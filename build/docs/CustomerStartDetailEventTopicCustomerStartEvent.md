@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **eventTime** | **Int** |  | [optional] |
+| **eventTime** | **Int64** |  | [optional] |
 | **conversationId** | **String** |  | [optional] |
 | **participantId** | **String** |  | [optional] |
 | **sessionId** | **String** |  | [optional] |
@@ -21,7 +21,7 @@
 | **addressFrom** | **String** |  | [optional] |
 | **callbackUserName** | **String** |  | [optional] |
 | **callbackNumbers** | **[String]** |  | [optional] |
-| **callbackScheduledTime** | **Int** |  | [optional] |
+| **callbackScheduledTime** | **Int64** |  | [optional] |
 | **subject** | **String** |  | [optional] |
 | **messageType** | **String** |  | [optional] |
 | **conversationExternalContactIds** | **[String]** |  | [optional] |
@@ -31,4 +31,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

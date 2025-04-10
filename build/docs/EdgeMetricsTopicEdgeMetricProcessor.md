@@ -7,11 +7,11 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **cpuId** | **String** |  | [optional] |
-| **idleTimePct** | **Int** |  | [optional] |
-| **activeTimePct** | **Int** |  | [optional] |
-| **privilegedTimePct** | **Int** |  | [optional] |
-| **userTimePct** | **Int** |  | [optional] |
+| **idleTimePct** | **Int64** |  | [optional] |
+| **activeTimePct** | **Int64** |  | [optional] |
+| **privilegedTimePct** | **Int64** |  | [optional] |
+| **userTimePct** | **Int64** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

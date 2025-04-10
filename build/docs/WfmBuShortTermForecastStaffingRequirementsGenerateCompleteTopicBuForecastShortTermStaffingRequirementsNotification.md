@@ -9,11 +9,11 @@
 | **businessUnitId** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
 | **forecast** | [**WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuShortTermForecastReference**](WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuShortTermForecastReference) |  | [optional] |
-| **weekCount** | **Int** |  | [optional] |
-| **intervalLengthMinutes** | **Int** |  | [optional] |
+| **weekCount** | **Int64** |  | [optional] |
+| **intervalLengthMinutes** | **Int64** |  | [optional] |
 | **referenceStartDate** | [**Date**](Date) |  | [optional] |
 | **results** | [**[WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults]**]([WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

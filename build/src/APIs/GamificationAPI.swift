@@ -58,6 +58,51 @@ open class GamificationAPI {
     
     
     /**
+     Delete a Contest by Id
+     
+     - parameter contestId: (path) The ID of the contest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteGamificationContest(contestId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteGamificationContestWithRequestBuilder(contestId: contestId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a Contest by Id
+     - DELETE /api/v2/gamification/contests/{contestId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter contestId: (path) The ID of the contest 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteGamificationContestWithRequestBuilder(contestId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/gamification/contests/{contestId}"
+        let contestIdPreEscape = "\(contestId)"
+        let contestIdPostEscape = contestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{contestId}", with: contestIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Get an External Metric Definition
      
      - parameter metricId: (path) Specifies the External Metric Definition ID 
@@ -209,6 +254,982 @@ open class GamificationAPI {
         ])
 
         let requestBuilder: RequestBuilder<ExternalMetricDefinitionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get a Contest by Id
+     
+     - parameter contestId: (path) The ID of the contest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationContest(contestId: String, completion: @escaping ((_ data: ContestsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationContestWithRequestBuilder(contestId: contestId)
+        requestBuilder.execute { (response: Response<ContestsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a Contest by Id
+     - GET /api/v2/gamification/contests/{contestId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "description" : "description",
+  "dateEnd" : "2024-01-12T00:00:00.000+0000",
+  "title" : "title",
+  "dateScoresModified" : "2000-01-23T04:56:07.000+00:00",
+  "division" : "{}",
+  "anonymization" : "NoAnonymization",
+  "dateStart" : "2024-01-12T00:00:00.000+0000",
+  "participantCount" : 5,
+  "disqualifiedAgents" : [ {
+    "note" : "note",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "note" : "note",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "id" : "id",
+  "participants" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "winners" : [ {
+    "tier" : 5,
+    "users" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "rank" : 2,
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "rank" : 2,
+      "id" : "id"
+    } ]
+  }, {
+    "tier" : 5,
+    "users" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "rank" : 2,
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "rank" : 2,
+      "id" : "id"
+    } ]
+  } ],
+  "profile" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "version" : 1,
+  "announcementTimezone" : "Europe/London",
+  "dateCancelled" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "prizes" : [ {
+    "imageId" : "imageId",
+    "tier" : 0,
+    "imageUrl" : "imageUrl",
+    "name" : "name",
+    "description" : "description",
+    "winnersCount" : 6
+  }, {
+    "imageId" : "imageId",
+    "tier" : 0,
+    "imageUrl" : "imageUrl",
+    "name" : "name",
+    "description" : "description",
+    "winnersCount" : 6
+  } ],
+  "dateAnnounced" : "2000-01-23T04:56:07.000+00:00",
+  "dateFinalized" : "2000-01-23T04:56:07.000+00:00",
+  "metrics" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "weight" : 6,
+    "id" : "id",
+    "minimumQualifier" : 1
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "weight" : 6,
+    "id" : "id",
+    "minimumQualifier" : 1
+  } ],
+  "winningCriteria" : "HighestOverallScore",
+  "status" : "Upcoming"
+}, statusCode=200}]
+     
+     - parameter contestId: (path) The ID of the contest 
+
+     - returns: RequestBuilder<ContestsResponse> 
+     */
+    open class func getGamificationContestWithRequestBuilder(contestId: String) -> RequestBuilder<ContestsResponse> {        
+        var path = "/api/v2/gamification/contests/{contestId}"
+        let contestIdPreEscape = "\(contestId)"
+        let contestIdPostEscape = contestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{contestId}", with: contestIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ContestsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum ReturnsView_getGamificationContestAgentsScores: String { 
+        case all = "All"
+        case topAndBottom = "TopAndBottom"
+    }
+    
+    
+    /**
+     Get Contest Scores (Admin)
+     
+     - parameter contestId: (path) The ID of the contest 
+     - parameter pageNumber: (query)  (optional)
+     - parameter pageSize: (query)  (optional)
+     - parameter workday: (query) Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter returnsView: (query) Desired response results (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationContestAgentsScores(contestId: String, pageNumber: Int? = nil, pageSize: Int? = nil, workday: Date? = nil, returnsView: ReturnsView_getGamificationContestAgentsScores? = nil, completion: @escaping ((_ data: ContestScoresAgentsPagedList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationContestAgentsScoresWithRequestBuilder(contestId: contestId, pageNumber: pageNumber, pageSize: pageSize, workday: workday, returnsView: returnsView)
+        requestBuilder.execute { (response: Response<ContestScoresAgentsPagedList>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Contest Scores (Admin)
+     - GET /api/v2/gamification/contests/{contestId}/agents/scores
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 7,
+  "pageCount" : 9,
+  "pageNumber" : 2,
+  "entities" : [ {
+    "disqualified" : true,
+    "contestScore" : "{}",
+    "metricScores" : [ {
+      "score" : 0.8008281904610115,
+      "metric" : "{}",
+      "percentOfGoal" : 1.4658129805029452,
+      "totalPoints" : 6.027456183070403,
+      "rank" : 5
+    }, {
+      "score" : 0.8008281904610115,
+      "metric" : "{}",
+      "percentOfGoal" : 1.4658129805029452,
+      "totalPoints" : 6.027456183070403,
+      "rank" : 5
+    } ],
+    "user" : "{}"
+  }, {
+    "disqualified" : true,
+    "contestScore" : "{}",
+    "metricScores" : [ {
+      "score" : 0.8008281904610115,
+      "metric" : "{}",
+      "percentOfGoal" : 1.4658129805029452,
+      "totalPoints" : 6.027456183070403,
+      "rank" : 5
+    }, {
+      "score" : 0.8008281904610115,
+      "metric" : "{}",
+      "percentOfGoal" : 1.4658129805029452,
+      "totalPoints" : 6.027456183070403,
+      "rank" : 5
+    } ],
+    "user" : "{}"
+  } ],
+  "pageSize" : 5,
+  "dateWorkday" : "2024-01-12T00:00:00.000+0000"
+}, statusCode=200}]
+     
+     - parameter contestId: (path) The ID of the contest 
+     - parameter pageNumber: (query)  (optional)
+     - parameter pageSize: (query)  (optional)
+     - parameter workday: (query) Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter returnsView: (query) Desired response results (optional)
+
+     - returns: RequestBuilder<ContestScoresAgentsPagedList> 
+     */
+    open class func getGamificationContestAgentsScoresWithRequestBuilder(contestId: String, pageNumber: Int? = nil, pageSize: Int? = nil, workday: Date? = nil, returnsView: ReturnsView_getGamificationContestAgentsScores? = nil) -> RequestBuilder<ContestScoresAgentsPagedList> {        
+        var path = "/api/v2/gamification/contests/{contestId}/agents/scores"
+        let contestIdPreEscape = "\(contestId)"
+        let contestIdPostEscape = contestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{contestId}", with: contestIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "workday": workday?.encodeToJSON(), 
+            "returnsView": returnsView?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<ContestScoresAgentsPagedList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum ReturnsView_getGamificationContestAgentsScoresMe: String { 
+        case all = "All"
+        case topAndBottom = "TopAndBottom"
+    }
+    
+    
+    /**
+     Get Contest Scores for the requesting Agent/Supervisor
+     
+     - parameter contestId: (path) The ID of the contest 
+     - parameter pageNumber: (query)  (optional)
+     - parameter pageSize: (query)  (optional)
+     - parameter workday: (query) Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter returnsView: (query) Desired response results (Supervisor Only) (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationContestAgentsScoresMe(contestId: String, pageNumber: Int? = nil, pageSize: Int? = nil, workday: Date? = nil, returnsView: ReturnsView_getGamificationContestAgentsScoresMe? = nil, completion: @escaping ((_ data: ContestScoresAgentsPagedList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationContestAgentsScoresMeWithRequestBuilder(contestId: contestId, pageNumber: pageNumber, pageSize: pageSize, workday: workday, returnsView: returnsView)
+        requestBuilder.execute { (response: Response<ContestScoresAgentsPagedList>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Contest Scores for the requesting Agent/Supervisor
+     - GET /api/v2/gamification/contests/{contestId}/agents/scores/me
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 7,
+  "pageCount" : 9,
+  "pageNumber" : 2,
+  "entities" : [ {
+    "disqualified" : true,
+    "contestScore" : "{}",
+    "metricScores" : [ {
+      "score" : 0.8008281904610115,
+      "metric" : "{}",
+      "percentOfGoal" : 1.4658129805029452,
+      "totalPoints" : 6.027456183070403,
+      "rank" : 5
+    }, {
+      "score" : 0.8008281904610115,
+      "metric" : "{}",
+      "percentOfGoal" : 1.4658129805029452,
+      "totalPoints" : 6.027456183070403,
+      "rank" : 5
+    } ],
+    "user" : "{}"
+  }, {
+    "disqualified" : true,
+    "contestScore" : "{}",
+    "metricScores" : [ {
+      "score" : 0.8008281904610115,
+      "metric" : "{}",
+      "percentOfGoal" : 1.4658129805029452,
+      "totalPoints" : 6.027456183070403,
+      "rank" : 5
+    }, {
+      "score" : 0.8008281904610115,
+      "metric" : "{}",
+      "percentOfGoal" : 1.4658129805029452,
+      "totalPoints" : 6.027456183070403,
+      "rank" : 5
+    } ],
+    "user" : "{}"
+  } ],
+  "pageSize" : 5,
+  "dateWorkday" : "2024-01-12T00:00:00.000+0000"
+}, statusCode=200}]
+     
+     - parameter contestId: (path) The ID of the contest 
+     - parameter pageNumber: (query)  (optional)
+     - parameter pageSize: (query)  (optional)
+     - parameter workday: (query) Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter returnsView: (query) Desired response results (Supervisor Only) (optional)
+
+     - returns: RequestBuilder<ContestScoresAgentsPagedList> 
+     */
+    open class func getGamificationContestAgentsScoresMeWithRequestBuilder(contestId: String, pageNumber: Int? = nil, pageSize: Int? = nil, workday: Date? = nil, returnsView: ReturnsView_getGamificationContestAgentsScoresMe? = nil) -> RequestBuilder<ContestScoresAgentsPagedList> {        
+        var path = "/api/v2/gamification/contests/{contestId}/agents/scores/me"
+        let contestIdPreEscape = "\(contestId)"
+        let contestIdPostEscape = contestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{contestId}", with: contestIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "workday": workday?.encodeToJSON(), 
+            "returnsView": returnsView?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<ContestScoresAgentsPagedList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get a Contest Score Trend (Average Trend)
+     
+     - parameter contestId: (path) The ID of the contest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationContestAgentsScoresTrends(contestId: String, completion: @escaping ((_ data: ContestScoresGroupTrendList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationContestAgentsScoresTrendsWithRequestBuilder(contestId: contestId)
+        requestBuilder.execute { (response: Response<ContestScoresGroupTrendList>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a Contest Score Trend (Average Trend)
+     - GET /api/v2/gamification/contests/{contestId}/agents/scores/trends
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "contestScore" : "{}",
+    "metricScores" : [ {
+      "score" : 0.8008281904610115,
+      "metric" : "{}",
+      "percentOfGoal" : 1.4658129805029452,
+      "totalPoints" : 6.027456183070403
+    }, {
+      "score" : 0.8008281904610115,
+      "metric" : "{}",
+      "percentOfGoal" : 1.4658129805029452,
+      "totalPoints" : 6.027456183070403
+    } ],
+    "dateWorkday" : "2024-01-12T00:00:00.000+0000"
+  }, {
+    "contestScore" : "{}",
+    "metricScores" : [ {
+      "score" : 0.8008281904610115,
+      "metric" : "{}",
+      "percentOfGoal" : 1.4658129805029452,
+      "totalPoints" : 6.027456183070403
+    }, {
+      "score" : 0.8008281904610115,
+      "metric" : "{}",
+      "percentOfGoal" : 1.4658129805029452,
+      "totalPoints" : 6.027456183070403
+    } ],
+    "dateWorkday" : "2024-01-12T00:00:00.000+0000"
+  } ]
+}, statusCode=200}]
+     
+     - parameter contestId: (path) The ID of the contest 
+
+     - returns: RequestBuilder<ContestScoresGroupTrendList> 
+     */
+    open class func getGamificationContestAgentsScoresTrendsWithRequestBuilder(contestId: String) -> RequestBuilder<ContestScoresGroupTrendList> {        
+        var path = "/api/v2/gamification/contests/{contestId}/agents/scores/trends"
+        let contestIdPreEscape = "\(contestId)"
+        let contestIdPostEscape = contestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{contestId}", with: contestIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ContestScoresGroupTrendList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get a Contest Score Trend for the requesting Agent
+     
+     - parameter contestId: (path) The ID of the contest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationContestAgentsScoresTrendsMe(contestId: String, completion: @escaping ((_ data: ContestScoresAgentTrendList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationContestAgentsScoresTrendsMeWithRequestBuilder(contestId: contestId)
+        requestBuilder.execute { (response: Response<ContestScoresAgentTrendList>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a Contest Score Trend for the requesting Agent
+     - GET /api/v2/gamification/contests/{contestId}/agents/scores/trends/me
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "disqualified" : true,
+    "contestScore" : "{}",
+    "metricScores" : [ {
+      "score" : 0.8008281904610115,
+      "metric" : "{}",
+      "percentOfGoal" : 1.4658129805029452,
+      "totalPoints" : 6.027456183070403,
+      "rank" : 5
+    }, {
+      "score" : 0.8008281904610115,
+      "metric" : "{}",
+      "percentOfGoal" : 1.4658129805029452,
+      "totalPoints" : 6.027456183070403,
+      "rank" : 5
+    } ],
+    "dateWorkday" : "2024-01-12T00:00:00.000+0000"
+  }, {
+    "disqualified" : true,
+    "contestScore" : "{}",
+    "metricScores" : [ {
+      "score" : 0.8008281904610115,
+      "metric" : "{}",
+      "percentOfGoal" : 1.4658129805029452,
+      "totalPoints" : 6.027456183070403,
+      "rank" : 5
+    }, {
+      "score" : 0.8008281904610115,
+      "metric" : "{}",
+      "percentOfGoal" : 1.4658129805029452,
+      "totalPoints" : 6.027456183070403,
+      "rank" : 5
+    } ],
+    "dateWorkday" : "2024-01-12T00:00:00.000+0000"
+  } ],
+  "user" : "{}"
+}, statusCode=200}]
+     
+     - parameter contestId: (path) The ID of the contest 
+
+     - returns: RequestBuilder<ContestScoresAgentTrendList> 
+     */
+    open class func getGamificationContestAgentsScoresTrendsMeWithRequestBuilder(contestId: String) -> RequestBuilder<ContestScoresAgentTrendList> {        
+        var path = "/api/v2/gamification/contests/{contestId}/agents/scores/trends/me"
+        let contestIdPreEscape = "\(contestId)"
+        let contestIdPostEscape = contestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{contestId}", with: contestIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ContestScoresAgentTrendList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a Contest Prize Image by Id
+     
+     - parameter contestId: (path) The ID of the contest 
+     - parameter prizeImageId: (path) The ID of the prize image 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationContestPrizeimage(contestId: String, prizeImageId: String, completion: @escaping ((_ data: PrizeImages?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationContestPrizeimageWithRequestBuilder(contestId: contestId, prizeImageId: prizeImageId)
+        requestBuilder.execute { (response: Response<PrizeImages>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a Contest Prize Image by Id
+     - GET /api/v2/gamification/contests/{contestId}/prizeimages/{prizeImageId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "imageUrl" : "imageUrl"
+}, statusCode=200}]
+     
+     - parameter contestId: (path) The ID of the contest 
+     - parameter prizeImageId: (path) The ID of the prize image 
+
+     - returns: RequestBuilder<PrizeImages> 
+     */
+    open class func getGamificationContestPrizeimageWithRequestBuilder(contestId: String, prizeImageId: String) -> RequestBuilder<PrizeImages> {        
+        var path = "/api/v2/gamification/contests/{contestId}/prizeimages/{prizeImageId}"
+        let contestIdPreEscape = "\(contestId)"
+        let contestIdPostEscape = contestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{contestId}", with: contestIdPostEscape, options: .literal, range: nil)
+        let prizeImageIdPreEscape = "\(prizeImageId)"
+        let prizeImageIdPostEscape = prizeImageIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{prizeImageId}", with: prizeImageIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PrizeImages>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum Status_getGamificationContests: String { 
+        case upcoming = "Upcoming"
+        case ongoing = "Ongoing"
+        case pending = "Pending"
+        case recentlyCompleted = "RecentlyCompleted"
+        case completed = "Completed"
+        case cancelled = "Cancelled"
+    }
+    
+    
+    public enum SortBy_getGamificationContests: String { 
+        case title = "title"
+        case datestart = "dateStart"
+        case dateend = "dateEnd"
+        case datefinalized = "dateFinalized"
+        case status = "status"
+        case profile = "profile"
+        case participantcount = "participantCount"
+    }
+    
+    
+    
+    public enum SortOrder_getGamificationContests: String { 
+        case asc = "asc"
+        case desc = "desc"
+    }
+    
+    
+    /**
+     Get a List of Contests (Admin)
+     
+     - parameter pageNumber: (query)  (optional)
+     - parameter pageSize: (query)  (optional)
+     - parameter dateStart: (query) Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter dateEnd: (query) End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter status: (query)  (optional)
+     - parameter sortBy: (query)  (optional)
+     - parameter sortOrder: (query)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationContests(pageNumber: Int? = nil, pageSize: Int? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, status: [String]? = nil, sortBy: SortBy_getGamificationContests? = nil, sortOrder: SortOrder_getGamificationContests? = nil, completion: @escaping ((_ data: GetContestsEssentialsListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationContestsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, dateStart: dateStart, dateEnd: dateEnd, status: status, sortBy: sortBy, sortOrder: sortOrder)
+        requestBuilder.execute { (response: Response<GetContestsEssentialsListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a List of Contests (Admin)
+     - GET /api/v2/gamification/contests
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 2,
+  "pageCount" : 7,
+  "pageNumber" : 5,
+  "entities" : [ {
+    "profile" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "requestingParticipantContestInfo" : "{}",
+    "dateEnd" : "2024-01-12T00:00:00.000+0000",
+    "title" : "title",
+    "dateScoresModified" : "2000-01-23T04:56:07.000+00:00",
+    "dateCancelled" : "2000-01-23T04:56:07.000+00:00",
+    "dateStart" : "2024-01-12T00:00:00.000+0000",
+    "participantCount" : 0,
+    "dateAnnounced" : "2000-01-23T04:56:07.000+00:00",
+    "dateFinalized" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "metrics" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "weight" : 6,
+      "id" : "id",
+      "minimumQualifier" : 1
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "weight" : 6,
+      "id" : "id",
+      "minimumQualifier" : 1
+    } ],
+    "status" : "Upcoming"
+  }, {
+    "profile" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "requestingParticipantContestInfo" : "{}",
+    "dateEnd" : "2024-01-12T00:00:00.000+0000",
+    "title" : "title",
+    "dateScoresModified" : "2000-01-23T04:56:07.000+00:00",
+    "dateCancelled" : "2000-01-23T04:56:07.000+00:00",
+    "dateStart" : "2024-01-12T00:00:00.000+0000",
+    "participantCount" : 0,
+    "dateAnnounced" : "2000-01-23T04:56:07.000+00:00",
+    "dateFinalized" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "metrics" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "weight" : 6,
+      "id" : "id",
+      "minimumQualifier" : 1
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "weight" : 6,
+      "id" : "id",
+      "minimumQualifier" : 1
+    } ],
+    "status" : "Upcoming"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 5,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query)  (optional)
+     - parameter pageSize: (query)  (optional)
+     - parameter dateStart: (query) Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter dateEnd: (query) End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter status: (query)  (optional)
+     - parameter sortBy: (query)  (optional)
+     - parameter sortOrder: (query)  (optional)
+
+     - returns: RequestBuilder<GetContestsEssentialsListing> 
+     */
+    open class func getGamificationContestsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, status: [String]? = nil, sortBy: SortBy_getGamificationContests? = nil, sortOrder: SortOrder_getGamificationContests? = nil) -> RequestBuilder<GetContestsEssentialsListing> {        
+        let path = "/api/v2/gamification/contests"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "dateStart": dateStart?.encodeToJSON(), 
+            "dateEnd": dateEnd?.encodeToJSON(), 
+            "status": status, 
+            "sortBy": sortBy?.rawValue, 
+            "sortOrder": sortOrder?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<GetContestsEssentialsListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum Status_getGamificationContestsMe: String { 
+        case upcoming = "Upcoming"
+        case ongoing = "Ongoing"
+        case pending = "Pending"
+        case recentlyCompleted = "RecentlyCompleted"
+        case completed = "Completed"
+        case cancelled = "Cancelled"
+    }
+    
+    
+    public enum SortBy_getGamificationContestsMe: String { 
+        case title = "title"
+        case datestart = "dateStart"
+        case dateend = "dateEnd"
+        case datefinalized = "dateFinalized"
+        case status = "status"
+        case profile = "profile"
+        case participantcount = "participantCount"
+    }
+    
+    
+    
+    public enum SortOrder_getGamificationContestsMe: String { 
+        case asc = "asc"
+        case desc = "desc"
+    }
+    
+    
+    
+    public enum View_getGamificationContestsMe: String { 
+        case participant = "participant"
+        case creator = "creator"
+    }
+    
+    
+    /**
+     Get a List of Contests (Agent/Supervisor)
+     
+     - parameter pageNumber: (query)  (optional)
+     - parameter pageSize: (query)  (optional)
+     - parameter dateStart: (query) Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter dateEnd: (query) End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter status: (query)  (optional)
+     - parameter sortBy: (query)  (optional)
+     - parameter sortOrder: (query)  (optional)
+     - parameter view: (query)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationContestsMe(pageNumber: Int? = nil, pageSize: Int? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, status: [String]? = nil, sortBy: SortBy_getGamificationContestsMe? = nil, sortOrder: SortOrder_getGamificationContestsMe? = nil, view: View_getGamificationContestsMe? = nil, completion: @escaping ((_ data: GetContestsEssentialsListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationContestsMeWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, dateStart: dateStart, dateEnd: dateEnd, status: status, sortBy: sortBy, sortOrder: sortOrder, view: view)
+        requestBuilder.execute { (response: Response<GetContestsEssentialsListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a List of Contests (Agent/Supervisor)
+     - GET /api/v2/gamification/contests/me
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 2,
+  "pageCount" : 7,
+  "pageNumber" : 5,
+  "entities" : [ {
+    "profile" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "requestingParticipantContestInfo" : "{}",
+    "dateEnd" : "2024-01-12T00:00:00.000+0000",
+    "title" : "title",
+    "dateScoresModified" : "2000-01-23T04:56:07.000+00:00",
+    "dateCancelled" : "2000-01-23T04:56:07.000+00:00",
+    "dateStart" : "2024-01-12T00:00:00.000+0000",
+    "participantCount" : 0,
+    "dateAnnounced" : "2000-01-23T04:56:07.000+00:00",
+    "dateFinalized" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "metrics" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "weight" : 6,
+      "id" : "id",
+      "minimumQualifier" : 1
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "weight" : 6,
+      "id" : "id",
+      "minimumQualifier" : 1
+    } ],
+    "status" : "Upcoming"
+  }, {
+    "profile" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "requestingParticipantContestInfo" : "{}",
+    "dateEnd" : "2024-01-12T00:00:00.000+0000",
+    "title" : "title",
+    "dateScoresModified" : "2000-01-23T04:56:07.000+00:00",
+    "dateCancelled" : "2000-01-23T04:56:07.000+00:00",
+    "dateStart" : "2024-01-12T00:00:00.000+0000",
+    "participantCount" : 0,
+    "dateAnnounced" : "2000-01-23T04:56:07.000+00:00",
+    "dateFinalized" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "metrics" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "weight" : 6,
+      "id" : "id",
+      "minimumQualifier" : 1
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "weight" : 6,
+      "id" : "id",
+      "minimumQualifier" : 1
+    } ],
+    "status" : "Upcoming"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 5,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query)  (optional)
+     - parameter pageSize: (query)  (optional)
+     - parameter dateStart: (query) Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter dateEnd: (query) End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter status: (query)  (optional)
+     - parameter sortBy: (query)  (optional)
+     - parameter sortOrder: (query)  (optional)
+     - parameter view: (query)  (optional)
+
+     - returns: RequestBuilder<GetContestsEssentialsListing> 
+     */
+    open class func getGamificationContestsMeWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, status: [String]? = nil, sortBy: SortBy_getGamificationContestsMe? = nil, sortOrder: SortOrder_getGamificationContestsMe? = nil, view: View_getGamificationContestsMe? = nil) -> RequestBuilder<GetContestsEssentialsListing> {        
+        let path = "/api/v2/gamification/contests/me"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "dateStart": dateStart?.encodeToJSON(), 
+            "dateEnd": dateEnd?.encodeToJSON(), 
+            "status": status, 
+            "sortBy": sortBy?.rawValue, 
+            "sortOrder": sortOrder?.rawValue, 
+            "view": view?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<GetContestsEssentialsListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -4622,6 +5643,151 @@ open class GamificationAPI {
 
     
     
+    
+    
+    /**
+     Finalize a Contest by Id
+     
+     - parameter contestId: (path) The ID of the contest 
+     - parameter body: (body) Finalize Contest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchGamificationContest(contestId: String, body: ContestsFinalizeRequest, completion: @escaping ((_ data: ContestsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchGamificationContestWithRequestBuilder(contestId: contestId, body: body)
+        requestBuilder.execute { (response: Response<ContestsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Finalize a Contest by Id
+     - PATCH /api/v2/gamification/contests/{contestId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "description" : "description",
+  "dateEnd" : "2024-01-12T00:00:00.000+0000",
+  "title" : "title",
+  "dateScoresModified" : "2000-01-23T04:56:07.000+00:00",
+  "division" : "{}",
+  "anonymization" : "NoAnonymization",
+  "dateStart" : "2024-01-12T00:00:00.000+0000",
+  "participantCount" : 5,
+  "disqualifiedAgents" : [ {
+    "note" : "note",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "note" : "note",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "id" : "id",
+  "participants" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "winners" : [ {
+    "tier" : 5,
+    "users" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "rank" : 2,
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "rank" : 2,
+      "id" : "id"
+    } ]
+  }, {
+    "tier" : 5,
+    "users" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "rank" : 2,
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "rank" : 2,
+      "id" : "id"
+    } ]
+  } ],
+  "profile" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "version" : 1,
+  "announcementTimezone" : "Europe/London",
+  "dateCancelled" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "prizes" : [ {
+    "imageId" : "imageId",
+    "tier" : 0,
+    "imageUrl" : "imageUrl",
+    "name" : "name",
+    "description" : "description",
+    "winnersCount" : 6
+  }, {
+    "imageId" : "imageId",
+    "tier" : 0,
+    "imageUrl" : "imageUrl",
+    "name" : "name",
+    "description" : "description",
+    "winnersCount" : 6
+  } ],
+  "dateAnnounced" : "2000-01-23T04:56:07.000+00:00",
+  "dateFinalized" : "2000-01-23T04:56:07.000+00:00",
+  "metrics" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "weight" : 6,
+    "id" : "id",
+    "minimumQualifier" : 1
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "weight" : 6,
+    "id" : "id",
+    "minimumQualifier" : 1
+  } ],
+  "winningCriteria" : "HighestOverallScore",
+  "status" : "Upcoming"
+}, statusCode=200}]
+     
+     - parameter contestId: (path) The ID of the contest 
+     - parameter body: (body) Finalize Contest 
+
+     - returns: RequestBuilder<ContestsResponse> 
+     */
+    open class func patchGamificationContestWithRequestBuilder(contestId: String, body: ContestsFinalizeRequest) -> RequestBuilder<ContestsResponse> {        
+        var path = "/api/v2/gamification/contests/{contestId}"
+        let contestIdPreEscape = "\(contestId)"
+        let contestIdPostEscape = contestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{contestId}", with: contestIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ContestsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Write External Metric Data
      
@@ -4771,6 +5937,200 @@ open class GamificationAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ExternalMetricDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Creates a Contest
+     
+     - parameter body: (body) Create Contest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postGamificationContests(body: ContestsCreateRequest, completion: @escaping ((_ data: ContestsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGamificationContestsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ContestsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Creates a Contest
+     - POST /api/v2/gamification/contests
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "description" : "description",
+  "dateEnd" : "2024-01-12T00:00:00.000+0000",
+  "title" : "title",
+  "dateScoresModified" : "2000-01-23T04:56:07.000+00:00",
+  "division" : "{}",
+  "anonymization" : "NoAnonymization",
+  "dateStart" : "2024-01-12T00:00:00.000+0000",
+  "participantCount" : 5,
+  "disqualifiedAgents" : [ {
+    "note" : "note",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "note" : "note",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "id" : "id",
+  "participants" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "winners" : [ {
+    "tier" : 5,
+    "users" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "rank" : 2,
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "rank" : 2,
+      "id" : "id"
+    } ]
+  }, {
+    "tier" : 5,
+    "users" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "rank" : 2,
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "rank" : 2,
+      "id" : "id"
+    } ]
+  } ],
+  "profile" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "version" : 1,
+  "announcementTimezone" : "Europe/London",
+  "dateCancelled" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "prizes" : [ {
+    "imageId" : "imageId",
+    "tier" : 0,
+    "imageUrl" : "imageUrl",
+    "name" : "name",
+    "description" : "description",
+    "winnersCount" : 6
+  }, {
+    "imageId" : "imageId",
+    "tier" : 0,
+    "imageUrl" : "imageUrl",
+    "name" : "name",
+    "description" : "description",
+    "winnersCount" : 6
+  } ],
+  "dateAnnounced" : "2000-01-23T04:56:07.000+00:00",
+  "dateFinalized" : "2000-01-23T04:56:07.000+00:00",
+  "metrics" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "weight" : 6,
+    "id" : "id",
+    "minimumQualifier" : 1
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "weight" : 6,
+    "id" : "id",
+    "minimumQualifier" : 1
+  } ],
+  "winningCriteria" : "HighestOverallScore",
+  "status" : "Upcoming"
+}, statusCode=200}]
+     
+     - parameter body: (body) Create Contest 
+
+     - returns: RequestBuilder<ContestsResponse> 
+     */
+    open class func postGamificationContestsWithRequestBuilder(body: ContestsCreateRequest) -> RequestBuilder<ContestsResponse> {        
+        let path = "/api/v2/gamification/contests"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ContestsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Generates pre-signed URL to upload a prize image for gamification contests
+     
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postGamificationContestsUploadsPrizeimages(body: GamificationContestPrizeImageUploadUrlRequest, completion: @escaping ((_ data: UploadUrlResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGamificationContestsUploadsPrizeimagesWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<UploadUrlResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Generates pre-signed URL to upload a prize image for gamification contests
+     - POST /api/v2/gamification/contests/uploads/prizeimages
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "headers"
+  },
+  "uploadKey" : "uploadKey",
+  "url" : "url"
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<UploadUrlResponse> 
+     */
+    open class func postGamificationContestsUploadsPrizeimagesWithRequestBuilder(body: GamificationContestPrizeImageUploadUrlRequest) -> RequestBuilder<UploadUrlResponse> {        
+        let path = "/api/v2/gamification/contests/uploads/prizeimages"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -5451,6 +6811,151 @@ open class GamificationAPI {
         let requestBuilder: RequestBuilder<UserProfilesInDateRange>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update a Contest by Id
+     
+     - parameter contestId: (path) The ID of the contest 
+     - parameter body: (body) Contest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putGamificationContest(contestId: String, body: ContestsCreateRequest, completion: @escaping ((_ data: ContestsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = putGamificationContestWithRequestBuilder(contestId: contestId, body: body)
+        requestBuilder.execute { (response: Response<ContestsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a Contest by Id
+     - PUT /api/v2/gamification/contests/{contestId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "description" : "description",
+  "dateEnd" : "2024-01-12T00:00:00.000+0000",
+  "title" : "title",
+  "dateScoresModified" : "2000-01-23T04:56:07.000+00:00",
+  "division" : "{}",
+  "anonymization" : "NoAnonymization",
+  "dateStart" : "2024-01-12T00:00:00.000+0000",
+  "participantCount" : 5,
+  "disqualifiedAgents" : [ {
+    "note" : "note",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "note" : "note",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "id" : "id",
+  "participants" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "winners" : [ {
+    "tier" : 5,
+    "users" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "rank" : 2,
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "rank" : 2,
+      "id" : "id"
+    } ]
+  }, {
+    "tier" : 5,
+    "users" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "rank" : 2,
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "rank" : 2,
+      "id" : "id"
+    } ]
+  } ],
+  "profile" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "version" : 1,
+  "announcementTimezone" : "Europe/London",
+  "dateCancelled" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "prizes" : [ {
+    "imageId" : "imageId",
+    "tier" : 0,
+    "imageUrl" : "imageUrl",
+    "name" : "name",
+    "description" : "description",
+    "winnersCount" : 6
+  }, {
+    "imageId" : "imageId",
+    "tier" : 0,
+    "imageUrl" : "imageUrl",
+    "name" : "name",
+    "description" : "description",
+    "winnersCount" : 6
+  } ],
+  "dateAnnounced" : "2000-01-23T04:56:07.000+00:00",
+  "dateFinalized" : "2000-01-23T04:56:07.000+00:00",
+  "metrics" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "weight" : 6,
+    "id" : "id",
+    "minimumQualifier" : 1
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "weight" : 6,
+    "id" : "id",
+    "minimumQualifier" : 1
+  } ],
+  "winningCriteria" : "HighestOverallScore",
+  "status" : "Upcoming"
+}, statusCode=200}]
+     
+     - parameter contestId: (path) The ID of the contest 
+     - parameter body: (body) Contest 
+
+     - returns: RequestBuilder<ContestsResponse> 
+     */
+    open class func putGamificationContestWithRequestBuilder(contestId: String, body: ContestsCreateRequest) -> RequestBuilder<ContestsResponse> {        
+        var path = "/api/v2/gamification/contests/{contestId}"
+        let contestIdPreEscape = "\(contestId)"
+        let contestIdPostEscape = contestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{contestId}", with: contestIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ContestsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
     

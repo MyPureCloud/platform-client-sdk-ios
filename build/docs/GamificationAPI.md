@@ -5,8 +5,17 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteEmployeeperformanceExternalmetricsDefinition**](GamificationAPI#deleteEmployeeperformanceExternalmetricsDefinition) | Delete an External Metric Definition |
+| [**deleteGamificationContest**](GamificationAPI#deleteGamificationContest) | Delete a Contest by Id |
 | [**getEmployeeperformanceExternalmetricsDefinition**](GamificationAPI#getEmployeeperformanceExternalmetricsDefinition) | Get an External Metric Definition |
 | [**getEmployeeperformanceExternalmetricsDefinitions**](GamificationAPI#getEmployeeperformanceExternalmetricsDefinitions) | Get a list of External Metric Definitions of an organization, sorted by name in ascending order |
+| [**getGamificationContest**](GamificationAPI#getGamificationContest) | Get a Contest by Id |
+| [**getGamificationContestAgentsScores**](GamificationAPI#getGamificationContestAgentsScores) | Get Contest Scores (Admin) |
+| [**getGamificationContestAgentsScoresMe**](GamificationAPI#getGamificationContestAgentsScoresMe) | Get Contest Scores for the requesting Agent/Supervisor |
+| [**getGamificationContestAgentsScoresTrends**](GamificationAPI#getGamificationContestAgentsScoresTrends) | Get a Contest Score Trend (Average Trend) |
+| [**getGamificationContestAgentsScoresTrendsMe**](GamificationAPI#getGamificationContestAgentsScoresTrendsMe) | Get a Contest Score Trend for the requesting Agent |
+| [**getGamificationContestPrizeimage**](GamificationAPI#getGamificationContestPrizeimage) | Get a Contest Prize Image by Id |
+| [**getGamificationContests**](GamificationAPI#getGamificationContests) | Get a List of Contests (Admin) |
+| [**getGamificationContestsMe**](GamificationAPI#getGamificationContestsMe) | Get a List of Contests (Agent/Supervisor) |
 | [**getGamificationInsights**](GamificationAPI#getGamificationInsights) | Get insights summary |
 | [**getGamificationInsightsDetails**](GamificationAPI#getGamificationInsightsDetails) | Get insights details for the current user |
 | [**getGamificationInsightsGroupsTrends**](GamificationAPI#getGamificationInsightsGroupsTrends) | Get insights overall trend for the current user |
@@ -54,8 +63,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getGamificationTemplate**](GamificationAPI#getGamificationTemplate) | Objective template by id |
 | [**getGamificationTemplates**](GamificationAPI#getGamificationTemplates) | All objective templates |
 | [**patchEmployeeperformanceExternalmetricsDefinition**](GamificationAPI#patchEmployeeperformanceExternalmetricsDefinition) | Update External Metric Definition |
+| [**patchGamificationContest**](GamificationAPI#patchGamificationContest) | Finalize a Contest by Id |
 | [**postEmployeeperformanceExternalmetricsData**](GamificationAPI#postEmployeeperformanceExternalmetricsData) | Write External Metric Data |
 | [**postEmployeeperformanceExternalmetricsDefinitions**](GamificationAPI#postEmployeeperformanceExternalmetricsDefinitions) | Create External Metric Definition |
+| [**postGamificationContests**](GamificationAPI#postGamificationContests) | Creates a Contest |
+| [**postGamificationContestsUploadsPrizeimages**](GamificationAPI#postGamificationContestsUploadsPrizeimages) | Generates pre-signed URL to upload a prize image for gamification contests |
 | [**postGamificationProfileActivate**](GamificationAPI#postGamificationProfileActivate) | Activate a performance profile |
 | [**postGamificationProfileDeactivate**](GamificationAPI#postGamificationProfileDeactivate) | Deactivate a performance profile |
 | [**postGamificationProfileMembers**](GamificationAPI#postGamificationProfileMembers) | Assign members to a given performance profile |
@@ -65,6 +77,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postGamificationProfiles**](GamificationAPI#postGamificationProfiles) | Create a new custom performance profile |
 | [**postGamificationProfilesUserQuery**](GamificationAPI#postGamificationProfilesUserQuery) | Query performance profiles in date range for a user |
 | [**postGamificationProfilesUsersMeQuery**](GamificationAPI#postGamificationProfilesUsersMeQuery) | Query performance profiles in date range for the current user |
+| [**putGamificationContest**](GamificationAPI#putGamificationContest) | Update a Contest by Id |
 | [**putGamificationProfile**](GamificationAPI#putGamificationProfile) | Updates a performance profile |
 | [**putGamificationProfileMetric**](GamificationAPI#putGamificationProfileMetric) | Updates a metric in performance profile |
 | [**putGamificationStatus**](GamificationAPI#putGamificationStatus) | Update gamification activation status |
@@ -113,6 +126,56 @@ GamificationAPI.deleteEmployeeperformanceExternalmetricsDefinition(metricId: met
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **metricId** | **String**| Specifies the External Metric Definition ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteGamificationContest
+
+
+
+> Void deleteGamificationContest(contestId)
+
+Delete a Contest by Id
+
+
+
+Wraps DELETE /api/v2/gamification/contests/{contestId}  
+
+Requires ANY permissions: 
+
+* gamification:contest:delete
+* gamification:contest:deleteAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contestId: String = "" // The ID of the contest
+
+// Code example
+GamificationAPI.deleteGamificationContest(contestId: contestId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("GamificationAPI.deleteGamificationContest was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contestId** | **String**| The ID of the contest | |
 
 
 ### Return type
@@ -220,6 +283,451 @@ GamificationAPI.getEmployeeperformanceExternalmetricsDefinitions(pageSize: pageS
 ### Return type
 
 [**ExternalMetricDefinitionListing**](ExternalMetricDefinitionListing)
+
+
+## getGamificationContest
+
+
+
+> [ContestsResponse](ContestsResponse) getGamificationContest(contestId)
+
+Get a Contest by Id
+
+
+
+Wraps GET /api/v2/gamification/contests/{contestId}  
+
+Requires ANY permissions: 
+
+* gamification:contest:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contestId: String = "" // The ID of the contest
+
+// Code example
+GamificationAPI.getGamificationContest(contestId: contestId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationContest was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contestId** | **String**| The ID of the contest | |
+
+
+### Return type
+
+[**ContestsResponse**](ContestsResponse)
+
+
+## getGamificationContestAgentsScores
+
+
+
+> [ContestScoresAgentsPagedList](ContestScoresAgentsPagedList) getGamificationContestAgentsScores(contestId, pageNumber, pageSize, workday, returnsView)
+
+Get Contest Scores (Admin)
+
+
+
+Wraps GET /api/v2/gamification/contests/{contestId}/agents/scores  
+
+Requires ANY permissions: 
+
+* gamification:contest:viewAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contestId: String = "" // The ID of the contest
+let pageNumber: Int = 0 // 
+let pageSize: Int = 0 // 
+let workday: Date = new Date(...) // Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let returnsView: GamificationAPI.ReturnsView_getGamificationContestAgentsScores = GamificationAPI.ReturnsView_getGamificationContestAgentsScores.enummember // Desired response results
+
+// Code example
+GamificationAPI.getGamificationContestAgentsScores(contestId: contestId, pageNumber: pageNumber, pageSize: pageSize, workday: workday, returnsView: returnsView) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationContestAgentsScores was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contestId** | **String**| The ID of the contest | |
+| **pageNumber** | **Int**|  | [optional] |
+| **pageSize** | **Int**|  | [optional] |
+| **workday** | **Date**| Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **returnsView** | **String**| Desired response results | [optional]<br />**Values**: all ("All"), topAndBottom ("TopAndBottom") |
+
+
+### Return type
+
+[**ContestScoresAgentsPagedList**](ContestScoresAgentsPagedList)
+
+
+## getGamificationContestAgentsScoresMe
+
+
+
+> [ContestScoresAgentsPagedList](ContestScoresAgentsPagedList) getGamificationContestAgentsScoresMe(contestId, pageNumber, pageSize, workday, returnsView)
+
+Get Contest Scores for the requesting Agent/Supervisor
+
+
+
+Wraps GET /api/v2/gamification/contests/{contestId}/agents/scores/me  
+
+Requires ALL permissions: 
+
+* gamification:contest:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contestId: String = "" // The ID of the contest
+let pageNumber: Int = 0 // 
+let pageSize: Int = 0 // 
+let workday: Date = new Date(...) // Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let returnsView: GamificationAPI.ReturnsView_getGamificationContestAgentsScoresMe = GamificationAPI.ReturnsView_getGamificationContestAgentsScoresMe.enummember // Desired response results (Supervisor Only)
+
+// Code example
+GamificationAPI.getGamificationContestAgentsScoresMe(contestId: contestId, pageNumber: pageNumber, pageSize: pageSize, workday: workday, returnsView: returnsView) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationContestAgentsScoresMe was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contestId** | **String**| The ID of the contest | |
+| **pageNumber** | **Int**|  | [optional] |
+| **pageSize** | **Int**|  | [optional] |
+| **workday** | **Date**| Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **returnsView** | **String**| Desired response results (Supervisor Only) | [optional]<br />**Values**: all ("All"), topAndBottom ("TopAndBottom") |
+
+
+### Return type
+
+[**ContestScoresAgentsPagedList**](ContestScoresAgentsPagedList)
+
+
+## getGamificationContestAgentsScoresTrends
+
+
+
+> [ContestScoresGroupTrendList](ContestScoresGroupTrendList) getGamificationContestAgentsScoresTrends(contestId)
+
+Get a Contest Score Trend (Average Trend)
+
+
+
+Wraps GET /api/v2/gamification/contests/{contestId}/agents/scores/trends  
+
+Requires ANY permissions: 
+
+* gamification:contest:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contestId: String = "" // The ID of the contest
+
+// Code example
+GamificationAPI.getGamificationContestAgentsScoresTrends(contestId: contestId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationContestAgentsScoresTrends was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contestId** | **String**| The ID of the contest | |
+
+
+### Return type
+
+[**ContestScoresGroupTrendList**](ContestScoresGroupTrendList)
+
+
+## getGamificationContestAgentsScoresTrendsMe
+
+
+
+> [ContestScoresAgentTrendList](ContestScoresAgentTrendList) getGamificationContestAgentsScoresTrendsMe(contestId)
+
+Get a Contest Score Trend for the requesting Agent
+
+
+
+Wraps GET /api/v2/gamification/contests/{contestId}/agents/scores/trends/me  
+
+Requires ANY permissions: 
+
+* gamification:contest:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contestId: String = "" // The ID of the contest
+
+// Code example
+GamificationAPI.getGamificationContestAgentsScoresTrendsMe(contestId: contestId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationContestAgentsScoresTrendsMe was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contestId** | **String**| The ID of the contest | |
+
+
+### Return type
+
+[**ContestScoresAgentTrendList**](ContestScoresAgentTrendList)
+
+
+## getGamificationContestPrizeimage
+
+
+
+> [PrizeImages](PrizeImages) getGamificationContestPrizeimage(contestId, prizeImageId)
+
+Get a Contest Prize Image by Id
+
+
+
+Wraps GET /api/v2/gamification/contests/{contestId}/prizeimages/{prizeImageId}  
+
+Requires ANY permissions: 
+
+* gamification:contest:view
+* gamification:contest:viewAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contestId: String = "" // The ID of the contest
+let prizeImageId: String = "" // The ID of the prize image
+
+// Code example
+GamificationAPI.getGamificationContestPrizeimage(contestId: contestId, prizeImageId: prizeImageId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationContestPrizeimage was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contestId** | **String**| The ID of the contest | |
+| **prizeImageId** | **String**| The ID of the prize image | |
+
+
+### Return type
+
+[**PrizeImages**](PrizeImages)
+
+
+## getGamificationContests
+
+
+
+> [GetContestsEssentialsListing](GetContestsEssentialsListing) getGamificationContests(pageNumber, pageSize, dateStart, dateEnd, status, sortBy, sortOrder)
+
+Get a List of Contests (Admin)
+
+
+
+Wraps GET /api/v2/gamification/contests  
+
+Requires ANY permissions: 
+
+* gamification:contest:viewAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // 
+let pageSize: Int = 0 // 
+let dateStart: Date = new Date(...) // Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let dateEnd: Date = new Date(...) // End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let status: [String] = [""] // 
+let sortBy: GamificationAPI.SortBy_getGamificationContests = GamificationAPI.SortBy_getGamificationContests.enummember // 
+let sortOrder: GamificationAPI.SortOrder_getGamificationContests = GamificationAPI.SortOrder_getGamificationContests.enummember // 
+
+// Code example
+GamificationAPI.getGamificationContests(pageNumber: pageNumber, pageSize: pageSize, dateStart: dateStart, dateEnd: dateEnd, status: status, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationContests was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**|  | [optional] |
+| **pageSize** | **Int**|  | [optional] |
+| **dateStart** | **Date**| Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **dateEnd** | **Date**| End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **status** | [**[String]**](String)|  | [optional]<br />**Values**: upcoming ("Upcoming"), ongoing ("Ongoing"), pending ("Pending"), recentlyCompleted ("RecentlyCompleted"), completed ("Completed"), cancelled ("Cancelled") |
+| **sortBy** | **String**|  | [optional]<br />**Values**: title ("title"), datestart ("dateStart"), dateend ("dateEnd"), datefinalized ("dateFinalized"), status ("status"), profile ("profile"), participantcount ("participantCount") |
+| **sortOrder** | **String**|  | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
+
+
+### Return type
+
+[**GetContestsEssentialsListing**](GetContestsEssentialsListing)
+
+
+## getGamificationContestsMe
+
+
+
+> [GetContestsEssentialsListing](GetContestsEssentialsListing) getGamificationContestsMe(pageNumber, pageSize, dateStart, dateEnd, status, sortBy, sortOrder, view)
+
+Get a List of Contests (Agent/Supervisor)
+
+
+
+Wraps GET /api/v2/gamification/contests/me  
+
+Requires ALL permissions: 
+
+* gamification:contest:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // 
+let pageSize: Int = 0 // 
+let dateStart: Date = new Date(...) // Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let dateEnd: Date = new Date(...) // End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let status: [String] = [""] // 
+let sortBy: GamificationAPI.SortBy_getGamificationContestsMe = GamificationAPI.SortBy_getGamificationContestsMe.enummember // 
+let sortOrder: GamificationAPI.SortOrder_getGamificationContestsMe = GamificationAPI.SortOrder_getGamificationContestsMe.enummember // 
+let view: GamificationAPI.View_getGamificationContestsMe = GamificationAPI.View_getGamificationContestsMe.enummember // 
+
+// Code example
+GamificationAPI.getGamificationContestsMe(pageNumber: pageNumber, pageSize: pageSize, dateStart: dateStart, dateEnd: dateEnd, status: status, sortBy: sortBy, sortOrder: sortOrder, view: view) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationContestsMe was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**|  | [optional] |
+| **pageSize** | **Int**|  | [optional] |
+| **dateStart** | **Date**| Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **dateEnd** | **Date**| End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **status** | [**[String]**](String)|  | [optional]<br />**Values**: upcoming ("Upcoming"), ongoing ("Ongoing"), pending ("Pending"), recentlyCompleted ("RecentlyCompleted"), completed ("Completed"), cancelled ("Cancelled") |
+| **sortBy** | **String**|  | [optional]<br />**Values**: title ("title"), datestart ("dateStart"), dateend ("dateEnd"), datefinalized ("dateFinalized"), status ("status"), profile ("profile"), participantcount ("participantCount") |
+| **sortOrder** | **String**|  | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
+| **view** | **String**|  | [optional]<br />**Values**: participant ("participant"), creator ("creator") |
+
+
+### Return type
+
+[**GetContestsEssentialsListing**](GetContestsEssentialsListing)
 
 
 ## getGamificationInsights
@@ -2799,6 +3307,59 @@ GamificationAPI.patchEmployeeperformanceExternalmetricsDefinition(metricId: metr
 [**ExternalMetricDefinition**](ExternalMetricDefinition)
 
 
+## patchGamificationContest
+
+
+
+> [ContestsResponse](ContestsResponse) patchGamificationContest(contestId, body)
+
+Finalize a Contest by Id
+
+
+
+Wraps PATCH /api/v2/gamification/contests/{contestId}  
+
+Requires ANY permissions: 
+
+* gamification:contestStatus:edit
+* gamification:contestStatus:editAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contestId: String = "" // The ID of the contest
+let body: ContestsFinalizeRequest = new ContestsFinalizeRequest(...) // Finalize Contest
+
+// Code example
+GamificationAPI.patchGamificationContest(contestId: contestId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.patchGamificationContest was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contestId** | **String**| The ID of the contest | |
+| **body** | [**ContestsFinalizeRequest**](ContestsFinalizeRequest)| Finalize Contest | |
+
+
+### Return type
+
+[**ContestsResponse**](ContestsResponse)
+
+
 ## postEmployeeperformanceExternalmetricsData
 
 
@@ -2897,6 +3458,106 @@ GamificationAPI.postEmployeeperformanceExternalmetricsDefinitions(body: body) { 
 ### Return type
 
 [**ExternalMetricDefinition**](ExternalMetricDefinition)
+
+
+## postGamificationContests
+
+
+
+> [ContestsResponse](ContestsResponse) postGamificationContests(body)
+
+Creates a Contest
+
+
+
+Wraps POST /api/v2/gamification/contests  
+
+Requires ANY permissions: 
+
+* gamification:contest:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ContestsCreateRequest = new ContestsCreateRequest(...) // Create Contest
+
+// Code example
+GamificationAPI.postGamificationContests(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.postGamificationContests was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ContestsCreateRequest**](ContestsCreateRequest)| Create Contest | |
+
+
+### Return type
+
+[**ContestsResponse**](ContestsResponse)
+
+
+## postGamificationContestsUploadsPrizeimages
+
+
+
+> [UploadUrlResponse](UploadUrlResponse) postGamificationContestsUploadsPrizeimages(body)
+
+Generates pre-signed URL to upload a prize image for gamification contests
+
+
+
+Wraps POST /api/v2/gamification/contests/uploads/prizeimages  
+
+Requires ALL permissions: 
+
+* gamification:contestPrizeImage:upload
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: GamificationContestPrizeImageUploadUrlRequest = new GamificationContestPrizeImageUploadUrlRequest(...) // query
+
+// Code example
+GamificationAPI.postGamificationContestsUploadsPrizeimages(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.postGamificationContestsUploadsPrizeimages was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**GamificationContestPrizeImageUploadUrlRequest**](GamificationContestPrizeImageUploadUrlRequest)| query | |
+
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse)
 
 
 ## postGamificationProfileActivate
@@ -3362,6 +4023,59 @@ GamificationAPI.postGamificationProfilesUsersMeQuery(body: body) { (response, er
 [**UserProfilesInDateRange**](UserProfilesInDateRange)
 
 
+## putGamificationContest
+
+
+
+> [ContestsResponse](ContestsResponse) putGamificationContest(contestId, body)
+
+Update a Contest by Id
+
+
+
+Wraps PUT /api/v2/gamification/contests/{contestId}  
+
+Requires ANY permissions: 
+
+* gamification:contest:edit
+* gamification:contest:editAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contestId: String = "" // The ID of the contest
+let body: ContestsCreateRequest = new ContestsCreateRequest(...) // Contest
+
+// Code example
+GamificationAPI.putGamificationContest(contestId: contestId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.putGamificationContest was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contestId** | **String**| The ID of the contest | |
+| **body** | [**ContestsCreateRequest**](ContestsCreateRequest)| Contest | |
+
+
+### Return type
+
+[**ContestsResponse**](ContestsResponse)
+
+
 ## putGamificationProfile
 
 
@@ -3518,4 +4232,4 @@ GamificationAPI.putGamificationStatus(status: status) { (response, error) in
 [**GamificationStatus**](GamificationStatus)
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

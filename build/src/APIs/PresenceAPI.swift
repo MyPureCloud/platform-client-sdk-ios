@@ -18,8 +18,8 @@ open class PresenceAPI {
      - parameter definitionId: (path) Presence Definition ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteDivisionBasedPresenceDefinition(definitionId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        let requestBuilder = deleteDivisionBasedPresenceDefinitionWithRequestBuilder(definitionId: definitionId)
+    open class func deletePresenceDefinition0(definitionId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deletePresenceDefinition0WithRequestBuilder(definitionId: definitionId)
         requestBuilder.execute { (response: Response<Void>?, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -40,7 +40,7 @@ open class PresenceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteDivisionBasedPresenceDefinitionWithRequestBuilder(definitionId: String) -> RequestBuilder<Void> {        
+    open class func deletePresenceDefinition0WithRequestBuilder(definitionId: String) -> RequestBuilder<Void> {        
         var path = "/api/v2/presence/definitions/{definitionId}"
         let definitionIdPreEscape = "\(definitionId)"
         let definitionIdPostEscape = definitionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -148,7 +148,7 @@ open class PresenceAPI {
     
     
     
-    public enum LocaleCode_getDivisionBasedPresenceDefinition: String { 
+    public enum LocaleCode_getPresenceDefinition0: String { 
         case all = "ALL"
         case he = "he"
         case fr = "fr"
@@ -184,8 +184,8 @@ open class PresenceAPI {
      - parameter localeCode: (query) The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getDivisionBasedPresenceDefinition(definitionId: String, localeCode: LocaleCode_getDivisionBasedPresenceDefinition? = nil, completion: @escaping ((_ data: OrganizationPresenceDefinition?,_ error: Error?) -> Void)) {
-        let requestBuilder = getDivisionBasedPresenceDefinitionWithRequestBuilder(definitionId: definitionId, localeCode: localeCode)
+    open class func getPresenceDefinition0(definitionId: String, localeCode: LocaleCode_getPresenceDefinition0? = nil, completion: @escaping ((_ data: OrganizationPresenceDefinition?,_ error: Error?) -> Void)) {
+        let requestBuilder = getPresenceDefinition0WithRequestBuilder(definitionId: definitionId, localeCode: localeCode)
         requestBuilder.execute { (response: Response<OrganizationPresenceDefinition>?, error) -> Void in
             do {
                 if let e = error {
@@ -226,7 +226,7 @@ open class PresenceAPI {
 
      - returns: RequestBuilder<OrganizationPresenceDefinition> 
      */
-    open class func getDivisionBasedPresenceDefinitionWithRequestBuilder(definitionId: String, localeCode: LocaleCode_getDivisionBasedPresenceDefinition? = nil) -> RequestBuilder<OrganizationPresenceDefinition> {        
+    open class func getPresenceDefinition0WithRequestBuilder(definitionId: String, localeCode: LocaleCode_getPresenceDefinition0? = nil) -> RequestBuilder<OrganizationPresenceDefinition> {        
         var path = "/api/v2/presence/definitions/{definitionId}"
         let definitionIdPreEscape = "\(definitionId)"
         let definitionIdPostEscape = definitionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -249,7 +249,7 @@ open class PresenceAPI {
     
     
     
-    public enum LocaleCode_getDivisionBasedPresenceDefinitions: String { 
+    public enum LocaleCode_getPresenceDefinitions0: String { 
         case all = "ALL"
         case he = "he"
         case fr = "fr"
@@ -286,8 +286,8 @@ open class PresenceAPI {
      - parameter localeCode: (query) The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getDivisionBasedPresenceDefinitions(deactivated: String? = nil, divisionId: [String]? = nil, localeCode: LocaleCode_getDivisionBasedPresenceDefinitions? = nil, completion: @escaping ((_ data: OrganizationPresenceDefinitionEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getDivisionBasedPresenceDefinitionsWithRequestBuilder(deactivated: deactivated, divisionId: divisionId, localeCode: localeCode)
+    open class func getPresenceDefinitions0(deactivated: String? = nil, divisionId: [String]? = nil, localeCode: LocaleCode_getPresenceDefinitions0? = nil, completion: @escaping ((_ data: OrganizationPresenceDefinitionEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getPresenceDefinitions0WithRequestBuilder(deactivated: deactivated, divisionId: divisionId, localeCode: localeCode)
         requestBuilder.execute { (response: Response<OrganizationPresenceDefinitionEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -344,7 +344,7 @@ open class PresenceAPI {
 
      - returns: RequestBuilder<OrganizationPresenceDefinitionEntityListing> 
      */
-    open class func getDivisionBasedPresenceDefinitionsWithRequestBuilder(deactivated: String? = nil, divisionId: [String]? = nil, localeCode: LocaleCode_getDivisionBasedPresenceDefinitions? = nil) -> RequestBuilder<OrganizationPresenceDefinitionEntityListing> {        
+    open class func getPresenceDefinitions0WithRequestBuilder(deactivated: String? = nil, divisionId: [String]? = nil, localeCode: LocaleCode_getPresenceDefinitions0? = nil) -> RequestBuilder<OrganizationPresenceDefinitionEntityListing> {        
         let path = "/api/v2/presence/definitions"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -718,6 +718,7 @@ open class PresenceAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -1019,6 +1020,7 @@ open class PresenceAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -1388,6 +1390,7 @@ open class PresenceAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -1689,6 +1692,7 @@ open class PresenceAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -1988,6 +1992,7 @@ open class PresenceAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -2289,6 +2294,7 @@ open class PresenceAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -3032,8 +3038,8 @@ open class PresenceAPI {
      - parameter body: (body) The Presence Definition to create 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postDivisionBasedPresenceDefinitions(body: OrganizationPresenceDefinition, completion: @escaping ((_ data: OrganizationPresenceDefinition?,_ error: Error?) -> Void)) {
-        let requestBuilder = postDivisionBasedPresenceDefinitionsWithRequestBuilder(body: body)
+    open class func postPresenceDefinitions0(body: OrganizationPresenceDefinition, completion: @escaping ((_ data: OrganizationPresenceDefinition?,_ error: Error?) -> Void)) {
+        let requestBuilder = postPresenceDefinitions0WithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<OrganizationPresenceDefinition>?, error) -> Void in
             do {
                 if let e = error {
@@ -3073,7 +3079,7 @@ open class PresenceAPI {
 
      - returns: RequestBuilder<OrganizationPresenceDefinition> 
      */
-    open class func postDivisionBasedPresenceDefinitionsWithRequestBuilder(body: OrganizationPresenceDefinition) -> RequestBuilder<OrganizationPresenceDefinition> {        
+    open class func postPresenceDefinitions0WithRequestBuilder(body: OrganizationPresenceDefinition) -> RequestBuilder<OrganizationPresenceDefinition> {        
         let path = "/api/v2/presence/definitions"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -3256,6 +3262,7 @@ open class PresenceAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -3557,6 +3564,7 @@ open class PresenceAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -3803,8 +3811,8 @@ open class PresenceAPI {
      - parameter body: (body) The updated Presence Definition 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putDivisionBasedPresenceDefinition(definitionId: String, body: OrganizationPresenceDefinition, completion: @escaping ((_ data: OrganizationPresenceDefinition?,_ error: Error?) -> Void)) {
-        let requestBuilder = putDivisionBasedPresenceDefinitionWithRequestBuilder(definitionId: definitionId, body: body)
+    open class func putPresenceDefinition0(definitionId: String, body: OrganizationPresenceDefinition, completion: @escaping ((_ data: OrganizationPresenceDefinition?,_ error: Error?) -> Void)) {
+        let requestBuilder = putPresenceDefinition0WithRequestBuilder(definitionId: definitionId, body: body)
         requestBuilder.execute { (response: Response<OrganizationPresenceDefinition>?, error) -> Void in
             do {
                 if let e = error {
@@ -3845,7 +3853,7 @@ open class PresenceAPI {
 
      - returns: RequestBuilder<OrganizationPresenceDefinition> 
      */
-    open class func putDivisionBasedPresenceDefinitionWithRequestBuilder(definitionId: String, body: OrganizationPresenceDefinition) -> RequestBuilder<OrganizationPresenceDefinition> {        
+    open class func putPresenceDefinition0WithRequestBuilder(definitionId: String, body: OrganizationPresenceDefinition) -> RequestBuilder<OrganizationPresenceDefinition> {        
         var path = "/api/v2/presence/definitions/{definitionId}"
         let definitionIdPreEscape = "\(definitionId)"
         let definitionIdPostEscape = definitionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4159,6 +4167,7 @@ open class PresenceAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -4460,6 +4469,7 @@ open class PresenceAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",

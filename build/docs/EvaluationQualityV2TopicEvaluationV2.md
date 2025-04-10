@@ -33,17 +33,17 @@
 | **previousAssigneeUserId** | **String** |  | [optional] |
 | **assigneeApplicable** | **Bool** |  | [optional] |
 | **evaluationContextId** | **String** |  | [optional] |
-| **disputeCount** | **Int** |  | [optional] |
-| **version** | **Int** |  | [optional] |
+| **disputeCount** | **Int64** |  | [optional] |
+| **version** | **Int64** |  | [optional] |
 | **previousStatus** | **String** |  | [optional] |
 | **declinedReview** | **Bool** |  | [optional] |
 | **retractedEvaluation** | [**EvaluationQualityV2TopicEvaluationReference**](EvaluationQualityV2TopicEvaluationReference) |  | [optional] |
-| **rescoreCount** | **Int** |  | [optional] |
+| **rescoreCount** | **Int64** |  | [optional] |
 | **evaluatorCommentHasUpdated** | **Bool** |  | [optional] |
 | **agentCommentHasUpdated** | **Bool** |  | [optional] |
-| **previousRescoreCount** | **Int** |  | [optional] |
+| **previousRescoreCount** | **Int64** |  | [optional] |
 | **previousEvaluatorUserId** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

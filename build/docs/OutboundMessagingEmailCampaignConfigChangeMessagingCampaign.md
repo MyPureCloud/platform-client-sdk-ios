@@ -13,7 +13,7 @@
 | **contactListFilters** | [**[OutboundMessagingEmailCampaignConfigChangeUriReference]**]([OutboundMessagingEmailCampaignConfigChangeUriReference]) | The contact list filters to check before sending a message for this messaging campaign. | [optional] |
 | **alwaysRunning** | **Bool** | Whether this messaging campaign is always running. | [optional] |
 | **contactSorts** | [**[OutboundMessagingEmailCampaignConfigChangeContactSort]**]([OutboundMessagingEmailCampaignConfigChangeContactSort]) | The order in which to sort contacts for dialing, based on up to four columns. | [optional] |
-| **messagesPerMinute** | **Int** | How many messages this messaging campaign will send per minute. | [optional] |
+| **messagesPerMinute** | **Int64** | How many messages this messaging campaign will send per minute. | [optional] |
 | **ruleSets** | [**[OutboundMessagingEmailCampaignConfigChangeUriReference]**]([OutboundMessagingEmailCampaignConfigChangeUriReference]) |  | [optional] |
 | **smsConfig** | [**OutboundMessagingEmailCampaignConfigChangeSmsConfig**](OutboundMessagingEmailCampaignConfigChangeSmsConfig) |  | [optional] |
 | **emailConfig** | [**OutboundMessagingEmailCampaignConfigChangeEmailConfig**](OutboundMessagingEmailCampaignConfigChangeEmailConfig) |  | [optional] |
@@ -23,9 +23,9 @@
 | **name** | **String** | The UI-visible name of the object | [optional] |
 | **dateCreated** | [**Date**](Date) | Creation time of the entity | [optional] |
 | **dateModified** | [**Date**](Date) | Last modified time of the entity | [optional] |
-| **version** | **Int** | Required for updates, must match the version number of the most recent update | [optional] |
+| **version** | **Int64** | Required for updates, must match the version number of the most recent update | [optional] |
 | **division** | [**OutboundMessagingEmailCampaignConfigChangeUriReference**](OutboundMessagingEmailCampaignConfigChangeUriReference) | A UriReference for a resource | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

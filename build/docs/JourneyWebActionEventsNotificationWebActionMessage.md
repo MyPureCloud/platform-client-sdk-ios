@@ -19,8 +19,8 @@
 | **geolocation** | [**JourneyWebActionEventsNotificationGeoLocation**](JourneyWebActionEventsNotificationGeoLocation) |  | [optional] |
 | **mktCampaign** | [**JourneyWebActionEventsNotificationMktCampaign**](JourneyWebActionEventsNotificationMktCampaign) |  | [optional] |
 | **visitReferrer** | [**JourneyWebActionEventsNotificationReferrer**](JourneyWebActionEventsNotificationReferrer) |  | [optional] |
-| **timeToDisposition** | **Int** |  | [optional] |
+| **timeToDisposition** | **Int64** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

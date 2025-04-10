@@ -8,9 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **key** | **String** |  | [optional] |
 | **namespace** | **String** |  | [optional] |
-| **value** | **Int** |  | [optional] |
+| **value** | **Int64** |  | [optional] |
 | **documented** | **Bool** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

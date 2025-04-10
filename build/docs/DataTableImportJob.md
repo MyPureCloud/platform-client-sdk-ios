@@ -19,8 +19,9 @@ State information for an import job of rows to a datatable
 | **countRecordsUpdated** | **Int** | The current count of the number of records processed | [optional] |
 | **countRecordsDeleted** | **Int** | The current count of the number of records deleted | [optional] |
 | **countRecordsFailed** | **Int** | The current count of the number of records that failed to import | [optional] |
+| **uploadHeaders** | **[String:String]** | Required headers when uploading a file through PUT request to the URL in the &#39;uploadURI&#39; field | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

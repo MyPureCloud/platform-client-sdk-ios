@@ -78,6 +78,62 @@ open class UploadsAPI {
 
     
     
+    /**
+     Generates pre-signed URL to upload a prize image for gamification contests
+     
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postGamificationContestsUploadsPrizeimages(body: GamificationContestPrizeImageUploadUrlRequest, completion: @escaping ((_ data: UploadUrlResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGamificationContestsUploadsPrizeimagesWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<UploadUrlResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Generates pre-signed URL to upload a prize image for gamification contests
+     - POST /api/v2/gamification/contests/uploads/prizeimages
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "headers"
+  },
+  "uploadKey" : "uploadKey",
+  "url" : "url"
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<UploadUrlResponse> 
+     */
+    open class func postGamificationContestsUploadsPrizeimagesWithRequestBuilder(body: GamificationContestPrizeImageUploadUrlRequest) -> RequestBuilder<UploadUrlResponse> {        
+        let path = "/api/v2/gamification/contests/uploads/prizeimages"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**

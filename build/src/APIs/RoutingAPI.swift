@@ -1857,7 +1857,7 @@ open class RoutingAPI {
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter excludeStatus: (query) Exclude MX record data (optional)
-     - parameter filter: (query) Optional search filter (optional)
+     - parameter filter: (query) Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getRoutingEmailDomains(pageSize: Int? = nil, pageNumber: Int? = nil, excludeStatus: Bool? = nil, filter: String? = nil, completion: @escaping ((_ data: InboundDomainEntityListing?,_ error: Error?) -> Void)) {
@@ -1916,7 +1916,7 @@ open class RoutingAPI {
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter excludeStatus: (query) Exclude MX record data (optional)
-     - parameter filter: (query) Optional search filter (optional)
+     - parameter filter: (query) Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)
 
      - returns: RequestBuilder<InboundDomainEntityListing> 
      */
@@ -2127,14 +2127,20 @@ open class RoutingAPI {
 
     
     
+    
+    
+    
+    
     /**
      Get outbound domains
      
-     - parameter filter: (query) Optional search filter (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter filter: (query) Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingEmailOutboundDomains(filter: String? = nil, completion: @escaping ((_ data: OutboundDomainEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingEmailOutboundDomainsWithRequestBuilder(filter: filter)
+    open class func getRoutingEmailOutboundDomains(pageSize: Int? = nil, pageNumber: Int? = nil, filter: String? = nil, completion: @escaping ((_ data: OutboundDomainEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailOutboundDomainsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, filter: filter)
         requestBuilder.execute { (response: Response<OutboundDomainEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -2184,17 +2190,21 @@ open class RoutingAPI {
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
-     - parameter filter: (query) Optional search filter (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter filter: (query) Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)
 
      - returns: RequestBuilder<OutboundDomainEntityListing> 
      */
-    open class func getRoutingEmailOutboundDomainsWithRequestBuilder(filter: String? = nil) -> RequestBuilder<OutboundDomainEntityListing> {        
+    open class func getRoutingEmailOutboundDomainsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, filter: String? = nil) -> RequestBuilder<OutboundDomainEntityListing> {        
         let path = "/api/v2/routing/email/outbound/domains"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON(), 
             "filter": filter
         ])
 
@@ -3762,6 +3772,7 @@ open class RoutingAPI {
         case employerinfo = "employerInfo"
         case biography = "biography"
         case datelastlogin = "dateLastLogin"
+        case datewelcomesent = "dateWelcomeSent"
     }
     
     
@@ -3920,6 +3931,7 @@ open class RoutingAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -4226,6 +4238,7 @@ open class RoutingAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -4533,6 +4546,7 @@ open class RoutingAPI {
         case employerinfo = "employerInfo"
         case biography = "biography"
         case datelastlogin = "dateLastLogin"
+        case datewelcomesent = "dateWelcomeSent"
     }
     
     
@@ -4685,6 +4699,7 @@ open class RoutingAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -4991,6 +5006,7 @@ open class RoutingAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -9776,6 +9792,7 @@ open class RoutingAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -10082,6 +10099,7 @@ open class RoutingAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -10511,6 +10529,7 @@ open class RoutingAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -10817,6 +10836,7 @@ open class RoutingAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",

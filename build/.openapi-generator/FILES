@@ -370,6 +370,7 @@ docs/AuthorizationAPI.json
 docs/AuthorizationAPI.md
 docs/AuthorizationSettings.md
 docs/AuthzDivision.md
+docs/AuthzDivisionCursorListing.md
 docs/AuthzDivisionEntityListing.md
 docs/AuthzDivisionGrantEntityListing.md
 docs/AuthzGrant.md
@@ -451,6 +452,7 @@ docs/BuAgentScheduleQueryResponse.md
 docs/BuAgentScheduleRescheduleResponse.md
 docs/BuAgentScheduleSearchResponse.md
 docs/BuAgentScheduleShift.md
+docs/BuAgentScheduleShiftRequest.md
 docs/BuAgentScheduleUpdate.md
 docs/BuAgentSchedulesQueryResponse.md
 docs/BuAgentSchedulesSearchResponse.md
@@ -899,6 +901,28 @@ docs/ContestDataMetrics.md
 docs/ContestDataPrizes.md
 docs/ContestDataWinners.md
 docs/ContestDataWinnersUsers.md
+docs/ContestDisqualifiedAgents.md
+docs/ContestMetricScore.md
+docs/ContestMetricScoreRanked.md
+docs/ContestMetrics.md
+docs/ContestPrizes.md
+docs/ContestProfile.md
+docs/ContestRequesingParticipantDailyInfo.md
+docs/ContestScore.md
+docs/ContestScoreRanked.md
+docs/ContestScoresAgentTrend.md
+docs/ContestScoresAgentTrendList.md
+docs/ContestScoresAgents.md
+docs/ContestScoresAgentsPagedList.md
+docs/ContestScoresGroupTrend.md
+docs/ContestScoresGroupTrendList.md
+docs/ContestUserRank.md
+docs/ContestWinners.md
+docs/ContestWinnersRequest.md
+docs/ContestsCreateRequest.md
+docs/ContestsEssentials.md
+docs/ContestsFinalizeRequest.md
+docs/ContestsResponse.md
 docs/Context.md
 docs/ContextEntity.md
 docs/ContextIntent.md
@@ -1014,11 +1038,13 @@ docs/ConversationContentCardAction.md
 docs/ConversationContentCarousel.md
 docs/ConversationContentDatePicker.md
 docs/ConversationContentDatePickerAvailableTime.md
+docs/ConversationContentInteractiveApplication.md
 docs/ConversationContentLocation.md
 docs/ConversationContentNotificationTemplate.md
 docs/ConversationContentQuickReply.md
 docs/ConversationContentQuickReplyV2.md
 docs/ConversationContentReaction.md
+docs/ConversationContentReceivedReplyMessage.md
 docs/ConversationContentStory.md
 docs/ConversationContentText.md
 docs/ConversationDeletionProtectionQuery.md
@@ -1563,6 +1589,7 @@ docs/DncListEntityListing.md
 docs/DncPatchCustomExclusionColumnsRequest.md
 docs/DncPatchEmailsRequest.md
 docs/DncPatchPhoneNumbersRequest.md
+docs/DncPatchWhatsAppNumbersRequest.md
 docs/DnclistDownloadReadyExportUri.md
 docs/DnclistDownloadReadyObject.md
 docs/DnclistImportStatusImportStatus.md
@@ -2129,6 +2156,7 @@ docs/GKNDocumentationSearchResponse.md
 docs/GSuite.md
 docs/GamificationAPI.json
 docs/GamificationAPI.md
+docs/GamificationContestPrizeImageUploadUrlRequest.md
 docs/GamificationScorecardChangeTopicEvaluationDetail.md
 docs/GamificationScorecardChangeTopicMetric.md
 docs/GamificationScorecardChangeTopicPerformanceMetric.md
@@ -2153,6 +2181,7 @@ docs/GeolocationSettings.md
 docs/GetAgentsWorkPlansRequest.md
 docs/GetAlertQuery.md
 docs/GetCelebrationListing.md
+docs/GetContestsEssentialsListing.md
 docs/GetFlowExecutionDataJobResult.md
 docs/GetMetricDefinitionsResponse.md
 docs/GetMetricResponse.md
@@ -3283,6 +3312,7 @@ docs/PlanningGroupList.md
 docs/PlanningGroupOutputs.md
 docs/PlanningGroupReference.md
 docs/PlanningPeriodSettings.md
+docs/PlanningPeriodShiftConstraints.md
 docs/Policy.md
 docs/PolicyActions.md
 docs/PolicyConditions.md
@@ -3322,6 +3352,7 @@ docs/PresenceEventOrganizationPresence.md
 docs/PresenceEventUserPresence.md
 docs/PresenceSettings.md
 docs/PresentedKnowledgeDocument.md
+docs/PrizeImages.md
 docs/ProcessAutomationAPI.json
 docs/ProcessAutomationAPI.md
 docs/ProcessScheduleUpdateUploadRequest.md
@@ -4326,6 +4357,8 @@ docs/TextbotsAPI.json
 docs/TextbotsAPI.md
 docs/Ticker.md
 docs/TimeAllowed.md
+docs/TimeAndDateSubCondition.md
+docs/TimeAndDateSubConditionRange.md
 docs/TimeInterval.md
 docs/TimeOffBalanceJobReference.md
 docs/TimeOffBalanceJobResponse.md
@@ -5255,7 +5288,6 @@ docs/deleteConversationsMessagingSettingsDefault-example.txt
 docs/deleteConversationsMessagingSupportedcontentSupportedContentId-example.txt
 docs/deleteDataprivacyMaskingrule-example.txt
 docs/deleteDiagnosticsLogcaptureBrowserUser-example.txt
-docs/deleteDivisionBasedPresenceDefinition-example.txt
 docs/deleteEmailsSettingsThreading-example.txt
 docs/deleteEmailsSettingsThreading-example.txt
 docs/deleteEmployeeengagementCelebration-example.txt
@@ -5278,6 +5310,7 @@ docs/deleteFlowsDatatable-example.txt
 docs/deleteFlowsDatatableRow-example.txt
 docs/deleteFlowsInstancesSettingsLoglevelsDefault-example.txt
 docs/deleteFlowsMilestone-example.txt
+docs/deleteGamificationContest-example.txt
 docs/deleteGreeting-example.txt
 docs/deleteGroup-example.txt
 docs/deleteGroupMembers-example.txt
@@ -5361,6 +5394,7 @@ docs/deleteOutboundDnclist-example.txt
 docs/deleteOutboundDnclistCustomexclusioncolumns-example.txt
 docs/deleteOutboundDnclistEmailaddresses-example.txt
 docs/deleteOutboundDnclistPhonenumbers-example.txt
+docs/deleteOutboundDnclistWhatsappnumbers-example.txt
 docs/deleteOutboundFilespecificationtemplate-example.txt
 docs/deleteOutboundFilespecificationtemplatesBulk-example.txt
 docs/deleteOutboundImporttemplate-example.txt
@@ -5373,6 +5407,7 @@ docs/deleteOutboundSchedulesEmailcampaign-example.txt
 docs/deleteOutboundSchedulesMessagingcampaign-example.txt
 docs/deleteOutboundSchedulesSequence-example.txt
 docs/deleteOutboundSequence-example.txt
+docs/deletePresenceDefinition0-example.txt
 docs/deletePresenceSource-example.txt
 docs/deletePresencedefinition-example.txt
 docs/deleteProcessautomationTrigger-example.txt
@@ -5572,10 +5607,14 @@ docs/getAuthorizationDivision-example.txt
 docs/getAuthorizationDivisionGrants-example.txt
 docs/getAuthorizationDivisions-example.txt
 docs/getAuthorizationDivisions-example.txt
+docs/getAuthorizationDivisionsDeleted-example.txt
+docs/getAuthorizationDivisionsDeleted-example.txt
 docs/getAuthorizationDivisionsHome-example.txt
 docs/getAuthorizationDivisionsHome-example.txt
 docs/getAuthorizationDivisionsLimit-example.txt
 docs/getAuthorizationDivisionsLimit-example.txt
+docs/getAuthorizationDivisionsQuery-example.txt
+docs/getAuthorizationDivisionsQuery-example.txt
 docs/getAuthorizationDivisionspermittedMe-example.txt
 docs/getAuthorizationDivisionspermittedMe-example.txt
 docs/getAuthorizationDivisionspermittedPagedMe-example.txt
@@ -5735,8 +5774,6 @@ docs/getDate-example.txt
 docs/getDiagnosticsLogcaptureBrowserEntriesDownloadJob-example.txt
 docs/getDiagnosticsLogcaptureBrowserUser-example.txt
 docs/getDiagnosticsLogcaptureBrowserUsers-example.txt
-docs/getDivisionBasedPresenceDefinition-example.txt
-docs/getDivisionBasedPresenceDefinitions-example.txt
 docs/getDocumentationGknSearch-example.txt
 docs/getDocumentationSearch-example.txt
 docs/getDownload-example.txt
@@ -5762,6 +5799,9 @@ docs/getExternalcontactsContactsSchema-example.txt
 docs/getExternalcontactsContactsSchemaVersion-example.txt
 docs/getExternalcontactsContactsSchemaVersions-example.txt
 docs/getExternalcontactsContactsSchemas-example.txt
+docs/getExternalcontactsContactsSchemasCoretype-example.txt
+docs/getExternalcontactsContactsSchemasCoretypes-example.txt
+docs/getExternalcontactsContactsSchemasLimits-example.txt
 docs/getExternalcontactsExternalsource-example.txt
 docs/getExternalcontactsExternalsources-example.txt
 docs/getExternalcontactsImportCsvSetting-example.txt
@@ -5782,6 +5822,9 @@ docs/getExternalcontactsOrganizationsSchema-example.txt
 docs/getExternalcontactsOrganizationsSchemaVersion-example.txt
 docs/getExternalcontactsOrganizationsSchemaVersions-example.txt
 docs/getExternalcontactsOrganizationsSchemas-example.txt
+docs/getExternalcontactsOrganizationsSchemasCoretype-example.txt
+docs/getExternalcontactsOrganizationsSchemasCoretypes-example.txt
+docs/getExternalcontactsOrganizationsSchemasLimits-example.txt
 docs/getExternalcontactsRelationship-example.txt
 docs/getExternalcontactsReversewhitepageslookup-example.txt
 docs/getExternalcontactsScanContacts-example.txt
@@ -5833,6 +5876,14 @@ docs/getFlowsMilestonesDivisionviews-example.txt
 docs/getFlowsOutcome-example.txt
 docs/getFlowsOutcomes-example.txt
 docs/getFlowsOutcomesDivisionviews-example.txt
+docs/getGamificationContest-example.txt
+docs/getGamificationContestAgentsScores-example.txt
+docs/getGamificationContestAgentsScoresMe-example.txt
+docs/getGamificationContestAgentsScoresTrends-example.txt
+docs/getGamificationContestAgentsScoresTrendsMe-example.txt
+docs/getGamificationContestPrizeimage-example.txt
+docs/getGamificationContests-example.txt
+docs/getGamificationContestsMe-example.txt
 docs/getGamificationInsights-example.txt
 docs/getGamificationInsightsDetails-example.txt
 docs/getGamificationInsightsGroupsTrends-example.txt
@@ -6218,6 +6269,8 @@ docs/getOutboundSequence-example.txt
 docs/getOutboundSequences-example.txt
 docs/getOutboundSettings-example.txt
 docs/getOutboundWrapupcodemappings-example.txt
+docs/getPresenceDefinition0-example.txt
+docs/getPresenceDefinitions0-example.txt
 docs/getPresenceSettings-example.txt
 docs/getPresenceSource-example.txt
 docs/getPresenceSources-example.txt
@@ -6441,6 +6494,9 @@ docs/getTaskmanagementWorkitemsSchema-example.txt
 docs/getTaskmanagementWorkitemsSchemaVersion-example.txt
 docs/getTaskmanagementWorkitemsSchemaVersions-example.txt
 docs/getTaskmanagementWorkitemsSchemas-example.txt
+docs/getTaskmanagementWorkitemsSchemasCoretype-example.txt
+docs/getTaskmanagementWorkitemsSchemasCoretypes-example.txt
+docs/getTaskmanagementWorkitemsSchemasLimits-example.txt
 docs/getTaskmanagementWorktype-example.txt
 docs/getTaskmanagementWorktypeFlowsDatebasedRule-example.txt
 docs/getTaskmanagementWorktypeFlowsDatebasedRules-example.txt
@@ -6803,6 +6859,7 @@ docs/patchEmployeeengagementCelebration-example.txt
 docs/patchEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/patchExternalcontactsContactIdentifiers-example.txt
 docs/patchFlowsInstancesSettingsExecutiondata-example.txt
+docs/patchGamificationContest-example.txt
 docs/patchGeolocationsSettings-example.txt
 docs/patchIntegration-example.txt
 docs/patchIntegrationsAction-example.txt
@@ -6844,6 +6901,7 @@ docs/patchOutboundCampaign-example.txt
 docs/patchOutboundDnclistCustomexclusioncolumns-example.txt
 docs/patchOutboundDnclistEmailaddresses-example.txt
 docs/patchOutboundDnclistPhonenumbers-example.txt
+docs/patchOutboundDnclistWhatsappnumbers-example.txt
 docs/patchOutboundSettings-example.txt
 docs/patchQualityFormsSurvey-example.txt
 docs/patchRecordingCrossplatformMediaretentionpolicy-example.txt
@@ -7135,7 +7193,6 @@ docs/postDataprivacyMaskingrulesValidate-example.txt
 docs/postDiagnosticsLogcaptureBrowserEntriesDownloadJobs-example.txt
 docs/postDiagnosticsLogcaptureBrowserEntriesQuery-example.txt
 docs/postDiagnosticsLogcaptureBrowserUser-example.txt
-docs/postDivisionBasedPresenceDefinitions-example.txt
 docs/postDocumentationGknSearch-example.txt
 docs/postDocumentationSearch-example.txt
 docs/postEmployeeengagementRecognitions-example.txt
@@ -7199,6 +7256,9 @@ docs/postFlowsInstancesQuery-example.txt
 docs/postFlowsJobs-example.txt
 docs/postFlowsMilestones-example.txt
 docs/postFlowsOutcomes-example.txt
+docs/postGamificationContests-example.txt
+docs/postGamificationContestsUploadsPrizeimages-example.txt
+docs/postGamificationContestsUploadsPrizeimages-example.txt
 docs/postGamificationProfileActivate-example.txt
 docs/postGamificationProfileDeactivate-example.txt
 docs/postGamificationProfileMembers-example.txt
@@ -7380,6 +7440,7 @@ docs/postOutboundMessagingcampaigns-example.txt
 docs/postOutboundMessagingcampaignsProgress-example.txt
 docs/postOutboundRulesets-example.txt
 docs/postOutboundSequences-example.txt
+docs/postPresenceDefinitions0-example.txt
 docs/postPresenceSources-example.txt
 docs/postPresencedefinitions-example.txt
 docs/postProcessautomationTriggerTest-example.txt
@@ -7679,7 +7740,6 @@ docs/putConversationsMessagingThreadingtimeline-example.txt
 docs/putConversationsScreenshareRecordingstate-example.txt
 docs/putConversationsSocialRecordingstate-example.txt
 docs/putConversationsVideoRecordingstate-example.txt
-docs/putDivisionBasedPresenceDefinition-example.txt
 docs/putExternalcontactsContact-example.txt
 docs/putExternalcontactsContactNote-example.txt
 docs/putExternalcontactsContactsSchema-example.txt
@@ -7702,6 +7762,7 @@ docs/putFlowsDatatableRow-example.txt
 docs/putFlowsInstancesSettingsLoglevelsDefault-example.txt
 docs/putFlowsMilestone-example.txt
 docs/putFlowsOutcome-example.txt
+docs/putGamificationContest-example.txt
 docs/putGamificationProfile-example.txt
 docs/putGamificationProfileMetric-example.txt
 docs/putGamificationStatus-example.txt
@@ -7775,6 +7836,7 @@ docs/putOutboundSchedulesMessagingcampaign-example.txt
 docs/putOutboundSchedulesSequence-example.txt
 docs/putOutboundSequence-example.txt
 docs/putOutboundWrapupcodemappings-example.txt
+docs/putPresenceDefinition0-example.txt
 docs/putPresenceSettings-example.txt
 docs/putPresenceSource-example.txt
 docs/putPresenceUserPrimarysource-example.txt
@@ -8310,6 +8372,7 @@ src/Models/AuditTopicPropertyChange.swift
 src/Models/AuthenticationSettings.swift
 src/Models/AuthorizationSettings.swift
 src/Models/AuthzDivision.swift
+src/Models/AuthzDivisionCursorListing.swift
 src/Models/AuthzDivisionEntityListing.swift
 src/Models/AuthzDivisionGrantEntityListing.swift
 src/Models/AuthzGrant.swift
@@ -8389,6 +8452,7 @@ src/Models/BuAgentScheduleQueryResponse.swift
 src/Models/BuAgentScheduleRescheduleResponse.swift
 src/Models/BuAgentScheduleSearchResponse.swift
 src/Models/BuAgentScheduleShift.swift
+src/Models/BuAgentScheduleShiftRequest.swift
 src/Models/BuAgentScheduleUpdate.swift
 src/Models/BuAgentSchedulesQueryResponse.swift
 src/Models/BuAgentSchedulesSearchResponse.swift
@@ -8829,6 +8893,28 @@ src/Models/ContestDataMetrics.swift
 src/Models/ContestDataPrizes.swift
 src/Models/ContestDataWinners.swift
 src/Models/ContestDataWinnersUsers.swift
+src/Models/ContestDisqualifiedAgents.swift
+src/Models/ContestMetricScore.swift
+src/Models/ContestMetricScoreRanked.swift
+src/Models/ContestMetrics.swift
+src/Models/ContestPrizes.swift
+src/Models/ContestProfile.swift
+src/Models/ContestRequesingParticipantDailyInfo.swift
+src/Models/ContestScore.swift
+src/Models/ContestScoreRanked.swift
+src/Models/ContestScoresAgentTrend.swift
+src/Models/ContestScoresAgentTrendList.swift
+src/Models/ContestScoresAgents.swift
+src/Models/ContestScoresAgentsPagedList.swift
+src/Models/ContestScoresGroupTrend.swift
+src/Models/ContestScoresGroupTrendList.swift
+src/Models/ContestUserRank.swift
+src/Models/ContestWinners.swift
+src/Models/ContestWinnersRequest.swift
+src/Models/ContestsCreateRequest.swift
+src/Models/ContestsEssentials.swift
+src/Models/ContestsFinalizeRequest.swift
+src/Models/ContestsResponse.swift
 src/Models/Context.swift
 src/Models/ContextEntity.swift
 src/Models/ContextIntent.swift
@@ -8944,11 +9030,13 @@ src/Models/ConversationContentCardAction.swift
 src/Models/ConversationContentCarousel.swift
 src/Models/ConversationContentDatePicker.swift
 src/Models/ConversationContentDatePickerAvailableTime.swift
+src/Models/ConversationContentInteractiveApplication.swift
 src/Models/ConversationContentLocation.swift
 src/Models/ConversationContentNotificationTemplate.swift
 src/Models/ConversationContentQuickReply.swift
 src/Models/ConversationContentQuickReplyV2.swift
 src/Models/ConversationContentReaction.swift
+src/Models/ConversationContentReceivedReplyMessage.swift
 src/Models/ConversationContentStory.swift
 src/Models/ConversationContentText.swift
 src/Models/ConversationDeletionProtectionQuery.swift
@@ -9487,6 +9575,7 @@ src/Models/DncListEntityListing.swift
 src/Models/DncPatchCustomExclusionColumnsRequest.swift
 src/Models/DncPatchEmailsRequest.swift
 src/Models/DncPatchPhoneNumbersRequest.swift
+src/Models/DncPatchWhatsAppNumbersRequest.swift
 src/Models/DnclistDownloadReadyExportUri.swift
 src/Models/DnclistDownloadReadyObject.swift
 src/Models/DnclistImportStatusImportStatus.swift
@@ -10037,6 +10126,7 @@ src/Models/GKNDocumentationSearchCriteria.swift
 src/Models/GKNDocumentationSearchRequest.swift
 src/Models/GKNDocumentationSearchResponse.swift
 src/Models/GSuite.swift
+src/Models/GamificationContestPrizeImageUploadUrlRequest.swift
 src/Models/GamificationScorecardChangeTopicEvaluationDetail.swift
 src/Models/GamificationScorecardChangeTopicMetric.swift
 src/Models/GamificationScorecardChangeTopicPerformanceMetric.swift
@@ -10057,6 +10147,7 @@ src/Models/GeolocationSettings.swift
 src/Models/GetAgentsWorkPlansRequest.swift
 src/Models/GetAlertQuery.swift
 src/Models/GetCelebrationListing.swift
+src/Models/GetContestsEssentialsListing.swift
 src/Models/GetFlowExecutionDataJobResult.swift
 src/Models/GetMetricDefinitionsResponse.swift
 src/Models/GetMetricResponse.swift
@@ -11146,6 +11237,7 @@ src/Models/PlanningGroupList.swift
 src/Models/PlanningGroupOutputs.swift
 src/Models/PlanningGroupReference.swift
 src/Models/PlanningPeriodSettings.swift
+src/Models/PlanningPeriodShiftConstraints.swift
 src/Models/Policy.swift
 src/Models/PolicyActions.swift
 src/Models/PolicyConditions.swift
@@ -11183,6 +11275,7 @@ src/Models/PresenceEventOrganizationPresence.swift
 src/Models/PresenceEventUserPresence.swift
 src/Models/PresenceSettings.swift
 src/Models/PresentedKnowledgeDocument.swift
+src/Models/PrizeImages.swift
 src/Models/ProcessScheduleUpdateUploadRequest.swift
 src/Models/ProfileWithDateRange.swift
 src/Models/Program.swift
@@ -12147,6 +12240,8 @@ src/Models/TextMessageListing.swift
 src/Models/TextStyleProperties.swift
 src/Models/Ticker.swift
 src/Models/TimeAllowed.swift
+src/Models/TimeAndDateSubCondition.swift
+src/Models/TimeAndDateSubConditionRange.swift
 src/Models/TimeInterval.swift
 src/Models/TimeOffBalanceJobReference.swift
 src/Models/TimeOffBalanceJobResponse.swift

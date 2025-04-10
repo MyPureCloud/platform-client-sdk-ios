@@ -5370,6 +5370,25 @@
     "return": "AuthzDivisionEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet sortBy: String = \"\" // variable name requested to sort by\nlet expand: [String] = [\"\"] // variable name requested by expand list\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet objectCount: Bool = true // Include the count of objects contained in the division\nlet _id: [String] = [\"\"] // Optionally request specific divisions by their IDs\nlet name: String = \"\" // Search term to filter by division name\n\n// Retrieve a list of all divisions defined for the organization\nGetAuthorizationDivisionsRequest.getAuthorizationDivisions(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, objectCount: objectCount, _id: _id, name: name) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAuthorizationDivisionsRequest.getAuthorizationDivisions was successful\")\n        dump(response)\n    }\n}"
   },
+  "getauthorizationdivisionsdeleted": {
+    "operationId": "getauthorizationdivisionsdeleted",
+    "functionName": "getAuthorizationDivisionsDeleted",
+    "signature": "getAuthorizationDivisionsDeleted(pageNumber, pageSize)",
+    "parameters": [
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "AuthzDivisionEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\n\n// Get a list of soft deleted divisions for the org\nGetAuthorizationDivisionsDeletedRequest.getAuthorizationDivisionsDeleted(pageNumber: pageNumber, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAuthorizationDivisionsDeletedRequest.getAuthorizationDivisionsDeleted was successful\")\n        dump(response)\n    }\n}"
+  },
   "getauthorizationdivisionshome": {
     "operationId": "getauthorizationdivisionshome",
     "functionName": "getAuthorizationDivisionsHome",
@@ -5383,6 +5402,40 @@
     "signature": "getAuthorizationDivisionsLimit()",
     "return": "Int",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Returns the maximum allowed number of divisions.\nGetAuthorizationDivisionsLimitRequest.getAuthorizationDivisionsLimit() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAuthorizationDivisionsLimitRequest.getAuthorizationDivisionsLimit was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getauthorizationdivisionsquery": {
+    "operationId": "getauthorizationdivisionsquery",
+    "functionName": "getAuthorizationDivisionsQuery",
+    "signature": "getAuthorizationDivisionsQuery(before, after, pageSize, _id, name)",
+    "parameters": [
+      {
+        "name": "before",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "_id",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "AuthzDivisionCursorListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 200.\nlet _id: [String] = [\"\"] // Optionally request specific divisions by their IDs\nlet name: String = \"\" // Optionally request specific divisions by division name\n\n// Retrieve a list of all divisions defined for the organization with cursor\nGetAuthorizationDivisionsQueryRequest.getAuthorizationDivisionsQuery(before: before, after: after, pageSize: pageSize, _id: _id, name: name) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAuthorizationDivisionsQueryRequest.getAuthorizationDivisionsQuery was successful\")\n        dump(response)\n    }\n}"
   },
   "getauthorizationdivisionspermittedme": {
     "operationId": "getauthorizationdivisionspermittedme",
@@ -13193,6 +13246,34 @@
     "return": "DataSchemaListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get a list of schemas.\nGetExternalcontactsContactsSchemasRequest.getExternalcontactsContactsSchemas() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsContactsSchemasRequest.getExternalcontactsContactsSchemas was successful\")\n        dump(response)\n    }\n}"
   },
+  "getexternalcontactscontactsschemascoretype": {
+    "operationId": "getexternalcontactscontactsschemascoretype",
+    "functionName": "getExternalcontactsContactsSchemasCoretype",
+    "signature": "getExternalcontactsContactsSchemasCoretype(coreTypeName)",
+    "parameters": [
+      {
+        "name": "coreTypeName",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "Coretype",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet coreTypeName: String = \"\" // Name of the core type\n\n// Get the core types from which all schemas are built.\nGetExternalcontactsContactsSchemasCoretypeRequest.getExternalcontactsContactsSchemasCoretype(coreTypeName: coreTypeName) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsContactsSchemasCoretypeRequest.getExternalcontactsContactsSchemasCoretype was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getexternalcontactscontactsschemascoretypes": {
+    "operationId": "getexternalcontactscontactsschemascoretypes",
+    "functionName": "getExternalcontactsContactsSchemasCoretypes",
+    "signature": "getExternalcontactsContactsSchemasCoretypes()",
+    "return": "Coretype",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get the core types from which all schemas are built.\nGetExternalcontactsContactsSchemasCoretypesRequest.getExternalcontactsContactsSchemasCoretypes() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsContactsSchemasCoretypesRequest.getExternalcontactsContactsSchemasCoretypes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getexternalcontactscontactsschemaslimits": {
+    "operationId": "getexternalcontactscontactsschemaslimits",
+    "functionName": "getExternalcontactsContactsSchemasLimits",
+    "signature": "getExternalcontactsContactsSchemasLimits()",
+    "return": "SchemaQuantityLimits",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get quantitative limits on schemas\nGetExternalcontactsContactsSchemasLimitsRequest.getExternalcontactsContactsSchemasLimits() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsContactsSchemasLimitsRequest.getExternalcontactsContactsSchemasLimits was successful\")\n        dump(response)\n    }\n}"
+  },
   "getexternalcontactsexternalsource": {
     "operationId": "getexternalcontactsexternalsource",
     "functionName": "getExternalcontactsExternalsource",
@@ -13655,6 +13736,34 @@
     "signature": "getExternalcontactsOrganizationsSchemas()",
     "return": "DataSchemaListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get a list of schemas.\nGetExternalcontactsOrganizationsSchemasRequest.getExternalcontactsOrganizationsSchemas() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsOrganizationsSchemasRequest.getExternalcontactsOrganizationsSchemas was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getexternalcontactsorganizationsschemascoretype": {
+    "operationId": "getexternalcontactsorganizationsschemascoretype",
+    "functionName": "getExternalcontactsOrganizationsSchemasCoretype",
+    "signature": "getExternalcontactsOrganizationsSchemasCoretype(coreTypeName)",
+    "parameters": [
+      {
+        "name": "coreTypeName",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "Coretype",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet coreTypeName: String = \"\" // Name of the core type\n\n// Get the core types from which all schemas are built.\nGetExternalcontactsOrganizationsSchemasCoretypeRequest.getExternalcontactsOrganizationsSchemasCoretype(coreTypeName: coreTypeName) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsOrganizationsSchemasCoretypeRequest.getExternalcontactsOrganizationsSchemasCoretype was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getexternalcontactsorganizationsschemascoretypes": {
+    "operationId": "getexternalcontactsorganizationsschemascoretypes",
+    "functionName": "getExternalcontactsOrganizationsSchemasCoretypes",
+    "signature": "getExternalcontactsOrganizationsSchemasCoretypes()",
+    "return": "Coretype",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get the core types from which all schemas are built.\nGetExternalcontactsOrganizationsSchemasCoretypesRequest.getExternalcontactsOrganizationsSchemasCoretypes() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsOrganizationsSchemasCoretypesRequest.getExternalcontactsOrganizationsSchemasCoretypes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getexternalcontactsorganizationsschemaslimits": {
+    "operationId": "getexternalcontactsorganizationsschemaslimits",
+    "functionName": "getExternalcontactsOrganizationsSchemasLimits",
+    "signature": "getExternalcontactsOrganizationsSchemasLimits()",
+    "return": "SchemaQuantityLimits",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get quantitative limits on schemas\nGetExternalcontactsOrganizationsSchemasLimitsRequest.getExternalcontactsOrganizationsSchemasLimits() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsOrganizationsSchemasLimitsRequest.getExternalcontactsOrganizationsSchemasLimits was successful\")\n        dump(response)\n    }\n}"
   },
   "getexternalcontactsrelationship": {
     "operationId": "getexternalcontactsrelationship",
@@ -14681,6 +14790,19 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet metricId: String = \"\" // Specifies the External Metric Definition ID\n\n// Delete an External Metric Definition\nDeleteEmployeeperformanceExternalmetricsDefinitionRequest.deleteEmployeeperformanceExternalmetricsDefinition(metricId: metricId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteEmployeeperformanceExternalmetricsDefinitionRequest.deleteEmployeeperformanceExternalmetricsDefinition was successful\")\n    }\n}"
   },
+  "deletegamificationcontest": {
+    "operationId": "deletegamificationcontest",
+    "functionName": "deleteGamificationContest",
+    "signature": "deleteGamificationContest(contestId)",
+    "parameters": [
+      {
+        "name": "contestId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contestId: String = \"\" // The ID of the contest\n\n// Delete a Contest by Id\nDeleteGamificationContestRequest.deleteGamificationContest(contestId: contestId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteGamificationContestRequest.deleteGamificationContest was successful\")\n    }\n}"
+  },
   "getemployeeperformanceexternalmetricsdefinition": {
     "operationId": "getemployeeperformanceexternalmetricsdefinition",
     "functionName": "getEmployeeperformanceExternalmetricsDefinition",
@@ -14713,6 +14835,228 @@
     ],
     "return": "ExternalMetricDefinitionListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\n\n// Get a list of External Metric Definitions of an organization, sorted by name in ascending order\nGetEmployeeperformanceExternalmetricsDefinitionsRequest.getEmployeeperformanceExternalmetricsDefinitions(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetEmployeeperformanceExternalmetricsDefinitionsRequest.getEmployeeperformanceExternalmetricsDefinitions was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getgamificationcontest": {
+    "operationId": "getgamificationcontest",
+    "functionName": "getGamificationContest",
+    "signature": "getGamificationContest(contestId)",
+    "parameters": [
+      {
+        "name": "contestId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ContestsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contestId: String = \"\" // The ID of the contest\n\n// Get a Contest by Id\nGetGamificationContestRequest.getGamificationContest(contestId: contestId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationContestRequest.getGamificationContest was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getgamificationcontestagentsscores": {
+    "operationId": "getgamificationcontestagentsscores",
+    "functionName": "getGamificationContestAgentsScores",
+    "signature": "getGamificationContestAgentsScores(contestId, pageNumber, pageSize, workday, returnsView)",
+    "parameters": [
+      {
+        "name": "contestId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "workday",
+        "type": "Date",
+        "required": "false"
+      },
+      {
+        "name": "returnsView",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ContestScoresAgentsPagedList",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contestId: String = \"\" // The ID of the contest\nlet pageNumber: Int = 0 // \nlet pageSize: Int = 0 // \nlet workday: Date = new Date(...) // Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet returnsView: GetGamificationContestAgentsScoresRequest.ReturnsView_getGamificationContestAgentsScores = GetGamificationContestAgentsScoresRequest.ReturnsView_getGamificationContestAgentsScores.enummember // Desired response results\n\n// Get Contest Scores (Admin)\nGetGamificationContestAgentsScoresRequest.getGamificationContestAgentsScores(contestId: contestId, pageNumber: pageNumber, pageSize: pageSize, workday: workday, returnsView: returnsView) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationContestAgentsScoresRequest.getGamificationContestAgentsScores was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getgamificationcontestagentsscoresme": {
+    "operationId": "getgamificationcontestagentsscoresme",
+    "functionName": "getGamificationContestAgentsScoresMe",
+    "signature": "getGamificationContestAgentsScoresMe(contestId, pageNumber, pageSize, workday, returnsView)",
+    "parameters": [
+      {
+        "name": "contestId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "workday",
+        "type": "Date",
+        "required": "false"
+      },
+      {
+        "name": "returnsView",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ContestScoresAgentsPagedList",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contestId: String = \"\" // The ID of the contest\nlet pageNumber: Int = 0 // \nlet pageSize: Int = 0 // \nlet workday: Date = new Date(...) // Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet returnsView: GetGamificationContestAgentsScoresMeRequest.ReturnsView_getGamificationContestAgentsScoresMe = GetGamificationContestAgentsScoresMeRequest.ReturnsView_getGamificationContestAgentsScoresMe.enummember // Desired response results (Supervisor Only)\n\n// Get Contest Scores for the requesting Agent/Supervisor\nGetGamificationContestAgentsScoresMeRequest.getGamificationContestAgentsScoresMe(contestId: contestId, pageNumber: pageNumber, pageSize: pageSize, workday: workday, returnsView: returnsView) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationContestAgentsScoresMeRequest.getGamificationContestAgentsScoresMe was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getgamificationcontestagentsscorestrends": {
+    "operationId": "getgamificationcontestagentsscorestrends",
+    "functionName": "getGamificationContestAgentsScoresTrends",
+    "signature": "getGamificationContestAgentsScoresTrends(contestId)",
+    "parameters": [
+      {
+        "name": "contestId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ContestScoresGroupTrendList",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contestId: String = \"\" // The ID of the contest\n\n// Get a Contest Score Trend (Average Trend)\nGetGamificationContestAgentsScoresTrendsRequest.getGamificationContestAgentsScoresTrends(contestId: contestId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationContestAgentsScoresTrendsRequest.getGamificationContestAgentsScoresTrends was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getgamificationcontestagentsscorestrendsme": {
+    "operationId": "getgamificationcontestagentsscorestrendsme",
+    "functionName": "getGamificationContestAgentsScoresTrendsMe",
+    "signature": "getGamificationContestAgentsScoresTrendsMe(contestId)",
+    "parameters": [
+      {
+        "name": "contestId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ContestScoresAgentTrendList",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contestId: String = \"\" // The ID of the contest\n\n// Get a Contest Score Trend for the requesting Agent\nGetGamificationContestAgentsScoresTrendsMeRequest.getGamificationContestAgentsScoresTrendsMe(contestId: contestId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationContestAgentsScoresTrendsMeRequest.getGamificationContestAgentsScoresTrendsMe was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getgamificationcontestprizeimage": {
+    "operationId": "getgamificationcontestprizeimage",
+    "functionName": "getGamificationContestPrizeimage",
+    "signature": "getGamificationContestPrizeimage(contestId, prizeImageId)",
+    "parameters": [
+      {
+        "name": "contestId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "prizeImageId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "PrizeImages",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contestId: String = \"\" // The ID of the contest\nlet prizeImageId: String = \"\" // The ID of the prize image\n\n// Get a Contest Prize Image by Id\nGetGamificationContestPrizeimageRequest.getGamificationContestPrizeimage(contestId: contestId, prizeImageId: prizeImageId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationContestPrizeimageRequest.getGamificationContestPrizeimage was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getgamificationcontests": {
+    "operationId": "getgamificationcontests",
+    "functionName": "getGamificationContests",
+    "signature": "getGamificationContests(pageNumber, pageSize, dateStart, dateEnd, status, sortBy, sortOrder)",
+    "parameters": [
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "dateStart",
+        "type": "Date",
+        "required": "false"
+      },
+      {
+        "name": "dateEnd",
+        "type": "Date",
+        "required": "false"
+      },
+      {
+        "name": "status",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "sortBy",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "GetContestsEssentialsListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // \nlet pageSize: Int = 0 // \nlet dateStart: Date = new Date(...) // Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet dateEnd: Date = new Date(...) // End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet status: [String] = [\"\"] // \nlet sortBy: GetGamificationContestsRequest.SortBy_getGamificationContests = GetGamificationContestsRequest.SortBy_getGamificationContests.enummember // \nlet sortOrder: GetGamificationContestsRequest.SortOrder_getGamificationContests = GetGamificationContestsRequest.SortOrder_getGamificationContests.enummember // \n\n// Get a List of Contests (Admin)\nGetGamificationContestsRequest.getGamificationContests(pageNumber: pageNumber, pageSize: pageSize, dateStart: dateStart, dateEnd: dateEnd, status: status, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationContestsRequest.getGamificationContests was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getgamificationcontestsme": {
+    "operationId": "getgamificationcontestsme",
+    "functionName": "getGamificationContestsMe",
+    "signature": "getGamificationContestsMe(pageNumber, pageSize, dateStart, dateEnd, status, sortBy, sortOrder, view)",
+    "parameters": [
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "dateStart",
+        "type": "Date",
+        "required": "false"
+      },
+      {
+        "name": "dateEnd",
+        "type": "Date",
+        "required": "false"
+      },
+      {
+        "name": "status",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "sortBy",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "view",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "GetContestsEssentialsListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // \nlet pageSize: Int = 0 // \nlet dateStart: Date = new Date(...) // Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet dateEnd: Date = new Date(...) // End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet status: [String] = [\"\"] // \nlet sortBy: GetGamificationContestsMeRequest.SortBy_getGamificationContestsMe = GetGamificationContestsMeRequest.SortBy_getGamificationContestsMe.enummember // \nlet sortOrder: GetGamificationContestsMeRequest.SortOrder_getGamificationContestsMe = GetGamificationContestsMeRequest.SortOrder_getGamificationContestsMe.enummember // \nlet view: GetGamificationContestsMeRequest.View_getGamificationContestsMe = GetGamificationContestsMeRequest.View_getGamificationContestsMe.enummember // \n\n// Get a List of Contests (Agent/Supervisor)\nGetGamificationContestsMeRequest.getGamificationContestsMe(pageNumber: pageNumber, pageSize: pageSize, dateStart: dateStart, dateEnd: dateEnd, status: status, sortBy: sortBy, sortOrder: sortOrder, view: view) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationContestsMeRequest.getGamificationContestsMe was successful\")\n        dump(response)\n    }\n}"
   },
   "getgamificationinsights": {
     "operationId": "getgamificationinsights",
@@ -15920,6 +16264,25 @@
     "return": "ExternalMetricDefinition",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet metricId: String = \"\" // Specifies the metric definition ID\nlet body: ExternalMetricDefinitionUpdateRequest = new ExternalMetricDefinitionUpdateRequest(...) // The External Metric Definition parameters to be updated\n\n// Update External Metric Definition\nPatchEmployeeperformanceExternalmetricsDefinitionRequest.patchEmployeeperformanceExternalmetricsDefinition(metricId: metricId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchEmployeeperformanceExternalmetricsDefinitionRequest.patchEmployeeperformanceExternalmetricsDefinition was successful\")\n        dump(response)\n    }\n}"
   },
+  "patchgamificationcontest": {
+    "operationId": "patchgamificationcontest",
+    "functionName": "patchGamificationContest",
+    "signature": "patchGamificationContest(contestId, body)",
+    "parameters": [
+      {
+        "name": "contestId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ContestsFinalizeRequest",
+        "required": "true"
+      }
+    ],
+    "return": "ContestsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contestId: String = \"\" // The ID of the contest\nlet body: ContestsFinalizeRequest = new ContestsFinalizeRequest(...) // Finalize Contest\n\n// Finalize a Contest by Id\nPatchGamificationContestRequest.patchGamificationContest(contestId: contestId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchGamificationContestRequest.patchGamificationContest was successful\")\n        dump(response)\n    }\n}"
+  },
   "postemployeeperformanceexternalmetricsdata": {
     "operationId": "postemployeeperformanceexternalmetricsdata",
     "functionName": "postEmployeeperformanceExternalmetricsData",
@@ -15947,6 +16310,34 @@
     ],
     "return": "ExternalMetricDefinition",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ExternalMetricDefinitionCreateRequest = new ExternalMetricDefinitionCreateRequest(...) // The External Metric Definition to be created\n\n// Create External Metric Definition\nPostEmployeeperformanceExternalmetricsDefinitionsRequest.postEmployeeperformanceExternalmetricsDefinitions(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostEmployeeperformanceExternalmetricsDefinitionsRequest.postEmployeeperformanceExternalmetricsDefinitions was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postgamificationcontests": {
+    "operationId": "postgamificationcontests",
+    "functionName": "postGamificationContests",
+    "signature": "postGamificationContests(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ContestsCreateRequest",
+        "required": "true"
+      }
+    ],
+    "return": "ContestsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ContestsCreateRequest = new ContestsCreateRequest(...) // Create Contest\n\n// Creates a Contest\nPostGamificationContestsRequest.postGamificationContests(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostGamificationContestsRequest.postGamificationContests was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postgamificationcontestsuploadsprizeimages": {
+    "operationId": "postgamificationcontestsuploadsprizeimages",
+    "functionName": "postGamificationContestsUploadsPrizeimages",
+    "signature": "postGamificationContestsUploadsPrizeimages(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "GamificationContestPrizeImageUploadUrlRequest",
+        "required": "true"
+      }
+    ],
+    "return": "UploadUrlResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: GamificationContestPrizeImageUploadUrlRequest = new GamificationContestPrizeImageUploadUrlRequest(...) // query\n\n// Generates pre-signed URL to upload a prize image for gamification contests\nPostGamificationContestsUploadsPrizeimagesRequest.postGamificationContestsUploadsPrizeimages(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostGamificationContestsUploadsPrizeimagesRequest.postGamificationContestsUploadsPrizeimages was successful\")\n        dump(response)\n    }\n}"
   },
   "postgamificationprofileactivate": {
     "operationId": "postgamificationprofileactivate",
@@ -16108,6 +16499,25 @@
     ],
     "return": "UserProfilesInDateRange",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: UserProfilesInDateRangeRequest = new UserProfilesInDateRangeRequest(...) // The date range of work day.\n\n// Query performance profiles in date range for the current user\nPostGamificationProfilesUsersMeQueryRequest.postGamificationProfilesUsersMeQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostGamificationProfilesUsersMeQueryRequest.postGamificationProfilesUsersMeQuery was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putgamificationcontest": {
+    "operationId": "putgamificationcontest",
+    "functionName": "putGamificationContest",
+    "signature": "putGamificationContest(contestId, body)",
+    "parameters": [
+      {
+        "name": "contestId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ContestsCreateRequest",
+        "required": "true"
+      }
+    ],
+    "return": "ContestsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contestId: String = \"\" // The ID of the contest\nlet body: ContestsCreateRequest = new ContestsCreateRequest(...) // Contest\n\n// Update a Contest by Id\nPutGamificationContestRequest.putGamificationContest(contestId: contestId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutGamificationContestRequest.putGamificationContest was successful\")\n        dump(response)\n    }\n}"
   },
   "putgamificationprofile": {
     "operationId": "putgamificationprofile",
@@ -27569,6 +27979,24 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dncListId: String = \"\" // DncList ID\nlet expiredOnly: Bool = true // Set to true to only remove DNC entries that are expired\n\n// Deletes all or expired phone numbers from a DNC list.\nDeleteOutboundDnclistPhonenumbersRequest.deleteOutboundDnclistPhonenumbers(dncListId: dncListId, expiredOnly: expiredOnly) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOutboundDnclistPhonenumbersRequest.deleteOutboundDnclistPhonenumbers was successful\")\n    }\n}"
   },
+  "deleteoutbounddnclistwhatsappnumbers": {
+    "operationId": "deleteoutbounddnclistwhatsappnumbers",
+    "functionName": "deleteOutboundDnclistWhatsappnumbers",
+    "signature": "deleteOutboundDnclistWhatsappnumbers(dncListId, expiredOnly)",
+    "parameters": [
+      {
+        "name": "dncListId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "expiredOnly",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dncListId: String = \"\" // DncList ID\nlet expiredOnly: Bool = true // Set to true to only remove DNC whatsApp numbers that are expired\n\n// Deletes all or expired whatsApp numbers from a DNC list.\nDeleteOutboundDnclistWhatsappnumbersRequest.deleteOutboundDnclistWhatsappnumbers(dncListId: dncListId, expiredOnly: expiredOnly) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOutboundDnclistWhatsappnumbersRequest.deleteOutboundDnclistWhatsappnumbers was successful\")\n    }\n}"
+  },
   "deleteoutboundfilespecificationtemplate": {
     "operationId": "deleteoutboundfilespecificationtemplate",
     "functionName": "deleteOutboundFilespecificationtemplate",
@@ -29646,6 +30074,24 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dncListId: String = \"\" // DncList ID\nlet body: DncPatchPhoneNumbersRequest = new DncPatchPhoneNumbersRequest(...) // DNC Phone Numbers\n\n// Add numbers to or delete numbers from a DNC list.\nPatchOutboundDnclistPhonenumbersRequest.patchOutboundDnclistPhonenumbers(dncListId: dncListId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchOutboundDnclistPhonenumbersRequest.patchOutboundDnclistPhonenumbers was successful\")\n    }\n}"
   },
+  "patchoutbounddnclistwhatsappnumbers": {
+    "operationId": "patchoutbounddnclistwhatsappnumbers",
+    "functionName": "patchOutboundDnclistWhatsappnumbers",
+    "signature": "patchOutboundDnclistWhatsappnumbers(dncListId, body)",
+    "parameters": [
+      {
+        "name": "dncListId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "DncPatchWhatsAppNumbersRequest",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dncListId: String = \"\" // DncList ID\nlet body: DncPatchWhatsAppNumbersRequest = new DncPatchWhatsAppNumbersRequest(...) // DNC whatsApp numbers\n\n// Add entries to or delete entries from a DNC list.\nPatchOutboundDnclistWhatsappnumbersRequest.patchOutboundDnclistWhatsappnumbers(dncListId: dncListId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchOutboundDnclistWhatsappnumbersRequest.patchOutboundDnclistWhatsappnumbers was successful\")\n    }\n}"
+  },
   "patchoutboundsettings": {
     "operationId": "patchoutboundsettings",
     "functionName": "patchOutboundSettings",
@@ -30700,10 +31146,10 @@
     "return": "WrapUpCodeMapping",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: WrapUpCodeMapping = new WrapUpCodeMapping(...) // wrapUpCodeMapping\n\n// Update the Dialer wrap up code mapping.\nPutOutboundWrapupcodemappingsRequest.putOutboundWrapupcodemappings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOutboundWrapupcodemappingsRequest.putOutboundWrapupcodemappings was successful\")\n        dump(response)\n    }\n}"
   },
-  "deletedivisionbasedpresencedefinition": {
-    "operationId": "deletedivisionbasedpresencedefinition",
-    "functionName": "deleteDivisionBasedPresenceDefinition",
-    "signature": "deleteDivisionBasedPresenceDefinition(definitionId)",
+  "deletepresencedefinition0": {
+    "operationId": "deletepresencedefinition0",
+    "functionName": "deletePresenceDefinition0",
+    "signature": "deletePresenceDefinition0(definitionId)",
     "parameters": [
       {
         "name": "definitionId",
@@ -30711,7 +31157,7 @@
         "required": "true"
       }
     ],
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet definitionId: String = \"\" // Presence Definition ID\n\n// Delete a Presence Definition\nDeleteDivisionBasedPresenceDefinitionRequest.deleteDivisionBasedPresenceDefinition(definitionId: definitionId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteDivisionBasedPresenceDefinitionRequest.deleteDivisionBasedPresenceDefinition was successful\")\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet definitionId: String = \"\" // Presence Definition ID\n\n// Delete a Presence Definition\nDeletePresenceDefinition0Request.deletePresenceDefinition0(definitionId: definitionId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeletePresenceDefinition0Request.deletePresenceDefinition0 was successful\")\n    }\n}"
   },
   "deletepresencesource": {
     "operationId": "deletepresencesource",
@@ -30739,10 +31185,10 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet presenceId: String = \"\" // Organization Presence ID\n\n// Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead\nDeletePresencedefinitionRequest.deletePresencedefinition(presenceId: presenceId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeletePresencedefinitionRequest.deletePresencedefinition was successful\")\n    }\n}"
   },
-  "getdivisionbasedpresencedefinition": {
-    "operationId": "getdivisionbasedpresencedefinition",
-    "functionName": "getDivisionBasedPresenceDefinition",
-    "signature": "getDivisionBasedPresenceDefinition(definitionId, localeCode)",
+  "getpresencedefinition0": {
+    "operationId": "getpresencedefinition0",
+    "functionName": "getPresenceDefinition0",
+    "signature": "getPresenceDefinition0(definitionId, localeCode)",
     "parameters": [
       {
         "name": "definitionId",
@@ -30756,12 +31202,12 @@
       }
     ],
     "return": "OrganizationPresenceDefinition",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet definitionId: String = \"\" // Presence Definition ID\nlet localeCode: GetDivisionBasedPresenceDefinitionRequest.LocaleCode_getDivisionBasedPresenceDefinition = GetDivisionBasedPresenceDefinitionRequest.LocaleCode_getDivisionBasedPresenceDefinition.enummember // The locale code to fetch for the presence definition. Use ALL to fetch everything.\n\n// Get a Presence Definition\nGetDivisionBasedPresenceDefinitionRequest.getDivisionBasedPresenceDefinition(definitionId: definitionId, localeCode: localeCode) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetDivisionBasedPresenceDefinitionRequest.getDivisionBasedPresenceDefinition was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet definitionId: String = \"\" // Presence Definition ID\nlet localeCode: GetPresenceDefinition0Request.LocaleCode_getPresenceDefinition0 = GetPresenceDefinition0Request.LocaleCode_getPresenceDefinition0.enummember // The locale code to fetch for the presence definition. Use ALL to fetch everything.\n\n// Get a Presence Definition\nGetPresenceDefinition0Request.getPresenceDefinition0(definitionId: definitionId, localeCode: localeCode) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetPresenceDefinition0Request.getPresenceDefinition0 was successful\")\n        dump(response)\n    }\n}"
   },
-  "getdivisionbasedpresencedefinitions": {
-    "operationId": "getdivisionbasedpresencedefinitions",
-    "functionName": "getDivisionBasedPresenceDefinitions",
-    "signature": "getDivisionBasedPresenceDefinitions(deactivated, divisionId, localeCode)",
+  "getpresencedefinitions0": {
+    "operationId": "getpresencedefinitions0",
+    "functionName": "getPresenceDefinitions0",
+    "signature": "getPresenceDefinitions0(deactivated, divisionId, localeCode)",
     "parameters": [
       {
         "name": "deactivated",
@@ -30780,7 +31226,7 @@
       }
     ],
     "return": "OrganizationPresenceDefinitionEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deactivated: String = \"\" // Deactivated query can be TRUE or FALSE\nlet divisionId: [String] = [\"\"] // One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned.\nlet localeCode: GetDivisionBasedPresenceDefinitionsRequest.LocaleCode_getDivisionBasedPresenceDefinitions = GetDivisionBasedPresenceDefinitionsRequest.LocaleCode_getDivisionBasedPresenceDefinitions.enummember // The locale code to fetch for the presence definition. Use ALL to fetch everything.\n\n// Get a list of Presence Definitions\nGetDivisionBasedPresenceDefinitionsRequest.getDivisionBasedPresenceDefinitions(deactivated: deactivated, divisionId: divisionId, localeCode: localeCode) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetDivisionBasedPresenceDefinitionsRequest.getDivisionBasedPresenceDefinitions was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deactivated: String = \"\" // Deactivated query can be TRUE or FALSE\nlet divisionId: [String] = [\"\"] // One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned.\nlet localeCode: GetPresenceDefinitions0Request.LocaleCode_getPresenceDefinitions0 = GetPresenceDefinitions0Request.LocaleCode_getPresenceDefinitions0.enummember // The locale code to fetch for the presence definition. Use ALL to fetch everything.\n\n// Get a list of Presence Definitions\nGetPresenceDefinitions0Request.getPresenceDefinitions0(deactivated: deactivated, divisionId: divisionId, localeCode: localeCode) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetPresenceDefinitions0Request.getPresenceDefinitions0 was successful\")\n        dump(response)\n    }\n}"
   },
   "getpresencesettings": {
     "operationId": "getpresencesettings",
@@ -30995,10 +31441,10 @@
     "return": "UserPresence",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // user Id\nlet body: UserPresence = new UserPresence(...) // User presence\n\n// Patch a Genesys Cloud user's presence\nPatchUserPresencesPurecloudRequest.patchUserPresencesPurecloud(userId: userId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchUserPresencesPurecloudRequest.patchUserPresencesPurecloud was successful\")\n        dump(response)\n    }\n}"
   },
-  "postdivisionbasedpresencedefinitions": {
-    "operationId": "postdivisionbasedpresencedefinitions",
-    "functionName": "postDivisionBasedPresenceDefinitions",
-    "signature": "postDivisionBasedPresenceDefinitions(body)",
+  "postpresencedefinitions0": {
+    "operationId": "postpresencedefinitions0",
+    "functionName": "postPresenceDefinitions0",
+    "signature": "postPresenceDefinitions0(body)",
     "parameters": [
       {
         "name": "body",
@@ -31007,7 +31453,7 @@
       }
     ],
     "return": "OrganizationPresenceDefinition",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: OrganizationPresenceDefinition = new OrganizationPresenceDefinition(...) // The Presence Definition to create\n\n// Create a Presence Definition\nPostDivisionBasedPresenceDefinitionsRequest.postDivisionBasedPresenceDefinitions(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostDivisionBasedPresenceDefinitionsRequest.postDivisionBasedPresenceDefinitions was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: OrganizationPresenceDefinition = new OrganizationPresenceDefinition(...) // The Presence Definition to create\n\n// Create a Presence Definition\nPostPresenceDefinitions0Request.postPresenceDefinitions0(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostPresenceDefinitions0Request.postPresenceDefinitions0 was successful\")\n        dump(response)\n    }\n}"
   },
   "postpresencesources": {
     "operationId": "postpresencesources",
@@ -31037,10 +31483,10 @@
     "return": "OrganizationPresence",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: OrganizationPresence = new OrganizationPresence(...) // The Presence Definition to create\n\n// Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead\nPostPresencedefinitionsRequest.postPresencedefinitions(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostPresencedefinitionsRequest.postPresencedefinitions was successful\")\n        dump(response)\n    }\n}"
   },
-  "putdivisionbasedpresencedefinition": {
-    "operationId": "putdivisionbasedpresencedefinition",
-    "functionName": "putDivisionBasedPresenceDefinition",
-    "signature": "putDivisionBasedPresenceDefinition(definitionId, body)",
+  "putpresencedefinition0": {
+    "operationId": "putpresencedefinition0",
+    "functionName": "putPresenceDefinition0",
+    "signature": "putPresenceDefinition0(definitionId, body)",
     "parameters": [
       {
         "name": "definitionId",
@@ -31054,7 +31500,7 @@
       }
     ],
     "return": "OrganizationPresenceDefinition",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet definitionId: String = \"\" // Presence Definition ID\nlet body: OrganizationPresenceDefinition = new OrganizationPresenceDefinition(...) // The updated Presence Definition\n\n// Update a Presence Definition\nPutDivisionBasedPresenceDefinitionRequest.putDivisionBasedPresenceDefinition(definitionId: definitionId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutDivisionBasedPresenceDefinitionRequest.putDivisionBasedPresenceDefinition was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet definitionId: String = \"\" // Presence Definition ID\nlet body: OrganizationPresenceDefinition = new OrganizationPresenceDefinition(...) // The updated Presence Definition\n\n// Update a Presence Definition\nPutPresenceDefinition0Request.putPresenceDefinition0(definitionId: definitionId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutPresenceDefinition0Request.putPresenceDefinition0 was successful\")\n        dump(response)\n    }\n}"
   },
   "putpresencesettings": {
     "operationId": "putpresencesettings",
@@ -34622,7 +35068,7 @@
       }
     ],
     "return": "InboundDomainEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet excludeStatus: Bool = true // Exclude MX record data\nlet filter: String = \"\" // Optional search filter\n\n// Get domains\nGetRoutingEmailDomainsRequest.getRoutingEmailDomains(pageSize: pageSize, pageNumber: pageNumber, excludeStatus: excludeStatus, filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailDomainsRequest.getRoutingEmailDomains was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet excludeStatus: Bool = true // Exclude MX record data\nlet filter: String = \"\" // Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter.\n\n// Get domains\nGetRoutingEmailDomainsRequest.getRoutingEmailDomains(pageSize: pageSize, pageNumber: pageNumber, excludeStatus: excludeStatus, filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailDomainsRequest.getRoutingEmailDomains was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingemailoutbounddomain": {
     "operationId": "getroutingemailoutbounddomain",
@@ -34669,8 +35115,18 @@
   "getroutingemailoutbounddomains": {
     "operationId": "getroutingemailoutbounddomains",
     "functionName": "getRoutingEmailOutboundDomains",
-    "signature": "getRoutingEmailOutboundDomains(filter)",
+    "signature": "getRoutingEmailOutboundDomains(pageSize, pageNumber, filter)",
     "parameters": [
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
       {
         "name": "filter",
         "type": "String",
@@ -34678,7 +35134,7 @@
       }
     ],
     "return": "OutboundDomainEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filter: String = \"\" // Optional search filter\n\n// Get outbound domains\nGetRoutingEmailOutboundDomainsRequest.getRoutingEmailOutboundDomains(filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailOutboundDomainsRequest.getRoutingEmailOutboundDomains was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet filter: String = \"\" // Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter.\n\n// Get outbound domains\nGetRoutingEmailOutboundDomainsRequest.getRoutingEmailOutboundDomains(pageSize: pageSize, pageNumber: pageNumber, filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailOutboundDomainsRequest.getRoutingEmailOutboundDomains was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingemailsetup": {
     "operationId": "getroutingemailsetup",
@@ -40309,6 +40765,34 @@
     "signature": "getTaskmanagementWorkitemsSchemas()",
     "return": "DataSchemaListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get a list of schemas.\nGetTaskmanagementWorkitemsSchemasRequest.getTaskmanagementWorkitemsSchemas() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemsSchemasRequest.getTaskmanagementWorkitemsSchemas was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettaskmanagementworkitemsschemascoretype": {
+    "operationId": "gettaskmanagementworkitemsschemascoretype",
+    "functionName": "getTaskmanagementWorkitemsSchemasCoretype",
+    "signature": "getTaskmanagementWorkitemsSchemasCoretype(coreTypeName)",
+    "parameters": [
+      {
+        "name": "coreTypeName",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "Coretype",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet coreTypeName: String = \"\" // Name of the core type\n\n// Get the core types from which all schemas are built.\nGetTaskmanagementWorkitemsSchemasCoretypeRequest.getTaskmanagementWorkitemsSchemasCoretype(coreTypeName: coreTypeName) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemsSchemasCoretypeRequest.getTaskmanagementWorkitemsSchemasCoretype was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettaskmanagementworkitemsschemascoretypes": {
+    "operationId": "gettaskmanagementworkitemsschemascoretypes",
+    "functionName": "getTaskmanagementWorkitemsSchemasCoretypes",
+    "signature": "getTaskmanagementWorkitemsSchemasCoretypes()",
+    "return": "Coretype",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get the core types from which all schemas are built.\nGetTaskmanagementWorkitemsSchemasCoretypesRequest.getTaskmanagementWorkitemsSchemasCoretypes() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemsSchemasCoretypesRequest.getTaskmanagementWorkitemsSchemasCoretypes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettaskmanagementworkitemsschemaslimits": {
+    "operationId": "gettaskmanagementworkitemsschemaslimits",
+    "functionName": "getTaskmanagementWorkitemsSchemasLimits",
+    "signature": "getTaskmanagementWorkitemsSchemasLimits()",
+    "return": "SchemaQuantityLimits",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get quantitative limits on schemas\nGetTaskmanagementWorkitemsSchemasLimitsRequest.getTaskmanagementWorkitemsSchemasLimits() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemsSchemasLimitsRequest.getTaskmanagementWorkitemsSchemasLimits was successful\")\n        dump(response)\n    }\n}"
   },
   "gettaskmanagementworktype": {
     "operationId": "gettaskmanagementworktype",
@@ -47835,7 +48319,7 @@
     "functionName": "getWorkforcemanagementHistoricaldataDeletejob",
     "signature": "getWorkforcemanagementHistoricaldataDeletejob()",
     "return": "HistoricalImportDeleteJobResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Retrieves delete job status for historical data imports of the organization\nGetWorkforcemanagementHistoricaldataDeletejobRequest.getWorkforcemanagementHistoricaldataDeletejob() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementHistoricaldataDeletejobRequest.getWorkforcemanagementHistoricaldataDeletejob was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Retrieves delete job status for historical data imports of the organization.\nGetWorkforcemanagementHistoricaldataDeletejobRequest.getWorkforcemanagementHistoricaldataDeletejob() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementHistoricaldataDeletejobRequest.getWorkforcemanagementHistoricaldataDeletejob was successful\")\n        dump(response)\n    }\n}"
   },
   "getworkforcemanagementhistoricaldataimportstatus": {
     "operationId": "getworkforcemanagementhistoricaldataimportstatus",
@@ -50226,7 +50710,7 @@
     "functionName": "postWorkforcemanagementHistoricaldataDeletejob",
     "signature": "postWorkforcemanagementHistoricaldataDeletejob()",
     "return": "HistoricalImportDeleteJobResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Delete the entries of the historical data imports in the organization\nPostWorkforcemanagementHistoricaldataDeletejobRequest.postWorkforcemanagementHistoricaldataDeletejob() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementHistoricaldataDeletejobRequest.postWorkforcemanagementHistoricaldataDeletejob was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Delete the entries of the historical data imports in the organization.\nPostWorkforcemanagementHistoricaldataDeletejobRequest.postWorkforcemanagementHistoricaldataDeletejob() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementHistoricaldataDeletejobRequest.postWorkforcemanagementHistoricaldataDeletejob was successful\")\n        dump(response)\n    }\n}"
   },
   "postworkforcemanagementhistoricaldatavalidate": {
     "operationId": "postworkforcemanagementhistoricaldatavalidate",

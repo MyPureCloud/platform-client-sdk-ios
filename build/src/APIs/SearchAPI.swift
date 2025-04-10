@@ -497,6 +497,7 @@ open class SearchAPI {
         case employerinfo = "employerInfo"
         case biography = "biography"
         case datelastlogin = "dateLastLogin"
+        case datewelcomesent = "dateWelcomeSent"
         case calleruserRoutingstatus = "callerUser.routingStatus"
         case calleruserPrimarypresence = "callerUser.primaryPresence"
         case calleruserConversationsummary = "callerUser.conversationSummary"
@@ -606,6 +607,7 @@ open class SearchAPI {
         case employerinfo = "employerInfo"
         case biography = "biography"
         case datelastlogin = "dateLastLogin"
+        case datewelcomesent = "dateWelcomeSent"
         case calleruserRoutingstatus = "callerUser.routingStatus"
         case calleruserPrimarypresence = "callerUser.primaryPresence"
         case calleruserConversationsummary = "callerUser.conversationSummary"
@@ -3040,6 +3042,7 @@ open class SearchAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -3333,6 +3336,7 @@ open class SearchAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -6505,7 +6509,7 @@ open class SearchAPI {
   "results" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "memberCount" : 0,
+    "memberCount" : 1,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
@@ -6514,7 +6518,7 @@ open class SearchAPI {
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "memberCount" : 0,
+    "memberCount" : 1,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
@@ -8872,6 +8876,7 @@ open class SearchAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -9165,6 +9170,7 @@ open class SearchAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -9518,6 +9524,7 @@ open class SearchAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -9811,6 +9818,7 @@ open class SearchAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",

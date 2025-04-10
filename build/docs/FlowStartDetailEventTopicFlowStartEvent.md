@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **eventTime** | **Int** |  | [optional] |
+| **eventTime** | **Int64** |  | [optional] |
 | **conversationId** | **String** |  | [optional] |
 | **participantId** | **String** |  | [optional] |
 | **sessionId** | **String** |  | [optional] |
@@ -28,4 +28,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

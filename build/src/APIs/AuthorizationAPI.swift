@@ -492,6 +492,93 @@ open class AuthorizationAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    /**
+     Get a list of soft deleted divisions for the org
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAuthorizationDivisionsDeleted(pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: AuthzDivisionEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationDivisionsDeletedWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<AuthzDivisionEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of soft deleted divisions for the org
+     - GET /api/v2/authorization/divisions/deleted
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "objectCounts" : {
+      "key" : 0
+    },
+    "id" : "id",
+    "homeDivision" : true
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "objectCounts" : {
+      "key" : 0
+    },
+    "id" : "id",
+    "homeDivision" : true
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+
+     - returns: RequestBuilder<AuthzDivisionEntityListing> 
+     */
+    open class func getAuthorizationDivisionsDeletedWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<AuthzDivisionEntityListing> {        
+        let path = "/api/v2/authorization/divisions/deleted"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<AuthzDivisionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     /**
      Retrieve the home division for the organization.
      
@@ -587,6 +674,103 @@ open class AuthorizationAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Int>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Retrieve a list of all divisions defined for the organization with cursor
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter _id: (query) Optionally request specific divisions by their IDs (optional)
+     - parameter name: (query) Optionally request specific divisions by division name (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAuthorizationDivisionsQuery(before: String? = nil, after: String? = nil, pageSize: String? = nil, _id: [String]? = nil, name: String? = nil, completion: @escaping ((_ data: AuthzDivisionCursorListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationDivisionsQueryWithRequestBuilder(before: before, after: after, pageSize: pageSize, _id: _id, name: name)
+        requestBuilder.execute { (response: Response<AuthzDivisionCursorListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve a list of all divisions defined for the organization with cursor
+     - GET /api/v2/authorization/divisions/query
+     - Use \"after\" and \"before\" param to fetch next/previous page}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "objectCounts" : {
+      "key" : 0
+    },
+    "id" : "id",
+    "homeDivision" : true
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "objectCounts" : {
+      "key" : 0
+    },
+    "id" : "id",
+    "homeDivision" : true
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter _id: (query) Optionally request specific divisions by their IDs (optional)
+     - parameter name: (query) Optionally request specific divisions by division name (optional)
+
+     - returns: RequestBuilder<AuthzDivisionCursorListing> 
+     */
+    open class func getAuthorizationDivisionsQueryWithRequestBuilder(before: String? = nil, after: String? = nil, pageSize: String? = nil, _id: [String]? = nil, name: String? = nil) -> RequestBuilder<AuthzDivisionCursorListing> {        
+        let path = "/api/v2/authorization/divisions/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize, 
+            "id": _id, 
+            "name": name
+        ])
+
+        let requestBuilder: RequestBuilder<AuthzDivisionCursorListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1090,6 +1274,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -1171,6 +1365,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -1495,6 +1690,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -1576,6 +1781,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -1915,6 +2121,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -1996,6 +2212,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -2320,6 +2537,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -2401,6 +2628,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -2812,6 +3040,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -2893,6 +3131,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -3217,6 +3456,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -3298,6 +3547,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -3637,6 +3887,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -3718,6 +3978,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -4042,6 +4303,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -4123,6 +4394,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -4463,6 +4735,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -4544,6 +4826,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -4868,6 +5151,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -4949,6 +5242,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -5288,6 +5582,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -5369,6 +5673,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -5693,6 +5998,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -5774,6 +6089,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -6119,6 +6435,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -6200,6 +6526,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -6524,6 +6851,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -6605,6 +6942,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -6944,6 +7282,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -7025,6 +7373,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -7349,6 +7698,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -7430,6 +7789,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -7778,6 +8138,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -7859,6 +8229,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -8183,6 +8554,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -8264,6 +8645,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -8603,6 +8985,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -8684,6 +9076,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -9008,6 +9401,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -9089,6 +9492,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -9434,6 +9838,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -9515,6 +9929,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -9839,6 +10254,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -9920,6 +10345,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -10259,6 +10685,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -10340,6 +10776,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -10664,6 +11101,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -10745,6 +11192,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -11392,6 +11840,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -11473,6 +11931,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -11797,6 +12256,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -11878,6 +12347,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -12217,6 +12687,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -12298,6 +12778,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -12622,6 +13103,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -12703,6 +13194,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -13055,6 +13547,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -13136,6 +13638,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -13460,6 +13963,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -13541,6 +14054,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -13880,6 +14394,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -13961,6 +14485,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -14285,6 +14810,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -14366,6 +14901,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -15323,6 +15859,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -15404,6 +15950,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -15728,6 +16275,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -15809,6 +16366,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -16148,6 +16706,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -16229,6 +16797,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -16553,6 +17122,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -16634,6 +17213,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -17365,6 +17945,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -17446,6 +18036,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -17770,6 +18361,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -17851,6 +18452,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -18190,6 +18792,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -18271,6 +18883,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -18595,6 +19208,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -18676,6 +19299,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -19016,6 +19640,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -19097,6 +19731,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -19421,6 +20056,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -19502,6 +20147,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -19841,6 +20487,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -19922,6 +20578,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -20246,6 +20903,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -20327,6 +20994,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -20672,6 +21340,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -20753,6 +21431,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -21077,6 +21756,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -21158,6 +21847,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -21497,6 +22187,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -21578,6 +22278,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -21902,6 +22603,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -21983,6 +22694,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -22331,6 +23043,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -22412,6 +23134,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -22736,6 +23459,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -22817,6 +23550,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -23156,6 +23890,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -23237,6 +23981,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -23561,6 +24306,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -23642,6 +24397,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -23987,6 +24743,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -24068,6 +24834,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -24392,6 +25159,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -24473,6 +25250,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -24812,6 +25590,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -24893,6 +25681,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -25217,6 +26006,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -25298,6 +26097,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -25709,6 +26509,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -25790,6 +26600,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -26114,6 +26925,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -26195,6 +27016,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -26534,6 +27356,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -26615,6 +27447,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -26939,6 +27772,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -27020,6 +27863,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -27427,6 +28271,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -27508,6 +28362,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -27832,6 +28687,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -27913,6 +28778,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -28252,6 +29118,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -28333,6 +29209,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -28657,6 +29534,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -28738,6 +29625,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -29090,6 +29978,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -29171,6 +30069,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -29495,6 +30394,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -29576,6 +30485,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -29915,6 +30825,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -29996,6 +30916,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -30320,6 +31241,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -30401,6 +31332,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -31111,6 +32043,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -31192,6 +32134,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -31516,6 +32459,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -31597,6 +32550,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -31936,6 +32890,16 @@ open class AuthorizationAPI {
     "policyDescription" : "policyDescription",
     "resourceConditionNode" : {
       "operands" : [ {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -32017,6 +32981,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -32341,6 +33306,16 @@ open class AuthorizationAPI {
           "agentOwnedRouting" : "{}"
         }
       }, {
+        "team" : {
+          "division" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "memberCount" : 1,
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id"
+        },
         "type" : "SCALAR",
         "user" : {
           "workPlanBidRanks" : "{}",
@@ -32422,6 +33397,7 @@ open class AuthorizationAPI {
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
+          "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
           "groups" : [ {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -32946,6 +33922,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -33027,6 +34013,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -33351,6 +34338,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -33432,6 +34429,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -33771,6 +34769,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -33852,6 +34860,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -34176,6 +35185,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -34257,6 +35276,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -34609,6 +35629,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -34690,6 +35720,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -35014,6 +36045,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -35095,6 +36136,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -35434,6 +36476,16 @@ open class AuthorizationAPI {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
         "operands" : [ {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -35515,6 +36567,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -35839,6 +36892,16 @@ open class AuthorizationAPI {
             "agentOwnedRouting" : "{}"
           }
         }, {
+          "team" : {
+            "division" : "{}",
+            "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+            "memberCount" : 1,
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "description" : "description",
+            "dateModified" : "2000-01-23T04:56:07.000+00:00",
+            "id" : "id"
+          },
           "type" : "SCALAR",
           "user" : {
             "workPlanBidRanks" : "{}",
@@ -35920,6 +36983,7 @@ open class AuthorizationAPI {
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
+            "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
             "groups" : [ {
               "images" : [ {
                 "imageUri" : "imageUri",

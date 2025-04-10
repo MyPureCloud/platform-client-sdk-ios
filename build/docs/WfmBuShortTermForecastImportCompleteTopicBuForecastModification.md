@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** |  | [optional] |
-| **startIntervalIndex** | **Int** |  | [optional] |
-| **endIntervalIndex** | **Int** |  | [optional] |
+| **startIntervalIndex** | **Int64** |  | [optional] |
+| **endIntervalIndex** | **Int64** |  | [optional] |
 | **metric** | **String** |  | [optional] |
 | **legacyMetric** | **String** |  | [optional] |
 | **value** | **Double** |  | [optional] |
@@ -22,4 +22,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

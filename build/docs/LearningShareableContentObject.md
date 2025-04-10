@@ -26,4 +26,4 @@ Learning assignment SCO (Shareable Content Object)
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

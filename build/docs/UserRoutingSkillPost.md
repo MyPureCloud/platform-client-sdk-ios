@@ -14,4 +14,4 @@ Represents an organization skill assigned to a user. When assigning to a user sp
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

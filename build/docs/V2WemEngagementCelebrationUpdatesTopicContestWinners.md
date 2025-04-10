@@ -6,11 +6,11 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **tier** | **Int** |  | [optional] |
-| **winnersCount** | **Int** |  | [optional] |
+| **tier** | **Int64** |  | [optional] |
+| **winnersCount** | **Int64** |  | [optional] |
 | **contestScore** | [**V2WemEngagementCelebrationUpdatesTopicContestWinnersScore**](V2WemEngagementCelebrationUpdatesTopicContestWinnersScore) |  | [optional] |
 | **users** | [**[V2WemEngagementCelebrationUpdatesTopicContestWinnersUsers]**]([V2WemEngagementCelebrationUpdatesTopicContestWinnersUsers]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

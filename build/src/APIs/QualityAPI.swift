@@ -126,6 +126,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -422,6 +423,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -715,6 +717,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -1011,6 +1014,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -1307,6 +1311,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -1864,6 +1869,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -2277,6 +2283,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -2573,6 +2580,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -2866,6 +2874,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -3162,6 +3171,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -3458,6 +3468,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -3955,6 +3966,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -4260,6 +4272,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -4916,6 +4929,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -5219,6 +5233,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -5518,6 +5533,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -5814,6 +5830,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -6113,6 +6130,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -6414,6 +6432,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -6717,6 +6736,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -7016,6 +7036,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -7312,6 +7333,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -7611,6 +7633,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -8004,6 +8027,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -8300,6 +8324,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -8593,6 +8618,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -8889,6 +8915,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -9185,6 +9212,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -9768,6 +9796,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -10064,6 +10093,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -10357,6 +10387,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -10653,6 +10684,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -10949,6 +10981,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -11441,6 +11474,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -11737,6 +11771,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -12030,6 +12065,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -12326,6 +12362,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -12622,6 +12659,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -13200,6 +13238,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -13613,6 +13652,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -13909,6 +13949,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -14202,6 +14243,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -14498,6 +14540,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -14794,6 +14837,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -15291,6 +15335,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -15596,6 +15641,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -16469,6 +16515,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -16883,6 +16930,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -17179,6 +17227,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -17472,6 +17521,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -17768,6 +17818,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -18064,6 +18115,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -18561,6 +18613,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -18866,6 +18919,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -19274,6 +19328,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -19688,6 +19743,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -19984,6 +20040,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -20277,6 +20334,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -20573,6 +20631,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -20869,6 +20928,7 @@ open class QualityAPI {
         } ],
         "selfUri" : "https://openapi-generator.tech",
         "conversationSummary" : "{}",
+        "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
         "groups" : [ {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -21366,6 +21426,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -21671,6 +21732,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -22222,6 +22284,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -22527,6 +22590,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -30511,6 +30575,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -30807,6 +30872,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -31100,6 +31166,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -31396,6 +31463,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -31692,6 +31760,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -32246,6 +32315,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -32660,6 +32730,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -32956,6 +33027,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -33249,6 +33321,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -33545,6 +33618,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -33841,6 +33915,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -34338,6 +34413,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -34643,6 +34719,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -37209,6 +37286,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -37505,6 +37583,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -37798,6 +37877,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -38094,6 +38174,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -38390,6 +38471,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -38948,6 +39030,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -39361,6 +39444,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -39657,6 +39741,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -39950,6 +40035,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -40246,6 +40332,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -40542,6 +40629,7 @@ open class QualityAPI {
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
+      "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
       "groups" : [ {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -41039,6 +41127,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -41344,6 +41433,7 @@ open class QualityAPI {
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
+    "dateWelcomeSent" : "2000-01-23T04:56:07.000+00:00",
     "groups" : [ {
       "images" : [ {
         "imageUri" : "imageUri",

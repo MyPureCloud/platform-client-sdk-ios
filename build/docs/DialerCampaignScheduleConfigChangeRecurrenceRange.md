@@ -9,9 +9,9 @@ the schedule range
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** |  | [optional] |
 | **end** | **String** | the range end date | [optional] |
-| **numberOfOccurrences** | **Int** | the number of occurrences to happen before ending | [optional] |
+| **numberOfOccurrences** | **Int64** | the number of occurrences to happen before ending | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

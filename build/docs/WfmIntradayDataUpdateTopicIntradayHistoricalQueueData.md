@@ -6,10 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **offered** | **Int** |  | [optional] |
-| **completed** | **Int** |  | [optional] |
-| **answered** | **Int** |  | [optional] |
-| **abandoned** | **Int** |  | [optional] |
+| **offered** | **Int64** |  | [optional] |
+| **completed** | **Int64** |  | [optional] |
+| **answered** | **Int64** |  | [optional] |
+| **abandoned** | **Int64** |  | [optional] |
 | **averageTalkTimeSeconds** | **Double** |  | [optional] |
 | **averageAfterCallWorkSeconds** | **Double** |  | [optional] |
 | **serviceLevelPercent** | **Double** |  | [optional] |
@@ -17,4 +17,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

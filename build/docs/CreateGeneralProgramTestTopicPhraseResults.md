@@ -6,10 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **processedTranscriptsCount** | **Int** |  | [optional] |
-| **matchedTranscriptsCount** | **Int** |  | [optional] |
+| **processedTranscriptsCount** | **Int64** |  | [optional] |
+| **matchedTranscriptsCount** | **Int64** |  | [optional] |
 | **matchedTranscripts** | [**[CreateGeneralProgramTestPhraseMatchedTranscript]**]([CreateGeneralProgramTestPhraseMatchedTranscript]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

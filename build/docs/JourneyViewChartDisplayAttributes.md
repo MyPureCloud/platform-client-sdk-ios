@@ -14,4 +14,4 @@ Display attributes for the chart, such as type, labels and legends
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

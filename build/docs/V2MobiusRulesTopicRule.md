@@ -17,8 +17,8 @@
 | **action** | **String** |  | [optional] |
 | **dateCreated** | [**Date**](Date) |  | [optional] |
 | **sendExitingAlarmNotification** | **Bool** |  | [optional] |
-| **waitBetweenNotificationMs** | **Int** |  | [optional] |
+| **waitBetweenNotificationMs** | **Int64** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

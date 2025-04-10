@@ -599,6 +599,23 @@ open class ExternalContactsAPI {
     "state" : "state"
   },
   "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+  "identifiers" : [ {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "SocialLine",
+    "value" : "value",
+    "externalSource" : "{}"
+  }, {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "SocialLine",
+    "value" : "value",
+    "externalSource" : "{}"
+  } ],
   "homePhone" : {
     "extension" : 0,
     "normalizationCountryCode" : "normalizationCountryCode",
@@ -1391,6 +1408,23 @@ open class ExternalContactsAPI {
     "state" : "state"
   },
   "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+  "identifiers" : [ {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "SocialLine",
+    "value" : "value",
+    "externalSource" : "{}"
+  }, {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "SocialLine",
+    "value" : "value",
+    "externalSource" : "{}"
+  } ],
   "homePhone" : {
     "extension" : 0,
     "normalizationCountryCode" : "normalizationCountryCode",
@@ -1681,6 +1715,23 @@ open class ExternalContactsAPI {
       "state" : "state"
     },
     "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+    "identifiers" : [ {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    }, {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    } ],
     "homePhone" : {
       "extension" : 0,
       "normalizationCountryCode" : "normalizationCountryCode",
@@ -1887,6 +1938,23 @@ open class ExternalContactsAPI {
       "state" : "state"
     },
     "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+    "identifiers" : [ {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    }, {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    } ],
     "homePhone" : {
       "extension" : 0,
       "normalizationCountryCode" : "normalizationCountryCode",
@@ -2501,6 +2569,188 @@ open class ExternalContactsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DataSchemaListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get the core types from which all schemas are built.
+     
+     - parameter coreTypeName: (path) Name of the core type 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsContactsSchemasCoretype(coreTypeName: String, completion: @escaping ((_ data: Coretype?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsContactsSchemasCoretypeWithRequestBuilder(coreTypeName: coreTypeName)
+        requestBuilder.execute { (response: Response<Coretype>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the core types from which all schemas are built.
+     - GET /api/v2/externalcontacts/contacts/schemas/coretypes/{coreTypeName}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schema" : "{}",
+  "current" : true,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "version" : 0,
+  "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+  "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+  "validationFields" : [ "validationFields", "validationFields" ],
+  "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+}, statusCode=200}]
+     
+     - parameter coreTypeName: (path) Name of the core type 
+
+     - returns: RequestBuilder<Coretype> 
+     */
+    open class func getExternalcontactsContactsSchemasCoretypeWithRequestBuilder(coreTypeName: String) -> RequestBuilder<Coretype> {        
+        var path = "/api/v2/externalcontacts/contacts/schemas/coretypes/{coreTypeName}"
+        let coreTypeNamePreEscape = "\(coreTypeName)"
+        let coreTypeNamePostEscape = coreTypeNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{coreTypeName}", with: coreTypeNamePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Coretype>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get the core types from which all schemas are built.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsContactsSchemasCoretypes(completion: @escaping ((_ data: Coretype?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsContactsSchemasCoretypesWithRequestBuilder()
+        requestBuilder.execute { (response: Response<Coretype>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the core types from which all schemas are built.
+     - GET /api/v2/externalcontacts/contacts/schemas/coretypes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schema" : "{}",
+  "current" : true,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "version" : 0,
+  "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+  "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+  "validationFields" : [ "validationFields", "validationFields" ],
+  "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<Coretype> 
+     */
+    open class func getExternalcontactsContactsSchemasCoretypesWithRequestBuilder() -> RequestBuilder<Coretype> {        
+        let path = "/api/v2/externalcontacts/contacts/schemas/coretypes"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Coretype>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get quantitative limits on schemas
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsContactsSchemasLimits(completion: @escaping ((_ data: SchemaQuantityLimits?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsContactsSchemasLimitsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<SchemaQuantityLimits>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get quantitative limits on schemas
+     - GET /api/v2/externalcontacts/contacts/schemas/limits
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "minSchemaDescriptionCharacters" : 7,
+  "maxFieldDescriptionCharacters" : 5,
+  "selfUri" : "https://openapi-generator.tech",
+  "minFieldDescriptionCharacters" : 1,
+  "maxNumberOfFieldsPerSchema" : 2,
+  "minSchemaNameCharacters" : 5,
+  "minFieldNameCharacters" : 0,
+  "maxNumberOfSchemasPerOrg" : 3,
+  "name" : "name",
+  "id" : "id",
+  "maxFieldNameCharacters" : 6,
+  "maxSchemaDescriptionCharacters" : 9,
+  "maxSchemaNameCharacters" : 2,
+  "maxNumberOfFieldsPerOrg" : 4
+}, statusCode=200}]
+
+     - returns: RequestBuilder<SchemaQuantityLimits> 
+     */
+    open class func getExternalcontactsContactsSchemasLimitsWithRequestBuilder() -> RequestBuilder<SchemaQuantityLimits> {        
+        let path = "/api/v2/externalcontacts/contacts/schemas/limits"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SchemaQuantityLimits>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -3560,6 +3810,23 @@ open class ExternalContactsAPI {
       "state" : "state"
     },
     "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+    "identifiers" : [ {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    }, {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    } ],
     "homePhone" : {
       "extension" : 0,
       "normalizationCountryCode" : "normalizationCountryCode",
@@ -3766,6 +4033,23 @@ open class ExternalContactsAPI {
       "state" : "state"
     },
     "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+    "identifiers" : [ {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    }, {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    } ],
     "homePhone" : {
       "extension" : 0,
       "normalizationCountryCode" : "normalizationCountryCode",
@@ -4832,6 +5116,188 @@ open class ExternalContactsAPI {
 
     
     
+    /**
+     Get the core types from which all schemas are built.
+     
+     - parameter coreTypeName: (path) Name of the core type 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsOrganizationsSchemasCoretype(coreTypeName: String, completion: @escaping ((_ data: Coretype?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsOrganizationsSchemasCoretypeWithRequestBuilder(coreTypeName: coreTypeName)
+        requestBuilder.execute { (response: Response<Coretype>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the core types from which all schemas are built.
+     - GET /api/v2/externalcontacts/organizations/schemas/coretypes/{coreTypeName}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schema" : "{}",
+  "current" : true,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "version" : 0,
+  "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+  "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+  "validationFields" : [ "validationFields", "validationFields" ],
+  "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+}, statusCode=200}]
+     
+     - parameter coreTypeName: (path) Name of the core type 
+
+     - returns: RequestBuilder<Coretype> 
+     */
+    open class func getExternalcontactsOrganizationsSchemasCoretypeWithRequestBuilder(coreTypeName: String) -> RequestBuilder<Coretype> {        
+        var path = "/api/v2/externalcontacts/organizations/schemas/coretypes/{coreTypeName}"
+        let coreTypeNamePreEscape = "\(coreTypeName)"
+        let coreTypeNamePostEscape = coreTypeNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{coreTypeName}", with: coreTypeNamePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Coretype>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get the core types from which all schemas are built.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsOrganizationsSchemasCoretypes(completion: @escaping ((_ data: Coretype?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsOrganizationsSchemasCoretypesWithRequestBuilder()
+        requestBuilder.execute { (response: Response<Coretype>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the core types from which all schemas are built.
+     - GET /api/v2/externalcontacts/organizations/schemas/coretypes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schema" : "{}",
+  "current" : true,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "version" : 0,
+  "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+  "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+  "validationFields" : [ "validationFields", "validationFields" ],
+  "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<Coretype> 
+     */
+    open class func getExternalcontactsOrganizationsSchemasCoretypesWithRequestBuilder() -> RequestBuilder<Coretype> {        
+        let path = "/api/v2/externalcontacts/organizations/schemas/coretypes"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Coretype>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get quantitative limits on schemas
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsOrganizationsSchemasLimits(completion: @escaping ((_ data: SchemaQuantityLimits?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsOrganizationsSchemasLimitsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<SchemaQuantityLimits>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get quantitative limits on schemas
+     - GET /api/v2/externalcontacts/organizations/schemas/limits
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "minSchemaDescriptionCharacters" : 7,
+  "maxFieldDescriptionCharacters" : 5,
+  "selfUri" : "https://openapi-generator.tech",
+  "minFieldDescriptionCharacters" : 1,
+  "maxNumberOfFieldsPerSchema" : 2,
+  "minSchemaNameCharacters" : 5,
+  "minFieldNameCharacters" : 0,
+  "maxNumberOfSchemasPerOrg" : 3,
+  "name" : "name",
+  "id" : "id",
+  "maxFieldNameCharacters" : 6,
+  "maxSchemaDescriptionCharacters" : 9,
+  "maxSchemaNameCharacters" : 2,
+  "maxNumberOfFieldsPerOrg" : 4
+}, statusCode=200}]
+
+     - returns: RequestBuilder<SchemaQuantityLimits> 
+     */
+    open class func getExternalcontactsOrganizationsSchemasLimitsWithRequestBuilder() -> RequestBuilder<SchemaQuantityLimits> {        
+        let path = "/api/v2/externalcontacts/organizations/schemas/limits"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SchemaQuantityLimits>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     public enum Expand_getExternalcontactsRelationship: String { 
@@ -5143,6 +5609,23 @@ open class ExternalContactsAPI {
       "state" : "state"
     },
     "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+    "identifiers" : [ {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    }, {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    } ],
     "homePhone" : {
       "extension" : 0,
       "normalizationCountryCode" : "normalizationCountryCode",
@@ -5349,6 +5832,23 @@ open class ExternalContactsAPI {
       "state" : "state"
     },
     "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+    "identifiers" : [ {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    }, {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    } ],
     "homePhone" : {
       "extension" : 0,
       "normalizationCountryCode" : "normalizationCountryCode",
@@ -5621,6 +6121,23 @@ open class ExternalContactsAPI {
       "state" : "state"
     },
     "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+    "identifiers" : [ {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    }, {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    } ],
     "homePhone" : {
       "extension" : 0,
       "normalizationCountryCode" : "normalizationCountryCode",
@@ -5827,6 +6344,23 @@ open class ExternalContactsAPI {
       "state" : "state"
     },
     "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+    "identifiers" : [ {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    }, {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    } ],
     "homePhone" : {
       "extension" : 0,
       "normalizationCountryCode" : "normalizationCountryCode",
@@ -7738,6 +8272,23 @@ open class ExternalContactsAPI {
     "state" : "state"
   },
   "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+  "identifiers" : [ {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "SocialLine",
+    "value" : "value",
+    "externalSource" : "{}"
+  }, {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "SocialLine",
+    "value" : "value",
+    "externalSource" : "{}"
+  } ],
   "homePhone" : {
     "extension" : 0,
     "normalizationCountryCode" : "normalizationCountryCode",
@@ -7997,6 +8548,23 @@ open class ExternalContactsAPI {
     "state" : "state"
   },
   "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+  "identifiers" : [ {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "SocialLine",
+    "value" : "value",
+    "externalSource" : "{}"
+  }, {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "SocialLine",
+    "value" : "value",
+    "externalSource" : "{}"
+  } ],
   "homePhone" : {
     "extension" : 0,
     "normalizationCountryCode" : "normalizationCountryCode",
@@ -8441,6 +9009,23 @@ open class ExternalContactsAPI {
     "state" : "state"
   },
   "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+  "identifiers" : [ {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "SocialLine",
+    "value" : "value",
+    "externalSource" : "{}"
+  }, {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "SocialLine",
+    "value" : "value",
+    "externalSource" : "{}"
+  } ],
   "homePhone" : {
     "extension" : 0,
     "normalizationCountryCode" : "normalizationCountryCode",
@@ -8964,7 +9549,7 @@ open class ExternalContactsAPI {
     /**
      Merge two contacts into a new contact record
      - POST /api/v2/externalcontacts/merge/contacts
-     - Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details
+     - Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /api/v2/externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -9008,6 +9593,23 @@ open class ExternalContactsAPI {
     "state" : "state"
   },
   "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+  "identifiers" : [ {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "SocialLine",
+    "value" : "value",
+    "externalSource" : "{}"
+  }, {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "SocialLine",
+    "value" : "value",
+    "externalSource" : "{}"
+  } ],
   "homePhone" : {
     "extension" : 0,
     "normalizationCountryCode" : "normalizationCountryCode",
@@ -9589,6 +10191,23 @@ open class ExternalContactsAPI {
     "state" : "state"
   },
   "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+  "identifiers" : [ {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "SocialLine",
+    "value" : "value",
+    "externalSource" : "{}"
+  }, {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "SocialLine",
+    "value" : "value",
+    "externalSource" : "{}"
+  } ],
   "homePhone" : {
     "extension" : 0,
     "normalizationCountryCode" : "normalizationCountryCode",

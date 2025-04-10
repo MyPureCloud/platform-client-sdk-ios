@@ -9,8 +9,8 @@
 | **status** | **String** |  | [optional] |
 | **result** | [**WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast**](WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast) |  | [optional] |
 | **operationId** | **String** |  | [optional] |
-| **progress** | **Int** |  | [optional] |
+| **progress** | **Int64** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

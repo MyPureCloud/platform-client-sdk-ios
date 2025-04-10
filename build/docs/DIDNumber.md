@@ -18,4 +18,4 @@ Represents an unassigned or assigned DID in a DID Pool.
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

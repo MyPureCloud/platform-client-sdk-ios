@@ -149,7 +149,7 @@ open class TeamsAPI {
      - examples: [{contentType=application/json, example={
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "memberCount" : 0,
+  "memberCount" : 1,
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "description" : "description",
@@ -324,7 +324,7 @@ open class TeamsAPI {
   "entities" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "memberCount" : 0,
+    "memberCount" : 1,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
@@ -333,7 +333,7 @@ open class TeamsAPI {
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "memberCount" : 0,
+    "memberCount" : 1,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
@@ -410,7 +410,7 @@ open class TeamsAPI {
      - examples: [{contentType=application/json, example={
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "memberCount" : 0,
+  "memberCount" : 1,
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "description" : "description",
@@ -692,7 +692,7 @@ open class TeamsAPI {
      - examples: [{contentType=application/json, example={
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "memberCount" : 0,
+  "memberCount" : 1,
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "description" : "description",
@@ -760,7 +760,7 @@ open class TeamsAPI {
   "results" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "memberCount" : 0,
+    "memberCount" : 1,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
@@ -769,7 +769,7 @@ open class TeamsAPI {
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "memberCount" : 0,
+    "memberCount" : 1,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",

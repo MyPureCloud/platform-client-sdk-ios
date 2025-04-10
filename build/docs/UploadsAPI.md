@@ -5,6 +5,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**getKnowledgeKnowledgebaseUploadsUrlsJob**](UploadsAPI#getKnowledgeKnowledgebaseUploadsUrlsJob) | Get content upload from URL job status |
+| [**postGamificationContestsUploadsPrizeimages**](UploadsAPI#postGamificationContestsUploadsPrizeimages) | Generates pre-signed URL to upload a prize image for gamification contests |
 | [**postIntegrationsActionDraftFunctionUpload**](UploadsAPI#postIntegrationsActionDraftFunctionUpload) | Create upload presigned URL for draft function package file. |
 | [**postKnowledgeDocumentuploads**](UploadsAPI#postKnowledgeDocumentuploads) | Creates a presigned URL for uploading a knowledge import file with a set of documents |
 | [**postKnowledgeKnowledgebaseUploadsUrlsJobs**](UploadsAPI#postKnowledgeKnowledgebaseUploadsUrlsJobs) | Create content upload from URL job |
@@ -66,6 +67,56 @@ UploadsAPI.getKnowledgeKnowledgebaseUploadsUrlsJob(knowledgeBaseId: knowledgeBas
 ### Return type
 
 [**GetUploadSourceUrlJobStatusResponse**](GetUploadSourceUrlJobStatusResponse)
+
+
+## postGamificationContestsUploadsPrizeimages
+
+
+
+> [UploadUrlResponse](UploadUrlResponse) postGamificationContestsUploadsPrizeimages(body)
+
+Generates pre-signed URL to upload a prize image for gamification contests
+
+
+
+Wraps POST /api/v2/gamification/contests/uploads/prizeimages  
+
+Requires ALL permissions: 
+
+* gamification:contestPrizeImage:upload
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: GamificationContestPrizeImageUploadUrlRequest = new GamificationContestPrizeImageUploadUrlRequest(...) // query
+
+// Code example
+UploadsAPI.postGamificationContestsUploadsPrizeimages(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UploadsAPI.postGamificationContestsUploadsPrizeimages was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**GamificationContestPrizeImageUploadUrlRequest**](GamificationContestPrizeImageUploadUrlRequest)| query | |
+
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse)
 
 
 ## postIntegrationsActionDraftFunctionUpload
@@ -474,4 +525,4 @@ UploadsAPI.postUploadsWorkforcemanagementHistoricaldataCsv(body: body) { (respon
 [**UploadUrlResponse**](UploadUrlResponse)
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

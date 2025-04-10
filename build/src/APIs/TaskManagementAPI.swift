@@ -1736,6 +1736,188 @@ open class TaskManagementAPI {
 
     
     
+    /**
+     Get the core types from which all schemas are built.
+     
+     - parameter coreTypeName: (path) Name of the core type 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorkitemsSchemasCoretype(coreTypeName: String, completion: @escaping ((_ data: Coretype?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorkitemsSchemasCoretypeWithRequestBuilder(coreTypeName: coreTypeName)
+        requestBuilder.execute { (response: Response<Coretype>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the core types from which all schemas are built.
+     - GET /api/v2/taskmanagement/workitems/schemas/coretypes/{coreTypeName}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schema" : "{}",
+  "current" : true,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "version" : 0,
+  "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+  "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+  "validationFields" : [ "validationFields", "validationFields" ],
+  "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+}, statusCode=200}]
+     
+     - parameter coreTypeName: (path) Name of the core type 
+
+     - returns: RequestBuilder<Coretype> 
+     */
+    open class func getTaskmanagementWorkitemsSchemasCoretypeWithRequestBuilder(coreTypeName: String) -> RequestBuilder<Coretype> {        
+        var path = "/api/v2/taskmanagement/workitems/schemas/coretypes/{coreTypeName}"
+        let coreTypeNamePreEscape = "\(coreTypeName)"
+        let coreTypeNamePostEscape = coreTypeNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{coreTypeName}", with: coreTypeNamePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Coretype>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get the core types from which all schemas are built.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorkitemsSchemasCoretypes(completion: @escaping ((_ data: Coretype?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorkitemsSchemasCoretypesWithRequestBuilder()
+        requestBuilder.execute { (response: Response<Coretype>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the core types from which all schemas are built.
+     - GET /api/v2/taskmanagement/workitems/schemas/coretypes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schema" : "{}",
+  "current" : true,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "version" : 0,
+  "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+  "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+  "validationFields" : [ "validationFields", "validationFields" ],
+  "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<Coretype> 
+     */
+    open class func getTaskmanagementWorkitemsSchemasCoretypesWithRequestBuilder() -> RequestBuilder<Coretype> {        
+        let path = "/api/v2/taskmanagement/workitems/schemas/coretypes"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Coretype>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get quantitative limits on schemas
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorkitemsSchemasLimits(completion: @escaping ((_ data: SchemaQuantityLimits?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorkitemsSchemasLimitsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<SchemaQuantityLimits>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get quantitative limits on schemas
+     - GET /api/v2/taskmanagement/workitems/schemas/limits
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "minSchemaDescriptionCharacters" : 7,
+  "maxFieldDescriptionCharacters" : 5,
+  "selfUri" : "https://openapi-generator.tech",
+  "minFieldDescriptionCharacters" : 1,
+  "maxNumberOfFieldsPerSchema" : 2,
+  "minSchemaNameCharacters" : 5,
+  "minFieldNameCharacters" : 0,
+  "maxNumberOfSchemasPerOrg" : 3,
+  "name" : "name",
+  "id" : "id",
+  "maxFieldNameCharacters" : 6,
+  "maxSchemaDescriptionCharacters" : 9,
+  "maxSchemaNameCharacters" : 2,
+  "maxNumberOfFieldsPerOrg" : 4
+}, statusCode=200}]
+
+     - returns: RequestBuilder<SchemaQuantityLimits> 
+     */
+    open class func getTaskmanagementWorkitemsSchemasLimitsWithRequestBuilder() -> RequestBuilder<SchemaQuantityLimits> {        
+        let path = "/api/v2/taskmanagement/workitems/schemas/limits"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SchemaQuantityLimits>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     public enum Expands_getTaskmanagementWorktype: String { 

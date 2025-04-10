@@ -11,8 +11,9 @@
 | **type** | **String** | The type of the mechanism. | |
 | **subType** | **String** | Subtype of detection mechanism | [optional] |
 | **maxLength** | **Int** | The maximum length of the entity resolved value | [optional] |
+| **minLength** | **Int** | The minimum length of the entity resolved value | [optional] |
 | **examples** | [**[NamedEntityTypeMechanismExample]**]([NamedEntityTypeMechanismExample]) | Examples for entity detection | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

@@ -27,9 +27,9 @@
 | **attributes** | **[String:String]** |  | [optional] |
 | **errorInfo** | [**ConversationMessageEventTopicErrorBody**](ConversationMessageEventTopicErrorBody) |  | [optional] |
 | **script** | [**ConversationMessageEventTopicUriReference**](ConversationMessageEventTopicUriReference) |  | [optional] |
-| **wrapupTimeoutMs** | **Int** |  | [optional] |
+| **wrapupTimeoutMs** | **Int64** |  | [optional] |
 | **wrapupSkipped** | **Bool** |  | [optional] |
-| **alertingTimeoutMs** | **Int** |  | [optional] |
+| **alertingTimeoutMs** | **Int64** |  | [optional] |
 | **provider** | **String** |  | [optional] |
 | **externalContact** | [**ConversationMessageEventTopicUriReference**](ConversationMessageEventTopicUriReference) |  | [optional] |
 | **externalContactInitialDivisionId** | **String** |  | [optional] |
@@ -55,4 +55,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

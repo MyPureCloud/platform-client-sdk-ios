@@ -87,7 +87,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementCalendarUrlIcs**](WorkforceManagementAPI#getWorkforcemanagementCalendarUrlIcs) | Get existing calendar link for the current user |
 | [**getWorkforcemanagementHistoricaldataBulkRemoveJob**](WorkforceManagementAPI#getWorkforcemanagementHistoricaldataBulkRemoveJob) | Retrieves delete job status for historical data imports associated with the job id |
 | [**getWorkforcemanagementHistoricaldataBulkRemoveJobs**](WorkforceManagementAPI#getWorkforcemanagementHistoricaldataBulkRemoveJobs) | Retrieves all delete job status for historical data |
-| [**getWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI#getWorkforcemanagementHistoricaldataDeletejob) | Retrieves delete job status for historical data imports of the organization |
+| [**getWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI#getWorkforcemanagementHistoricaldataDeletejob) | Retrieves delete job status for historical data imports of the organization. |
 | [**getWorkforcemanagementHistoricaldataImportstatus**](WorkforceManagementAPI#getWorkforcemanagementHistoricaldataImportstatus) | Retrieves status of the historical data imports of the organization |
 | [**getWorkforcemanagementHistoricaldataImportstatusJobId**](WorkforceManagementAPI#getWorkforcemanagementHistoricaldataImportstatusJobId) | Retrieves status of the historical data imports associated with job id |
 | [**getWorkforcemanagementIntegrationsHris**](WorkforceManagementAPI#getWorkforcemanagementIntegrationsHris) | Get integrations |
@@ -205,7 +205,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementBusinessunits**](WorkforceManagementAPI#postWorkforcemanagementBusinessunits) | Add a new business unit |
 | [**postWorkforcemanagementCalendarUrlIcs**](WorkforceManagementAPI#postWorkforcemanagementCalendarUrlIcs) | Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned |
 | [**postWorkforcemanagementHistoricaldataBulkRemoveJobs**](WorkforceManagementAPI#postWorkforcemanagementHistoricaldataBulkRemoveJobs) | Delete the list of the historical data import entries |
-| [**postWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI#postWorkforcemanagementHistoricaldataDeletejob) | Delete the entries of the historical data imports in the organization |
+| [**postWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI#postWorkforcemanagementHistoricaldataDeletejob) | Delete the entries of the historical data imports in the organization. |
 | [**postWorkforcemanagementHistoricaldataValidate**](WorkforceManagementAPI#postWorkforcemanagementHistoricaldataValidate) | Trigger validation process for historical import |
 | [**postWorkforcemanagementIntegrationsHriTimeofftypesJobs**](WorkforceManagementAPI#postWorkforcemanagementIntegrationsHriTimeofftypesJobs) | Get list of time off types configured in integration |
 | [**postWorkforcemanagementManagementunitAgentsWorkplansQuery**](WorkforceManagementAPI#postWorkforcemanagementManagementunitAgentsWorkplansQuery) | Get agents work plans configuration |
@@ -4788,7 +4788,9 @@ This endpoint does not require any parameters.
 
 > [HistoricalImportDeleteJobResponse](HistoricalImportDeleteJobResponse) getWorkforcemanagementHistoricaldataDeletejob()
 
-Retrieves delete job status for historical data imports of the organization
+Retrieves delete job status for historical data imports of the organization.
+
+Deprecated: Please use GET /workforcemanagement/historicaldata/bulk/remove/jobs instead.
 
 
 
@@ -11131,7 +11133,9 @@ WorkforceManagementAPI.postWorkforcemanagementHistoricaldataBulkRemoveJobs(body:
 
 > [HistoricalImportDeleteJobResponse](HistoricalImportDeleteJobResponse) postWorkforcemanagementHistoricaldataDeletejob()
 
-Delete the entries of the historical data imports in the organization
+Delete the entries of the historical data imports in the organization.
+
+Deprecated: Please use POST /workforcemanagement/historicaldata/bulk/remove/jobs instead.
 
 
 
@@ -13298,4 +13302,4 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

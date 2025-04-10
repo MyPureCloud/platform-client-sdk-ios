@@ -10,8 +10,8 @@
 | **version** | **String** |  | [optional] |
 | **lang** | **String** |  | [optional] |
 | **fingerprint** | **String** |  | [optional] |
-| **viewHeight** | **Int** |  | [optional] |
-| **viewWidth** | **Int** |  | [optional] |
+| **viewHeight** | **Int64** |  | [optional] |
+| **viewWidth** | **Int64** |  | [optional] |
 | **featuresFlash** | **Bool** |  | [optional] |
 | **featuresJava** | **Bool** |  | [optional] |
 | **featuresPdf** | **Bool** |  | [optional] |
@@ -19,4 +19,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

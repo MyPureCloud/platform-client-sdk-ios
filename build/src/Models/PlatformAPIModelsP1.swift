@@ -3747,11 +3747,11 @@ public class BuImportAgentScheduleUploadSchema: Codable {
     /** The IDs of the work plans per week for this user.  Mutually exclusive with workPlanId */
     public var workPlanIdsPerWeek: ListWrapperString?
     /** The shift definitions for this agent schedule */
-    public var shifts: [BuAgentScheduleShift]?
+    public var shifts: [BuAgentScheduleShiftRequest]?
     /** Any full day time off markers that apply to this agent schedule */
     public var fullDayTimeOffMarkers: [BuFullDayTimeOffMarker]?
 
-    public init(userId: String?, workPlanId: ValueWrapperString?, workPlanIdsPerWeek: ListWrapperString?, shifts: [BuAgentScheduleShift]?, fullDayTimeOffMarkers: [BuFullDayTimeOffMarker]?) {
+    public init(userId: String?, workPlanId: ValueWrapperString?, workPlanIdsPerWeek: ListWrapperString?, shifts: [BuAgentScheduleShiftRequest]?, fullDayTimeOffMarkers: [BuFullDayTimeOffMarker]?) {
         self.userId = userId
         self.workPlanId = workPlanId
         self.workPlanIdsPerWeek = workPlanIdsPerWeek
@@ -6562,38 +6562,6 @@ public class CoachingAppointmentResponseList: Codable {
 
 
 
-public class Column: Codable {
-
-
-
-
-
-
-
-
-
-    /** Column name. Mandatory for Fixed position/length file format. */
-    public var columnName: String?
-    /** 0 based column number in delimited file format */
-    public var columnNumber: Int?
-    /** Zero-based position of the first column's character. Mandatory for Fixed position/length file format. */
-    public var startPosition: Int?
-    /** Column width. Mandatory for Fixed position/length file format. */
-    public var length: Int?
-
-    public init(columnName: String?, columnNumber: Int?, startPosition: Int?, length: Int?) {
-        self.columnName = columnName
-        self.columnNumber = columnNumber
-        self.startPosition = startPosition
-        self.length = length
-    }
-
-
-}
-
-
-
-
 public class CoachingAppointmentStatusRequest: Codable {
 
     public enum Status: String, Codable { 
@@ -6961,6 +6929,38 @@ public class CollaborateChatGroupMessageEventTopicCollaborateChatMessage: Codabl
         self.mentions = mentions
         self.notifyAll = notifyAll
         self.reactions = reactions
+    }
+
+
+}
+
+
+
+
+public class Column: Codable {
+
+
+
+
+
+
+
+
+
+    /** Column name. Mandatory for Fixed position/length file format. */
+    public var columnName: String?
+    /** 0 based column number in delimited file format */
+    public var columnNumber: Int?
+    /** Zero-based position of the first column's character. Mandatory for Fixed position/length file format. */
+    public var startPosition: Int?
+    /** Column width. Mandatory for Fixed position/length file format. */
+    public var length: Int?
+
+    public init(columnName: String?, columnNumber: Int?, startPosition: Int?, length: Int?) {
+        self.columnName = columnName
+        self.columnNumber = columnNumber
+        self.startPosition = startPosition
+        self.length = length
     }
 
 
@@ -7634,7 +7634,7 @@ public class ContactDetailEventTopicContactUpdateEvent: Codable {
 
 
 
-    public var eventTime: Int?
+    public var eventTime: Int64?
     public var conversationId: String?
     public var participantId: String?
     public var sessionId: String?
@@ -7649,14 +7649,14 @@ public class ContactDetailEventTopicContactUpdateEvent: Codable {
     public var addressFrom: String?
     public var callbackUserName: String?
     public var callbackNumbers: [String]?
-    public var callbackScheduledTime: Int?
+    public var callbackScheduledTime: Int64?
     public var subject: String?
     public var messageType: MessageType?
     public var conversationExternalContactIds: [String]?
     public var conversationExternalOrganizationIds: [String]?
     public var divisionId: String?
 
-    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, externalOrganizationId: String?, externalContactId: String?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int?, subject: String?, messageType: MessageType?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?, divisionId: String?) {
+    public init(eventTime: Int64?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, externalOrganizationId: String?, externalContactId: String?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int64?, subject: String?, messageType: MessageType?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?, divisionId: String?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
@@ -8181,15 +8181,15 @@ public class ContentManagementWorkspaceDocumentsTopicDocumentDataV2: Codable {
     public var workspace: ContentManagementWorkspaceDocumentsTopicWorkspaceData?
     public var createdBy: ContentManagementWorkspaceDocumentsTopicUserData?
     public var contentType: String?
-    public var contentLength: Int?
+    public var contentLength: Int64?
     public var filename: String?
-    public var changeNumber: Int?
+    public var changeNumber: Int64?
     public var dateUploaded: Date?
     public var uploadedBy: ContentManagementWorkspaceDocumentsTopicUserData?
     public var lockInfo: ContentManagementWorkspaceDocumentsTopicLockData?
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, workspace: ContentManagementWorkspaceDocumentsTopicWorkspaceData?, createdBy: ContentManagementWorkspaceDocumentsTopicUserData?, contentType: String?, contentLength: Int?, filename: String?, changeNumber: Int?, dateUploaded: Date?, uploadedBy: ContentManagementWorkspaceDocumentsTopicUserData?, lockInfo: ContentManagementWorkspaceDocumentsTopicLockData?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, workspace: ContentManagementWorkspaceDocumentsTopicWorkspaceData?, createdBy: ContentManagementWorkspaceDocumentsTopicUserData?, contentType: String?, contentLength: Int64?, filename: String?, changeNumber: Int64?, dateUploaded: Date?, uploadedBy: ContentManagementWorkspaceDocumentsTopicUserData?, lockInfo: ContentManagementWorkspaceDocumentsTopicLockData?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -8335,6 +8335,365 @@ public class ContestCompleteDataScore: Codable {
 
 
 
+public class ContestDisqualifiedAgents: Codable {
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The disqualification explanation */
+    public var note: String?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, note: String?, selfUri: String?) {
+        self._id = _id
+        self.note = note
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case note
+        case selfUri
+    }
+
+
+}
+
+
+
+
+public class ContestProfile: Codable {
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case selfUri
+    }
+
+
+}
+
+
+
+
+public class ContestScoresAgentsPagedList: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public var entities: [ContestScoresAgents]?
+    public var pageSize: Int?
+    public var pageNumber: Int?
+    public var total: Int64?
+    /** Workday of the contest scores leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var dateWorkday: Date?
+    public var pageCount: Int?
+
+    public init(entities: [ContestScoresAgents]?, pageSize: Int?, pageNumber: Int?, total: Int64?, dateWorkday: Date?, pageCount: Int?) {
+        self.entities = entities
+        self.pageSize = pageSize
+        self.pageNumber = pageNumber
+        self.total = total
+        self.dateWorkday = dateWorkday
+        self.pageCount = pageCount
+    }
+
+
+}
+
+
+
+
+public class ContestUserRank: Codable {
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The user's rank in contest, a lower rank is better (1 is the best) */
+    public var rank: Int?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, rank: Int?, selfUri: String?) {
+        self._id = _id
+        self.rank = rank
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case rank
+        case selfUri
+    }
+
+
+}
+
+
+
+
+public class ContestsCreateRequest: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum WinningCriteria: String, Codable { 
+        case highestOverallScore = "HighestOverallScore"
+        case highestOverallPercentOfGoal = "HighestOverallPercentOfGoal"
+    }
+
+
+
+
+
+    public enum Anonymization: String, Codable { 
+        case noAnonymization = "NoAnonymization"
+        case all = "All"
+        case allExceptTop = "AllExceptTop"
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The division for this performance profile associate to. Only set for DEFAULT profile. */
+    public var division: WritableDivision?
+    /** The Contest title */
+    public var title: String?
+    /** The Contest description */
+    public var _description: String?
+    /** Start date of the contest. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var dateStart: Date?
+    /** End date of the contest. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var dateEnd: Date?
+    /** The Contest winning criteria */
+    public var winningCriteria: WinningCriteria?
+    /** The Contest's Announcement Datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateAnnounced: Date?
+    /** The Contest's Announcement Timezone. Valid values are strings of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London */
+    public var announcementTimezone: String?
+    /** The Contest anonymization */
+    public var anonymization: Anonymization?
+    /** The Contest's Metrics */
+    public var metrics: [ContestMetrics]?
+    /** The Contest Prizes */
+    public var prizes: [ContestPrizes]?
+    /** The Contest profile */
+    public var profileId: String?
+    /** The Contest's participants */
+    public var participantIds: [String]?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, division: WritableDivision?, title: String?, _description: String?, dateStart: Date?, dateEnd: Date?, winningCriteria: WinningCriteria?, dateAnnounced: Date?, announcementTimezone: String?, anonymization: Anonymization?, metrics: [ContestMetrics]?, prizes: [ContestPrizes]?, profileId: String?, participantIds: [String]?, selfUri: String?) {
+        self._id = _id
+        self.division = division
+        self.title = title
+        self._description = _description
+        self.dateStart = dateStart
+        self.dateEnd = dateEnd
+        self.winningCriteria = winningCriteria
+        self.dateAnnounced = dateAnnounced
+        self.announcementTimezone = announcementTimezone
+        self.anonymization = anonymization
+        self.metrics = metrics
+        self.prizes = prizes
+        self.profileId = profileId
+        self.participantIds = participantIds
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case division
+        case title
+        case _description = "description"
+        case dateStart
+        case dateEnd
+        case winningCriteria
+        case dateAnnounced
+        case announcementTimezone
+        case anonymization
+        case metrics
+        case prizes
+        case profileId
+        case participantIds
+        case selfUri
+    }
+
+
+}
+
+
+
+
+public class ContestsEssentials: Codable {
+
+
+
+
+
+    public enum Status: String, Codable { 
+        case upcoming = "Upcoming"
+        case ongoing = "Ongoing"
+        case pending = "Pending"
+        case recentlyCompleted = "RecentlyCompleted"
+        case completed = "Completed"
+        case cancelled = "Cancelled"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The Contest title */
+    public var title: String?
+    /** The Contest status */
+    public var status: Status?
+    /** Start date of the contest. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var dateStart: Date?
+    /** End date of the contest. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var dateEnd: Date?
+    /** The performance profile */
+    public var profile: ContestProfile?
+    /** The Number of participants in the contest */
+    public var participantCount: Int?
+    /** The Contest's Announcement datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateAnnounced: Date?
+    /** The Contest's finalize datetime, returned when a contest is complete. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateFinalized: Date?
+    /** The Contest's cancelled datetime, returned when a contest is complete. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCancelled: Date?
+    /** The Contest's last modified datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateModified: Date?
+    /** The datetime the contest scores were last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateScoresModified: Date?
+    /** The Contest's Metrics */
+    public var metrics: [ContestMetrics]?
+    /** The Most Recent Contest Info for the requesting participant */
+    public var requestingParticipantContestInfo: ContestRequesingParticipantDailyInfo?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, title: String?, status: Status?, dateStart: Date?, dateEnd: Date?, profile: ContestProfile?, participantCount: Int?, dateAnnounced: Date?, dateFinalized: Date?, dateCancelled: Date?, dateModified: Date?, dateScoresModified: Date?, metrics: [ContestMetrics]?, requestingParticipantContestInfo: ContestRequesingParticipantDailyInfo?, selfUri: String?) {
+        self._id = _id
+        self.title = title
+        self.status = status
+        self.dateStart = dateStart
+        self.dateEnd = dateEnd
+        self.profile = profile
+        self.participantCount = participantCount
+        self.dateAnnounced = dateAnnounced
+        self.dateFinalized = dateFinalized
+        self.dateCancelled = dateCancelled
+        self.dateModified = dateModified
+        self.dateScoresModified = dateScoresModified
+        self.metrics = metrics
+        self.requestingParticipantContestInfo = requestingParticipantContestInfo
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case title
+        case status
+        case dateStart
+        case dateEnd
+        case profile
+        case participantCount
+        case dateAnnounced
+        case dateFinalized
+        case dateCancelled
+        case dateModified
+        case dateScoresModified
+        case metrics
+        case requestingParticipantContestInfo
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class ContextIntent: Codable {
 
 
@@ -8344,51 +8703,6 @@ public class ContextIntent: Codable {
 
     public init(name: String?) {
         self.name = name
-    }
-
-
-}
-
-
-
-
-public class ConversationActivityResponse: Codable {
-
-
-
-    public enum EntityIdDimension: String, Codable { 
-        case activerouting = "activeRouting"
-        case addressfrom = "addressFrom"
-        case addressto = "addressTo"
-        case agentscore = "agentScore"
-        case ani = "ani"
-        case conversationid = "conversationId"
-        case convertedfrom = "convertedFrom"
-        case convertedto = "convertedTo"
-        case direction = "direction"
-        case dnis = "dnis"
-        case mediatype = "mediaType"
-        case participantname = "participantName"
-        case queueid = "queueId"
-        case requestedlanguageid = "requestedLanguageId"
-        case requestedrouting = "requestedRouting"
-        case requestedroutingskillid = "requestedRoutingSkillId"
-        case routingpriority = "routingPriority"
-        case scoredagentid = "scoredAgentId"
-        case sessionid = "sessionId"
-        case teamid = "teamId"
-        case usedrouting = "usedRouting"
-        case userid = "userId"
-    }
-
-    /** Query results */
-    public var results: [ConversationActivityData]?
-    /** Dimension that is used as an entityId */
-    public var entityIdDimension: EntityIdDimension?
-
-    public init(results: [ConversationActivityData]?, entityIdDimension: EntityIdDimension?) {
-        self.results = results
-        self.entityIdDimension = entityIdDimension
     }
 
 
@@ -8459,6 +8773,51 @@ public class ConversationActivityQueryPredicate: Codable {
         case dimension
         case _operator = "operator"
         case value
+    }
+
+
+}
+
+
+
+
+public class ConversationActivityResponse: Codable {
+
+
+
+    public enum EntityIdDimension: String, Codable { 
+        case activerouting = "activeRouting"
+        case addressfrom = "addressFrom"
+        case addressto = "addressTo"
+        case agentscore = "agentScore"
+        case ani = "ani"
+        case conversationid = "conversationId"
+        case convertedfrom = "convertedFrom"
+        case convertedto = "convertedTo"
+        case direction = "direction"
+        case dnis = "dnis"
+        case mediatype = "mediaType"
+        case participantname = "participantName"
+        case queueid = "queueId"
+        case requestedlanguageid = "requestedLanguageId"
+        case requestedrouting = "requestedRouting"
+        case requestedroutingskillid = "requestedRoutingSkillId"
+        case routingpriority = "routingPriority"
+        case scoredagentid = "scoredAgentId"
+        case sessionid = "sessionId"
+        case teamid = "teamId"
+        case usedrouting = "usedRouting"
+        case userid = "userId"
+    }
+
+    /** Query results */
+    public var results: [ConversationActivityData]?
+    /** Dimension that is used as an entityId */
+    public var entityIdDimension: EntityIdDimension?
+
+    public init(results: [ConversationActivityData]?, entityIdDimension: EntityIdDimension?) {
+        self.results = results
+        self.entityIdDimension = entityIdDimension
     }
 
 
@@ -8804,13 +9163,13 @@ public class ConversationCallEventTopicConversationRoutingData: Codable {
     /** A UriReference for a resource */
     public var language: ConversationCallEventTopicUriReference?
     /** The priority of the conversation to use for routing decisions */
-    public var priority: Int?
+    public var priority: Int64?
     /** The skills to use for routing decisions */
     public var skills: [ConversationCallEventTopicUriReference]?
     /** A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents */
     public var scoredAgents: [ConversationCallEventTopicScoredAgent]?
 
-    public init(queue: ConversationCallEventTopicUriReference?, language: ConversationCallEventTopicUriReference?, priority: Int?, skills: [ConversationCallEventTopicUriReference]?, scoredAgents: [ConversationCallEventTopicScoredAgent]?) {
+    public init(queue: ConversationCallEventTopicUriReference?, language: ConversationCallEventTopicUriReference?, priority: Int64?, skills: [ConversationCallEventTopicUriReference]?, scoredAgents: [ConversationCallEventTopicScoredAgent]?) {
         self.queue = queue
         self.language = language
         self.priority = priority
@@ -9021,10 +9380,10 @@ public class ConversationCallbackEventTopicLimit: Codable {
 
     public var key: String?
     public var namespace: Namespace?
-    public var value: Int?
+    public var value: Int64?
     public var documented: Bool?
 
-    public init(key: String?, namespace: Namespace?, value: Int?, documented: Bool?) {
+    public init(key: String?, namespace: Namespace?, value: Int64?, documented: Bool?) {
         self.key = key
         self.namespace = namespace
         self.value = value
@@ -9048,7 +9407,7 @@ public class ConversationCallbackEventTopicQueueMediaSettings: Codable {
 
 
     /** Specifies how long the agent has to answer an interaction before being marked as not responding. */
-    public var alertingTimeoutSeconds: Int?
+    public var alertingTimeoutSeconds: Int64?
     /** Specifies the duration of the alerting sound to be played for auto answered interactions. */
     public var autoAnswerAlertToneSeconds: Double?
     /** Specifies the duration of the alerting sound to be played for manually answered interactions */
@@ -9056,7 +9415,7 @@ public class ConversationCallbackEventTopicQueueMediaSettings: Codable {
     /** Flag to indicate if auto answer is enabled for the given media type or media subtype. */
     public var enableAutoAnswer: Bool?
 
-    public init(alertingTimeoutSeconds: Int?, autoAnswerAlertToneSeconds: Double?, manualAnswerAlertToneSeconds: Double?, enableAutoAnswer: Bool?) {
+    public init(alertingTimeoutSeconds: Int64?, autoAnswerAlertToneSeconds: Double?, manualAnswerAlertToneSeconds: Double?, enableAutoAnswer: Bool?) {
         self.alertingTimeoutSeconds = alertingTimeoutSeconds
         self.autoAnswerAlertToneSeconds = autoAnswerAlertToneSeconds
         self.manualAnswerAlertToneSeconds = manualAnswerAlertToneSeconds
@@ -9292,9 +9651,9 @@ public class ConversationChatEventTopicScoredAgent: Codable {
     /** A UriReference for a resource */
     public var agent: ConversationChatEventTopicUriReference?
     /** Agent's score for the current conversation, from 0 - 100, higher being better */
-    public var score: Int?
+    public var score: Int64?
 
-    public init(agent: ConversationChatEventTopicUriReference?, score: Int?) {
+    public init(agent: ConversationChatEventTopicUriReference?, score: Int64?) {
         self.agent = agent
         self.score = score
     }
@@ -9432,10 +9791,10 @@ public class ConversationCobrowseEventTopicLimit: Codable {
 
     public var key: String?
     public var namespace: Namespace?
-    public var value: Int?
+    public var value: Int64?
     public var documented: Bool?
 
-    public init(key: String?, namespace: Namespace?, value: Int?, documented: Bool?) {
+    public init(key: String?, namespace: Namespace?, value: Int64?, documented: Bool?) {
         self.key = key
         self.namespace = namespace
         self.value = value
@@ -9459,7 +9818,7 @@ public class ConversationCobrowseEventTopicQueueMediaSettings: Codable {
 
 
     /** Specifies how long the agent has to answer an interaction before being marked as not responding. */
-    public var alertingTimeoutSeconds: Int?
+    public var alertingTimeoutSeconds: Int64?
     /** Specifies the duration of the alerting sound to be played for auto answered interactions. */
     public var autoAnswerAlertToneSeconds: Double?
     /** Specifies the duration of the alerting sound to be played for manually answered interactions */
@@ -9467,7 +9826,7 @@ public class ConversationCobrowseEventTopicQueueMediaSettings: Codable {
     /** Flag to indicate if auto answer is enabled for the given media type or media subtype. */
     public var enableAutoAnswer: Bool?
 
-    public init(alertingTimeoutSeconds: Int?, autoAnswerAlertToneSeconds: Double?, manualAnswerAlertToneSeconds: Double?, enableAutoAnswer: Bool?) {
+    public init(alertingTimeoutSeconds: Int64?, autoAnswerAlertToneSeconds: Double?, manualAnswerAlertToneSeconds: Double?, enableAutoAnswer: Bool?) {
         self.alertingTimeoutSeconds = alertingTimeoutSeconds
         self.autoAnswerAlertToneSeconds = autoAnswerAlertToneSeconds
         self.manualAnswerAlertToneSeconds = manualAnswerAlertToneSeconds
@@ -9894,9 +10253,9 @@ public class ConversationEmailEventTopicEmailMediaParticipant: Codable {
     public var attributes: [String:String]?
     public var errorInfo: ConversationEmailEventTopicErrorBody?
     public var script: ConversationEmailEventTopicUriReference?
-    public var wrapupTimeoutMs: Int?
+    public var wrapupTimeoutMs: Int64?
     public var wrapupSkipped: Bool?
-    public var alertingTimeoutMs: Int?
+    public var alertingTimeoutMs: Int64?
     public var provider: String?
     public var externalContact: ConversationEmailEventTopicUriReference?
     public var externalContactInitialDivisionId: String?
@@ -9914,13 +10273,13 @@ public class ConversationEmailEventTopicEmailMediaParticipant: Codable {
     public var mediaRoles: [String]?
     public var queueMediaSettings: ConversationEmailEventTopicQueueMediaSettings?
     public var subject: String?
-    public var messagesSent: Int?
+    public var messagesSent: Int64?
     public var autoGenerated: Bool?
     public var messageId: String?
     public var draftAttachments: [ConversationEmailEventTopicAttachment]?
     public var spam: Bool?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, initialState: InitialState?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationEmailEventTopicUriReference?, queue: ConversationEmailEventTopicUriReference?, team: ConversationEmailEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationEmailEventTopicErrorBody?, script: ConversationEmailEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: ConversationEmailEventTopicUriReference?, externalContactInitialDivisionId: String?, externalOrganization: ConversationEmailEventTopicUriReference?, wrapup: ConversationEmailEventTopicWrapup?, conversationRoutingData: ConversationEmailEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationEmailEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, resumeTime: Date?, parkTime: Date?, mediaRoles: [String]?, queueMediaSettings: ConversationEmailEventTopicQueueMediaSettings?, subject: String?, messagesSent: Int?, autoGenerated: Bool?, messageId: String?, draftAttachments: [ConversationEmailEventTopicAttachment]?, spam: Bool?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, initialState: InitialState?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationEmailEventTopicUriReference?, queue: ConversationEmailEventTopicUriReference?, team: ConversationEmailEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationEmailEventTopicErrorBody?, script: ConversationEmailEventTopicUriReference?, wrapupTimeoutMs: Int64?, wrapupSkipped: Bool?, alertingTimeoutMs: Int64?, provider: String?, externalContact: ConversationEmailEventTopicUriReference?, externalContactInitialDivisionId: String?, externalOrganization: ConversationEmailEventTopicUriReference?, wrapup: ConversationEmailEventTopicWrapup?, conversationRoutingData: ConversationEmailEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationEmailEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, resumeTime: Date?, parkTime: Date?, mediaRoles: [String]?, queueMediaSettings: ConversationEmailEventTopicQueueMediaSettings?, subject: String?, messagesSent: Int64?, autoGenerated: Bool?, messageId: String?, draftAttachments: [ConversationEmailEventTopicAttachment]?, spam: Bool?) {
         self._id = _id
         self.name = name
         self.address = address
@@ -10074,29 +10433,6 @@ public class ConversationEmailEventTopicJourneyContext: Codable {
 
 
 
-/** Metadata enrichments provided by the platform. */
-
-public class ConversationEnrichment: Codable {
-
-
-
-
-
-    /** Detected language of this message. */
-    public var language: ConversationEnrichmentLanguage?
-    /** Detected sentiment of this message. */
-    public var sentimentV2: ConversationEnrichmentSentimentV2?
-
-    public init(language: ConversationEnrichmentLanguage?, sentimentV2: ConversationEnrichmentSentimentV2?) {
-        self.language = language
-        self.sentimentV2 = sentimentV2
-    }
-
-
-}
-
-
-
 
 public class ConversationEmailEventTopicWrapup: Codable {
 
@@ -10117,16 +10453,39 @@ public class ConversationEmailEventTopicWrapup: Codable {
     /** List of tags selected by the agent to describe the call or disposition. */
     public var tags: [String]?
     /** The length of time in seconds that the agent spent doing after call work., Note, the format of utc-millisec should be ignored, our code generator needs it to generate a Long for us internally */
-    public var durationSeconds: Int?
+    public var durationSeconds: Int64?
     /** The timestamp when the wrapup was finished. */
     public var endTime: Date?
 
-    public init(code: String?, notes: String?, tags: [String]?, durationSeconds: Int?, endTime: Date?) {
+    public init(code: String?, notes: String?, tags: [String]?, durationSeconds: Int64?, endTime: Date?) {
         self.code = code
         self.notes = notes
         self.tags = tags
         self.durationSeconds = durationSeconds
         self.endTime = endTime
+    }
+
+
+}
+
+
+
+/** Metadata enrichments provided by the platform. */
+
+public class ConversationEnrichment: Codable {
+
+
+
+
+
+    /** Detected language of this message. */
+    public var language: ConversationEnrichmentLanguage?
+    /** Detected sentiment of this message. */
+    public var sentimentV2: ConversationEnrichmentSentimentV2?
+
+    public init(language: ConversationEnrichmentLanguage?, sentimentV2: ConversationEnrichmentSentimentV2?) {
+        self.language = language
+        self.sentimentV2 = sentimentV2
     }
 
 
@@ -10238,13 +10597,13 @@ public class ConversationEventTopicConversationRoutingData: Codable {
     /** A UriReference for a resource */
     public var language: ConversationEventTopicUriReference?
     /** The priority of the conversation to use for routing decisions */
-    public var priority: Int?
+    public var priority: Int64?
     /** The skills to use for routing decisions */
     public var skills: [ConversationEventTopicUriReference]?
     /** A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents */
     public var scoredAgents: [ConversationEventTopicScoredAgent]?
 
-    public init(queue: ConversationEventTopicUriReference?, language: ConversationEventTopicUriReference?, priority: Int?, skills: [ConversationEventTopicUriReference]?, scoredAgents: [ConversationEventTopicScoredAgent]?) {
+    public init(queue: ConversationEventTopicUriReference?, language: ConversationEventTopicUriReference?, priority: Int64?, skills: [ConversationEventTopicUriReference]?, scoredAgents: [ConversationEventTopicScoredAgent]?) {
         self.queue = queue
         self.language = language
         self.priority = priority
@@ -10302,7 +10661,7 @@ public class ConversationEventTopicErrorDetails: Codable {
 
 
     /** The HTTP status code for this message (400, 401, 403, 404, 500, etc. */
-    public var status: Int?
+    public var status: Int64?
     /** A code unique to this error. */
     public var code: String?
     /** Friendly description of this error. */
@@ -10315,7 +10674,7 @@ public class ConversationEventTopicErrorDetails: Codable {
     public var contextId: String?
     public var uri: String?
 
-    public init(status: Int?, code: String?, message: String?, messageWithParams: String?, messageParams: [String:String]?, contextId: String?, uri: String?) {
+    public init(status: Int64?, code: String?, message: String?, messageWithParams: String?, messageParams: [String:String]?, contextId: String?, uri: String?) {
         self.status = status
         self.code = code
         self.message = message
@@ -10449,9 +10808,9 @@ public class ConversationMessageEventTopicScoredAgent: Codable {
     /** A UriReference for a resource */
     public var agent: ConversationMessageEventTopicUriReference?
     /** Agent's score for the current conversation, from 0 - 100, higher being better */
-    public var score: Int?
+    public var score: Int64?
 
-    public init(agent: ConversationMessageEventTopicUriReference?, score: Int?) {
+    public init(agent: ConversationMessageEventTopicUriReference?, score: Int64?) {
         self.agent = agent
         self.score = score
     }
@@ -10938,7 +11297,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     /** The date and time of metric creation */
     public var metricDate: Date?
     /** Metric value */
-    public var value: Int?
+    public var value: Int64?
     /** Record identifier */
     public var recordId: String?
     /** Active routing method */
@@ -10952,7 +11311,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     /** Unique identifier of the active virtual agent assistant */
     public var agentAssistantId: String?
     /** Bullseye ring of the targeted agent */
-    public var agentBullseyeRing: Int?
+    public var agentBullseyeRing: Int64?
     /** Flag indicating an agent-owned callback */
     public var agentOwned: Bool?
     /** Automatic Number Identification (caller's number) */
@@ -10986,7 +11345,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     /** Unique identifier of the edge device */
     public var edgeId: String?
     /** Number of eligible agents for each predictive routing attempt */
-    public var eligibleAgentCounts: [Int]?
+    public var eligibleAgentCounts: [Int64]?
     /** A code corresponding to the error that occurred */
     public var errorCode: String?
     /** Extended delivery status */
@@ -10994,7 +11353,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     /** External contact identifier */
     public var externalContactId: String?
     /** Count of any media (images, files, etc) included on the external session */
-    public var externalMediaCount: Int?
+    public var externalMediaCount: Int64?
     /** External organization identifier */
     public var externalOrganizationId: String?
     /** External tag for the conversation */
@@ -11016,7 +11375,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     /** Identifier of the journey action map that triggered the action. */
     public var journeyActionMapId: String?
     /** Version of the journey action map that triggered the action. */
-    public var journeyActionMapVersion: Int?
+    public var journeyActionMapVersion: Int64?
     /** Primary identifier of the journey customer in the source where the activities originate from. */
     public var journeyCustomerId: String?
     /** Type of primary identifier of the journey customer (e.g. cookie). */
@@ -11028,7 +11387,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     /** The unique identifier(s) of the knowledge base(s) used */
     public var knowledgeBaseIds: [String]?
     /** Count of any media (images, files, etc) included in this session */
-    public var mediaCount: Int?
+    public var mediaCount: Int64?
     /** The session media type */
     public var mediaType: MediaType?
     /** Message type for messaging services. E.g.: sms, facebook, twitter, line */
@@ -11066,9 +11425,9 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     /** Unique identifier for the room */
     public var roomId: String?
     /** Routing priority for the current interaction */
-    public var routingPriority: Int?
+    public var routingPriority: Int64?
     /** Routing ring for bullseye or preferred agent routing */
-    public var routingRing: Int?
+    public var routingRing: Int64?
     /** Routing rule for preferred, conditional and predictive routing type */
     public var routingRule: String?
     /** Routing rule type */
@@ -11076,7 +11435,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     /** Selected agent ID */
     public var selectedAgentId: String?
     /** Selected agent GPR rank */
-    public var selectedAgentRank: Int?
+    public var selectedAgentRank: Int64?
     /** Indicates whether all flow sessions were self serviced */
     public var selfServed: Bool?
     /** Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred */
@@ -11094,7 +11453,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     /** Flag indicating if video is present */
     public var videoPresent: Bool?
     /** Number of waiting interactions for each predictive routing attempt */
-    public var waitingInteractionCounts: [Int]?
+    public var waitingInteractionCounts: [Int64]?
     /** Wrap up code */
     public var wrapUpCode: String?
     /** Proposed agents */
@@ -11102,7 +11461,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     /** Scored agents */
     public var scoredAgents: [ConversationMetricsTopicConversationScoredAgent]?
 
-    public init(metric: Metric?, metricDate: Date?, value: Int?, recordId: String?, activeRouting: ActiveRouting?, activeSkillIds: [String]?, addressFrom: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int?, agentOwned: Bool?, ani: String?, assignerId: String?, authenticated: Bool?, conversationId: String?, conversationInitiator: ConversationInitiator?, convertedFrom: String?, convertedTo: String?, customerParticipation: Bool?, deliveryStatus: DeliveryStatus?, destinationAddresses: [String]?, direction: Direction?, disconnectType: DisconnectType?, divisionIds: [String]?, dnis: String?, edgeId: String?, eligibleAgentCounts: [Int]?, errorCode: String?, extendedDeliveryStatus: String?, externalContactId: String?, externalMediaCount: Int?, externalOrganizationId: String?, externalTag: String?, firstQueue: Bool?, flaggedReason: FlaggedReason?, flowInType: String?, flowOutType: String?, groupId: String?, interactionType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, knowledgeBaseIds: [String]?, mediaCount: Int?, mediaType: MediaType?, messageType: String?, originatingDirection: OriginatingDirection?, originatingSocialMediaPublic: Bool?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, participantName: String?, peerId: String?, provider: String?, purpose: Purpose?, queueId: String?, remote: String?, removedSkillIds: [String]?, requestedLanguageId: String?, requestedRoutingSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingPriority: Int?, routingRing: Int?, routingRule: String?, routingRuleType: RoutingRuleType?, selectedAgentId: String?, selectedAgentRank: Int?, selfServed: Bool?, sessionDnis: String?, sessionId: String?, stationId: String?, teamId: String?, usedRouting: UsedRouting?, userId: String?, videoPresent: Bool?, waitingInteractionCounts: [Int]?, wrapUpCode: String?, proposedAgents: [ConversationMetricsTopicConversationProposedAgent]?, scoredAgents: [ConversationMetricsTopicConversationScoredAgent]?) {
+    public init(metric: Metric?, metricDate: Date?, value: Int64?, recordId: String?, activeRouting: ActiveRouting?, activeSkillIds: [String]?, addressFrom: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int64?, agentOwned: Bool?, ani: String?, assignerId: String?, authenticated: Bool?, conversationId: String?, conversationInitiator: ConversationInitiator?, convertedFrom: String?, convertedTo: String?, customerParticipation: Bool?, deliveryStatus: DeliveryStatus?, destinationAddresses: [String]?, direction: Direction?, disconnectType: DisconnectType?, divisionIds: [String]?, dnis: String?, edgeId: String?, eligibleAgentCounts: [Int64]?, errorCode: String?, extendedDeliveryStatus: String?, externalContactId: String?, externalMediaCount: Int64?, externalOrganizationId: String?, externalTag: String?, firstQueue: Bool?, flaggedReason: FlaggedReason?, flowInType: String?, flowOutType: String?, groupId: String?, interactionType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int64?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, knowledgeBaseIds: [String]?, mediaCount: Int64?, mediaType: MediaType?, messageType: String?, originatingDirection: OriginatingDirection?, originatingSocialMediaPublic: Bool?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, participantName: String?, peerId: String?, provider: String?, purpose: Purpose?, queueId: String?, remote: String?, removedSkillIds: [String]?, requestedLanguageId: String?, requestedRoutingSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingPriority: Int64?, routingRing: Int64?, routingRule: String?, routingRuleType: RoutingRuleType?, selectedAgentId: String?, selectedAgentRank: Int64?, selfServed: Bool?, sessionDnis: String?, sessionId: String?, stationId: String?, teamId: String?, usedRouting: UsedRouting?, userId: String?, videoPresent: Bool?, waitingInteractionCounts: [Int64]?, wrapUpCode: String?, proposedAgents: [ConversationMetricsTopicConversationProposedAgent]?, scoredAgents: [ConversationMetricsTopicConversationScoredAgent]?) {
         self.metric = metric
         self.metricDate = metricDate
         self.value = value
@@ -11202,11 +11561,11 @@ public class ConversationMetricsTopicConversationProposedAgent: Codable {
 
 
     /** Proposed agent rank for this conversation from predictive routing (lower is better) */
-    public var agentRank: Int?
+    public var agentRank: Int64?
     /** Unique identifier for the agent that was proposed by predictive routing */
     public var proposedAgentId: String?
 
-    public init(agentRank: Int?, proposedAgentId: String?) {
+    public init(agentRank: Int64?, proposedAgentId: String?) {
         self.agentRank = agentRank
         self.proposedAgentId = proposedAgentId
     }
@@ -11336,7 +11695,7 @@ public class ConversationScreenShareEventTopicErrorBody: Codable {
 
     public var message: String?
     public var code: String?
-    public var status: Int?
+    public var status: Int64?
     public var entityId: String?
     public var entityName: String?
     public var messageWithParams: String?
@@ -11346,7 +11705,7 @@ public class ConversationScreenShareEventTopicErrorBody: Codable {
     public var errors: [ConversationScreenShareEventTopicErrorBody]?
     public var limit: ConversationScreenShareEventTopicLimit?
 
-    public init(message: String?, code: String?, status: Int?, entityId: String?, entityName: String?, messageWithParams: String?, messageParams: [String:String]?, contextId: String?, details: [ConversationScreenShareEventTopicDetail]?, errors: [ConversationScreenShareEventTopicErrorBody]?, limit: ConversationScreenShareEventTopicLimit?) {
+    public init(message: String?, code: String?, status: Int64?, entityId: String?, entityName: String?, messageWithParams: String?, messageParams: [String:String]?, contextId: String?, details: [ConversationScreenShareEventTopicDetail]?, errors: [ConversationScreenShareEventTopicErrorBody]?, limit: ConversationScreenShareEventTopicLimit?) {
         self.message = message
         self.code = code
         self.status = status
@@ -11376,9 +11735,9 @@ public class ConversationScreenShareEventTopicJourneyActionMap: Codable {
     /** The ID of the actionMap in the Journey System which triggered this action */
     public var _id: String?
     /** The version number of the actionMap in the Journey System at the time this action was triggered */
-    public var version: Int?
+    public var version: Int64?
 
-    public init(_id: String?, version: Int?) {
+    public init(_id: String?, version: Int64?) {
         self._id = _id
         self.version = version
     }
@@ -11438,13 +11797,13 @@ public class ConversationSocialExpressionEventTopicConversationRoutingData: Coda
     /** A UriReference for a resource */
     public var language: ConversationSocialExpressionEventTopicUriReference?
     /** The priority of the conversation to use for routing decisions */
-    public var priority: Int?
+    public var priority: Int64?
     /** The skills to use for routing decisions */
     public var skills: [ConversationSocialExpressionEventTopicUriReference]?
     /** A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents */
     public var scoredAgents: [ConversationSocialExpressionEventTopicScoredAgent]?
 
-    public init(queue: ConversationSocialExpressionEventTopicUriReference?, language: ConversationSocialExpressionEventTopicUriReference?, priority: Int?, skills: [ConversationSocialExpressionEventTopicUriReference]?, scoredAgents: [ConversationSocialExpressionEventTopicScoredAgent]?) {
+    public init(queue: ConversationSocialExpressionEventTopicUriReference?, language: ConversationSocialExpressionEventTopicUriReference?, priority: Int64?, skills: [ConversationSocialExpressionEventTopicUriReference]?, scoredAgents: [ConversationSocialExpressionEventTopicScoredAgent]?) {
         self.queue = queue
         self.language = language
         self.priority = priority
@@ -11859,9 +12218,9 @@ public class ConversationVideoEventTopicVideoMediaParticipant: Codable {
     public var attributes: [String:String]?
     public var errorInfo: ConversationVideoEventTopicErrorBody?
     public var script: ConversationVideoEventTopicUriReference?
-    public var wrapupTimeoutMs: Int?
+    public var wrapupTimeoutMs: Int64?
     public var wrapupSkipped: Bool?
-    public var alertingTimeoutMs: Int?
+    public var alertingTimeoutMs: Int64?
     public var provider: String?
     public var externalContact: ConversationVideoEventTopicUriReference?
     public var externalContactInitialDivisionId: String?
@@ -11881,11 +12240,11 @@ public class ConversationVideoEventTopicVideoMediaParticipant: Codable {
     public var audioMuted: Bool?
     public var videoMuted: Bool?
     public var sharingScreen: Bool?
-    public var peerCount: Int?
+    public var peerCount: Int64?
     public var context: String?
     public var msids: [String]?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, initialState: InitialState?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationVideoEventTopicUriReference?, queue: ConversationVideoEventTopicUriReference?, team: ConversationVideoEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationVideoEventTopicErrorBody?, script: ConversationVideoEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: ConversationVideoEventTopicUriReference?, externalContactInitialDivisionId: String?, externalOrganization: ConversationVideoEventTopicUriReference?, wrapup: ConversationVideoEventTopicWrapup?, conversationRoutingData: ConversationVideoEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationVideoEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, resumeTime: Date?, parkTime: Date?, mediaRoles: [String]?, queueMediaSettings: ConversationVideoEventTopicQueueMediaSettings?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: Int?, context: String?, msids: [String]?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, initialState: InitialState?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationVideoEventTopicUriReference?, queue: ConversationVideoEventTopicUriReference?, team: ConversationVideoEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationVideoEventTopicErrorBody?, script: ConversationVideoEventTopicUriReference?, wrapupTimeoutMs: Int64?, wrapupSkipped: Bool?, alertingTimeoutMs: Int64?, provider: String?, externalContact: ConversationVideoEventTopicUriReference?, externalContactInitialDivisionId: String?, externalOrganization: ConversationVideoEventTopicUriReference?, wrapup: ConversationVideoEventTopicWrapup?, conversationRoutingData: ConversationVideoEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationVideoEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, resumeTime: Date?, parkTime: Date?, mediaRoles: [String]?, queueMediaSettings: ConversationVideoEventTopicQueueMediaSettings?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: Int64?, context: String?, msids: [String]?) {
         self._id = _id
         self.name = name
         self.address = address
@@ -12008,11 +12367,11 @@ public class ConversationVideoEventTopicWrapup: Codable {
     /** List of tags selected by the agent to describe the call or disposition. */
     public var tags: [String]?
     /** The length of time in seconds that the agent spent doing after call work., Note, the format of utc-millisec should be ignored, our code generator needs it to generate a Long for us internally */
-    public var durationSeconds: Int?
+    public var durationSeconds: Int64?
     /** The timestamp when the wrapup was finished. */
     public var endTime: Date?
 
-    public init(code: String?, notes: String?, tags: [String]?, durationSeconds: Int?, endTime: Date?) {
+    public init(code: String?, notes: String?, tags: [String]?, durationSeconds: Int64?, endTime: Date?) {
         self.code = code
         self.notes = notes
         self.tags = tags
@@ -12505,73 +12864,6 @@ public class CredentialTypeListing: Codable {
 
 
 
-public class Device: Codable {
-
-    public enum Category: String, Codable { 
-        case desktop = "desktop"
-        case mobile = "mobile"
-        case tablet = "tablet"
-        case other = "other"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** Device category. */
-    public var category: Category?
-    /** Device type (e.g. iPad, iPhone, Other). */
-    public var type: String?
-    /** Flag that is true for mobile devices. */
-    public var isMobile: Bool?
-    /** Device's screen height. */
-    public var screenHeight: Int?
-    /** Device's screen width. */
-    public var screenWidth: Int?
-    /** Device's screen density, measured as a scale factor where a value of 1 represents a baseline 1:1 ratio of pixels to logical (device-independent) pixels. */
-    public var screenDensity: Int?
-    /** Fingerprint generated by looking at the individual device features. */
-    public var fingerprint: String?
-    /** Operating system family. */
-    public var osFamily: String?
-    /** Operating system version. */
-    public var osVersion: String?
-    /** Manufacturer of the device. */
-    public var manufacturer: String?
-
-    public init(category: Category?, type: String?, isMobile: Bool?, screenHeight: Int?, screenWidth: Int?, screenDensity: Int?, fingerprint: String?, osFamily: String?, osVersion: String?, manufacturer: String?) {
-        self.category = category
-        self.type = type
-        self.isMobile = isMobile
-        self.screenHeight = screenHeight
-        self.screenWidth = screenWidth
-        self.screenDensity = screenDensity
-        self.fingerprint = fingerprint
-        self.osFamily = osFamily
-        self.osVersion = osVersion
-        self.manufacturer = manufacturer
-    }
-
-
-}
-
-
-
-
 public class CrossPlatformChatMediaPolicy: Codable {
 
 
@@ -12765,7 +13057,7 @@ public class CustomerEndDetailEventTopicCustomerEndEvent: Codable {
 
 
 
-    public var eventTime: Int?
+    public var eventTime: Int64?
     public var conversationId: String?
     public var participantId: String?
     public var sessionId: String?
@@ -12781,15 +13073,15 @@ public class CustomerEndDetailEventTopicCustomerEndEvent: Codable {
     public var addressFrom: String?
     public var callbackUserName: String?
     public var callbackNumbers: [String]?
-    public var callbackScheduledTime: Int?
+    public var callbackScheduledTime: Int64?
     public var subject: String?
     public var messageType: MessageType?
-    public var interactingDurationMs: Int?
+    public var interactingDurationMs: Int64?
     public var conversationExternalContactIds: [String]?
     public var conversationExternalOrganizationIds: [String]?
     public var divisionId: String?
 
-    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, externalOrganizationId: String?, externalContactId: String?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int?, subject: String?, messageType: MessageType?, interactingDurationMs: Int?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?, divisionId: String?) {
+    public init(eventTime: Int64?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, externalOrganizationId: String?, externalContactId: String?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int64?, subject: String?, messageType: MessageType?, interactingDurationMs: Int64?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?, divisionId: String?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
@@ -13639,6 +13931,73 @@ public class DevelopmentActivityAggregateQueryResponseData: Codable {
 
 
 
+public class Device: Codable {
+
+    public enum Category: String, Codable { 
+        case desktop = "desktop"
+        case mobile = "mobile"
+        case tablet = "tablet"
+        case other = "other"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** Device category. */
+    public var category: Category?
+    /** Device type (e.g. iPad, iPhone, Other). */
+    public var type: String?
+    /** Flag that is true for mobile devices. */
+    public var isMobile: Bool?
+    /** Device's screen height. */
+    public var screenHeight: Int?
+    /** Device's screen width. */
+    public var screenWidth: Int?
+    /** Device's screen density, measured as a scale factor where a value of 1 represents a baseline 1:1 ratio of pixels to logical (device-independent) pixels. */
+    public var screenDensity: Int?
+    /** Fingerprint generated by looking at the individual device features. */
+    public var fingerprint: String?
+    /** Operating system family. */
+    public var osFamily: String?
+    /** Operating system version. */
+    public var osVersion: String?
+    /** Manufacturer of the device. */
+    public var manufacturer: String?
+
+    public init(category: Category?, type: String?, isMobile: Bool?, screenHeight: Int?, screenWidth: Int?, screenDensity: Int?, fingerprint: String?, osFamily: String?, osVersion: String?, manufacturer: String?) {
+        self.category = category
+        self.type = type
+        self.isMobile = isMobile
+        self.screenHeight = screenHeight
+        self.screenWidth = screenWidth
+        self.screenDensity = screenDensity
+        self.fingerprint = fingerprint
+        self.osFamily = osFamily
+        self.osVersion = osVersion
+        self.manufacturer = manufacturer
+    }
+
+
+}
+
+
+
+
 public class DialerCallabletimesetConfigChangeTimeSlot: Codable {
 
 
@@ -13654,10 +14013,10 @@ public class DialerCallabletimesetConfigChangeTimeSlot: Codable {
     /** The stop time of this time slot */
     public var stopTime: String?
     /** The day this time slot applies */
-    public var day: Int?
+    public var day: Int64?
     public var additionalProperties: [String:JSON]?
 
-    public init(startTime: String?, stopTime: String?, day: Int?, additionalProperties: [String:JSON]?) {
+    public init(startTime: String?, stopTime: String?, day: Int64?, additionalProperties: [String:JSON]?) {
         self.startTime = startTime
         self.stopTime = stopTime
         self.day = day
@@ -13721,10 +14080,10 @@ public class DialerCampaignScheduleConfigChangeRecurrenceRange: Codable {
     /** the range end date */
     public var end: String?
     /** the number of occurrences to happen before ending */
-    public var numberOfOccurrences: Int?
+    public var numberOfOccurrences: Int64?
     public var additionalProperties: [String:JSON]?
 
-    public init(type: ModelType?, end: String?, numberOfOccurrences: Int?, additionalProperties: [String:JSON]?) {
+    public init(type: ModelType?, end: String?, numberOfOccurrences: Int64?, additionalProperties: [String:JSON]?) {
         self.type = type
         self.end = end
         self.numberOfOccurrences = numberOfOccurrences
@@ -13846,11 +14205,11 @@ public class DialerContactlistConfigChangeImportStatus: Codable {
     /** current status of the import */
     public var importState: ImportState?
     /** total number of records to be imported */
-    public var totalRecords: Int?
+    public var totalRecords: Int64?
     /** number of records finished importing */
-    public var completedRecords: Int?
+    public var completedRecords: Int64?
     /** percentage of records finished importing */
-    public var percentageComplete: Int?
+    public var percentageComplete: Int64?
     /** if the import has failed, the reason for the failure */
     public var failureReason: String?
     /** The ids for target contact lists */
@@ -13859,7 +14218,7 @@ public class DialerContactlistConfigChangeImportStatus: Codable {
     public var listNamePrefix: String?
     public var additionalProperties: [String:JSON]?
 
-    public init(importState: ImportState?, totalRecords: Int?, completedRecords: Int?, percentageComplete: Int?, failureReason: String?, targetContactListIds: [String]?, listNamePrefix: String?, additionalProperties: [String:JSON]?) {
+    public init(importState: ImportState?, totalRecords: Int64?, completedRecords: Int64?, percentageComplete: Int64?, failureReason: String?, targetContactListIds: [String]?, listNamePrefix: String?, additionalProperties: [String:JSON]?) {
         self.importState = importState
         self.totalRecords = totalRecords
         self.completedRecords = completedRecords
@@ -13972,7 +14331,7 @@ public class DialerOutboundSettingsConfigChangeOutboundSettings: Codable {
 
 
     /** The maximum number of calls that can be placed per agent on any campaign */
-    public var maxCallsPerAgent: Int?
+    public var maxCallsPerAgent: Int64?
     /** The maximum percentage of lines that should be used for Outbound, expressed as a decimal in the range [0.0, 1.0] */
     public var maxLineUtilization: Double?
     /** The number of seconds used to determine if a call is abandoned */
@@ -13989,9 +14348,9 @@ public class DialerOutboundSettingsConfigChangeOutboundSettings: Codable {
     /** Last modified time of the entity */
     public var dateModified: Date?
     /** Required for updates, must match the version number of the most recent update */
-    public var version: Int?
+    public var version: Int64?
 
-    public init(maxCallsPerAgent: Int?, maxLineUtilization: Double?, abandonSeconds: Double?, complianceAbandonRateDenominator: ComplianceAbandonRateDenominator?, automaticTimeZoneMapping: DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
+    public init(maxCallsPerAgent: Int64?, maxLineUtilization: Double?, abandonSeconds: Double?, complianceAbandonRateDenominator: ComplianceAbandonRateDenominator?, automaticTimeZoneMapping: DialerOutboundSettingsConfigChangeAutomaticTimeZoneMappingSettings?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?) {
         self.maxCallsPerAgent = maxCallsPerAgent
         self.maxLineUtilization = maxLineUtilization
         self.abandonSeconds = abandonSeconds
@@ -14042,10 +14401,10 @@ public class DialerSequenceScheduleConfigChangeRecurrenceRange: Codable {
     /** the range end date */
     public var end: String?
     /** the number of occurrences to happen before ending */
-    public var numberOfOccurrences: Int?
+    public var numberOfOccurrences: Int64?
     public var additionalProperties: [String:JSON]?
 
-    public init(type: ModelType?, end: String?, numberOfOccurrences: Int?, additionalProperties: [String:JSON]?) {
+    public init(type: ModelType?, end: String?, numberOfOccurrences: Int64?, additionalProperties: [String:JSON]?) {
         self.type = type
         self.end = end
         self.numberOfOccurrences = numberOfOccurrences
@@ -15578,6 +15937,33 @@ public class DomainEntityListing: Codable {
 
 
 
+public class DomainRole: Codable {
+
+
+
+
+
+    /** The ID of the role */
+    public var _id: String?
+    /** The name of the role */
+    public var name: String?
+
+    public init(_id: String?, name: String?) {
+        self._id = _id
+        self.name = name
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+    }
+
+
+}
+
+
+
+
 public class DomainEntityRef: Codable {
 
 
@@ -16162,33 +16548,6 @@ public class DomainPhysicalInterface: Codable {
 
 
 
-public class DomainRole: Codable {
-
-
-
-
-
-    /** The ID of the role */
-    public var _id: String?
-    /** The name of the role */
-    public var name: String?
-
-    public init(_id: String?, name: String?) {
-        self._id = _id
-        self.name = name
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-    }
-
-
-}
-
-
-
-
 public class Draft: Codable {
 
 
@@ -16366,12 +16725,12 @@ public class EdgeMetricsTopicEdgeMetricNetworks: Codable {
 
 
     public var ifname: String?
-    public var sentBytesPerSec: Int?
-    public var receivedBytesPerSec: Int?
-    public var bandwidthBitsPerSec: Int?
+    public var sentBytesPerSec: Int64?
+    public var receivedBytesPerSec: Int64?
+    public var bandwidthBitsPerSec: Int64?
     public var utilizationPct: Double?
 
-    public init(ifname: String?, sentBytesPerSec: Int?, receivedBytesPerSec: Int?, bandwidthBitsPerSec: Int?, utilizationPct: Double?) {
+    public init(ifname: String?, sentBytesPerSec: Int64?, receivedBytesPerSec: Int64?, bandwidthBitsPerSec: Int64?, utilizationPct: Double?) {
         self.ifname = ifname
         self.sentBytesPerSec = sentBytesPerSec
         self.receivedBytesPerSec = receivedBytesPerSec
@@ -18632,8 +18991,8 @@ public class ExternalContactsOrganizationChangedTopicExternalOrganization: Codab
     public var address: ExternalContactsOrganizationChangedTopicContactAddress?
     public var phoneNumber: ExternalContactsOrganizationChangedTopicPhoneNumber?
     public var faxNumber: ExternalContactsOrganizationChangedTopicPhoneNumber?
-    public var employeeCount: Int?
-    public var revenue: Int?
+    public var employeeCount: Int64?
+    public var revenue: Int64?
     public var tags: [String]?
     public var websites: [String]?
     public var tickers: [ExternalContactsOrganizationChangedTopicTicker]?
@@ -18643,7 +19002,7 @@ public class ExternalContactsOrganizationChangedTopicExternalOrganization: Codab
     public var createDate: Date?
     public var modifyDate: Date?
 
-    public init(_id: String?, division: ExternalContactsOrganizationChangedTopicDivision?, name: String?, companyType: String?, industry: String?, primaryContactId: String?, address: ExternalContactsOrganizationChangedTopicContactAddress?, phoneNumber: ExternalContactsOrganizationChangedTopicPhoneNumber?, faxNumber: ExternalContactsOrganizationChangedTopicPhoneNumber?, employeeCount: Int?, revenue: Int?, tags: [String]?, websites: [String]?, tickers: [ExternalContactsOrganizationChangedTopicTicker]?, twitterId: ExternalContactsOrganizationChangedTopicTwitterId?, externalSystemUrl: String?, customFields: [String:JSON]?, createDate: Date?, modifyDate: Date?) {
+    public init(_id: String?, division: ExternalContactsOrganizationChangedTopicDivision?, name: String?, companyType: String?, industry: String?, primaryContactId: String?, address: ExternalContactsOrganizationChangedTopicContactAddress?, phoneNumber: ExternalContactsOrganizationChangedTopicPhoneNumber?, faxNumber: ExternalContactsOrganizationChangedTopicPhoneNumber?, employeeCount: Int64?, revenue: Int64?, tags: [String]?, websites: [String]?, tickers: [ExternalContactsOrganizationChangedTopicTicker]?, twitterId: ExternalContactsOrganizationChangedTopicTwitterId?, externalSystemUrl: String?, customFields: [String:JSON]?, createDate: Date?, modifyDate: Date?) {
         self._id = _id
         self.division = division
         self.name = name
@@ -18762,8 +19121,8 @@ public class ExternalContactsUnresolvedContactChangedTopicExternalOrganization: 
     public var address: ExternalContactsUnresolvedContactChangedTopicContactAddress?
     public var phoneNumber: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?
     public var faxNumber: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?
-    public var employeeCount: Int?
-    public var revenue: Int?
+    public var employeeCount: Int64?
+    public var revenue: Int64?
     public var tags: [String]?
     public var websites: [String]?
     public var tickers: [ExternalContactsUnresolvedContactChangedTopicTicker]?
@@ -18773,7 +19132,7 @@ public class ExternalContactsUnresolvedContactChangedTopicExternalOrganization: 
     public var createDate: Date?
     public var modifyDate: Date?
 
-    public init(_id: String?, division: ExternalContactsUnresolvedContactChangedTopicDivision?, name: String?, companyType: String?, industry: String?, primaryContactId: String?, address: ExternalContactsUnresolvedContactChangedTopicContactAddress?, phoneNumber: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, faxNumber: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, employeeCount: Int?, revenue: Int?, tags: [String]?, websites: [String]?, tickers: [ExternalContactsUnresolvedContactChangedTopicTicker]?, twitterId: ExternalContactsUnresolvedContactChangedTopicTwitterId?, externalSystemUrl: String?, customFields: [String:JSON]?, createDate: Date?, modifyDate: Date?) {
+    public init(_id: String?, division: ExternalContactsUnresolvedContactChangedTopicDivision?, name: String?, companyType: String?, industry: String?, primaryContactId: String?, address: ExternalContactsUnresolvedContactChangedTopicContactAddress?, phoneNumber: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, faxNumber: ExternalContactsUnresolvedContactChangedTopicPhoneNumber?, employeeCount: Int64?, revenue: Int64?, tags: [String]?, websites: [String]?, tickers: [ExternalContactsUnresolvedContactChangedTopicTicker]?, twitterId: ExternalContactsUnresolvedContactChangedTopicTwitterId?, externalSystemUrl: String?, customFields: [String:JSON]?, createDate: Date?, modifyDate: Date?) {
         self._id = _id
         self.division = division
         self.name = name
@@ -19728,11 +20087,11 @@ public class FlowMetricsTopicFlowScoredAgent: Codable {
 
 
     /** Assigned agent score for this conversation (0 - 100, higher being better) */
-    public var agentScore: Int?
+    public var agentScore: Int64?
     /** Unique identifier for the agent that was scored for this conversation */
     public var scoredAgentId: String?
 
-    public init(agentScore: Int?, scoredAgentId: String?) {
+    public init(agentScore: Int64?, scoredAgentId: String?) {
         self.agentScore = agentScore
         self.scoredAgentId = scoredAgentId
     }
@@ -19899,9 +20258,9 @@ public class FlowOutcomeDetailEventTopicFlowMilestone: Codable {
 
 
     public var milestoneId: UUID?
-    public var milestoneTime: Int?
+    public var milestoneTime: Int64?
 
-    public init(milestoneId: UUID?, milestoneTime: Int?) {
+    public init(milestoneId: UUID?, milestoneTime: Int64?) {
         self.milestoneId = milestoneId
         self.milestoneTime = milestoneTime
     }
@@ -20019,7 +20378,7 @@ public class FlowStartDetailEventTopicFlowStartEvent: Codable {
 
 
 
-    public var eventTime: Int?
+    public var eventTime: Int64?
     public var conversationId: String?
     public var participantId: String?
     public var sessionId: String?
@@ -20039,7 +20398,7 @@ public class FlowStartDetailEventTopicFlowStartEvent: Codable {
     public var conversationExternalContactIds: [String]?
     public var conversationExternalOrganizationIds: [String]?
 
-    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, subject: String?, messageType: MessageType?, flowType: FlowType?, flowId: String?, divisionId: String?, flowVersion: String?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?) {
+    public init(eventTime: Int64?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, subject: String?, messageType: MessageType?, flowType: FlowType?, flowId: String?, divisionId: String?, flowVersion: String?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
@@ -21547,9 +21906,9 @@ public class JourneyAppEventsNotificationWebActionMessage: Codable {
     public var geolocation: JourneyAppEventsNotificationGeoLocation?
     public var mktCampaign: JourneyAppEventsNotificationMktCampaign?
     public var visitReferrer: JourneyAppEventsNotificationReferrer?
-    public var timeToDisposition: Int?
+    public var timeToDisposition: Int64?
 
-    public init(action: JourneyAppEventsNotificationEventAction?, actionTarget: JourneyAppEventsNotificationActionTarget?, actionMap: JourneyAppEventsNotificationActionMap?, errorCode: String?, errorMessage: String?, userAgentString: String?, ipAddress: String?, ipOrganization: String?, browser: JourneyAppEventsNotificationBrowser?, device: JourneyAppEventsNotificationDevice?, geolocation: JourneyAppEventsNotificationGeoLocation?, mktCampaign: JourneyAppEventsNotificationMktCampaign?, visitReferrer: JourneyAppEventsNotificationReferrer?, timeToDisposition: Int?) {
+    public init(action: JourneyAppEventsNotificationEventAction?, actionTarget: JourneyAppEventsNotificationActionTarget?, actionMap: JourneyAppEventsNotificationActionMap?, errorCode: String?, errorMessage: String?, userAgentString: String?, ipAddress: String?, ipOrganization: String?, browser: JourneyAppEventsNotificationBrowser?, device: JourneyAppEventsNotificationDevice?, geolocation: JourneyAppEventsNotificationGeoLocation?, mktCampaign: JourneyAppEventsNotificationMktCampaign?, visitReferrer: JourneyAppEventsNotificationReferrer?, timeToDisposition: Int64?) {
         self.action = action
         self.actionTarget = actionTarget
         self.actionMap = actionMap
@@ -21765,14 +22124,14 @@ public class JourneySessionEventsNotificationBrowser: Codable {
     public var version: String?
     public var lang: String?
     public var fingerprint: String?
-    public var viewHeight: Int?
-    public var viewWidth: Int?
+    public var viewHeight: Int64?
+    public var viewWidth: Int64?
     public var featuresFlash: Bool?
     public var featuresJava: Bool?
     public var featuresPdf: Bool?
     public var featuresWebrtc: Bool?
 
-    public init(family: String?, version: String?, lang: String?, fingerprint: String?, viewHeight: Int?, viewWidth: Int?, featuresFlash: Bool?, featuresJava: Bool?, featuresPdf: Bool?, featuresWebrtc: Bool?) {
+    public init(family: String?, version: String?, lang: String?, fingerprint: String?, viewHeight: Int64?, viewWidth: Int64?, featuresFlash: Bool?, featuresJava: Bool?, featuresPdf: Bool?, featuresWebrtc: Bool?) {
         self.family = family
         self.version = version
         self.lang = lang
@@ -26873,104 +27232,6 @@ public class MessagingRoutingEstablishedEvent: Codable {
 
 
 
-public class Metric: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum TimeDisplayUnit: String, Codable { 
-        case _none = "None"
-        case seconds = "Seconds"
-        case minutes = "Minutes"
-        case hours = "Hours"
-    }
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    /** The name of this metric */
-    public var name: String?
-    /** The id of associated metric definition */
-    public var metricDefinitionId: String?
-    /** The id of associated external metric definition */
-    public var externalMetricDefinitionId: String?
-    /** Associated objective for this metric */
-    public var objective: Objective?
-    /** Performance profile id of this metric */
-    public var performanceProfileId: String?
-    /** The linked metric entity reference */
-    public var linkedMetric: AddressableEntityRef?
-    /** The created date of this metric. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateCreated: Date?
-    /** The unlinked workday for this metric if this metric was ever unlinked. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
-    public var dateUnlinked: Date?
-    /** The precision of the metric, must be between 0 and 5 */
-    public var precision: Int?
-    /** The time unit in which the metric should be displayed -- this parameter is ignored when displaying non-time values */
-    public var timeDisplayUnit: TimeDisplayUnit?
-    /** The source performance profile when this metric is linked */
-    public var sourcePerformanceProfile: PerformanceProfile?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, metricDefinitionId: String?, externalMetricDefinitionId: String?, objective: Objective?, performanceProfileId: String?, linkedMetric: AddressableEntityRef?, dateCreated: Date?, dateUnlinked: Date?, precision: Int?, timeDisplayUnit: TimeDisplayUnit?, sourcePerformanceProfile: PerformanceProfile?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.metricDefinitionId = metricDefinitionId
-        self.externalMetricDefinitionId = externalMetricDefinitionId
-        self.objective = objective
-        self.performanceProfileId = performanceProfileId
-        self.linkedMetric = linkedMetric
-        self.dateCreated = dateCreated
-        self.dateUnlinked = dateUnlinked
-        self.precision = precision
-        self.timeDisplayUnit = timeDisplayUnit
-        self.sourcePerformanceProfile = sourcePerformanceProfile
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case metricDefinitionId
-        case externalMetricDefinitionId
-        case objective
-        case performanceProfileId
-        case linkedMetric
-        case dateCreated
-        case dateUnlinked
-        case precision
-        case timeDisplayUnit
-        case sourcePerformanceProfile
-        case selfUri
-    }
-
-
-}
-
-
-
-
 public class MessagingUserTransferEvent: Codable {
 
 
@@ -27233,6 +27494,104 @@ public class MeteredEvaluationAssignment: Codable {
         self.evaluationForm = evaluationForm
         self.assignToActiveUser = assignToActiveUser
         self.timeInterval = timeInterval
+    }
+
+
+}
+
+
+
+
+public class Metric: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum TimeDisplayUnit: String, Codable { 
+        case _none = "None"
+        case seconds = "Seconds"
+        case minutes = "Minutes"
+        case hours = "Hours"
+    }
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The name of this metric */
+    public var name: String?
+    /** The id of associated metric definition */
+    public var metricDefinitionId: String?
+    /** The id of associated external metric definition */
+    public var externalMetricDefinitionId: String?
+    /** Associated objective for this metric */
+    public var objective: Objective?
+    /** Performance profile id of this metric */
+    public var performanceProfileId: String?
+    /** The linked metric entity reference */
+    public var linkedMetric: AddressableEntityRef?
+    /** The created date of this metric. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+    /** The unlinked workday for this metric if this metric was ever unlinked. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var dateUnlinked: Date?
+    /** The precision of the metric, must be between 0 and 5 */
+    public var precision: Int?
+    /** The time unit in which the metric should be displayed -- this parameter is ignored when displaying non-time values */
+    public var timeDisplayUnit: TimeDisplayUnit?
+    /** The source performance profile when this metric is linked */
+    public var sourcePerformanceProfile: PerformanceProfile?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, metricDefinitionId: String?, externalMetricDefinitionId: String?, objective: Objective?, performanceProfileId: String?, linkedMetric: AddressableEntityRef?, dateCreated: Date?, dateUnlinked: Date?, precision: Int?, timeDisplayUnit: TimeDisplayUnit?, sourcePerformanceProfile: PerformanceProfile?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.metricDefinitionId = metricDefinitionId
+        self.externalMetricDefinitionId = externalMetricDefinitionId
+        self.objective = objective
+        self.performanceProfileId = performanceProfileId
+        self.linkedMetric = linkedMetric
+        self.dateCreated = dateCreated
+        self.dateUnlinked = dateUnlinked
+        self.precision = precision
+        self.timeDisplayUnit = timeDisplayUnit
+        self.sourcePerformanceProfile = sourcePerformanceProfile
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case metricDefinitionId
+        case externalMetricDefinitionId
+        case objective
+        case performanceProfileId
+        case linkedMetric
+        case dateCreated
+        case dateUnlinked
+        case precision
+        case timeDisplayUnit
+        case sourcePerformanceProfile
+        case selfUri
     }
 
 
@@ -27732,6 +28091,8 @@ public class NamedEntityTypeMechanism: Codable {
 
 
 
+
+
     /** The items that define the named entity type. */
     public var items: [NamedEntityTypeItem]?
     /** Whether the named entity type is restricted to the items provided. Default: false */
@@ -27742,15 +28103,18 @@ public class NamedEntityTypeMechanism: Codable {
     public var subType: SubType?
     /** The maximum length of the entity resolved value */
     public var maxLength: Int?
+    /** The minimum length of the entity resolved value */
+    public var minLength: Int?
     /** Examples for entity detection */
     public var examples: [NamedEntityTypeMechanismExample]?
 
-    public init(items: [NamedEntityTypeItem]?, restricted: Bool?, type: ModelType?, subType: SubType?, maxLength: Int?, examples: [NamedEntityTypeMechanismExample]?) {
+    public init(items: [NamedEntityTypeItem]?, restricted: Bool?, type: ModelType?, subType: SubType?, maxLength: Int?, minLength: Int?, examples: [NamedEntityTypeMechanismExample]?) {
         self.items = items
         self.restricted = restricted
         self.type = type
         self.subType = subType
         self.maxLength = maxLength
+        self.minLength = minLength
         self.examples = examples
     }
 
@@ -28058,6 +28422,24 @@ public class NuanceBotEntityListing: Codable {
 
 
 
+/** Model for setting the launch configuration for Nuance bots available to Genesys Cloud */
+
+public class NuanceBotLaunchSettings: Codable {
+
+
+
+    /** The list of Nuance bots that are configured as available to the Genesys Cloud system */
+    public var botExecutionConfigurations: [BotExecutionConfiguration]?
+
+    public init(botExecutionConfigurations: [BotExecutionConfiguration]?) {
+        self.botExecutionConfigurations = botExecutionConfigurations
+    }
+
+
+}
+
+
+
 /** Model for a Nuance bot transfer node */
 
 public class NuanceBotTransferNode: Codable {
@@ -28100,24 +28482,6 @@ public class NuanceBotTransferNode: Codable {
         case type
         case _description = "description"
         case requestVariables
-    }
-
-
-}
-
-
-
-/** Model for setting the launch configuration for Nuance bots available to Genesys Cloud */
-
-public class NuanceBotLaunchSettings: Codable {
-
-
-
-    /** The list of Nuance bots that are configured as available to the Genesys Cloud system */
-    public var botExecutionConfigurations: [BotExecutionConfiguration]?
-
-    public init(botExecutionConfigurations: [BotExecutionConfiguration]?) {
-        self.botExecutionConfigurations = botExecutionConfigurations
     }
 
 
@@ -28956,12 +29320,12 @@ public class OutboundMessagingEmailCampaignProgressEventCampaignProgress: Codabl
     /** The total number of contacts in the contact list */
     public var totalNumberOfContacts: Double?
     /** numberOfContactsContacted/totalNumberOfContacts*100 */
-    public var percentage: Int?
+    public var percentage: Int64?
     /** A map of skipped reasons and the number of contacts associated with each. */
-    public var numberOfContactsSkipped: [String:Int]?
+    public var numberOfContactsSkipped: [String:Int64]?
     public var additionalProperties: [String:JSON]?
 
-    public init(campaign: OutboundMessagingEmailCampaignProgressEventUriReference?, numberOfContactsCalled: Double?, numberOfContactsMessaged: Double?, totalNumberOfContacts: Double?, percentage: Int?, numberOfContactsSkipped: [String:Int]?, additionalProperties: [String:JSON]?) {
+    public init(campaign: OutboundMessagingEmailCampaignProgressEventUriReference?, numberOfContactsCalled: Double?, numberOfContactsMessaged: Double?, totalNumberOfContacts: Double?, percentage: Int64?, numberOfContactsSkipped: [String:Int64]?, additionalProperties: [String:JSON]?) {
         self.campaign = campaign
         self.numberOfContactsCalled = numberOfContactsCalled
         self.numberOfContactsMessaged = numberOfContactsMessaged
@@ -30396,9 +30760,9 @@ public class ProgramTopicLinksTestPhraseDetectedPhrase: Codable {
 
     public var foundPhrase: String?
     public var snippet: String?
-    public var confidence: Int?
+    public var confidence: Int64?
 
-    public init(foundPhrase: String?, snippet: String?, confidence: Int?) {
+    public init(foundPhrase: String?, snippet: String?, confidence: Int64?) {
         self.foundPhrase = foundPhrase
         self.snippet = snippet
         self.confidence = confidence
@@ -30522,14 +30886,14 @@ public class PublishProgramTestPhraseMatchedTranscript: Codable {
 
 
 
-    public var timestamp: Int?
+    public var timestamp: Int64?
     public var transcriptId: String?
     public var communicationId: String?
     public var conversationId: String?
     public var mediaType: MediaType?
     public var detectedPhrases: [PublishProgramTestPhraseDetectedPhrase]?
 
-    public init(timestamp: Int?, transcriptId: String?, communicationId: String?, conversationId: String?, mediaType: MediaType?, detectedPhrases: [PublishProgramTestPhraseDetectedPhrase]?) {
+    public init(timestamp: Int64?, transcriptId: String?, communicationId: String?, conversationId: String?, mediaType: MediaType?, detectedPhrases: [PublishProgramTestPhraseDetectedPhrase]?) {
         self.timestamp = timestamp
         self.transcriptId = transcriptId
         self.communicationId = communicationId
@@ -30552,11 +30916,11 @@ public class PublishProgramTestTopicPhraseResults: Codable {
 
 
 
-    public var processedTranscriptsCount: Int?
-    public var matchedTranscriptsCount: Int?
+    public var processedTranscriptsCount: Int64?
+    public var matchedTranscriptsCount: Int64?
     public var matchedTranscripts: [PublishProgramTestPhraseMatchedTranscript]?
 
-    public init(processedTranscriptsCount: Int?, matchedTranscriptsCount: Int?, matchedTranscripts: [PublishProgramTestPhraseMatchedTranscript]?) {
+    public init(processedTranscriptsCount: Int64?, matchedTranscriptsCount: Int64?, matchedTranscripts: [PublishProgramTestPhraseMatchedTranscript]?) {
         self.processedTranscriptsCount = processedTranscriptsCount
         self.matchedTranscriptsCount = matchedTranscriptsCount
         self.matchedTranscripts = matchedTranscripts
@@ -31140,9 +31504,9 @@ public class QueueConversationCallEventTopicCallConversation: Codable {
     public var divisions: [QueueConversationCallEventTopicConversationDivisionMembership]?
     public var recordingState: RecordingState?
     public var securePause: Bool?
-    public var maxParticipants: Int?
+    public var maxParticipants: Int64?
 
-    public init(_id: String?, name: String?, participants: [QueueConversationCallEventTopicCallMediaParticipant]?, otherMediaUris: [String]?, address: String?, utilizationLabelId: String?, divisions: [QueueConversationCallEventTopicConversationDivisionMembership]?, recordingState: RecordingState?, securePause: Bool?, maxParticipants: Int?) {
+    public init(_id: String?, name: String?, participants: [QueueConversationCallEventTopicCallMediaParticipant]?, otherMediaUris: [String]?, address: String?, utilizationLabelId: String?, divisions: [QueueConversationCallEventTopicConversationDivisionMembership]?, recordingState: RecordingState?, securePause: Bool?, maxParticipants: Int64?) {
         self._id = _id
         self.name = name
         self.participants = participants
@@ -31228,7 +31592,7 @@ public class QueueConversationCallEventTopicErrorBody: Codable {
 
     public var message: String?
     public var code: String?
-    public var status: Int?
+    public var status: Int64?
     public var entityId: String?
     public var entityName: String?
     public var messageWithParams: String?
@@ -31238,7 +31602,7 @@ public class QueueConversationCallEventTopicErrorBody: Codable {
     public var errors: [QueueConversationCallEventTopicErrorBody]?
     public var limit: QueueConversationCallEventTopicLimit?
 
-    public init(message: String?, code: String?, status: Int?, entityId: String?, entityName: String?, messageWithParams: String?, messageParams: [String:String]?, contextId: String?, details: [QueueConversationCallEventTopicDetail]?, errors: [QueueConversationCallEventTopicErrorBody]?, limit: QueueConversationCallEventTopicLimit?) {
+    public init(message: String?, code: String?, status: Int64?, entityId: String?, entityName: String?, messageWithParams: String?, messageParams: [String:String]?, contextId: String?, details: [QueueConversationCallEventTopicDetail]?, errors: [QueueConversationCallEventTopicErrorBody]?, limit: QueueConversationCallEventTopicLimit?) {
         self.message = message
         self.code = code
         self.status = status
@@ -31268,9 +31632,9 @@ public class QueueConversationCallEventTopicJourneyActionMap: Codable {
     /** The ID of the actionMap in the Journey System which triggered this action */
     public var _id: String?
     /** The version number of the actionMap in the Journey System at the time this action was triggered */
-    public var version: Int?
+    public var version: Int64?
 
-    public init(_id: String?, version: Int?) {
+    public init(_id: String?, version: Int64?) {
         self._id = _id
         self.version = version
     }
@@ -31414,11 +31778,11 @@ public class QueueConversationCallbackEventTopicWrapup: Codable {
     /** List of tags selected by the agent to describe the call or disposition. */
     public var tags: [String]?
     /** The length of time in seconds that the agent spent doing after call work., Note, the format of utc-millisec should be ignored, our code generator needs it to generate a Long for us internally */
-    public var durationSeconds: Int?
+    public var durationSeconds: Int64?
     /** The timestamp when the wrapup was finished. */
     public var endTime: Date?
 
-    public init(code: String?, notes: String?, tags: [String]?, durationSeconds: Int?, endTime: Date?) {
+    public init(code: String?, notes: String?, tags: [String]?, durationSeconds: Int64?, endTime: Date?) {
         self.code = code
         self.notes = notes
         self.tags = tags
@@ -31509,10 +31873,10 @@ public class QueueConversationChatEventTopicLimit: Codable {
 
     public var key: String?
     public var namespace: Namespace?
-    public var value: Int?
+    public var value: Int64?
     public var documented: Bool?
 
-    public init(key: String?, namespace: Namespace?, value: Int?, documented: Bool?) {
+    public init(key: String?, namespace: Namespace?, value: Int64?, documented: Bool?) {
         self.key = key
         self.namespace = namespace
         self.value = value
@@ -31536,7 +31900,7 @@ public class QueueConversationChatEventTopicQueueMediaSettings: Codable {
 
 
     /** Specifies how long the agent has to answer an interaction before being marked as not responding. */
-    public var alertingTimeoutSeconds: Int?
+    public var alertingTimeoutSeconds: Int64?
     /** Specifies the duration of the alerting sound to be played for auto answered interactions. */
     public var autoAnswerAlertToneSeconds: Double?
     /** Specifies the duration of the alerting sound to be played for manually answered interactions */
@@ -31544,7 +31908,7 @@ public class QueueConversationChatEventTopicQueueMediaSettings: Codable {
     /** Flag to indicate if auto answer is enabled for the given media type or media subtype. */
     public var enableAutoAnswer: Bool?
 
-    public init(alertingTimeoutSeconds: Int?, autoAnswerAlertToneSeconds: Double?, manualAnswerAlertToneSeconds: Double?, enableAutoAnswer: Bool?) {
+    public init(alertingTimeoutSeconds: Int64?, autoAnswerAlertToneSeconds: Double?, manualAnswerAlertToneSeconds: Double?, enableAutoAnswer: Bool?) {
         self.alertingTimeoutSeconds = alertingTimeoutSeconds
         self.autoAnswerAlertToneSeconds = autoAnswerAlertToneSeconds
         self.manualAnswerAlertToneSeconds = manualAnswerAlertToneSeconds
@@ -31658,73 +32022,16 @@ public class QueueConversationCobrowseEventTopicWrapup: Codable {
     /** List of tags selected by the agent to describe the call or disposition. */
     public var tags: [String]?
     /** The length of time in seconds that the agent spent doing after call work., Note, the format of utc-millisec should be ignored, our code generator needs it to generate a Long for us internally */
-    public var durationSeconds: Int?
+    public var durationSeconds: Int64?
     /** The timestamp when the wrapup was finished. */
     public var endTime: Date?
 
-    public init(code: String?, notes: String?, tags: [String]?, durationSeconds: Int?, endTime: Date?) {
+    public init(code: String?, notes: String?, tags: [String]?, durationSeconds: Int64?, endTime: Date?) {
         self.code = code
         self.notes = notes
         self.tags = tags
         self.durationSeconds = durationSeconds
         self.endTime = endTime
-    }
-
-
-}
-
-
-
-
-public class QueueMember: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The queue member's id. */
-    public var _id: String?
-    public var name: String?
-    public var user: User?
-    public var ringNumber: Int?
-    public var joined: Bool?
-    public var memberBy: String?
-    public var routingStatus: RoutingStatus?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, user: User?, ringNumber: Int?, joined: Bool?, memberBy: String?, routingStatus: RoutingStatus?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.user = user
-        self.ringNumber = ringNumber
-        self.joined = joined
-        self.memberBy = memberBy
-        self.routingStatus = routingStatus
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case user
-        case ringNumber
-        case joined
-        case memberBy
-        case routingStatus
-        case selfUri
     }
 
 
@@ -31750,13 +32057,13 @@ public class QueueConversationEmailEventTopicConversationRoutingData: Codable {
     /** A UriReference for a resource */
     public var language: QueueConversationEmailEventTopicUriReference?
     /** The priority of the conversation to use for routing decisions */
-    public var priority: Int?
+    public var priority: Int64?
     /** The skills to use for routing decisions */
     public var skills: [QueueConversationEmailEventTopicUriReference]?
     /** A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents */
     public var scoredAgents: [QueueConversationEmailEventTopicScoredAgent]?
 
-    public init(queue: QueueConversationEmailEventTopicUriReference?, language: QueueConversationEmailEventTopicUriReference?, priority: Int?, skills: [QueueConversationEmailEventTopicUriReference]?, scoredAgents: [QueueConversationEmailEventTopicScoredAgent]?) {
+    public init(queue: QueueConversationEmailEventTopicUriReference?, language: QueueConversationEmailEventTopicUriReference?, priority: Int64?, skills: [QueueConversationEmailEventTopicUriReference]?, scoredAgents: [QueueConversationEmailEventTopicScoredAgent]?) {
         self.queue = queue
         self.language = language
         self.priority = priority
@@ -32095,7 +32402,7 @@ public class QueueConversationEventTopicConversation: Codable {
 
 
     public var _id: String?
-    public var maxParticipants: Int?
+    public var maxParticipants: Int64?
     public var participants: [QueueConversationEventTopicParticipant]?
     public var recentTransfers: [QueueConversationEventTopicTransferResponse]?
     public var recordingState: String?
@@ -32105,7 +32412,7 @@ public class QueueConversationEventTopicConversation: Codable {
     public var securePause: Bool?
     public var divisions: [QueueConversationEventTopicConversationDivisionMembership]?
 
-    public init(_id: String?, maxParticipants: Int?, participants: [QueueConversationEventTopicParticipant]?, recentTransfers: [QueueConversationEventTopicTransferResponse]?, recordingState: String?, address: String?, externalTag: String?, utilizationLabelId: String?, securePause: Bool?, divisions: [QueueConversationEventTopicConversationDivisionMembership]?) {
+    public init(_id: String?, maxParticipants: Int64?, participants: [QueueConversationEventTopicParticipant]?, recentTransfers: [QueueConversationEventTopicTransferResponse]?, recordingState: String?, address: String?, externalTag: String?, utilizationLabelId: String?, securePause: Bool?, divisions: [QueueConversationEventTopicConversationDivisionMembership]?) {
         self._id = _id
         self.maxParticipants = maxParticipants
         self.participants = participants
@@ -32151,11 +32458,11 @@ public class QueueConversationEventTopicDisconnectReason: Codable {
     /** Disconnect reason protocol type. */
     public var type: ModelType?
     /** Protocol specific reason code. See the Q.850 and SIP specs. */
-    public var code: Int?
+    public var code: Int64?
     /** Human readable English description of the disconnect reason. */
     public var phrase: String?
 
-    public init(type: ModelType?, code: Int?, phrase: String?) {
+    public init(type: ModelType?, code: Int64?, phrase: String?) {
         self.type = type
         self.code = code
         self.phrase = phrase
@@ -32177,9 +32484,9 @@ public class QueueConversationEventTopicJourneyActionMap: Codable {
     /** The ID of the actionMap in the Journey System which triggered this action */
     public var _id: String?
     /** The version number of the actionMap in the Journey System at the time this action was triggered */
-    public var version: Int?
+    public var version: Int64?
 
-    public init(_id: String?, version: Int?) {
+    public init(_id: String?, version: Int64?) {
         self._id = _id
         self.version = version
     }
@@ -32540,10 +32847,10 @@ public class QueueConversationMessageEventTopicLimit: Codable {
 
     public var key: String?
     public var namespace: Namespace?
-    public var value: Int?
+    public var value: Int64?
     public var documented: Bool?
 
-    public init(key: String?, namespace: Namespace?, value: Int?, documented: Bool?) {
+    public init(key: String?, namespace: Namespace?, value: Int64?, documented: Bool?) {
         self.key = key
         self.namespace = namespace
         self.value = value
@@ -32589,7 +32896,7 @@ public class QueueConversationMessageEventTopicQueueMediaSettings: Codable {
 
 
     /** Specifies how long the agent has to answer an interaction before being marked as not responding. */
-    public var alertingTimeoutSeconds: Int?
+    public var alertingTimeoutSeconds: Int64?
     /** Specifies the duration of the alerting sound to be played for auto answered interactions. */
     public var autoAnswerAlertToneSeconds: Double?
     /** Specifies the duration of the alerting sound to be played for manually answered interactions */
@@ -32597,7 +32904,7 @@ public class QueueConversationMessageEventTopicQueueMediaSettings: Codable {
     /** Flag to indicate if auto answer is enabled for the given media type or media subtype. */
     public var enableAutoAnswer: Bool?
 
-    public init(alertingTimeoutSeconds: Int?, autoAnswerAlertToneSeconds: Double?, manualAnswerAlertToneSeconds: Double?, enableAutoAnswer: Bool?) {
+    public init(alertingTimeoutSeconds: Int64?, autoAnswerAlertToneSeconds: Double?, manualAnswerAlertToneSeconds: Double?, enableAutoAnswer: Bool?) {
         self.alertingTimeoutSeconds = alertingTimeoutSeconds
         self.autoAnswerAlertToneSeconds = autoAnswerAlertToneSeconds
         self.manualAnswerAlertToneSeconds = manualAnswerAlertToneSeconds
@@ -32695,9 +33002,9 @@ public class QueueConversationScreenShareEventTopicScoredAgent: Codable {
     /** A UriReference for a resource */
     public var agent: QueueConversationScreenShareEventTopicUriReference?
     /** Agent's score for the current conversation, from 0 - 100, higher being better */
-    public var score: Int?
+    public var score: Int64?
 
-    public init(agent: QueueConversationScreenShareEventTopicUriReference?, score: Int?) {
+    public init(agent: QueueConversationScreenShareEventTopicUriReference?, score: Int64?) {
         self.agent = agent
         self.score = score
     }
@@ -32869,9 +33176,9 @@ public class QueueConversationScreenShareEventTopicScreenShareMediaParticipant: 
     public var attributes: [String:String]?
     public var errorInfo: QueueConversationScreenShareEventTopicErrorBody?
     public var script: QueueConversationScreenShareEventTopicUriReference?
-    public var wrapupTimeoutMs: Int?
+    public var wrapupTimeoutMs: Int64?
     public var wrapupSkipped: Bool?
-    public var alertingTimeoutMs: Int?
+    public var alertingTimeoutMs: Int64?
     public var provider: String?
     public var externalContact: QueueConversationScreenShareEventTopicUriReference?
     public var externalContactInitialDivisionId: String?
@@ -32889,10 +33196,10 @@ public class QueueConversationScreenShareEventTopicScreenShareMediaParticipant: 
     public var mediaRoles: [String]?
     public var queueMediaSettings: QueueConversationScreenShareEventTopicQueueMediaSettings?
     public var context: String?
-    public var peerCount: Int?
+    public var peerCount: Int64?
     public var sharing: Bool?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, initialState: InitialState?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationScreenShareEventTopicUriReference?, queue: QueueConversationScreenShareEventTopicUriReference?, team: QueueConversationScreenShareEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationScreenShareEventTopicErrorBody?, script: QueueConversationScreenShareEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: QueueConversationScreenShareEventTopicUriReference?, externalContactInitialDivisionId: String?, externalOrganization: QueueConversationScreenShareEventTopicUriReference?, wrapup: QueueConversationScreenShareEventTopicWrapup?, conversationRoutingData: QueueConversationScreenShareEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationScreenShareEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, resumeTime: Date?, parkTime: Date?, mediaRoles: [String]?, queueMediaSettings: QueueConversationScreenShareEventTopicQueueMediaSettings?, context: String?, peerCount: Int?, sharing: Bool?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, initialState: InitialState?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationScreenShareEventTopicUriReference?, queue: QueueConversationScreenShareEventTopicUriReference?, team: QueueConversationScreenShareEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationScreenShareEventTopicErrorBody?, script: QueueConversationScreenShareEventTopicUriReference?, wrapupTimeoutMs: Int64?, wrapupSkipped: Bool?, alertingTimeoutMs: Int64?, provider: String?, externalContact: QueueConversationScreenShareEventTopicUriReference?, externalContactInitialDivisionId: String?, externalOrganization: QueueConversationScreenShareEventTopicUriReference?, wrapup: QueueConversationScreenShareEventTopicWrapup?, conversationRoutingData: QueueConversationScreenShareEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationScreenShareEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, resumeTime: Date?, parkTime: Date?, mediaRoles: [String]?, queueMediaSettings: QueueConversationScreenShareEventTopicQueueMediaSettings?, context: String?, peerCount: Int64?, sharing: Bool?) {
         self._id = _id
         self.name = name
         self.address = address
@@ -33289,7 +33596,7 @@ public class QueueConversationSocialExpressionEventTopicConversation: Codable {
 
 
     public var _id: String?
-    public var maxParticipants: Int?
+    public var maxParticipants: Int64?
     public var participants: [QueueConversationSocialExpressionEventTopicParticipant]?
     public var recentTransfers: [QueueConversationSocialExpressionEventTopicTransferResponse]?
     public var recordingState: String?
@@ -33299,7 +33606,7 @@ public class QueueConversationSocialExpressionEventTopicConversation: Codable {
     public var securePause: Bool?
     public var divisions: [QueueConversationSocialExpressionEventTopicConversationDivisionMembership]?
 
-    public init(_id: String?, maxParticipants: Int?, participants: [QueueConversationSocialExpressionEventTopicParticipant]?, recentTransfers: [QueueConversationSocialExpressionEventTopicTransferResponse]?, recordingState: String?, address: String?, externalTag: String?, utilizationLabelId: String?, securePause: Bool?, divisions: [QueueConversationSocialExpressionEventTopicConversationDivisionMembership]?) {
+    public init(_id: String?, maxParticipants: Int64?, participants: [QueueConversationSocialExpressionEventTopicParticipant]?, recentTransfers: [QueueConversationSocialExpressionEventTopicTransferResponse]?, recordingState: String?, address: String?, externalTag: String?, utilizationLabelId: String?, securePause: Bool?, divisions: [QueueConversationSocialExpressionEventTopicConversationDivisionMembership]?) {
         self._id = _id
         self.maxParticipants = maxParticipants
         self.participants = participants
@@ -33345,11 +33652,11 @@ public class QueueConversationSocialExpressionEventTopicDisconnectReason: Codabl
     /** Disconnect reason protocol type. */
     public var type: ModelType?
     /** Protocol specific reason code. See the Q.850 and SIP specs. */
-    public var code: Int?
+    public var code: Int64?
     /** Human readable English description of the disconnect reason. */
     public var phrase: String?
 
-    public init(type: ModelType?, code: Int?, phrase: String?) {
+    public init(type: ModelType?, code: Int64?, phrase: String?) {
         self.type = type
         self.code = code
         self.phrase = phrase
@@ -33371,9 +33678,9 @@ public class QueueConversationSocialExpressionEventTopicJourneyActionMap: Codabl
     /** The ID of the actionMap in the Journey System which triggered this action */
     public var _id: String?
     /** The version number of the actionMap in the Journey System at the time this action was triggered */
-    public var version: Int?
+    public var version: Int64?
 
-    public init(_id: String?, version: Int?) {
+    public init(_id: String?, version: Int64?) {
         self._id = _id
         self.version = version
     }
@@ -33656,6 +33963,63 @@ public class QueueConversationSocialExpressionEventTopicUriReference: Codable {
 
 
 
+
+public class QueueMember: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The queue member's id. */
+    public var _id: String?
+    public var name: String?
+    public var user: User?
+    public var ringNumber: Int?
+    public var joined: Bool?
+    public var memberBy: String?
+    public var routingStatus: RoutingStatus?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, user: User?, ringNumber: Int?, joined: Bool?, memberBy: String?, routingStatus: RoutingStatus?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.user = user
+        self.ringNumber = ringNumber
+        self.joined = joined
+        self.memberBy = memberBy
+        self.routingStatus = routingStatus
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case user
+        case ringNumber
+        case joined
+        case memberBy
+        case routingStatus
+        case selfUri
+    }
+
+
+}
+
+
+
 /** A communication's after-call work data. */
 
 public class QueueConversationVideoEventTopicAfterCallWork: Codable {
@@ -33708,13 +34072,13 @@ public class QueueConversationVideoEventTopicConversationRoutingData: Codable {
     /** A UriReference for a resource */
     public var language: QueueConversationVideoEventTopicUriReference?
     /** The priority of the conversation to use for routing decisions */
-    public var priority: Int?
+    public var priority: Int64?
     /** The skills to use for routing decisions */
     public var skills: [QueueConversationVideoEventTopicUriReference]?
     /** A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents */
     public var scoredAgents: [QueueConversationVideoEventTopicScoredAgent]?
 
-    public init(queue: QueueConversationVideoEventTopicUriReference?, language: QueueConversationVideoEventTopicUriReference?, priority: Int?, skills: [QueueConversationVideoEventTopicUriReference]?, scoredAgents: [QueueConversationVideoEventTopicScoredAgent]?) {
+    public init(queue: QueueConversationVideoEventTopicUriReference?, language: QueueConversationVideoEventTopicUriReference?, priority: Int64?, skills: [QueueConversationVideoEventTopicUriReference]?, scoredAgents: [QueueConversationVideoEventTopicScoredAgent]?) {
         self.queue = queue
         self.language = language
         self.priority = priority
@@ -33772,7 +34136,7 @@ public class QueueConversationVideoEventTopicErrorDetails: Codable {
 
 
     /** The HTTP status code for this message (400, 401, 403, 404, 500, etc. */
-    public var status: Int?
+    public var status: Int64?
     /** A code unique to this error. */
     public var code: String?
     /** Friendly description of this error. */
@@ -33785,7 +34149,7 @@ public class QueueConversationVideoEventTopicErrorDetails: Codable {
     public var contextId: String?
     public var uri: String?
 
-    public init(status: Int?, code: String?, message: String?, messageWithParams: String?, messageParams: [String:String]?, contextId: String?, uri: String?) {
+    public init(status: Int64?, code: String?, message: String?, messageWithParams: String?, messageParams: [String:String]?, contextId: String?, uri: String?) {
         self.status = status
         self.code = code
         self.message = message
@@ -34088,6 +34452,33 @@ public class QueueRequest: Codable {
 
 
 
+public class Record: Codable {
+
+
+
+
+
+
+
+    /** The name of the record. */
+    public var name: String?
+    /** The type of the record. (Example values:  MX, TXT, CNAME) */
+    public var type: String?
+    /** The value of the record. */
+    public var value: String?
+
+    public init(name: String?, type: String?, value: String?) {
+        self.name = name
+        self.type = type
+        self.value = value
+    }
+
+
+}
+
+
+
+
 public class RateLimitAggregateQueryPredicate: Codable {
 
     public enum ModelType: String, Codable { 
@@ -34283,33 +34674,6 @@ public class RecognitionBase: Codable {
 
 
 
-public class Record: Codable {
-
-
-
-
-
-
-
-    /** The name of the record. */
-    public var name: String?
-    /** The type of the record. (Example values:  MX, TXT, CNAME) */
-    public var type: String?
-    /** The value of the record. */
-    public var value: String?
-
-    public init(name: String?, type: String?, value: String?) {
-        self.name = name
-        self.type = type
-        self.value = value
-    }
-
-
-}
-
-
-
-
 public class RecordingArchiveRestoreTopicRecording: Codable {
 
 
@@ -34328,10 +34692,10 @@ public class RecordingArchiveRestoreTopicRecording: Codable {
     public var conversationId: String?
     public var fileState: String?
     public var mediaUris: [RecordingArchiveRestoreTopicMediaResult]?
-    public var estimatedTranscodeTimeMs: Int?
-    public var actualTranscodeTimeMs: Int?
+    public var estimatedTranscodeTimeMs: Int64?
+    public var actualTranscodeTimeMs: Int64?
 
-    public init(_id: String?, conversationId: String?, fileState: String?, mediaUris: [RecordingArchiveRestoreTopicMediaResult]?, estimatedTranscodeTimeMs: Int?, actualTranscodeTimeMs: Int?) {
+    public init(_id: String?, conversationId: String?, fileState: String?, mediaUris: [RecordingArchiveRestoreTopicMediaResult]?, estimatedTranscodeTimeMs: Int64?, actualTranscodeTimeMs: Int64?) {
         self._id = _id
         self.conversationId = conversationId
         self.fileState = fileState
@@ -34618,10 +34982,10 @@ public class RecordingTranscodeCompleteTopicRecording: Codable {
     public var conversationId: String?
     public var fileState: String?
     public var mediaUris: [RecordingTranscodeCompleteTopicMediaResult]?
-    public var estimatedTranscodeTimeMs: Int?
-    public var actualTranscodeTimeMs: Int?
+    public var estimatedTranscodeTimeMs: Int64?
+    public var actualTranscodeTimeMs: Int64?
 
-    public init(_id: String?, conversationId: String?, fileState: String?, mediaUris: [RecordingTranscodeCompleteTopicMediaResult]?, estimatedTranscodeTimeMs: Int?, actualTranscodeTimeMs: Int?) {
+    public init(_id: String?, conversationId: String?, fileState: String?, mediaUris: [RecordingTranscodeCompleteTopicMediaResult]?, estimatedTranscodeTimeMs: Int64?, actualTranscodeTimeMs: Int64?) {
         self._id = _id
         self.conversationId = conversationId
         self.fileState = fileState
@@ -40208,61 +40572,6 @@ public class UserAggregationQuery: Codable {
 
 
 
-public class UserDetailQueryPredicate: Codable {
-
-    public enum ModelType: String, Codable { 
-        case dimension = "dimension"
-        case property = "property"
-        case metric = "metric"
-    }
-
-    public enum Dimension: String, Codable { 
-        case userid = "userId"
-    }
-
-    public enum Operator: String, Codable { 
-        case matches = "matches"
-        case exists = "exists"
-        case notexists = "notExists"
-    }
-
-
-
-
-
-    /** Optional type, can usually be inferred */
-    public var type: ModelType?
-    /** Left hand side for dimension predicates */
-    public var dimension: Dimension?
-    /** Optional operator, default is matches */
-    public var _operator: Operator?
-    /** Right hand side for dimension predicates */
-    public var value: String?
-    /** Right hand side for dimension predicates */
-    public var range: NumericRange?
-
-    public init(type: ModelType?, dimension: Dimension?, _operator: Operator?, value: String?, range: NumericRange?) {
-        self.type = type
-        self.dimension = dimension
-        self._operator = _operator
-        self.value = value
-        self.range = range
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case type
-        case dimension
-        case _operator = "operator"
-        case value
-        case range
-    }
-
-
-}
-
-
-
-
 public class UserDevice: Codable {
 
 
@@ -40331,6 +40640,61 @@ public class UserDevice: Codable {
         case type
         case sessionHash
         case selfUri
+    }
+
+
+}
+
+
+
+
+public class UserDetailQueryPredicate: Codable {
+
+    public enum ModelType: String, Codable { 
+        case dimension = "dimension"
+        case property = "property"
+        case metric = "metric"
+    }
+
+    public enum Dimension: String, Codable { 
+        case userid = "userId"
+    }
+
+    public enum Operator: String, Codable { 
+        case matches = "matches"
+        case exists = "exists"
+        case notexists = "notExists"
+    }
+
+
+
+
+
+    /** Optional type, can usually be inferred */
+    public var type: ModelType?
+    /** Left hand side for dimension predicates */
+    public var dimension: Dimension?
+    /** Optional operator, default is matches */
+    public var _operator: Operator?
+    /** Right hand side for dimension predicates */
+    public var value: String?
+    /** Right hand side for dimension predicates */
+    public var range: NumericRange?
+
+    public init(type: ModelType?, dimension: Dimension?, _operator: Operator?, value: String?, range: NumericRange?) {
+        self.type = type
+        self.dimension = dimension
+        self._operator = _operator
+        self.value = value
+        self.range = range
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case type
+        case dimension
+        case _operator = "operator"
+        case value
+        case range
     }
 
 
@@ -40443,7 +40807,7 @@ public class UserEndDetailEventTopicUserEndEvent: Codable {
 
 
 
-    public var eventTime: Int?
+    public var eventTime: Int64?
     public var conversationId: String?
     public var participantId: String?
     public var sessionId: String?
@@ -40457,22 +40821,22 @@ public class UserEndDetailEventTopicUserEndEvent: Codable {
     public var addressFrom: String?
     public var callbackUserName: String?
     public var callbackNumbers: [String]?
-    public var callbackScheduledTime: Int?
+    public var callbackScheduledTime: Int64?
     public var subject: String?
     public var messageType: MessageType?
     public var userId: String?
     public var divisionId: String?
     public var queueId: String?
-    public var interactingDurationMs: Int?
-    public var heldDurationMs: Int?
-    public var alertingDurationMs: Int?
-    public var contactingDurationMs: Int?
-    public var dialingDurationMs: Int?
-    public var callbackDurationMs: Int?
+    public var interactingDurationMs: Int64?
+    public var heldDurationMs: Int64?
+    public var alertingDurationMs: Int64?
+    public var contactingDurationMs: Int64?
+    public var dialingDurationMs: Int64?
+    public var callbackDurationMs: Int64?
     public var conversationExternalContactIds: [String]?
     public var conversationExternalOrganizationIds: [String]?
 
-    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int?, subject: String?, messageType: MessageType?, userId: String?, divisionId: String?, queueId: String?, interactingDurationMs: Int?, heldDurationMs: Int?, alertingDurationMs: Int?, contactingDurationMs: Int?, dialingDurationMs: Int?, callbackDurationMs: Int?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?) {
+    public init(eventTime: Int64?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int64?, subject: String?, messageType: MessageType?, userId: String?, divisionId: String?, queueId: String?, interactingDurationMs: Int64?, heldDurationMs: Int64?, alertingDurationMs: Int64?, contactingDurationMs: Int64?, dialingDurationMs: Int64?, callbackDurationMs: Int64?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
@@ -41852,11 +42216,11 @@ public class V2WebMessagingUndeliveredMessageTopicWebMessagingUndeliveredMessage
     public var participantId: String?
     public var externalContactId: String?
     public var communicationId: String?
-    public var sessionExpiry: Int?
+    public var sessionExpiry: Int64?
     public var messages: [V2WebMessagingUndeliveredMessageTopicMessage]?
-    public var eventTimeMs: Int?
+    public var eventTimeMs: Int64?
 
-    public init(conversationId: String?, deploymentId: String?, participantId: String?, externalContactId: String?, communicationId: String?, sessionExpiry: Int?, messages: [V2WebMessagingUndeliveredMessageTopicMessage]?, eventTimeMs: Int?) {
+    public init(conversationId: String?, deploymentId: String?, participantId: String?, externalContactId: String?, communicationId: String?, sessionExpiry: Int64?, messages: [V2WebMessagingUndeliveredMessageTopicMessage]?, eventTimeMs: Int64?) {
         self.conversationId = conversationId
         self.deploymentId = deploymentId
         self.participantId = participantId
@@ -42633,12 +42997,12 @@ public class WfmActivityPlanJobCompleteTopicErrorBody: Codable {
 
 
 
-    public var status: Int?
+    public var status: Int64?
     public var code: String?
     public var message: String?
     public var messageParams: [String:String]?
 
-    public init(status: Int?, code: String?, message: String?, messageParams: [String:String]?) {
+    public init(status: Int64?, code: String?, message: String?, messageParams: [String:String]?) {
         self.status = status
         self.code = code
         self.message = message
@@ -42724,12 +43088,12 @@ public class WfmAdherenceExplanationJobCompleteTopicErrorBody: Codable {
 
 
 
-    public var status: Int?
+    public var status: Int64?
     public var code: String?
     public var message: String?
     public var messageParams: [String:String]?
 
-    public init(status: Int?, code: String?, message: String?, messageParams: [String:String]?) {
+    public init(status: Int64?, code: String?, message: String?, messageParams: [String:String]?) {
         self.status = status
         self.code = code
         self.message = message
@@ -42936,7 +43300,7 @@ public class WfmBuScheduleTopicBuScheduleMetadata: Codable {
 
     public var _id: String?
     public var weekDate: Date?
-    public var weekCount: Int?
+    public var weekCount: Int64?
     public var _description: String?
     public var published: Bool?
     public var shortTermForecast: WfmBuScheduleTopicBuShortTermForecastReference?
@@ -42944,7 +43308,7 @@ public class WfmBuScheduleTopicBuScheduleMetadata: Codable {
     public var generationResults: WfmBuScheduleTopicBuScheduleGenerationResultSummary?
     public var metadata: WfmBuScheduleTopicWfmVersionedEntityMetadata?
 
-    public init(_id: String?, weekDate: Date?, weekCount: Int?, _description: String?, published: Bool?, shortTermForecast: WfmBuScheduleTopicBuShortTermForecastReference?, managementUnits: [WfmBuScheduleTopicBuManagementUnitScheduleSummary]?, generationResults: WfmBuScheduleTopicBuScheduleGenerationResultSummary?, metadata: WfmBuScheduleTopicWfmVersionedEntityMetadata?) {
+    public init(_id: String?, weekDate: Date?, weekCount: Int64?, _description: String?, published: Bool?, shortTermForecast: WfmBuScheduleTopicBuShortTermForecastReference?, managementUnits: [WfmBuScheduleTopicBuManagementUnitScheduleSummary]?, generationResults: WfmBuScheduleTopicBuScheduleGenerationResultSummary?, metadata: WfmBuScheduleTopicWfmVersionedEntityMetadata?) {
         self._id = _id
         self.weekDate = weekDate
         self.weekCount = weekCount
@@ -43036,12 +43400,12 @@ public class WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast: Cod
     public var sourceDays: [WfmBuShortTermForecastGenerateProgressTopicForecastSourceDayPointer]?
     public var modifications: [WfmBuShortTermForecastGenerateProgressTopicBuForecastModification]?
     public var timeZone: String?
-    public var planningGroupsVersion: Int?
-    public var weekCount: Int?
+    public var planningGroupsVersion: Int64?
+    public var weekCount: Int64?
     public var metadata: WfmBuShortTermForecastGenerateProgressTopicWfmVersionedEntityMetadata?
     public var canUseForScheduling: Bool?
 
-    public init(_id: String?, weekDate: String?, creationMethod: CreationMethod?, _description: String?, legacy: Bool?, referenceStartDate: Date?, sourceDays: [WfmBuShortTermForecastGenerateProgressTopicForecastSourceDayPointer]?, modifications: [WfmBuShortTermForecastGenerateProgressTopicBuForecastModification]?, timeZone: String?, planningGroupsVersion: Int?, weekCount: Int?, metadata: WfmBuShortTermForecastGenerateProgressTopicWfmVersionedEntityMetadata?, canUseForScheduling: Bool?) {
+    public init(_id: String?, weekDate: String?, creationMethod: CreationMethod?, _description: String?, legacy: Bool?, referenceStartDate: Date?, sourceDays: [WfmBuShortTermForecastGenerateProgressTopicForecastSourceDayPointer]?, modifications: [WfmBuShortTermForecastGenerateProgressTopicBuForecastModification]?, timeZone: String?, planningGroupsVersion: Int64?, weekCount: Int64?, metadata: WfmBuShortTermForecastGenerateProgressTopicWfmVersionedEntityMetadata?, canUseForScheduling: Bool?) {
         self._id = _id
         self.weekDate = weekDate
         self.creationMethod = creationMethod
@@ -43101,12 +43465,12 @@ public class WfmBuShortTermForecastImportCompleteTopicForecastSourceDayPointer: 
 
 
     public var dayOfWeek: DayOfWeek?
-    public var weight: Int?
+    public var weight: Int64?
     public var date: String?
     public var fileName: String?
     public var dataKey: String?
 
-    public init(dayOfWeek: DayOfWeek?, weight: Int?, date: String?, fileName: String?, dataKey: String?) {
+    public init(dayOfWeek: DayOfWeek?, weight: Int64?, date: String?, fileName: String?, dataKey: String?) {
         self.dayOfWeek = dayOfWeek
         self.weight = weight
         self.date = date
@@ -43148,11 +43512,11 @@ public class WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuFo
 
 
 
-    public var weekNumber: Int?
+    public var weekNumber: Int64?
     public var downloadUrl: String?
     public var downloadUrlExpirationDate: Date?
 
-    public init(weekNumber: Int?, downloadUrl: String?, downloadUrlExpirationDate: Date?) {
+    public init(weekNumber: Int64?, downloadUrl: String?, downloadUrlExpirationDate: Date?) {
         self.weekNumber = weekNumber
         self.downloadUrl = downloadUrl
         self.downloadUrlExpirationDate = downloadUrlExpirationDate
@@ -43631,12 +43995,12 @@ public class WfmTimeOffBalanceJobTopicErrorBody: Codable {
 
 
 
-    public var status: Int?
+    public var status: Int64?
     public var code: String?
     public var message: String?
     public var messageParams: [String:String]?
 
-    public init(status: Int?, code: String?, message: String?, messageParams: [String:String]?) {
+    public init(status: Int64?, code: String?, message: String?, messageParams: [String:String]?) {
         self.status = status
         self.code = code
         self.message = message
@@ -43665,9 +44029,9 @@ public class WfmTimeOffBalanceJobTopicTimeOffBalance: Codable {
     public var hrisTimeOffTypeId: String?
     public var hrisTimeOffTypeSecondaryId: String?
     public var startDate: Date?
-    public var balanceMinutesPerDay: [Int]?
+    public var balanceMinutesPerDay: [Int64]?
 
-    public init(activityCodeId: String?, hrisTimeOffTypeId: String?, hrisTimeOffTypeSecondaryId: String?, startDate: Date?, balanceMinutesPerDay: [Int]?) {
+    public init(activityCodeId: String?, hrisTimeOffTypeId: String?, hrisTimeOffTypeSecondaryId: String?, startDate: Date?, balanceMinutesPerDay: [Int64]?) {
         self.activityCodeId = activityCodeId
         self.hrisTimeOffTypeId = hrisTimeOffTypeId
         self.hrisTimeOffTypeSecondaryId = hrisTimeOffTypeSecondaryId
@@ -45359,7 +45723,7 @@ public class WrapupDetailEventTopicWrapupEvent: Codable {
 
 
 
-    public var eventTime: Int?
+    public var eventTime: Int64?
     public var conversationId: String?
     public var participantId: String?
     public var sessionId: String?
@@ -45372,17 +45736,17 @@ public class WrapupDetailEventTopicWrapupEvent: Codable {
     public var addressFrom: String?
     public var callbackUserName: String?
     public var callbackNumbers: [String]?
-    public var callbackScheduledTime: Int?
+    public var callbackScheduledTime: Int64?
     public var subject: String?
     public var messageType: MessageType?
     public var queueId: String?
     public var wrapupCode: String?
     public var wrapupNotes: String?
-    public var wrapupDurationMs: Int?
+    public var wrapupDurationMs: Int64?
     public var conversationExternalContactIds: [String]?
     public var conversationExternalOrganizationIds: [String]?
 
-    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int?, subject: String?, messageType: MessageType?, queueId: String?, wrapupCode: String?, wrapupNotes: String?, wrapupDurationMs: Int?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?) {
+    public init(eventTime: Int64?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int64?, subject: String?, messageType: MessageType?, queueId: String?, wrapupCode: String?, wrapupNotes: String?, wrapupDurationMs: Int64?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId

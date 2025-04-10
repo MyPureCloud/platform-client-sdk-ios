@@ -10,8 +10,8 @@
 | **hrisTimeOffTypeId** | **String** |  | [optional] |
 | **hrisTimeOffTypeSecondaryId** | **String** |  | [optional] |
 | **startDate** | [**Date**](Date) |  | [optional] |
-| **balanceMinutesPerDay** | **[Int]** |  | [optional] |
+| **balanceMinutesPerDay** | **[Int64]** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

@@ -13,4 +13,4 @@ A subset of the Journey System&#39;s data relevant to a part of a conversation (
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

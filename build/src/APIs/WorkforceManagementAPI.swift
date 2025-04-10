@@ -6741,7 +6741,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     Retrieves delete job status for historical data imports of the organization
+     Retrieves delete job status for historical data imports of the organization.
      
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -6764,8 +6764,9 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     Retrieves delete job status for historical data imports of the organization
+     Retrieves delete job status for historical data imports of the organization.
      - GET /api/v2/workforcemanagement/historicaldata/deletejob
+     - Deprecated: Please use GET /workforcemanagement/historicaldata/bulk/remove/jobs instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -16749,7 +16750,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     Delete the entries of the historical data imports in the organization
+     Delete the entries of the historical data imports in the organization.
      
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -16772,8 +16773,9 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     Delete the entries of the historical data imports in the organization
+     Delete the entries of the historical data imports in the organization.
      - POST /api/v2/workforcemanagement/historicaldata/deletejob
+     - Deprecated: Please use POST /workforcemanagement/historicaldata/bulk/remove/jobs instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

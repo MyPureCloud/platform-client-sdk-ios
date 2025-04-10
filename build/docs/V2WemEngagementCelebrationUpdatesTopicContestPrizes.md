@@ -6,10 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **tier** | **Int** |  | [optional] |
+| **tier** | **Int64** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **imageId** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

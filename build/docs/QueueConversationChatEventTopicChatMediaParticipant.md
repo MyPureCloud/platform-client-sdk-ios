@@ -27,9 +27,9 @@
 | **attributes** | **[String:String]** |  | [optional] |
 | **errorInfo** | [**QueueConversationChatEventTopicErrorBody**](QueueConversationChatEventTopicErrorBody) |  | [optional] |
 | **script** | [**QueueConversationChatEventTopicUriReference**](QueueConversationChatEventTopicUriReference) |  | [optional] |
-| **wrapupTimeoutMs** | **Int** |  | [optional] |
+| **wrapupTimeoutMs** | **Int64** |  | [optional] |
 | **wrapupSkipped** | **Bool** |  | [optional] |
-| **alertingTimeoutMs** | **Int** |  | [optional] |
+| **alertingTimeoutMs** | **Int64** |  | [optional] |
 | **provider** | **String** |  | [optional] |
 | **externalContact** | [**QueueConversationChatEventTopicUriReference**](QueueConversationChatEventTopicUriReference) |  | [optional] |
 | **externalContactInitialDivisionId** | **String** |  | [optional] |
@@ -51,4 +51,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

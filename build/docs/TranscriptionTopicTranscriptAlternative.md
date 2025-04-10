@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **confidence** | **Double** |  | [optional] |
-| **offsetMs** | **Int** |  | [optional] |
-| **durationMs** | **Int** |  | [optional] |
+| **offsetMs** | **Int64** |  | [optional] |
+| **durationMs** | **Int64** |  | [optional] |
 | **transcript** | **String** |  | [optional] |
 | **words** | [**[TranscriptionTopicTranscriptWord]**]([TranscriptionTopicTranscriptWord]) |  | [optional] |
 | **decoratedTranscript** | **String** |  | [optional] |
@@ -16,4 +16,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

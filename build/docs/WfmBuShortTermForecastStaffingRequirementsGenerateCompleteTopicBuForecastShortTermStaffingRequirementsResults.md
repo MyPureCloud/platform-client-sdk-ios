@@ -6,10 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **weekNumber** | **Int** |  | [optional] |
+| **weekNumber** | **Int64** |  | [optional] |
 | **downloadUrl** | **String** |  | [optional] |
 | **downloadUrlExpirationDate** | [**Date**](Date) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_
