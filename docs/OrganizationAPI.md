@@ -961,4 +961,4 @@ OrganizationAPI.putOrganizationsWhitelist(body: body) { (response, error) in
 [**OrgWhitelistSettings**](OrgWhitelistSettings)
 
 
-_PureCloudPlatformClientV2@165.0.0_
+_PureCloudPlatformClientV2@165.1.0_

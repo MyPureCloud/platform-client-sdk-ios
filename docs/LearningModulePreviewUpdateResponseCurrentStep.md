@@ -11,4 +11,4 @@ Learning module preview update response current step
 
 
 
-_PureCloudPlatformClientV2@165.0.0_
+_PureCloudPlatformClientV2@165.1.0_

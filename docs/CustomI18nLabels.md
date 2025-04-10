@@ -12,4 +12,4 @@ The localization settings for homescreen
 
 
 
-_PureCloudPlatformClientV2@165.0.0_
+_PureCloudPlatformClientV2@165.1.0_

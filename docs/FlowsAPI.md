@@ -164,4 +164,4 @@ FlowsAPI.postAnalyticsFlowsObservationsQuery(body: body) { (response, error) in
 [**FlowObservationQueryResponse**](FlowObservationQueryResponse)
 
 
-_PureCloudPlatformClientV2@165.0.0_
+_PureCloudPlatformClientV2@165.1.0_

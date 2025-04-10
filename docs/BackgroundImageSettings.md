@@ -11,4 +11,4 @@ The settings to Agent Video background image
 
 
 
-_PureCloudPlatformClientV2@165.0.0_
+_PureCloudPlatformClientV2@165.1.0_
