@@ -543,4 +543,4 @@ TeamsAPI.postTeamsSearch(body: body) { (response, error) in
 [**TeamsSearchResponse**](TeamsSearchResponse)
 
 
-_PureCloudPlatformClientV2@165.0.0_
+_PureCloudPlatformClientV2@165.1.0_

@@ -17,4 +17,4 @@ Data property required as input for installing an accelerator
 
 
 
-_PureCloudPlatformClientV2@165.0.0_
+_PureCloudPlatformClientV2@165.1.0_

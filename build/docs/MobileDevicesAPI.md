@@ -262,4 +262,4 @@ MobileDevicesAPI.putMobiledevice(deviceId: deviceId, body: body) { (response, er
 [**UserDevice**](UserDevice)
 
 
-_PureCloudPlatformClientV2@165.0.0_
+_PureCloudPlatformClientV2@165.1.0_

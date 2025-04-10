@@ -1704,4 +1704,4 @@ ChatAPI.putChatsSettings(body: body) { (response, error) in
 [**ChatSettings**](ChatSettings)
 
 
-_PureCloudPlatformClientV2@165.0.0_
+_PureCloudPlatformClientV2@165.1.0_

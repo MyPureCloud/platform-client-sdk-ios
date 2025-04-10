@@ -11,4 +11,4 @@ Query integrations for agents request
 
 
 
-_PureCloudPlatformClientV2@165.0.0_
+_PureCloudPlatformClientV2@165.1.0_

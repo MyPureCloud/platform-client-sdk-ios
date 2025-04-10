@@ -371,4 +371,4 @@ UserRecordingsAPI.putUserrecording(recordingId: recordingId, body: body, expand:
 [**UserRecording**](UserRecording)
 
 
-_PureCloudPlatformClientV2@165.0.0_
+_PureCloudPlatformClientV2@165.1.0_

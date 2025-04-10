@@ -15,4 +15,4 @@ User information for a twitter account
 
 
 
-_PureCloudPlatformClientV2@165.0.0_
+_PureCloudPlatformClientV2@165.1.0_
