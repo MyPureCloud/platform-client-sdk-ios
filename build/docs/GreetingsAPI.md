@@ -824,4 +824,4 @@ GreetingsAPI.putUserGreetingsDefaults(userId: userId, body: body) { (response, e
 [**DefaultGreetingList**](DefaultGreetingList)
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

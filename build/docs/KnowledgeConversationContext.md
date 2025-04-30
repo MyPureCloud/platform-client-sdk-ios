@@ -8,9 +8,10 @@
 |------------ | ------------- | ------------- | -------------|
 | **conversationId** | **String** | The unique identifier of the conversation. | |
 | **mediaType** | **String** | The media type of the conversation. | [optional] |
+| **messageType** | **String** | The message type of the conversation. | [optional] |
 | **queueId** | **String** | The unique identifier of the queue used to assign the interaction to the user. | [optional] |
 | **externalContactId** | **String** | The external contact identifier of the end-user participant. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

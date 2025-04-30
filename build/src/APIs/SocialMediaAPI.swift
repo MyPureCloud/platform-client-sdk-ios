@@ -644,6 +644,7 @@ open class SocialMediaAPI {
         } ],
         "originatingEntity" : "Human",
         "isFinalReceipt" : true,
+        "relatedMessages" : [ null, null ],
         "channel" : "{}",
         "type" : "Text",
         "content" : [ {
@@ -653,6 +654,13 @@ open class SocialMediaAPI {
           "attachment" : "{}",
           "buttonResponse" : "{}",
           "location" : "{}",
+          "reactions" : [ {
+            "reactionType" : "None",
+            "count" : 0
+          }, {
+            "reactionType" : "None",
+            "count" : 0
+          } ],
           "text" : "{}",
           "carousel" : "{}",
           "contentType" : "Reactions",
@@ -665,12 +673,20 @@ open class SocialMediaAPI {
           "attachment" : "{}",
           "buttonResponse" : "{}",
           "location" : "{}",
+          "reactions" : [ {
+            "reactionType" : "None",
+            "count" : 0
+          }, {
+            "reactionType" : "None",
+            "count" : 0
+          } ],
           "text" : "{}",
           "carousel" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
           "story" : "{}"
         } ],
+        "enrichment" : "{}",
         "id" : "id",
         "text" : "text",
         "byoSmsIntegrationId" : "byoSmsIntegrationId",
@@ -708,6 +724,7 @@ open class SocialMediaAPI {
         } ],
         "originatingEntity" : "Human",
         "isFinalReceipt" : true,
+        "relatedMessages" : [ null, null ],
         "channel" : "{}",
         "type" : "Text",
         "content" : [ {
@@ -717,6 +734,13 @@ open class SocialMediaAPI {
           "attachment" : "{}",
           "buttonResponse" : "{}",
           "location" : "{}",
+          "reactions" : [ {
+            "reactionType" : "None",
+            "count" : 0
+          }, {
+            "reactionType" : "None",
+            "count" : 0
+          } ],
           "text" : "{}",
           "carousel" : "{}",
           "contentType" : "Reactions",
@@ -729,12 +753,20 @@ open class SocialMediaAPI {
           "attachment" : "{}",
           "buttonResponse" : "{}",
           "location" : "{}",
+          "reactions" : [ {
+            "reactionType" : "None",
+            "count" : 0
+          }, {
+            "reactionType" : "None",
+            "count" : 0
+          } ],
           "text" : "{}",
           "carousel" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
           "story" : "{}"
         } ],
+        "enrichment" : "{}",
         "id" : "id",
         "text" : "text",
         "byoSmsIntegrationId" : "byoSmsIntegrationId",
@@ -775,6 +807,7 @@ open class SocialMediaAPI {
         } ],
         "originatingEntity" : "Human",
         "isFinalReceipt" : true,
+        "relatedMessages" : [ null, null ],
         "channel" : "{}",
         "type" : "Text",
         "content" : [ {
@@ -784,6 +817,13 @@ open class SocialMediaAPI {
           "attachment" : "{}",
           "buttonResponse" : "{}",
           "location" : "{}",
+          "reactions" : [ {
+            "reactionType" : "None",
+            "count" : 0
+          }, {
+            "reactionType" : "None",
+            "count" : 0
+          } ],
           "text" : "{}",
           "carousel" : "{}",
           "contentType" : "Reactions",
@@ -796,12 +836,20 @@ open class SocialMediaAPI {
           "attachment" : "{}",
           "buttonResponse" : "{}",
           "location" : "{}",
+          "reactions" : [ {
+            "reactionType" : "None",
+            "count" : 0
+          }, {
+            "reactionType" : "None",
+            "count" : 0
+          } ],
           "text" : "{}",
           "carousel" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
           "story" : "{}"
         } ],
+        "enrichment" : "{}",
         "id" : "id",
         "text" : "text",
         "byoSmsIntegrationId" : "byoSmsIntegrationId",
@@ -839,6 +887,7 @@ open class SocialMediaAPI {
         } ],
         "originatingEntity" : "Human",
         "isFinalReceipt" : true,
+        "relatedMessages" : [ null, null ],
         "channel" : "{}",
         "type" : "Text",
         "content" : [ {
@@ -848,6 +897,13 @@ open class SocialMediaAPI {
           "attachment" : "{}",
           "buttonResponse" : "{}",
           "location" : "{}",
+          "reactions" : [ {
+            "reactionType" : "None",
+            "count" : 0
+          }, {
+            "reactionType" : "None",
+            "count" : 0
+          } ],
           "text" : "{}",
           "carousel" : "{}",
           "contentType" : "Reactions",
@@ -860,12 +916,20 @@ open class SocialMediaAPI {
           "attachment" : "{}",
           "buttonResponse" : "{}",
           "location" : "{}",
+          "reactions" : [ {
+            "reactionType" : "None",
+            "count" : 0
+          }, {
+            "reactionType" : "None",
+            "count" : 0
+          } ],
           "text" : "{}",
           "carousel" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
           "story" : "{}"
         } ],
+        "enrichment" : "{}",
         "id" : "id",
         "text" : "text",
         "byoSmsIntegrationId" : "byoSmsIntegrationId",

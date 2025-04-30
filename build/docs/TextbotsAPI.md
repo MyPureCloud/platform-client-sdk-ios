@@ -39,8 +39,8 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let botType: [String] = [""] // Bot types
 let botName: String = "" // Bot name
-let botId: [String] = [""] // Bot IDs
-let pageSize: Int = 0 // The maximum results to return
+let botId: [String] = [""] // Bot IDs. Maximum of 50
+let pageSize: Int = 0 // The maximum results to return. Maximum of 100
 
 // Code example
 TextbotsAPI.getTextbotsBotsSearch(botType: botType, botName: botName, botId: botId, pageSize: pageSize) { (response, error) in
@@ -58,10 +58,10 @@ TextbotsAPI.getTextbotsBotsSearch(botType: botType, botName: botName, botId: bot
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **botType** | [**[String]**](String)| Bot types | [optional]<br />**Values**: genesysBotConnector ("GenesysBotConnector"), genesysDialogEngine ("GenesysDialogEngine"), amazonLex ("AmazonLex"), googleDialogFlowES ("GoogleDialogFlowES"), googleDialogFlowCX ("GoogleDialogFlowCX"), nuanceDlg ("NuanceDlg"), genesysBotFlow ("GenesysBotFlow"), genesysDigitalBotFlow ("GenesysDigitalBotFlow"), genesysVoiceSurveyFlow ("GenesysVoiceSurveyFlow") |
+| **botType** | [**[String]**](String)| Bot types | [optional]<br />**Values**: genesysBotConnector ("GenesysBotConnector"), genesysDialogEngine ("GenesysDialogEngine"), amazonLex ("AmazonLex"), googleDialogFlowES ("GoogleDialogFlowES"), googleDialogFlowCX ("GoogleDialogFlowCX"), nuanceDlg ("NuanceDlg"), genesysBotFlow ("GenesysBotFlow"), genesysDigitalBotFlow ("GenesysDigitalBotFlow"), genesysVoiceSurveyFlow ("GenesysVoiceSurveyFlow"), genesysDigitalBotConnector ("GenesysDigitalBotConnector") |
 | **botName** | **String**| Bot name | [optional] |
-| **botId** | [**[String]**](String)| Bot IDs | [optional] |
-| **pageSize** | **Int**| The maximum results to return | [optional] |
+| **botId** | [**[String]**](String)| Bot IDs. Maximum of 50 | [optional] |
+| **pageSize** | **Int**| The maximum results to return. Maximum of 100 | [optional] |
 
 
 ### Return type
@@ -227,4 +227,4 @@ TextbotsAPI.postTextbotsBotsExecute(postTextRequest: postTextRequest) { (respons
 [**PostTextResponse**](PostTextResponse)
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

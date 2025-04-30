@@ -13,4 +13,4 @@ Defines a \&quot;bulk\&quot; request in the SCIM service provider&#39;s configur
 
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

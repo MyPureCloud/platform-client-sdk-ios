@@ -1186,7 +1186,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let jobId: String = "" // jobId
 let pageSize: Int = 0 // Page size. Maximum is 100.
 let pageNumber: Int = 0 // Page number
-let includeTotal: Bool = true // If false, cursor will be used to locate the page instead of pageNumber.
+let includeTotal: Bool = true // If false, cursor will be used to locate the page instead of pageNumber. It is recommended to set it to false for improved performance.
 let cursor: String = "" // Indicates where to resume query results (not required for first page)
 
 // Code example
@@ -1208,7 +1208,7 @@ RecordingAPI.getRecordingJobFailedrecordings(jobId: jobId, pageSize: pageSize, p
 | **jobId** | **String**| jobId | |
 | **pageSize** | **Int**| Page size. Maximum is 100. | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **includeTotal** | **Bool**| If false, cursor will be used to locate the page instead of pageNumber. | [optional] |
+| **includeTotal** | **Bool**| If false, cursor will be used to locate the page instead of pageNumber. It is recommended to set it to false for improved performance. | [optional] |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
 
 
@@ -1247,7 +1247,7 @@ let sortBy: RecordingAPI.SortBy_getRecordingJobs = RecordingAPI.SortBy_getRecord
 let state: RecordingAPI.State_getRecordingJobs = RecordingAPI.State_getRecordingJobs.enummember // Filter by state
 let showOnlyMyJobs: Bool = true // Show only my jobs
 let jobType: RecordingAPI.JobType_getRecordingJobs = RecordingAPI.JobType_getRecordingJobs.enummember // Job Type (Can be left empty for both)
-let includeTotal: Bool = true // If false, cursor will be used to locate the page instead of pageNumber.
+let includeTotal: Bool = true // If false, cursor will be used to locate the page instead of pageNumber. It is recommended to set it to false for improved performance.
 let cursor: String = "" // Indicates where to resume query results (not required for first page)
 
 // Code example
@@ -1272,7 +1272,7 @@ RecordingAPI.getRecordingJobs(pageSize: pageSize, pageNumber: pageNumber, sortBy
 | **state** | **String**| Filter by state | [optional]<br />**Values**: fulfilled ("FULFILLED"), pending ("PENDING"), ready ("READY"), processing ("PROCESSING"), cancelled ("CANCELLED"), failed ("FAILED") |
 | **showOnlyMyJobs** | **Bool**| Show only my jobs | [optional] |
 | **jobType** | **String**| Job Type (Can be left empty for both) | [optional]<br />**Values**: archive ("ARCHIVE"), delete ("DELETE"), export ("EXPORT") |
-| **includeTotal** | **Bool**| If false, cursor will be used to locate the page instead of pageNumber. | [optional] |
+| **includeTotal** | **Bool**| If false, cursor will be used to locate the page instead of pageNumber. It is recommended to set it to false for improved performance. | [optional] |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
 
 
@@ -3094,4 +3094,4 @@ RecordingAPI.putRecordingsDeletionprotection(protect: protect, body: body) { (er
 `nil` (empty response body)
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

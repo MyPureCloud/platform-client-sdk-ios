@@ -2939,7 +2939,9 @@ open class JourneyAPI {
   "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
   "journeyView" : "{}",
+  "estimatedCompletionMargin" : 0,
   "id" : "id",
+  "userId" : "userId",
   "status" : "Accepted",
   "dateCompletionEstimated" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]
@@ -3227,7 +3229,9 @@ open class JourneyAPI {
   "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
   "journeyView" : "{}",
+  "estimatedCompletionMargin" : 0,
   "id" : "id",
+  "userId" : "userId",
   "status" : "Accepted",
   "dateCompletionEstimated" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]
@@ -3772,7 +3776,9 @@ open class JourneyAPI {
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
     "selfUri" : "https://openapi-generator.tech",
     "journeyView" : "{}",
+    "estimatedCompletionMargin" : 0,
     "id" : "id",
+    "userId" : "userId",
     "status" : "Accepted",
     "dateCompletionEstimated" : "2000-01-23T04:56:07.000+00:00"
   }, {
@@ -3780,7 +3786,9 @@ open class JourneyAPI {
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
     "selfUri" : "https://openapi-generator.tech",
     "journeyView" : "{}",
+    "estimatedCompletionMargin" : 0,
     "id" : "id",
+    "userId" : "userId",
     "status" : "Accepted",
     "dateCompletionEstimated" : "2000-01-23T04:56:07.000+00:00"
   } ],
@@ -4352,7 +4360,9 @@ open class JourneyAPI {
   "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
   "journeyView" : "{}",
+  "estimatedCompletionMargin" : 0,
   "id" : "id",
+  "userId" : "userId",
   "status" : "Accepted",
   "dateCompletionEstimated" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]
@@ -5543,7 +5553,9 @@ open class JourneyAPI {
   "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
   "journeyView" : "{}",
+  "estimatedCompletionMargin" : 0,
   "id" : "id",
+  "userId" : "userId",
   "status" : "Accepted",
   "dateCompletionEstimated" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=202}]

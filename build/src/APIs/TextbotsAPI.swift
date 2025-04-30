@@ -22,6 +22,7 @@ open class TextbotsAPI {
         case genesysBotFlow = "GenesysBotFlow"
         case genesysDigitalBotFlow = "GenesysDigitalBotFlow"
         case genesysVoiceSurveyFlow = "GenesysVoiceSurveyFlow"
+        case genesysDigitalBotConnector = "GenesysDigitalBotConnector"
     }
     
     
@@ -35,8 +36,8 @@ open class TextbotsAPI {
      
      - parameter botType: (query) Bot types (optional)
      - parameter botName: (query) Bot name (optional)
-     - parameter botId: (query) Bot IDs (optional)
-     - parameter pageSize: (query) The maximum results to return (optional)
+     - parameter botId: (query) Bot IDs. Maximum of 50 (optional)
+     - parameter pageSize: (query) The maximum results to return. Maximum of 100 (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getTextbotsBotsSearch(botType: [String]? = nil, botName: String? = nil, botId: [String]? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: BotSearchResponseEntityListing?,_ error: Error?) -> Void)) {
@@ -82,8 +83,8 @@ open class TextbotsAPI {
      
      - parameter botType: (query) Bot types (optional)
      - parameter botName: (query) Bot name (optional)
-     - parameter botId: (query) Bot IDs (optional)
-     - parameter pageSize: (query) The maximum results to return (optional)
+     - parameter botId: (query) Bot IDs. Maximum of 50 (optional)
+     - parameter pageSize: (query) The maximum results to return. Maximum of 100 (optional)
 
      - returns: RequestBuilder<BotSearchResponseEntityListing> 
      */
@@ -283,6 +284,13 @@ open class TextbotsAPI {
       "attachment" : "{}",
       "buttonResponse" : "{}",
       "location" : "{}",
+      "reactions" : [ {
+        "reactionType" : "None",
+        "count" : 0
+      }, {
+        "reactionType" : "None",
+        "count" : 0
+      } ],
       "text" : "{}",
       "carousel" : "{}",
       "contentType" : "Reactions",
@@ -295,6 +303,13 @@ open class TextbotsAPI {
       "attachment" : "{}",
       "buttonResponse" : "{}",
       "location" : "{}",
+      "reactions" : [ {
+        "reactionType" : "None",
+        "count" : 0
+      }, {
+        "reactionType" : "None",
+        "count" : 0
+      } ],
       "text" : "{}",
       "carousel" : "{}",
       "contentType" : "Reactions",
@@ -311,6 +326,13 @@ open class TextbotsAPI {
       "attachment" : "{}",
       "buttonResponse" : "{}",
       "location" : "{}",
+      "reactions" : [ {
+        "reactionType" : "None",
+        "count" : 0
+      }, {
+        "reactionType" : "None",
+        "count" : 0
+      } ],
       "text" : "{}",
       "carousel" : "{}",
       "contentType" : "Reactions",
@@ -323,6 +345,13 @@ open class TextbotsAPI {
       "attachment" : "{}",
       "buttonResponse" : "{}",
       "location" : "{}",
+      "reactions" : [ {
+        "reactionType" : "None",
+        "count" : 0
+      }, {
+        "reactionType" : "None",
+        "count" : 0
+      } ],
       "text" : "{}",
       "carousel" : "{}",
       "contentType" : "Reactions",

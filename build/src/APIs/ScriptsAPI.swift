@@ -855,6 +855,96 @@ open class ScriptsAPI {
     
     
     
+    public enum Input_getScriptsPublishedDivisionviewVariables: String { 
+        case _true = "true"
+        case _false = "false"
+    }
+    
+    
+    
+    public enum Output_getScriptsPublishedDivisionviewVariables: String { 
+        case _true = "true"
+        case _false = "false"
+    }
+    
+    
+    
+    public enum ModelType_getScriptsPublishedDivisionviewVariables: String { 
+        case string = "string"
+        case number = "number"
+        case boolean = "boolean"
+    }
+    
+    
+    
+    
+    /**
+     Get the published variables
+     
+     - parameter scriptId: (path) Script ID 
+     - parameter input: (query) input (optional)
+     - parameter output: (query) output (optional)
+     - parameter type: (query) type (optional)
+     - parameter scriptDataVersion: (query) Advanced usage - controls the data version of the script (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getScriptsPublishedDivisionviewVariables(scriptId: String, input: Input_getScriptsPublishedDivisionviewVariables? = nil, output: Output_getScriptsPublishedDivisionviewVariables? = nil, type: ModelType_getScriptsPublishedDivisionviewVariables? = nil, scriptDataVersion: String? = nil, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
+        let requestBuilder = getScriptsPublishedDivisionviewVariablesWithRequestBuilder(scriptId: scriptId, input: input, output: output, type: type, scriptDataVersion: scriptDataVersion)
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the published variables
+     - GET /api/v2/scripts/published/divisionviews/{scriptId}/variables
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter scriptId: (path) Script ID 
+     - parameter input: (query) input (optional)
+     - parameter output: (query) output (optional)
+     - parameter type: (query) type (optional)
+     - parameter scriptDataVersion: (query) Advanced usage - controls the data version of the script (optional)
+
+     - returns: RequestBuilder<JSON> 
+     */
+    open class func getScriptsPublishedDivisionviewVariablesWithRequestBuilder(scriptId: String, input: Input_getScriptsPublishedDivisionviewVariables? = nil, output: Output_getScriptsPublishedDivisionviewVariables? = nil, type: ModelType_getScriptsPublishedDivisionviewVariables? = nil, scriptDataVersion: String? = nil) -> RequestBuilder<JSON> {        
+        var path = "/api/v2/scripts/published/divisionviews/{scriptId}/variables"
+        let scriptIdPreEscape = "\(scriptId)"
+        let scriptIdPostEscape = scriptIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scriptId}", with: scriptIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "input": input?.rawValue, 
+            "output": output?.rawValue, 
+            "type": type?.rawValue, 
+            "scriptDataVersion": scriptDataVersion
+        ])
+
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
     
     
     

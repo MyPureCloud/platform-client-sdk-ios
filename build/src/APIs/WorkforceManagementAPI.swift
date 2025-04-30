@@ -3221,8 +3221,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   }, {
@@ -3234,8 +3234,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   } ],
@@ -7095,8 +7095,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]
@@ -9507,8 +9507,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   }, {
@@ -9520,8 +9520,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   } ],
@@ -9605,8 +9605,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   }, {
@@ -9618,8 +9618,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   } ],
@@ -11890,8 +11890,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]
@@ -19280,8 +19280,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]

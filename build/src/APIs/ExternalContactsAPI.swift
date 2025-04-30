@@ -5388,11 +5388,11 @@ open class ExternalContactsAPI {
     
     
     /**
-     Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
+     Look up contacts based on an attribute. Maximum of 25 values returned.
      
-     - parameter lookupVal: (query) User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names) 
+     - parameter lookupVal: (query) User supplied value to lookup contacts (supports email addresses, e164 phone numbers, Twitter screen names) 
      - parameter expand: (query) which field, if any, to expand (optional)
-     - parameter divisionId: (query) Specifies which division to lookup contacts/externalOrganizations in, for the given lookup value (optional)
+     - parameter divisionId: (query) Specifies which division to lookup contacts in, for the given lookup value (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getExternalcontactsReversewhitepageslookup(lookupVal: String, expand: [String]? = nil, divisionId: String? = nil, completion: @escaping ((_ data: ReverseWhitepagesLookupResult?,_ error: Error?) -> Void)) {
@@ -5414,161 +5414,12 @@ open class ExternalContactsAPI {
     }
 
     /**
-     Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
+     Look up contacts based on an attribute. Maximum of 25 values returned.
      - GET /api/v2/externalcontacts/reversewhitepageslookup
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "externalOrganizations" : [ {
-    "schema" : "{}",
-    "address" : {
-      "address2" : "address2",
-      "city" : "city",
-      "address1" : "address1",
-      "countryCode" : "countryCode",
-      "postalCode" : "postalCode",
-      "state" : "state"
-    },
-    "modifyDate" : "2000-01-23T04:56:07.000+00:00",
-    "companyType" : "companyType",
-    "customFields" : {
-      "key" : "{}"
-    },
-    "selfUri" : "https://openapi-generator.tech",
-    "industry" : "industry",
-    "employeeCount" : 6,
-    "tickers" : [ {
-      "symbol" : "symbol",
-      "exchange" : "exchange"
-    }, {
-      "symbol" : "symbol",
-      "exchange" : "exchange"
-    } ],
-    "twitterId" : {
-      "profileUrl" : "profileUrl",
-      "name" : "name",
-      "verified" : true,
-      "id" : "id",
-      "screenName" : "screenName"
-    },
-    "tags" : [ "tags", "tags" ],
-    "division" : "{}",
-    "revenue" : 1,
-    "phoneNumber" : {
-      "extension" : 0,
-      "normalizationCountryCode" : "normalizationCountryCode",
-      "e164" : "e164",
-      "acceptsSMS" : true,
-      "countryCode" : "countryCode",
-      "display" : "display",
-      "userInput" : "userInput"
-    },
-    "externalSystemUrl" : "externalSystemUrl",
-    "externalDataSources" : [ {
-      "platform" : "SALESFORCE",
-      "url" : "url"
-    }, {
-      "platform" : "SALESFORCE",
-      "url" : "url"
-    } ],
-    "name" : "name",
-    "faxNumber" : {
-      "extension" : 0,
-      "normalizationCountryCode" : "normalizationCountryCode",
-      "e164" : "e164",
-      "acceptsSMS" : true,
-      "countryCode" : "countryCode",
-      "display" : "display",
-      "userInput" : "userInput"
-    },
-    "trustor" : {
-      "authorization" : "{}",
-      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "createdBy" : "{}",
-      "organization" : "{}",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
-      "enabled" : true
-    },
-    "websites" : [ "websites", "websites" ],
-    "id" : "id",
-    "createDate" : "2000-01-23T04:56:07.000+00:00"
-  }, {
-    "schema" : "{}",
-    "address" : {
-      "address2" : "address2",
-      "city" : "city",
-      "address1" : "address1",
-      "countryCode" : "countryCode",
-      "postalCode" : "postalCode",
-      "state" : "state"
-    },
-    "modifyDate" : "2000-01-23T04:56:07.000+00:00",
-    "companyType" : "companyType",
-    "customFields" : {
-      "key" : "{}"
-    },
-    "selfUri" : "https://openapi-generator.tech",
-    "industry" : "industry",
-    "employeeCount" : 6,
-    "tickers" : [ {
-      "symbol" : "symbol",
-      "exchange" : "exchange"
-    }, {
-      "symbol" : "symbol",
-      "exchange" : "exchange"
-    } ],
-    "twitterId" : {
-      "profileUrl" : "profileUrl",
-      "name" : "name",
-      "verified" : true,
-      "id" : "id",
-      "screenName" : "screenName"
-    },
-    "tags" : [ "tags", "tags" ],
-    "division" : "{}",
-    "revenue" : 1,
-    "phoneNumber" : {
-      "extension" : 0,
-      "normalizationCountryCode" : "normalizationCountryCode",
-      "e164" : "e164",
-      "acceptsSMS" : true,
-      "countryCode" : "countryCode",
-      "display" : "display",
-      "userInput" : "userInput"
-    },
-    "externalSystemUrl" : "externalSystemUrl",
-    "externalDataSources" : [ {
-      "platform" : "SALESFORCE",
-      "url" : "url"
-    }, {
-      "platform" : "SALESFORCE",
-      "url" : "url"
-    } ],
-    "name" : "name",
-    "faxNumber" : {
-      "extension" : 0,
-      "normalizationCountryCode" : "normalizationCountryCode",
-      "e164" : "e164",
-      "acceptsSMS" : true,
-      "countryCode" : "countryCode",
-      "display" : "display",
-      "userInput" : "userInput"
-    },
-    "trustor" : {
-      "authorization" : "{}",
-      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "createdBy" : "{}",
-      "organization" : "{}",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
-      "enabled" : true
-    },
-    "websites" : [ "websites", "websites" ],
-    "id" : "id",
-    "createDate" : "2000-01-23T04:56:07.000+00:00"
-  } ],
   "contacts" : [ {
     "schema" : "{}",
     "lastName" : "lastName",
@@ -6018,9 +5869,9 @@ open class ExternalContactsAPI {
   } ]
 }, statusCode=200}]
      
-     - parameter lookupVal: (query) User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names) 
+     - parameter lookupVal: (query) User supplied value to lookup contacts (supports email addresses, e164 phone numbers, Twitter screen names) 
      - parameter expand: (query) which field, if any, to expand (optional)
-     - parameter divisionId: (query) Specifies which division to lookup contacts/externalOrganizations in, for the given lookup value (optional)
+     - parameter divisionId: (query) Specifies which division to lookup contacts in, for the given lookup value (optional)
 
      - returns: RequestBuilder<ReverseWhitepagesLookupResult> 
      */

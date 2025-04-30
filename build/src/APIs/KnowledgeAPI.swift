@@ -2025,6 +2025,7 @@ open class KnowledgeAPI {
         case manualSearch = "ManualSearch"
         case recommendation = "Recommendation"
         case suggestion = "Suggestion"
+        case expandedArticle = "ExpandedArticle"
     }
     
     

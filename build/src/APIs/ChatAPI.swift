@@ -1390,9 +1390,9 @@ open class ChatAPI {
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getChatsUsersMeSettings(completion: @escaping ((_ data: ChatUserSettings?,_ error: Error?) -> Void)) {
+    open class func getChatsUsersMeSettings(completion: @escaping ((_ data: UserSettingsForChat?,_ error: Error?) -> Void)) {
         let requestBuilder = getChatsUsersMeSettingsWithRequestBuilder()
-        requestBuilder.execute { (response: Response<ChatUserSettings>?, error) -> Void in
+        requestBuilder.execute { (response: Response<UserSettingsForChat>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1415,19 +1415,22 @@ open class ChatAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "mobile" : "{}"
+  "notifyOnReactions" : true,
+  "mentionsOnly" : true,
+  "mobile" : "{}",
+  "muted" : true
 }, statusCode=200}]
 
-     - returns: RequestBuilder<ChatUserSettings> 
+     - returns: RequestBuilder<UserSettingsForChat> 
      */
-    open class func getChatsUsersMeSettingsWithRequestBuilder() -> RequestBuilder<ChatUserSettings> {        
+    open class func getChatsUsersMeSettingsWithRequestBuilder() -> RequestBuilder<UserSettingsForChat> {        
         let path = "/api/v2/chats/users/me/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<ChatUserSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<UserSettingsForChat>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1733,9 +1736,9 @@ open class ChatAPI {
      - parameter body: (body)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchChatsUsersMeSettings(body: ChatUserSettings, completion: @escaping ((_ data: ChatUserSettings?,_ error: Error?) -> Void)) {
+    open class func patchChatsUsersMeSettings(body: UserSettingsForChat, completion: @escaping ((_ data: UserSettingsForChat?,_ error: Error?) -> Void)) {
         let requestBuilder = patchChatsUsersMeSettingsWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<ChatUserSettings>?, error) -> Void in
+        requestBuilder.execute { (response: Response<UserSettingsForChat>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1758,21 +1761,24 @@ open class ChatAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "mobile" : "{}"
+  "notifyOnReactions" : true,
+  "mentionsOnly" : true,
+  "mobile" : "{}",
+  "muted" : true
 }, statusCode=200}]
      
      - parameter body: (body)  
 
-     - returns: RequestBuilder<ChatUserSettings> 
+     - returns: RequestBuilder<UserSettingsForChat> 
      */
-    open class func patchChatsUsersMeSettingsWithRequestBuilder(body: ChatUserSettings) -> RequestBuilder<ChatUserSettings> {        
+    open class func patchChatsUsersMeSettingsWithRequestBuilder(body: UserSettingsForChat) -> RequestBuilder<UserSettingsForChat> {        
         let path = "/api/v2/chats/users/me/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<ChatUserSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<UserSettingsForChat>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }

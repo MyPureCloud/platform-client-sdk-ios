@@ -14,4 +14,4 @@ Details about a forms tracking event trigger
 
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

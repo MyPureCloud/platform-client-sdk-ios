@@ -199,6 +199,7 @@ open class RecordingAPI {
       "time" : "2000-01-23T04:56:07.000+00:00"
     } ],
     "messagingTranscript" : [ {
+      "socialVisibility" : "Public",
       "messageText" : "messageText",
       "quickReplies" : [ {
         "payload" : "payload",
@@ -298,6 +299,7 @@ open class RecordingAPI {
       "timestamp" : "2000-01-23T04:56:07.000+00:00",
       "story" : "{}"
     }, {
+      "socialVisibility" : "Public",
       "messageText" : "messageText",
       "quickReplies" : [ {
         "payload" : "payload",
@@ -1542,6 +1544,7 @@ open class RecordingAPI {
     "time" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "messagingTranscript" : [ {
+    "socialVisibility" : "Public",
     "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
@@ -1641,6 +1644,7 @@ open class RecordingAPI {
     "timestamp" : "2000-01-23T04:56:07.000+00:00",
     "story" : "{}"
   }, {
+    "socialVisibility" : "Public",
     "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
@@ -2994,6 +2998,7 @@ open class RecordingAPI {
     "time" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "messagingTranscript" : [ {
+    "socialVisibility" : "Public",
     "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
@@ -3093,6 +3098,7 @@ open class RecordingAPI {
     "timestamp" : "2000-01-23T04:56:07.000+00:00",
     "story" : "{}"
   }, {
+    "socialVisibility" : "Public",
     "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
@@ -4035,6 +4041,7 @@ open class RecordingAPI {
       "time" : "2000-01-23T04:56:07.000+00:00"
     } ],
     "messagingTranscript" : [ {
+      "socialVisibility" : "Public",
       "messageText" : "messageText",
       "quickReplies" : [ {
         "payload" : "payload",
@@ -4134,6 +4141,7 @@ open class RecordingAPI {
       "timestamp" : "2000-01-23T04:56:07.000+00:00",
       "story" : "{}"
     }, {
+      "socialVisibility" : "Public",
       "messageText" : "messageText",
       "quickReplies" : [ {
         "payload" : "payload",
@@ -5149,6 +5157,7 @@ open class RecordingAPI {
     "time" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "messagingTranscript" : [ {
+    "socialVisibility" : "Public",
     "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
@@ -5248,6 +5257,7 @@ open class RecordingAPI {
     "timestamp" : "2000-01-23T04:56:07.000+00:00",
     "story" : "{}"
   }, {
+    "socialVisibility" : "Public",
     "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
@@ -6226,6 +6236,7 @@ open class RecordingAPI {
         "time" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "messagingTranscript" : [ {
+        "socialVisibility" : "Public",
         "messageText" : "messageText",
         "quickReplies" : [ {
           "payload" : "payload",
@@ -6325,6 +6336,7 @@ open class RecordingAPI {
         "timestamp" : "2000-01-23T04:56:07.000+00:00",
         "story" : "{}"
       }, {
+        "socialVisibility" : "Public",
         "messageText" : "messageText",
         "quickReplies" : [ {
           "payload" : "payload",
@@ -7241,6 +7253,7 @@ open class RecordingAPI {
         "time" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "messagingTranscript" : [ {
+        "socialVisibility" : "Public",
         "messageText" : "messageText",
         "quickReplies" : [ {
           "payload" : "payload",
@@ -7340,6 +7353,7 @@ open class RecordingAPI {
         "timestamp" : "2000-01-23T04:56:07.000+00:00",
         "story" : "{}"
       }, {
+        "socialVisibility" : "Public",
         "messageText" : "messageText",
         "quickReplies" : [ {
           "payload" : "payload",
@@ -8655,7 +8669,7 @@ open class RecordingAPI {
      - parameter jobId: (path) jobId 
      - parameter pageSize: (query) Page size. Maximum is 100. (optional)
      - parameter pageNumber: (query) Page number (optional)
-     - parameter includeTotal: (query) If false, cursor will be used to locate the page instead of pageNumber. (optional)
+     - parameter includeTotal: (query) If false, cursor will be used to locate the page instead of pageNumber. It is recommended to set it to false for improved performance. (optional)
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -8705,7 +8719,7 @@ open class RecordingAPI {
      - parameter jobId: (path) jobId 
      - parameter pageSize: (query) Page size. Maximum is 100. (optional)
      - parameter pageNumber: (query) Page number (optional)
-     - parameter includeTotal: (query) If false, cursor will be used to locate the page instead of pageNumber. (optional)
+     - parameter includeTotal: (query) If false, cursor will be used to locate the page instead of pageNumber. It is recommended to set it to false for improved performance. (optional)
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
 
      - returns: RequestBuilder<FailedRecordingEntityListing> 
@@ -8776,7 +8790,7 @@ open class RecordingAPI {
      - parameter state: (query) Filter by state (optional)
      - parameter showOnlyMyJobs: (query) Show only my jobs (optional)
      - parameter jobType: (query) Job Type (Can be left empty for both) (optional)
-     - parameter includeTotal: (query) If false, cursor will be used to locate the page instead of pageNumber. (optional)
+     - parameter includeTotal: (query) If false, cursor will be used to locate the page instead of pageNumber. It is recommended to set it to false for improved performance. (optional)
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -8853,7 +8867,7 @@ open class RecordingAPI {
      - parameter state: (query) Filter by state (optional)
      - parameter showOnlyMyJobs: (query) Show only my jobs (optional)
      - parameter jobType: (query) Job Type (Can be left empty for both) (optional)
-     - parameter includeTotal: (query) If false, cursor will be used to locate the page instead of pageNumber. (optional)
+     - parameter includeTotal: (query) If false, cursor will be used to locate the page instead of pageNumber. It is recommended to set it to false for improved performance. (optional)
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
 
      - returns: RequestBuilder<RecordingJobEntityListing> 
@@ -10840,6 +10854,7 @@ open class RecordingAPI {
     "time" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "messagingTranscript" : [ {
+    "socialVisibility" : "Public",
     "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
@@ -10939,6 +10954,7 @@ open class RecordingAPI {
     "timestamp" : "2000-01-23T04:56:07.000+00:00",
     "story" : "{}"
   }, {
+    "socialVisibility" : "Public",
     "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
@@ -11965,6 +11981,7 @@ open class RecordingAPI {
     "time" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "messagingTranscript" : [ {
+    "socialVisibility" : "Public",
     "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
@@ -12064,6 +12081,7 @@ open class RecordingAPI {
     "timestamp" : "2000-01-23T04:56:07.000+00:00",
     "story" : "{}"
   }, {
+    "socialVisibility" : "Public",
     "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",

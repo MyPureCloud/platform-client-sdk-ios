@@ -6555,7 +6555,7 @@
     "operationId": "getchatsusersmesettings",
     "functionName": "getChatsUsersMeSettings",
     "signature": "getChatsUsersMeSettings()",
-    "return": "ChatUserSettings",
+    "return": "UserSettingsForChat",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get a user's chat settings\nGetChatsUsersMeSettingsRequest.getChatsUsersMeSettings() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetChatsUsersMeSettingsRequest.getChatsUsersMeSettings was successful\")\n        dump(response)\n    }\n}"
   },
   "patchchatsroom": {
@@ -6664,12 +6664,12 @@
     "parameters": [
       {
         "name": "body",
-        "type": "ChatUserSettings",
+        "type": "UserSettingsForChat",
         "required": "true"
       }
     ],
-    "return": "ChatUserSettings",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ChatUserSettings = new ChatUserSettings(...) // \n\n// Update a user's chat settings\nPatchChatsUsersMeSettingsRequest.patchChatsUsersMeSettings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchChatsUsersMeSettingsRequest.patchChatsUsersMeSettings was successful\")\n        dump(response)\n    }\n}"
+    "return": "UserSettingsForChat",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: UserSettingsForChat = new UserSettingsForChat(...) // \n\n// Update a user's chat settings\nPatchChatsUsersMeSettingsRequest.patchChatsUsersMeSettings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchChatsUsersMeSettingsRequest.patchChatsUsersMeSettings was successful\")\n        dump(response)\n    }\n}"
   },
   "postchatsroommessages": {
     "operationId": "postchatsroommessages",
@@ -11753,6 +11753,30 @@
     "return": "MessageMediaData",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet communicationId: String = \"\" // communicationId\n\n// Create media\nPostConversationsMessageCommunicationMessagesMediaRequest.postConversationsMessageCommunicationMessagesMedia(conversationId: conversationId, communicationId: communicationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsMessageCommunicationMessagesMediaRequest.postConversationsMessageCommunicationMessagesMedia was successful\")\n        dump(response)\n    }\n}"
   },
+  "postconversationsmessagecommunicationmessagesmediauploads": {
+    "operationId": "postconversationsmessagecommunicationmessagesmediauploads",
+    "functionName": "postConversationsMessageCommunicationMessagesMediaUploads",
+    "signature": "postConversationsMessageCommunicationMessagesMediaUploads(conversationId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UploadMediaRequest",
+        "required": "true"
+      }
+    ],
+    "return": "MessageMediaUploadData",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet communicationId: String = \"\" // communicationId\nlet body: UploadMediaRequest = new UploadMediaRequest(...) // request\n\n// Create a URL to upload a message media file\nPostConversationsMessageCommunicationMessagesMediaUploadsRequest.postConversationsMessageCommunicationMessagesMediaUploads(conversationId: conversationId, communicationId: communicationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsMessageCommunicationMessagesMediaUploadsRequest.postConversationsMessageCommunicationMessagesMediaUploads was successful\")\n        dump(response)\n    }\n}"
+  },
   "postconversationsmessagecommunicationtyping": {
     "operationId": "postconversationsmessagecommunicationtyping",
     "functionName": "postConversationsMessageCommunicationTyping",
@@ -13806,7 +13830,7 @@
       }
     ],
     "return": "ReverseWhitepagesLookupResult",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet lookupVal: String = \"\" // User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)\nlet expand: [String] = [\"\"] // which field, if any, to expand\nlet divisionId: String = \"\" // Specifies which division to lookup contacts/externalOrganizations in, for the given lookup value\n\n// Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.\nGetExternalcontactsReversewhitepageslookupRequest.getExternalcontactsReversewhitepageslookup(lookupVal: lookupVal, expand: expand, divisionId: divisionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsReversewhitepageslookupRequest.getExternalcontactsReversewhitepageslookup was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet lookupVal: String = \"\" // User supplied value to lookup contacts (supports email addresses, e164 phone numbers, Twitter screen names)\nlet expand: [String] = [\"\"] // which field, if any, to expand\nlet divisionId: String = \"\" // Specifies which division to lookup contacts in, for the given lookup value\n\n// Look up contacts based on an attribute. Maximum of 25 values returned.\nGetExternalcontactsReversewhitepageslookupRequest.getExternalcontactsReversewhitepageslookup(lookupVal: lookupVal, expand: expand, divisionId: divisionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsReversewhitepageslookupRequest.getExternalcontactsReversewhitepageslookup was successful\")\n        dump(response)\n    }\n}"
   },
   "getexternalcontactsscancontacts": {
     "operationId": "getexternalcontactsscancontacts",
@@ -33602,7 +33626,7 @@
       }
     ],
     "return": "FailedRecordingEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // jobId\nlet pageSize: Int = 0 // Page size. Maximum is 100.\nlet pageNumber: Int = 0 // Page number\nlet includeTotal: Bool = true // If false, cursor will be used to locate the page instead of pageNumber.\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page)\n\n// Get IDs of recordings that the bulk job failed for\nGetRecordingJobFailedrecordingsRequest.getRecordingJobFailedrecordings(jobId: jobId, pageSize: pageSize, pageNumber: pageNumber, includeTotal: includeTotal, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRecordingJobFailedrecordingsRequest.getRecordingJobFailedrecordings was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // jobId\nlet pageSize: Int = 0 // Page size. Maximum is 100.\nlet pageNumber: Int = 0 // Page number\nlet includeTotal: Bool = true // If false, cursor will be used to locate the page instead of pageNumber. It is recommended to set it to false for improved performance.\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page)\n\n// Get IDs of recordings that the bulk job failed for\nGetRecordingJobFailedrecordingsRequest.getRecordingJobFailedrecordings(jobId: jobId, pageSize: pageSize, pageNumber: pageNumber, includeTotal: includeTotal, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRecordingJobFailedrecordingsRequest.getRecordingJobFailedrecordings was successful\")\n        dump(response)\n    }\n}"
   },
   "getrecordingjobs": {
     "operationId": "getrecordingjobs",
@@ -33651,7 +33675,7 @@
       }
     ],
     "return": "RecordingJobEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortBy: GetRecordingJobsRequest.SortBy_getRecordingJobs = GetRecordingJobsRequest.SortBy_getRecordingJobs.enummember // Sort by\nlet state: GetRecordingJobsRequest.State_getRecordingJobs = GetRecordingJobsRequest.State_getRecordingJobs.enummember // Filter by state\nlet showOnlyMyJobs: Bool = true // Show only my jobs\nlet jobType: GetRecordingJobsRequest.JobType_getRecordingJobs = GetRecordingJobsRequest.JobType_getRecordingJobs.enummember // Job Type (Can be left empty for both)\nlet includeTotal: Bool = true // If false, cursor will be used to locate the page instead of pageNumber.\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page)\n\n// Get the status of all jobs within the user's organization\nGetRecordingJobsRequest.getRecordingJobs(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, state: state, showOnlyMyJobs: showOnlyMyJobs, jobType: jobType, includeTotal: includeTotal, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRecordingJobsRequest.getRecordingJobs was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortBy: GetRecordingJobsRequest.SortBy_getRecordingJobs = GetRecordingJobsRequest.SortBy_getRecordingJobs.enummember // Sort by\nlet state: GetRecordingJobsRequest.State_getRecordingJobs = GetRecordingJobsRequest.State_getRecordingJobs.enummember // Filter by state\nlet showOnlyMyJobs: Bool = true // Show only my jobs\nlet jobType: GetRecordingJobsRequest.JobType_getRecordingJobs = GetRecordingJobsRequest.JobType_getRecordingJobs.enummember // Job Type (Can be left empty for both)\nlet includeTotal: Bool = true // If false, cursor will be used to locate the page instead of pageNumber. It is recommended to set it to false for improved performance.\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page)\n\n// Get the status of all jobs within the user's organization\nGetRecordingJobsRequest.getRecordingJobs(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, state: state, showOnlyMyJobs: showOnlyMyJobs, jobType: jobType, includeTotal: includeTotal, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRecordingJobsRequest.getRecordingJobs was successful\")\n        dump(response)\n    }\n}"
   },
   "getrecordingkeyconfiguration": {
     "operationId": "getrecordingkeyconfiguration",
@@ -38215,6 +38239,40 @@
     "return": "ScriptEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet expand: String = \"\" // Expand\nlet name: String = \"\" // Name filter\nlet feature: String = \"\" // Feature filter\nlet flowId: String = \"\" // Secure flow id filter\nlet scriptDataVersion: String = \"\" // Advanced usage - controls the data version of the script\nlet divisionIds: String = \"\" // Filters scripts to requested divisionIds\n\n// Get the published scripts.\nGetScriptsPublishedRequest.getScriptsPublished(pageSize: pageSize, pageNumber: pageNumber, expand: expand, name: name, feature: feature, flowId: flowId, scriptDataVersion: scriptDataVersion, divisionIds: divisionIds) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScriptsPublishedRequest.getScriptsPublished was successful\")\n        dump(response)\n    }\n}"
   },
+  "getscriptspublisheddivisionviewvariables": {
+    "operationId": "getscriptspublisheddivisionviewvariables",
+    "functionName": "getScriptsPublishedDivisionviewVariables",
+    "signature": "getScriptsPublishedDivisionviewVariables(scriptId, input, output, type, scriptDataVersion)",
+    "parameters": [
+      {
+        "name": "scriptId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "input",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "output",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "type",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "scriptDataVersion",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "JSON",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet scriptId: String = \"\" // Script ID\nlet input: GetScriptsPublishedDivisionviewVariablesRequest.Input_getScriptsPublishedDivisionviewVariables = GetScriptsPublishedDivisionviewVariablesRequest.Input_getScriptsPublishedDivisionviewVariables.enummember // input\nlet output: GetScriptsPublishedDivisionviewVariablesRequest.Output_getScriptsPublishedDivisionviewVariables = GetScriptsPublishedDivisionviewVariablesRequest.Output_getScriptsPublishedDivisionviewVariables.enummember // output\nlet type: GetScriptsPublishedDivisionviewVariablesRequest.ModelType_getScriptsPublishedDivisionviewVariables = GetScriptsPublishedDivisionviewVariablesRequest.ModelType_getScriptsPublishedDivisionviewVariables.enummember // type\nlet scriptDataVersion: String = \"\" // Advanced usage - controls the data version of the script\n\n// Get the published variables\nGetScriptsPublishedDivisionviewVariablesRequest.getScriptsPublishedDivisionviewVariables(scriptId: scriptId, input: input, output: output, type: type, scriptDataVersion: scriptDataVersion) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScriptsPublishedDivisionviewVariablesRequest.getScriptsPublishedDivisionviewVariables was successful\")\n        dump(response)\n    }\n}"
+  },
   "getscriptspublisheddivisionviews": {
     "operationId": "getscriptspublisheddivisionviews",
     "functionName": "getScriptsPublishedDivisionviews",
@@ -40507,6 +40565,83 @@
     "return": "Workbin",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workbinId: String = \"\" // Workbin ID\n\n// Get a workbin\nGetTaskmanagementWorkbinRequest.getTaskmanagementWorkbin(workbinId: workbinId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkbinRequest.getTaskmanagementWorkbin was successful\")\n        dump(response)\n    }\n}"
   },
+  "gettaskmanagementworkbinhistory": {
+    "operationId": "gettaskmanagementworkbinhistory",
+    "functionName": "getTaskmanagementWorkbinHistory",
+    "signature": "getTaskmanagementWorkbinHistory(workbinId, after, pageSize, sortOrder)",
+    "parameters": [
+      {
+        "name": "workbinId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "WorkbinChangeListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workbinId: String = \"\" // Workbin ID\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.\nlet sortOrder: GetTaskmanagementWorkbinHistoryRequest.SortOrder_getTaskmanagementWorkbinHistory = GetTaskmanagementWorkbinHistoryRequest.SortOrder_getTaskmanagementWorkbinHistory.enummember // Ascending or descending sort order\n\n// Get a listing of a workbin's attribute change history\nGetTaskmanagementWorkbinHistoryRequest.getTaskmanagementWorkbinHistory(workbinId: workbinId, after: after, pageSize: pageSize, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkbinHistoryRequest.getTaskmanagementWorkbinHistory was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettaskmanagementworkbinversion": {
+    "operationId": "gettaskmanagementworkbinversion",
+    "functionName": "getTaskmanagementWorkbinVersion",
+    "signature": "getTaskmanagementWorkbinVersion(workbinId, entityVersion)",
+    "parameters": [
+      {
+        "name": "workbinId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "entityVersion",
+        "type": "Int",
+        "required": "true"
+      }
+    ],
+    "return": "WorkbinVersion",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workbinId: String = \"\" // Workbin ID\nlet entityVersion: Int = 0 // Workbin version\n\n// Get a version of a workbin\nGetTaskmanagementWorkbinVersionRequest.getTaskmanagementWorkbinVersion(workbinId: workbinId, entityVersion: entityVersion) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkbinVersionRequest.getTaskmanagementWorkbinVersion was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettaskmanagementworkbinversions": {
+    "operationId": "gettaskmanagementworkbinversions",
+    "functionName": "getTaskmanagementWorkbinVersions",
+    "signature": "getTaskmanagementWorkbinVersions(workbinId, after, pageSize, sortOrder)",
+    "parameters": [
+      {
+        "name": "workbinId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "WorkbinVersionListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workbinId: String = \"\" // Workbin ID\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.\nlet sortOrder: GetTaskmanagementWorkbinVersionsRequest.SortOrder_getTaskmanagementWorkbinVersions = GetTaskmanagementWorkbinVersionsRequest.SortOrder_getTaskmanagementWorkbinVersions.enummember // Ascending or descending sort order\n\n// Get all versions of a workbin\nGetTaskmanagementWorkbinVersionsRequest.getTaskmanagementWorkbinVersions(workbinId: workbinId, after: after, pageSize: pageSize, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkbinVersionsRequest.getTaskmanagementWorkbinVersions was successful\")\n        dump(response)\n    }\n}"
+  },
   "gettaskmanagementworkitem": {
     "operationId": "gettaskmanagementworkitem",
     "functionName": "getTaskmanagementWorkitem",
@@ -40525,6 +40660,35 @@
     ],
     "return": "Workitem",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workitemId: String = \"\" // Workitem ID\nlet expands: GetTaskmanagementWorkitemRequest.Expands_getTaskmanagementWorkitem = GetTaskmanagementWorkitemRequest.Expands_getTaskmanagementWorkitem.enummember // Which fields to expand. Comma separated if more than one.\n\n// Get a workitem\nGetTaskmanagementWorkitemRequest.getTaskmanagementWorkitem(workitemId: workitemId, expands: expands) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemRequest.getTaskmanagementWorkitem was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettaskmanagementworkitemhistory": {
+    "operationId": "gettaskmanagementworkitemhistory",
+    "functionName": "getTaskmanagementWorkitemHistory",
+    "signature": "getTaskmanagementWorkitemHistory(workitemId, after, pageSize, sortOrder)",
+    "parameters": [
+      {
+        "name": "workitemId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "WorkitemChangeListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workitemId: String = \"\" // Workitem ID\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.\nlet sortOrder: GetTaskmanagementWorkitemHistoryRequest.SortOrder_getTaskmanagementWorkitemHistory = GetTaskmanagementWorkitemHistoryRequest.SortOrder_getTaskmanagementWorkitemHistory.enummember // Ascending or descending sort order\n\n// Get a listing of a workitem's attribute change history\nGetTaskmanagementWorkitemHistoryRequest.getTaskmanagementWorkitemHistory(workitemId: workitemId, after: after, pageSize: pageSize, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemHistoryRequest.getTaskmanagementWorkitemHistory was successful\")\n        dump(response)\n    }\n}"
   },
   "gettaskmanagementworkitemuserwrapups": {
     "operationId": "gettaskmanagementworkitemuserwrapups",
@@ -40564,6 +40728,54 @@
     ],
     "return": "WorkitemWrapup",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workitemId: String = \"\" // The ID of the Workitem.\nlet userId: String = \"\" // The ID of the user\nlet expands: GetTaskmanagementWorkitemUserWrapupsRequest.Expands_getTaskmanagementWorkitemUserWrapups = GetTaskmanagementWorkitemUserWrapupsRequest.Expands_getTaskmanagementWorkitemUserWrapups.enummember // Which fields, if any, to expand.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 50.\nlet sortOrder: GetTaskmanagementWorkitemUserWrapupsRequest.SortOrder_getTaskmanagementWorkitemUserWrapups = GetTaskmanagementWorkitemUserWrapupsRequest.SortOrder_getTaskmanagementWorkitemUserWrapups.enummember // Ascending or descending sort order\n\n// Get all wrapup codes added for the given user for a workitem.\nGetTaskmanagementWorkitemUserWrapupsRequest.getTaskmanagementWorkitemUserWrapups(workitemId: workitemId, userId: userId, expands: expands, after: after, pageSize: pageSize, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemUserWrapupsRequest.getTaskmanagementWorkitemUserWrapups was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettaskmanagementworkitemversion": {
+    "operationId": "gettaskmanagementworkitemversion",
+    "functionName": "getTaskmanagementWorkitemVersion",
+    "signature": "getTaskmanagementWorkitemVersion(workitemId, entityVersion)",
+    "parameters": [
+      {
+        "name": "workitemId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "entityVersion",
+        "type": "Int",
+        "required": "true"
+      }
+    ],
+    "return": "WorkitemVersion",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workitemId: String = \"\" // Workitem ID\nlet entityVersion: Int = 0 // Workitem version\n\n// Get a version of a workitem\nGetTaskmanagementWorkitemVersionRequest.getTaskmanagementWorkitemVersion(workitemId: workitemId, entityVersion: entityVersion) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemVersionRequest.getTaskmanagementWorkitemVersion was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettaskmanagementworkitemversions": {
+    "operationId": "gettaskmanagementworkitemversions",
+    "functionName": "getTaskmanagementWorkitemVersions",
+    "signature": "getTaskmanagementWorkitemVersions(workitemId, after, pageSize, sortOrder)",
+    "parameters": [
+      {
+        "name": "workitemId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "WorkitemVersionListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workitemId: String = \"\" // Workitem ID\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.\nlet sortOrder: GetTaskmanagementWorkitemVersionsRequest.SortOrder_getTaskmanagementWorkitemVersions = GetTaskmanagementWorkitemVersionsRequest.SortOrder_getTaskmanagementWorkitemVersions.enummember // Ascending or descending sort order\n\n// Get all versions of a workitem\nGetTaskmanagementWorkitemVersionsRequest.getTaskmanagementWorkitemVersions(workitemId: workitemId, after: after, pageSize: pageSize, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemVersionsRequest.getTaskmanagementWorkitemVersions was successful\")\n        dump(response)\n    }\n}"
   },
   "gettaskmanagementworkitemwrapups": {
     "operationId": "gettaskmanagementworkitemwrapups",
@@ -40942,6 +41154,40 @@
     "return": "WorkitemOnCreateRuleListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.\n\n// Get all on-create rules for a worktype\nGetTaskmanagementWorktypeFlowsOncreateRulesRequest.getTaskmanagementWorktypeFlowsOncreateRules(worktypeId: worktypeId, after: after, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorktypeFlowsOncreateRulesRequest.getTaskmanagementWorktypeFlowsOncreateRules was successful\")\n        dump(response)\n    }\n}"
   },
+  "gettaskmanagementworktypehistory": {
+    "operationId": "gettaskmanagementworktypehistory",
+    "functionName": "getTaskmanagementWorktypeHistory",
+    "signature": "getTaskmanagementWorktypeHistory(worktypeId, after, pageSize, sortOrder, fields)",
+    "parameters": [
+      {
+        "name": "worktypeId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "fields",
+        "type": "[String]",
+        "required": "false"
+      }
+    ],
+    "return": "WorktypeChangeListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.\nlet sortOrder: GetTaskmanagementWorktypeHistoryRequest.SortOrder_getTaskmanagementWorktypeHistory = GetTaskmanagementWorktypeHistoryRequest.SortOrder_getTaskmanagementWorktypeHistory.enummember // Ascending or descending sort order\nlet fields: [String] = [\"\"] // Comma-separated list of fields. The response will contain only versions created as a result of changes to these fields.\n\n// Get a listing of a worktype's attribute change history\nGetTaskmanagementWorktypeHistoryRequest.getTaskmanagementWorktypeHistory(worktypeId: worktypeId, after: after, pageSize: pageSize, sortOrder: sortOrder, fields: fields) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorktypeHistoryRequest.getTaskmanagementWorktypeHistory was successful\")\n        dump(response)\n    }\n}"
+  },
   "gettaskmanagementworktypestatus": {
     "operationId": "gettaskmanagementworktypestatus",
     "functionName": "getTaskmanagementWorktypeStatus",
@@ -40974,6 +41220,54 @@
     ],
     "return": "WorkitemStatusListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\n\n// Get list of statuses for this worktype.\nGetTaskmanagementWorktypeStatusesRequest.getTaskmanagementWorktypeStatuses(worktypeId: worktypeId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorktypeStatusesRequest.getTaskmanagementWorktypeStatuses was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettaskmanagementworktypeversion": {
+    "operationId": "gettaskmanagementworktypeversion",
+    "functionName": "getTaskmanagementWorktypeVersion",
+    "signature": "getTaskmanagementWorktypeVersion(worktypeId, entityVersion)",
+    "parameters": [
+      {
+        "name": "worktypeId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "entityVersion",
+        "type": "Int",
+        "required": "true"
+      }
+    ],
+    "return": "WorktypeVersion",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\nlet entityVersion: Int = 0 // Worktype version\n\n// Get a version of a worktype\nGetTaskmanagementWorktypeVersionRequest.getTaskmanagementWorktypeVersion(worktypeId: worktypeId, entityVersion: entityVersion) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorktypeVersionRequest.getTaskmanagementWorktypeVersion was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettaskmanagementworktypeversions": {
+    "operationId": "gettaskmanagementworktypeversions",
+    "functionName": "getTaskmanagementWorktypeVersions",
+    "signature": "getTaskmanagementWorktypeVersions(worktypeId, after, pageSize, sortOrder)",
+    "parameters": [
+      {
+        "name": "worktypeId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "WorktypeVersionListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.\nlet sortOrder: GetTaskmanagementWorktypeVersionsRequest.SortOrder_getTaskmanagementWorktypeVersions = GetTaskmanagementWorktypeVersionsRequest.SortOrder_getTaskmanagementWorktypeVersions.enummember // Ascending or descending sort order\n\n// Get all versions of a worktype\nGetTaskmanagementWorktypeVersionsRequest.getTaskmanagementWorktypeVersions(worktypeId: worktypeId, after: after, pageSize: pageSize, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorktypeVersionsRequest.getTaskmanagementWorktypeVersions was successful\")\n        dump(response)\n    }\n}"
   },
   "patchtaskmanagementworkbin": {
     "operationId": "patchtaskmanagementworkbin",
@@ -44223,7 +44517,7 @@
       }
     ],
     "return": "BotSearchResponseEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet botType: [String] = [\"\"] // Bot types\nlet botName: String = \"\" // Bot name\nlet botId: [String] = [\"\"] // Bot IDs\nlet pageSize: Int = 0 // The maximum results to return\n\n// Find bots using the currently configured friendly name or ID.\nGetTextbotsBotsSearchRequest.getTextbotsBotsSearch(botType: botType, botName: botName, botId: botId, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTextbotsBotsSearchRequest.getTextbotsBotsSearch was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet botType: [String] = [\"\"] // Bot types\nlet botName: String = \"\" // Bot name\nlet botId: [String] = [\"\"] // Bot IDs. Maximum of 50\nlet pageSize: Int = 0 // The maximum results to return. Maximum of 100\n\n// Find bots using the currently configured friendly name or ID.\nGetTextbotsBotsSearchRequest.getTextbotsBotsSearch(botType: botType, botName: botName, botId: botId, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTextbotsBotsSearchRequest.getTextbotsBotsSearch was successful\")\n        dump(response)\n    }\n}"
   },
   "posttextbotsbotflowssessionturns": {
     "operationId": "posttextbotsbotflowssessionturns",

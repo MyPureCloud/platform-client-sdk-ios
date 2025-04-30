@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getScripts**](ScriptsAPI#getScripts) | Get the list of scripts |
 | [**getScriptsDivisionviews**](ScriptsAPI#getScriptsDivisionviews) | Get the metadata for a list of scripts |
 | [**getScriptsPublished**](ScriptsAPI#getScriptsPublished) | Get the published scripts. |
+| [**getScriptsPublishedDivisionviewVariables**](ScriptsAPI#getScriptsPublishedDivisionviewVariables) | Get the published variables |
 | [**getScriptsPublishedDivisionviews**](ScriptsAPI#getScriptsPublishedDivisionviews) | Get the published scripts metadata. |
 | [**getScriptsPublishedScriptId**](ScriptsAPI#getScriptsPublishedScriptId) | Get the published script. |
 | [**getScriptsPublishedScriptIdPage**](ScriptsAPI#getScriptsPublishedScriptIdPage) | Get the published page. |
@@ -375,6 +376,64 @@ ScriptsAPI.getScriptsPublished(pageSize: pageSize, pageNumber: pageNumber, expan
 ### Return type
 
 [**ScriptEntityListing**](ScriptEntityListing)
+
+
+## getScriptsPublishedDivisionviewVariables
+
+
+
+> [JSON](JSON) getScriptsPublishedDivisionviewVariables(scriptId, input, output, type, scriptDataVersion)
+
+Get the published variables
+
+
+
+Wraps GET /api/v2/scripts/published/divisionviews/{scriptId}/variables  
+
+Requires ANY permissions: 
+
+* scripter:publishedScript:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let scriptId: String = "" // Script ID
+let input: ScriptsAPI.Input_getScriptsPublishedDivisionviewVariables = ScriptsAPI.Input_getScriptsPublishedDivisionviewVariables.enummember // input
+let output: ScriptsAPI.Output_getScriptsPublishedDivisionviewVariables = ScriptsAPI.Output_getScriptsPublishedDivisionviewVariables.enummember // output
+let type: ScriptsAPI.ModelType_getScriptsPublishedDivisionviewVariables = ScriptsAPI.ModelType_getScriptsPublishedDivisionviewVariables.enummember // type
+let scriptDataVersion: String = "" // Advanced usage - controls the data version of the script
+
+// Code example
+ScriptsAPI.getScriptsPublishedDivisionviewVariables(scriptId: scriptId, input: input, output: output, type: type, scriptDataVersion: scriptDataVersion) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ScriptsAPI.getScriptsPublishedDivisionviewVariables was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **scriptId** | **String**| Script ID | |
+| **input** | **String**| input | [optional]<br />**Values**: _true ("true"), _false ("false") |
+| **output** | **String**| output | [optional]<br />**Values**: _true ("true"), _false ("false") |
+| **type** | **String**| type | [optional]<br />**Values**: string ("string"), number ("number"), boolean ("boolean") |
+| **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
+
+
+### Return type
+
+[**JSON**](JSON)
 
 
 ## getScriptsPublishedDivisionviews
@@ -813,4 +872,4 @@ ScriptsAPI.postScriptsPublished(scriptDataVersion: scriptDataVersion, body: body
 [**Script**](Script)
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

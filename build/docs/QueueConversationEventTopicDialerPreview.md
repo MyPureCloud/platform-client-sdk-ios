@@ -15,4 +15,4 @@ The preview data to be used when this callback is a Preview.
 
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

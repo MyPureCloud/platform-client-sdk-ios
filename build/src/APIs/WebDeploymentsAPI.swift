@@ -741,6 +741,13 @@ open class WebDeploymentsAPI {
   "supportedContent" : "{}",
   "lastModifiedUser" : "{}",
   "id" : "id",
+  "pushIntegrations" : [ {
+    "provider" : "APNS",
+    "id" : "id"
+  }, {
+    "provider" : "APNS",
+    "id" : "id"
+  } ],
   "flow" : "{}",
   "status" : "Pending"
 }, statusCode=200}]
@@ -957,6 +964,13 @@ open class WebDeploymentsAPI {
     "supportedContent" : "{}",
     "lastModifiedUser" : "{}",
     "id" : "id",
+    "pushIntegrations" : [ {
+      "provider" : "APNS",
+      "id" : "id"
+    }, {
+      "provider" : "APNS",
+      "id" : "id"
+    } ],
     "flow" : "{}",
     "status" : "Pending"
   }, {
@@ -972,6 +986,13 @@ open class WebDeploymentsAPI {
     "supportedContent" : "{}",
     "lastModifiedUser" : "{}",
     "id" : "id",
+    "pushIntegrations" : [ {
+      "provider" : "APNS",
+      "id" : "id"
+    }, {
+      "provider" : "APNS",
+      "id" : "id"
+    } ],
     "flow" : "{}",
     "status" : "Pending"
   } ],
@@ -1231,6 +1252,13 @@ open class WebDeploymentsAPI {
   "supportedContent" : "{}",
   "lastModifiedUser" : "{}",
   "id" : "id",
+  "pushIntegrations" : [ {
+    "provider" : "APNS",
+    "id" : "id"
+  }, {
+    "provider" : "APNS",
+    "id" : "id"
+  } ],
   "flow" : "{}",
   "status" : "Pending"
 }, statusCode=200}]
@@ -1497,6 +1525,13 @@ open class WebDeploymentsAPI {
   "supportedContent" : "{}",
   "lastModifiedUser" : "{}",
   "id" : "id",
+  "pushIntegrations" : [ {
+    "provider" : "APNS",
+    "id" : "id"
+  }, {
+    "provider" : "APNS",
+    "id" : "id"
+  } ],
   "flow" : "{}",
   "status" : "Pending"
 }, statusCode=200}]

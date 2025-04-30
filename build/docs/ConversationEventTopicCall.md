@@ -11,6 +11,7 @@
 | **initialState** | **String** |  | [optional] |
 | **recording** | **Bool** | True if this call is being recorded. | [optional] |
 | **recordingState** | **String** | State of recording on this call. | [optional] |
+| **recordersState** | [**ConversationEventTopicRecordersState**](ConversationEventTopicRecordersState) |  | [optional] |
 | **muted** | **Bool** | True if this call is muted so that remote participants can&#39;t hear any audio from this end. | [optional] |
 | **confined** | **Bool** | True if this call is held and the person on this side hears hold music. | [optional] |
 | **held** | **Bool** | True if this call is held and the person on this side hears silence. | [optional] |
@@ -39,4 +40,4 @@
 
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

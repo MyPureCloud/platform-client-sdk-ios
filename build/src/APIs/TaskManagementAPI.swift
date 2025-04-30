@@ -553,6 +553,266 @@ open class TaskManagementAPI {
     
     
     
+    
+    
+    
+    
+    public enum SortOrder_getTaskmanagementWorkbinHistory: String { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+    
+    
+    /**
+     Get a listing of a workbin's attribute change history
+     
+     - parameter workbinId: (path) Workbin ID 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorkbinHistory(workbinId: String, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorkbinHistory? = nil, completion: @escaping ((_ data: WorkbinChangeListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorkbinHistoryWithRequestBuilder(workbinId: workbinId, after: after, pageSize: pageSize, sortOrder: sortOrder)
+        requestBuilder.execute { (response: Response<WorkbinChangeListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a listing of a workbin's attribute change history
+     - GET /api/v2/taskmanagement/workbins/{workbinId}/history
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "delta" : "{}",
+    "modifiedBy" : "{}",
+    "version" : 0
+  }, {
+    "delta" : "{}",
+    "modifiedBy" : "{}",
+    "version" : 0
+  } ],
+  "selfUri" : "selfUri",
+  "after" : "after",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter workbinId: (path) Workbin ID 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
+
+     - returns: RequestBuilder<WorkbinChangeListing> 
+     */
+    open class func getTaskmanagementWorkbinHistoryWithRequestBuilder(workbinId: String, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorkbinHistory? = nil) -> RequestBuilder<WorkbinChangeListing> {        
+        var path = "/api/v2/taskmanagement/workbins/{workbinId}/history"
+        let workbinIdPreEscape = "\(workbinId)"
+        let workbinIdPostEscape = workbinIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{workbinId}", with: workbinIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "sortOrder": sortOrder?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<WorkbinChangeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a version of a workbin
+     
+     - parameter workbinId: (path) Workbin ID 
+     - parameter entityVersion: (path) Workbin version 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorkbinVersion(workbinId: String, entityVersion: Int, completion: @escaping ((_ data: WorkbinVersion?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorkbinVersionWithRequestBuilder(workbinId: workbinId, entityVersion: entityVersion)
+        requestBuilder.execute { (response: Response<WorkbinVersion>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a version of a workbin
+     - GET /api/v2/taskmanagement/workbins/{workbinId}/versions/{entityVersion}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "version" : 0
+}, statusCode=200}]
+     
+     - parameter workbinId: (path) Workbin ID 
+     - parameter entityVersion: (path) Workbin version 
+
+     - returns: RequestBuilder<WorkbinVersion> 
+     */
+    open class func getTaskmanagementWorkbinVersionWithRequestBuilder(workbinId: String, entityVersion: Int) -> RequestBuilder<WorkbinVersion> {        
+        var path = "/api/v2/taskmanagement/workbins/{workbinId}/versions/{entityVersion}"
+        let workbinIdPreEscape = "\(workbinId)"
+        let workbinIdPostEscape = workbinIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{workbinId}", with: workbinIdPostEscape, options: .literal, range: nil)
+        let entityVersionPreEscape = "\(entityVersion)"
+        let entityVersionPostEscape = entityVersionPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{entityVersion}", with: entityVersionPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkbinVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    public enum SortOrder_getTaskmanagementWorkbinVersions: String { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+    
+    
+    /**
+     Get all versions of a workbin
+     
+     - parameter workbinId: (path) Workbin ID 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorkbinVersions(workbinId: String, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorkbinVersions? = nil, completion: @escaping ((_ data: WorkbinVersionListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorkbinVersionsWithRequestBuilder(workbinId: workbinId, after: after, pageSize: pageSize, sortOrder: sortOrder)
+        requestBuilder.execute { (response: Response<WorkbinVersionListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get all versions of a workbin
+     - GET /api/v2/taskmanagement/workbins/{workbinId}/versions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "version" : 0
+  }, {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "version" : 0
+  } ],
+  "selfUri" : "selfUri",
+  "after" : "after",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter workbinId: (path) Workbin ID 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
+
+     - returns: RequestBuilder<WorkbinVersionListing> 
+     */
+    open class func getTaskmanagementWorkbinVersionsWithRequestBuilder(workbinId: String, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorkbinVersions? = nil) -> RequestBuilder<WorkbinVersionListing> {        
+        var path = "/api/v2/taskmanagement/workbins/{workbinId}/versions"
+        let workbinIdPreEscape = "\(workbinId)"
+        let workbinIdPostEscape = workbinIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{workbinId}", with: workbinIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "sortOrder": sortOrder?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<WorkbinVersionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
     public enum Expands_getTaskmanagementWorkitem: String { 
         case type = "type"
         case workbin = "workbin"
@@ -681,6 +941,95 @@ open class TaskManagementAPI {
     
     
     
+    
+    
+    public enum SortOrder_getTaskmanagementWorkitemHistory: String { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+    
+    
+    /**
+     Get a listing of a workitem's attribute change history
+     
+     - parameter workitemId: (path) Workitem ID 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorkitemHistory(workitemId: String, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorkitemHistory? = nil, completion: @escaping ((_ data: WorkitemChangeListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorkitemHistoryWithRequestBuilder(workitemId: workitemId, after: after, pageSize: pageSize, sortOrder: sortOrder)
+        requestBuilder.execute { (response: Response<WorkitemChangeListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a listing of a workitem's attribute change history
+     - GET /api/v2/taskmanagement/workitems/{workitemId}/history
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "delta" : "{}",
+    "modifiedBy" : "{}",
+    "version" : 0
+  }, {
+    "delta" : "{}",
+    "modifiedBy" : "{}",
+    "version" : 0
+  } ],
+  "selfUri" : "selfUri",
+  "after" : "after",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter workitemId: (path) Workitem ID 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
+
+     - returns: RequestBuilder<WorkitemChangeListing> 
+     */
+    open class func getTaskmanagementWorkitemHistoryWithRequestBuilder(workitemId: String, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorkitemHistory? = nil) -> RequestBuilder<WorkitemChangeListing> {        
+        var path = "/api/v2/taskmanagement/workitems/{workitemId}/history"
+        let workitemIdPreEscape = "\(workitemId)"
+        let workitemIdPostEscape = workitemIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{workitemId}", with: workitemIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "sortOrder": sortOrder?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<WorkitemChangeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
     public enum Expands_getTaskmanagementWorkitemUserWrapups: String { 
         case wrapupcode = "wrapupCode"
     }
@@ -769,6 +1118,324 @@ open class TaskManagementAPI {
         ])
 
         let requestBuilder: RequestBuilder<WorkitemWrapup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a version of a workitem
+     
+     - parameter workitemId: (path) Workitem ID 
+     - parameter entityVersion: (path) Workitem version 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorkitemVersion(workitemId: String, entityVersion: Int, completion: @escaping ((_ data: WorkitemVersion?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorkitemVersionWithRequestBuilder(workitemId: workitemId, entityVersion: entityVersion)
+        requestBuilder.execute { (response: Response<WorkitemVersion>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a version of a workitem
+     - GET /api/v2/taskmanagement/workitems/{workitemId}/versions/{entityVersion}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "preferredAgents" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "schema" : "{}",
+  "durationSeconds" : 6,
+  "customFields" : {
+    "key" : "{}"
+  },
+  "description" : "description",
+  "language" : "{}",
+  "externalTag" : "externalTag",
+  "type" : "{}",
+  "statusCategory" : "Open",
+  "dateClosed" : "2000-01-23T04:56:07.000+00:00",
+  "division" : "{}",
+  "skills" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "dateExpires" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "scoredAgents" : [ {
+    "score" : 5,
+    "agent" : "{}"
+  }, {
+    "score" : 5,
+    "agent" : "{}"
+  } ],
+  "dateDue" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "reporter" : "{}",
+  "externalContact" : "{}",
+  "priority" : 0,
+  "ttl" : 1,
+  "version" : 5,
+  "script" : "{}",
+  "autoStatusTransitionDetail" : "{}",
+  "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
+  "alertTimeoutSeconds" : 5,
+  "assignmentState" : "Unknown",
+  "utilizationLabel" : "{}",
+  "dateAssignmentStateChanged" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "autoStatusTransition" : true,
+  "assignee" : "{}",
+  "workbin" : "{}",
+  "queue" : "{}",
+  "status" : "{}"
+}, statusCode=200}]
+     
+     - parameter workitemId: (path) Workitem ID 
+     - parameter entityVersion: (path) Workitem version 
+
+     - returns: RequestBuilder<WorkitemVersion> 
+     */
+    open class func getTaskmanagementWorkitemVersionWithRequestBuilder(workitemId: String, entityVersion: Int) -> RequestBuilder<WorkitemVersion> {        
+        var path = "/api/v2/taskmanagement/workitems/{workitemId}/versions/{entityVersion}"
+        let workitemIdPreEscape = "\(workitemId)"
+        let workitemIdPostEscape = workitemIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{workitemId}", with: workitemIdPostEscape, options: .literal, range: nil)
+        let entityVersionPreEscape = "\(entityVersion)"
+        let entityVersionPostEscape = entityVersionPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{entityVersion}", with: entityVersionPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkitemVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    public enum SortOrder_getTaskmanagementWorkitemVersions: String { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+    
+    
+    /**
+     Get all versions of a workitem
+     
+     - parameter workitemId: (path) Workitem ID 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorkitemVersions(workitemId: String, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorkitemVersions? = nil, completion: @escaping ((_ data: WorkitemVersionListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorkitemVersionsWithRequestBuilder(workitemId: workitemId, after: after, pageSize: pageSize, sortOrder: sortOrder)
+        requestBuilder.execute { (response: Response<WorkitemVersionListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get all versions of a workitem
+     - GET /api/v2/taskmanagement/workitems/{workitemId}/versions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "preferredAgents" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "schema" : "{}",
+    "durationSeconds" : 6,
+    "customFields" : {
+      "key" : "{}"
+    },
+    "description" : "description",
+    "language" : "{}",
+    "externalTag" : "externalTag",
+    "type" : "{}",
+    "statusCategory" : "Open",
+    "dateClosed" : "2000-01-23T04:56:07.000+00:00",
+    "division" : "{}",
+    "skills" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateExpires" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "scoredAgents" : [ {
+      "score" : 5,
+      "agent" : "{}"
+    }, {
+      "score" : 5,
+      "agent" : "{}"
+    } ],
+    "dateDue" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "reporter" : "{}",
+    "externalContact" : "{}",
+    "priority" : 0,
+    "ttl" : 1,
+    "version" : 5,
+    "script" : "{}",
+    "autoStatusTransitionDetail" : "{}",
+    "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
+    "alertTimeoutSeconds" : 5,
+    "assignmentState" : "Unknown",
+    "utilizationLabel" : "{}",
+    "dateAssignmentStateChanged" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "autoStatusTransition" : true,
+    "assignee" : "{}",
+    "workbin" : "{}",
+    "queue" : "{}",
+    "status" : "{}"
+  }, {
+    "preferredAgents" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "schema" : "{}",
+    "durationSeconds" : 6,
+    "customFields" : {
+      "key" : "{}"
+    },
+    "description" : "description",
+    "language" : "{}",
+    "externalTag" : "externalTag",
+    "type" : "{}",
+    "statusCategory" : "Open",
+    "dateClosed" : "2000-01-23T04:56:07.000+00:00",
+    "division" : "{}",
+    "skills" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateExpires" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "scoredAgents" : [ {
+      "score" : 5,
+      "agent" : "{}"
+    }, {
+      "score" : 5,
+      "agent" : "{}"
+    } ],
+    "dateDue" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "reporter" : "{}",
+    "externalContact" : "{}",
+    "priority" : 0,
+    "ttl" : 1,
+    "version" : 5,
+    "script" : "{}",
+    "autoStatusTransitionDetail" : "{}",
+    "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
+    "alertTimeoutSeconds" : 5,
+    "assignmentState" : "Unknown",
+    "utilizationLabel" : "{}",
+    "dateAssignmentStateChanged" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "autoStatusTransition" : true,
+    "assignee" : "{}",
+    "workbin" : "{}",
+    "queue" : "{}",
+    "status" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "after" : "after",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter workitemId: (path) Workitem ID 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
+
+     - returns: RequestBuilder<WorkitemVersionListing> 
+     */
+    open class func getTaskmanagementWorkitemVersionsWithRequestBuilder(workitemId: String, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorkitemVersions? = nil) -> RequestBuilder<WorkitemVersionListing> {        
+        var path = "/api/v2/taskmanagement/workitems/{workitemId}/versions"
+        let workitemIdPreEscape = "\(workitemId)"
+        let workitemIdPostEscape = workitemIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{workitemId}", with: workitemIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "sortOrder": sortOrder?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<WorkitemVersionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -2523,6 +3190,115 @@ open class TaskManagementAPI {
     
     
     
+    
+    
+    
+    public enum SortOrder_getTaskmanagementWorktypeHistory: String { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+    
+    
+    
+    
+    public enum Fields_getTaskmanagementWorktypeHistory: String { 
+        case name = "name"
+        case serviceleveltarget = "serviceLevelTarget"
+        case defaultworkbinid = "defaultWorkbinId"
+        case defaultduedurationseconds = "defaultDueDurationSeconds"
+        case defaultexpirationseconds = "defaultExpirationSeconds"
+        case defaultpriority = "defaultPriority"
+        case defaultlanguageid = "defaultLanguageId"
+        case defaultskillids = "defaultSkillIds"
+        case defaultqueueid = "defaultQueueId"
+        case assignmentenabled = "assignmentEnabled"
+        case defaultstatusid = "defaultStatusId"
+        case statuses = "statuses"
+    }
+    
+    /**
+     Get a listing of a worktype's attribute change history
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
+     - parameter fields: (query) Comma-separated list of fields. The response will contain only versions created as a result of changes to these fields. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorktypeHistory(worktypeId: String, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorktypeHistory? = nil, fields: [String]? = nil, completion: @escaping ((_ data: WorktypeChangeListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorktypeHistoryWithRequestBuilder(worktypeId: worktypeId, after: after, pageSize: pageSize, sortOrder: sortOrder, fields: fields)
+        requestBuilder.execute { (response: Response<WorktypeChangeListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a listing of a worktype's attribute change history
+     - GET /api/v2/taskmanagement/worktypes/{worktypeId}/history
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "delta" : "{}",
+    "modifiedBy" : "{}",
+    "version" : 0
+  }, {
+    "delta" : "{}",
+    "modifiedBy" : "{}",
+    "version" : 0
+  } ],
+  "selfUri" : "selfUri",
+  "after" : "after",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
+     - parameter fields: (query) Comma-separated list of fields. The response will contain only versions created as a result of changes to these fields. (optional)
+
+     - returns: RequestBuilder<WorktypeChangeListing> 
+     */
+    open class func getTaskmanagementWorktypeHistoryWithRequestBuilder(worktypeId: String, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorktypeHistory? = nil, fields: [String]? = nil) -> RequestBuilder<WorktypeChangeListing> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/history"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "sortOrder": sortOrder?.rawValue, 
+            "fields": fields
+        ])
+
+        let requestBuilder: RequestBuilder<WorktypeChangeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     /**
      Get a status
      
@@ -2692,6 +3468,366 @@ open class TaskManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WorkitemStatusListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a version of a worktype
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter entityVersion: (path) Worktype version 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorktypeVersion(worktypeId: String, entityVersion: Int, completion: @escaping ((_ data: WorktypeVersion?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorktypeVersionWithRequestBuilder(worktypeId: worktypeId, entityVersion: entityVersion)
+        requestBuilder.execute { (response: Response<WorktypeVersion>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a version of a worktype
+     - GET /api/v2/taskmanagement/worktypes/{worktypeId}/versions/{entityVersion}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schema" : "{}",
+  "defaultDueDurationSeconds" : 1,
+  "defaultTtlSeconds" : 5,
+  "ruleSettings" : "{}",
+  "description" : "description",
+  "defaultWorkbin" : "{}",
+  "division" : "{}",
+  "defaultStatus" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "defaultLanguage" : "{}",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "flow" : "{}",
+  "serviceLevelTarget" : 2,
+  "defaultSkills" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "defaultPriority" : 5,
+  "selfUri" : "https://openapi-generator.tech",
+  "defaultQueue" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "version" : 7,
+  "defaultExpirationSeconds" : 6,
+  "defaultScript" : "{}",
+  "name" : "name",
+  "statuses" : [ {
+    "defaultDestinationStatus" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "worktype" : "{}",
+    "destinationStatuses" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "id" : "id",
+    "category" : "Open",
+    "statusTransitionDelaySeconds" : 0,
+    "autoTerminateWorkitem" : true,
+    "statusTransitionTime" : "statusTransitionTime"
+  }, {
+    "defaultDestinationStatus" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "worktype" : "{}",
+    "destinationStatuses" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "id" : "id",
+    "category" : "Open",
+    "statusTransitionDelaySeconds" : 0,
+    "autoTerminateWorkitem" : true,
+    "statusTransitionTime" : "statusTransitionTime"
+  } ],
+  "defaultDurationSeconds" : 0,
+  "assignmentEnabled" : true
+}, statusCode=200}]
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter entityVersion: (path) Worktype version 
+
+     - returns: RequestBuilder<WorktypeVersion> 
+     */
+    open class func getTaskmanagementWorktypeVersionWithRequestBuilder(worktypeId: String, entityVersion: Int) -> RequestBuilder<WorktypeVersion> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/versions/{entityVersion}"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let entityVersionPreEscape = "\(entityVersion)"
+        let entityVersionPostEscape = entityVersionPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{entityVersion}", with: entityVersionPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorktypeVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    public enum SortOrder_getTaskmanagementWorktypeVersions: String { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+    
+    
+    /**
+     Get all versions of a worktype
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorktypeVersions(worktypeId: String, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorktypeVersions? = nil, completion: @escaping ((_ data: WorktypeVersionListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorktypeVersionsWithRequestBuilder(worktypeId: worktypeId, after: after, pageSize: pageSize, sortOrder: sortOrder)
+        requestBuilder.execute { (response: Response<WorktypeVersionListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get all versions of a worktype
+     - GET /api/v2/taskmanagement/worktypes/{worktypeId}/versions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "schema" : "{}",
+    "defaultDueDurationSeconds" : 1,
+    "defaultTtlSeconds" : 5,
+    "ruleSettings" : "{}",
+    "description" : "description",
+    "defaultWorkbin" : "{}",
+    "division" : "{}",
+    "defaultStatus" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "defaultLanguage" : "{}",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "flow" : "{}",
+    "serviceLevelTarget" : 2,
+    "defaultSkills" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "defaultPriority" : 5,
+    "selfUri" : "https://openapi-generator.tech",
+    "defaultQueue" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "version" : 7,
+    "defaultExpirationSeconds" : 6,
+    "defaultScript" : "{}",
+    "name" : "name",
+    "statuses" : [ {
+      "defaultDestinationStatus" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "worktype" : "{}",
+      "destinationStatuses" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "id" : "id",
+      "category" : "Open",
+      "statusTransitionDelaySeconds" : 0,
+      "autoTerminateWorkitem" : true,
+      "statusTransitionTime" : "statusTransitionTime"
+    }, {
+      "defaultDestinationStatus" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "worktype" : "{}",
+      "destinationStatuses" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "id" : "id",
+      "category" : "Open",
+      "statusTransitionDelaySeconds" : 0,
+      "autoTerminateWorkitem" : true,
+      "statusTransitionTime" : "statusTransitionTime"
+    } ],
+    "defaultDurationSeconds" : 0,
+    "assignmentEnabled" : true
+  }, {
+    "schema" : "{}",
+    "defaultDueDurationSeconds" : 1,
+    "defaultTtlSeconds" : 5,
+    "ruleSettings" : "{}",
+    "description" : "description",
+    "defaultWorkbin" : "{}",
+    "division" : "{}",
+    "defaultStatus" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "defaultLanguage" : "{}",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "flow" : "{}",
+    "serviceLevelTarget" : 2,
+    "defaultSkills" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "defaultPriority" : 5,
+    "selfUri" : "https://openapi-generator.tech",
+    "defaultQueue" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "version" : 7,
+    "defaultExpirationSeconds" : 6,
+    "defaultScript" : "{}",
+    "name" : "name",
+    "statuses" : [ {
+      "defaultDestinationStatus" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "worktype" : "{}",
+      "destinationStatuses" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "id" : "id",
+      "category" : "Open",
+      "statusTransitionDelaySeconds" : 0,
+      "autoTerminateWorkitem" : true,
+      "statusTransitionTime" : "statusTransitionTime"
+    }, {
+      "defaultDestinationStatus" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "worktype" : "{}",
+      "destinationStatuses" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "id" : "id",
+      "category" : "Open",
+      "statusTransitionDelaySeconds" : 0,
+      "autoTerminateWorkitem" : true,
+      "statusTransitionTime" : "statusTransitionTime"
+    } ],
+    "defaultDurationSeconds" : 0,
+    "assignmentEnabled" : true
+  } ],
+  "selfUri" : "selfUri",
+  "after" : "after",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
+
+     - returns: RequestBuilder<WorktypeVersionListing> 
+     */
+    open class func getTaskmanagementWorktypeVersionsWithRequestBuilder(worktypeId: String, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorktypeVersions? = nil) -> RequestBuilder<WorktypeVersionListing> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/versions"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "sortOrder": sortOrder?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<WorktypeVersionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }

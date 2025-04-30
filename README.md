@@ -2,7 +2,7 @@
 
 The iOS SDK is compatible with Swift 5 and does not require any external dependencies. Documentation can be found at https://mypurecloud.github.io/platform-client-sdk-ios/.
 
-Documentation version PureCloudPlatformClientV2@165.1.0
+Documentation version PureCloudPlatformClientV2@166.0.0
 
 ## Install using CocoaPods
 
@@ -12,7 +12,7 @@ This package's source is on github at https://github.com/MyPureCloud/platform-cl
 Reference the SDK's pod in your project's Podfile:
 
 ```
-pod 'PureCloudPlatformClientV2', :git => 'https://github.com/MyPureCloud/platform-client-sdk-ios.git', :tag => '165.1.0'
+pod 'PureCloudPlatformClientV2', :git => 'https://github.com/MyPureCloud/platform-client-sdk-ios.git', :tag => '166.0.0'
 ```
 
 Then install your project's dependencies:
@@ -95,4 +95,4 @@ The SDK's version is incremented according to the [Semantic Versioning Specifica
 
 This package is intended to be forwards compatible with v2 of Genesys Cloud's Platform API. While the general policy for the API is not to introduce breaking changes, there are certain additions and changes to the API that cause breaking changes for the SDK, often due to the way the API is expressed in its swagger definition. Because of this, the SDK can have a major version bump while the API remains at major version 2. While the SDK is intended to be forward compatible, patches will only be released to the latest version. For these reasons, it is strongly recommended that all applications using this SDK are kept up to date and use the latest version of the SDK.
 
-For any issues, questions, or suggestions for the SDK, visit the [Genesys Cloud Developer Forum](https://developer.genesys.cloud/forum/).
+For any issues, questions, or suggestions for the SDK, visit the [Genesys Cloud Developer Community](https://community.genesys.com/communities/community-home1/digestviewer?CommunityKey=a39cc4d6-857e-43cb-be7b-019581ab9f38).
