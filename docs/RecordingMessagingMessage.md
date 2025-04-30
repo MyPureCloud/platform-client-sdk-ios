@@ -25,8 +25,9 @@
 | **cards** | [**[Card]**]([Card]) | List of cards offered for this message | [optional] |
 | **notificationTemplate** | [**RecordingNotificationTemplate**](RecordingNotificationTemplate) | Template notification content. | [optional] |
 | **contentType** | **String** | Indicates the content type for this message | [optional] |
+| **socialVisibility** | **String** | For social media messages, the visibility of the message in the originating social platform | [optional] |
 | **events** | [**[ConversationMessageEvent]**]([ConversationMessageEvent]) | List of event elements | [optional] |
 
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

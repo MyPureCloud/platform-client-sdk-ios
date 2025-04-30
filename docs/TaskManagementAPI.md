@@ -15,8 +15,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteTaskmanagementWorktypeFlowsOncreateRule**](TaskManagementAPI#deleteTaskmanagementWorktypeFlowsOncreateRule) | Delete a rule |
 | [**deleteTaskmanagementWorktypeStatus**](TaskManagementAPI#deleteTaskmanagementWorktypeStatus) | Delete a status |
 | [**getTaskmanagementWorkbin**](TaskManagementAPI#getTaskmanagementWorkbin) | Get a workbin |
+| [**getTaskmanagementWorkbinHistory**](TaskManagementAPI#getTaskmanagementWorkbinHistory) | Get a listing of a workbin&#39;s attribute change history |
+| [**getTaskmanagementWorkbinVersion**](TaskManagementAPI#getTaskmanagementWorkbinVersion) | Get a version of a workbin |
+| [**getTaskmanagementWorkbinVersions**](TaskManagementAPI#getTaskmanagementWorkbinVersions) | Get all versions of a workbin |
 | [**getTaskmanagementWorkitem**](TaskManagementAPI#getTaskmanagementWorkitem) | Get a workitem |
+| [**getTaskmanagementWorkitemHistory**](TaskManagementAPI#getTaskmanagementWorkitemHistory) | Get a listing of a workitem&#39;s attribute change history |
 | [**getTaskmanagementWorkitemUserWrapups**](TaskManagementAPI#getTaskmanagementWorkitemUserWrapups) | Get all wrapup codes added for the given user for a workitem. |
+| [**getTaskmanagementWorkitemVersion**](TaskManagementAPI#getTaskmanagementWorkitemVersion) | Get a version of a workitem |
+| [**getTaskmanagementWorkitemVersions**](TaskManagementAPI#getTaskmanagementWorkitemVersions) | Get all versions of a workitem |
 | [**getTaskmanagementWorkitemWrapups**](TaskManagementAPI#getTaskmanagementWorkitemWrapups) | Get all wrapup codes added for all users for a workitem. |
 | [**getTaskmanagementWorkitemsBulkAddJob**](TaskManagementAPI#getTaskmanagementWorkitemsBulkAddJob) | Get the bulk add job associated with the job id. |
 | [**getTaskmanagementWorkitemsBulkAddJobResults**](TaskManagementAPI#getTaskmanagementWorkitemsBulkAddJobResults) | Get bulk add job results. |
@@ -39,8 +45,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTaskmanagementWorktypeFlowsOnattributechangeRules**](TaskManagementAPI#getTaskmanagementWorktypeFlowsOnattributechangeRules) | Get all attribute-change rules for a worktype |
 | [**getTaskmanagementWorktypeFlowsOncreateRule**](TaskManagementAPI#getTaskmanagementWorktypeFlowsOncreateRule) | Get an on-create rule |
 | [**getTaskmanagementWorktypeFlowsOncreateRules**](TaskManagementAPI#getTaskmanagementWorktypeFlowsOncreateRules) | Get all on-create rules for a worktype |
+| [**getTaskmanagementWorktypeHistory**](TaskManagementAPI#getTaskmanagementWorktypeHistory) | Get a listing of a worktype&#39;s attribute change history |
 | [**getTaskmanagementWorktypeStatus**](TaskManagementAPI#getTaskmanagementWorktypeStatus) | Get a status |
 | [**getTaskmanagementWorktypeStatuses**](TaskManagementAPI#getTaskmanagementWorktypeStatuses) | Get list of statuses for this worktype. |
+| [**getTaskmanagementWorktypeVersion**](TaskManagementAPI#getTaskmanagementWorktypeVersion) | Get a version of a worktype |
+| [**getTaskmanagementWorktypeVersions**](TaskManagementAPI#getTaskmanagementWorktypeVersions) | Get all versions of a worktype |
 | [**patchTaskmanagementWorkbin**](TaskManagementAPI#patchTaskmanagementWorkbin) | Update the attributes of a workbin |
 | [**patchTaskmanagementWorkitem**](TaskManagementAPI#patchTaskmanagementWorkitem) | Update the attributes of a workitem |
 | [**patchTaskmanagementWorkitemAssignment**](TaskManagementAPI#patchTaskmanagementWorkitemAssignment) | Attempts to manually assign a specified workitem to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. |
@@ -621,6 +630,170 @@ TaskManagementAPI.getTaskmanagementWorkbin(workbinId: workbinId) { (response, er
 [**Workbin**](Workbin)
 
 
+## getTaskmanagementWorkbinHistory
+
+
+
+> [WorkbinChangeListing](WorkbinChangeListing) getTaskmanagementWorkbinHistory(workbinId, after, pageSize, sortOrder)
+
+Get a listing of a workbin&#39;s attribute change history
+
+
+
+Wraps GET /api/v2/taskmanagement/workbins/{workbinId}/history  
+
+Requires ANY permissions: 
+
+* workitems:workbin:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let workbinId: String = "" // Workbin ID
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.
+let sortOrder: TaskManagementAPI.SortOrder_getTaskmanagementWorkbinHistory = TaskManagementAPI.SortOrder_getTaskmanagementWorkbinHistory.enummember // Ascending or descending sort order
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorkbinHistory(workbinId: workbinId, after: after, pageSize: pageSize, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorkbinHistory was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **workbinId** | **String**| Workbin ID | |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **Int**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
+
+
+### Return type
+
+[**WorkbinChangeListing**](WorkbinChangeListing)
+
+
+## getTaskmanagementWorkbinVersion
+
+
+
+> [WorkbinVersion](WorkbinVersion) getTaskmanagementWorkbinVersion(workbinId, entityVersion)
+
+Get a version of a workbin
+
+
+
+Wraps GET /api/v2/taskmanagement/workbins/{workbinId}/versions/{entityVersion}  
+
+Requires ANY permissions: 
+
+* workitems:workbin:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let workbinId: String = "" // Workbin ID
+let entityVersion: Int = 0 // Workbin version
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorkbinVersion(workbinId: workbinId, entityVersion: entityVersion) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorkbinVersion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **workbinId** | **String**| Workbin ID | |
+| **entityVersion** | **Int**| Workbin version | |
+
+
+### Return type
+
+[**WorkbinVersion**](WorkbinVersion)
+
+
+## getTaskmanagementWorkbinVersions
+
+
+
+> [WorkbinVersionListing](WorkbinVersionListing) getTaskmanagementWorkbinVersions(workbinId, after, pageSize, sortOrder)
+
+Get all versions of a workbin
+
+
+
+Wraps GET /api/v2/taskmanagement/workbins/{workbinId}/versions  
+
+Requires ANY permissions: 
+
+* workitems:workbin:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let workbinId: String = "" // Workbin ID
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.
+let sortOrder: TaskManagementAPI.SortOrder_getTaskmanagementWorkbinVersions = TaskManagementAPI.SortOrder_getTaskmanagementWorkbinVersions.enummember // Ascending or descending sort order
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorkbinVersions(workbinId: workbinId, after: after, pageSize: pageSize, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorkbinVersions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **workbinId** | **String**| Workbin ID | |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **Int**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
+
+
+### Return type
+
+[**WorkbinVersionListing**](WorkbinVersionListing)
+
+
 ## getTaskmanagementWorkitem
 
 
@@ -671,6 +844,62 @@ TaskManagementAPI.getTaskmanagementWorkitem(workitemId: workitemId, expands: exp
 ### Return type
 
 [**Workitem**](Workitem)
+
+
+## getTaskmanagementWorkitemHistory
+
+
+
+> [WorkitemChangeListing](WorkitemChangeListing) getTaskmanagementWorkitemHistory(workitemId, after, pageSize, sortOrder)
+
+Get a listing of a workitem&#39;s attribute change history
+
+
+
+Wraps GET /api/v2/taskmanagement/workitems/{workitemId}/history  
+
+Requires ANY permissions: 
+
+* workitems:workitem:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let workitemId: String = "" // Workitem ID
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.
+let sortOrder: TaskManagementAPI.SortOrder_getTaskmanagementWorkitemHistory = TaskManagementAPI.SortOrder_getTaskmanagementWorkitemHistory.enummember // Ascending or descending sort order
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorkitemHistory(workitemId: workitemId, after: after, pageSize: pageSize, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorkitemHistory was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **workitemId** | **String**| Workitem ID | |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **Int**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
+
+
+### Return type
+
+[**WorkitemChangeListing**](WorkitemChangeListing)
 
 
 ## getTaskmanagementWorkitemUserWrapups
@@ -731,6 +960,114 @@ TaskManagementAPI.getTaskmanagementWorkitemUserWrapups(workitemId: workitemId, u
 ### Return type
 
 [**WorkitemWrapup**](WorkitemWrapup)
+
+
+## getTaskmanagementWorkitemVersion
+
+
+
+> [WorkitemVersion](WorkitemVersion) getTaskmanagementWorkitemVersion(workitemId, entityVersion)
+
+Get a version of a workitem
+
+
+
+Wraps GET /api/v2/taskmanagement/workitems/{workitemId}/versions/{entityVersion}  
+
+Requires ANY permissions: 
+
+* workitems:workitem:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let workitemId: String = "" // Workitem ID
+let entityVersion: Int = 0 // Workitem version
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorkitemVersion(workitemId: workitemId, entityVersion: entityVersion) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorkitemVersion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **workitemId** | **String**| Workitem ID | |
+| **entityVersion** | **Int**| Workitem version | |
+
+
+### Return type
+
+[**WorkitemVersion**](WorkitemVersion)
+
+
+## getTaskmanagementWorkitemVersions
+
+
+
+> [WorkitemVersionListing](WorkitemVersionListing) getTaskmanagementWorkitemVersions(workitemId, after, pageSize, sortOrder)
+
+Get all versions of a workitem
+
+
+
+Wraps GET /api/v2/taskmanagement/workitems/{workitemId}/versions  
+
+Requires ANY permissions: 
+
+* workitems:workitem:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let workitemId: String = "" // Workitem ID
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.
+let sortOrder: TaskManagementAPI.SortOrder_getTaskmanagementWorkitemVersions = TaskManagementAPI.SortOrder_getTaskmanagementWorkitemVersions.enummember // Ascending or descending sort order
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorkitemVersions(workitemId: workitemId, after: after, pageSize: pageSize, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorkitemVersions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **workitemId** | **String**| Workitem ID | |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **Int**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
+
+
+### Return type
+
+[**WorkitemVersionListing**](WorkitemVersionListing)
 
 
 ## getTaskmanagementWorkitemWrapups
@@ -1857,6 +2194,64 @@ TaskManagementAPI.getTaskmanagementWorktypeFlowsOncreateRules(worktypeId: workty
 [**WorkitemOnCreateRuleListing**](WorkitemOnCreateRuleListing)
 
 
+## getTaskmanagementWorktypeHistory
+
+
+
+> [WorktypeChangeListing](WorktypeChangeListing) getTaskmanagementWorktypeHistory(worktypeId, after, pageSize, sortOrder, fields)
+
+Get a listing of a worktype&#39;s attribute change history
+
+
+
+Wraps GET /api/v2/taskmanagement/worktypes/{worktypeId}/history  
+
+Requires ANY permissions: 
+
+* workitems:worktype:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.
+let sortOrder: TaskManagementAPI.SortOrder_getTaskmanagementWorktypeHistory = TaskManagementAPI.SortOrder_getTaskmanagementWorktypeHistory.enummember // Ascending or descending sort order
+let fields: [String] = [""] // Comma-separated list of fields. The response will contain only versions created as a result of changes to these fields.
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorktypeHistory(worktypeId: worktypeId, after: after, pageSize: pageSize, sortOrder: sortOrder, fields: fields) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorktypeHistory was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **Int**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **fields** | [**[String]**](String)| Comma-separated list of fields. The response will contain only versions created as a result of changes to these fields. | [optional]<br />**Values**: name ("name"), serviceleveltarget ("serviceLevelTarget"), defaultworkbinid ("defaultWorkbinId"), defaultduedurationseconds ("defaultDueDurationSeconds"), defaultexpirationseconds ("defaultExpirationSeconds"), defaultpriority ("defaultPriority"), defaultlanguageid ("defaultLanguageId"), defaultskillids ("defaultSkillIds"), defaultqueueid ("defaultQueueId"), assignmentenabled ("assignmentEnabled"), defaultstatusid ("defaultStatusId"), statuses ("statuses") |
+
+
+### Return type
+
+[**WorktypeChangeListing**](WorktypeChangeListing)
+
+
 ## getTaskmanagementWorktypeStatus
 
 
@@ -1957,6 +2352,114 @@ TaskManagementAPI.getTaskmanagementWorktypeStatuses(worktypeId: worktypeId) { (r
 ### Return type
 
 [**WorkitemStatusListing**](WorkitemStatusListing)
+
+
+## getTaskmanagementWorktypeVersion
+
+
+
+> [WorktypeVersion](WorktypeVersion) getTaskmanagementWorktypeVersion(worktypeId, entityVersion)
+
+Get a version of a worktype
+
+
+
+Wraps GET /api/v2/taskmanagement/worktypes/{worktypeId}/versions/{entityVersion}  
+
+Requires ANY permissions: 
+
+* workitems:worktype:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let entityVersion: Int = 0 // Worktype version
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorktypeVersion(worktypeId: worktypeId, entityVersion: entityVersion) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorktypeVersion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **entityVersion** | **Int**| Worktype version | |
+
+
+### Return type
+
+[**WorktypeVersion**](WorktypeVersion)
+
+
+## getTaskmanagementWorktypeVersions
+
+
+
+> [WorktypeVersionListing](WorktypeVersionListing) getTaskmanagementWorktypeVersions(worktypeId, after, pageSize, sortOrder)
+
+Get all versions of a worktype
+
+
+
+Wraps GET /api/v2/taskmanagement/worktypes/{worktypeId}/versions  
+
+Requires ANY permissions: 
+
+* workitems:worktype:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.
+let sortOrder: TaskManagementAPI.SortOrder_getTaskmanagementWorktypeVersions = TaskManagementAPI.SortOrder_getTaskmanagementWorktypeVersions.enummember // Ascending or descending sort order
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorktypeVersions(worktypeId: worktypeId, after: after, pageSize: pageSize, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorktypeVersions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **Int**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
+
+
+### Return type
+
+[**WorktypeVersionListing**](WorktypeVersionListing)
 
 
 ## patchTaskmanagementWorkbin
@@ -3456,4 +3959,4 @@ TaskManagementAPI.putTaskmanagementWorkitemsSchema(schemaId: schemaId, body: bod
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

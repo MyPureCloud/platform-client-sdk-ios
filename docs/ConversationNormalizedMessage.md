@@ -18,9 +18,11 @@ General rich media message structure with normalized feature support across many
 | **originatingEntity** | **String** | Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies. | [optional] |
 | **isFinalReceipt** | **Bool** | Indicates if this is the last message receipt for this message, or if another message receipt can be expected. | [optional] |
 | **direction** | **String** | The direction of the message. | [optional] |
+| **relatedMessages** | [**[ConversationNormalizedMessage]**]([ConversationNormalizedMessage]) | A list of messages related to this one. | [optional] |
 | **metadata** | **[String:String]** | Additional metadata about this message. | [optional] |
+| **enrichment** | [**ConversationEnrichment**](ConversationEnrichment) | Metadata enrichments provided by the platform. | [optional] |
 | **byoSmsIntegrationId** | **String** | The internal id representing the customer supplied sms integration message. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

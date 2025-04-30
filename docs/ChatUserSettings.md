@@ -11,4 +11,4 @@ Settings for a chat user
 
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

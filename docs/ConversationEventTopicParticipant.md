@@ -43,11 +43,11 @@
 | **emails** | [**[ConversationEventTopicEmail]**]([ConversationEventTopicEmail]) |  | [optional] |
 | **messages** | [**[ConversationEventTopicMessage]**]([ConversationEventTopicMessage]) |  | [optional] |
 | **internalMessages** | [**[ConversationEventTopicInternalMessage]**]([ConversationEventTopicInternalMessage]) |  | [optional] |
-| **screenshares** | [**[ConversationEventTopicScreenshare]**]([ConversationEventTopicScreenshare]) |  | [optional] |
+| **screenshares** | [**[ConversationEventTopicScreenShare]**]([ConversationEventTopicScreenShare]) |  | [optional] |
 | **socialExpressions** | [**[ConversationEventTopicSocialExpression]**]([ConversationEventTopicSocialExpression]) |  | [optional] |
 | **videos** | [**[ConversationEventTopicVideo]**]([ConversationEventTopicVideo]) |  | [optional] |
 | **workflow** | [**ConversationEventTopicWorkflow**](ConversationEventTopicWorkflow) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

@@ -202,6 +202,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsKeyconfigurationsValidate**](ConversationsAPI#postConversationsKeyconfigurationsValidate) | Validate encryption key configurations without saving it |
 | [**postConversationsMessageCommunicationMessages**](ConversationsAPI#postConversationsMessageCommunicationMessages) | Send message |
 | [**postConversationsMessageCommunicationMessagesMedia**](ConversationsAPI#postConversationsMessageCommunicationMessagesMedia) | Create media |
+| [**postConversationsMessageCommunicationMessagesMediaUploads**](ConversationsAPI#postConversationsMessageCommunicationMessagesMediaUploads) | Create a URL to upload a message media file |
 | [**postConversationsMessageCommunicationTyping**](ConversationsAPI#postConversationsMessageCommunicationTyping) | Send message typing event |
 | [**postConversationsMessageInboundOpenEvent**](ConversationsAPI#postConversationsMessageInboundOpenEvent) | Send an inbound Open Event Message |
 | [**postConversationsMessageInboundOpenMessage**](ConversationsAPI#postConversationsMessageInboundOpenMessage) | Send inbound Open Message |
@@ -10578,6 +10579,64 @@ ConversationsAPI.postConversationsMessageCommunicationMessagesMedia(conversation
 [**MessageMediaData**](MessageMediaData)
 
 
+## postConversationsMessageCommunicationMessagesMediaUploads
+
+
+
+> [MessageMediaUploadData](MessageMediaUploadData) postConversationsMessageCommunicationMessagesMediaUploads(conversationId, communicationId, body)
+
+Create a URL to upload a message media file
+
+See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
+
+
+
+Wraps POST /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/uploads  
+
+Requires ANY permissions: 
+
+* conversation:message:create
+* conversation:webmessaging:create
+* conversation:socialmedia:create
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let communicationId: String = "" // communicationId
+let body: UploadMediaRequest = new UploadMediaRequest(...) // request
+
+// Code example
+ConversationsAPI.postConversationsMessageCommunicationMessagesMediaUploads(conversationId: conversationId, communicationId: communicationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsMessageCommunicationMessagesMediaUploads was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **communicationId** | **String**| communicationId | |
+| **body** | [**UploadMediaRequest**](UploadMediaRequest)| request | |
+
+
+### Return type
+
+[**MessageMediaUploadData**](MessageMediaUploadData)
+
+
 ## postConversationsMessageCommunicationTyping
 
 
@@ -12737,4 +12796,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

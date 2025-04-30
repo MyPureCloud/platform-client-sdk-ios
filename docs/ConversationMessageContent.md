@@ -18,7 +18,8 @@ Message content element. If contentType &#x3D; \&quot;Attachment\&quot; only one
 | **carousel** | [**ConversationContentCarousel**](ConversationContentCarousel) | Carousel content | [optional] |
 | **text** | [**ConversationContentText**](ConversationContentText) | Text content. | [optional] |
 | **quickReplyV2** | [**ConversationContentQuickReplyV2**](ConversationContentQuickReplyV2) | Quick reply V2 content. | [optional] |
+| **reactions** | [**[ConversationContentReaction]**]([ConversationContentReaction]) | A set of reactions to a message. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

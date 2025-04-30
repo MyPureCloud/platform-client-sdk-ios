@@ -19,4 +19,4 @@ Information about the recipient the message is sent to or received from.
 
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

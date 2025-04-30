@@ -54,7 +54,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getExternalcontactsOrganizationsSchemasCoretypes**](ExternalContactsAPI#getExternalcontactsOrganizationsSchemasCoretypes) | Get the core types from which all schemas are built. |
 | [**getExternalcontactsOrganizationsSchemasLimits**](ExternalContactsAPI#getExternalcontactsOrganizationsSchemasLimits) | Get quantitative limits on schemas |
 | [**getExternalcontactsRelationship**](ExternalContactsAPI#getExternalcontactsRelationship) | Fetch a relationship |
-| [**getExternalcontactsReversewhitepageslookup**](ExternalContactsAPI#getExternalcontactsReversewhitepageslookup) | Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned. |
+| [**getExternalcontactsReversewhitepageslookup**](ExternalContactsAPI#getExternalcontactsReversewhitepageslookup) | Look up contacts based on an attribute. Maximum of 25 values returned. |
 | [**getExternalcontactsScanContacts**](ExternalContactsAPI#getExternalcontactsScanContacts) | Scan for external contacts using paging |
 | [**getExternalcontactsScanNotes**](ExternalContactsAPI#getExternalcontactsScanNotes) | Scan for notes using paging |
 | [**getExternalcontactsScanOrganizations**](ExternalContactsAPI#getExternalcontactsScanOrganizations) | Scan for external organizations using paging |
@@ -2730,7 +2730,7 @@ ExternalContactsAPI.getExternalcontactsRelationship(relationshipId: relationship
 
 > [ReverseWhitepagesLookupResult](ReverseWhitepagesLookupResult) getExternalcontactsReversewhitepageslookup(lookupVal, expand, divisionId)
 
-Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
+Look up contacts based on an attribute. Maximum of 25 values returned.
 
 
 
@@ -2748,9 +2748,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let lookupVal: String = "" // User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)
+let lookupVal: String = "" // User supplied value to lookup contacts (supports email addresses, e164 phone numbers, Twitter screen names)
 let expand: [String] = [""] // which field, if any, to expand
-let divisionId: String = "" // Specifies which division to lookup contacts/externalOrganizations in, for the given lookup value
+let divisionId: String = "" // Specifies which division to lookup contacts in, for the given lookup value
 
 // Code example
 ExternalContactsAPI.getExternalcontactsReversewhitepageslookup(lookupVal: lookupVal, expand: expand, divisionId: divisionId) { (response, error) in
@@ -2768,9 +2768,9 @@ ExternalContactsAPI.getExternalcontactsReversewhitepageslookup(lookupVal: lookup
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **lookupVal** | **String**| User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names) | |
+| **lookupVal** | **String**| User supplied value to lookup contacts (supports email addresses, e164 phone numbers, Twitter screen names) | |
 | **expand** | [**[String]**](String)| which field, if any, to expand | [optional]<br />**Values**: contactsExternalorganization ("contacts.externalOrganization"), externaldatasources ("externalDataSources"), division ("division") |
-| **divisionId** | **String**| Specifies which division to lookup contacts/externalOrganizations in, for the given lookup value | [optional] |
+| **divisionId** | **String**| Specifies which division to lookup contacts in, for the given lookup value | [optional] |
 
 
 ### Return type
@@ -5462,4 +5462,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

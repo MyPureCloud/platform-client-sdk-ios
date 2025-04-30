@@ -934,7 +934,7 @@ ChatAPI.getChatsUserSettings(userId: userId) { (response, error) in
 
 
 
-> [ChatUserSettings](ChatUserSettings) getChatsUsersMeSettings()
+> [UserSettingsForChat](UserSettingsForChat) getChatsUsersMeSettings()
 
 Get a user&#39;s chat settings
 
@@ -972,7 +972,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**ChatUserSettings**](ChatUserSettings)
+[**UserSettingsForChat**](UserSettingsForChat)
 
 
 ## patchChatsRoom
@@ -1244,7 +1244,7 @@ ChatAPI.patchChatsUserSettings(userId: userId, body: body) { (response, error) i
 
 
 
-> [ChatUserSettings](ChatUserSettings) patchChatsUsersMeSettings(body)
+> [UserSettingsForChat](UserSettingsForChat) patchChatsUsersMeSettings(body)
 
 Update a user&#39;s chat settings
 
@@ -1263,7 +1263,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: ChatUserSettings = new ChatUserSettings(...) // 
+let body: UserSettingsForChat = new UserSettingsForChat(...) // 
 
 // Code example
 ChatAPI.patchChatsUsersMeSettings(body: body) { (response, error) in
@@ -1281,12 +1281,12 @@ ChatAPI.patchChatsUsersMeSettings(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ChatUserSettings**](ChatUserSettings)|  | |
+| **body** | [**UserSettingsForChat**](UserSettingsForChat)|  | |
 
 
 ### Return type
 
-[**ChatUserSettings**](ChatUserSettings)
+[**UserSettingsForChat**](UserSettingsForChat)
 
 
 ## postChatsRoomMessages
@@ -1704,4 +1704,4 @@ ChatAPI.putChatsSettings(body: body) { (response, error) in
 [**ChatSettings**](ChatSettings)
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_

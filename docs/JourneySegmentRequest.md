@@ -11,7 +11,6 @@
 | **version** | **Int** | The version of the segment. | [optional] |
 | **_description** | **String** | A description of the segment. | [optional] |
 | **color** | **String** | The hexadecimal color value of the segment. | |
-| **scope** | **String** | The target entity that a segment applies to. | [optional] |
 | **shouldDisplayToAgent** | **Bool** | Whether or not the segment should be displayed to agent/supervisor users. | [optional] |
 | **context** | [**RequestContext**](RequestContext) | The context of the segment. | |
 | **journey** | [**RequestJourney**](RequestJourney) | The pattern of rules defining the segment. | |
@@ -20,4 +19,4 @@
 
 
 
-_PureCloudPlatformClientV2@165.1.0_
+_PureCloudPlatformClientV2@166.0.0_
