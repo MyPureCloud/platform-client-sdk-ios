@@ -15,6 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWebdeploymentsDeployment**](WebDeploymentsAPI#getWebdeploymentsDeployment) | Get a deployment |
 | [**getWebdeploymentsDeploymentCobrowseSessionId**](WebDeploymentsAPI#getWebdeploymentsDeploymentCobrowseSessionId) | Retrieves a cobrowse session |
 | [**getWebdeploymentsDeploymentConfigurations**](WebDeploymentsAPI#getWebdeploymentsDeploymentConfigurations) | Get active configuration for a given deployment |
+| [**getWebdeploymentsDeploymentIdentityresolution**](WebDeploymentsAPI#getWebdeploymentsDeploymentIdentityresolution) | Get a deployment identity resolution setting. |
 | [**getWebdeploymentsDeployments**](WebDeploymentsAPI#getWebdeploymentsDeployments) | Get deployments |
 | [**postWebdeploymentsConfigurationVersionsDraftPublish**](WebDeploymentsAPI#postWebdeploymentsConfigurationVersionsDraftPublish) | Publish the configuration draft and create a new version |
 | [**postWebdeploymentsConfigurations**](WebDeploymentsAPI#postWebdeploymentsConfigurations) | Create a configuration draft |
@@ -23,6 +24,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWebdeploymentsTokenRefresh**](WebDeploymentsAPI#postWebdeploymentsTokenRefresh) | Refresh a JWT. |
 | [**putWebdeploymentsConfigurationVersionsDraft**](WebDeploymentsAPI#putWebdeploymentsConfigurationVersionsDraft) | Update the configuration draft |
 | [**putWebdeploymentsDeployment**](WebDeploymentsAPI#putWebdeploymentsDeployment) | Update a deployment |
+| [**putWebdeploymentsDeploymentIdentityresolution**](WebDeploymentsAPI#putWebdeploymentsDeploymentIdentityresolution) | Update identity resolution settings for a deployment. |
 {: class="table-striped"}
 
 
@@ -585,6 +587,57 @@ WebDeploymentsAPI.getWebdeploymentsDeploymentConfigurations(deploymentId: deploy
 [**WebDeploymentActiveConfigurationOnDeployment**](WebDeploymentActiveConfigurationOnDeployment)
 
 
+## getWebdeploymentsDeploymentIdentityresolution
+
+
+
+> [IdentityResolutionConfig](IdentityResolutionConfig) getWebdeploymentsDeploymentIdentityresolution(deploymentId)
+
+Get a deployment identity resolution setting.
+
+
+
+Wraps GET /api/v2/webdeployments/deployments/{deploymentId}/identityresolution  
+
+Requires ALL permissions: 
+
+* webDeployments:deployment:view
+* webDeployments:identityResolution:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let deploymentId: String = "" // The deployment ID
+
+// Code example
+WebDeploymentsAPI.getWebdeploymentsDeploymentIdentityresolution(deploymentId: deploymentId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WebDeploymentsAPI.getWebdeploymentsDeploymentIdentityresolution was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **deploymentId** | **String**| The deployment ID | |
+
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
+
+
 ## getWebdeploymentsDeployments
 
 
@@ -627,7 +680,7 @@ WebDeploymentsAPI.getWebdeploymentsDeployments(expand: expand) { (response, erro
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **expand** | [**[String]**](String)| The specified entity attributes will be filled. Comma separated values expected.  | [optional]<br />**Values**: configuration ("Configuration"), supportedContent ("SupportedContent") |
+| **expand** | [**[String]**](String)| The specified entity attributes will be filled. Comma separated values expected.  | [optional]<br />**Values**: configuration ("Configuration"), supportedContent ("SupportedContent"), identityresolution ("identityresolution") |
 
 
 ### Return type
@@ -988,4 +1041,57 @@ WebDeploymentsAPI.putWebdeploymentsDeployment(deploymentId: deploymentId, deploy
 [**WebDeployment**](WebDeployment)
 
 
-_PureCloudPlatformClientV2@166.0.0_
+## putWebdeploymentsDeploymentIdentityresolution
+
+
+
+> [IdentityResolutionConfig](IdentityResolutionConfig) putWebdeploymentsDeploymentIdentityresolution(deploymentId, body)
+
+Update identity resolution settings for a deployment.
+
+
+
+Wraps PUT /api/v2/webdeployments/deployments/{deploymentId}/identityresolution  
+
+Requires ALL permissions: 
+
+* webDeployments:deployment:edit
+* webDeployments:identityResolution:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let deploymentId: String = "" // The deployment ID
+let body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // 
+
+// Code example
+WebDeploymentsAPI.putWebdeploymentsDeploymentIdentityresolution(deploymentId: deploymentId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WebDeploymentsAPI.putWebdeploymentsDeploymentIdentityresolution was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **deploymentId** | **String**| The deployment ID | |
+| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  | |
+
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
+
+
+_PureCloudPlatformClientV2@167.0.0_

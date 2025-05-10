@@ -4515,6 +4515,48 @@ public class BulkContactsRequest: Codable {
 
 
 
+public class BulkEntityErrorContactEnrichRequest: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** An error code for the specific error condition. */
+    public var code: String?
+    /** A short error message. */
+    public var message: String?
+    /** The HTTP Status Code for the error. */
+    public var status: Int?
+    /** Whether this particular error should be retried. */
+    public var retryable: Bool?
+    /** Additional error details for specific fields. */
+    public var details: [BulkErrorDetail]?
+    /** The entity body specified in the Bulk request operation that caused this error. */
+    public var entity: ContactEnrichRequest?
+
+    public init(code: String?, message: String?, status: Int?, retryable: Bool?, details: [BulkErrorDetail]?, entity: ContactEnrichRequest?) {
+        self.code = code
+        self.message = message
+        self.status = status
+        self.retryable = retryable
+        self.details = details
+        self.entity = entity
+    }
+
+
+}
+
+
+
+
 public class BulkEntityErrorEntity: Codable {
 
 
@@ -5358,6 +5400,18 @@ public class CampaignDiagnostics: Codable {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
     /** Campaign properties that can impact which contacts are callable */
     public var callableContacts: CallableContactsDiagnostic?
     /** Information regarding the campaign's queue */
@@ -5372,10 +5426,22 @@ public class CampaignDiagnostics: Codable {
     public var timeZoneRescheduledCallsCount: Int?
     /** Number of contacts that don't match filter. This is currently supported only for Campaigns with dynamic filter on. */
     public var filteredOutContactsCount: Int?
+    /** Information regarding the campaign's available agents. */
+    public var idleAgents: Int?
+    /** Information regarding the campaign's effective available agents. */
+    public var effectiveIdleAgents: Double?
+    /** Information on the campaign's lines utilization. */
+    public var linesUtilization: CampaignLinesUtilization?
+    /** Number of contacts called during the campaign. */
+    public var numberOfContactsCalled: Int64?
+    /** Total number of contacts in the campaign. */
+    public var totalNumberOfContacts: Int64?
+    /** A list of current error conditions associated with the campaign. */
+    public var campaignErrors: [RestErrorDetail]?
     /** Information regarding the campaign's skills */
     public var campaignSkillStatistics: CampaignSkillStatistics?
 
-    public init(callableContacts: CallableContactsDiagnostic?, queueUtilizationDiagnostic: QueueUtilizationDiagnostic?, ruleSetDiagnostics: [RuleSetDiagnostic]?, outstandingInteractionsCount: Int?, scheduledInteractionsCount: Int?, timeZoneRescheduledCallsCount: Int?, filteredOutContactsCount: Int?, campaignSkillStatistics: CampaignSkillStatistics?) {
+    public init(callableContacts: CallableContactsDiagnostic?, queueUtilizationDiagnostic: QueueUtilizationDiagnostic?, ruleSetDiagnostics: [RuleSetDiagnostic]?, outstandingInteractionsCount: Int?, scheduledInteractionsCount: Int?, timeZoneRescheduledCallsCount: Int?, filteredOutContactsCount: Int?, idleAgents: Int?, effectiveIdleAgents: Double?, linesUtilization: CampaignLinesUtilization?, numberOfContactsCalled: Int64?, totalNumberOfContacts: Int64?, campaignErrors: [RestErrorDetail]?, campaignSkillStatistics: CampaignSkillStatistics?) {
         self.callableContacts = callableContacts
         self.queueUtilizationDiagnostic = queueUtilizationDiagnostic
         self.ruleSetDiagnostics = ruleSetDiagnostics
@@ -5383,6 +5449,12 @@ public class CampaignDiagnostics: Codable {
         self.scheduledInteractionsCount = scheduledInteractionsCount
         self.timeZoneRescheduledCallsCount = timeZoneRescheduledCallsCount
         self.filteredOutContactsCount = filteredOutContactsCount
+        self.idleAgents = idleAgents
+        self.effectiveIdleAgents = effectiveIdleAgents
+        self.linesUtilization = linesUtilization
+        self.numberOfContactsCalled = numberOfContactsCalled
+        self.totalNumberOfContacts = totalNumberOfContacts
+        self.campaignErrors = campaignErrors
         self.campaignSkillStatistics = campaignSkillStatistics
     }
 
@@ -6257,6 +6329,129 @@ public class ConfusionIntentDetails: Codable {
 
 
 
+public class DID: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum State: String, Codable { 
+        case active = "active"
+        case inactive = "inactive"
+        case deleted = "deleted"
+    }
+
+
+
+
+
+
+
+
+
+
+
+    public enum OwnerType: String, Codable { 
+        case user = "USER"
+        case phone = "PHONE"
+        case ivrConfig = "IVR_CONFIG"
+        case group = "GROUP"
+    }
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The name of the entity. */
+    public var name: String?
+    /** The division to which this entity belongs. */
+    public var division: Division?
+    /** The resource's description. */
+    public var _description: String?
+    /** The current version of the resource. */
+    public var version: Int?
+    /** The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+    /** The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateModified: Date?
+    /** The ID of the user that last modified the resource. */
+    public var modifiedBy: String?
+    /** The ID of the user that created the resource. */
+    public var createdBy: String?
+    /** Indicates if the resource is active, inactive, or deleted. */
+    public var state: State?
+    /** The application that last modified the resource. */
+    public var modifiedByApp: String?
+    /** The application that created the resource. */
+    public var createdByApp: String?
+    public var phoneNumber: String?
+    public var didPool: DomainEntityRef?
+    /** A Uri reference to the owner of this DID, which is either a User or an IVR */
+    public var owner: DomainEntityRef?
+    public var ownerType: OwnerType?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, phoneNumber: String?, didPool: DomainEntityRef?, owner: DomainEntityRef?, ownerType: OwnerType?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.division = division
+        self._description = _description
+        self.version = version
+        self.dateCreated = dateCreated
+        self.dateModified = dateModified
+        self.modifiedBy = modifiedBy
+        self.createdBy = createdBy
+        self.state = state
+        self.modifiedByApp = modifiedByApp
+        self.createdByApp = createdByApp
+        self.phoneNumber = phoneNumber
+        self.didPool = didPool
+        self.owner = owner
+        self.ownerType = ownerType
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case division
+        case _description = "description"
+        case version
+        case dateCreated
+        case dateModified
+        case modifiedBy
+        case createdBy
+        case state
+        case modifiedByApp
+        case createdByApp
+        case phoneNumber
+        case didPool
+        case owner
+        case ownerType
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class ConsumingResourcesEntityListing: Codable {
 
 
@@ -6319,6 +6514,8 @@ public class ContactBulkEditRequest: Codable {
 
 
 
+
+
     /** Contact List Filter ID. */
     public var contactListFilterId: String?
     /** Criteria to filter the contacts by. */
@@ -6327,12 +6524,15 @@ public class ContactBulkEditRequest: Codable {
     public var contactIds: [String]?
     /** Contact object with details of fields used for patching. */
     public var contact: DialerContact?
+    /** Whether to do backup export as part of Bulk Operation or not. Default: true. */
+    public var generateDownloadURI: Bool?
 
-    public init(contactListFilterId: String?, criteria: ContactBulkSearchCriteria?, contactIds: [String]?, contact: DialerContact?) {
+    public init(contactListFilterId: String?, criteria: ContactBulkSearchCriteria?, contactIds: [String]?, contact: DialerContact?, generateDownloadURI: Bool?) {
         self.contactListFilterId = contactListFilterId
         self.criteria = criteria
         self.contactIds = contactIds
         self.contact = contact
+        self.generateDownloadURI = generateDownloadURI
     }
 
 
@@ -6387,11 +6587,16 @@ public class ContactImportJobRequest: Codable {
 
 
 
+
+
     /** Settings id */
     public var settingsId: String?
+    /** The division to import into */
+    public var division: WritableStarrableDivision?
 
-    public init(settingsId: String?) {
+    public init(settingsId: String?, division: WritableStarrableDivision?) {
         self.settingsId = settingsId
+        self.division = division
     }
 
 
@@ -8556,9 +8761,9 @@ public class ConversationContentListPicker: Codable {
 
     /** An array of sections in the List Picker. */
     public var sections: [ConversationContentListPickerSection]?
-    /** The message displayed in the received message bubble. */
+    /** The reply message after the user has selected the options from the List Picker. */
     public var replyMessage: ConversationContentReceivedReplyMessage?
-    /** The message displayed in the reply message bubble. */
+    /** The message prompt to select options in the List Picker sections. */
     public var receivedMessage: ConversationContentReceivedReplyMessage?
 
     public init(sections: [ConversationContentListPickerSection]?, replyMessage: ConversationContentReceivedReplyMessage?, receivedMessage: ConversationContentReceivedReplyMessage?) {
@@ -12375,129 +12580,6 @@ public class CustomEventAttributeList: Codable {
 
 
 
-public class DID: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum State: String, Codable { 
-        case active = "active"
-        case inactive = "inactive"
-        case deleted = "deleted"
-    }
-
-
-
-
-
-
-
-
-
-
-
-    public enum OwnerType: String, Codable { 
-        case user = "USER"
-        case phone = "PHONE"
-        case ivrConfig = "IVR_CONFIG"
-        case group = "GROUP"
-    }
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    /** The name of the entity. */
-    public var name: String?
-    /** The division to which this entity belongs. */
-    public var division: Division?
-    /** The resource's description. */
-    public var _description: String?
-    /** The current version of the resource. */
-    public var version: Int?
-    /** The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateCreated: Date?
-    /** The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateModified: Date?
-    /** The ID of the user that last modified the resource. */
-    public var modifiedBy: String?
-    /** The ID of the user that created the resource. */
-    public var createdBy: String?
-    /** Indicates if the resource is active, inactive, or deleted. */
-    public var state: State?
-    /** The application that last modified the resource. */
-    public var modifiedByApp: String?
-    /** The application that created the resource. */
-    public var createdByApp: String?
-    public var phoneNumber: String?
-    public var didPool: DomainEntityRef?
-    /** A Uri reference to the owner of this DID, which is either a User or an IVR */
-    public var owner: DomainEntityRef?
-    public var ownerType: OwnerType?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, phoneNumber: String?, didPool: DomainEntityRef?, owner: DomainEntityRef?, ownerType: OwnerType?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.division = division
-        self._description = _description
-        self.version = version
-        self.dateCreated = dateCreated
-        self.dateModified = dateModified
-        self.modifiedBy = modifiedBy
-        self.createdBy = createdBy
-        self.state = state
-        self.modifiedByApp = modifiedByApp
-        self.createdByApp = createdByApp
-        self.phoneNumber = phoneNumber
-        self.didPool = didPool
-        self.owner = owner
-        self.ownerType = ownerType
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case division
-        case _description = "description"
-        case version
-        case dateCreated
-        case dateModified
-        case modifiedBy
-        case createdBy
-        case state
-        case modifiedByApp
-        case createdByApp
-        case phoneNumber
-        case didPool
-        case owner
-        case ownerType
-        case selfUri
-    }
-
-
-}
-
-
-
-
 public class DIDPool: Codable {
 
 
@@ -13290,6 +13372,110 @@ public class DialerCampaignConfigChangeRestErrorDetail: Codable {
 
 
 
+public class DialerContact: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    /** The identifier of the contact list containing this contact. */
+    public var contactListId: String?
+    /** An ordered map of the contact's columns and corresponding values. */
+    public var data: [String:String]?
+    /** A map of call records for the contact phone columns. */
+    public var callRecords: [String:CallRecord]?
+    /** A map of SMS records for the contact phone columns. */
+    public var latestSmsEvaluations: [String:MessageEvaluation]?
+    /** A map of email records for the contact email columns. */
+    public var latestEmailEvaluations: [String:MessageEvaluation]?
+    /** A map of whatsapp records for the contact whatsapp columns. */
+    public var latestWhatsAppEvaluations: [String:MessageEvaluation]?
+    /** Indicates whether or not the contact can be called. */
+    public var callable: Bool?
+    /** A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not. */
+    public var phoneNumberStatus: [String:PhoneNumberStatus]?
+    /** A map of media types (Voice, SMS and Email) to ContactableStatus, which indicates if the contact can be contacted using the specified media type. */
+    public var contactableStatus: [String:ContactableStatus]?
+    /** Map containing data about the timezone the contact is mapped to. This will only be populated if the contact list has automatic timezone mapping turned on. The key is the column name. The value is the timezone it mapped to and the type of column: Phone or Zip */
+    public var contactColumnTimeZones: [String:ContactColumnTimeZone]?
+    /** the priority property within ConfigurationOverides indicates whether or not the contact to be placed in front of the queue or at the end of the queue */
+    public var configurationOverrides: ConfigurationOverrides?
+    /** Timestamp for when the contact was added. Contacts added prior to 2023 September 1 may be missing this value. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, contactListId: String?, data: [String:String]?, callRecords: [String:CallRecord]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, latestWhatsAppEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, dateCreated: Date?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.contactListId = contactListId
+        self.data = data
+        self.callRecords = callRecords
+        self.latestSmsEvaluations = latestSmsEvaluations
+        self.latestEmailEvaluations = latestEmailEvaluations
+        self.latestWhatsAppEvaluations = latestWhatsAppEvaluations
+        self.callable = callable
+        self.phoneNumberStatus = phoneNumberStatus
+        self.contactableStatus = contactableStatus
+        self.contactColumnTimeZones = contactColumnTimeZones
+        self.configurationOverrides = configurationOverrides
+        self.dateCreated = dateCreated
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case contactListId
+        case data
+        case callRecords
+        case latestSmsEvaluations
+        case latestEmailEvaluations
+        case latestWhatsAppEvaluations
+        case callable
+        case phoneNumberStatus
+        case contactableStatus
+        case contactColumnTimeZones
+        case configurationOverrides
+        case dateCreated
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class DialerCampaignRuleConfigChangeCampaignRule: Codable {
 
 
@@ -13508,110 +13694,6 @@ public class DialerCampaignScheduleConfigChangeCampaignSchedule: Codable {
         case dateCreated
         case dateModified
         case version
-    }
-
-
-}
-
-
-
-
-public class DialerContact: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    public var name: String?
-    /** The identifier of the contact list containing this contact. */
-    public var contactListId: String?
-    /** An ordered map of the contact's columns and corresponding values. */
-    public var data: [String:String]?
-    /** A map of call records for the contact phone columns. */
-    public var callRecords: [String:CallRecord]?
-    /** A map of SMS records for the contact phone columns. */
-    public var latestSmsEvaluations: [String:MessageEvaluation]?
-    /** A map of email records for the contact email columns. */
-    public var latestEmailEvaluations: [String:MessageEvaluation]?
-    /** A map of whatsapp records for the contact whatsapp columns. */
-    public var latestWhatsAppEvaluations: [String:MessageEvaluation]?
-    /** Indicates whether or not the contact can be called. */
-    public var callable: Bool?
-    /** A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not. */
-    public var phoneNumberStatus: [String:PhoneNumberStatus]?
-    /** A map of media types (Voice, SMS and Email) to ContactableStatus, which indicates if the contact can be contacted using the specified media type. */
-    public var contactableStatus: [String:ContactableStatus]?
-    /** Map containing data about the timezone the contact is mapped to. This will only be populated if the contact list has automatic timezone mapping turned on. The key is the column name. The value is the timezone it mapped to and the type of column: Phone or Zip */
-    public var contactColumnTimeZones: [String:ContactColumnTimeZone]?
-    /** the priority property within ConfigurationOverides indicates whether or not the contact to be placed in front of the queue or at the end of the queue */
-    public var configurationOverrides: ConfigurationOverrides?
-    /** Timestamp for when the contact was added. Contacts added prior to 2023 September 1 may be missing this value. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateCreated: Date?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, contactListId: String?, data: [String:String]?, callRecords: [String:CallRecord]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, latestWhatsAppEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, dateCreated: Date?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.contactListId = contactListId
-        self.data = data
-        self.callRecords = callRecords
-        self.latestSmsEvaluations = latestSmsEvaluations
-        self.latestEmailEvaluations = latestEmailEvaluations
-        self.latestWhatsAppEvaluations = latestWhatsAppEvaluations
-        self.callable = callable
-        self.phoneNumberStatus = phoneNumberStatus
-        self.contactableStatus = contactableStatus
-        self.contactColumnTimeZones = contactColumnTimeZones
-        self.configurationOverrides = configurationOverrides
-        self.dateCreated = dateCreated
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case contactListId
-        case data
-        case callRecords
-        case latestSmsEvaluations
-        case latestEmailEvaluations
-        case latestWhatsAppEvaluations
-        case callable
-        case phoneNumberStatus
-        case contactableStatus
-        case contactColumnTimeZones
-        case configurationOverrides
-        case dateCreated
-        case selfUri
     }
 
 
@@ -16260,6 +16342,36 @@ public class EndConsultTransferEvent: Codable {
 
 
 
+public class EngagementRequest: Codable {
+
+    public enum Visibility: String, Codable { 
+        case presented = "Presented"
+        case notPresented = "NotPresented"
+        case unknown = "Unknown"
+    }
+
+    public enum Status: String, Codable { 
+        case copied = "Copied"
+        case notCopied = "NotCopied"
+        case unknown = "Unknown"
+    }
+
+    /** Represents the visibility of summary */
+    public var visibility: Visibility?
+    /** Represents the engagements made by the agent in response to the generated summary */
+    public var status: Status?
+
+    public init(visibility: Visibility?, status: Status?) {
+        self.visibility = visibility
+        self.status = status
+    }
+
+
+}
+
+
+
+
 public class EngineIntegration: Codable {
 
 
@@ -16497,93 +16609,6 @@ public class EvaluationCreateUser: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case selfUri
-    }
-
-
-}
-
-
-
-
-public class Event: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** System-generated UUID for the event. */
-    public var _id: String?
-    /** UUID corresponding to triggering action that caused this event (e.g. HTTP POST, SIP invite, another event). */
-    public var correlationId: String?
-    /** Primary identifier of the customer in the source of the events. */
-    public var customerId: String?
-    /** Type of primary identifier (e.g. cookie, email, phone). */
-    public var customerIdType: String?
-    /** The session that the event belongs to. */
-    public var session: EventSession?
-    /** The name representing the type of event. */
-    public var eventType: String?
-    /** Event where a customer has achieved a specific outcome or goal. */
-    public var outcomeAchievedEvent: OutcomeAchievedEvent?
-    /** Event that represents a segment being assigned. */
-    public var segmentAssignmentEvent: SegmentAssignmentEvent?
-    /** Event triggered by web actions. */
-    public var webActionEvent: WebActionEvent?
-    /** Event that tracks user interactions with content in a browser such as pageviews, downloads, mobile ad clicks, etc. */
-    public var webEvent: WebEvent?
-    /** Event that tracks user interactions with content in an application such as screen views, searches, etc. */
-    public var appEvent: AppEvent?
-    /** Timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var createdDate: Date?
-
-    public init(_id: String?, correlationId: String?, customerId: String?, customerIdType: String?, session: EventSession?, eventType: String?, outcomeAchievedEvent: OutcomeAchievedEvent?, segmentAssignmentEvent: SegmentAssignmentEvent?, webActionEvent: WebActionEvent?, webEvent: WebEvent?, appEvent: AppEvent?, createdDate: Date?) {
-        self._id = _id
-        self.correlationId = correlationId
-        self.customerId = customerId
-        self.customerIdType = customerIdType
-        self.session = session
-        self.eventType = eventType
-        self.outcomeAchievedEvent = outcomeAchievedEvent
-        self.segmentAssignmentEvent = segmentAssignmentEvent
-        self.webActionEvent = webActionEvent
-        self.webEvent = webEvent
-        self.appEvent = appEvent
-        self.createdDate = createdDate
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case correlationId
-        case customerId
-        case customerIdType
-        case session
-        case eventType
-        case outcomeAchievedEvent
-        case segmentAssignmentEvent
-        case webActionEvent
-        case webEvent
-        case appEvent
-        case createdDate
     }
 
 
@@ -17126,6 +17151,93 @@ public class EvaluatorActivityEntityListing: Codable {
         self.firstUri = firstUri
         self.selfUri = selfUri
         self.pageCount = pageCount
+    }
+
+
+}
+
+
+
+
+public class Event: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** System-generated UUID for the event. */
+    public var _id: String?
+    /** UUID corresponding to triggering action that caused this event (e.g. HTTP POST, SIP invite, another event). */
+    public var correlationId: String?
+    /** Primary identifier of the customer in the source of the events. */
+    public var customerId: String?
+    /** Type of primary identifier (e.g. cookie, email, phone). */
+    public var customerIdType: String?
+    /** The session that the event belongs to. */
+    public var session: EventSession?
+    /** The name representing the type of event. */
+    public var eventType: String?
+    /** Event where a customer has achieved a specific outcome or goal. */
+    public var outcomeAchievedEvent: OutcomeAchievedEvent?
+    /** Event that represents a segment being assigned. */
+    public var segmentAssignmentEvent: SegmentAssignmentEvent?
+    /** Event triggered by web actions. */
+    public var webActionEvent: WebActionEvent?
+    /** Event that tracks user interactions with content in a browser such as pageviews, downloads, mobile ad clicks, etc. */
+    public var webEvent: WebEvent?
+    /** Event that tracks user interactions with content in an application such as screen views, searches, etc. */
+    public var appEvent: AppEvent?
+    /** Timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var createdDate: Date?
+
+    public init(_id: String?, correlationId: String?, customerId: String?, customerIdType: String?, session: EventSession?, eventType: String?, outcomeAchievedEvent: OutcomeAchievedEvent?, segmentAssignmentEvent: SegmentAssignmentEvent?, webActionEvent: WebActionEvent?, webEvent: WebEvent?, appEvent: AppEvent?, createdDate: Date?) {
+        self._id = _id
+        self.correlationId = correlationId
+        self.customerId = customerId
+        self.customerIdType = customerIdType
+        self.session = session
+        self.eventType = eventType
+        self.outcomeAchievedEvent = outcomeAchievedEvent
+        self.segmentAssignmentEvent = segmentAssignmentEvent
+        self.webActionEvent = webActionEvent
+        self.webEvent = webEvent
+        self.appEvent = appEvent
+        self.createdDate = createdDate
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case correlationId
+        case customerId
+        case customerIdType
+        case session
+        case eventType
+        case outcomeAchievedEvent
+        case segmentAssignmentEvent
+        case webActionEvent
+        case webEvent
+        case appEvent
+        case createdDate
     }
 
 
@@ -18197,6 +18309,10 @@ public class ExternalOrganization: Codable {
 
 
 
+
+
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of the company. */
@@ -18225,12 +18341,16 @@ public class ExternalOrganization: Codable {
     public var schema: DataSchema?
     /** Custom fields defined in the schema referenced by schemaId and schemaVersion. */
     public var customFields: [String:JSON]?
+    /** Identifiers claimed by this external org */
+    public var identifiers: [ExternalOrganizationIdentifier]?
+    /** A list of external identifiers that identify this External Organization in an external system */
+    public var externalIds: [ExternalId]?
     /** Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param. */
     public var externalDataSources: [ExternalDataSource]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableStarrableDivision?, companyType: String?, industry: String?, address: ContactAddress?, phoneNumber: PhoneNumber?, faxNumber: PhoneNumber?, employeeCount: Int64?, revenue: Int64?, tags: [String]?, websites: [String]?, tickers: [Ticker]?, twitterId: TwitterId?, externalSystemUrl: String?, modifyDate: Date?, createDate: Date?, trustor: Trustor?, schema: DataSchema?, customFields: [String:JSON]?, externalDataSources: [ExternalDataSource]?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableStarrableDivision?, companyType: String?, industry: String?, address: ContactAddress?, phoneNumber: PhoneNumber?, faxNumber: PhoneNumber?, employeeCount: Int64?, revenue: Int64?, tags: [String]?, websites: [String]?, tickers: [Ticker]?, twitterId: TwitterId?, externalSystemUrl: String?, modifyDate: Date?, createDate: Date?, trustor: Trustor?, schema: DataSchema?, customFields: [String:JSON]?, identifiers: [ExternalOrganizationIdentifier]?, externalIds: [ExternalId]?, externalDataSources: [ExternalDataSource]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -18251,6 +18371,8 @@ public class ExternalOrganization: Codable {
         self.trustor = trustor
         self.schema = schema
         self.customFields = customFields
+        self.identifiers = identifiers
+        self.externalIds = externalIds
         self.externalDataSources = externalDataSources
         self.selfUri = selfUri
     }
@@ -18276,6 +18398,8 @@ public class ExternalOrganization: Codable {
         case trustor
         case schema
         case customFields
+        case identifiers
+        case externalIds
         case externalDataSources
         case selfUri
     }
@@ -18578,6 +18702,32 @@ public class FeatureState: Codable {
 
     public init(enabled: Bool?) {
         self.enabled = enabled
+    }
+
+
+}
+
+
+
+
+public class FeedbackUpdateRequest: Codable {
+
+    public enum Rating: String, Codable { 
+        case positive = "Positive"
+        case negative = "Negative"
+        case unknown = "Unknown"
+    }
+
+
+
+    /** Agent’s rating for the system-generated summary. */
+    public var rating: Rating?
+    /** Agent's summary for the conversation */
+    public var summary: String?
+
+    public init(rating: Rating?, summary: String?) {
+        self.rating = rating
+        self.summary = summary
     }
 
 
@@ -32618,6 +32768,70 @@ public class RecordingJobFailedRecording: Codable {
 
 
 
+public class Referrer: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum Medium: String, Codable { 
+        case _internal = "internal"
+        case search = "search"
+        case social = "social"
+        case email = "email"
+        case unknown = "unknown"
+        case paid = "paid"
+    }
+
+    /** Referrer URL. */
+    public var url: String?
+    /** Referrer URL domain. */
+    public var domain: String?
+    /** Referrer URL hostname. */
+    public var hostname: String?
+    /** Referrer keywords. */
+    public var keywords: String?
+    /** Referrer URL pathname. */
+    public var pathname: String?
+    /** Referrer URL querystring. */
+    public var queryString: String?
+    /** Referrer URL fragment. */
+    public var fragment: String?
+    /** Name of referrer (e.g. Yahoo!, Google, InfoSpace). */
+    public var name: String?
+    /** Type of referrer (e.g. search, social). */
+    public var medium: Medium?
+
+    public init(url: String?, domain: String?, hostname: String?, keywords: String?, pathname: String?, queryString: String?, fragment: String?, name: String?, medium: Medium?) {
+        self.url = url
+        self.domain = domain
+        self.hostname = hostname
+        self.keywords = keywords
+        self.pathname = pathname
+        self.queryString = queryString
+        self.fragment = fragment
+        self.name = name
+        self.medium = medium
+    }
+
+
+}
+
+
+
+
 public class RecordingSettings: Codable {
 
 
@@ -32793,70 +33007,6 @@ public class RecurrencePeriod: Codable {
     public init(magnitude: Int?, granularity: Granularity?) {
         self.magnitude = magnitude
         self.granularity = granularity
-    }
-
-
-}
-
-
-
-
-public class Referrer: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum Medium: String, Codable { 
-        case _internal = "internal"
-        case search = "search"
-        case social = "social"
-        case email = "email"
-        case unknown = "unknown"
-        case paid = "paid"
-    }
-
-    /** Referrer URL. */
-    public var url: String?
-    /** Referrer URL domain. */
-    public var domain: String?
-    /** Referrer URL hostname. */
-    public var hostname: String?
-    /** Referrer keywords. */
-    public var keywords: String?
-    /** Referrer URL pathname. */
-    public var pathname: String?
-    /** Referrer URL querystring. */
-    public var queryString: String?
-    /** Referrer URL fragment. */
-    public var fragment: String?
-    /** Name of referrer (e.g. Yahoo!, Google, InfoSpace). */
-    public var name: String?
-    /** Type of referrer (e.g. search, social). */
-    public var medium: Medium?
-
-    public init(url: String?, domain: String?, hostname: String?, keywords: String?, pathname: String?, queryString: String?, fragment: String?, name: String?, medium: Medium?) {
-        self.url = url
-        self.domain = domain
-        self.hostname = hostname
-        self.keywords = keywords
-        self.pathname = pathname
-        self.queryString = queryString
-        self.fragment = fragment
-        self.name = name
-        self.medium = medium
     }
 
 
@@ -33126,6 +33276,8 @@ public class ReportingExportJobRequest: Codable {
         case hms = "Hms"
     }
 
+
+
     /** The user supplied name of the export request */
     public var name: String?
     /** The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London */
@@ -33166,8 +33318,10 @@ public class ReportingExportJobRequest: Codable {
     public var includeDurationFormatInHeader: Bool?
     /** Indicates the duration format for the exports */
     public var durationFormat: DurationFormat?
+    /** The list of columns for which chart is going to be displayed in export */
+    public var chartColumns: [ChartColumn]?
 
-    public init(name: String?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, hasSummaryRow: Bool?, csvDelimiter: CsvDelimiter?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?, includeDurationFormatInHeader: Bool?, durationFormat: DurationFormat?) {
+    public init(name: String?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, hasSummaryRow: Bool?, csvDelimiter: CsvDelimiter?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?, includeDurationFormatInHeader: Bool?, durationFormat: DurationFormat?, chartColumns: [ChartColumn]?) {
         self.name = name
         self.timeZone = timeZone
         self.exportFormat = exportFormat
@@ -33188,6 +33342,7 @@ public class ReportingExportJobRequest: Codable {
         self.recipientEmails = recipientEmails
         self.includeDurationFormatInHeader = includeDurationFormatInHeader
         self.durationFormat = durationFormat
+        self.chartColumns = chartColumns
     }
 
 
@@ -35522,6 +35677,116 @@ public class StaffingGroupReference: Codable {
 
 
 
+public class Survey: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    public enum Status: String, Codable { 
+        case pending = "Pending"
+        case sent = "Sent"
+        case inProgress = "InProgress"
+        case finished = "Finished"
+        case optOut = "OptOut"
+        case error = "Error"
+        case expired = "Expired"
+    }
+
+
+
+
+
+
+
+
+
+
+
+    public enum SurveyType: String, Codable { 
+        case web = "Web"
+        case voice = "Voice"
+    }
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    public var conversation: ConversationReference?
+    /** Survey form used for this survey. */
+    public var surveyForm: SurveyForm?
+    public var agent: DomainEntityRef?
+    public var status: Status?
+    public var queue: QueueReference?
+    public var answers: SurveyScoringSet?
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var completedDate: Date?
+    /** Additional information about what happened when the survey is in Error status. */
+    public var surveyErrorDetails: SurveyErrorDetails?
+    /** The team that the agent belongs to */
+    public var agentTeam: Team?
+    /** Type of the survey */
+    public var surveyType: SurveyType?
+    /** True if any of the required questions for the survey form have not been answered. Null if survey is not finished. */
+    public var missingRequiredAnswer: Bool?
+    /** An Architect flow that executed in order to collect the answers for this survey. */
+    public var flow: AddressableEntityRef?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, conversation: ConversationReference?, surveyForm: SurveyForm?, agent: DomainEntityRef?, status: Status?, queue: QueueReference?, answers: SurveyScoringSet?, completedDate: Date?, surveyErrorDetails: SurveyErrorDetails?, agentTeam: Team?, surveyType: SurveyType?, missingRequiredAnswer: Bool?, flow: AddressableEntityRef?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.conversation = conversation
+        self.surveyForm = surveyForm
+        self.agent = agent
+        self.status = status
+        self.queue = queue
+        self.answers = answers
+        self.completedDate = completedDate
+        self.surveyErrorDetails = surveyErrorDetails
+        self.agentTeam = agentTeam
+        self.surveyType = surveyType
+        self.missingRequiredAnswer = missingRequiredAnswer
+        self.flow = flow
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case conversation
+        case surveyForm
+        case agent
+        case status
+        case queue
+        case answers
+        case completedDate
+        case surveyErrorDetails
+        case agentTeam
+        case surveyType
+        case missingRequiredAnswer
+        case flow
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class StatEventCampaignTopicStatsNotification: Codable {
 
 
@@ -35966,116 +36231,6 @@ public class SupportedLanguagesInfoDefinition: Codable {
         self.status = status
         self.supportedEntityTypes = supportedEntityTypes
         self.supportedEntityTypeConfiguration = supportedEntityTypeConfiguration
-    }
-
-
-}
-
-
-
-
-public class Survey: Codable {
-
-
-
-
-
-
-
-
-
-
-
-    public enum Status: String, Codable { 
-        case pending = "Pending"
-        case sent = "Sent"
-        case inProgress = "InProgress"
-        case finished = "Finished"
-        case optOut = "OptOut"
-        case error = "Error"
-        case expired = "Expired"
-    }
-
-
-
-
-
-
-
-
-
-
-
-    public enum SurveyType: String, Codable { 
-        case web = "Web"
-        case voice = "Voice"
-    }
-
-
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    public var name: String?
-    public var conversation: ConversationReference?
-    /** Survey form used for this survey. */
-    public var surveyForm: SurveyForm?
-    public var agent: DomainEntityRef?
-    public var status: Status?
-    public var queue: QueueReference?
-    public var answers: SurveyScoringSet?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var completedDate: Date?
-    /** Additional information about what happened when the survey is in Error status. */
-    public var surveyErrorDetails: SurveyErrorDetails?
-    /** The team that the agent belongs to */
-    public var agentTeam: Team?
-    /** Type of the survey */
-    public var surveyType: SurveyType?
-    /** True if any of the required questions for the survey form have not been answered. Null if survey is not finished. */
-    public var missingRequiredAnswer: Bool?
-    /** An Architect flow that executed in order to collect the answers for this survey. */
-    public var flow: AddressableEntityRef?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, conversation: ConversationReference?, surveyForm: SurveyForm?, agent: DomainEntityRef?, status: Status?, queue: QueueReference?, answers: SurveyScoringSet?, completedDate: Date?, surveyErrorDetails: SurveyErrorDetails?, agentTeam: Team?, surveyType: SurveyType?, missingRequiredAnswer: Bool?, flow: AddressableEntityRef?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.conversation = conversation
-        self.surveyForm = surveyForm
-        self.agent = agent
-        self.status = status
-        self.queue = queue
-        self.answers = answers
-        self.completedDate = completedDate
-        self.surveyErrorDetails = surveyErrorDetails
-        self.agentTeam = agentTeam
-        self.surveyType = surveyType
-        self.missingRequiredAnswer = missingRequiredAnswer
-        self.flow = flow
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case conversation
-        case surveyForm
-        case agent
-        case status
-        case queue
-        case answers
-        case completedDate
-        case surveyErrorDetails
-        case agentTeam
-        case surveyType
-        case missingRequiredAnswer
-        case flow
-        case selfUri
     }
 
 
@@ -37723,6 +37878,22 @@ public class TransferToQueueRequest: Codable {
         self.keepInternalMessageAlive = keepInternalMessageAlive
         self.queueId = queueId
         self.queueName = queueName
+    }
+
+
+}
+
+
+
+
+public class TranslateSupportedLanguageList: Codable {
+
+
+
+    public var entities: [TranslateSupportedLanguage]?
+
+    public init(entities: [TranslateSupportedLanguage]?) {
+        self.entities = entities
     }
 
 
@@ -44066,6 +44237,53 @@ public class WorkitemsAttributeChangeWorkitemStatusCategory: Codable {
 
 
 
+public class Wrapup: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The user configured wrap up code id. */
+    public var code: String?
+    /** The user configured wrap up code name. */
+    public var name: String?
+    /** Text entered by the agent to describe the call or disposition. */
+    public var notes: String?
+    /** List of tags selected by the agent to describe the call or disposition. */
+    public var tags: [String]?
+    /** The length of time in seconds that the agent spent doing after call work. */
+    public var durationSeconds: Int?
+    /** The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var endTime: Date?
+    /** Indicates if this is a pending save and should not require a code to be specified.  This allows someone to save some temporary wrapup that will be used later. */
+    public var provisional: Bool?
+
+    public init(code: String?, name: String?, notes: String?, tags: [String]?, durationSeconds: Int?, endTime: Date?, provisional: Bool?) {
+        self.code = code
+        self.name = name
+        self.notes = notes
+        self.tags = tags
+        self.durationSeconds = durationSeconds
+        self.endTime = endTime
+        self.provisional = provisional
+    }
+
+
+}
+
+
+
+
 public class WorkitemsAttributeChangeWrapupDelta: Codable {
 
 
@@ -45189,53 +45407,6 @@ public class WrapUpCodeConfig: Codable {
 
     public init(values: [String]?) {
         self.values = values
-    }
-
-
-}
-
-
-
-
-public class Wrapup: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The user configured wrap up code id. */
-    public var code: String?
-    /** The user configured wrap up code name. */
-    public var name: String?
-    /** Text entered by the agent to describe the call or disposition. */
-    public var notes: String?
-    /** List of tags selected by the agent to describe the call or disposition. */
-    public var tags: [String]?
-    /** The length of time in seconds that the agent spent doing after call work. */
-    public var durationSeconds: Int?
-    /** The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var endTime: Date?
-    /** Indicates if this is a pending save and should not require a code to be specified.  This allows someone to save some temporary wrapup that will be used later. */
-    public var provisional: Bool?
-
-    public init(code: String?, name: String?, notes: String?, tags: [String]?, durationSeconds: Int?, endTime: Date?, provisional: Bool?) {
-        self.code = code
-        self.name = name
-        self.notes = notes
-        self.tags = tags
-        self.durationSeconds = durationSeconds
-        self.endTime = endTime
-        self.provisional = provisional
     }
 
 

@@ -799,16 +799,16 @@ open class SpeechTextAnalyticsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "sourceId" : "sourceId",
     "summary" : "summary",
-    "agentId" : "agentId",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "generated" : true,
     "summaryType" : "Conversation",
     "mediaType" : "Unknown",
     "language" : "language"
   }, {
+    "sourceId" : "sourceId",
     "summary" : "summary",
-    "agentId" : "agentId",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "generated" : true,
     "summaryType" : "Conversation",
@@ -2635,6 +2635,187 @@ open class SpeechTextAnalyticsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TopicJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Translate a single interaction recording (or an email conversation)
+     
+     - parameter languageId: (path) Target translation language 
+     - parameter conversationId: (path) Conversation id 
+     - parameter communicationId: (query) Communication id associated with the conversation. Please provide a valid communicationId when requesting non-email interactions. (optional)
+     - parameter recordingId: (query) Recording id associated with the communication. Please provide a valid recordingId when requesting voice interactions. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsTranslationsLanguageConversation(languageId: String, conversationId: String, communicationId: String? = nil, recordingId: String? = nil, completion: @escaping ((_ data: CommunicationTranslationList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsTranslationsLanguageConversationWithRequestBuilder(languageId: languageId, conversationId: conversationId, communicationId: communicationId, recordingId: recordingId)
+        requestBuilder.execute { (response: Response<CommunicationTranslationList>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Translate a single interaction recording (or an email conversation)
+     - GET /api/v2/speechandtextanalytics/translations/languages/{languageId}/conversations/{conversationId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "transcripts" : [ {
+      "translateError" : "translateError",
+      "id" : "id",
+      "phrases" : [ {
+        "translatedText" : "translatedText",
+        "startTimeMs" : 0,
+        "participantPurpose" : "participantPurpose"
+      }, {
+        "translatedText" : "translatedText",
+        "startTimeMs" : 0,
+        "participantPurpose" : "participantPurpose"
+      } ]
+    }, {
+      "translateError" : "translateError",
+      "id" : "id",
+      "phrases" : [ {
+        "translatedText" : "translatedText",
+        "startTimeMs" : 0,
+        "participantPurpose" : "participantPurpose"
+      }, {
+        "translatedText" : "translatedText",
+        "startTimeMs" : 0,
+        "participantPurpose" : "participantPurpose"
+      } ]
+    } ],
+    "communicationId" : "communicationId"
+  }, {
+    "transcripts" : [ {
+      "translateError" : "translateError",
+      "id" : "id",
+      "phrases" : [ {
+        "translatedText" : "translatedText",
+        "startTimeMs" : 0,
+        "participantPurpose" : "participantPurpose"
+      }, {
+        "translatedText" : "translatedText",
+        "startTimeMs" : 0,
+        "participantPurpose" : "participantPurpose"
+      } ]
+    }, {
+      "translateError" : "translateError",
+      "id" : "id",
+      "phrases" : [ {
+        "translatedText" : "translatedText",
+        "startTimeMs" : 0,
+        "participantPurpose" : "participantPurpose"
+      }, {
+        "translatedText" : "translatedText",
+        "startTimeMs" : 0,
+        "participantPurpose" : "participantPurpose"
+      } ]
+    } ],
+    "communicationId" : "communicationId"
+  } ]
+}, statusCode=200}]
+     
+     - parameter languageId: (path) Target translation language 
+     - parameter conversationId: (path) Conversation id 
+     - parameter communicationId: (query) Communication id associated with the conversation. Please provide a valid communicationId when requesting non-email interactions. (optional)
+     - parameter recordingId: (query) Recording id associated with the communication. Please provide a valid recordingId when requesting voice interactions. (optional)
+
+     - returns: RequestBuilder<CommunicationTranslationList> 
+     */
+    open class func getSpeechandtextanalyticsTranslationsLanguageConversationWithRequestBuilder(languageId: String, conversationId: String, communicationId: String? = nil, recordingId: String? = nil) -> RequestBuilder<CommunicationTranslationList> {        
+        var path = "/api/v2/speechandtextanalytics/translations/languages/{languageId}/conversations/{conversationId}"
+        let languageIdPreEscape = "\(languageId)"
+        let languageIdPostEscape = languageIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageId}", with: languageIdPostEscape, options: .literal, range: nil)
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "communicationId": communicationId, 
+            "recordingId": recordingId
+        ])
+
+        let requestBuilder: RequestBuilder<CommunicationTranslationList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get supported translation languages
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsTranslationsLanguages(completion: @escaping ((_ data: TranslateSupportedLanguageList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsTranslationsLanguagesWithRequestBuilder()
+        requestBuilder.execute { (response: Response<TranslateSupportedLanguageList>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get supported translation languages
+     - GET /api/v2/speechandtextanalytics/translations/languages
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "languageCode" : "languageCode",
+    "languageName" : "languageName"
+  }, {
+    "languageCode" : "languageCode",
+    "languageName" : "languageName"
+  } ]
+}, statusCode=200}]
+
+     - returns: RequestBuilder<TranslateSupportedLanguageList> 
+     */
+    open class func getSpeechandtextanalyticsTranslationsLanguagesWithRequestBuilder() -> RequestBuilder<TranslateSupportedLanguageList> {        
+        let path = "/api/v2/speechandtextanalytics/translations/languages"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TranslateSupportedLanguageList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }

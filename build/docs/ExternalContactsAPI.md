@@ -42,6 +42,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getExternalcontactsImportSettings**](ExternalContactsAPI#getExternalcontactsImportSettings) | List settings for organization |
 | [**getExternalcontactsOrganization**](ExternalContactsAPI#getExternalcontactsOrganization) | Fetch an external organization |
 | [**getExternalcontactsOrganizationContacts**](ExternalContactsAPI#getExternalcontactsOrganizationContacts) | Search for external contacts in an external organization |
+| [**getExternalcontactsOrganizationIdentifiers**](ExternalContactsAPI#getExternalcontactsOrganizationIdentifiers) | List the identifiers for an external organization |
 | [**getExternalcontactsOrganizationNote**](ExternalContactsAPI#getExternalcontactsOrganizationNote) | Fetch a note for an external organization |
 | [**getExternalcontactsOrganizationNotes**](ExternalContactsAPI#getExternalcontactsOrganizationNotes) | List notes for an external organization |
 | [**getExternalcontactsOrganizationRelationships**](ExternalContactsAPI#getExternalcontactsOrganizationRelationships) | Fetch a relationship for an external organization |
@@ -56,12 +57,19 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getExternalcontactsRelationship**](ExternalContactsAPI#getExternalcontactsRelationship) | Fetch a relationship |
 | [**getExternalcontactsReversewhitepageslookup**](ExternalContactsAPI#getExternalcontactsReversewhitepageslookup) | Look up contacts based on an attribute. Maximum of 25 values returned. |
 | [**getExternalcontactsScanContacts**](ExternalContactsAPI#getExternalcontactsScanContacts) | Scan for external contacts using paging |
+| [**getExternalcontactsScanContactsDivisionviewsAll**](ExternalContactsAPI#getExternalcontactsScanContactsDivisionviewsAll) | Scan for external contacts using paging |
 | [**getExternalcontactsScanNotes**](ExternalContactsAPI#getExternalcontactsScanNotes) | Scan for notes using paging |
+| [**getExternalcontactsScanNotesDivisionviewsAll**](ExternalContactsAPI#getExternalcontactsScanNotesDivisionviewsAll) | Scan for notes using paging |
 | [**getExternalcontactsScanOrganizations**](ExternalContactsAPI#getExternalcontactsScanOrganizations) | Scan for external organizations using paging |
+| [**getExternalcontactsScanOrganizationsDivisionviewsAll**](ExternalContactsAPI#getExternalcontactsScanOrganizationsDivisionviewsAll) | Scan for external organizations using paging |
 | [**getExternalcontactsScanRelationships**](ExternalContactsAPI#getExternalcontactsScanRelationships) | Scan for relationships |
+| [**getExternalcontactsScanRelationshipsDivisionviewsAll**](ExternalContactsAPI#getExternalcontactsScanRelationshipsDivisionviewsAll) | Scan for relationships |
 | [**patchExternalcontactsContactIdentifiers**](ExternalContactsAPI#patchExternalcontactsContactIdentifiers) | Claim or release identifiers for a contact |
+| [**patchExternalcontactsOrganizationIdentifiers**](ExternalContactsAPI#patchExternalcontactsOrganizationIdentifiers) | Claim or release identifiers for an external organization |
 | [**postExternalcontactsBulkContacts**](ExternalContactsAPI#postExternalcontactsBulkContacts) | Bulk fetch contacts |
 | [**postExternalcontactsBulkContactsAdd**](ExternalContactsAPI#postExternalcontactsBulkContactsAdd) | Bulk add contacts |
+| [**postExternalcontactsBulkContactsDivisionviews**](ExternalContactsAPI#postExternalcontactsBulkContactsDivisionviews) | Bulk fetch contacts across divisions |
+| [**postExternalcontactsBulkContactsEnrich**](ExternalContactsAPI#postExternalcontactsBulkContactsEnrich) | Bulk Enrich Contacts - Run up to 10 Enrich operations per request |
 | [**postExternalcontactsBulkContactsRemove**](ExternalContactsAPI#postExternalcontactsBulkContactsRemove) | Bulk remove contacts |
 | [**postExternalcontactsBulkContactsUnresolved**](ExternalContactsAPI#postExternalcontactsBulkContactsUnresolved) | Bulk fetch unresolved ancestor contacts |
 | [**postExternalcontactsBulkContactsUpdate**](ExternalContactsAPI#postExternalcontactsBulkContactsUpdate) | Bulk update contacts |
@@ -71,6 +79,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postExternalcontactsBulkNotesUpdate**](ExternalContactsAPI#postExternalcontactsBulkNotesUpdate) | Bulk update notes |
 | [**postExternalcontactsBulkOrganizations**](ExternalContactsAPI#postExternalcontactsBulkOrganizations) | Bulk fetch organizations |
 | [**postExternalcontactsBulkOrganizationsAdd**](ExternalContactsAPI#postExternalcontactsBulkOrganizationsAdd) | Bulk add organizations |
+| [**postExternalcontactsBulkOrganizationsDivisionviews**](ExternalContactsAPI#postExternalcontactsBulkOrganizationsDivisionviews) | Bulk fetch organizations across divisions |
+| [**postExternalcontactsBulkOrganizationsEnrich**](ExternalContactsAPI#postExternalcontactsBulkOrganizationsEnrich) | Bulk enrich external organizations - Run up to 10 Enrich operations per request |
 | [**postExternalcontactsBulkOrganizationsRemove**](ExternalContactsAPI#postExternalcontactsBulkOrganizationsRemove) | Bulk remove organizations |
 | [**postExternalcontactsBulkOrganizationsUpdate**](ExternalContactsAPI#postExternalcontactsBulkOrganizationsUpdate) | Bulk update organizations |
 | [**postExternalcontactsBulkRelationships**](ExternalContactsAPI#postExternalcontactsBulkRelationships) | Bulk fetch relationships |
@@ -80,10 +90,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postExternalcontactsContactNotes**](ExternalContactsAPI#postExternalcontactsContactNotes) | Create a note for an external contact |
 | [**postExternalcontactsContactPromotion**](ExternalContactsAPI#postExternalcontactsContactPromotion) | Promote an observed contact (ephemeral or identified) to a curated contact |
 | [**postExternalcontactsContacts**](ExternalContactsAPI#postExternalcontactsContacts) | Create an external contact |
+| [**postExternalcontactsContactsEnrich**](ExternalContactsAPI#postExternalcontactsContactsEnrich) | Modify or create an External Contact, with powerful behaviors for finding and combining data with pre-existing Contacts. |
 | [**postExternalcontactsContactsExports**](ExternalContactsAPI#postExternalcontactsContactsExports) | Create bulk export |
+| [**postExternalcontactsContactsMerge**](ExternalContactsAPI#postExternalcontactsContactsMerge) | Merge up to 25 contacts into a new contact record |
 | [**postExternalcontactsContactsSchemas**](ExternalContactsAPI#postExternalcontactsContactsSchemas) | Create a schema |
 | [**postExternalcontactsExternalsources**](ExternalContactsAPI#postExternalcontactsExternalsources) | Create an External Source |
 | [**postExternalcontactsIdentifierlookup**](ExternalContactsAPI#postExternalcontactsIdentifierlookup) | Fetch a contact using an identifier type and value. |
+| [**postExternalcontactsIdentifierlookupContacts**](ExternalContactsAPI#postExternalcontactsIdentifierlookupContacts) | Fetch a contact using an identifier type and value. |
+| [**postExternalcontactsIdentifierlookupOrganizations**](ExternalContactsAPI#postExternalcontactsIdentifierlookupOrganizations) | Fetch an external organization using an identifier type and value. |
 | [**postExternalcontactsImportCsvJobs**](ExternalContactsAPI#postExternalcontactsImportCsvJobs) | Create CSV import job |
 | [**postExternalcontactsImportCsvSettings**](ExternalContactsAPI#postExternalcontactsImportCsvSettings) | Create settings for CSV import |
 | [**postExternalcontactsImportCsvUploads**](ExternalContactsAPI#postExternalcontactsImportCsvUploads) | Get url for CSV upload |
@@ -92,6 +106,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postExternalcontactsMergeContacts**](ExternalContactsAPI#postExternalcontactsMergeContacts) | Merge two contacts into a new contact record |
 | [**postExternalcontactsOrganizationNotes**](ExternalContactsAPI#postExternalcontactsOrganizationNotes) | Create a note for an external organization |
 | [**postExternalcontactsOrganizations**](ExternalContactsAPI#postExternalcontactsOrganizations) | Create an external organization |
+| [**postExternalcontactsOrganizationsEnrich**](ExternalContactsAPI#postExternalcontactsOrganizationsEnrich) | Modify or create an External Org, with powerful behaviors for finding and combining data with pre-existing External Orgs. |
 | [**postExternalcontactsOrganizationsSchemas**](ExternalContactsAPI#postExternalcontactsOrganizationsSchemas) | Create a schema |
 | [**postExternalcontactsRelationships**](ExternalContactsAPI#postExternalcontactsRelationships) | Create a relationship |
 | [**putExternalcontactsContact**](ExternalContactsAPI#putExternalcontactsContact) | Update an external contact |
@@ -2093,6 +2108,56 @@ ExternalContactsAPI.getExternalcontactsOrganizationContacts(externalOrganization
 [**ContactListing**](ContactListing)
 
 
+## getExternalcontactsOrganizationIdentifiers
+
+
+
+> [ExternalOrganizationIdentifierListing](ExternalOrganizationIdentifierListing) getExternalcontactsOrganizationIdentifiers(externalOrganizationId)
+
+List the identifiers for an external organization
+
+
+
+Wraps GET /api/v2/externalcontacts/organizations/{externalOrganizationId}/identifiers  
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let externalOrganizationId: String = "" // External Organization ID
+
+// Code example
+ExternalContactsAPI.getExternalcontactsOrganizationIdentifiers(externalOrganizationId: externalOrganizationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsOrganizationIdentifiers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **externalOrganizationId** | **String**| External Organization ID | |
+
+
+### Return type
+
+[**ExternalOrganizationIdentifierListing**](ExternalOrganizationIdentifierListing)
+
+
 ## getExternalcontactsOrganizationNote
 
 
@@ -2833,6 +2898,58 @@ ExternalContactsAPI.getExternalcontactsScanContacts(limit: limit, cursor: cursor
 [**CursorContactListing**](CursorContactListing)
 
 
+## getExternalcontactsScanContactsDivisionviewsAll
+
+
+
+> [CursorContactListing](CursorContactListing) getExternalcontactsScanContactsDivisionviewsAll(limit, cursor)
+
+Scan for external contacts using paging
+
+
+
+Wraps GET /api/v2/externalcontacts/scan/contacts/divisionviews/all  
+
+Requires ALL permissions: 
+
+* externalContacts:contact:viewAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let limit: Int = 0 // The number of contacts per page; must be between 10 and 200, default is 100
+let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+
+// Code example
+ExternalContactsAPI.getExternalcontactsScanContactsDivisionviewsAll(limit: limit, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsScanContactsDivisionviewsAll was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **limit** | **Int**| The number of contacts per page; must be between 10 and 200, default is 100 | [optional] |
+| **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
+
+
+### Return type
+
+[**CursorContactListing**](CursorContactListing)
+
+
 ## getExternalcontactsScanNotes
 
 
@@ -2881,6 +2998,58 @@ ExternalContactsAPI.getExternalcontactsScanNotes(limit: limit, cursor: cursor, d
 | **limit** | **Int**| The number of notes per page; must be between 10 and 200, default is 100 | [optional] |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
 | **divisionId** | **String**| The division to scan over | [optional] |
+
+
+### Return type
+
+[**CursorNoteListing**](CursorNoteListing)
+
+
+## getExternalcontactsScanNotesDivisionviewsAll
+
+
+
+> [CursorNoteListing](CursorNoteListing) getExternalcontactsScanNotesDivisionviewsAll(limit, cursor)
+
+Scan for notes using paging
+
+
+
+Wraps GET /api/v2/externalcontacts/scan/notes/divisionviews/all  
+
+Requires ALL permissions: 
+
+* externalContacts:contact:viewAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let limit: Int = 0 // The number of notes per page; must be between 10 and 200, default is 100
+let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+
+// Code example
+ExternalContactsAPI.getExternalcontactsScanNotesDivisionviewsAll(limit: limit, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsScanNotesDivisionviewsAll was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **limit** | **Int**| The number of notes per page; must be between 10 and 200, default is 100 | [optional] |
+| **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
 
 
 ### Return type
@@ -2943,6 +3112,58 @@ ExternalContactsAPI.getExternalcontactsScanOrganizations(limit: limit, cursor: c
 [**CursorOrganizationListing**](CursorOrganizationListing)
 
 
+## getExternalcontactsScanOrganizationsDivisionviewsAll
+
+
+
+> [CursorOrganizationListing](CursorOrganizationListing) getExternalcontactsScanOrganizationsDivisionviewsAll(limit, cursor)
+
+Scan for external organizations using paging
+
+
+
+Wraps GET /api/v2/externalcontacts/scan/organizations/divisionviews/all  
+
+Requires ALL permissions: 
+
+* externalContacts:externalOrganization:viewAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let limit: Int = 0 // The number of organizations per page; must be between 10 and 200, default is 100
+let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+
+// Code example
+ExternalContactsAPI.getExternalcontactsScanOrganizationsDivisionviewsAll(limit: limit, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsScanOrganizationsDivisionviewsAll was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **limit** | **Int**| The number of organizations per page; must be between 10 and 200, default is 100 | [optional] |
+| **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
+
+
+### Return type
+
+[**CursorOrganizationListing**](CursorOrganizationListing)
+
+
 ## getExternalcontactsScanRelationships
 
 
@@ -2991,6 +3212,58 @@ ExternalContactsAPI.getExternalcontactsScanRelationships(limit: limit, cursor: c
 | **limit** | **Int**| The number of relationships per page; must be between 10 and 200, default is 100 | [optional] |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
 | **divisionId** | **String**| The division to scan over | [optional] |
+
+
+### Return type
+
+[**CursorRelationshipListing**](CursorRelationshipListing)
+
+
+## getExternalcontactsScanRelationshipsDivisionviewsAll
+
+
+
+> [CursorRelationshipListing](CursorRelationshipListing) getExternalcontactsScanRelationshipsDivisionviewsAll(limit, cursor)
+
+Scan for relationships
+
+
+
+Wraps GET /api/v2/externalcontacts/scan/relationships/divisionviews/all  
+
+Requires ALL permissions: 
+
+* externalContacts:contact:viewAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let limit: Int = 0 // The number of relationships per page; must be between 10 and 200, default is 100
+let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+
+// Code example
+ExternalContactsAPI.getExternalcontactsScanRelationshipsDivisionviewsAll(limit: limit, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsScanRelationshipsDivisionviewsAll was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **limit** | **Int**| The number of relationships per page; must be between 10 and 200, default is 100 | [optional] |
+| **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
 
 
 ### Return type
@@ -3048,6 +3321,58 @@ ExternalContactsAPI.patchExternalcontactsContactIdentifiers(contactId: contactId
 ### Return type
 
 [**ContactIdentifier**](ContactIdentifier)
+
+
+## patchExternalcontactsOrganizationIdentifiers
+
+
+
+> [ExternalOrganizationIdentifier](ExternalOrganizationIdentifier) patchExternalcontactsOrganizationIdentifiers(externalOrganizationId, body)
+
+Claim or release identifiers for an external organization
+
+
+
+Wraps PATCH /api/v2/externalcontacts/organizations/{externalOrganizationId}/identifiers  
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let externalOrganizationId: String = "" // External Organization ID
+let body: ExternalOrganizationIdentifierClaimRequest = new ExternalOrganizationIdentifierClaimRequest(...) // ClaimRequest
+
+// Code example
+ExternalContactsAPI.patchExternalcontactsOrganizationIdentifiers(externalOrganizationId: externalOrganizationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.patchExternalcontactsOrganizationIdentifiers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **externalOrganizationId** | **String**| External Organization ID | |
+| **body** | [**ExternalOrganizationIdentifierClaimRequest**](ExternalOrganizationIdentifierClaimRequest)| ClaimRequest | |
+
+
+### Return type
+
+[**ExternalOrganizationIdentifier**](ExternalOrganizationIdentifier)
 
 
 ## postExternalcontactsBulkContacts
@@ -3148,6 +3473,110 @@ ExternalContactsAPI.postExternalcontactsBulkContactsAdd(body: body) { (response,
 ### Return type
 
 [**BulkContactsResponse**](BulkContactsResponse)
+
+
+## postExternalcontactsBulkContactsDivisionviews
+
+
+
+> [BulkFetchContactsResponse](BulkFetchContactsResponse) postExternalcontactsBulkContactsDivisionviews(body)
+
+Bulk fetch contacts across divisions
+
+
+
+Wraps POST /api/v2/externalcontacts/bulk/contacts/divisionviews  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkIdsRequest = new BulkIdsRequest(...) // Contact ids
+
+// Code example
+ExternalContactsAPI.postExternalcontactsBulkContactsDivisionviews(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsBulkContactsDivisionviews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkIdsRequest**](BulkIdsRequest)| Contact ids | |
+
+
+### Return type
+
+[**BulkFetchContactsResponse**](BulkFetchContactsResponse)
+
+
+## postExternalcontactsBulkContactsEnrich
+
+
+
+> [BulkContactsEnrichResponse](BulkContactsEnrichResponse) postExternalcontactsBulkContactsEnrich(body, dryRun)
+
+Bulk Enrich Contacts - Run up to 10 Enrich operations per request
+
+See the API endpoint /externalcontacts/contacts/enrich for docs on individual Enrich operations.
+
+
+
+Wraps POST /api/v2/externalcontacts/bulk/contacts/enrich  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:enrich
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkContactsEnrichRequest = new BulkContactsEnrichRequest(...) // Contact Enrich Requests
+let dryRun: Bool = true // If true, the request will not make any modifications, but will show you what the end result *would* be.
+
+// Code example
+ExternalContactsAPI.postExternalcontactsBulkContactsEnrich(body: body, dryRun: dryRun) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsBulkContactsEnrich was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkContactsEnrichRequest**](BulkContactsEnrichRequest)| Contact Enrich Requests | |
+| **dryRun** | **Bool**| If true, the request will not make any modifications, but will show you what the end result *would* be. | [optional] |
+
+
+### Return type
+
+[**BulkContactsEnrichResponse**](BulkContactsEnrichResponse)
 
 
 ## postExternalcontactsBulkContactsRemove
@@ -3602,6 +4031,110 @@ ExternalContactsAPI.postExternalcontactsBulkOrganizationsAdd(body: body) { (resp
 ### Return type
 
 [**BulkOrganizationsResponse**](BulkOrganizationsResponse)
+
+
+## postExternalcontactsBulkOrganizationsDivisionviews
+
+
+
+> [BulkFetchOrganizationsResponse](BulkFetchOrganizationsResponse) postExternalcontactsBulkOrganizationsDivisionviews(body)
+
+Bulk fetch organizations across divisions
+
+
+
+Wraps POST /api/v2/externalcontacts/bulk/organizations/divisionviews  
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkIdsRequest = new BulkIdsRequest(...) // Organizations ids
+
+// Code example
+ExternalContactsAPI.postExternalcontactsBulkOrganizationsDivisionviews(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsBulkOrganizationsDivisionviews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkIdsRequest**](BulkIdsRequest)| Organizations ids | |
+
+
+### Return type
+
+[**BulkFetchOrganizationsResponse**](BulkFetchOrganizationsResponse)
+
+
+## postExternalcontactsBulkOrganizationsEnrich
+
+
+
+> [BulkOrganizationsEnrichResponse](BulkOrganizationsEnrichResponse) postExternalcontactsBulkOrganizationsEnrich(body, dryRun)
+
+Bulk enrich external organizations - Run up to 10 Enrich operations per request
+
+See the API endpoint /externalcontacts/organizations/enrich for docs on individual Enrich operations.
+
+
+
+Wraps POST /api/v2/externalcontacts/bulk/organizations/enrich  
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:enrich
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkOrganizationsEnrichRequest = new BulkOrganizationsEnrichRequest(...) // External Organization Enrich Requests
+let dryRun: Bool = true // If true, the request will not make any modifications, but will show you what the end result *would* be.
+
+// Code example
+ExternalContactsAPI.postExternalcontactsBulkOrganizationsEnrich(body: body, dryRun: dryRun) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsBulkOrganizationsEnrich was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkOrganizationsEnrichRequest**](BulkOrganizationsEnrichRequest)| External Organization Enrich Requests | |
+| **dryRun** | **Bool**| If true, the request will not make any modifications, but will show you what the end result *would* be. | [optional] |
+
+
+### Return type
+
+[**BulkOrganizationsEnrichResponse**](BulkOrganizationsEnrichResponse)
 
 
 ## postExternalcontactsBulkOrganizationsRemove
@@ -4062,6 +4595,60 @@ ExternalContactsAPI.postExternalcontactsContacts(body: body) { (response, error)
 [**ExternalContact**](ExternalContact)
 
 
+## postExternalcontactsContactsEnrich
+
+
+
+> [ExternalContact](ExternalContact) postExternalcontactsContactsEnrich(body, dryRun)
+
+Modify or create an External Contact, with powerful behaviors for finding and combining data with pre-existing Contacts.
+
+You may also submit multiple Enrich operations in one request via the Bulk Enrich API at /externalcontacts/bulk/contacts. A 201 response status indicates that a new Contact was created, whereas a 200 status indicates that a Contact was updated or a merge occurred.
+
+
+
+Wraps POST /api/v2/externalcontacts/contacts/enrich  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:enrich
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ContactEnrichRequest = new ContactEnrichRequest(...) // ContactEnrichRequest
+let dryRun: Bool = true // If true, the request will not make any modifications, but will show you what the end result *would* be.
+
+// Code example
+ExternalContactsAPI.postExternalcontactsContactsEnrich(body: body, dryRun: dryRun) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsContactsEnrich was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ContactEnrichRequest**](ContactEnrichRequest)| ContactEnrichRequest | |
+| **dryRun** | **Bool**| If true, the request will not make any modifications, but will show you what the end result *would* be. | [optional] |
+
+
+### Return type
+
+[**ExternalContact**](ExternalContact)
+
+
 ## postExternalcontactsContactsExports
 
 
@@ -4111,6 +4698,58 @@ ExternalContactsAPI.postExternalcontactsContactsExports(body: body) { (response,
 ### Return type
 
 [**ContactsExport**](ContactsExport)
+
+
+## postExternalcontactsContactsMerge
+
+
+
+> [ExternalContact](ExternalContact) postExternalcontactsContactsMerge(body)
+
+Merge up to 25 contacts into a new contact record
+
+Merge operation may fail if the resulting mergeset exceeds our default limit of 52. The valueOverride field lets you override any of the Contact fields post-merge. If any Contact field is left null in &#x60;valueOverride&#x60;, it will be taken from the most recently-modified contact in the merge set. Exception for *phone/_*email fields: Conflicting data will be moved to any other available phone/email fields in the merged contact.
+
+
+
+Wraps POST /api/v2/externalcontacts/contacts/merge  
+
+Requires ANY permissions: 
+
+* externalContacts:identity:merge
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: MergeContactsRequest = new MergeContactsRequest(...) // MergeRequest
+
+// Code example
+ExternalContactsAPI.postExternalcontactsContactsMerge(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsContactsMerge was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**MergeContactsRequest**](MergeContactsRequest)| MergeRequest | |
+
+
+### Return type
+
+[**ExternalContact**](ExternalContact)
 
 
 ## postExternalcontactsContactsSchemas
@@ -4266,6 +4905,114 @@ ExternalContactsAPI.postExternalcontactsIdentifierlookup(identifier: identifier,
 ### Return type
 
 [**ExternalContact**](ExternalContact)
+
+
+## postExternalcontactsIdentifierlookupContacts
+
+
+
+> [ExternalContact](ExternalContact) postExternalcontactsIdentifierlookupContacts(identifier, expand)
+
+Fetch a contact using an identifier type and value.
+
+Phone number identifier values must be provided with the country code and a leading &#39;+&#39; symbol. Example: \&quot;+1 704 298 4733\&quot;
+
+
+
+Wraps POST /api/v2/externalcontacts/identifierlookup/contacts  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let identifier: ContactIdentifier = new ContactIdentifier(...) // 
+let expand: [String] = [""] // which field, if any, to expand
+
+// Code example
+ExternalContactsAPI.postExternalcontactsIdentifierlookupContacts(identifier: identifier, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsIdentifierlookupContacts was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **identifier** | [**ContactIdentifier**](ContactIdentifier)|  | |
+| **expand** | [**[String]**](String)| which field, if any, to expand | [optional]<br />**Values**: externalorganization ("externalOrganization"), identifiers ("identifiers"), externalsources ("externalSources"), division ("division") |
+
+
+### Return type
+
+[**ExternalContact**](ExternalContact)
+
+
+## postExternalcontactsIdentifierlookupOrganizations
+
+
+
+> [ExternalOrganization](ExternalOrganization) postExternalcontactsIdentifierlookupOrganizations(identifier, expand)
+
+Fetch an external organization using an identifier type and value.
+
+This endpoint will only accept ExternalId type identifiers.
+
+
+
+Wraps POST /api/v2/externalcontacts/identifierlookup/organizations  
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let identifier: ExternalOrganizationIdentifier = new ExternalOrganizationIdentifier(...) // 
+let expand: [String] = [""] // which field, if any, to expand
+
+// Code example
+ExternalContactsAPI.postExternalcontactsIdentifierlookupOrganizations(identifier: identifier, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsIdentifierlookupOrganizations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **identifier** | [**ExternalOrganizationIdentifier**](ExternalOrganizationIdentifier)|  | |
+| **expand** | [**[String]**](String)| which field, if any, to expand | [optional]<br />**Values**: identifiers ("identifiers"), externalsources ("externalSources"), division ("division") |
+
+
+### Return type
+
+[**ExternalOrganization**](ExternalOrganization)
 
 
 ## postExternalcontactsImportCsvJobs
@@ -4667,6 +5414,60 @@ ExternalContactsAPI.postExternalcontactsOrganizations(body: body) { (response, e
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**ExternalOrganization**](ExternalOrganization)| ExternalOrganization | |
+
+
+### Return type
+
+[**ExternalOrganization**](ExternalOrganization)
+
+
+## postExternalcontactsOrganizationsEnrich
+
+
+
+> [ExternalOrganization](ExternalOrganization) postExternalcontactsOrganizationsEnrich(body, dryRun)
+
+Modify or create an External Org, with powerful behaviors for finding and combining data with pre-existing External Orgs.
+
+You may also submit multiple Enrich operations in one request via the Bulk Enrich API at /externalcontacts/bulk/organizations. A 201 response status indicates that a new External Organization was created, whereas a 200 status indicates that an External Organization was updated
+
+
+
+Wraps POST /api/v2/externalcontacts/organizations/enrich  
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:enrich
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ExternalOrganizationEnrichRequest = new ExternalOrganizationEnrichRequest(...) // ExternalOrgEnrichRequest
+let dryRun: Bool = true // If true, the request will not make any modifications, but will show you what the end result *would* be.
+
+// Code example
+ExternalContactsAPI.postExternalcontactsOrganizationsEnrich(body: body, dryRun: dryRun) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsOrganizationsEnrich was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ExternalOrganizationEnrichRequest**](ExternalOrganizationEnrichRequest)| ExternalOrgEnrichRequest | |
+| **dryRun** | **Bool**| If true, the request will not make any modifications, but will show you what the end result *would* be. | [optional] |
 
 
 ### Return type
@@ -5462,4 +6263,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@166.0.0_
+_PureCloudPlatformClientV2@167.0.0_

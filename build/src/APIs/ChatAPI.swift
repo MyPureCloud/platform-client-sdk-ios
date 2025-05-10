@@ -778,14 +778,17 @@ open class ChatAPI {
 
     
     
+    
+    
     /**
      Get room participants in a room
      
      - parameter roomJid: (path) roomJid 
+     - parameter notify: (query) Whether to get users to notify (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getChatsRoomParticipants(roomJid: String, completion: @escaping ((_ data: RoomParticipantsResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getChatsRoomParticipantsWithRequestBuilder(roomJid: roomJid)
+    open class func getChatsRoomParticipants(roomJid: String, notify: Bool? = nil, completion: @escaping ((_ data: RoomParticipantsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getChatsRoomParticipantsWithRequestBuilder(roomJid: roomJid, notify: notify)
         requestBuilder.execute { (response: Response<RoomParticipantsResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -819,10 +822,11 @@ open class ChatAPI {
 }, statusCode=200}]
      
      - parameter roomJid: (path) roomJid 
+     - parameter notify: (query) Whether to get users to notify (optional)
 
      - returns: RequestBuilder<RoomParticipantsResponse> 
      */
-    open class func getChatsRoomParticipantsWithRequestBuilder(roomJid: String) -> RequestBuilder<RoomParticipantsResponse> {        
+    open class func getChatsRoomParticipantsWithRequestBuilder(roomJid: String, notify: Bool? = nil) -> RequestBuilder<RoomParticipantsResponse> {        
         var path = "/api/v2/chats/rooms/{roomJid}/participants"
         let roomJidPreEscape = "\(roomJid)"
         let roomJidPostEscape = roomJidPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -830,7 +834,10 @@ open class ChatAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "notify": notify
+        ])
 
         let requestBuilder: RequestBuilder<RoomParticipantsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

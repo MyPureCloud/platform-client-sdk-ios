@@ -2453,10 +2453,24 @@
     "return": "IVR",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ivrId: String = \"\" // IVR id\n\n// Get an IVR config.\nGetArchitectIvrRequest.getArchitectIvr(ivrId: ivrId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetArchitectIvrRequest.getArchitectIvr was successful\")\n        dump(response)\n    }\n}"
   },
+  "getarchitectivridentityresolution": {
+    "operationId": "getarchitectivridentityresolution",
+    "functionName": "getArchitectIvrIdentityresolution",
+    "signature": "getArchitectIvrIdentityresolution(ivrId)",
+    "parameters": [
+      {
+        "name": "ivrId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "IdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ivrId: String = \"\" // IVR id\n\n// Get an IVR IdentityResolutionConfig.\nGetArchitectIvrIdentityresolutionRequest.getArchitectIvrIdentityresolution(ivrId: ivrId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetArchitectIvrIdentityresolutionRequest.getArchitectIvrIdentityresolution was successful\")\n        dump(response)\n    }\n}"
+  },
   "getarchitectivrs": {
     "operationId": "getarchitectivrs",
     "functionName": "getArchitectIvrs",
-    "signature": "getArchitectIvrs(pageNumber, pageSize, sortBy, sortOrder, name, dnis, scheduleGroup)",
+    "signature": "getArchitectIvrs(pageNumber, pageSize, sortBy, sortOrder, name, dnis, scheduleGroup, expand)",
     "parameters": [
       {
         "name": "pageNumber",
@@ -2492,10 +2506,15 @@
         "name": "scheduleGroup",
         "type": "String",
         "required": "false"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
       }
     ],
     "return": "IVREntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet sortBy: String = \"\" // Sort by\nlet sortOrder: String = \"\" // Sort order\nlet name: String = \"\" // Name of the IVR to filter by.\nlet dnis: String = \"\" // The phone number of the IVR to filter by.\nlet scheduleGroup: String = \"\" // The Schedule Group of the IVR to filter by.\n\n// Get IVR configs.\nGetArchitectIvrsRequest.getArchitectIvrs(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name, dnis: dnis, scheduleGroup: scheduleGroup) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetArchitectIvrsRequest.getArchitectIvrs was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet sortBy: String = \"\" // Sort by\nlet sortOrder: String = \"\" // Sort order\nlet name: String = \"\" // Name of the IVR to filter by.\nlet dnis: String = \"\" // The phone number of the IVR to filter by.\nlet scheduleGroup: String = \"\" // The Schedule Group of the IVR to filter by.\nlet expand: [String] = [\"\"] // Which fields, if any, to expand\n\n// Get IVR configs.\nGetArchitectIvrsRequest.getArchitectIvrs(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name, dnis: dnis, scheduleGroup: scheduleGroup, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetArchitectIvrsRequest.getArchitectIvrs was successful\")\n        dump(response)\n    }\n}"
   },
   "getarchitectivrsdivisionviews": {
     "operationId": "getarchitectivrsdivisionviews",
@@ -4852,6 +4871,25 @@
     "return": "IVR",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ivrId: String = \"\" // IVR id\nlet body: IVR = new IVR(...) // \n\n// Update an IVR Config.\nPutArchitectIvrRequest.putArchitectIvr(ivrId: ivrId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutArchitectIvrRequest.putArchitectIvr was successful\")\n        dump(response)\n    }\n}"
   },
+  "putarchitectivridentityresolution": {
+    "operationId": "putarchitectivridentityresolution",
+    "functionName": "putArchitectIvrIdentityresolution",
+    "signature": "putArchitectIvrIdentityresolution(ivrId, body)",
+    "parameters": [
+      {
+        "name": "ivrId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "IdentityResolutionConfig",
+        "required": "true"
+      }
+    ],
+    "return": "IdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ivrId: String = \"\" // IVR id\nlet body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // \n\n// Update an IVR IdentityResolutionConfig.\nPutArchitectIvrIdentityresolutionRequest.putArchitectIvrIdentityresolution(ivrId: ivrId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutArchitectIvrIdentityresolutionRequest.putArchitectIvrIdentityresolution was successful\")\n        dump(response)\n    }\n}"
+  },
   "putarchitectprompt": {
     "operationId": "putarchitectprompt",
     "functionName": "putArchitectPrompt",
@@ -6428,16 +6466,21 @@
   "getchatsroomparticipants": {
     "operationId": "getchatsroomparticipants",
     "functionName": "getChatsRoomParticipants",
-    "signature": "getChatsRoomParticipants(roomJid)",
+    "signature": "getChatsRoomParticipants(roomJid, notify)",
     "parameters": [
       {
         "name": "roomJid",
         "type": "String",
         "required": "true"
+      },
+      {
+        "name": "notify",
+        "type": "Bool",
+        "required": "false"
       }
     ],
     "return": "RoomParticipantsResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet roomJid: String = \"\" // roomJid\n\n// Get room participants in a room\nGetChatsRoomParticipantsRequest.getChatsRoomParticipants(roomJid: roomJid) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetChatsRoomParticipantsRequest.getChatsRoomParticipants was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet roomJid: String = \"\" // roomJid\nlet notify: Bool = true // Whether to get users to notify\n\n// Get room participants in a room\nGetChatsRoomParticipantsRequest.getChatsRoomParticipants(roomJid: roomJid, notify: notify) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetChatsRoomParticipantsRequest.getChatsRoomParticipants was successful\")\n        dump(response)\n    }\n}"
   },
   "getchatssettings": {
     "operationId": "getchatssettings",
@@ -9284,6 +9327,48 @@
     "return": "FacebookPermissionEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get a list of Facebook Permissions\nGetConversationsMessagingFacebookPermissionsRequest.getConversationsMessagingFacebookPermissions() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingFacebookPermissionsRequest.getConversationsMessagingFacebookPermissions was successful\")\n        dump(response)\n    }\n}"
   },
+  "getconversationsmessagingidentityresolutionintegrationsfacebookintegrationid": {
+    "operationId": "getconversationsmessagingidentityresolutionintegrationsfacebookintegrationid",
+    "functionName": "getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId",
+    "signature": "getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId)",
+    "parameters": [
+      {
+        "name": "integrationId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "IdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\n\n// Get Facebook messaging integration identity resolution settings\nGetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdRequest.getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId: integrationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdRequest.getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationsmessagingidentityresolutionintegrationsopenintegrationid": {
+    "operationId": "getconversationsmessagingidentityresolutionintegrationsopenintegrationid",
+    "functionName": "getConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId",
+    "signature": "getConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId(integrationId)",
+    "parameters": [
+      {
+        "name": "integrationId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "OpenMessagingIdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\n\n// Get an open messaging integration Identity Resolution settings\nGetConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationIdRequest.getConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId(integrationId: integrationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationIdRequest.getConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationsmessagingidentityresolutionintegrationswhatsappintegrationid": {
+    "operationId": "getconversationsmessagingidentityresolutionintegrationswhatsappintegrationid",
+    "functionName": "getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId",
+    "signature": "getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId)",
+    "parameters": [
+      {
+        "name": "integrationId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "IdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\n\n// Get a whatsApp integration Identity Resolution settings\nGetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdRequest.getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId: integrationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdRequest.getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId was successful\")\n        dump(response)\n    }\n}"
+  },
   "getconversationsmessagingintegrationtwitteroauthsettings": {
     "operationId": "getconversationsmessagingintegrationtwitteroauthsettings",
     "functionName": "getConversationsMessagingIntegrationTwitterOauthSettings",
@@ -9849,6 +9934,52 @@
     ],
     "return": "String",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\nlet body: ConversationSecureAttributes = new ConversationSecureAttributes(...) // Conversation Secure Attributes\n\n// Update the secure attributes on a conversation.\nPatchConversationSecureattributesRequest.patchConversationSecureattributes(conversationId: conversationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchConversationSecureattributesRequest.patchConversationSecureattributes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchconversationsummaryengagements": {
+    "operationId": "patchconversationsummaryengagements",
+    "functionName": "patchConversationSummaryEngagements",
+    "signature": "patchConversationSummaryEngagements(conversationId, summaryId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "summaryId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "EngagementRequest",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // Conversation ID\nlet summaryId: String = \"\" // Summary ID\nlet body: EngagementRequest = new EngagementRequest(...) // \n\n// Update agent's engagement for the summary.\nPatchConversationSummaryEngagementsRequest.patchConversationSummaryEngagements(conversationId: conversationId, summaryId: summaryId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchConversationSummaryEngagementsRequest.patchConversationSummaryEngagements was successful\")\n    }\n}"
+  },
+  "patchconversationsummaryfeedback": {
+    "operationId": "patchconversationsummaryfeedback",
+    "functionName": "patchConversationSummaryFeedback",
+    "signature": "patchConversationSummaryFeedback(conversationId, summaryId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "summaryId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "FeedbackUpdateRequest",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // Conversation ID\nlet summaryId: String = \"\" // Summary ID\nlet body: FeedbackUpdateRequest = new FeedbackUpdateRequest(...) // \n\n// Update the feedback for the summary.\nPatchConversationSummaryFeedbackRequest.patchConversationSummaryFeedback(conversationId: conversationId, summaryId: summaryId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchConversationSummaryFeedbackRequest.patchConversationSummaryFeedback was successful\")\n    }\n}"
   },
   "patchconversationutilizationlabel": {
     "operationId": "patchconversationutilizationlabel",
@@ -12449,6 +12580,63 @@
     "return": "String",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet body: SetRecordingState = new SetRecordingState(...) // SetRecordingState\n\n// Update a conversation by setting its recording state\nPutConversationsMessageRecordingstateRequest.putConversationsMessageRecordingstate(conversationId: conversationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsMessageRecordingstateRequest.putConversationsMessageRecordingstate was successful\")\n        dump(response)\n    }\n}"
   },
+  "putconversationsmessagingidentityresolutionintegrationsfacebookintegrationid": {
+    "operationId": "putconversationsmessagingidentityresolutionintegrationsfacebookintegrationid",
+    "functionName": "putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId",
+    "signature": "putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId, body)",
+    "parameters": [
+      {
+        "name": "integrationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "IdentityResolutionConfig",
+        "required": "true"
+      }
+    ],
+    "return": "IdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // IdentityResolutionConfig\n\n// Create an identity resolution settings for a Facebook messaging integration\nPutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putconversationsmessagingidentityresolutionintegrationsopenintegrationid": {
+    "operationId": "putconversationsmessagingidentityresolutionintegrationsopenintegrationid",
+    "functionName": "putConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId",
+    "signature": "putConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId(integrationId, body)",
+    "parameters": [
+      {
+        "name": "integrationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "OpenMessagingIdentityResolutionConfig",
+        "required": "true"
+      }
+    ],
+    "return": "OpenMessagingIdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: OpenMessagingIdentityResolutionConfig = new OpenMessagingIdentityResolutionConfig(...) // \n\n// Update an open messaging integration Identity Resolution settings\nPutConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putconversationsmessagingidentityresolutionintegrationswhatsappintegrationid": {
+    "operationId": "putconversationsmessagingidentityresolutionintegrationswhatsappintegrationid",
+    "functionName": "putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId",
+    "signature": "putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId, body)",
+    "parameters": [
+      {
+        "name": "integrationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "IdentityResolutionConfig",
+        "required": "true"
+      }
+    ],
+    "return": "IdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // \n\n// Update a whatsApp integration Identity Resolution settings\nPutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId was successful\")\n        dump(response)\n    }\n}"
+  },
   "putconversationsmessagingsettingsdefault": {
     "operationId": "putconversationsmessagingsettingsdefault",
     "functionName": "putConversationsMessagingSettingsDefault",
@@ -13566,6 +13754,20 @@
     "return": "ContactListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet externalOrganizationId: String = \"\" // External Organization ID\nlet pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)\nlet pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)\nlet q: String = \"\" // User supplied search keywords (no special syntax is currently supported)\nlet sortOrder: String = \"\" // The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \\\"firstName:asc\\\", \\\"title:desc\\\"\nlet expand: [String] = [\"\"] // which fields, if any, to expand\n\n// Search for external contacts in an external organization\nGetExternalcontactsOrganizationContactsRequest.getExternalcontactsOrganizationContacts(externalOrganizationId: externalOrganizationId, pageSize: pageSize, pageNumber: pageNumber, q: q, sortOrder: sortOrder, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsOrganizationContactsRequest.getExternalcontactsOrganizationContacts was successful\")\n        dump(response)\n    }\n}"
   },
+  "getexternalcontactsorganizationidentifiers": {
+    "operationId": "getexternalcontactsorganizationidentifiers",
+    "functionName": "getExternalcontactsOrganizationIdentifiers",
+    "signature": "getExternalcontactsOrganizationIdentifiers(externalOrganizationId)",
+    "parameters": [
+      {
+        "name": "externalOrganizationId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ExternalOrganizationIdentifierListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet externalOrganizationId: String = \"\" // External Organization ID\n\n// List the identifiers for an external organization\nGetExternalcontactsOrganizationIdentifiersRequest.getExternalcontactsOrganizationIdentifiers(externalOrganizationId: externalOrganizationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsOrganizationIdentifiersRequest.getExternalcontactsOrganizationIdentifiers was successful\")\n        dump(response)\n    }\n}"
+  },
   "getexternalcontactsorganizationnote": {
     "operationId": "getexternalcontactsorganizationnote",
     "functionName": "getExternalcontactsOrganizationNote",
@@ -13856,6 +14058,25 @@
     "return": "CursorContactListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet limit: Int = 0 // The number of contacts per page; must be between 10 and 200, default is 100\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL\nlet divisionId: String = \"\" // The division to scan over\n\n// Scan for external contacts using paging\nGetExternalcontactsScanContactsRequest.getExternalcontactsScanContacts(limit: limit, cursor: cursor, divisionId: divisionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsScanContactsRequest.getExternalcontactsScanContacts was successful\")\n        dump(response)\n    }\n}"
   },
+  "getexternalcontactsscancontactsdivisionviewsall": {
+    "operationId": "getexternalcontactsscancontactsdivisionviewsall",
+    "functionName": "getExternalcontactsScanContactsDivisionviewsAll",
+    "signature": "getExternalcontactsScanContactsDivisionviewsAll(limit, cursor)",
+    "parameters": [
+      {
+        "name": "limit",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "cursor",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "CursorContactListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet limit: Int = 0 // The number of contacts per page; must be between 10 and 200, default is 100\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL\n\n// Scan for external contacts using paging\nGetExternalcontactsScanContactsDivisionviewsAllRequest.getExternalcontactsScanContactsDivisionviewsAll(limit: limit, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsScanContactsDivisionviewsAllRequest.getExternalcontactsScanContactsDivisionviewsAll was successful\")\n        dump(response)\n    }\n}"
+  },
   "getexternalcontactsscannotes": {
     "operationId": "getexternalcontactsscannotes",
     "functionName": "getExternalcontactsScanNotes",
@@ -13879,6 +14100,25 @@
     ],
     "return": "CursorNoteListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet limit: Int = 0 // The number of notes per page; must be between 10 and 200, default is 100\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL\nlet divisionId: String = \"\" // The division to scan over\n\n// Scan for notes using paging\nGetExternalcontactsScanNotesRequest.getExternalcontactsScanNotes(limit: limit, cursor: cursor, divisionId: divisionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsScanNotesRequest.getExternalcontactsScanNotes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getexternalcontactsscannotesdivisionviewsall": {
+    "operationId": "getexternalcontactsscannotesdivisionviewsall",
+    "functionName": "getExternalcontactsScanNotesDivisionviewsAll",
+    "signature": "getExternalcontactsScanNotesDivisionviewsAll(limit, cursor)",
+    "parameters": [
+      {
+        "name": "limit",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "cursor",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "CursorNoteListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet limit: Int = 0 // The number of notes per page; must be between 10 and 200, default is 100\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL\n\n// Scan for notes using paging\nGetExternalcontactsScanNotesDivisionviewsAllRequest.getExternalcontactsScanNotesDivisionviewsAll(limit: limit, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsScanNotesDivisionviewsAllRequest.getExternalcontactsScanNotesDivisionviewsAll was successful\")\n        dump(response)\n    }\n}"
   },
   "getexternalcontactsscanorganizations": {
     "operationId": "getexternalcontactsscanorganizations",
@@ -13904,6 +14144,25 @@
     "return": "CursorOrganizationListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet limit: Int = 0 // The number of organizations per page; must be between 10 and 200, default is 100\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL\nlet divisionId: String = \"\" // The division to scan over\n\n// Scan for external organizations using paging\nGetExternalcontactsScanOrganizationsRequest.getExternalcontactsScanOrganizations(limit: limit, cursor: cursor, divisionId: divisionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsScanOrganizationsRequest.getExternalcontactsScanOrganizations was successful\")\n        dump(response)\n    }\n}"
   },
+  "getexternalcontactsscanorganizationsdivisionviewsall": {
+    "operationId": "getexternalcontactsscanorganizationsdivisionviewsall",
+    "functionName": "getExternalcontactsScanOrganizationsDivisionviewsAll",
+    "signature": "getExternalcontactsScanOrganizationsDivisionviewsAll(limit, cursor)",
+    "parameters": [
+      {
+        "name": "limit",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "cursor",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "CursorOrganizationListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet limit: Int = 0 // The number of organizations per page; must be between 10 and 200, default is 100\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL\n\n// Scan for external organizations using paging\nGetExternalcontactsScanOrganizationsDivisionviewsAllRequest.getExternalcontactsScanOrganizationsDivisionviewsAll(limit: limit, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsScanOrganizationsDivisionviewsAllRequest.getExternalcontactsScanOrganizationsDivisionviewsAll was successful\")\n        dump(response)\n    }\n}"
+  },
   "getexternalcontactsscanrelationships": {
     "operationId": "getexternalcontactsscanrelationships",
     "functionName": "getExternalcontactsScanRelationships",
@@ -13928,6 +14187,25 @@
     "return": "CursorRelationshipListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet limit: Int = 0 // The number of relationships per page; must be between 10 and 200, default is 100\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL\nlet divisionId: String = \"\" // The division to scan over\n\n// Scan for relationships\nGetExternalcontactsScanRelationshipsRequest.getExternalcontactsScanRelationships(limit: limit, cursor: cursor, divisionId: divisionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsScanRelationshipsRequest.getExternalcontactsScanRelationships was successful\")\n        dump(response)\n    }\n}"
   },
+  "getexternalcontactsscanrelationshipsdivisionviewsall": {
+    "operationId": "getexternalcontactsscanrelationshipsdivisionviewsall",
+    "functionName": "getExternalcontactsScanRelationshipsDivisionviewsAll",
+    "signature": "getExternalcontactsScanRelationshipsDivisionviewsAll(limit, cursor)",
+    "parameters": [
+      {
+        "name": "limit",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "cursor",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "CursorRelationshipListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet limit: Int = 0 // The number of relationships per page; must be between 10 and 200, default is 100\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL\n\n// Scan for relationships\nGetExternalcontactsScanRelationshipsDivisionviewsAllRequest.getExternalcontactsScanRelationshipsDivisionviewsAll(limit: limit, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsScanRelationshipsDivisionviewsAllRequest.getExternalcontactsScanRelationshipsDivisionviewsAll was successful\")\n        dump(response)\n    }\n}"
+  },
   "patchexternalcontactscontactidentifiers": {
     "operationId": "patchexternalcontactscontactidentifiers",
     "functionName": "patchExternalcontactsContactIdentifiers",
@@ -13946,6 +14224,25 @@
     ],
     "return": "ContactIdentifier",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactId: String = \"\" // ExternalContact ID\nlet body: IdentifierClaimRequest = new IdentifierClaimRequest(...) // ClaimRequest\n\n// Claim or release identifiers for a contact\nPatchExternalcontactsContactIdentifiersRequest.patchExternalcontactsContactIdentifiers(contactId: contactId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchExternalcontactsContactIdentifiersRequest.patchExternalcontactsContactIdentifiers was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchexternalcontactsorganizationidentifiers": {
+    "operationId": "patchexternalcontactsorganizationidentifiers",
+    "functionName": "patchExternalcontactsOrganizationIdentifiers",
+    "signature": "patchExternalcontactsOrganizationIdentifiers(externalOrganizationId, body)",
+    "parameters": [
+      {
+        "name": "externalOrganizationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExternalOrganizationIdentifierClaimRequest",
+        "required": "true"
+      }
+    ],
+    "return": "ExternalOrganizationIdentifier",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet externalOrganizationId: String = \"\" // External Organization ID\nlet body: ExternalOrganizationIdentifierClaimRequest = new ExternalOrganizationIdentifierClaimRequest(...) // ClaimRequest\n\n// Claim or release identifiers for an external organization\nPatchExternalcontactsOrganizationIdentifiersRequest.patchExternalcontactsOrganizationIdentifiers(externalOrganizationId: externalOrganizationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchExternalcontactsOrganizationIdentifiersRequest.patchExternalcontactsOrganizationIdentifiers was successful\")\n        dump(response)\n    }\n}"
   },
   "postexternalcontactsbulkcontacts": {
     "operationId": "postexternalcontactsbulkcontacts",
@@ -13974,6 +14271,39 @@
     ],
     "return": "BulkContactsResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: BulkContactsRequest = new BulkContactsRequest(...) // Contacts\n\n// Bulk add contacts\nPostExternalcontactsBulkContactsAddRequest.postExternalcontactsBulkContactsAdd(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsBulkContactsAddRequest.postExternalcontactsBulkContactsAdd was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postexternalcontactsbulkcontactsdivisionviews": {
+    "operationId": "postexternalcontactsbulkcontactsdivisionviews",
+    "functionName": "postExternalcontactsBulkContactsDivisionviews",
+    "signature": "postExternalcontactsBulkContactsDivisionviews(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "BulkIdsRequest",
+        "required": "true"
+      }
+    ],
+    "return": "BulkFetchContactsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: BulkIdsRequest = new BulkIdsRequest(...) // Contact ids\n\n// Bulk fetch contacts across divisions\nPostExternalcontactsBulkContactsDivisionviewsRequest.postExternalcontactsBulkContactsDivisionviews(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsBulkContactsDivisionviewsRequest.postExternalcontactsBulkContactsDivisionviews was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postexternalcontactsbulkcontactsenrich": {
+    "operationId": "postexternalcontactsbulkcontactsenrich",
+    "functionName": "postExternalcontactsBulkContactsEnrich",
+    "signature": "postExternalcontactsBulkContactsEnrich(body, dryRun)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "BulkContactsEnrichRequest",
+        "required": "true"
+      },
+      {
+        "name": "dryRun",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "BulkContactsEnrichResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: BulkContactsEnrichRequest = new BulkContactsEnrichRequest(...) // Contact Enrich Requests\nlet dryRun: Bool = true // If true, the request will not make any modifications, but will show you what the end result *would* be.\n\n// Bulk Enrich Contacts - Run up to 10 Enrich operations per request\nPostExternalcontactsBulkContactsEnrichRequest.postExternalcontactsBulkContactsEnrich(body: body, dryRun: dryRun) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsBulkContactsEnrichRequest.postExternalcontactsBulkContactsEnrich was successful\")\n        dump(response)\n    }\n}"
   },
   "postexternalcontactsbulkcontactsremove": {
     "operationId": "postexternalcontactsbulkcontactsremove",
@@ -14100,6 +14430,39 @@
     ],
     "return": "BulkOrganizationsResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: BulkOrganizationsRequest = new BulkOrganizationsRequest(...) // Organizations\n\n// Bulk add organizations\nPostExternalcontactsBulkOrganizationsAddRequest.postExternalcontactsBulkOrganizationsAdd(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsBulkOrganizationsAddRequest.postExternalcontactsBulkOrganizationsAdd was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postexternalcontactsbulkorganizationsdivisionviews": {
+    "operationId": "postexternalcontactsbulkorganizationsdivisionviews",
+    "functionName": "postExternalcontactsBulkOrganizationsDivisionviews",
+    "signature": "postExternalcontactsBulkOrganizationsDivisionviews(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "BulkIdsRequest",
+        "required": "true"
+      }
+    ],
+    "return": "BulkFetchOrganizationsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: BulkIdsRequest = new BulkIdsRequest(...) // Organizations ids\n\n// Bulk fetch organizations across divisions\nPostExternalcontactsBulkOrganizationsDivisionviewsRequest.postExternalcontactsBulkOrganizationsDivisionviews(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsBulkOrganizationsDivisionviewsRequest.postExternalcontactsBulkOrganizationsDivisionviews was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postexternalcontactsbulkorganizationsenrich": {
+    "operationId": "postexternalcontactsbulkorganizationsenrich",
+    "functionName": "postExternalcontactsBulkOrganizationsEnrich",
+    "signature": "postExternalcontactsBulkOrganizationsEnrich(body, dryRun)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "BulkOrganizationsEnrichRequest",
+        "required": "true"
+      },
+      {
+        "name": "dryRun",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "BulkOrganizationsEnrichResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: BulkOrganizationsEnrichRequest = new BulkOrganizationsEnrichRequest(...) // External Organization Enrich Requests\nlet dryRun: Bool = true // If true, the request will not make any modifications, but will show you what the end result *would* be.\n\n// Bulk enrich external organizations - Run up to 10 Enrich operations per request\nPostExternalcontactsBulkOrganizationsEnrichRequest.postExternalcontactsBulkOrganizationsEnrich(body: body, dryRun: dryRun) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsBulkOrganizationsEnrichRequest.postExternalcontactsBulkOrganizationsEnrich was successful\")\n        dump(response)\n    }\n}"
   },
   "postexternalcontactsbulkorganizationsremove": {
     "operationId": "postexternalcontactsbulkorganizationsremove",
@@ -14232,6 +14595,25 @@
     "return": "ExternalContact",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ExternalContact = new ExternalContact(...) // ExternalContact\n\n// Create an external contact\nPostExternalcontactsContactsRequest.postExternalcontactsContacts(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsContactsRequest.postExternalcontactsContacts was successful\")\n        dump(response)\n    }\n}"
   },
+  "postexternalcontactscontactsenrich": {
+    "operationId": "postexternalcontactscontactsenrich",
+    "functionName": "postExternalcontactsContactsEnrich",
+    "signature": "postExternalcontactsContactsEnrich(body, dryRun)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ContactEnrichRequest",
+        "required": "true"
+      },
+      {
+        "name": "dryRun",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "ExternalContact",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ContactEnrichRequest = new ContactEnrichRequest(...) // ContactEnrichRequest\nlet dryRun: Bool = true // If true, the request will not make any modifications, but will show you what the end result *would* be.\n\n// Modify or create an External Contact, with powerful behaviors for finding and combining data with pre-existing Contacts.\nPostExternalcontactsContactsEnrichRequest.postExternalcontactsContactsEnrich(body: body, dryRun: dryRun) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsContactsEnrichRequest.postExternalcontactsContactsEnrich was successful\")\n        dump(response)\n    }\n}"
+  },
   "postexternalcontactscontactsexports": {
     "operationId": "postexternalcontactscontactsexports",
     "functionName": "postExternalcontactsContactsExports",
@@ -14245,6 +14627,20 @@
     ],
     "return": "ContactsExport",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ContactsExport = new ContactsExport(...) // Export\n\n// Create bulk export\nPostExternalcontactsContactsExportsRequest.postExternalcontactsContactsExports(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsContactsExportsRequest.postExternalcontactsContactsExports was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postexternalcontactscontactsmerge": {
+    "operationId": "postexternalcontactscontactsmerge",
+    "functionName": "postExternalcontactsContactsMerge",
+    "signature": "postExternalcontactsContactsMerge(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "MergeContactsRequest",
+        "required": "true"
+      }
+    ],
+    "return": "ExternalContact",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: MergeContactsRequest = new MergeContactsRequest(...) // MergeRequest\n\n// Merge up to 25 contacts into a new contact record\nPostExternalcontactsContactsMergeRequest.postExternalcontactsContactsMerge(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsContactsMergeRequest.postExternalcontactsContactsMerge was successful\")\n        dump(response)\n    }\n}"
   },
   "postexternalcontactscontactsschemas": {
     "operationId": "postexternalcontactscontactsschemas",
@@ -14292,6 +14688,44 @@
     ],
     "return": "ExternalContact",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet identifier: ContactIdentifier = new ContactIdentifier(...) // \nlet expand: [String] = [\"\"] // which field, if any, to expand\n\n// Fetch a contact using an identifier type and value.\nPostExternalcontactsIdentifierlookupRequest.postExternalcontactsIdentifierlookup(identifier: identifier, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsIdentifierlookupRequest.postExternalcontactsIdentifierlookup was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postexternalcontactsidentifierlookupcontacts": {
+    "operationId": "postexternalcontactsidentifierlookupcontacts",
+    "functionName": "postExternalcontactsIdentifierlookupContacts",
+    "signature": "postExternalcontactsIdentifierlookupContacts(identifier, expand)",
+    "parameters": [
+      {
+        "name": "identifier",
+        "type": "ContactIdentifier",
+        "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
+      }
+    ],
+    "return": "ExternalContact",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet identifier: ContactIdentifier = new ContactIdentifier(...) // \nlet expand: [String] = [\"\"] // which field, if any, to expand\n\n// Fetch a contact using an identifier type and value.\nPostExternalcontactsIdentifierlookupContactsRequest.postExternalcontactsIdentifierlookupContacts(identifier: identifier, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsIdentifierlookupContactsRequest.postExternalcontactsIdentifierlookupContacts was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postexternalcontactsidentifierlookuporganizations": {
+    "operationId": "postexternalcontactsidentifierlookuporganizations",
+    "functionName": "postExternalcontactsIdentifierlookupOrganizations",
+    "signature": "postExternalcontactsIdentifierlookupOrganizations(identifier, expand)",
+    "parameters": [
+      {
+        "name": "identifier",
+        "type": "ExternalOrganizationIdentifier",
+        "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
+      }
+    ],
+    "return": "ExternalOrganization",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet identifier: ExternalOrganizationIdentifier = new ExternalOrganizationIdentifier(...) // \nlet expand: [String] = [\"\"] // which field, if any, to expand\n\n// Fetch an external organization using an identifier type and value.\nPostExternalcontactsIdentifierlookupOrganizationsRequest.postExternalcontactsIdentifierlookupOrganizations(identifier: identifier, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsIdentifierlookupOrganizationsRequest.postExternalcontactsIdentifierlookupOrganizations was successful\")\n        dump(response)\n    }\n}"
   },
   "postexternalcontactsimportcsvjobs": {
     "operationId": "postexternalcontactsimportcsvjobs",
@@ -14409,6 +14843,25 @@
     ],
     "return": "ExternalOrganization",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ExternalOrganization = new ExternalOrganization(...) // ExternalOrganization\n\n// Create an external organization\nPostExternalcontactsOrganizationsRequest.postExternalcontactsOrganizations(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsOrganizationsRequest.postExternalcontactsOrganizations was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postexternalcontactsorganizationsenrich": {
+    "operationId": "postexternalcontactsorganizationsenrich",
+    "functionName": "postExternalcontactsOrganizationsEnrich",
+    "signature": "postExternalcontactsOrganizationsEnrich(body, dryRun)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ExternalOrganizationEnrichRequest",
+        "required": "true"
+      },
+      {
+        "name": "dryRun",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "ExternalOrganization",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ExternalOrganizationEnrichRequest = new ExternalOrganizationEnrichRequest(...) // ExternalOrgEnrichRequest\nlet dryRun: Bool = true // If true, the request will not make any modifications, but will show you what the end result *would* be.\n\n// Modify or create an External Org, with powerful behaviors for finding and combining data with pre-existing External Orgs.\nPostExternalcontactsOrganizationsEnrichRequest.postExternalcontactsOrganizationsEnrich(body: body, dryRun: dryRun) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsOrganizationsEnrichRequest.postExternalcontactsOrganizationsEnrich was successful\")\n        dump(response)\n    }\n}"
   },
   "postexternalcontactsorganizationsschemas": {
     "operationId": "postexternalcontactsorganizationsschemas",
@@ -35020,7 +35473,31 @@
   "getroutingemaildomainroute": {
     "operationId": "getroutingemaildomainroute",
     "functionName": "getRoutingEmailDomainRoute",
-    "signature": "getRoutingEmailDomainRoute(domainName, routeId)",
+    "signature": "getRoutingEmailDomainRoute(domainName, routeId, expand)",
+    "parameters": [
+      {
+        "name": "domainName",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "routeId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
+      }
+    ],
+    "return": "InboundRoute",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainName: String = \"\" // email domain\nlet routeId: String = \"\" // route ID\nlet expand: [String] = [\"\"] // Which fields, if any, to expand\n\n// Get a route\nGetRoutingEmailDomainRouteRequest.getRoutingEmailDomainRoute(domainName: domainName, routeId: routeId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailDomainRouteRequest.getRoutingEmailDomainRoute was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getroutingemaildomainrouteidentityresolution": {
+    "operationId": "getroutingemaildomainrouteidentityresolution",
+    "functionName": "getRoutingEmailDomainRouteIdentityresolution",
+    "signature": "getRoutingEmailDomainRouteIdentityresolution(domainName, routeId)",
     "parameters": [
       {
         "name": "domainName",
@@ -35033,13 +35510,13 @@
         "required": "true"
       }
     ],
-    "return": "InboundRoute",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainName: String = \"\" // email domain\nlet routeId: String = \"\" // route ID\n\n// Get a route\nGetRoutingEmailDomainRouteRequest.getRoutingEmailDomainRoute(domainName: domainName, routeId: routeId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailDomainRouteRequest.getRoutingEmailDomainRoute was successful\")\n        dump(response)\n    }\n}"
+    "return": "IdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainName: String = \"\" // email domain\nlet routeId: String = \"\" // route ID\n\n// Get a route identity resolution setting.\nGetRoutingEmailDomainRouteIdentityresolutionRequest.getRoutingEmailDomainRouteIdentityresolution(domainName: domainName, routeId: routeId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailDomainRouteIdentityresolutionRequest.getRoutingEmailDomainRouteIdentityresolution was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingemaildomainroutes": {
     "operationId": "getroutingemaildomainroutes",
     "functionName": "getRoutingEmailDomainRoutes",
-    "signature": "getRoutingEmailDomainRoutes(domainName, pageSize, pageNumber, pattern)",
+    "signature": "getRoutingEmailDomainRoutes(domainName, pageSize, pageNumber, pattern, expand)",
     "parameters": [
       {
         "name": "domainName",
@@ -35060,10 +35537,15 @@
         "name": "pattern",
         "type": "String",
         "required": "false"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
       }
     ],
     "return": "InboundRouteEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainName: String = \"\" // email domain\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet pattern: String = \"\" // Filter routes by the route's pattern property\n\n// Get routes\nGetRoutingEmailDomainRoutesRequest.getRoutingEmailDomainRoutes(domainName: domainName, pageSize: pageSize, pageNumber: pageNumber, pattern: pattern) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailDomainRoutesRequest.getRoutingEmailDomainRoutes was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainName: String = \"\" // email domain\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet pattern: String = \"\" // Filter routes by the route's pattern property\nlet expand: [String] = [\"\"] // Which fields, if any, to expand\n\n// Get routes\nGetRoutingEmailDomainRoutesRequest.getRoutingEmailDomainRoutes(domainName: domainName, pageSize: pageSize, pageNumber: pageNumber, pattern: pattern, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailDomainRoutesRequest.getRoutingEmailDomainRoutes was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingemaildomains": {
     "operationId": "getroutingemaildomains",
@@ -35361,16 +35843,21 @@
   "getroutingqueue": {
     "operationId": "getroutingqueue",
     "functionName": "getRoutingQueue",
-    "signature": "getRoutingQueue(queueId)",
+    "signature": "getRoutingQueue(queueId, expand)",
     "parameters": [
       {
         "name": "queueId",
         "type": "String",
         "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
       }
     ],
     "return": "Queue",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet queueId: String = \"\" // Queue ID\n\n// Get details about this queue.\nGetRoutingQueueRequest.getRoutingQueue(queueId: queueId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingQueueRequest.getRoutingQueue was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet queueId: String = \"\" // Queue ID\nlet expand: [String] = [\"\"] // Which fields, if any, to expand\n\n// Get details about this queue.\nGetRoutingQueueRequest.getRoutingQueue(queueId: queueId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingQueueRequest.getRoutingQueue was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingqueueassistant": {
     "operationId": "getroutingqueueassistant",
@@ -35442,6 +35929,20 @@
     ],
     "return": "EstimatedWaitTimePredictions",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet queueId: String = \"\" // queueId\nlet conversationId: String = \"\" // conversationId\n\n// Get Estimated Wait Time\nGetRoutingQueueEstimatedwaittimeRequest.getRoutingQueueEstimatedwaittime(queueId: queueId, conversationId: conversationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingQueueEstimatedwaittimeRequest.getRoutingQueueEstimatedwaittime was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getroutingqueueidentityresolution": {
+    "operationId": "getroutingqueueidentityresolution",
+    "functionName": "getRoutingQueueIdentityresolution",
+    "signature": "getRoutingQueueIdentityresolution(queueId)",
+    "parameters": [
+      {
+        "name": "queueId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "IdentityResolutionQueueConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet queueId: String = \"\" // Queue ID\n\n// Get Queue IdentityResolution Settings.\nGetRoutingQueueIdentityresolutionRequest.getRoutingQueueIdentityresolution(queueId: queueId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingQueueIdentityresolutionRequest.getRoutingQueueIdentityresolution was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingqueuemediatypeestimatedwaittime": {
     "operationId": "getroutingqueuemediatypeestimatedwaittime",
@@ -35637,7 +36138,7 @@
   "getroutingqueues": {
     "operationId": "getroutingqueues",
     "functionName": "getRoutingQueues",
-    "signature": "getRoutingQueues(pageNumber, pageSize, sortOrder, name, _id, divisionId, peerId, cannedResponseLibraryId, hasPeer)",
+    "signature": "getRoutingQueues(pageNumber, pageSize, sortOrder, name, _id, divisionId, peerId, cannedResponseLibraryId, hasPeer, expand)",
     "parameters": [
       {
         "name": "pageNumber",
@@ -35683,10 +36184,15 @@
         "name": "hasPeer",
         "type": "Bool",
         "required": "false"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
       }
     ],
     "return": "QueueEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet sortOrder: GetRoutingQueuesRequest.SortOrder_getRoutingQueues = GetRoutingQueuesRequest.SortOrder_getRoutingQueues.enummember // Note: results are sorted by name.\nlet name: String = \"\" // Include only queues with the given name (leading and trailing asterisks allowed)\nlet _id: [String] = [\"\"] // Include only queues with the specified ID(s)\nlet divisionId: [String] = [\"\"] // Include only queues in the specified division ID(s)\nlet peerId: [String] = [\"\"] // Include only queues with the specified peer ID(s)\nlet cannedResponseLibraryId: String = \"\" // Include only queues explicitly associated with the specified canned response library ID\nlet hasPeer: Bool = true // Include only queues with a peer ID\n\n// Get list of queues.\nGetRoutingQueuesRequest.getRoutingQueues(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId, peerId: peerId, cannedResponseLibraryId: cannedResponseLibraryId, hasPeer: hasPeer) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingQueuesRequest.getRoutingQueues was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet sortOrder: GetRoutingQueuesRequest.SortOrder_getRoutingQueues = GetRoutingQueuesRequest.SortOrder_getRoutingQueues.enummember // Note: results are sorted by name.\nlet name: String = \"\" // Include only queues with the given name (leading and trailing asterisks allowed)\nlet _id: [String] = [\"\"] // Include only queues with the specified ID(s)\nlet divisionId: [String] = [\"\"] // Include only queues in the specified division ID(s)\nlet peerId: [String] = [\"\"] // Include only queues with the specified peer ID(s)\nlet cannedResponseLibraryId: String = \"\" // Include only queues explicitly associated with the specified canned response library ID\nlet hasPeer: Bool = true // Include only queues with a peer ID\nlet expand: [String] = [\"\"] // Which fields, if any, to expand\n\n// Get list of queues.\nGetRoutingQueuesRequest.getRoutingQueues(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId, peerId: peerId, cannedResponseLibraryId: cannedResponseLibraryId, hasPeer: hasPeer, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingQueuesRequest.getRoutingQueues was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingqueuesdivisionviews": {
     "operationId": "getroutingqueuesdivisionviews",
@@ -36022,6 +36528,20 @@
     "return": "SMSAvailablePhoneNumberEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet countryCode: String = \"\" // The ISO 3166-1 alpha-2 country code of the county for which available phone numbers should be returned\nlet phoneNumberType: GetRoutingSmsAvailablephonenumbersRequest.PhoneNumberType_getRoutingSmsAvailablephonenumbers = GetRoutingSmsAvailablephonenumbersRequest.PhoneNumberType_getRoutingSmsAvailablephonenumbers.enummember // Type of available phone numbers searched\nlet region: String = \"\" // Region/province/state that can be used to restrict the numbers returned\nlet city: String = \"\" // City that can be used to restrict the numbers returned\nlet areaCode: String = \"\" // Area code that can be used to restrict the numbers returned\nlet pattern: String = \"\" // A pattern to match phone numbers. Valid characters are '*' and [0-9a-zA-Z]. The '*' character will match any single digit.\nlet addressRequirement: GetRoutingSmsAvailablephonenumbersRequest.AddressRequirement_getRoutingSmsAvailablephonenumbers = GetRoutingSmsAvailablephonenumbersRequest.AddressRequirement_getRoutingSmsAvailablephonenumbers.enummember // This indicates whether the phone number requires to have an Address registered.\n\n// Get a list of available phone numbers for SMS provisioning.\nGetRoutingSmsAvailablephonenumbersRequest.getRoutingSmsAvailablephonenumbers(countryCode: countryCode, phoneNumberType: phoneNumberType, region: region, city: city, areaCode: areaCode, pattern: pattern, addressRequirement: addressRequirement) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingSmsAvailablephonenumbersRequest.getRoutingSmsAvailablephonenumbers was successful\")\n        dump(response)\n    }\n}"
   },
+  "getroutingsmsidentityresolutionphonenumber": {
+    "operationId": "getroutingsmsidentityresolutionphonenumber",
+    "functionName": "getRoutingSmsIdentityresolutionPhonenumber",
+    "signature": "getRoutingSmsIdentityresolutionPhonenumber(addressId)",
+    "parameters": [
+      {
+        "name": "addressId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "IdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet addressId: String = \"\" // Address ID\n\n// Get a SMS identity resolution settings.\nGetRoutingSmsIdentityresolutionPhonenumberRequest.getRoutingSmsIdentityresolutionPhonenumber(addressId: addressId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingSmsIdentityresolutionPhonenumberRequest.getRoutingSmsIdentityresolutionPhonenumber was successful\")\n        dump(response)\n    }\n}"
+  },
   "getroutingsmsphonenumber": {
     "operationId": "getroutingsmsphonenumber",
     "functionName": "getRoutingSmsPhonenumber",
@@ -36044,7 +36564,7 @@
   "getroutingsmsphonenumbers": {
     "operationId": "getroutingsmsphonenumbers",
     "functionName": "getRoutingSmsPhonenumbers",
-    "signature": "getRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId, supportedContentId)",
+    "signature": "getRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId, supportedContentId, expand)",
     "parameters": [
       {
         "name": "phoneNumber",
@@ -36100,10 +36620,15 @@
         "name": "supportedContentId",
         "type": "String",
         "required": "false"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
       }
     ],
     "return": "SmsPhoneNumberEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet phoneNumber: String = \"\" // Filter on phone number address. Allowable characters are the digits '0-9' and the wild card character '\\\\*'. If just digits are present, a contains search is done on the address pattern. For example, '317' could be matched anywhere in the address. An '\\\\*' will match multiple digits. For example, to match a specific area code within the US a pattern like '1317*' could be used.\nlet phoneNumberType: [String] = [\"\"] // Filter on phone number type\nlet phoneNumberStatus: [String] = [\"\"] // Filter on phone number status\nlet countryCode: [String] = [\"\"] // Filter on country code\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortBy: GetRoutingSmsPhonenumbersRequest.SortBy_getRoutingSmsPhonenumbers = GetRoutingSmsPhonenumbersRequest.SortBy_getRoutingSmsPhonenumbers.enummember // Optional field to sort results\nlet sortOrder: GetRoutingSmsPhonenumbersRequest.SortOrder_getRoutingSmsPhonenumbers = GetRoutingSmsPhonenumbersRequest.SortOrder_getRoutingSmsPhonenumbers.enummember // Sort order\nlet language: String = en-US // A language tag (which is sometimes referred to as a \\\"locale identifier\\\") to use to localize country field and sort operations\nlet integrationId: String = \"\" // Filter on the Genesys Cloud integration id to which the phone number belongs to\nlet supportedContentId: String = \"\" // Filter based on the supported content ID\n\n// Get a list of provisioned phone numbers.\nGetRoutingSmsPhonenumbersRequest.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: phoneNumberType, phoneNumberStatus: phoneNumberStatus, countryCode: countryCode, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, language: language, integrationId: integrationId, supportedContentId: supportedContentId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingSmsPhonenumbersRequest.getRoutingSmsPhonenumbers was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet phoneNumber: String = \"\" // Filter on phone number address. Allowable characters are the digits '0-9' and the wild card character '\\\\*'. If just digits are present, a contains search is done on the address pattern. For example, '317' could be matched anywhere in the address. An '\\\\*' will match multiple digits. For example, to match a specific area code within the US a pattern like '1317*' could be used.\nlet phoneNumberType: [String] = [\"\"] // Filter on phone number type\nlet phoneNumberStatus: [String] = [\"\"] // Filter on phone number status\nlet countryCode: [String] = [\"\"] // Filter on country code\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortBy: GetRoutingSmsPhonenumbersRequest.SortBy_getRoutingSmsPhonenumbers = GetRoutingSmsPhonenumbersRequest.SortBy_getRoutingSmsPhonenumbers.enummember // Optional field to sort results\nlet sortOrder: GetRoutingSmsPhonenumbersRequest.SortOrder_getRoutingSmsPhonenumbers = GetRoutingSmsPhonenumbersRequest.SortOrder_getRoutingSmsPhonenumbers.enummember // Sort order\nlet language: String = en-US // A language tag (which is sometimes referred to as a \\\"locale identifier\\\") to use to localize country field and sort operations\nlet integrationId: String = \"\" // Filter on the Genesys Cloud integration id to which the phone number belongs to\nlet supportedContentId: String = \"\" // Filter based on the supported content ID\nlet expand: [String] = [\"\"] // Which fields, if any, to expand\n\n// Get a list of provisioned phone numbers.\nGetRoutingSmsPhonenumbersRequest.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: phoneNumberType, phoneNumberStatus: phoneNumberStatus, countryCode: countryCode, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, language: language, integrationId: integrationId, supportedContentId: supportedContentId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingSmsPhonenumbersRequest.getRoutingSmsPhonenumbers was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutinguserdirectroutingbackupsettings": {
     "operationId": "getroutinguserdirectroutingbackupsettings",
@@ -37152,6 +37677,30 @@
     "return": "InboundRoute",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainName: String = \"\" // email domain\nlet routeId: String = \"\" // route ID\nlet body: InboundRoute = new InboundRoute(...) // Route\n\n// Update a route\nPutRoutingEmailDomainRouteRequest.putRoutingEmailDomainRoute(domainName: domainName, routeId: routeId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRoutingEmailDomainRouteRequest.putRoutingEmailDomainRoute was successful\")\n        dump(response)\n    }\n}"
   },
+  "putroutingemaildomainrouteidentityresolution": {
+    "operationId": "putroutingemaildomainrouteidentityresolution",
+    "functionName": "putRoutingEmailDomainRouteIdentityresolution",
+    "signature": "putRoutingEmailDomainRouteIdentityresolution(domainName, routeId, body)",
+    "parameters": [
+      {
+        "name": "domainName",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "routeId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "IdentityResolutionConfig",
+        "required": "true"
+      }
+    ],
+    "return": "IdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainName: String = \"\" // email domain\nlet routeId: String = \"\" // route ID\nlet body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // \n\n// Update identity resolution settings for a route.\nPutRoutingEmailDomainRouteIdentityresolutionRequest.putRoutingEmailDomainRouteIdentityresolution(domainName: domainName, routeId: routeId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRoutingEmailDomainRouteIdentityresolutionRequest.putRoutingEmailDomainRouteIdentityresolution was successful\")\n        dump(response)\n    }\n}"
+  },
   "putroutingemailoutbounddomainactivation": {
     "operationId": "putroutingemailoutbounddomainactivation",
     "functionName": "putRoutingEmailOutboundDomainActivation",
@@ -37204,6 +37753,25 @@
     "return": "Queue",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet queueId: String = \"\" // Queue ID\nlet body: QueueRequest = new QueueRequest(...) // Queue\n\n// Update a queue\nPutRoutingQueueRequest.putRoutingQueue(queueId: queueId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRoutingQueueRequest.putRoutingQueue was successful\")\n        dump(response)\n    }\n}"
   },
+  "putroutingqueueidentityresolution": {
+    "operationId": "putroutingqueueidentityresolution",
+    "functionName": "putRoutingQueueIdentityresolution",
+    "signature": "putRoutingQueueIdentityresolution(queueId, body)",
+    "parameters": [
+      {
+        "name": "queueId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "IdentityResolutionQueueConfig",
+        "required": "true"
+      }
+    ],
+    "return": "IdentityResolutionQueueConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet queueId: String = \"\" // Queue ID\nlet body: IdentityResolutionQueueConfig = new IdentityResolutionQueueConfig(...) // \n\n// Update Queue IdentityResolution Settings.\nPutRoutingQueueIdentityresolutionRequest.putRoutingQueueIdentityresolution(queueId: queueId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRoutingQueueIdentityresolutionRequest.putRoutingQueueIdentityresolution was successful\")\n        dump(response)\n    }\n}"
+  },
   "putroutingsettings": {
     "operationId": "putroutingsettings",
     "functionName": "putRoutingSettings",
@@ -37231,6 +37799,25 @@
     ],
     "return": "TranscriptionSettings",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: TranscriptionSettings = new TranscriptionSettings(...) // Organization Settings\n\n// Update Transcription Settings\nPutRoutingSettingsTranscriptionRequest.putRoutingSettingsTranscription(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRoutingSettingsTranscriptionRequest.putRoutingSettingsTranscription was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putroutingsmsidentityresolutionphonenumber": {
+    "operationId": "putroutingsmsidentityresolutionphonenumber",
+    "functionName": "putRoutingSmsIdentityresolutionPhonenumber",
+    "signature": "putRoutingSmsIdentityresolutionPhonenumber(addressId, body)",
+    "parameters": [
+      {
+        "name": "addressId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "IdentityResolutionConfig",
+        "required": "true"
+      }
+    ],
+    "return": "IdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet addressId: String = \"\" // Address ID\nlet body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // \n\n// Update an SMS identity resolution settings.\nPutRoutingSmsIdentityresolutionPhonenumberRequest.putRoutingSmsIdentityresolutionPhonenumber(addressId: addressId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRoutingSmsIdentityresolutionPhonenumberRequest.putRoutingSmsIdentityresolutionPhonenumber was successful\")\n        dump(response)\n    }\n}"
   },
   "putroutinguserdirectroutingbackupsettings": {
     "operationId": "putroutinguserdirectroutingbackupsettings",
@@ -38763,6 +39350,20 @@
     "return": "VoicemailsSearchResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: VoicemailSearchRequest = new VoicemailSearchRequest(...) // Search request options\n\n// Search voicemails\nPostVoicemailSearchRequest.postVoicemailSearch(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostVoicemailSearchRequest.postVoicemailSearch was successful\")\n        dump(response)\n    }\n}"
   },
+  "deleteexternalcontactssettings": {
+    "operationId": "deleteexternalcontactssettings",
+    "functionName": "deleteExternalcontactsSettings",
+    "signature": "deleteExternalcontactsSettings()",
+    "return": "UpdatedSettingsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Delete settings\nDeleteExternalcontactsSettingsRequest.deleteExternalcontactsSettings() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"DeleteExternalcontactsSettingsRequest.deleteExternalcontactsSettings was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getexternalcontactssettings": {
+    "operationId": "getexternalcontactssettings",
+    "functionName": "getExternalcontactsSettings",
+    "signature": "getExternalcontactsSettings()",
+    "return": "ExternalContactsSettings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get settings\nGetExternalcontactsSettingsRequest.getExternalcontactsSettings() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsSettingsRequest.getExternalcontactsSettings was successful\")\n        dump(response)\n    }\n}"
+  },
   "getsettingsexecutiondata": {
     "operationId": "getsettingsexecutiondata",
     "functionName": "getSettingsExecutiondata",
@@ -38783,6 +39384,20 @@
     ],
     "return": "ExecutionDataGlobalSettingsResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ExecutionDataSettingsRequest = new ExecutionDataSettingsRequest(...) // New Execution Data Setting\n\n// Edit the execution history on off setting.\nPatchSettingsExecutiondataRequest.patchSettingsExecutiondata(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchSettingsExecutiondataRequest.patchSettingsExecutiondata was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putexternalcontactssettings": {
+    "operationId": "putexternalcontactssettings",
+    "functionName": "putExternalcontactsSettings",
+    "signature": "putExternalcontactsSettings(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ExternalContactsSettings",
+        "required": "false"
+      }
+    ],
+    "return": "UpdatedSettingsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ExternalContactsSettings = new ExternalContactsSettings(...) // \n\n// Set settings\nPutExternalcontactsSettingsRequest.putExternalcontactsSettings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutExternalcontactsSettingsRequest.putExternalcontactsSettings was successful\")\n        dump(response)\n    }\n}"
   },
   "deletesocialmediaescalationrule": {
     "operationId": "deletesocialmediaescalationrule",
@@ -40051,6 +40666,42 @@
     ],
     "return": "TopicJob",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // The id of the publish topics job\n\n// Get a Speech & Text Analytics publish topics job by id\nGetSpeechandtextanalyticsTopicsPublishjobRequest.getSpeechandtextanalyticsTopicsPublishjob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsTopicsPublishjobRequest.getSpeechandtextanalyticsTopicsPublishjob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getspeechandtextanalyticstranslationslanguageconversation": {
+    "operationId": "getspeechandtextanalyticstranslationslanguageconversation",
+    "functionName": "getSpeechandtextanalyticsTranslationsLanguageConversation",
+    "signature": "getSpeechandtextanalyticsTranslationsLanguageConversation(languageId, conversationId, communicationId, recordingId)",
+    "parameters": [
+      {
+        "name": "languageId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "recordingId",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "CommunicationTranslationList",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet languageId: String = \"\" // Target translation language\nlet conversationId: String = \"\" // Conversation id\nlet communicationId: String = \"\" // Communication id associated with the conversation. Please provide a valid communicationId when requesting non-email interactions.\nlet recordingId: String = \"\" // Recording id associated with the communication. Please provide a valid recordingId when requesting voice interactions.\n\n// Translate a single interaction recording (or an email conversation)\nGetSpeechandtextanalyticsTranslationsLanguageConversationRequest.getSpeechandtextanalyticsTranslationsLanguageConversation(languageId: languageId, conversationId: conversationId, communicationId: communicationId, recordingId: recordingId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsTranslationsLanguageConversationRequest.getSpeechandtextanalyticsTranslationsLanguageConversation was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getspeechandtextanalyticstranslationslanguages": {
+    "operationId": "getspeechandtextanalyticstranslationslanguages",
+    "functionName": "getSpeechandtextanalyticsTranslationsLanguages",
+    "signature": "getSpeechandtextanalyticsTranslationsLanguages()",
+    "return": "TranslateSupportedLanguageList",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get supported translation languages\nGetSpeechandtextanalyticsTranslationsLanguagesRequest.getSpeechandtextanalyticsTranslationsLanguages() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsTranslationsLanguagesRequest.getSpeechandtextanalyticsTranslationsLanguages was successful\")\n        dump(response)\n    }\n}"
   },
   "patchspeechandtextanalyticssettings": {
     "operationId": "patchspeechandtextanalyticssettings",
@@ -46840,6 +47491,20 @@
     "return": "WebDeploymentActiveConfigurationOnDeployment",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // The deployment ID\nlet type: String = \"\" // Get active configuration on a deployment\nlet expand: [String] = [\"\"] // Expand instructions for the return value\n\n// Get active configuration for a given deployment\nGetWebdeploymentsDeploymentConfigurationsRequest.getWebdeploymentsDeploymentConfigurations(deploymentId: deploymentId, type: type, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsDeploymentConfigurationsRequest.getWebdeploymentsDeploymentConfigurations was successful\")\n        dump(response)\n    }\n}"
   },
+  "getwebdeploymentsdeploymentidentityresolution": {
+    "operationId": "getwebdeploymentsdeploymentidentityresolution",
+    "functionName": "getWebdeploymentsDeploymentIdentityresolution",
+    "signature": "getWebdeploymentsDeploymentIdentityresolution(deploymentId)",
+    "parameters": [
+      {
+        "name": "deploymentId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "IdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // The deployment ID\n\n// Get a deployment identity resolution setting.\nGetWebdeploymentsDeploymentIdentityresolutionRequest.getWebdeploymentsDeploymentIdentityresolution(deploymentId: deploymentId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsDeploymentIdentityresolutionRequest.getWebdeploymentsDeploymentIdentityresolution was successful\")\n        dump(response)\n    }\n}"
+  },
   "getwebdeploymentsdeployments": {
     "operationId": "getwebdeploymentsdeployments",
     "functionName": "getWebdeploymentsDeployments",
@@ -46961,6 +47626,25 @@
     ],
     "return": "WebDeployment",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // The deployment ID\nlet deployment: WebDeployment = new WebDeployment(...) // \n\n// Update a deployment\nPutWebdeploymentsDeploymentRequest.putWebdeploymentsDeployment(deploymentId: deploymentId, deployment: deployment) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutWebdeploymentsDeploymentRequest.putWebdeploymentsDeployment was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putwebdeploymentsdeploymentidentityresolution": {
+    "operationId": "putwebdeploymentsdeploymentidentityresolution",
+    "functionName": "putWebdeploymentsDeploymentIdentityresolution",
+    "signature": "putWebdeploymentsDeploymentIdentityresolution(deploymentId, body)",
+    "parameters": [
+      {
+        "name": "deploymentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "IdentityResolutionConfig",
+        "required": "true"
+      }
+    ],
+    "return": "IdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // The deployment ID\nlet body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // \n\n// Update identity resolution settings for a deployment.\nPutWebdeploymentsDeploymentIdentityresolutionRequest.putWebdeploymentsDeploymentIdentityresolution(deploymentId: deploymentId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutWebdeploymentsDeploymentIdentityresolutionRequest.putWebdeploymentsDeploymentIdentityresolution was successful\")\n        dump(response)\n    }\n}"
   },
   "getwebmessagingmessages": {
     "operationId": "getwebmessagingmessages",

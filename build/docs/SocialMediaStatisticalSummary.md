@@ -14,6 +14,7 @@
 | **countNeutral** | **Int64** |  | [optional] |
 | **countUnknown** | **Int64** |  | [optional] |
 | **sum** | **Double** |  | [optional] |
+| **average** | **Double** |  | [optional] |
 | **current** | **Double** |  | [optional] |
 | **ratio** | **Double** |  | [optional] |
 | **numerator** | **Double** |  | [optional] |
@@ -24,4 +25,4 @@
 
 
 
-_PureCloudPlatformClientV2@166.0.0_
+_PureCloudPlatformClientV2@167.0.0_

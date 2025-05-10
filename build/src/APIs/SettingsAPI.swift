@@ -47,6 +47,53 @@ open class SettingsAPI {
         return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    /**
+     Delete settings
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteExternalcontactsSettings(completion: @escaping ((_ data: UpdatedSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteExternalcontactsSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<UpdatedSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete settings
+     - DELETE /api/v2/externalcontacts/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "message" : "message"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<UpdatedSettingsResponse> 
+     */
+    open class func deleteExternalcontactsSettingsWithRequestBuilder() -> RequestBuilder<UpdatedSettingsResponse> {        
+        let path = "/api/v2/externalcontacts/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UpdatedSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
     
     
     /**
@@ -183,6 +230,54 @@ open class SettingsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EmailThreadingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get settings
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsSettings(completion: @escaping ((_ data: ExternalContactsSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<ExternalContactsSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get settings
+     - GET /api/v2/externalcontacts/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "manuallyAssignDivisionsToInteractions" : true,
+  "manuallyAssignDivisionsToContacts" : true
+}, statusCode=200}]
+
+     - returns: RequestBuilder<ExternalContactsSettings> 
+     */
+    open class func getExternalcontactsSettingsWithRequestBuilder() -> RequestBuilder<ExternalContactsSettings> {        
+        let path = "/api/v2/externalcontacts/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExternalContactsSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -525,6 +620,58 @@ open class SettingsAPI {
         let requestBuilder: RequestBuilder<AutoAnswerSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Set settings
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putExternalcontactsSettings(body: ExternalContactsSettings? = nil, completion: @escaping ((_ data: UpdatedSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = putExternalcontactsSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<UpdatedSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Set settings
+     - PUT /api/v2/externalcontacts/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "message" : "message"
+}, statusCode=200}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<UpdatedSettingsResponse> 
+     */
+    open class func putExternalcontactsSettingsWithRequestBuilder(body: ExternalContactsSettings? = nil) -> RequestBuilder<UpdatedSettingsResponse> {        
+        let path = "/api/v2/externalcontacts/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UpdatedSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
     

@@ -6,7 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **reportLowMaxCallsPerAgentAlert** | **Bool** | Whether to report on low max calls per agent alerts. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@166.0.0_
+_PureCloudPlatformClientV2@167.0.0_

@@ -532,12 +532,16 @@ docs/BuUpdateTimeOffPlanRequest.md
 docs/BulkCallbackDisconnectRequest.md
 docs/BulkCallbackPatchRequest.md
 docs/BulkCallbackPatchResponse.md
+docs/BulkContactsEnrichRequest.md
+docs/BulkContactsEnrichResponse.md
 docs/BulkContactsRequest.md
 docs/BulkContactsResponse.md
 docs/BulkDeleteResponse.md
+docs/BulkEntityErrorContactEnrichRequest.md
 docs/BulkEntityErrorEntity.md
 docs/BulkEntityErrorExternalContact.md
 docs/BulkEntityErrorExternalOrganization.md
+docs/BulkEntityErrorExternalOrganizationEnrichRequest.md
 docs/BulkEntityErrorNote.md
 docs/BulkEntityErrorRelationship.md
 docs/BulkError.md
@@ -562,15 +566,19 @@ docs/BulkJobUpdate.md
 docs/BulkJobsListing.md
 docs/BulkNotesRequest.md
 docs/BulkNotesResponse.md
+docs/BulkOrganizationsEnrichRequest.md
+docs/BulkOrganizationsEnrichResponse.md
 docs/BulkOrganizationsRequest.md
 docs/BulkOrganizationsResponse.md
 docs/BulkRelationshipsRequest.md
 docs/BulkRelationshipsResponse.md
 docs/BulkResponse.md
+docs/BulkResponseResultExternalContactContactEnrichRequestBulkEntityErrorContactEnrichRequest.md
 docs/BulkResponseResultExternalContactEntityBulkEntityErrorEntity.md
 docs/BulkResponseResultExternalContactExternalContactBulkEntityErrorExternalContact.md
 docs/BulkResponseResultExternalOrganizationEntityBulkEntityErrorEntity.md
 docs/BulkResponseResultExternalOrganizationExternalOrganizationBulkEntityErrorExternalOrganization.md
+docs/BulkResponseResultExternalOrganizationExternalOrganizationEnrichRequestBulkEntityErrorExternalOrganizationEnrichRequest.md
 docs/BulkResponseResultNoteEntityBulkEntityErrorEntity.md
 docs/BulkResponseResultNoteNoteBulkEntityErrorNote.md
 docs/BulkResponseResultRelationshipEntityBulkEntityErrorEntity.md
@@ -694,6 +702,7 @@ docs/Channel.md
 docs/ChannelEntityListing.md
 docs/ChannelTopic.md
 docs/ChannelTopicEntityListing.md
+docs/ChartColumn.md
 docs/Chat.md
 docs/ChatAPI.json
 docs/ChatAPI.md
@@ -775,6 +784,8 @@ docs/CommonRulePredicateEntity.md
 docs/CommunicationAnsweredEvent.md
 docs/CommunicationDispositionAppliedEvent.md
 docs/CommunicationEndedEvent.md
+docs/CommunicationTranslation.md
+docs/CommunicationTranslationList.md
 docs/ComparisonPeriod.md
 docs/ComparisonPeriodListing.md
 docs/ComplexVariableInfo.md
@@ -822,6 +833,8 @@ docs/ContactColumnConditionSettings.md
 docs/ContactColumnTimeZone.md
 docs/ContactColumnToDataActionFieldMapping.md
 docs/ContactDetailEventTopicContactUpdateEvent.md
+docs/ContactEnrichOptions.md
+docs/ContactEnrichRequest.md
 docs/ContactIdentifier.md
 docs/ContactIdentifierListing.md
 docs/ContactImportField.md
@@ -1813,7 +1826,10 @@ docs/EncryptionKeyEntityListing.md
 docs/EndConsultTransferEvent.md
 docs/EndTransferEvent.md
 docs/Endpoint.md
+docs/EngagementRequest.md
 docs/EngineIntegration.md
+docs/EnrichFieldRule.md
+docs/EnrichFieldRules.md
 docs/Entity.md
 docs/EntityChange.md
 docs/EntityListing.md
@@ -1998,7 +2014,10 @@ docs/ExternalMetricDefinitionCreateRequest.md
 docs/ExternalMetricDefinitionListing.md
 docs/ExternalMetricDefinitionUpdateRequest.md
 docs/ExternalOrganization.md
+docs/ExternalOrganizationEnrichRequest.md
 docs/ExternalOrganizationIdentifier.md
+docs/ExternalOrganizationIdentifierClaimRequest.md
+docs/ExternalOrganizationIdentifierListing.md
 docs/ExternalOrganizationListing.md
 docs/ExternalOrganizationTrustorLink.md
 docs/ExternalSegment.md
@@ -2041,6 +2060,7 @@ docs/FaxTopicWorkspaceData.md
 docs/FeatureState.md
 docs/Feedback.md
 docs/FeedbackAddRequest.md
+docs/FeedbackUpdateRequest.md
 docs/FieldConfig.md
 docs/FieldConfigs.md
 docs/FieldList.md
@@ -2890,6 +2910,7 @@ docs/Member.md
 docs/MemberEntity.md
 docs/MemberGroup.md
 docs/MemberListing.md
+docs/MergeContactsRequest.md
 docs/MergeOperation.md
 docs/MergeRequest.md
 docs/Message.md
@@ -3320,6 +3341,7 @@ docs/PhoneTransferEvent.md
 docs/PhonesReboot.md
 docs/Phrase.md
 docs/PhraseAssociations.md
+docs/PhraseTranslation.md
 docs/PhysicalInterfaceEntityListing.md
 docs/PingIdentity.md
 docs/PinnedMessageRequest.md
@@ -4433,6 +4455,7 @@ docs/TranscriptSearchCriteria.md
 docs/TranscriptSearchRequest.md
 docs/TranscriptTopic.md
 docs/TranscriptTopics.md
+docs/TranscriptTranslation.md
 docs/TranscriptUrl.md
 docs/TranscriptUrls.md
 docs/TranscriptionConfig.md
@@ -4452,6 +4475,8 @@ docs/TransferResponseModifiedBy.md
 docs/TransferToAgentRequest.md
 docs/TransferToExternalRequest.md
 docs/TransferToQueueRequest.md
+docs/TranslateSupportedLanguage.md
+docs/TranslateSupportedLanguageList.md
 docs/TrendData.md
 docs/Trigger.md
 docs/TriggerEntityListing.md
@@ -4581,6 +4606,7 @@ docs/UpdateVerifierRequest.md
 docs/UpdateWorkPlanBid.md
 docs/UpdateWorkPlanRotationAgentRequest.md
 docs/UpdateWorkPlanRotationRequest.md
+docs/UpdatedSettingsResponse.md
 docs/UpdatedTopicObject.md
 docs/UpdatedTopicSystemMessage.md
 docs/UploadMediaRequest.md
@@ -4621,6 +4647,7 @@ docs/UserAuthorization.md
 docs/UserAvailableTimes.md
 docs/UserBestPoints.md
 docs/UserBestPointsItem.md
+docs/UserChatSettings.md
 docs/UserConversationSummary.md
 docs/UserConversationsEventMediaSummary.md
 docs/UserConversationsEventMediaSummaryDetail.md
@@ -5086,6 +5113,8 @@ docs/WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate.md
 docs/WfmVersionedEntityMetadata.md
 docs/WhatsAppAvailablePhoneNumberDetails.md
 docs/WhatsAppAvailablePhoneNumberDetailsListing.md
+docs/WhatsAppCallingConfigurationRequest.md
+docs/WhatsAppCallingConfigurationResponse.md
 docs/WhatsAppColumn.md
 docs/WhatsAppConfig.md
 docs/WhatsAppDefinition.md
@@ -5353,6 +5382,7 @@ docs/deleteExternalcontactsOrganization-example.txt
 docs/deleteExternalcontactsOrganizationNote-example.txt
 docs/deleteExternalcontactsOrganizationTrustor-example.txt
 docs/deleteExternalcontactsRelationship-example.txt
+docs/deleteExternalcontactsSettings-example.txt
 docs/deleteFaxDocument-example.txt
 docs/deleteFlow-example.txt
 docs/deleteFlowInstancesSettingsLoglevels-example.txt
@@ -5625,6 +5655,7 @@ docs/getArchitectGrammar-example.txt
 docs/getArchitectGrammarLanguage-example.txt
 docs/getArchitectGrammars-example.txt
 docs/getArchitectIvr-example.txt
+docs/getArchitectIvrIdentityresolution-example.txt
 docs/getArchitectIvrs-example.txt
 docs/getArchitectIvrsDivisionviews-example.txt
 docs/getArchitectPrompt-example.txt
@@ -5792,6 +5823,9 @@ docs/getConversationsMessagesCachedmedia-example.txt
 docs/getConversationsMessagesCachedmediaCachedMediaItemId-example.txt
 docs/getConversationsMessagingFacebookApp-example.txt
 docs/getConversationsMessagingFacebookPermissions-example.txt
+docs/getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId-example.txt
+docs/getConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId-example.txt
+docs/getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId-example.txt
 docs/getConversationsMessagingIntegrationTwitterOauthSettings-example.txt
 docs/getConversationsMessagingIntegrations-example.txt
 docs/getConversationsMessagingIntegrationsFacebook-example.txt
@@ -5865,6 +5899,7 @@ docs/getExternalcontactsImportSetting-example.txt
 docs/getExternalcontactsImportSettings-example.txt
 docs/getExternalcontactsOrganization-example.txt
 docs/getExternalcontactsOrganizationContacts-example.txt
+docs/getExternalcontactsOrganizationIdentifiers-example.txt
 docs/getExternalcontactsOrganizationNote-example.txt
 docs/getExternalcontactsOrganizationNotes-example.txt
 docs/getExternalcontactsOrganizationRelationships-example.txt
@@ -5879,9 +5914,14 @@ docs/getExternalcontactsOrganizationsSchemasLimits-example.txt
 docs/getExternalcontactsRelationship-example.txt
 docs/getExternalcontactsReversewhitepageslookup-example.txt
 docs/getExternalcontactsScanContacts-example.txt
+docs/getExternalcontactsScanContactsDivisionviewsAll-example.txt
 docs/getExternalcontactsScanNotes-example.txt
+docs/getExternalcontactsScanNotesDivisionviewsAll-example.txt
 docs/getExternalcontactsScanOrganizations-example.txt
+docs/getExternalcontactsScanOrganizationsDivisionviewsAll-example.txt
 docs/getExternalcontactsScanRelationships-example.txt
+docs/getExternalcontactsScanRelationshipsDivisionviewsAll-example.txt
+docs/getExternalcontactsSettings-example.txt
 docs/getFaxDocument-example.txt
 docs/getFaxDocumentContent-example.txt
 docs/getFaxDocuments-example.txt
@@ -6393,6 +6433,7 @@ docs/getRoutingDirectroutingbackupSettingsMe-example.txt
 docs/getRoutingDirectroutingbackupSettingsMe-example.txt
 docs/getRoutingEmailDomain-example.txt
 docs/getRoutingEmailDomainRoute-example.txt
+docs/getRoutingEmailDomainRouteIdentityresolution-example.txt
 docs/getRoutingEmailDomainRoutes-example.txt
 docs/getRoutingEmailDomains-example.txt
 docs/getRoutingEmailOutboundDomain-example.txt
@@ -6414,6 +6455,7 @@ docs/getRoutingQueueAssistant-example.txt
 docs/getRoutingQueueComparisonperiod-example.txt
 docs/getRoutingQueueComparisonperiods-example.txt
 docs/getRoutingQueueEstimatedwaittime-example.txt
+docs/getRoutingQueueIdentityresolution-example.txt
 docs/getRoutingQueueMediatypeEstimatedwaittime-example.txt
 docs/getRoutingQueueMembers-example.txt
 docs/getRoutingQueueUsers-example.txt
@@ -6434,6 +6476,7 @@ docs/getRoutingSkills-example.txt
 docs/getRoutingSmsAddress-example.txt
 docs/getRoutingSmsAddresses-example.txt
 docs/getRoutingSmsAvailablephonenumbers-example.txt
+docs/getRoutingSmsIdentityresolutionPhonenumber-example.txt
 docs/getRoutingSmsPhonenumber-example.txt
 docs/getRoutingSmsPhonenumbers-example.txt
 docs/getRoutingUserDirectroutingbackupSettings-example.txt
@@ -6528,6 +6571,8 @@ docs/getSpeechandtextanalyticsTopicsDialects-example.txt
 docs/getSpeechandtextanalyticsTopicsGeneral-example.txt
 docs/getSpeechandtextanalyticsTopicsGeneralStatus-example.txt
 docs/getSpeechandtextanalyticsTopicsPublishjob-example.txt
+docs/getSpeechandtextanalyticsTranslationsLanguageConversation-example.txt
+docs/getSpeechandtextanalyticsTranslationsLanguages-example.txt
 docs/getStation-example.txt
 docs/getStations-example.txt
 docs/getSystempresences-example.txt
@@ -6736,6 +6781,7 @@ docs/getWebdeploymentsConfigurations-example.txt
 docs/getWebdeploymentsDeployment-example.txt
 docs/getWebdeploymentsDeploymentCobrowseSessionId-example.txt
 docs/getWebdeploymentsDeploymentConfigurations-example.txt
+docs/getWebdeploymentsDeploymentIdentityresolution-example.txt
 docs/getWebdeploymentsDeployments-example.txt
 docs/getWebmessagingMessages-example.txt
 docs/getWidgetsDeployment-example.txt
@@ -6872,6 +6918,8 @@ docs/patchCoachingNotification-example.txt
 docs/patchConversationParticipant-example.txt
 docs/patchConversationParticipantAttributes-example.txt
 docs/patchConversationSecureattributes-example.txt
+docs/patchConversationSummaryEngagements-example.txt
+docs/patchConversationSummaryFeedback-example.txt
 docs/patchConversationUtilizationlabel-example.txt
 docs/patchConversationsAftercallworkConversationIdParticipantCommunication-example.txt
 docs/patchConversationsCall-example.txt
@@ -6919,6 +6967,7 @@ docs/patchEmailsSettingsThreading-example.txt
 docs/patchEmployeeengagementCelebration-example.txt
 docs/patchEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/patchExternalcontactsContactIdentifiers-example.txt
+docs/patchExternalcontactsOrganizationIdentifiers-example.txt
 docs/patchFlowsInstancesSettingsExecutiondata-example.txt
 docs/patchGamificationContest-example.txt
 docs/patchGeolocationsSettings-example.txt
@@ -7265,6 +7314,8 @@ docs/postEventsUsersPresence-example.txt
 docs/postEventsUsersRoutingstatus-example.txt
 docs/postExternalcontactsBulkContacts-example.txt
 docs/postExternalcontactsBulkContactsAdd-example.txt
+docs/postExternalcontactsBulkContactsDivisionviews-example.txt
+docs/postExternalcontactsBulkContactsEnrich-example.txt
 docs/postExternalcontactsBulkContactsRemove-example.txt
 docs/postExternalcontactsBulkContactsUnresolved-example.txt
 docs/postExternalcontactsBulkContactsUpdate-example.txt
@@ -7274,6 +7325,8 @@ docs/postExternalcontactsBulkNotesRemove-example.txt
 docs/postExternalcontactsBulkNotesUpdate-example.txt
 docs/postExternalcontactsBulkOrganizations-example.txt
 docs/postExternalcontactsBulkOrganizationsAdd-example.txt
+docs/postExternalcontactsBulkOrganizationsDivisionviews-example.txt
+docs/postExternalcontactsBulkOrganizationsEnrich-example.txt
 docs/postExternalcontactsBulkOrganizationsRemove-example.txt
 docs/postExternalcontactsBulkOrganizationsUpdate-example.txt
 docs/postExternalcontactsBulkRelationships-example.txt
@@ -7283,10 +7336,14 @@ docs/postExternalcontactsBulkRelationshipsUpdate-example.txt
 docs/postExternalcontactsContactNotes-example.txt
 docs/postExternalcontactsContactPromotion-example.txt
 docs/postExternalcontactsContacts-example.txt
+docs/postExternalcontactsContactsEnrich-example.txt
 docs/postExternalcontactsContactsExports-example.txt
+docs/postExternalcontactsContactsMerge-example.txt
 docs/postExternalcontactsContactsSchemas-example.txt
 docs/postExternalcontactsExternalsources-example.txt
 docs/postExternalcontactsIdentifierlookup-example.txt
+docs/postExternalcontactsIdentifierlookupContacts-example.txt
+docs/postExternalcontactsIdentifierlookupOrganizations-example.txt
 docs/postExternalcontactsImportCsvJobs-example.txt
 docs/postExternalcontactsImportCsvSettings-example.txt
 docs/postExternalcontactsImportCsvUploads-example.txt
@@ -7295,6 +7352,7 @@ docs/postExternalcontactsImportSettings-example.txt
 docs/postExternalcontactsMergeContacts-example.txt
 docs/postExternalcontactsOrganizationNotes-example.txt
 docs/postExternalcontactsOrganizations-example.txt
+docs/postExternalcontactsOrganizationsEnrich-example.txt
 docs/postExternalcontactsOrganizationsSchemas-example.txt
 docs/postExternalcontactsRelationships-example.txt
 docs/postFlowHistory-example.txt
@@ -7763,6 +7821,7 @@ docs/putAlertingRule-example.txt
 docs/putAnalyticsDataretentionSettings-example.txt
 docs/putArchitectEmergencygroup-example.txt
 docs/putArchitectIvr-example.txt
+docs/putArchitectIvrIdentityresolution-example.txt
 docs/putArchitectPrompt-example.txt
 docs/putArchitectPromptResource-example.txt
 docs/putArchitectSchedule-example.txt
@@ -7796,6 +7855,9 @@ docs/putConversationsEmailMessagesDraft-example.txt
 docs/putConversationsEmailRecordingstate-example.txt
 docs/putConversationsKeyconfiguration-example.txt
 docs/putConversationsMessageRecordingstate-example.txt
+docs/putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId-example.txt
+docs/putConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId-example.txt
+docs/putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId-example.txt
 docs/putConversationsMessagingSettingsDefault-example.txt
 docs/putConversationsMessagingSupportedcontentDefault-example.txt
 docs/putConversationsMessagingThreadingtimeline-example.txt
@@ -7815,6 +7877,7 @@ docs/putExternalcontactsOrganizationNote-example.txt
 docs/putExternalcontactsOrganizationTrustorTrustorId-example.txt
 docs/putExternalcontactsOrganizationsSchema-example.txt
 docs/putExternalcontactsRelationship-example.txt
+docs/putExternalcontactsSettings-example.txt
 docs/putFaxDocument-example.txt
 docs/putFaxSettings-example.txt
 docs/putFlow-example.txt
@@ -7924,11 +7987,14 @@ docs/putResponsemanagementResponseasset-example.txt
 docs/putRoutingDirectroutingbackupSettingsMe-example.txt
 docs/putRoutingDirectroutingbackupSettingsMe-example.txt
 docs/putRoutingEmailDomainRoute-example.txt
+docs/putRoutingEmailDomainRouteIdentityresolution-example.txt
 docs/putRoutingEmailOutboundDomainActivation-example.txt
 docs/putRoutingMessageRecipient-example.txt
 docs/putRoutingQueue-example.txt
+docs/putRoutingQueueIdentityresolution-example.txt
 docs/putRoutingSettings-example.txt
 docs/putRoutingSettingsTranscription-example.txt
+docs/putRoutingSmsIdentityresolutionPhonenumber-example.txt
 docs/putRoutingUserDirectroutingbackupSettings-example.txt
 docs/putRoutingUserDirectroutingbackupSettings-example.txt
 docs/putRoutingUserUtilization-example.txt
@@ -7994,6 +8060,7 @@ docs/putWebchatDeployment-example.txt
 docs/putWebchatSettings-example.txt
 docs/putWebdeploymentsConfigurationVersionsDraft-example.txt
 docs/putWebdeploymentsDeployment-example.txt
+docs/putWebdeploymentsDeploymentIdentityresolution-example.txt
 docs/putWidgetsDeployment-example.txt
 docs/putWorkforcemanagementAgentIntegrationsHris-example.txt
 docs/putWorkforcemanagementBusinessunitTimeofflimitValues-example.txt
@@ -8594,12 +8661,16 @@ src/Models/BuUpdateTimeOffPlanRequest.swift
 src/Models/BulkCallbackDisconnectRequest.swift
 src/Models/BulkCallbackPatchRequest.swift
 src/Models/BulkCallbackPatchResponse.swift
+src/Models/BulkContactsEnrichRequest.swift
+src/Models/BulkContactsEnrichResponse.swift
 src/Models/BulkContactsRequest.swift
 src/Models/BulkContactsResponse.swift
 src/Models/BulkDeleteResponse.swift
+src/Models/BulkEntityErrorContactEnrichRequest.swift
 src/Models/BulkEntityErrorEntity.swift
 src/Models/BulkEntityErrorExternalContact.swift
 src/Models/BulkEntityErrorExternalOrganization.swift
+src/Models/BulkEntityErrorExternalOrganizationEnrichRequest.swift
 src/Models/BulkEntityErrorNote.swift
 src/Models/BulkEntityErrorRelationship.swift
 src/Models/BulkError.swift
@@ -8624,15 +8695,19 @@ src/Models/BulkJobUpdate.swift
 src/Models/BulkJobsListing.swift
 src/Models/BulkNotesRequest.swift
 src/Models/BulkNotesResponse.swift
+src/Models/BulkOrganizationsEnrichRequest.swift
+src/Models/BulkOrganizationsEnrichResponse.swift
 src/Models/BulkOrganizationsRequest.swift
 src/Models/BulkOrganizationsResponse.swift
 src/Models/BulkRelationshipsRequest.swift
 src/Models/BulkRelationshipsResponse.swift
 src/Models/BulkResponse.swift
+src/Models/BulkResponseResultExternalContactContactEnrichRequestBulkEntityErrorContactEnrichRequest.swift
 src/Models/BulkResponseResultExternalContactEntityBulkEntityErrorEntity.swift
 src/Models/BulkResponseResultExternalContactExternalContactBulkEntityErrorExternalContact.swift
 src/Models/BulkResponseResultExternalOrganizationEntityBulkEntityErrorEntity.swift
 src/Models/BulkResponseResultExternalOrganizationExternalOrganizationBulkEntityErrorExternalOrganization.swift
+src/Models/BulkResponseResultExternalOrganizationExternalOrganizationEnrichRequestBulkEntityErrorExternalOrganizationEnrichRequest.swift
 src/Models/BulkResponseResultNoteEntityBulkEntityErrorEntity.swift
 src/Models/BulkResponseResultNoteNoteBulkEntityErrorNote.swift
 src/Models/BulkResponseResultRelationshipEntityBulkEntityErrorEntity.swift
@@ -8754,6 +8829,7 @@ src/Models/Channel.swift
 src/Models/ChannelEntityListing.swift
 src/Models/ChannelTopic.swift
 src/Models/ChannelTopicEntityListing.swift
+src/Models/ChartColumn.swift
 src/Models/Chat.swift
 src/Models/ChatBadgeTopicBadgeEntity.swift
 src/Models/ChatBadgeTopicChatBadge.swift
@@ -8831,6 +8907,8 @@ src/Models/CommonRulePredicateEntity.swift
 src/Models/CommunicationAnsweredEvent.swift
 src/Models/CommunicationDispositionAppliedEvent.swift
 src/Models/CommunicationEndedEvent.swift
+src/Models/CommunicationTranslation.swift
+src/Models/CommunicationTranslationList.swift
 src/Models/ComparisonPeriod.swift
 src/Models/ComparisonPeriodListing.swift
 src/Models/ComplexVariableInfo.swift
@@ -8878,6 +8956,8 @@ src/Models/ContactColumnConditionSettings.swift
 src/Models/ContactColumnTimeZone.swift
 src/Models/ContactColumnToDataActionFieldMapping.swift
 src/Models/ContactDetailEventTopicContactUpdateEvent.swift
+src/Models/ContactEnrichOptions.swift
+src/Models/ContactEnrichRequest.swift
 src/Models/ContactIdentifier.swift
 src/Models/ContactIdentifierListing.swift
 src/Models/ContactImportField.swift
@@ -9855,7 +9935,10 @@ src/Models/EncryptionKeyEntityListing.swift
 src/Models/EndConsultTransferEvent.swift
 src/Models/EndTransferEvent.swift
 src/Models/Endpoint.swift
+src/Models/EngagementRequest.swift
 src/Models/EngineIntegration.swift
+src/Models/EnrichFieldRule.swift
+src/Models/EnrichFieldRules.swift
 src/Models/Entity.swift
 src/Models/EntityChange.swift
 src/Models/EntityListing.swift
@@ -10036,7 +10119,10 @@ src/Models/ExternalMetricDefinitionCreateRequest.swift
 src/Models/ExternalMetricDefinitionListing.swift
 src/Models/ExternalMetricDefinitionUpdateRequest.swift
 src/Models/ExternalOrganization.swift
+src/Models/ExternalOrganizationEnrichRequest.swift
 src/Models/ExternalOrganizationIdentifier.swift
+src/Models/ExternalOrganizationIdentifierClaimRequest.swift
+src/Models/ExternalOrganizationIdentifierListing.swift
 src/Models/ExternalOrganizationListing.swift
 src/Models/ExternalOrganizationTrustorLink.swift
 src/Models/ExternalSegment.swift
@@ -10077,6 +10163,7 @@ src/Models/FaxTopicWorkspaceData.swift
 src/Models/FeatureState.swift
 src/Models/Feedback.swift
 src/Models/FeedbackAddRequest.swift
+src/Models/FeedbackUpdateRequest.swift
 src/Models/FieldConfig.swift
 src/Models/FieldConfigs.swift
 src/Models/FieldList.swift
@@ -10892,6 +10979,7 @@ src/Models/Member.swift
 src/Models/MemberEntity.swift
 src/Models/MemberGroup.swift
 src/Models/MemberListing.swift
+src/Models/MergeContactsRequest.swift
 src/Models/MergeOperation.swift
 src/Models/MergeRequest.swift
 src/Models/Message.swift
@@ -11307,6 +11395,7 @@ src/Models/PhoneTransferEvent.swift
 src/Models/PhonesReboot.swift
 src/Models/Phrase.swift
 src/Models/PhraseAssociations.swift
+src/Models/PhraseTranslation.swift
 src/Models/PhysicalInterfaceEntityListing.swift
 src/Models/PingIdentity.swift
 src/Models/PinnedMessageRequest.swift
@@ -12376,6 +12465,7 @@ src/Models/TranscriptSearchCriteria.swift
 src/Models/TranscriptSearchRequest.swift
 src/Models/TranscriptTopic.swift
 src/Models/TranscriptTopics.swift
+src/Models/TranscriptTranslation.swift
 src/Models/TranscriptUrl.swift
 src/Models/TranscriptUrls.swift
 src/Models/TranscriptionConfig.swift
@@ -12395,6 +12485,8 @@ src/Models/TransferResponseModifiedBy.swift
 src/Models/TransferToAgentRequest.swift
 src/Models/TransferToExternalRequest.swift
 src/Models/TransferToQueueRequest.swift
+src/Models/TranslateSupportedLanguage.swift
+src/Models/TranslateSupportedLanguageList.swift
 src/Models/TrendData.swift
 src/Models/Trigger.swift
 src/Models/TriggerEntityListing.swift
@@ -12524,6 +12616,7 @@ src/Models/UpdateVerifierRequest.swift
 src/Models/UpdateWorkPlanBid.swift
 src/Models/UpdateWorkPlanRotationAgentRequest.swift
 src/Models/UpdateWorkPlanRotationRequest.swift
+src/Models/UpdatedSettingsResponse.swift
 src/Models/UpdatedTopicObject.swift
 src/Models/UpdatedTopicSystemMessage.swift
 src/Models/UploadMediaRequest.swift
@@ -12560,6 +12653,7 @@ src/Models/UserAuthorization.swift
 src/Models/UserAvailableTimes.swift
 src/Models/UserBestPoints.swift
 src/Models/UserBestPointsItem.swift
+src/Models/UserChatSettings.swift
 src/Models/UserConversationSummary.swift
 src/Models/UserConversationsEventMediaSummary.swift
 src/Models/UserConversationsEventMediaSummaryDetail.swift
@@ -13010,6 +13104,8 @@ src/Models/WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate.swift
 src/Models/WfmVersionedEntityMetadata.swift
 src/Models/WhatsAppAvailablePhoneNumberDetails.swift
 src/Models/WhatsAppAvailablePhoneNumberDetailsListing.swift
+src/Models/WhatsAppCallingConfigurationRequest.swift
+src/Models/WhatsAppCallingConfigurationResponse.swift
 src/Models/WhatsAppColumn.swift
 src/Models/WhatsAppConfig.swift
 src/Models/WhatsAppDefinition.swift

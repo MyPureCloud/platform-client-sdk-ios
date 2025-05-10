@@ -5,15 +5,18 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteEmailsSettingsThreading**](SettingsAPI#deleteEmailsSettingsThreading) | Reset email threading settings to default |
+| [**deleteExternalcontactsSettings**](SettingsAPI#deleteExternalcontactsSettings) | Delete settings |
 | [**deleteUsersAgentuiAgentsAutoanswerAgentIdSettings**](SettingsAPI#deleteUsersAgentuiAgentsAutoanswerAgentIdSettings) | Delete agent auto answer settings |
 | [**getEmailsSettings**](SettingsAPI#getEmailsSettings) | Get email Contact Center settings |
 | [**getEmailsSettingsThreading**](SettingsAPI#getEmailsSettingsThreading) | Get email threading settings |
+| [**getExternalcontactsSettings**](SettingsAPI#getExternalcontactsSettings) | Get settings |
 | [**getSettingsExecutiondata**](SettingsAPI#getSettingsExecutiondata) | Get the execution history enabled setting. |
 | [**getUsersAgentuiAgentsAutoanswerAgentIdSettings**](SettingsAPI#getUsersAgentuiAgentsAutoanswerAgentIdSettings) | Get agent auto answer settings |
 | [**patchEmailsSettings**](SettingsAPI#patchEmailsSettings) | Patch email Contact Center settings |
 | [**patchEmailsSettingsThreading**](SettingsAPI#patchEmailsSettingsThreading) | Patch email threading settings |
 | [**patchSettingsExecutiondata**](SettingsAPI#patchSettingsExecutiondata) | Edit the execution history on off setting. |
 | [**patchUsersAgentuiAgentsAutoanswerAgentIdSettings**](SettingsAPI#patchUsersAgentuiAgentsAutoanswerAgentIdSettings) | Update agent auto answer settings |
+| [**putExternalcontactsSettings**](SettingsAPI#putExternalcontactsSettings) | Set settings |
 | [**putUsersAgentuiAgentsAutoanswerAgentIdSettings**](SettingsAPI#putUsersAgentuiAgentsAutoanswerAgentIdSettings) | Set agent auto answer settings |
 {: class="table-striped"}
 
@@ -61,6 +64,52 @@ This endpoint does not require any parameters.
 ### Return type
 
 `nil` (empty response body)
+
+
+## deleteExternalcontactsSettings
+
+
+
+> [UpdatedSettingsResponse](UpdatedSettingsResponse) deleteExternalcontactsSettings()
+
+Delete settings
+
+
+
+Wraps DELETE /api/v2/externalcontacts/settings  
+
+Requires ANY permissions: 
+
+* externalContacts:settings:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+SettingsAPI.deleteExternalcontactsSettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SettingsAPI.deleteExternalcontactsSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**UpdatedSettingsResponse**](UpdatedSettingsResponse)
 
 
 ## deleteUsersAgentuiAgentsAutoanswerAgentIdSettings
@@ -202,6 +251,52 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**EmailThreadingSettings**](EmailThreadingSettings)
+
+
+## getExternalcontactsSettings
+
+
+
+> [ExternalContactsSettings](ExternalContactsSettings) getExternalcontactsSettings()
+
+Get settings
+
+
+
+Wraps GET /api/v2/externalcontacts/settings  
+
+Requires ANY permissions: 
+
+* externalContacts:settings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+SettingsAPI.getExternalcontactsSettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SettingsAPI.getExternalcontactsSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**ExternalContactsSettings**](ExternalContactsSettings)
 
 
 ## getSettingsExecutiondata
@@ -506,6 +601,56 @@ SettingsAPI.patchUsersAgentuiAgentsAutoanswerAgentIdSettings(agentId: agentId, b
 [**AutoAnswerSettings**](AutoAnswerSettings)
 
 
+## putExternalcontactsSettings
+
+
+
+> [UpdatedSettingsResponse](UpdatedSettingsResponse) putExternalcontactsSettings(body)
+
+Set settings
+
+
+
+Wraps PUT /api/v2/externalcontacts/settings  
+
+Requires ANY permissions: 
+
+* externalContacts:settings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ExternalContactsSettings = new ExternalContactsSettings(...) // 
+
+// Code example
+SettingsAPI.putExternalcontactsSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SettingsAPI.putExternalcontactsSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ExternalContactsSettings**](ExternalContactsSettings)|  | [optional] |
+
+
+### Return type
+
+[**UpdatedSettingsResponse**](UpdatedSettingsResponse)
+
+
 ## putUsersAgentuiAgentsAutoanswerAgentIdSettings
 
 
@@ -558,4 +703,4 @@ SettingsAPI.putUsersAgentuiAgentsAutoanswerAgentIdSettings(agentId: agentId, bod
 [**AutoAnswerSettings**](AutoAnswerSettings)
 
 
-_PureCloudPlatformClientV2@166.0.0_
+_PureCloudPlatformClientV2@167.0.0_

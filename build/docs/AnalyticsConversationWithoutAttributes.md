@@ -18,6 +18,7 @@
 | **mediaStatsMinConversationMos** | **Double** | The lowest estimated average MOS among all the audio streams belonging to this conversation | [optional] |
 | **mediaStatsMinConversationRFactor** | **Double** | The lowest R-factor value among all of the audio streams belonging to this conversation | [optional] |
 | **originatingDirection** | **String** | The original direction of the conversation | [optional] |
+| **originatingSocialMediaPublic** | **Bool** | Indicates that the conversation originated from a public message on social media | [optional] |
 | **selfServed** | **Bool** | Indicates whether all flow sessions were self serviced | [optional] |
 | **evaluations** | [**[AnalyticsEvaluation]**]([AnalyticsEvaluation]) | Evaluations associated with this conversation | [optional] |
 | **surveys** | [**[AnalyticsSurvey]**]([AnalyticsSurvey]) | Surveys associated with this conversation | [optional] |
@@ -26,4 +27,4 @@
 
 
 
-_PureCloudPlatformClientV2@166.0.0_
+_PureCloudPlatformClientV2@167.0.0_

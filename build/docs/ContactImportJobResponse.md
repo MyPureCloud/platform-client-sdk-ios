@@ -12,9 +12,10 @@
 | **executionStep** | **String** | Detailed description for the Job execution state | [optional] |
 | **metadata** | [**ContactImportJobMetadata**](ContactImportJobMetadata) | Metadata for the job | [optional] |
 | **dateCreated** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **division** | [**StarrableDivision**](StarrableDivision) | Division for the job | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 | **settings** | [**AddressableEntityRef**](AddressableEntityRef) | Settings | |
 
 
 
-_PureCloudPlatformClientV2@166.0.0_
+_PureCloudPlatformClientV2@167.0.0_

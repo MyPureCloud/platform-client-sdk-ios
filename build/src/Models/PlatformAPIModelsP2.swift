@@ -1450,7 +1450,7 @@ public class AppEvent: Codable {
     public var searchQuery: String?
     /** User-defined attributes associated with a particular event. */
     public var attributes: [String:CustomEventAttribute]?
-    /** Traits are attributes intrinsic to the customer that may be sent in selected events. Examples are email, name, phone. */
+    /** Traits are attributes intrinsic to the customer that may be sent in selected events. Examples are email, givenName, cellPhone. */
     public var traits: [String:CustomEventAttribute]?
 
     public init(eventName: String?, screenName: String?, app: JourneyApp?, device: Device?, ipAddress: String?, ipOrganization: String?, geolocation: JourneyGeolocation?, sdkLibrary: SdkLibrary?, networkConnectivity: NetworkConnectivity?, mktCampaign: JourneyCampaign?, searchQuery: String?, attributes: [String:CustomEventAttribute]?, traits: [String:CustomEventAttribute]?) {
@@ -1519,7 +1519,7 @@ public class AppEventRequest: Codable {
     public var searchQuery: String?
     /** User-defined attributes associated with a particular event. These attributes provide additional context about the event. For example, items_in_cart or subscription_level. */
     public var attributes: [String:CustomEventAttribute]?
-    /** Traits are attributes intrinsic to the customer that may be sent in selected events, (e.g. email, lastName, cellPhone). Traits are used to collect information for identity resolution. For example, the same person might be using an application on different devices which might create two sessions with different customerIds. Additional information can be provided as traits to help link those two sessions and customers to a single external contact through common identifiers that were submitted via a form fill, message, or other input in both sessions. */
+    /** Traits are attributes intrinsic to the customer that may be sent in selected events, (e.g. email, givenName, cellPhone). Traits are used to collect information for identity resolution. For example, the same person might be using an application on different devices which might create two sessions with different customerIds. Additional information can be provided as traits to help link those two sessions and customers to a single external contact through common identifiers that were submitted via a form fill, message, or other input in both sessions. */
     public var traits: [String:CustomEventAttribute]?
     /** A UUID representing the customer associated with the app event. This is expected to be set per application install or device and can be used to identify a single customer across multiple sessions. This identifier, along with others passed as traits, is used for identity resolution. */
     public var customerCookieId: String?
@@ -3774,6 +3774,22 @@ public class BulkJobTerminateRequest: Codable {
 
 
 
+public class BulkOrganizationsEnrichRequest: Codable {
+
+
+
+    public var entities: [ExternalOrganizationEnrichRequest]?
+
+    public init(entities: [ExternalOrganizationEnrichRequest]?) {
+        self.entities = entities
+    }
+
+
+}
+
+
+
+
 public class BulkResponseResultExternalOrganizationExternalOrganizationBulkEntityErrorExternalOrganization: Codable {
 
 
@@ -5542,24 +5558,6 @@ public class ChatSettings: Codable {
 
 
 
-/** Settings for a chat user */
-
-public class ChatUserSettings: Codable {
-
-
-
-    /** Settings for mobile devices */
-    public var mobile: MobileSettings?
-
-    public init(mobile: MobileSettings?) {
-        self.mobile = mobile
-    }
-
-
-}
-
-
-
 
 public class Check: Codable {
 
@@ -5593,6 +5591,24 @@ public class Check: Codable {
     public init(result: Result?, type: ModelType?) {
         self.result = result
         self.type = type
+    }
+
+
+}
+
+
+
+/** Settings for a chat user */
+
+public class ChatUserSettings: Codable {
+
+
+
+    /** Settings for mobile devices */
+    public var mobile: MobileSettings?
+
+    public init(mobile: MobileSettings?) {
+        self.mobile = mobile
     }
 
 
@@ -6209,6 +6225,28 @@ public class CommonRulePredicate: Codable {
         self.entity = entity
         self.mediaType = mediaType
         self.metric = metric
+    }
+
+
+}
+
+
+
+
+public class CommunicationTranslation: Codable {
+
+
+
+
+
+    /** Communication Id */
+    public var communicationId: String?
+    /** List of translated transcripts */
+    public var transcripts: [TranscriptTranslation]?
+
+    public init(communicationId: String?, transcripts: [TranscriptTranslation]?) {
+        self.communicationId = communicationId
+        self.transcripts = transcripts
     }
 
 
@@ -11196,6 +11234,58 @@ public class CreateCallResponse: Codable {
 
 
 
+public class CreateMetric: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum TimeDisplayUnit: String, Codable { 
+        case _none = "None"
+        case seconds = "Seconds"
+        case minutes = "Minutes"
+        case hours = "Hours"
+    }
+
+    /** The id of associated metric definition */
+    public var metricDefinitionId: String?
+    /** The id of associated external metric definition */
+    public var externalMetricDefinitionId: String?
+    /** Associated objective for this metric */
+    public var objective: CreateObjective?
+    /** Performance profile id of this metric */
+    public var performanceProfileId: String?
+    /** The name of this metric */
+    public var name: String?
+    /** The precision of the metric, must be between 0 and 5 */
+    public var precision: Int?
+    /** The time unit in which the metric should be displayed -- this parameter is ignored when displaying non-time values */
+    public var timeDisplayUnit: TimeDisplayUnit?
+
+    public init(metricDefinitionId: String?, externalMetricDefinitionId: String?, objective: CreateObjective?, performanceProfileId: String?, name: String?, precision: Int?, timeDisplayUnit: TimeDisplayUnit?) {
+        self.metricDefinitionId = metricDefinitionId
+        self.externalMetricDefinitionId = externalMetricDefinitionId
+        self.objective = objective
+        self.performanceProfileId = performanceProfileId
+        self.name = name
+        self.precision = precision
+        self.timeDisplayUnit = timeDisplayUnit
+    }
+
+
+}
+
+
+
+
 public class CreateGeneralProgramTestPhraseMatchedTranscript: Codable {
 
 
@@ -11290,58 +11380,6 @@ public class CreateGeneralProgramTopicsDefinitionsJob: Codable {
         case _id = "id"
         case state
         case testTopicPhraseResults
-    }
-
-
-}
-
-
-
-
-public class CreateMetric: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum TimeDisplayUnit: String, Codable { 
-        case _none = "None"
-        case seconds = "Seconds"
-        case minutes = "Minutes"
-        case hours = "Hours"
-    }
-
-    /** The id of associated metric definition */
-    public var metricDefinitionId: String?
-    /** The id of associated external metric definition */
-    public var externalMetricDefinitionId: String?
-    /** Associated objective for this metric */
-    public var objective: CreateObjective?
-    /** Performance profile id of this metric */
-    public var performanceProfileId: String?
-    /** The name of this metric */
-    public var name: String?
-    /** The precision of the metric, must be between 0 and 5 */
-    public var precision: Int?
-    /** The time unit in which the metric should be displayed -- this parameter is ignored when displaying non-time values */
-    public var timeDisplayUnit: TimeDisplayUnit?
-
-    public init(metricDefinitionId: String?, externalMetricDefinitionId: String?, objective: CreateObjective?, performanceProfileId: String?, name: String?, precision: Int?, timeDisplayUnit: TimeDisplayUnit?) {
-        self.metricDefinitionId = metricDefinitionId
-        self.externalMetricDefinitionId = externalMetricDefinitionId
-        self.objective = objective
-        self.performanceProfileId = performanceProfileId
-        self.name = name
-        self.precision = precision
-        self.timeDisplayUnit = timeDisplayUnit
     }
 
 
@@ -11940,14 +11978,19 @@ public class CsvJobRequest: Codable {
 
 
 
+
+
     /** Upload for the csv job */
     public var uploadId: String?
     /** Settings for the csv job */
     public var settingsId: String?
+    /** Division for the csv job */
+    public var division: WritableStarrableDivision?
 
-    public init(uploadId: String?, settingsId: String?) {
+    public init(uploadId: String?, settingsId: String?, division: WritableStarrableDivision?) {
         self.uploadId = uploadId
         self.settingsId = settingsId
+        self.division = division
     }
 
 
@@ -12451,6 +12494,7 @@ public class Dependency: Codable {
         case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case digitalbotconnector = "DIGITALBOTCONNECTOR"
         case digitalbotflow = "DIGITALBOTFLOW"
+        case division = "DIVISION"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -12673,6 +12717,23 @@ public class DevelopmentActivityAggregateQueryResponseGroupedData: Codable {
     public init(group: [String:String]?, data: [DevelopmentActivityAggregateQueryResponseData]?) {
         self.group = group
         self.data = data
+    }
+
+
+}
+
+
+
+
+public class DiagnosticsSettings: Codable {
+
+
+
+    /** Whether to report on low max calls per agent alerts. */
+    public var reportLowMaxCallsPerAgentAlert: Bool?
+
+    public init(reportLowMaxCallsPerAgentAlert: Bool?) {
+        self.reportLowMaxCallsPerAgentAlert = reportLowMaxCallsPerAgentAlert
     }
 
 
@@ -15862,6 +15923,76 @@ public class Endpoint: Codable {
 
 
 
+public class EnrichFieldRule: Codable {
+
+
+
+    public enum Action: String, Codable { 
+        case alwaysUseProvided = "AlwaysUseProvided"
+        case preferExisting = "PreferExisting"
+        case preferProvided = "PreferProvided"
+    }
+
+    public enum ArrayAction: String, Codable { 
+        case replace = "Replace"
+        case extend = "Extend"
+        case fill = "Fill"
+    }
+
+    /** A restricted JSONPath naming the specific field this combining behavior should apply to. You may use dot-notation for named fields, and array indexing for lists, but nothing more sophisticated (e.g. wildcards, sublists, filter expressions, etc). For example, to target the `firstName` field of a Contact, this should be \"$.firstName\". */
+    public var field: String?
+    /** The behavior for how to combine data from the request body and the database. */
+    public var action: Action?
+    /** The behavior for how to combine items in array field from the request body and the database. */
+    public var arrayAction: ArrayAction?
+
+    public init(field: String?, action: Action?, arrayAction: ArrayAction?) {
+        self.field = field
+        self.action = action
+        self.arrayAction = arrayAction
+    }
+
+
+}
+
+
+
+
+public class EnrichFieldRules: Codable {
+
+    public enum DefaultAction: String, Codable { 
+        case alwaysUseProvided = "AlwaysUseProvided"
+        case preferExisting = "PreferExisting"
+        case preferProvided = "PreferProvided"
+    }
+
+
+
+    public enum DefaultArrayAction: String, Codable { 
+        case replace = "Replace"
+        case extend = "Extend"
+        case fill = "Fill"
+    }
+
+    /** Default behavior for combining data from the submitted request with any entity found in the database. The default behavior if unspecified is `PreferProvided`, meaning any non-null fields in the submitted request will override data in the database, but all null fields will remain unchanged. Omitting a field in the request payload means that it will be treated as null. */
+    public var defaultAction: DefaultAction?
+    /** Field-specific behaviors for how to combine data from different sources. For example, you can set a `defaultAction` of `PreferProvided`, but use different behaviors such as `AlwaysUseProvided` or `PreferExisting` for specific fields. */
+    public var rules: [EnrichFieldRule]?
+    /** Default behavior for combining items in array field from the submitted request with any array entity found in the database. The default behavior if unspecified is `fill`, meaning the field value will always be the partial concatenation of both the array in the Database and the array in the contact body, up to the size limit of the array */
+    public var defaultArrayAction: DefaultArrayAction?
+
+    public init(defaultAction: DefaultAction?, rules: [EnrichFieldRule]?, defaultArrayAction: DefaultArrayAction?) {
+        self.defaultAction = defaultAction
+        self.rules = rules
+        self.defaultArrayAction = defaultArrayAction
+    }
+
+
+}
+
+
+
+
 public class EntityReference: Codable {
 
 
@@ -16820,6 +16951,27 @@ public class ExternalContactsContactChangedTopicExternalId: Codable {
 
 
 
+public class ExternalContactsEntity: Codable {
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+
+    public init(_id: String?) {
+        self._id = _id
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+    }
+
+
+}
+
+
+
+
 public class ExternalContactsContactChangedTopicFacebookScopedId: Codable {
 
 
@@ -16942,53 +17094,10 @@ public class ExternalContactsContactChangedTopicTwitterId: Codable {
 
 
 
-public class Facet: Codable {
-
-
-
-
-
-    /** The name of the field on which to facet. */
-    public var name: String?
-    /** The type of the facet, DATE or STRING. */
-    public var type: String?
-
-    public init(name: String?, type: String?) {
-        self.name = name
-        self.type = type
-    }
-
-
-}
-
-
-
-
 public class ExternalContactsContactNoteChangedTopicDivision: Codable {
 
 
 
-    public var _id: String?
-
-    public init(_id: String?) {
-        self._id = _id
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-    }
-
-
-}
-
-
-
-
-public class ExternalContactsEntity: Codable {
-
-
-
-    /** The globally unique identifier for the object. */
     public var _id: String?
 
     public init(_id: String?) {
@@ -17438,6 +17547,28 @@ public class FacebookScopedId: Codable {
 
     public init(scopedId: String?) {
         self.scopedId = scopedId
+    }
+
+
+}
+
+
+
+
+public class Facet: Codable {
+
+
+
+
+
+    /** The name of the field on which to facet. */
+    public var name: String?
+    /** The type of the facet, DATE or STRING. */
+    public var type: String?
+
+    public init(name: String?, type: String?) {
+        self.name = name
+        self.type = type
     }
 
 
@@ -25392,6 +25523,7 @@ public class LimitChangeRequestDetails: Codable {
         case gcv = "gcv"
         case gdpr = "gdpr"
         case groups = "groups"
+        case guides = "guides"
         case historicalAdherence = "historical.adherence"
         case infrastructureascode = "infrastructureascode"
         case integrations = "integrations"
@@ -29678,6 +29810,33 @@ public class PhoneNumber: Codable {
         case userInput
         case e164
         case countryCode
+    }
+
+
+}
+
+
+
+
+public class PhraseTranslation: Codable {
+
+
+
+
+
+
+
+    /** Epoch start time of the phrase */
+    public var startTimeMs: Int64?
+    /** Purpose of the participant associated with the phrase */
+    public var participantPurpose: String?
+    /** Translation of the phrase */
+    public var translatedText: String?
+
+    public init(startTimeMs: Int64?, participantPurpose: String?, translatedText: String?) {
+        self.startTimeMs = startTimeMs
+        self.participantPurpose = participantPurpose
+        self.translatedText = translatedText
     }
 
 
@@ -38070,36 +38229,6 @@ public class SkillEntityListing: Codable {
 
 
 
-public class SkillsToRemove: Codable {
-
-
-
-
-
-
-
-    public var name: String?
-    public var _id: String?
-    public var selfUri: String?
-
-    public init(name: String?, _id: String?, selfUri: String?) {
-        self.name = name
-        self._id = _id
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case name
-        case _id = "id"
-        case selfUri
-    }
-
-
-}
-
-
-
-
 public class SkillGroupEntityListing: Codable {
 
 
@@ -38168,6 +38297,36 @@ public class SkillGroupMemberEntityListing: Codable {
         self.nextUri = nextUri
         self.selfUri = selfUri
         self.previousUri = previousUri
+    }
+
+
+}
+
+
+
+
+public class SkillsToRemove: Codable {
+
+
+
+
+
+
+
+    public var name: String?
+    public var _id: String?
+    public var selfUri: String?
+
+    public init(name: String?, _id: String?, selfUri: String?) {
+        self.name = name
+        self._id = _id
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case name
+        case _id = "id"
+        case selfUri
     }
 
 
@@ -40345,6 +40504,39 @@ public class TranscriptSearchCriteria: Codable {
 
 
 
+public class TranscriptTranslation: Codable {
+
+
+
+
+
+
+
+    /** Transcript Id */
+    public var _id: String?
+    /** List of translated phrases, if translation succeeded */
+    public var phrases: [PhraseTranslation]?
+    /** Translation error, if translation failed */
+    public var translateError: String?
+
+    public init(_id: String?, phrases: [PhraseTranslation]?, translateError: String?) {
+        self._id = _id
+        self.phrases = phrases
+        self.translateError = translateError
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case phrases
+        case translateError
+    }
+
+
+}
+
+
+
+
 public class TranscriptUrl: Codable {
 
 
@@ -41816,6 +42008,33 @@ public class UserAuthorization: Codable {
 
 
 
+public class UserChatSettings: Codable {
+
+
+
+
+
+
+
+    /** Whether or not to enable muting notifications */
+    public var muted: Bool?
+    /** Whether or not to enable notifications for mentions only */
+    public var mentionsOnly: Bool?
+    /** Whether or not to enable notifications for reactions on a user's own messages */
+    public var notifyOnReactions: Bool?
+
+    public init(muted: Bool?, mentionsOnly: Bool?, notifyOnReactions: Bool?) {
+        self.muted = muted
+        self.mentionsOnly = mentionsOnly
+        self.notifyOnReactions = notifyOnReactions
+    }
+
+
+}
+
+
+
+
 public class UserDetailQueryFilter: Codable {
 
     public enum ModelType: String, Codable { 
@@ -42381,6 +42600,170 @@ public class UserObservationQueryClause: Codable {
     public init(type: ModelType?, predicates: [UserObservationQueryPredicate]?) {
         self.type = type
         self.predicates = predicates
+    }
+
+
+}
+
+
+
+
+public class Video: Codable {
+
+    public enum State: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case _none = "none"
+    }
+
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case _none = "none"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum DisconnectType: String, Codable { 
+        case endpoint = "endpoint"
+        case client = "client"
+        case system = "system"
+        case timeout = "timeout"
+        case transfer = "transfer"
+        case transferConference = "transfer.conference"
+        case transferConsult = "transfer.consult"
+        case transferForward = "transfer.forward"
+        case transferNoanswer = "transfer.noanswer"
+        case transferNotavailable = "transfer.notavailable"
+        case transportFailure = "transport.failure"
+        case error = "error"
+        case peer = "peer"
+        case other = "other"
+        case spam = "spam"
+        case uncallable = "uncallable"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The connection state of this communication. */
+    public var state: State?
+    /** The initial connection state of this communication. */
+    public var initialState: InitialState?
+    /** A globally unique identifier for this communication. */
+    public var _id: String?
+    /** The room id context (xmpp jid) for the conference session. */
+    public var context: String?
+    /** Indicates whether this participant has muted their outgoing audio. */
+    public var audioMuted: Bool?
+    /** Indicates whether this participant has muted/paused their outgoing video. */
+    public var videoMuted: Bool?
+    /** Indicates whether this participant is sharing their screen to the session. */
+    public var sharingScreen: Bool?
+    /** The number of peer participants from the perspective of the participant in the conference. */
+    public var peerCount: Int?
+    /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
+    public var disconnectType: DisconnectType?
+    /** The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var startAlertingTime: Date?
+    /** The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var connectedTime: Date?
+    /** The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var disconnectedTime: Date?
+    /** The source provider for the video. */
+    public var provider: String?
+    /** The id of the peer communication corresponding to a matching leg for this communication. */
+    public var peerId: String?
+    /** List of media stream ids */
+    public var msids: [String]?
+    /** Address and name data for a call endpoint. */
+    public var _self: Address?
+    /** Call wrap up or disposition data. */
+    public var wrapup: Wrapup?
+    /** After-call work for the communication. */
+    public var afterCallWork: AfterCallWork?
+    /** Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. */
+    public var afterCallWorkRequired: Bool?
+
+    public init(state: State?, initialState: InitialState?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: Int?, disconnectType: DisconnectType?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, msids: [String]?, _self: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
+        self.state = state
+        self.initialState = initialState
+        self._id = _id
+        self.context = context
+        self.audioMuted = audioMuted
+        self.videoMuted = videoMuted
+        self.sharingScreen = sharingScreen
+        self.peerCount = peerCount
+        self.disconnectType = disconnectType
+        self.startAlertingTime = startAlertingTime
+        self.connectedTime = connectedTime
+        self.disconnectedTime = disconnectedTime
+        self.provider = provider
+        self.peerId = peerId
+        self.msids = msids
+        self._self = _self
+        self.wrapup = wrapup
+        self.afterCallWork = afterCallWork
+        self.afterCallWorkRequired = afterCallWorkRequired
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case state
+        case initialState
+        case _id = "id"
+        case context
+        case audioMuted
+        case videoMuted
+        case sharingScreen
+        case peerCount
+        case disconnectType
+        case startAlertingTime
+        case connectedTime
+        case disconnectedTime
+        case provider
+        case peerId
+        case msids
+        case _self = "self"
+        case wrapup
+        case afterCallWork
+        case afterCallWorkRequired
     }
 
 
@@ -43879,170 +44262,6 @@ public class Verifier: Codable {
 
 
 
-public class Video: Codable {
-
-    public enum State: String, Codable { 
-        case alerting = "alerting"
-        case dialing = "dialing"
-        case contacting = "contacting"
-        case offering = "offering"
-        case connected = "connected"
-        case disconnected = "disconnected"
-        case terminated = "terminated"
-        case _none = "none"
-    }
-
-    public enum InitialState: String, Codable { 
-        case alerting = "alerting"
-        case dialing = "dialing"
-        case contacting = "contacting"
-        case offering = "offering"
-        case connected = "connected"
-        case disconnected = "disconnected"
-        case terminated = "terminated"
-        case _none = "none"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum DisconnectType: String, Codable { 
-        case endpoint = "endpoint"
-        case client = "client"
-        case system = "system"
-        case timeout = "timeout"
-        case transfer = "transfer"
-        case transferConference = "transfer.conference"
-        case transferConsult = "transfer.consult"
-        case transferForward = "transfer.forward"
-        case transferNoanswer = "transfer.noanswer"
-        case transferNotavailable = "transfer.notavailable"
-        case transportFailure = "transport.failure"
-        case error = "error"
-        case peer = "peer"
-        case other = "other"
-        case spam = "spam"
-        case uncallable = "uncallable"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The connection state of this communication. */
-    public var state: State?
-    /** The initial connection state of this communication. */
-    public var initialState: InitialState?
-    /** A globally unique identifier for this communication. */
-    public var _id: String?
-    /** The room id context (xmpp jid) for the conference session. */
-    public var context: String?
-    /** Indicates whether this participant has muted their outgoing audio. */
-    public var audioMuted: Bool?
-    /** Indicates whether this participant has muted/paused their outgoing video. */
-    public var videoMuted: Bool?
-    /** Indicates whether this participant is sharing their screen to the session. */
-    public var sharingScreen: Bool?
-    /** The number of peer participants from the perspective of the participant in the conference. */
-    public var peerCount: Int?
-    /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
-    public var disconnectType: DisconnectType?
-    /** The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var startAlertingTime: Date?
-    /** The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var connectedTime: Date?
-    /** The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var disconnectedTime: Date?
-    /** The source provider for the video. */
-    public var provider: String?
-    /** The id of the peer communication corresponding to a matching leg for this communication. */
-    public var peerId: String?
-    /** List of media stream ids */
-    public var msids: [String]?
-    /** Address and name data for a call endpoint. */
-    public var _self: Address?
-    /** Call wrap up or disposition data. */
-    public var wrapup: Wrapup?
-    /** After-call work for the communication. */
-    public var afterCallWork: AfterCallWork?
-    /** Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. */
-    public var afterCallWorkRequired: Bool?
-
-    public init(state: State?, initialState: InitialState?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: Int?, disconnectType: DisconnectType?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, msids: [String]?, _self: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
-        self.state = state
-        self.initialState = initialState
-        self._id = _id
-        self.context = context
-        self.audioMuted = audioMuted
-        self.videoMuted = videoMuted
-        self.sharingScreen = sharingScreen
-        self.peerCount = peerCount
-        self.disconnectType = disconnectType
-        self.startAlertingTime = startAlertingTime
-        self.connectedTime = connectedTime
-        self.disconnectedTime = disconnectedTime
-        self.provider = provider
-        self.peerId = peerId
-        self.msids = msids
-        self._self = _self
-        self.wrapup = wrapup
-        self.afterCallWork = afterCallWork
-        self.afterCallWorkRequired = afterCallWorkRequired
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case state
-        case initialState
-        case _id = "id"
-        case context
-        case audioMuted
-        case videoMuted
-        case sharingScreen
-        case peerCount
-        case disconnectType
-        case startAlertingTime
-        case connectedTime
-        case disconnectedTime
-        case provider
-        case peerId
-        case msids
-        case _self = "self"
-        case wrapup
-        case afterCallWork
-        case afterCallWorkRequired
-    }
-
-
-}
-
-
-
-
 public class VideoConferenceUpdateTopicParticipantInfo: Codable {
 
 
@@ -44732,7 +44951,10 @@ public class WebMessagingContent: Codable {
         case genericTemplate = "GenericTemplate"
         case card = "Card"
         case carousel = "Carousel"
+        case datePicker = "DatePicker"
     }
+
+
 
 
 
@@ -44760,8 +44982,10 @@ public class WebMessagingContent: Codable {
     public var card: ContentCard?
     /** Carousel content */
     public var carousel: ContentCarousel?
+    /** DatePicker content */
+    public var datePicker: ContentDatePicker?
 
-    public init(contentType: ContentType?, attachment: WebMessagingAttachment?, quickReply: WebMessagingQuickReply?, buttonResponse: WebMessagingButtonResponse?, generic: WebMessagingGeneric?, card: ContentCard?, carousel: ContentCarousel?) {
+    public init(contentType: ContentType?, attachment: WebMessagingAttachment?, quickReply: WebMessagingQuickReply?, buttonResponse: WebMessagingButtonResponse?, generic: WebMessagingGeneric?, card: ContentCard?, carousel: ContentCarousel?, datePicker: ContentDatePicker?) {
         self.contentType = contentType
         self.attachment = attachment
         self.quickReply = quickReply
@@ -44769,6 +44993,7 @@ public class WebMessagingContent: Codable {
         self.generic = generic
         self.card = card
         self.carousel = carousel
+        self.datePicker = datePicker
     }
 
 
@@ -46826,44 +47051,6 @@ public class WorkitemCommonCreate: Codable {
 
 
 
-public class WorkitemSchema: Codable {
-
-
-
-
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    public var name: String?
-    /** The version of the Workitem custom attribute schema. */
-    public var version: Int?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, version: Int?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.version = version
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case version
-        case selfUri
-    }
-
-
-}
-
-
-
-
 public class WorkitemOnAttributeChangeRuleCreate: Codable {
 
 
@@ -47158,6 +47345,44 @@ public class WorkitemQueueReference: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case selfUri
+    }
+
+
+}
+
+
+
+
+public class WorkitemSchema: Codable {
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    /** The version of the Workitem custom attribute schema. */
+    public var version: Int?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, version: Int?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.version = version
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case version
         case selfUri
     }
 

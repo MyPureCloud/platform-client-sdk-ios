@@ -35,6 +35,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingDirectroutingbackupSettingsMe**](RoutingAPI#getRoutingDirectroutingbackupSettingsMe) | Get the user&#39;s Direct Routing Backup settings. |
 | [**getRoutingEmailDomain**](RoutingAPI#getRoutingEmailDomain) | Get domain |
 | [**getRoutingEmailDomainRoute**](RoutingAPI#getRoutingEmailDomainRoute) | Get a route |
+| [**getRoutingEmailDomainRouteIdentityresolution**](RoutingAPI#getRoutingEmailDomainRouteIdentityresolution) | Get a route identity resolution setting. |
 | [**getRoutingEmailDomainRoutes**](RoutingAPI#getRoutingEmailDomainRoutes) | Get routes |
 | [**getRoutingEmailDomains**](RoutingAPI#getRoutingEmailDomains) | Get domains |
 | [**getRoutingEmailOutboundDomain**](RoutingAPI#getRoutingEmailOutboundDomain) | Get domain |
@@ -56,6 +57,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingQueueComparisonperiod**](RoutingAPI#getRoutingQueueComparisonperiod) | Get a Comparison Period. |
 | [**getRoutingQueueComparisonperiods**](RoutingAPI#getRoutingQueueComparisonperiods) | Get list of comparison periods |
 | [**getRoutingQueueEstimatedwaittime**](RoutingAPI#getRoutingQueueEstimatedwaittime) | Get Estimated Wait Time |
+| [**getRoutingQueueIdentityresolution**](RoutingAPI#getRoutingQueueIdentityresolution) | Get Queue IdentityResolution Settings. |
 | [**getRoutingQueueMediatypeEstimatedwaittime**](RoutingAPI#getRoutingQueueMediatypeEstimatedwaittime) | Get Estimated Wait Time |
 | [**getRoutingQueueMembers**](RoutingAPI#getRoutingQueueMembers) | Get the members of this queue. |
 | [**getRoutingQueueUsers**](RoutingAPI#getRoutingQueueUsers) | DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue. |
@@ -76,6 +78,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingSmsAddress**](RoutingAPI#getRoutingSmsAddress) | Get an Address by Id for SMS |
 | [**getRoutingSmsAddresses**](RoutingAPI#getRoutingSmsAddresses) | Get a list of Addresses for SMS |
 | [**getRoutingSmsAvailablephonenumbers**](RoutingAPI#getRoutingSmsAvailablephonenumbers) | Get a list of available phone numbers for SMS provisioning. |
+| [**getRoutingSmsIdentityresolutionPhonenumber**](RoutingAPI#getRoutingSmsIdentityresolutionPhonenumber) | Get a SMS identity resolution settings. |
 | [**getRoutingSmsPhonenumber**](RoutingAPI#getRoutingSmsPhonenumber) | Get a phone number provisioned for SMS. |
 | [**getRoutingSmsPhonenumbers**](RoutingAPI#getRoutingSmsPhonenumbers) | Get a list of provisioned phone numbers. |
 | [**getRoutingUserDirectroutingbackupSettings**](RoutingAPI#getRoutingUserDirectroutingbackupSettings) | Get the user&#39;s Direct Routing Backup settings. |
@@ -135,11 +138,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postUserRoutingskills**](RoutingAPI#postUserRoutingskills) | Assign a routing skill to a user |
 | [**putRoutingDirectroutingbackupSettingsMe**](RoutingAPI#putRoutingDirectroutingbackupSettingsMe) | Update the user&#39;s Direct Routing Backup settings. |
 | [**putRoutingEmailDomainRoute**](RoutingAPI#putRoutingEmailDomainRoute) | Update a route |
+| [**putRoutingEmailDomainRouteIdentityresolution**](RoutingAPI#putRoutingEmailDomainRouteIdentityresolution) | Update identity resolution settings for a route. |
 | [**putRoutingEmailOutboundDomainActivation**](RoutingAPI#putRoutingEmailOutboundDomainActivation) | Request an activation status (cname + dkim) update of an outbound domain |
 | [**putRoutingMessageRecipient**](RoutingAPI#putRoutingMessageRecipient) | Update a recipient |
 | [**putRoutingQueue**](RoutingAPI#putRoutingQueue) | Update a queue |
+| [**putRoutingQueueIdentityresolution**](RoutingAPI#putRoutingQueueIdentityresolution) | Update Queue IdentityResolution Settings. |
 | [**putRoutingSettings**](RoutingAPI#putRoutingSettings) | Update an organization&#39;s routing settings |
 | [**putRoutingSettingsTranscription**](RoutingAPI#putRoutingSettingsTranscription) | Update Transcription Settings |
+| [**putRoutingSmsIdentityresolutionPhonenumber**](RoutingAPI#putRoutingSmsIdentityresolutionPhonenumber) | Update an SMS identity resolution settings. |
 | [**putRoutingUserDirectroutingbackupSettings**](RoutingAPI#putRoutingUserDirectroutingbackupSettings) | Update the user&#39;s Direct Routing Backup settings. |
 | [**putRoutingUserUtilization**](RoutingAPI#putRoutingUserUtilization) | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
 | [**putRoutingUtilization**](RoutingAPI#putRoutingUtilization) | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. |
@@ -1639,7 +1645,7 @@ RoutingAPI.getRoutingEmailDomain(domainId: domainId) { (response, error) in
 
 
 
-> [InboundRoute](InboundRoute) getRoutingEmailDomainRoute(domainName, routeId)
+> [InboundRoute](InboundRoute) getRoutingEmailDomainRoute(domainName, routeId, expand)
 
 Get a route
 
@@ -1661,9 +1667,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let domainName: String = "" // email domain
 let routeId: String = "" // route ID
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
-RoutingAPI.getRoutingEmailDomainRoute(domainName: domainName, routeId: routeId) { (response, error) in
+RoutingAPI.getRoutingEmailDomainRoute(domainName: domainName, routeId: routeId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1680,6 +1687,7 @@ RoutingAPI.getRoutingEmailDomainRoute(domainName: domainName, routeId: routeId) 
 | ------------- | ------------- | ------------- | ------------- |
 | **domainName** | **String**| email domain | |
 | **routeId** | **String**| route ID | |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: identityresolution ("identityresolution") |
 
 
 ### Return type
@@ -1687,11 +1695,64 @@ RoutingAPI.getRoutingEmailDomainRoute(domainName: domainName, routeId: routeId) 
 [**InboundRoute**](InboundRoute)
 
 
+## getRoutingEmailDomainRouteIdentityresolution
+
+
+
+> [IdentityResolutionConfig](IdentityResolutionConfig) getRoutingEmailDomainRouteIdentityresolution(domainName, routeId)
+
+Get a route identity resolution setting.
+
+
+
+Wraps GET /api/v2/routing/email/domains/{domainName}/routes/{routeId}/identityresolution  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+* routing:identityResolution:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainName: String = "" // email domain
+let routeId: String = "" // route ID
+
+// Code example
+RoutingAPI.getRoutingEmailDomainRouteIdentityresolution(domainName: domainName, routeId: routeId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingEmailDomainRouteIdentityresolution was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainName** | **String**| email domain | |
+| **routeId** | **String**| route ID | |
+
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
+
+
 ## getRoutingEmailDomainRoutes
 
 
 
-> [InboundRouteEntityListing](InboundRouteEntityListing) getRoutingEmailDomainRoutes(domainName, pageSize, pageNumber, pattern)
+> [InboundRouteEntityListing](InboundRouteEntityListing) getRoutingEmailDomainRoutes(domainName, pageSize, pageNumber, pattern, expand)
 
 Get routes
 
@@ -1715,9 +1776,10 @@ let domainName: String = "" // email domain
 let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
 let pattern: String = "" // Filter routes by the route's pattern property
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
-RoutingAPI.getRoutingEmailDomainRoutes(domainName: domainName, pageSize: pageSize, pageNumber: pageNumber, pattern: pattern) { (response, error) in
+RoutingAPI.getRoutingEmailDomainRoutes(domainName: domainName, pageSize: pageSize, pageNumber: pageNumber, pattern: pattern, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1736,6 +1798,7 @@ RoutingAPI.getRoutingEmailDomainRoutes(domainName: domainName, pageSize: pageSiz
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pattern** | **String**| Filter routes by the route's pattern property | [optional] |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: identityresolution ("identityresolution") |
 
 
 ### Return type
@@ -2528,7 +2591,7 @@ RoutingAPI.getRoutingPredictorsKeyperformanceindicators(kpiGroup: kpiGroup, expa
 
 
 
-> [Queue](Queue) getRoutingQueue(queueId)
+> [Queue](Queue) getRoutingQueue(queueId, expand)
 
 Get details about this queue.
 
@@ -2549,9 +2612,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let queueId: String = "" // Queue ID
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
-RoutingAPI.getRoutingQueue(queueId: queueId) { (response, error) in
+RoutingAPI.getRoutingQueue(queueId: queueId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2567,6 +2631,7 @@ RoutingAPI.getRoutingQueue(queueId: queueId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **queueId** | **String**| Queue ID | |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: identityresolution ("identityresolution") |
 
 
 ### Return type
@@ -2780,6 +2845,57 @@ RoutingAPI.getRoutingQueueEstimatedwaittime(queueId: queueId, conversationId: co
 ### Return type
 
 [**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions)
+
+
+## getRoutingQueueIdentityresolution
+
+
+
+> [IdentityResolutionQueueConfig](IdentityResolutionQueueConfig) getRoutingQueueIdentityresolution(queueId)
+
+Get Queue IdentityResolution Settings.
+
+
+
+Wraps GET /api/v2/routing/queues/{queueId}/identityresolution  
+
+Requires ALL permissions: 
+
+* routing:queue:view
+* routing:identityResolution:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let queueId: String = "" // Queue ID
+
+// Code example
+RoutingAPI.getRoutingQueueIdentityresolution(queueId: queueId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingQueueIdentityresolution was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **queueId** | **String**| Queue ID | |
+
+
+### Return type
+
+[**IdentityResolutionQueueConfig**](IdentityResolutionQueueConfig)
 
 
 ## getRoutingQueueMediatypeEstimatedwaittime
@@ -3044,7 +3160,7 @@ RoutingAPI.getRoutingQueueWrapupcodes(queueId: queueId, pageSize: pageSize, page
 
 
 
-> [QueueEntityListing](QueueEntityListing) getRoutingQueues(pageNumber, pageSize, sortOrder, name, _id, divisionId, peerId, cannedResponseLibraryId, hasPeer)
+> [QueueEntityListing](QueueEntityListing) getRoutingQueues(pageNumber, pageSize, sortOrder, name, _id, divisionId, peerId, cannedResponseLibraryId, hasPeer, expand)
 
 Get list of queues.
 
@@ -3073,9 +3189,10 @@ let divisionId: [String] = [""] // Include only queues in the specified division
 let peerId: [String] = [""] // Include only queues with the specified peer ID(s)
 let cannedResponseLibraryId: String = "" // Include only queues explicitly associated with the specified canned response library ID
 let hasPeer: Bool = true // Include only queues with a peer ID
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
-RoutingAPI.getRoutingQueues(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId, peerId: peerId, cannedResponseLibraryId: cannedResponseLibraryId, hasPeer: hasPeer) { (response, error) in
+RoutingAPI.getRoutingQueues(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId, peerId: peerId, cannedResponseLibraryId: cannedResponseLibraryId, hasPeer: hasPeer, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3099,6 +3216,7 @@ RoutingAPI.getRoutingQueues(pageNumber: pageNumber, pageSize: pageSize, sortOrde
 | **peerId** | [**[String]**](String)| Include only queues with the specified peer ID(s) | [optional] |
 | **cannedResponseLibraryId** | **String**| Include only queues explicitly associated with the specified canned response library ID | [optional] |
 | **hasPeer** | **Bool**| Include only queues with a peer ID | [optional] |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: identityresolution ("identityresolution") |
 
 
 ### Return type
@@ -3899,6 +4017,57 @@ RoutingAPI.getRoutingSmsAvailablephonenumbers(countryCode: countryCode, phoneNum
 [**SMSAvailablePhoneNumberEntityListing**](SMSAvailablePhoneNumberEntityListing)
 
 
+## getRoutingSmsIdentityresolutionPhonenumber
+
+
+
+> [IdentityResolutionConfig](IdentityResolutionConfig) getRoutingSmsIdentityresolutionPhonenumber(addressId)
+
+Get a SMS identity resolution settings.
+
+
+
+Wraps GET /api/v2/routing/sms/identityresolution/phonenumbers/{addressId}  
+
+Requires ALL permissions: 
+
+* sms:phoneNumber:view
+* routing:identityResolution:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let addressId: String = "" // Address ID
+
+// Code example
+RoutingAPI.getRoutingSmsIdentityresolutionPhonenumber(addressId: addressId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingSmsIdentityresolutionPhonenumber was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **addressId** | **String**| Address ID | |
+
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
+
+
 ## getRoutingSmsPhonenumber
 
 
@@ -3955,7 +4124,7 @@ RoutingAPI.getRoutingSmsPhonenumber(phoneNumberId: phoneNumberId, expand: expand
 
 
 
-> [SmsPhoneNumberEntityListing](SmsPhoneNumberEntityListing) getRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId, supportedContentId)
+> [SmsPhoneNumberEntityListing](SmsPhoneNumberEntityListing) getRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId, supportedContentId, expand)
 
 Get a list of provisioned phone numbers.
 
@@ -3986,9 +4155,10 @@ let sortOrder: RoutingAPI.SortOrder_getRoutingSmsPhonenumbers = RoutingAPI.SortO
 let language: String = en-US // A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize country field and sort operations
 let integrationId: String = "" // Filter on the Genesys Cloud integration id to which the phone number belongs to
 let supportedContentId: String = "" // Filter based on the supported content ID
+let expand: [String] = [""] // Which fields, if any, to expand
 
 // Code example
-RoutingAPI.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: phoneNumberType, phoneNumberStatus: phoneNumberStatus, countryCode: countryCode, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, language: language, integrationId: integrationId, supportedContentId: supportedContentId) { (response, error) in
+RoutingAPI.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: phoneNumberType, phoneNumberStatus: phoneNumberStatus, countryCode: countryCode, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, language: language, integrationId: integrationId, supportedContentId: supportedContentId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4014,6 +4184,7 @@ RoutingAPI.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: 
 | **language** | **String**| A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize country field and sort operations | [optional] |
 | **integrationId** | **String**| Filter on the Genesys Cloud integration id to which the phone number belongs to | [optional] |
 | **supportedContentId** | **String**| Filter based on the supported content ID | [optional] |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: identityresolution ("identityresolution"), supportedcontent ("supportedContent") |
 
 
 ### Return type
@@ -7001,6 +7172,61 @@ RoutingAPI.putRoutingEmailDomainRoute(domainName: domainName, routeId: routeId, 
 [**InboundRoute**](InboundRoute)
 
 
+## putRoutingEmailDomainRouteIdentityresolution
+
+
+
+> [IdentityResolutionConfig](IdentityResolutionConfig) putRoutingEmailDomainRouteIdentityresolution(domainName, routeId, body)
+
+Update identity resolution settings for a route.
+
+
+
+Wraps PUT /api/v2/routing/email/domains/{domainName}/routes/{routeId}/identityresolution  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+* routing:identityResolution:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainName: String = "" // email domain
+let routeId: String = "" // route ID
+let body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // 
+
+// Code example
+RoutingAPI.putRoutingEmailDomainRouteIdentityresolution(domainName: domainName, routeId: routeId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.putRoutingEmailDomainRouteIdentityresolution was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainName** | **String**| email domain | |
+| **routeId** | **String**| route ID | |
+| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  | |
+
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
+
+
 ## putRoutingEmailOutboundDomainActivation
 
 
@@ -7155,6 +7381,59 @@ RoutingAPI.putRoutingQueue(queueId: queueId, body: body) { (response, error) in
 [**Queue**](Queue)
 
 
+## putRoutingQueueIdentityresolution
+
+
+
+> [IdentityResolutionQueueConfig](IdentityResolutionQueueConfig) putRoutingQueueIdentityresolution(queueId, body)
+
+Update Queue IdentityResolution Settings.
+
+
+
+Wraps PUT /api/v2/routing/queues/{queueId}/identityresolution  
+
+Requires ALL permissions: 
+
+* routing:queue:edit
+* routing:identityResolution:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let queueId: String = "" // Queue ID
+let body: IdentityResolutionQueueConfig = new IdentityResolutionQueueConfig(...) // 
+
+// Code example
+RoutingAPI.putRoutingQueueIdentityresolution(queueId: queueId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.putRoutingQueueIdentityresolution was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **queueId** | **String**| Queue ID | |
+| **body** | [**IdentityResolutionQueueConfig**](IdentityResolutionQueueConfig)|  | |
+
+
+### Return type
+
+[**IdentityResolutionQueueConfig**](IdentityResolutionQueueConfig)
+
+
 ## putRoutingSettings
 
 
@@ -7253,6 +7532,59 @@ RoutingAPI.putRoutingSettingsTranscription(body: body) { (response, error) in
 ### Return type
 
 [**TranscriptionSettings**](TranscriptionSettings)
+
+
+## putRoutingSmsIdentityresolutionPhonenumber
+
+
+
+> [IdentityResolutionConfig](IdentityResolutionConfig) putRoutingSmsIdentityresolutionPhonenumber(addressId, body)
+
+Update an SMS identity resolution settings.
+
+
+
+Wraps PUT /api/v2/routing/sms/identityresolution/phonenumbers/{addressId}  
+
+Requires ALL permissions: 
+
+* sms:phoneNumber:edit
+* routing:identityResolution:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let addressId: String = "" // Address ID
+let body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // 
+
+// Code example
+RoutingAPI.putRoutingSmsIdentityresolutionPhonenumber(addressId: addressId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.putRoutingSmsIdentityresolutionPhonenumber was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **addressId** | **String**| Address ID | |
+| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  | |
+
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
 
 
 ## putRoutingUserDirectroutingbackupSettings
@@ -7619,4 +7951,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@166.0.0_
+_PureCloudPlatformClientV2@167.0.0_

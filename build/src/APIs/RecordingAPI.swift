@@ -2710,6 +2710,7 @@ open class RecordingAPI {
   "id" : "id",
   "endTime" : "endTime",
   "mediaSubject" : "mediaSubject",
+  "region" : "af-south-1",
   "remainingRestorationsAllowedForOrg" : 6,
   "deleteDate" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]
@@ -2820,6 +2821,7 @@ open class RecordingAPI {
   "id" : "id",
   "endTime" : "endTime",
   "mediaSubject" : "mediaSubject",
+  "region" : "af-south-1",
   "remainingRestorationsAllowedForOrg" : 6,
   "deleteDate" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]

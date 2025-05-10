@@ -14,7 +14,8 @@ Message content element.
 | **generic** | [**WebMessagingGeneric**](WebMessagingGeneric) | Generic content (Deprecated). | [optional] |
 | **card** | [**ContentCard**](ContentCard) | Card content | [optional] |
 | **carousel** | [**ContentCarousel**](ContentCarousel) | Carousel content | [optional] |
+| **datePicker** | [**ContentDatePicker**](ContentDatePicker) | DatePicker content | [optional] |
 
 
 
-_PureCloudPlatformClientV2@166.0.0_
+_PureCloudPlatformClientV2@167.0.0_

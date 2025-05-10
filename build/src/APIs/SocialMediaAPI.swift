@@ -328,40 +328,42 @@ open class SocialMediaAPI {
         "metric" : "metric",
         "stats" : {
           "countUnknown" : 7,
+          "average" : 3.616076749251911,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 9.301444243932576,
           "p95" : 1,
           "countNegative" : 5,
-          "numerator" : 4.145608029883936,
-          "denominator" : 7.386281948385884,
-          "target" : 1.2315135367772556,
-          "p99" : 1,
-          "current" : 3.616076749251911,
+          "numerator" : 7.386281948385884,
+          "denominator" : 1.2315135367772556,
+          "target" : 1.0246457001441578,
+          "p99" : 6,
+          "current" : 2.027123023002322,
           "min" : 6.027456183070403,
           "countNeutral" : 2,
           "countPositive" : 5,
-          "ratio" : 2.027123023002322
+          "ratio" : 4.145608029883936
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
           "countUnknown" : 7,
+          "average" : 3.616076749251911,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 9.301444243932576,
           "p95" : 1,
           "countNegative" : 5,
-          "numerator" : 4.145608029883936,
-          "denominator" : 7.386281948385884,
-          "target" : 1.2315135367772556,
-          "p99" : 1,
-          "current" : 3.616076749251911,
+          "numerator" : 7.386281948385884,
+          "denominator" : 1.2315135367772556,
+          "target" : 1.0246457001441578,
+          "p99" : 6,
+          "current" : 2.027123023002322,
           "min" : 6.027456183070403,
           "countNeutral" : 2,
           "countPositive" : 5,
-          "ratio" : 2.027123023002322
+          "ratio" : 4.145608029883936
         },
         "qualifier" : "qualifier"
       } ]
@@ -371,40 +373,42 @@ open class SocialMediaAPI {
         "metric" : "metric",
         "stats" : {
           "countUnknown" : 7,
+          "average" : 3.616076749251911,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 9.301444243932576,
           "p95" : 1,
           "countNegative" : 5,
-          "numerator" : 4.145608029883936,
-          "denominator" : 7.386281948385884,
-          "target" : 1.2315135367772556,
-          "p99" : 1,
-          "current" : 3.616076749251911,
+          "numerator" : 7.386281948385884,
+          "denominator" : 1.2315135367772556,
+          "target" : 1.0246457001441578,
+          "p99" : 6,
+          "current" : 2.027123023002322,
           "min" : 6.027456183070403,
           "countNeutral" : 2,
           "countPositive" : 5,
-          "ratio" : 2.027123023002322
+          "ratio" : 4.145608029883936
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
           "countUnknown" : 7,
+          "average" : 3.616076749251911,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 9.301444243932576,
           "p95" : 1,
           "countNegative" : 5,
-          "numerator" : 4.145608029883936,
-          "denominator" : 7.386281948385884,
-          "target" : 1.2315135367772556,
-          "p99" : 1,
-          "current" : 3.616076749251911,
+          "numerator" : 7.386281948385884,
+          "denominator" : 1.2315135367772556,
+          "target" : 1.0246457001441578,
+          "p99" : 6,
+          "current" : 2.027123023002322,
           "min" : 6.027456183070403,
           "countNeutral" : 2,
           "countPositive" : 5,
-          "ratio" : 2.027123023002322
+          "ratio" : 4.145608029883936
         },
         "qualifier" : "qualifier"
       } ]
@@ -419,40 +423,42 @@ open class SocialMediaAPI {
         "metric" : "metric",
         "stats" : {
           "countUnknown" : 7,
+          "average" : 3.616076749251911,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 9.301444243932576,
           "p95" : 1,
           "countNegative" : 5,
-          "numerator" : 4.145608029883936,
-          "denominator" : 7.386281948385884,
-          "target" : 1.2315135367772556,
-          "p99" : 1,
-          "current" : 3.616076749251911,
+          "numerator" : 7.386281948385884,
+          "denominator" : 1.2315135367772556,
+          "target" : 1.0246457001441578,
+          "p99" : 6,
+          "current" : 2.027123023002322,
           "min" : 6.027456183070403,
           "countNeutral" : 2,
           "countPositive" : 5,
-          "ratio" : 2.027123023002322
+          "ratio" : 4.145608029883936
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
           "countUnknown" : 7,
+          "average" : 3.616076749251911,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 9.301444243932576,
           "p95" : 1,
           "countNegative" : 5,
-          "numerator" : 4.145608029883936,
-          "denominator" : 7.386281948385884,
-          "target" : 1.2315135367772556,
-          "p99" : 1,
-          "current" : 3.616076749251911,
+          "numerator" : 7.386281948385884,
+          "denominator" : 1.2315135367772556,
+          "target" : 1.0246457001441578,
+          "p99" : 6,
+          "current" : 2.027123023002322,
           "min" : 6.027456183070403,
           "countNeutral" : 2,
           "countPositive" : 5,
-          "ratio" : 2.027123023002322
+          "ratio" : 4.145608029883936
         },
         "qualifier" : "qualifier"
       } ]
@@ -462,40 +468,42 @@ open class SocialMediaAPI {
         "metric" : "metric",
         "stats" : {
           "countUnknown" : 7,
+          "average" : 3.616076749251911,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 9.301444243932576,
           "p95" : 1,
           "countNegative" : 5,
-          "numerator" : 4.145608029883936,
-          "denominator" : 7.386281948385884,
-          "target" : 1.2315135367772556,
-          "p99" : 1,
-          "current" : 3.616076749251911,
+          "numerator" : 7.386281948385884,
+          "denominator" : 1.2315135367772556,
+          "target" : 1.0246457001441578,
+          "p99" : 6,
+          "current" : 2.027123023002322,
           "min" : 6.027456183070403,
           "countNeutral" : 2,
           "countPositive" : 5,
-          "ratio" : 2.027123023002322
+          "ratio" : 4.145608029883936
         },
         "qualifier" : "qualifier"
       }, {
         "metric" : "metric",
         "stats" : {
           "countUnknown" : 7,
+          "average" : 3.616076749251911,
           "max" : 0.8008281904610115,
           "count" : 1,
           "sum" : 9.301444243932576,
           "p95" : 1,
           "countNegative" : 5,
-          "numerator" : 4.145608029883936,
-          "denominator" : 7.386281948385884,
-          "target" : 1.2315135367772556,
-          "p99" : 1,
-          "current" : 3.616076749251911,
+          "numerator" : 7.386281948385884,
+          "denominator" : 1.2315135367772556,
+          "target" : 1.0246457001441578,
+          "p99" : 6,
+          "current" : 2.027123023002322,
           "min" : 6.027456183070403,
           "countNeutral" : 2,
           "countPositive" : 5,
-          "ratio" : 2.027123023002322
+          "ratio" : 4.145608029883936
         },
         "qualifier" : "qualifier"
       } ]

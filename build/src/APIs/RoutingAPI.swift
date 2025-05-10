@@ -1610,15 +1610,22 @@ open class RoutingAPI {
     
     
     
+    
+    
+    public enum Expand_getRoutingEmailDomainRoute: String { 
+        case identityresolution = "identityresolution"
+    }
+    
     /**
      Get a route
      
      - parameter domainName: (path) email domain 
      - parameter routeId: (path) route ID 
+     - parameter expand: (query) Which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingEmailDomainRoute(domainName: String, routeId: String, completion: @escaping ((_ data: InboundRoute?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingEmailDomainRouteWithRequestBuilder(domainName: domainName, routeId: routeId)
+    open class func getRoutingEmailDomainRoute(domainName: String, routeId: String, expand: [String]? = nil, completion: @escaping ((_ data: InboundRoute?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailDomainRouteWithRequestBuilder(domainName: domainName, routeId: routeId, expand: expand)
         requestBuilder.execute { (response: Response<InboundRoute>?, error) -> Void in
             do {
                 if let e = error {
@@ -1677,11 +1684,80 @@ open class RoutingAPI {
      
      - parameter domainName: (path) email domain 
      - parameter routeId: (path) route ID 
+     - parameter expand: (query) Which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<InboundRoute> 
      */
-    open class func getRoutingEmailDomainRouteWithRequestBuilder(domainName: String, routeId: String) -> RequestBuilder<InboundRoute> {        
+    open class func getRoutingEmailDomainRouteWithRequestBuilder(domainName: String, routeId: String, expand: [String]? = nil) -> RequestBuilder<InboundRoute> {        
         var path = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}"
+        let domainNamePreEscape = "\(domainName)"
+        let domainNamePostEscape = domainNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainName}", with: domainNamePostEscape, options: .literal, range: nil)
+        let routeIdPreEscape = "\(routeId)"
+        let routeIdPostEscape = routeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{routeId}", with: routeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<InboundRoute>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a route identity resolution setting.
+     
+     - parameter domainName: (path) email domain 
+     - parameter routeId: (path) route ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingEmailDomainRouteIdentityresolution(domainName: String, routeId: String, completion: @escaping ((_ data: IdentityResolutionConfig?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailDomainRouteIdentityresolutionWithRequestBuilder(domainName: domainName, routeId: routeId)
+        requestBuilder.execute { (response: Response<IdentityResolutionConfig>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a route identity resolution setting.
+     - GET /api/v2/routing/email/domains/{domainName}/routes/{routeId}/identityresolution
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "resolveIdentities" : true,
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter domainName: (path) email domain 
+     - parameter routeId: (path) route ID 
+
+     - returns: RequestBuilder<IdentityResolutionConfig> 
+     */
+    open class func getRoutingEmailDomainRouteIdentityresolutionWithRequestBuilder(domainName: String, routeId: String) -> RequestBuilder<IdentityResolutionConfig> {        
+        var path = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}/identityresolution"
         let domainNamePreEscape = "\(domainName)"
         let domainNamePostEscape = domainNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{domainName}", with: domainNamePostEscape, options: .literal, range: nil)
@@ -1693,7 +1769,7 @@ open class RoutingAPI {
         
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<InboundRoute>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<IdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1706,6 +1782,12 @@ open class RoutingAPI {
     
     
     
+    
+    
+    public enum Expand_getRoutingEmailDomainRoutes: String { 
+        case identityresolution = "identityresolution"
+    }
+    
     /**
      Get routes
      
@@ -1713,10 +1795,11 @@ open class RoutingAPI {
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter pattern: (query) Filter routes by the route&#39;s pattern property (optional)
+     - parameter expand: (query) Which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingEmailDomainRoutes(domainName: String, pageSize: Int? = nil, pageNumber: Int? = nil, pattern: String? = nil, completion: @escaping ((_ data: InboundRouteEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingEmailDomainRoutesWithRequestBuilder(domainName: domainName, pageSize: pageSize, pageNumber: pageNumber, pattern: pattern)
+    open class func getRoutingEmailDomainRoutes(domainName: String, pageSize: Int? = nil, pageNumber: Int? = nil, pattern: String? = nil, expand: [String]? = nil, completion: @escaping ((_ data: InboundRouteEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailDomainRoutesWithRequestBuilder(domainName: domainName, pageSize: pageSize, pageNumber: pageNumber, pattern: pattern, expand: expand)
         requestBuilder.execute { (response: Response<InboundRouteEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1820,10 +1903,11 @@ open class RoutingAPI {
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter pattern: (query) Filter routes by the route&#39;s pattern property (optional)
+     - parameter expand: (query) Which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<InboundRouteEntityListing> 
      */
-    open class func getRoutingEmailDomainRoutesWithRequestBuilder(domainName: String, pageSize: Int? = nil, pageNumber: Int? = nil, pattern: String? = nil) -> RequestBuilder<InboundRouteEntityListing> {        
+    open class func getRoutingEmailDomainRoutesWithRequestBuilder(domainName: String, pageSize: Int? = nil, pageNumber: Int? = nil, pattern: String? = nil, expand: [String]? = nil) -> RequestBuilder<InboundRouteEntityListing> {        
         var path = "/api/v2/routing/email/domains/{domainName}/routes"
         let domainNamePreEscape = "\(domainName)"
         let domainNamePostEscape = domainNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1835,7 +1919,8 @@ open class RoutingAPI {
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
-            "pattern": pattern
+            "pattern": pattern, 
+            "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<InboundRouteEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3160,14 +3245,21 @@ open class RoutingAPI {
 
     
     
+    
+    
+    public enum Expand_getRoutingQueue: String { 
+        case identityresolution = "identityresolution"
+    }
+    
     /**
      Get details about this queue.
      
      - parameter queueId: (path) Queue ID 
+     - parameter expand: (query) Which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingQueue(queueId: String, completion: @escaping ((_ data: Queue?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingQueueWithRequestBuilder(queueId: queueId)
+    open class func getRoutingQueue(queueId: String, expand: [String]? = nil, completion: @escaping ((_ data: Queue?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueueWithRequestBuilder(queueId: queueId, expand: expand)
         requestBuilder.execute { (response: Response<Queue>?, error) -> Void in
             do {
                 if let e = error {
@@ -3300,10 +3392,11 @@ open class RoutingAPI {
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue ID 
+     - parameter expand: (query) Which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<Queue> 
      */
-    open class func getRoutingQueueWithRequestBuilder(queueId: String) -> RequestBuilder<Queue> {        
+    open class func getRoutingQueueWithRequestBuilder(queueId: String, expand: [String]? = nil) -> RequestBuilder<Queue> {        
         var path = "/api/v2/routing/queues/{queueId}"
         let queueIdPreEscape = "\(queueId)"
         let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3311,7 +3404,10 @@ open class RoutingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
 
         let requestBuilder: RequestBuilder<Queue>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -3640,6 +3736,66 @@ open class RoutingAPI {
         ])
 
         let requestBuilder: RequestBuilder<EstimatedWaitTimePredictions>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get Queue IdentityResolution Settings.
+     
+     - parameter queueId: (path) Queue ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingQueueIdentityresolution(queueId: String, completion: @escaping ((_ data: IdentityResolutionQueueConfig?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueueIdentityresolutionWithRequestBuilder(queueId: queueId)
+        requestBuilder.execute { (response: Response<IdentityResolutionQueueConfig>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Queue IdentityResolution Settings.
+     - GET /api/v2/routing/queues/{queueId}/identityresolution
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "callOnBehalfOfQueue" : {
+    "division" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "resolveIdentities" : true,
+    "id" : "id"
+  }
+}, statusCode=200}]
+     
+     - parameter queueId: (path) Queue ID 
+
+     - returns: RequestBuilder<IdentityResolutionQueueConfig> 
+     */
+    open class func getRoutingQueueIdentityresolutionWithRequestBuilder(queueId: String) -> RequestBuilder<IdentityResolutionQueueConfig> {        
+        var path = "/api/v2/routing/queues/{queueId}/identityresolution"
+        let queueIdPreEscape = "\(queueId)"
+        let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{queueId}", with: queueIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<IdentityResolutionQueueConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -5393,6 +5549,12 @@ open class RoutingAPI {
     
     
     
+    
+    
+    public enum Expand_getRoutingQueues: String { 
+        case identityresolution = "identityresolution"
+    }
+    
     /**
      Get list of queues.
      
@@ -5405,10 +5567,11 @@ open class RoutingAPI {
      - parameter peerId: (query) Include only queues with the specified peer ID(s) (optional)
      - parameter cannedResponseLibraryId: (query) Include only queues explicitly associated with the specified canned response library ID (optional)
      - parameter hasPeer: (query) Include only queues with a peer ID (optional)
+     - parameter expand: (query) Which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingQueues(pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueues? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, peerId: [String]? = nil, cannedResponseLibraryId: String? = nil, hasPeer: Bool? = nil, completion: @escaping ((_ data: QueueEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingQueuesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId, peerId: peerId, cannedResponseLibraryId: cannedResponseLibraryId, hasPeer: hasPeer)
+    open class func getRoutingQueues(pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueues? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, peerId: [String]? = nil, cannedResponseLibraryId: String? = nil, hasPeer: Bool? = nil, expand: [String]? = nil, completion: @escaping ((_ data: QueueEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueuesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId, peerId: peerId, cannedResponseLibraryId: cannedResponseLibraryId, hasPeer: hasPeer, expand: expand)
         requestBuilder.execute { (response: Response<QueueEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -5667,10 +5830,11 @@ open class RoutingAPI {
      - parameter peerId: (query) Include only queues with the specified peer ID(s) (optional)
      - parameter cannedResponseLibraryId: (query) Include only queues explicitly associated with the specified canned response library ID (optional)
      - parameter hasPeer: (query) Include only queues with a peer ID (optional)
+     - parameter expand: (query) Which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<QueueEntityListing> 
      */
-    open class func getRoutingQueuesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueues? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, peerId: [String]? = nil, cannedResponseLibraryId: String? = nil, hasPeer: Bool? = nil) -> RequestBuilder<QueueEntityListing> {        
+    open class func getRoutingQueuesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueues? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, peerId: [String]? = nil, cannedResponseLibraryId: String? = nil, hasPeer: Bool? = nil, expand: [String]? = nil) -> RequestBuilder<QueueEntityListing> {        
         let path = "/api/v2/routing/queues"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -5685,7 +5849,8 @@ open class RoutingAPI {
             "divisionId": divisionId, 
             "peerId": peerId, 
             "cannedResponseLibraryId": cannedResponseLibraryId, 
-            "hasPeer": hasPeer
+            "hasPeer": hasPeer, 
+            "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<QueueEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -7546,6 +7711,64 @@ open class RoutingAPI {
 
     
     
+    /**
+     Get a SMS identity resolution settings.
+     
+     - parameter addressId: (path) Address ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingSmsIdentityresolutionPhonenumber(addressId: String, completion: @escaping ((_ data: IdentityResolutionConfig?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingSmsIdentityresolutionPhonenumberWithRequestBuilder(addressId: addressId)
+        requestBuilder.execute { (response: Response<IdentityResolutionConfig>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a SMS identity resolution settings.
+     - GET /api/v2/routing/sms/identityresolution/phonenumbers/{addressId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "resolveIdentities" : true,
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter addressId: (path) Address ID 
+
+     - returns: RequestBuilder<IdentityResolutionConfig> 
+     */
+    open class func getRoutingSmsIdentityresolutionPhonenumberWithRequestBuilder(addressId: String) -> RequestBuilder<IdentityResolutionConfig> {        
+        var path = "/api/v2/routing/sms/identityresolution/phonenumbers/{addressId}"
+        let addressIdPreEscape = "\(addressId)"
+        let addressIdPostEscape = addressIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{addressId}", with: addressIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<IdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     public enum Expand_getRoutingSmsPhonenumber: String { 
         case compliance = "compliance"
@@ -7695,6 +7918,13 @@ open class RoutingAPI {
     
     
     
+    
+    
+    public enum Expand_getRoutingSmsPhonenumbers: String { 
+        case identityresolution = "identityresolution"
+        case supportedcontent = "supportedContent"
+    }
+    
     /**
      Get a list of provisioned phone numbers.
      
@@ -7709,10 +7939,11 @@ open class RoutingAPI {
      - parameter language: (query) A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional)
      - parameter integrationId: (query) Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)
      - parameter supportedContentId: (query) Filter based on the supported content ID (optional)
+     - parameter expand: (query) Which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingSmsPhonenumbers(phoneNumber: String? = nil, phoneNumberType: [String]? = nil, phoneNumberStatus: [String]? = nil, countryCode: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingSmsPhonenumbers? = nil, sortOrder: SortOrder_getRoutingSmsPhonenumbers? = nil, language: String? = nil, integrationId: String? = nil, supportedContentId: String? = nil, completion: @escaping ((_ data: SmsPhoneNumberEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingSmsPhonenumbersWithRequestBuilder(phoneNumber: phoneNumber, phoneNumberType: phoneNumberType, phoneNumberStatus: phoneNumberStatus, countryCode: countryCode, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, language: language, integrationId: integrationId, supportedContentId: supportedContentId)
+    open class func getRoutingSmsPhonenumbers(phoneNumber: String? = nil, phoneNumberType: [String]? = nil, phoneNumberStatus: [String]? = nil, countryCode: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingSmsPhonenumbers? = nil, sortOrder: SortOrder_getRoutingSmsPhonenumbers? = nil, language: String? = nil, integrationId: String? = nil, supportedContentId: String? = nil, expand: [String]? = nil, completion: @escaping ((_ data: SmsPhoneNumberEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingSmsPhonenumbersWithRequestBuilder(phoneNumber: phoneNumber, phoneNumberType: phoneNumberType, phoneNumberStatus: phoneNumberStatus, countryCode: countryCode, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, language: language, integrationId: integrationId, supportedContentId: supportedContentId, expand: expand)
         requestBuilder.execute { (response: Response<SmsPhoneNumberEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -7815,10 +8046,11 @@ open class RoutingAPI {
      - parameter language: (query) A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional)
      - parameter integrationId: (query) Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)
      - parameter supportedContentId: (query) Filter based on the supported content ID (optional)
+     - parameter expand: (query) Which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<SmsPhoneNumberEntityListing> 
      */
-    open class func getRoutingSmsPhonenumbersWithRequestBuilder(phoneNumber: String? = nil, phoneNumberType: [String]? = nil, phoneNumberStatus: [String]? = nil, countryCode: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingSmsPhonenumbers? = nil, sortOrder: SortOrder_getRoutingSmsPhonenumbers? = nil, language: String? = nil, integrationId: String? = nil, supportedContentId: String? = nil) -> RequestBuilder<SmsPhoneNumberEntityListing> {        
+    open class func getRoutingSmsPhonenumbersWithRequestBuilder(phoneNumber: String? = nil, phoneNumberType: [String]? = nil, phoneNumberStatus: [String]? = nil, countryCode: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingSmsPhonenumbers? = nil, sortOrder: SortOrder_getRoutingSmsPhonenumbers? = nil, language: String? = nil, integrationId: String? = nil, supportedContentId: String? = nil, expand: [String]? = nil) -> RequestBuilder<SmsPhoneNumberEntityListing> {        
         let path = "/api/v2/routing/sms/phonenumbers"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -7835,7 +8067,8 @@ open class RoutingAPI {
             "sortOrder": sortOrder?.rawValue, 
             "language": language, 
             "integration.id": integrationId, 
-            "supportedContent.id": supportedContentId
+            "supportedContent.id": supportedContentId, 
+            "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<SmsPhoneNumberEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -14295,6 +14528,75 @@ open class RoutingAPI {
 
     
     
+    
+    
+    
+    
+    /**
+     Update identity resolution settings for a route.
+     
+     - parameter domainName: (path) email domain 
+     - parameter routeId: (path) route ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putRoutingEmailDomainRouteIdentityresolution(domainName: String, routeId: String, body: IdentityResolutionConfig, completion: @escaping ((_ data: IdentityResolutionConfig?,_ error: Error?) -> Void)) {
+        let requestBuilder = putRoutingEmailDomainRouteIdentityresolutionWithRequestBuilder(domainName: domainName, routeId: routeId, body: body)
+        requestBuilder.execute { (response: Response<IdentityResolutionConfig>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update identity resolution settings for a route.
+     - PUT /api/v2/routing/email/domains/{domainName}/routes/{routeId}/identityresolution
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "resolveIdentities" : true,
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter domainName: (path) email domain 
+     - parameter routeId: (path) route ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<IdentityResolutionConfig> 
+     */
+    open class func putRoutingEmailDomainRouteIdentityresolutionWithRequestBuilder(domainName: String, routeId: String, body: IdentityResolutionConfig) -> RequestBuilder<IdentityResolutionConfig> {        
+        var path = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}/identityresolution"
+        let domainNamePreEscape = "\(domainName)"
+        let domainNamePostEscape = domainNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainName}", with: domainNamePostEscape, options: .literal, range: nil)
+        let routeIdPreEscape = "\(routeId)"
+        let routeIdPostEscape = routeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{routeId}", with: routeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<IdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Request an activation status (cname + dkim) update of an outbound domain
      
@@ -14593,6 +14895,70 @@ open class RoutingAPI {
 
     
     
+    
+    
+    /**
+     Update Queue IdentityResolution Settings.
+     
+     - parameter queueId: (path) Queue ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putRoutingQueueIdentityresolution(queueId: String, body: IdentityResolutionQueueConfig, completion: @escaping ((_ data: IdentityResolutionQueueConfig?,_ error: Error?) -> Void)) {
+        let requestBuilder = putRoutingQueueIdentityresolutionWithRequestBuilder(queueId: queueId, body: body)
+        requestBuilder.execute { (response: Response<IdentityResolutionQueueConfig>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update Queue IdentityResolution Settings.
+     - PUT /api/v2/routing/queues/{queueId}/identityresolution
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "callOnBehalfOfQueue" : {
+    "division" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "resolveIdentities" : true,
+    "id" : "id"
+  }
+}, statusCode=200}]
+     
+     - parameter queueId: (path) Queue ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<IdentityResolutionQueueConfig> 
+     */
+    open class func putRoutingQueueIdentityresolutionWithRequestBuilder(queueId: String, body: IdentityResolutionQueueConfig) -> RequestBuilder<IdentityResolutionQueueConfig> {        
+        var path = "/api/v2/routing/queues/{queueId}/identityresolution"
+        let queueIdPreEscape = "\(queueId)"
+        let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{queueId}", with: queueIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<IdentityResolutionQueueConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Update an organization's routing settings
      
@@ -14696,6 +15062,68 @@ open class RoutingAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TranscriptionSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update an SMS identity resolution settings.
+     
+     - parameter addressId: (path) Address ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putRoutingSmsIdentityresolutionPhonenumber(addressId: String, body: IdentityResolutionConfig, completion: @escaping ((_ data: IdentityResolutionConfig?,_ error: Error?) -> Void)) {
+        let requestBuilder = putRoutingSmsIdentityresolutionPhonenumberWithRequestBuilder(addressId: addressId, body: body)
+        requestBuilder.execute { (response: Response<IdentityResolutionConfig>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an SMS identity resolution settings.
+     - PUT /api/v2/routing/sms/identityresolution/phonenumbers/{addressId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "resolveIdentities" : true,
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter addressId: (path) Address ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<IdentityResolutionConfig> 
+     */
+    open class func putRoutingSmsIdentityresolutionPhonenumberWithRequestBuilder(addressId: String, body: IdentityResolutionConfig) -> RequestBuilder<IdentityResolutionConfig> {        
+        var path = "/api/v2/routing/sms/identityresolution/phonenumbers/{addressId}"
+        let addressIdPreEscape = "\(addressId)"
+        let addressIdPostEscape = addressIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{addressId}", with: addressIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<IdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

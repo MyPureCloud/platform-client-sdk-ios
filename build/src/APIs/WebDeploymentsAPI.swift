@@ -914,9 +914,68 @@ open class WebDeploymentsAPI {
 
     
     
+    /**
+     Get a deployment identity resolution setting.
+     
+     - parameter deploymentId: (path) The deployment ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWebdeploymentsDeploymentIdentityresolution(deploymentId: String, completion: @escaping ((_ data: IdentityResolutionConfig?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWebdeploymentsDeploymentIdentityresolutionWithRequestBuilder(deploymentId: deploymentId)
+        requestBuilder.execute { (response: Response<IdentityResolutionConfig>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a deployment identity resolution setting.
+     - GET /api/v2/webdeployments/deployments/{deploymentId}/identityresolution
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "resolveIdentities" : true,
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter deploymentId: (path) The deployment ID 
+
+     - returns: RequestBuilder<IdentityResolutionConfig> 
+     */
+    open class func getWebdeploymentsDeploymentIdentityresolutionWithRequestBuilder(deploymentId: String) -> RequestBuilder<IdentityResolutionConfig> {        
+        var path = "/api/v2/webdeployments/deployments/{deploymentId}/identityresolution"
+        let deploymentIdPreEscape = "\(deploymentId)"
+        let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<IdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     public enum Expand_getWebdeploymentsDeployments: String { 
         case configuration = "Configuration"
         case supportedContent = "SupportedContent"
+        case identityresolution = "identityresolution"
     }
     
     /**
@@ -1552,6 +1611,68 @@ open class WebDeploymentsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WebDeployment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update identity resolution settings for a deployment.
+     
+     - parameter deploymentId: (path) The deployment ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putWebdeploymentsDeploymentIdentityresolution(deploymentId: String, body: IdentityResolutionConfig, completion: @escaping ((_ data: IdentityResolutionConfig?,_ error: Error?) -> Void)) {
+        let requestBuilder = putWebdeploymentsDeploymentIdentityresolutionWithRequestBuilder(deploymentId: deploymentId, body: body)
+        requestBuilder.execute { (response: Response<IdentityResolutionConfig>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update identity resolution settings for a deployment.
+     - PUT /api/v2/webdeployments/deployments/{deploymentId}/identityresolution
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "resolveIdentities" : true,
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter deploymentId: (path) The deployment ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<IdentityResolutionConfig> 
+     */
+    open class func putWebdeploymentsDeploymentIdentityresolutionWithRequestBuilder(deploymentId: String, body: IdentityResolutionConfig) -> RequestBuilder<IdentityResolutionConfig> {        
+        var path = "/api/v2/webdeployments/deployments/{deploymentId}/identityresolution"
+        let deploymentIdPreEscape = "\(deploymentId)"
+        let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<IdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

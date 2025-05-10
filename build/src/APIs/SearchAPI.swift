@@ -3821,6 +3821,7 @@ open class SearchAPI {
       "userId" : "userId"
     } ],
     "originatingDirection" : "inbound",
+    "originatingSocialMediaPublic" : true,
     "divisionIds" : [ "divisionIds", "divisionIds" ],
     "conferenceStart" : "2000-01-23T04:56:07.000+00:00",
     "mediaStatsMinConversationRFactor" : 6.027456183070403,
@@ -4771,6 +4772,7 @@ open class SearchAPI {
       "userId" : "userId"
     } ],
     "originatingDirection" : "inbound",
+    "originatingSocialMediaPublic" : true,
     "divisionIds" : [ "divisionIds", "divisionIds" ],
     "conferenceStart" : "2000-01-23T04:56:07.000+00:00",
     "mediaStatsMinConversationRFactor" : 6.027456183070403,

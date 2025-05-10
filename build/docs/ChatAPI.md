@@ -567,7 +567,7 @@ ChatAPI.getChatsRoomParticipant(roomJid: roomJid, participantJid: participantJid
 
 
 
-> [RoomParticipantsResponse](RoomParticipantsResponse) getChatsRoomParticipants(roomJid)
+> [RoomParticipantsResponse](RoomParticipantsResponse) getChatsRoomParticipants(roomJid, notify)
 
 Get room participants in a room
 
@@ -589,9 +589,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let roomJid: String = "" // roomJid
+let notify: Bool = true // Whether to get users to notify
 
 // Code example
-ChatAPI.getChatsRoomParticipants(roomJid: roomJid) { (response, error) in
+ChatAPI.getChatsRoomParticipants(roomJid: roomJid, notify: notify) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -607,6 +608,7 @@ ChatAPI.getChatsRoomParticipants(roomJid: roomJid) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **roomJid** | **String**| roomJid | |
+| **notify** | **Bool**| Whether to get users to notify | [optional] |
 
 
 ### Return type
@@ -1704,4 +1706,4 @@ ChatAPI.putChatsSettings(body: body) { (response, error) in
 [**ChatSettings**](ChatSettings)
 
 
-_PureCloudPlatformClientV2@166.0.0_
+_PureCloudPlatformClientV2@167.0.0_

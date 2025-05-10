@@ -1672,6 +1672,7 @@ open class ArchitectAPI {
         case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case digitalbotconnector = "DIGITALBOTCONNECTOR"
         case digitalbotflow = "DIGITALBOTFLOW"
+        case division = "DIVISION"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -1754,6 +1755,7 @@ open class ArchitectAPI {
         case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case digitalbotconnector = "DIGITALBOTCONNECTOR"
         case digitalbotflow = "DIGITALBOTFLOW"
+        case division = "DIVISION"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -1832,6 +1834,7 @@ open class ArchitectAPI {
         case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case digitalbotconnector = "DIGITALBOTCONNECTOR"
         case digitalbotflow = "DIGITALBOTFLOW"
+        case division = "DIVISION"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -2156,6 +2159,7 @@ open class ArchitectAPI {
         case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case digitalbotconnector = "DIGITALBOTCONNECTOR"
         case digitalbotflow = "DIGITALBOTFLOW"
+        case division = "DIVISION"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -2235,6 +2239,7 @@ open class ArchitectAPI {
         case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case digitalbotconnector = "DIGITALBOTCONNECTOR"
         case digitalbotflow = "DIGITALBOTFLOW"
+        case division = "DIVISION"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -2413,6 +2418,7 @@ open class ArchitectAPI {
         case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case digitalbotconnector = "DIGITALBOTCONNECTOR"
         case digitalbotflow = "DIGITALBOTFLOW"
+        case division = "DIVISION"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -2492,6 +2498,7 @@ open class ArchitectAPI {
         case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case digitalbotconnector = "DIGITALBOTCONNECTOR"
         case digitalbotflow = "DIGITALBOTFLOW"
+        case division = "DIVISION"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -2683,6 +2690,7 @@ open class ArchitectAPI {
         case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case digitalbotconnector = "DIGITALBOTCONNECTOR"
         case digitalbotflow = "DIGITALBOTFLOW"
+        case division = "DIVISION"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -2770,6 +2778,7 @@ open class ArchitectAPI {
         case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case digitalbotconnector = "DIGITALBOTCONNECTOR"
         case digitalbotflow = "DIGITALBOTFLOW"
+        case division = "DIVISION"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -3029,6 +3038,7 @@ open class ArchitectAPI {
         case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case digitalbotconnector = "DIGITALBOTCONNECTOR"
         case digitalbotflow = "DIGITALBOTFLOW"
+        case division = "DIVISION"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -3112,6 +3122,7 @@ open class ArchitectAPI {
         case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case digitalbotconnector = "DIGITALBOTCONNECTOR"
         case digitalbotflow = "DIGITALBOTFLOW"
+        case division = "DIVISION"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -3190,6 +3201,7 @@ open class ArchitectAPI {
         case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case digitalbotconnector = "DIGITALBOTCONNECTOR"
         case digitalbotflow = "DIGITALBOTFLOW"
+        case division = "DIVISION"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -3528,6 +3540,7 @@ open class ArchitectAPI {
         case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case digitalbotconnector = "DIGITALBOTCONNECTOR"
         case digitalbotflow = "DIGITALBOTFLOW"
+        case division = "DIVISION"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -3608,6 +3621,7 @@ open class ArchitectAPI {
         case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case digitalbotconnector = "DIGITALBOTCONNECTOR"
         case digitalbotflow = "DIGITALBOTFLOW"
+        case division = "DIVISION"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -4587,6 +4601,62 @@ open class ArchitectAPI {
 
     
     
+    /**
+     Get an IVR IdentityResolutionConfig.
+     
+     - parameter ivrId: (path) IVR id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getArchitectIvrIdentityresolution(ivrId: String, completion: @escaping ((_ data: IdentityResolutionConfig?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectIvrIdentityresolutionWithRequestBuilder(ivrId: ivrId)
+        requestBuilder.execute { (response: Response<IdentityResolutionConfig>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an IVR IdentityResolutionConfig.
+     - GET /api/v2/architect/ivrs/{ivrId}/identityresolution
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "resolveIdentities" : true,
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter ivrId: (path) IVR id 
+
+     - returns: RequestBuilder<IdentityResolutionConfig> 
+     */
+    open class func getArchitectIvrIdentityresolutionWithRequestBuilder(ivrId: String) -> RequestBuilder<IdentityResolutionConfig> {        
+        var path = "/api/v2/architect/ivrs/{ivrId}/identityresolution"
+        let ivrIdPreEscape = "\(ivrId)"
+        let ivrIdPostEscape = ivrIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ivrId}", with: ivrIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<IdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     
     
     
@@ -4598,6 +4668,14 @@ open class ArchitectAPI {
     
     
     
+    
+    
+    
+    
+    
+    public enum Expand_getArchitectIvrs: String { 
+        case identityresolution = "identityresolution"
+    }
     
     /**
      Get IVR configs.
@@ -4609,10 +4687,11 @@ open class ArchitectAPI {
      - parameter name: (query) Name of the IVR to filter by. (optional)
      - parameter dnis: (query) The phone number of the IVR to filter by. (optional)
      - parameter scheduleGroup: (query) The Schedule Group of the IVR to filter by. (optional)
+     - parameter expand: (query) Which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArchitectIvrs(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, dnis: String? = nil, scheduleGroup: String? = nil, completion: @escaping ((_ data: IVREntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getArchitectIvrsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name, dnis: dnis, scheduleGroup: scheduleGroup)
+    open class func getArchitectIvrs(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, dnis: String? = nil, scheduleGroup: String? = nil, expand: [String]? = nil, completion: @escaping ((_ data: IVREntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectIvrsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name, dnis: dnis, scheduleGroup: scheduleGroup, expand: expand)
         requestBuilder.execute { (response: Response<IVREntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -4694,10 +4773,11 @@ open class ArchitectAPI {
      - parameter name: (query) Name of the IVR to filter by. (optional)
      - parameter dnis: (query) The phone number of the IVR to filter by. (optional)
      - parameter scheduleGroup: (query) The Schedule Group of the IVR to filter by. (optional)
+     - parameter expand: (query) Which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<IVREntityListing> 
      */
-    open class func getArchitectIvrsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, dnis: String? = nil, scheduleGroup: String? = nil) -> RequestBuilder<IVREntityListing> {        
+    open class func getArchitectIvrsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, dnis: String? = nil, scheduleGroup: String? = nil, expand: [String]? = nil) -> RequestBuilder<IVREntityListing> {        
         let path = "/api/v2/architect/ivrs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -4710,7 +4790,8 @@ open class ArchitectAPI {
             "sortOrder": sortOrder, 
             "name": name, 
             "dnis": dnis, 
-            "scheduleGroup": scheduleGroup
+            "scheduleGroup": scheduleGroup, 
+            "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<IVREntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -34511,6 +34592,68 @@ open class ArchitectAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<IVR>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update an IVR IdentityResolutionConfig.
+     
+     - parameter ivrId: (path) IVR id 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putArchitectIvrIdentityresolution(ivrId: String, body: IdentityResolutionConfig, completion: @escaping ((_ data: IdentityResolutionConfig?,_ error: Error?) -> Void)) {
+        let requestBuilder = putArchitectIvrIdentityresolutionWithRequestBuilder(ivrId: ivrId, body: body)
+        requestBuilder.execute { (response: Response<IdentityResolutionConfig>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an IVR IdentityResolutionConfig.
+     - PUT /api/v2/architect/ivrs/{ivrId}/identityresolution
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "resolveIdentities" : true,
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter ivrId: (path) IVR id 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<IdentityResolutionConfig> 
+     */
+    open class func putArchitectIvrIdentityresolutionWithRequestBuilder(ivrId: String, body: IdentityResolutionConfig) -> RequestBuilder<IdentityResolutionConfig> {        
+        var path = "/api/v2/architect/ivrs/{ivrId}/identityresolution"
+        let ivrIdPreEscape = "\(ivrId)"
+        let ivrIdPostEscape = ivrIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ivrId}", with: ivrIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<IdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
