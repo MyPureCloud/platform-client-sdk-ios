@@ -13,4 +13,4 @@ Specifies the requirements for a credential that can be provided for configuring
 
 
 
-_PureCloudPlatformClientV2@166.0.0_
+_PureCloudPlatformClientV2@167.0.0_

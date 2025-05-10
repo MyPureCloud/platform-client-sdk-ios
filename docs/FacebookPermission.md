@@ -12,4 +12,4 @@ Facebook Permissions Model
 
 
 
-_PureCloudPlatformClientV2@166.0.0_
+_PureCloudPlatformClientV2@167.0.0_

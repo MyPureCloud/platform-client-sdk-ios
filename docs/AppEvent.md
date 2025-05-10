@@ -18,8 +18,8 @@
 | **mktCampaign** | [**JourneyCampaign**](JourneyCampaign) | Marketing / traffic source information. | [optional] |
 | **searchQuery** | **String** | Represents the keywords in a customer search query. | [optional] |
 | **attributes** | [**[String:CustomEventAttribute]**](CustomEventAttribute) | User-defined attributes associated with a particular event. | |
-| **traits** | [**[String:CustomEventAttribute]**](CustomEventAttribute) | Traits are attributes intrinsic to the customer that may be sent in selected events. Examples are email, name, phone. | |
+| **traits** | [**[String:CustomEventAttribute]**](CustomEventAttribute) | Traits are attributes intrinsic to the customer that may be sent in selected events. Examples are email, givenName, cellPhone. | |
 
 
 
-_PureCloudPlatformClientV2@166.0.0_
+_PureCloudPlatformClientV2@167.0.0_

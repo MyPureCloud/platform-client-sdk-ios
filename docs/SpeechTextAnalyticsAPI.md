@@ -39,6 +39,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSpeechandtextanalyticsTopicsGeneral**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsTopicsGeneral) | Get the Speech &amp; Text Analytics general topics for a given dialect |
 | [**getSpeechandtextanalyticsTopicsGeneralStatus**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsTopicsGeneralStatus) | Get the list of general topics from the org and the system with their current status |
 | [**getSpeechandtextanalyticsTopicsPublishjob**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsTopicsPublishjob) | Get a Speech &amp; Text Analytics publish topics job by id |
+| [**getSpeechandtextanalyticsTranslationsLanguageConversation**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsTranslationsLanguageConversation) | Translate a single interaction recording (or an email conversation) |
+| [**getSpeechandtextanalyticsTranslationsLanguages**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsTranslationsLanguages) | Get supported translation languages |
 | [**patchSpeechandtextanalyticsSettings**](SpeechTextAnalyticsAPI#patchSpeechandtextanalyticsSettings) | Patch Speech And Text Analytics Settings |
 | [**postSpeechandtextanalyticsCategories**](SpeechTextAnalyticsAPI#postSpeechandtextanalyticsCategories) | Create new Speech &amp; Text Analytics category |
 | [**postSpeechandtextanalyticsDictionaryfeedback**](SpeechTextAnalyticsAPI#postSpeechandtextanalyticsDictionaryfeedback) | Create a Speech &amp; Text Analytics DictionaryFeedback |
@@ -1842,6 +1844,108 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopicsPublishjob(jobId: jobId) {
 [**TopicJob**](TopicJob)
 
 
+## getSpeechandtextanalyticsTranslationsLanguageConversation
+
+
+
+> [CommunicationTranslationList](CommunicationTranslationList) getSpeechandtextanalyticsTranslationsLanguageConversation(languageId, conversationId, communicationId, recordingId)
+
+Translate a single interaction recording (or an email conversation)
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/translations/languages/{languageId}/conversations/{conversationId}  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:translation:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let languageId: String = "" // Target translation language
+let conversationId: String = "" // Conversation id
+let communicationId: String = "" // Communication id associated with the conversation. Please provide a valid communicationId when requesting non-email interactions.
+let recordingId: String = "" // Recording id associated with the communication. Please provide a valid recordingId when requesting voice interactions.
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTranslationsLanguageConversation(languageId: languageId, conversationId: conversationId, communicationId: communicationId, recordingId: recordingId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTranslationsLanguageConversation was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **languageId** | **String**| Target translation language | |
+| **conversationId** | **String**| Conversation id | |
+| **communicationId** | **String**| Communication id associated with the conversation. Please provide a valid communicationId when requesting non-email interactions. | [optional] |
+| **recordingId** | **String**| Recording id associated with the communication. Please provide a valid recordingId when requesting voice interactions. | [optional] |
+
+
+### Return type
+
+[**CommunicationTranslationList**](CommunicationTranslationList)
+
+
+## getSpeechandtextanalyticsTranslationsLanguages
+
+
+
+> [TranslateSupportedLanguageList](TranslateSupportedLanguageList) getSpeechandtextanalyticsTranslationsLanguages()
+
+Get supported translation languages
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/translations/languages  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:translation:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTranslationsLanguages() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTranslationsLanguages was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**TranslateSupportedLanguageList**](TranslateSupportedLanguageList)
+
+
 ## patchSpeechandtextanalyticsSettings
 
 
@@ -2761,4 +2865,4 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsTopic(topicId: topicId, body: bo
 [**Topic**](Topic)
 
 
-_PureCloudPlatformClientV2@166.0.0_
+_PureCloudPlatformClientV2@167.0.0_

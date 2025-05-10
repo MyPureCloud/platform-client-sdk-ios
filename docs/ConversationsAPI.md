@@ -80,6 +80,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagesCachedmediaCachedMediaItemId**](ConversationsAPI#getConversationsMessagesCachedmediaCachedMediaItemId) | Get a cached media item |
 | [**getConversationsMessagingFacebookApp**](ConversationsAPI#getConversationsMessagingFacebookApp) | Get Genesys Facebook App Id |
 | [**getConversationsMessagingFacebookPermissions**](ConversationsAPI#getConversationsMessagingFacebookPermissions) | Get a list of Facebook Permissions |
+| [**getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId**](ConversationsAPI#getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId) | Get Facebook messaging integration identity resolution settings |
+| [**getConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId**](ConversationsAPI#getConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId) | Get an open messaging integration Identity Resolution settings |
+| [**getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId**](ConversationsAPI#getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId) | Get a whatsApp integration Identity Resolution settings |
 | [**getConversationsMessagingIntegrationTwitterOauthSettings**](ConversationsAPI#getConversationsMessagingIntegrationTwitterOauthSettings) | Get twitter oauth settings to patch an integration |
 | [**getConversationsMessagingIntegrations**](ConversationsAPI#getConversationsMessagingIntegrations) | Get a list of Integrations |
 | [**getConversationsMessagingIntegrationsFacebook**](ConversationsAPI#getConversationsMessagingIntegrationsFacebook) | Get a list of Facebook Integrations |
@@ -107,6 +110,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationParticipant**](ConversationsAPI#patchConversationParticipant) | Update a participant. |
 | [**patchConversationParticipantAttributes**](ConversationsAPI#patchConversationParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationSecureattributes**](ConversationsAPI#patchConversationSecureattributes) | Update the secure attributes on a conversation. |
+| [**patchConversationSummaryEngagements**](ConversationsAPI#patchConversationSummaryEngagements) | Update agent&#39;s engagement for the summary. |
+| [**patchConversationSummaryFeedback**](ConversationsAPI#patchConversationSummaryFeedback) | Update the feedback for the summary. |
 | [**patchConversationUtilizationlabel**](ConversationsAPI#patchConversationUtilizationlabel) | Update the utilization label on a conversation. When there is no value provided, the system default label is applied |
 | [**patchConversationsAftercallworkConversationIdParticipantCommunication**](ConversationsAPI#patchConversationsAftercallworkConversationIdParticipantCommunication) | Update after-call work for this conversation communication. |
 | [**patchConversationsCall**](ConversationsAPI#patchConversationsCall) | Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
@@ -238,6 +243,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putConversationsEmailRecordingstate**](ConversationsAPI#putConversationsEmailRecordingstate) | Update a conversation by setting its recording state |
 | [**putConversationsKeyconfiguration**](ConversationsAPI#putConversationsKeyconfiguration) | Update the encryption key configurations |
 | [**putConversationsMessageRecordingstate**](ConversationsAPI#putConversationsMessageRecordingstate) | Update a conversation by setting its recording state |
+| [**putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId**](ConversationsAPI#putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId) | Create an identity resolution settings for a Facebook messaging integration |
+| [**putConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId**](ConversationsAPI#putConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId) | Update an open messaging integration Identity Resolution settings |
+| [**putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId**](ConversationsAPI#putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId) | Update a whatsApp integration Identity Resolution settings |
 | [**putConversationsMessagingSettingsDefault**](ConversationsAPI#putConversationsMessagingSettingsDefault) | Set the organization&#39;s default setting that may be applied to to integrations without settings |
 | [**putConversationsMessagingSupportedcontentDefault**](ConversationsAPI#putConversationsMessagingSupportedcontentDefault) | Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. |
 | [**putConversationsMessagingThreadingtimeline**](ConversationsAPI#putConversationsMessagingThreadingtimeline) | Update conversation threading window timeline for each messaging type |
@@ -4117,6 +4125,159 @@ This endpoint does not require any parameters.
 [**FacebookPermissionEntityListing**](FacebookPermissionEntityListing)
 
 
+## getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId
+
+
+
+> [IdentityResolutionConfig](IdentityResolutionConfig) getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId)
+
+Get Facebook messaging integration identity resolution settings
+
+
+
+Wraps GET /api/v2/conversations/messaging/identityresolution/integrations/facebook/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+* messaging:identityResolutionFacebook:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+
+// Code example
+ConversationsAPI.getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId: integrationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
+
+
+## getConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId
+
+
+
+> [OpenMessagingIdentityResolutionConfig](OpenMessagingIdentityResolutionConfig) getConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId(integrationId)
+
+Get an open messaging integration Identity Resolution settings
+
+
+
+Wraps GET /api/v2/conversations/messaging/identityresolution/integrations/open/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+* messaging:identityResolutionOpen:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+
+// Code example
+ConversationsAPI.getConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId(integrationId: integrationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+
+
+### Return type
+
+[**OpenMessagingIdentityResolutionConfig**](OpenMessagingIdentityResolutionConfig)
+
+
+## getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId
+
+
+
+> [IdentityResolutionConfig](IdentityResolutionConfig) getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId)
+
+Get a whatsApp integration Identity Resolution settings
+
+
+
+Wraps GET /api/v2/conversations/messaging/identityresolution/integrations/whatsapp/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+* messaging:identityResolutionWhatsApp:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+
+// Code example
+ConversationsAPI.getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId: integrationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
+
+
 ## getConversationsMessagingIntegrationTwitterOauthSettings
 
 
@@ -4215,7 +4376,7 @@ ConversationsAPI.getConversationsMessagingIntegrations(pageSize: pageSize, pageN
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **expand** | [**[String]**](String)| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
+| **expand** | [**[String]**](String)| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting"), identityresolution ("identityresolution") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
 | **messagingSettingId** | **String**| Filter integrations returned based on the setting ID | [optional] |
 
@@ -4273,7 +4434,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsFacebook(pageSize: pageSiz
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting"), identityresolution ("identityresolution") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
 | **messagingSettingId** | **String**| Filter integrations returned based on the setting ID | [optional] |
 
@@ -4327,7 +4488,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsFacebookIntegrationId(inte
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting"), identityresolution ("identityresolution") |
 
 
 ### Return type
@@ -4383,7 +4544,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsInstagram(pageSize: pageSi
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting"), identityresolution ("identityresolution") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
 | **messagingSettingId** | **String**| Filter integrations returned based on the setting ID | [optional] |
 
@@ -4437,7 +4598,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsInstagramIntegrationId(int
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting"), identityresolution ("identityresolution") |
 
 
 ### Return type
@@ -4495,7 +4656,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsOpen(pageSize: pageSize, p
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting"), identityresolution ("identityresolution") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
 | **messagingSettingId** | **String**| Filter integrations returned based on the setting ID | [optional] |
 
@@ -4551,7 +4712,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsOpenIntegrationId(integrat
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting"), identityresolution ("identityresolution") |
 
 
 ### Return type
@@ -4607,7 +4768,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsTwitter(pageSize: pageSize
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting"), identityresolution ("identityresolution") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
 | **messagingSettingId** | **String**| Filter integrations returned based on the setting ID | [optional] |
 
@@ -4661,7 +4822,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsTwitterIntegrationId(integ
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting"), identityresolution ("identityresolution") |
 
 
 ### Return type
@@ -4763,7 +4924,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsWhatsapp(pageSize: pageSiz
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting"), identityresolution ("identityresolution") |
 | **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
 | **messagingSettingId** | **String**| Filter integrations returned based on the setting ID | [optional] |
 
@@ -4817,7 +4978,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsWhatsappIntegrationId(inte
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting"), identityresolution ("identityresolution") |
 
 
 ### Return type
@@ -5403,6 +5564,7 @@ Wraps PATCH /api/v2/conversations/{conversationId}/participants/{participantId}
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
+* conversation:call:record
 
 ### Example
 
@@ -5543,6 +5705,112 @@ ConversationsAPI.patchConversationSecureattributes(conversationId: conversationI
 ### Return type
 
 **String**
+
+
+## patchConversationSummaryEngagements
+
+
+
+> Void patchConversationSummaryEngagements(conversationId, summaryId, body)
+
+Update agent&#39;s engagement for the summary.
+
+
+
+Wraps PATCH /api/v2/conversations/{conversationId}/summaries/{summaryId}/engagements  
+
+Requires ALL permissions: 
+
+* conversation:summaryEngagement:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // Conversation ID
+let summaryId: String = "" // Summary ID
+let body: EngagementRequest = new EngagementRequest(...) // 
+
+// Code example
+ConversationsAPI.patchConversationSummaryEngagements(conversationId: conversationId, summaryId: summaryId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.patchConversationSummaryEngagements was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| Conversation ID | |
+| **summaryId** | **String**| Summary ID | |
+| **body** | [**EngagementRequest**](EngagementRequest)|  | [optional] |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## patchConversationSummaryFeedback
+
+
+
+> Void patchConversationSummaryFeedback(conversationId, summaryId, body)
+
+Update the feedback for the summary.
+
+
+
+Wraps PATCH /api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback  
+
+Requires ALL permissions: 
+
+* conversation:summaryFeedback:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // Conversation ID
+let summaryId: String = "" // Summary ID
+let body: FeedbackUpdateRequest = new FeedbackUpdateRequest(...) // 
+
+// Code example
+ConversationsAPI.patchConversationSummaryFeedback(conversationId: conversationId, summaryId: summaryId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.patchConversationSummaryFeedback was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| Conversation ID | |
+| **summaryId** | **String**| Summary ID | |
+| **body** | [**FeedbackUpdateRequest**](FeedbackUpdateRequest)|  | [optional] |
+
+
+### Return type
+
+`nil` (empty response body)
 
 
 ## patchConversationUtilizationlabel
@@ -12482,6 +12750,165 @@ ConversationsAPI.putConversationsMessageRecordingstate(conversationId: conversat
 **String**
 
 
+## putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId
+
+
+
+> [IdentityResolutionConfig](IdentityResolutionConfig) putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId, body)
+
+Create an identity resolution settings for a Facebook messaging integration
+
+
+
+Wraps PUT /api/v2/conversations/messaging/identityresolution/integrations/facebook/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:edit
+* messaging:identityResolutionFacebook:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+let body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // IdentityResolutionConfig
+
+// Code example
+ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId: integrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)| IdentityResolutionConfig | |
+
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
+
+
+## putConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId
+
+
+
+> [OpenMessagingIdentityResolutionConfig](OpenMessagingIdentityResolutionConfig) putConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId(integrationId, body)
+
+Update an open messaging integration Identity Resolution settings
+
+
+
+Wraps PUT /api/v2/conversations/messaging/identityresolution/integrations/open/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:edit
+* messaging:identityResolutionOpen:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+let body: OpenMessagingIdentityResolutionConfig = new OpenMessagingIdentityResolutionConfig(...) // 
+
+// Code example
+ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId(integrationId: integrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+| **body** | [**OpenMessagingIdentityResolutionConfig**](OpenMessagingIdentityResolutionConfig)|  | |
+
+
+### Return type
+
+[**OpenMessagingIdentityResolutionConfig**](OpenMessagingIdentityResolutionConfig)
+
+
+## putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId
+
+
+
+> [IdentityResolutionConfig](IdentityResolutionConfig) putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId, body)
+
+Update a whatsApp integration Identity Resolution settings
+
+
+
+Wraps PUT /api/v2/conversations/messaging/identityresolution/integrations/whatsapp/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:edit
+* messaging:identityResolutionWhatsApp:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+let body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // 
+
+// Code example
+ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId: integrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  | |
+
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
+
+
 ## putConversationsMessagingSettingsDefault
 
 
@@ -12796,4 +13223,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@166.0.0_
+_PureCloudPlatformClientV2@167.0.0_

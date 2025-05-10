@@ -10,13 +10,13 @@
 | **pageSize** | **Int** | Deprecated, paging is not supported | [optional] |
 | **pageNumber** | **Int** | Deprecated, paging is not supported | [optional] |
 | **total** | **Int64** | Deprecated, paging is not supported | [optional] |
+| **pageCount** | **Int** | Deprecated, paging is not supported | [optional] |
 | **nextUri** | **String** | Deprecated, paging is not supported | [optional] |
 | **previousUri** | **String** | Deprecated, paging is not supported | [optional] |
 | **lastUri** | **String** | Deprecated, paging is not supported | [optional] |
 | **firstUri** | **String** | Deprecated, paging is not supported | [optional] |
-| **pageCount** | **Int** | Deprecated, paging is not supported | [optional] |
 | **selfUri** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@166.0.0_
+_PureCloudPlatformClientV2@167.0.0_

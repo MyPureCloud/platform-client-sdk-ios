@@ -37,9 +37,10 @@
 | **includeDurationFormatInHeader** | **Bool** | Indicates whether to include selected duration format to the column headers | [optional] |
 | **durationFormat** | **String** | Indicates the duration format for the exports | [optional] |
 | **exportAllowedToRerun** | **Bool** | Indicates whether the export run is allowed to rerun | [optional] |
+| **chartColumns** | [**[ChartColumn]**]([ChartColumn]) | The list of columns for which chart is going to be displayed in export | [optional] |
 | **enabled** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@166.0.0_
+_PureCloudPlatformClientV2@167.0.0_
