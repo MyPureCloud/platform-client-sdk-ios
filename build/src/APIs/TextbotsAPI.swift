@@ -31,17 +31,20 @@ open class TextbotsAPI {
     
     
     
+    
+    
     /**
      Find bots using the currently configured friendly name or ID.
      
      - parameter botType: (query) Bot types (optional)
      - parameter botName: (query) Bot name (optional)
      - parameter botId: (query) Bot IDs. Maximum of 50 (optional)
+     - parameter virtualAgentEnabled: (query) Include or exclude virtual agent flows, only applies to GenesysBotFlows or GenesysDigitalBotFlows (optional)
      - parameter pageSize: (query) The maximum results to return. Maximum of 100 (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getTextbotsBotsSearch(botType: [String]? = nil, botName: String? = nil, botId: [String]? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: BotSearchResponseEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getTextbotsBotsSearchWithRequestBuilder(botType: botType, botName: botName, botId: botId, pageSize: pageSize)
+    open class func getTextbotsBotsSearch(botType: [String]? = nil, botName: String? = nil, botId: [String]? = nil, virtualAgentEnabled: Bool? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: BotSearchResponseEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTextbotsBotsSearchWithRequestBuilder(botType: botType, botName: botName, botId: botId, virtualAgentEnabled: virtualAgentEnabled, pageSize: pageSize)
         requestBuilder.execute { (response: Response<BotSearchResponseEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -67,12 +70,14 @@ open class TextbotsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "virtualAgentEnabled" : true,
     "botType" : "GenesysBotConnector",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
     "id" : "id"
   }, {
+    "virtualAgentEnabled" : true,
     "botType" : "GenesysBotConnector",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
@@ -84,11 +89,12 @@ open class TextbotsAPI {
      - parameter botType: (query) Bot types (optional)
      - parameter botName: (query) Bot name (optional)
      - parameter botId: (query) Bot IDs. Maximum of 50 (optional)
+     - parameter virtualAgentEnabled: (query) Include or exclude virtual agent flows, only applies to GenesysBotFlows or GenesysDigitalBotFlows (optional)
      - parameter pageSize: (query) The maximum results to return. Maximum of 100 (optional)
 
      - returns: RequestBuilder<BotSearchResponseEntityListing> 
      */
-    open class func getTextbotsBotsSearchWithRequestBuilder(botType: [String]? = nil, botName: String? = nil, botId: [String]? = nil, pageSize: Int? = nil) -> RequestBuilder<BotSearchResponseEntityListing> {        
+    open class func getTextbotsBotsSearchWithRequestBuilder(botType: [String]? = nil, botName: String? = nil, botId: [String]? = nil, virtualAgentEnabled: Bool? = nil, pageSize: Int? = nil) -> RequestBuilder<BotSearchResponseEntityListing> {        
         let path = "/api/v2/textbots/bots/search"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -98,6 +104,7 @@ open class TextbotsAPI {
             "botType": botType, 
             "botName": botName, 
             "botId": botId, 
+            "virtualAgentEnabled": virtualAgentEnabled, 
             "pageSize": pageSize?.encodeToJSON()
         ])
 
@@ -281,8 +288,10 @@ open class TextbotsAPI {
       "template" : "{}",
       "quickReplyV2" : "{}",
       "quickReply" : "{}",
-      "attachment" : "{}",
       "buttonResponse" : "{}",
+      "carousel" : "{}",
+      "push" : "{}",
+      "attachment" : "{}",
       "location" : "{}",
       "reactions" : [ {
         "reactionType" : "None",
@@ -292,7 +301,6 @@ open class TextbotsAPI {
         "count" : 0
       } ],
       "text" : "{}",
-      "carousel" : "{}",
       "contentType" : "Reactions",
       "card" : "{}",
       "story" : "{}"
@@ -300,8 +308,10 @@ open class TextbotsAPI {
       "template" : "{}",
       "quickReplyV2" : "{}",
       "quickReply" : "{}",
-      "attachment" : "{}",
       "buttonResponse" : "{}",
+      "carousel" : "{}",
+      "push" : "{}",
+      "attachment" : "{}",
       "location" : "{}",
       "reactions" : [ {
         "reactionType" : "None",
@@ -311,7 +321,6 @@ open class TextbotsAPI {
         "count" : 0
       } ],
       "text" : "{}",
-      "carousel" : "{}",
       "contentType" : "Reactions",
       "card" : "{}",
       "story" : "{}"
@@ -323,8 +332,10 @@ open class TextbotsAPI {
       "template" : "{}",
       "quickReplyV2" : "{}",
       "quickReply" : "{}",
-      "attachment" : "{}",
       "buttonResponse" : "{}",
+      "carousel" : "{}",
+      "push" : "{}",
+      "attachment" : "{}",
       "location" : "{}",
       "reactions" : [ {
         "reactionType" : "None",
@@ -334,7 +345,6 @@ open class TextbotsAPI {
         "count" : 0
       } ],
       "text" : "{}",
-      "carousel" : "{}",
       "contentType" : "Reactions",
       "card" : "{}",
       "story" : "{}"
@@ -342,8 +352,10 @@ open class TextbotsAPI {
       "template" : "{}",
       "quickReplyV2" : "{}",
       "quickReply" : "{}",
-      "attachment" : "{}",
       "buttonResponse" : "{}",
+      "carousel" : "{}",
+      "push" : "{}",
+      "attachment" : "{}",
       "location" : "{}",
       "reactions" : [ {
         "reactionType" : "None",
@@ -353,7 +365,6 @@ open class TextbotsAPI {
         "count" : 0
       } ],
       "text" : "{}",
-      "carousel" : "{}",
       "contentType" : "Reactions",
       "card" : "{}",
       "story" : "{}"

@@ -659,8 +659,10 @@ open class SocialMediaAPI {
           "template" : "{}",
           "quickReplyV2" : "{}",
           "quickReply" : "{}",
-          "attachment" : "{}",
           "buttonResponse" : "{}",
+          "carousel" : "{}",
+          "push" : "{}",
+          "attachment" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -670,7 +672,6 @@ open class SocialMediaAPI {
             "count" : 0
           } ],
           "text" : "{}",
-          "carousel" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
           "story" : "{}"
@@ -678,8 +679,10 @@ open class SocialMediaAPI {
           "template" : "{}",
           "quickReplyV2" : "{}",
           "quickReply" : "{}",
-          "attachment" : "{}",
           "buttonResponse" : "{}",
+          "carousel" : "{}",
+          "push" : "{}",
+          "attachment" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -689,7 +692,6 @@ open class SocialMediaAPI {
             "count" : 0
           } ],
           "text" : "{}",
-          "carousel" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
           "story" : "{}"
@@ -739,8 +741,10 @@ open class SocialMediaAPI {
           "template" : "{}",
           "quickReplyV2" : "{}",
           "quickReply" : "{}",
-          "attachment" : "{}",
           "buttonResponse" : "{}",
+          "carousel" : "{}",
+          "push" : "{}",
+          "attachment" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -750,7 +754,6 @@ open class SocialMediaAPI {
             "count" : 0
           } ],
           "text" : "{}",
-          "carousel" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
           "story" : "{}"
@@ -758,8 +761,10 @@ open class SocialMediaAPI {
           "template" : "{}",
           "quickReplyV2" : "{}",
           "quickReply" : "{}",
-          "attachment" : "{}",
           "buttonResponse" : "{}",
+          "carousel" : "{}",
+          "push" : "{}",
+          "attachment" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -769,7 +774,6 @@ open class SocialMediaAPI {
             "count" : 0
           } ],
           "text" : "{}",
-          "carousel" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
           "story" : "{}"
@@ -822,8 +826,10 @@ open class SocialMediaAPI {
           "template" : "{}",
           "quickReplyV2" : "{}",
           "quickReply" : "{}",
-          "attachment" : "{}",
           "buttonResponse" : "{}",
+          "carousel" : "{}",
+          "push" : "{}",
+          "attachment" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -833,7 +839,6 @@ open class SocialMediaAPI {
             "count" : 0
           } ],
           "text" : "{}",
-          "carousel" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
           "story" : "{}"
@@ -841,8 +846,10 @@ open class SocialMediaAPI {
           "template" : "{}",
           "quickReplyV2" : "{}",
           "quickReply" : "{}",
-          "attachment" : "{}",
           "buttonResponse" : "{}",
+          "carousel" : "{}",
+          "push" : "{}",
+          "attachment" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -852,7 +859,6 @@ open class SocialMediaAPI {
             "count" : 0
           } ],
           "text" : "{}",
-          "carousel" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
           "story" : "{}"
@@ -902,8 +908,10 @@ open class SocialMediaAPI {
           "template" : "{}",
           "quickReplyV2" : "{}",
           "quickReply" : "{}",
-          "attachment" : "{}",
           "buttonResponse" : "{}",
+          "carousel" : "{}",
+          "push" : "{}",
+          "attachment" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -913,7 +921,6 @@ open class SocialMediaAPI {
             "count" : 0
           } ],
           "text" : "{}",
-          "carousel" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
           "story" : "{}"
@@ -921,8 +928,10 @@ open class SocialMediaAPI {
           "template" : "{}",
           "quickReplyV2" : "{}",
           "quickReply" : "{}",
-          "attachment" : "{}",
           "buttonResponse" : "{}",
+          "carousel" : "{}",
+          "push" : "{}",
+          "attachment" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -932,7 +941,6 @@ open class SocialMediaAPI {
             "count" : 0
           } ],
           "text" : "{}",
-          "carousel" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
           "story" : "{}"
@@ -1130,8 +1138,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter divisionId: (query) One division ID 
@@ -1309,8 +1317,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -1578,8 +1586,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -1855,8 +1863,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -1984,8 +1992,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)

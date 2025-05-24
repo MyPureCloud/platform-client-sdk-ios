@@ -3243,8 +3243,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -7488,6 +7488,7 @@ open class WorkforceManagementAPI {
     "receivingShiftId" : "receivingShiftId",
     "receivingUser" : "{}",
     "receivingShiftStart" : "2000-01-23T04:56:07.000+00:00",
+    "receivingWeekDate" : "2000-01-23",
     "oneSided" : true,
     "reviewedBy" : "{}",
     "initiatingUser" : "{}",
@@ -7507,6 +7508,7 @@ open class WorkforceManagementAPI {
     "receivingShiftId" : "receivingShiftId",
     "receivingUser" : "{}",
     "receivingShiftStart" : "2000-01-23T04:56:07.000+00:00",
+    "receivingWeekDate" : "2000-01-23",
     "oneSided" : true,
     "reviewedBy" : "{}",
     "initiatingUser" : "{}",
@@ -7581,9 +7583,11 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "count" : 0,
+    "crossWeekReceivingCount" : 6,
     "weekDate" : "2000-01-23"
   }, {
     "count" : 0,
+    "crossWeekReceivingCount" : 6,
     "weekDate" : "2000-01-23"
   } ]
 }, statusCode=200}]
@@ -8513,17 +8517,20 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
     /**
      Gets all the shift trades for a given week
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter evaluateMatches: (query) Whether to evaluate the matches for violations (optional)
+     - parameter includeCrossWeekShifts: (query) Whether to include all shift trades with either the initiating shift or the receiving shift in the week (optional)
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId: String, weekDateId: Date, evaluateMatches: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: WeekShiftTradeListResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementManagementunitWeekShifttradesWithRequestBuilder(managementUnitId: managementUnitId, weekDateId: weekDateId, evaluateMatches: evaluateMatches, forceDownloadService: forceDownloadService)
+    open class func getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId: String, weekDateId: Date, evaluateMatches: Bool? = nil, includeCrossWeekShifts: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: WeekShiftTradeListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementManagementunitWeekShifttradesWithRequestBuilder(managementUnitId: managementUnitId, weekDateId: weekDateId, evaluateMatches: evaluateMatches, includeCrossWeekShifts: includeCrossWeekShifts, forceDownloadService: forceDownloadService)
         requestBuilder.execute { (response: Response<WeekShiftTradeListResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -8560,11 +8567,12 @@ open class WorkforceManagementAPI {
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter evaluateMatches: (query) Whether to evaluate the matches for violations (optional)
+     - parameter includeCrossWeekShifts: (query) Whether to include all shift trades with either the initiating shift or the receiving shift in the week (optional)
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
 
      - returns: RequestBuilder<WeekShiftTradeListResponse> 
      */
-    open class func getWorkforcemanagementManagementunitWeekShifttradesWithRequestBuilder(managementUnitId: String, weekDateId: Date, evaluateMatches: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<WeekShiftTradeListResponse> {        
+    open class func getWorkforcemanagementManagementunitWeekShifttradesWithRequestBuilder(managementUnitId: String, weekDateId: Date, evaluateMatches: Bool? = nil, includeCrossWeekShifts: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<WeekShiftTradeListResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -8578,6 +8586,7 @@ open class WorkforceManagementAPI {
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "evaluateMatches": evaluateMatches, 
+            "includeCrossWeekShifts": includeCrossWeekShifts, 
             "forceDownloadService": forceDownloadService
         ])
 
@@ -9529,8 +9538,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Deprecated, paging is not supported (optional)
@@ -9627,8 +9636,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return all divisions (optional)
@@ -9823,6 +9832,7 @@ open class WorkforceManagementAPI {
     "receivingShiftId" : "receivingShiftId",
     "receivingUser" : "{}",
     "receivingShiftStart" : "2000-01-23T04:56:07.000+00:00",
+    "receivingWeekDate" : "2000-01-23",
     "oneSided" : true,
     "reviewedBy" : "{}",
     "initiatingUser" : "{}",
@@ -9842,6 +9852,7 @@ open class WorkforceManagementAPI {
     "receivingShiftId" : "receivingShiftId",
     "receivingUser" : "{}",
     "receivingShiftStart" : "2000-01-23T04:56:07.000+00:00",
+    "receivingWeekDate" : "2000-01-23",
     "oneSided" : true,
     "reviewedBy" : "{}",
     "initiatingUser" : "{}",
@@ -12401,6 +12412,7 @@ open class WorkforceManagementAPI {
   "receivingShiftId" : "receivingShiftId",
   "receivingUser" : "{}",
   "receivingShiftStart" : "2000-01-23T04:56:07.000+00:00",
+  "receivingWeekDate" : "2000-01-23",
   "oneSided" : true,
   "reviewedBy" : "{}",
   "initiatingUser" : "{}",
@@ -18274,7 +18286,8 @@ open class WorkforceManagementAPI {
     "params" : {
       "key" : "params"
     }
-  } ]
+  } ],
+  "unevaluatedRules" : [ "PlanningPeriodMinPaidTime", "PlanningPeriodMinPaidTime" ]
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -18349,6 +18362,7 @@ open class WorkforceManagementAPI {
   "receivingShiftId" : "receivingShiftId",
   "receivingUser" : "{}",
   "receivingShiftStart" : "2000-01-23T04:56:07.000+00:00",
+  "receivingWeekDate" : "2000-01-23",
   "oneSided" : true,
   "reviewedBy" : "{}",
   "initiatingUser" : "{}",

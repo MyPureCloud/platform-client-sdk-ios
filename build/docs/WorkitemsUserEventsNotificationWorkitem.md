@@ -31,6 +31,7 @@
 | **modifiedBy** | **String** |  | [optional] |
 | **operation** | **String** |  | [optional] |
 | **changes** | [**[WorkitemsUserEventsNotificationDelta]**]([WorkitemsUserEventsNotificationDelta]) |  | [optional] |
+| **propertyChanges** | [**[WorkitemsUserEventsNotificationPropertyChange]**]([WorkitemsUserEventsNotificationPropertyChange]) |  | [optional] |
 | **assignmentState** | **String** |  | [optional] |
 | **assignmentId** | **String** |  | [optional] |
 | **alertTimeoutSeconds** | **Int64** |  | [optional] |
@@ -49,4 +50,4 @@
 
 
 
-_PureCloudPlatformClientV2@167.0.0_
+_PureCloudPlatformClientV2@168.0.0_

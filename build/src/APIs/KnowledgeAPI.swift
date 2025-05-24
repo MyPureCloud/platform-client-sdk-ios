@@ -2998,7 +2998,6 @@ open class KnowledgeAPI {
     public enum Expand_getKnowledgeKnowledgebaseDocuments: String { 
         case category = "category"
         case labels = "labels"
-        case variations = "variations"
     }
     
     

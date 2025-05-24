@@ -12,4 +12,4 @@ The associated user reference as a member of a performance profile
 
 
 
-_PureCloudPlatformClientV2@167.0.0_
+_PureCloudPlatformClientV2@168.0.0_

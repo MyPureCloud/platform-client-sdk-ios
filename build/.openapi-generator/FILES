@@ -257,6 +257,7 @@ docs/AppEventRequest.md
 docs/AppEventResponse.md
 docs/AppEventResponseSession.md
 docs/AppendToDncActionSettings.md
+docs/AppleOpaqueId.md
 docs/ApprovalNamespace.md
 docs/ArchitectAPI.json
 docs/ArchitectAPI.md
@@ -478,7 +479,8 @@ docs/BuForecastTimeSeriesResult.md
 docs/BuFullDayTimeOffMarker.md
 docs/BuGenerateScheduleRequest.md
 docs/BuGetCurrentAgentScheduleRequest.md
-docs/BuHeadcountForecast.md
+docs/BuHeadcountForecastBuPlanningGroupHeadcountForecastResult.md
+docs/BuHeadcountForecastBuPlanningGroupHeadcountForecastUploadSchema.md
 docs/BuHeadcountForecastResponse.md
 docs/BuImportAgentScheduleUploadSchema.md
 docs/BuImportShortTermForecastSchema.md
@@ -490,7 +492,8 @@ docs/BuListAlternativeShiftTradesResponse.md
 docs/BuManagementUnitScheduleSummary.md
 docs/BuNotificationSettingsRequest.md
 docs/BuNotificationSettingsResponse.md
-docs/BuPlanningGroupHeadcountForecast.md
+docs/BuPlanningGroupHeadcountForecastResult.md
+docs/BuPlanningGroupHeadcountForecastUploadSchema.md
 docs/BuQueryAdherenceExplanationsRequest.md
 docs/BuQueryAdherenceExplanationsResponse.md
 docs/BuQueryAgentSchedulesRequest.md
@@ -1058,15 +1061,20 @@ docs/ConversationContentCarousel.md
 docs/ConversationContentDatePicker.md
 docs/ConversationContentDatePickerAvailableTime.md
 docs/ConversationContentInteractiveApplication.md
+docs/ConversationContentLineItem.md
 docs/ConversationContentListPicker.md
 docs/ConversationContentListPickerItem.md
 docs/ConversationContentListPickerSection.md
 docs/ConversationContentLocation.md
 docs/ConversationContentNotificationTemplate.md
+docs/ConversationContentPaymentRequest.md
+docs/ConversationContentPaymentResponse.md
+docs/ConversationContentPush.md
 docs/ConversationContentQuickReply.md
 docs/ConversationContentQuickReplyV2.md
 docs/ConversationContentReaction.md
 docs/ConversationContentReceivedReplyMessage.md
+docs/ConversationContentRequiredContactField.md
 docs/ConversationContentStory.md
 docs/ConversationContentText.md
 docs/ConversationDeletionProtectionQuery.md
@@ -1202,6 +1210,9 @@ docs/ConversationParticipantSearchRequest.md
 docs/ConversationProfile.md
 docs/ConversationProperties.md
 docs/ConversationPublicMetadata.md
+docs/ConversationPushFailedMessageReferences.md
+docs/ConversationPushNotificationMessageLabel.md
+docs/ConversationPushProviderIntegration.md
 docs/ConversationQuery.md
 docs/ConversationQueueMediaSettings.md
 docs/ConversationReason.md
@@ -1259,6 +1270,7 @@ docs/ConversationSummaryTopicConversationSummary.md
 docs/ConversationSummaryTopicConversationSummaryEvent.md
 docs/ConversationSummaryTopicConversationSummaryParticipant.md
 docs/ConversationSummaryTopicConversationWrapUpCode.md
+docs/ConversationSummaryTopicSummaryExtractedCustomEntity.md
 docs/ConversationSummaryTopicTriggerSource.md
 docs/ConversationSummaryTopicVirtualAgentsConversationFollowupAction.md
 docs/ConversationSummaryTopicVirtualAgentsConversationHeadline.md
@@ -1268,6 +1280,7 @@ docs/ConversationSummaryTopicVirtualAgentsConversationSummary.md
 docs/ConversationSummaryTopicVirtualAgentsConversationSummaryEvent.md
 docs/ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant.md
 docs/ConversationSummaryTopicVirtualAgentsConversationWrapUpCode.md
+docs/ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity.md
 docs/ConversationSummaryTopicVirtualAgentsTriggerSource.md
 docs/ConversationSummaryWrapupCode.md
 docs/ConversationTagsUpdate.md
@@ -1939,6 +1952,7 @@ docs/ExternalContact.md
 docs/ExternalContactReference.md
 docs/ExternalContactsAPI.json
 docs/ExternalContactsAPI.md
+docs/ExternalContactsContactChangedTopicAppleOpaqueId.md
 docs/ExternalContactsContactChangedTopicContact.md
 docs/ExternalContactsContactChangedTopicContactAddress.md
 docs/ExternalContactsContactChangedTopicDataSchema.md
@@ -1982,6 +1996,7 @@ docs/ExternalContactsRelationshipChangedTopicTicker.md
 docs/ExternalContactsRelationshipChangedTopicTwitterId.md
 docs/ExternalContactsRelationshipChangedTopicUser.md
 docs/ExternalContactsSettings.md
+docs/ExternalContactsUnresolvedContactChangedTopicAppleOpaqueId.md
 docs/ExternalContactsUnresolvedContactChangedTopicContact.md
 docs/ExternalContactsUnresolvedContactChangedTopicContactAddress.md
 docs/ExternalContactsUnresolvedContactChangedTopicDataSchema.md
@@ -2871,6 +2886,9 @@ docs/LogicalInterfaceEntityListing.md
 docs/LongTermForecastPlanningGroupData.md
 docs/LongTermForecastResult.md
 docs/LongTermForecastResultResponse.md
+docs/MaestroWebhooksInvocationTopicObject.md
+docs/MaestroWebhooksInvocationTopicPublicWebhooksEvent.md
+docs/MaestroWebhooksInvocationTopicWebhooksInvocation.md
 docs/MailFromResult.md
 docs/ManagementUnit.md
 docs/ManagementUnitListing.md
@@ -4262,6 +4280,7 @@ docs/SummaryAggregateQueryResponse.md
 docs/SummaryAggregationQuery.md
 docs/SummaryAggregationView.md
 docs/SummaryGenerationConfig.md
+docs/SummarySettingEntity.md
 docs/SupportCenterCategory.md
 docs/SupportCenterCompactCategoryModuleTemplate.md
 docs/SupportCenterCustomMessage.md
@@ -4795,6 +4814,12 @@ docs/V2MobiusRulesTopicCondition.md
 docs/V2MobiusRulesTopicConditionRulePredicate.md
 docs/V2MobiusRulesTopicEntityProperties.md
 docs/V2MobiusRulesTopicRule.md
+docs/V2SessionConversationsSummarySettingsPreviewEventConversationFollowupAction.md
+docs/V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage.md
+docs/V2SessionConversationsSummarySettingsPreviewEventConversationResolutionMessage.md
+docs/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryExtractedEntity.md
+docs/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryMessage.md
+docs/V2SessionConversationsSummarySettingsPreviewEventConversationSummarySettingsPreviewMessage.md
 docs/V2WebMessagingUndeliveredMessageTopicMessage.md
 docs/V2WebMessagingUndeliveredMessageTopicWebMessagingUndeliveredMessageEventBody.md
 docs/V2WemEngagementCelebrationUpdatesTopicContestCompleteData.md
@@ -5260,6 +5285,7 @@ docs/WorkitemsChangeWorktypeDelta.md
 docs/WorkitemsEventsNotificationAssignmentSegment.md
 docs/WorkitemsEventsNotificationCustomAttribute.md
 docs/WorkitemsEventsNotificationDelta.md
+docs/WorkitemsEventsNotificationPropertyChange.md
 docs/WorkitemsEventsNotificationScoredAgent.md
 docs/WorkitemsEventsNotificationSession.md
 docs/WorkitemsEventsNotificationWorkitem.md
@@ -5267,6 +5293,7 @@ docs/WorkitemsEventsNotificationWrapup.md
 docs/WorkitemsQueueEventsNotificationAssignmentSegment.md
 docs/WorkitemsQueueEventsNotificationCustomAttribute.md
 docs/WorkitemsQueueEventsNotificationDelta.md
+docs/WorkitemsQueueEventsNotificationPropertyChange.md
 docs/WorkitemsQueueEventsNotificationScoredAgent.md
 docs/WorkitemsQueueEventsNotificationSession.md
 docs/WorkitemsQueueEventsNotificationWorkitem.md
@@ -5274,6 +5301,7 @@ docs/WorkitemsQueueEventsNotificationWrapup.md
 docs/WorkitemsUserEventsNotificationAssignmentSegment.md
 docs/WorkitemsUserEventsNotificationCustomAttribute.md
 docs/WorkitemsUserEventsNotificationDelta.md
+docs/WorkitemsUserEventsNotificationPropertyChange.md
 docs/WorkitemsUserEventsNotificationScoredAgent.md
 docs/WorkitemsUserEventsNotificationSession.md
 docs/WorkitemsUserEventsNotificationWorkitem.md
@@ -5824,6 +5852,7 @@ docs/getConversationsMessagesCachedmediaCachedMediaItemId-example.txt
 docs/getConversationsMessagingFacebookApp-example.txt
 docs/getConversationsMessagingFacebookPermissions-example.txt
 docs/getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId-example.txt
+docs/getConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId-example.txt
 docs/getConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId-example.txt
 docs/getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId-example.txt
 docs/getConversationsMessagingIntegrationTwitterOauthSettings-example.txt
@@ -7856,6 +7885,7 @@ docs/putConversationsEmailRecordingstate-example.txt
 docs/putConversationsKeyconfiguration-example.txt
 docs/putConversationsMessageRecordingstate-example.txt
 docs/putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId-example.txt
+docs/putConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId-example.txt
 docs/putConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId-example.txt
 docs/putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId-example.txt
 docs/putConversationsMessagingSettingsDefault-example.txt
@@ -8394,6 +8424,7 @@ src/Models/AppEventRequest.swift
 src/Models/AppEventResponse.swift
 src/Models/AppEventResponseSession.swift
 src/Models/AppendToDncActionSettings.swift
+src/Models/AppleOpaqueId.swift
 src/Models/ApprovalNamespace.swift
 src/Models/ArchitectDependencyTrackingBuildNotificationClient.swift
 src/Models/ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification.swift
@@ -8607,7 +8638,8 @@ src/Models/BuForecastTimeSeriesResult.swift
 src/Models/BuFullDayTimeOffMarker.swift
 src/Models/BuGenerateScheduleRequest.swift
 src/Models/BuGetCurrentAgentScheduleRequest.swift
-src/Models/BuHeadcountForecast.swift
+src/Models/BuHeadcountForecastBuPlanningGroupHeadcountForecastResult.swift
+src/Models/BuHeadcountForecastBuPlanningGroupHeadcountForecastUploadSchema.swift
 src/Models/BuHeadcountForecastResponse.swift
 src/Models/BuImportAgentScheduleUploadSchema.swift
 src/Models/BuImportShortTermForecastSchema.swift
@@ -8619,7 +8651,8 @@ src/Models/BuListAlternativeShiftTradesResponse.swift
 src/Models/BuManagementUnitScheduleSummary.swift
 src/Models/BuNotificationSettingsRequest.swift
 src/Models/BuNotificationSettingsResponse.swift
-src/Models/BuPlanningGroupHeadcountForecast.swift
+src/Models/BuPlanningGroupHeadcountForecastResult.swift
+src/Models/BuPlanningGroupHeadcountForecastUploadSchema.swift
 src/Models/BuQueryAdherenceExplanationsRequest.swift
 src/Models/BuQueryAdherenceExplanationsResponse.swift
 src/Models/BuQueryAgentSchedulesRequest.swift
@@ -9179,15 +9212,20 @@ src/Models/ConversationContentCarousel.swift
 src/Models/ConversationContentDatePicker.swift
 src/Models/ConversationContentDatePickerAvailableTime.swift
 src/Models/ConversationContentInteractiveApplication.swift
+src/Models/ConversationContentLineItem.swift
 src/Models/ConversationContentListPicker.swift
 src/Models/ConversationContentListPickerItem.swift
 src/Models/ConversationContentListPickerSection.swift
 src/Models/ConversationContentLocation.swift
 src/Models/ConversationContentNotificationTemplate.swift
+src/Models/ConversationContentPaymentRequest.swift
+src/Models/ConversationContentPaymentResponse.swift
+src/Models/ConversationContentPush.swift
 src/Models/ConversationContentQuickReply.swift
 src/Models/ConversationContentQuickReplyV2.swift
 src/Models/ConversationContentReaction.swift
 src/Models/ConversationContentReceivedReplyMessage.swift
+src/Models/ConversationContentRequiredContactField.swift
 src/Models/ConversationContentStory.swift
 src/Models/ConversationContentText.swift
 src/Models/ConversationDeletionProtectionQuery.swift
@@ -9323,6 +9361,9 @@ src/Models/ConversationParticipantSearchRequest.swift
 src/Models/ConversationProfile.swift
 src/Models/ConversationProperties.swift
 src/Models/ConversationPublicMetadata.swift
+src/Models/ConversationPushFailedMessageReferences.swift
+src/Models/ConversationPushNotificationMessageLabel.swift
+src/Models/ConversationPushProviderIntegration.swift
 src/Models/ConversationQuery.swift
 src/Models/ConversationQueueMediaSettings.swift
 src/Models/ConversationReason.swift
@@ -9380,6 +9421,7 @@ src/Models/ConversationSummaryTopicConversationSummary.swift
 src/Models/ConversationSummaryTopicConversationSummaryEvent.swift
 src/Models/ConversationSummaryTopicConversationSummaryParticipant.swift
 src/Models/ConversationSummaryTopicConversationWrapUpCode.swift
+src/Models/ConversationSummaryTopicSummaryExtractedCustomEntity.swift
 src/Models/ConversationSummaryTopicTriggerSource.swift
 src/Models/ConversationSummaryTopicVirtualAgentsConversationFollowupAction.swift
 src/Models/ConversationSummaryTopicVirtualAgentsConversationHeadline.swift
@@ -9389,6 +9431,7 @@ src/Models/ConversationSummaryTopicVirtualAgentsConversationSummary.swift
 src/Models/ConversationSummaryTopicVirtualAgentsConversationSummaryEvent.swift
 src/Models/ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant.swift
 src/Models/ConversationSummaryTopicVirtualAgentsConversationWrapUpCode.swift
+src/Models/ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity.swift
 src/Models/ConversationSummaryTopicVirtualAgentsTriggerSource.swift
 src/Models/ConversationSummaryWrapupCode.swift
 src/Models/ConversationTagsUpdate.swift
@@ -10044,6 +10087,7 @@ src/Models/ExtensionPoolDivisionViewEntityListing.swift
 src/Models/ExtensionPoolEntityListing.swift
 src/Models/ExternalContact.swift
 src/Models/ExternalContactReference.swift
+src/Models/ExternalContactsContactChangedTopicAppleOpaqueId.swift
 src/Models/ExternalContactsContactChangedTopicContact.swift
 src/Models/ExternalContactsContactChangedTopicContactAddress.swift
 src/Models/ExternalContactsContactChangedTopicDataSchema.swift
@@ -10087,6 +10131,7 @@ src/Models/ExternalContactsRelationshipChangedTopicTicker.swift
 src/Models/ExternalContactsRelationshipChangedTopicTwitterId.swift
 src/Models/ExternalContactsRelationshipChangedTopicUser.swift
 src/Models/ExternalContactsSettings.swift
+src/Models/ExternalContactsUnresolvedContactChangedTopicAppleOpaqueId.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicContact.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicContactAddress.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicDataSchema.swift
@@ -10940,6 +10985,9 @@ src/Models/LogicalInterfaceEntityListing.swift
 src/Models/LongTermForecastPlanningGroupData.swift
 src/Models/LongTermForecastResult.swift
 src/Models/LongTermForecastResultResponse.swift
+src/Models/MaestroWebhooksInvocationTopicObject.swift
+src/Models/MaestroWebhooksInvocationTopicPublicWebhooksEvent.swift
+src/Models/MaestroWebhooksInvocationTopicWebhooksInvocation.swift
 src/Models/MailFromResult.swift
 src/Models/ManagementUnit.swift
 src/Models/ManagementUnitListing.swift
@@ -12284,6 +12332,7 @@ src/Models/SummaryAggregateQueryResponse.swift
 src/Models/SummaryAggregationQuery.swift
 src/Models/SummaryAggregationView.swift
 src/Models/SummaryGenerationConfig.swift
+src/Models/SummarySettingEntity.swift
 src/Models/SupportCenterCategory.swift
 src/Models/SupportCenterCompactCategoryModuleTemplate.swift
 src/Models/SupportCenterCustomMessage.swift
@@ -12795,6 +12844,12 @@ src/Models/V2MobiusRulesTopicCondition.swift
 src/Models/V2MobiusRulesTopicConditionRulePredicate.swift
 src/Models/V2MobiusRulesTopicEntityProperties.swift
 src/Models/V2MobiusRulesTopicRule.swift
+src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationFollowupAction.swift
+src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage.swift
+src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationResolutionMessage.swift
+src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryExtractedEntity.swift
+src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryMessage.swift
+src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationSummarySettingsPreviewMessage.swift
 src/Models/V2WebMessagingUndeliveredMessageTopicMessage.swift
 src/Models/V2WebMessagingUndeliveredMessageTopicWebMessagingUndeliveredMessageEventBody.swift
 src/Models/V2WemEngagementCelebrationUpdatesTopicContestCompleteData.swift
@@ -13247,6 +13302,7 @@ src/Models/WorkitemsChangeWorktypeDelta.swift
 src/Models/WorkitemsEventsNotificationAssignmentSegment.swift
 src/Models/WorkitemsEventsNotificationCustomAttribute.swift
 src/Models/WorkitemsEventsNotificationDelta.swift
+src/Models/WorkitemsEventsNotificationPropertyChange.swift
 src/Models/WorkitemsEventsNotificationScoredAgent.swift
 src/Models/WorkitemsEventsNotificationSession.swift
 src/Models/WorkitemsEventsNotificationWorkitem.swift
@@ -13254,6 +13310,7 @@ src/Models/WorkitemsEventsNotificationWrapup.swift
 src/Models/WorkitemsQueueEventsNotificationAssignmentSegment.swift
 src/Models/WorkitemsQueueEventsNotificationCustomAttribute.swift
 src/Models/WorkitemsQueueEventsNotificationDelta.swift
+src/Models/WorkitemsQueueEventsNotificationPropertyChange.swift
 src/Models/WorkitemsQueueEventsNotificationScoredAgent.swift
 src/Models/WorkitemsQueueEventsNotificationSession.swift
 src/Models/WorkitemsQueueEventsNotificationWorkitem.swift
@@ -13261,6 +13318,7 @@ src/Models/WorkitemsQueueEventsNotificationWrapup.swift
 src/Models/WorkitemsUserEventsNotificationAssignmentSegment.swift
 src/Models/WorkitemsUserEventsNotificationCustomAttribute.swift
 src/Models/WorkitemsUserEventsNotificationDelta.swift
+src/Models/WorkitemsUserEventsNotificationPropertyChange.swift
 src/Models/WorkitemsUserEventsNotificationScoredAgent.swift
 src/Models/WorkitemsUserEventsNotificationSession.swift
 src/Models/WorkitemsUserEventsNotificationWorkitem.swift

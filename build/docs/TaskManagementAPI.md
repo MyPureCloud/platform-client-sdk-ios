@@ -35,7 +35,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTaskmanagementWorkitemsSchemaVersion**](TaskManagementAPI#getTaskmanagementWorkitemsSchemaVersion) | Get a specific version of a schema |
 | [**getTaskmanagementWorkitemsSchemaVersions**](TaskManagementAPI#getTaskmanagementWorkitemsSchemaVersions) | Get all versions of a schema |
 | [**getTaskmanagementWorkitemsSchemas**](TaskManagementAPI#getTaskmanagementWorkitemsSchemas) | Get a list of schemas. |
-| [**getTaskmanagementWorkitemsSchemasCoretype**](TaskManagementAPI#getTaskmanagementWorkitemsSchemasCoretype) | Get the core types from which all schemas are built. |
+| [**getTaskmanagementWorkitemsSchemasCoretype**](TaskManagementAPI#getTaskmanagementWorkitemsSchemasCoretype) | Get a specific named core type. |
 | [**getTaskmanagementWorkitemsSchemasCoretypes**](TaskManagementAPI#getTaskmanagementWorkitemsSchemasCoretypes) | Get the core types from which all schemas are built. |
 | [**getTaskmanagementWorkitemsSchemasLimits**](TaskManagementAPI#getTaskmanagementWorkitemsSchemasLimits) | Get quantitative limits on schemas |
 | [**getTaskmanagementWorktype**](TaskManagementAPI#getTaskmanagementWorktype) | Get a worktype |
@@ -1688,7 +1688,7 @@ This endpoint does not require any parameters.
 
 > [Coretype](Coretype) getTaskmanagementWorkitemsSchemasCoretype(coreTypeName)
 
-Get the core types from which all schemas are built.
+Get a specific named core type.
 
 
 
@@ -1736,7 +1736,7 @@ TaskManagementAPI.getTaskmanagementWorkitemsSchemasCoretype(coreTypeName: coreTy
 
 
 
-> [Coretype](Coretype) getTaskmanagementWorkitemsSchemasCoretypes()
+> [CoretypeListing](CoretypeListing) getTaskmanagementWorkitemsSchemasCoretypes()
 
 Get the core types from which all schemas are built.
 
@@ -1775,7 +1775,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**Coretype**](Coretype)
+[**CoretypeListing**](CoretypeListing)
 
 
 ## getTaskmanagementWorkitemsSchemasLimits
@@ -3959,4 +3959,4 @@ TaskManagementAPI.putTaskmanagementWorkitemsSchema(schemaId: schemaId, body: bod
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatformClientV2@167.0.0_
+_PureCloudPlatformClientV2@168.0.0_

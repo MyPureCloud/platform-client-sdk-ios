@@ -589,7 +589,15 @@ open class ExternalContactsAPI {
   "externalSystemUrl" : "externalSystemUrl",
   "id" : "id",
   "otherEmail" : "otherEmail",
+  "mergedFrom" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "createDate" : "2000-01-23T04:56:07.000+00:00",
+  "mergedTo" : "{}",
   "address" : {
     "address2" : "address2",
     "city" : "city",
@@ -801,6 +809,7 @@ open class ExternalContactsAPI {
     "platform" : "SALESFORCE",
     "url" : "url"
   } ],
+  "instagramId" : "{}",
   "middleName" : "middleName",
   "workPhone" : {
     "extension" : 0,
@@ -1332,8 +1341,8 @@ open class ExternalContactsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "partialResults" : true
 }, statusCode=200}]
      
@@ -1438,7 +1447,15 @@ open class ExternalContactsAPI {
   "externalSystemUrl" : "externalSystemUrl",
   "id" : "id",
   "otherEmail" : "otherEmail",
+  "mergedFrom" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "createDate" : "2000-01-23T04:56:07.000+00:00",
+  "mergedTo" : "{}",
   "address" : {
     "address2" : "address2",
     "city" : "city",
@@ -1650,6 +1667,7 @@ open class ExternalContactsAPI {
     "platform" : "SALESFORCE",
     "url" : "url"
   } ],
+  "instagramId" : "{}",
   "middleName" : "middleName",
   "workPhone" : {
     "extension" : 0,
@@ -1785,7 +1803,15 @@ open class ExternalContactsAPI {
     "externalSystemUrl" : "externalSystemUrl",
     "id" : "id",
     "otherEmail" : "otherEmail",
+    "mergedFrom" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "createDate" : "2000-01-23T04:56:07.000+00:00",
+    "mergedTo" : "{}",
     "address" : {
       "address2" : "address2",
       "city" : "city",
@@ -1997,6 +2023,7 @@ open class ExternalContactsAPI {
       "platform" : "SALESFORCE",
       "url" : "url"
     } ],
+    "instagramId" : "{}",
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
@@ -2048,7 +2075,15 @@ open class ExternalContactsAPI {
     "externalSystemUrl" : "externalSystemUrl",
     "id" : "id",
     "otherEmail" : "otherEmail",
+    "mergedFrom" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "createDate" : "2000-01-23T04:56:07.000+00:00",
+    "mergedTo" : "{}",
     "address" : {
       "address2" : "address2",
       "city" : "city",
@@ -2260,6 +2295,7 @@ open class ExternalContactsAPI {
       "platform" : "SALESFORCE",
       "url" : "url"
     } ],
+    "instagramId" : "{}",
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
@@ -2736,7 +2772,7 @@ open class ExternalContactsAPI {
     
     
     /**
-     Get the core types from which all schemas are built.
+     Get a specific named core type.
      
      - parameter coreTypeName: (path) Name of the core type 
      - parameter completion: completion handler to receive the data and the error objects
@@ -2760,7 +2796,7 @@ open class ExternalContactsAPI {
     }
 
     /**
-     Get the core types from which all schemas are built.
+     Get a specific named core type.
      - GET /api/v2/externalcontacts/contacts/schemas/coretypes/{coreTypeName}
      - OAuth:
        - type: oauth2
@@ -2803,9 +2839,9 @@ open class ExternalContactsAPI {
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getExternalcontactsContactsSchemasCoretypes(completion: @escaping ((_ data: Coretype?,_ error: Error?) -> Void)) {
+    open class func getExternalcontactsContactsSchemasCoretypes(completion: @escaping ((_ data: CoretypeListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getExternalcontactsContactsSchemasCoretypesWithRequestBuilder()
-        requestBuilder.execute { (response: Response<Coretype>?, error) -> Void in
+        requestBuilder.execute { (response: Response<CoretypeListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -2828,29 +2864,45 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "schema" : "{}",
-  "current" : true,
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
-  "id" : "id",
-  "version" : 0,
-  "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
-  "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
-  "validationFields" : [ "validationFields", "validationFields" ],
-  "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+  "total" : 0,
+  "entities" : [ {
+    "schema" : "{}",
+    "current" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "version" : 0,
+    "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+    "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+    "validationFields" : [ "validationFields", "validationFields" ],
+    "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+  }, {
+    "schema" : "{}",
+    "current" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "version" : 0,
+    "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+    "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+    "validationFields" : [ "validationFields", "validationFields" ],
+    "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+  } ],
+  "selfUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
 
-     - returns: RequestBuilder<Coretype> 
+     - returns: RequestBuilder<CoretypeListing> 
      */
-    open class func getExternalcontactsContactsSchemasCoretypesWithRequestBuilder() -> RequestBuilder<Coretype> {        
+    open class func getExternalcontactsContactsSchemasCoretypesWithRequestBuilder() -> RequestBuilder<CoretypeListing> {        
         let path = "/api/v2/externalcontacts/contacts/schemas/coretypes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Coretype>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<CoretypeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -4003,7 +4055,15 @@ open class ExternalContactsAPI {
     "externalSystemUrl" : "externalSystemUrl",
     "id" : "id",
     "otherEmail" : "otherEmail",
+    "mergedFrom" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "createDate" : "2000-01-23T04:56:07.000+00:00",
+    "mergedTo" : "{}",
     "address" : {
       "address2" : "address2",
       "city" : "city",
@@ -4215,6 +4275,7 @@ open class ExternalContactsAPI {
       "platform" : "SALESFORCE",
       "url" : "url"
     } ],
+    "instagramId" : "{}",
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
@@ -4266,7 +4327,15 @@ open class ExternalContactsAPI {
     "externalSystemUrl" : "externalSystemUrl",
     "id" : "id",
     "otherEmail" : "otherEmail",
+    "mergedFrom" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "createDate" : "2000-01-23T04:56:07.000+00:00",
+    "mergedTo" : "{}",
     "address" : {
       "address2" : "address2",
       "city" : "city",
@@ -4478,6 +4547,7 @@ open class ExternalContactsAPI {
       "platform" : "SALESFORCE",
       "url" : "url"
     } ],
+    "instagramId" : "{}",
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
@@ -4794,8 +4864,8 @@ open class ExternalContactsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "partialResults" : true
 }, statusCode=200}]
      
@@ -4914,8 +4984,8 @@ open class ExternalContactsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "partialResults" : true
 }, statusCode=200}]
      
@@ -5245,8 +5315,8 @@ open class ExternalContactsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "partialResults" : true
 }, statusCode=200}]
      
@@ -5551,7 +5621,7 @@ open class ExternalContactsAPI {
     
     
     /**
-     Get the core types from which all schemas are built.
+     Get a specific named core type.
      
      - parameter coreTypeName: (path) Name of the core type 
      - parameter completion: completion handler to receive the data and the error objects
@@ -5575,7 +5645,7 @@ open class ExternalContactsAPI {
     }
 
     /**
-     Get the core types from which all schemas are built.
+     Get a specific named core type.
      - GET /api/v2/externalcontacts/organizations/schemas/coretypes/{coreTypeName}
      - OAuth:
        - type: oauth2
@@ -5618,9 +5688,9 @@ open class ExternalContactsAPI {
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getExternalcontactsOrganizationsSchemasCoretypes(completion: @escaping ((_ data: Coretype?,_ error: Error?) -> Void)) {
+    open class func getExternalcontactsOrganizationsSchemasCoretypes(completion: @escaping ((_ data: CoretypeListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getExternalcontactsOrganizationsSchemasCoretypesWithRequestBuilder()
-        requestBuilder.execute { (response: Response<Coretype>?, error) -> Void in
+        requestBuilder.execute { (response: Response<CoretypeListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -5643,29 +5713,45 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "schema" : "{}",
-  "current" : true,
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
-  "id" : "id",
-  "version" : 0,
-  "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
-  "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
-  "validationFields" : [ "validationFields", "validationFields" ],
-  "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+  "total" : 0,
+  "entities" : [ {
+    "schema" : "{}",
+    "current" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "version" : 0,
+    "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+    "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+    "validationFields" : [ "validationFields", "validationFields" ],
+    "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+  }, {
+    "schema" : "{}",
+    "current" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "version" : 0,
+    "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+    "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+    "validationFields" : [ "validationFields", "validationFields" ],
+    "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+  } ],
+  "selfUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
 
-     - returns: RequestBuilder<Coretype> 
+     - returns: RequestBuilder<CoretypeListing> 
      */
-    open class func getExternalcontactsOrganizationsSchemasCoretypesWithRequestBuilder() -> RequestBuilder<Coretype> {        
+    open class func getExternalcontactsOrganizationsSchemasCoretypesWithRequestBuilder() -> RequestBuilder<CoretypeListing> {        
         let path = "/api/v2/externalcontacts/organizations/schemas/coretypes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Coretype>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<CoretypeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -5884,7 +5970,15 @@ open class ExternalContactsAPI {
     "externalSystemUrl" : "externalSystemUrl",
     "id" : "id",
     "otherEmail" : "otherEmail",
+    "mergedFrom" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "createDate" : "2000-01-23T04:56:07.000+00:00",
+    "mergedTo" : "{}",
     "address" : {
       "address2" : "address2",
       "city" : "city",
@@ -6096,6 +6190,7 @@ open class ExternalContactsAPI {
       "platform" : "SALESFORCE",
       "url" : "url"
     } ],
+    "instagramId" : "{}",
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
@@ -6147,7 +6242,15 @@ open class ExternalContactsAPI {
     "externalSystemUrl" : "externalSystemUrl",
     "id" : "id",
     "otherEmail" : "otherEmail",
+    "mergedFrom" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "createDate" : "2000-01-23T04:56:07.000+00:00",
+    "mergedTo" : "{}",
     "address" : {
       "address2" : "address2",
       "city" : "city",
@@ -6359,6 +6462,7 @@ open class ExternalContactsAPI {
       "platform" : "SALESFORCE",
       "url" : "url"
     } ],
+    "instagramId" : "{}",
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
@@ -6476,7 +6580,15 @@ open class ExternalContactsAPI {
     "externalSystemUrl" : "externalSystemUrl",
     "id" : "id",
     "otherEmail" : "otherEmail",
+    "mergedFrom" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "createDate" : "2000-01-23T04:56:07.000+00:00",
+    "mergedTo" : "{}",
     "address" : {
       "address2" : "address2",
       "city" : "city",
@@ -6688,6 +6800,7 @@ open class ExternalContactsAPI {
       "platform" : "SALESFORCE",
       "url" : "url"
     } ],
+    "instagramId" : "{}",
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
@@ -6739,7 +6852,15 @@ open class ExternalContactsAPI {
     "externalSystemUrl" : "externalSystemUrl",
     "id" : "id",
     "otherEmail" : "otherEmail",
+    "mergedFrom" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "createDate" : "2000-01-23T04:56:07.000+00:00",
+    "mergedTo" : "{}",
     "address" : {
       "address2" : "address2",
       "city" : "city",
@@ -6951,6 +7072,7 @@ open class ExternalContactsAPI {
       "platform" : "SALESFORCE",
       "url" : "url"
     } ],
+    "instagramId" : "{}",
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
@@ -7068,7 +7190,15 @@ open class ExternalContactsAPI {
     "externalSystemUrl" : "externalSystemUrl",
     "id" : "id",
     "otherEmail" : "otherEmail",
+    "mergedFrom" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "createDate" : "2000-01-23T04:56:07.000+00:00",
+    "mergedTo" : "{}",
     "address" : {
       "address2" : "address2",
       "city" : "city",
@@ -7280,6 +7410,7 @@ open class ExternalContactsAPI {
       "platform" : "SALESFORCE",
       "url" : "url"
     } ],
+    "instagramId" : "{}",
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
@@ -7331,7 +7462,15 @@ open class ExternalContactsAPI {
     "externalSystemUrl" : "externalSystemUrl",
     "id" : "id",
     "otherEmail" : "otherEmail",
+    "mergedFrom" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "createDate" : "2000-01-23T04:56:07.000+00:00",
+    "mergedTo" : "{}",
     "address" : {
       "address2" : "address2",
       "city" : "city",
@@ -7543,6 +7682,7 @@ open class ExternalContactsAPI {
       "platform" : "SALESFORCE",
       "url" : "url"
     } ],
+    "instagramId" : "{}",
     "middleName" : "middleName",
     "workPhone" : {
       "extension" : 0,
@@ -10196,7 +10336,15 @@ open class ExternalContactsAPI {
   "externalSystemUrl" : "externalSystemUrl",
   "id" : "id",
   "otherEmail" : "otherEmail",
+  "mergedFrom" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "createDate" : "2000-01-23T04:56:07.000+00:00",
+  "mergedTo" : "{}",
   "address" : {
     "address2" : "address2",
     "city" : "city",
@@ -10408,6 +10556,7 @@ open class ExternalContactsAPI {
     "platform" : "SALESFORCE",
     "url" : "url"
   } ],
+  "instagramId" : "{}",
   "middleName" : "middleName",
   "workPhone" : {
     "extension" : 0,
@@ -10512,7 +10661,15 @@ open class ExternalContactsAPI {
   "externalSystemUrl" : "externalSystemUrl",
   "id" : "id",
   "otherEmail" : "otherEmail",
+  "mergedFrom" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "createDate" : "2000-01-23T04:56:07.000+00:00",
+  "mergedTo" : "{}",
   "address" : {
     "address2" : "address2",
     "city" : "city",
@@ -10724,6 +10881,7 @@ open class ExternalContactsAPI {
     "platform" : "SALESFORCE",
     "url" : "url"
   } ],
+  "instagramId" : "{}",
   "middleName" : "middleName",
   "workPhone" : {
     "extension" : 0,
@@ -10829,7 +10987,15 @@ open class ExternalContactsAPI {
   "externalSystemUrl" : "externalSystemUrl",
   "id" : "id",
   "otherEmail" : "otherEmail",
+  "mergedFrom" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "createDate" : "2000-01-23T04:56:07.000+00:00",
+  "mergedTo" : "{}",
   "address" : {
     "address2" : "address2",
     "city" : "city",
@@ -11041,6 +11207,7 @@ open class ExternalContactsAPI {
     "platform" : "SALESFORCE",
     "url" : "url"
   } ],
+  "instagramId" : "{}",
   "middleName" : "middleName",
   "workPhone" : {
     "extension" : 0,
@@ -11206,7 +11373,15 @@ open class ExternalContactsAPI {
   "externalSystemUrl" : "externalSystemUrl",
   "id" : "id",
   "otherEmail" : "otherEmail",
+  "mergedFrom" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "createDate" : "2000-01-23T04:56:07.000+00:00",
+  "mergedTo" : "{}",
   "address" : {
     "address2" : "address2",
     "city" : "city",
@@ -11418,6 +11593,7 @@ open class ExternalContactsAPI {
     "platform" : "SALESFORCE",
     "url" : "url"
   } ],
+  "instagramId" : "{}",
   "middleName" : "middleName",
   "workPhone" : {
     "extension" : 0,
@@ -11648,7 +11824,15 @@ open class ExternalContactsAPI {
   "externalSystemUrl" : "externalSystemUrl",
   "id" : "id",
   "otherEmail" : "otherEmail",
+  "mergedFrom" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "createDate" : "2000-01-23T04:56:07.000+00:00",
+  "mergedTo" : "{}",
   "address" : {
     "address2" : "address2",
     "city" : "city",
@@ -11860,6 +12044,7 @@ open class ExternalContactsAPI {
     "platform" : "SALESFORCE",
     "url" : "url"
   } ],
+  "instagramId" : "{}",
   "middleName" : "middleName",
   "workPhone" : {
     "extension" : 0,
@@ -11976,7 +12161,15 @@ open class ExternalContactsAPI {
   "externalSystemUrl" : "externalSystemUrl",
   "id" : "id",
   "otherEmail" : "otherEmail",
+  "mergedFrom" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "createDate" : "2000-01-23T04:56:07.000+00:00",
+  "mergedTo" : "{}",
   "address" : {
     "address2" : "address2",
     "city" : "city",
@@ -12188,6 +12381,7 @@ open class ExternalContactsAPI {
     "platform" : "SALESFORCE",
     "url" : "url"
   } ],
+  "instagramId" : "{}",
   "middleName" : "middleName",
   "workPhone" : {
     "extension" : 0,
@@ -12779,7 +12973,15 @@ open class ExternalContactsAPI {
   "externalSystemUrl" : "externalSystemUrl",
   "id" : "id",
   "otherEmail" : "otherEmail",
+  "mergedFrom" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "createDate" : "2000-01-23T04:56:07.000+00:00",
+  "mergedTo" : "{}",
   "address" : {
     "address2" : "address2",
     "city" : "city",
@@ -12991,6 +13193,7 @@ open class ExternalContactsAPI {
     "platform" : "SALESFORCE",
     "url" : "url"
   } ],
+  "instagramId" : "{}",
   "middleName" : "middleName",
   "workPhone" : {
     "extension" : 0,
@@ -13629,7 +13832,15 @@ open class ExternalContactsAPI {
   "externalSystemUrl" : "externalSystemUrl",
   "id" : "id",
   "otherEmail" : "otherEmail",
+  "mergedFrom" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "createDate" : "2000-01-23T04:56:07.000+00:00",
+  "mergedTo" : "{}",
   "address" : {
     "address2" : "address2",
     "city" : "city",
@@ -13841,6 +14052,7 @@ open class ExternalContactsAPI {
     "platform" : "SALESFORCE",
     "url" : "url"
   } ],
+  "instagramId" : "{}",
   "middleName" : "middleName",
   "workPhone" : {
     "extension" : 0,

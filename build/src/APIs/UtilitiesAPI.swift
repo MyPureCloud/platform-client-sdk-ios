@@ -88,13 +88,15 @@ open class UtilitiesAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "service" : "data-actions",
+    "service" : "api",
     "cidr" : "cidr",
-    "region" : "region"
+    "region" : "region",
+    "direction" : "inbound"
   }, {
-    "service" : "data-actions",
+    "service" : "api",
     "cidr" : "cidr",
-    "region" : "region"
+    "region" : "region",
+    "direction" : "inbound"
   } ]
 }, statusCode=200}]
 
@@ -168,8 +170,8 @@ open class UtilitiesAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)

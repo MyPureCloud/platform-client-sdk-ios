@@ -1789,7 +1789,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseDocuments(knowledgeBaseId: knowledgeBaseId
 | **includeSubcategories** | **Bool**| Works along with 'categoryId' query parameter. If specified, retrieves documents associated with category ids and its children categories. | [optional] |
 | **includeDrafts** | **Bool**| If includeDrafts is true, Documents in the draft state are also returned in the response. | [optional] |
 | **labelIds** | [**[String]**](String)| If specified, retrieves documents associated with label ids, comma separated values expected. | [optional] |
-| **expand** | [**[String]**](String)| The specified entity attributes will be filled. Comma separated values expected. | [optional]<br />**Values**: category ("category"), labels ("labels"), variations ("variations") |
+| **expand** | [**[String]**](String)| The specified entity attributes will be filled. Comma separated values expected. | [optional]<br />**Values**: category ("category"), labels ("labels") |
 | **externalIds** | [**[String]**](String)| If specified, retrieves documents associated with external ids, comma separated values expected. | [optional] |
 
 
@@ -6397,4 +6397,4 @@ KnowledgeAPI.putKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId:
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatformClientV2@167.0.0_
+_PureCloudPlatformClientV2@168.0.0_

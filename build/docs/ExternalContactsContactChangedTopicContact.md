@@ -31,6 +31,7 @@
 | **facebookId** | [**ExternalContactsContactChangedTopicFacebookId**](ExternalContactsContactChangedTopicFacebookId) |  | [optional] |
 | **instagramId** | [**ExternalContactsContactChangedTopicInstagramId**](ExternalContactsContactChangedTopicInstagramId) |  | [optional] |
 | **externalIds** | [**[ExternalContactsContactChangedTopicExternalId]**]([ExternalContactsContactChangedTopicExternalId]) |  | [optional] |
+| **appleOpaqueIds** | [**[ExternalContactsContactChangedTopicAppleOpaqueId]**]([ExternalContactsContactChangedTopicAppleOpaqueId]) |  | [optional] |
 | **canonicalContactId** | **String** |  | [optional] |
 | **schema** | [**ExternalContactsContactChangedTopicDataSchema**](ExternalContactsContactChangedTopicDataSchema) |  | [optional] |
 | **customFields** | [**[String:JSON]**](JSON) |  | [optional] |
@@ -43,4 +44,4 @@
 
 
 
-_PureCloudPlatformClientV2@167.0.0_
+_PureCloudPlatformClientV2@168.0.0_
