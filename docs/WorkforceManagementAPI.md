@@ -6040,7 +6040,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekSchedules(managem
 
 
 
-> [WeekShiftTradeListResponse](WeekShiftTradeListResponse) getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId, weekDateId, evaluateMatches, forceDownloadService)
+> [WeekShiftTradeListResponse](WeekShiftTradeListResponse) getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId, weekDateId, evaluateMatches, includeCrossWeekShifts, forceDownloadService)
 
 Gets all the shift trades for a given week
 
@@ -6064,10 +6064,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekDateId: Date = new Date(...) // The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let evaluateMatches: Bool = true // Whether to evaluate the matches for violations
+let includeCrossWeekShifts: Bool = true // Whether to include all shift trades with either the initiating shift or the receiving shift in the week
 let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId: managementUnitId, weekDateId: weekDateId, evaluateMatches: evaluateMatches, forceDownloadService: forceDownloadService) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId: managementUnitId, weekDateId: weekDateId, evaluateMatches: evaluateMatches, includeCrossWeekShifts: includeCrossWeekShifts, forceDownloadService: forceDownloadService) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -6085,6 +6086,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShifttrades(manag
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **evaluateMatches** | **Bool**| Whether to evaluate the matches for violations | [optional] |
+| **includeCrossWeekShifts** | **Bool**| Whether to include all shift trades with either the initiating shift or the receiving shift in the week | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
 
 
@@ -13302,4 +13304,4 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatformClientV2@167.0.0_
+_PureCloudPlatformClientV2@168.0.0_

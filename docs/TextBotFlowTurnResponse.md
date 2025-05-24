@@ -17,4 +17,4 @@ Information related to a success bot flow turn request.
 
 
 
-_PureCloudPlatformClientV2@167.0.0_
+_PureCloudPlatformClientV2@168.0.0_

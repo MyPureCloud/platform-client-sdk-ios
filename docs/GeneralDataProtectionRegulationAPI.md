@@ -156,7 +156,7 @@ GeneralDataProtectionRegulationAPI.getGdprSubjects(searchType: searchType, searc
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **searchType** | **String**| Search Type |<br />**Values**: name ("NAME"), address ("ADDRESS"), phone ("PHONE"), email ("EMAIL"), twitter ("TWITTER"), facebook ("FACEBOOK"), instagram ("INSTAGRAM") |
+| **searchType** | **String**| Search Type |<br />**Values**: name ("NAME"), address ("ADDRESS"), phone ("PHONE"), email ("EMAIL"), twitter ("TWITTER"), instagram ("INSTAGRAM"), facebook ("FACEBOOK") |
 | **searchValue** | **String**| Search Value | |
 
 
@@ -217,4 +217,4 @@ GeneralDataProtectionRegulationAPI.postGdprRequests(body: body, deleteConfirmed:
 [**GDPRRequest**](GDPRRequest)
 
 
-_PureCloudPlatformClientV2@167.0.0_
+_PureCloudPlatformClientV2@168.0.0_

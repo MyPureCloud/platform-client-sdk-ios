@@ -2149,7 +2149,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageNumber: Int = 0 // The number of the page to return
 let pageSize: Int = 0 // Max number of entities to return
 let interval: String = 2023-07-17T00:00:00Z/2023-07-18T00:00:00Z // An absolute timeframe for filtering the jobs, expressed as an ISO 8601 interval.
-let statuses: String = statuses=Accepted,Executing,Complete,Failed // Job statuses to filter for
+let statuses: String = statuses=Accepted,Executing,Complete,Failed,Scheduled // Job statuses to filter for
 
 // Code example
 JourneyAPI.getJourneyViewsJobs(pageNumber: pageNumber, pageSize: pageSize, interval: interval, statuses: statuses) { (response, error) in
@@ -3466,4 +3466,4 @@ JourneyAPI.putJourneyViewVersion(viewId: viewId, versionId: versionId, body: bod
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatformClientV2@167.0.0_
+_PureCloudPlatformClientV2@168.0.0_

@@ -11,8 +11,8 @@ Query result list
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
-| **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
+| **nextUri** | **String** |  | [optional] |
 | **lastUri** | **String** |  | [optional] |
 | **firstUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
@@ -20,4 +20,4 @@ Query result list
 
 
 
-_PureCloudPlatformClientV2@167.0.0_
+_PureCloudPlatformClientV2@168.0.0_

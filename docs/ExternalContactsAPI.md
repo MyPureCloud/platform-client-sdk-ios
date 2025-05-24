@@ -27,7 +27,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getExternalcontactsContactsSchemaVersion**](ExternalContactsAPI#getExternalcontactsContactsSchemaVersion) | Get a specific version of a schema |
 | [**getExternalcontactsContactsSchemaVersions**](ExternalContactsAPI#getExternalcontactsContactsSchemaVersions) | Get all versions of an external contact&#39;s schema |
 | [**getExternalcontactsContactsSchemas**](ExternalContactsAPI#getExternalcontactsContactsSchemas) | Get a list of schemas. |
-| [**getExternalcontactsContactsSchemasCoretype**](ExternalContactsAPI#getExternalcontactsContactsSchemasCoretype) | Get the core types from which all schemas are built. |
+| [**getExternalcontactsContactsSchemasCoretype**](ExternalContactsAPI#getExternalcontactsContactsSchemasCoretype) | Get a specific named core type. |
 | [**getExternalcontactsContactsSchemasCoretypes**](ExternalContactsAPI#getExternalcontactsContactsSchemasCoretypes) | Get the core types from which all schemas are built. |
 | [**getExternalcontactsContactsSchemasLimits**](ExternalContactsAPI#getExternalcontactsContactsSchemasLimits) | Get quantitative limits on schemas |
 | [**getExternalcontactsExternalsource**](ExternalContactsAPI#getExternalcontactsExternalsource) | Fetch an External Source |
@@ -51,7 +51,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getExternalcontactsOrganizationsSchemaVersion**](ExternalContactsAPI#getExternalcontactsOrganizationsSchemaVersion) | Get a specific version of a schema |
 | [**getExternalcontactsOrganizationsSchemaVersions**](ExternalContactsAPI#getExternalcontactsOrganizationsSchemaVersions) | Get all versions of an external organization&#39;s schema |
 | [**getExternalcontactsOrganizationsSchemas**](ExternalContactsAPI#getExternalcontactsOrganizationsSchemas) | Get a list of schemas. |
-| [**getExternalcontactsOrganizationsSchemasCoretype**](ExternalContactsAPI#getExternalcontactsOrganizationsSchemasCoretype) | Get the core types from which all schemas are built. |
+| [**getExternalcontactsOrganizationsSchemasCoretype**](ExternalContactsAPI#getExternalcontactsOrganizationsSchemasCoretype) | Get a specific named core type. |
 | [**getExternalcontactsOrganizationsSchemasCoretypes**](ExternalContactsAPI#getExternalcontactsOrganizationsSchemasCoretypes) | Get the core types from which all schemas are built. |
 | [**getExternalcontactsOrganizationsSchemasLimits**](ExternalContactsAPI#getExternalcontactsOrganizationsSchemasLimits) | Get quantitative limits on schemas |
 | [**getExternalcontactsRelationship**](ExternalContactsAPI#getExternalcontactsRelationship) | Fetch a relationship |
@@ -1326,7 +1326,7 @@ This endpoint does not require any parameters.
 
 > [Coretype](Coretype) getExternalcontactsContactsSchemasCoretype(coreTypeName)
 
-Get the core types from which all schemas are built.
+Get a specific named core type.
 
 
 
@@ -1374,7 +1374,7 @@ ExternalContactsAPI.getExternalcontactsContactsSchemasCoretype(coreTypeName: cor
 
 
 
-> [Coretype](Coretype) getExternalcontactsContactsSchemasCoretypes()
+> [CoretypeListing](CoretypeListing) getExternalcontactsContactsSchemasCoretypes()
 
 Get the core types from which all schemas are built.
 
@@ -1413,7 +1413,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**Coretype**](Coretype)
+[**CoretypeListing**](CoretypeListing)
 
 
 ## getExternalcontactsContactsSchemasLimits
@@ -2600,7 +2600,7 @@ This endpoint does not require any parameters.
 
 > [Coretype](Coretype) getExternalcontactsOrganizationsSchemasCoretype(coreTypeName)
 
-Get the core types from which all schemas are built.
+Get a specific named core type.
 
 
 
@@ -2648,7 +2648,7 @@ ExternalContactsAPI.getExternalcontactsOrganizationsSchemasCoretype(coreTypeName
 
 
 
-> [Coretype](Coretype) getExternalcontactsOrganizationsSchemasCoretypes()
+> [CoretypeListing](CoretypeListing) getExternalcontactsOrganizationsSchemasCoretypes()
 
 Get the core types from which all schemas are built.
 
@@ -2687,7 +2687,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**Coretype**](Coretype)
+[**CoretypeListing**](CoretypeListing)
 
 
 ## getExternalcontactsOrganizationsSchemasLimits
@@ -6263,4 +6263,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@167.0.0_
+_PureCloudPlatformClientV2@168.0.0_

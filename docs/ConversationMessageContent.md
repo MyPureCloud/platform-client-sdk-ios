@@ -19,7 +19,8 @@ Message content element. If contentType &#x3D; \&quot;Attachment\&quot; only one
 | **text** | [**ConversationContentText**](ConversationContentText) | Text content. | [optional] |
 | **quickReplyV2** | [**ConversationContentQuickReplyV2**](ConversationContentQuickReplyV2) | Quick reply V2 content. | [optional] |
 | **reactions** | [**[ConversationContentReaction]**]([ConversationContentReaction]) | A set of reactions to a message. | [optional] |
+| **push** | [**ConversationContentPush**](ConversationContentPush) | Push content. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@167.0.0_
+_PureCloudPlatformClientV2@168.0.0_
