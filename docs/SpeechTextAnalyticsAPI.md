@@ -39,6 +39,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSpeechandtextanalyticsTopicsGeneral**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsTopicsGeneral) | Get the Speech &amp; Text Analytics general topics for a given dialect |
 | [**getSpeechandtextanalyticsTopicsGeneralStatus**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsTopicsGeneralStatus) | Get the list of general topics from the org and the system with their current status |
 | [**getSpeechandtextanalyticsTopicsPublishjob**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsTopicsPublishjob) | Get a Speech &amp; Text Analytics publish topics job by id |
+| [**getSpeechandtextanalyticsTopicsTestphraseJob**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsTopicsTestphraseJob) | Get a Speech &amp; Text Analytics test topics phrase job by id |
 | [**getSpeechandtextanalyticsTranslationsLanguageConversation**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsTranslationsLanguageConversation) | Translate a single interaction recording (or an email conversation) |
 | [**getSpeechandtextanalyticsTranslationsLanguages**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsTranslationsLanguages) | Get supported translation languages |
 | [**patchSpeechandtextanalyticsSettings**](SpeechTextAnalyticsAPI#patchSpeechandtextanalyticsSettings) | Patch Speech And Text Analytics Settings |
@@ -50,6 +51,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postSpeechandtextanalyticsSentimentfeedback**](SpeechTextAnalyticsAPI#postSpeechandtextanalyticsSentimentfeedback) | Create a Speech &amp; Text Analytics SentimentFeedback |
 | [**postSpeechandtextanalyticsTopics**](SpeechTextAnalyticsAPI#postSpeechandtextanalyticsTopics) | Create new Speech &amp; Text Analytics topic |
 | [**postSpeechandtextanalyticsTopicsPublishjobs**](SpeechTextAnalyticsAPI#postSpeechandtextanalyticsTopicsPublishjobs) | Create new Speech &amp; Text Analytics publish topics job |
+| [**postSpeechandtextanalyticsTopicsTestphraseJobs**](SpeechTextAnalyticsAPI#postSpeechandtextanalyticsTopicsTestphraseJobs) | Create new Speech &amp; Text Analytics publish topics job |
 | [**postSpeechandtextanalyticsTranscriptsSearch**](SpeechTextAnalyticsAPI#postSpeechandtextanalyticsTranscriptsSearch) | Search resources. |
 | [**putSpeechandtextanalyticsCategory**](SpeechTextAnalyticsAPI#putSpeechandtextanalyticsCategory) | Update a Speech &amp; Text Analytics category by ID |
 | [**putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**](SpeechTextAnalyticsAPI#putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId) | Update existing Speech &amp; Text Analytics dictionary feedback by id |
@@ -1844,6 +1846,56 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopicsPublishjob(jobId: jobId) {
 [**TopicJob**](TopicJob)
 
 
+## getSpeechandtextanalyticsTopicsTestphraseJob
+
+
+
+> [TestTopicPhraseJob](TestTopicPhraseJob) getSpeechandtextanalyticsTopicsTestphraseJob(jobId)
+
+Get a Speech &amp; Text Analytics test topics phrase job by id
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/topics/testphrase/jobs/{jobId}  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:topic:testPhrase
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // the id of the test topic phrase job
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopicsTestphraseJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopicsTestphraseJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| the id of the test topic phrase job | |
+
+
+### Return type
+
+[**TestTopicPhraseJob**](TestTopicPhraseJob)
+
+
 ## getSpeechandtextanalyticsTranslationsLanguageConversation
 
 
@@ -2399,6 +2451,56 @@ SpeechTextAnalyticsAPI.postSpeechandtextanalyticsTopicsPublishjobs(body: body) {
 [**TopicJob**](TopicJob)
 
 
+## postSpeechandtextanalyticsTopicsTestphraseJobs
+
+
+
+> [TestTopicPhraseJobs](TestTopicPhraseJobs) postSpeechandtextanalyticsTopicsTestphraseJobs(body)
+
+Create new Speech &amp; Text Analytics publish topics job
+
+
+
+Wraps POST /api/v2/speechandtextanalytics/topics/testphrase/jobs  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:topic:testPhrase
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: TestTopicPhraseJobRequest = new TestTopicPhraseJobRequest(...) // The publish test topic phrase job to create
+
+// Code example
+SpeechTextAnalyticsAPI.postSpeechandtextanalyticsTopicsTestphraseJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.postSpeechandtextanalyticsTopicsTestphraseJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**TestTopicPhraseJobRequest**](TestTopicPhraseJobRequest)| The publish test topic phrase job to create | |
+
+
+### Return type
+
+[**TestTopicPhraseJobs**](TestTopicPhraseJobs)
+
+
 ## postSpeechandtextanalyticsTranscriptsSearch
 
 
@@ -2866,4 +2968,4 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsTopic(topicId: topicId, body: bo
 [**Topic**](Topic)
 
 
-_PureCloudPlatformClientV2@168.0.0_
+_PureCloudPlatformClientV2@169.0.0_

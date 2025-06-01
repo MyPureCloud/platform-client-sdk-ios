@@ -7108,7 +7108,7 @@ WorkforceManagementAPI.patchWorkforcemanagementAlternativeshiftsTrade(tradeId: t
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **tradeId** | **String**| The ID of the alternative shift trade | |
-| **body** | [**AgentUpdateAlternativeShiftTradeRequest**](AgentUpdateAlternativeShiftTradeRequest)| body | [optional] |
+| **body** | [**AgentUpdateAlternativeShiftTradeRequest**](AgentUpdateAlternativeShiftTradeRequest)| body | |
 
 
 ### Return type
@@ -7210,7 +7210,7 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunit(businessUnitId: busi
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
-| **body** | [**UpdateBusinessUnitRequest**](UpdateBusinessUnitRequest)| body | [optional] |
+| **body** | [**UpdateBusinessUnitRequest**](UpdateBusinessUnitRequest)| body | |
 
 
 ### Return type
@@ -7264,7 +7264,7 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitActivitycode(business
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 | **activityCodeId** | **String**| The ID of the activity code to update | |
-| **body** | [**UpdateActivityCodeRequest**](UpdateActivityCodeRequest)| body | [optional] |
+| **body** | [**UpdateActivityCodeRequest**](UpdateActivityCodeRequest)| body | |
 
 
 ### Return type
@@ -7372,7 +7372,7 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitAlternativeshiftsSett
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**UpdateAlternativeShiftBuSettingsRequest**](UpdateAlternativeShiftBuSettingsRequest)| body | [optional] |
+| **body** | [**UpdateAlternativeShiftBuSettingsRequest**](UpdateAlternativeShiftBuSettingsRequest)| body | |
 
 
 ### Return type
@@ -7426,7 +7426,7 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitPlanninggroup(busines
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
 | **planningGroupId** | **String**| The ID of a planning group to update | |
-| **body** | [**UpdatePlanningGroupRequest**](UpdatePlanningGroupRequest)| body | [optional] |
+| **body** | [**UpdatePlanningGroupRequest**](UpdatePlanningGroupRequest)| body | |
 
 
 ### Return type
@@ -7479,7 +7479,7 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitSchedulingRun(busines
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **runId** | **String**| The ID of the schedule run | |
-| **body** | [**PatchBuScheduleRunRequest**](PatchBuScheduleRunRequest)| body | [optional] |
+| **body** | [**PatchBuScheduleRunRequest**](PatchBuScheduleRunRequest)| body | |
 
 
 ### Return type
@@ -7533,7 +7533,7 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitServicegoaltemplate(b
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
 | **serviceGoalTemplateId** | **String**| The ID of a service goal template to update | |
-| **body** | [**UpdateServiceGoalTemplate**](UpdateServiceGoalTemplate)| body | [optional] |
+| **body** | [**UpdateServiceGoalTemplate**](UpdateServiceGoalTemplate)| body | |
 
 
 ### Return type
@@ -7587,7 +7587,7 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitStaffinggroup(busines
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **staffingGroupId** | **String**| The ID of the staffing group to update | |
-| **body** | [**UpdateStaffingGroupRequest**](UpdateStaffingGroupRequest)| body | [optional] |
+| **body** | [**UpdateStaffingGroupRequest**](UpdateStaffingGroupRequest)| body | |
 
 
 ### Return type
@@ -7641,7 +7641,7 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitTimeoffplan(businessU
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **timeOffPlanId** | **String**| The ID of the time-off plan to update | |
-| **body** | [**BuUpdateTimeOffPlanRequest**](BuUpdateTimeOffPlanRequest)| body | [optional] |
+| **body** | [**BuUpdateTimeOffPlanRequest**](BuUpdateTimeOffPlanRequest)| body | |
 
 
 ### Return type
@@ -7751,7 +7751,7 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitWorkplanbidGroup(busi
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **bidId** | **String**| The work plan bid id of the bid groups | |
 | **bidGroupId** | **String**| Work Plan Bid Group id | |
-| **body** | [**WorkPlanBidGroupUpdate**](WorkPlanBidGroupUpdate)| body | [optional] |
+| **body** | [**WorkPlanBidGroupUpdate**](WorkPlanBidGroupUpdate)| body | |
 
 
 ### Return type
@@ -7807,7 +7807,7 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitWorkplanbidGroupPrefe
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **bidId** | **String**| The work plan bid id of the bid groups | |
 | **bidGroupId** | **String**| The ID of the work plan bid group | |
-| **body** | [**AgentsBidAssignedWorkPlanOverrideRequest**](AgentsBidAssignedWorkPlanOverrideRequest)| body | [optional] |
+| **body** | [**AgentsBidAssignedWorkPlanOverrideRequest**](AgentsBidAssignedWorkPlanOverrideRequest)| body | |
 
 
 ### Return type
@@ -7859,7 +7859,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunit(managementUnitId: 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **body** | [**UpdateManagementUnitRequest**](UpdateManagementUnitRequest)| body | [optional] |
+| **body** | [**UpdateManagementUnitRequest**](UpdateManagementUnitRequest)| body | |
 
 
 ### Return type
@@ -7910,7 +7910,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitAgents(managementUn
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **body** | [**UpdateMuAgentsRequest**](UpdateMuAgentsRequest)| body | [optional] |
+| **body** | [**UpdateMuAgentsRequest**](UpdateMuAgentsRequest)| body | |
 
 
 ### Return type
@@ -7962,7 +7962,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitAgentsWorkplansBulk
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **body** | [**UpdateMuAgentWorkPlansBatchRequest**](UpdateMuAgentWorkPlansBatchRequest)| body | [optional] |
+| **body** | [**UpdateMuAgentWorkPlansBatchRequest**](UpdateMuAgentWorkPlansBatchRequest)| body | |
 
 
 ### Return type
@@ -8018,7 +8018,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitTimeofflimit(manage
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit. | |
 | **timeOffLimitId** | **String**| The id of time off limit object to update | |
-| **body** | [**UpdateTimeOffLimitRequest**](UpdateTimeOffLimitRequest)| body | [optional] |
+| **body** | [**UpdateTimeOffLimitRequest**](UpdateTimeOffLimitRequest)| body | |
 
 
 ### Return type
@@ -8072,7 +8072,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitTimeoffplan(managem
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit | |
 | **timeOffPlanId** | **String**| The ID of the time off plan to update | |
-| **body** | [**UpdateTimeOffPlanRequest**](UpdateTimeOffPlanRequest)| body | [optional] |
+| **body** | [**UpdateTimeOffPlanRequest**](UpdateTimeOffPlanRequest)| body | |
 
 
 ### Return type
@@ -8128,7 +8128,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitTimeoffrequestUserI
 | **managementUnitId** | **String**| The ID of the management unit. | |
 | **timeOffRequestId** | **String**| The ID of the time off request. | |
 | **userId** | **String**| The ID of user to whom the time off request belongs. | |
-| **body** | [**SetTimeOffIntegrationStatusRequest**](SetTimeOffIntegrationStatusRequest)| body | [optional] |
+| **body** | [**SetTimeOffIntegrationStatusRequest**](SetTimeOffIntegrationStatusRequest)| body | |
 
 
 ### Return type
@@ -8184,7 +8184,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitUserTimeoffrequest(
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **userId** | **String**| The id of the user the requested time off request belongs to | |
 | **timeOffRequestId** | **String**| The id of the time off request to update | |
-| **body** | [**AdminTimeOffRequestPatch**](AdminTimeOffRequestPatch)| body | [optional] |
+| **body** | [**AdminTimeOffRequestPatch**](AdminTimeOffRequestPatch)| body | |
 
 
 ### Return type
@@ -8252,7 +8252,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitWeekShifttrade(mana
 
 
 
-> [WorkPlan](WorkPlan) patchWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, validationMode, body)
+> [WorkPlan](WorkPlan) patchWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, body, validationMode)
 
 Update a work plan
 
@@ -8274,11 +8274,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let workPlanId: String = "" // The ID of the work plan to update
-let validationMode: WorkforceManagementAPI.ValidationMode_patchWorkforcemanagementManagementunitWorkplan = WorkforceManagementAPI.ValidationMode_patchWorkforcemanagementManagementunitWorkplan.enummember // Allows to update work plan even if validation result is invalid
 let body: WorkPlan = new WorkPlan(...) // body
+let validationMode: WorkforceManagementAPI.ValidationMode_patchWorkforcemanagementManagementunitWorkplan = WorkforceManagementAPI.ValidationMode_patchWorkforcemanagementManagementunitWorkplan.enummember // Allows to update work plan even if validation result is invalid
 
 // Code example
-WorkforceManagementAPI.patchWorkforcemanagementManagementunitWorkplan(managementUnitId: managementUnitId, workPlanId: workPlanId, validationMode: validationMode, body: body) { (response, error) in
+WorkforceManagementAPI.patchWorkforcemanagementManagementunitWorkplan(managementUnitId: managementUnitId, workPlanId: workPlanId, body: body, validationMode: validationMode) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -8295,8 +8295,8 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitWorkplan(management
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanId** | **String**| The ID of the work plan to update | |
+| **body** | [**WorkPlan**](WorkPlan)| body | |
 | **validationMode** | **String**| Allows to update work plan even if validation result is invalid | [optional]<br />**Values**: ignore ("Ignore") |
-| **body** | [**WorkPlan**](WorkPlan)| body | [optional] |
 
 
 ### Return type
@@ -8350,7 +8350,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitWorkplanrotation(ma
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanRotationId** | **String**| The ID of the work plan rotation to update | |
-| **body** | [**UpdateWorkPlanRotationRequest**](UpdateWorkPlanRotationRequest)| body | [optional] |
+| **body** | [**UpdateWorkPlanRotationRequest**](UpdateWorkPlanRotationRequest)| body | |
 
 
 ### Return type
@@ -8402,7 +8402,7 @@ WorkforceManagementAPI.patchWorkforcemanagementTimeoffrequest(timeOffRequestId: 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **timeOffRequestId** | **String**| The ID of the time off request | |
-| **body** | [**AgentTimeOffRequestPatch**](AgentTimeOffRequestPatch)| body | [optional] |
+| **body** | [**AgentTimeOffRequestPatch**](AgentTimeOffRequestPatch)| body | |
 
 
 ### Return type
@@ -8454,7 +8454,7 @@ WorkforceManagementAPI.patchWorkforcemanagementUserWorkplanbidranks(userId: user
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The userId to whom the work plan bid ranks apply. | |
-| **body** | [**WorkPlanBidRanks**](WorkPlanBidRanks)| body | [optional] |
+| **body** | [**WorkPlanBidRanks**](WorkPlanBidRanks)| body | |
 
 
 ### Return type
@@ -8556,7 +8556,7 @@ WorkforceManagementAPI.patchWorkforcemanagementWorkplanbidPreferences(bidId: bid
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **bidId** | **String**| The ID of the work plan bid | |
-| **body** | [**UpdateAgentWorkPlanBiddingPreference**](UpdateAgentWorkPlanBiddingPreference)| body | [optional] |
+| **body** | [**UpdateAgentWorkPlanBiddingPreference**](UpdateAgentWorkPlanBiddingPreference)| body | |
 
 
 ### Return type
@@ -8760,7 +8760,7 @@ WorkforceManagementAPI.postWorkforcemanagementAdherenceHistoricalBulk(body: body
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**WfmHistoricalAdherenceBulkQuery**](WfmHistoricalAdherenceBulkQuery)| body | [optional] |
+| **body** | [**WfmHistoricalAdherenceBulkQuery**](WfmHistoricalAdherenceBulkQuery)| body | |
 
 
 ### Return type
@@ -8918,7 +8918,7 @@ WorkforceManagementAPI.postWorkforcemanagementAgents(body: body) { (response, er
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**MoveAgentsRequest**](MoveAgentsRequest)| body | [optional] |
+| **body** | [**MoveAgentsRequest**](MoveAgentsRequest)| body | |
 
 
 ### Return type
@@ -8968,7 +8968,7 @@ WorkforceManagementAPI.postWorkforcemanagementAgentsIntegrationsHrisQuery(body: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**QueryAgentsIntegrationsRequest**](QueryAgentsIntegrationsRequest)| body | [optional] |
+| **body** | [**QueryAgentsIntegrationsRequest**](QueryAgentsIntegrationsRequest)| body | |
 
 
 ### Return type
@@ -9068,7 +9068,7 @@ WorkforceManagementAPI.postWorkforcemanagementAgentschedulesMine(body: body) { (
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**BuGetCurrentAgentScheduleRequest**](BuGetCurrentAgentScheduleRequest)| body | [optional] |
+| **body** | [**BuGetCurrentAgentScheduleRequest**](BuGetCurrentAgentScheduleRequest)| body | |
 
 
 ### Return type
@@ -9270,7 +9270,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivitycodes(business
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
-| **body** | [**CreateActivityCodeRequest**](CreateActivityCodeRequest)| body | [optional] |
+| **body** | [**CreateActivityCodeRequest**](CreateActivityCodeRequest)| body | |
 
 
 ### Return type
@@ -9444,7 +9444,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitAdherenceExplanationsQ
 
 
 
-> [BuAsyncAgentSchedulesSearchResponse](BuAsyncAgentSchedulesSearchResponse) postWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId, forceAsync, forceDownloadService, body)
+> [BuAsyncAgentSchedulesSearchResponse](BuAsyncAgentSchedulesSearchResponse) postWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId, body, forceAsync, forceDownloadService)
 
 Search published schedules
 
@@ -9466,12 +9466,12 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The ID of the business unit
+let body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body
 let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
 let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
-let body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId: businessUnitId, forceAsync: forceAsync, forceDownloadService: forceDownloadService, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -9487,9 +9487,9 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitAgentschedulesSearch(b
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest)| body | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
-| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest)| body | [optional] |
 
 
 ### Return type
@@ -9555,7 +9555,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitAlternativeshiftsTrade
 
 
 
-> [AsyncIntradayResponse](AsyncIntradayResponse) postWorkforcemanagementBusinessunitIntraday(businessUnitId, forceAsync, body)
+> [AsyncIntradayResponse](AsyncIntradayResponse) postWorkforcemanagementBusinessunitIntraday(businessUnitId, body, forceAsync)
 
 Get intraday data for the given date for the requested planningGroupIds
 
@@ -9576,11 +9576,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The ID of the business unit
-let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
 let body: IntradayPlanningGroupRequest = new IntradayPlanningGroupRequest(...) // body
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementBusinessunitIntraday(businessUnitId: businessUnitId, forceAsync: forceAsync, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitIntraday(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -9596,8 +9596,8 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitIntraday(businessUnitI
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**IntradayPlanningGroupRequest**](IntradayPlanningGroupRequest)| body | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
-| **body** | [**IntradayPlanningGroupRequest**](IntradayPlanningGroupRequest)| body | [optional] |
 
 
 ### Return type
@@ -9649,7 +9649,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitPlanninggroups(busines
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
-| **body** | [**CreatePlanningGroupRequest**](CreatePlanningGroupRequest)| body | [optional] |
+| **body** | [**CreatePlanningGroupRequest**](CreatePlanningGroupRequest)| body | |
 
 
 ### Return type
@@ -9701,7 +9701,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitServicegoaltemplates(b
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
-| **body** | [**CreateServiceGoalTemplate**](CreateServiceGoalTemplate)| body | [optional] |
+| **body** | [**CreateServiceGoalTemplate**](CreateServiceGoalTemplate)| body | |
 
 
 ### Return type
@@ -9753,7 +9753,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitStaffinggroups(busines
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**CreateStaffingGroupRequest**](CreateStaffingGroupRequest)| body | [optional] |
+| **body** | [**CreateStaffingGroupRequest**](CreateStaffingGroupRequest)| body | |
 
 
 ### Return type
@@ -9805,7 +9805,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitStaffinggroupsQuery(bu
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**QueryUserStaffingGroupListRequest**](QueryUserStaffingGroupListRequest)| body | [optional] |
+| **body** | [**QueryUserStaffingGroupListRequest**](QueryUserStaffingGroupListRequest)| body | |
 
 
 ### Return type
@@ -9857,7 +9857,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeofflimits(business
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**BuCreateTimeOffLimitRequest**](BuCreateTimeOffLimitRequest)| body | [optional] |
+| **body** | [**BuCreateTimeOffLimitRequest**](BuCreateTimeOffLimitRequest)| body | |
 
 
 ### Return type
@@ -9909,7 +9909,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeofflimitsValuesQue
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**QueryTimeOffLimitValuesRequest**](QueryTimeOffLimitValuesRequest)| body | [optional] |
+| **body** | [**QueryTimeOffLimitValuesRequest**](QueryTimeOffLimitValuesRequest)| body | |
 
 
 ### Return type
@@ -9961,7 +9961,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeoffplans(businessU
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**BuCreateTimeOffPlanRequest**](BuCreateTimeOffPlanRequest)| body | [optional] |
+| **body** | [**BuCreateTimeOffPlanRequest**](BuCreateTimeOffPlanRequest)| body | |
 
 
 ### Return type
@@ -10134,7 +10134,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekSchedulePerformanc
 | **businessUnitId** | **String**| The ID of the business unit to which the performance prediction belongs | |
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format | |
 | **scheduleId** | **String**| The ID of the schedule the performance prediction belongs to | |
-| **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest)| body | [optional] |
+| **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest)| body | |
 
 
 ### Return type
@@ -10190,7 +10190,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekSchedulePerformanc
 | **businessUnitId** | **String**| The ID of the business unit to which the performance prediction belongs | |
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format | |
 | **scheduleId** | **String**| The ID of the schedule the performance prediction belongs to | |
-| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody)| body | [optional] |
+| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody)| body | |
 
 
 ### Return type
@@ -10916,7 +10916,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWorkplanbidGroups(busi
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **bidId** | **String**| The work plan bid id of the bid groups | |
-| **body** | [**WorkPlanBidGroupCreate**](WorkPlanBidGroupCreate)| body | [optional] |
+| **body** | [**WorkPlanBidGroupCreate**](WorkPlanBidGroupCreate)| body | |
 
 
 ### Return type
@@ -10968,7 +10968,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWorkplanbids(businessU
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**CreateWorkPlanBid**](CreateWorkPlanBid)| The work plan bid to be created | [optional] |
+| **body** | [**CreateWorkPlanBid**](CreateWorkPlanBid)| The work plan bid to be created | |
 
 
 ### Return type
@@ -11020,7 +11020,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunits(body: body) { (respo
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CreateBusinessUnitRequest**](CreateBusinessUnitRequest)| body | [optional] |
+| **body** | [**CreateBusinessUnitRequest**](CreateBusinessUnitRequest)| body | |
 
 
 ### Return type
@@ -11121,7 +11121,7 @@ WorkforceManagementAPI.postWorkforcemanagementHistoricaldataBulkRemoveJobs(body:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**HistoricalImportDeleteFilesJobRequest**](HistoricalImportDeleteFilesJobRequest)| body | [optional] |
+| **body** | [**HistoricalImportDeleteFilesJobRequest**](HistoricalImportDeleteFilesJobRequest)| body | |
 
 
 ### Return type
@@ -11219,7 +11219,7 @@ WorkforceManagementAPI.postWorkforcemanagementHistoricaldataValidate(body: body)
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ValidationServiceRequest**](ValidationServiceRequest)| body | [optional] |
+| **body** | [**ValidationServiceRequest**](ValidationServiceRequest)| body | |
 
 
 ### Return type
@@ -11281,7 +11281,7 @@ WorkforceManagementAPI.postWorkforcemanagementIntegrationsHriTimeofftypesJobs(hr
 
 
 
-> [AgentsWorkPlansResponse](AgentsWorkPlansResponse) postWorkforcemanagementManagementunitAgentsWorkplansQuery(managementUnitId, forceDownloadService, body)
+> [AgentsWorkPlansResponse](AgentsWorkPlansResponse) postWorkforcemanagementManagementunitAgentsWorkplansQuery(managementUnitId, body, forceDownloadService)
 
 Get agents work plans configuration
 
@@ -11302,11 +11302,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
 let body: GetAgentsWorkPlansRequest = new GetAgentsWorkPlansRequest(...) // body
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentsWorkplansQuery(managementUnitId: managementUnitId, forceDownloadService: forceDownloadService, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentsWorkplansQuery(managementUnitId: managementUnitId, body: body, forceDownloadService: forceDownloadService) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -11322,8 +11322,8 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentsWorkplansQuery
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
+| **body** | [**GetAgentsWorkPlansRequest**](GetAgentsWorkPlansRequest)| body | |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
-| **body** | [**GetAgentsWorkPlansRequest**](GetAgentsWorkPlansRequest)| body | [optional] |
 
 
 ### Return type
@@ -11335,7 +11335,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentsWorkplansQuery
 
 
 
-> [BuAsyncAgentSchedulesSearchResponse](BuAsyncAgentSchedulesSearchResponse) postWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId, forceAsync, forceDownloadService, body)
+> [BuAsyncAgentSchedulesSearchResponse](BuAsyncAgentSchedulesSearchResponse) postWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId, body, forceAsync, forceDownloadService)
 
 Query published schedules for given given time range for set of users
 
@@ -11357,12 +11357,12 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body
 let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
 let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
-let body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId: managementUnitId, forceAsync: forceAsync, forceDownloadService: forceDownloadService, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId: managementUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -11378,9 +11378,9 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
+| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest)| body | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
-| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest)| body | [optional] |
 
 
 ### Return type
@@ -11434,7 +11434,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitHistoricaladherenceq
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit | |
-| **body** | [**WfmHistoricalAdherenceQuery**](WfmHistoricalAdherenceQuery)| body | [optional] |
+| **body** | [**WfmHistoricalAdherenceQuery**](WfmHistoricalAdherenceQuery)| body | |
 
 
 ### Return type
@@ -11488,7 +11488,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitMove(managementUnitI
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **body** | [**MoveManagementUnitRequest**](MoveManagementUnitRequest)| body | [optional] |
+| **body** | [**MoveManagementUnitRequest**](MoveManagementUnitRequest)| body | |
 
 
 ### Return type
@@ -11541,7 +11541,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitSchedulesSearch(mana
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **body** | [**UserListScheduleRequestBody**](UserListScheduleRequestBody)| body | [optional] |
+| **body** | [**UserListScheduleRequestBody**](UserListScheduleRequestBody)| body | |
 
 
 ### Return type
@@ -11595,7 +11595,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitShrinkageJobs(manage
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit | |
-| **body** | [**WfmHistoricalShrinkageRequest**](WfmHistoricalShrinkageRequest)| body | [optional] |
+| **body** | [**WfmHistoricalShrinkageRequest**](WfmHistoricalShrinkageRequest)| body | |
 
 
 ### Return type
@@ -11649,7 +11649,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeofflimits(manage
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit. | |
-| **body** | [**CreateTimeOffLimitRequest**](CreateTimeOffLimitRequest)| body | [optional] |
+| **body** | [**CreateTimeOffLimitRequest**](CreateTimeOffLimitRequest)| body | |
 
 
 ### Return type
@@ -11701,7 +11701,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeofflimitsValuesQ
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit. | |
-| **body** | [**QueryTimeOffLimitValuesRequest**](QueryTimeOffLimitValuesRequest)| body | [optional] |
+| **body** | [**QueryTimeOffLimitValuesRequest**](QueryTimeOffLimitValuesRequest)| body | |
 
 
 ### Return type
@@ -11753,7 +11753,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffplans(managem
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit | |
-| **body** | [**CreateTimeOffPlanRequest**](CreateTimeOffPlanRequest)| body | [optional] |
+| **body** | [**CreateTimeOffPlanRequest**](CreateTimeOffPlanRequest)| body | |
 
 
 ### Return type
@@ -11805,7 +11805,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequests(mana
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **body** | [**CreateAdminTimeOffRequest**](CreateAdminTimeOffRequest)| body | [optional] |
+| **body** | [**CreateAdminTimeOffRequest**](CreateAdminTimeOffRequest)| body | |
 
 
 ### Return type
@@ -11857,7 +11857,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsInteg
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit. | |
-| **body** | [**QueryTimeOffIntegrationStatusRequest**](QueryTimeOffIntegrationStatusRequest)| body | [optional] |
+| **body** | [**QueryTimeOffIntegrationStatusRequest**](QueryTimeOffIntegrationStatusRequest)| body | |
 
 
 ### Return type
@@ -11869,7 +11869,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsInteg
 
 
 
-> [TimeOffRequestListing](TimeOffRequestListing) postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId, forceDownloadService, body)
+> [TimeOffRequestListing](TimeOffRequestListing) postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId, body, forceDownloadService)
 
 Fetches time off requests matching the conditions specified in the request body
 
@@ -11892,11 +11892,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
 let body: TimeOffRequestQueryBody = new TimeOffRequestQueryBody(...) // body
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId: managementUnitId, forceDownloadService: forceDownloadService, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId: managementUnitId, body: body, forceDownloadService: forceDownloadService) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -11912,8 +11912,8 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsQuery
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
+| **body** | [**TimeOffRequestQueryBody**](TimeOffRequestQueryBody)| body | |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
-| **body** | [**TimeOffRequestQueryBody**](TimeOffRequestQueryBody)| body | [optional] |
 
 
 ### Return type
@@ -11965,7 +11965,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsWaitl
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit. | |
-| **body** | [**QueryWaitlistPositionsRequest**](QueryWaitlistPositionsRequest)| body | [optional] |
+| **body** | [**QueryWaitlistPositionsRequest**](QueryWaitlistPositionsRequest)| body | |
 
 
 ### Return type
@@ -12127,7 +12127,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitUserTimeoffrequestsE
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit | |
 | **userId** | **String**| The id of the user for whom the time off request estimate is requested | |
-| **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest)| body | [optional] |
+| **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest)| body | |
 
 
 ### Return type
@@ -12406,7 +12406,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanCopy(managem
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanId** | **String**| The ID of the work plan to create a copy | |
-| **body** | [**CopyWorkPlan**](CopyWorkPlan)| body | [optional] |
+| **body** | [**CopyWorkPlan**](CopyWorkPlan)| body | |
 
 
 ### Return type
@@ -12418,7 +12418,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanCopy(managem
 
 
 
-> [ValidateWorkPlanResponse](ValidateWorkPlanResponse) postWorkforcemanagementManagementunitWorkplanValidate(managementUnitId, workPlanId, expand, body)
+> [ValidateWorkPlanResponse](ValidateWorkPlanResponse) postWorkforcemanagementManagementunitWorkplanValidate(managementUnitId, workPlanId, body, expand)
 
 Validate Work Plan
 
@@ -12441,11 +12441,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let workPlanId: String = "" // The ID of the work plan to validate. For new work plan, use the word 'new' for the ID.
-let expand: [String] = [""] // 
 let body: WorkPlanValidationRequest = new WorkPlanValidationRequest(...) // body
+let expand: [String] = [""] // 
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanValidate(managementUnitId: managementUnitId, workPlanId: workPlanId, expand: expand, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanValidate(managementUnitId: managementUnitId, workPlanId: workPlanId, body: body, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -12462,8 +12462,8 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanValidate(man
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanId** | **String**| The ID of the work plan to validate. For new work plan, use the word 'new' for the ID. | |
+| **body** | [**WorkPlanValidationRequest**](WorkPlanValidationRequest)| body | |
 | **expand** | [**[String]**](String)|  | [optional]<br />**Values**: messages ("messages") |
-| **body** | [**WorkPlanValidationRequest**](WorkPlanValidationRequest)| body | [optional] |
 
 
 ### Return type
@@ -12517,7 +12517,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanrotationCopy
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanRotationId** | **String**| The ID of the work plan rotation to create a copy | |
-| **body** | [**CopyWorkPlanRotationRequest**](CopyWorkPlanRotationRequest)| body | [optional] |
+| **body** | [**CopyWorkPlanRotationRequest**](CopyWorkPlanRotationRequest)| body | |
 
 
 ### Return type
@@ -12569,7 +12569,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanrotations(ma
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **body** | [**AddWorkPlanRotationRequest**](AddWorkPlanRotationRequest)| body | [optional] |
+| **body** | [**AddWorkPlanRotationRequest**](AddWorkPlanRotationRequest)| body | |
 
 
 ### Return type
@@ -12581,7 +12581,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanrotations(ma
 
 
 
-> [WorkPlan](WorkPlan) postWorkforcemanagementManagementunitWorkplans(managementUnitId, validationMode, body)
+> [WorkPlan](WorkPlan) postWorkforcemanagementManagementunitWorkplans(managementUnitId, body, validationMode)
 
 Create a new work plan
 
@@ -12602,11 +12602,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let validationMode: WorkforceManagementAPI.ValidationMode_postWorkforcemanagementManagementunitWorkplans = WorkforceManagementAPI.ValidationMode_postWorkforcemanagementManagementunitWorkplans.enummember // Allows to create work plan even if the validation result is invalid
 let body: CreateWorkPlan = new CreateWorkPlan(...) // body
+let validationMode: WorkforceManagementAPI.ValidationMode_postWorkforcemanagementManagementunitWorkplans = WorkforceManagementAPI.ValidationMode_postWorkforcemanagementManagementunitWorkplans.enummember // Allows to create work plan even if the validation result is invalid
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplans(managementUnitId: managementUnitId, validationMode: validationMode, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplans(managementUnitId: managementUnitId, body: body, validationMode: validationMode) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -12622,8 +12622,8 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplans(management
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
+| **body** | [**CreateWorkPlan**](CreateWorkPlan)| body | |
 | **validationMode** | **String**| Allows to create work plan even if the validation result is invalid | [optional]<br />**Values**: ignore ("Ignore") |
-| **body** | [**CreateWorkPlan**](CreateWorkPlan)| body | [optional] |
 
 
 ### Return type
@@ -12675,7 +12675,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunits(body: body) { (res
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CreateManagementUnitApiRequest**](CreateManagementUnitApiRequest)| body | [optional] |
+| **body** | [**CreateManagementUnitApiRequest**](CreateManagementUnitApiRequest)| body | |
 
 
 ### Return type
@@ -12724,7 +12724,7 @@ WorkforceManagementAPI.postWorkforcemanagementNotificationsUpdate(body: body) { 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**UpdateNotificationsRequest**](UpdateNotificationsRequest)| body | [optional] |
+| **body** | [**UpdateNotificationsRequest**](UpdateNotificationsRequest)| body | |
 
 
 ### Return type
@@ -12828,7 +12828,7 @@ WorkforceManagementAPI.postWorkforcemanagementTeamAdherenceHistorical(teamId: te
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **teamId** | **String**| The ID of the team | |
-| **body** | [**WfmHistoricalAdherenceQueryForTeams**](WfmHistoricalAdherenceQueryForTeams)| body | [optional] |
+| **body** | [**WfmHistoricalAdherenceQueryForTeams**](WfmHistoricalAdherenceQueryForTeams)| body | |
 
 
 ### Return type
@@ -12882,7 +12882,7 @@ WorkforceManagementAPI.postWorkforcemanagementTeamShrinkageJobs(teamId: teamId, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **teamId** | **String**| The ID of the team | |
-| **body** | [**WfmHistoricalShrinkageTeamsRequest**](WfmHistoricalShrinkageTeamsRequest)| body | [optional] |
+| **body** | [**WfmHistoricalShrinkageTeamsRequest**](WfmHistoricalShrinkageTeamsRequest)| body | |
 
 
 ### Return type
@@ -12982,7 +12982,7 @@ WorkforceManagementAPI.postWorkforcemanagementTimeofflimitsAvailableQuery(body: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AvailableTimeOffRequest**](AvailableTimeOffRequest)| body | [optional] |
+| **body** | [**AvailableTimeOffRequest**](AvailableTimeOffRequest)| body | |
 
 
 ### Return type
@@ -13032,7 +13032,7 @@ WorkforceManagementAPI.postWorkforcemanagementTimeoffrequests(body: body) { (res
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CreateAgentTimeOffRequest**](CreateAgentTimeOffRequest)| body | [optional] |
+| **body** | [**CreateAgentTimeOffRequest**](CreateAgentTimeOffRequest)| body | |
 
 
 ### Return type
@@ -13082,7 +13082,7 @@ WorkforceManagementAPI.postWorkforcemanagementTimeoffrequestsEstimate(body: body
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest)| body | [optional] |
+| **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest)| body | |
 
 
 ### Return type
@@ -13132,7 +13132,7 @@ WorkforceManagementAPI.postWorkforcemanagementTimeoffrequestsIntegrationstatusQu
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CurrentUserTimeOffIntegrationStatusRequest**](CurrentUserTimeOffIntegrationStatusRequest)| body | [optional] |
+| **body** | [**CurrentUserTimeOffIntegrationStatusRequest**](CurrentUserTimeOffIntegrationStatusRequest)| body | |
 
 
 ### Return type
@@ -13240,7 +13240,7 @@ WorkforceManagementAPI.putWorkforcemanagementBusinessunitTimeofflimitValues(busi
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **timeOffLimitId** | **String**| The ID of the time-off limit object to set values for | |
-| **body** | [**BuSetTimeOffLimitValuesRequest**](BuSetTimeOffLimitValuesRequest)| body | [optional] |
+| **body** | [**BuSetTimeOffLimitValuesRequest**](BuSetTimeOffLimitValuesRequest)| body | |
 
 
 ### Return type
@@ -13296,7 +13296,7 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit. | |
 | **timeOffLimitId** | **String**| The ID of the time off limit object to set values for | |
-| **body** | [**SetTimeOffLimitValuesRequest**](SetTimeOffLimitValuesRequest)| body | [optional] |
+| **body** | [**SetTimeOffLimitValuesRequest**](SetTimeOffLimitValuesRequest)| body | |
 
 
 ### Return type
@@ -13304,4 +13304,4 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatformClientV2@168.0.0_
+_PureCloudPlatformClientV2@169.0.0_

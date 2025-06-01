@@ -209,6 +209,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessageCommunicationMessages**](ConversationsAPI#postConversationsMessageCommunicationMessages) | Send message |
 | [**postConversationsMessageCommunicationMessagesMedia**](ConversationsAPI#postConversationsMessageCommunicationMessagesMedia) | Create media |
 | [**postConversationsMessageCommunicationMessagesMediaUploads**](ConversationsAPI#postConversationsMessageCommunicationMessagesMediaUploads) | Create a URL to upload a message media file |
+| [**postConversationsMessageCommunicationSocialmediaMessages**](ConversationsAPI#postConversationsMessageCommunicationSocialmediaMessages) | Send a social media message |
 | [**postConversationsMessageCommunicationTyping**](ConversationsAPI#postConversationsMessageCommunicationTyping) | Send message typing event |
 | [**postConversationsMessageInboundOpenEvent**](ConversationsAPI#postConversationsMessageInboundOpenEvent) | Send an inbound Open Event Message |
 | [**postConversationsMessageInboundOpenMessage**](ConversationsAPI#postConversationsMessageInboundOpenMessage) | Send inbound Open Message |
@@ -6041,6 +6042,7 @@ Wraps PATCH /api/v2/conversations/calls/{conversationId}/participants/{participa
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
+* conversation:call:record
 
 ### Example
 
@@ -6574,6 +6576,7 @@ Wraps PATCH /api/v2/conversations/chats/{conversationId}/participants/{participa
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
+* conversation:call:record
 
 ### Example
 
@@ -6795,6 +6798,7 @@ Wraps PATCH /api/v2/conversations/cobrowsesessions/{conversationId}/participants
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
+* conversation:call:record
 
 ### Example
 
@@ -7067,6 +7071,7 @@ Wraps PATCH /api/v2/conversations/emails/{conversationId}/participants/{particip
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
+* conversation:call:record
 
 ### Example
 
@@ -7333,6 +7338,7 @@ Wraps PATCH /api/v2/conversations/messages/{conversationId}/participants/{partic
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
+* conversation:call:record
 
 ### Example
 
@@ -10959,6 +10965,62 @@ ConversationsAPI.postConversationsMessageCommunicationMessagesMediaUploads(conve
 [**MessageMediaUploadData**](MessageMediaUploadData)
 
 
+## postConversationsMessageCommunicationSocialmediaMessages
+
+
+
+> [SocialMediaMessageData](SocialMediaMessageData) postConversationsMessageCommunicationSocialmediaMessages(conversationId, communicationId, body)
+
+Send a social media message
+
+Send a social media message on existing conversation/communication.
+
+
+
+Wraps POST /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/socialmedia/messages  
+
+Requires ANY permissions: 
+
+* conversation:socialmedia:create
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let communicationId: String = "" // communicationId
+let body: AdditionalSocialMediaMessage = new AdditionalSocialMediaMessage(...) // Message
+
+// Code example
+ConversationsAPI.postConversationsMessageCommunicationSocialmediaMessages(conversationId: conversationId, communicationId: communicationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsMessageCommunicationSocialmediaMessages was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **communicationId** | **String**| communicationId | |
+| **body** | [**AdditionalSocialMediaMessage**](AdditionalSocialMediaMessage)| Message | |
+
+
+### Return type
+
+[**SocialMediaMessageData**](SocialMediaMessageData)
+
+
 ## postConversationsMessageCommunicationTyping
 
 
@@ -13330,4 +13392,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@168.0.0_
+_PureCloudPlatformClientV2@169.0.0_

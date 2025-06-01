@@ -1496,6 +1496,7 @@ Wraps DELETE /api/v2/outbound/schedules/campaigns/{campaignId}
 Requires ANY permissions: 
 
 * outbound:schedule:delete
+* outbound:campaign:deleteSchedule
 
 ### Example
 
@@ -1545,6 +1546,7 @@ Wraps DELETE /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}
 Requires ANY permissions: 
 
 * outbound:emailCampaignSchedule:delete
+* outbound:emailCampaign:deleteSchedule
 
 ### Example
 
@@ -1594,6 +1596,7 @@ Wraps DELETE /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}
 Requires ANY permissions: 
 
 * outbound:messagingCampaignSchedule:delete
+* outbound:messagingCampaign:deleteSchedule
 
 ### Example
 
@@ -5031,6 +5034,7 @@ Wraps GET /api/v2/outbound/schedules/campaigns/{campaignId}
 Requires ANY permissions: 
 
 * outbound:schedule:view
+* outbound:campaign:viewSchedule
 
 ### Example
 
@@ -5081,6 +5085,7 @@ Wraps GET /api/v2/outbound/schedules/campaigns
 Requires ANY permissions: 
 
 * outbound:schedule:view
+* outbound:campaign:viewSchedule
 
 ### Example
 
@@ -5127,6 +5132,7 @@ Wraps GET /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}
 Requires ANY permissions: 
 
 * outbound:emailCampaignSchedule:view
+* outbound:emailCampaign:viewSchedule
 
 ### Example
 
@@ -5177,6 +5183,7 @@ Wraps GET /api/v2/outbound/schedules/emailcampaigns
 Requires ANY permissions: 
 
 * outbound:emailCampaignSchedule:view
+* outbound:emailCampaign:viewSchedule
 
 ### Example
 
@@ -5223,6 +5230,7 @@ Wraps GET /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}
 Requires ANY permissions: 
 
 * outbound:messagingCampaignSchedule:view
+* outbound:messagingCampaign:viewSchedule
 
 ### Example
 
@@ -5273,6 +5281,7 @@ Wraps GET /api/v2/outbound/schedules/messagingcampaigns
 Requires ANY permissions: 
 
 * outbound:messagingCampaignSchedule:view
+* outbound:messagingCampaign:viewSchedule
 
 ### Example
 
@@ -8769,6 +8778,7 @@ Wraps PUT /api/v2/outbound/schedules/campaigns/{campaignId}
 Requires ANY permissions: 
 
 * outbound:schedule:edit
+* outbound:campaign:editSchedule
 
 ### Example
 
@@ -8821,6 +8831,7 @@ Wraps PUT /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}
 Requires ANY permissions: 
 
 * outbound:emailCampaignSchedule:edit
+* outbound:emailCampaign:editSchedule
 
 ### Example
 
@@ -8873,6 +8884,7 @@ Wraps PUT /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}
 Requires ANY permissions: 
 
 * outbound:messagingCampaignSchedule:edit
+* outbound:messagingCampaign:editSchedule
 
 ### Example
 
@@ -9064,4 +9076,4 @@ OutboundAPI.putOutboundWrapupcodemappings(body: body) { (response, error) in
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatformClientV2@168.0.0_
+_PureCloudPlatformClientV2@169.0.0_

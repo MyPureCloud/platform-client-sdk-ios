@@ -12,4 +12,4 @@ This is a table of settings per a loglevel that define what will be logged in ex
 
 
 
-_PureCloudPlatformClientV2@168.0.0_
+_PureCloudPlatformClientV2@169.0.0_

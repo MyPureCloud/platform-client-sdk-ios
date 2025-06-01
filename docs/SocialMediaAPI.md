@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteSocialmediaEscalationrule**](SocialMediaAPI#deleteSocialmediaEscalationrule) | Delete an escalation rule. |
 | [**deleteSocialmediaTopic**](SocialMediaAPI#deleteSocialmediaTopic) | Delete a social topic. |
 | [**deleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId**](SocialMediaAPI#deleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId) | Delete a Facebook data ingestion rule. |
+| [**deleteSocialmediaTopicDataingestionrulesOpenOpenId**](SocialMediaAPI#deleteSocialmediaTopicDataingestionrulesOpenOpenId) | Delete a open data ingestion rule. |
 | [**deleteSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId**](SocialMediaAPI#deleteSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId) | Delete a X (formally Twitter) data ingestion rule. |
 | [**getSocialmediaAnalyticsAggregatesJob**](SocialMediaAPI#getSocialmediaAnalyticsAggregatesJob) | Get status for async query for social media aggregates |
 | [**getSocialmediaAnalyticsAggregatesJobResults**](SocialMediaAPI#getSocialmediaAnalyticsAggregatesJobResults) | Fetch a page of results for an async social media query |
@@ -19,23 +20,31 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId) | Get a single Facebook data ingestion rule. |
 | [**getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersion**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersion) | Get a single Facebook data ingestion rule version. |
 | [**getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersions**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersions) | Get the Facebook data ingestion rule versions. |
+| [**getSocialmediaTopicDataingestionrulesOpenOpenId**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesOpenOpenId) | Get a single open data ingestion rule. |
+| [**getSocialmediaTopicDataingestionrulesOpenOpenIdVersion**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesOpenOpenIdVersion) | Get a single Open data ingestion rule version. |
+| [**getSocialmediaTopicDataingestionrulesOpenOpenIdVersions**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesOpenOpenIdVersions) | Get the Open data ingestion rule versions. |
 | [**getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId) | Get a single X (formally Twitter) data ingestion rule. |
 | [**getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersion**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersion) | Get a single X (formally Twitter) data ingestion rule version. |
 | [**getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersions**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersions) | Get the Open data ingestion rule versions. |
 | [**getSocialmediaTopics**](SocialMediaAPI#getSocialmediaTopics) | Retrieve all social topics. |
 | [**patchSocialmediaTopic**](SocialMediaAPI#patchSocialmediaTopic) | Update a social topic. |
 | [**patchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId**](SocialMediaAPI#patchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId) | Update the status of a Facebook data ingestion rule. |
+| [**patchSocialmediaTopicDataingestionrulesOpenOpenId**](SocialMediaAPI#patchSocialmediaTopicDataingestionrulesOpenOpenId) | Update the status of a open data ingestion rule. |
 | [**patchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId**](SocialMediaAPI#patchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId) | Update the status of a X (formally Twitter) data ingestion rule. |
 | [**postSocialmediaAnalyticsAggregatesJobs**](SocialMediaAPI#postSocialmediaAnalyticsAggregatesJobs) | Query for social media aggregates asynchronously |
 | [**postSocialmediaAnalyticsMessagesJobs**](SocialMediaAPI#postSocialmediaAnalyticsMessagesJobs) | Query for social media messages asynchronously |
 | [**postSocialmediaEscalationrules**](SocialMediaAPI#postSocialmediaEscalationrules) | Create an escalation rule. |
 | [**postSocialmediaEscalationsMessages**](SocialMediaAPI#postSocialmediaEscalationsMessages) | Escalate message to a conversation manually |
 | [**postSocialmediaTopicDataingestionrulesFacebook**](SocialMediaAPI#postSocialmediaTopicDataingestionrulesFacebook) | Create an Facebook data ingestion rule. |
+| [**postSocialmediaTopicDataingestionrulesOpen**](SocialMediaAPI#postSocialmediaTopicDataingestionrulesOpen) | Create an open data ingestion rule. |
+| [**postSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk**](SocialMediaAPI#postSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk) | Ingest a list of Open Social Messages |
+| [**postSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk**](SocialMediaAPI#postSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk) | Ingest a list of Open Social Reactions |
 | [**postSocialmediaTopicDataingestionrulesTwitter**](SocialMediaAPI#postSocialmediaTopicDataingestionrulesTwitter) | Create an twitter data ingestion rule. |
 | [**postSocialmediaTopics**](SocialMediaAPI#postSocialmediaTopics) | Create a social topic. |
 | [**postSocialmediaTwitterHistoricalTweets**](SocialMediaAPI#postSocialmediaTwitterHistoricalTweets) | Retrieves historical tweet count for search terms, optional countries list and the current limit and usage for the organization. |
 | [**putSocialmediaEscalationrule**](SocialMediaAPI#putSocialmediaEscalationrule) | Update the escalation rule. |
 | [**putSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId**](SocialMediaAPI#putSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId) | Update the Facebook data ingestion rule. |
+| [**putSocialmediaTopicDataingestionrulesOpenOpenId**](SocialMediaAPI#putSocialmediaTopicDataingestionrulesOpenOpenId) | Update the open data ingestion rule. |
 | [**putSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId**](SocialMediaAPI#putSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId) | Update the X (formally Twitter) data ingestion rule. |
 {: class="table-striped"}
 
@@ -186,6 +195,59 @@ SocialMediaAPI.deleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestion
 | **topicId** | **String**| topicId | |
 | **facebookIngestionRuleId** | **String**| facebookIngestionRuleId | |
 | **hardDelete** | **Bool**| Determines whether a Facebook data ingestion rule should be soft-deleted (have it's state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. | [optional] |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteSocialmediaTopicDataingestionrulesOpenOpenId
+
+
+
+> Void deleteSocialmediaTopicDataingestionrulesOpenOpenId(topicId, openId, hardDelete)
+
+Delete a open data ingestion rule.
+
+
+
+Wraps DELETE /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}  
+
+Requires ANY permissions: 
+
+* socialmedia:openDataIngestionRule:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let topicId: String = "" // topicId
+let openId: String = "" // openId
+let hardDelete: Bool = true // Determines whether a open data ingestion rule should be soft-deleted (have it's state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default.
+
+// Code example
+SocialMediaAPI.deleteSocialmediaTopicDataingestionrulesOpenOpenId(topicId: topicId, openId: openId, hardDelete: hardDelete) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("SocialMediaAPI.deleteSocialmediaTopicDataingestionrulesOpenOpenId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **topicId** | **String**| topicId | |
+| **openId** | **String**| openId | |
+| **hardDelete** | **Bool**| Determines whether a open data ingestion rule should be soft-deleted (have it's state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. | [optional] |
 
 
 ### Return type
@@ -830,6 +892,174 @@ SocialMediaAPI.getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRul
 [**FacebookDataIngestionRuleVersionResponseEntityListing**](FacebookDataIngestionRuleVersionResponseEntityListing)
 
 
+## getSocialmediaTopicDataingestionrulesOpenOpenId
+
+
+
+> [OpenDataIngestionRuleResponse](OpenDataIngestionRuleResponse) getSocialmediaTopicDataingestionrulesOpenOpenId(topicId, openId, includeDeleted)
+
+Get a single open data ingestion rule.
+
+
+
+Wraps GET /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}  
+
+Requires ALL permissions: 
+
+* socialmedia:openDataIngestionRule:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let topicId: String = "" // topicId
+let openId: String = "" // openId
+let includeDeleted: Bool = true // Determines whether to include soft-deleted items in the result.
+
+// Code example
+SocialMediaAPI.getSocialmediaTopicDataingestionrulesOpenOpenId(topicId: topicId, openId: openId, includeDeleted: includeDeleted) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SocialMediaAPI.getSocialmediaTopicDataingestionrulesOpenOpenId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **topicId** | **String**| topicId | |
+| **openId** | **String**| openId | |
+| **includeDeleted** | **Bool**| Determines whether to include soft-deleted items in the result. | [optional] |
+
+
+### Return type
+
+[**OpenDataIngestionRuleResponse**](OpenDataIngestionRuleResponse)
+
+
+## getSocialmediaTopicDataingestionrulesOpenOpenIdVersion
+
+
+
+> [OpenDataIngestionRuleVersionResponse](OpenDataIngestionRuleVersionResponse) getSocialmediaTopicDataingestionrulesOpenOpenIdVersion(topicId, openId, dataIngestionRuleVersion, includeDeleted)
+
+Get a single Open data ingestion rule version.
+
+
+
+Wraps GET /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}/versions/{dataIngestionRuleVersion}  
+
+Requires ALL permissions: 
+
+* socialmedia:openDataIngestionRule:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let topicId: String = "" // topicId
+let openId: String = "" // openId
+let dataIngestionRuleVersion: String = "" // version
+let includeDeleted: Bool = true // Determines whether to include soft-deleted item in the result.
+
+// Code example
+SocialMediaAPI.getSocialmediaTopicDataingestionrulesOpenOpenIdVersion(topicId: topicId, openId: openId, dataIngestionRuleVersion: dataIngestionRuleVersion, includeDeleted: includeDeleted) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SocialMediaAPI.getSocialmediaTopicDataingestionrulesOpenOpenIdVersion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **topicId** | **String**| topicId | |
+| **openId** | **String**| openId | |
+| **dataIngestionRuleVersion** | **String**| version | |
+| **includeDeleted** | **Bool**| Determines whether to include soft-deleted item in the result. | [optional] |
+
+
+### Return type
+
+[**OpenDataIngestionRuleVersionResponse**](OpenDataIngestionRuleVersionResponse)
+
+
+## getSocialmediaTopicDataingestionrulesOpenOpenIdVersions
+
+
+
+> [OpenDataIngestionRuleVersionResponseEntityListing](OpenDataIngestionRuleVersionResponseEntityListing) getSocialmediaTopicDataingestionrulesOpenOpenIdVersions(topicId, openId, pageNumber, pageSize, includeDeleted)
+
+Get the Open data ingestion rule versions.
+
+
+
+Wraps GET /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}/versions  
+
+Requires ALL permissions: 
+
+* socialmedia:openDataIngestionRule:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let topicId: String = "" // topicId
+let openId: String = "" // openId
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let includeDeleted: Bool = true // Determines whether to include soft-deleted items in the result.
+
+// Code example
+SocialMediaAPI.getSocialmediaTopicDataingestionrulesOpenOpenIdVersions(topicId: topicId, openId: openId, pageNumber: pageNumber, pageSize: pageSize, includeDeleted: includeDeleted) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SocialMediaAPI.getSocialmediaTopicDataingestionrulesOpenOpenIdVersions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **topicId** | **String**| topicId | |
+| **openId** | **String**| openId | |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **includeDeleted** | **Bool**| Determines whether to include soft-deleted items in the result. | [optional] |
+
+
+### Return type
+
+[**OpenDataIngestionRuleVersionResponseEntityListing**](OpenDataIngestionRuleVersionResponseEntityListing)
+
+
 ## getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId
 
 
@@ -1160,6 +1390,60 @@ SocialMediaAPI.patchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionR
 [**FacebookDataIngestionRuleResponse**](FacebookDataIngestionRuleResponse)
 
 
+## patchSocialmediaTopicDataingestionrulesOpenOpenId
+
+
+
+> [OpenDataIngestionRuleResponse](OpenDataIngestionRuleResponse) patchSocialmediaTopicDataingestionrulesOpenOpenId(topicId, openId, body)
+
+Update the status of a open data ingestion rule.
+
+
+
+Wraps PATCH /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}  
+
+Requires ALL permissions: 
+
+* socialmedia:openDataIngestionRule:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let topicId: String = "" // topicId
+let openId: String = "" // openId
+let body: DataIngestionRuleStatusPatchRequest = new DataIngestionRuleStatusPatchRequest(...) // 
+
+// Code example
+SocialMediaAPI.patchSocialmediaTopicDataingestionrulesOpenOpenId(topicId: topicId, openId: openId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SocialMediaAPI.patchSocialmediaTopicDataingestionrulesOpenOpenId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **topicId** | **String**| topicId | |
+| **openId** | **String**| openId | |
+| **body** | [**DataIngestionRuleStatusPatchRequest**](DataIngestionRuleStatusPatchRequest)|  | [optional] |
+
+
+### Return type
+
+[**OpenDataIngestionRuleResponse**](OpenDataIngestionRuleResponse)
+
+
 ## patchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId
 
 
@@ -1468,6 +1752,170 @@ SocialMediaAPI.postSocialmediaTopicDataingestionrulesFacebook(topicId: topicId, 
 [**FacebookDataIngestionRuleResponse**](FacebookDataIngestionRuleResponse)
 
 
+## postSocialmediaTopicDataingestionrulesOpen
+
+
+
+> [OpenDataIngestionRuleResponse](OpenDataIngestionRuleResponse) postSocialmediaTopicDataingestionrulesOpen(topicId, body)
+
+Create an open data ingestion rule.
+
+
+
+Wraps POST /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open  
+
+Requires ANY permissions: 
+
+* socialmedia:openDataIngestionRule:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let topicId: String = "" // topicId
+let body: OpenDataIngestionRuleRequest = new OpenDataIngestionRuleRequest(...) // 
+
+// Code example
+SocialMediaAPI.postSocialmediaTopicDataingestionrulesOpen(topicId: topicId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SocialMediaAPI.postSocialmediaTopicDataingestionrulesOpen was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **topicId** | **String**| topicId | |
+| **body** | [**OpenDataIngestionRuleRequest**](OpenDataIngestionRuleRequest)|  | [optional] |
+
+
+### Return type
+
+[**OpenDataIngestionRuleResponse**](OpenDataIngestionRuleResponse)
+
+
+## postSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk
+
+
+
+> [OpenSocialNormalizedMessageEntityListing](OpenSocialNormalizedMessageEntityListing) postSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk(topicId, ruleId, body)
+
+Ingest a list of Open Social Messages
+
+Ingest a list of open social messages to an ingestion rule on a topic. This endpoint will ingest and enrich these messages.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+
+
+
+Wraps POST /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/messages/bulk  
+
+Requires ALL permissions: 
+
+* socialmedia:message:receive
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let topicId: String = "" // Topic ID
+let ruleId: String = "" // Data Ingestion Rule ID
+let body: [OpenSocialMediaNormalizedMessage] = [new OpenSocialMediaNormalizedMessage(...)] // NormalizedMessage
+
+// Code example
+SocialMediaAPI.postSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk(topicId: topicId, ruleId: ruleId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SocialMediaAPI.postSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **topicId** | **String**| Topic ID | |
+| **ruleId** | **String**| Data Ingestion Rule ID | |
+| **body** | [**[OpenSocialMediaNormalizedMessage]**](OpenSocialMediaNormalizedMessage)| NormalizedMessage | |
+
+
+### Return type
+
+[**OpenSocialNormalizedMessageEntityListing**](OpenSocialNormalizedMessageEntityListing)
+
+
+## postSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk
+
+
+
+> [OpenSocialReactionsNormalizedEventEntityListing](OpenSocialReactionsNormalizedEventEntityListing) postSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk(topicId, ruleId, body)
+
+Ingest a list of Open Social Reactions
+
+Ingest a list of open social reactions to an ingestion rule on a topic. This endpoint will ingest these reactions.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+
+
+
+Wraps POST /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/reactions/bulk  
+
+Requires ALL permissions: 
+
+* socialmedia:reaction:receive
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let topicId: String = "" // Topic ID
+let ruleId: String = "" // Data Ingestion Rule ID
+let body: OpenSocialMediaReactionsRequest = new OpenSocialMediaReactionsRequest(...) // NormalizedEvent
+
+// Code example
+SocialMediaAPI.postSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk(topicId: topicId, ruleId: ruleId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SocialMediaAPI.postSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **topicId** | **String**| Topic ID | |
+| **ruleId** | **String**| Data Ingestion Rule ID | |
+| **body** | [**OpenSocialMediaReactionsRequest**](OpenSocialMediaReactionsRequest)| NormalizedEvent | |
+
+
+### Return type
+
+[**OpenSocialReactionsNormalizedEventEntityListing**](OpenSocialReactionsNormalizedEventEntityListing)
+
+
 ## postSocialmediaTopicDataingestionrulesTwitter
 
 
@@ -1726,6 +2174,60 @@ SocialMediaAPI.putSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRul
 [**FacebookDataIngestionRuleResponse**](FacebookDataIngestionRuleResponse)
 
 
+## putSocialmediaTopicDataingestionrulesOpenOpenId
+
+
+
+> [OpenDataIngestionRuleResponse](OpenDataIngestionRuleResponse) putSocialmediaTopicDataingestionrulesOpenOpenId(topicId, openId, body)
+
+Update the open data ingestion rule.
+
+
+
+Wraps PUT /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}  
+
+Requires ALL permissions: 
+
+* socialmedia:openDataIngestionRule:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let topicId: String = "" // topicId
+let openId: String = "" // openId
+let body: OpenDataIngestionRuleRequest = new OpenDataIngestionRuleRequest(...) // 
+
+// Code example
+SocialMediaAPI.putSocialmediaTopicDataingestionrulesOpenOpenId(topicId: topicId, openId: openId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SocialMediaAPI.putSocialmediaTopicDataingestionrulesOpenOpenId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **topicId** | **String**| topicId | |
+| **openId** | **String**| openId | |
+| **body** | [**OpenDataIngestionRuleRequest**](OpenDataIngestionRuleRequest)|  | [optional] |
+
+
+### Return type
+
+[**OpenDataIngestionRuleResponse**](OpenDataIngestionRuleResponse)
+
+
 ## putSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId
 
 
@@ -1780,4 +2282,4 @@ SocialMediaAPI.putSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleI
 [**TwitterDataIngestionRuleResponse**](TwitterDataIngestionRuleResponse)
 
 
-_PureCloudPlatformClientV2@168.0.0_
+_PureCloudPlatformClientV2@169.0.0_
