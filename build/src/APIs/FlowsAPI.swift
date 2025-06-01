@@ -288,6 +288,7 @@ open class FlowsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -306,6 +307,7 @@ open class FlowsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -324,6 +326,7 @@ open class FlowsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -341,6 +344,7 @@ open class FlowsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -362,6 +366,7 @@ open class FlowsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -380,6 +385,7 @@ open class FlowsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -398,6 +404,7 @@ open class FlowsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -415,6 +422,7 @@ open class FlowsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -441,6 +449,7 @@ open class FlowsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -459,6 +468,7 @@ open class FlowsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -477,6 +487,7 @@ open class FlowsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -494,6 +505,7 @@ open class FlowsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -515,6 +527,7 @@ open class FlowsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -533,6 +546,7 @@ open class FlowsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -551,6 +565,7 @@ open class FlowsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -568,6 +583,7 @@ open class FlowsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -644,6 +660,7 @@ open class FlowsAPI {
         "current" : 7.061401241503109,
         "min" : 6.027456183070403,
         "countPositive" : 5,
+        "calculatedMetricValue" : 1,
         "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
@@ -716,6 +733,7 @@ open class FlowsAPI {
         "current" : 7.061401241503109,
         "min" : 6.027456183070403,
         "countPositive" : 5,
+        "calculatedMetricValue" : 1,
         "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
@@ -793,6 +811,7 @@ open class FlowsAPI {
         "current" : 7.061401241503109,
         "min" : 6.027456183070403,
         "countPositive" : 5,
+        "calculatedMetricValue" : 1,
         "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
@@ -865,6 +884,7 @@ open class FlowsAPI {
         "current" : 7.061401241503109,
         "min" : 6.027456183070403,
         "countPositive" : 5,
+        "calculatedMetricValue" : 1,
         "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",

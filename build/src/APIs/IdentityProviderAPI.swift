@@ -688,8 +688,8 @@ open class IdentityProviderAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
 
      - returns: RequestBuilder<IdentityProviderEntityListing> 

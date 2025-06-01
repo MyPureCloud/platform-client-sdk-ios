@@ -422,6 +422,12 @@ open class AgentAssistantsAPI {
     
     
     
+    
+    public enum Expand_getAssistants: String { 
+        case copilot = "copilot"
+    }
+    
+    
     /**
      Get all assistants.
      
@@ -430,10 +436,11 @@ open class AgentAssistantsAPI {
      - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter name: (query) Return the assistant by the given name. (optional)
+     - parameter expand: (query) Which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAssistants(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil, completion: @escaping ((_ data: AssistantListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAssistantsWithRequestBuilder(before: before, after: after, limit: limit, pageSize: pageSize, name: name)
+    open class func getAssistants(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil, expand: Expand_getAssistants? = nil, completion: @escaping ((_ data: AssistantListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAssistantsWithRequestBuilder(before: before, after: after, limit: limit, pageSize: pageSize, name: name, expand: expand)
         requestBuilder.execute { (response: Response<AssistantListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -494,10 +501,11 @@ open class AgentAssistantsAPI {
      - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter name: (query) Return the assistant by the given name. (optional)
+     - parameter expand: (query) Which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<AssistantListing> 
      */
-    open class func getAssistantsWithRequestBuilder(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil) -> RequestBuilder<AssistantListing> {        
+    open class func getAssistantsWithRequestBuilder(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil, expand: Expand_getAssistants? = nil) -> RequestBuilder<AssistantListing> {        
         let path = "/api/v2/assistants"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -508,7 +516,8 @@ open class AgentAssistantsAPI {
             "after": after, 
             "limit": limit, 
             "pageSize": pageSize, 
-            "name": name
+            "name": name, 
+            "expand": expand?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<AssistantListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

@@ -11,13 +11,13 @@ Model for a paged listing of Nuance bots
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
-| **previousUri** | **String** |  | [optional] |
-| **nextUri** | **String** |  | [optional] |
-| **lastUri** | **String** |  | [optional] |
 | **firstUri** | **String** |  | [optional] |
+| **lastUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
+| **nextUri** | **String** |  | [optional] |
+| **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@168.0.0_
+_PureCloudPlatformClientV2@169.0.0_

@@ -11,4 +11,4 @@ Information related to a successful launch of a bot flow. The ID will be used in
 
 
 
-_PureCloudPlatformClientV2@168.0.0_
+_PureCloudPlatformClientV2@169.0.0_

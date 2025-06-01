@@ -382,8 +382,8 @@ open class SpeechTextAnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The page size for the listing. The max that will be returned is 25. (optional)
@@ -604,8 +604,8 @@ open class SpeechTextAnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter conversationId: (path) The id of the conversation 
@@ -1693,8 +1693,8 @@ open class SpeechTextAnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The page size for the listing. The max that will be returned is 100. (optional)
@@ -2641,6 +2641,71 @@ open class SpeechTextAnalyticsAPI {
 
     
     
+    /**
+     Get a Speech & Text Analytics test topics phrase job by id
+     
+     - parameter jobId: (path) the id of the test topic phrase job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsTopicsTestphraseJob(jobId: String, completion: @escaping ((_ data: TestTopicPhraseJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsTopicsTestphraseJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<TestTopicPhraseJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a Speech & Text Analytics test topics phrase job by id
+     - GET /api/v2/speechandtextanalytics/topics/testphrase/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "matchedTranscriptsCount" : 6,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Running",
+  "processedTranscriptsCount" : 0
+}, statusCode=200}]
+     
+     - parameter jobId: (path) the id of the test topic phrase job 
+
+     - returns: RequestBuilder<TestTopicPhraseJob> 
+     */
+    open class func getSpeechandtextanalyticsTopicsTestphraseJobWithRequestBuilder(jobId: String) -> RequestBuilder<TestTopicPhraseJob> {        
+        var path = "/api/v2/speechandtextanalytics/topics/testphrase/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TestTopicPhraseJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     
@@ -3424,6 +3489,68 @@ open class SpeechTextAnalyticsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TopicJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create new Speech & Text Analytics publish topics job
+     
+     - parameter body: (body) The publish test topic phrase job to create 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postSpeechandtextanalyticsTopicsTestphraseJobs(body: TestTopicPhraseJobRequest, completion: @escaping ((_ data: TestTopicPhraseJobs?,_ error: Error?) -> Void)) {
+        let requestBuilder = postSpeechandtextanalyticsTopicsTestphraseJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<TestTopicPhraseJobs>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create new Speech & Text Analytics publish topics job
+     - POST /api/v2/speechandtextanalytics/topics/testphrase/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "entityType" : "TOPIC",
+  "selfUri" : "https://openapi-generator.tech",
+  "action" : "action",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Running"
+}, statusCode=200}]
+     
+     - parameter body: (body) The publish test topic phrase job to create 
+
+     - returns: RequestBuilder<TestTopicPhraseJobs> 
+     */
+    open class func postSpeechandtextanalyticsTopicsTestphraseJobsWithRequestBuilder(body: TestTopicPhraseJobRequest) -> RequestBuilder<TestTopicPhraseJobs> {        
+        let path = "/api/v2/speechandtextanalytics/topics/testphrase/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TestTopicPhraseJobs>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

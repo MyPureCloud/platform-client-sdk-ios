@@ -123,9 +123,9 @@ open class LogCaptureAPI {
      - parameter userId: (path) The id of the user to get browser log capture configuration 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getDiagnosticsLogcaptureBrowserUser(userId: String, completion: @escaping ((_ data: LogCaptureUserConfiguration?,_ error: Error?) -> Void)) {
+    open class func getDiagnosticsLogcaptureBrowserUser(userId: String, completion: @escaping ((_ data: LogCaptureUserConfigurationResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = getDiagnosticsLogcaptureBrowserUserWithRequestBuilder(userId: userId)
-        requestBuilder.execute { (response: Response<LogCaptureUserConfiguration>?, error) -> Void in
+        requestBuilder.execute { (response: Response<LogCaptureUserConfigurationResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -151,15 +151,14 @@ open class LogCaptureAPI {
   "dateStarted" : "2000-01-23T04:56:07.000+00:00",
   "dateExpired" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
-  "captureMethod" : "OnDemand",
   "id" : "id"
 }, statusCode=200}]
      
      - parameter userId: (path) The id of the user to get browser log capture configuration 
 
-     - returns: RequestBuilder<LogCaptureUserConfiguration> 
+     - returns: RequestBuilder<LogCaptureUserConfigurationResponse> 
      */
-    open class func getDiagnosticsLogcaptureBrowserUserWithRequestBuilder(userId: String) -> RequestBuilder<LogCaptureUserConfiguration> {        
+    open class func getDiagnosticsLogcaptureBrowserUserWithRequestBuilder(userId: String) -> RequestBuilder<LogCaptureUserConfigurationResponse> {        
         var path = "/api/v2/diagnostics/logcapture/browser/users/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -169,7 +168,7 @@ open class LogCaptureAPI {
         
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<LogCaptureUserConfiguration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<LogCaptureUserConfigurationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -182,9 +181,9 @@ open class LogCaptureAPI {
      - parameter includeExpired: (query) Include expired users with log captures still available for search or download (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getDiagnosticsLogcaptureBrowserUsers(includeExpired: Bool? = nil, completion: @escaping ((_ data: PagelessEntityListing?,_ error: Error?) -> Void)) {
+    open class func getDiagnosticsLogcaptureBrowserUsers(includeExpired: Bool? = nil, completion: @escaping ((_ data: LogCaptureUserConfigurationListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getDiagnosticsLogcaptureBrowserUsersWithRequestBuilder(includeExpired: includeExpired)
-        requestBuilder.execute { (response: Response<PagelessEntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<LogCaptureUserConfigurationListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -209,10 +208,16 @@ open class LogCaptureAPI {
      - examples: [{contentType=application/json, example={
   "total" : 0,
   "entities" : [ {
+    "dateStarted" : "2000-01-23T04:56:07.000+00:00",
+    "dateExpired" : "2000-01-23T04:56:07.000+00:00",
     "selfUri" : "https://openapi-generator.tech",
+    "captureMethod" : "OnDemand",
     "id" : "id"
   }, {
+    "dateStarted" : "2000-01-23T04:56:07.000+00:00",
+    "dateExpired" : "2000-01-23T04:56:07.000+00:00",
     "selfUri" : "https://openapi-generator.tech",
+    "captureMethod" : "OnDemand",
     "id" : "id"
   } ],
   "selfUri" : "https://openapi-generator.tech"
@@ -220,9 +225,9 @@ open class LogCaptureAPI {
      
      - parameter includeExpired: (query) Include expired users with log captures still available for search or download (optional)
 
-     - returns: RequestBuilder<PagelessEntityListing> 
+     - returns: RequestBuilder<LogCaptureUserConfigurationListing> 
      */
-    open class func getDiagnosticsLogcaptureBrowserUsersWithRequestBuilder(includeExpired: Bool? = nil) -> RequestBuilder<PagelessEntityListing> {        
+    open class func getDiagnosticsLogcaptureBrowserUsersWithRequestBuilder(includeExpired: Bool? = nil) -> RequestBuilder<LogCaptureUserConfigurationListing> {        
         let path = "/api/v2/diagnostics/logcapture/browser/users"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -232,7 +237,7 @@ open class LogCaptureAPI {
             "includeExpired": includeExpired
         ])
 
-        let requestBuilder: RequestBuilder<PagelessEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<LogCaptureUserConfigurationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -300,19 +305,16 @@ open class LogCaptureAPI {
     
     
     
-    
-    
     /**
      Query collected log entries. It returns a limited amount of records, to get all records use download endpoint.
      
-     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter body: (body)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postDiagnosticsLogcaptureBrowserEntriesQuery(before: String? = nil, after: String? = nil, pageSize: String? = nil, body: LogCaptureQueryRequest? = nil, completion: @escaping ((_ data: LogCaptureQueryResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postDiagnosticsLogcaptureBrowserEntriesQueryWithRequestBuilder(before: before, after: after, pageSize: pageSize, body: body)
+    open class func postDiagnosticsLogcaptureBrowserEntriesQuery(after: String? = nil, pageSize: String? = nil, body: LogCaptureQueryRequest? = nil, completion: @escaping ((_ data: LogCaptureQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postDiagnosticsLogcaptureBrowserEntriesQueryWithRequestBuilder(after: after, pageSize: pageSize, body: body)
         requestBuilder.execute { (response: Response<LogCaptureQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -346,25 +348,22 @@ open class LogCaptureAPI {
     "timestamp" : 0
   } ],
   "selfUri" : "selfUri",
-  "nextUri" : "nextUri",
-  "previousUri" : "previousUri"
+  "nextUri" : "nextUri"
 }, statusCode=200}]
      
-     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter body: (body)  (optional)
 
      - returns: RequestBuilder<LogCaptureQueryResponse> 
      */
-    open class func postDiagnosticsLogcaptureBrowserEntriesQueryWithRequestBuilder(before: String? = nil, after: String? = nil, pageSize: String? = nil, body: LogCaptureQueryRequest? = nil) -> RequestBuilder<LogCaptureQueryResponse> {        
+    open class func postDiagnosticsLogcaptureBrowserEntriesQueryWithRequestBuilder(after: String? = nil, pageSize: String? = nil, body: LogCaptureQueryRequest? = nil) -> RequestBuilder<LogCaptureQueryResponse> {        
         let path = "/api/v2/diagnostics/logcapture/browser/entries/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "before": before, 
             "after": after, 
             "pageSize": pageSize
         ])

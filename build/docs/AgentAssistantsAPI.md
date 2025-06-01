@@ -338,7 +338,7 @@ AgentAssistantsAPI.getAssistantQueues(assistantId: assistantId, before: before, 
 
 
 
-> [AssistantListing](AssistantListing) getAssistants(before, after, limit, pageSize, name)
+> [AssistantListing](AssistantListing) getAssistants(before, after, limit, pageSize, name, expand)
 
 Get all assistants.
 
@@ -363,9 +363,10 @@ let after: String = "" // The cursor that points to the end of the set of entiti
 let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
 let name: String = "" // Return the assistant by the given name.
+let expand: AgentAssistantsAPI.Expand_getAssistants = AgentAssistantsAPI.Expand_getAssistants.enummember // Which fields, if any, to expand
 
 // Code example
-AgentAssistantsAPI.getAssistants(before: before, after: after, limit: limit, pageSize: pageSize, name: name) { (response, error) in
+AgentAssistantsAPI.getAssistants(before: before, after: after, limit: limit, pageSize: pageSize, name: name, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -385,6 +386,7 @@ AgentAssistantsAPI.getAssistants(before: before, after: after, limit: limit, pag
 | **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **name** | **String**| Return the assistant by the given name. | [optional] |
+| **expand** | **String**| Which fields, if any, to expand | [optional]<br />**Values**: copilot ("copilot") |
 
 
 ### Return type
@@ -658,4 +660,4 @@ AgentAssistantsAPI.putAssistantQueue(assistantId: assistantId, queueId: queueId,
 [**AssistantQueue**](AssistantQueue)
 
 
-_PureCloudPlatformClientV2@168.0.0_
+_PureCloudPlatformClientV2@169.0.0_

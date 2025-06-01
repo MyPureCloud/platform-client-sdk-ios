@@ -79,8 +79,8 @@ docs/AddWorkPlanRotationRequest.md
 docs/AdditionalLanguagesIntent.md
 docs/AdditionalLanguagesSynonyms.md
 docs/AdditionalMessage.md
+docs/AdditionalSocialMediaMessage.md
 docs/Address.md
-docs/AddressableEntity.md
 docs/AddressableEntityRef.md
 docs/AddressableLicenseDefinition.md
 docs/AdherenceExplanationAsyncResponse.md
@@ -382,6 +382,7 @@ docs/AutoAnswerSetting.md
 docs/AutoAnswerSettings.md
 docs/AutoStart.md
 docs/AutoStatusTransitionDetail.md
+docs/AutomatedAnswer.md
 docs/AutomaticTimeZoneMappingSettings.md
 docs/AvailabilityRange.md
 docs/AvailableMediaType.md
@@ -1060,7 +1061,10 @@ docs/ConversationContentCardAction.md
 docs/ConversationContentCarousel.md
 docs/ConversationContentDatePicker.md
 docs/ConversationContentDatePickerAvailableTime.md
+docs/ConversationContentForm.md
+docs/ConversationContentInput.md
 docs/ConversationContentInteractiveApplication.md
+docs/ConversationContentIntroduction.md
 docs/ConversationContentLineItem.md
 docs/ConversationContentListPicker.md
 docs/ConversationContentListPickerItem.md
@@ -1077,6 +1081,8 @@ docs/ConversationContentReceivedReplyMessage.md
 docs/ConversationContentRequiredContactField.md
 docs/ConversationContentStory.md
 docs/ConversationContentText.md
+docs/ConversationContentWheelPicker.md
+docs/ConversationContentWheelPickerItem.md
 docs/ConversationDeletionProtectionQuery.md
 docs/ConversationDetailQueryClause.md
 docs/ConversationDetailQueryFilter.md
@@ -1161,6 +1167,10 @@ docs/ConversationEventTopicWorkflow.md
 docs/ConversationEventTopicWrapup.md
 docs/ConversationEventTyping.md
 docs/ConversationEventVideo.md
+docs/ConversationFormPage.md
+docs/ConversationFormPageComponent.md
+docs/ConversationFormResponseComponent.md
+docs/ConversationFormResponseContent.md
 docs/ConversationInsight.md
 docs/ConversationMessageContent.md
 docs/ConversationMessageEvent.md
@@ -2839,6 +2849,9 @@ docs/LineUserId.md
 docs/LinkConfiguration.md
 docs/ListAlternativeShiftTradesResponse.md
 docs/ListItemComponent.md
+docs/ListPicker.md
+docs/ListPickerItem.md
+docs/ListPickerSection.md
 docs/ListWrapperAgentWorkPlanField.md
 docs/ListWrapperAlternativeShiftBuSettingsActivityCategory.md
 docs/ListWrapperAlternativeShiftBuSettingsGranularity.md
@@ -2881,6 +2894,8 @@ docs/LogCaptureDownloadExecutionResponse.md
 docs/LogCaptureQueryRequest.md
 docs/LogCaptureQueryResponse.md
 docs/LogCaptureUserConfiguration.md
+docs/LogCaptureUserConfigurationListing.md
+docs/LogCaptureUserConfigurationResponse.md
 docs/LogEntry.md
 docs/LogicalInterfaceEntityListing.md
 docs/LongTermForecastPlanningGroupData.md
@@ -3118,6 +3133,10 @@ docs/OneOnOne.md
 docs/OpenActionFields.md
 docs/OpenActionProperties.md
 docs/OpenContentAttachment.md
+docs/OpenDataIngestionRuleRequest.md
+docs/OpenDataIngestionRuleResponse.md
+docs/OpenDataIngestionRuleVersionResponse.md
+docs/OpenDataIngestionRuleVersionResponseEntityListing.md
 docs/OpenEvent.md
 docs/OpenEventNormalizedMessage.md
 docs/OpenInboundMessageContent.md
@@ -3141,6 +3160,18 @@ docs/OpenMessagingToRecipient.md
 docs/OpenNormalizedMessage.md
 docs/OpenReceiptNormalizedMessage.md
 docs/OpenRichMediaSetting.md
+docs/OpenSocialMediaChannel.md
+docs/OpenSocialMediaMessageContent.md
+docs/OpenSocialMediaNormalizedMessage.md
+docs/OpenSocialMediaPublicMetadata.md
+docs/OpenSocialMediaReactionsChannel.md
+docs/OpenSocialMediaReactionsEvent.md
+docs/OpenSocialMediaReactionsNormalizedEvent.md
+docs/OpenSocialMediaReactionsRequest.md
+docs/OpenSocialMediaRecipient.md
+docs/OpenSocialMediaRecipientAdditionalIdentifier.md
+docs/OpenSocialNormalizedMessageEntityListing.md
+docs/OpenSocialReactionsNormalizedEventEntityListing.md
 docs/Operand.md
 docs/OperandPosition.md
 docs/Operation.md
@@ -3271,7 +3302,6 @@ docs/Page.md
 docs/PagedNamespaceListing.md
 docs/PagedSkillCombinationListing.md
 docs/PagelessDomainEntityListingEvaluationVersion.md
-docs/PagelessEntityListing.md
 docs/PagingSpec.md
 docs/ParkingStateRequest.md
 docs/ParsedCertificate.md
@@ -4190,6 +4220,7 @@ docs/SocialMediaAsyncDetailQuery.md
 docs/SocialMediaAsyncDetailQueryResponse.md
 docs/SocialMediaDetailDataContainer.md
 docs/SocialMediaDetailMessageContainer.md
+docs/SocialMediaMessageData.md
 docs/SocialMediaMessageEscalationInfo.md
 docs/SocialMediaQueryClause.md
 docs/SocialMediaQueryFilter.md
@@ -4385,6 +4416,11 @@ docs/TestModeResults.md
 docs/TestModeTrigger.md
 docs/TestSchemaOperation.md
 docs/TestTargetOperation.md
+docs/TestTopicPhraseJob.md
+docs/TestTopicPhraseJobRequest.md
+docs/TestTopicPhraseJobs.md
+docs/TestTopicPhrasePhrase.md
+docs/TestTopicPhraseTopic.md
 docs/TextBotChannel.md
 docs/TextBotDisconnectAction.md
 docs/TextBotErrorInputEvent.md
@@ -4486,6 +4522,7 @@ docs/TranscriptionTopicTranscriptWord.md
 docs/TranscriptionTopicTranscriptionMessage.md
 docs/TranscriptionTopicTranscriptionRequestStatus.md
 docs/Transcripts.md
+docs/TranscriptsFilters.md
 docs/TransferDestination.md
 docs/TransferInitiator.md
 docs/TransferRequest.md
@@ -5562,6 +5599,7 @@ docs/deleteScimV2User-example.txt
 docs/deleteSocialmediaEscalationrule-example.txt
 docs/deleteSocialmediaTopic-example.txt
 docs/deleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId-example.txt
+docs/deleteSocialmediaTopicDataingestionrulesOpenOpenId-example.txt
 docs/deleteSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId-example.txt
 docs/deleteSpeechandtextanalyticsCategory-example.txt
 docs/deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId-example.txt
@@ -6567,6 +6605,9 @@ docs/getSocialmediaTopicDataingestionrules-example.txt
 docs/getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId-example.txt
 docs/getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersion-example.txt
 docs/getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersions-example.txt
+docs/getSocialmediaTopicDataingestionrulesOpenOpenId-example.txt
+docs/getSocialmediaTopicDataingestionrulesOpenOpenIdVersion-example.txt
+docs/getSocialmediaTopicDataingestionrulesOpenOpenIdVersions-example.txt
 docs/getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId-example.txt
 docs/getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersion-example.txt
 docs/getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersions-example.txt
@@ -6600,6 +6641,7 @@ docs/getSpeechandtextanalyticsTopicsDialects-example.txt
 docs/getSpeechandtextanalyticsTopicsGeneral-example.txt
 docs/getSpeechandtextanalyticsTopicsGeneralStatus-example.txt
 docs/getSpeechandtextanalyticsTopicsPublishjob-example.txt
+docs/getSpeechandtextanalyticsTopicsTestphraseJob-example.txt
 docs/getSpeechandtextanalyticsTranslationsLanguageConversation-example.txt
 docs/getSpeechandtextanalyticsTranslationsLanguages-example.txt
 docs/getStation-example.txt
@@ -7063,6 +7105,7 @@ docs/patchScimV2User-example.txt
 docs/patchSettingsExecutiondata-example.txt
 docs/patchSocialmediaTopic-example.txt
 docs/patchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId-example.txt
+docs/patchSocialmediaTopicDataingestionrulesOpenOpenId-example.txt
 docs/patchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId-example.txt
 docs/patchSpeechandtextanalyticsSettings-example.txt
 docs/patchTaskmanagementWorkbin-example.txt
@@ -7304,6 +7347,7 @@ docs/postConversationsKeyconfigurationsValidate-example.txt
 docs/postConversationsMessageCommunicationMessages-example.txt
 docs/postConversationsMessageCommunicationMessagesMedia-example.txt
 docs/postConversationsMessageCommunicationMessagesMediaUploads-example.txt
+docs/postConversationsMessageCommunicationSocialmediaMessages-example.txt
 docs/postConversationsMessageCommunicationTyping-example.txt
 docs/postConversationsMessageInboundOpenEvent-example.txt
 docs/postConversationsMessageInboundOpenMessage-example.txt
@@ -7660,6 +7704,9 @@ docs/postSocialmediaAnalyticsMessagesJobs-example.txt
 docs/postSocialmediaEscalationrules-example.txt
 docs/postSocialmediaEscalationsMessages-example.txt
 docs/postSocialmediaTopicDataingestionrulesFacebook-example.txt
+docs/postSocialmediaTopicDataingestionrulesOpen-example.txt
+docs/postSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk-example.txt
+docs/postSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk-example.txt
 docs/postSocialmediaTopicDataingestionrulesTwitter-example.txt
 docs/postSocialmediaTopics-example.txt
 docs/postSocialmediaTwitterHistoricalTweets-example.txt
@@ -7671,6 +7718,7 @@ docs/postSpeechandtextanalyticsProgramsPublishjobs-example.txt
 docs/postSpeechandtextanalyticsSentimentfeedback-example.txt
 docs/postSpeechandtextanalyticsTopics-example.txt
 docs/postSpeechandtextanalyticsTopicsPublishjobs-example.txt
+docs/postSpeechandtextanalyticsTopicsTestphraseJobs-example.txt
 docs/postSpeechandtextanalyticsTranscriptsSearch-example.txt
 docs/postSpeechandtextanalyticsTranscriptsSearch-example.txt
 docs/postTaskmanagementWorkbins-example.txt
@@ -8038,6 +8086,7 @@ docs/putScimV2Group-example.txt
 docs/putScimV2User-example.txt
 docs/putSocialmediaEscalationrule-example.txt
 docs/putSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId-example.txt
+docs/putSocialmediaTopicDataingestionrulesOpenOpenId-example.txt
 docs/putSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId-example.txt
 docs/putSpeechandtextanalyticsCategory-example.txt
 docs/putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId-example.txt
@@ -8256,8 +8305,8 @@ src/Models/AddWorkPlanRotationRequest.swift
 src/Models/AdditionalLanguagesIntent.swift
 src/Models/AdditionalLanguagesSynonyms.swift
 src/Models/AdditionalMessage.swift
+src/Models/AdditionalSocialMediaMessage.swift
 src/Models/Address.swift
-src/Models/AddressableEntity.swift
 src/Models/AddressableEntityRef.swift
 src/Models/AddressableLicenseDefinition.swift
 src/Models/AdherenceExplanationAsyncResponse.swift
@@ -8543,6 +8592,7 @@ src/Models/AutoAnswerSetting.swift
 src/Models/AutoAnswerSettings.swift
 src/Models/AutoStart.swift
 src/Models/AutoStatusTransitionDetail.swift
+src/Models/AutomatedAnswer.swift
 src/Models/AutomaticTimeZoneMappingSettings.swift
 src/Models/AvailabilityRange.swift
 src/Models/AvailableMediaType.swift
@@ -9211,7 +9261,10 @@ src/Models/ConversationContentCardAction.swift
 src/Models/ConversationContentCarousel.swift
 src/Models/ConversationContentDatePicker.swift
 src/Models/ConversationContentDatePickerAvailableTime.swift
+src/Models/ConversationContentForm.swift
+src/Models/ConversationContentInput.swift
 src/Models/ConversationContentInteractiveApplication.swift
+src/Models/ConversationContentIntroduction.swift
 src/Models/ConversationContentLineItem.swift
 src/Models/ConversationContentListPicker.swift
 src/Models/ConversationContentListPickerItem.swift
@@ -9228,6 +9281,8 @@ src/Models/ConversationContentReceivedReplyMessage.swift
 src/Models/ConversationContentRequiredContactField.swift
 src/Models/ConversationContentStory.swift
 src/Models/ConversationContentText.swift
+src/Models/ConversationContentWheelPicker.swift
+src/Models/ConversationContentWheelPickerItem.swift
 src/Models/ConversationDeletionProtectionQuery.swift
 src/Models/ConversationDetailQueryClause.swift
 src/Models/ConversationDetailQueryFilter.swift
@@ -9312,6 +9367,10 @@ src/Models/ConversationEventTopicWorkflow.swift
 src/Models/ConversationEventTopicWrapup.swift
 src/Models/ConversationEventTyping.swift
 src/Models/ConversationEventVideo.swift
+src/Models/ConversationFormPage.swift
+src/Models/ConversationFormPageComponent.swift
+src/Models/ConversationFormResponseComponent.swift
+src/Models/ConversationFormResponseContent.swift
 src/Models/ConversationInsight.swift
 src/Models/ConversationMessageContent.swift
 src/Models/ConversationMessageEvent.swift
@@ -10942,6 +11001,9 @@ src/Models/LineUserId.swift
 src/Models/LinkConfiguration.swift
 src/Models/ListAlternativeShiftTradesResponse.swift
 src/Models/ListItemComponent.swift
+src/Models/ListPicker.swift
+src/Models/ListPickerItem.swift
+src/Models/ListPickerSection.swift
 src/Models/ListWrapperAgentWorkPlanField.swift
 src/Models/ListWrapperAlternativeShiftBuSettingsActivityCategory.swift
 src/Models/ListWrapperAlternativeShiftBuSettingsGranularity.swift
@@ -10980,6 +11042,8 @@ src/Models/LogCaptureDownloadExecutionResponse.swift
 src/Models/LogCaptureQueryRequest.swift
 src/Models/LogCaptureQueryResponse.swift
 src/Models/LogCaptureUserConfiguration.swift
+src/Models/LogCaptureUserConfigurationListing.swift
+src/Models/LogCaptureUserConfigurationResponse.swift
 src/Models/LogEntry.swift
 src/Models/LogicalInterfaceEntityListing.swift
 src/Models/LongTermForecastPlanningGroupData.swift
@@ -11210,6 +11274,10 @@ src/Models/OneOnOne.swift
 src/Models/OpenActionFields.swift
 src/Models/OpenActionProperties.swift
 src/Models/OpenContentAttachment.swift
+src/Models/OpenDataIngestionRuleRequest.swift
+src/Models/OpenDataIngestionRuleResponse.swift
+src/Models/OpenDataIngestionRuleVersionResponse.swift
+src/Models/OpenDataIngestionRuleVersionResponseEntityListing.swift
 src/Models/OpenEvent.swift
 src/Models/OpenEventNormalizedMessage.swift
 src/Models/OpenInboundMessageContent.swift
@@ -11233,6 +11301,18 @@ src/Models/OpenMessagingToRecipient.swift
 src/Models/OpenNormalizedMessage.swift
 src/Models/OpenReceiptNormalizedMessage.swift
 src/Models/OpenRichMediaSetting.swift
+src/Models/OpenSocialMediaChannel.swift
+src/Models/OpenSocialMediaMessageContent.swift
+src/Models/OpenSocialMediaNormalizedMessage.swift
+src/Models/OpenSocialMediaPublicMetadata.swift
+src/Models/OpenSocialMediaReactionsChannel.swift
+src/Models/OpenSocialMediaReactionsEvent.swift
+src/Models/OpenSocialMediaReactionsNormalizedEvent.swift
+src/Models/OpenSocialMediaReactionsRequest.swift
+src/Models/OpenSocialMediaRecipient.swift
+src/Models/OpenSocialMediaRecipientAdditionalIdentifier.swift
+src/Models/OpenSocialNormalizedMessageEntityListing.swift
+src/Models/OpenSocialReactionsNormalizedEventEntityListing.swift
 src/Models/Operand.swift
 src/Models/OperandPosition.swift
 src/Models/Operation.swift
@@ -11355,7 +11435,6 @@ src/Models/Page.swift
 src/Models/PagedNamespaceListing.swift
 src/Models/PagedSkillCombinationListing.swift
 src/Models/PagelessDomainEntityListingEvaluationVersion.swift
-src/Models/PagelessEntityListing.swift
 src/Models/PagingSpec.swift
 src/Models/ParkingStateRequest.swift
 src/Models/ParsedCertificate.swift
@@ -12248,6 +12327,7 @@ src/Models/SocialMediaAsyncDetailQuery.swift
 src/Models/SocialMediaAsyncDetailQueryResponse.swift
 src/Models/SocialMediaDetailDataContainer.swift
 src/Models/SocialMediaDetailMessageContainer.swift
+src/Models/SocialMediaMessageData.swift
 src/Models/SocialMediaMessageEscalationInfo.swift
 src/Models/SocialMediaQueryClause.swift
 src/Models/SocialMediaQueryFilter.swift
@@ -12429,6 +12509,11 @@ src/Models/TestModeResults.swift
 src/Models/TestModeTrigger.swift
 src/Models/TestSchemaOperation.swift
 src/Models/TestTargetOperation.swift
+src/Models/TestTopicPhraseJob.swift
+src/Models/TestTopicPhraseJobRequest.swift
+src/Models/TestTopicPhraseJobs.swift
+src/Models/TestTopicPhrasePhrase.swift
+src/Models/TestTopicPhraseTopic.swift
 src/Models/TextBotChannel.swift
 src/Models/TextBotDisconnectAction.swift
 src/Models/TextBotErrorInputEvent.swift
@@ -12526,6 +12611,7 @@ src/Models/TranscriptionTopicTranscriptWord.swift
 src/Models/TranscriptionTopicTranscriptionMessage.swift
 src/Models/TranscriptionTopicTranscriptionRequestStatus.swift
 src/Models/Transcripts.swift
+src/Models/TranscriptsFilters.swift
 src/Models/TransferDestination.swift
 src/Models/TransferInitiator.swift
 src/Models/TransferRequest.swift

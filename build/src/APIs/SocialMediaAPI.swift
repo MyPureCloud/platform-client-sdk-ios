@@ -173,6 +173,65 @@ open class SocialMediaAPI {
     
     
     /**
+     Delete a open data ingestion rule.
+     
+     - parameter topicId: (path) topicId 
+     - parameter openId: (path) openId 
+     - parameter hardDelete: (query) Determines whether a open data ingestion rule should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteSocialmediaTopicDataingestionrulesOpenOpenId(topicId: String, openId: String, hardDelete: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteSocialmediaTopicDataingestionrulesOpenOpenIdWithRequestBuilder(topicId: topicId, openId: openId, hardDelete: hardDelete)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a open data ingestion rule.
+     - DELETE /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter topicId: (path) topicId 
+     - parameter openId: (path) openId 
+     - parameter hardDelete: (query) Determines whether a open data ingestion rule should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteSocialmediaTopicDataingestionrulesOpenOpenIdWithRequestBuilder(topicId: String, openId: String, hardDelete: Bool? = nil) -> RequestBuilder<Void> {        
+        var path = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}"
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let openIdPreEscape = "\(openId)"
+        let openIdPostEscape = openIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{openId}", with: openIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "hardDelete": hardDelete
+        ])
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
      Delete a X (formally Twitter) data ingestion rule.
      
      - parameter topicId: (path) topicId 
@@ -1138,8 +1197,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter divisionId: (query) One division ID 
@@ -1317,8 +1376,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -1586,8 +1645,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -1617,6 +1676,279 @@ open class SocialMediaAPI {
         ])
 
         let requestBuilder: RequestBuilder<FacebookDataIngestionRuleVersionResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get a single open data ingestion rule.
+     
+     - parameter topicId: (path) topicId 
+     - parameter openId: (path) openId 
+     - parameter includeDeleted: (query) Determines whether to include soft-deleted items in the result. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSocialmediaTopicDataingestionrulesOpenOpenId(topicId: String, openId: String, includeDeleted: Bool? = nil, completion: @escaping ((_ data: OpenDataIngestionRuleResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSocialmediaTopicDataingestionrulesOpenOpenIdWithRequestBuilder(topicId: topicId, openId: openId, includeDeleted: includeDeleted)
+        requestBuilder.execute { (response: Response<OpenDataIngestionRuleResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a single open data ingestion rule.
+     - GET /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "version" : 0,
+  "platform" : "platform",
+  "status" : "Active",
+  "externalSource" : "{}"
+}, statusCode=200}]
+     
+     - parameter topicId: (path) topicId 
+     - parameter openId: (path) openId 
+     - parameter includeDeleted: (query) Determines whether to include soft-deleted items in the result. (optional)
+
+     - returns: RequestBuilder<OpenDataIngestionRuleResponse> 
+     */
+    open class func getSocialmediaTopicDataingestionrulesOpenOpenIdWithRequestBuilder(topicId: String, openId: String, includeDeleted: Bool? = nil) -> RequestBuilder<OpenDataIngestionRuleResponse> {        
+        var path = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}"
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let openIdPreEscape = "\(openId)"
+        let openIdPostEscape = openIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{openId}", with: openIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeDeleted": includeDeleted
+        ])
+
+        let requestBuilder: RequestBuilder<OpenDataIngestionRuleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get a single Open data ingestion rule version.
+     
+     - parameter topicId: (path) topicId 
+     - parameter openId: (path) openId 
+     - parameter dataIngestionRuleVersion: (path) version 
+     - parameter includeDeleted: (query) Determines whether to include soft-deleted item in the result. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSocialmediaTopicDataingestionrulesOpenOpenIdVersion(topicId: String, openId: String, dataIngestionRuleVersion: String, includeDeleted: Bool? = nil, completion: @escaping ((_ data: OpenDataIngestionRuleVersionResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSocialmediaTopicDataingestionrulesOpenOpenIdVersionWithRequestBuilder(topicId: topicId, openId: openId, dataIngestionRuleVersion: dataIngestionRuleVersion, includeDeleted: includeDeleted)
+        requestBuilder.execute { (response: Response<OpenDataIngestionRuleVersionResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a single Open data ingestion rule version.
+     - GET /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}/versions/{dataIngestionRuleVersion}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "version" : 0,
+  "platform" : "platform",
+  "status" : "Active",
+  "externalSource" : "{}"
+}, statusCode=200}]
+     
+     - parameter topicId: (path) topicId 
+     - parameter openId: (path) openId 
+     - parameter dataIngestionRuleVersion: (path) version 
+     - parameter includeDeleted: (query) Determines whether to include soft-deleted item in the result. (optional)
+
+     - returns: RequestBuilder<OpenDataIngestionRuleVersionResponse> 
+     */
+    open class func getSocialmediaTopicDataingestionrulesOpenOpenIdVersionWithRequestBuilder(topicId: String, openId: String, dataIngestionRuleVersion: String, includeDeleted: Bool? = nil) -> RequestBuilder<OpenDataIngestionRuleVersionResponse> {        
+        var path = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}/versions/{dataIngestionRuleVersion}"
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let openIdPreEscape = "\(openId)"
+        let openIdPostEscape = openIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{openId}", with: openIdPostEscape, options: .literal, range: nil)
+        let dataIngestionRuleVersionPreEscape = "\(dataIngestionRuleVersion)"
+        let dataIngestionRuleVersionPostEscape = dataIngestionRuleVersionPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{dataIngestionRuleVersion}", with: dataIngestionRuleVersionPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeDeleted": includeDeleted
+        ])
+
+        let requestBuilder: RequestBuilder<OpenDataIngestionRuleVersionResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get the Open data ingestion rule versions.
+     
+     - parameter topicId: (path) topicId 
+     - parameter openId: (path) openId 
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter includeDeleted: (query) Determines whether to include soft-deleted items in the result. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSocialmediaTopicDataingestionrulesOpenOpenIdVersions(topicId: String, openId: String, pageNumber: Int? = nil, pageSize: Int? = nil, includeDeleted: Bool? = nil, completion: @escaping ((_ data: OpenDataIngestionRuleVersionResponseEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSocialmediaTopicDataingestionrulesOpenOpenIdVersionsWithRequestBuilder(topicId: topicId, openId: openId, pageNumber: pageNumber, pageSize: pageSize, includeDeleted: includeDeleted)
+        requestBuilder.execute { (response: Response<OpenDataIngestionRuleVersionResponseEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the Open data ingestion rule versions.
+     - GET /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}/versions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "version" : 0,
+    "platform" : "platform",
+    "status" : "Active",
+    "externalSource" : "{}"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "version" : 0,
+    "platform" : "platform",
+    "status" : "Active",
+    "externalSource" : "{}"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter topicId: (path) topicId 
+     - parameter openId: (path) openId 
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter includeDeleted: (query) Determines whether to include soft-deleted items in the result. (optional)
+
+     - returns: RequestBuilder<OpenDataIngestionRuleVersionResponseEntityListing> 
+     */
+    open class func getSocialmediaTopicDataingestionrulesOpenOpenIdVersionsWithRequestBuilder(topicId: String, openId: String, pageNumber: Int? = nil, pageSize: Int? = nil, includeDeleted: Bool? = nil) -> RequestBuilder<OpenDataIngestionRuleVersionResponseEntityListing> {        
+        var path = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}/versions"
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let openIdPreEscape = "\(openId)"
+        let openIdPostEscape = openIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{openId}", with: openIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "includeDeleted": includeDeleted
+        ])
+
+        let requestBuilder: RequestBuilder<OpenDataIngestionRuleVersionResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1863,8 +2195,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -1992,8 +2324,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -2171,6 +2503,81 @@ open class SocialMediaAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FacebookDataIngestionRuleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update the status of a open data ingestion rule.
+     
+     - parameter topicId: (path) topicId 
+     - parameter openId: (path) openId 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchSocialmediaTopicDataingestionrulesOpenOpenId(topicId: String, openId: String, body: DataIngestionRuleStatusPatchRequest? = nil, completion: @escaping ((_ data: OpenDataIngestionRuleResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchSocialmediaTopicDataingestionrulesOpenOpenIdWithRequestBuilder(topicId: topicId, openId: openId, body: body)
+        requestBuilder.execute { (response: Response<OpenDataIngestionRuleResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the status of a open data ingestion rule.
+     - PATCH /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "version" : 0,
+  "platform" : "platform",
+  "status" : "Active",
+  "externalSource" : "{}"
+}, statusCode=202}]
+     
+     - parameter topicId: (path) topicId 
+     - parameter openId: (path) openId 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<OpenDataIngestionRuleResponse> 
+     */
+    open class func patchSocialmediaTopicDataingestionrulesOpenOpenIdWithRequestBuilder(topicId: String, openId: String, body: DataIngestionRuleStatusPatchRequest? = nil) -> RequestBuilder<OpenDataIngestionRuleResponse> {        
+        var path = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}"
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let openIdPreEscape = "\(openId)"
+        let openIdPostEscape = openIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{openId}", with: openIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OpenDataIngestionRuleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -2555,6 +2962,308 @@ open class SocialMediaAPI {
     
     
     /**
+     Create an open data ingestion rule.
+     
+     - parameter topicId: (path) topicId 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postSocialmediaTopicDataingestionrulesOpen(topicId: String, body: OpenDataIngestionRuleRequest? = nil, completion: @escaping ((_ data: OpenDataIngestionRuleResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postSocialmediaTopicDataingestionrulesOpenWithRequestBuilder(topicId: topicId, body: body)
+        requestBuilder.execute { (response: Response<OpenDataIngestionRuleResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create an open data ingestion rule.
+     - POST /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "version" : 0,
+  "platform" : "platform",
+  "status" : "Active",
+  "externalSource" : "{}"
+}, statusCode=202}]
+     
+     - parameter topicId: (path) topicId 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<OpenDataIngestionRuleResponse> 
+     */
+    open class func postSocialmediaTopicDataingestionrulesOpenWithRequestBuilder(topicId: String, body: OpenDataIngestionRuleRequest? = nil) -> RequestBuilder<OpenDataIngestionRuleResponse> {        
+        var path = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open"
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OpenDataIngestionRuleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Ingest a list of Open Social Messages
+     
+     - parameter topicId: (path) Topic ID 
+     - parameter ruleId: (path) Data Ingestion Rule ID 
+     - parameter body: (body) NormalizedMessage 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk(topicId: String, ruleId: String, body: [OpenSocialMediaNormalizedMessage], completion: @escaping ((_ data: OpenSocialNormalizedMessageEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulkWithRequestBuilder(topicId: topicId, ruleId: ruleId, body: body)
+        requestBuilder.execute { (response: Response<OpenSocialNormalizedMessageEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Ingest a list of Open Social Messages
+     - POST /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/messages/bulk
+     - Ingest a list of open social messages to an ingestion rule on a topic. This endpoint will ingest and enrich these messages.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "metadata" : {
+      "key" : "metadata"
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "channel" : "{}",
+    "id" : "id",
+    "text" : "text",
+    "type" : "Text",
+    "content" : [ {
+      "reaction" : "{}",
+      "attachment" : "{}",
+      "text" : "{}",
+      "contentType" : "Attachment"
+    }, {
+      "reaction" : "{}",
+      "attachment" : "{}",
+      "text" : "{}",
+      "contentType" : "Attachment"
+    } ]
+  }, {
+    "metadata" : {
+      "key" : "metadata"
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "channel" : "{}",
+    "id" : "id",
+    "text" : "text",
+    "type" : "Text",
+    "content" : [ {
+      "reaction" : "{}",
+      "attachment" : "{}",
+      "text" : "{}",
+      "contentType" : "Attachment"
+    }, {
+      "reaction" : "{}",
+      "attachment" : "{}",
+      "text" : "{}",
+      "contentType" : "Attachment"
+    } ]
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=202}]
+     
+     - parameter topicId: (path) Topic ID 
+     - parameter ruleId: (path) Data Ingestion Rule ID 
+     - parameter body: (body) NormalizedMessage 
+
+     - returns: RequestBuilder<OpenSocialNormalizedMessageEntityListing> 
+     */
+    open class func postSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulkWithRequestBuilder(topicId: String, ruleId: String, body: [OpenSocialMediaNormalizedMessage]) -> RequestBuilder<OpenSocialNormalizedMessageEntityListing> {        
+        var path = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/messages/bulk"
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let ruleIdPreEscape = "\(ruleId)"
+        let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OpenSocialNormalizedMessageEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Ingest a list of Open Social Reactions
+     
+     - parameter topicId: (path) Topic ID 
+     - parameter ruleId: (path) Data Ingestion Rule ID 
+     - parameter body: (body) NormalizedEvent 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk(topicId: String, ruleId: String, body: OpenSocialMediaReactionsRequest, completion: @escaping ((_ data: OpenSocialReactionsNormalizedEventEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulkWithRequestBuilder(topicId: topicId, ruleId: ruleId, body: body)
+        requestBuilder.execute { (response: Response<OpenSocialReactionsNormalizedEventEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Ingest a list of Open Social Reactions
+     - POST /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/reactions/bulk
+     - Ingest a list of open social reactions to an ingestion rule on a topic. This endpoint will ingest these reactions.  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least social scope.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 5,
+  "pageCount" : 5,
+  "pageNumber" : 1,
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "channel" : "{}",
+    "id" : "id",
+    "events" : [ {
+      "reactions" : [ {
+        "reactionType" : "Like",
+        "count" : 0
+      }, {
+        "reactionType" : "Like",
+        "count" : 0
+      } ]
+    }, {
+      "reactions" : [ {
+        "reactionType" : "Like",
+        "count" : 0
+      }, {
+        "reactionType" : "Like",
+        "count" : 0
+      } ]
+    } ]
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "channel" : "{}",
+    "id" : "id",
+    "events" : [ {
+      "reactions" : [ {
+        "reactionType" : "Like",
+        "count" : 0
+      }, {
+        "reactionType" : "Like",
+        "count" : 0
+      } ]
+    }, {
+      "reactions" : [ {
+        "reactionType" : "Like",
+        "count" : 0
+      }, {
+        "reactionType" : "Like",
+        "count" : 0
+      } ]
+    } ]
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=202}]
+     
+     - parameter topicId: (path) Topic ID 
+     - parameter ruleId: (path) Data Ingestion Rule ID 
+     - parameter body: (body) NormalizedEvent 
+
+     - returns: RequestBuilder<OpenSocialReactionsNormalizedEventEntityListing> 
+     */
+    open class func postSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulkWithRequestBuilder(topicId: String, ruleId: String, body: OpenSocialMediaReactionsRequest) -> RequestBuilder<OpenSocialReactionsNormalizedEventEntityListing> {        
+        var path = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/reactions/bulk"
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let ruleIdPreEscape = "\(ruleId)"
+        let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OpenSocialReactionsNormalizedEventEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Create an twitter data ingestion rule.
      
      - parameter topicId: (path) topicId 
@@ -2888,6 +3597,81 @@ open class SocialMediaAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FacebookDataIngestionRuleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update the open data ingestion rule.
+     
+     - parameter topicId: (path) topicId 
+     - parameter openId: (path) openId 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putSocialmediaTopicDataingestionrulesOpenOpenId(topicId: String, openId: String, body: OpenDataIngestionRuleRequest? = nil, completion: @escaping ((_ data: OpenDataIngestionRuleResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = putSocialmediaTopicDataingestionrulesOpenOpenIdWithRequestBuilder(topicId: topicId, openId: openId, body: body)
+        requestBuilder.execute { (response: Response<OpenDataIngestionRuleResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the open data ingestion rule.
+     - PUT /api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "version" : 0,
+  "platform" : "platform",
+  "status" : "Active",
+  "externalSource" : "{}"
+}, statusCode=202}]
+     
+     - parameter topicId: (path) topicId 
+     - parameter openId: (path) openId 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<OpenDataIngestionRuleResponse> 
+     */
+    open class func putSocialmediaTopicDataingestionrulesOpenOpenIdWithRequestBuilder(topicId: String, openId: String, body: OpenDataIngestionRuleRequest? = nil) -> RequestBuilder<OpenDataIngestionRuleResponse> {        
+        var path = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}"
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let openIdPreEscape = "\(openId)"
+        let openIdPostEscape = openIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{openId}", with: openIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OpenDataIngestionRuleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

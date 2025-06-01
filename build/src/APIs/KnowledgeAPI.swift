@@ -9455,24 +9455,25 @@ open class KnowledgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "conversationContext" : "{}",
-  "total" : 1,
   "pageCount" : 5,
   "pageNumber" : 6,
-  "searchId" : "searchId",
-  "application" : "{}",
+  "preprocessQuery" : true,
   "confidenceThreshold" : 2.302136,
   "query" : "query",
-  "answerGeneration" : "{}",
   "pageSize" : 0,
+  "queryType" : "AutoSearch",
+  "conversationContext" : "{}",
+  "total" : 1,
+  "searchId" : "searchId",
+  "application" : "{}",
+  "answerGeneration" : "{}",
   "results" : [ {
     "confidence" : 5.637376656633329,
     "document" : "{}"
   }, {
     "confidence" : 5.637376656633329,
     "document" : "{}"
-  } ],
-  "queryType" : "AutoSearch"
+  } ]
 }, statusCode=200}]
      
      - parameter knowledgeBaseId: (path) The ID of knowledge base containing the documents to query. 

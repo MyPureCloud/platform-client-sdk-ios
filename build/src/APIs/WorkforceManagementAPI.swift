@@ -3221,8 +3221,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   }, {
@@ -3234,8 +3234,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   } ],
@@ -3243,8 +3243,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -7095,8 +7095,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "modifiedBy" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]
@@ -9516,8 +9516,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   }, {
@@ -9529,8 +9529,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   } ],
@@ -9538,8 +9538,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Deprecated, paging is not supported (optional)
@@ -9614,8 +9614,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   }, {
@@ -9627,8 +9627,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   } ],
@@ -9636,8 +9636,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return all divisions (optional)
@@ -10674,10 +10674,10 @@ open class WorkforceManagementAPI {
      Update my alternative shifts trade by trade ID
      
      - parameter tradeId: (path) The ID of the alternative shift trade 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementAlternativeshiftsTrade(tradeId: String, body: AgentUpdateAlternativeShiftTradeRequest? = nil, completion: @escaping ((_ data: AlternativeShiftTradeResponse?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementAlternativeshiftsTrade(tradeId: String, body: AgentUpdateAlternativeShiftTradeRequest, completion: @escaping ((_ data: AlternativeShiftTradeResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementAlternativeshiftsTradeWithRequestBuilder(tradeId: tradeId, body: body)
         requestBuilder.execute { (response: Response<AlternativeShiftTradeResponse>?, error) -> Void in
             do {
@@ -10834,11 +10834,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter tradeId: (path) The ID of the alternative shift trade 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<AlternativeShiftTradeResponse> 
      */
-    open class func patchWorkforcemanagementAlternativeshiftsTradeWithRequestBuilder(tradeId: String, body: AgentUpdateAlternativeShiftTradeRequest? = nil) -> RequestBuilder<AlternativeShiftTradeResponse> {        
+    open class func patchWorkforcemanagementAlternativeshiftsTradeWithRequestBuilder(tradeId: String, body: AgentUpdateAlternativeShiftTradeRequest) -> RequestBuilder<AlternativeShiftTradeResponse> {        
         var path = "/api/v2/workforcemanagement/alternativeshifts/trades/{tradeId}"
         let tradeIdPreEscape = "\(tradeId)"
         let tradeIdPostEscape = tradeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -10913,10 +10913,10 @@ open class WorkforceManagementAPI {
      Update business unit
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementBusinessunit(businessUnitId: String, body: UpdateBusinessUnitRequest? = nil, completion: @escaping ((_ data: BusinessUnitResponse?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementBusinessunit(businessUnitId: String, body: UpdateBusinessUnitRequest, completion: @escaping ((_ data: BusinessUnitResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: businessUnitId, body: body)
         requestBuilder.execute { (response: Response<BusinessUnitResponse>?, error) -> Void in
             do {
@@ -10949,11 +10949,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<BusinessUnitResponse> 
      */
-    open class func patchWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String, body: UpdateBusinessUnitRequest? = nil) -> RequestBuilder<BusinessUnitResponse> {        
+    open class func patchWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String, body: UpdateBusinessUnitRequest) -> RequestBuilder<BusinessUnitResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -10979,10 +10979,10 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
      - parameter activityCodeId: (path) The ID of the activity code to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementBusinessunitActivitycode(businessUnitId: String, activityCodeId: String, body: UpdateActivityCodeRequest? = nil, completion: @escaping ((_ data: BusinessUnitActivityCode?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementBusinessunitActivitycode(businessUnitId: String, activityCodeId: String, body: UpdateActivityCodeRequest, completion: @escaping ((_ data: BusinessUnitActivityCode?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementBusinessunitActivitycodeWithRequestBuilder(businessUnitId: businessUnitId, activityCodeId: activityCodeId, body: body)
         requestBuilder.execute { (response: Response<BusinessUnitActivityCode>?, error) -> Void in
             do {
@@ -11032,11 +11032,11 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
      - parameter activityCodeId: (path) The ID of the activity code to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<BusinessUnitActivityCode> 
      */
-    open class func patchWorkforcemanagementBusinessunitActivitycodeWithRequestBuilder(businessUnitId: String, activityCodeId: String, body: UpdateActivityCodeRequest? = nil) -> RequestBuilder<BusinessUnitActivityCode> {        
+    open class func patchWorkforcemanagementBusinessunitActivitycodeWithRequestBuilder(businessUnitId: String, activityCodeId: String, body: UpdateActivityCodeRequest) -> RequestBuilder<BusinessUnitActivityCode> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11168,10 +11168,10 @@ open class WorkforceManagementAPI {
      Update alternative shifts settings for a business unit
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementBusinessunitAlternativeshiftsSettings(businessUnitId: String, body: UpdateAlternativeShiftBuSettingsRequest? = nil, completion: @escaping ((_ data: AlternativeShiftBuSettingsResponse?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementBusinessunitAlternativeshiftsSettings(businessUnitId: String, body: UpdateAlternativeShiftBuSettingsRequest, completion: @escaping ((_ data: AlternativeShiftBuSettingsResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementBusinessunitAlternativeshiftsSettingsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
         requestBuilder.execute { (response: Response<AlternativeShiftBuSettingsResponse>?, error) -> Void in
             do {
@@ -11203,11 +11203,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<AlternativeShiftBuSettingsResponse> 
      */
-    open class func patchWorkforcemanagementBusinessunitAlternativeshiftsSettingsWithRequestBuilder(businessUnitId: String, body: UpdateAlternativeShiftBuSettingsRequest? = nil) -> RequestBuilder<AlternativeShiftBuSettingsResponse> {        
+    open class func patchWorkforcemanagementBusinessunitAlternativeshiftsSettingsWithRequestBuilder(businessUnitId: String, body: UpdateAlternativeShiftBuSettingsRequest) -> RequestBuilder<AlternativeShiftBuSettingsResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11233,10 +11233,10 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit. 
      - parameter planningGroupId: (path) The ID of a planning group to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementBusinessunitPlanninggroup(businessUnitId: String, planningGroupId: String, body: UpdatePlanningGroupRequest? = nil, completion: @escaping ((_ data: PlanningGroup?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementBusinessunitPlanninggroup(businessUnitId: String, planningGroupId: String, body: UpdatePlanningGroupRequest, completion: @escaping ((_ data: PlanningGroup?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementBusinessunitPlanninggroupWithRequestBuilder(businessUnitId: businessUnitId, planningGroupId: planningGroupId, body: body)
         requestBuilder.execute { (response: Response<PlanningGroup>?, error) -> Void in
             do {
@@ -11293,11 +11293,11 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit. 
      - parameter planningGroupId: (path) The ID of a planning group to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<PlanningGroup> 
      */
-    open class func patchWorkforcemanagementBusinessunitPlanninggroupWithRequestBuilder(businessUnitId: String, planningGroupId: String, body: UpdatePlanningGroupRequest? = nil) -> RequestBuilder<PlanningGroup> {        
+    open class func patchWorkforcemanagementBusinessunitPlanninggroupWithRequestBuilder(businessUnitId: String, planningGroupId: String, body: UpdatePlanningGroupRequest) -> RequestBuilder<PlanningGroup> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11326,10 +11326,10 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter runId: (path) The ID of the schedule run 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementBusinessunitSchedulingRun(businessUnitId: String, runId: String, body: PatchBuScheduleRunRequest? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementBusinessunitSchedulingRun(businessUnitId: String, runId: String, body: PatchBuScheduleRunRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementBusinessunitSchedulingRunWithRequestBuilder(businessUnitId: businessUnitId, runId: runId, body: body)
         requestBuilder.execute { (response: Response<Void>?, error) -> Void in
             if error == nil {
@@ -11349,11 +11349,11 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter runId: (path) The ID of the schedule run 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<Void> 
      */
-    open class func patchWorkforcemanagementBusinessunitSchedulingRunWithRequestBuilder(businessUnitId: String, runId: String, body: PatchBuScheduleRunRequest? = nil) -> RequestBuilder<Void> {        
+    open class func patchWorkforcemanagementBusinessunitSchedulingRunWithRequestBuilder(businessUnitId: String, runId: String, body: PatchBuScheduleRunRequest) -> RequestBuilder<Void> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11382,10 +11382,10 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit. 
      - parameter serviceGoalTemplateId: (path) The ID of a service goal template to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId: String, serviceGoalTemplateId: String, body: UpdateServiceGoalTemplate? = nil, completion: @escaping ((_ data: ServiceGoalTemplate?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId: String, serviceGoalTemplateId: String, body: UpdateServiceGoalTemplate, completion: @escaping ((_ data: ServiceGoalTemplate?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: businessUnitId, serviceGoalTemplateId: serviceGoalTemplateId, body: body)
         requestBuilder.execute { (response: Response<ServiceGoalTemplate>?, error) -> Void in
             do {
@@ -11422,11 +11422,11 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit. 
      - parameter serviceGoalTemplateId: (path) The ID of a service goal template to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<ServiceGoalTemplate> 
      */
-    open class func patchWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: String, serviceGoalTemplateId: String, body: UpdateServiceGoalTemplate? = nil) -> RequestBuilder<ServiceGoalTemplate> {        
+    open class func patchWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: String, serviceGoalTemplateId: String, body: UpdateServiceGoalTemplate) -> RequestBuilder<ServiceGoalTemplate> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11455,10 +11455,10 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter staffingGroupId: (path) The ID of the staffing group to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementBusinessunitStaffinggroup(businessUnitId: String, staffingGroupId: String, body: UpdateStaffingGroupRequest? = nil, completion: @escaping ((_ data: StaffingGroupResponse?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementBusinessunitStaffinggroup(businessUnitId: String, staffingGroupId: String, body: UpdateStaffingGroupRequest, completion: @escaping ((_ data: StaffingGroupResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementBusinessunitStaffinggroupWithRequestBuilder(businessUnitId: businessUnitId, staffingGroupId: staffingGroupId, body: body)
         requestBuilder.execute { (response: Response<StaffingGroupResponse>?, error) -> Void in
             do {
@@ -11499,11 +11499,11 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter staffingGroupId: (path) The ID of the staffing group to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<StaffingGroupResponse> 
      */
-    open class func patchWorkforcemanagementBusinessunitStaffinggroupWithRequestBuilder(businessUnitId: String, staffingGroupId: String, body: UpdateStaffingGroupRequest? = nil) -> RequestBuilder<StaffingGroupResponse> {        
+    open class func patchWorkforcemanagementBusinessunitStaffinggroupWithRequestBuilder(businessUnitId: String, staffingGroupId: String, body: UpdateStaffingGroupRequest) -> RequestBuilder<StaffingGroupResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11532,10 +11532,10 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter timeOffPlanId: (path) The ID of the time-off plan to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementBusinessunitTimeoffplan(businessUnitId: String, timeOffPlanId: String, body: BuUpdateTimeOffPlanRequest? = nil, completion: @escaping ((_ data: BuTimeOffPlanResponse?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementBusinessunitTimeoffplan(businessUnitId: String, timeOffPlanId: String, body: BuUpdateTimeOffPlanRequest, completion: @escaping ((_ data: BuTimeOffPlanResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementBusinessunitTimeoffplanWithRequestBuilder(businessUnitId: businessUnitId, timeOffPlanId: timeOffPlanId, body: body)
         requestBuilder.execute { (response: Response<BuTimeOffPlanResponse>?, error) -> Void in
             do {
@@ -11583,11 +11583,11 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter timeOffPlanId: (path) The ID of the time-off plan to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<BuTimeOffPlanResponse> 
      */
-    open class func patchWorkforcemanagementBusinessunitTimeoffplanWithRequestBuilder(businessUnitId: String, timeOffPlanId: String, body: BuUpdateTimeOffPlanRequest? = nil) -> RequestBuilder<BuTimeOffPlanResponse> {        
+    open class func patchWorkforcemanagementBusinessunitTimeoffplanWithRequestBuilder(businessUnitId: String, timeOffPlanId: String, body: BuUpdateTimeOffPlanRequest) -> RequestBuilder<BuTimeOffPlanResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11697,10 +11697,10 @@ open class WorkforceManagementAPI {
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter bidId: (path) The work plan bid id of the bid groups 
      - parameter bidGroupId: (path) Work Plan Bid Group id 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId: String, bidId: String, bidGroupId: String, body: WorkPlanBidGroupUpdate? = nil, completion: @escaping ((_ data: WorkPlanBidGroupResponse?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId: String, bidId: String, bidGroupId: String, body: WorkPlanBidGroupUpdate, completion: @escaping ((_ data: WorkPlanBidGroupResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementBusinessunitWorkplanbidGroupWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId, body: body)
         requestBuilder.execute { (response: Response<WorkPlanBidGroupResponse>?, error) -> Void in
             do {
@@ -11734,11 +11734,11 @@ open class WorkforceManagementAPI {
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter bidId: (path) The work plan bid id of the bid groups 
      - parameter bidGroupId: (path) Work Plan Bid Group id 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<WorkPlanBidGroupResponse> 
      */
-    open class func patchWorkforcemanagementBusinessunitWorkplanbidGroupWithRequestBuilder(businessUnitId: String, bidId: String, bidGroupId: String, body: WorkPlanBidGroupUpdate? = nil) -> RequestBuilder<WorkPlanBidGroupResponse> {        
+    open class func patchWorkforcemanagementBusinessunitWorkplanbidGroupWithRequestBuilder(businessUnitId: String, bidId: String, bidGroupId: String, body: WorkPlanBidGroupUpdate) -> RequestBuilder<WorkPlanBidGroupResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11773,10 +11773,10 @@ open class WorkforceManagementAPI {
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter bidId: (path) The work plan bid id of the bid groups 
      - parameter bidGroupId: (path) The ID of the work plan bid group 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences(businessUnitId: String, bidId: String, bidGroupId: String, body: AgentsBidAssignedWorkPlanOverrideRequest? = nil, completion: @escaping ((_ data: AdminAgentWorkPlanPreferenceResponse?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences(businessUnitId: String, bidId: String, bidGroupId: String, body: AgentsBidAssignedWorkPlanOverrideRequest, completion: @escaping ((_ data: AdminAgentWorkPlanPreferenceResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferencesWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId, body: body)
         requestBuilder.execute { (response: Response<AdminAgentWorkPlanPreferenceResponse>?, error) -> Void in
             do {
@@ -11832,11 +11832,11 @@ open class WorkforceManagementAPI {
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter bidId: (path) The work plan bid id of the bid groups 
      - parameter bidGroupId: (path) The ID of the work plan bid group 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<AdminAgentWorkPlanPreferenceResponse> 
      */
-    open class func patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferencesWithRequestBuilder(businessUnitId: String, bidId: String, bidGroupId: String, body: AgentsBidAssignedWorkPlanOverrideRequest? = nil) -> RequestBuilder<AdminAgentWorkPlanPreferenceResponse> {        
+    open class func patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferencesWithRequestBuilder(businessUnitId: String, bidId: String, bidGroupId: String, body: AgentsBidAssignedWorkPlanOverrideRequest) -> RequestBuilder<AdminAgentWorkPlanPreferenceResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}/preferences"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11865,10 +11865,10 @@ open class WorkforceManagementAPI {
      Update the requested management unit
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementManagementunit(managementUnitId: String, body: UpdateManagementUnitRequest? = nil, completion: @escaping ((_ data: ManagementUnit?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementManagementunit(managementUnitId: String, body: UpdateManagementUnitRequest, completion: @escaping ((_ data: ManagementUnit?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: managementUnitId, body: body)
         requestBuilder.execute { (response: Response<ManagementUnit>?, error) -> Void in
             do {
@@ -11901,18 +11901,18 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "modifiedBy" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<ManagementUnit> 
      */
-    open class func patchWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: String, body: UpdateManagementUnitRequest? = nil) -> RequestBuilder<ManagementUnit> {        
+    open class func patchWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: String, body: UpdateManagementUnitRequest) -> RequestBuilder<ManagementUnit> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11935,10 +11935,10 @@ open class WorkforceManagementAPI {
      Update agent configurations
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementManagementunitAgents(managementUnitId: String, body: UpdateMuAgentsRequest? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementManagementunitAgents(managementUnitId: String, body: UpdateMuAgentsRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementManagementunitAgentsWithRequestBuilder(managementUnitId: managementUnitId, body: body)
         requestBuilder.execute { (response: Response<Void>?, error) -> Void in
             if error == nil {
@@ -11957,11 +11957,11 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<Void> 
      */
-    open class func patchWorkforcemanagementManagementunitAgentsWithRequestBuilder(managementUnitId: String, body: UpdateMuAgentsRequest? = nil) -> RequestBuilder<Void> {        
+    open class func patchWorkforcemanagementManagementunitAgentsWithRequestBuilder(managementUnitId: String, body: UpdateMuAgentsRequest) -> RequestBuilder<Void> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11984,10 +11984,10 @@ open class WorkforceManagementAPI {
      Updates agent work plan configuration
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementManagementunitAgentsWorkplansBulk(managementUnitId: String, body: UpdateMuAgentWorkPlansBatchRequest? = nil, completion: @escaping ((_ data: UpdateMuAgentWorkPlansBatchResponse?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementManagementunitAgentsWorkplansBulk(managementUnitId: String, body: UpdateMuAgentWorkPlansBatchRequest, completion: @escaping ((_ data: UpdateMuAgentWorkPlansBatchResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementManagementunitAgentsWorkplansBulkWithRequestBuilder(managementUnitId: managementUnitId, body: body)
         requestBuilder.execute { (response: Response<UpdateMuAgentWorkPlansBatchResponse>?, error) -> Void in
             do {
@@ -12024,11 +12024,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<UpdateMuAgentWorkPlansBatchResponse> 
      */
-    open class func patchWorkforcemanagementManagementunitAgentsWorkplansBulkWithRequestBuilder(managementUnitId: String, body: UpdateMuAgentWorkPlansBatchRequest? = nil) -> RequestBuilder<UpdateMuAgentWorkPlansBatchResponse> {        
+    open class func patchWorkforcemanagementManagementunitAgentsWorkplansBulkWithRequestBuilder(managementUnitId: String, body: UpdateMuAgentWorkPlansBatchRequest) -> RequestBuilder<UpdateMuAgentWorkPlansBatchResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/bulk"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -12054,10 +12054,10 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffLimitId: (path) The id of time off limit object to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementManagementunitTimeofflimit(managementUnitId: String, timeOffLimitId: String, body: UpdateTimeOffLimitRequest? = nil, completion: @escaping ((_ data: TimeOffLimit?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementManagementunitTimeofflimit(managementUnitId: String, timeOffLimitId: String, body: UpdateTimeOffLimitRequest, completion: @escaping ((_ data: TimeOffLimit?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementManagementunitTimeofflimitWithRequestBuilder(managementUnitId: managementUnitId, timeOffLimitId: timeOffLimitId, body: body)
         requestBuilder.execute { (response: Response<TimeOffLimit>?, error) -> Void in
             do {
@@ -12092,11 +12092,11 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffLimitId: (path) The id of time off limit object to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<TimeOffLimit> 
      */
-    open class func patchWorkforcemanagementManagementunitTimeofflimitWithRequestBuilder(managementUnitId: String, timeOffLimitId: String, body: UpdateTimeOffLimitRequest? = nil) -> RequestBuilder<TimeOffLimit> {        
+    open class func patchWorkforcemanagementManagementunitTimeofflimitWithRequestBuilder(managementUnitId: String, timeOffLimitId: String, body: UpdateTimeOffLimitRequest) -> RequestBuilder<TimeOffLimit> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -12125,10 +12125,10 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit 
      - parameter timeOffPlanId: (path) The ID of the time off plan to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementManagementunitTimeoffplan(managementUnitId: String, timeOffPlanId: String, body: UpdateTimeOffPlanRequest? = nil, completion: @escaping ((_ data: TimeOffPlan?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementManagementunitTimeoffplan(managementUnitId: String, timeOffPlanId: String, body: UpdateTimeOffPlanRequest, completion: @escaping ((_ data: TimeOffPlan?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementManagementunitTimeoffplanWithRequestBuilder(managementUnitId: managementUnitId, timeOffPlanId: timeOffPlanId, body: body)
         requestBuilder.execute { (response: Response<TimeOffPlan>?, error) -> Void in
             do {
@@ -12173,11 +12173,11 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit 
      - parameter timeOffPlanId: (path) The ID of the time off plan to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<TimeOffPlan> 
      */
-    open class func patchWorkforcemanagementManagementunitTimeoffplanWithRequestBuilder(managementUnitId: String, timeOffPlanId: String, body: UpdateTimeOffPlanRequest? = nil) -> RequestBuilder<TimeOffPlan> {        
+    open class func patchWorkforcemanagementManagementunitTimeoffplanWithRequestBuilder(managementUnitId: String, timeOffPlanId: String, body: UpdateTimeOffPlanRequest) -> RequestBuilder<TimeOffPlan> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -12209,10 +12209,10 @@ open class WorkforceManagementAPI {
      - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffRequestId: (path) The ID of the time off request. 
      - parameter userId: (path) The ID of user to whom the time off request belongs. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus(managementUnitId: String, timeOffRequestId: String, userId: String, body: SetTimeOffIntegrationStatusRequest? = nil, completion: @escaping ((_ data: UserTimeOffIntegrationStatusResponse?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus(managementUnitId: String, timeOffRequestId: String, userId: String, body: SetTimeOffIntegrationStatusRequest, completion: @escaping ((_ data: UserTimeOffIntegrationStatusResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatusWithRequestBuilder(managementUnitId: managementUnitId, timeOffRequestId: timeOffRequestId, userId: userId, body: body)
         requestBuilder.execute { (response: Response<UserTimeOffIntegrationStatusResponse>?, error) -> Void in
             do {
@@ -12245,11 +12245,11 @@ open class WorkforceManagementAPI {
      - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffRequestId: (path) The ID of the time off request. 
      - parameter userId: (path) The ID of user to whom the time off request belongs. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<UserTimeOffIntegrationStatusResponse> 
      */
-    open class func patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatusWithRequestBuilder(managementUnitId: String, timeOffRequestId: String, userId: String, body: SetTimeOffIntegrationStatusRequest? = nil) -> RequestBuilder<UserTimeOffIntegrationStatusResponse> {        
+    open class func patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatusWithRequestBuilder(managementUnitId: String, timeOffRequestId: String, userId: String, body: SetTimeOffIntegrationStatusRequest) -> RequestBuilder<UserTimeOffIntegrationStatusResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/{timeOffRequestId}/users/{userId}/integrationstatus"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -12284,10 +12284,10 @@ open class WorkforceManagementAPI {
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter userId: (path) The id of the user the requested time off request belongs to 
      - parameter timeOffRequestId: (path) The id of the time off request to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementManagementunitUserTimeoffrequest(managementUnitId: String, userId: String, timeOffRequestId: String, body: AdminTimeOffRequestPatch? = nil, completion: @escaping ((_ data: TimeOffRequestResponse?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementManagementunitUserTimeoffrequest(managementUnitId: String, userId: String, timeOffRequestId: String, body: AdminTimeOffRequestPatch, completion: @escaping ((_ data: TimeOffRequestResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementManagementunitUserTimeoffrequestWithRequestBuilder(managementUnitId: managementUnitId, userId: userId, timeOffRequestId: timeOffRequestId, body: body)
         requestBuilder.execute { (response: Response<TimeOffRequestResponse>?, error) -> Void in
             do {
@@ -12340,11 +12340,11 @@ open class WorkforceManagementAPI {
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter userId: (path) The id of the user the requested time off request belongs to 
      - parameter timeOffRequestId: (path) The id of the time off request to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<TimeOffRequestResponse> 
      */
-    open class func patchWorkforcemanagementManagementunitUserTimeoffrequestWithRequestBuilder(managementUnitId: String, userId: String, timeOffRequestId: String, body: AdminTimeOffRequestPatch? = nil) -> RequestBuilder<TimeOffRequestResponse> {        
+    open class func patchWorkforcemanagementManagementunitUserTimeoffrequestWithRequestBuilder(managementUnitId: String, userId: String, timeOffRequestId: String, body: AdminTimeOffRequestPatch) -> RequestBuilder<TimeOffRequestResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -12461,11 +12461,11 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
     public enum ValidationMode_patchWorkforcemanagementManagementunitWorkplan: String { 
         case ignore = "Ignore"
     }
-    
-    
     
     
     /**
@@ -12473,12 +12473,12 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanId: (path) The ID of the work plan to update 
+     - parameter body: (body) body 
      - parameter validationMode: (query) Allows to update work plan even if validation result is invalid (optional)
-     - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementManagementunitWorkplan(managementUnitId: String, workPlanId: String, validationMode: ValidationMode_patchWorkforcemanagementManagementunitWorkplan? = nil, body: WorkPlan? = nil, completion: @escaping ((_ data: WorkPlan?,_ error: Error?) -> Void)) {
-        let requestBuilder = patchWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: managementUnitId, workPlanId: workPlanId, validationMode: validationMode, body: body)
+    open class func patchWorkforcemanagementManagementunitWorkplan(managementUnitId: String, workPlanId: String, body: WorkPlan, validationMode: ValidationMode_patchWorkforcemanagementManagementunitWorkplan? = nil, completion: @escaping ((_ data: WorkPlan?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: managementUnitId, workPlanId: workPlanId, body: body, validationMode: validationMode)
         requestBuilder.execute { (response: Response<WorkPlan>?, error) -> Void in
             do {
                 if let e = error {
@@ -12667,12 +12667,12 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanId: (path) The ID of the work plan to update 
+     - parameter body: (body) body 
      - parameter validationMode: (query) Allows to update work plan even if validation result is invalid (optional)
-     - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<WorkPlan> 
      */
-    open class func patchWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: String, workPlanId: String, validationMode: ValidationMode_patchWorkforcemanagementManagementunitWorkplan? = nil, body: WorkPlan? = nil) -> RequestBuilder<WorkPlan> {        
+    open class func patchWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: String, workPlanId: String, body: WorkPlan, validationMode: ValidationMode_patchWorkforcemanagementManagementunitWorkplan? = nil) -> RequestBuilder<WorkPlan> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -12704,10 +12704,10 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanRotationId: (path) The ID of the work plan rotation to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementManagementunitWorkplanrotation(managementUnitId: String, workPlanRotationId: String, body: UpdateWorkPlanRotationRequest? = nil, completion: @escaping ((_ data: WorkPlanRotationResponse?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementManagementunitWorkplanrotation(managementUnitId: String, workPlanRotationId: String, body: UpdateWorkPlanRotationRequest, completion: @escaping ((_ data: WorkPlanRotationResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementManagementunitWorkplanrotationWithRequestBuilder(managementUnitId: managementUnitId, workPlanRotationId: workPlanRotationId, body: body)
         requestBuilder.execute { (response: Response<WorkPlanRotationResponse>?, error) -> Void in
             do {
@@ -12753,11 +12753,11 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanRotationId: (path) The ID of the work plan rotation to update 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<WorkPlanRotationResponse> 
      */
-    open class func patchWorkforcemanagementManagementunitWorkplanrotationWithRequestBuilder(managementUnitId: String, workPlanRotationId: String, body: UpdateWorkPlanRotationRequest? = nil) -> RequestBuilder<WorkPlanRotationResponse> {        
+    open class func patchWorkforcemanagementManagementunitWorkplanrotationWithRequestBuilder(managementUnitId: String, workPlanRotationId: String, body: UpdateWorkPlanRotationRequest) -> RequestBuilder<WorkPlanRotationResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -12783,10 +12783,10 @@ open class WorkforceManagementAPI {
      Update a time off request for the current user
      
      - parameter timeOffRequestId: (path) The ID of the time off request 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementTimeoffrequest(timeOffRequestId: String, body: AgentTimeOffRequestPatch? = nil, completion: @escaping ((_ data: TimeOffRequestResponse?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementTimeoffrequest(timeOffRequestId: String, body: AgentTimeOffRequestPatch, completion: @escaping ((_ data: TimeOffRequestResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementTimeoffrequestWithRequestBuilder(timeOffRequestId: timeOffRequestId, body: body)
         requestBuilder.execute { (response: Response<TimeOffRequestResponse>?, error) -> Void in
             do {
@@ -12837,11 +12837,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter timeOffRequestId: (path) The ID of the time off request 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<TimeOffRequestResponse> 
      */
-    open class func patchWorkforcemanagementTimeoffrequestWithRequestBuilder(timeOffRequestId: String, body: AgentTimeOffRequestPatch? = nil) -> RequestBuilder<TimeOffRequestResponse> {        
+    open class func patchWorkforcemanagementTimeoffrequestWithRequestBuilder(timeOffRequestId: String, body: AgentTimeOffRequestPatch) -> RequestBuilder<TimeOffRequestResponse> {        
         var path = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}"
         let timeOffRequestIdPreEscape = "\(timeOffRequestId)"
         let timeOffRequestIdPostEscape = timeOffRequestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -12864,10 +12864,10 @@ open class WorkforceManagementAPI {
      Update work plan bid ranks for a user
      
      - parameter userId: (path) The userId to whom the work plan bid ranks apply. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementUserWorkplanbidranks(userId: String, body: WorkPlanBidRanks? = nil, completion: @escaping ((_ data: WorkPlanBidRanks?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementUserWorkplanbidranks(userId: String, body: WorkPlanBidRanks, completion: @escaping ((_ data: WorkPlanBidRanks?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementUserWorkplanbidranksWithRequestBuilder(userId: userId, body: body)
         requestBuilder.execute { (response: Response<WorkPlanBidRanks>?, error) -> Void in
             do {
@@ -12899,11 +12899,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter userId: (path) The userId to whom the work plan bid ranks apply. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<WorkPlanBidRanks> 
      */
-    open class func patchWorkforcemanagementUserWorkplanbidranksWithRequestBuilder(userId: String, body: WorkPlanBidRanks? = nil) -> RequestBuilder<WorkPlanBidRanks> {        
+    open class func patchWorkforcemanagementUserWorkplanbidranksWithRequestBuilder(userId: String, body: WorkPlanBidRanks) -> RequestBuilder<WorkPlanBidRanks> {        
         var path = "/api/v2/workforcemanagement/users/{userId}/workplanbidranks"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -12978,10 +12978,10 @@ open class WorkforceManagementAPI {
      Update an agent's work plan bidding preference
      
      - parameter bidId: (path) The ID of the work plan bid 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementWorkplanbidPreferences(bidId: String, body: UpdateAgentWorkPlanBiddingPreference? = nil, completion: @escaping ((_ data: AgentWorkPlanBiddingPreferenceResponse?,_ error: Error?) -> Void)) {
+    open class func patchWorkforcemanagementWorkplanbidPreferences(bidId: String, body: UpdateAgentWorkPlanBiddingPreference, completion: @escaping ((_ data: AgentWorkPlanBiddingPreferenceResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = patchWorkforcemanagementWorkplanbidPreferencesWithRequestBuilder(bidId: bidId, body: body)
         requestBuilder.execute { (response: Response<AgentWorkPlanBiddingPreferenceResponse>?, error) -> Void in
             do {
@@ -13022,11 +13022,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter bidId: (path) The ID of the work plan bid 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<AgentWorkPlanBiddingPreferenceResponse> 
      */
-    open class func patchWorkforcemanagementWorkplanbidPreferencesWithRequestBuilder(bidId: String, body: UpdateAgentWorkPlanBiddingPreference? = nil) -> RequestBuilder<AgentWorkPlanBiddingPreferenceResponse> {        
+    open class func patchWorkforcemanagementWorkplanbidPreferencesWithRequestBuilder(bidId: String, body: UpdateAgentWorkPlanBiddingPreference) -> RequestBuilder<AgentWorkPlanBiddingPreferenceResponse> {        
         var path = "/api/v2/workforcemanagement/workplanbids/{bidId}/preferences"
         let bidIdPreEscape = "\(bidId)"
         let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -13220,10 +13220,10 @@ open class WorkforceManagementAPI {
     /**
      Request a historical adherence report in bulk
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementAdherenceHistoricalBulk(body: WfmHistoricalAdherenceBulkQuery? = nil, completion: @escaping ((_ data: WfmHistoricalAdherenceBulkResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementAdherenceHistoricalBulk(body: WfmHistoricalAdherenceBulkQuery, completion: @escaping ((_ data: WfmHistoricalAdherenceBulkResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementAdherenceHistoricalBulkWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<WfmHistoricalAdherenceBulkResponse>?, error) -> Void in
             do {
@@ -13253,11 +13253,11 @@ open class WorkforceManagementAPI {
   "job" : "{}"
 }, statusCode=202}]
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<WfmHistoricalAdherenceBulkResponse> 
      */
-    open class func postWorkforcemanagementAdherenceHistoricalBulkWithRequestBuilder(body: WfmHistoricalAdherenceBulkQuery? = nil) -> RequestBuilder<WfmHistoricalAdherenceBulkResponse> {        
+    open class func postWorkforcemanagementAdherenceHistoricalBulkWithRequestBuilder(body: WfmHistoricalAdherenceBulkQuery) -> RequestBuilder<WfmHistoricalAdherenceBulkResponse> {        
         let path = "/api/v2/workforcemanagement/adherence/historical/bulk"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -13406,10 +13406,10 @@ open class WorkforceManagementAPI {
     /**
      Move agents in and out of management unit
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementAgents(body: MoveAgentsRequest? = nil, completion: @escaping ((_ data: MoveAgentsResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementAgents(body: MoveAgentsRequest, completion: @escaping ((_ data: MoveAgentsResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementAgentsWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<MoveAgentsResponse>?, error) -> Void in
             do {
@@ -13445,11 +13445,11 @@ open class WorkforceManagementAPI {
   } ]
 }, statusCode=202}]
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<MoveAgentsResponse> 
      */
-    open class func postWorkforcemanagementAgentsWithRequestBuilder(body: MoveAgentsRequest? = nil) -> RequestBuilder<MoveAgentsResponse> {        
+    open class func postWorkforcemanagementAgentsWithRequestBuilder(body: MoveAgentsRequest) -> RequestBuilder<MoveAgentsResponse> {        
         let path = "/api/v2/workforcemanagement/agents"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -13466,10 +13466,10 @@ open class WorkforceManagementAPI {
     /**
      Query integrations for agents
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementAgentsIntegrationsHrisQuery(body: QueryAgentsIntegrationsRequest? = nil, completion: @escaping ((_ data: AgentsIntegrationsListing?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementAgentsIntegrationsHrisQuery(body: QueryAgentsIntegrationsRequest, completion: @escaping ((_ data: AgentsIntegrationsListing?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementAgentsIntegrationsHrisQueryWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<AgentsIntegrationsListing>?, error) -> Void in
             do {
@@ -13523,11 +13523,11 @@ open class WorkforceManagementAPI {
   } ]
 }, statusCode=200}]
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<AgentsIntegrationsListing> 
      */
-    open class func postWorkforcemanagementAgentsIntegrationsHrisQueryWithRequestBuilder(body: QueryAgentsIntegrationsRequest? = nil) -> RequestBuilder<AgentsIntegrationsListing> {        
+    open class func postWorkforcemanagementAgentsIntegrationsHrisQueryWithRequestBuilder(body: QueryAgentsIntegrationsRequest) -> RequestBuilder<AgentsIntegrationsListing> {        
         let path = "/api/v2/workforcemanagement/agents/integrations/hris/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -13634,10 +13634,10 @@ open class WorkforceManagementAPI {
     /**
      Get published schedule for the current user
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementAgentschedulesMine(body: BuGetCurrentAgentScheduleRequest? = nil, completion: @escaping ((_ data: BuCurrentAgentScheduleSearchResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementAgentschedulesMine(body: BuGetCurrentAgentScheduleRequest, completion: @escaping ((_ data: BuCurrentAgentScheduleSearchResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementAgentschedulesMineWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<BuCurrentAgentScheduleSearchResponse>?, error) -> Void in
             do {
@@ -13850,11 +13850,11 @@ open class WorkforceManagementAPI {
   "startDate" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<BuCurrentAgentScheduleSearchResponse> 
      */
-    open class func postWorkforcemanagementAgentschedulesMineWithRequestBuilder(body: BuGetCurrentAgentScheduleRequest? = nil) -> RequestBuilder<BuCurrentAgentScheduleSearchResponse> {        
+    open class func postWorkforcemanagementAgentschedulesMineWithRequestBuilder(body: BuGetCurrentAgentScheduleRequest) -> RequestBuilder<BuCurrentAgentScheduleSearchResponse> {        
         let path = "/api/v2/workforcemanagement/agentschedules/mine"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -14158,10 +14158,10 @@ open class WorkforceManagementAPI {
      Create a new activity code
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitActivitycodes(businessUnitId: String, body: CreateActivityCodeRequest? = nil, completion: @escaping ((_ data: BusinessUnitActivityCode?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementBusinessunitActivitycodes(businessUnitId: String, body: CreateActivityCodeRequest, completion: @escaping ((_ data: BusinessUnitActivityCode?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementBusinessunitActivitycodesWithRequestBuilder(businessUnitId: businessUnitId, body: body)
         requestBuilder.execute { (response: Response<BusinessUnitActivityCode>?, error) -> Void in
             do {
@@ -14210,11 +14210,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<BusinessUnitActivityCode> 
      */
-    open class func postWorkforcemanagementBusinessunitActivitycodesWithRequestBuilder(businessUnitId: String, body: CreateActivityCodeRequest? = nil) -> RequestBuilder<BusinessUnitActivityCode> {        
+    open class func postWorkforcemanagementBusinessunitActivitycodesWithRequestBuilder(businessUnitId: String, body: CreateActivityCodeRequest) -> RequestBuilder<BusinessUnitActivityCode> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -14500,13 +14500,13 @@ open class WorkforceManagementAPI {
      Search published schedules
      
      - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
-     - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId: String, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, body: BuSearchAgentSchedulesRequest? = nil, completion: @escaping ((_ data: BuAsyncAgentSchedulesSearchResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementBusinessunitAgentschedulesSearchWithRequestBuilder(businessUnitId: businessUnitId, forceAsync: forceAsync, forceDownloadService: forceDownloadService, body: body)
+    open class func postWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId: String, body: BuSearchAgentSchedulesRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: BuAsyncAgentSchedulesSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitAgentschedulesSearchWithRequestBuilder(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService)
         requestBuilder.execute { (response: Response<BuAsyncAgentSchedulesSearchResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -14538,13 +14538,13 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
-     - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<BuAsyncAgentSchedulesSearchResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitAgentschedulesSearchWithRequestBuilder(businessUnitId: String, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, body: BuSearchAgentSchedulesRequest? = nil) -> RequestBuilder<BuAsyncAgentSchedulesSearchResponse> {        
+    open class func postWorkforcemanagementBusinessunitAgentschedulesSearchWithRequestBuilder(businessUnitId: String, body: BuSearchAgentSchedulesRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<BuAsyncAgentSchedulesSearchResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/agentschedules/search"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -14640,12 +14640,12 @@ open class WorkforceManagementAPI {
      Get intraday data for the given date for the requested planningGroupIds
      
      - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
-     - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitIntraday(businessUnitId: String, forceAsync: Bool? = nil, body: IntradayPlanningGroupRequest? = nil, completion: @escaping ((_ data: AsyncIntradayResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementBusinessunitIntradayWithRequestBuilder(businessUnitId: businessUnitId, forceAsync: forceAsync, body: body)
+    open class func postWorkforcemanagementBusinessunitIntraday(businessUnitId: String, body: IntradayPlanningGroupRequest, forceAsync: Bool? = nil, completion: @escaping ((_ data: AsyncIntradayResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitIntradayWithRequestBuilder(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync)
         requestBuilder.execute { (response: Response<AsyncIntradayResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -14675,12 +14675,12 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
-     - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<AsyncIntradayResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitIntradayWithRequestBuilder(businessUnitId: String, forceAsync: Bool? = nil, body: IntradayPlanningGroupRequest? = nil) -> RequestBuilder<AsyncIntradayResponse> {        
+    open class func postWorkforcemanagementBusinessunitIntradayWithRequestBuilder(businessUnitId: String, body: IntradayPlanningGroupRequest, forceAsync: Bool? = nil) -> RequestBuilder<AsyncIntradayResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -14706,10 +14706,10 @@ open class WorkforceManagementAPI {
      Adds a new planning group
      
      - parameter businessUnitId: (path) The ID of the business unit. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitPlanninggroups(businessUnitId: String, body: CreatePlanningGroupRequest? = nil, completion: @escaping ((_ data: PlanningGroup?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementBusinessunitPlanninggroups(businessUnitId: String, body: CreatePlanningGroupRequest, completion: @escaping ((_ data: PlanningGroup?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementBusinessunitPlanninggroupsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
         requestBuilder.execute { (response: Response<PlanningGroup>?, error) -> Void in
             do {
@@ -14765,11 +14765,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<PlanningGroup> 
      */
-    open class func postWorkforcemanagementBusinessunitPlanninggroupsWithRequestBuilder(businessUnitId: String, body: CreatePlanningGroupRequest? = nil) -> RequestBuilder<PlanningGroup> {        
+    open class func postWorkforcemanagementBusinessunitPlanninggroupsWithRequestBuilder(businessUnitId: String, body: CreatePlanningGroupRequest) -> RequestBuilder<PlanningGroup> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -14792,10 +14792,10 @@ open class WorkforceManagementAPI {
      Adds a new service goal template
      
      - parameter businessUnitId: (path) The ID of the business unit. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitServicegoaltemplates(businessUnitId: String, body: CreateServiceGoalTemplate? = nil, completion: @escaping ((_ data: ServiceGoalTemplate?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementBusinessunitServicegoaltemplates(businessUnitId: String, body: CreateServiceGoalTemplate, completion: @escaping ((_ data: ServiceGoalTemplate?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementBusinessunitServicegoaltemplatesWithRequestBuilder(businessUnitId: businessUnitId, body: body)
         requestBuilder.execute { (response: Response<ServiceGoalTemplate>?, error) -> Void in
             do {
@@ -14831,11 +14831,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<ServiceGoalTemplate> 
      */
-    open class func postWorkforcemanagementBusinessunitServicegoaltemplatesWithRequestBuilder(businessUnitId: String, body: CreateServiceGoalTemplate? = nil) -> RequestBuilder<ServiceGoalTemplate> {        
+    open class func postWorkforcemanagementBusinessunitServicegoaltemplatesWithRequestBuilder(businessUnitId: String, body: CreateServiceGoalTemplate) -> RequestBuilder<ServiceGoalTemplate> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -14858,10 +14858,10 @@ open class WorkforceManagementAPI {
      Creates a new staffing group
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitStaffinggroups(businessUnitId: String, body: CreateStaffingGroupRequest? = nil, completion: @escaping ((_ data: StaffingGroupResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementBusinessunitStaffinggroups(businessUnitId: String, body: CreateStaffingGroupRequest, completion: @escaping ((_ data: StaffingGroupResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementBusinessunitStaffinggroupsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
         requestBuilder.execute { (response: Response<StaffingGroupResponse>?, error) -> Void in
             do {
@@ -14901,11 +14901,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<StaffingGroupResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitStaffinggroupsWithRequestBuilder(businessUnitId: String, body: CreateStaffingGroupRequest? = nil) -> RequestBuilder<StaffingGroupResponse> {        
+    open class func postWorkforcemanagementBusinessunitStaffinggroupsWithRequestBuilder(businessUnitId: String, body: CreateStaffingGroupRequest) -> RequestBuilder<StaffingGroupResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -14928,10 +14928,10 @@ open class WorkforceManagementAPI {
      Gets staffing group associations for a list of user IDs
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitStaffinggroupsQuery(businessUnitId: String, body: QueryUserStaffingGroupListRequest? = nil, completion: @escaping ((_ data: UserStaffingGroupListing?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementBusinessunitStaffinggroupsQuery(businessUnitId: String, body: QueryUserStaffingGroupListRequest, completion: @escaping ((_ data: UserStaffingGroupListing?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementBusinessunitStaffinggroupsQueryWithRequestBuilder(businessUnitId: businessUnitId, body: body)
         requestBuilder.execute { (response: Response<UserStaffingGroupListing>?, error) -> Void in
             do {
@@ -14966,11 +14966,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<UserStaffingGroupListing> 
      */
-    open class func postWorkforcemanagementBusinessunitStaffinggroupsQueryWithRequestBuilder(businessUnitId: String, body: QueryUserStaffingGroupListRequest? = nil) -> RequestBuilder<UserStaffingGroupListing> {        
+    open class func postWorkforcemanagementBusinessunitStaffinggroupsQueryWithRequestBuilder(businessUnitId: String, body: QueryUserStaffingGroupListRequest) -> RequestBuilder<UserStaffingGroupListing> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/query"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -14993,10 +14993,10 @@ open class WorkforceManagementAPI {
      Creates a new time-off limit object
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitTimeofflimits(businessUnitId: String, body: BuCreateTimeOffLimitRequest? = nil, completion: @escaping ((_ data: BuTimeOffLimitResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementBusinessunitTimeofflimits(businessUnitId: String, body: BuCreateTimeOffLimitRequest, completion: @escaping ((_ data: BuTimeOffLimitResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementBusinessunitTimeofflimitsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
         requestBuilder.execute { (response: Response<BuTimeOffLimitResponse>?, error) -> Void in
             do {
@@ -15029,11 +15029,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<BuTimeOffLimitResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitTimeofflimitsWithRequestBuilder(businessUnitId: String, body: BuCreateTimeOffLimitRequest? = nil) -> RequestBuilder<BuTimeOffLimitResponse> {        
+    open class func postWorkforcemanagementBusinessunitTimeofflimitsWithRequestBuilder(businessUnitId: String, body: BuCreateTimeOffLimitRequest) -> RequestBuilder<BuTimeOffLimitResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -15056,10 +15056,10 @@ open class WorkforceManagementAPI {
      Retrieves time-off limit related values based on a given set of filters.
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery(businessUnitId: String, body: QueryTimeOffLimitValuesRequest? = nil, completion: @escaping ((_ data: BuTimeOffLimitValuesResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery(businessUnitId: String, body: QueryTimeOffLimitValuesRequest, completion: @escaping ((_ data: BuTimeOffLimitValuesResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementBusinessunitTimeofflimitsValuesQueryWithRequestBuilder(businessUnitId: businessUnitId, body: body)
         requestBuilder.execute { (response: Response<BuTimeOffLimitValuesResponse>?, error) -> Void in
             do {
@@ -15110,11 +15110,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<BuTimeOffLimitValuesResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitTimeofflimitsValuesQueryWithRequestBuilder(businessUnitId: String, body: QueryTimeOffLimitValuesRequest? = nil) -> RequestBuilder<BuTimeOffLimitValuesResponse> {        
+    open class func postWorkforcemanagementBusinessunitTimeofflimitsValuesQueryWithRequestBuilder(businessUnitId: String, body: QueryTimeOffLimitValuesRequest) -> RequestBuilder<BuTimeOffLimitValuesResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/values/query"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -15137,10 +15137,10 @@ open class WorkforceManagementAPI {
      Creates a new time-off plan
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitTimeoffplans(businessUnitId: String, body: BuCreateTimeOffPlanRequest? = nil, completion: @escaping ((_ data: BuTimeOffPlanResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementBusinessunitTimeoffplans(businessUnitId: String, body: BuCreateTimeOffPlanRequest, completion: @escaping ((_ data: BuTimeOffPlanResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementBusinessunitTimeoffplansWithRequestBuilder(businessUnitId: businessUnitId, body: body)
         requestBuilder.execute { (response: Response<BuTimeOffPlanResponse>?, error) -> Void in
             do {
@@ -15187,11 +15187,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<BuTimeOffPlanResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitTimeoffplansWithRequestBuilder(businessUnitId: String, body: BuCreateTimeOffPlanRequest? = nil) -> RequestBuilder<BuTimeOffPlanResponse> {        
+    open class func postWorkforcemanagementBusinessunitTimeoffplansWithRequestBuilder(businessUnitId: String, body: BuCreateTimeOffPlanRequest) -> RequestBuilder<BuTimeOffPlanResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -15384,10 +15384,10 @@ open class WorkforceManagementAPI {
      - parameter businessUnitId: (path) The ID of the business unit to which the performance prediction belongs 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format 
      - parameter scheduleId: (path) The ID of the schedule the performance prediction belongs to 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations(businessUnitId: String, weekId: String, scheduleId: String, body: WfmProcessUploadRequest? = nil, completion: @escaping ((_ data: PerformancePredictionRecalculationResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations(businessUnitId: String, weekId: String, scheduleId: String, body: WfmProcessUploadRequest, completion: @escaping ((_ data: PerformancePredictionRecalculationResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body)
         requestBuilder.execute { (response: Response<PerformancePredictionRecalculationResponse>?, error) -> Void in
             do {
@@ -15421,11 +15421,11 @@ open class WorkforceManagementAPI {
      - parameter businessUnitId: (path) The ID of the business unit to which the performance prediction belongs 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format 
      - parameter scheduleId: (path) The ID of the schedule the performance prediction belongs to 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<PerformancePredictionRecalculationResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsWithRequestBuilder(businessUnitId: String, weekId: String, scheduleId: String, body: WfmProcessUploadRequest? = nil) -> RequestBuilder<PerformancePredictionRecalculationResponse> {        
+    open class func postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsWithRequestBuilder(businessUnitId: String, weekId: String, scheduleId: String, body: WfmProcessUploadRequest) -> RequestBuilder<PerformancePredictionRecalculationResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -15460,10 +15460,10 @@ open class WorkforceManagementAPI {
      - parameter businessUnitId: (path) The ID of the business unit to which the performance prediction belongs 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format 
      - parameter scheduleId: (path) The ID of the schedule the performance prediction belongs to 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl(businessUnitId: String, weekId: String, scheduleId: String, body: UploadUrlRequestBody? = nil, completion: @escaping ((_ data: PerformancePredictionRecalculationUploadResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl(businessUnitId: String, weekId: String, scheduleId: String, body: UploadUrlRequestBody, completion: @escaping ((_ data: PerformancePredictionRecalculationUploadResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurlWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body)
         requestBuilder.execute { (response: Response<PerformancePredictionRecalculationUploadResponse>?, error) -> Void in
             do {
@@ -15499,11 +15499,11 @@ open class WorkforceManagementAPI {
      - parameter businessUnitId: (path) The ID of the business unit to which the performance prediction belongs 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format 
      - parameter scheduleId: (path) The ID of the schedule the performance prediction belongs to 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<PerformancePredictionRecalculationUploadResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurlWithRequestBuilder(businessUnitId: String, weekId: String, scheduleId: String, body: UploadUrlRequestBody? = nil) -> RequestBuilder<PerformancePredictionRecalculationUploadResponse> {        
+    open class func postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurlWithRequestBuilder(businessUnitId: String, weekId: String, scheduleId: String, body: UploadUrlRequestBody) -> RequestBuilder<PerformancePredictionRecalculationUploadResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/uploadurl"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -16451,10 +16451,10 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter bidId: (path) The work plan bid id of the bid groups 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitWorkplanbidGroups(businessUnitId: String, bidId: String, body: WorkPlanBidGroupCreate? = nil, completion: @escaping ((_ data: WorkPlanBidGroupResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementBusinessunitWorkplanbidGroups(businessUnitId: String, bidId: String, body: WorkPlanBidGroupCreate, completion: @escaping ((_ data: WorkPlanBidGroupResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementBusinessunitWorkplanbidGroupsWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, body: body)
         requestBuilder.execute { (response: Response<WorkPlanBidGroupResponse>?, error) -> Void in
             do {
@@ -16487,11 +16487,11 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter bidId: (path) The work plan bid id of the bid groups 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<WorkPlanBidGroupResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitWorkplanbidGroupsWithRequestBuilder(businessUnitId: String, bidId: String, body: WorkPlanBidGroupCreate? = nil) -> RequestBuilder<WorkPlanBidGroupResponse> {        
+    open class func postWorkforcemanagementBusinessunitWorkplanbidGroupsWithRequestBuilder(businessUnitId: String, bidId: String, body: WorkPlanBidGroupCreate) -> RequestBuilder<WorkPlanBidGroupResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -16517,10 +16517,10 @@ open class WorkforceManagementAPI {
      Create a new work plan bid
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter body: (body) The work plan bid to be created (optional)
+     - parameter body: (body) The work plan bid to be created 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitWorkplanbids(businessUnitId: String, body: CreateWorkPlanBid? = nil, completion: @escaping ((_ data: WorkPlanBid?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementBusinessunitWorkplanbids(businessUnitId: String, body: CreateWorkPlanBid, completion: @escaping ((_ data: WorkPlanBid?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementBusinessunitWorkplanbidsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
         requestBuilder.execute { (response: Response<WorkPlanBid>?, error) -> Void in
             do {
@@ -16561,11 +16561,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter body: (body) The work plan bid to be created (optional)
+     - parameter body: (body) The work plan bid to be created 
 
      - returns: RequestBuilder<WorkPlanBid> 
      */
-    open class func postWorkforcemanagementBusinessunitWorkplanbidsWithRequestBuilder(businessUnitId: String, body: CreateWorkPlanBid? = nil) -> RequestBuilder<WorkPlanBid> {        
+    open class func postWorkforcemanagementBusinessunitWorkplanbidsWithRequestBuilder(businessUnitId: String, body: CreateWorkPlanBid) -> RequestBuilder<WorkPlanBid> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -16585,10 +16585,10 @@ open class WorkforceManagementAPI {
     /**
      Add a new business unit
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunits(body: CreateBusinessUnitRequest? = nil, completion: @escaping ((_ data: BusinessUnitResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementBusinessunits(body: CreateBusinessUnitRequest, completion: @escaping ((_ data: BusinessUnitResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementBusinessunitsWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<BusinessUnitResponse>?, error) -> Void in
             do {
@@ -16621,11 +16621,11 @@ open class WorkforceManagementAPI {
   "id" : "id"
 }, statusCode=200}]
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<BusinessUnitResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitsWithRequestBuilder(body: CreateBusinessUnitRequest? = nil) -> RequestBuilder<BusinessUnitResponse> {        
+    open class func postWorkforcemanagementBusinessunitsWithRequestBuilder(body: CreateBusinessUnitRequest) -> RequestBuilder<BusinessUnitResponse> {        
         let path = "/api/v2/workforcemanagement/businessunits"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -16698,10 +16698,10 @@ open class WorkforceManagementAPI {
     /**
      Delete the list of the historical data import entries
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementHistoricaldataBulkRemoveJobs(body: HistoricalImportDeleteFilesJobRequest? = nil, completion: @escaping ((_ data: HistoricalImportDeleteFilesJobResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementHistoricaldataBulkRemoveJobs(body: HistoricalImportDeleteFilesJobRequest, completion: @escaping ((_ data: HistoricalImportDeleteFilesJobResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementHistoricaldataBulkRemoveJobsWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<HistoricalImportDeleteFilesJobResponse>?, error) -> Void in
             do {
@@ -16745,11 +16745,11 @@ open class WorkforceManagementAPI {
   "state" : "Processing"
 }, statusCode=202}]
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<HistoricalImportDeleteFilesJobResponse> 
      */
-    open class func postWorkforcemanagementHistoricaldataBulkRemoveJobsWithRequestBuilder(body: HistoricalImportDeleteFilesJobRequest? = nil) -> RequestBuilder<HistoricalImportDeleteFilesJobResponse> {        
+    open class func postWorkforcemanagementHistoricaldataBulkRemoveJobsWithRequestBuilder(body: HistoricalImportDeleteFilesJobRequest) -> RequestBuilder<HistoricalImportDeleteFilesJobResponse> {        
         let path = "/api/v2/workforcemanagement/historicaldata/bulk/remove/jobs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -16817,10 +16817,10 @@ open class WorkforceManagementAPI {
     /**
      Trigger validation process for historical import
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementHistoricaldataValidate(body: ValidationServiceRequest? = nil, completion: @escaping ((_ data: ValidationServiceAsyncResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementHistoricaldataValidate(body: ValidationServiceRequest, completion: @escaping ((_ data: ValidationServiceAsyncResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementHistoricaldataValidateWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<ValidationServiceAsyncResponse>?, error) -> Void in
             do {
@@ -16849,11 +16849,11 @@ open class WorkforceManagementAPI {
   "id" : "id"
 }, statusCode=202}]
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<ValidationServiceAsyncResponse> 
      */
-    open class func postWorkforcemanagementHistoricaldataValidateWithRequestBuilder(body: ValidationServiceRequest? = nil) -> RequestBuilder<ValidationServiceAsyncResponse> {        
+    open class func postWorkforcemanagementHistoricaldataValidateWithRequestBuilder(body: ValidationServiceRequest) -> RequestBuilder<ValidationServiceAsyncResponse> {        
         let path = "/api/v2/workforcemanagement/historicaldata/validate"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -16939,12 +16939,12 @@ open class WorkforceManagementAPI {
      Get agents work plans configuration
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body 
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
-     - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitAgentsWorkplansQuery(managementUnitId: String, forceDownloadService: Bool? = nil, body: GetAgentsWorkPlansRequest? = nil, completion: @escaping ((_ data: AgentsWorkPlansResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementManagementunitAgentsWorkplansQueryWithRequestBuilder(managementUnitId: managementUnitId, forceDownloadService: forceDownloadService, body: body)
+    open class func postWorkforcemanagementManagementunitAgentsWorkplansQuery(managementUnitId: String, body: GetAgentsWorkPlansRequest, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: AgentsWorkPlansResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitAgentsWorkplansQueryWithRequestBuilder(managementUnitId: managementUnitId, body: body, forceDownloadService: forceDownloadService)
         requestBuilder.execute { (response: Response<AgentsWorkPlansResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -16973,12 +16973,12 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body 
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
-     - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<AgentsWorkPlansResponse> 
      */
-    open class func postWorkforcemanagementManagementunitAgentsWorkplansQueryWithRequestBuilder(managementUnitId: String, forceDownloadService: Bool? = nil, body: GetAgentsWorkPlansRequest? = nil) -> RequestBuilder<AgentsWorkPlansResponse> {        
+    open class func postWorkforcemanagementManagementunitAgentsWorkplansQueryWithRequestBuilder(managementUnitId: String, body: GetAgentsWorkPlansRequest, forceDownloadService: Bool? = nil) -> RequestBuilder<AgentsWorkPlansResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/query"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -17008,13 +17008,13 @@ open class WorkforceManagementAPI {
      Query published schedules for given given time range for set of users
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body 
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
-     - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId: String, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, body: BuSearchAgentSchedulesRequest? = nil, completion: @escaping ((_ data: BuAsyncAgentSchedulesSearchResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementManagementunitAgentschedulesSearchWithRequestBuilder(managementUnitId: managementUnitId, forceAsync: forceAsync, forceDownloadService: forceDownloadService, body: body)
+    open class func postWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId: String, body: BuSearchAgentSchedulesRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: BuAsyncAgentSchedulesSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitAgentschedulesSearchWithRequestBuilder(managementUnitId: managementUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService)
         requestBuilder.execute { (response: Response<BuAsyncAgentSchedulesSearchResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -17046,13 +17046,13 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body 
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
-     - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<BuAsyncAgentSchedulesSearchResponse> 
      */
-    open class func postWorkforcemanagementManagementunitAgentschedulesSearchWithRequestBuilder(managementUnitId: String, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, body: BuSearchAgentSchedulesRequest? = nil) -> RequestBuilder<BuAsyncAgentSchedulesSearchResponse> {        
+    open class func postWorkforcemanagementManagementunitAgentschedulesSearchWithRequestBuilder(managementUnitId: String, body: BuSearchAgentSchedulesRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<BuAsyncAgentSchedulesSearchResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agentschedules/search"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -17079,10 +17079,10 @@ open class WorkforceManagementAPI {
      Request a historical adherence report
      
      - parameter managementUnitId: (path) The ID of the management unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitHistoricaladherencequery(managementUnitId: String, body: WfmHistoricalAdherenceQuery? = nil, completion: @escaping ((_ data: WfmHistoricalAdherenceResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementManagementunitHistoricaladherencequery(managementUnitId: String, body: WfmHistoricalAdherenceQuery, completion: @escaping ((_ data: WfmHistoricalAdherenceResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementManagementunitHistoricaladherencequeryWithRequestBuilder(managementUnitId: managementUnitId, body: body)
         requestBuilder.execute { (response: Response<WfmHistoricalAdherenceResponse>?, error) -> Void in
             do {
@@ -17116,11 +17116,11 @@ open class WorkforceManagementAPI {
 }, statusCode=202}]
      
      - parameter managementUnitId: (path) The ID of the management unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<WfmHistoricalAdherenceResponse> 
      */
-    open class func postWorkforcemanagementManagementunitHistoricaladherencequeryWithRequestBuilder(managementUnitId: String, body: WfmHistoricalAdherenceQuery? = nil) -> RequestBuilder<WfmHistoricalAdherenceResponse> {        
+    open class func postWorkforcemanagementManagementunitHistoricaladherencequeryWithRequestBuilder(managementUnitId: String, body: WfmHistoricalAdherenceQuery) -> RequestBuilder<WfmHistoricalAdherenceResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/historicaladherencequery"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -17143,10 +17143,10 @@ open class WorkforceManagementAPI {
      Move the requested management unit to a new business unit
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitMove(managementUnitId: String, body: MoveManagementUnitRequest? = nil, completion: @escaping ((_ data: MoveManagementUnitResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementManagementunitMove(managementUnitId: String, body: MoveManagementUnitRequest, completion: @escaping ((_ data: MoveManagementUnitResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementManagementunitMoveWithRequestBuilder(managementUnitId: managementUnitId, body: body)
         requestBuilder.execute { (response: Response<MoveManagementUnitResponse>?, error) -> Void in
             do {
@@ -17177,11 +17177,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<MoveManagementUnitResponse> 
      */
-    open class func postWorkforcemanagementManagementunitMoveWithRequestBuilder(managementUnitId: String, body: MoveManagementUnitRequest? = nil) -> RequestBuilder<MoveManagementUnitResponse> {        
+    open class func postWorkforcemanagementManagementunitMoveWithRequestBuilder(managementUnitId: String, body: MoveManagementUnitRequest) -> RequestBuilder<MoveManagementUnitResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/move"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -17204,10 +17204,10 @@ open class WorkforceManagementAPI {
      Query published schedules for given given time range for set of users
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitSchedulesSearch(managementUnitId: String, body: UserListScheduleRequestBody? = nil, completion: @escaping ((_ data: UserScheduleContainer?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementManagementunitSchedulesSearch(managementUnitId: String, body: UserListScheduleRequestBody, completion: @escaping ((_ data: UserScheduleContainer?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementManagementunitSchedulesSearchWithRequestBuilder(managementUnitId: managementUnitId, body: body)
         requestBuilder.execute { (response: Response<UserScheduleContainer>?, error) -> Void in
             do {
@@ -17316,11 +17316,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<UserScheduleContainer> 
      */
-    open class func postWorkforcemanagementManagementunitSchedulesSearchWithRequestBuilder(managementUnitId: String, body: UserListScheduleRequestBody? = nil) -> RequestBuilder<UserScheduleContainer> {        
+    open class func postWorkforcemanagementManagementunitSchedulesSearchWithRequestBuilder(managementUnitId: String, body: UserListScheduleRequestBody) -> RequestBuilder<UserScheduleContainer> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/schedules/search"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -17343,10 +17343,10 @@ open class WorkforceManagementAPI {
      Request a historical shrinkage report
      
      - parameter managementUnitId: (path) The ID of the management unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitShrinkageJobs(managementUnitId: String, body: WfmHistoricalShrinkageRequest? = nil, completion: @escaping ((_ data: WfmHistoricalShrinkageResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementManagementunitShrinkageJobs(managementUnitId: String, body: WfmHistoricalShrinkageRequest, completion: @escaping ((_ data: WfmHistoricalShrinkageResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementManagementunitShrinkageJobsWithRequestBuilder(managementUnitId: managementUnitId, body: body)
         requestBuilder.execute { (response: Response<WfmHistoricalShrinkageResponse>?, error) -> Void in
             do {
@@ -17379,11 +17379,11 @@ open class WorkforceManagementAPI {
 }, statusCode=202}]
      
      - parameter managementUnitId: (path) The ID of the management unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<WfmHistoricalShrinkageResponse> 
      */
-    open class func postWorkforcemanagementManagementunitShrinkageJobsWithRequestBuilder(managementUnitId: String, body: WfmHistoricalShrinkageRequest? = nil) -> RequestBuilder<WfmHistoricalShrinkageResponse> {        
+    open class func postWorkforcemanagementManagementunitShrinkageJobsWithRequestBuilder(managementUnitId: String, body: WfmHistoricalShrinkageRequest) -> RequestBuilder<WfmHistoricalShrinkageResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/shrinkage/jobs"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -17406,10 +17406,10 @@ open class WorkforceManagementAPI {
      Creates a new time off limit object under management unit.
      
      - parameter managementUnitId: (path) The ID of the management unit. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitTimeofflimits(managementUnitId: String, body: CreateTimeOffLimitRequest? = nil, completion: @escaping ((_ data: TimeOffLimit?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementManagementunitTimeofflimits(managementUnitId: String, body: CreateTimeOffLimitRequest, completion: @escaping ((_ data: TimeOffLimit?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementManagementunitTimeofflimitsWithRequestBuilder(managementUnitId: managementUnitId, body: body)
         requestBuilder.execute { (response: Response<TimeOffLimit>?, error) -> Void in
             do {
@@ -17443,11 +17443,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<TimeOffLimit> 
      */
-    open class func postWorkforcemanagementManagementunitTimeofflimitsWithRequestBuilder(managementUnitId: String, body: CreateTimeOffLimitRequest? = nil) -> RequestBuilder<TimeOffLimit> {        
+    open class func postWorkforcemanagementManagementunitTimeofflimitsWithRequestBuilder(managementUnitId: String, body: CreateTimeOffLimitRequest) -> RequestBuilder<TimeOffLimit> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -17470,10 +17470,10 @@ open class WorkforceManagementAPI {
      Retrieves time off limit related values based on a given set of filters.
      
      - parameter managementUnitId: (path) The ID of the management unit. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitTimeofflimitsValuesQuery(managementUnitId: String, body: QueryTimeOffLimitValuesRequest? = nil, completion: @escaping ((_ data: QueryTimeOffLimitValuesResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementManagementunitTimeofflimitsValuesQuery(managementUnitId: String, body: QueryTimeOffLimitValuesRequest, completion: @escaping ((_ data: QueryTimeOffLimitValuesResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementManagementunitTimeofflimitsValuesQueryWithRequestBuilder(managementUnitId: managementUnitId, body: body)
         requestBuilder.execute { (response: Response<QueryTimeOffLimitValuesResponse>?, error) -> Void in
             do {
@@ -17520,11 +17520,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<QueryTimeOffLimitValuesResponse> 
      */
-    open class func postWorkforcemanagementManagementunitTimeofflimitsValuesQueryWithRequestBuilder(managementUnitId: String, body: QueryTimeOffLimitValuesRequest? = nil) -> RequestBuilder<QueryTimeOffLimitValuesResponse> {        
+    open class func postWorkforcemanagementManagementunitTimeofflimitsValuesQueryWithRequestBuilder(managementUnitId: String, body: QueryTimeOffLimitValuesRequest) -> RequestBuilder<QueryTimeOffLimitValuesResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/values/query"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -17547,10 +17547,10 @@ open class WorkforceManagementAPI {
      Creates a new time off plan
      
      - parameter managementUnitId: (path) The ID of the management unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitTimeoffplans(managementUnitId: String, body: CreateTimeOffPlanRequest? = nil, completion: @escaping ((_ data: TimeOffPlan?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementManagementunitTimeoffplans(managementUnitId: String, body: CreateTimeOffPlanRequest, completion: @escaping ((_ data: TimeOffPlan?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementManagementunitTimeoffplansWithRequestBuilder(managementUnitId: managementUnitId, body: body)
         requestBuilder.execute { (response: Response<TimeOffPlan>?, error) -> Void in
             do {
@@ -17594,11 +17594,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<TimeOffPlan> 
      */
-    open class func postWorkforcemanagementManagementunitTimeoffplansWithRequestBuilder(managementUnitId: String, body: CreateTimeOffPlanRequest? = nil) -> RequestBuilder<TimeOffPlan> {        
+    open class func postWorkforcemanagementManagementunitTimeoffplansWithRequestBuilder(managementUnitId: String, body: CreateTimeOffPlanRequest) -> RequestBuilder<TimeOffPlan> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -17621,10 +17621,10 @@ open class WorkforceManagementAPI {
      Create a new time off request
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitTimeoffrequests(managementUnitId: String, body: CreateAdminTimeOffRequest? = nil, completion: @escaping ((_ data: TimeOffRequestList?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementManagementunitTimeoffrequests(managementUnitId: String, body: CreateAdminTimeOffRequest, completion: @escaping ((_ data: TimeOffRequestList?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementManagementunitTimeoffrequestsWithRequestBuilder(managementUnitId: managementUnitId, body: body)
         requestBuilder.execute { (response: Response<TimeOffRequestList>?, error) -> Void in
             do {
@@ -17704,11 +17704,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<TimeOffRequestList> 
      */
-    open class func postWorkforcemanagementManagementunitTimeoffrequestsWithRequestBuilder(managementUnitId: String, body: CreateAdminTimeOffRequest? = nil) -> RequestBuilder<TimeOffRequestList> {        
+    open class func postWorkforcemanagementManagementunitTimeoffrequestsWithRequestBuilder(managementUnitId: String, body: CreateAdminTimeOffRequest) -> RequestBuilder<TimeOffRequestList> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -17731,10 +17731,10 @@ open class WorkforceManagementAPI {
      Retrieves integration statuses for a list of time off requests
      
      - parameter managementUnitId: (path) The ID of the management unit. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery(managementUnitId: String, body: QueryTimeOffIntegrationStatusRequest? = nil, completion: @escaping ((_ data: UserTimeOffIntegrationStatusResponseListing?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery(managementUnitId: String, body: QueryTimeOffIntegrationStatusRequest, completion: @escaping ((_ data: UserTimeOffIntegrationStatusResponseListing?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQueryWithRequestBuilder(managementUnitId: managementUnitId, body: body)
         requestBuilder.execute { (response: Response<UserTimeOffIntegrationStatusResponseListing>?, error) -> Void in
             do {
@@ -17771,11 +17771,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<UserTimeOffIntegrationStatusResponseListing> 
      */
-    open class func postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQueryWithRequestBuilder(managementUnitId: String, body: QueryTimeOffIntegrationStatusRequest? = nil) -> RequestBuilder<UserTimeOffIntegrationStatusResponseListing> {        
+    open class func postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQueryWithRequestBuilder(managementUnitId: String, body: QueryTimeOffIntegrationStatusRequest) -> RequestBuilder<UserTimeOffIntegrationStatusResponseListing> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/integrationstatus/query"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -17800,12 +17800,12 @@ open class WorkforceManagementAPI {
      Fetches time off requests matching the conditions specified in the request body
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body 
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
-     - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId: String, forceDownloadService: Bool? = nil, body: TimeOffRequestQueryBody? = nil, completion: @escaping ((_ data: TimeOffRequestListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementManagementunitTimeoffrequestsQueryWithRequestBuilder(managementUnitId: managementUnitId, forceDownloadService: forceDownloadService, body: body)
+    open class func postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId: String, body: TimeOffRequestQueryBody, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: TimeOffRequestListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitTimeoffrequestsQueryWithRequestBuilder(managementUnitId: managementUnitId, body: body, forceDownloadService: forceDownloadService)
         requestBuilder.execute { (response: Response<TimeOffRequestListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -17879,12 +17879,12 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body 
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
-     - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<TimeOffRequestListing> 
      */
-    open class func postWorkforcemanagementManagementunitTimeoffrequestsQueryWithRequestBuilder(managementUnitId: String, forceDownloadService: Bool? = nil, body: TimeOffRequestQueryBody? = nil) -> RequestBuilder<TimeOffRequestListing> {        
+    open class func postWorkforcemanagementManagementunitTimeoffrequestsQueryWithRequestBuilder(managementUnitId: String, body: TimeOffRequestQueryBody, forceDownloadService: Bool? = nil) -> RequestBuilder<TimeOffRequestListing> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/query"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -17910,10 +17910,10 @@ open class WorkforceManagementAPI {
      Retrieves daily waitlist position for a list of time off requests
      
      - parameter managementUnitId: (path) The ID of the management unit. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery(managementUnitId: String, body: QueryWaitlistPositionsRequest? = nil, completion: @escaping ((_ data: WaitlistPositionListing?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery(managementUnitId: String, body: QueryWaitlistPositionsRequest, completion: @escaping ((_ data: WaitlistPositionListing?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryWithRequestBuilder(managementUnitId: managementUnitId, body: body)
         requestBuilder.execute { (response: Response<WaitlistPositionListing>?, error) -> Void in
             do {
@@ -17952,11 +17952,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<WaitlistPositionListing> 
      */
-    open class func postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryWithRequestBuilder(managementUnitId: String, body: QueryWaitlistPositionsRequest? = nil) -> RequestBuilder<WaitlistPositionListing> {        
+    open class func postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQueryWithRequestBuilder(managementUnitId: String, body: QueryWaitlistPositionsRequest) -> RequestBuilder<WaitlistPositionListing> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/waitlistpositions/query"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -18143,10 +18143,10 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit 
      - parameter userId: (path) The id of the user for whom the time off request estimate is requested 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate(managementUnitId: String, userId: String, body: EstimateAvailableTimeOffRequest? = nil, completion: @escaping ((_ data: EstimateAvailableTimeOffResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate(managementUnitId: String, userId: String, body: EstimateAvailableTimeOffRequest, completion: @escaping ((_ data: EstimateAvailableTimeOffResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementManagementunitUserTimeoffrequestsEstimateWithRequestBuilder(managementUnitId: managementUnitId, userId: userId, body: body)
         requestBuilder.execute { (response: Response<EstimateAvailableTimeOffResponse>?, error) -> Void in
             do {
@@ -18200,11 +18200,11 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit 
      - parameter userId: (path) The id of the user for whom the time off request estimate is requested 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<EstimateAvailableTimeOffResponse> 
      */
-    open class func postWorkforcemanagementManagementunitUserTimeoffrequestsEstimateWithRequestBuilder(managementUnitId: String, userId: String, body: EstimateAvailableTimeOffRequest? = nil) -> RequestBuilder<EstimateAvailableTimeOffResponse> {        
+    open class func postWorkforcemanagementManagementunitUserTimeoffrequestsEstimateWithRequestBuilder(managementUnitId: String, userId: String, body: EstimateAvailableTimeOffRequest) -> RequestBuilder<EstimateAvailableTimeOffResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/estimate"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -18571,10 +18571,10 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanId: (path) The ID of the work plan to create a copy 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitWorkplanCopy(managementUnitId: String, workPlanId: String, body: CopyWorkPlan? = nil, completion: @escaping ((_ data: WorkPlan?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementManagementunitWorkplanCopy(managementUnitId: String, workPlanId: String, body: CopyWorkPlan, completion: @escaping ((_ data: WorkPlan?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementManagementunitWorkplanCopyWithRequestBuilder(managementUnitId: managementUnitId, workPlanId: workPlanId, body: body)
         requestBuilder.execute { (response: Response<WorkPlan>?, error) -> Void in
             do {
@@ -18764,11 +18764,11 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanId: (path) The ID of the work plan to create a copy 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<WorkPlan> 
      */
-    open class func postWorkforcemanagementManagementunitWorkplanCopyWithRequestBuilder(managementUnitId: String, workPlanId: String, body: CopyWorkPlan? = nil) -> RequestBuilder<WorkPlan> {        
+    open class func postWorkforcemanagementManagementunitWorkplanCopyWithRequestBuilder(managementUnitId: String, workPlanId: String, body: CopyWorkPlan) -> RequestBuilder<WorkPlan> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/copy"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -18792,23 +18792,23 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
     public enum Expand_postWorkforcemanagementManagementunitWorkplanValidate: String { 
         case messages = "messages"
     }
-    
-    
     
     /**
      Validate Work Plan
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanId: (path) The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID. 
+     - parameter body: (body) body 
      - parameter expand: (query)  (optional)
-     - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitWorkplanValidate(managementUnitId: String, workPlanId: String, expand: [String]? = nil, body: WorkPlanValidationRequest? = nil, completion: @escaping ((_ data: ValidateWorkPlanResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementManagementunitWorkplanValidateWithRequestBuilder(managementUnitId: managementUnitId, workPlanId: workPlanId, expand: expand, body: body)
+    open class func postWorkforcemanagementManagementunitWorkplanValidate(managementUnitId: String, workPlanId: String, body: WorkPlanValidationRequest, expand: [String]? = nil, completion: @escaping ((_ data: ValidateWorkPlanResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitWorkplanValidateWithRequestBuilder(managementUnitId: managementUnitId, workPlanId: workPlanId, body: body, expand: expand)
         requestBuilder.execute { (response: Response<ValidateWorkPlanResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -18839,12 +18839,12 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanId: (path) The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID. 
+     - parameter body: (body) body 
      - parameter expand: (query)  (optional)
-     - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<ValidateWorkPlanResponse> 
      */
-    open class func postWorkforcemanagementManagementunitWorkplanValidateWithRequestBuilder(managementUnitId: String, workPlanId: String, expand: [String]? = nil, body: WorkPlanValidationRequest? = nil) -> RequestBuilder<ValidateWorkPlanResponse> {        
+    open class func postWorkforcemanagementManagementunitWorkplanValidateWithRequestBuilder(managementUnitId: String, workPlanId: String, body: WorkPlanValidationRequest, expand: [String]? = nil) -> RequestBuilder<ValidateWorkPlanResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/validate"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -18876,10 +18876,10 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanRotationId: (path) The ID of the work plan rotation to create a copy 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitWorkplanrotationCopy(managementUnitId: String, workPlanRotationId: String, body: CopyWorkPlanRotationRequest? = nil, completion: @escaping ((_ data: WorkPlanRotationResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementManagementunitWorkplanrotationCopy(managementUnitId: String, workPlanRotationId: String, body: CopyWorkPlanRotationRequest, completion: @escaping ((_ data: WorkPlanRotationResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementManagementunitWorkplanrotationCopyWithRequestBuilder(managementUnitId: managementUnitId, workPlanRotationId: workPlanRotationId, body: body)
         requestBuilder.execute { (response: Response<WorkPlanRotationResponse>?, error) -> Void in
             do {
@@ -18925,11 +18925,11 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanRotationId: (path) The ID of the work plan rotation to create a copy 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<WorkPlanRotationResponse> 
      */
-    open class func postWorkforcemanagementManagementunitWorkplanrotationCopyWithRequestBuilder(managementUnitId: String, workPlanRotationId: String, body: CopyWorkPlanRotationRequest? = nil) -> RequestBuilder<WorkPlanRotationResponse> {        
+    open class func postWorkforcemanagementManagementunitWorkplanrotationCopyWithRequestBuilder(managementUnitId: String, workPlanRotationId: String, body: CopyWorkPlanRotationRequest) -> RequestBuilder<WorkPlanRotationResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}/copy"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -18955,10 +18955,10 @@ open class WorkforceManagementAPI {
      Create a new work plan rotation
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitWorkplanrotations(managementUnitId: String, body: AddWorkPlanRotationRequest? = nil, completion: @escaping ((_ data: WorkPlanRotationResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementManagementunitWorkplanrotations(managementUnitId: String, body: AddWorkPlanRotationRequest, completion: @escaping ((_ data: WorkPlanRotationResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementManagementunitWorkplanrotationsWithRequestBuilder(managementUnitId: managementUnitId, body: body)
         requestBuilder.execute { (response: Response<WorkPlanRotationResponse>?, error) -> Void in
             do {
@@ -19003,11 +19003,11 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<WorkPlanRotationResponse> 
      */
-    open class func postWorkforcemanagementManagementunitWorkplanrotationsWithRequestBuilder(managementUnitId: String, body: AddWorkPlanRotationRequest? = nil) -> RequestBuilder<WorkPlanRotationResponse> {        
+    open class func postWorkforcemanagementManagementunitWorkplanrotationsWithRequestBuilder(managementUnitId: String, body: AddWorkPlanRotationRequest) -> RequestBuilder<WorkPlanRotationResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -19025,23 +19025,23 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
     public enum ValidationMode_postWorkforcemanagementManagementunitWorkplans: String { 
         case ignore = "Ignore"
     }
-    
-    
     
     
     /**
      Create a new work plan
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body 
      - parameter validationMode: (query) Allows to create work plan even if the validation result is invalid (optional)
-     - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitWorkplans(managementUnitId: String, validationMode: ValidationMode_postWorkforcemanagementManagementunitWorkplans? = nil, body: CreateWorkPlan? = nil, completion: @escaping ((_ data: WorkPlan?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: managementUnitId, validationMode: validationMode, body: body)
+    open class func postWorkforcemanagementManagementunitWorkplans(managementUnitId: String, body: CreateWorkPlan, validationMode: ValidationMode_postWorkforcemanagementManagementunitWorkplans? = nil, completion: @escaping ((_ data: WorkPlan?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: managementUnitId, body: body, validationMode: validationMode)
         requestBuilder.execute { (response: Response<WorkPlan>?, error) -> Void in
             do {
                 if let e = error {
@@ -19229,12 +19229,12 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body 
      - parameter validationMode: (query) Allows to create work plan even if the validation result is invalid (optional)
-     - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<WorkPlan> 
      */
-    open class func postWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: String, validationMode: ValidationMode_postWorkforcemanagementManagementunitWorkplans? = nil, body: CreateWorkPlan? = nil) -> RequestBuilder<WorkPlan> {        
+    open class func postWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: String, body: CreateWorkPlan, validationMode: ValidationMode_postWorkforcemanagementManagementunitWorkplans? = nil) -> RequestBuilder<WorkPlan> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -19257,10 +19257,10 @@ open class WorkforceManagementAPI {
     /**
      Add a management unit
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunits(body: CreateManagementUnitApiRequest? = nil, completion: @escaping ((_ data: ManagementUnit?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementManagementunits(body: CreateManagementUnitApiRequest, completion: @escaping ((_ data: ManagementUnit?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementManagementunitsWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<ManagementUnit>?, error) -> Void in
             do {
@@ -19294,17 +19294,17 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "modifiedBy" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<ManagementUnit> 
      */
-    open class func postWorkforcemanagementManagementunitsWithRequestBuilder(body: CreateManagementUnitApiRequest? = nil) -> RequestBuilder<ManagementUnit> {        
+    open class func postWorkforcemanagementManagementunitsWithRequestBuilder(body: CreateManagementUnitApiRequest) -> RequestBuilder<ManagementUnit> {        
         let path = "/api/v2/workforcemanagement/managementunits"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -19321,10 +19321,10 @@ open class WorkforceManagementAPI {
     /**
      Mark a list of notifications as read or unread
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementNotificationsUpdate(body: UpdateNotificationsRequest? = nil, completion: @escaping ((_ data: UpdateNotificationsResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementNotificationsUpdate(body: UpdateNotificationsRequest, completion: @escaping ((_ data: UpdateNotificationsResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementNotificationsUpdateWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<UpdateNotificationsResponse>?, error) -> Void in
             do {
@@ -19358,11 +19358,11 @@ open class WorkforceManagementAPI {
   } ]
 }, statusCode=200}]
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<UpdateNotificationsResponse> 
      */
-    open class func postWorkforcemanagementNotificationsUpdateWithRequestBuilder(body: UpdateNotificationsRequest? = nil) -> RequestBuilder<UpdateNotificationsResponse> {        
+    open class func postWorkforcemanagementNotificationsUpdateWithRequestBuilder(body: UpdateNotificationsRequest) -> RequestBuilder<UpdateNotificationsResponse> {        
         let path = "/api/v2/workforcemanagement/notifications/update"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -19514,10 +19514,10 @@ open class WorkforceManagementAPI {
      Request a teams historical adherence report
      
      - parameter teamId: (path) The ID of the team 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementTeamAdherenceHistorical(teamId: String, body: WfmHistoricalAdherenceQueryForTeams? = nil, completion: @escaping ((_ data: WfmHistoricalAdherenceResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementTeamAdherenceHistorical(teamId: String, body: WfmHistoricalAdherenceQueryForTeams, completion: @escaping ((_ data: WfmHistoricalAdherenceResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementTeamAdherenceHistoricalWithRequestBuilder(teamId: teamId, body: body)
         requestBuilder.execute { (response: Response<WfmHistoricalAdherenceResponse>?, error) -> Void in
             do {
@@ -19551,11 +19551,11 @@ open class WorkforceManagementAPI {
 }, statusCode=202}]
      
      - parameter teamId: (path) The ID of the team 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<WfmHistoricalAdherenceResponse> 
      */
-    open class func postWorkforcemanagementTeamAdherenceHistoricalWithRequestBuilder(teamId: String, body: WfmHistoricalAdherenceQueryForTeams? = nil) -> RequestBuilder<WfmHistoricalAdherenceResponse> {        
+    open class func postWorkforcemanagementTeamAdherenceHistoricalWithRequestBuilder(teamId: String, body: WfmHistoricalAdherenceQueryForTeams) -> RequestBuilder<WfmHistoricalAdherenceResponse> {        
         var path = "/api/v2/workforcemanagement/teams/{teamId}/adherence/historical"
         let teamIdPreEscape = "\(teamId)"
         let teamIdPostEscape = teamIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -19578,10 +19578,10 @@ open class WorkforceManagementAPI {
      Request a historical shrinkage report
      
      - parameter teamId: (path) The ID of the team 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementTeamShrinkageJobs(teamId: String, body: WfmHistoricalShrinkageTeamsRequest? = nil, completion: @escaping ((_ data: WfmHistoricalShrinkageResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementTeamShrinkageJobs(teamId: String, body: WfmHistoricalShrinkageTeamsRequest, completion: @escaping ((_ data: WfmHistoricalShrinkageResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementTeamShrinkageJobsWithRequestBuilder(teamId: teamId, body: body)
         requestBuilder.execute { (response: Response<WfmHistoricalShrinkageResponse>?, error) -> Void in
             do {
@@ -19614,11 +19614,11 @@ open class WorkforceManagementAPI {
 }, statusCode=202}]
      
      - parameter teamId: (path) The ID of the team 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<WfmHistoricalShrinkageResponse> 
      */
-    open class func postWorkforcemanagementTeamShrinkageJobsWithRequestBuilder(teamId: String, body: WfmHistoricalShrinkageTeamsRequest? = nil) -> RequestBuilder<WfmHistoricalShrinkageResponse> {        
+    open class func postWorkforcemanagementTeamShrinkageJobsWithRequestBuilder(teamId: String, body: WfmHistoricalShrinkageTeamsRequest) -> RequestBuilder<WfmHistoricalShrinkageResponse> {        
         var path = "/api/v2/workforcemanagement/teams/{teamId}/shrinkage/jobs"
         let teamIdPreEscape = "\(teamId)"
         let teamIdPostEscape = teamIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -19703,10 +19703,10 @@ open class WorkforceManagementAPI {
     /**
      Queries available time off for the current user
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementTimeofflimitsAvailableQuery(body: AvailableTimeOffRequest? = nil, completion: @escaping ((_ data: AvailableTimeOffResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementTimeofflimitsAvailableQuery(body: AvailableTimeOffRequest, completion: @escaping ((_ data: AvailableTimeOffResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementTimeofflimitsAvailableQueryWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<AvailableTimeOffResponse>?, error) -> Void in
             do {
@@ -19748,11 +19748,11 @@ open class WorkforceManagementAPI {
   } ]
 }, statusCode=200}]
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<AvailableTimeOffResponse> 
      */
-    open class func postWorkforcemanagementTimeofflimitsAvailableQueryWithRequestBuilder(body: AvailableTimeOffRequest? = nil) -> RequestBuilder<AvailableTimeOffResponse> {        
+    open class func postWorkforcemanagementTimeofflimitsAvailableQueryWithRequestBuilder(body: AvailableTimeOffRequest) -> RequestBuilder<AvailableTimeOffResponse> {        
         let path = "/api/v2/workforcemanagement/timeofflimits/available/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -19769,10 +19769,10 @@ open class WorkforceManagementAPI {
     /**
      Create a time off request for the current user
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementTimeoffrequests(body: CreateAgentTimeOffRequest? = nil, completion: @escaping ((_ data: TimeOffRequestResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementTimeoffrequests(body: CreateAgentTimeOffRequest, completion: @escaping ((_ data: TimeOffRequestResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementTimeoffrequestsWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<TimeOffRequestResponse>?, error) -> Void in
             do {
@@ -19822,11 +19822,11 @@ open class WorkforceManagementAPI {
   "status" : "PENDING"
 }, statusCode=200}]
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<TimeOffRequestResponse> 
      */
-    open class func postWorkforcemanagementTimeoffrequestsWithRequestBuilder(body: CreateAgentTimeOffRequest? = nil) -> RequestBuilder<TimeOffRequestResponse> {        
+    open class func postWorkforcemanagementTimeoffrequestsWithRequestBuilder(body: CreateAgentTimeOffRequest) -> RequestBuilder<TimeOffRequestResponse> {        
         let path = "/api/v2/workforcemanagement/timeoffrequests"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -19843,10 +19843,10 @@ open class WorkforceManagementAPI {
     /**
      Estimates available time off for current user
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementTimeoffrequestsEstimate(body: EstimateAvailableTimeOffRequest? = nil, completion: @escaping ((_ data: EstimateAvailableTimeOffResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementTimeoffrequestsEstimate(body: EstimateAvailableTimeOffRequest, completion: @escaping ((_ data: EstimateAvailableTimeOffResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementTimeoffrequestsEstimateWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<EstimateAvailableTimeOffResponse>?, error) -> Void in
             do {
@@ -19898,11 +19898,11 @@ open class WorkforceManagementAPI {
   "user" : "{}"
 }, statusCode=200}]
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<EstimateAvailableTimeOffResponse> 
      */
-    open class func postWorkforcemanagementTimeoffrequestsEstimateWithRequestBuilder(body: EstimateAvailableTimeOffRequest? = nil) -> RequestBuilder<EstimateAvailableTimeOffResponse> {        
+    open class func postWorkforcemanagementTimeoffrequestsEstimateWithRequestBuilder(body: EstimateAvailableTimeOffRequest) -> RequestBuilder<EstimateAvailableTimeOffResponse> {        
         let path = "/api/v2/workforcemanagement/timeoffrequests/estimate"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -19919,10 +19919,10 @@ open class WorkforceManagementAPI {
     /**
      Retrieves integration statuses for a list of current user time off requests
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery(body: CurrentUserTimeOffIntegrationStatusRequest? = nil, completion: @escaping ((_ data: TimeOffIntegrationStatusResponseListing?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery(body: CurrentUserTimeOffIntegrationStatusRequest, completion: @escaping ((_ data: TimeOffIntegrationStatusResponseListing?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementTimeoffrequestsIntegrationstatusQueryWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<TimeOffIntegrationStatusResponseListing>?, error) -> Void in
             do {
@@ -19956,11 +19956,11 @@ open class WorkforceManagementAPI {
   } ]
 }, statusCode=200}]
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<TimeOffIntegrationStatusResponseListing> 
      */
-    open class func postWorkforcemanagementTimeoffrequestsIntegrationstatusQueryWithRequestBuilder(body: CurrentUserTimeOffIntegrationStatusRequest? = nil) -> RequestBuilder<TimeOffIntegrationStatusResponseListing> {        
+    open class func postWorkforcemanagementTimeoffrequestsIntegrationstatusQueryWithRequestBuilder(body: CurrentUserTimeOffIntegrationStatusRequest) -> RequestBuilder<TimeOffIntegrationStatusResponseListing> {        
         let path = "/api/v2/workforcemanagement/timeoffrequests/integrationstatus/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -20053,10 +20053,10 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter timeOffLimitId: (path) The ID of the time-off limit object to set values for 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putWorkforcemanagementBusinessunitTimeofflimitValues(businessUnitId: String, timeOffLimitId: String, body: BuSetTimeOffLimitValuesRequest? = nil, completion: @escaping ((_ data: BuTimeOffLimitResponse?,_ error: Error?) -> Void)) {
+    open class func putWorkforcemanagementBusinessunitTimeofflimitValues(businessUnitId: String, timeOffLimitId: String, body: BuSetTimeOffLimitValuesRequest, completion: @escaping ((_ data: BuTimeOffLimitResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = putWorkforcemanagementBusinessunitTimeofflimitValuesWithRequestBuilder(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId, body: body)
         requestBuilder.execute { (response: Response<BuTimeOffLimitResponse>?, error) -> Void in
             do {
@@ -20091,11 +20091,11 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter timeOffLimitId: (path) The ID of the time-off limit object to set values for 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<BuTimeOffLimitResponse> 
      */
-    open class func putWorkforcemanagementBusinessunitTimeofflimitValuesWithRequestBuilder(businessUnitId: String, timeOffLimitId: String, body: BuSetTimeOffLimitValuesRequest? = nil) -> RequestBuilder<BuTimeOffLimitResponse> {        
+    open class func putWorkforcemanagementBusinessunitTimeofflimitValuesWithRequestBuilder(businessUnitId: String, timeOffLimitId: String, body: BuSetTimeOffLimitValuesRequest) -> RequestBuilder<BuTimeOffLimitResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -20124,10 +20124,10 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffLimitId: (path) The ID of the time off limit object to set values for 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putWorkforcemanagementManagementunitTimeofflimitValues(managementUnitId: String, timeOffLimitId: String, body: SetTimeOffLimitValuesRequest? = nil, completion: @escaping ((_ data: TimeOffLimit?,_ error: Error?) -> Void)) {
+    open class func putWorkforcemanagementManagementunitTimeofflimitValues(managementUnitId: String, timeOffLimitId: String, body: SetTimeOffLimitValuesRequest, completion: @escaping ((_ data: TimeOffLimit?,_ error: Error?) -> Void)) {
         let requestBuilder = putWorkforcemanagementManagementunitTimeofflimitValuesWithRequestBuilder(managementUnitId: managementUnitId, timeOffLimitId: timeOffLimitId, body: body)
         requestBuilder.execute { (response: Response<TimeOffLimit>?, error) -> Void in
             do {
@@ -20162,11 +20162,11 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffLimitId: (path) The ID of the time off limit object to set values for 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<TimeOffLimit> 
      */
-    open class func putWorkforcemanagementManagementunitTimeofflimitValuesWithRequestBuilder(managementUnitId: String, timeOffLimitId: String, body: SetTimeOffLimitValuesRequest? = nil) -> RequestBuilder<TimeOffLimit> {        
+    open class func putWorkforcemanagementManagementunitTimeofflimitValuesWithRequestBuilder(managementUnitId: String, timeOffLimitId: String, body: SetTimeOffLimitValuesRequest) -> RequestBuilder<TimeOffLimit> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

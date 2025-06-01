@@ -117,7 +117,7 @@ LogCaptureAPI.getDiagnosticsLogcaptureBrowserEntriesDownloadJob(jobId: jobId) { 
 
 
 
-> [LogCaptureUserConfiguration](LogCaptureUserConfiguration) getDiagnosticsLogcaptureBrowserUser(userId)
+> [LogCaptureUserConfigurationResponse](LogCaptureUserConfigurationResponse) getDiagnosticsLogcaptureBrowserUser(userId)
 
 Get log capture configuration for the user
 
@@ -160,14 +160,14 @@ LogCaptureAPI.getDiagnosticsLogcaptureBrowserUser(userId: userId) { (response, e
 
 ### Return type
 
-[**LogCaptureUserConfiguration**](LogCaptureUserConfiguration)
+[**LogCaptureUserConfigurationResponse**](LogCaptureUserConfigurationResponse)
 
 
 ## getDiagnosticsLogcaptureBrowserUsers
 
 
 
-> [PagelessEntityListing](PagelessEntityListing) getDiagnosticsLogcaptureBrowserUsers(includeExpired)
+> [LogCaptureUserConfigurationListing](LogCaptureUserConfigurationListing) getDiagnosticsLogcaptureBrowserUsers(includeExpired)
 
 Get all log capture enabled users for an org
 
@@ -210,7 +210,7 @@ LogCaptureAPI.getDiagnosticsLogcaptureBrowserUsers(includeExpired: includeExpire
 
 ### Return type
 
-[**PagelessEntityListing**](PagelessEntityListing)
+[**LogCaptureUserConfigurationListing**](LogCaptureUserConfigurationListing)
 
 
 ## postDiagnosticsLogcaptureBrowserEntriesDownloadJobs
@@ -267,7 +267,7 @@ LogCaptureAPI.postDiagnosticsLogcaptureBrowserEntriesDownloadJobs(body: body) { 
 
 
 
-> [LogCaptureQueryResponse](LogCaptureQueryResponse) postDiagnosticsLogcaptureBrowserEntriesQuery(before, after, pageSize, body)
+> [LogCaptureQueryResponse](LogCaptureQueryResponse) postDiagnosticsLogcaptureBrowserEntriesQuery(after, pageSize, body)
 
 Query collected log entries. It returns a limited amount of records, to get all records use download endpoint.
 
@@ -287,13 +287,12 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
 let body: LogCaptureQueryRequest = new LogCaptureQueryRequest(...) // 
 
 // Code example
-LogCaptureAPI.postDiagnosticsLogcaptureBrowserEntriesQuery(before: before, after: after, pageSize: pageSize, body: body) { (response, error) in
+LogCaptureAPI.postDiagnosticsLogcaptureBrowserEntriesQuery(after: after, pageSize: pageSize, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -308,7 +307,6 @@ LogCaptureAPI.postDiagnosticsLogcaptureBrowserEntriesQuery(before: before, after
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **body** | [**LogCaptureQueryRequest**](LogCaptureQueryRequest)|  | [optional] |
@@ -371,4 +369,4 @@ LogCaptureAPI.postDiagnosticsLogcaptureBrowserUser(userId: userId, body: body) {
 [**LogCaptureUserConfiguration**](LogCaptureUserConfiguration)
 
 
-_PureCloudPlatformClientV2@168.0.0_
+_PureCloudPlatformClientV2@169.0.0_

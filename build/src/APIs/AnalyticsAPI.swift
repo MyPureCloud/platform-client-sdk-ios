@@ -5820,8 +5820,8 @@ open class AnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter sortBy: (query)  (optional)
@@ -5995,8 +5995,8 @@ open class AnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -6084,8 +6084,8 @@ open class AnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
 
      - returns: RequestBuilder<ReportingExportMetadataJobListing> 
@@ -6415,8 +6415,8 @@ open class AnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 7,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter dashboardType: (query) List dashboard of given type 
@@ -6698,8 +6698,8 @@ open class AnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 7,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -7061,6 +7061,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7079,6 +7080,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7097,6 +7099,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -7114,6 +7117,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -7135,6 +7139,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7153,6 +7158,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7171,6 +7177,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -7188,6 +7195,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -7214,6 +7222,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7232,6 +7241,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7250,6 +7260,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -7267,6 +7278,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -7288,6 +7300,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7306,6 +7319,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7324,6 +7338,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -7341,6 +7356,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -7419,6 +7435,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7437,6 +7454,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7455,6 +7473,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -7472,6 +7491,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -7493,6 +7513,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7511,6 +7532,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7529,6 +7551,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -7546,6 +7569,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -7572,6 +7596,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7590,6 +7615,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7608,6 +7634,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -7625,6 +7652,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -7646,6 +7674,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7664,6 +7693,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7682,6 +7712,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -7699,6 +7730,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -7945,6 +7977,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7963,6 +7996,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -7981,6 +8015,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -7998,6 +8033,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -8019,6 +8055,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -8037,6 +8074,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -8055,6 +8093,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -8072,6 +8111,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -8098,6 +8138,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -8116,6 +8157,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -8134,6 +8176,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -8151,6 +8194,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -8172,6 +8216,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -8190,6 +8235,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -8208,6 +8254,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -8225,6 +8272,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -8366,17 +8414,19 @@ open class AnalyticsAPI {
       "metric" : "oAlerting",
       "qualifier" : "qualifier",
       "count" : 0,
-      "entityIds" : [ "entityIds", "entityIds" ]
+      "entityIds" : [ "entityIds", "entityIds" ],
+      "calculatedMetricValue" : 6
     }, {
       "metric" : "oAlerting",
       "qualifier" : "qualifier",
       "count" : 0,
-      "entityIds" : [ "entityIds", "entityIds" ]
+      "entityIds" : [ "entityIds", "entityIds" ],
+      "calculatedMetricValue" : 6
     } ],
     "entities" : [ {
       "queueId" : "queueId",
       "usedRouting" : "Bullseye",
-      "routingPriority" : 6,
+      "routingPriority" : 1,
       "conversationId" : "conversationId",
       "convertedTo" : "convertedTo",
       "activeRouting" : "Bullseye",
@@ -8393,10 +8443,10 @@ open class AnalyticsAPI {
       "dnis" : "dnis",
       "scoredAgents" : [ {
         "scoredAgentId" : "scoredAgentId",
-        "agentScore" : 1
+        "agentScore" : 5
       }, {
         "scoredAgentId" : "scoredAgentId",
-        "agentScore" : 1
+        "agentScore" : 5
       } ],
       "addressFrom" : "addressFrom",
       "participantName" : "participantName",
@@ -8406,7 +8456,7 @@ open class AnalyticsAPI {
     }, {
       "queueId" : "queueId",
       "usedRouting" : "Bullseye",
-      "routingPriority" : 6,
+      "routingPriority" : 1,
       "conversationId" : "conversationId",
       "convertedTo" : "convertedTo",
       "activeRouting" : "Bullseye",
@@ -8423,10 +8473,10 @@ open class AnalyticsAPI {
       "dnis" : "dnis",
       "scoredAgents" : [ {
         "scoredAgentId" : "scoredAgentId",
-        "agentScore" : 1
+        "agentScore" : 5
       }, {
         "scoredAgentId" : "scoredAgentId",
-        "agentScore" : 1
+        "agentScore" : 5
       } ],
       "addressFrom" : "addressFrom",
       "participantName" : "participantName",
@@ -8443,17 +8493,19 @@ open class AnalyticsAPI {
       "metric" : "oAlerting",
       "qualifier" : "qualifier",
       "count" : 0,
-      "entityIds" : [ "entityIds", "entityIds" ]
+      "entityIds" : [ "entityIds", "entityIds" ],
+      "calculatedMetricValue" : 6
     }, {
       "metric" : "oAlerting",
       "qualifier" : "qualifier",
       "count" : 0,
-      "entityIds" : [ "entityIds", "entityIds" ]
+      "entityIds" : [ "entityIds", "entityIds" ],
+      "calculatedMetricValue" : 6
     } ],
     "entities" : [ {
       "queueId" : "queueId",
       "usedRouting" : "Bullseye",
-      "routingPriority" : 6,
+      "routingPriority" : 1,
       "conversationId" : "conversationId",
       "convertedTo" : "convertedTo",
       "activeRouting" : "Bullseye",
@@ -8470,10 +8522,10 @@ open class AnalyticsAPI {
       "dnis" : "dnis",
       "scoredAgents" : [ {
         "scoredAgentId" : "scoredAgentId",
-        "agentScore" : 1
+        "agentScore" : 5
       }, {
         "scoredAgentId" : "scoredAgentId",
-        "agentScore" : 1
+        "agentScore" : 5
       } ],
       "addressFrom" : "addressFrom",
       "participantName" : "participantName",
@@ -8483,7 +8535,7 @@ open class AnalyticsAPI {
     }, {
       "queueId" : "queueId",
       "usedRouting" : "Bullseye",
-      "routingPriority" : 6,
+      "routingPriority" : 1,
       "conversationId" : "conversationId",
       "convertedTo" : "convertedTo",
       "activeRouting" : "Bullseye",
@@ -8500,10 +8552,10 @@ open class AnalyticsAPI {
       "dnis" : "dnis",
       "scoredAgents" : [ {
         "scoredAgentId" : "scoredAgentId",
-        "agentScore" : 1
+        "agentScore" : 5
       }, {
         "scoredAgentId" : "scoredAgentId",
-        "agentScore" : 1
+        "agentScore" : 5
       } ],
       "addressFrom" : "addressFrom",
       "participantName" : "participantName",
@@ -8591,6 +8643,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -8609,6 +8662,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -8627,6 +8681,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -8644,6 +8699,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -8665,6 +8721,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -8683,6 +8740,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -8701,6 +8759,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -8718,6 +8777,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -8744,6 +8804,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -8762,6 +8823,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -8780,6 +8842,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -8797,6 +8860,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -8818,6 +8882,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -8836,6 +8901,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -8854,6 +8920,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -8871,6 +8938,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -12943,6 +13011,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -12961,6 +13030,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -12979,6 +13049,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -12996,6 +13067,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -13017,6 +13089,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13035,6 +13108,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13053,6 +13127,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -13070,6 +13145,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -13096,6 +13172,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13114,6 +13191,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13132,6 +13210,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -13149,6 +13228,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -13170,6 +13250,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13188,6 +13269,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13206,6 +13288,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -13223,6 +13306,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -13301,6 +13385,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13319,6 +13404,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13337,6 +13423,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -13354,6 +13441,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -13375,6 +13463,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13393,6 +13482,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13411,6 +13501,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -13428,6 +13519,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -13454,6 +13546,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13472,6 +13565,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13490,6 +13584,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -13507,6 +13602,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -13528,6 +13624,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13546,6 +13643,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13564,6 +13662,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -13581,6 +13680,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -13886,6 +13986,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13904,6 +14005,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13922,6 +14024,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -13939,6 +14042,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -13960,6 +14064,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13978,6 +14083,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -13996,6 +14102,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -14013,6 +14120,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -14039,6 +14147,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -14057,6 +14166,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -14075,6 +14185,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -14092,6 +14203,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -14113,6 +14225,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -14131,6 +14244,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -14149,6 +14263,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -14166,6 +14281,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -14242,6 +14358,7 @@ open class AnalyticsAPI {
         "current" : 7.061401241503109,
         "min" : 6.027456183070403,
         "countPositive" : 5,
+        "calculatedMetricValue" : 1,
         "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
@@ -14314,6 +14431,7 @@ open class AnalyticsAPI {
         "current" : 7.061401241503109,
         "min" : 6.027456183070403,
         "countPositive" : 5,
+        "calculatedMetricValue" : 1,
         "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
@@ -14391,6 +14509,7 @@ open class AnalyticsAPI {
         "current" : 7.061401241503109,
         "min" : 6.027456183070403,
         "countPositive" : 5,
+        "calculatedMetricValue" : 1,
         "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
@@ -14463,6 +14582,7 @@ open class AnalyticsAPI {
         "current" : 7.061401241503109,
         "min" : 6.027456183070403,
         "countPositive" : 5,
+        "calculatedMetricValue" : 1,
         "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
@@ -14594,6 +14714,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -14612,6 +14733,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -14630,6 +14752,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -14647,6 +14770,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -14668,6 +14792,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -14686,6 +14811,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -14704,6 +14830,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -14721,6 +14848,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -14747,6 +14875,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -14765,6 +14894,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -14783,6 +14913,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -14800,6 +14931,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -14821,6 +14953,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -14839,6 +14972,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -14857,6 +14991,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -14874,6 +15009,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -14952,6 +15088,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -14970,6 +15107,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -14988,6 +15126,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -15005,6 +15144,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -15026,6 +15166,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -15044,6 +15185,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -15062,6 +15204,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -15079,6 +15222,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -15105,6 +15249,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -15123,6 +15268,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -15141,6 +15287,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -15158,6 +15305,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -15179,6 +15327,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -15197,6 +15346,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -15215,6 +15365,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -15232,6 +15383,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -15311,6 +15463,7 @@ open class AnalyticsAPI {
         "current" : 7.061401241503109,
         "min" : 6.027456183070403,
         "countPositive" : 5,
+        "calculatedMetricValue" : 1,
         "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
@@ -15383,6 +15536,7 @@ open class AnalyticsAPI {
         "current" : 7.061401241503109,
         "min" : 6.027456183070403,
         "countPositive" : 5,
+        "calculatedMetricValue" : 1,
         "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
@@ -15460,6 +15614,7 @@ open class AnalyticsAPI {
         "current" : 7.061401241503109,
         "min" : 6.027456183070403,
         "countPositive" : 5,
+        "calculatedMetricValue" : 1,
         "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
@@ -15532,6 +15687,7 @@ open class AnalyticsAPI {
         "current" : 7.061401241503109,
         "min" : 6.027456183070403,
         "countPositive" : 5,
+        "calculatedMetricValue" : 1,
         "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
@@ -15664,6 +15820,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -15682,6 +15839,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -15700,6 +15858,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -15717,6 +15876,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -15738,6 +15898,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -15756,6 +15917,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -15774,6 +15936,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -15791,6 +15954,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -15817,6 +15981,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -15835,6 +16000,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -15853,6 +16019,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -15870,6 +16037,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -15891,6 +16059,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -15909,6 +16078,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -15927,6 +16097,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -15944,6 +16115,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -16382,8 +16554,8 @@ open class AnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 7,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter body: (body)  
@@ -16453,6 +16625,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -16471,6 +16644,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -16489,6 +16663,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -16506,6 +16681,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -16527,6 +16703,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -16545,6 +16722,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -16563,6 +16741,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -16580,6 +16759,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -16606,6 +16786,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -16624,6 +16805,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -16642,6 +16824,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -16659,6 +16842,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -16680,6 +16864,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -16698,6 +16883,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -16716,6 +16902,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -16733,6 +16920,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -16958,6 +17146,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -16976,6 +17165,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -16994,6 +17184,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17011,6 +17202,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17032,6 +17224,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17050,6 +17243,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17068,6 +17262,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17085,6 +17280,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17111,6 +17307,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17129,6 +17326,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17147,6 +17345,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17164,6 +17363,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17185,6 +17385,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17203,6 +17404,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17221,6 +17423,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17238,6 +17441,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17316,6 +17520,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17334,6 +17539,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17352,6 +17558,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17369,6 +17576,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17390,6 +17598,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17408,6 +17617,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17426,6 +17636,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17443,6 +17654,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17469,6 +17681,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17487,6 +17700,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17505,6 +17719,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17522,6 +17737,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17543,6 +17759,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17561,6 +17778,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17579,6 +17797,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17596,6 +17815,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17674,6 +17894,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17692,6 +17913,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17710,6 +17932,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17727,6 +17950,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17748,6 +17972,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17766,6 +17991,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17784,6 +18010,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17801,6 +18028,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17827,6 +18055,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17845,6 +18074,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17863,6 +18093,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17880,6 +18111,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17901,6 +18133,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17919,6 +18152,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -17937,6 +18171,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -17954,6 +18189,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -18179,6 +18415,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -18197,6 +18434,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -18215,6 +18453,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -18232,6 +18471,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -18253,6 +18493,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -18271,6 +18512,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -18289,6 +18531,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -18306,6 +18549,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -18332,6 +18576,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -18350,6 +18595,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -18368,6 +18614,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -18385,6 +18632,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -18406,6 +18654,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -18424,6 +18673,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -18442,6 +18692,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -18459,6 +18710,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -18683,6 +18935,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -18701,6 +18954,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -18719,6 +18973,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -18736,6 +18991,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -18757,6 +19013,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -18775,6 +19032,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -18793,6 +19051,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -18810,6 +19069,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -18836,6 +19096,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -18854,6 +19115,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -18872,6 +19134,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -18889,6 +19152,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -18910,6 +19174,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -18928,6 +19193,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -18946,6 +19212,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -18963,6 +19230,7 @@ open class AnalyticsAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -19221,6 +19489,7 @@ open class AnalyticsAPI {
         "current" : 7.061401241503109,
         "min" : 6.027456183070403,
         "countPositive" : 5,
+        "calculatedMetricValue" : 1,
         "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
@@ -19293,6 +19562,7 @@ open class AnalyticsAPI {
         "current" : 7.061401241503109,
         "min" : 6.027456183070403,
         "countPositive" : 5,
+        "calculatedMetricValue" : 1,
         "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
@@ -19370,6 +19640,7 @@ open class AnalyticsAPI {
         "current" : 7.061401241503109,
         "min" : 6.027456183070403,
         "countPositive" : 5,
+        "calculatedMetricValue" : 1,
         "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",
@@ -19442,6 +19713,7 @@ open class AnalyticsAPI {
         "current" : 7.061401241503109,
         "min" : 6.027456183070403,
         "countPositive" : 5,
+        "calculatedMetricValue" : 1,
         "ratio" : 9.301444243932576
       },
       "qualifier" : "qualifier",

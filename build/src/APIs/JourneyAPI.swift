@@ -888,8 +888,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1192,8 +1192,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1377,8 +1377,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1669,8 +1669,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1974,8 +1974,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)
@@ -3524,8 +3524,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -3796,8 +3796,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) The number of the page to return (optional)
@@ -3881,8 +3881,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) The number of the page to return (optional)
@@ -4446,6 +4446,7 @@ open class JourneyAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -4464,6 +4465,7 @@ open class JourneyAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -4482,6 +4484,7 @@ open class JourneyAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -4499,6 +4502,7 @@ open class JourneyAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -4520,6 +4524,7 @@ open class JourneyAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -4538,6 +4543,7 @@ open class JourneyAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -4556,6 +4562,7 @@ open class JourneyAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -4573,6 +4580,7 @@ open class JourneyAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -4599,6 +4607,7 @@ open class JourneyAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -4617,6 +4626,7 @@ open class JourneyAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -4635,6 +4645,7 @@ open class JourneyAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -4652,6 +4663,7 @@ open class JourneyAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -4673,6 +4685,7 @@ open class JourneyAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -4691,6 +4704,7 @@ open class JourneyAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "qualifier" : "qualifier"
@@ -4709,6 +4723,7 @@ open class JourneyAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
@@ -4726,6 +4741,7 @@ open class JourneyAPI {
           "current" : 7.061401241503109,
           "min" : 6.027456183070403,
           "countPositive" : 5,
+          "calculatedMetricValue" : 1,
           "ratio" : 9.301444243932576
         },
         "name" : "name"
