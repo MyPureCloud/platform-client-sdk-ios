@@ -6,10 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** | The ID of the historical adherence bulk job to listen for via notification or query using the jobs route | [optional] |
-| **status** | **String** | The status of the historical adherence bulk job | [optional] |
+| **_id** | **String** | The ID of the historical adherence job to listen for via notification or query using the jobs route | [optional] |
+| **status** | **String** | The status of the historical adherence job | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

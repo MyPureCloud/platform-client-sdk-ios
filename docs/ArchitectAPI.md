@@ -107,13 +107,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postArchitectGrammars**](ArchitectAPI#postArchitectGrammars) | Create a new grammar |
 | [**postArchitectIvrs**](ArchitectAPI#postArchitectIvrs) | Create IVR config. |
 | [**postArchitectPromptHistory**](ArchitectAPI#postArchitectPromptHistory) | Generate prompt history |
-| [**postArchitectPromptResourceUploads**](ArchitectAPI#postArchitectPromptResourceUploads) | Creates a presigned URL for uploading a user prompt file |
 | [**postArchitectPromptResources**](ArchitectAPI#postArchitectPromptResources) | Create a new user prompt resource |
 | [**postArchitectPrompts**](ArchitectAPI#postArchitectPrompts) | Create a new user prompt |
 | [**postArchitectSchedulegroups**](ArchitectAPI#postArchitectSchedulegroups) | Creates a new schedule group |
 | [**postArchitectSchedules**](ArchitectAPI#postArchitectSchedules) | Create a new schedule. |
 | [**postArchitectSystempromptHistory**](ArchitectAPI#postArchitectSystempromptHistory) | Generate system prompt history |
-| [**postArchitectSystempromptResourceUploads**](ArchitectAPI#postArchitectSystempromptResourceUploads) | Creates a presigned URL for uploading a system prompt file |
 | [**postArchitectSystempromptResources**](ArchitectAPI#postArchitectSystempromptResources) | Create system prompt resource override. |
 | [**postFlowHistory**](ArchitectAPI#postFlowHistory) | Generate flow history |
 | [**postFlowInstancesSettingsLoglevels**](ArchitectAPI#postFlowInstancesSettingsLoglevels) | Set the logLevel for a particular flow id |
@@ -1801,7 +1799,7 @@ ArchitectAPI.getArchitectEmergencygroups(pageNumber: pageNumber, pageSize: pageS
 
 Get a pageable list of basic emergency group objects filterable by query parameters.
 
-This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+This returns emergency groups consisting of name and division. If one or more IDs are specified, the search will fetch emergency groups that match the given ID(s) and not use any additional supplied query parameters in the search.
 
 
 
@@ -5884,58 +5882,6 @@ ArchitectAPI.postArchitectPromptHistory(promptId: promptId) { (response, error) 
 [**Operation**](Operation)
 
 
-## postArchitectPromptResourceUploads
-
-
-
-> [PromptAssetUpload](PromptAssetUpload) postArchitectPromptResourceUploads(promptId, languageCode)
-
-Creates a presigned URL for uploading a user prompt file
-
-
-
-Wraps POST /api/v2/architect/prompts/{promptId}/resources/{languageCode}/uploads  
-
-Requires ALL permissions: 
-
-* architect:userPrompt:edit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let promptId: String = "" // Prompt ID
-let languageCode: String = "" // Language
-
-// Code example
-ArchitectAPI.postArchitectPromptResourceUploads(promptId: promptId, languageCode: languageCode) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("ArchitectAPI.postArchitectPromptResourceUploads was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **promptId** | **String**| Prompt ID | |
-| **languageCode** | **String**| Language | |
-
-
-### Return type
-
-[**PromptAssetUpload**](PromptAssetUpload)
-
-
 ## postArchitectPromptResources
 
 
@@ -6188,58 +6134,6 @@ ArchitectAPI.postArchitectSystempromptHistory(promptId: promptId) { (response, e
 ### Return type
 
 [**Operation**](Operation)
-
-
-## postArchitectSystempromptResourceUploads
-
-
-
-> [PromptAssetUpload](PromptAssetUpload) postArchitectSystempromptResourceUploads(promptId, languageCode)
-
-Creates a presigned URL for uploading a system prompt file
-
-
-
-Wraps POST /api/v2/architect/systemprompts/{promptId}/resources/{languageCode}/uploads  
-
-Requires ALL permissions: 
-
-* architect:systemPrompt:edit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let promptId: String = "" // Prompt ID
-let languageCode: String = "" // Language
-
-// Code example
-ArchitectAPI.postArchitectSystempromptResourceUploads(promptId: promptId, languageCode: languageCode) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("ArchitectAPI.postArchitectSystempromptResourceUploads was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **promptId** | **String**| Prompt ID | |
-| **languageCode** | **String**| Language | |
-
-
-### Return type
-
-[**PromptAssetUpload**](PromptAssetUpload)
 
 
 ## postArchitectSystempromptResources
@@ -8193,4 +8087,4 @@ ArchitectAPI.putFlowsOutcome(flowOutcomeId: flowOutcomeId, body: body) { (respon
 [**Operation**](Operation)
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

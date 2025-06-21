@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** | The globally unique identifier for the object. | [optional] |
+| **_id** | **String** | The mobile push integration id associated with the deployment | [optional] |
 | **provider** | **String** | The integration provider associated with the deployment | [optional] |
 
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

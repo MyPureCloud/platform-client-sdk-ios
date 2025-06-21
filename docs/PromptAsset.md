@@ -14,7 +14,7 @@
 | **ttsString** | **String** | Text to speech of the resource | [optional] |
 | **text** | **String** | Text of the resource | [optional] |
 | **uploadStatus** | **String** | Audio upload status | [optional] |
-| **uploadUri** | **String** | Upload URI for the resource audio | [optional] |
+| **uploadUri** | **String** | Deprecated. This was use for uploading the resource audio. | [optional] |
 | **languageDefault** | **Bool** | Whether or not this resource locale is the default for the language | [optional] |
 | **tags** | [**[String:[String]]**](StringJSON) |  | [optional] |
 | **durationSeconds** | **Double** |  | [optional] |
@@ -22,4 +22,4 @@
 
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

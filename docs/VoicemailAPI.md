@@ -526,6 +526,8 @@ VoicemailAPI.getVoicemailMessage(messageId: messageId, expand: expand) { (respon
 
 Get media playback URI for this voicemail message
 
+API should migrate to use GET api/v2/voicemail/messages/{messageId}/downloads
+
 
 
 Wraps GET /api/v2/voicemail/messages/{messageId}/media  
@@ -1388,4 +1390,4 @@ VoicemailAPI.putVoicemailUserpolicy(userId: userId, body: body) { (response, err
 [**VoicemailUserPolicy**](VoicemailUserPolicy)
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

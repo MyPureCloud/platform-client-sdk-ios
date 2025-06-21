@@ -6,7 +6,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteGreeting**](GreetingsAPI#deleteGreeting) | Deletes a Greeting with the given GreetingId |
 | [**getGreeting**](GreetingsAPI#getGreeting) | Get a Greeting with the given GreetingId |
+| [**getGreetingDownloads**](GreetingsAPI#getGreetingDownloads) | Download a organization greeting recording |
+| [**getGreetingGroupsDownloads**](GreetingsAPI#getGreetingGroupsDownloads) | Download a group greeting recording |
 | [**getGreetingMedia**](GreetingsAPI#getGreetingMedia) | Get media playback URI for this greeting |
+| [**getGreetingUsersDownloads**](GreetingsAPI#getGreetingUsersDownloads) | Download a user greeting recording |
 | [**getGreetings**](GreetingsAPI#getGreetings) | Gets an Organization&#39;s Greetings |
 | [**getGreetingsDefaults**](GreetingsAPI#getGreetingsDefaults) | Get an Organization&#39;s DefaultGreetingList |
 | [**getGroupGreetings**](GreetingsAPI#getGroupGreetings) | Get a list of the Group&#39;s Greetings |
@@ -120,6 +123,110 @@ GreetingsAPI.getGreeting(greetingId: greetingId) { (response, error) in
 [**Greeting**](Greeting)
 
 
+## getGreetingDownloads
+
+
+
+> [GreetingMediaInfo](GreetingMediaInfo) getGreetingDownloads(greetingId, formatId)
+
+Download a organization greeting recording
+
+
+
+Wraps GET /api/v2/greetings/{greetingId}/downloads  
+
+Requires ANY permissions: 
+
+* greetings:greeting:download
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let greetingId: String = "" // Greeting ID
+let formatId: GreetingsAPI.FormatId_getGreetingDownloads = GreetingsAPI.FormatId_getGreetingDownloads.enummember // The desired media format.
+
+// Code example
+GreetingsAPI.getGreetingDownloads(greetingId: greetingId, formatId: formatId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GreetingsAPI.getGreetingDownloads was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **greetingId** | **String**| Greeting ID | |
+| **formatId** | **String**| The desired media format. | [optional]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
+
+
+### Return type
+
+[**GreetingMediaInfo**](GreetingMediaInfo)
+
+
+## getGreetingGroupsDownloads
+
+
+
+> [GreetingMediaInfo](GreetingMediaInfo) getGreetingGroupsDownloads(greetingId, formatId)
+
+Download a group greeting recording
+
+
+
+Wraps GET /api/v2/greetings/{greetingId}/groups/downloads  
+
+Requires ANY permissions: 
+
+* greetings:groupGreeting:download
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let greetingId: String = "" // Greeting ID
+let formatId: GreetingsAPI.FormatId_getGreetingGroupsDownloads = GreetingsAPI.FormatId_getGreetingGroupsDownloads.enummember // The desired media format.
+
+// Code example
+GreetingsAPI.getGreetingGroupsDownloads(greetingId: greetingId, formatId: formatId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GreetingsAPI.getGreetingGroupsDownloads was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **greetingId** | **String**| Greeting ID | |
+| **formatId** | **String**| The desired media format. | [optional]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
+
+
+### Return type
+
+[**GreetingMediaInfo**](GreetingMediaInfo)
+
+
 ## getGreetingMedia
 
 
@@ -127,6 +234,8 @@ GreetingsAPI.getGreeting(greetingId: greetingId) { (response, error) in
 > [GreetingMediaInfo](GreetingMediaInfo) getGreetingMedia(greetingId, formatId)
 
 Get media playback URI for this greeting
+
+API should migrate to use GET api/v2/greetings/{greetingId}/downloads
 
 
 
@@ -152,6 +261,58 @@ GreetingsAPI.getGreetingMedia(greetingId: greetingId, formatId: formatId) { (res
         dump(error)
     } else if let response = response {
         print("GreetingsAPI.getGreetingMedia was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **greetingId** | **String**| Greeting ID | |
+| **formatId** | **String**| The desired media format. | [optional]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
+
+
+### Return type
+
+[**GreetingMediaInfo**](GreetingMediaInfo)
+
+
+## getGreetingUsersDownloads
+
+
+
+> [GreetingMediaInfo](GreetingMediaInfo) getGreetingUsersDownloads(greetingId, formatId)
+
+Download a user greeting recording
+
+
+
+Wraps GET /api/v2/greetings/{greetingId}/users/downloads  
+
+Requires ANY permissions: 
+
+* greetings:greeting:download
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let greetingId: String = "" // Greeting ID
+let formatId: GreetingsAPI.FormatId_getGreetingUsersDownloads = GreetingsAPI.FormatId_getGreetingUsersDownloads.enummember // The desired media format.
+
+// Code example
+GreetingsAPI.getGreetingUsersDownloads(greetingId: greetingId, formatId: formatId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GreetingsAPI.getGreetingUsersDownloads was successful")
         dump(response)
     }
 }
@@ -824,4 +985,4 @@ GreetingsAPI.putUserGreetingsDefaults(userId: userId, body: body) { (response, e
 [**DefaultGreetingList**](DefaultGreetingList)
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

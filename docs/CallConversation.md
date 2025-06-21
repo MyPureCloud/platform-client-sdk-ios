@@ -12,6 +12,7 @@
 | **otherMediaUris** | **[String]** | The list of other media channels involved in the conversation. | [optional] |
 | **recentTransfers** | [**[TransferResponse]**]([TransferResponse]) | The list of the most recent 20 transfer commands applied to this conversation. | [optional] |
 | **utilizationLabelId** | **String** | An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level | [optional] |
+| **inactivityTimeout** | [**Date**](Date) | The time in the future, after which this conversation would be considered inactive. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **divisions** | [**[ConversationDivisionMembership]**]([ConversationDivisionMembership]) | Identifiers of divisions associated with this conversation. | [optional] |
 | **recordingState** | **String** |  | [optional] |
 | **maxParticipants** | **Int** | If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference. | [optional] |
@@ -20,4 +21,4 @@
 
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

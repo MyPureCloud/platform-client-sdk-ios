@@ -15,4 +15,4 @@ Defines a response for a list of SCIM resource types.
 
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

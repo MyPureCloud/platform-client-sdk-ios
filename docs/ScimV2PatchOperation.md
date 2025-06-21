@@ -13,4 +13,4 @@ Defines a SCIM PATCH operation. The path and value follow very specific rules ba
 
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

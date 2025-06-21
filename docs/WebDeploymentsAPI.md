@@ -591,7 +591,7 @@ WebDeploymentsAPI.getWebdeploymentsDeploymentConfigurations(deploymentId: deploy
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) getWebdeploymentsDeploymentIdentityresolution(deploymentId)
+> [DeploymentIdentityResolutionConfig](DeploymentIdentityResolutionConfig) getWebdeploymentsDeploymentIdentityresolution(deploymentId)
 
 Get a deployment identity resolution setting.
 
@@ -635,7 +635,7 @@ WebDeploymentsAPI.getWebdeploymentsDeploymentIdentityresolution(deploymentId: de
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**DeploymentIdentityResolutionConfig**](DeploymentIdentityResolutionConfig)
 
 
 ## getWebdeploymentsDeployments
@@ -1045,7 +1045,7 @@ WebDeploymentsAPI.putWebdeploymentsDeployment(deploymentId: deploymentId, deploy
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) putWebdeploymentsDeploymentIdentityresolution(deploymentId, body)
+> [DeploymentIdentityResolutionConfig](DeploymentIdentityResolutionConfig) putWebdeploymentsDeploymentIdentityresolution(deploymentId, body)
 
 Update identity resolution settings for a deployment.
 
@@ -1067,7 +1067,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let deploymentId: String = "" // The deployment ID
-let body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // 
+let body: DeploymentIdentityResolutionConfig = new DeploymentIdentityResolutionConfig(...) // 
 
 // Code example
 WebDeploymentsAPI.putWebdeploymentsDeploymentIdentityresolution(deploymentId: deploymentId, body: body) { (response, error) in
@@ -1086,12 +1086,12 @@ WebDeploymentsAPI.putWebdeploymentsDeploymentIdentityresolution(deploymentId: de
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| The deployment ID | |
-| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  | |
+| **body** | [**DeploymentIdentityResolutionConfig**](DeploymentIdentityResolutionConfig)|  | |
 
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**DeploymentIdentityResolutionConfig**](DeploymentIdentityResolutionConfig)
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

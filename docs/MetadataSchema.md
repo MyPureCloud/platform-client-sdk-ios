@@ -15,4 +15,4 @@ A description of the contents of a data gathering interface for an accelerator
 
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_
