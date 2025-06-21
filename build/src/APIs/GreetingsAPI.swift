@@ -128,6 +128,154 @@ open class GreetingsAPI {
     
     
     
+    public enum FormatId_getGreetingDownloads: String { 
+        case wav = "WAV"
+        case webm = "WEBM"
+        case wavUlaw = "WAV_ULAW"
+        case oggVorbis = "OGG_VORBIS"
+        case oggOpus = "OGG_OPUS"
+        case mp3 = "MP3"
+        case _none = "NONE"
+    }
+    
+    
+    /**
+     Download a organization greeting recording
+     
+     - parameter greetingId: (path) Greeting ID 
+     - parameter formatId: (query) The desired media format. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGreetingDownloads(greetingId: String, formatId: FormatId_getGreetingDownloads? = nil, completion: @escaping ((_ data: GreetingMediaInfo?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGreetingDownloadsWithRequestBuilder(greetingId: greetingId, formatId: formatId)
+        requestBuilder.execute { (response: Response<GreetingMediaInfo>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Download a organization greeting recording
+     - GET /api/v2/greetings/{greetingId}/downloads
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "mediaImageUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "mediaFileUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter greetingId: (path) Greeting ID 
+     - parameter formatId: (query) The desired media format. (optional)
+
+     - returns: RequestBuilder<GreetingMediaInfo> 
+     */
+    open class func getGreetingDownloadsWithRequestBuilder(greetingId: String, formatId: FormatId_getGreetingDownloads? = nil) -> RequestBuilder<GreetingMediaInfo> {        
+        var path = "/api/v2/greetings/{greetingId}/downloads"
+        let greetingIdPreEscape = "\(greetingId)"
+        let greetingIdPostEscape = greetingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{greetingId}", with: greetingIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "formatId": formatId?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<GreetingMediaInfo>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    public enum FormatId_getGreetingGroupsDownloads: String { 
+        case wav = "WAV"
+        case webm = "WEBM"
+        case wavUlaw = "WAV_ULAW"
+        case oggVorbis = "OGG_VORBIS"
+        case oggOpus = "OGG_OPUS"
+        case mp3 = "MP3"
+        case _none = "NONE"
+    }
+    
+    
+    /**
+     Download a group greeting recording
+     
+     - parameter greetingId: (path) Greeting ID 
+     - parameter formatId: (query) The desired media format. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGreetingGroupsDownloads(greetingId: String, formatId: FormatId_getGreetingGroupsDownloads? = nil, completion: @escaping ((_ data: GreetingMediaInfo?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGreetingGroupsDownloadsWithRequestBuilder(greetingId: greetingId, formatId: formatId)
+        requestBuilder.execute { (response: Response<GreetingMediaInfo>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Download a group greeting recording
+     - GET /api/v2/greetings/{greetingId}/groups/downloads
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "mediaImageUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "mediaFileUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter greetingId: (path) Greeting ID 
+     - parameter formatId: (query) The desired media format. (optional)
+
+     - returns: RequestBuilder<GreetingMediaInfo> 
+     */
+    open class func getGreetingGroupsDownloadsWithRequestBuilder(greetingId: String, formatId: FormatId_getGreetingGroupsDownloads? = nil) -> RequestBuilder<GreetingMediaInfo> {        
+        var path = "/api/v2/greetings/{greetingId}/groups/downloads"
+        let greetingIdPreEscape = "\(greetingId)"
+        let greetingIdPostEscape = greetingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{greetingId}", with: greetingIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "formatId": formatId?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<GreetingMediaInfo>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
     public enum FormatId_getGreetingMedia: String { 
         case wav = "WAV"
         case webm = "WEBM"
@@ -167,6 +315,7 @@ open class GreetingsAPI {
     /**
      Get media playback URI for this greeting
      - GET /api/v2/greetings/{greetingId}/media
+     - API should migrate to use GET api/v2/greetings/{greetingId}/downloads
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -183,6 +332,80 @@ open class GreetingsAPI {
      */
     open class func getGreetingMediaWithRequestBuilder(greetingId: String, formatId: FormatId_getGreetingMedia? = nil) -> RequestBuilder<GreetingMediaInfo> {        
         var path = "/api/v2/greetings/{greetingId}/media"
+        let greetingIdPreEscape = "\(greetingId)"
+        let greetingIdPostEscape = greetingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{greetingId}", with: greetingIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "formatId": formatId?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<GreetingMediaInfo>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    public enum FormatId_getGreetingUsersDownloads: String { 
+        case wav = "WAV"
+        case webm = "WEBM"
+        case wavUlaw = "WAV_ULAW"
+        case oggVorbis = "OGG_VORBIS"
+        case oggOpus = "OGG_OPUS"
+        case mp3 = "MP3"
+        case _none = "NONE"
+    }
+    
+    
+    /**
+     Download a user greeting recording
+     
+     - parameter greetingId: (path) Greeting ID 
+     - parameter formatId: (query) The desired media format. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGreetingUsersDownloads(greetingId: String, formatId: FormatId_getGreetingUsersDownloads? = nil, completion: @escaping ((_ data: GreetingMediaInfo?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGreetingUsersDownloadsWithRequestBuilder(greetingId: greetingId, formatId: formatId)
+        requestBuilder.execute { (response: Response<GreetingMediaInfo>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Download a user greeting recording
+     - GET /api/v2/greetings/{greetingId}/users/downloads
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "mediaImageUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "mediaFileUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter greetingId: (path) Greeting ID 
+     - parameter formatId: (query) The desired media format. (optional)
+
+     - returns: RequestBuilder<GreetingMediaInfo> 
+     */
+    open class func getGreetingUsersDownloadsWithRequestBuilder(greetingId: String, formatId: FormatId_getGreetingUsersDownloads? = nil) -> RequestBuilder<GreetingMediaInfo> {        
+        var path = "/api/v2/greetings/{greetingId}/users/downloads"
         let greetingIdPreEscape = "\(greetingId)"
         let greetingIdPostEscape = greetingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{greetingId}", with: greetingIdPostEscape, options: .literal, range: nil)
@@ -251,8 +474,8 @@ open class GreetingsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -436,8 +659,8 @@ open class GreetingsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter groupId: (path) Group ID 
@@ -607,8 +830,8 @@ open class GreetingsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 

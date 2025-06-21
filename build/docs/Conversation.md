@@ -16,13 +16,14 @@
 | **conversationIds** | **[String]** | A list of conversations to merge into this conversation to create a conference. This field is null except when being used to create a conference. | [optional] |
 | **maxParticipants** | **Int** | If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference. | [optional] |
 | **recordingState** | **String** | On update, &#39;paused&#39; initiates a secure pause, &#39;active&#39; resumes any paused recordings; otherwise indicates state of conversation recording. | [optional] |
-| **state** | **String** | The conversation&#39;s state | [optional] |
+| **state** | **String** | On update, &#39;disconnected&#39; will disconnect the conversation. No other values are valid. When reading conversations, this field will never have a value present. | [optional] |
 | **divisions** | [**[ConversationDivisionMembership]**]([ConversationDivisionMembership]) | Identifiers of divisions associated with this conversation | [optional] |
 | **recentTransfers** | [**[TransferResponse]**]([TransferResponse]) | The list of the most recent 20 transfer commands applied to this conversation. | [optional] |
 | **securePause** | **Bool** | True when the recording of this conversation is in secure pause status. | [optional] |
 | **utilizationLabelId** | **String** | An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level | [optional] |
+| **inactivityTimeout** | [**Date**](Date) | The time in the future, after which this conversation would be considered inactive. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

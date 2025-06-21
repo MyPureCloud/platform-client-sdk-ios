@@ -83,6 +83,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId**](ConversationsAPI#getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId) | Get Facebook messaging integration identity resolution settings |
 | [**getConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId**](ConversationsAPI#getConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId) | Get an Instagram integration identity resolution settings |
 | [**getConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId**](ConversationsAPI#getConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId) | Get an open messaging integration Identity Resolution settings |
+| [**getConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId**](ConversationsAPI#getConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId) | Get X (Formally Twitter) messaging integration identity resolution settings |
 | [**getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId**](ConversationsAPI#getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId) | Get a whatsApp integration Identity Resolution settings |
 | [**getConversationsMessagingIntegrationTwitterOauthSettings**](ConversationsAPI#getConversationsMessagingIntegrationTwitterOauthSettings) | Get twitter oauth settings to patch an integration |
 | [**getConversationsMessagingIntegrations**](ConversationsAPI#getConversationsMessagingIntegrations) | Get a list of Integrations |
@@ -214,6 +215,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessageInboundOpenEvent**](ConversationsAPI#postConversationsMessageInboundOpenEvent) | Send an inbound Open Event Message |
 | [**postConversationsMessageInboundOpenMessage**](ConversationsAPI#postConversationsMessageInboundOpenMessage) | Send inbound Open Message |
 | [**postConversationsMessageInboundOpenReceipt**](ConversationsAPI#postConversationsMessageInboundOpenReceipt) | Send an inbound Open Receipt Message |
+| [**postConversationsMessageInboundOpenStructuredResponse**](ConversationsAPI#postConversationsMessageInboundOpenStructuredResponse) | Send inbound Open Response |
 | [**postConversationsMessageMessagesBulk**](ConversationsAPI#postConversationsMessageMessagesBulk) | Get messages in batch |
 | [**postConversationsMessageParticipantCommunicationWrapup**](ConversationsAPI#postConversationsMessageParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsMessageParticipantMonitor**](ConversationsAPI#postConversationsMessageParticipantMonitor) | Listen in on the conversation from the point of view of a given participant. |
@@ -248,6 +250,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId**](ConversationsAPI#putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId) | Create an identity resolution settings for a Facebook messaging integration |
 | [**putConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId**](ConversationsAPI#putConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId) | Create identity resolution settings for an Instagram messaging integration |
 | [**putConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId**](ConversationsAPI#putConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId) | Update an open messaging integration Identity Resolution settings |
+| [**putConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId**](ConversationsAPI#putConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId) | Create an identity resolution settings for an X (Formally Twitter) messaging integration |
 | [**putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId**](ConversationsAPI#putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId) | Update a whatsApp integration Identity Resolution settings |
 | [**putConversationsMessagingSettingsDefault**](ConversationsAPI#putConversationsMessagingSettingsDefault) | Set the organization&#39;s default setting that may be applied to to integrations without settings |
 | [**putConversationsMessagingSupportedcontentDefault**](ConversationsAPI#putConversationsMessagingSupportedcontentDefault) | Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. |
@@ -1800,7 +1803,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates whether or not to fetch provisional wrap-up code.
 
 // Code example
 ConversationsAPI.getConversationsCallParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
@@ -1821,7 +1824,7 @@ ConversationsAPI.getConversationsCallParticipantCommunicationWrapup(conversation
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+| **provisional** | **Bool**| Indicates whether or not to fetch provisional wrap-up code. | [optional] |
 
 
 ### Return type
@@ -1854,7 +1857,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
-let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates whether or not to fetch provisional wrap-up code.
 
 // Code example
 ConversationsAPI.getConversationsCallParticipantWrapup(conversationId: conversationId, participantId: participantId, provisional: provisional) { (response, error) in
@@ -1874,7 +1877,7 @@ ConversationsAPI.getConversationsCallParticipantWrapup(conversationId: conversat
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+| **provisional** | **Bool**| Indicates whether or not to fetch provisional wrap-up code. | [optional] |
 
 
 ### Return type
@@ -2008,7 +2011,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates whether or not to fetch provisional wrap-up code.
 
 // Code example
 ConversationsAPI.getConversationsCallbackParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
@@ -2029,7 +2032,7 @@ ConversationsAPI.getConversationsCallbackParticipantCommunicationWrapup(conversa
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+| **provisional** | **Bool**| Indicates whether or not to fetch provisional wrap-up code. | [optional] |
 
 
 ### Return type
@@ -2062,7 +2065,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
-let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates whether or not to fetch provisional wrap-up code.
 
 // Code example
 ConversationsAPI.getConversationsCallbackParticipantWrapup(conversationId: conversationId, participantId: participantId, provisional: provisional) { (response, error) in
@@ -2082,7 +2085,7 @@ ConversationsAPI.getConversationsCallbackParticipantWrapup(conversationId: conve
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+| **provisional** | **Bool**| Indicates whether or not to fetch provisional wrap-up code. | [optional] |
 
 
 ### Return type
@@ -2522,7 +2525,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates whether or not to fetch provisional wrap-up code.
 
 // Code example
 ConversationsAPI.getConversationsChatParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
@@ -2543,7 +2546,7 @@ ConversationsAPI.getConversationsChatParticipantCommunicationWrapup(conversation
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+| **provisional** | **Bool**| Indicates whether or not to fetch provisional wrap-up code. | [optional] |
 
 
 ### Return type
@@ -2578,7 +2581,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
-let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates whether or not to fetch provisional wrap-up code.
 
 // Code example
 ConversationsAPI.getConversationsChatParticipantWrapup(conversationId: conversationId, participantId: participantId, provisional: provisional) { (response, error) in
@@ -2598,7 +2601,7 @@ ConversationsAPI.getConversationsChatParticipantWrapup(conversationId: conversat
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+| **provisional** | **Bool**| Indicates whether or not to fetch provisional wrap-up code. | [optional] |
 
 
 ### Return type
@@ -2783,7 +2786,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates whether or not to fetch provisional wrap-up code.
 
 // Code example
 ConversationsAPI.getConversationsCobrowsesessionParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
@@ -2804,7 +2807,7 @@ ConversationsAPI.getConversationsCobrowsesessionParticipantCommunicationWrapup(c
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+| **provisional** | **Bool**| Indicates whether or not to fetch provisional wrap-up code. | [optional] |
 
 
 ### Return type
@@ -2839,7 +2842,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
-let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates whether or not to fetch provisional wrap-up code.
 
 // Code example
 ConversationsAPI.getConversationsCobrowsesessionParticipantWrapup(conversationId: conversationId, participantId: participantId, provisional: provisional) { (response, error) in
@@ -2859,7 +2862,7 @@ ConversationsAPI.getConversationsCobrowsesessionParticipantWrapup(conversationId
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+| **provisional** | **Bool**| Indicates whether or not to fetch provisional wrap-up code. | [optional] |
 
 
 ### Return type
@@ -3189,7 +3192,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates whether or not to fetch provisional wrap-up code.
 
 // Code example
 ConversationsAPI.getConversationsEmailParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
@@ -3210,7 +3213,7 @@ ConversationsAPI.getConversationsEmailParticipantCommunicationWrapup(conversatio
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+| **provisional** | **Bool**| Indicates whether or not to fetch provisional wrap-up code. | [optional] |
 
 
 ### Return type
@@ -3243,7 +3246,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
-let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates whether or not to fetch provisional wrap-up code.
 
 // Code example
 ConversationsAPI.getConversationsEmailParticipantWrapup(conversationId: conversationId, participantId: participantId, provisional: provisional) { (response, error) in
@@ -3263,7 +3266,7 @@ ConversationsAPI.getConversationsEmailParticipantWrapup(conversationId: conversa
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+| **provisional** | **Bool**| Indicates whether or not to fetch provisional wrap-up code. | [optional] |
 
 
 ### Return type
@@ -3752,7 +3755,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates whether or not to fetch provisional wrap-up code.
 
 // Code example
 ConversationsAPI.getConversationsMessageParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
@@ -3773,7 +3776,7 @@ ConversationsAPI.getConversationsMessageParticipantCommunicationWrapup(conversat
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+| **provisional** | **Bool**| Indicates whether or not to fetch provisional wrap-up code. | [optional] |
 
 
 ### Return type
@@ -3806,7 +3809,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
-let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates whether or not to fetch provisional wrap-up code.
 
 // Code example
 ConversationsAPI.getConversationsMessageParticipantWrapup(conversationId: conversationId, participantId: participantId, provisional: provisional) { (response, error) in
@@ -3826,7 +3829,7 @@ ConversationsAPI.getConversationsMessageParticipantWrapup(conversationId: conver
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+| **provisional** | **Bool**| Indicates whether or not to fetch provisional wrap-up code. | [optional] |
 
 
 ### Return type
@@ -4279,6 +4282,57 @@ ConversationsAPI.getConversationsMessagingIdentityresolutionIntegrationsOpenInte
 ### Return type
 
 [**OpenMessagingIdentityResolutionConfig**](OpenMessagingIdentityResolutionConfig)
+
+
+## getConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId
+
+
+
+> [IdentityResolutionConfig](IdentityResolutionConfig) getConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId(integrationId)
+
+Get X (Formally Twitter) messaging integration identity resolution settings
+
+
+
+Wraps GET /api/v2/conversations/messaging/identityresolution/integrations/twitter/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+* messaging:identityResolutionX:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration Id
+
+// Code example
+ConversationsAPI.getConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId(integrationId: integrationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration Id | |
+
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
 
 
 ## getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId
@@ -5416,7 +5470,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates whether or not to fetch provisional wrap-up code.
 
 // Code example
 ConversationsAPI.getConversationsScreenshareParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
@@ -5437,7 +5491,7 @@ ConversationsAPI.getConversationsScreenshareParticipantCommunicationWrapup(conve
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+| **provisional** | **Bool**| Indicates whether or not to fetch provisional wrap-up code. | [optional] |
 
 
 ### Return type
@@ -5517,7 +5571,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates whether or not to fetch provisional wrap-up code.
 
 // Code example
 ConversationsAPI.getConversationsSocialParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
@@ -5538,7 +5592,7 @@ ConversationsAPI.getConversationsSocialParticipantCommunicationWrapup(conversati
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+| **provisional** | **Bool**| Indicates whether or not to fetch provisional wrap-up code. | [optional] |
 
 
 ### Return type
@@ -5572,7 +5626,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let participantId: String = "" // participantId
 let communicationId: String = "" // communicationId
-let provisional: Bool = true // Indicates if the wrap-up code is provisional.
+let provisional: Bool = true // Indicates whether or not to fetch provisional wrap-up code.
 
 // Code example
 ConversationsAPI.getConversationsVideoParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in
@@ -5593,7 +5647,7 @@ ConversationsAPI.getConversationsVideoParticipantCommunicationWrapup(conversatio
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **communicationId** | **String**| communicationId | |
-| **provisional** | **Bool**| Indicates if the wrap-up code is provisional. | [optional] |
+| **provisional** | **Bool**| Indicates whether or not to fetch provisional wrap-up code. | [optional] |
 
 
 ### Return type
@@ -5619,6 +5673,7 @@ Requires ANY permissions:
 
 * conversation:participant:wrapup
 * conversation:call:record
+* conversation:communication:disconnect
 
 ### Example
 
@@ -6043,6 +6098,7 @@ Requires ANY permissions:
 
 * conversation:participant:wrapup
 * conversation:call:record
+* conversation:communication:disconnect
 
 ### Example
 
@@ -6309,6 +6365,8 @@ Wraps PATCH /api/v2/conversations/callbacks/{conversationId}/participants/{parti
 Requires ANY permissions: 
 
 * conversation:participant:wrapup
+* conversation:call:record
+* conversation:communication:disconnect
 
 ### Example
 
@@ -6577,6 +6635,7 @@ Requires ANY permissions:
 
 * conversation:participant:wrapup
 * conversation:call:record
+* conversation:communication:disconnect
 
 ### Example
 
@@ -6799,6 +6858,7 @@ Requires ANY permissions:
 
 * conversation:participant:wrapup
 * conversation:call:record
+* conversation:communication:disconnect
 
 ### Example
 
@@ -7072,6 +7132,8 @@ Requires ANY permissions:
 
 * conversation:participant:wrapup
 * conversation:call:record
+* conversation:communication:disconnect
+* conversation:email:park
 
 ### Example
 
@@ -7339,6 +7401,7 @@ Requires ANY permissions:
 
 * conversation:participant:wrapup
 * conversation:call:record
+* conversation:communication:disconnect
 
 ### Example
 
@@ -11241,6 +11304,60 @@ ConversationsAPI.postConversationsMessageInboundOpenReceipt(integrationId: integ
 [**OpenReceiptNormalizedMessage**](OpenReceiptNormalizedMessage)
 
 
+## postConversationsMessageInboundOpenStructuredResponse
+
+
+
+> [OpenStructuredResponseNormalizedMessage](OpenStructuredResponseNormalizedMessage) postConversationsMessageInboundOpenStructuredResponse(integrationId, body)
+
+Send inbound Open Response
+
+Send an inbound response for a structured message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+
+
+
+Wraps POST /api/v2/conversations/messages/{integrationId}/inbound/open/structured/response  
+
+Requires ALL permissions: 
+
+* conversation:message:receive
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // integrationId
+let body: OpenInboundStructuredResponseMessage = new OpenInboundStructuredResponseMessage(...) // OpenInboundStructuredResponseMessage
+
+// Code example
+ConversationsAPI.postConversationsMessageInboundOpenStructuredResponse(integrationId: integrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsMessageInboundOpenStructuredResponse was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| integrationId | |
+| **body** | [**OpenInboundStructuredResponseMessage**](OpenInboundStructuredResponseMessage)| OpenInboundStructuredResponseMessage | |
+
+
+### Return type
+
+[**OpenStructuredResponseNormalizedMessage**](OpenStructuredResponseNormalizedMessage)
+
+
 ## postConversationsMessageMessagesBulk
 
 
@@ -13025,6 +13142,59 @@ ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsOpenInte
 [**OpenMessagingIdentityResolutionConfig**](OpenMessagingIdentityResolutionConfig)
 
 
+## putConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId
+
+
+
+> [IdentityResolutionConfig](IdentityResolutionConfig) putConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId(integrationId, body)
+
+Create an identity resolution settings for an X (Formally Twitter) messaging integration
+
+
+
+Wraps PUT /api/v2/conversations/messaging/identityresolution/integrations/twitter/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:XIntegration:edit
+* messaging:identityResolutionX:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration Id
+let body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // IdentityResolutionConfig
+
+// Code example
+ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId(integrationId: integrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration Id | |
+| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)| IdentityResolutionConfig | |
+
+
+### Return type
+
+[**IdentityResolutionConfig**](IdentityResolutionConfig)
+
+
 ## putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId
 
 
@@ -13392,4 +13562,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

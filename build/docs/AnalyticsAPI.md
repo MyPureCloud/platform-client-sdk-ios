@@ -29,7 +29,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchAnalyticsReportingSettings**](AnalyticsAPI#patchAnalyticsReportingSettings) | Patch AnalyticsReportingSettings values for an organization |
 | [**postAnalyticsActionsAggregatesQuery**](AnalyticsAPI#postAnalyticsActionsAggregatesQuery) | Query for action aggregates |
 | [**postAnalyticsAgentcopilotsAggregatesQuery**](AnalyticsAPI#postAnalyticsAgentcopilotsAggregatesQuery) | Query for agent copilot aggregates |
-| [**postAnalyticsAgentsStatusCounts**](AnalyticsAPI#postAnalyticsAgentsStatusCounts) | Count agents by segment type |
+| [**postAnalyticsAgentsStatusCounts**](AnalyticsAPI#postAnalyticsAgentsStatusCounts) | Count agents by different groupings |
 | [**postAnalyticsAgentsStatusQuery**](AnalyticsAPI#postAnalyticsAgentsStatusQuery) | Retrieve the top 50 agents matching the query filters |
 | [**postAnalyticsBotsAggregatesQuery**](AnalyticsAPI#postAnalyticsBotsAggregatesQuery) | Query for bot aggregates |
 | [**postAnalyticsConversationDetailsProperties**](AnalyticsAPI#postAnalyticsConversationDetailsProperties) | Index conversation properties |
@@ -1396,7 +1396,7 @@ AnalyticsAPI.postAnalyticsAgentcopilotsAggregatesQuery(body: body) { (response, 
 
 > [AnalyticsAgentStateCountsResponse](AnalyticsAgentStateCountsResponse) postAnalyticsAgentsStatusCounts(body)
 
-Count agents by segment type
+Count agents by different groupings
 
 
 
@@ -3167,4 +3167,4 @@ AnalyticsAPI.putAnalyticsDataretentionSettings(body: body) { (response, error) i
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

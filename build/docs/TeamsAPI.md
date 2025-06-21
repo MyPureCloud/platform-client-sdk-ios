@@ -255,7 +255,7 @@ let pageSize: Int = 0 // Page size
 let name: String = "" // Return only teams whose names start with this value (case-insensitive matching)
 let after: String = "" // The cursor that points to the next item in the complete list of teams
 let before: String = "" // The cursor that points to the previous item in the complete list of teams
-let expand: TeamsAPI.Expand_getTeams = TeamsAPI.Expand_getTeams.enummember // Expand the name on each user
+let expand: TeamsAPI.Expand_getTeams = TeamsAPI.Expand_getTeams.enummember // Expand the division on each team
 
 // Code example
 TeamsAPI.getTeams(pageSize: pageSize, name: name, after: after, before: before, expand: expand) { (response, error) in
@@ -277,7 +277,7 @@ TeamsAPI.getTeams(pageSize: pageSize, name: name, after: after, before: before, 
 | **name** | **String**| Return only teams whose names start with this value (case-insensitive matching) | [optional] |
 | **after** | **String**| The cursor that points to the next item in the complete list of teams | [optional] |
 | **before** | **String**| The cursor that points to the previous item in the complete list of teams | [optional] |
-| **expand** | **String**| Expand the name on each user | [optional]<br />**Values**: entitiesDivision ("entities.division") |
+| **expand** | **String**| Expand the division on each team | [optional]<br />**Values**: entitiesDivision ("entities.division") |
 
 
 ### Return type
@@ -543,4 +543,4 @@ TeamsAPI.postTeamsSearch(body: body) { (response, error) in
 [**TeamsSearchResponse**](TeamsSearchResponse)
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

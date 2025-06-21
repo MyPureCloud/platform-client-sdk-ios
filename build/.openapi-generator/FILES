@@ -146,7 +146,10 @@ docs/AgentQueueTimeRequest.md
 docs/AgentStateAgentQueryClause.md
 docs/AgentStateAgentQueryPredicate.md
 docs/AgentStateCountsRequest.md
+docs/AgentStateIsOutOfOfficeCount.md
+docs/AgentStatePresenceCount.md
 docs/AgentStateQueryRequest.md
+docs/AgentStateRoutingStatusCount.md
 docs/AgentStateSegmentTypeCount.md
 docs/AgentStateSessionFilter.md
 docs/AgentStateSessionQueryClause.md
@@ -1269,6 +1272,7 @@ docs/ConversationSocialExpressionEventTopicUriReference.md
 docs/ConversationSocialExpressionEventTopicWrapup.md
 docs/ConversationSummariesGetResponse.md
 docs/ConversationSummary.md
+docs/ConversationSummaryExtractedEntity.md
 docs/ConversationSummaryFollowup.md
 docs/ConversationSummaryReason.md
 docs/ConversationSummaryResolution.md
@@ -1397,6 +1401,7 @@ docs/CreateWorkPlanBid.md
 docs/CreateWorkPlanShift.md
 docs/Credential.md
 docs/CredentialInfo.md
+docs/CredentialInfoCursorListing.md
 docs/CredentialInfoListing.md
 docs/CredentialSpecification.md
 docs/CredentialType.md
@@ -1491,6 +1496,7 @@ docs/DependencyObjectEntityListing.md
 docs/DependencyStatus.md
 docs/DependencyType.md
 docs/DependencyTypeEntityListing.md
+docs/DeploymentIdentityResolutionConfig.md
 docs/DeploymentPing.md
 docs/DeploymentWebAction.md
 docs/Destination.md
@@ -2332,6 +2338,7 @@ docs/IdentityProvider.md
 docs/IdentityProviderAPI.json
 docs/IdentityProviderAPI.md
 docs/IdentityProviderEntityListing.md
+docs/IdentityResolutionAutomergeConfig.md
 docs/IdentityResolutionConfig.md
 docs/IdentityResolutionQueueConfig.md
 docs/IdleEventTrigger.md
@@ -3146,6 +3153,8 @@ docs/OpenInboundMessagingReceiptChannel.md
 docs/OpenInboundNormalizedEvent.md
 docs/OpenInboundNormalizedMessage.md
 docs/OpenInboundNormalizedReceipt.md
+docs/OpenInboundStructuredResponseMessage.md
+docs/OpenInboundStructuredResponseNormalizedMessageContent.md
 docs/OpenIntegration.md
 docs/OpenIntegrationEntityListing.md
 docs/OpenIntegrationRequest.md
@@ -3172,6 +3181,7 @@ docs/OpenSocialMediaRecipient.md
 docs/OpenSocialMediaRecipientAdditionalIdentifier.md
 docs/OpenSocialNormalizedMessageEntityListing.md
 docs/OpenSocialReactionsNormalizedEventEntityListing.md
+docs/OpenStructuredResponseNormalizedMessage.md
 docs/Operand.md
 docs/OperandPosition.md
 docs/Operation.md
@@ -3349,6 +3359,9 @@ docs/PatchUser.md
 docs/PatchWebMessagingOfferFields.md
 docs/Pattern.md
 docs/PauseCriteria.md
+docs/PaymentLineItem.md
+docs/PaymentRequest.md
+docs/PaymentResponse.md
 docs/PerformancePredictionCompleteEventTopicErrorBody.md
 docs/PerformancePredictionCompleteEventTopicPerformancePredictionCalculationNotification.md
 docs/PerformancePredictionOutputs.md
@@ -3465,7 +3478,6 @@ docs/Prompt.md
 docs/PromptAsset.md
 docs/PromptAssetCreate.md
 docs/PromptAssetEntityListing.md
-docs/PromptAssetUpload.md
 docs/PromptEntityListing.md
 docs/PropertyChange.md
 docs/PropertyIndexRequest.md
@@ -4155,6 +4167,7 @@ docs/SharedResponse.md
 docs/ShiftStartVariance.md
 docs/ShiftTradeActivityPreviewResponse.md
 docs/ShiftTradeActivityRule.md
+docs/ShiftTradeExternalActivityRule.md
 docs/ShiftTradeListResponse.md
 docs/ShiftTradeMatchReviewResponse.md
 docs/ShiftTradeMatchReviewUserResponse.md
@@ -4203,6 +4216,7 @@ docs/SmsConfig.md
 docs/SmsPhoneNumber.md
 docs/SmsPhoneNumberEntityListing.md
 docs/SmsPhoneNumberImport.md
+docs/SmsPhoneNumberPatchRequest.md
 docs/SmsPhoneNumberProvision.md
 docs/SmsPhoneNumberRef.md
 docs/SmsProvisioningStatus.md
@@ -5892,6 +5906,7 @@ docs/getConversationsMessagingFacebookPermissions-example.txt
 docs/getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId-example.txt
 docs/getConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId-example.txt
 docs/getConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId-example.txt
+docs/getConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId-example.txt
 docs/getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId-example.txt
 docs/getConversationsMessagingIntegrationTwitterOauthSettings-example.txt
 docs/getConversationsMessagingIntegrations-example.txt
@@ -6093,7 +6108,10 @@ docs/getGdprRequests-example.txt
 docs/getGdprSubjects-example.txt
 docs/getGeolocationsSettings-example.txt
 docs/getGreeting-example.txt
+docs/getGreetingDownloads-example.txt
+docs/getGreetingGroupsDownloads-example.txt
 docs/getGreetingMedia-example.txt
+docs/getGreetingUsersDownloads-example.txt
 docs/getGreetings-example.txt
 docs/getGreetingsDefaults-example.txt
 docs/getGroup-example.txt
@@ -6148,6 +6166,7 @@ docs/getIntegrationsClientapps-example.txt
 docs/getIntegrationsClientappsUnifiedcommunications-example.txt
 docs/getIntegrationsCredential-example.txt
 docs/getIntegrationsCredentials-example.txt
+docs/getIntegrationsCredentialsListing-example.txt
 docs/getIntegrationsCredentialsTypes-example.txt
 docs/getIntegrationsSpeechAudioconnector-example.txt
 docs/getIntegrationsSpeechAudioconnectorIntegrationId-example.txt
@@ -7098,6 +7117,7 @@ docs/patchRoutingQueueUsers-example.txt
 docs/patchRoutingSettingsContactcenter-example.txt
 docs/patchRoutingSettingsTranscription-example.txt
 docs/patchRoutingSkillgroup-example.txt
+docs/patchRoutingSmsPhonenumber-example.txt
 docs/patchScimGroup-example.txt
 docs/patchScimUser-example.txt
 docs/patchScimV2Group-example.txt
@@ -7243,13 +7263,11 @@ docs/postArchitectGrammarLanguages-example.txt
 docs/postArchitectGrammars-example.txt
 docs/postArchitectIvrs-example.txt
 docs/postArchitectPromptHistory-example.txt
-docs/postArchitectPromptResourceUploads-example.txt
 docs/postArchitectPromptResources-example.txt
 docs/postArchitectPrompts-example.txt
 docs/postArchitectSchedulegroups-example.txt
 docs/postArchitectSchedules-example.txt
 docs/postArchitectSystempromptHistory-example.txt
-docs/postArchitectSystempromptResourceUploads-example.txt
 docs/postArchitectSystempromptResources-example.txt
 docs/postAssistants-example.txt
 docs/postAuditsQuery-example.txt
@@ -7352,6 +7370,7 @@ docs/postConversationsMessageCommunicationTyping-example.txt
 docs/postConversationsMessageInboundOpenEvent-example.txt
 docs/postConversationsMessageInboundOpenMessage-example.txt
 docs/postConversationsMessageInboundOpenReceipt-example.txt
+docs/postConversationsMessageInboundOpenStructuredResponse-example.txt
 docs/postConversationsMessageMessagesBulk-example.txt
 docs/postConversationsMessageParticipantCommunicationWrapup-example.txt
 docs/postConversationsMessageParticipantMonitor-example.txt
@@ -7935,6 +7954,7 @@ docs/putConversationsMessageRecordingstate-example.txt
 docs/putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId-example.txt
 docs/putConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId-example.txt
 docs/putConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId-example.txt
+docs/putConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId-example.txt
 docs/putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId-example.txt
 docs/putConversationsMessagingSettingsDefault-example.txt
 docs/putConversationsMessagingSupportedcontentDefault-example.txt
@@ -8368,7 +8388,10 @@ src/Models/AgentQueueTimeRequest.swift
 src/Models/AgentStateAgentQueryClause.swift
 src/Models/AgentStateAgentQueryPredicate.swift
 src/Models/AgentStateCountsRequest.swift
+src/Models/AgentStateIsOutOfOfficeCount.swift
+src/Models/AgentStatePresenceCount.swift
 src/Models/AgentStateQueryRequest.swift
+src/Models/AgentStateRoutingStatusCount.swift
 src/Models/AgentStateSegmentTypeCount.swift
 src/Models/AgentStateSessionFilter.swift
 src/Models/AgentStateSessionQueryClause.swift
@@ -9469,6 +9492,7 @@ src/Models/ConversationSocialExpressionEventTopicUriReference.swift
 src/Models/ConversationSocialExpressionEventTopicWrapup.swift
 src/Models/ConversationSummariesGetResponse.swift
 src/Models/ConversationSummary.swift
+src/Models/ConversationSummaryExtractedEntity.swift
 src/Models/ConversationSummaryFollowup.swift
 src/Models/ConversationSummaryReason.swift
 src/Models/ConversationSummaryResolution.swift
@@ -9595,6 +9619,7 @@ src/Models/CreateWorkPlanBid.swift
 src/Models/CreateWorkPlanShift.swift
 src/Models/Credential.swift
 src/Models/CredentialInfo.swift
+src/Models/CredentialInfoCursorListing.swift
 src/Models/CredentialInfoListing.swift
 src/Models/CredentialSpecification.swift
 src/Models/CredentialType.swift
@@ -9685,6 +9710,7 @@ src/Models/DependencyObjectEntityListing.swift
 src/Models/DependencyStatus.swift
 src/Models/DependencyType.swift
 src/Models/DependencyTypeEntityListing.swift
+src/Models/DeploymentIdentityResolutionConfig.swift
 src/Models/DeploymentPing.swift
 src/Models/DeploymentWebAction.swift
 src/Models/Destination.swift
@@ -10500,6 +10526,7 @@ src/Models/IdentifierClaimRequest.swift
 src/Models/IdentityNow.swift
 src/Models/IdentityProvider.swift
 src/Models/IdentityProviderEntityListing.swift
+src/Models/IdentityResolutionAutomergeConfig.swift
 src/Models/IdentityResolutionConfig.swift
 src/Models/IdentityResolutionQueueConfig.swift
 src/Models/IdleEventTrigger.swift
@@ -11287,6 +11314,8 @@ src/Models/OpenInboundMessagingReceiptChannel.swift
 src/Models/OpenInboundNormalizedEvent.swift
 src/Models/OpenInboundNormalizedMessage.swift
 src/Models/OpenInboundNormalizedReceipt.swift
+src/Models/OpenInboundStructuredResponseMessage.swift
+src/Models/OpenInboundStructuredResponseNormalizedMessageContent.swift
 src/Models/OpenIntegration.swift
 src/Models/OpenIntegrationEntityListing.swift
 src/Models/OpenIntegrationRequest.swift
@@ -11313,6 +11342,7 @@ src/Models/OpenSocialMediaRecipient.swift
 src/Models/OpenSocialMediaRecipientAdditionalIdentifier.swift
 src/Models/OpenSocialNormalizedMessageEntityListing.swift
 src/Models/OpenSocialReactionsNormalizedEventEntityListing.swift
+src/Models/OpenStructuredResponseNormalizedMessage.swift
 src/Models/Operand.swift
 src/Models/OperandPosition.swift
 src/Models/Operation.swift
@@ -11482,6 +11512,9 @@ src/Models/PatchUser.swift
 src/Models/PatchWebMessagingOfferFields.swift
 src/Models/Pattern.swift
 src/Models/PauseCriteria.swift
+src/Models/PaymentLineItem.swift
+src/Models/PaymentRequest.swift
+src/Models/PaymentResponse.swift
 src/Models/PerformancePredictionCompleteEventTopicErrorBody.swift
 src/Models/PerformancePredictionCompleteEventTopicPerformancePredictionCalculationNotification.swift
 src/Models/PerformancePredictionOutputs.swift
@@ -11594,7 +11627,6 @@ src/Models/Prompt.swift
 src/Models/PromptAsset.swift
 src/Models/PromptAssetCreate.swift
 src/Models/PromptAssetEntityListing.swift
-src/Models/PromptAssetUpload.swift
 src/Models/PromptEntityListing.swift
 src/Models/PropertyChange.swift
 src/Models/PropertyIndexRequest.swift
@@ -12264,6 +12296,7 @@ src/Models/SharedResponse.swift
 src/Models/ShiftStartVariance.swift
 src/Models/ShiftTradeActivityPreviewResponse.swift
 src/Models/ShiftTradeActivityRule.swift
+src/Models/ShiftTradeExternalActivityRule.swift
 src/Models/ShiftTradeListResponse.swift
 src/Models/ShiftTradeMatchReviewResponse.swift
 src/Models/ShiftTradeMatchReviewUserResponse.swift
@@ -12312,6 +12345,7 @@ src/Models/SmsConfig.swift
 src/Models/SmsPhoneNumber.swift
 src/Models/SmsPhoneNumberEntityListing.swift
 src/Models/SmsPhoneNumberImport.swift
+src/Models/SmsPhoneNumberPatchRequest.swift
 src/Models/SmsPhoneNumberProvision.swift
 src/Models/SmsPhoneNumberRef.swift
 src/Models/SmsProvisioningStatus.swift

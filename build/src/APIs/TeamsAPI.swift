@@ -293,7 +293,7 @@ open class TeamsAPI {
      - parameter name: (query) Return only teams whose names start with this value (case-insensitive matching) (optional)
      - parameter after: (query) The cursor that points to the next item in the complete list of teams (optional)
      - parameter before: (query) The cursor that points to the previous item in the complete list of teams (optional)
-     - parameter expand: (query) Expand the name on each user (optional)
+     - parameter expand: (query) Expand the division on each team (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getTeams(pageSize: Int? = nil, name: String? = nil, after: String? = nil, before: String? = nil, expand: Expand_getTeams? = nil, completion: @escaping ((_ data: TeamEntityListing?,_ error: Error?) -> Void)) {
@@ -349,7 +349,7 @@ open class TeamsAPI {
      - parameter name: (query) Return only teams whose names start with this value (case-insensitive matching) (optional)
      - parameter after: (query) The cursor that points to the next item in the complete list of teams (optional)
      - parameter before: (query) The cursor that points to the previous item in the complete list of teams (optional)
-     - parameter expand: (query) Expand the name on each user (optional)
+     - parameter expand: (query) Expand the division on each team (optional)
 
      - returns: RequestBuilder<TeamEntityListing> 
      */

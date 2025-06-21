@@ -920,9 +920,9 @@ open class WebDeploymentsAPI {
      - parameter deploymentId: (path) The deployment ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWebdeploymentsDeploymentIdentityresolution(deploymentId: String, completion: @escaping ((_ data: IdentityResolutionConfig?,_ error: Error?) -> Void)) {
+    open class func getWebdeploymentsDeploymentIdentityresolution(deploymentId: String, completion: @escaping ((_ data: DeploymentIdentityResolutionConfig?,_ error: Error?) -> Void)) {
         let requestBuilder = getWebdeploymentsDeploymentIdentityresolutionWithRequestBuilder(deploymentId: deploymentId)
-        requestBuilder.execute { (response: Response<IdentityResolutionConfig>?, error) -> Void in
+        requestBuilder.execute { (response: Response<DeploymentIdentityResolutionConfig>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -953,9 +953,9 @@ open class WebDeploymentsAPI {
      
      - parameter deploymentId: (path) The deployment ID 
 
-     - returns: RequestBuilder<IdentityResolutionConfig> 
+     - returns: RequestBuilder<DeploymentIdentityResolutionConfig> 
      */
-    open class func getWebdeploymentsDeploymentIdentityresolutionWithRequestBuilder(deploymentId: String) -> RequestBuilder<IdentityResolutionConfig> {        
+    open class func getWebdeploymentsDeploymentIdentityresolutionWithRequestBuilder(deploymentId: String) -> RequestBuilder<DeploymentIdentityResolutionConfig> {        
         var path = "/api/v2/webdeployments/deployments/{deploymentId}/identityresolution"
         let deploymentIdPreEscape = "\(deploymentId)"
         let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -965,7 +965,7 @@ open class WebDeploymentsAPI {
         
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<IdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<DeploymentIdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1626,9 +1626,9 @@ open class WebDeploymentsAPI {
      - parameter body: (body)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putWebdeploymentsDeploymentIdentityresolution(deploymentId: String, body: IdentityResolutionConfig, completion: @escaping ((_ data: IdentityResolutionConfig?,_ error: Error?) -> Void)) {
+    open class func putWebdeploymentsDeploymentIdentityresolution(deploymentId: String, body: DeploymentIdentityResolutionConfig, completion: @escaping ((_ data: DeploymentIdentityResolutionConfig?,_ error: Error?) -> Void)) {
         let requestBuilder = putWebdeploymentsDeploymentIdentityresolutionWithRequestBuilder(deploymentId: deploymentId, body: body)
-        requestBuilder.execute { (response: Response<IdentityResolutionConfig>?, error) -> Void in
+        requestBuilder.execute { (response: Response<DeploymentIdentityResolutionConfig>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1660,9 +1660,9 @@ open class WebDeploymentsAPI {
      - parameter deploymentId: (path) The deployment ID 
      - parameter body: (body)  
 
-     - returns: RequestBuilder<IdentityResolutionConfig> 
+     - returns: RequestBuilder<DeploymentIdentityResolutionConfig> 
      */
-    open class func putWebdeploymentsDeploymentIdentityresolutionWithRequestBuilder(deploymentId: String, body: IdentityResolutionConfig) -> RequestBuilder<IdentityResolutionConfig> {        
+    open class func putWebdeploymentsDeploymentIdentityresolutionWithRequestBuilder(deploymentId: String, body: DeploymentIdentityResolutionConfig) -> RequestBuilder<DeploymentIdentityResolutionConfig> {        
         var path = "/api/v2/webdeployments/deployments/{deploymentId}/identityresolution"
         let deploymentIdPreEscape = "\(deploymentId)"
         let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1672,7 +1672,7 @@ open class WebDeploymentsAPI {
 
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<IdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<DeploymentIdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

@@ -8,8 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **agentId** | **String** | ID of the agent | |
 | **startOffsetMinutes** | **[Int]** | List of offsets in minutes from calculationStartDate | |
-| **onQueueLengthMinutesPerInterval** | **[Int]** | List of on queue time lengths in minutes per interval of elements in startOffsetMinutes | |
+| **onQueueLengthMinutesPerInterval** | **[Int]** | List of on-queue time lengths in minutes per interval of elements in startOffsetMinutes | |
+| **onQueueActivityCodeIds** | **[String]** | List of on-queue activity code ids | [optional] |
 
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

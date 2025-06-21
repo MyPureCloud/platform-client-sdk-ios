@@ -1197,8 +1197,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter divisionId: (query) One division ID 
@@ -1358,6 +1358,7 @@ open class SocialMediaAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
+    "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
     "status" : "Active"
@@ -1368,6 +1369,7 @@ open class SocialMediaAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
+    "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
     "status" : "Active"
@@ -1376,8 +1378,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -1453,6 +1455,7 @@ open class SocialMediaAPI {
   "integrationId" : "integrationId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
+  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "status" : "Active"
@@ -1534,6 +1537,7 @@ open class SocialMediaAPI {
   "integrationId" : "integrationId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
+  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "status" : "Active"
@@ -1626,6 +1630,7 @@ open class SocialMediaAPI {
     "integrationId" : "integrationId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
+    "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
     "status" : "Active"
@@ -1637,6 +1642,7 @@ open class SocialMediaAPI {
     "integrationId" : "integrationId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
+    "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
     "status" : "Active"
@@ -1645,8 +1651,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -1725,6 +1731,7 @@ open class SocialMediaAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
+  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "status" : "Active",
@@ -1806,6 +1813,7 @@ open class SocialMediaAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
+  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "status" : "Active",
@@ -1898,6 +1906,7 @@ open class SocialMediaAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
+    "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
     "status" : "Active",
@@ -1909,6 +1918,7 @@ open class SocialMediaAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
+    "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
     "status" : "Active",
@@ -1918,8 +1928,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -2195,8 +2205,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -2324,8 +2334,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -2478,6 +2488,7 @@ open class SocialMediaAPI {
   "integrationId" : "integrationId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
+  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "status" : "Active"
@@ -2552,6 +2563,7 @@ open class SocialMediaAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
+  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "status" : "Active",
@@ -2932,6 +2944,7 @@ open class SocialMediaAPI {
   "integrationId" : "integrationId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
+  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "status" : "Active"
@@ -2999,6 +3012,7 @@ open class SocialMediaAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
+  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "status" : "Active",
@@ -3113,8 +3127,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=202}]
      
      - parameter topicId: (path) Topic ID 
@@ -3231,8 +3245,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=202}]
      
      - parameter topicId: (path) Topic ID 
@@ -3572,6 +3586,7 @@ open class SocialMediaAPI {
   "integrationId" : "integrationId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
+  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "status" : "Active"
@@ -3646,6 +3661,7 @@ open class SocialMediaAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
+  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "status" : "Active",

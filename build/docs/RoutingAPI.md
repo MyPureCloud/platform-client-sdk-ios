@@ -106,6 +106,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchRoutingSettingsContactcenter**](RoutingAPI#patchRoutingSettingsContactcenter) | Update Contact Center Settings |
 | [**patchRoutingSettingsTranscription**](RoutingAPI#patchRoutingSettingsTranscription) | Patch Transcription Settings |
 | [**patchRoutingSkillgroup**](RoutingAPI#patchRoutingSkillgroup) | Update skill group definition |
+| [**patchRoutingSmsPhonenumber**](RoutingAPI#patchRoutingSmsPhonenumber) | Update a phone number provisioned for SMS. |
 | [**patchUserQueue**](RoutingAPI#patchUserQueue) | Join or unjoin a queue for a user |
 | [**patchUserQueues**](RoutingAPI#patchUserQueues) | Join or unjoin a set of queues for a user |
 | [**patchUserRoutinglanguage**](RoutingAPI#patchUserRoutinglanguage) | Update an assigned routing language&#39;s proficiency |
@@ -3013,7 +3014,7 @@ RoutingAPI.getRoutingQueueMembers(queueId: queueId, pageNumber: pageNumber, page
 | **pageNumber** | **Int**|  | [optional] |
 | **pageSize** | **Int**| Max value is 100 | [optional] |
 | **sortOrder** | **String**| Note: results are sorted by name. | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
-| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), externalcontactssettings ("externalContactsSettings"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin"), datewelcomesent ("dateWelcomeSent") |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), externalcontactssettings ("externalContactsSettings"), groups ("groups"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin"), datewelcomesent ("dateWelcomeSent") |
 | **name** | **String**| Filter by queue member name (contains-style search) | [optional] |
 | **profileSkills** | [**[String]**](String)| Filter by profile skill (contains-style search) | [optional] |
 | **skills** | [**[String]**](String)| Filter by skill (contains-style search) | [optional] |
@@ -3087,7 +3088,7 @@ RoutingAPI.getRoutingQueueUsers(queueId: queueId, pageNumber: pageNumber, pageSi
 | **pageNumber** | **Int**|  | [optional] |
 | **pageSize** | **Int**| Max value is 100 | [optional] |
 | **sortOrder** | **String**| Note: results are sorted by name. | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
-| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), externalcontactssettings ("externalContactsSettings"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin"), datewelcomesent ("dateWelcomeSent") |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), externalcontactssettings ("externalContactsSettings"), groups ("groups"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin"), datewelcomesent ("dateWelcomeSent") |
 | **joined** | **Bool**| Filter by joined status | [optional] |
 | **name** | **String**| Filter by queue member name | [optional] |
 | **profileSkills** | [**[String]**](String)| Filter by profile skill | [optional] |
@@ -5518,6 +5519,58 @@ RoutingAPI.patchRoutingSkillgroup(skillGroupId: skillGroupId, body: body) { (res
 ### Return type
 
 [**SkillGroup**](SkillGroup)
+
+
+## patchRoutingSmsPhonenumber
+
+
+
+> [SmsPhoneNumber](SmsPhoneNumber) patchRoutingSmsPhonenumber(phoneNumberId, body)
+
+Update a phone number provisioned for SMS.
+
+
+
+Wraps PATCH /api/v2/routing/sms/phonenumbers/{phoneNumberId}  
+
+Requires ALL permissions: 
+
+* sms:phoneNumber:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let phoneNumberId: String = "" // phone number
+let body: SmsPhoneNumberPatchRequest = new SmsPhoneNumberPatchRequest(...) // SmsPhoneNumberPatchRequest
+
+// Code example
+RoutingAPI.patchRoutingSmsPhonenumber(phoneNumberId: phoneNumberId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.patchRoutingSmsPhonenumber was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **phoneNumberId** | **String**| phone number | |
+| **body** | [**SmsPhoneNumberPatchRequest**](SmsPhoneNumberPatchRequest)| SmsPhoneNumberPatchRequest | |
+
+
+### Return type
+
+[**SmsPhoneNumber**](SmsPhoneNumber)
 
 
 ## patchUserQueue
@@ -7951,4 +8004,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

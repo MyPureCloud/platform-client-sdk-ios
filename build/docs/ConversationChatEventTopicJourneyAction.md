@@ -12,4 +12,4 @@ A subset of the Journey System&#39;s action data relevant to a part of a convers
 
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

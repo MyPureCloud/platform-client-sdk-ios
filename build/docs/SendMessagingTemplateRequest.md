@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **responseId** | **String** | A Response Management response identifier for a messaging template defined response | [optional] |
+| **responseId** | **String** | Unique identifier for a Response Management response to fetch and apply pre-configured message content when sending outbound responses. | [optional] |
 | **parameters** | [**[TemplateParameter]**]([TemplateParameter]) | A list of Response Management response substitutions for the response&#39;s messaging template. (Deprecated) use bodyParameters instead. | [optional] |
 | **headerParameters** | [**[TemplateParameter]**]([TemplateParameter]) | A list of Response Management header parameter substitutions for the response&#39;s messaging template | [optional] |
 | **bodyParameters** | [**[TemplateParameter]**]([TemplateParameter]) | A list of Response Management body parameter substitutions for the response&#39;s messaging template | [optional] |
@@ -14,4 +14,4 @@
 
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

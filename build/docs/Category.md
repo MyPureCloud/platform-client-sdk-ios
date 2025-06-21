@@ -11,4 +11,4 @@ List of available Action categories.
 
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

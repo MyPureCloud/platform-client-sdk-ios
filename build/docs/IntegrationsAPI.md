@@ -34,6 +34,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getIntegrationsClientappsUnifiedcommunications**](IntegrationsAPI#getIntegrationsClientappsUnifiedcommunications) | UC integration client application configuration. |
 | [**getIntegrationsCredential**](IntegrationsAPI#getIntegrationsCredential) | Get a single credential with sensitive fields redacted |
 | [**getIntegrationsCredentials**](IntegrationsAPI#getIntegrationsCredentials) | List multiple sets of credentials |
+| [**getIntegrationsCredentialsListing**](IntegrationsAPI#getIntegrationsCredentialsListing) | List multiple sets of credentials using cursor-based paging |
 | [**getIntegrationsCredentialsTypes**](IntegrationsAPI#getIntegrationsCredentialsTypes) | List all credential types |
 | [**getIntegrationsSpeechAudioconnector**](IntegrationsAPI#getIntegrationsSpeechAudioconnector) | Get a list of Audio Connector integrations |
 | [**getIntegrationsSpeechAudioconnectorIntegrationId**](IntegrationsAPI#getIntegrationsSpeechAudioconnectorIntegrationId) | Get an Audio Connector integration |
@@ -1726,6 +1727,60 @@ IntegrationsAPI.getIntegrationsCredentials(pageNumber: pageNumber, pageSize: pag
 ### Return type
 
 [**CredentialInfoListing**](CredentialInfoListing)
+
+
+## getIntegrationsCredentialsListing
+
+
+
+> [CredentialInfoCursorListing](CredentialInfoCursorListing) getIntegrationsCredentialsListing(before, after, pageSize)
+
+List multiple sets of credentials using cursor-based paging
+
+
+
+Wraps GET /api/v2/integrations/credentials/listing  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+
+// Code example
+IntegrationsAPI.getIntegrationsCredentialsListing(before: before, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsCredentialsListing was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+
+
+### Return type
+
+[**CredentialInfoCursorListing**](CredentialInfoCursorListing)
 
 
 ## getIntegrationsCredentialsTypes
@@ -4699,4 +4754,4 @@ IntegrationsAPI.putIntegrationsUnifiedcommunicationThirdpartypresences(ucIntegra
 **String**
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

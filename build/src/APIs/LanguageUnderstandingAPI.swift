@@ -486,8 +486,8 @@ open class LanguageUnderstandingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -1290,8 +1290,8 @@ open class LanguageUnderstandingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -1385,8 +1385,8 @@ open class LanguageUnderstandingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1459,6 +1459,7 @@ open class LanguageUnderstandingAPI {
   "conversationsDateRangeEnd" : "2019-12-20T00:00:00.000+0000",
   "queueIds" : [ "queueIds", "queueIds" ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "seeding" : true,
   "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
   "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
   "latestDraftVersion" : "{}",
@@ -2221,6 +2222,7 @@ open class LanguageUnderstandingAPI {
     "conversationsDateRangeEnd" : "2019-12-20T00:00:00.000+0000",
     "queueIds" : [ "queueIds", "queueIds" ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "seeding" : true,
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
     "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
     "latestDraftVersion" : "{}",
@@ -2245,6 +2247,7 @@ open class LanguageUnderstandingAPI {
     "conversationsDateRangeEnd" : "2019-12-20T00:00:00.000+0000",
     "queueIds" : [ "queueIds", "queueIds" ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "seeding" : true,
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
     "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
     "latestDraftVersion" : "{}",
@@ -3551,6 +3554,7 @@ open class LanguageUnderstandingAPI {
   "conversationsDateRangeEnd" : "2019-12-20T00:00:00.000+0000",
   "queueIds" : [ "queueIds", "queueIds" ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "seeding" : true,
   "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
   "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
   "latestDraftVersion" : "{}",
@@ -3629,6 +3633,7 @@ open class LanguageUnderstandingAPI {
   "conversationsDateRangeEnd" : "2019-12-20T00:00:00.000+0000",
   "queueIds" : [ "queueIds", "queueIds" ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "seeding" : true,
   "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
   "dateTriggered" : "2000-01-23T04:56:07.000+00:00",
   "latestDraftVersion" : "{}",

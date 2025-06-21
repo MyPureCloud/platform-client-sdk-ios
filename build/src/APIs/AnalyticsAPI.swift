@@ -632,6 +632,7 @@ open class AnalyticsAPI {
     "evaluationId" : "evaluationId",
     "assigneeApplicable" : true,
     "deleted" : true,
+    "systemSubmitted" : true,
     "formName" : "formName",
     "eventTime" : "2000-01-23T04:56:07.000+00:00",
     "rescored" : true,
@@ -650,6 +651,7 @@ open class AnalyticsAPI {
     "evaluationId" : "evaluationId",
     "assigneeApplicable" : true,
     "deleted" : true,
+    "systemSubmitted" : true,
     "formName" : "formName",
     "eventTime" : "2000-01-23T04:56:07.000+00:00",
     "rescored" : true,
@@ -1637,6 +1639,7 @@ open class AnalyticsAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -1655,6 +1658,7 @@ open class AnalyticsAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -2588,6 +2592,7 @@ open class AnalyticsAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -2606,6 +2611,7 @@ open class AnalyticsAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -3661,6 +3667,7 @@ open class AnalyticsAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -3679,6 +3686,7 @@ open class AnalyticsAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -4618,6 +4626,7 @@ open class AnalyticsAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -4636,6 +4645,7 @@ open class AnalyticsAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -5820,8 +5830,8 @@ open class AnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter sortBy: (query)  (optional)
@@ -5995,8 +6005,8 @@ open class AnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -6084,8 +6094,8 @@ open class AnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
 
      - returns: RequestBuilder<ReportingExportMetadataJobListing> 
@@ -6415,8 +6425,8 @@ open class AnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 7,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter dashboardType: (query) List dashboard of given type 
@@ -6698,8 +6708,8 @@ open class AnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 7,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -7761,7 +7771,7 @@ open class AnalyticsAPI {
     
     
     /**
-     Count agents by segment type
+     Count agents by different groupings
      
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
@@ -7785,7 +7795,7 @@ open class AnalyticsAPI {
     }
 
     /**
-     Count agents by segment type
+     Count agents by different groupings
      - POST /api/v2/analytics/agents/status/counts
      - OAuth:
        - type: oauth2
@@ -9066,6 +9076,7 @@ open class AnalyticsAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -9084,6 +9095,7 @@ open class AnalyticsAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -10017,6 +10029,7 @@ open class AnalyticsAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -10035,6 +10048,7 @@ open class AnalyticsAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -11053,6 +11067,7 @@ open class AnalyticsAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -11071,6 +11086,7 @@ open class AnalyticsAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -12004,6 +12020,7 @@ open class AnalyticsAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -12022,6 +12039,7 @@ open class AnalyticsAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -16554,8 +16572,8 @@ open class AnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 7,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter body: (body)  

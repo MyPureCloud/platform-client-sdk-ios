@@ -3136,14 +3136,18 @@ open class WorkforceManagementAPI {
     
     
     public enum Feature_getWorkforcemanagementBusinessunitManagementunits: String { 
+        case agentHistoricalAdherence = "AgentHistoricalAdherence"
+        case agentHistoricalAdherenceConformance = "AgentHistoricalAdherenceConformance"
         case agentSchedule = "AgentSchedule"
         case agentTimeOffRequest = "AgentTimeOffRequest"
         case agentWorkPlanBid = "AgentWorkPlanBid"
         case alternativeShift = "AlternativeShift"
         case coaching = "Coaching"
         case learning = "Learning"
+        case agentUnavailableTimes = "AgentUnavailableTimes"
         case activityCodes = "ActivityCodes"
         case activityPlans = "ActivityPlans"
+        case unavailableTimes = "UnavailableTimes"
         case agents = "Agents"
         case buActivityCodes = "BuActivityCodes"
         case businessUnits = "BusinessUnits"
@@ -3243,8 +3247,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -3999,15 +4003,18 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
     /**
      Gets a list of staffing groups
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter managementUnitId: (query) The ID of the management unit to get management unit specific staffing groups (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementBusinessunitStaffinggroups(businessUnitId: String, managementUnitId: String? = nil, completion: @escaping ((_ data: StaffingGroupListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementBusinessunitStaffinggroupsWithRequestBuilder(businessUnitId: businessUnitId, managementUnitId: managementUnitId)
+    open class func getWorkforcemanagementBusinessunitStaffinggroups(businessUnitId: String, managementUnitId: String? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: StaffingGroupListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitStaffinggroupsWithRequestBuilder(businessUnitId: businessUnitId, managementUnitId: managementUnitId, forceDownloadService: forceDownloadService)
         requestBuilder.execute { (response: Response<StaffingGroupListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -4057,15 +4064,17 @@ open class WorkforceManagementAPI {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
     } ]
-  } ]
+  } ],
+  "downloadUrl" : "downloadUrl"
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter managementUnitId: (query) The ID of the management unit to get management unit specific staffing groups (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
 
      - returns: RequestBuilder<StaffingGroupListing> 
      */
-    open class func getWorkforcemanagementBusinessunitStaffinggroupsWithRequestBuilder(businessUnitId: String, managementUnitId: String? = nil) -> RequestBuilder<StaffingGroupListing> {        
+    open class func getWorkforcemanagementBusinessunitStaffinggroupsWithRequestBuilder(businessUnitId: String, managementUnitId: String? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<StaffingGroupListing> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4075,7 +4084,8 @@ open class WorkforceManagementAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "managementUnitId": managementUnitId
+            "managementUnitId": managementUnitId, 
+            "forceDownloadService": forceDownloadService
         ])
 
         let requestBuilder: RequestBuilder<StaffingGroupListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6341,14 +6351,18 @@ open class WorkforceManagementAPI {
 
     
     public enum Feature_getWorkforcemanagementBusinessunits: String { 
+        case agentHistoricalAdherence = "AgentHistoricalAdherence"
+        case agentHistoricalAdherenceConformance = "AgentHistoricalAdherenceConformance"
         case agentSchedule = "AgentSchedule"
         case agentTimeOffRequest = "AgentTimeOffRequest"
         case agentWorkPlanBid = "AgentWorkPlanBid"
         case alternativeShift = "AlternativeShift"
         case coaching = "Coaching"
         case learning = "Learning"
+        case agentUnavailableTimes = "AgentUnavailableTimes"
         case activityCodes = "ActivityCodes"
         case activityPlans = "ActivityPlans"
+        case unavailableTimes = "UnavailableTimes"
         case agents = "Agents"
         case buActivityCodes = "BuActivityCodes"
         case businessUnits = "BusinessUnits"
@@ -9429,14 +9443,18 @@ open class WorkforceManagementAPI {
     
     
     public enum Feature_getWorkforcemanagementManagementunits: String { 
+        case agentHistoricalAdherence = "AgentHistoricalAdherence"
+        case agentHistoricalAdherenceConformance = "AgentHistoricalAdherenceConformance"
         case agentSchedule = "AgentSchedule"
         case agentTimeOffRequest = "AgentTimeOffRequest"
         case agentWorkPlanBid = "AgentWorkPlanBid"
         case alternativeShift = "AlternativeShift"
         case coaching = "Coaching"
         case learning = "Learning"
+        case agentUnavailableTimes = "AgentUnavailableTimes"
         case activityCodes = "ActivityCodes"
         case activityPlans = "ActivityPlans"
+        case unavailableTimes = "UnavailableTimes"
         case agents = "Agents"
         case buActivityCodes = "BuActivityCodes"
         case businessUnits = "BusinessUnits"
@@ -9538,8 +9556,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Deprecated, paging is not supported (optional)
@@ -9636,8 +9654,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return all divisions (optional)
@@ -14924,15 +14942,18 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
     /**
      Gets staffing group associations for a list of user IDs
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter body: (body) body 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitStaffinggroupsQuery(businessUnitId: String, body: QueryUserStaffingGroupListRequest, completion: @escaping ((_ data: UserStaffingGroupListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementBusinessunitStaffinggroupsQueryWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+    open class func postWorkforcemanagementBusinessunitStaffinggroupsQuery(businessUnitId: String, body: QueryUserStaffingGroupListRequest, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: UserStaffingGroupListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitStaffinggroupsQueryWithRequestBuilder(businessUnitId: businessUnitId, body: body, forceDownloadService: forceDownloadService)
         requestBuilder.execute { (response: Response<UserStaffingGroupListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -14962,15 +14983,17 @@ open class WorkforceManagementAPI {
   }, {
     "user" : "{}",
     "staffingGroup" : "{}"
-  } ]
+  } ],
+  "downloadUrl" : "downloadUrl"
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter body: (body) body 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service (optional)
 
      - returns: RequestBuilder<UserStaffingGroupListing> 
      */
-    open class func postWorkforcemanagementBusinessunitStaffinggroupsQueryWithRequestBuilder(businessUnitId: String, body: QueryUserStaffingGroupListRequest) -> RequestBuilder<UserStaffingGroupListing> {        
+    open class func postWorkforcemanagementBusinessunitStaffinggroupsQueryWithRequestBuilder(businessUnitId: String, body: QueryUserStaffingGroupListRequest, forceDownloadService: Bool? = nil) -> RequestBuilder<UserStaffingGroupListing> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/query"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -14978,7 +15001,10 @@ open class WorkforceManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceDownloadService": forceDownloadService
+        ])
 
         let requestBuilder: RequestBuilder<UserStaffingGroupListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -16373,10 +16399,10 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter bidId: (path) The ID of the work plan bid to copy 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitWorkplanbidCopy(businessUnitId: String, bidId: String, body: CopyWorkPlanBid? = nil, completion: @escaping ((_ data: WorkPlanBid?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementBusinessunitWorkplanbidCopy(businessUnitId: String, bidId: String, body: CopyWorkPlanBid, completion: @escaping ((_ data: WorkPlanBid?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementBusinessunitWorkplanbidCopyWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, body: body)
         requestBuilder.execute { (response: Response<WorkPlanBid>?, error) -> Void in
             do {
@@ -16418,11 +16444,11 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter bidId: (path) The ID of the work plan bid to copy 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) body 
 
      - returns: RequestBuilder<WorkPlanBid> 
      */
-    open class func postWorkforcemanagementBusinessunitWorkplanbidCopyWithRequestBuilder(businessUnitId: String, bidId: String, body: CopyWorkPlanBid? = nil) -> RequestBuilder<WorkPlanBid> {        
+    open class func postWorkforcemanagementBusinessunitWorkplanbidCopyWithRequestBuilder(businessUnitId: String, bidId: String, body: CopyWorkPlanBid) -> RequestBuilder<WorkPlanBid> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/copy"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

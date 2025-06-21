@@ -16,8 +16,8 @@
 | **scheduleLengthSecs** | **Int** | Total duration in seconds for all scheduled activities | [optional] |
 | **actualLengthSecs** | **Int** | Total duration in seconds for all actually worked activities | [optional] |
 | **adherencePercentage** | **Double** | Total adherence percentage for this user, in the scale of 0 - 100 | [optional] |
-| **conformancePercentage** | **Double** | Total conformance percentage for this user, in the scale of 0 - 100. Conformance percentage can be greater than 100 when the actual on queue time is greater than the scheduled on queue time for the same period. | [optional] |
+| **conformancePercentage** | **Double** | Total conformance percentage for this user, in the scale of 0 - 100. Conformance percentage can be greater than 100 when the actual on-queue time is greater than the scheduled on-queue time for the same period. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@169.0.0_
+_PureCloudPlatformClientV2@170.0.0_

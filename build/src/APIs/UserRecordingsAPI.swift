@@ -158,6 +158,7 @@ open class UserRecordingsAPI {
       } ]
     } ],
     "maxParticipants" : 0,
+    "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
     "conversationIds" : [ "conversationIds", "conversationIds" ],
     "securePause" : true,
     "recordingState" : "ACTIVE",
@@ -188,6 +189,7 @@ open class UserRecordingsAPI {
       "queueId" : "queueId",
       "monitoredParticipantId" : "monitoredParticipantId",
       "internalMessages" : [ {
+        "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
         "peerId" : "peerId",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "initialState" : "alerting",
@@ -221,6 +223,7 @@ open class UserRecordingsAPI {
         "id" : "id",
         "sourceUserId" : "sourceUserId"
       }, {
+        "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
         "peerId" : "peerId",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "initialState" : "alerting",
@@ -6856,6 +6859,7 @@ open class UserRecordingsAPI {
       "queueId" : "queueId",
       "monitoredParticipantId" : "monitoredParticipantId",
       "internalMessages" : [ {
+        "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
         "peerId" : "peerId",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "initialState" : "alerting",
@@ -6889,6 +6893,7 @@ open class UserRecordingsAPI {
         "id" : "id",
         "sourceUserId" : "sourceUserId"
       }, {
+        "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
         "peerId" : "peerId",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "initialState" : "alerting",
@@ -13838,6 +13843,7 @@ open class UserRecordingsAPI {
         } ]
       } ],
       "maxParticipants" : 0,
+      "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
       "conversationIds" : [ "conversationIds", "conversationIds" ],
       "securePause" : true,
       "recordingState" : "ACTIVE",
@@ -13868,6 +13874,7 @@ open class UserRecordingsAPI {
         "queueId" : "queueId",
         "monitoredParticipantId" : "monitoredParticipantId",
         "internalMessages" : [ {
+          "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "initialState" : "alerting",
@@ -13901,6 +13908,7 @@ open class UserRecordingsAPI {
           "id" : "id",
           "sourceUserId" : "sourceUserId"
         }, {
+          "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "initialState" : "alerting",
@@ -20536,6 +20544,7 @@ open class UserRecordingsAPI {
         "queueId" : "queueId",
         "monitoredParticipantId" : "monitoredParticipantId",
         "internalMessages" : [ {
+          "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "initialState" : "alerting",
@@ -20569,6 +20578,7 @@ open class UserRecordingsAPI {
           "id" : "id",
           "sourceUserId" : "sourceUserId"
         }, {
+          "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "initialState" : "alerting",
@@ -27265,6 +27275,7 @@ open class UserRecordingsAPI {
         } ]
       } ],
       "maxParticipants" : 0,
+      "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
       "conversationIds" : [ "conversationIds", "conversationIds" ],
       "securePause" : true,
       "recordingState" : "ACTIVE",
@@ -27295,6 +27306,7 @@ open class UserRecordingsAPI {
         "queueId" : "queueId",
         "monitoredParticipantId" : "monitoredParticipantId",
         "internalMessages" : [ {
+          "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "initialState" : "alerting",
@@ -27328,6 +27340,7 @@ open class UserRecordingsAPI {
           "id" : "id",
           "sourceUserId" : "sourceUserId"
         }, {
+          "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "initialState" : "alerting",
@@ -33963,6 +33976,7 @@ open class UserRecordingsAPI {
         "queueId" : "queueId",
         "monitoredParticipantId" : "monitoredParticipantId",
         "internalMessages" : [ {
+          "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "initialState" : "alerting",
@@ -33996,6 +34010,7 @@ open class UserRecordingsAPI {
           "id" : "id",
           "sourceUserId" : "sourceUserId"
         }, {
+          "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "initialState" : "alerting",
@@ -40633,8 +40648,8 @@ open class UserRecordingsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -40815,6 +40830,7 @@ open class UserRecordingsAPI {
       } ]
     } ],
     "maxParticipants" : 0,
+    "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
     "conversationIds" : [ "conversationIds", "conversationIds" ],
     "securePause" : true,
     "recordingState" : "ACTIVE",
@@ -40845,6 +40861,7 @@ open class UserRecordingsAPI {
       "queueId" : "queueId",
       "monitoredParticipantId" : "monitoredParticipantId",
       "internalMessages" : [ {
+        "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
         "peerId" : "peerId",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "initialState" : "alerting",
@@ -40878,6 +40895,7 @@ open class UserRecordingsAPI {
         "id" : "id",
         "sourceUserId" : "sourceUserId"
       }, {
+        "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
         "peerId" : "peerId",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "initialState" : "alerting",
@@ -47513,6 +47531,7 @@ open class UserRecordingsAPI {
       "queueId" : "queueId",
       "monitoredParticipantId" : "monitoredParticipantId",
       "internalMessages" : [ {
+        "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
         "peerId" : "peerId",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "initialState" : "alerting",
@@ -47546,6 +47565,7 @@ open class UserRecordingsAPI {
         "id" : "id",
         "sourceUserId" : "sourceUserId"
       }, {
+        "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
         "peerId" : "peerId",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "initialState" : "alerting",

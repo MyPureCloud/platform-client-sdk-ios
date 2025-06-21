@@ -487,10 +487,10 @@ open class SearchAPI {
         case team = "team"
         case workplanbidranks = "workPlanBidRanks"
         case externalcontactssettings = "externalContactsSettings"
+        case groups = "groups"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
-        case groups = "groups"
         case skills = "skills"
         case languages = "languages"
         case languagepreference = "languagePreference"
@@ -597,10 +597,10 @@ open class SearchAPI {
         case team = "team"
         case workplanbidranks = "workPlanBidRanks"
         case externalcontactssettings = "externalContactsSettings"
+        case groups = "groups"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
-        case groups = "groups"
         case skills = "skills"
         case languages = "languages"
         case languagepreference = "languagePreference"
@@ -3751,6 +3751,7 @@ open class SearchAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -3769,6 +3770,7 @@ open class SearchAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -4702,6 +4704,7 @@ open class SearchAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
@@ -4720,6 +4723,7 @@ open class SearchAPI {
       "evaluationId" : "evaluationId",
       "assigneeApplicable" : true,
       "deleted" : true,
+      "systemSubmitted" : true,
       "formName" : "formName",
       "eventTime" : "2000-01-23T04:56:07.000+00:00",
       "rescored" : true,
