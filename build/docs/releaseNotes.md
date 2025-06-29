@@ -1,528 +1,225 @@
-Platform API version: 9347
+Platform API version: 9375
 
 
 
 
-# Major Changes (12 changes)
+# Major Changes (23 changes)
 
-**/api/v2/architect/prompts/{promptId}/resources/{languageCode}/uploads** (1 change)
+**/api/v2/workforcemanagement/historicaldata/deletejob** (1 change)
 
-* Path /api/v2/architect/prompts/{promptId}/resources/{languageCode}/uploads was removed
+* Path /api/v2/workforcemanagement/historicaldata/deletejob was removed
 
-**/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}/uploads** (1 change)
+**GET /api/v2/integrations/credentials** (1 change)
 
-* Path /api/v2/architect/systemprompts/{promptId}/resources/{languageCode}/uploads was removed
+* Has been deprecated
 
-**DELETE /api/v2/conversations/messaging/integrations/whatsapp/{integrationId}** (1 change)
+**GET /api/v2/routing/queues/{queueId}/wrapupcodes** (1 change)
 
-* Response 202 was removed
+* Parameter name was added
 
-**GET /api/v2/webdeployments/deployments/{deploymentId}/identityresolution** (1 change)
+**ContentAttachment** (1 change)
 
-* Response 200 type was changed from IdentityResolutionConfig to DeploymentIdentityResolutionConfig
+* Model ContentAttachment was removed
 
-**PUT /api/v2/webdeployments/deployments/{deploymentId}/identityresolution** (1 change)
+**ContentGeneric** (1 change)
 
-* Response 200 type was changed from IdentityResolutionConfig to DeploymentIdentityResolutionConfig
+* Model ContentGeneric was removed
 
-**GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups** (1 change)
+**ContentList** (1 change)
 
-* Parameter forceDownloadService was added
+* Model ContentList was removed
 
-**POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/query** (1 change)
+**ContentLocation** (1 change)
 
-* Parameter forceDownloadService was added
+* Model ContentLocation was removed
 
-**POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/copy** (1 change)
+**ContentNotificationTemplate** (1 change)
 
-* Parameter body was made required
+* Model ContentNotificationTemplate was removed
 
-**PromptAssetUpload** (1 change)
+**ContentPostback** (1 change)
 
-* Model PromptAssetUpload was removed
+* Model ContentPostback was removed
 
-**JourneyAggregateQueryPredicate** (1 change)
+**ContentQuickReply** (1 change)
 
-* Enum value journeySegmentScope was removed from property dimension
+* Model ContentQuickReply was removed
 
-**JourneyAggregationQuery** (1 change)
+**ContentQuickReplyV2** (1 change)
 
-* Enum value journeySegmentScope was removed from property groupBy
+* Model ContentQuickReplyV2 was removed
 
-**SystemPromptAsset** (1 change)
+**ContentStory** (1 change)
 
-* uploadUri has been made readonly
+* Model ContentStory was removed
 
+**ContentText** (1 change)
 
-# Minor Changes (129 changes)
+* Model ContentText was removed
 
-**/api/v2/conversations/messages/{integrationId}/inbound/open/structured/response** (2 changes)
+**ListItemComponent** (1 change)
 
-* Path was added
-* Operation POST was added
+* Model ListItemComponent was removed
 
-**/api/v2/conversations/messaging/identityresolution/integrations/twitter/{integrationId}** (3 changes)
+**MessageContent** (1 change)
 
-* Path was added
-* Operation GET was added
-* Operation PUT was added
+* Model MessageContent was removed
 
-**DELETE /api/v2/conversations/messaging/integrations/whatsapp/{integrationId}** (1 change)
+**MessagingRecipient** (1 change)
 
-* Response 204 was added
+* Model MessagingRecipient was removed
 
-**/api/v2/integrations/credentials/listing** (2 changes)
+**NotificationTemplateBody** (1 change)
 
-* Path was added
-* Operation GET was added
+* Model NotificationTemplateBody was removed
 
-**/api/v2/greetings/{greetingId}/groups/downloads** (2 changes)
+**NotificationTemplateButton** (1 change)
 
-* Path was added
-* Operation GET was added
+* Model NotificationTemplateButton was removed
 
-**/api/v2/greetings/{greetingId}/downloads** (2 changes)
+**NotificationTemplateFooter** (1 change)
 
-* Path was added
-* Operation GET was added
+* Model NotificationTemplateFooter was removed
 
-**/api/v2/greetings/{greetingId}/users/downloads** (2 changes)
+**NotificationTemplateHeader** (1 change)
 
-* Path was added
-* Operation GET was added
+* Model NotificationTemplateHeader was removed
 
-**/api/v2/routing/sms/phonenumbers/{phoneNumberId}** (1 change)
+**NotificationTemplateParameter** (1 change)
 
-* Operation patch was added. Summary: Update a phone number provisioned for SMS.
+* Model NotificationTemplateParameter was removed
 
-**AgentStateIsOutOfOfficeCount** (1 change)
+**HistoricalImportDeleteJobResponse** (1 change)
 
-* Model was added
+* Model HistoricalImportDeleteJobResponse was removed
 
-**AgentStatePresenceCount** (1 change)
+**TextBotPromptSegment** (1 change)
 
-* Model was added
+* Property content was changed from MessageContent[] to ConversationMessageContent[]
 
-**AgentStateRoutingStatusCount** (1 change)
 
-* Model was added
+# Minor Changes (33 changes)
 
-**AgentStateAgentQueryPredicate** (5 changes)
-
-* Enum value systemPresence was added to property dimension
-* Enum value organizationPresenceId was added to property dimension
-* Enum value routingStatus was added to property dimension
-* Enum value isOutOfOffice was added to property dimension
-* Enum value online was added to property dimension
-
-**AgentStateQueryRequest** (5 changes)
-
-* Enum value presenceDate was added to property userOrderBy
-* Enum value routingStatusDate was added to property userOrderBy
-* Enum value systemPresence was added to property userOrderBy
-* Enum value routingStatus was added to property userOrderBy
-* Enum value organizationPresenceId was added to property userOrderBy
-
-**ConversationAggregationQuery** (2 changes)
-
-* Enum value oAudioMessageCount was added to property metrics
-* Enum value oExternalAudioMessageCount was added to property metrics
-
-**ConversationAggregationView** (2 changes)
-
-* Enum value oAudioMessageCount was added to property target
-* Enum value oExternalAudioMessageCount was added to property target
-
-**AnalyticsConversationSegment** (1 change)
-
-* Enum value inactivity was added to property disconnectType
-
-**AnalyticsEvaluation** (1 change)
-
-* Optional property systemSubmitted was added
-
-**ConversationDetailQueryPredicate** (2 changes)
-
-* Enum value oAudioMessageCount was added to property metric
-* Enum value oExternalAudioMessageCount was added to property metric
-
-**EvaluationDetailQueryPredicate** (1 change)
-
-* Enum value systemSubmitted was added to property dimension
-
-**EvaluationAggregateQueryPredicate** (1 change)
-
-* Enum value systemSubmitted was added to property dimension
-
-**EvaluationAggregationQuery** (1 change)
-
-* Enum value systemSubmitted was added to property groupBy
-
-**ReportingTurnAction** (2 changes)
-
-* Enum value FormAction was added to property actionType
-* Enum value SendInteractiveApplicationAction was added to property actionType
-
-**KnowledgeBaseWithDialectReference** (2 changes)
-
-* Enum value fi-FI was added to property languageCode
-* Enum value nb-NO was added to property languageCode
-
-**ConditionalGroupActivationCondition** (2 changes)
-
-* Enum value EqualTo was added to property operator
-* Enum value NotEqualTo was added to property operator
-
-**Limit** (1 change)
-
-* Enum value voice.transcription was added to property namespace
-
-**Conversation** (1 change)
+**AnalyticsConversationWithoutAttributes** (1 change)
 
 * Optional property inactivityTimeout was added
 
-**InternalMessage** (1 change)
-
-* Optional property startAlertingTime was added
-
-**Message** (1 change)
-
-* Enum value inactivity was added to property disconnectType
-
-**CallConversation** (1 change)
+**AnalyticsConversation** (1 change)
 
 * Optional property inactivityTimeout was added
 
-**CallMediaParticipant** (3 changes)
+**ViewFilter** (2 changes)
 
-* Optional property startAlertingTime was added
-* Enum value inactivity was added to property disconnectType
-* Optional property recordersState was added
+* Enum value INBOUND_AUDIO_COUNT was added to property viewMetrics
+* Enum value OUTBOUND_AUDIO_COUNT was added to property viewMetrics
 
-**CallHistoryParticipant** (1 change)
+**Widget** (2 changes)
 
-* Enum value inactivity was added to property disconnectType
+* Enum value INBOUND_AUDIO_COUNT was added to property metrics
+* Enum value OUTBOUND_AUDIO_COUNT was added to property metrics
 
-**CallbackConversation** (1 change)
+**ConversationMessageMetadataContent** (1 change)
 
-* Optional property inactivityTimeout was added
+* Enum value RoadsideAssistance was added to property contentType
 
-**CallbackMediaParticipant** (2 changes)
-
-* Optional property startAlertingTime was added
-* Enum value inactivity was added to property disconnectType
-
-**ChatConversation** (1 change)
-
-* Optional property inactivityTimeout was added
-
-**ChatMediaParticipant** (2 changes)
-
-* Optional property startAlertingTime was added
-* Enum value inactivity was added to property disconnectType
-
-**CobrowseConversation** (1 change)
-
-* Optional property inactivityTimeout was added
-
-**CobrowseMediaParticipant** (2 changes)
-
-* Optional property startAlertingTime was added
-* Enum value inactivity was added to property disconnectType
-
-**EmailConversation** (1 change)
-
-* Optional property inactivityTimeout was added
-
-**EmailMediaParticipant** (2 changes)
-
-* Optional property startAlertingTime was added
-* Enum value inactivity was added to property disconnectType
-
-**MessageConversation** (1 change)
-
-* Optional property inactivityTimeout was added
-
-**MessageMediaParticipant** (2 changes)
-
-* Optional property startAlertingTime was added
-* Enum value inactivity was added to property disconnectType
-
-**OpenInboundStructuredResponseNormalizedMessageContent** (1 change)
+**ConversationContentRoadsideAssistance** (1 change)
 
 * Model was added
 
-**OpenStructuredResponseNormalizedMessage** (1 change)
+**ConversationMessageContent** (1 change)
+
+* Enum value RoadsideAssistance was added to property contentType
+
+**ContestUserRank** (1 change)
+
+* Optional property score was added
+
+**ContestWinners** (1 change)
+
+* Optional property winnersCount was added
+
+**ButtonResponse** (1 change)
+
+* Optional property originatingMessageId was added
+
+**DatePicker** (2 changes)
+
+* Optional property id was added
+* Optional property dateSelected was added
+
+**ListPicker** (1 change)
+
+* Optional property id was added
+
+**ReceivedReplyMessage** (1 change)
 
 * Model was added
 
-**OpenInboundStructuredResponseMessage** (1 change)
+**RecordingForm** (1 change)
 
 * Model was added
 
-**ConversationSummaryExtractedEntity** (1 change)
+**RecordingFormPage** (1 change)
 
 * Model was added
 
-**CredentialInfoCursorListing** (1 change)
+**RecordingFormPageComponent** (1 change)
 
 * Model was added
 
-**ConversationBasic** (1 change)
-
-* Optional property inactivityTimeout was added
-
-**EventLog** (1 change)
-
-* Enum value WHATSAPP_CAMPAIGN_SCHEDULE was added to property category
-
-**Condition** (3 changes)
-
-* Optional property subConditions was added
-* Optional property matchAnyConditions was added
-* Optional property timeZoneId was added
-
-**TimeAndDateSubCondition** (6 changes)
-
-* Optional property type was added
-* Optional property operator was added
-* Optional property inverted was added
-* Optional property includeYear was added
-* Optional property thresholdValue was added
-* Optional property range was added
-
-**TimeAndDateSubConditionRange** (3 changes)
-
-* Optional property min was added
-* Optional property max was added
-* Optional property inSet was added
-
-**Miner** (1 change)
-
-* Optional property seeding was added
-
-**ApprovalNamespace** (1 change)
-
-* Enum value voice.transcription was added to property namespace
-
-**LimitChangeRequestDetails** (1 change)
-
-* Enum value voice.transcription was added to property namespace
-
-**StatusChange** (1 change)
-
-* Enum value voice.transcription was added to property namespace
-
-**EvaluationAggregationQueryMe** (1 change)
-
-* Enum value systemSubmitted was added to property groupBy
-
-**PaymentLineItem** (1 change)
+**RecordingFormResponseComponent** (1 change)
 
 * Model was added
 
-**PaymentRequest** (1 change)
+**RecordingFormResponseContent** (1 change)
 
 * Model was added
 
-**PaymentResponse** (1 change)
+**RecordingInput** (1 change)
 
 * Model was added
 
-**RecordingMessagingMessage** (2 changes)
-
-* Enum value PaymentRequest was added to property contentType
-* Enum value PaymentResponse was added to property contentType
-
-**SmsPhoneNumber** (1 change)
-
-* Optional property supportedContent was added
-
-**SmsPhoneNumberImport** (1 change)
-
-* Optional property supportedContent was added
-
-**SmsPhoneNumberPatchRequest** (1 change)
+**RecordingIntroduction** (1 change)
 
 * Model was added
 
-**SmsPhoneNumberProvision** (1 change)
+**RecordingMessagingMessage** (1 change)
 
-* Optional property supportedContent was added
+* Enum value Form was added to property contentType
 
-**DataIngestionRuleResponse** (1 change)
-
-* Optional property countries was added
-
-**FacebookDataIngestionRuleResponse** (1 change)
-
-* Optional property countries was added
-
-**FacebookDataIngestionRuleVersionResponse** (1 change)
-
-* Optional property countries was added
-
-**OpenDataIngestionRuleResponse** (1 change)
-
-* Optional property countries was added
-
-**OpenDataIngestionRuleVersionResponse** (1 change)
-
-* Optional property countries was added
-
-**DeploymentIdentityResolutionConfig** (1 change)
+**RecordingWheelPicker** (1 change)
 
 * Model was added
 
-**IdentityResolutionAutomergeConfig** (1 change)
+**RecordingWheelPickerItem** (1 change)
 
 * Model was added
 
-**PushIntegration** (1 change)
+**VoicemailMailboxInfo** (3 changes)
 
-* id is no longer readonly
+* Optional property id was added
+* Optional property ownerType was added
+* Optional property selfUri was added
 
-**BuScheduleReference** (1 change)
-
-* id is no longer readonly
-
-**SchedulerMessageTypeSeverity** (2 changes)
-
-* Enum value UnableToProduceAgentScheduleDueToUnavailableTimes was added to property type
-* Enum value UnableToSchedulePlanningPeriodMaxShiftStartTimeVarianceFromAgentHistory was added to property type
-
-**ShiftTradeExternalActivityRule** (1 change)
+**LearningModuleAutoAssignResponse** (1 change)
 
 * Model was added
 
-**BuScheduleReferenceForMuRoute** (1 change)
+**UsersRulesRuleReference** (1 change)
 
-* id is no longer readonly
+* Model was added
 
-**StaffingGroupListing** (1 change)
+**LearningModuleAutoAssignRequest** (1 change)
 
-* Optional property downloadUrl was added
+* Model was added
 
-**UserStaffingGroupListing** (1 change)
+**LearningModuleJobRequest** (1 change)
 
-* Optional property downloadUrl was added
-
-**ShiftTradeMatchViolation** (4 changes)
-
-* Enum value InitiatingExternalActivityCannotInterruptReceivingShift was added to property type
-* Enum value InitiatingExternalActivityOutsideReceivingShift was added to property type
-* Enum value ReceivingExternalActivityCannotInterruptInitiatingShift was added to property type
-* Enum value ReceivingExternalActivityOutsideInitiatingShift was added to property type
-
-**BulkUpdateShiftTradeStateResultItem** (2 changes)
-
-* Enum value InitiatingExternalActivityOutsideReceivingShift was added to property failureReason
-* Enum value ReceivingExternalActivityOutsideInitiatingShift was added to property failureReason
-
-**BuAgentSchedulePublishedScheduleReference** (1 change)
-
-* id is no longer readonly
-
-**AgentQueueTimeRequest** (1 change)
-
-* Optional property onQueueActivityCodeIds was added
-
-**ScheduleGenerationMessage** (2 changes)
-
-* Enum value UnableToProduceAgentScheduleDueToUnavailableTimes was added to property type
-* Enum value UnableToSchedulePlanningPeriodMaxShiftStartTimeVarianceFromAgentHistory was added to property type
-
-**BuScheduleMetadata** (1 change)
-
-* id is no longer readonly
-
-**BuScheduleListItem** (1 change)
-
-* id is no longer readonly
+* Enum value Assign was added to property action
 
 
-# Point Changes (21 changes)
+# Point Changes (1 change)
 
-**POST /api/v2/analytics/agents/status/counts** (1 change)
-
-* Summary was changed
-
-**GET /api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapup** (1 change)
-
-* Description was changed for parameter provisional
-
-**GET /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
-
-* Description was changed for parameter provisional
-
-**GET /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapup** (1 change)
-
-* Description was changed for parameter provisional
-
-**GET /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
-
-* Description was changed for parameter provisional
-
-**GET /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapup** (1 change)
-
-* Description was changed for parameter provisional
-
-**GET /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
-
-* Description was changed for parameter provisional
-
-**GET /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapup** (1 change)
-
-* Description was changed for parameter provisional
-
-**GET /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
-
-* Description was changed for parameter provisional
-
-**GET /api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapup** (1 change)
-
-* Description was changed for parameter provisional
-
-**GET /api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
-
-* Description was changed for parameter provisional
-
-**GET /api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapup** (1 change)
-
-* Description was changed for parameter provisional
-
-**GET /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
-
-* Description was changed for parameter provisional
-
-**GET /api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
-
-* Description was changed for parameter provisional
-
-**GET /api/v2/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
-
-* Description was changed for parameter provisional
-
-**GET /api/v2/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
-
-* Description was changed for parameter provisional
-
-**GET /api/v2/greetings/{greetingId}/media** (1 change)
-
-* Description was changed
-
-**GET /api/v2/teams** (1 change)
-
-* Description was changed for parameter expand
-
-**GET /api/v2/telephony/providers/edges/extensionpools/divisionviews** (1 change)
-
-* Description was changed
-
-**GET /api/v2/voicemail/messages/{messageId}/media** (1 change)
-
-* Description was changed
-
-**GET /api/v2/architect/emergencygroups/divisionviews** (1 change)
+**GET /api/v2/integrations/credentials** (1 change)
 
 * Description was changed

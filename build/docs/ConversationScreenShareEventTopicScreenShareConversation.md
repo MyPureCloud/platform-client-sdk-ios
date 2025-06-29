@@ -12,8 +12,9 @@
 | **otherMediaUris** | **[String]** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
+| **inactivityTimeout** | [**Date**](Date) |  | [optional] |
 | **divisions** | [**[ConversationScreenShareEventTopicConversationDivisionMembership]**]([ConversationScreenShareEventTopicConversationDivisionMembership]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@170.0.0_
+_PureCloudPlatformClientV2@171.0.0_

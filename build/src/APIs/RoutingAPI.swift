@@ -5436,16 +5436,19 @@ open class RoutingAPI {
     
     
     
+    
+    
     /**
      Get the wrap-up codes for a queue
      
      - parameter queueId: (path) Queue ID 
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
+     - parameter name: (query) Wrapup code&#39;s name (trailing asterisks allowed) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingQueueWrapupcodes(queueId: String, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: WrapupCodeEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingQueueWrapupcodesWithRequestBuilder(queueId: queueId, pageSize: pageSize, pageNumber: pageNumber)
+    open class func getRoutingQueueWrapupcodes(queueId: String, pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, completion: @escaping ((_ data: WrapupCodeEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueueWrapupcodesWithRequestBuilder(queueId: queueId, pageSize: pageSize, pageNumber: pageNumber, name: name)
         requestBuilder.execute { (response: Response<WrapupCodeEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -5504,10 +5507,11 @@ open class RoutingAPI {
      - parameter queueId: (path) Queue ID 
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
+     - parameter name: (query) Wrapup code&#39;s name (trailing asterisks allowed) (optional)
 
      - returns: RequestBuilder<WrapupCodeEntityListing> 
      */
-    open class func getRoutingQueueWrapupcodesWithRequestBuilder(queueId: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<WrapupCodeEntityListing> {        
+    open class func getRoutingQueueWrapupcodesWithRequestBuilder(queueId: String, pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil) -> RequestBuilder<WrapupCodeEntityListing> {        
         var path = "/api/v2/routing/queues/{queueId}/wrapupcodes"
         let queueIdPreEscape = "\(queueId)"
         let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -5518,7 +5522,8 @@ open class RoutingAPI {
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
-            "pageNumber": pageNumber?.encodeToJSON()
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "name": name
         ])
 
         let requestBuilder: RequestBuilder<WrapupCodeEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

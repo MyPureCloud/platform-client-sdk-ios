@@ -126,16 +126,19 @@ open class VoicemailAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "ownerType" : "User",
   "newestReadDate" : "2000-01-23T04:56:07.000+00:00",
-  "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "oldestUnreadDate" : "2000-01-23T04:56:07.000+00:00",
-  "usageSizeBytes" : 0,
-  "deletedCount" : 5,
   "newestUnreadDate" : "2000-01-23T04:56:07.000+00:00",
-  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
   "unreadCount" : 1,
   "totalCount" : 6,
-  "oldestReadDate" : "2000-01-23T04:56:07.000+00:00"
+  "oldestReadDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "usageSizeBytes" : 0,
+  "deletedCount" : 5,
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
 }, statusCode=200}]
      
      - parameter groupId: (path) groupId 
@@ -391,16 +394,19 @@ open class VoicemailAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "ownerType" : "User",
   "newestReadDate" : "2000-01-23T04:56:07.000+00:00",
-  "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "oldestUnreadDate" : "2000-01-23T04:56:07.000+00:00",
-  "usageSizeBytes" : 0,
-  "deletedCount" : 5,
   "newestUnreadDate" : "2000-01-23T04:56:07.000+00:00",
-  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
   "unreadCount" : 1,
   "totalCount" : 6,
-  "oldestReadDate" : "2000-01-23T04:56:07.000+00:00"
+  "oldestReadDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "usageSizeBytes" : 0,
+  "deletedCount" : 5,
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
 }, statusCode=200}]
 
      - returns: RequestBuilder<VoicemailMailboxInfo> 
@@ -447,16 +453,19 @@ open class VoicemailAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "ownerType" : "User",
   "newestReadDate" : "2000-01-23T04:56:07.000+00:00",
-  "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "oldestUnreadDate" : "2000-01-23T04:56:07.000+00:00",
-  "usageSizeBytes" : 0,
-  "deletedCount" : 5,
   "newestUnreadDate" : "2000-01-23T04:56:07.000+00:00",
-  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
   "unreadCount" : 1,
   "totalCount" : 6,
-  "oldestReadDate" : "2000-01-23T04:56:07.000+00:00"
+  "oldestReadDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "usageSizeBytes" : 0,
+  "deletedCount" : 5,
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
 }, statusCode=200}]
 
      - returns: RequestBuilder<VoicemailMailboxInfo> 
@@ -1322,16 +1331,19 @@ open class VoicemailAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "ownerType" : "User",
   "newestReadDate" : "2000-01-23T04:56:07.000+00:00",
-  "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "oldestUnreadDate" : "2000-01-23T04:56:07.000+00:00",
-  "usageSizeBytes" : 0,
-  "deletedCount" : 5,
   "newestUnreadDate" : "2000-01-23T04:56:07.000+00:00",
-  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
   "unreadCount" : 1,
   "totalCount" : 6,
-  "oldestReadDate" : "2000-01-23T04:56:07.000+00:00"
+  "oldestReadDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "usageSizeBytes" : 0,
+  "deletedCount" : 5,
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
 }, statusCode=200}]
      
      - parameter userId: (path) userId 

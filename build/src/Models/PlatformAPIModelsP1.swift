@@ -8326,58 +8326,6 @@ public class ContentFileResponse: Codable {
 
 
 
-/** Deprecated, should use Card. */
-
-public class ContentGeneric: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** Text to show in the title. */
-    public var title: String?
-    /** Text to show in the description. */
-    public var _description: String?
-    /** URL of an image. */
-    public var image: String?
-    /** URL of a video. */
-    public var video: String?
-    /** Actions to be taken (Deprecated). */
-    public var actions: ContentActions?
-    /** An array of component objects. */
-    public var components: [ButtonComponent]?
-
-    public init(title: String?, _description: String?, image: String?, video: String?, actions: ContentActions?, components: [ButtonComponent]?) {
-        self.title = title
-        self._description = _description
-        self.image = image
-        self.video = video
-        self.actions = actions
-        self.components = components
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case title
-        case _description = "description"
-        case image
-        case video
-        case actions
-        case components
-    }
-
-
-}
-
-
-
 
 public class ContentManagementSingleDocumentTopicUserData: Codable {
 
@@ -8552,31 +8500,6 @@ public class ContentReaction: Codable {
 
 
 
-/** Message content element containing text only. */
-
-public class ContentText: Codable {
-
-    public enum ModelType: String, Codable { 
-        case text = "Text"
-    }
-
-
-
-    /** Type of text content. */
-    public var type: ModelType?
-    /** Text to be shown for this content element. */
-    public var body: String?
-
-    public init(type: ModelType?, body: String?) {
-        self.type = type
-        self.body = body
-    }
-
-
-}
-
-
-
 
 public class ContestCompleteDataScore: Codable {
 
@@ -8705,22 +8628,28 @@ public class ContestUserRank: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The user's rank in contest, a lower rank is better (1 is the best) */
     public var rank: Int?
+    /** The user's contest score */
+    public var score: Double?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, rank: Int?, selfUri: String?) {
+    public init(_id: String?, rank: Int?, score: Double?, selfUri: String?) {
         self._id = _id
         self.rank = rank
+        self.score = score
         self.selfUri = selfUri
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case rank
+        case score
         case selfUri
     }
 
@@ -9493,21 +9422,25 @@ public class ConversationCallbackEventTopicCallbackConversation: Codable {
 
 
 
+
+
     public var _id: String?
     public var name: String?
     public var participants: [ConversationCallbackEventTopicCallbackMediaParticipant]?
     public var otherMediaUris: [String]?
     public var address: String?
     public var utilizationLabelId: String?
+    public var inactivityTimeout: Date?
     public var divisions: [ConversationCallbackEventTopicConversationDivisionMembership]?
 
-    public init(_id: String?, name: String?, participants: [ConversationCallbackEventTopicCallbackMediaParticipant]?, otherMediaUris: [String]?, address: String?, utilizationLabelId: String?, divisions: [ConversationCallbackEventTopicConversationDivisionMembership]?) {
+    public init(_id: String?, name: String?, participants: [ConversationCallbackEventTopicCallbackMediaParticipant]?, otherMediaUris: [String]?, address: String?, utilizationLabelId: String?, inactivityTimeout: Date?, divisions: [ConversationCallbackEventTopicConversationDivisionMembership]?) {
         self._id = _id
         self.name = name
         self.participants = participants
         self.otherMediaUris = otherMediaUris
         self.address = address
         self.utilizationLabelId = utilizationLabelId
+        self.inactivityTimeout = inactivityTimeout
         self.divisions = divisions
     }
 
@@ -9518,6 +9451,7 @@ public class ConversationCallbackEventTopicCallbackConversation: Codable {
         case otherMediaUris
         case address
         case utilizationLabelId
+        case inactivityTimeout
         case divisions
     }
 
@@ -9949,21 +9883,25 @@ public class ConversationCobrowseEventTopicCobrowseConversation: Codable {
 
 
 
+
+
     public var _id: String?
     public var name: String?
     public var participants: [ConversationCobrowseEventTopicCobrowseMediaParticipant]?
     public var otherMediaUris: [String]?
     public var address: String?
     public var utilizationLabelId: String?
+    public var inactivityTimeout: Date?
     public var divisions: [ConversationCobrowseEventTopicConversationDivisionMembership]?
 
-    public init(_id: String?, name: String?, participants: [ConversationCobrowseEventTopicCobrowseMediaParticipant]?, otherMediaUris: [String]?, address: String?, utilizationLabelId: String?, divisions: [ConversationCobrowseEventTopicConversationDivisionMembership]?) {
+    public init(_id: String?, name: String?, participants: [ConversationCobrowseEventTopicCobrowseMediaParticipant]?, otherMediaUris: [String]?, address: String?, utilizationLabelId: String?, inactivityTimeout: Date?, divisions: [ConversationCobrowseEventTopicConversationDivisionMembership]?) {
         self._id = _id
         self.name = name
         self.participants = participants
         self.otherMediaUris = otherMediaUris
         self.address = address
         self.utilizationLabelId = utilizationLabelId
+        self.inactivityTimeout = inactivityTimeout
         self.divisions = divisions
     }
 
@@ -9974,6 +9912,7 @@ public class ConversationCobrowseEventTopicCobrowseConversation: Codable {
         case otherMediaUris
         case address
         case utilizationLabelId
+        case inactivityTimeout
         case divisions
     }
 
@@ -10587,6 +10526,7 @@ public class ConversationEmailEventTopicEmailMediaParticipant: Codable {
         case other = "other"
         case spam = "spam"
         case uncallable = "uncallable"
+        case inactivity = "inactivity"
     }
 
 
@@ -11446,6 +11386,55 @@ public class ConversationMessageEventTopicJourneyCustomerSession: Codable {
 
 
 
+public class ConversationMetrics: Codable {
+
+
+
+
+
+
+
+    public enum SentimentTrendClass: String, Codable { 
+        case notCalculated = "NotCalculated"
+        case declining = "Declining"
+        case slightlyDeclining = "SlightlyDeclining"
+        case noChange = "NoChange"
+        case slightlyImproving = "SlightlyImproving"
+        case improving = "Improving"
+    }
+
+
+
+
+
+    /** The Conversation Reference */
+    public var conversation: AddressableEntityRef?
+    /** The Sentiment Score */
+    public var sentimentScore: Double?
+    /** The Sentiment Trend */
+    public var sentimentTrend: Double?
+    /** The Sentiment Trend Class */
+    public var sentimentTrendClass: SentimentTrendClass?
+    /** The Empathy Scores */
+    public var empathyScores: [EmpathyScore]?
+    /** The Participant Metrics */
+    public var participantMetrics: ParticipantMetrics?
+
+    public init(conversation: AddressableEntityRef?, sentimentScore: Double?, sentimentTrend: Double?, sentimentTrendClass: SentimentTrendClass?, empathyScores: [EmpathyScore]?, participantMetrics: ParticipantMetrics?) {
+        self.conversation = conversation
+        self.sentimentScore = sentimentScore
+        self.sentimentTrend = sentimentTrend
+        self.sentimentTrendClass = sentimentTrendClass
+        self.empathyScores = empathyScores
+        self.participantMetrics = participantMetrics
+    }
+
+
+}
+
+
+
+
 public class ConversationMessageEventTopicScoredAgent: Codable {
 
 
@@ -11543,55 +11532,6 @@ public class ConversationMessagingToRecipient: Codable {
 
 
 
-public class ConversationMetrics: Codable {
-
-
-
-
-
-
-
-    public enum SentimentTrendClass: String, Codable { 
-        case notCalculated = "NotCalculated"
-        case declining = "Declining"
-        case slightlyDeclining = "SlightlyDeclining"
-        case noChange = "NoChange"
-        case slightlyImproving = "SlightlyImproving"
-        case improving = "Improving"
-    }
-
-
-
-
-
-    /** The Conversation Reference */
-    public var conversation: AddressableEntityRef?
-    /** The Sentiment Score */
-    public var sentimentScore: Double?
-    /** The Sentiment Trend */
-    public var sentimentTrend: Double?
-    /** The Sentiment Trend Class */
-    public var sentimentTrendClass: SentimentTrendClass?
-    /** The Empathy Scores */
-    public var empathyScores: [EmpathyScore]?
-    /** The Participant Metrics */
-    public var participantMetrics: ParticipantMetrics?
-
-    public init(conversation: AddressableEntityRef?, sentimentScore: Double?, sentimentTrend: Double?, sentimentTrendClass: SentimentTrendClass?, empathyScores: [EmpathyScore]?, participantMetrics: ParticipantMetrics?) {
-        self.conversation = conversation
-        self.sentimentScore = sentimentScore
-        self.sentimentTrend = sentimentTrend
-        self.sentimentTrendClass = sentimentTrendClass
-        self.empathyScores = empathyScores
-        self.participantMetrics = participantMetrics
-    }
-
-
-}
-
-
-
-
 public class ConversationMetricsTopicConversationMetricRecord: Codable {
 
     public enum Metric: String, Codable { 
@@ -11609,6 +11549,8 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
         case noutboundconnected = "nOutboundConnected"
         case noversla = "nOverSla"
         case ntransferred = "nTransferred"
+        case oaudiomessagecount = "oAudioMessageCount"
+        case oexternalaudiomessagecount = "oExternalAudioMessageCount"
         case oexternalmediacount = "oExternalMediaCount"
         case omediacount = "oMediaCount"
         case omessagecount = "oMessageCount"
@@ -11743,6 +11685,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
         case endpointdnd = "endpointDnd"
         case error = "error"
         case forwardtransfer = "forwardTransfer"
+        case inactivity = "inactivity"
         case noanswertransfer = "noAnswerTransfer"
         case notavailabletransfer = "notAvailableTransfer"
         case other = "other"
@@ -12794,6 +12737,7 @@ public class ConversationVideoEventTopicVideoMediaParticipant: Codable {
         case other = "other"
         case spam = "spam"
         case uncallable = "uncallable"
+        case inactivity = "inactivity"
     }
 
 
@@ -13662,6 +13606,7 @@ public class CustomerEndDetailEventTopicCustomerEndEvent: Codable {
         case uncallable = "UNCALLABLE"
         case dndEndpoint = "DND_ENDPOINT"
         case dndTransfer = "DND_TRANSFER"
+        case inactivity = "INACTIVITY"
     }
 
     public enum MediaType: String, Codable { 
@@ -16915,12 +16860,12 @@ public class DomainOrganizationRoleCreate: Codable {
     public var userCount: Int?
     /** Optional unless patch operation. */
     public var roleNeedsUpdate: Bool?
-    public var _default: Bool?
     public var base: Bool?
+    public var _default: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, defaultRoleId: String?, permissions: [String]?, unusedPermissions: [String]?, permissionPolicies: [DomainPermissionPolicy]?, userCount: Int?, roleNeedsUpdate: Bool?, _default: Bool?, base: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, defaultRoleId: String?, permissions: [String]?, unusedPermissions: [String]?, permissionPolicies: [DomainPermissionPolicy]?, userCount: Int?, roleNeedsUpdate: Bool?, base: Bool?, _default: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
@@ -16930,8 +16875,8 @@ public class DomainOrganizationRoleCreate: Codable {
         self.permissionPolicies = permissionPolicies
         self.userCount = userCount
         self.roleNeedsUpdate = roleNeedsUpdate
-        self._default = _default
         self.base = base
+        self._default = _default
         self.selfUri = selfUri
     }
 
@@ -16945,8 +16890,8 @@ public class DomainOrganizationRoleCreate: Codable {
         case permissionPolicies
         case userCount
         case roleNeedsUpdate
-        case _default = "default"
         case base
+        case _default = "default"
         case selfUri
     }
 
@@ -16995,12 +16940,12 @@ public class DomainOrganizationRoleUpdate: Codable {
     public var userCount: Int?
     /** Optional unless patch operation. */
     public var roleNeedsUpdate: Bool?
-    public var _default: Bool?
     public var base: Bool?
+    public var _default: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, defaultRoleId: String?, permissions: [String]?, unusedPermissions: [String]?, permissionPolicies: [DomainPermissionPolicy]?, userCount: Int?, roleNeedsUpdate: Bool?, _default: Bool?, base: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, defaultRoleId: String?, permissions: [String]?, unusedPermissions: [String]?, permissionPolicies: [DomainPermissionPolicy]?, userCount: Int?, roleNeedsUpdate: Bool?, base: Bool?, _default: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
@@ -17010,8 +16955,8 @@ public class DomainOrganizationRoleUpdate: Codable {
         self.permissionPolicies = permissionPolicies
         self.userCount = userCount
         self.roleNeedsUpdate = roleNeedsUpdate
-        self._default = _default
         self.base = base
+        self._default = _default
         self.selfUri = selfUri
     }
 
@@ -17025,8 +16970,8 @@ public class DomainOrganizationRoleUpdate: Codable {
         case permissionPolicies
         case userCount
         case roleNeedsUpdate
-        case _default = "default"
         case base
+        case _default = "default"
         case selfUri
     }
 
@@ -21895,48 +21840,6 @@ public class HistoricalDataDeleteEntity: Codable {
 
 
 
-public class HistoricalImportDeleteJobResponse: Codable {
-
-
-
-
-
-    public enum Status: String, Codable { 
-        case inProgress = "InProgress"
-        case success = "Success"
-        case failed = "Failed"
-    }
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    public var name: String?
-    /** Property denoting the status of the delete. */
-    public var status: Status?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, status: Status?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.status = status
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case status
-        case selfUri
-    }
-
-
-}
-
-
-
-
 public class HistoricalShrinkageActivityCodeResponse: Codable {
 
 
@@ -25754,6 +25657,29 @@ public class LearningCoverArtUploadUrlRequest: Codable {
 
 
 
+/** Auto assign request */
+
+public class LearningModuleAutoAssignRequest: Codable {
+
+
+
+
+
+    /** The id of the rule */
+    public var ruleId: String?
+    /** Whether the rule is enabled for the module */
+    public var enabled: Bool?
+
+    public init(ruleId: String?, enabled: Bool?) {
+        self.ruleId = ruleId
+        self.enabled = enabled
+    }
+
+
+}
+
+
+
 /** Learning module preview get response assignment */
 
 public class LearningModulePreviewGetResponseAssignment: Codable {
@@ -27869,81 +27795,6 @@ public class MessagingIntegration: Codable {
 
 
 
-/** Information about the recipient the message is sent to or received from. */
-
-public class MessagingRecipient: Codable {
-
-
-
-
-
-    public enum IdType: String, Codable { 
-        case email = "Email"
-        case phone = "Phone"
-        case opaque = "Opaque"
-        case topic = "Topic"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** Nickname or display name of the recipient. */
-    public var nickname: String?
-    /** The recipient ID specific to the provider. */
-    public var _id: String?
-    /** The recipient ID type. This is used to indicate the format used for the ID. */
-    public var idType: IdType?
-    /** URL of an image that represents the recipient. */
-    public var image: String?
-    /** First name of the recipient. */
-    public var firstName: String?
-    /** Last name of the recipient. */
-    public var lastName: String?
-    /** E-mail address of the recipient. */
-    public var email: String?
-    /** The identifier of the external contact. */
-    public var externalContactId: String?
-    /** List of recipient additional identifiers */
-    public var additionalIds: [RecipientAdditionalIdentifier]?
-
-    public init(nickname: String?, _id: String?, idType: IdType?, image: String?, firstName: String?, lastName: String?, email: String?, externalContactId: String?, additionalIds: [RecipientAdditionalIdentifier]?) {
-        self.nickname = nickname
-        self._id = _id
-        self.idType = idType
-        self.image = image
-        self.firstName = firstName
-        self.lastName = lastName
-        self.email = email
-        self.externalContactId = externalContactId
-        self.additionalIds = additionalIds
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case nickname
-        case _id = "id"
-        case idType
-        case image
-        case firstName
-        case lastName
-        case email
-        case externalContactId
-        case additionalIds
-    }
-
-
-}
-
-
-
 
 public class MessagingRoutingEstablishedEvent: Codable {
 
@@ -29075,29 +28926,6 @@ public class NluUtterance: Codable {
         case _id = "id"
         case source
         case segments
-    }
-
-
-}
-
-
-
-/** Template parameters for placeholders in template. */
-
-public class NotificationTemplateParameter: Codable {
-
-
-
-
-
-    /** Parameter name. */
-    public var name: String?
-    /** Parameter text value. */
-    public var text: String?
-
-    public init(name: String?, text: String?) {
-        self.name = name
-        self.text = text
     }
 
 
@@ -32385,6 +32213,8 @@ public class QueueConversationCallEventTopicCallConversation: Codable {
 
 
 
+
+
     public enum RecordingState: String, Codable { 
         case _none = "none"
         case active = "active"
@@ -32401,18 +32231,20 @@ public class QueueConversationCallEventTopicCallConversation: Codable {
     public var otherMediaUris: [String]?
     public var address: String?
     public var utilizationLabelId: String?
+    public var inactivityTimeout: Date?
     public var divisions: [QueueConversationCallEventTopicConversationDivisionMembership]?
     public var recordingState: RecordingState?
     public var securePause: Bool?
     public var maxParticipants: Int64?
 
-    public init(_id: String?, name: String?, participants: [QueueConversationCallEventTopicCallMediaParticipant]?, otherMediaUris: [String]?, address: String?, utilizationLabelId: String?, divisions: [QueueConversationCallEventTopicConversationDivisionMembership]?, recordingState: RecordingState?, securePause: Bool?, maxParticipants: Int64?) {
+    public init(_id: String?, name: String?, participants: [QueueConversationCallEventTopicCallMediaParticipant]?, otherMediaUris: [String]?, address: String?, utilizationLabelId: String?, inactivityTimeout: Date?, divisions: [QueueConversationCallEventTopicConversationDivisionMembership]?, recordingState: RecordingState?, securePause: Bool?, maxParticipants: Int64?) {
         self._id = _id
         self.name = name
         self.participants = participants
         self.otherMediaUris = otherMediaUris
         self.address = address
         self.utilizationLabelId = utilizationLabelId
+        self.inactivityTimeout = inactivityTimeout
         self.divisions = divisions
         self.recordingState = recordingState
         self.securePause = securePause
@@ -32426,6 +32258,7 @@ public class QueueConversationCallEventTopicCallConversation: Codable {
         case otherMediaUris
         case address
         case utilizationLabelId
+        case inactivityTimeout
         case divisions
         case recordingState
         case securePause
@@ -33333,6 +33166,8 @@ public class QueueConversationEventTopicConversation: Codable {
 
 
 
+
+
     public var _id: String?
     public var maxParticipants: Int64?
     public var participants: [QueueConversationEventTopicParticipant]?
@@ -33342,9 +33177,10 @@ public class QueueConversationEventTopicConversation: Codable {
     public var externalTag: String?
     public var utilizationLabelId: String?
     public var securePause: Bool?
+    public var inactivityTimeout: Date?
     public var divisions: [QueueConversationEventTopicConversationDivisionMembership]?
 
-    public init(_id: String?, maxParticipants: Int64?, participants: [QueueConversationEventTopicParticipant]?, recentTransfers: [QueueConversationEventTopicTransferResponse]?, recordingState: String?, address: String?, externalTag: String?, utilizationLabelId: String?, securePause: Bool?, divisions: [QueueConversationEventTopicConversationDivisionMembership]?) {
+    public init(_id: String?, maxParticipants: Int64?, participants: [QueueConversationEventTopicParticipant]?, recentTransfers: [QueueConversationEventTopicTransferResponse]?, recordingState: String?, address: String?, externalTag: String?, utilizationLabelId: String?, securePause: Bool?, inactivityTimeout: Date?, divisions: [QueueConversationEventTopicConversationDivisionMembership]?) {
         self._id = _id
         self.maxParticipants = maxParticipants
         self.participants = participants
@@ -33354,6 +33190,7 @@ public class QueueConversationEventTopicConversation: Codable {
         self.externalTag = externalTag
         self.utilizationLabelId = utilizationLabelId
         self.securePause = securePause
+        self.inactivityTimeout = inactivityTimeout
         self.divisions = divisions
     }
 
@@ -33367,6 +33204,7 @@ public class QueueConversationEventTopicConversation: Codable {
         case externalTag
         case utilizationLabelId
         case securePause
+        case inactivityTimeout
         case divisions
     }
 
@@ -34049,6 +33887,7 @@ public class QueueConversationScreenShareEventTopicScreenShareMediaParticipant: 
         case other = "other"
         case spam = "spam"
         case uncallable = "uncallable"
+        case inactivity = "inactivity"
     }
 
 
@@ -34560,6 +34399,8 @@ public class QueueConversationSocialExpressionEventTopicConversation: Codable {
 
 
 
+
+
     public var _id: String?
     public var maxParticipants: Int64?
     public var participants: [QueueConversationSocialExpressionEventTopicParticipant]?
@@ -34569,9 +34410,10 @@ public class QueueConversationSocialExpressionEventTopicConversation: Codable {
     public var externalTag: String?
     public var utilizationLabelId: String?
     public var securePause: Bool?
+    public var inactivityTimeout: Date?
     public var divisions: [QueueConversationSocialExpressionEventTopicConversationDivisionMembership]?
 
-    public init(_id: String?, maxParticipants: Int64?, participants: [QueueConversationSocialExpressionEventTopicParticipant]?, recentTransfers: [QueueConversationSocialExpressionEventTopicTransferResponse]?, recordingState: String?, address: String?, externalTag: String?, utilizationLabelId: String?, securePause: Bool?, divisions: [QueueConversationSocialExpressionEventTopicConversationDivisionMembership]?) {
+    public init(_id: String?, maxParticipants: Int64?, participants: [QueueConversationSocialExpressionEventTopicParticipant]?, recentTransfers: [QueueConversationSocialExpressionEventTopicTransferResponse]?, recordingState: String?, address: String?, externalTag: String?, utilizationLabelId: String?, securePause: Bool?, inactivityTimeout: Date?, divisions: [QueueConversationSocialExpressionEventTopicConversationDivisionMembership]?) {
         self._id = _id
         self.maxParticipants = maxParticipants
         self.participants = participants
@@ -34581,6 +34423,7 @@ public class QueueConversationSocialExpressionEventTopicConversation: Codable {
         self.externalTag = externalTag
         self.utilizationLabelId = utilizationLabelId
         self.securePause = securePause
+        self.inactivityTimeout = inactivityTimeout
         self.divisions = divisions
     }
 
@@ -34594,6 +34437,7 @@ public class QueueConversationSocialExpressionEventTopicConversation: Codable {
         case externalTag
         case utilizationLabelId
         case securePause
+        case inactivityTimeout
         case divisions
     }
 
@@ -35958,6 +35802,94 @@ public class RecordingEmailMessage: Codable {
 
 
 
+public class RecordingFormPageComponent: Codable {
+
+    public enum FormComponentType: String, Codable { 
+        case listPicker = "ListPicker"
+        case datePicker = "DatePicker"
+        case wheelPicker = "WheelPicker"
+        case input = "Input"
+    }
+
+
+
+
+
+
+
+
+
+    /** Type of this form component element. */
+    public var formComponentType: FormComponentType?
+    /** Date Picker content. */
+    public var datePicker: DatePicker?
+    /** Wheel Picker content. */
+    public var wheelPicker: RecordingWheelPicker?
+    /** List Picker content. */
+    public var listPicker: ListPicker?
+    /** Input content. */
+    public var input: RecordingInput?
+
+    public init(formComponentType: FormComponentType?, datePicker: DatePicker?, wheelPicker: RecordingWheelPicker?, listPicker: ListPicker?, input: RecordingInput?) {
+        self.formComponentType = formComponentType
+        self.datePicker = datePicker
+        self.wheelPicker = wheelPicker
+        self.listPicker = listPicker
+        self.input = input
+    }
+
+
+}
+
+
+
+
+public class RecordingFormResponseContent: Codable {
+
+    public enum ContentType: String, Codable { 
+        case buttonResponse = "ButtonResponse"
+    }
+
+
+
+    /** Type of this content element. */
+    public var contentType: ContentType?
+    /** Button response content. */
+    public var buttonResponse: ButtonResponse?
+
+    public init(contentType: ContentType?, buttonResponse: ButtonResponse?) {
+        self.contentType = contentType
+        self.buttonResponse = buttonResponse
+    }
+
+
+}
+
+
+
+
+public class RecordingIntroduction: Codable {
+
+
+
+
+
+    /** Text to show in the title. */
+    public var title: String?
+    /** Text to show in the subtitle. */
+    public var subtitle: String?
+
+    public init(title: String?, subtitle: String?) {
+        self.title = title
+        self.subtitle = subtitle
+    }
+
+
+}
+
+
+
+
 public class RecordingJobsQuery: Codable {
 
     public enum Action: String, Codable { 
@@ -36146,6 +36078,33 @@ public class RecordingTranscodeCompleteTopicRecording: Codable {
         case mediaUris
         case estimatedTranscodeTimeMs
         case actualTranscodeTimeMs
+    }
+
+
+}
+
+
+
+
+public class RecordingWheelPicker: Codable {
+
+
+
+
+
+    /** Optional unique identifier to help map component replies to form messages where multiple Wheel Pickers can be present. */
+    public var _id: String?
+    /** An array of options in the Wheel Picker. */
+    public var items: [RecordingWheelPickerItem]?
+
+    public init(_id: String?, items: [RecordingWheelPickerItem]?) {
+        self._id = _id
+        self.items = items
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case items
     }
 
 
@@ -36809,58 +36768,6 @@ public class RoutingActivityData: Codable {
 
 
 
-public class RoutingData: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The identifier of the routing queue */
-    public var queueId: String?
-    /** The identifier of a language to be considered in routing */
-    public var languageId: String?
-    /** An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level */
-    public var label: String?
-    /** The priority for routing */
-    public var priority: Int?
-    /** A list of skill identifiers to be considered in routing */
-    public var skillIds: [String]?
-    /** A list of agents to be preferred in routing */
-    public var preferredAgentIds: [String]?
-    /** A list of scored agents for routing decisions. For Agent Owned Callbacks use one scored agent with a score of 100. */
-    public var scoredAgents: [ScoredAgent]?
-    /** An array of flags indicating how the conversation should be routed. Use \"AGENT_OWNED_CALLBACK\" when creating an Agent Owned Callback. */
-    public var routingFlags: [String]?
-
-    public init(queueId: String?, languageId: String?, label: String?, priority: Int?, skillIds: [String]?, preferredAgentIds: [String]?, scoredAgents: [ScoredAgent]?, routingFlags: [String]?) {
-        self.queueId = queueId
-        self.languageId = languageId
-        self.label = label
-        self.priority = priority
-        self.skillIds = skillIds
-        self.preferredAgentIds = preferredAgentIds
-        self.scoredAgents = scoredAgents
-        self.routingFlags = routingFlags
-    }
-
-
-}
-
-
-
-
 public class RoutingActivityQueryFilter: Codable {
 
     public enum ModelType: String, Codable { 
@@ -36919,6 +36826,58 @@ public class RoutingConversationAttributesRequest: Codable {
         self.languageId = languageId
         self.labelId = labelId
         self.requestScoredAgents = requestScoredAgents
+    }
+
+
+}
+
+
+
+
+public class RoutingData: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The identifier of the routing queue */
+    public var queueId: String?
+    /** The identifier of a language to be considered in routing */
+    public var languageId: String?
+    /** An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level */
+    public var label: String?
+    /** The priority for routing */
+    public var priority: Int?
+    /** A list of skill identifiers to be considered in routing */
+    public var skillIds: [String]?
+    /** A list of agents to be preferred in routing */
+    public var preferredAgentIds: [String]?
+    /** A list of scored agents for routing decisions. For Agent Owned Callbacks use one scored agent with a score of 100. */
+    public var scoredAgents: [ScoredAgent]?
+    /** An array of flags indicating how the conversation should be routed. Use \"AGENT_OWNED_CALLBACK\" when creating an Agent Owned Callback. */
+    public var routingFlags: [String]?
+
+    public init(queueId: String?, languageId: String?, label: String?, priority: Int?, skillIds: [String]?, preferredAgentIds: [String]?, scoredAgents: [ScoredAgent]?, routingFlags: [String]?) {
+        self.queueId = queueId
+        self.languageId = languageId
+        self.label = label
+        self.priority = priority
+        self.skillIds = skillIds
+        self.preferredAgentIds = preferredAgentIds
+        self.scoredAgents = scoredAgents
+        self.routingFlags = routingFlags
     }
 
 
@@ -41970,6 +41929,7 @@ public class UserEndDetailEventTopicUserEndEvent: Codable {
         case uncallable = "UNCALLABLE"
         case dndEndpoint = "DND_ENDPOINT"
         case dndTransfer = "DND_TRANSFER"
+        case inactivity = "INACTIVITY"
     }
 
     public enum MediaType: String, Codable { 
@@ -42968,6 +42928,33 @@ public class UserVideoSettings: Codable {
 
 
 
+public class UsersRulesRuleReference: Codable {
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, selfUri: String?) {
+        self._id = _id
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class UtilizationLabelEntityListing: Codable {
 
 
@@ -43193,31 +43180,6 @@ public class V2ConversationMessageTypingEventForWorkflowTopicConversationMessagi
 
 
 
-
-public class V2IntegrationPresenceEventOrganizationPresence: Codable {
-
-
-
-
-
-    public var _id: UUID?
-    public var systemPresence: String?
-
-    public init(_id: UUID?, systemPresence: String?) {
-        self._id = _id
-        self.systemPresence = systemPresence
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case systemPresence
-    }
-
-
-}
-
-
-
 /** This contains contextual information about an invoking entity. */
 
 public class V2FlowExecutionDataFlowidTopicInvokingJourneyActionMapContext: Codable {
@@ -43280,6 +43242,31 @@ public class V2FlowExecutionDataFlowidTopicInvokingWorkitemContext: Codable {
     public init(workitemId: String?, workitemName: String?) {
         self.workitemId = workitemId
         self.workitemName = workitemName
+    }
+
+
+}
+
+
+
+
+public class V2IntegrationPresenceEventOrganizationPresence: Codable {
+
+
+
+
+
+    public var _id: UUID?
+    public var systemPresence: String?
+
+    public init(_id: UUID?, systemPresence: String?) {
+        self._id = _id
+        self.systemPresence = systemPresence
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case systemPresence
     }
 
 
@@ -43390,6 +43377,45 @@ public class V2MobiusRulesTopicAlertNotification: Codable {
 
 
 
+/** Observation data for one metric */
+
+public class V2QueueObservationMetricData: Codable {
+
+    public enum Metric: String, Codable { 
+        case oalerting = "oAlerting"
+        case ointeracting = "oInteracting"
+        case owaiting = "oWaiting"
+        case oflow = "oFlow"
+        case olongestwaiting = "oLongestWaiting"
+        case olongestinteracting = "oLongestInteracting"
+    }
+
+
+
+
+
+
+
+    /** The observation metric */
+    public var metric: Metric?
+    /** List of observations sorted by timestamp in ascending order. This list may be truncated. */
+    public var observations: [V2QueueObservationObservation]?
+    /** Flag indicating whether the list of observations was truncated or not */
+    public var truncated: Bool?
+    public var stats: V2QueueObservationMetricStats?
+
+    public init(metric: Metric?, observations: [V2QueueObservationObservation]?, truncated: Bool?, stats: V2QueueObservationMetricStats?) {
+        self.metric = metric
+        self.observations = observations
+        self.truncated = truncated
+        self.stats = stats
+    }
+
+
+}
+
+
+
 
 public class V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage: Codable {
 
@@ -43397,12 +43423,22 @@ public class V2SessionConversationsSummarySettingsPreviewEventConversationReason
 
 
 
+
+
     public var text: String?
+    public var _description: String?
     public var score: Double?
 
-    public init(text: String?, score: Double?) {
+    public init(text: String?, _description: String?, score: Double?) {
         self.text = text
+        self._description = _description
         self.score = score
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case text
+        case _description = "description"
+        case score
     }
 
 
@@ -43417,12 +43453,50 @@ public class V2SessionConversationsSummarySettingsPreviewEventConversationResolu
 
 
 
+
+
     public var text: String?
+    public var _description: String?
     public var score: Double?
 
-    public init(text: String?, score: Double?) {
+    public init(text: String?, _description: String?, score: Double?) {
         self.text = text
+        self._description = _description
         self.score = score
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case text
+        case _description = "description"
+        case score
+    }
+
+
+}
+
+
+
+
+public class V2StaTopicsDetectedTopicParticipant: Codable {
+
+
+
+
+
+
+
+
+
+    public var userId: String?
+    public var queueId: String?
+    public var divisionId: String?
+    public var purpose: String?
+
+    public init(userId: String?, queueId: String?, divisionId: String?, purpose: String?) {
+        self.userId = userId
+        self.queueId = queueId
+        self.divisionId = divisionId
+        self.purpose = purpose
     }
 
 
@@ -45849,6 +45923,8 @@ public class Widget: Codable {
         case totalParkTime = "TOTAL_PARK_TIME"
         case minParkTime = "MIN_PARK_TIME"
         case maxParkTime = "MAX_PARK_TIME"
+        case inboundAudioCount = "INBOUND_AUDIO_COUNT"
+        case outboundAudioCount = "OUTBOUND_AUDIO_COUNT"
     }
 
 

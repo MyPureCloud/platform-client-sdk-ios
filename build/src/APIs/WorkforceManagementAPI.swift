@@ -6755,57 +6755,6 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     Retrieves delete job status for historical data imports of the organization.
-     
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getWorkforcemanagementHistoricaldataDeletejob(completion: @escaping ((_ data: HistoricalImportDeleteJobResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementHistoricaldataDeletejobWithRequestBuilder()
-        requestBuilder.execute { (response: Response<HistoricalImportDeleteJobResponse>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Retrieves delete job status for historical data imports of the organization.
-     - GET /api/v2/workforcemanagement/historicaldata/deletejob
-     - Deprecated: Please use GET /workforcemanagement/historicaldata/bulk/remove/jobs instead.
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
-  "id" : "id",
-  "status" : "InProgress"
-}, statusCode=200}]
-
-     - returns: RequestBuilder<HistoricalImportDeleteJobResponse> 
-     */
-    open class func getWorkforcemanagementHistoricaldataDeletejobWithRequestBuilder() -> RequestBuilder<HistoricalImportDeleteJobResponse> {        
-        let path = "/api/v2/workforcemanagement/historicaldata/deletejob"
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<HistoricalImportDeleteJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
-    }
-
-    /**
      Retrieves status of the historical data imports of the organization
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -16783,57 +16732,6 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<HistoricalImportDeleteFilesJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
-    }
-
-    /**
-     Delete the entries of the historical data imports in the organization.
-     
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func postWorkforcemanagementHistoricaldataDeletejob(completion: @escaping ((_ data: HistoricalImportDeleteJobResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementHistoricaldataDeletejobWithRequestBuilder()
-        requestBuilder.execute { (response: Response<HistoricalImportDeleteJobResponse>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Delete the entries of the historical data imports in the organization.
-     - POST /api/v2/workforcemanagement/historicaldata/deletejob
-     - Deprecated: Please use POST /workforcemanagement/historicaldata/bulk/remove/jobs instead.
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
-  "id" : "id",
-  "status" : "InProgress"
-}, statusCode=202}]
-
-     - returns: RequestBuilder<HistoricalImportDeleteJobResponse> 
-     */
-    open class func postWorkforcemanagementHistoricaldataDeletejobWithRequestBuilder() -> RequestBuilder<HistoricalImportDeleteJobResponse> {        
-        let path = "/api/v2/workforcemanagement/historicaldata/deletejob"
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<HistoricalImportDeleteJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

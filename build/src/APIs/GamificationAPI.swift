@@ -318,24 +318,30 @@ open class GamificationAPI {
   } ],
   "winners" : [ {
     "tier" : 5,
+    "winnersCount" : 2,
     "users" : [ {
+      "score" : 9.301444243932576,
       "selfUri" : "https://openapi-generator.tech",
-      "rank" : 2,
+      "rank" : 7,
       "id" : "id"
     }, {
+      "score" : 9.301444243932576,
       "selfUri" : "https://openapi-generator.tech",
-      "rank" : 2,
+      "rank" : 7,
       "id" : "id"
     } ]
   }, {
     "tier" : 5,
+    "winnersCount" : 2,
     "users" : [ {
+      "score" : 9.301444243932576,
       "selfUri" : "https://openapi-generator.tech",
-      "rank" : 2,
+      "rank" : 7,
       "id" : "id"
     }, {
+      "score" : 9.301444243932576,
       "selfUri" : "https://openapi-generator.tech",
-      "rank" : 2,
+      "rank" : 7,
       "id" : "id"
     } ]
   } ],
@@ -5704,24 +5710,30 @@ open class GamificationAPI {
   } ],
   "winners" : [ {
     "tier" : 5,
+    "winnersCount" : 2,
     "users" : [ {
+      "score" : 9.301444243932576,
       "selfUri" : "https://openapi-generator.tech",
-      "rank" : 2,
+      "rank" : 7,
       "id" : "id"
     }, {
+      "score" : 9.301444243932576,
       "selfUri" : "https://openapi-generator.tech",
-      "rank" : 2,
+      "rank" : 7,
       "id" : "id"
     } ]
   }, {
     "tier" : 5,
+    "winnersCount" : 2,
     "users" : [ {
+      "score" : 9.301444243932576,
       "selfUri" : "https://openapi-generator.tech",
-      "rank" : 2,
+      "rank" : 7,
       "id" : "id"
     }, {
+      "score" : 9.301444243932576,
       "selfUri" : "https://openapi-generator.tech",
-      "rank" : 2,
+      "rank" : 7,
       "id" : "id"
     } ]
   } ],
@@ -6001,24 +6013,30 @@ open class GamificationAPI {
   } ],
   "winners" : [ {
     "tier" : 5,
+    "winnersCount" : 2,
     "users" : [ {
+      "score" : 9.301444243932576,
       "selfUri" : "https://openapi-generator.tech",
-      "rank" : 2,
+      "rank" : 7,
       "id" : "id"
     }, {
+      "score" : 9.301444243932576,
       "selfUri" : "https://openapi-generator.tech",
-      "rank" : 2,
+      "rank" : 7,
       "id" : "id"
     } ]
   }, {
     "tier" : 5,
+    "winnersCount" : 2,
     "users" : [ {
+      "score" : 9.301444243932576,
       "selfUri" : "https://openapi-generator.tech",
-      "rank" : 2,
+      "rank" : 7,
       "id" : "id"
     }, {
+      "score" : 9.301444243932576,
       "selfUri" : "https://openapi-generator.tech",
-      "rank" : 2,
+      "rank" : 7,
       "id" : "id"
     } ]
   } ],
@@ -6876,24 +6894,30 @@ open class GamificationAPI {
   } ],
   "winners" : [ {
     "tier" : 5,
+    "winnersCount" : 2,
     "users" : [ {
+      "score" : 9.301444243932576,
       "selfUri" : "https://openapi-generator.tech",
-      "rank" : 2,
+      "rank" : 7,
       "id" : "id"
     }, {
+      "score" : 9.301444243932576,
       "selfUri" : "https://openapi-generator.tech",
-      "rank" : 2,
+      "rank" : 7,
       "id" : "id"
     } ]
   }, {
     "tier" : 5,
+    "winnersCount" : 2,
     "users" : [ {
+      "score" : 9.301444243932576,
       "selfUri" : "https://openapi-generator.tech",
-      "rank" : 2,
+      "rank" : 7,
       "id" : "id"
     }, {
+      "score" : 9.301444243932576,
       "selfUri" : "https://openapi-generator.tech",
-      "rank" : 2,
+      "rank" : 7,
       "id" : "id"
     } ]
   } ],

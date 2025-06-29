@@ -2566,6 +2566,7 @@ open class IntegrationsAPI {
     /**
      List multiple sets of credentials
      - GET /api/v2/integrations/credentials
+     - This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
