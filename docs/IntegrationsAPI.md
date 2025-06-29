@@ -1685,6 +1685,8 @@ IntegrationsAPI.getIntegrationsCredential(credentialId: credentialId) { (respons
 
 List multiple sets of credentials
 
+This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
+
 
 
 Wraps GET /api/v2/integrations/credentials  
@@ -4754,4 +4756,4 @@ IntegrationsAPI.putIntegrationsUnifiedcommunicationThirdpartypresences(ucIntegra
 **String**
 
 
-_PureCloudPlatformClientV2@170.0.0_
+_PureCloudPlatformClientV2@171.0.0_

@@ -3107,7 +3107,7 @@ RoutingAPI.getRoutingQueueUsers(queueId: queueId, pageNumber: pageNumber, pageSi
 
 
 
-> [WrapupCodeEntityListing](WrapupCodeEntityListing) getRoutingQueueWrapupcodes(queueId, pageSize, pageNumber)
+> [WrapupCodeEntityListing](WrapupCodeEntityListing) getRoutingQueueWrapupcodes(queueId, pageSize, pageNumber, name)
 
 Get the wrap-up codes for a queue
 
@@ -3130,9 +3130,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let queueId: String = "" // Queue ID
 let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
+let name: String = "" // Wrapup code's name (trailing asterisks allowed)
 
 // Code example
-RoutingAPI.getRoutingQueueWrapupcodes(queueId: queueId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+RoutingAPI.getRoutingQueueWrapupcodes(queueId: queueId, pageSize: pageSize, pageNumber: pageNumber, name: name) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3150,6 +3151,7 @@ RoutingAPI.getRoutingQueueWrapupcodes(queueId: queueId, pageSize: pageSize, page
 | **queueId** | **String**| Queue ID | |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
+| **name** | **String**| Wrapup code's name (trailing asterisks allowed) | [optional] |
 
 
 ### Return type
@@ -8004,4 +8006,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@170.0.0_
+_PureCloudPlatformClientV2@171.0.0_
