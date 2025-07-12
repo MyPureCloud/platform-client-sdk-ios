@@ -1349,6 +1349,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -1359,6 +1360,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -1386,6 +1388,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -1396,6 +1399,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -2954,6 +2958,7 @@ open class UserRecordingsAPI {
               "questions" : [ {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -2966,6 +2971,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -2977,6 +2983,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -2991,6 +2998,7 @@ open class UserRecordingsAPI {
               }, {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -3003,6 +3011,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -3014,6 +3023,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -3043,6 +3053,7 @@ open class UserRecordingsAPI {
               "questions" : [ {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -3055,6 +3066,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -3066,6 +3078,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -3080,6 +3093,7 @@ open class UserRecordingsAPI {
               }, {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -3092,6 +3106,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -3103,6 +3118,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -4164,6 +4180,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -4174,6 +4191,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -4201,6 +4219,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -4211,6 +4230,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -5769,6 +5789,7 @@ open class UserRecordingsAPI {
               "questions" : [ {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -5781,6 +5802,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -5792,6 +5814,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -5806,6 +5829,7 @@ open class UserRecordingsAPI {
               }, {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -5818,6 +5842,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -5829,6 +5854,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -5858,6 +5884,7 @@ open class UserRecordingsAPI {
               "questions" : [ {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -5870,6 +5897,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -5881,6 +5909,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -5895,6 +5924,7 @@ open class UserRecordingsAPI {
               }, {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -5907,6 +5937,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -5918,6 +5949,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -8019,6 +8051,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -8029,6 +8062,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -8056,6 +8090,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -8066,6 +8101,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -9624,6 +9660,7 @@ open class UserRecordingsAPI {
               "questions" : [ {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -9636,6 +9673,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -9647,6 +9685,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -9661,6 +9700,7 @@ open class UserRecordingsAPI {
               }, {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -9673,6 +9713,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -9684,6 +9725,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -9713,6 +9755,7 @@ open class UserRecordingsAPI {
               "questions" : [ {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -9725,6 +9768,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -9736,6 +9780,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -9750,6 +9795,7 @@ open class UserRecordingsAPI {
               }, {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -9762,6 +9808,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -9773,6 +9820,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -10834,6 +10882,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -10844,6 +10893,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -10871,6 +10921,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -10881,6 +10932,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -12439,6 +12491,7 @@ open class UserRecordingsAPI {
               "questions" : [ {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -12451,6 +12504,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -12462,6 +12516,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -12476,6 +12531,7 @@ open class UserRecordingsAPI {
               }, {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -12488,6 +12544,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -12499,6 +12556,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -12528,6 +12586,7 @@ open class UserRecordingsAPI {
               "questions" : [ {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -12540,6 +12599,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -12551,6 +12611,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -12565,6 +12626,7 @@ open class UserRecordingsAPI {
               }, {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -12577,6 +12639,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -12588,6 +12651,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -15034,6 +15098,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -15044,6 +15109,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -15071,6 +15137,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -15081,6 +15148,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -16639,6 +16707,7 @@ open class UserRecordingsAPI {
                 "questions" : [ {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -16651,6 +16720,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -16662,6 +16732,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -16676,6 +16747,7 @@ open class UserRecordingsAPI {
                 }, {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -16688,6 +16760,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -16699,6 +16772,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -16728,6 +16802,7 @@ open class UserRecordingsAPI {
                 "questions" : [ {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -16740,6 +16815,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -16751,6 +16827,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -16765,6 +16842,7 @@ open class UserRecordingsAPI {
                 }, {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -16777,6 +16855,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -16788,6 +16867,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -17849,6 +17929,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -17859,6 +17940,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -17886,6 +17968,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -17896,6 +17979,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -19454,6 +19538,7 @@ open class UserRecordingsAPI {
                 "questions" : [ {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -19466,6 +19551,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -19477,6 +19563,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -19491,6 +19578,7 @@ open class UserRecordingsAPI {
                 }, {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -19503,6 +19591,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -19514,6 +19603,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -19543,6 +19633,7 @@ open class UserRecordingsAPI {
                 "questions" : [ {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -19555,6 +19646,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -19566,6 +19658,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -19580,6 +19673,7 @@ open class UserRecordingsAPI {
                 }, {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -19592,6 +19686,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -19603,6 +19698,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -21704,6 +21800,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -21714,6 +21811,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -21741,6 +21839,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -21751,6 +21850,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -23309,6 +23409,7 @@ open class UserRecordingsAPI {
                 "questions" : [ {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -23321,6 +23422,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -23332,6 +23434,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -23346,6 +23449,7 @@ open class UserRecordingsAPI {
                 }, {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -23358,6 +23462,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -23369,6 +23474,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -23398,6 +23504,7 @@ open class UserRecordingsAPI {
                 "questions" : [ {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -23410,6 +23517,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -23421,6 +23529,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -23435,6 +23544,7 @@ open class UserRecordingsAPI {
                 }, {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -23447,6 +23557,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -23458,6 +23569,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -24519,6 +24631,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -24529,6 +24642,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -24556,6 +24670,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -24566,6 +24681,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -26124,6 +26240,7 @@ open class UserRecordingsAPI {
                 "questions" : [ {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -26136,6 +26253,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -26147,6 +26265,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -26161,6 +26280,7 @@ open class UserRecordingsAPI {
                 }, {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -26173,6 +26293,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -26184,6 +26305,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -26213,6 +26335,7 @@ open class UserRecordingsAPI {
                 "questions" : [ {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -26225,6 +26348,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -26236,6 +26360,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -26250,6 +26375,7 @@ open class UserRecordingsAPI {
                 }, {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -26262,6 +26388,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -26273,6 +26400,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -28466,6 +28594,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -28476,6 +28605,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -28503,6 +28633,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -28513,6 +28644,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -30071,6 +30203,7 @@ open class UserRecordingsAPI {
                 "questions" : [ {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -30083,6 +30216,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -30094,6 +30228,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -30108,6 +30243,7 @@ open class UserRecordingsAPI {
                 }, {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -30120,6 +30256,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -30131,6 +30268,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -30160,6 +30298,7 @@ open class UserRecordingsAPI {
                 "questions" : [ {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -30172,6 +30311,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -30183,6 +30323,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -30197,6 +30338,7 @@ open class UserRecordingsAPI {
                 }, {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -30209,6 +30351,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -30220,6 +30363,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -31281,6 +31425,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -31291,6 +31436,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -31318,6 +31464,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -31328,6 +31475,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -32886,6 +33034,7 @@ open class UserRecordingsAPI {
                 "questions" : [ {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -32898,6 +33047,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -32909,6 +33059,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -32923,6 +33074,7 @@ open class UserRecordingsAPI {
                 }, {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -32935,6 +33087,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -32946,6 +33099,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -32975,6 +33129,7 @@ open class UserRecordingsAPI {
                 "questions" : [ {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -32987,6 +33142,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -32998,6 +33154,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -33012,6 +33169,7 @@ open class UserRecordingsAPI {
                 }, {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -33024,6 +33182,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -33035,6 +33194,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -35136,6 +35296,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -35146,6 +35307,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -35173,6 +35335,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -35183,6 +35346,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -36741,6 +36905,7 @@ open class UserRecordingsAPI {
                 "questions" : [ {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -36753,6 +36918,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -36764,6 +36930,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -36778,6 +36945,7 @@ open class UserRecordingsAPI {
                 }, {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -36790,6 +36958,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -36801,6 +36970,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -36830,6 +37000,7 @@ open class UserRecordingsAPI {
                 "questions" : [ {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -36842,6 +37013,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -36853,6 +37025,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -36867,6 +37040,7 @@ open class UserRecordingsAPI {
                 }, {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -36879,6 +37053,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -36890,6 +37065,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -37951,6 +38127,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -37961,6 +38138,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -37988,6 +38166,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -37998,6 +38177,7 @@ open class UserRecordingsAPI {
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
+                "multipleSelectQuestionOptionScores" : [ null, null ],
                 "markedNA" : true,
                 "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
@@ -39556,6 +39736,7 @@ open class UserRecordingsAPI {
                 "questions" : [ {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -39568,6 +39749,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -39579,6 +39761,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -39593,6 +39776,7 @@ open class UserRecordingsAPI {
                 }, {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -39605,6 +39789,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -39616,6 +39801,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -39645,6 +39831,7 @@ open class UserRecordingsAPI {
                 "questions" : [ {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -39657,6 +39844,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -39668,6 +39856,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -39682,6 +39871,7 @@ open class UserRecordingsAPI {
                 }, {
                   "helpText" : "helpText",
                   "commentsRequired" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
@@ -39694,6 +39884,7 @@ open class UserRecordingsAPI {
                   "isKill" : true,
                   "naEnabled" : true,
                   "answerOptions" : [ {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -39705,6 +39896,7 @@ open class UserRecordingsAPI {
                       "operator" : "EXISTS"
                     } ]
                   }, {
+                    "builtInType" : "Selected",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -42021,6 +42213,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -42031,6 +42224,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -42058,6 +42252,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -42068,6 +42263,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -43626,6 +43822,7 @@ open class UserRecordingsAPI {
               "questions" : [ {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -43638,6 +43835,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -43649,6 +43847,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -43663,6 +43862,7 @@ open class UserRecordingsAPI {
               }, {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -43675,6 +43875,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -43686,6 +43887,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -43715,6 +43917,7 @@ open class UserRecordingsAPI {
               "questions" : [ {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -43727,6 +43930,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -43738,6 +43942,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -43752,6 +43957,7 @@ open class UserRecordingsAPI {
               }, {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -43764,6 +43970,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -43775,6 +43982,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -44836,6 +45044,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -44846,6 +45055,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -44873,6 +45083,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -44883,6 +45094,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -46441,6 +46653,7 @@ open class UserRecordingsAPI {
               "questions" : [ {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -46453,6 +46666,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -46464,6 +46678,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -46478,6 +46693,7 @@ open class UserRecordingsAPI {
               }, {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -46490,6 +46706,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -46501,6 +46718,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -46530,6 +46748,7 @@ open class UserRecordingsAPI {
               "questions" : [ {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -46542,6 +46761,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -46553,6 +46773,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -46567,6 +46788,7 @@ open class UserRecordingsAPI {
               }, {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -46579,6 +46801,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -46590,6 +46813,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -48691,6 +48915,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -48701,6 +48926,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -48728,6 +48954,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -48738,6 +48965,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -50296,6 +50524,7 @@ open class UserRecordingsAPI {
               "questions" : [ {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -50308,6 +50537,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -50319,6 +50549,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -50333,6 +50564,7 @@ open class UserRecordingsAPI {
               }, {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -50345,6 +50577,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -50356,6 +50589,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -50385,6 +50619,7 @@ open class UserRecordingsAPI {
               "questions" : [ {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -50397,6 +50632,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -50408,6 +50644,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -50422,6 +50659,7 @@ open class UserRecordingsAPI {
               }, {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -50434,6 +50672,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -50445,6 +50684,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -51506,6 +51746,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -51516,6 +51757,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -51543,6 +51785,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -51553,6 +51796,7 @@ open class UserRecordingsAPI {
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
+              "multipleSelectQuestionOptionScores" : [ null, null ],
               "markedNA" : true,
               "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
@@ -53111,6 +53355,7 @@ open class UserRecordingsAPI {
               "questions" : [ {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -53123,6 +53368,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -53134,6 +53380,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -53148,6 +53395,7 @@ open class UserRecordingsAPI {
               }, {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -53160,6 +53408,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -53171,6 +53420,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -53200,6 +53450,7 @@ open class UserRecordingsAPI {
               "questions" : [ {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -53212,6 +53463,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -53223,6 +53475,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -53237,6 +53490,7 @@ open class UserRecordingsAPI {
               }, {
                 "helpText" : "helpText",
                 "commentsRequired" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
@@ -53249,6 +53503,7 @@ open class UserRecordingsAPI {
                 "isKill" : true,
                 "naEnabled" : true,
                 "answerOptions" : [ {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -53260,6 +53515,7 @@ open class UserRecordingsAPI {
                     "operator" : "EXISTS"
                   } ]
                 }, {
+                  "builtInType" : "Selected",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,

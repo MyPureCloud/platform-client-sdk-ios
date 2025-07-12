@@ -17,6 +17,8 @@
 | **autoDialDelaySeconds** | **Int** | Time in seconds after agent connects to callback before outgoing call is auto-dialed. Allowable values in range 0 - 1200 seconds. Defaults to 300 seconds. | [optional] |
 | **autoEndDelaySeconds** | **Int** | Time in seconds after agent disconnects from the outgoing call before the encasing callback is auto-ended. Allowable values in range 0 - 1200 seconds. Defaults to 300 seconds. | [optional] |
 | **pacingModifier** | **Double** | Controls the maximum number of outbound calls at one time when mode is CustomerFirst. | [optional] |
+| **maxRetryCount** | **Int** | Maximum number of retries that should be attempted to try and connect a customer first callback to a customer when the initial callback attempt did not connect. | [optional] |
+| **retryDelaySeconds** | **Int** | Delay in seconds between each retry of a customer first callback. | [optional] |
 | **liveVoiceReactionType** | **String** | The action to take if a live voice is detected during the outbound call of a customer first callback. | [optional] |
 | **liveVoiceFlow** | [**DomainEntityRef**](DomainEntityRef) | The inbound flow to transfer to if a live voice is detected during the outbound call of a customer first callback. | [optional] |
 | **answeringMachineReactionType** | **String** | The action to take if an answering machine is detected during the outbound call of a customer first callback. | [optional] |
@@ -24,4 +26,4 @@
 
 
 
-_PureCloudPlatformClientV2@171.0.0_
+_PureCloudPlatformClientV2@172.0.0_

@@ -1432,6 +1432,7 @@ docs/CustomEventAttribute.md
 docs/CustomEventAttributeList.md
 docs/CustomI18nLabels.md
 docs/CustomProvider.md
+docs/CustomSmtpServerRequest.md
 docs/CustomerEndDetailEventTopicCustomerEndEvent.md
 docs/CustomerInteractionCenter.md
 docs/CustomerStartDetailEventTopicCustomerStartEvent.md
@@ -2330,6 +2331,7 @@ docs/IdentityProviderAPI.md
 docs/IdentityProviderEntityListing.md
 docs/IdentityResolutionAutomergeConfig.md
 docs/IdentityResolutionConfig.md
+docs/IdentityResolutionExternalSource.md
 docs/IdentityResolutionQueueConfig.md
 docs/IdleEventTrigger.md
 docs/IdleTokenTimeout.md
@@ -3207,6 +3209,7 @@ docs/OutboundAPI.md
 docs/OutboundDetailEventTopicOutboundInitEvent.md
 docs/OutboundDomain.md
 docs/OutboundDomainEntityListing.md
+docs/OutboundDomainRequest.md
 docs/OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes.md
 docs/OutboundMessagingCampaignPostContactEmailEventTopicOutboundMessagingCampaignPostContactEmailEvent.md
 docs/OutboundMessagingCampaignPostContactSmsEventTopicOutboundMessagingCampaignPostContactSMSEvent.md
@@ -4712,6 +4715,7 @@ docs/UserAvailableTimes.md
 docs/UserBestPoints.md
 docs/UserBestPointsItem.md
 docs/UserChatSettings.md
+docs/UserChatSettingsPost.md
 docs/UserConversationSummary.md
 docs/UserConversationsEventMediaSummary.md
 docs/UserConversationsEventMediaSummaryDetail.md
@@ -5427,6 +5431,7 @@ docs/deleteChatsRoomMessagesPin-example.txt
 docs/deleteChatsRoomParticipant-example.txt
 docs/deleteChatsUserMessage-example.txt
 docs/deleteChatsUserMessagesPin-example.txt
+docs/deleteChatsUsersMeSettings-example.txt
 docs/deleteCoachingAppointment-example.txt
 docs/deleteCoachingAppointmentAnnotation-example.txt
 docs/deleteContentmanagementDocument-example.txt
@@ -6977,6 +6982,7 @@ docs/getWorkforcemanagementNotifications-example.txt
 docs/getWorkforcemanagementSchedulingjob-example.txt
 docs/getWorkforcemanagementShifttrades-example.txt
 docs/getWorkforcemanagementShrinkageJob-example.txt
+docs/getWorkforcemanagementTeamAdherence-example.txt
 docs/getWorkforcemanagementTimeoffbalanceJob-example.txt
 docs/getWorkforcemanagementTimeoffrequest-example.txt
 docs/getWorkforcemanagementTimeoffrequestWaitlistpositions-example.txt
@@ -7302,6 +7308,7 @@ docs/postChatsRoomParticipant-example.txt
 docs/postChatsRooms-example.txt
 docs/postChatsUserMessages-example.txt
 docs/postChatsUserMessagesPins-example.txt
+docs/postChatsUsersMeSettings-example.txt
 docs/postCoachingAppointmentAnnotations-example.txt
 docs/postCoachingAppointmentConversations-example.txt
 docs/postCoachingAppointments-example.txt
@@ -9652,6 +9659,7 @@ src/Models/CustomEventAttribute.swift
 src/Models/CustomEventAttributeList.swift
 src/Models/CustomI18nLabels.swift
 src/Models/CustomProvider.swift
+src/Models/CustomSmtpServerRequest.swift
 src/Models/CustomerEndDetailEventTopicCustomerEndEvent.swift
 src/Models/CustomerInteractionCenter.swift
 src/Models/CustomerStartDetailEventTopicCustomerStartEvent.swift
@@ -10520,6 +10528,7 @@ src/Models/IdentityProvider.swift
 src/Models/IdentityProviderEntityListing.swift
 src/Models/IdentityResolutionAutomergeConfig.swift
 src/Models/IdentityResolutionConfig.swift
+src/Models/IdentityResolutionExternalSource.swift
 src/Models/IdentityResolutionQueueConfig.swift
 src/Models/IdleEventTrigger.swift
 src/Models/IdleTokenTimeout.swift
@@ -11362,6 +11371,7 @@ src/Models/OutOfOfficeEventUser.swift
 src/Models/OutboundDetailEventTopicOutboundInitEvent.swift
 src/Models/OutboundDomain.swift
 src/Models/OutboundDomainEntityListing.swift
+src/Models/OutboundDomainRequest.swift
 src/Models/OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes.swift
 src/Models/OutboundMessagingCampaignPostContactEmailEventTopicOutboundMessagingCampaignPostContactEmailEvent.swift
 src/Models/OutboundMessagingCampaignPostContactSmsEventTopicOutboundMessagingCampaignPostContactSMSEvent.swift
@@ -12819,6 +12829,7 @@ src/Models/UserAvailableTimes.swift
 src/Models/UserBestPoints.swift
 src/Models/UserBestPointsItem.swift
 src/Models/UserChatSettings.swift
+src/Models/UserChatSettingsPost.swift
 src/Models/UserConversationSummary.swift
 src/Models/UserConversationsEventMediaSummary.swift
 src/Models/UserConversationsEventMediaSummaryDetail.swift

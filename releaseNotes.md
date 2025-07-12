@@ -1,225 +1,136 @@
-Platform API version: 9375
+Platform API version: 9401
 
 
 
 
-# Major Changes (23 changes)
+# Major Changes (4 changes)
 
-**/api/v2/workforcemanagement/historicaldata/deletejob** (1 change)
+**GET /api/v2/externalcontacts/contacts/schemas/{schemaId}/versions** (1 change)
 
-* Path /api/v2/workforcemanagement/historicaldata/deletejob was removed
+* Response 200 type was changed from DataSchema to DataSchemaListing
 
-**GET /api/v2/integrations/credentials** (1 change)
+**GET /api/v2/externalcontacts/organizations/schemas/{schemaId}/versions** (1 change)
 
-* Has been deprecated
+* Response 200 type was changed from DataSchema to DataSchemaListing
 
-**GET /api/v2/routing/queues/{queueId}/wrapupcodes** (1 change)
+**GET /api/v2/taskmanagement/workitems/schemas/{schemaId}/versions** (1 change)
 
-* Parameter name was added
+* Response 200 type was changed from DataSchema to DataSchemaListing
 
-**ContentAttachment** (1 change)
+**OpenMessagingIdentityResolutionConfig** (1 change)
 
-* Model ContentAttachment was removed
-
-**ContentGeneric** (1 change)
-
-* Model ContentGeneric was removed
-
-**ContentList** (1 change)
-
-* Model ContentList was removed
-
-**ContentLocation** (1 change)
-
-* Model ContentLocation was removed
-
-**ContentNotificationTemplate** (1 change)
-
-* Model ContentNotificationTemplate was removed
-
-**ContentPostback** (1 change)
-
-* Model ContentPostback was removed
-
-**ContentQuickReply** (1 change)
-
-* Model ContentQuickReply was removed
-
-**ContentQuickReplyV2** (1 change)
-
-* Model ContentQuickReplyV2 was removed
-
-**ContentStory** (1 change)
-
-* Model ContentStory was removed
-
-**ContentText** (1 change)
-
-* Model ContentText was removed
-
-**ListItemComponent** (1 change)
-
-* Model ListItemComponent was removed
-
-**MessageContent** (1 change)
-
-* Model MessageContent was removed
-
-**MessagingRecipient** (1 change)
-
-* Model MessagingRecipient was removed
-
-**NotificationTemplateBody** (1 change)
-
-* Model NotificationTemplateBody was removed
-
-**NotificationTemplateButton** (1 change)
-
-* Model NotificationTemplateButton was removed
-
-**NotificationTemplateFooter** (1 change)
-
-* Model NotificationTemplateFooter was removed
-
-**NotificationTemplateHeader** (1 change)
-
-* Model NotificationTemplateHeader was removed
-
-**NotificationTemplateParameter** (1 change)
-
-* Model NotificationTemplateParameter was removed
-
-**HistoricalImportDeleteJobResponse** (1 change)
-
-* Model HistoricalImportDeleteJobResponse was removed
-
-**TextBotPromptSegment** (1 change)
-
-* Property content was changed from MessageContent[] to ConversationMessageContent[]
+* Property externalSource was changed from AddressableEntityRef to IdentityResolutionExternalSource
 
 
-# Minor Changes (33 changes)
+# Minor Changes (30 changes)
 
-**AnalyticsConversationWithoutAttributes** (1 change)
+**/api/v2/chats/users/me/settings** (2 changes)
 
-* Optional property inactivityTimeout was added
+* Operation post was added. Summary: Create a user's chat settings
+* Operation delete was added. Summary: Delete a user's chat settings
 
-**AnalyticsConversation** (1 change)
+**/api/v2/workforcemanagement/teams/{teamId}/adherence** (2 changes)
 
-* Optional property inactivityTimeout was added
+* Path was added
+* Operation GET was added
 
-**ViewFilter** (2 changes)
+**ConversationAggregationView** (1 change)
 
-* Enum value INBOUND_AUDIO_COUNT was added to property viewMetrics
-* Enum value OUTBOUND_AUDIO_COUNT was added to property viewMetrics
+* Enum value tAgentVideoConnected was added to property target
 
-**Widget** (2 changes)
+**ConversationDetailQueryPredicate** (1 change)
 
-* Enum value INBOUND_AUDIO_COUNT was added to property metrics
-* Enum value OUTBOUND_AUDIO_COUNT was added to property metrics
+* Enum value tAgentVideoConnected was added to property metric
 
-**ConversationMessageMetadataContent** (1 change)
+**ConversationAggregationQuery** (1 change)
 
-* Enum value RoadsideAssistance was added to property contentType
+* Enum value tAgentVideoConnected was added to property metrics
 
-**ConversationContentRoadsideAssistance** (1 change)
+**KnowledgeBaseReference** (1 change)
+
+* Enum value cs-CZ was added to property languageCode
+
+**CallbackMediaSettings** (2 changes)
+
+* Optional property maxRetryCount was added
+* Optional property retryDelaySeconds was added
+
+**AnswerOption** (1 change)
+
+* Optional property builtInType was added
+
+**EvaluationQuestion** (1 change)
+
+* Optional property multipleSelectOptionQuestions was added
+
+**EvaluationQuestionScore** (1 change)
+
+* Optional property multipleSelectQuestionOptionScores was added
+
+**IdentityResolutionExternalSource** (1 change)
 
 * Model was added
 
-**ConversationMessageContent** (1 change)
-
-* Enum value RoadsideAssistance was added to property contentType
-
-**ContestUserRank** (1 change)
-
-* Optional property score was added
-
-**ContestWinners** (1 change)
-
-* Optional property winnersCount was added
-
-**ButtonResponse** (1 change)
-
-* Optional property originatingMessageId was added
-
-**DatePicker** (2 changes)
-
-* Optional property id was added
-* Optional property dateSelected was added
-
-**ListPicker** (1 change)
-
-* Optional property id was added
-
-**ReceivedReplyMessage** (1 change)
+**UserChatSettingsPost** (1 change)
 
 * Model was added
 
-**RecordingForm** (1 change)
+**KnowledgeBase** (1 change)
+
+* Enum value cs-CZ was added to property coreLanguage
+
+**KnowledgeCategory** (1 change)
+
+* Enum value cs-CZ was added to property languageCode
+
+**KnowledgeSearchDocumentV1** (1 change)
+
+* Enum value cs-CZ was added to property languageCode
+
+**KnowledgeExtendedCategory** (1 change)
+
+* Enum value cs-CZ was added to property languageCode
+
+**KnowledgeImport** (1 change)
+
+* Enum value cs-CZ was added to property languageCode
+
+**KnowledgeDocument** (1 change)
+
+* Enum value cs-CZ was added to property languageCode
+
+**KnowledgeBaseCreateRequest** (1 change)
+
+* Enum value cs-CZ was added to property coreLanguage
+
+**KnowledgeDocumentsAnswerFilter** (1 change)
+
+* Enum value cs-CZ was added to property language
+
+**PredictionResults** (2 changes)
+
+* Enum value AI-ADJUSTED-AHT was added to property formula
+* Enum value POSITION-IN-QUEUE was added to property formula
+
+**OutboundDomain** (1 change)
+
+* Enum value EmailSmtpDomain was added to property senderType
+
+**CustomSmtpServerRequest** (1 change)
 
 * Model was added
 
-**RecordingFormPage** (1 change)
+**EmailOutboundDomainResult** (1 change)
+
+* Enum value EmailSmtpDomain was added to property senderType
+
+**OutboundDomainRequest** (1 change)
 
 * Model was added
 
-**RecordingFormPageComponent** (1 change)
+**ScimPhoneNumber** (1 change)
 
-* Model was added
-
-**RecordingFormResponseComponent** (1 change)
-
-* Model was added
-
-**RecordingFormResponseContent** (1 change)
-
-* Model was added
-
-**RecordingInput** (1 change)
-
-* Model was added
-
-**RecordingIntroduction** (1 change)
-
-* Model was added
-
-**RecordingMessagingMessage** (1 change)
-
-* Enum value Form was added to property contentType
-
-**RecordingWheelPicker** (1 change)
-
-* Model was added
-
-**RecordingWheelPickerItem** (1 change)
-
-* Model was added
-
-**VoicemailMailboxInfo** (3 changes)
-
-* Optional property id was added
-* Optional property ownerType was added
-* Optional property selfUri was added
-
-**LearningModuleAutoAssignResponse** (1 change)
-
-* Model was added
-
-**UsersRulesRuleReference** (1 change)
-
-* Model was added
-
-**LearningModuleAutoAssignRequest** (1 change)
-
-* Model was added
-
-**LearningModuleJobRequest** (1 change)
-
-* Enum value Assign was added to property action
+* Enum value ringcentral was added to property type
 
 
-# Point Changes (1 change)
-
-**GET /api/v2/integrations/credentials** (1 change)
-
-* Description was changed
+# Point Changes (0 changes)

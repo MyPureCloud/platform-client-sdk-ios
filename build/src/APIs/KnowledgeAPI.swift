@@ -482,6 +482,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -607,6 +608,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -752,6 +754,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -3686,6 +3689,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -3847,6 +3851,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -3992,6 +3997,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -4139,6 +4145,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -4273,6 +4280,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -4508,6 +4516,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -4637,6 +4646,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -4764,6 +4774,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -6007,6 +6018,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -6946,6 +6958,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -7095,6 +7108,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -7244,6 +7258,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -7424,6 +7439,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -9904,6 +9920,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -10048,6 +10065,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -10179,6 +10197,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -10323,6 +10342,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -10449,6 +10469,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     
@@ -10576,6 +10597,7 @@ open class KnowledgeAPI {
         case huHu = "hu-HU"
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
+        case csCz = "cs-CZ"
     }
     
     

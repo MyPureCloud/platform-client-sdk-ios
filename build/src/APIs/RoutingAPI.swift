@@ -13190,7 +13190,7 @@ open class RoutingAPI {
      - parameter body: (body) Domain 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postRoutingEmailOutboundDomains(body: OutboundDomain, completion: @escaping ((_ data: EmailOutboundDomainResult?,_ error: Error?) -> Void)) {
+    open class func postRoutingEmailOutboundDomains(body: OutboundDomainRequest, completion: @escaping ((_ data: EmailOutboundDomainResult?,_ error: Error?) -> Void)) {
         let requestBuilder = postRoutingEmailOutboundDomainsWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<EmailOutboundDomainResult>?, error) -> Void in
             do {
@@ -13234,7 +13234,7 @@ open class RoutingAPI {
 
      - returns: RequestBuilder<EmailOutboundDomainResult> 
      */
-    open class func postRoutingEmailOutboundDomainsWithRequestBuilder(body: OutboundDomain) -> RequestBuilder<EmailOutboundDomainResult> {        
+    open class func postRoutingEmailOutboundDomainsWithRequestBuilder(body: OutboundDomainRequest) -> RequestBuilder<EmailOutboundDomainResult> {        
         let path = "/api/v2/routing/email/outbound/domains"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -13254,7 +13254,7 @@ open class RoutingAPI {
      - parameter body: (body) Domain 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postRoutingEmailOutboundDomainsSimulated(body: OutboundDomain, completion: @escaping ((_ data: EmailOutboundDomainResult?,_ error: Error?) -> Void)) {
+    open class func postRoutingEmailOutboundDomainsSimulated(body: OutboundDomainRequest, completion: @escaping ((_ data: EmailOutboundDomainResult?,_ error: Error?) -> Void)) {
         let requestBuilder = postRoutingEmailOutboundDomainsSimulatedWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<EmailOutboundDomainResult>?, error) -> Void in
             do {
@@ -13298,7 +13298,7 @@ open class RoutingAPI {
 
      - returns: RequestBuilder<EmailOutboundDomainResult> 
      */
-    open class func postRoutingEmailOutboundDomainsSimulatedWithRequestBuilder(body: OutboundDomain) -> RequestBuilder<EmailOutboundDomainResult> {        
+    open class func postRoutingEmailOutboundDomainsSimulatedWithRequestBuilder(body: OutboundDomainRequest) -> RequestBuilder<EmailOutboundDomainResult> {        
         let path = "/api/v2/routing/email/outbound/domains/simulated"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)

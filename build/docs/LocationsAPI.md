@@ -421,4 +421,4 @@ LocationsAPI.postLocationsSearch(body: body) { (response, error) in
 [**LocationsSearchResponse**](LocationsSearchResponse)
 
 
-_PureCloudPlatformClientV2@171.0.0_
+_PureCloudPlatformClientV2@172.0.0_

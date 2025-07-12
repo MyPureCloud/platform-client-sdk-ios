@@ -3225,8 +3225,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   }, {
@@ -3238,8 +3238,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   } ],
@@ -7058,8 +7058,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]
@@ -9483,8 +9483,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   }, {
@@ -9496,8 +9496,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   } ],
@@ -9581,8 +9581,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   }, {
@@ -9594,8 +9594,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   } ],
@@ -9904,6 +9904,136 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WfmHistoricalShrinkageResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get a list of user schedule adherence records for the requested team
+     
+     - parameter teamId: (path) The ID of the team 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementTeamAdherence(teamId: String, completion: @escaping ((_ data: UserScheduleAdherenceListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementTeamAdherenceWithRequestBuilder(teamId: teamId)
+        requestBuilder.execute { (response: Response<UserScheduleAdherenceListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of user schedule adherence records for the requested team
+     - GET /api/v2/workforcemanagement/teams/{teamId}/adherence
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "adherenceExplanation" : "{}",
+    "removedFromManagementUnit" : true,
+    "organizationSecondaryPresenceId" : "organizationSecondaryPresenceId",
+    "suppressOnTimeReminder" : true,
+    "businessUnit" : "{}",
+    "impact" : "Positive",
+    "selfUri" : "https://openapi-generator.tech",
+    "adherenceState" : "InAdherence",
+    "team" : "{}",
+    "routingStatus" : "OFF_QUEUE",
+    "presenceUpdateTime" : "2000-01-23T04:56:07.000+00:00",
+    "isOutOfOffice" : true,
+    "activeQueuesModifiedTime" : "2000-01-23T04:56:07.000+00:00",
+    "managementUnit" : "{}",
+    "timeOfAdherenceChange" : "2000-01-23T04:56:07.000+00:00",
+    "systemPresence" : "Available",
+    "name" : "name",
+    "actualActivityCategory" : "OnQueueWork",
+    "scheduledActivityCategory" : "OnQueueWork",
+    "scheduledActivityCode" : "{}",
+    "nextActivityReminders" : [ {
+      "activityCategory" : "OnQueueWork",
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCategory" : "OnQueueWork",
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "activeQueues" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "id" : "id",
+    "user" : "{}"
+  }, {
+    "adherenceExplanation" : "{}",
+    "removedFromManagementUnit" : true,
+    "organizationSecondaryPresenceId" : "organizationSecondaryPresenceId",
+    "suppressOnTimeReminder" : true,
+    "businessUnit" : "{}",
+    "impact" : "Positive",
+    "selfUri" : "https://openapi-generator.tech",
+    "adherenceState" : "InAdherence",
+    "team" : "{}",
+    "routingStatus" : "OFF_QUEUE",
+    "presenceUpdateTime" : "2000-01-23T04:56:07.000+00:00",
+    "isOutOfOffice" : true,
+    "activeQueuesModifiedTime" : "2000-01-23T04:56:07.000+00:00",
+    "managementUnit" : "{}",
+    "timeOfAdherenceChange" : "2000-01-23T04:56:07.000+00:00",
+    "systemPresence" : "Available",
+    "name" : "name",
+    "actualActivityCategory" : "OnQueueWork",
+    "scheduledActivityCategory" : "OnQueueWork",
+    "scheduledActivityCode" : "{}",
+    "nextActivityReminders" : [ {
+      "activityCategory" : "OnQueueWork",
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCategory" : "OnQueueWork",
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "activeQueues" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "id" : "id",
+    "user" : "{}"
+  } ],
+  "downloadUrl" : "downloadUrl"
+}, statusCode=200}]
+     
+     - parameter teamId: (path) The ID of the team 
+
+     - returns: RequestBuilder<UserScheduleAdherenceListing> 
+     */
+    open class func getWorkforcemanagementTeamAdherenceWithRequestBuilder(teamId: String) -> RequestBuilder<UserScheduleAdherenceListing> {        
+        var path = "/api/v2/workforcemanagement/teams/{teamId}/adherence"
+        let teamIdPreEscape = "\(teamId)"
+        let teamIdPostEscape = teamIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{teamId}", with: teamIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserScheduleAdherenceListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -11868,8 +11998,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]
@@ -19218,8 +19348,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]

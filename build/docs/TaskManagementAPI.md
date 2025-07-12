@@ -1590,7 +1590,7 @@ TaskManagementAPI.getTaskmanagementWorkitemsSchemaVersion(schemaId: schemaId, ve
 
 
 
-> [DataSchema](DataSchema) getTaskmanagementWorkitemsSchemaVersions(schemaId)
+> [DataSchemaListing](DataSchemaListing) getTaskmanagementWorkitemsSchemaVersions(schemaId)
 
 Get all versions of a schema
 
@@ -1633,7 +1633,7 @@ TaskManagementAPI.getTaskmanagementWorkitemsSchemaVersions(schemaId: schemaId) {
 
 ### Return type
 
-[**DataSchema**](DataSchema)
+[**DataSchemaListing**](DataSchemaListing)
 
 
 ## getTaskmanagementWorkitemsSchemas
@@ -3959,4 +3959,4 @@ TaskManagementAPI.putTaskmanagementWorkitemsSchema(schemaId: schemaId, body: bod
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatformClientV2@171.0.0_
+_PureCloudPlatformClientV2@172.0.0_

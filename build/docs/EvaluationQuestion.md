@@ -15,9 +15,10 @@
 | **commentsRequired** | **Bool** |  | [optional] |
 | **visibilityCondition** | [**VisibilityCondition**](VisibilityCondition) |  | [optional] |
 | **answerOptions** | [**[AnswerOption]**]([AnswerOption]) | Options from which to choose an answer for this question. Only used by Multiple Choice type questions. | [optional] |
+| **multipleSelectOptionQuestions** | [**[EvaluationQuestion]**]([EvaluationQuestion]) | Only used by Multiple Select type questions. A list of multiple choice questions representing selectable options. | [optional] |
 | **isKill** | **Bool** |  | [optional] |
 | **isCritical** | **Bool** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@171.0.0_
+_PureCloudPlatformClientV2@172.0.0_

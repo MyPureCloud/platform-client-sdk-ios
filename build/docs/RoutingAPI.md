@@ -6230,7 +6230,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: OutboundDomain = new OutboundDomain(...) // Domain
+let body: OutboundDomainRequest = new OutboundDomainRequest(...) // Domain
 
 // Code example
 RoutingAPI.postRoutingEmailOutboundDomains(body: body) { (response, error) in
@@ -6248,7 +6248,7 @@ RoutingAPI.postRoutingEmailOutboundDomains(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**OutboundDomain**](OutboundDomain)| Domain | |
+| **body** | [**OutboundDomainRequest**](OutboundDomainRequest)| Domain | |
 
 
 ### Return type
@@ -6280,7 +6280,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: OutboundDomain = new OutboundDomain(...) // Domain
+let body: OutboundDomainRequest = new OutboundDomainRequest(...) // Domain
 
 // Code example
 RoutingAPI.postRoutingEmailOutboundDomainsSimulated(body: body) { (response, error) in
@@ -6298,7 +6298,7 @@ RoutingAPI.postRoutingEmailOutboundDomainsSimulated(body: body) { (response, err
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**OutboundDomain**](OutboundDomain)| Domain | |
+| **body** | [**OutboundDomainRequest**](OutboundDomainRequest)| Domain | |
 
 
 ### Return type
@@ -8006,4 +8006,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@171.0.0_
+_PureCloudPlatformClientV2@172.0.0_

@@ -6340,6 +6340,12 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // userId\nlet pinnedMessageId: String = \"\" // pinnedMessageId\n\n// Remove a pinned message from a 1on1\nDeleteChatsUserMessagesPinRequest.deleteChatsUserMessagesPin(userId: userId, pinnedMessageId: pinnedMessageId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteChatsUserMessagesPinRequest.deleteChatsUserMessagesPin was successful\")\n    }\n}"
   },
+  "deletechatsusersmesettings": {
+    "operationId": "deletechatsusersmesettings",
+    "functionName": "deleteChatsUsersMeSettings",
+    "signature": "deleteChatsUsersMeSettings()",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Delete a user's chat settings\nDeleteChatsUsersMeSettingsRequest.deleteChatsUsersMeSettings() { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteChatsUsersMeSettingsRequest.deleteChatsUsersMeSettings was successful\")\n    }\n}"
+  },
   "getchatsmessage": {
     "operationId": "getchatsmessage",
     "functionName": "getChatsMessage",
@@ -6791,6 +6797,19 @@
       }
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // userId\nlet body: PinnedMessageRequest = new PinnedMessageRequest(...) // Pinned Message Ids\n\n// Add pinned messages for a 1on1, up to a maximum of 5 pinned messages\nPostChatsUserMessagesPinsRequest.postChatsUserMessagesPins(userId: userId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostChatsUserMessagesPinsRequest.postChatsUserMessagesPins was successful\")\n    }\n}"
+  },
+  "postchatsusersmesettings": {
+    "operationId": "postchatsusersmesettings",
+    "functionName": "postChatsUsersMeSettings",
+    "signature": "postChatsUsersMeSettings(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "UserChatSettingsPost",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: UserChatSettingsPost = new UserChatSettingsPost(...) // \n\n// Create a user's chat settings\nPostChatsUsersMeSettingsRequest.postChatsUsersMeSettings(body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostChatsUsersMeSettingsRequest.postChatsUsersMeSettings was successful\")\n    }\n}"
   },
   "putchatsmessagereactions": {
     "operationId": "putchatsmessagereactions",
@@ -13529,7 +13548,7 @@
         "required": "true"
       }
     ],
-    "return": "DataSchema",
+    "return": "DataSchemaListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaId: String = \"\" // Schema ID\n\n// Get all versions of an external contact's schema\nGetExternalcontactsContactsSchemaVersionsRequest.getExternalcontactsContactsSchemaVersions(schemaId: schemaId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsContactsSchemaVersionsRequest.getExternalcontactsContactsSchemaVersions was successful\")\n        dump(response)\n    }\n}"
   },
   "getexternalcontactscontactsschemas": {
@@ -14034,7 +14053,7 @@
         "required": "true"
       }
     ],
-    "return": "DataSchema",
+    "return": "DataSchemaListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaId: String = \"\" // Schema ID\n\n// Get all versions of an external organization's schema\nGetExternalcontactsOrganizationsSchemaVersionsRequest.getExternalcontactsOrganizationsSchemaVersions(schemaId: schemaId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsOrganizationsSchemaVersionsRequest.getExternalcontactsOrganizationsSchemaVersions was successful\")\n        dump(response)\n    }\n}"
   },
   "getexternalcontactsorganizationsschemas": {
@@ -37538,12 +37557,12 @@
     "parameters": [
       {
         "name": "body",
-        "type": "OutboundDomain",
+        "type": "OutboundDomainRequest",
         "required": "true"
       }
     ],
     "return": "EmailOutboundDomainResult",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: OutboundDomain = new OutboundDomain(...) // Domain\n\n// Create a domain\nPostRoutingEmailOutboundDomainsRequest.postRoutingEmailOutboundDomains(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRoutingEmailOutboundDomainsRequest.postRoutingEmailOutboundDomains was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: OutboundDomainRequest = new OutboundDomainRequest(...) // Domain\n\n// Create a domain\nPostRoutingEmailOutboundDomainsRequest.postRoutingEmailOutboundDomains(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRoutingEmailOutboundDomainsRequest.postRoutingEmailOutboundDomains was successful\")\n        dump(response)\n    }\n}"
   },
   "postroutingemailoutbounddomainssimulated": {
     "operationId": "postroutingemailoutbounddomainssimulated",
@@ -37552,12 +37571,12 @@
     "parameters": [
       {
         "name": "body",
-        "type": "OutboundDomain",
+        "type": "OutboundDomainRequest",
         "required": "true"
       }
     ],
     "return": "EmailOutboundDomainResult",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: OutboundDomain = new OutboundDomain(...) // Domain\n\n// Create a simulated domain\nPostRoutingEmailOutboundDomainsSimulatedRequest.postRoutingEmailOutboundDomainsSimulated(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRoutingEmailOutboundDomainsSimulatedRequest.postRoutingEmailOutboundDomainsSimulated was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: OutboundDomainRequest = new OutboundDomainRequest(...) // Domain\n\n// Create a simulated domain\nPostRoutingEmailOutboundDomainsSimulatedRequest.postRoutingEmailOutboundDomainsSimulated(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRoutingEmailOutboundDomainsSimulatedRequest.postRoutingEmailOutboundDomainsSimulated was successful\")\n        dump(response)\n    }\n}"
   },
   "postroutinglanguages": {
     "operationId": "postroutinglanguages",
@@ -42053,7 +42072,7 @@
         "required": "true"
       }
     ],
-    "return": "DataSchema",
+    "return": "DataSchemaListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaId: String = \"\" // Schema ID\n\n// Get all versions of a schema\nGetTaskmanagementWorkitemsSchemaVersionsRequest.getTaskmanagementWorkitemsSchemaVersions(schemaId: schemaId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemsSchemaVersionsRequest.getTaskmanagementWorkitemsSchemaVersions was successful\")\n        dump(response)\n    }\n}"
   },
   "gettaskmanagementworkitemsschemas": {
@@ -50330,6 +50349,20 @@
     ],
     "return": "WfmHistoricalShrinkageResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // jobId\n\n// Request to fetch the status of the historical shrinkage query\nGetWorkforcemanagementShrinkageJobRequest.getWorkforcemanagementShrinkageJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementShrinkageJobRequest.getWorkforcemanagementShrinkageJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementteamadherence": {
+    "operationId": "getworkforcemanagementteamadherence",
+    "functionName": "getWorkforcemanagementTeamAdherence",
+    "signature": "getWorkforcemanagementTeamAdherence(teamId)",
+    "parameters": [
+      {
+        "name": "teamId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "UserScheduleAdherenceListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet teamId: String = \"\" // The ID of the team\n\n// Get a list of user schedule adherence records for the requested team\nGetWorkforcemanagementTeamAdherenceRequest.getWorkforcemanagementTeamAdherence(teamId: teamId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementTeamAdherenceRequest.getWorkforcemanagementTeamAdherence was successful\")\n        dump(response)\n    }\n}"
   },
   "getworkforcemanagementtimeoffbalancejob": {
     "operationId": "getworkforcemanagementtimeoffbalancejob",

@@ -12,4 +12,4 @@ Description of a data value returned from an intent
 
 
 
-_PureCloudPlatformClientV2@171.0.0_
+_PureCloudPlatformClientV2@172.0.0_

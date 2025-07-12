@@ -1554,6 +1554,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -1566,6 +1567,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -1577,6 +1579,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -1591,6 +1594,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -1603,6 +1607,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -1614,6 +1619,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -1643,6 +1649,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -1655,6 +1662,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -1666,6 +1674,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -1680,6 +1689,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -1692,6 +1702,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -1703,6 +1714,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -2108,6 +2120,7 @@ open class QualityAPI {
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
+        "multipleSelectQuestionOptionScores" : [ null, null ],
         "markedNA" : true,
         "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
@@ -2118,6 +2131,7 @@ open class QualityAPI {
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
+        "multipleSelectQuestionOptionScores" : [ null, null ],
         "markedNA" : true,
         "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
@@ -2145,6 +2159,7 @@ open class QualityAPI {
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
+        "multipleSelectQuestionOptionScores" : [ null, null ],
         "markedNA" : true,
         "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
@@ -2155,6 +2170,7 @@ open class QualityAPI {
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
+        "multipleSelectQuestionOptionScores" : [ null, null ],
         "markedNA" : true,
         "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
@@ -7777,6 +7793,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -7789,6 +7806,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -7800,6 +7818,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -7814,6 +7833,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -7826,6 +7846,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -7837,6 +7858,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -7866,6 +7888,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -7878,6 +7901,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -7889,6 +7913,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -7903,6 +7928,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -7915,6 +7941,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -7926,6 +7953,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -9546,6 +9574,7 @@ open class QualityAPI {
         "questions" : [ {
           "helpText" : "helpText",
           "commentsRequired" : true,
+          "multipleSelectOptionQuestions" : [ null, null ],
           "visibilityCondition" : {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
@@ -9558,6 +9587,7 @@ open class QualityAPI {
           "isKill" : true,
           "naEnabled" : true,
           "answerOptions" : [ {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -9569,6 +9599,7 @@ open class QualityAPI {
               "operator" : "EXISTS"
             } ]
           }, {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -9583,6 +9614,7 @@ open class QualityAPI {
         }, {
           "helpText" : "helpText",
           "commentsRequired" : true,
+          "multipleSelectOptionQuestions" : [ null, null ],
           "visibilityCondition" : {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
@@ -9595,6 +9627,7 @@ open class QualityAPI {
           "isKill" : true,
           "naEnabled" : true,
           "answerOptions" : [ {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -9606,6 +9639,7 @@ open class QualityAPI {
               "operator" : "EXISTS"
             } ]
           }, {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -9635,6 +9669,7 @@ open class QualityAPI {
         "questions" : [ {
           "helpText" : "helpText",
           "commentsRequired" : true,
+          "multipleSelectOptionQuestions" : [ null, null ],
           "visibilityCondition" : {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
@@ -9647,6 +9682,7 @@ open class QualityAPI {
           "isKill" : true,
           "naEnabled" : true,
           "answerOptions" : [ {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -9658,6 +9694,7 @@ open class QualityAPI {
               "operator" : "EXISTS"
             } ]
           }, {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -9672,6 +9709,7 @@ open class QualityAPI {
         }, {
           "helpText" : "helpText",
           "commentsRequired" : true,
+          "multipleSelectOptionQuestions" : [ null, null ],
           "visibilityCondition" : {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
@@ -9684,6 +9722,7 @@ open class QualityAPI {
           "isKill" : true,
           "naEnabled" : true,
           "answerOptions" : [ {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -9695,6 +9734,7 @@ open class QualityAPI {
               "operator" : "EXISTS"
             } ]
           }, {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -11224,6 +11264,7 @@ open class QualityAPI {
         "questions" : [ {
           "helpText" : "helpText",
           "commentsRequired" : true,
+          "multipleSelectOptionQuestions" : [ null, null ],
           "visibilityCondition" : {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
@@ -11236,6 +11277,7 @@ open class QualityAPI {
           "isKill" : true,
           "naEnabled" : true,
           "answerOptions" : [ {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -11247,6 +11289,7 @@ open class QualityAPI {
               "operator" : "EXISTS"
             } ]
           }, {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -11261,6 +11304,7 @@ open class QualityAPI {
         }, {
           "helpText" : "helpText",
           "commentsRequired" : true,
+          "multipleSelectOptionQuestions" : [ null, null ],
           "visibilityCondition" : {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
@@ -11273,6 +11317,7 @@ open class QualityAPI {
           "isKill" : true,
           "naEnabled" : true,
           "answerOptions" : [ {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -11284,6 +11329,7 @@ open class QualityAPI {
               "operator" : "EXISTS"
             } ]
           }, {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -11313,6 +11359,7 @@ open class QualityAPI {
         "questions" : [ {
           "helpText" : "helpText",
           "commentsRequired" : true,
+          "multipleSelectOptionQuestions" : [ null, null ],
           "visibilityCondition" : {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
@@ -11325,6 +11372,7 @@ open class QualityAPI {
           "isKill" : true,
           "naEnabled" : true,
           "answerOptions" : [ {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -11336,6 +11384,7 @@ open class QualityAPI {
               "operator" : "EXISTS"
             } ]
           }, {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -11350,6 +11399,7 @@ open class QualityAPI {
         }, {
           "helpText" : "helpText",
           "commentsRequired" : true,
+          "multipleSelectOptionQuestions" : [ null, null ],
           "visibilityCondition" : {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
@@ -11362,6 +11412,7 @@ open class QualityAPI {
           "isKill" : true,
           "naEnabled" : true,
           "answerOptions" : [ {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -11373,6 +11424,7 @@ open class QualityAPI {
               "operator" : "EXISTS"
             } ]
           }, {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -11799,6 +11851,7 @@ open class QualityAPI {
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
+        "multipleSelectQuestionOptionScores" : [ null, null ],
         "markedNA" : true,
         "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
@@ -11809,6 +11862,7 @@ open class QualityAPI {
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
+        "multipleSelectQuestionOptionScores" : [ null, null ],
         "markedNA" : true,
         "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
@@ -11836,6 +11890,7 @@ open class QualityAPI {
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
+        "multipleSelectQuestionOptionScores" : [ null, null ],
         "markedNA" : true,
         "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
@@ -11846,6 +11901,7 @@ open class QualityAPI {
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
+        "multipleSelectQuestionOptionScores" : [ null, null ],
         "markedNA" : true,
         "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
@@ -13398,6 +13454,7 @@ open class QualityAPI {
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
+          "multipleSelectQuestionOptionScores" : [ null, null ],
           "markedNA" : true,
           "aiAnswer" : "{}",
           "assistedAnswerId" : "assistedAnswerId"
@@ -13408,6 +13465,7 @@ open class QualityAPI {
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
+          "multipleSelectQuestionOptionScores" : [ null, null ],
           "markedNA" : true,
           "aiAnswer" : "{}",
           "assistedAnswerId" : "assistedAnswerId"
@@ -13435,6 +13493,7 @@ open class QualityAPI {
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
+          "multipleSelectQuestionOptionScores" : [ null, null ],
           "markedNA" : true,
           "aiAnswer" : "{}",
           "assistedAnswerId" : "assistedAnswerId"
@@ -13445,6 +13504,7 @@ open class QualityAPI {
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
+          "multipleSelectQuestionOptionScores" : [ null, null ],
           "markedNA" : true,
           "aiAnswer" : "{}",
           "assistedAnswerId" : "assistedAnswerId"
@@ -15003,6 +15063,7 @@ open class QualityAPI {
           "questions" : [ {
             "helpText" : "helpText",
             "commentsRequired" : true,
+            "multipleSelectOptionQuestions" : [ null, null ],
             "visibilityCondition" : {
               "combiningOperation" : "AND",
               "predicates" : [ "{}", "{}" ]
@@ -15015,6 +15076,7 @@ open class QualityAPI {
             "isKill" : true,
             "naEnabled" : true,
             "answerOptions" : [ {
+              "builtInType" : "Selected",
               "id" : "id",
               "text" : "text",
               "value" : 1,
@@ -15026,6 +15088,7 @@ open class QualityAPI {
                 "operator" : "EXISTS"
               } ]
             }, {
+              "builtInType" : "Selected",
               "id" : "id",
               "text" : "text",
               "value" : 1,
@@ -15040,6 +15103,7 @@ open class QualityAPI {
           }, {
             "helpText" : "helpText",
             "commentsRequired" : true,
+            "multipleSelectOptionQuestions" : [ null, null ],
             "visibilityCondition" : {
               "combiningOperation" : "AND",
               "predicates" : [ "{}", "{}" ]
@@ -15052,6 +15116,7 @@ open class QualityAPI {
             "isKill" : true,
             "naEnabled" : true,
             "answerOptions" : [ {
+              "builtInType" : "Selected",
               "id" : "id",
               "text" : "text",
               "value" : 1,
@@ -15063,6 +15128,7 @@ open class QualityAPI {
                 "operator" : "EXISTS"
               } ]
             }, {
+              "builtInType" : "Selected",
               "id" : "id",
               "text" : "text",
               "value" : 1,
@@ -15092,6 +15158,7 @@ open class QualityAPI {
           "questions" : [ {
             "helpText" : "helpText",
             "commentsRequired" : true,
+            "multipleSelectOptionQuestions" : [ null, null ],
             "visibilityCondition" : {
               "combiningOperation" : "AND",
               "predicates" : [ "{}", "{}" ]
@@ -15104,6 +15171,7 @@ open class QualityAPI {
             "isKill" : true,
             "naEnabled" : true,
             "answerOptions" : [ {
+              "builtInType" : "Selected",
               "id" : "id",
               "text" : "text",
               "value" : 1,
@@ -15115,6 +15183,7 @@ open class QualityAPI {
                 "operator" : "EXISTS"
               } ]
             }, {
+              "builtInType" : "Selected",
               "id" : "id",
               "text" : "text",
               "value" : 1,
@@ -15129,6 +15198,7 @@ open class QualityAPI {
           }, {
             "helpText" : "helpText",
             "commentsRequired" : true,
+            "multipleSelectOptionQuestions" : [ null, null ],
             "visibilityCondition" : {
               "combiningOperation" : "AND",
               "predicates" : [ "{}", "{}" ]
@@ -15141,6 +15211,7 @@ open class QualityAPI {
             "isKill" : true,
             "naEnabled" : true,
             "answerOptions" : [ {
+              "builtInType" : "Selected",
               "id" : "id",
               "text" : "text",
               "value" : 1,
@@ -15152,6 +15223,7 @@ open class QualityAPI {
                 "operator" : "EXISTS"
               } ]
             }, {
+              "builtInType" : "Selected",
               "id" : "id",
               "text" : "text",
               "value" : 1,
@@ -16213,6 +16285,7 @@ open class QualityAPI {
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
+          "multipleSelectQuestionOptionScores" : [ null, null ],
           "markedNA" : true,
           "aiAnswer" : "{}",
           "assistedAnswerId" : "assistedAnswerId"
@@ -16223,6 +16296,7 @@ open class QualityAPI {
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
+          "multipleSelectQuestionOptionScores" : [ null, null ],
           "markedNA" : true,
           "aiAnswer" : "{}",
           "assistedAnswerId" : "assistedAnswerId"
@@ -16250,6 +16324,7 @@ open class QualityAPI {
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
+          "multipleSelectQuestionOptionScores" : [ null, null ],
           "markedNA" : true,
           "aiAnswer" : "{}",
           "assistedAnswerId" : "assistedAnswerId"
@@ -16260,6 +16335,7 @@ open class QualityAPI {
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
+          "multipleSelectQuestionOptionScores" : [ null, null ],
           "markedNA" : true,
           "aiAnswer" : "{}",
           "assistedAnswerId" : "assistedAnswerId"
@@ -17818,6 +17894,7 @@ open class QualityAPI {
           "questions" : [ {
             "helpText" : "helpText",
             "commentsRequired" : true,
+            "multipleSelectOptionQuestions" : [ null, null ],
             "visibilityCondition" : {
               "combiningOperation" : "AND",
               "predicates" : [ "{}", "{}" ]
@@ -17830,6 +17907,7 @@ open class QualityAPI {
             "isKill" : true,
             "naEnabled" : true,
             "answerOptions" : [ {
+              "builtInType" : "Selected",
               "id" : "id",
               "text" : "text",
               "value" : 1,
@@ -17841,6 +17919,7 @@ open class QualityAPI {
                 "operator" : "EXISTS"
               } ]
             }, {
+              "builtInType" : "Selected",
               "id" : "id",
               "text" : "text",
               "value" : 1,
@@ -17855,6 +17934,7 @@ open class QualityAPI {
           }, {
             "helpText" : "helpText",
             "commentsRequired" : true,
+            "multipleSelectOptionQuestions" : [ null, null ],
             "visibilityCondition" : {
               "combiningOperation" : "AND",
               "predicates" : [ "{}", "{}" ]
@@ -17867,6 +17947,7 @@ open class QualityAPI {
             "isKill" : true,
             "naEnabled" : true,
             "answerOptions" : [ {
+              "builtInType" : "Selected",
               "id" : "id",
               "text" : "text",
               "value" : 1,
@@ -17878,6 +17959,7 @@ open class QualityAPI {
                 "operator" : "EXISTS"
               } ]
             }, {
+              "builtInType" : "Selected",
               "id" : "id",
               "text" : "text",
               "value" : 1,
@@ -17907,6 +17989,7 @@ open class QualityAPI {
           "questions" : [ {
             "helpText" : "helpText",
             "commentsRequired" : true,
+            "multipleSelectOptionQuestions" : [ null, null ],
             "visibilityCondition" : {
               "combiningOperation" : "AND",
               "predicates" : [ "{}", "{}" ]
@@ -17919,6 +18002,7 @@ open class QualityAPI {
             "isKill" : true,
             "naEnabled" : true,
             "answerOptions" : [ {
+              "builtInType" : "Selected",
               "id" : "id",
               "text" : "text",
               "value" : 1,
@@ -17930,6 +18014,7 @@ open class QualityAPI {
                 "operator" : "EXISTS"
               } ]
             }, {
+              "builtInType" : "Selected",
               "id" : "id",
               "text" : "text",
               "value" : 1,
@@ -17944,6 +18029,7 @@ open class QualityAPI {
           }, {
             "helpText" : "helpText",
             "commentsRequired" : true,
+            "multipleSelectOptionQuestions" : [ null, null ],
             "visibilityCondition" : {
               "combiningOperation" : "AND",
               "predicates" : [ "{}", "{}" ]
@@ -17956,6 +18042,7 @@ open class QualityAPI {
             "isKill" : true,
             "naEnabled" : true,
             "answerOptions" : [ {
+              "builtInType" : "Selected",
               "id" : "id",
               "text" : "text",
               "value" : 1,
@@ -17967,6 +18054,7 @@ open class QualityAPI {
                 "operator" : "EXISTS"
               } ]
             }, {
+              "builtInType" : "Selected",
               "id" : "id",
               "text" : "text",
               "value" : 1,
@@ -19557,6 +19645,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -19569,6 +19658,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -19580,6 +19670,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -19594,6 +19685,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -19606,6 +19698,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -19617,6 +19710,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -19646,6 +19740,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -19658,6 +19753,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -19669,6 +19765,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -19683,6 +19780,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -19695,6 +19793,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -19706,6 +19805,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -19810,6 +19910,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -19822,6 +19923,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -19833,6 +19935,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -19847,6 +19950,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -19859,6 +19963,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -19870,6 +19975,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -19899,6 +20005,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -19911,6 +20018,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -19922,6 +20030,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -19936,6 +20045,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -19948,6 +20058,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -19959,6 +20070,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20000,6 +20112,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -20012,6 +20125,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20023,6 +20137,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20037,6 +20152,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -20049,6 +20165,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20060,6 +20177,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20089,6 +20207,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -20101,6 +20220,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20112,6 +20232,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20126,6 +20247,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -20138,6 +20260,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20149,6 +20272,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20285,6 +20409,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -20297,6 +20422,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20308,6 +20434,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20322,6 +20449,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -20334,6 +20462,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20345,6 +20474,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20374,6 +20504,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -20386,6 +20517,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20397,6 +20529,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20411,6 +20544,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -20423,6 +20557,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20434,6 +20569,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20475,6 +20611,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -20487,6 +20624,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20498,6 +20636,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20512,6 +20651,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -20524,6 +20664,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20535,6 +20676,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20564,6 +20706,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -20576,6 +20719,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20587,6 +20731,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20601,6 +20746,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -20613,6 +20759,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20624,6 +20771,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -20739,6 +20887,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -20751,6 +20900,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -20762,6 +20912,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -20776,6 +20927,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -20788,6 +20940,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -20799,6 +20952,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -20828,6 +20982,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -20840,6 +20995,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -20851,6 +21007,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -20865,6 +21022,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -20877,6 +21035,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -20888,6 +21047,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -20995,6 +21155,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -21007,6 +21168,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21018,6 +21180,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21032,6 +21195,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -21044,6 +21208,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21055,6 +21220,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21084,6 +21250,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -21096,6 +21263,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21107,6 +21275,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21121,6 +21290,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -21133,6 +21303,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21144,6 +21315,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21185,6 +21357,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -21197,6 +21370,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21208,6 +21382,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21222,6 +21397,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -21234,6 +21410,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21245,6 +21422,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21274,6 +21452,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -21286,6 +21465,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21297,6 +21477,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21311,6 +21492,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -21323,6 +21505,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21334,6 +21517,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21473,6 +21657,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -21485,6 +21670,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21496,6 +21682,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21510,6 +21697,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -21522,6 +21710,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21533,6 +21722,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21562,6 +21752,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -21574,6 +21765,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21585,6 +21777,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21599,6 +21792,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -21611,6 +21805,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21622,6 +21817,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21663,6 +21859,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -21675,6 +21872,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21686,6 +21884,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21700,6 +21899,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -21712,6 +21912,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21723,6 +21924,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21752,6 +21954,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -21764,6 +21967,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21775,6 +21979,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21789,6 +21994,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -21801,6 +22007,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21812,6 +22019,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -21927,6 +22135,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -21939,6 +22148,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -21950,6 +22160,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -21964,6 +22175,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -21976,6 +22188,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -21987,6 +22200,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -22016,6 +22230,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -22028,6 +22243,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -22039,6 +22255,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -22053,6 +22270,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -22065,6 +22283,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -22076,6 +22295,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -22179,6 +22399,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -22190,6 +22411,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -22214,6 +22436,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -22225,6 +22448,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -22259,6 +22483,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -22270,6 +22495,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -22294,6 +22520,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -22305,6 +22532,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -22415,6 +22643,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22426,6 +22655,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22450,6 +22680,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22461,6 +22692,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22495,6 +22727,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22506,6 +22739,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22530,6 +22764,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22541,6 +22776,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22588,6 +22824,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22599,6 +22836,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22623,6 +22861,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22634,6 +22873,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22668,6 +22908,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22679,6 +22920,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22703,6 +22945,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22714,6 +22957,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22856,6 +23100,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22867,6 +23112,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22891,6 +23137,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22902,6 +23149,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22936,6 +23184,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22947,6 +23196,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22971,6 +23221,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -22982,6 +23233,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23029,6 +23281,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23040,6 +23293,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23064,6 +23318,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23075,6 +23330,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23109,6 +23365,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23120,6 +23377,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23144,6 +23402,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23155,6 +23414,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23280,6 +23540,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23291,6 +23552,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23315,6 +23577,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23326,6 +23589,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23360,6 +23624,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23371,6 +23636,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23395,6 +23661,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23406,6 +23673,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23453,6 +23721,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23464,6 +23733,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23488,6 +23758,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23499,6 +23770,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23533,6 +23805,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23544,6 +23817,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23568,6 +23842,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23579,6 +23854,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -23689,6 +23965,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -23700,6 +23977,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -23724,6 +24002,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -23735,6 +24014,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -23769,6 +24049,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -23780,6 +24061,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -23804,6 +24086,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -23815,6 +24098,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -23908,6 +24192,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -23920,6 +24205,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -23931,6 +24217,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -23945,6 +24232,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -23957,6 +24245,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -23968,6 +24257,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -23997,6 +24287,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -24009,6 +24300,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -24020,6 +24312,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -24034,6 +24327,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -24046,6 +24340,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -24057,6 +24352,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -24164,6 +24460,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -24176,6 +24473,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24187,6 +24485,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24201,6 +24500,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -24213,6 +24513,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24224,6 +24525,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24253,6 +24555,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -24265,6 +24568,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24276,6 +24580,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24290,6 +24595,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -24302,6 +24608,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24313,6 +24620,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24354,6 +24662,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -24366,6 +24675,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24377,6 +24687,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24391,6 +24702,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -24403,6 +24715,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24414,6 +24727,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24443,6 +24757,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -24455,6 +24770,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24466,6 +24782,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24480,6 +24797,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -24492,6 +24810,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24503,6 +24822,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24610,6 +24930,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -24622,6 +24943,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -24633,6 +24955,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -24647,6 +24970,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -24659,6 +24983,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -24670,6 +24995,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -24699,6 +25025,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -24711,6 +25038,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -24722,6 +25050,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -24736,6 +25065,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -24748,6 +25078,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -24759,6 +25090,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -24866,6 +25198,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -24878,6 +25211,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24889,6 +25223,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24903,6 +25238,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -24915,6 +25251,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24926,6 +25263,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24955,6 +25293,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -24967,6 +25306,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24978,6 +25318,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -24992,6 +25333,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -25004,6 +25346,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25015,6 +25358,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25056,6 +25400,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -25068,6 +25413,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25079,6 +25425,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25093,6 +25440,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -25105,6 +25453,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25116,6 +25465,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25145,6 +25495,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -25157,6 +25508,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25168,6 +25520,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25182,6 +25535,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -25194,6 +25548,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25205,6 +25560,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25321,6 +25677,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -25332,6 +25689,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -25356,6 +25714,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -25367,6 +25726,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -25401,6 +25761,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -25412,6 +25773,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -25436,6 +25798,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -25447,6 +25810,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -25560,6 +25924,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25571,6 +25936,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25595,6 +25961,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25606,6 +25973,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25640,6 +26008,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25651,6 +26020,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25675,6 +26045,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25686,6 +26057,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25733,6 +26105,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25744,6 +26117,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25768,6 +26142,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25779,6 +26154,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25813,6 +26189,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25824,6 +26201,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25848,6 +26226,7 @@ open class QualityAPI {
         "maxResponseCharacters" : 0,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -25859,6 +26238,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -26227,6 +26607,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -26238,6 +26619,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -26262,6 +26644,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -26273,6 +26656,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -26307,6 +26691,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -26318,6 +26703,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -26342,6 +26728,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -26353,6 +26740,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -28683,6 +29071,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -28695,6 +29084,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -28706,6 +29096,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -28720,6 +29111,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -28732,6 +29124,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -28743,6 +29136,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -28772,6 +29166,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -28784,6 +29179,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -28795,6 +29191,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -28809,6 +29206,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -28821,6 +29219,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -28832,6 +29231,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -29234,6 +29634,7 @@ open class QualityAPI {
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
+        "multipleSelectQuestionOptionScores" : [ null, null ],
         "markedNA" : true,
         "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
@@ -29244,6 +29645,7 @@ open class QualityAPI {
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
+        "multipleSelectQuestionOptionScores" : [ null, null ],
         "markedNA" : true,
         "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
@@ -29271,6 +29673,7 @@ open class QualityAPI {
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
+        "multipleSelectQuestionOptionScores" : [ null, null ],
         "markedNA" : true,
         "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
@@ -29281,6 +29684,7 @@ open class QualityAPI {
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
+        "multipleSelectQuestionOptionScores" : [ null, null ],
         "markedNA" : true,
         "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
@@ -30839,6 +31243,7 @@ open class QualityAPI {
         "questions" : [ {
           "helpText" : "helpText",
           "commentsRequired" : true,
+          "multipleSelectOptionQuestions" : [ null, null ],
           "visibilityCondition" : {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
@@ -30851,6 +31256,7 @@ open class QualityAPI {
           "isKill" : true,
           "naEnabled" : true,
           "answerOptions" : [ {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -30862,6 +31268,7 @@ open class QualityAPI {
               "operator" : "EXISTS"
             } ]
           }, {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -30876,6 +31283,7 @@ open class QualityAPI {
         }, {
           "helpText" : "helpText",
           "commentsRequired" : true,
+          "multipleSelectOptionQuestions" : [ null, null ],
           "visibilityCondition" : {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
@@ -30888,6 +31296,7 @@ open class QualityAPI {
           "isKill" : true,
           "naEnabled" : true,
           "answerOptions" : [ {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -30899,6 +31308,7 @@ open class QualityAPI {
               "operator" : "EXISTS"
             } ]
           }, {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -30928,6 +31338,7 @@ open class QualityAPI {
         "questions" : [ {
           "helpText" : "helpText",
           "commentsRequired" : true,
+          "multipleSelectOptionQuestions" : [ null, null ],
           "visibilityCondition" : {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
@@ -30940,6 +31351,7 @@ open class QualityAPI {
           "isKill" : true,
           "naEnabled" : true,
           "answerOptions" : [ {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -30951,6 +31363,7 @@ open class QualityAPI {
               "operator" : "EXISTS"
             } ]
           }, {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -30965,6 +31378,7 @@ open class QualityAPI {
         }, {
           "helpText" : "helpText",
           "commentsRequired" : true,
+          "multipleSelectOptionQuestions" : [ null, null ],
           "visibilityCondition" : {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
@@ -30977,6 +31391,7 @@ open class QualityAPI {
           "isKill" : true,
           "naEnabled" : true,
           "answerOptions" : [ {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -30988,6 +31403,7 @@ open class QualityAPI {
               "operator" : "EXISTS"
             } ]
           }, {
+            "builtInType" : "Selected",
             "id" : "id",
             "text" : "text",
             "value" : 1,
@@ -32249,6 +32665,7 @@ open class QualityAPI {
       "questionId" : "questionId",
       "systemMarkedNA" : true,
       "comments" : "comments",
+      "multipleSelectQuestionOptionScores" : [ null, null ],
       "markedNA" : true,
       "aiAnswer" : "{}",
       "assistedAnswerId" : "assistedAnswerId"
@@ -32259,6 +32676,7 @@ open class QualityAPI {
       "questionId" : "questionId",
       "systemMarkedNA" : true,
       "comments" : "comments",
+      "multipleSelectQuestionOptionScores" : [ null, null ],
       "markedNA" : true,
       "aiAnswer" : "{}",
       "assistedAnswerId" : "assistedAnswerId"
@@ -32286,6 +32704,7 @@ open class QualityAPI {
       "questionId" : "questionId",
       "systemMarkedNA" : true,
       "comments" : "comments",
+      "multipleSelectQuestionOptionScores" : [ null, null ],
       "markedNA" : true,
       "aiAnswer" : "{}",
       "assistedAnswerId" : "assistedAnswerId"
@@ -32296,6 +32715,7 @@ open class QualityAPI {
       "questionId" : "questionId",
       "systemMarkedNA" : true,
       "comments" : "comments",
+      "multipleSelectQuestionOptionScores" : [ null, null ],
       "markedNA" : true,
       "aiAnswer" : "{}",
       "assistedAnswerId" : "assistedAnswerId"
@@ -32408,6 +32828,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -32420,6 +32841,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32431,6 +32853,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32445,6 +32868,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -32457,6 +32881,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32468,6 +32893,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32497,6 +32923,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -32509,6 +32936,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32520,6 +32948,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32534,6 +32963,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -32546,6 +32976,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32557,6 +32988,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32648,6 +33080,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -32660,6 +33093,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32671,6 +33105,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32685,6 +33120,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -32697,6 +33133,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32708,6 +33145,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32737,6 +33175,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -32749,6 +33188,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32760,6 +33200,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32774,6 +33215,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -32786,6 +33228,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32797,6 +33240,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32897,6 +33341,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32908,6 +33353,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32932,6 +33378,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32943,6 +33390,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32977,6 +33425,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -32988,6 +33437,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33012,6 +33462,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33023,6 +33474,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33111,6 +33563,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -33123,6 +33576,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33134,6 +33588,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33148,6 +33603,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -33160,6 +33616,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33171,6 +33628,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33200,6 +33658,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -33212,6 +33671,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33223,6 +33683,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33237,6 +33698,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -33249,6 +33711,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33260,6 +33723,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33351,6 +33815,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -33363,6 +33828,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33374,6 +33840,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33388,6 +33855,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -33400,6 +33868,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33411,6 +33880,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33440,6 +33910,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -33452,6 +33923,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33463,6 +33935,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33477,6 +33950,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -33489,6 +33963,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33500,6 +33975,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33600,6 +34076,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33611,6 +34088,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33635,6 +34113,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33646,6 +34125,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33680,6 +34160,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33691,6 +34172,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33715,6 +34197,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -33726,6 +34209,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -35412,6 +35896,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -35424,6 +35909,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -35435,6 +35921,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -35449,6 +35936,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -35461,6 +35949,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -35472,6 +35961,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -35501,6 +35991,7 @@ open class QualityAPI {
       "questions" : [ {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -35513,6 +36004,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -35524,6 +36016,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -35538,6 +36031,7 @@ open class QualityAPI {
       }, {
         "helpText" : "helpText",
         "commentsRequired" : true,
+        "multipleSelectOptionQuestions" : [ null, null ],
         "visibilityCondition" : {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
@@ -35550,6 +36044,7 @@ open class QualityAPI {
         "isKill" : true,
         "naEnabled" : true,
         "answerOptions" : [ {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -35561,6 +36056,7 @@ open class QualityAPI {
             "operator" : "EXISTS"
           } ]
         }, {
+          "builtInType" : "Selected",
           "id" : "id",
           "text" : "text",
           "value" : 1,
@@ -35967,6 +36463,7 @@ open class QualityAPI {
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
+        "multipleSelectQuestionOptionScores" : [ null, null ],
         "markedNA" : true,
         "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
@@ -35977,6 +36474,7 @@ open class QualityAPI {
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
+        "multipleSelectQuestionOptionScores" : [ null, null ],
         "markedNA" : true,
         "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
@@ -36004,6 +36502,7 @@ open class QualityAPI {
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
+        "multipleSelectQuestionOptionScores" : [ null, null ],
         "markedNA" : true,
         "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
@@ -36014,6 +36513,7 @@ open class QualityAPI {
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
+        "multipleSelectQuestionOptionScores" : [ null, null ],
         "markedNA" : true,
         "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
@@ -36866,6 +37366,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -36878,6 +37379,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -36889,6 +37391,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -36903,6 +37406,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -36915,6 +37419,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -36926,6 +37431,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -36955,6 +37461,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -36967,6 +37474,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -36978,6 +37486,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -36992,6 +37501,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -37004,6 +37514,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -37015,6 +37526,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -37113,6 +37625,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -37125,6 +37638,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -37136,6 +37650,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -37150,6 +37665,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -37162,6 +37678,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -37173,6 +37690,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -37202,6 +37720,7 @@ open class QualityAPI {
     "questions" : [ {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -37214,6 +37733,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -37225,6 +37745,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -37239,6 +37760,7 @@ open class QualityAPI {
     }, {
       "helpText" : "helpText",
       "commentsRequired" : true,
+      "multipleSelectOptionQuestions" : [ null, null ],
       "visibilityCondition" : {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
@@ -37251,6 +37773,7 @@ open class QualityAPI {
       "isKill" : true,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -37262,6 +37785,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -37456,6 +37980,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -37467,6 +37992,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -37491,6 +38017,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -37502,6 +38029,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -37536,6 +38064,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -37547,6 +38076,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -37571,6 +38101,7 @@ open class QualityAPI {
       "maxResponseCharacters" : 0,
       "naEnabled" : true,
       "answerOptions" : [ {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
@@ -37582,6 +38113,7 @@ open class QualityAPI {
           "operator" : "EXISTS"
         } ]
       }, {
+        "builtInType" : "Selected",
         "id" : "id",
         "text" : "text",
         "value" : 1,
