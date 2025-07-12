@@ -12,4 +12,4 @@ This resource contains all of the schemas needed to define the inputs and output
 
 
 
-_PureCloudPlatformClientV2@171.0.0_
+_PureCloudPlatformClientV2@172.0.0_

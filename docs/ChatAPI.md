@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteChatsRoomParticipant**](ChatAPI#deleteChatsRoomParticipant) | Remove a user from a room. |
 | [**deleteChatsUserMessage**](ChatAPI#deleteChatsUserMessage) | Delete a message to a user |
 | [**deleteChatsUserMessagesPin**](ChatAPI#deleteChatsUserMessagesPin) | Remove a pinned message from a 1on1 |
+| [**deleteChatsUsersMeSettings**](ChatAPI#deleteChatsUsersMeSettings) | Delete a user&#39;s chat settings |
 | [**getChatsMessage**](ChatAPI#getChatsMessage) | Get a message |
 | [**getChatsRoom**](ChatAPI#getChatsRoom) | Get a room |
 | [**getChatsRoomMessage**](ChatAPI#getChatsRoomMessage) | Get messages by id(s) from a room |
@@ -34,6 +35,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postChatsRooms**](ChatAPI#postChatsRooms) | Create an adhoc room |
 | [**postChatsUserMessages**](ChatAPI#postChatsUserMessages) | Send a message to a user |
 | [**postChatsUserMessagesPins**](ChatAPI#postChatsUserMessagesPins) | Add pinned messages for a 1on1, up to a maximum of 5 pinned messages |
+| [**postChatsUsersMeSettings**](ChatAPI#postChatsUsersMeSettings) | Create a user&#39;s chat settings |
 | [**putChatsMessageReactions**](ChatAPI#putChatsMessageReactions) | Update reactions to a message |
 | [**putChatsSettings**](ChatAPI#putChatsSettings) | Update Chat Settings. |
 {: class="table-striped"}
@@ -292,6 +294,50 @@ ChatAPI.deleteChatsUserMessagesPin(userId: userId, pinnedMessageId: pinnedMessag
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| userId | |
 | **pinnedMessageId** | **String**| pinnedMessageId | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteChatsUsersMeSettings
+
+
+
+> Void deleteChatsUsersMeSettings()
+
+Delete a user&#39;s chat settings
+
+
+
+Wraps DELETE /api/v2/chats/users/me/settings  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ChatAPI.deleteChatsUsersMeSettings() { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ChatAPI.deleteChatsUsersMeSettings was successful")
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
 
 
 ### Return type
@@ -1604,6 +1650,54 @@ ChatAPI.postChatsUserMessagesPins(userId: userId, body: body) { (error) in
 `nil` (empty response body)
 
 
+## postChatsUsersMeSettings
+
+
+
+> Void postChatsUsersMeSettings(body)
+
+Create a user&#39;s chat settings
+
+
+
+Wraps POST /api/v2/chats/users/me/settings  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: UserChatSettingsPost = new UserChatSettingsPost(...) // 
+
+// Code example
+ChatAPI.postChatsUsersMeSettings(body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ChatAPI.postChatsUsersMeSettings was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**UserChatSettingsPost**](UserChatSettingsPost)|  | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
 ## putChatsMessageReactions
 
 
@@ -1706,4 +1800,4 @@ ChatAPI.putChatsSettings(body: body) { (response, error) in
 [**ChatSettings**](ChatSettings)
 
 
-_PureCloudPlatformClientV2@171.0.0_
+_PureCloudPlatformClientV2@172.0.0_

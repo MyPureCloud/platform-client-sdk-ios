@@ -1228,7 +1228,7 @@ ExternalContactsAPI.getExternalcontactsContactsSchemaVersion(schemaId: schemaId,
 
 
 
-> [DataSchema](DataSchema) getExternalcontactsContactsSchemaVersions(schemaId)
+> [DataSchemaListing](DataSchemaListing) getExternalcontactsContactsSchemaVersions(schemaId)
 
 Get all versions of an external contact&#39;s schema
 
@@ -1271,7 +1271,7 @@ ExternalContactsAPI.getExternalcontactsContactsSchemaVersions(schemaId: schemaId
 
 ### Return type
 
-[**DataSchema**](DataSchema)
+[**DataSchemaListing**](DataSchemaListing)
 
 
 ## getExternalcontactsContactsSchemas
@@ -2502,7 +2502,7 @@ ExternalContactsAPI.getExternalcontactsOrganizationsSchemaVersion(schemaId: sche
 
 
 
-> [DataSchema](DataSchema) getExternalcontactsOrganizationsSchemaVersions(schemaId)
+> [DataSchemaListing](DataSchemaListing) getExternalcontactsOrganizationsSchemaVersions(schemaId)
 
 Get all versions of an external organization&#39;s schema
 
@@ -2545,7 +2545,7 @@ ExternalContactsAPI.getExternalcontactsOrganizationsSchemaVersions(schemaId: sch
 
 ### Return type
 
-[**DataSchema**](DataSchema)
+[**DataSchemaListing**](DataSchemaListing)
 
 
 ## getExternalcontactsOrganizationsSchemas
@@ -6263,4 +6263,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@171.0.0_
+_PureCloudPlatformClientV2@172.0.0_

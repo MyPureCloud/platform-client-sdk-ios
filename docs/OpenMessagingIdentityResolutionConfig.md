@@ -9,9 +9,9 @@
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **division** | [**WritableStarrableDivision**](WritableStarrableDivision) | The division to which this entity belongs. | [optional] |
 | **resolveIdentities** | **Bool** | Whether the channel should resolve identities | |
-| **externalSource** | [**AddressableEntityRef**](AddressableEntityRef) | The external source used for stitching this channel - used only for Open Messaging. | [optional] |
+| **externalSource** | [**IdentityResolutionExternalSource**](IdentityResolutionExternalSource) | The external source used for stitching this channel. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@171.0.0_
+_PureCloudPlatformClientV2@172.0.0_

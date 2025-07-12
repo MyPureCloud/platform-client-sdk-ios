@@ -18,4 +18,4 @@ Learning module inform steps request
 
 
 
-_PureCloudPlatformClientV2@171.0.0_
+_PureCloudPlatformClientV2@172.0.0_

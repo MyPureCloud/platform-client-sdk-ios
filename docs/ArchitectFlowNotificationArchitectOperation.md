@@ -20,4 +20,4 @@ Describes an operation being performed on an Architect object
 
 
 
-_PureCloudPlatformClientV2@171.0.0_
+_PureCloudPlatformClientV2@172.0.0_

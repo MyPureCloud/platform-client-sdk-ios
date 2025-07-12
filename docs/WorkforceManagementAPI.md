@@ -119,6 +119,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementSchedulingjob**](WorkforceManagementAPI#getWorkforcemanagementSchedulingjob) | Get status of the scheduling job |
 | [**getWorkforcemanagementShifttrades**](WorkforceManagementAPI#getWorkforcemanagementShifttrades) | Gets all of my shift trades |
 | [**getWorkforcemanagementShrinkageJob**](WorkforceManagementAPI#getWorkforcemanagementShrinkageJob) | Request to fetch the status of the historical shrinkage query |
+| [**getWorkforcemanagementTeamAdherence**](WorkforceManagementAPI#getWorkforcemanagementTeamAdherence) | Get a list of user schedule adherence records for the requested team |
 | [**getWorkforcemanagementTimeoffbalanceJob**](WorkforceManagementAPI#getWorkforcemanagementTimeoffbalanceJob) | Query the results of time off types job |
 | [**getWorkforcemanagementTimeoffrequest**](WorkforceManagementAPI#getWorkforcemanagementTimeoffrequest) | Get a time off request for the current user |
 | [**getWorkforcemanagementTimeoffrequestWaitlistpositions**](WorkforceManagementAPI#getWorkforcemanagementTimeoffrequestWaitlistpositions) | Get the daily waitlist positions of a time off request for the current user |
@@ -6567,6 +6568,56 @@ WorkforceManagementAPI.getWorkforcemanagementShrinkageJob(jobId: jobId) { (respo
 ### Return type
 
 [**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse)
+
+
+## getWorkforcemanagementTeamAdherence
+
+
+
+> [UserScheduleAdherenceListing](UserScheduleAdherenceListing) getWorkforcemanagementTeamAdherence(teamId)
+
+Get a list of user schedule adherence records for the requested team
+
+
+
+Wraps GET /api/v2/workforcemanagement/teams/{teamId}/adherence  
+
+Requires ANY permissions: 
+
+* wfm:realtimeAdherence:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let teamId: String = "" // The ID of the team
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementTeamAdherence(teamId: teamId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementTeamAdherence was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **teamId** | **String**| The ID of the team | |
+
+
+### Return type
+
+[**UserScheduleAdherenceListing**](UserScheduleAdherenceListing)
 
 
 ## getWorkforcemanagementTimeoffbalanceJob
@@ -13210,4 +13261,4 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatformClientV2@171.0.0_
+_PureCloudPlatformClientV2@172.0.0_
