@@ -505,7 +505,7 @@ ChatAPI.getChatsRoomMessage(roomJid: roomJid, messageIds: messageIds) { (respons
 
 
 
-> [ChatMessageEntityListing](ChatMessageEntityListing) getChatsRoomMessages(roomJid, limit, before, after)
+> [ChatMessageEntityListing](ChatMessageEntityListing) getChatsRoomMessages(roomJid, limit, before, after, excludeMetadata)
 
 Get a room&#39;s message history
 
@@ -530,9 +530,10 @@ let roomJid: String = "" // roomJid
 let limit: String = "" // The maximum number of messages to retrieve
 let before: String = "" // The cutoff date for messages to retrieve
 let after: String = "" // The beginning date for messages to retrieve
+let excludeMetadata: Bool = true // Whether to exclude metadata for messages
 
 // Code example
-ChatAPI.getChatsRoomMessages(roomJid: roomJid, limit: limit, before: before, after: after) { (response, error) in
+ChatAPI.getChatsRoomMessages(roomJid: roomJid, limit: limit, before: before, after: after, excludeMetadata: excludeMetadata) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -551,6 +552,7 @@ ChatAPI.getChatsRoomMessages(roomJid: roomJid, limit: limit, before: before, aft
 | **limit** | **String**| The maximum number of messages to retrieve | [optional] |
 | **before** | **String**| The cutoff date for messages to retrieve | [optional] |
 | **after** | **String**| The beginning date for messages to retrieve | [optional] |
+| **excludeMetadata** | **Bool**| Whether to exclude metadata for messages | [optional] |
 
 
 ### Return type
@@ -713,7 +715,7 @@ This endpoint does not require any parameters.
 
 
 
-> [ChatMessageEntityListing](ChatMessageEntityListing) getChatsThreadMessages(threadId, limit, before, after)
+> [ChatMessageEntityListing](ChatMessageEntityListing) getChatsThreadMessages(threadId, limit, before, after, excludeMetadata)
 
 Get history by thread
 
@@ -738,9 +740,10 @@ let threadId: String = "" // threadId
 let limit: String = "" // The maximum number of messages to retrieve
 let before: String = "" // The cutoff date for messages to retrieve
 let after: String = "" // The beginning date for messages to retrieve
+let excludeMetadata: Bool = true // Whether to exclude metadata for messages
 
 // Code example
-ChatAPI.getChatsThreadMessages(threadId: threadId, limit: limit, before: before, after: after) { (response, error) in
+ChatAPI.getChatsThreadMessages(threadId: threadId, limit: limit, before: before, after: after, excludeMetadata: excludeMetadata) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -759,6 +762,7 @@ ChatAPI.getChatsThreadMessages(threadId: threadId, limit: limit, before: before,
 | **limit** | **String**| The maximum number of messages to retrieve | [optional] |
 | **before** | **String**| The cutoff date for messages to retrieve | [optional] |
 | **after** | **String**| The beginning date for messages to retrieve | [optional] |
+| **excludeMetadata** | **Bool**| Whether to exclude metadata for messages | [optional] |
 
 
 ### Return type
@@ -874,7 +878,7 @@ ChatAPI.getChatsUserMessage(userId: userId, messageIds: messageIds) { (response,
 
 
 
-> [ChatMessageResponse](ChatMessageResponse) getChatsUserMessages(userId, limit, before, after)
+> [ChatMessageResponse](ChatMessageResponse) getChatsUserMessages(userId, limit, before, after, excludeMetadata)
 
 Get 1on1 History between a user
 
@@ -899,9 +903,10 @@ let userId: String = "" // userId
 let limit: String = "" // The maximum number of messages to retrieve
 let before: String = "" // The cutoff date for messages to retrieve
 let after: String = "" // The beginning date for messages to retrieve
+let excludeMetadata: Bool = true // Whether to exclude metadata for messages
 
 // Code example
-ChatAPI.getChatsUserMessages(userId: userId, limit: limit, before: before, after: after) { (response, error) in
+ChatAPI.getChatsUserMessages(userId: userId, limit: limit, before: before, after: after, excludeMetadata: excludeMetadata) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -920,6 +925,7 @@ ChatAPI.getChatsUserMessages(userId: userId, limit: limit, before: before, after
 | **limit** | **String**| The maximum number of messages to retrieve | [optional] |
 | **before** | **String**| The cutoff date for messages to retrieve | [optional] |
 | **after** | **String**| The beginning date for messages to retrieve | [optional] |
+| **excludeMetadata** | **Bool**| Whether to exclude metadata for messages | [optional] |
 
 
 ### Return type
@@ -1800,4 +1806,4 @@ ChatAPI.putChatsSettings(body: body) { (response, error) in
 [**ChatSettings**](ChatSettings)
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

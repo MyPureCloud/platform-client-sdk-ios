@@ -7,9 +7,9 @@ Notification settings that handles messenger notifications
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **enabled** | **Bool** | The toggle to enable or disable notifications | [optional] |
+| **enabled** | **Bool** | The toggle to enable or disable notifications. When enabled, PushNotificationTitle and PushNotificationBody localization keys are required. | [optional] |
 | **notificationContentType** | **String** | The notification content type settings for messenger | [optional] |
 
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

@@ -14,7 +14,8 @@
 | **targetContactListIds** | **[String]** | The ids for target contact lists | [optional] |
 | **listNamePrefix** | **String** | The prefix used for target contact list names | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
+| **getAdditionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

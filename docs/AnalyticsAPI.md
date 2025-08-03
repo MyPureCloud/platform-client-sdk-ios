@@ -37,7 +37,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsConversationsAggregatesQuery**](AnalyticsAPI#postAnalyticsConversationsAggregatesQuery) | Query for conversation aggregates |
 | [**postAnalyticsConversationsDetailsJobs**](AnalyticsAPI#postAnalyticsConversationsDetailsJobs) | Query for conversation details asynchronously |
 | [**postAnalyticsConversationsDetailsQuery**](AnalyticsAPI#postAnalyticsConversationsDetailsQuery) | Query for conversation details |
-| [**postAnalyticsConversationsTranscriptsQuery**](AnalyticsAPI#postAnalyticsConversationsTranscriptsQuery) | Search resources. |
 | [**postAnalyticsEvaluationsAggregatesQuery**](AnalyticsAPI#postAnalyticsEvaluationsAggregatesQuery) | Query for evaluation aggregates |
 | [**postAnalyticsFlowexecutionsAggregatesQuery**](AnalyticsAPI#postAnalyticsFlowexecutionsAggregatesQuery) | Query for flow execution aggregates |
 | [**postAnalyticsFlowsActivityQuery**](AnalyticsAPI#postAnalyticsFlowsActivityQuery) | Query for flow activity observations |
@@ -1798,56 +1797,6 @@ AnalyticsAPI.postAnalyticsConversationsDetailsQuery(body: body) { (response, err
 [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse)
 
 
-## postAnalyticsConversationsTranscriptsQuery
-
-
-
-> [AnalyticsConversationWithoutAttributesMultiGetResponse](AnalyticsConversationWithoutAttributesMultiGetResponse) postAnalyticsConversationsTranscriptsQuery(body)
-
-Search resources.
-
-
-
-Wraps POST /api/v2/analytics/conversations/transcripts/query  
-
-Requires ANY permissions: 
-
-* analytics:conversationDetail:view
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let body: TranscriptConversationDetailSearchRequest = new TranscriptConversationDetailSearchRequest(...) // Search request options
-
-// Code example
-AnalyticsAPI.postAnalyticsConversationsTranscriptsQuery(body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("AnalyticsAPI.postAnalyticsConversationsTranscriptsQuery was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **body** | [**TranscriptConversationDetailSearchRequest**](TranscriptConversationDetailSearchRequest)| Search request options | |
-
-
-### Return type
-
-[**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse)
-
-
 ## postAnalyticsEvaluationsAggregatesQuery
 
 
@@ -3167,4 +3116,4 @@ AnalyticsAPI.putAnalyticsDataretentionSettings(body: body) { (response, error) i
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

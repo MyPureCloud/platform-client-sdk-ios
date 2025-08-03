@@ -6,6 +6,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteWorkforcemanagementBusinessunit**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunit) | Delete business unit |
 | [**deleteWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitActivitycode) | Deletes an activity code |
+| [**deleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory) | Delete staffing group allocations history created for a capacity plan before the given date |
 | [**deleteWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitPlanninggroup) | Deletes the planning group |
 | [**deleteWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitSchedulingRun) | Cancel a scheduling run |
 | [**deleteWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitServicegoaltemplate) | Delete a service goal template |
@@ -47,6 +48,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementBusinessunitAlternativeshiftsSettings**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAlternativeshiftsSettings) | Get alternative shifts settings for a business unit |
 | [**getWorkforcemanagementBusinessunitAlternativeshiftsTrade**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAlternativeshiftsTrade) | Get an alternative shifts trade in a business unit for a given trade ID |
 | [**getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob) | Query the status of an alternative shift search trade operation. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementBusinessunitCapacityplan**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitCapacityplan) | Get a capacity plan |
+| [**getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations) | Get a capacity plan&#39;s staffing group allocations |
+| [**getWorkforcemanagementBusinessunitCapacityplanStaffingrequirements**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitCapacityplanStaffingrequirements) | Get a capacity plan&#39;s staffing requirements |
+| [**getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast) | Get the latest long term staffing requirements for a business unit |
+| [**getWorkforcemanagementBusinessunitCapacityplans**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitCapacityplans) | Get list of capacity plans for a business unit |
 | [**getWorkforcemanagementBusinessunitIntradayPlanninggroups**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitIntradayPlanninggroups) | Get intraday planning groups for the given date |
 | [**getWorkforcemanagementBusinessunitManagementunits**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitManagementunits) | Get all authorized management units in the business unit |
 | [**getWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitPlanninggroup) | Get a planning group |
@@ -135,6 +141,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitActivitycode) | Update an activity code |
 | [**patchWorkforcemanagementBusinessunitActivityplan**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitActivityplan) | Update an activity plan |
 | [**patchWorkforcemanagementBusinessunitAlternativeshiftsSettings**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitAlternativeshiftsSettings) | Update alternative shifts settings for a business unit |
+| [**patchWorkforcemanagementBusinessunitCapacityplan**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitCapacityplan) | Update a capacity plan configuration |
 | [**patchWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitPlanninggroup) | Updates the planning group |
 | [**patchWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitSchedulingRun) | Mark a schedule run as applied |
 | [**patchWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitServicegoaltemplate) | Updates a service goal template |
@@ -176,10 +183,18 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementBusinessunitAdherenceExplanationsQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitAdherenceExplanationsQuery) | Query adherence explanations across an entire business unit for the requested period |
 | [**postWorkforcemanagementBusinessunitAgentschedulesSearch**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitAgentschedulesSearch) | Search published schedules |
 | [**postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch) | List alternative shifts trades for a given management unit or agent |
+| [**postWorkforcemanagementBusinessunitCapacityplanCopy**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitCapacityplanCopy) | Copy a capacity plan |
+| [**postWorkforcemanagementBusinessunitCapacityplanRequirementGenerate**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitCapacityplanRequirementGenerate) | Regenerate requirements for capacity plan |
+| [**postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations) | Create staffing group allocations for a capacity plan |
+| [**postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQuery) | Query staffing groups allocations history for a capacity plan |
+| [**postWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate) | Force regenerate the latest long term staffing requirements for a business unit |
+| [**postWorkforcemanagementBusinessunitCapacityplans**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitCapacityplans) | Create a new capacity plan |
+| [**postWorkforcemanagementBusinessunitCapacityplansBulkRemove**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitCapacityplansBulkRemove) | Delete capacity plans in a business unit |
 | [**postWorkforcemanagementBusinessunitIntraday**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitIntraday) | Get intraday data for the given date for the requested planningGroupIds |
 | [**postWorkforcemanagementBusinessunitPlanninggroups**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitPlanninggroups) | Adds a new planning group |
 | [**postWorkforcemanagementBusinessunitServicegoaltemplates**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitServicegoaltemplates) | Adds a new service goal template |
 | [**postWorkforcemanagementBusinessunitStaffinggroups**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitStaffinggroups) | Creates a new staffing group |
+| [**postWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery) | Gets a list of planning group to staffing groups list association |
 | [**postWorkforcemanagementBusinessunitStaffinggroupsQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitStaffinggroupsQuery) | Gets staffing group associations for a list of user IDs |
 | [**postWorkforcemanagementBusinessunitTimeofflimits**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitTimeofflimits) | Creates a new time-off limit object |
 | [**postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery) | Retrieves time-off limit related values based on a given set of filters. |
@@ -343,6 +358,59 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitActivitycode(busines
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 | **activityCodeId** | **String**| The ID of the activity code to delete | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory
+
+
+
+> Void deleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory(businessUnitId, capacityPlanId, beforeDateId)
+
+Delete staffing group allocations history created for a capacity plan before the given date
+
+
+
+Wraps DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory  
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let capacityPlanId: String = "" // The ID of the capacity plan
+let beforeDateId: Date = new Date(...) // The date to delete records that are created on or before this date in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+// Code example
+WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId, beforeDateId: beforeDateId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **capacityPlanId** | **String**| The ID of the capacity plan | |
+| **beforeDateId** | **Date**| The date to delete records that are created on or before this date in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 
 
 ### Return type
@@ -1990,7 +2058,7 @@ WorkforceManagementAPI.getWorkforcemanagementAlternativeshiftsTradesStateJob(job
 
 
 
-> [BusinessUnitResponse](BusinessUnitResponse) getWorkforcemanagementBusinessunit(businessUnitId, expand)
+> [BusinessUnitResponse](BusinessUnitResponse) getWorkforcemanagementBusinessunit(businessUnitId, expand, includeSchedulingDefaultMessageSeverities)
 
 Get business unit
 
@@ -2084,9 +2152,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
 let expand: [String] = [""] // Include to access additional data on the business unit
+let includeSchedulingDefaultMessageSeverities: Bool = true // Whether to include scheduling default message severities
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementBusinessunit(businessUnitId: businessUnitId, expand: expand) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementBusinessunit(businessUnitId: businessUnitId, expand: expand, includeSchedulingDefaultMessageSeverities: includeSchedulingDefaultMessageSeverities) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2103,6 +2172,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunit(businessUnitId: busine
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 | **expand** | [**[String]**](String)| Include to access additional data on the business unit | [optional]<br />**Values**: settings ("settings"), settingsTimezone ("settings.timeZone"), settingsStartdayofweek ("settings.startDayOfWeek"), settingsShorttermforecasting ("settings.shortTermForecasting"), settingsScheduling ("settings.scheduling"), settingsNotificationsScheduling ("settings.notifications.scheduling"), settingsLearning ("settings.learning"), settingsCoaching ("settings.coaching") |
+| **includeSchedulingDefaultMessageSeverities** | **Bool**| Whether to include scheduling default message severities | [optional] |
 
 
 ### Return type
@@ -2634,6 +2704,266 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitAlternativeshiftsTrades
 ### Return type
 
 [**BuAlternativeShiftJobResponse**](BuAlternativeShiftJobResponse)
+
+
+## getWorkforcemanagementBusinessunitCapacityplan
+
+
+
+> [CapacityPlanResponse](CapacityPlanResponse) getWorkforcemanagementBusinessunitCapacityplan(businessUnitId, capacityPlanId)
+
+Get a capacity plan
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}  
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let capacityPlanId: String = "" // The ID of the capacity plan
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplan(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplan was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **capacityPlanId** | **String**| The ID of the capacity plan | |
+
+
+### Return type
+
+[**CapacityPlanResponse**](CapacityPlanResponse)
+
+
+## getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations
+
+
+
+> [CapacityPlanStaffingGroupAllocationsResponse](CapacityPlanStaffingGroupAllocationsResponse) getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations(businessUnitId, capacityPlanId)
+
+Get a capacity plan&#39;s staffing group allocations
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations  
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let capacityPlanId: String = "" // The ID of the capacity plan
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **capacityPlanId** | **String**| The ID of the capacity plan | |
+
+
+### Return type
+
+[**CapacityPlanStaffingGroupAllocationsResponse**](CapacityPlanStaffingGroupAllocationsResponse)
+
+
+## getWorkforcemanagementBusinessunitCapacityplanStaffingrequirements
+
+
+
+> [CapacityPlanStaffingRequirementResult](CapacityPlanStaffingRequirementResult) getWorkforcemanagementBusinessunitCapacityplanStaffingrequirements(businessUnitId, capacityPlanId)
+
+Get a capacity plan&#39;s staffing requirements
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffingrequirements  
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let capacityPlanId: String = "" // The ID of the capacity plan
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplanStaffingrequirements(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplanStaffingrequirements was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **capacityPlanId** | **String**| The ID of the capacity plan | |
+
+
+### Return type
+
+[**CapacityPlanStaffingRequirementResult**](CapacityPlanStaffingRequirementResult)
+
+
+## getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast
+
+
+
+> [LongTermRequirementsResponse](LongTermRequirementsResponse) getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast(businessUnitId, weekDateId, forecastId)
+
+Get the latest long term staffing requirements for a business unit
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}  
+
+Requires ANY permissions: 
+
+* wfm:longTermStaffing:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // 
+let weekDateId: Date = new Date(...) // weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let forecastId: String = "" // forecastId of forecast
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**|  | |
+| **weekDateId** | **Date**| weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **forecastId** | **String**| forecastId of forecast | |
+
+
+### Return type
+
+[**LongTermRequirementsResponse**](LongTermRequirementsResponse)
+
+
+## getWorkforcemanagementBusinessunitCapacityplans
+
+
+
+> [CapacityPlansListResponse](CapacityPlansListResponse) getWorkforcemanagementBusinessunitCapacityplans(businessUnitId)
+
+Get list of capacity plans for a business unit
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans  
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplans(businessUnitId: businessUnitId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplans was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+
+
+### Return type
+
+[**CapacityPlansListResponse**](CapacityPlansListResponse)
 
 
 ## getWorkforcemanagementBusinessunitIntradayPlanninggroups
@@ -7173,7 +7503,7 @@ WorkforceManagementAPI.patchWorkforcemanagementAlternativeshiftsTradesStateJobs(
 
 
 
-> [BusinessUnitResponse](BusinessUnitResponse) patchWorkforcemanagementBusinessunit(businessUnitId, body)
+> [BusinessUnitResponse](BusinessUnitResponse) patchWorkforcemanagementBusinessunit(businessUnitId, body, includeSchedulingDefaultMessageSeverities)
 
 Update business unit
 
@@ -7195,9 +7525,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
 let body: UpdateBusinessUnitRequest = new UpdateBusinessUnitRequest(...) // body
+let includeSchedulingDefaultMessageSeverities: Bool = true // Whether to include scheduling default message severities
 
 // Code example
-WorkforceManagementAPI.patchWorkforcemanagementBusinessunit(businessUnitId: businessUnitId, body: body) { (response, error) in
+WorkforceManagementAPI.patchWorkforcemanagementBusinessunit(businessUnitId: businessUnitId, body: body, includeSchedulingDefaultMessageSeverities: includeSchedulingDefaultMessageSeverities) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -7214,6 +7545,7 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunit(businessUnitId: busi
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 | **body** | [**UpdateBusinessUnitRequest**](UpdateBusinessUnitRequest)| body | |
+| **includeSchedulingDefaultMessageSeverities** | **Bool**| Whether to include scheduling default message severities | [optional] |
 
 
 ### Return type
@@ -7381,6 +7713,60 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitAlternativeshiftsSett
 ### Return type
 
 [**AlternativeShiftBuSettingsResponse**](AlternativeShiftBuSettingsResponse)
+
+
+## patchWorkforcemanagementBusinessunitCapacityplan
+
+
+
+> [CapacityPlanResponse](CapacityPlanResponse) patchWorkforcemanagementBusinessunitCapacityplan(businessUnitId, capacityPlanId, body)
+
+Update a capacity plan configuration
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}  
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let capacityPlanId: String = "" // The ID of the capacity plan
+let body: UpdateCapacityPlanRequest = new UpdateCapacityPlanRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementBusinessunitCapacityplan(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementBusinessunitCapacityplan was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **capacityPlanId** | **String**| The ID of the capacity plan | |
+| **body** | [**UpdateCapacityPlanRequest**](UpdateCapacityPlanRequest)| body | |
+
+
+### Return type
+
+[**CapacityPlanResponse**](CapacityPlanResponse)
 
 
 ## patchWorkforcemanagementBusinessunitPlanninggroup
@@ -9554,6 +9940,377 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitAlternativeshiftsTrade
 [**BuListAlternativeShiftTradesResponse**](BuListAlternativeShiftTradesResponse)
 
 
+## postWorkforcemanagementBusinessunitCapacityplanCopy
+
+
+
+> [CapacityPlanResponse](CapacityPlanResponse) postWorkforcemanagementBusinessunitCapacityplanCopy(businessUnitId, capacityPlanId, body)
+
+Copy a capacity plan
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/copy  
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let capacityPlanId: String = "" // The ID of the capacity plan
+let body: CopyCapacityPlanRequest = new CopyCapacityPlanRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitCapacityplanCopy(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitCapacityplanCopy was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **capacityPlanId** | **String**| The ID of the capacity plan | |
+| **body** | [**CopyCapacityPlanRequest**](CopyCapacityPlanRequest)| body | |
+
+
+### Return type
+
+[**CapacityPlanResponse**](CapacityPlanResponse)
+
+
+## postWorkforcemanagementBusinessunitCapacityplanRequirementGenerate
+
+
+
+> [CapacityPlanStaffingRequirementResult](CapacityPlanStaffingRequirementResult) postWorkforcemanagementBusinessunitCapacityplanRequirementGenerate(businessUnitId, capacityPlanId)
+
+Regenerate requirements for capacity plan
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/requirement/generate  
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let capacityPlanId: String = "" // The ID of the capacity plan
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitCapacityplanRequirementGenerate(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitCapacityplanRequirementGenerate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **capacityPlanId** | **String**| The ID of the capacity plan | |
+
+
+### Return type
+
+[**CapacityPlanStaffingRequirementResult**](CapacityPlanStaffingRequirementResult)
+
+
+## postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations
+
+
+
+> [CapacityPlanStaffingGroupMetricChangeResponse](CapacityPlanStaffingGroupMetricChangeResponse) postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations(businessUnitId, capacityPlanId, body)
+
+Create staffing group allocations for a capacity plan
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations  
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let capacityPlanId: String = "" // The ID of the capacity plan
+let body: CreateCapacityPlanStaffingGroupMetricChangeRequest = new CreateCapacityPlanStaffingGroupMetricChangeRequest(...) // 
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **capacityPlanId** | **String**| The ID of the capacity plan | |
+| **body** | [**CreateCapacityPlanStaffingGroupMetricChangeRequest**](CreateCapacityPlanStaffingGroupMetricChangeRequest)|  | |
+
+
+### Return type
+
+[**CapacityPlanStaffingGroupMetricChangeResponse**](CapacityPlanStaffingGroupMetricChangeResponse)
+
+
+## postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQuery
+
+
+
+> [CapacityPlanStaffingGroupMetricChangeHistoryListResponse](CapacityPlanStaffingGroupMetricChangeHistoryListResponse) postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQuery(businessUnitId, capacityPlanId, body)
+
+Query staffing groups allocations history for a capacity plan
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory/query  
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let capacityPlanId: String = "" // The ID of the capacity plan
+let body: QueryCapacityPlanStaffingGroupMetricChangeHistory = new QueryCapacityPlanStaffingGroupMetricChangeHistory(...) // 
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQuery(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **capacityPlanId** | **String**| The ID of the capacity plan | |
+| **body** | [**QueryCapacityPlanStaffingGroupMetricChangeHistory**](QueryCapacityPlanStaffingGroupMetricChangeHistory)|  | |
+
+
+### Return type
+
+[**CapacityPlanStaffingGroupMetricChangeHistoryListResponse**](CapacityPlanStaffingGroupMetricChangeHistoryListResponse)
+
+
+## postWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate
+
+
+
+> [LongTermRequirementsResponse](LongTermRequirementsResponse) postWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate(businessUnitId, weekDateId, forecastId)
+
+Force regenerate the latest long term staffing requirements for a business unit
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}/forceregenerate  
+
+Requires ANY permissions: 
+
+* wfm:longTermStaffing:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // 
+let weekDateId: Date = new Date(...) // weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let forecastId: String = "" // forecastId of forecast
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**|  | |
+| **weekDateId** | **Date**| weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **forecastId** | **String**| forecastId of forecast | |
+
+
+### Return type
+
+[**LongTermRequirementsResponse**](LongTermRequirementsResponse)
+
+
+## postWorkforcemanagementBusinessunitCapacityplans
+
+
+
+> [CapacityPlanResponse](CapacityPlanResponse) postWorkforcemanagementBusinessunitCapacityplans(businessUnitId, body)
+
+Create a new capacity plan
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans  
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: CapacityPlanRequest = new CapacityPlanRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitCapacityplans(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitCapacityplans was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**CapacityPlanRequest**](CapacityPlanRequest)| body | |
+
+
+### Return type
+
+[**CapacityPlanResponse**](CapacityPlanResponse)
+
+
+## postWorkforcemanagementBusinessunitCapacityplansBulkRemove
+
+
+
+> Void postWorkforcemanagementBusinessunitCapacityplansBulkRemove(businessUnitId, body)
+
+Delete capacity plans in a business unit
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/bulk/remove  
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: CapacityPlanDeleteRequest = new CapacityPlanDeleteRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitCapacityplansBulkRemove(businessUnitId: businessUnitId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitCapacityplansBulkRemove was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**CapacityPlanDeleteRequest**](CapacityPlanDeleteRequest)| body | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
 ## postWorkforcemanagementBusinessunitIntraday
 
 
@@ -9762,6 +10519,58 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitStaffinggroups(busines
 ### Return type
 
 [**StaffingGroupResponse**](StaffingGroupResponse)
+
+
+## postWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery
+
+
+
+> [PlanningGroupToStaffingGroupsListing](PlanningGroupToStaffingGroupsListing) postWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery(businessUnitId, body)
+
+Gets a list of planning group to staffing groups list association
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/planninggroups/query  
+
+Requires ANY permissions: 
+
+* wfm:staffingGroup:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: QueryPlanningGroupToStaffingGroupsRequest = new QueryPlanningGroupToStaffingGroupsRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**QueryPlanningGroupToStaffingGroupsRequest**](QueryPlanningGroupToStaffingGroupsRequest)| body | |
+
+
+### Return type
+
+[**PlanningGroupToStaffingGroupsListing**](PlanningGroupToStaffingGroupsListing)
 
 
 ## postWorkforcemanagementBusinessunitStaffinggroupsQuery
@@ -10985,7 +11794,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWorkplanbids(businessU
 
 
 
-> [BusinessUnitResponse](BusinessUnitResponse) postWorkforcemanagementBusinessunits(body)
+> [BusinessUnitResponse](BusinessUnitResponse) postWorkforcemanagementBusinessunits(body, includeSchedulingDefaultMessageSeverities)
 
 Add a new business unit
 
@@ -11008,9 +11817,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: CreateBusinessUnitRequest = new CreateBusinessUnitRequest(...) // body
+let includeSchedulingDefaultMessageSeverities: Bool = true // Whether to include scheduling default message severities
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementBusinessunits(body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementBusinessunits(body: body, includeSchedulingDefaultMessageSeverities: includeSchedulingDefaultMessageSeverities) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -11026,6 +11836,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunits(body: body) { (respo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**CreateBusinessUnitRequest**](CreateBusinessUnitRequest)| body | |
+| **includeSchedulingDefaultMessageSeverities** | **Bool**| Whether to include scheduling default message severities | [optional] |
 
 
 ### Return type
@@ -13261,4 +14072,4 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

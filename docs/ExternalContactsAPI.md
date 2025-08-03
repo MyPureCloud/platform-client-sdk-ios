@@ -16,6 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteExternalcontactsRelationship**](ExternalContactsAPI#deleteExternalcontactsRelationship) | Delete a relationship |
 | [**getExternalcontactsContact**](ExternalContactsAPI#getExternalcontactsContact) | Fetch an external contact |
 | [**getExternalcontactsContactIdentifiers**](ExternalContactsAPI#getExternalcontactsContactIdentifiers) | List the identifiers for a contact |
+| [**getExternalcontactsContactJourneySegments**](ExternalContactsAPI#getExternalcontactsContactJourneySegments) | Retrieve segment assignments by external contact ID. |
 | [**getExternalcontactsContactJourneySessions**](ExternalContactsAPI#getExternalcontactsContactJourneySessions) | Retrieve all sessions for a given external contact. |
 | [**getExternalcontactsContactNote**](ExternalContactsAPI#getExternalcontactsContactNote) | Fetch a note for an external contact |
 | [**getExternalcontactsContactNotes**](ExternalContactsAPI#getExternalcontactsContactNotes) | List notes for an external contact |
@@ -87,6 +88,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postExternalcontactsBulkRelationshipsAdd**](ExternalContactsAPI#postExternalcontactsBulkRelationshipsAdd) | Bulk add relationships |
 | [**postExternalcontactsBulkRelationshipsRemove**](ExternalContactsAPI#postExternalcontactsBulkRelationshipsRemove) | Bulk remove relationships |
 | [**postExternalcontactsBulkRelationshipsUpdate**](ExternalContactsAPI#postExternalcontactsBulkRelationshipsUpdate) | Bulk update relationships |
+| [**postExternalcontactsContactJourneySegments**](ExternalContactsAPI#postExternalcontactsContactJourneySegments) | Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success. |
 | [**postExternalcontactsContactNotes**](ExternalContactsAPI#postExternalcontactsContactNotes) | Create a note for an external contact |
 | [**postExternalcontactsContactPromotion**](ExternalContactsAPI#postExternalcontactsContactPromotion) | Promote an observed contact (ephemeral or identified) to a curated contact |
 | [**postExternalcontactsContacts**](ExternalContactsAPI#postExternalcontactsContacts) | Create an external contact |
@@ -731,6 +733,60 @@ ExternalContactsAPI.getExternalcontactsContactIdentifiers(contactId: contactId) 
 ### Return type
 
 [**ContactIdentifierListing**](ContactIdentifierListing)
+
+
+## getExternalcontactsContactJourneySegments
+
+
+
+> [SegmentAssignmentListing](SegmentAssignmentListing) getExternalcontactsContactJourneySegments(contactId, includeMerged, limit)
+
+Retrieve segment assignments by external contact ID.
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/{contactId}/journey/segments  
+
+Requires ANY permissions: 
+
+* externalContacts:segmentAssignment:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactId: String = "" // ExternalContact ID
+let includeMerged: Bool = true // Indicates whether to return segment assignments from all external contacts in the merge-set of the given one.
+let limit: Int = 0 // Number of entities to return. Default of 25, maximum of 500.
+
+// Code example
+ExternalContactsAPI.getExternalcontactsContactJourneySegments(contactId: contactId, includeMerged: includeMerged, limit: limit) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsContactJourneySegments was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactId** | **String**| ExternalContact ID | |
+| **includeMerged** | **Bool**| Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. | [optional] |
+| **limit** | **Int**| Number of entities to return. Default of 25, maximum of 500. | [optional] |
+
+
+### Return type
+
+[**SegmentAssignmentListing**](SegmentAssignmentListing)
 
 
 ## getExternalcontactsContactJourneySessions
@@ -4441,6 +4497,59 @@ ExternalContactsAPI.postExternalcontactsBulkRelationshipsUpdate(body: body) { (r
 [**BulkRelationshipsResponse**](BulkRelationshipsResponse)
 
 
+## postExternalcontactsContactJourneySegments
+
+
+
+> [UpdateSegmentAssignmentResponse](UpdateSegmentAssignmentResponse) postExternalcontactsContactJourneySegments(contactId, body)
+
+Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success.
+
+
+
+Wraps POST /api/v2/externalcontacts/contacts/{contactId}/journey/segments  
+
+Requires ANY permissions: 
+
+* externalContacts:segmentAssignment:add
+* externalContacts:segmentAssignment:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactId: String = "" // ExternalContact ID
+let body: UpdateSegmentAssignmentRequest = new UpdateSegmentAssignmentRequest(...) // 
+
+// Code example
+ExternalContactsAPI.postExternalcontactsContactJourneySegments(contactId: contactId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsContactJourneySegments was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactId** | **String**| ExternalContact ID | |
+| **body** | [**UpdateSegmentAssignmentRequest**](UpdateSegmentAssignmentRequest)|  | [optional] |
+
+
+### Return type
+
+[**UpdateSegmentAssignmentResponse**](UpdateSegmentAssignmentResponse)
+
+
 ## postExternalcontactsContactNotes
 
 
@@ -6263,4 +6372,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

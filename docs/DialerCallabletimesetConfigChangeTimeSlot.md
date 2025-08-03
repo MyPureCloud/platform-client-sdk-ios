@@ -10,7 +10,8 @@
 | **stopTime** | **String** | The stop time of this time slot | [optional] |
 | **day** | **Int64** | The day this time slot applies | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
+| **getAdditionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

@@ -10,7 +10,8 @@
 | **parameters** | **[String:String]** | The parameters to match this condition | [optional] |
 | **conditionType** | **String** | The type of this condition | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
+| **getAdditionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

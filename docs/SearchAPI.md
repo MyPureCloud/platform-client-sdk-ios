@@ -13,7 +13,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTelephonyProvidersEdgesSitesSearch**](SearchAPI#getTelephonyProvidersEdgesSitesSearch) | Search sites using the q64 value returned from a previous search |
 | [**getUsersSearch**](SearchAPI#getUsersSearch) | Search users using the q64 value returned from a previous search |
 | [**getVoicemailSearch**](SearchAPI#getVoicemailSearch) | Search voicemails using the q64 value returned from a previous search |
-| [**postAnalyticsConversationsTranscriptsQuery**](SearchAPI#postAnalyticsConversationsTranscriptsQuery) | Search resources. |
 | [**postConversationsParticipantsAttributesSearch**](SearchAPI#postConversationsParticipantsAttributesSearch) | Search conversations |
 | [**postDocumentationGknSearch**](SearchAPI#postDocumentationGknSearch) | Search gkn documentation |
 | [**postDocumentationSearch**](SearchAPI#postDocumentationSearch) | Search documentation |
@@ -495,56 +494,6 @@ SearchAPI.getVoicemailSearch(q64: q64, expand: expand) { (response, error) in
 ### Return type
 
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse)
-
-
-## postAnalyticsConversationsTranscriptsQuery
-
-
-
-> [AnalyticsConversationWithoutAttributesMultiGetResponse](AnalyticsConversationWithoutAttributesMultiGetResponse) postAnalyticsConversationsTranscriptsQuery(body)
-
-Search resources.
-
-
-
-Wraps POST /api/v2/analytics/conversations/transcripts/query  
-
-Requires ANY permissions: 
-
-* analytics:conversationDetail:view
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let body: TranscriptConversationDetailSearchRequest = new TranscriptConversationDetailSearchRequest(...) // Search request options
-
-// Code example
-SearchAPI.postAnalyticsConversationsTranscriptsQuery(body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("SearchAPI.postAnalyticsConversationsTranscriptsQuery was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **body** | [**TranscriptConversationDetailSearchRequest**](TranscriptConversationDetailSearchRequest)| Search request options | |
-
-
-### Return type
-
-[**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse)
 
 
 ## postConversationsParticipantsAttributesSearch
@@ -1251,4 +1200,4 @@ SearchAPI.postVoicemailSearch(body: body) { (response, error) in
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse)
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

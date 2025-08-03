@@ -235,7 +235,10 @@
 | **deliveryPushed** | **Bool** | Filter to indicate if push notification is sent | [optional] |
 | **socialRatings** | **[Float]** | A set of ratings for Google Business Profile | [optional] |
 | **virtualAgentIds** | **[String]** | A list of virtual agent ids for filtering. | [optional] |
+| **empathyScoreCategories** | **[String]** | A set of Empathy Score Categories for filtering | [optional] |
+| **sentimentScoreCategories** | **[String]** | A set of Sentiment Score Categories  for filtering | [optional] |
+| **sentimentTrendCategories** | **[String]** | A set of Sentiment Trend Categories for filtering | [optional] |
 
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

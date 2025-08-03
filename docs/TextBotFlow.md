@@ -11,4 +11,4 @@ Description of the Bot Flow.
 
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

@@ -11,7 +11,8 @@
 | **updateOption** | **String** | Indicator of the type of update action (applicable only to certain types of actions) | [optional] |
 | **properties** | **[String:String]** | Map of key-value pairs pertinent to the action (different actions require different properties) | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
+| **getAdditionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

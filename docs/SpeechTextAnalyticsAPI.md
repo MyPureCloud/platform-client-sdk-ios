@@ -16,6 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSpeechandtextanalyticsConversationCategories**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsConversationCategories) | Get the list of detected Speech and Text Analytics categories of conversation |
 | [**getSpeechandtextanalyticsConversationCommunicationTranscripturl**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsConversationCommunicationTranscripturl) | Get the pre-signed S3 URL for the transcript of a specific communication of a conversation |
 | [**getSpeechandtextanalyticsConversationCommunicationTranscripturls**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsConversationCommunicationTranscripturls) | Get the list of pre-signed S3 URL for the transcripts of a specific communication of a conversation |
+| [**getSpeechandtextanalyticsConversationSentiments**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsConversationSentiments) | Get sentiment data |
 | [**getSpeechandtextanalyticsConversationSummaries**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsConversationSummaries) | Get conversation summaries by conversation id. |
 | [**getSpeechandtextanalyticsDictionaryfeedback**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsDictionaryfeedback) | Get the list of Speech &amp; Text Analytics dictionary feedbacks |
 | [**getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId) | Get a Speech &amp; Text Analytics dictionary feedback by id |
@@ -676,6 +677,59 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsConversationCommunicationTranscr
 ### Return type
 
 [**TranscriptUrls**](TranscriptUrls)
+
+
+## getSpeechandtextanalyticsConversationSentiments
+
+
+
+> [SentimentData](SentimentData) getSpeechandtextanalyticsConversationSentiments(conversationId)
+
+Get sentiment data
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/conversations/{conversationId}/sentiments  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:sentimentData:view
+* speechAndTextAnalytics:data:view
+* recording:recording:view
+* recording:recording:viewSensitiveData
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // The conversation ID of the sentiment data
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsConversationSentiments(conversationId: conversationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsConversationSentiments was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| The conversation ID of the sentiment data | |
+
+
+### Return type
+
+[**SentimentData**](SentimentData)
 
 
 ## getSpeechandtextanalyticsConversationSummaries
@@ -2968,4 +3022,4 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsTopic(topicId: topicId, body: bo
 [**Topic**](Topic)
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

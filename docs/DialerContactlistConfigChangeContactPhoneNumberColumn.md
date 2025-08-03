@@ -10,7 +10,8 @@
 | **type** | **String** | type of the phone column, for example, &#39;cell&#39; or &#39;home&#39; | [optional] |
 | **callableTimeColumn** | **String** | name of the column indicating the timezone to be considered for determining callable times | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
+| **getAdditionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

@@ -84,6 +84,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postKnowledgeGuestSessionDocumentsSearchSuggestions**](KnowledgeAPI#postKnowledgeGuestSessionDocumentsSearchSuggestions) | Query the knowledge documents to provide suggestions for auto completion. |
 | [**postKnowledgeGuestSessions**](KnowledgeAPI#postKnowledgeGuestSessions) | Create guest session |
 | [**postKnowledgeKnowledgebaseCategories**](KnowledgeAPI#postKnowledgeKnowledgebaseCategories) | Create new category |
+| [**postKnowledgeKnowledgebaseChunksSearch**](KnowledgeAPI#postKnowledgeKnowledgebaseChunksSearch) | Search for chunks in a knowledge base |
 | [**postKnowledgeKnowledgebaseDocumentCopies**](KnowledgeAPI#postKnowledgeKnowledgebaseDocumentCopies) | Indicate that the document was copied by the user. |
 | [**postKnowledgeKnowledgebaseDocumentFeedback**](KnowledgeAPI#postKnowledgeKnowledgebaseDocumentFeedback) | Give feedback on a document |
 | [**postKnowledgeKnowledgebaseDocumentVariations**](KnowledgeAPI#postKnowledgeKnowledgebaseDocumentVariations) | Create a variation for a document. |
@@ -4545,6 +4546,58 @@ KnowledgeAPI.postKnowledgeKnowledgebaseCategories(knowledgeBaseId: knowledgeBase
 [**CategoryResponse**](CategoryResponse)
 
 
+## postKnowledgeKnowledgebaseChunksSearch
+
+
+
+> [KnowledgeDocumentChunkResponse](KnowledgeDocumentChunkResponse) postKnowledgeKnowledgebaseChunksSearch(knowledgeBaseId, body)
+
+Search for chunks in a knowledge base
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/chunks/search  
+
+Requires ALL permissions: 
+
+* knowledge:knowledgebase:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge Base ID
+let body: KnowledgeDocumentChunkRequest = new KnowledgeDocumentChunkRequest(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseChunksSearch(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseChunksSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge Base ID | |
+| **body** | [**KnowledgeDocumentChunkRequest**](KnowledgeDocumentChunkRequest)|  | [optional] |
+
+
+### Return type
+
+[**KnowledgeDocumentChunkResponse**](KnowledgeDocumentChunkResponse)
+
+
 ## postKnowledgeKnowledgebaseDocumentCopies
 
 
@@ -5119,7 +5172,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseDocumentsQuery(knowledgeBaseId: knowledge
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge Base ID | |
-| **expand** | [**[String]**](String)| Fields, if any, to expand for each document in the search result matching the query. | [optional]<br />**Values**: documentvariations ("documentVariations"), documentalternatives ("documentAlternatives"), knowledgebaselanguagecode ("knowledgeBaseLanguageCode") |
+| **expand** | [**[String]**](String)| Fields, if any, to expand for each document in the search result matching the query. | [optional]<br />**Values**: documentvariations ("documentVariations"), documentalternatives ("documentAlternatives"), knowledgebaselanguagecode ("knowledgeBaseLanguageCode"), variationchunks ("variationChunks") |
 | **body** | [**KnowledgeDocumentQuery**](KnowledgeDocumentQuery)|  | [optional] |
 
 
@@ -5173,7 +5226,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseDocumentsSearch(knowledgeBaseId: knowledg
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| The ID of knowledge base containing the documents to query. | |
-| **expand** | [**[String]**](String)| Fields, if any, to expand for each document in the search result matching the query. | [optional]<br />**Values**: documentvariations ("documentVariations"), documentalternatives ("documentAlternatives"), knowledgebaselanguagecode ("knowledgeBaseLanguageCode") |
+| **expand** | [**[String]**](String)| Fields, if any, to expand for each document in the search result matching the query. | [optional]<br />**Values**: documentvariations ("documentVariations"), documentalternatives ("documentAlternatives"), knowledgebaselanguagecode ("knowledgeBaseLanguageCode"), variationchunks ("variationChunks") |
 | **body** | [**KnowledgeDocumentSearchRequest**](KnowledgeDocumentSearchRequest)|  | [optional] |
 
 
@@ -6397,4 +6450,4 @@ KnowledgeAPI.putKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId:
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_
