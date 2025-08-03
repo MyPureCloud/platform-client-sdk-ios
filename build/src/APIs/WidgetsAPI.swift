@@ -32,7 +32,7 @@ open class WidgetsAPI {
     /**
      Delete a Widget deployment
      - DELETE /api/v2/widgets/deployments/{deploymentId}
-     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+     - This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -85,7 +85,7 @@ open class WidgetsAPI {
     /**
      Get a Widget deployment
      - GET /api/v2/widgets/deployments/{deploymentId}
-     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+     - This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -147,7 +147,7 @@ open class WidgetsAPI {
     /**
      List Widget deployments
      - GET /api/v2/widgets/deployments
-     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+     - This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -222,7 +222,7 @@ open class WidgetsAPI {
     /**
      Create Widget deployment
      - POST /api/v2/widgets/deployments
-     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+     - This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -287,7 +287,7 @@ open class WidgetsAPI {
     /**
      Update a Widget deployment
      - PUT /api/v2/widgets/deployments/{deploymentId}
-     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+     - This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

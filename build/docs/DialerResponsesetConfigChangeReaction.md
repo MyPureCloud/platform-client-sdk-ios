@@ -10,7 +10,8 @@
 | **name** | **String** |  | [optional] |
 | **reactionType** | **String** |  | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
+| **getAdditionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

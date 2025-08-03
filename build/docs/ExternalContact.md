@@ -41,9 +41,9 @@
 | **mergeSet** | [**[ContactAddressableEntityRef]**]([ContactAddressableEntityRef]) | The set of all contacts that are a part of the merge tree. If null, this contact is not a part of any merge. | [optional] |
 | **mergedFrom** | [**[ContactAddressableEntityRef]**]([ContactAddressableEntityRef]) | The input contacts from the merge operation. | [optional] |
 | **mergedTo** | [**ContactAddressableEntityRef**](ContactAddressableEntityRef) | The output contact from the merge operation. | [optional] |
-| **mergeOperation** | [**MergeOperation**](MergeOperation) | Information about the merge history of this contact. If null, this contact is not a part of any merge. | [optional] |
+| **mergeOperation** | [**MergeOperation**](MergeOperation) | (Deprecated: use mergedTo and mergedFrom instead) Information about the merge history of this contact. If null, this contact is not a part of any merge. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

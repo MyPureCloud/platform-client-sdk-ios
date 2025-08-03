@@ -11,6 +11,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteJourneySegment**](JourneyAPI#deleteJourneySegment) | Delete a segment. |
 | [**deleteJourneyView**](JourneyAPI#deleteJourneyView) | Delete a Journey View by ID |
 | [**deleteJourneyViewSchedules**](JourneyAPI#deleteJourneyViewSchedules) | Delete the Schedule of a JourneyView |
+| [**getExternalcontactsContactJourneySegments**](JourneyAPI#getExternalcontactsContactJourneySegments) | Retrieve segment assignments by external contact ID. |
 | [**getExternalcontactsContactJourneySessions**](JourneyAPI#getExternalcontactsContactJourneySessions) | Retrieve all sessions for a given external contact. |
 | [**getJourneyActionmap**](JourneyAPI#getJourneyActionmap) | Retrieve a single action map. |
 | [**getJourneyActionmaps**](JourneyAPI#getJourneyActionmaps) | Retrieve all action maps. |
@@ -52,6 +53,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchJourneySegment**](JourneyAPI#patchJourneySegment) | Update a segment. |
 | [**patchJourneyViewVersionJob**](JourneyAPI#patchJourneyViewVersionJob) | Update the job for a journey view version. Only the status can be changed and only to Cancelled |
 | [**postAnalyticsJourneysAggregatesQuery**](JourneyAPI#postAnalyticsJourneysAggregatesQuery) | Query for journey aggregates |
+| [**postExternalcontactsContactJourneySegments**](JourneyAPI#postExternalcontactsContactJourneySegments) | Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success. |
 | [**postJourneyActionmaps**](JourneyAPI#postJourneyActionmaps) | Create an action map. |
 | [**postJourneyActionmapsEstimatesJobs**](JourneyAPI#postJourneyActionmapsEstimatesJobs) | Query for estimates |
 | [**postJourneyActiontemplates**](JourneyAPI#postJourneyActiontemplates) | Create a single action template. |
@@ -418,6 +420,60 @@ JourneyAPI.deleteJourneyViewSchedules(viewId: viewId) { (response, error) in
 ### Return type
 
 [**JourneyViewSchedule**](JourneyViewSchedule)
+
+
+## getExternalcontactsContactJourneySegments
+
+
+
+> [SegmentAssignmentListing](SegmentAssignmentListing) getExternalcontactsContactJourneySegments(contactId, includeMerged, limit)
+
+Retrieve segment assignments by external contact ID.
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/{contactId}/journey/segments  
+
+Requires ANY permissions: 
+
+* externalContacts:segmentAssignment:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactId: String = "" // ExternalContact ID
+let includeMerged: Bool = true // Indicates whether to return segment assignments from all external contacts in the merge-set of the given one.
+let limit: Int = 0 // Number of entities to return. Default of 25, maximum of 500.
+
+// Code example
+JourneyAPI.getExternalcontactsContactJourneySegments(contactId: contactId, includeMerged: includeMerged, limit: limit) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getExternalcontactsContactJourneySegments was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactId** | **String**| ExternalContact ID | |
+| **includeMerged** | **Bool**| Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. | [optional] |
+| **limit** | **Int**| Number of entities to return. Default of 25, maximum of 500. | [optional] |
+
+
+### Return type
+
+[**SegmentAssignmentListing**](SegmentAssignmentListing)
 
 
 ## getExternalcontactsContactJourneySessions
@@ -2596,6 +2652,59 @@ JourneyAPI.postAnalyticsJourneysAggregatesQuery(body: body) { (response, error) 
 [**JourneyAggregateQueryResponse**](JourneyAggregateQueryResponse)
 
 
+## postExternalcontactsContactJourneySegments
+
+
+
+> [UpdateSegmentAssignmentResponse](UpdateSegmentAssignmentResponse) postExternalcontactsContactJourneySegments(contactId, body)
+
+Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success.
+
+
+
+Wraps POST /api/v2/externalcontacts/contacts/{contactId}/journey/segments  
+
+Requires ANY permissions: 
+
+* externalContacts:segmentAssignment:add
+* externalContacts:segmentAssignment:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactId: String = "" // ExternalContact ID
+let body: UpdateSegmentAssignmentRequest = new UpdateSegmentAssignmentRequest(...) // 
+
+// Code example
+JourneyAPI.postExternalcontactsContactJourneySegments(contactId: contactId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.postExternalcontactsContactJourneySegments was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactId** | **String**| ExternalContact ID | |
+| **body** | [**UpdateSegmentAssignmentRequest**](UpdateSegmentAssignmentRequest)|  | [optional] |
+
+
+### Return type
+
+[**UpdateSegmentAssignmentResponse**](UpdateSegmentAssignmentResponse)
+
+
 ## postJourneyActionmaps
 
 
@@ -3466,4 +3575,4 @@ JourneyAPI.putJourneyViewVersion(viewId: viewId, versionId: versionId, body: bod
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

@@ -615,6 +615,8 @@ open class ChatAPI {
     
     
     
+    
+    
     /**
      Get a room's message history
      
@@ -622,10 +624,11 @@ open class ChatAPI {
      - parameter limit: (query) The maximum number of messages to retrieve (optional)
      - parameter before: (query) The cutoff date for messages to retrieve (optional)
      - parameter after: (query) The beginning date for messages to retrieve (optional)
+     - parameter excludeMetadata: (query) Whether to exclude metadata for messages (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getChatsRoomMessages(roomJid: String, limit: String? = nil, before: String? = nil, after: String? = nil, completion: @escaping ((_ data: ChatMessageEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getChatsRoomMessagesWithRequestBuilder(roomJid: roomJid, limit: limit, before: before, after: after)
+    open class func getChatsRoomMessages(roomJid: String, limit: String? = nil, before: String? = nil, after: String? = nil, excludeMetadata: Bool? = nil, completion: @escaping ((_ data: ChatMessageEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getChatsRoomMessagesWithRequestBuilder(roomJid: roomJid, limit: limit, before: before, after: after, excludeMetadata: excludeMetadata)
         requestBuilder.execute { (response: Response<ChatMessageEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -728,10 +731,11 @@ open class ChatAPI {
      - parameter limit: (query) The maximum number of messages to retrieve (optional)
      - parameter before: (query) The cutoff date for messages to retrieve (optional)
      - parameter after: (query) The beginning date for messages to retrieve (optional)
+     - parameter excludeMetadata: (query) Whether to exclude metadata for messages (optional)
 
      - returns: RequestBuilder<ChatMessageEntityListing> 
      */
-    open class func getChatsRoomMessagesWithRequestBuilder(roomJid: String, limit: String? = nil, before: String? = nil, after: String? = nil) -> RequestBuilder<ChatMessageEntityListing> {        
+    open class func getChatsRoomMessagesWithRequestBuilder(roomJid: String, limit: String? = nil, before: String? = nil, after: String? = nil, excludeMetadata: Bool? = nil) -> RequestBuilder<ChatMessageEntityListing> {        
         var path = "/api/v2/chats/rooms/{roomJid}/messages"
         let roomJidPreEscape = "\(roomJid)"
         let roomJidPostEscape = roomJidPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -743,7 +747,8 @@ open class ChatAPI {
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "limit": limit, 
             "before": before, 
-            "after": after
+            "after": after, 
+            "excludeMetadata": excludeMetadata
         ])
 
         let requestBuilder: RequestBuilder<ChatMessageEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -937,6 +942,8 @@ open class ChatAPI {
     
     
     
+    
+    
     /**
      Get history by thread
      
@@ -944,10 +951,11 @@ open class ChatAPI {
      - parameter limit: (query) The maximum number of messages to retrieve (optional)
      - parameter before: (query) The cutoff date for messages to retrieve (optional)
      - parameter after: (query) The beginning date for messages to retrieve (optional)
+     - parameter excludeMetadata: (query) Whether to exclude metadata for messages (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getChatsThreadMessages(threadId: String, limit: String? = nil, before: String? = nil, after: String? = nil, completion: @escaping ((_ data: ChatMessageEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getChatsThreadMessagesWithRequestBuilder(threadId: threadId, limit: limit, before: before, after: after)
+    open class func getChatsThreadMessages(threadId: String, limit: String? = nil, before: String? = nil, after: String? = nil, excludeMetadata: Bool? = nil, completion: @escaping ((_ data: ChatMessageEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getChatsThreadMessagesWithRequestBuilder(threadId: threadId, limit: limit, before: before, after: after, excludeMetadata: excludeMetadata)
         requestBuilder.execute { (response: Response<ChatMessageEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1050,10 +1058,11 @@ open class ChatAPI {
      - parameter limit: (query) The maximum number of messages to retrieve (optional)
      - parameter before: (query) The cutoff date for messages to retrieve (optional)
      - parameter after: (query) The beginning date for messages to retrieve (optional)
+     - parameter excludeMetadata: (query) Whether to exclude metadata for messages (optional)
 
      - returns: RequestBuilder<ChatMessageEntityListing> 
      */
-    open class func getChatsThreadMessagesWithRequestBuilder(threadId: String, limit: String? = nil, before: String? = nil, after: String? = nil) -> RequestBuilder<ChatMessageEntityListing> {        
+    open class func getChatsThreadMessagesWithRequestBuilder(threadId: String, limit: String? = nil, before: String? = nil, after: String? = nil, excludeMetadata: Bool? = nil) -> RequestBuilder<ChatMessageEntityListing> {        
         var path = "/api/v2/chats/threads/{threadId}/messages"
         let threadIdPreEscape = "\(threadId)"
         let threadIdPostEscape = threadIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1065,7 +1074,8 @@ open class ChatAPI {
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "limit": limit, 
             "before": before, 
-            "after": after
+            "after": after, 
+            "excludeMetadata": excludeMetadata
         ])
 
         let requestBuilder: RequestBuilder<ChatMessageEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1276,6 +1286,8 @@ open class ChatAPI {
     
     
     
+    
+    
     /**
      Get 1on1 History between a user
      
@@ -1283,10 +1295,11 @@ open class ChatAPI {
      - parameter limit: (query) The maximum number of messages to retrieve (optional)
      - parameter before: (query) The cutoff date for messages to retrieve (optional)
      - parameter after: (query) The beginning date for messages to retrieve (optional)
+     - parameter excludeMetadata: (query) Whether to exclude metadata for messages (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getChatsUserMessages(userId: String, limit: String? = nil, before: String? = nil, after: String? = nil, completion: @escaping ((_ data: ChatMessageResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getChatsUserMessagesWithRequestBuilder(userId: userId, limit: limit, before: before, after: after)
+    open class func getChatsUserMessages(userId: String, limit: String? = nil, before: String? = nil, after: String? = nil, excludeMetadata: Bool? = nil, completion: @escaping ((_ data: ChatMessageResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getChatsUserMessagesWithRequestBuilder(userId: userId, limit: limit, before: before, after: after, excludeMetadata: excludeMetadata)
         requestBuilder.execute { (response: Response<ChatMessageResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -1351,10 +1364,11 @@ open class ChatAPI {
      - parameter limit: (query) The maximum number of messages to retrieve (optional)
      - parameter before: (query) The cutoff date for messages to retrieve (optional)
      - parameter after: (query) The beginning date for messages to retrieve (optional)
+     - parameter excludeMetadata: (query) Whether to exclude metadata for messages (optional)
 
      - returns: RequestBuilder<ChatMessageResponse> 
      */
-    open class func getChatsUserMessagesWithRequestBuilder(userId: String, limit: String? = nil, before: String? = nil, after: String? = nil) -> RequestBuilder<ChatMessageResponse> {        
+    open class func getChatsUserMessagesWithRequestBuilder(userId: String, limit: String? = nil, before: String? = nil, after: String? = nil, excludeMetadata: Bool? = nil) -> RequestBuilder<ChatMessageResponse> {        
         var path = "/api/v2/chats/users/{userId}/messages"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1366,7 +1380,8 @@ open class ChatAPI {
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "limit": limit, 
             "before": before, 
-            "after": after
+            "after": after, 
+            "excludeMetadata": excludeMetadata
         ])
 
         let requestBuilder: RequestBuilder<ChatMessageResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

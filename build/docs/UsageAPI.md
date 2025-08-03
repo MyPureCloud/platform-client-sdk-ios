@@ -6,9 +6,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**getOauthClientUsageQueryResult**](UsageAPI#getOauthClientUsageQueryResult) | Get the results of a usage query |
 | [**getOauthClientUsageSummary**](UsageAPI#getOauthClientUsageSummary) | Get a summary of OAuth client API usage |
+| [**getUsageAggregatesQueryJob**](UsageAPI#getUsageAggregatesQueryJob) | Get the status and results of the usage query |
+| [**getUsageClientClientIdAggregatesQueryJob**](UsageAPI#getUsageClientClientIdAggregatesQueryJob) | Get the status and results of the usage query |
 | [**getUsageQueryExecutionIdResults**](UsageAPI#getUsageQueryExecutionIdResults) | Get the results of a usage query |
 | [**getUsageSimplesearchExecutionIdResults**](UsageAPI#getUsageSimplesearchExecutionIdResults) | Get the results of a usage search. Number of records to be returned is limited to 20,000 results. |
 | [**postOauthClientUsageQuery**](UsageAPI#postOauthClientUsageQuery) | Query for OAuth client API usage |
+| [**postUsageAggregatesQueryJobs**](UsageAPI#postUsageAggregatesQueryJobs) | Query your organization&#39;s public api usage. |
+| [**postUsageClientClientIdAggregatesQueryJobs**](UsageAPI#postUsageClientClientIdAggregatesQueryJobs) | Query your client&#39;s public api usage. |
 | [**postUsageQuery**](UsageAPI#postUsageQuery) | Query organization API Usage -  |
 | [**postUsageSimplesearch**](UsageAPI#postUsageSimplesearch) | Search organization API Usage |
 {: class="table-striped"}
@@ -120,6 +124,116 @@ UsageAPI.getOauthClientUsageSummary(clientId: clientId, days: days) { (response,
 ### Return type
 
 [**UsageExecutionResult**](UsageExecutionResult)
+
+
+## getUsageAggregatesQueryJob
+
+
+
+> [OrganizationPublicApiUsageResultsResponse](OrganizationPublicApiUsageResultsResponse) getUsageAggregatesQueryJob(jobId, pageSize, after)
+
+Get the status and results of the usage query
+
+
+
+Wraps GET /api/v2/usage/aggregates/query/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* usage:organization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+let pageSize: Int = 0 // Page size of the results. Max is 1000.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+
+// Code example
+UsageAPI.getUsageAggregatesQueryJob(jobId: jobId, pageSize: pageSize, after: after) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsageAPI.getUsageAggregatesQueryJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+| **pageSize** | **Int**| Page size of the results. Max is 1000. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+
+
+### Return type
+
+[**OrganizationPublicApiUsageResultsResponse**](OrganizationPublicApiUsageResultsResponse)
+
+
+## getUsageClientClientIdAggregatesQueryJob
+
+
+
+> [ClientPublicApiUsageResultsResponse](ClientPublicApiUsageResultsResponse) getUsageClientClientIdAggregatesQueryJob(clientId, jobId, pageSize, after)
+
+Get the status and results of the usage query
+
+
+
+Wraps GET /api/v2/usage/client/{clientId}/aggregates/query/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* usage:client:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let clientId: String = "" // clientId
+let jobId: String = "" // jobId
+let pageSize: Int = 0 // Page size of the results. Max is 1000.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+
+// Code example
+UsageAPI.getUsageClientClientIdAggregatesQueryJob(clientId: clientId, jobId: jobId, pageSize: pageSize, after: after) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsageAPI.getUsageClientClientIdAggregatesQueryJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **clientId** | **String**| clientId | |
+| **jobId** | **String**| jobId | |
+| **pageSize** | **Int**| Page size of the results. Max is 1000. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+
+
+### Return type
+
+[**ClientPublicApiUsageResultsResponse**](ClientPublicApiUsageResultsResponse)
 
 
 ## getUsageQueryExecutionIdResults
@@ -283,6 +397,112 @@ UsageAPI.postOauthClientUsageQuery(clientId: clientId, body: body) { (response, 
 [**UsageExecutionResult**](UsageExecutionResult)
 
 
+## postUsageAggregatesQueryJobs
+
+
+
+> [OrganizationUsageQueryResponse](OrganizationUsageQueryResponse) postUsageAggregatesQueryJobs(body)
+
+Query your organization&#39;s public api usage.
+
+After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+
+
+
+Wraps POST /api/v2/usage/aggregates/query/jobs  
+
+Requires ANY permissions: 
+
+* usage:organization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: OrganizationPublicApiUsageQueryRequest = new OrganizationPublicApiUsageQueryRequest(...) // Query
+
+// Code example
+UsageAPI.postUsageAggregatesQueryJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsageAPI.postUsageAggregatesQueryJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**OrganizationPublicApiUsageQueryRequest**](OrganizationPublicApiUsageQueryRequest)| Query | |
+
+
+### Return type
+
+[**OrganizationUsageQueryResponse**](OrganizationUsageQueryResponse)
+
+
+## postUsageClientClientIdAggregatesQueryJobs
+
+
+
+> [ClientUsageQueryResponse](ClientUsageQueryResponse) postUsageClientClientIdAggregatesQueryJobs(clientId, body)
+
+Query your client&#39;s public api usage.
+
+After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+
+
+
+Wraps POST /api/v2/usage/client/{clientId}/aggregates/query/jobs  
+
+Requires ANY permissions: 
+
+* usage:client:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let clientId: String = "" // clientId
+let body: ClientPublicApiUsageQueryRequest = new ClientPublicApiUsageQueryRequest(...) // Query
+
+// Code example
+UsageAPI.postUsageClientClientIdAggregatesQueryJobs(clientId: clientId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsageAPI.postUsageClientClientIdAggregatesQueryJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **clientId** | **String**| clientId | |
+| **body** | [**ClientPublicApiUsageQueryRequest**](ClientPublicApiUsageQueryRequest)| Query | |
+
+
+### Return type
+
+[**ClientUsageQueryResponse**](ClientUsageQueryResponse)
+
+
 ## postUsageQuery
 
 
@@ -389,4 +609,4 @@ UsageAPI.postUsageSimplesearch(body: body) { (response, error) in
 [**UsageExecutionResult**](UsageExecutionResult)
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

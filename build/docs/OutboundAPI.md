@@ -34,6 +34,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteOutboundSchedulesEmailcampaign**](OutboundAPI#deleteOutboundSchedulesEmailcampaign) | Delete an email campaign schedule. |
 | [**deleteOutboundSchedulesMessagingcampaign**](OutboundAPI#deleteOutboundSchedulesMessagingcampaign) | Delete a messaging campaign schedule. |
 | [**deleteOutboundSchedulesSequence**](OutboundAPI#deleteOutboundSchedulesSequence) | Delete a dialer sequence schedule. |
+| [**deleteOutboundSchedulesWhatsappcampaign**](OutboundAPI#deleteOutboundSchedulesWhatsappcampaign) | Delete a WhatsApp campaign schedule. |
 | [**deleteOutboundSequence**](OutboundAPI#deleteOutboundSequence) | Delete a dialer campaign sequence. |
 | [**getOutboundAttemptlimit**](OutboundAPI#getOutboundAttemptlimit) | Get attempt limits |
 | [**getOutboundAttemptlimits**](OutboundAPI#getOutboundAttemptlimits) | Query attempt limits list |
@@ -101,6 +102,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOutboundSchedulesMessagingcampaigns**](OutboundAPI#getOutboundSchedulesMessagingcampaigns) | Query for a list of messaging campaign schedules. |
 | [**getOutboundSchedulesSequence**](OutboundAPI#getOutboundSchedulesSequence) | Get a dialer sequence schedule. |
 | [**getOutboundSchedulesSequences**](OutboundAPI#getOutboundSchedulesSequences) | Query for a list of dialer sequence schedules. |
+| [**getOutboundSchedulesWhatsappcampaign**](OutboundAPI#getOutboundSchedulesWhatsappcampaign) | Get a WhatsApp campaign schedule. |
+| [**getOutboundSchedulesWhatsappcampaigns**](OutboundAPI#getOutboundSchedulesWhatsappcampaigns) | Query for a list of WhatsApp campaign schedules. |
 | [**getOutboundSequence**](OutboundAPI#getOutboundSequence) | Get a dialer campaign sequence. |
 | [**getOutboundSequences**](OutboundAPI#getOutboundSequences) | Query a list of dialer campaign sequences. |
 | [**getOutboundSettings**](OutboundAPI#getOutboundSettings) | Get the outbound settings for this organization |
@@ -170,6 +173,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putOutboundSchedulesEmailcampaign**](OutboundAPI#putOutboundSchedulesEmailcampaign) | Update an email campaign schedule. |
 | [**putOutboundSchedulesMessagingcampaign**](OutboundAPI#putOutboundSchedulesMessagingcampaign) | Update a new messaging campaign schedule. |
 | [**putOutboundSchedulesSequence**](OutboundAPI#putOutboundSchedulesSequence) | Update a new sequence schedule. |
+| [**putOutboundSchedulesWhatsappcampaign**](OutboundAPI#putOutboundSchedulesWhatsappcampaign) | Update a WhatsApp campaign schedule. |
 | [**putOutboundSequence**](OutboundAPI#putOutboundSequence) | Update a new campaign sequence. |
 | [**putOutboundWrapupcodemappings**](OutboundAPI#putOutboundWrapupcodemappings) | Update the Dialer wrap up code mapping. |
 {: class="table-striped"}
@@ -1646,6 +1650,7 @@ Wraps DELETE /api/v2/outbound/schedules/sequences/{sequenceId}
 Requires ANY permissions: 
 
 * outbound:schedule:delete
+* outbound:campaignSequenceSchedule:delete
 
 ### Example
 
@@ -1673,6 +1678,56 @@ OutboundAPI.deleteOutboundSchedulesSequence(sequenceId: sequenceId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **sequenceId** | **String**| Sequence ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteOutboundSchedulesWhatsappcampaign
+
+
+
+> Void deleteOutboundSchedulesWhatsappcampaign(whatsAppCampaignId)
+
+Delete a WhatsApp campaign schedule.
+
+
+
+Wraps DELETE /api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}  
+
+Requires ANY permissions: 
+
+* outbound:whatsAppCampaignSchedule:delete
+* outbound:whatsAppCampaign:deleteSchedule
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let whatsAppCampaignId: String = "" // WhatsApp Campaign ID
+
+// Code example
+OutboundAPI.deleteOutboundSchedulesWhatsappcampaign(whatsAppCampaignId: whatsAppCampaignId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OutboundAPI.deleteOutboundSchedulesWhatsappcampaign was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **whatsAppCampaignId** | **String**| WhatsApp Campaign ID | |
 
 
 ### Return type
@@ -5328,6 +5383,7 @@ Wraps GET /api/v2/outbound/schedules/sequences/{sequenceId}
 Requires ANY permissions: 
 
 * outbound:schedule:view
+* outbound:campaignSequenceSchedule:view
 
 ### Example
 
@@ -5378,6 +5434,7 @@ Wraps GET /api/v2/outbound/schedules/sequences
 Requires ANY permissions: 
 
 * outbound:schedule:view
+* outbound:campaignSequenceSchedule:view
 
 ### Example
 
@@ -5407,6 +5464,104 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**[SequenceSchedule]**](SequenceSchedule)
+
+
+## getOutboundSchedulesWhatsappcampaign
+
+
+
+> [WhatsAppCampaignSchedule](WhatsAppCampaignSchedule) getOutboundSchedulesWhatsappcampaign(whatsAppCampaignId)
+
+Get a WhatsApp campaign schedule.
+
+
+
+Wraps GET /api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}  
+
+Requires ANY permissions: 
+
+* outbound:whatsAppCampaignSchedule:view
+* outbound:whatsAppCampaign:viewSchedule
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let whatsAppCampaignId: String = "" // WhatsApp Campaign ID
+
+// Code example
+OutboundAPI.getOutboundSchedulesWhatsappcampaign(whatsAppCampaignId: whatsAppCampaignId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundSchedulesWhatsappcampaign was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **whatsAppCampaignId** | **String**| WhatsApp Campaign ID | |
+
+
+### Return type
+
+[**WhatsAppCampaignSchedule**](WhatsAppCampaignSchedule)
+
+
+## getOutboundSchedulesWhatsappcampaigns
+
+
+
+> [WhatsAppCampaignScheduleEntityListing](WhatsAppCampaignScheduleEntityListing) getOutboundSchedulesWhatsappcampaigns()
+
+Query for a list of WhatsApp campaign schedules.
+
+
+
+Wraps GET /api/v2/outbound/schedules/whatsappcampaigns  
+
+Requires ANY permissions: 
+
+* outbound:whatsAppCampaignSchedule:view
+* outbound:whatsAppCampaign:viewSchedule
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+OutboundAPI.getOutboundSchedulesWhatsappcampaigns() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundSchedulesWhatsappcampaigns was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**WhatsAppCampaignScheduleEntityListing**](WhatsAppCampaignScheduleEntityListing)
 
 
 ## getOutboundSequence
@@ -8937,6 +9092,7 @@ Wraps PUT /api/v2/outbound/schedules/sequences/{sequenceId}
 Requires ANY permissions: 
 
 * outbound:schedule:edit
+* outbound:campaignSequenceSchedule:edit
 
 ### Example
 
@@ -8972,6 +9128,59 @@ OutboundAPI.putOutboundSchedulesSequence(sequenceId: sequenceId, body: body) { (
 ### Return type
 
 [**SequenceSchedule**](SequenceSchedule)
+
+
+## putOutboundSchedulesWhatsappcampaign
+
+
+
+> [WhatsAppCampaignSchedule](WhatsAppCampaignSchedule) putOutboundSchedulesWhatsappcampaign(whatsAppCampaignId, body)
+
+Update a WhatsApp campaign schedule.
+
+
+
+Wraps PUT /api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}  
+
+Requires ANY permissions: 
+
+* outbound:whatsAppCampaignSchedule:edit
+* outbound:whatsAppCampaign:editSchedule
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let whatsAppCampaignId: String = "" // WhatsApp Campaign ID
+let body: WhatsAppCampaignSchedule = new WhatsAppCampaignSchedule(...) // WhatsAppCampaignSchedule
+
+// Code example
+OutboundAPI.putOutboundSchedulesWhatsappcampaign(whatsAppCampaignId: whatsAppCampaignId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.putOutboundSchedulesWhatsappcampaign was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **whatsAppCampaignId** | **String**| WhatsApp Campaign ID | |
+| **body** | [**WhatsAppCampaignSchedule**](WhatsAppCampaignSchedule)| WhatsAppCampaignSchedule | |
+
+
+### Return type
+
+[**WhatsAppCampaignSchedule**](WhatsAppCampaignSchedule)
 
 
 ## putOutboundSequence
@@ -9076,4 +9285,4 @@ OutboundAPI.putOutboundWrapupcodemappings(body: body) { (response, error) in
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

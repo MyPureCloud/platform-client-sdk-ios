@@ -906,7 +906,7 @@ TaskManagementAPI.getTaskmanagementWorkitemHistory(workitemId: workitemId, after
 
 
 
-> [WorkitemWrapup](WorkitemWrapup) getTaskmanagementWorkitemUserWrapups(workitemId, userId, expands, after, pageSize, sortOrder)
+> [WorkitemWrapupEntityListing](WorkitemWrapupEntityListing) getTaskmanagementWorkitemUserWrapups(workitemId, userId, expands, after, pageSize, sortOrder)
 
 Get all wrapup codes added for the given user for a workitem.
 
@@ -959,7 +959,7 @@ TaskManagementAPI.getTaskmanagementWorkitemUserWrapups(workitemId: workitemId, u
 
 ### Return type
 
-[**WorkitemWrapup**](WorkitemWrapup)
+[**WorkitemWrapupEntityListing**](WorkitemWrapupEntityListing)
 
 
 ## getTaskmanagementWorkitemVersion
@@ -3959,4 +3959,4 @@ TaskManagementAPI.putTaskmanagementWorkitemsSchema(schemaId: schemaId, body: bod
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

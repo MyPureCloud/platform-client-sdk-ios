@@ -353,6 +353,85 @@ open class JourneyAPI {
     
     
     
+    /**
+     Retrieve segment assignments by external contact ID.
+     
+     - parameter contactId: (path) ExternalContact ID 
+     - parameter includeMerged: (query) Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)
+     - parameter limit: (query) Number of entities to return. Default of 25, maximum of 500. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsContactJourneySegments(contactId: String, includeMerged: Bool? = nil, limit: Int? = nil, completion: @escaping ((_ data: SegmentAssignmentListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsContactJourneySegmentsWithRequestBuilder(contactId: contactId, includeMerged: includeMerged, limit: limit)
+        requestBuilder.execute { (response: Response<SegmentAssignmentListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve segment assignments by external contact ID.
+     - GET /api/v2/externalcontacts/contacts/{contactId}/journey/segments
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "session" : "{}",
+    "segment" : "{}",
+    "dateForUnassignment" : "2000-01-23T04:56:07.000+00:00",
+    "externalContact" : "{}",
+    "dateAssigned" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "session" : "{}",
+    "segment" : "{}",
+    "dateForUnassignment" : "2000-01-23T04:56:07.000+00:00",
+    "externalContact" : "{}",
+    "dateAssigned" : "2000-01-23T04:56:07.000+00:00"
+  } ]
+}, statusCode=200}]
+     
+     - parameter contactId: (path) ExternalContact ID 
+     - parameter includeMerged: (query) Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)
+     - parameter limit: (query) Number of entities to return. Default of 25, maximum of 500. (optional)
+
+     - returns: RequestBuilder<SegmentAssignmentListing> 
+     */
+    open class func getExternalcontactsContactJourneySegmentsWithRequestBuilder(contactId: String, includeMerged: Bool? = nil, limit: Int? = nil) -> RequestBuilder<SegmentAssignmentListing> {        
+        var path = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments"
+        let contactIdPreEscape = "\(contactId)"
+        let contactIdPostEscape = contactIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{contactId}", with: contactIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeMerged": includeMerged, 
+            "limit": limit?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<SegmentAssignmentListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
     
     
     /**
@@ -888,8 +967,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1192,8 +1271,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1377,8 +1456,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1669,8 +1748,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1974,8 +2053,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)
@@ -3524,8 +3603,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -3796,8 +3875,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) The number of the page to return (optional)
@@ -3881,8 +3960,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) The number of the page to return (optional)
@@ -4765,6 +4844,65 @@ open class JourneyAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JourneyAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success.
+     
+     - parameter contactId: (path) ExternalContact ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postExternalcontactsContactJourneySegments(contactId: String, body: UpdateSegmentAssignmentRequest? = nil, completion: @escaping ((_ data: UpdateSegmentAssignmentResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postExternalcontactsContactJourneySegmentsWithRequestBuilder(contactId: contactId, body: body)
+        requestBuilder.execute { (response: Response<UpdateSegmentAssignmentResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success.
+     - POST /api/v2/externalcontacts/contacts/{contactId}/journey/segments
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "unprocessedItems" : "{}"
+}, statusCode=200}]
+     
+     - parameter contactId: (path) ExternalContact ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<UpdateSegmentAssignmentResponse> 
+     */
+    open class func postExternalcontactsContactJourneySegmentsWithRequestBuilder(contactId: String, body: UpdateSegmentAssignmentRequest? = nil) -> RequestBuilder<UpdateSegmentAssignmentResponse> {        
+        var path = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments"
+        let contactIdPreEscape = "\(contactId)"
+        let contactIdPostEscape = contactIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{contactId}", with: contactIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UpdateSegmentAssignmentResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

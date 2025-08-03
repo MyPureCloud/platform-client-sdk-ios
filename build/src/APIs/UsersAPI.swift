@@ -951,8 +951,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
@@ -1048,8 +1048,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter subjectId: (path) Subject ID (user or group) 
@@ -1556,8 +1556,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -5571,8 +5571,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6410,7 +6410,8 @@ open class UsersAPI {
     "lastAgentRoutingMode" : "Disabled",
     "directRouting" : "{}",
     "name" : "name",
-    "agentOwnedRouting" : "{}"
+    "agentOwnedRouting" : "{}",
+    "conditionalGroupActivation" : "{}"
   }, {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
@@ -6517,14 +6518,15 @@ open class UsersAPI {
     "lastAgentRoutingMode" : "Disabled",
     "directRouting" : "{}",
     "name" : "name",
-    "agentOwnedRouting" : "{}"
+    "agentOwnedRouting" : "{}",
+    "conditionalGroupActivation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6743,8 +6745,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6843,8 +6845,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -7684,8 +7686,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -8477,8 +8479,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -8781,8 +8783,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (query) Specifies the list of user IDs to be queried, up to 100 user IDs. It searches for any relationship for the userId. (optional)
@@ -8986,8 +8988,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. (optional)
@@ -12130,10 +12132,8 @@ open class UsersAPI {
   "acdAutoAnswer" : true,
   "title" : "title",
   "orgAuthorization" : [ {
-    "default" : true,
-    "userCount" : 1,
+    "dateLicenseLastUpdated" : "2000-01-23T04:56:07.000+00:00",
     "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
-    "permissions" : [ "permissions", "permissions" ],
     "permissionPolicies" : [ {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
@@ -12551,7 +12551,8 @@ open class UsersAPI {
             "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
-            "agentOwnedRouting" : "{}"
+            "agentOwnedRouting" : "{}",
+            "conditionalGroupActivation" : "{}"
           }
         }, {
           "team" : {
@@ -12967,7 +12968,8 @@ open class UsersAPI {
             "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
-            "agentOwnedRouting" : "{}"
+            "agentOwnedRouting" : "{}",
+            "conditionalGroupActivation" : "{}"
           }
         } ],
         "variableName" : "variableName",
@@ -13398,7 +13400,8 @@ open class UsersAPI {
             "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
-            "agentOwnedRouting" : "{}"
+            "agentOwnedRouting" : "{}",
+            "conditionalGroupActivation" : "{}"
           }
         }, {
           "team" : {
@@ -13814,7 +13817,8 @@ open class UsersAPI {
             "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
-            "agentOwnedRouting" : "{}"
+            "agentOwnedRouting" : "{}",
+            "conditionalGroupActivation" : "{}"
           }
         } ],
         "variableName" : "variableName",
@@ -13830,17 +13834,20 @@ open class UsersAPI {
       "actionSet" : [ "actionSet", "actionSet" ]
     } ],
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
+    "addonLicenses" : [ "addonLicenses", "addonLicenses" ],
     "description" : "description",
+    "baseLicense" : "baseLicense",
+    "default" : true,
+    "userCount" : 1,
+    "permissions" : [ "permissions", "permissions" ],
+    "name" : "name",
     "id" : "id",
     "roleNeedsUpdate" : true,
     "defaultRoleId" : "defaultRoleId",
     "base" : true
   }, {
-    "default" : true,
-    "userCount" : 1,
+    "dateLicenseLastUpdated" : "2000-01-23T04:56:07.000+00:00",
     "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
-    "permissions" : [ "permissions", "permissions" ],
     "permissionPolicies" : [ {
       "policyDescription" : "policyDescription",
       "resourceConditionNode" : {
@@ -14258,7 +14265,8 @@ open class UsersAPI {
             "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
-            "agentOwnedRouting" : "{}"
+            "agentOwnedRouting" : "{}",
+            "conditionalGroupActivation" : "{}"
           }
         }, {
           "team" : {
@@ -14674,7 +14682,8 @@ open class UsersAPI {
             "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
-            "agentOwnedRouting" : "{}"
+            "agentOwnedRouting" : "{}",
+            "conditionalGroupActivation" : "{}"
           }
         } ],
         "variableName" : "variableName",
@@ -15105,7 +15114,8 @@ open class UsersAPI {
             "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
-            "agentOwnedRouting" : "{}"
+            "agentOwnedRouting" : "{}",
+            "conditionalGroupActivation" : "{}"
           }
         }, {
           "team" : {
@@ -15521,7 +15531,8 @@ open class UsersAPI {
             "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
-            "agentOwnedRouting" : "{}"
+            "agentOwnedRouting" : "{}",
+            "conditionalGroupActivation" : "{}"
           }
         } ],
         "variableName" : "variableName",
@@ -15537,8 +15548,13 @@ open class UsersAPI {
       "actionSet" : [ "actionSet", "actionSet" ]
     } ],
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
+    "addonLicenses" : [ "addonLicenses", "addonLicenses" ],
     "description" : "description",
+    "baseLicense" : "baseLicense",
+    "default" : true,
+    "userCount" : 1,
+    "permissions" : [ "permissions", "permissions" ],
+    "name" : "name",
     "id" : "id",
     "roleNeedsUpdate" : true,
     "defaultRoleId" : "defaultRoleId",
@@ -18431,7 +18447,8 @@ open class UsersAPI {
   "lastAgentRoutingMode" : "Disabled",
   "directRouting" : "{}",
   "name" : "name",
-  "agentOwnedRouting" : "{}"
+  "agentOwnedRouting" : "{}",
+  "conditionalGroupActivation" : "{}"
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue ID 
@@ -18606,7 +18623,8 @@ open class UsersAPI {
     "lastAgentRoutingMode" : "Disabled",
     "directRouting" : "{}",
     "name" : "name",
-    "agentOwnedRouting" : "{}"
+    "agentOwnedRouting" : "{}",
+    "conditionalGroupActivation" : "{}"
   }, {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
@@ -18713,14 +18731,15 @@ open class UsersAPI {
     "lastAgentRoutingMode" : "Disabled",
     "directRouting" : "{}",
     "name" : "name",
-    "agentOwnedRouting" : "{}"
+    "agentOwnedRouting" : "{}",
+    "conditionalGroupActivation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -18876,8 +18895,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -18958,8 +18977,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -19611,8 +19630,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter body: (body) Users 
@@ -24225,8 +24244,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 

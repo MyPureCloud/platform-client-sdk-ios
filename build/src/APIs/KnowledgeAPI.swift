@@ -8371,6 +8371,86 @@ open class KnowledgeAPI {
     
     
     
+    /**
+     Search for chunks in a knowledge base
+     
+     - parameter knowledgeBaseId: (path) Knowledge Base ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseChunksSearch(knowledgeBaseId: String, body: KnowledgeDocumentChunkRequest? = nil, completion: @escaping ((_ data: KnowledgeDocumentChunkResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseChunksSearchWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentChunkResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Search for chunks in a knowledge base
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/chunks/search
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "conversationContext" : "{}",
+  "total" : 0,
+  "pageCount" : 6,
+  "pageNumber" : 5,
+  "preprocessQuery" : true,
+  "searchId" : "searchId",
+  "application" : "{}",
+  "confidenceThreshold" : 5.637377,
+  "query" : "query",
+  "pageSize" : 1,
+  "results" : [ {
+    "confidence" : 2.302136,
+    "document" : "{}",
+    "id" : "id",
+    "text" : "text"
+  }, {
+    "confidence" : 2.302136,
+    "document" : "{}",
+    "id" : "id",
+    "text" : "text"
+  } ],
+  "queryType" : "AutoSearch"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge Base ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<KnowledgeDocumentChunkResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseChunksSearchWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeDocumentChunkRequest? = nil) -> RequestBuilder<KnowledgeDocumentChunkResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/chunks/search"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentChunkResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     
     
     /**
@@ -9148,6 +9228,7 @@ open class KnowledgeAPI {
         case documentvariations = "documentVariations"
         case documentalternatives = "documentAlternatives"
         case knowledgebaselanguagecode = "knowledgeBaseLanguageCode"
+        case variationchunks = "variationChunks"
     }
     
     
@@ -9220,12 +9301,19 @@ open class KnowledgeAPI {
     "datePublished" : "2000-01-23T04:56:07.000+00:00",
     "dateImported" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "lastPublishedVersionNumber" : 0,
+    "lastPublishedVersionNumber" : 5,
     "knowledgeBase" : "{}",
     "readonly" : true,
     "createdBy" : "{}",
     "variations" : [ {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "chunks" : [ {
+        "id" : "id",
+        "text" : "text"
+      }, {
+        "id" : "id",
+        "text" : "text"
+      } ],
       "document" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
@@ -9250,11 +9338,18 @@ open class KnowledgeAPI {
         } ],
         "context" : "{}"
       } ],
-      "priority" : 6,
+      "priority" : 2,
       "body" : "{}",
       "documentVersion" : "{}"
     }, {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "chunks" : [ {
+        "id" : "id",
+        "text" : "text"
+      }, {
+        "id" : "id",
+        "text" : "text"
+      } ],
       "document" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
@@ -9279,7 +9374,7 @@ open class KnowledgeAPI {
         } ],
         "context" : "{}"
       } ],
-      "priority" : 6,
+      "priority" : 2,
       "body" : "{}",
       "documentVersion" : "{}"
     } ],
@@ -9325,12 +9420,19 @@ open class KnowledgeAPI {
     "datePublished" : "2000-01-23T04:56:07.000+00:00",
     "dateImported" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "lastPublishedVersionNumber" : 0,
+    "lastPublishedVersionNumber" : 5,
     "knowledgeBase" : "{}",
     "readonly" : true,
     "createdBy" : "{}",
     "variations" : [ {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "chunks" : [ {
+        "id" : "id",
+        "text" : "text"
+      }, {
+        "id" : "id",
+        "text" : "text"
+      } ],
       "document" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
@@ -9355,11 +9457,18 @@ open class KnowledgeAPI {
         } ],
         "context" : "{}"
       } ],
-      "priority" : 6,
+      "priority" : 2,
       "body" : "{}",
       "documentVersion" : "{}"
     }, {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "chunks" : [ {
+        "id" : "id",
+        "text" : "text"
+      }, {
+        "id" : "id",
+        "text" : "text"
+      } ],
       "document" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
@@ -9384,7 +9493,7 @@ open class KnowledgeAPI {
         } ],
         "context" : "{}"
       } ],
-      "priority" : 6,
+      "priority" : 2,
       "body" : "{}",
       "documentVersion" : "{}"
     } ],
@@ -9434,6 +9543,7 @@ open class KnowledgeAPI {
         case documentvariations = "documentVariations"
         case documentalternatives = "documentAlternatives"
         case knowledgebaselanguagecode = "knowledgeBaseLanguageCode"
+        case variationchunks = "variationChunks"
     }
     
     

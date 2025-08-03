@@ -774,4 +774,4 @@ AlertingAPI.putAlertingRule(ruleId: ruleId, body: body) { (response, error) in
 [**CommonRule**](CommonRule)
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

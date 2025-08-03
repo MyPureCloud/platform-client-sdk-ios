@@ -20,7 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a Widget deployment
 
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
 
 
 
@@ -72,7 +72,7 @@ WidgetsAPI.deleteWidgetsDeployment(deploymentId: deploymentId) { (error) in
 
 Get a Widget deployment
 
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
 
 
 
@@ -125,7 +125,7 @@ WidgetsAPI.getWidgetsDeployment(deploymentId: deploymentId) { (response, error) 
 
 List Widget deployments
 
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
 
 
 
@@ -174,7 +174,7 @@ This endpoint does not require any parameters.
 
 Create Widget deployment
 
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
 
 
 
@@ -227,7 +227,7 @@ WidgetsAPI.postWidgetsDeployments(body: body) { (response, error) in
 
 Update a Widget deployment
 
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
 
 
 
@@ -274,4 +274,4 @@ WidgetsAPI.putWidgetsDeployment(deploymentId: deploymentId, body: body) { (respo
 [**WidgetDeployment**](WidgetDeployment)
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

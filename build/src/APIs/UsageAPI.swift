@@ -168,6 +168,207 @@ open class UsageAPI {
 
     
     
+    
+    
+    
+    
+    /**
+     Get the status and results of the usage query
+     
+     - parameter jobId: (path) jobId 
+     - parameter pageSize: (query) Page size of the results. Max is 1000. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsageAggregatesQueryJob(jobId: String, pageSize: Int? = nil, after: String? = nil, completion: @escaping ((_ data: OrganizationPublicApiUsageResultsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsageAggregatesQueryJobWithRequestBuilder(jobId: jobId, pageSize: pageSize, after: after)
+        requestBuilder.execute { (response: Response<OrganizationPublicApiUsageResultsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the status and results of the usage query
+     - GET /api/v2/usage/aggregates/query/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "queryStatus" : "Queued",
+  "entities" : [ {
+    "date" : "2000-01-23",
+    "requestCount" : 0,
+    "status429" : 5,
+    "templateUri" : "templateUri",
+    "status400" : 5,
+    "status500" : 2,
+    "status200" : 6,
+    "status300" : 1,
+    "httpMethod" : "GET",
+    "user" : "{}",
+    "platform" : "platform",
+    "oauthClient" : "{}"
+  }, {
+    "date" : "2000-01-23",
+    "requestCount" : 0,
+    "status429" : 5,
+    "templateUri" : "templateUri",
+    "status400" : 5,
+    "status500" : 2,
+    "status200" : 6,
+    "status300" : 1,
+    "httpMethod" : "GET",
+    "user" : "{}",
+    "platform" : "platform",
+    "oauthClient" : "{}"
+  } ],
+  "errorBody" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "nextUri" : "nextUri"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) jobId 
+     - parameter pageSize: (query) Page size of the results. Max is 1000. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+
+     - returns: RequestBuilder<OrganizationPublicApiUsageResultsResponse> 
+     */
+    open class func getUsageAggregatesQueryJobWithRequestBuilder(jobId: String, pageSize: Int? = nil, after: String? = nil) -> RequestBuilder<OrganizationPublicApiUsageResultsResponse> {        
+        var path = "/api/v2/usage/aggregates/query/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "after": after
+        ])
+
+        let requestBuilder: RequestBuilder<OrganizationPublicApiUsageResultsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get the status and results of the usage query
+     
+     - parameter clientId: (path) clientId 
+     - parameter jobId: (path) jobId 
+     - parameter pageSize: (query) Page size of the results. Max is 1000. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsageClientClientIdAggregatesQueryJob(clientId: String, jobId: String, pageSize: Int? = nil, after: String? = nil, completion: @escaping ((_ data: ClientPublicApiUsageResultsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsageClientClientIdAggregatesQueryJobWithRequestBuilder(clientId: clientId, jobId: jobId, pageSize: pageSize, after: after)
+        requestBuilder.execute { (response: Response<ClientPublicApiUsageResultsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the status and results of the usage query
+     - GET /api/v2/usage/client/{clientId}/aggregates/query/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "queryStatus" : "Queued",
+  "entities" : [ {
+    "date" : "2000-01-23",
+    "organizationId" : "organizationId",
+    "requestCount" : 0,
+    "status429" : 5,
+    "templateUri" : "templateUri",
+    "status400" : 5,
+    "status500" : 2,
+    "status200" : 6,
+    "status300" : 1,
+    "httpMethod" : "GET",
+    "platform" : "platform"
+  }, {
+    "date" : "2000-01-23",
+    "organizationId" : "organizationId",
+    "requestCount" : 0,
+    "status429" : 5,
+    "templateUri" : "templateUri",
+    "status400" : 5,
+    "status500" : 2,
+    "status200" : 6,
+    "status300" : 1,
+    "httpMethod" : "GET",
+    "platform" : "platform"
+  } ],
+  "errorBody" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "nextUri" : "nextUri"
+}, statusCode=200}]
+     
+     - parameter clientId: (path) clientId 
+     - parameter jobId: (path) jobId 
+     - parameter pageSize: (query) Page size of the results. Max is 1000. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+
+     - returns: RequestBuilder<ClientPublicApiUsageResultsResponse> 
+     */
+    open class func getUsageClientClientIdAggregatesQueryJobWithRequestBuilder(clientId: String, jobId: String, pageSize: Int? = nil, after: String? = nil) -> RequestBuilder<ClientPublicApiUsageResultsResponse> {        
+        var path = "/api/v2/usage/client/{clientId}/aggregates/query/jobs/{jobId}"
+        let clientIdPreEscape = "\(clientId)"
+        let clientIdPostEscape = clientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{clientId}", with: clientIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "after": after
+        ])
+
+        let requestBuilder: RequestBuilder<ClientPublicApiUsageResultsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Get the results of a usage query
      
@@ -405,6 +606,125 @@ open class UsageAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UsageExecutionResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Query your organization's public api usage.
+     
+     - parameter body: (body) Query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsageAggregatesQueryJobs(body: OrganizationPublicApiUsageQueryRequest, completion: @escaping ((_ data: OrganizationUsageQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postUsageAggregatesQueryJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<OrganizationUsageQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query your organization's public api usage.
+     - POST /api/v2/usage/aggregates/query/jobs
+     - After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "resultsUri" : "resultsUri"
+}, statusCode=200}]
+     
+     - parameter body: (body) Query 
+
+     - returns: RequestBuilder<OrganizationUsageQueryResponse> 
+     */
+    open class func postUsageAggregatesQueryJobsWithRequestBuilder(body: OrganizationPublicApiUsageQueryRequest) -> RequestBuilder<OrganizationUsageQueryResponse> {        
+        let path = "/api/v2/usage/aggregates/query/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OrganizationUsageQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Query your client's public api usage.
+     
+     - parameter clientId: (path) clientId 
+     - parameter body: (body) Query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsageClientClientIdAggregatesQueryJobs(clientId: String, body: ClientPublicApiUsageQueryRequest, completion: @escaping ((_ data: ClientUsageQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postUsageClientClientIdAggregatesQueryJobsWithRequestBuilder(clientId: clientId, body: body)
+        requestBuilder.execute { (response: Response<ClientUsageQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query your client's public api usage.
+     - POST /api/v2/usage/client/{clientId}/aggregates/query/jobs
+     - After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "resultsUri" : "resultsUri"
+}, statusCode=200}]
+     
+     - parameter clientId: (path) clientId 
+     - parameter body: (body) Query 
+
+     - returns: RequestBuilder<ClientUsageQueryResponse> 
+     */
+    open class func postUsageClientClientIdAggregatesQueryJobsWithRequestBuilder(clientId: String, body: ClientPublicApiUsageQueryRequest) -> RequestBuilder<ClientUsageQueryResponse> {        
+        var path = "/api/v2/usage/client/{clientId}/aggregates/query/jobs"
+        let clientIdPreEscape = "\(clientId)"
+        let clientIdPostEscape = clientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{clientId}", with: clientIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ClientUsageQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

@@ -24,10 +24,11 @@
 | **story** | [**RecordingContentStory**](RecordingContentStory) | Ephemeral story content. | [optional] |
 | **cards** | [**[Card]**]([Card]) | List of cards offered for this message | [optional] |
 | **notificationTemplate** | [**RecordingNotificationTemplate**](RecordingNotificationTemplate) | Template notification content. | [optional] |
+| **datePicker** | [**DatePicker**](DatePicker) | DatePicker content object. | [optional] |
 | **contentType** | **String** | Indicates the content type for this message | [optional] |
 | **socialVisibility** | **String** | For social media messages, the visibility of the message in the originating social platform | [optional] |
 | **events** | [**[ConversationMessageEvent]**]([ConversationMessageEvent]) | List of event elements | [optional] |
 
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

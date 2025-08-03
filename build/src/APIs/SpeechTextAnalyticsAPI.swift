@@ -382,8 +382,8 @@ open class SpeechTextAnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The page size for the listing. The max that will be returned is 25. (optional)
@@ -604,8 +604,8 @@ open class SpeechTextAnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter conversationId: (path) The id of the conversation 
@@ -761,6 +761,61 @@ open class SpeechTextAnalyticsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TranscriptUrls>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get sentiment data
+     
+     - parameter conversationId: (path) The conversation ID of the sentiment data 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsConversationSentiments(conversationId: String, completion: @escaping ((_ data: SentimentData?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsConversationSentimentsWithRequestBuilder(conversationId: conversationId)
+        requestBuilder.execute { (response: Response<SentimentData>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get sentiment data
+     - GET /api/v2/speechandtextanalytics/conversations/{conversationId}/sentiments
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "insights" : "{}"
+}, statusCode=200}]
+     
+     - parameter conversationId: (path) The conversation ID of the sentiment data 
+
+     - returns: RequestBuilder<SentimentData> 
+     */
+    open class func getSpeechandtextanalyticsConversationSentimentsWithRequestBuilder(conversationId: String) -> RequestBuilder<SentimentData> {        
+        var path = "/api/v2/speechandtextanalytics/conversations/{conversationId}/sentiments"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SentimentData>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1693,8 +1748,8 @@ open class SpeechTextAnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The page size for the listing. The max that will be returned is 100. (optional)

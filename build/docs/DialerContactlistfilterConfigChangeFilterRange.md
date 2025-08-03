@@ -13,7 +13,8 @@ FilterRange is one of the attributes of a FilterPredicate
 | **maxInclusive** | **Bool** | Whether or not to include the maximum in the range | [optional] |
 | **inSet** | **[String]** | Elements that apply to the IN operator | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
+| **getAdditionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

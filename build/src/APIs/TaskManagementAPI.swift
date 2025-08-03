@@ -1057,9 +1057,9 @@ open class TaskManagementAPI {
      - parameter sortOrder: (query) Ascending or descending sort order (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getTaskmanagementWorkitemUserWrapups(workitemId: String, userId: String, expands: Expands_getTaskmanagementWorkitemUserWrapups? = nil, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorkitemUserWrapups? = nil, completion: @escaping ((_ data: WorkitemWrapup?,_ error: Error?) -> Void)) {
+    open class func getTaskmanagementWorkitemUserWrapups(workitemId: String, userId: String, expands: Expands_getTaskmanagementWorkitemUserWrapups? = nil, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorkitemUserWrapups? = nil, completion: @escaping ((_ data: WorkitemWrapupEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getTaskmanagementWorkitemUserWrapupsWithRequestBuilder(workitemId: workitemId, userId: userId, expands: expands, after: after, pageSize: pageSize, sortOrder: sortOrder)
-        requestBuilder.execute { (response: Response<WorkitemWrapup>?, error) -> Void in
+        requestBuilder.execute { (response: Response<WorkitemWrapupEntityListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1082,11 +1082,22 @@ open class TaskManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "wrapupCode" : "{}",
-  "workitem" : "{}",
-  "modifiedBy" : "{}",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "user" : "{}"
+  "entities" : [ {
+    "wrapupCode" : "{}",
+    "workitem" : "{}",
+    "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "user" : "{}"
+  }, {
+    "wrapupCode" : "{}",
+    "workitem" : "{}",
+    "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "user" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
 }, statusCode=200}]
      
      - parameter workitemId: (path) The ID of the Workitem. 
@@ -1096,9 +1107,9 @@ open class TaskManagementAPI {
      - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 50. (optional)
      - parameter sortOrder: (query) Ascending or descending sort order (optional)
 
-     - returns: RequestBuilder<WorkitemWrapup> 
+     - returns: RequestBuilder<WorkitemWrapupEntityListing> 
      */
-    open class func getTaskmanagementWorkitemUserWrapupsWithRequestBuilder(workitemId: String, userId: String, expands: Expands_getTaskmanagementWorkitemUserWrapups? = nil, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorkitemUserWrapups? = nil) -> RequestBuilder<WorkitemWrapup> {        
+    open class func getTaskmanagementWorkitemUserWrapupsWithRequestBuilder(workitemId: String, userId: String, expands: Expands_getTaskmanagementWorkitemUserWrapups? = nil, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorkitemUserWrapups? = nil) -> RequestBuilder<WorkitemWrapupEntityListing> {        
         var path = "/api/v2/taskmanagement/workitems/{workitemId}/users/{userId}/wrapups"
         let workitemIdPreEscape = "\(workitemId)"
         let workitemIdPostEscape = workitemIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1117,7 +1128,7 @@ open class TaskManagementAPI {
             "sortOrder": sortOrder?.rawValue
         ])
 
-        let requestBuilder: RequestBuilder<WorkitemWrapup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<WorkitemWrapupEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }

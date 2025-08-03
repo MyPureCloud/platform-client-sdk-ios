@@ -80,7 +80,7 @@ open class WebChatAPI {
     /**
      Remove a member from a chat conversation
      - DELETE /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}
-     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/
+     - This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
@@ -318,7 +318,7 @@ open class WebChatAPI {
     /**
      Get a media request in the conversation
      - GET /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId}
-     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
+     - This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-legacy-co-browse-and-screenshare/
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
@@ -384,7 +384,7 @@ open class WebChatAPI {
     /**
      Get all media requests to the guest in the conversation
      - GET /api/v2/webchat/guest/conversations/{conversationId}/mediarequests
-     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/
+     - This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
@@ -459,7 +459,7 @@ open class WebChatAPI {
     /**
      Get a web chat conversation member
      - GET /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}
-     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/
+     - This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
@@ -542,7 +542,7 @@ open class WebChatAPI {
     /**
      Get the members of a chat conversation.
      - GET /api/v2/webchat/guest/conversations/{conversationId}/members
-     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/
+     - This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
@@ -587,8 +587,8 @@ open class WebChatAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter conversationId: (path) conversationId 
@@ -650,7 +650,7 @@ open class WebChatAPI {
     /**
      Get a web chat conversation message
      - GET /api/v2/webchat/guest/conversations/{conversationId}/messages/{messageId}
-     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/
+     - This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
@@ -734,7 +734,7 @@ open class WebChatAPI {
     /**
      Get the messages of a chat conversation.
      - GET /api/v2/webchat/guest/conversations/{conversationId}/messages
-     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/
+     - This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
@@ -875,7 +875,7 @@ open class WebChatAPI {
     /**
      Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
      - PATCH /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId}
-     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
+     - This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-legacy-co-browse-and-screenshare/
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
@@ -1011,7 +1011,7 @@ open class WebChatAPI {
     /**
      Send a message in a chat conversation.
      - POST /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}/messages
-     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/
+     - This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
@@ -1082,7 +1082,7 @@ open class WebChatAPI {
     /**
      Send a typing-indicator in a chat conversation.
      - POST /api/v2/webchat/guest/conversations/{conversationId}/members/{memberId}/typing
-     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/
+     - This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
@@ -1145,7 +1145,7 @@ open class WebChatAPI {
     /**
      Create an ACD chat conversation from an external customer.
      - POST /api/v2/webchat/guest/conversations
-     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. This endpoint will create a new ACD Chat conversation under the specified Chat Deployment. The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the 'memberAuthToken' field should include his JWT as generated by the 'POST /api/v2/signeddata' resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted. The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the 'eventStreamUri' field of the response; the conversation is not routed until the event stream is attached.
+     - This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. This endpoint will create a new ACD Chat conversation under the specified Chat Deployment. The conversation will begin with a guest member in it (with a role=CUSTOMER) according to the customer information that is supplied. If the guest member is authenticated, the 'memberAuthToken' field should include his JWT as generated by the 'POST /api/v2/signeddata' resource; if the guest member is anonymous (and the Deployment permits it) this field can be omitted. The returned data includes the IDs of the conversation created, along with a newly-create JWT token that you can supply to all future endpoints as authentication to perform operations against that conversation. After successfully creating a conversation, you should connect a websocket to the event stream named in the 'eventStreamUri' field of the response; the conversation is not routed until the event stream is attached.
      - examples: [{contentType=application/json, example={
   "jwt" : "jwt",
   "member" : "{}",

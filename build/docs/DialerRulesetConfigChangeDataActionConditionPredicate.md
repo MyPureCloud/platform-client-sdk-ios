@@ -12,7 +12,8 @@
 | **outputFieldMissingResolution** | **Bool** | The result of this predicate if the requested output field is missing from the data action&#39;s result | [optional] |
 | **inverted** | **Bool** | If true, inverts the result of evaluating this Predicate. Default is false. | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
+| **getAdditionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

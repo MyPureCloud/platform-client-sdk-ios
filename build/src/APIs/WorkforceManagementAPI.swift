@@ -112,6 +112,65 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
+    /**
+     Delete staffing group allocations history created for a capacity plan before the given date
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter beforeDateId: (query) The date to delete records that are created on or before this date in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory(businessUnitId: String, capacityPlanId: String, beforeDateId: Date? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryWithRequestBuilder(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId, beforeDateId: beforeDateId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete staffing group allocations history created for a capacity plan before the given date
+     - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter beforeDateId: (query) The date to delete records that are created on or before this date in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryWithRequestBuilder(businessUnitId: String, capacityPlanId: String, beforeDateId: Date? = nil) -> RequestBuilder<Void> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let capacityPlanIdPreEscape = "\(capacityPlanId)"
+        let capacityPlanIdPostEscape = capacityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{capacityPlanId}", with: capacityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "beforeDateId": beforeDateId?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     /**
      Deletes the planning group
      
@@ -2029,15 +2088,18 @@ open class WorkforceManagementAPI {
         case settingsCoaching = "settings.coaching"
     }
     
+    
+    
     /**
      Get business unit
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
      - parameter expand: (query) Include to access additional data on the business unit (optional)
+     - parameter includeSchedulingDefaultMessageSeverities: (query) Whether to include scheduling default message severities (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementBusinessunit(businessUnitId: String, expand: [String]? = nil, completion: @escaping ((_ data: BusinessUnitResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: businessUnitId, expand: expand)
+    open class func getWorkforcemanagementBusinessunit(businessUnitId: String, expand: [String]? = nil, includeSchedulingDefaultMessageSeverities: Bool? = nil, completion: @escaping ((_ data: BusinessUnitResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: businessUnitId, expand: expand, includeSchedulingDefaultMessageSeverities: includeSchedulingDefaultMessageSeverities)
         requestBuilder.execute { (response: Response<BusinessUnitResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -2071,10 +2133,11 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
      - parameter expand: (query) Include to access additional data on the business unit (optional)
+     - parameter includeSchedulingDefaultMessageSeverities: (query) Whether to include scheduling default message severities (optional)
 
      - returns: RequestBuilder<BusinessUnitResponse> 
      */
-    open class func getWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String, expand: [String]? = nil) -> RequestBuilder<BusinessUnitResponse> {        
+    open class func getWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String, expand: [String]? = nil, includeSchedulingDefaultMessageSeverities: Bool? = nil) -> RequestBuilder<BusinessUnitResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2084,7 +2147,8 @@ open class WorkforceManagementAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "expand": expand
+            "expand": expand, 
+            "includeSchedulingDefaultMessageSeverities": includeSchedulingDefaultMessageSeverities
         ])
 
         let requestBuilder: RequestBuilder<BusinessUnitResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3020,6 +3084,351 @@ open class WorkforceManagementAPI {
     
     
     /**
+     Get a capacity plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitCapacityplan(businessUnitId: String, capacityPlanId: String, completion: @escaping ((_ data: CapacityPlanResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitCapacityplanWithRequestBuilder(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId)
+        requestBuilder.execute { (response: Response<CapacityPlanResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a capacity plan
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "fullTimeEquivalentWeeklyHours" : 0.8008281904610115,
+  "description" : "description",
+  "forecast" : "{}",
+  "id" : "id",
+  "startBusinessUnitDate" : "2000-01-23",
+  "endBusinessUnitDate" : "2000-01-23"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+
+     - returns: RequestBuilder<CapacityPlanResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitCapacityplanWithRequestBuilder(businessUnitId: String, capacityPlanId: String) -> RequestBuilder<CapacityPlanResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let capacityPlanIdPreEscape = "\(capacityPlanId)"
+        let capacityPlanIdPostEscape = capacityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{capacityPlanId}", with: capacityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CapacityPlanResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a capacity plan's staffing group allocations
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations(businessUnitId: String, capacityPlanId: String, completion: @escaping ((_ data: CapacityPlanStaffingGroupAllocationsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationsWithRequestBuilder(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId)
+        requestBuilder.execute { (response: Response<CapacityPlanStaffingGroupAllocationsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a capacity plan's staffing group allocations
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadTemplate" : "{}",
+  "fullTimeEquivalentWeeklyHours" : 0.8008281904610115,
+  "downloadUrl" : "downloadUrl",
+  "capacityPlan" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+
+     - returns: RequestBuilder<CapacityPlanStaffingGroupAllocationsResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationsWithRequestBuilder(businessUnitId: String, capacityPlanId: String) -> RequestBuilder<CapacityPlanStaffingGroupAllocationsResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let capacityPlanIdPreEscape = "\(capacityPlanId)"
+        let capacityPlanIdPostEscape = capacityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{capacityPlanId}", with: capacityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CapacityPlanStaffingGroupAllocationsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a capacity plan's staffing requirements
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitCapacityplanStaffingrequirements(businessUnitId: String, capacityPlanId: String, completion: @escaping ((_ data: CapacityPlanStaffingRequirementResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitCapacityplanStaffingrequirementsWithRequestBuilder(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId)
+        requestBuilder.execute { (response: Response<CapacityPlanStaffingRequirementResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a capacity plan's staffing requirements
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffingrequirements
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadTemplate" : "{}",
+  "referenceBusinessUnitDate" : "2000-01-23",
+  "businessUnit" : "{}",
+  "granularity" : "Weekly",
+  "downloadUrl" : "downloadUrl",
+  "errorCode" : "TimedOut",
+  "capacityPlan" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+
+     - returns: RequestBuilder<CapacityPlanStaffingRequirementResult> 
+     */
+    open class func getWorkforcemanagementBusinessunitCapacityplanStaffingrequirementsWithRequestBuilder(businessUnitId: String, capacityPlanId: String) -> RequestBuilder<CapacityPlanStaffingRequirementResult> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffingrequirements"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let capacityPlanIdPreEscape = "\(capacityPlanId)"
+        let capacityPlanIdPostEscape = capacityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{capacityPlanId}", with: capacityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CapacityPlanStaffingRequirementResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get the latest long term staffing requirements for a business unit
+     
+     - parameter businessUnitId: (path)  
+     - parameter weekDateId: (path) weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) forecastId of forecast 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast(businessUnitId: String, weekDateId: Date, forecastId: String, completion: @escaping ((_ data: LongTermRequirementsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId)
+        requestBuilder.execute { (response: Response<LongTermRequirementsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the latest long term staffing requirements for a business unit
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadUrl" : "downloadUrl",
+  "errorCode" : "TimedOut",
+  "status" : "Processing",
+  "longTermRequirements" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path)  
+     - parameter weekDateId: (path) weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) forecastId of forecast 
+
+     - returns: RequestBuilder<LongTermRequirementsResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String) -> RequestBuilder<LongTermRequirementsResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let forecastIdPreEscape = "\(forecastId)"
+        let forecastIdPostEscape = forecastIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{forecastId}", with: forecastIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LongTermRequirementsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get list of capacity plans for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitCapacityplans(businessUnitId: String, completion: @escaping ((_ data: CapacityPlansListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitCapacityplansWithRequestBuilder(businessUnitId: businessUnitId)
+        requestBuilder.execute { (response: Response<CapacityPlansListResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get list of capacity plans for a business unit
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "metadata" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "startBusinessUnitDate" : "2000-01-23",
+    "endBusinessUnitDate" : "2000-01-23"
+  }, {
+    "metadata" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "startBusinessUnitDate" : "2000-01-23",
+    "endBusinessUnitDate" : "2000-01-23"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+
+     - returns: RequestBuilder<CapacityPlansListResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitCapacityplansWithRequestBuilder(businessUnitId: String) -> RequestBuilder<CapacityPlansListResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CapacityPlansListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Get intraday planning groups for the given date
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -3247,8 +3656,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -3966,6 +4375,13 @@ open class WorkforceManagementAPI {
   "managementUnit" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
+  "planningGroups" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "id" : "id",
   "users" : [ {
     "selfUri" : "https://openapi-generator.tech",
@@ -4043,6 +4459,13 @@ open class WorkforceManagementAPI {
     "managementUnit" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "planningGroups" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "id" : "id",
     "users" : [ {
       "selfUri" : "https://openapi-generator.tech",
@@ -4056,6 +4479,13 @@ open class WorkforceManagementAPI {
     "managementUnit" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "planningGroups" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "id" : "id",
     "users" : [ {
       "selfUri" : "https://openapi-generator.tech",
@@ -4822,6 +5252,8 @@ open class WorkforceManagementAPI {
         "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
+      "workPlanId" : "workPlanId",
+      "workPlanShiftId" : "workPlanShiftId",
       "id" : "id",
       "startDate" : "2000-01-23T04:56:07.000+00:00",
       "manuallyEdited" : true
@@ -4851,6 +5283,8 @@ open class WorkforceManagementAPI {
         "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
+      "workPlanId" : "workPlanId",
+      "workPlanShiftId" : "workPlanShiftId",
       "id" : "id",
       "startDate" : "2000-01-23T04:56:07.000+00:00",
       "manuallyEdited" : true
@@ -4905,6 +5339,8 @@ open class WorkforceManagementAPI {
         "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
+      "workPlanId" : "workPlanId",
+      "workPlanShiftId" : "workPlanShiftId",
       "id" : "id",
       "startDate" : "2000-01-23T04:56:07.000+00:00",
       "manuallyEdited" : true
@@ -4934,6 +5370,8 @@ open class WorkforceManagementAPI {
         "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
+      "workPlanId" : "workPlanId",
+      "workPlanShiftId" : "workPlanShiftId",
       "id" : "id",
       "startDate" : "2000-01-23T04:56:07.000+00:00",
       "manuallyEdited" : true
@@ -8616,134 +9054,138 @@ open class WorkforceManagementAPI {
   "valid" : true,
   "minimumShiftStartDistanceMinutes" : 4,
   "constrainMaximumConsecutiveWorkingDays" : true,
+  "constrainMaximumWorkingWeekendsPerPlanningPeriod" : true,
   "maximumConsecutiveWorkingDays" : 2,
   "constrainMinimumTimeBetweenShifts" : true,
   "shifts" : [ {
     "validationId" : "validationId",
-    "maximumContiguousWorkTimeMinutes" : 6,
+    "maximumContiguousWorkTimeMinutes" : 3,
     "constrainDayOff" : true,
     "flexiblePaidTime" : true,
     "delete" : true,
     "constrainStopTime" : true,
-    "latestStopTimeMinutesFromMidnight" : 4,
+    "latestStopTimeMinutesFromMidnight" : 5,
     "id" : "id",
     "constrainEarliestStopTime" : true,
-    "exactStartTimeMinutesFromMidnight" : 6,
+    "exactStartTimeMinutesFromMidnight" : 7,
     "dayOffRule" : "NextDayOff",
     "startIncrementMinutes" : 9,
     "constrainContiguousWorkTime" : true,
+    "planningPeriodConstraints" : "{}",
     "constrainLatestStopTime" : true,
-    "latestStartTimeMinutesFromMidnight" : 1,
-    "earliestStopTimeMinutesFromMidnight" : 5,
+    "latestStartTimeMinutesFromMidnight" : 4,
+    "earliestStopTimeMinutesFromMidnight" : 9,
     "activities" : [ {
       "startTimeIncrementMinutes" : 6,
       "validationId" : "validationId",
-      "lengthMinutes" : 3,
-      "earliestStartTimeMinutes" : 6,
+      "lengthMinutes" : 6,
+      "earliestStartTimeMinutes" : 1,
       "description" : "description",
-      "latestStartTimeMinutes" : 1,
+      "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "activityCodeId",
-      "minimumLengthFromShiftStartMinutes" : 6,
+      "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 5,
-      "exactStartTimeMinutes" : 2,
+      "minimumLengthFromShiftEndMinutes" : 6,
+      "exactStartTimeMinutes" : 6,
       "countsAsContiguousWorkTime" : true,
       "id" : "id",
       "flexibleStartTime" : true
     }, {
       "startTimeIncrementMinutes" : 6,
       "validationId" : "validationId",
-      "lengthMinutes" : 3,
-      "earliestStartTimeMinutes" : 6,
+      "lengthMinutes" : 6,
+      "earliestStartTimeMinutes" : 1,
       "description" : "description",
-      "latestStartTimeMinutes" : 1,
+      "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "activityCodeId",
-      "minimumLengthFromShiftStartMinutes" : 6,
+      "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 5,
-      "exactStartTimeMinutes" : 2,
+      "minimumLengthFromShiftEndMinutes" : 6,
+      "exactStartTimeMinutes" : 6,
       "countsAsContiguousWorkTime" : true,
       "id" : "id",
       "flexibleStartTime" : true
     } ],
-    "maximumPaidTimeMinutes" : 8,
+    "maximumPaidTimeMinutes" : 9,
     "name" : "name",
     "days" : "{}",
-    "minimumContiguousWorkTimeMinutes" : 9,
-    "exactPaidTimeMinutes" : 9,
-    "earliestStartTimeMinutesFromMidnight" : 7,
+    "minimumContiguousWorkTimeMinutes" : 6,
+    "exactPaidTimeMinutes" : 6,
+    "earliestStartTimeMinutesFromMidnight" : 1,
     "flexibleStartTime" : true,
-    "minimumPaidTimeMinutes" : 6
+    "minimumPaidTimeMinutes" : 8
   }, {
     "validationId" : "validationId",
-    "maximumContiguousWorkTimeMinutes" : 6,
+    "maximumContiguousWorkTimeMinutes" : 3,
     "constrainDayOff" : true,
     "flexiblePaidTime" : true,
     "delete" : true,
     "constrainStopTime" : true,
-    "latestStopTimeMinutesFromMidnight" : 4,
+    "latestStopTimeMinutesFromMidnight" : 5,
     "id" : "id",
     "constrainEarliestStopTime" : true,
-    "exactStartTimeMinutesFromMidnight" : 6,
+    "exactStartTimeMinutesFromMidnight" : 7,
     "dayOffRule" : "NextDayOff",
     "startIncrementMinutes" : 9,
     "constrainContiguousWorkTime" : true,
+    "planningPeriodConstraints" : "{}",
     "constrainLatestStopTime" : true,
-    "latestStartTimeMinutesFromMidnight" : 1,
-    "earliestStopTimeMinutesFromMidnight" : 5,
+    "latestStartTimeMinutesFromMidnight" : 4,
+    "earliestStopTimeMinutesFromMidnight" : 9,
     "activities" : [ {
       "startTimeIncrementMinutes" : 6,
       "validationId" : "validationId",
-      "lengthMinutes" : 3,
-      "earliestStartTimeMinutes" : 6,
+      "lengthMinutes" : 6,
+      "earliestStartTimeMinutes" : 1,
       "description" : "description",
-      "latestStartTimeMinutes" : 1,
+      "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "activityCodeId",
-      "minimumLengthFromShiftStartMinutes" : 6,
+      "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 5,
-      "exactStartTimeMinutes" : 2,
+      "minimumLengthFromShiftEndMinutes" : 6,
+      "exactStartTimeMinutes" : 6,
       "countsAsContiguousWorkTime" : true,
       "id" : "id",
       "flexibleStartTime" : true
     }, {
       "startTimeIncrementMinutes" : 6,
       "validationId" : "validationId",
-      "lengthMinutes" : 3,
-      "earliestStartTimeMinutes" : 6,
+      "lengthMinutes" : 6,
+      "earliestStartTimeMinutes" : 1,
       "description" : "description",
-      "latestStartTimeMinutes" : 1,
+      "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "activityCodeId",
-      "minimumLengthFromShiftStartMinutes" : 6,
+      "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 5,
-      "exactStartTimeMinutes" : 2,
+      "minimumLengthFromShiftEndMinutes" : 6,
+      "exactStartTimeMinutes" : 6,
       "countsAsContiguousWorkTime" : true,
       "id" : "id",
       "flexibleStartTime" : true
     } ],
-    "maximumPaidTimeMinutes" : 8,
+    "maximumPaidTimeMinutes" : 9,
     "name" : "name",
     "days" : "{}",
-    "minimumContiguousWorkTimeMinutes" : 9,
-    "exactPaidTimeMinutes" : 9,
-    "earliestStartTimeMinutesFromMidnight" : 7,
+    "minimumContiguousWorkTimeMinutes" : 6,
+    "exactPaidTimeMinutes" : 6,
+    "earliestStartTimeMinutesFromMidnight" : 1,
     "flexibleStartTime" : true,
-    "minimumPaidTimeMinutes" : 6
+    "minimumPaidTimeMinutes" : 8
   } ],
   "weeklyMinimumPaidMinutes" : 6,
   "id" : "id",
   "paidTimeGranularityMinutes" : 5,
   "maximumConsecutiveWorkingWeekends" : 9,
   "weeklyExactPaidMinutes" : 0,
+  "maximumWorkingWeekendsPerPlanningPeriod" : 6,
   "shiftStartVarianceType" : "ShiftStart",
   "maximumDays" : 2,
   "minimumWorkingDaysPerWeek" : 3,
@@ -8765,7 +9207,7 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "minimumDaysOffPerPlanningPeriod" : 7,
   "constrainMaximumConsecutiveWorkingWeekends" : true,
-  "agentCount" : 6
+  "agentCount" : 7
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -9040,134 +9482,138 @@ open class WorkforceManagementAPI {
     "valid" : true,
     "minimumShiftStartDistanceMinutes" : 4,
     "constrainMaximumConsecutiveWorkingDays" : true,
+    "constrainMaximumWorkingWeekendsPerPlanningPeriod" : true,
     "maximumConsecutiveWorkingDays" : 2,
     "constrainMinimumTimeBetweenShifts" : true,
     "shifts" : [ {
       "validationId" : "validationId",
-      "maximumContiguousWorkTimeMinutes" : 6,
+      "maximumContiguousWorkTimeMinutes" : 3,
       "constrainDayOff" : true,
       "flexiblePaidTime" : true,
       "delete" : true,
       "constrainStopTime" : true,
-      "latestStopTimeMinutesFromMidnight" : 4,
+      "latestStopTimeMinutesFromMidnight" : 5,
       "id" : "id",
       "constrainEarliestStopTime" : true,
-      "exactStartTimeMinutesFromMidnight" : 6,
+      "exactStartTimeMinutesFromMidnight" : 7,
       "dayOffRule" : "NextDayOff",
       "startIncrementMinutes" : 9,
       "constrainContiguousWorkTime" : true,
+      "planningPeriodConstraints" : "{}",
       "constrainLatestStopTime" : true,
-      "latestStartTimeMinutesFromMidnight" : 1,
-      "earliestStopTimeMinutesFromMidnight" : 5,
+      "latestStartTimeMinutesFromMidnight" : 4,
+      "earliestStopTimeMinutesFromMidnight" : 9,
       "activities" : [ {
         "startTimeIncrementMinutes" : 6,
         "validationId" : "validationId",
-        "lengthMinutes" : 3,
-        "earliestStartTimeMinutes" : 6,
+        "lengthMinutes" : 6,
+        "earliestStartTimeMinutes" : 1,
         "description" : "description",
-        "latestStartTimeMinutes" : 1,
+        "latestStartTimeMinutes" : 2,
         "countsAsPaidTime" : true,
         "delete" : true,
         "activityCodeId" : "activityCodeId",
-        "minimumLengthFromShiftStartMinutes" : 6,
+        "minimumLengthFromShiftStartMinutes" : 5,
         "startTimeIsRelativeToShiftStart" : true,
-        "minimumLengthFromShiftEndMinutes" : 5,
-        "exactStartTimeMinutes" : 2,
+        "minimumLengthFromShiftEndMinutes" : 6,
+        "exactStartTimeMinutes" : 6,
         "countsAsContiguousWorkTime" : true,
         "id" : "id",
         "flexibleStartTime" : true
       }, {
         "startTimeIncrementMinutes" : 6,
         "validationId" : "validationId",
-        "lengthMinutes" : 3,
-        "earliestStartTimeMinutes" : 6,
+        "lengthMinutes" : 6,
+        "earliestStartTimeMinutes" : 1,
         "description" : "description",
-        "latestStartTimeMinutes" : 1,
+        "latestStartTimeMinutes" : 2,
         "countsAsPaidTime" : true,
         "delete" : true,
         "activityCodeId" : "activityCodeId",
-        "minimumLengthFromShiftStartMinutes" : 6,
+        "minimumLengthFromShiftStartMinutes" : 5,
         "startTimeIsRelativeToShiftStart" : true,
-        "minimumLengthFromShiftEndMinutes" : 5,
-        "exactStartTimeMinutes" : 2,
+        "minimumLengthFromShiftEndMinutes" : 6,
+        "exactStartTimeMinutes" : 6,
         "countsAsContiguousWorkTime" : true,
         "id" : "id",
         "flexibleStartTime" : true
       } ],
-      "maximumPaidTimeMinutes" : 8,
+      "maximumPaidTimeMinutes" : 9,
       "name" : "name",
       "days" : "{}",
-      "minimumContiguousWorkTimeMinutes" : 9,
-      "exactPaidTimeMinutes" : 9,
-      "earliestStartTimeMinutesFromMidnight" : 7,
+      "minimumContiguousWorkTimeMinutes" : 6,
+      "exactPaidTimeMinutes" : 6,
+      "earliestStartTimeMinutesFromMidnight" : 1,
       "flexibleStartTime" : true,
-      "minimumPaidTimeMinutes" : 6
+      "minimumPaidTimeMinutes" : 8
     }, {
       "validationId" : "validationId",
-      "maximumContiguousWorkTimeMinutes" : 6,
+      "maximumContiguousWorkTimeMinutes" : 3,
       "constrainDayOff" : true,
       "flexiblePaidTime" : true,
       "delete" : true,
       "constrainStopTime" : true,
-      "latestStopTimeMinutesFromMidnight" : 4,
+      "latestStopTimeMinutesFromMidnight" : 5,
       "id" : "id",
       "constrainEarliestStopTime" : true,
-      "exactStartTimeMinutesFromMidnight" : 6,
+      "exactStartTimeMinutesFromMidnight" : 7,
       "dayOffRule" : "NextDayOff",
       "startIncrementMinutes" : 9,
       "constrainContiguousWorkTime" : true,
+      "planningPeriodConstraints" : "{}",
       "constrainLatestStopTime" : true,
-      "latestStartTimeMinutesFromMidnight" : 1,
-      "earliestStopTimeMinutesFromMidnight" : 5,
+      "latestStartTimeMinutesFromMidnight" : 4,
+      "earliestStopTimeMinutesFromMidnight" : 9,
       "activities" : [ {
         "startTimeIncrementMinutes" : 6,
         "validationId" : "validationId",
-        "lengthMinutes" : 3,
-        "earliestStartTimeMinutes" : 6,
+        "lengthMinutes" : 6,
+        "earliestStartTimeMinutes" : 1,
         "description" : "description",
-        "latestStartTimeMinutes" : 1,
+        "latestStartTimeMinutes" : 2,
         "countsAsPaidTime" : true,
         "delete" : true,
         "activityCodeId" : "activityCodeId",
-        "minimumLengthFromShiftStartMinutes" : 6,
+        "minimumLengthFromShiftStartMinutes" : 5,
         "startTimeIsRelativeToShiftStart" : true,
-        "minimumLengthFromShiftEndMinutes" : 5,
-        "exactStartTimeMinutes" : 2,
+        "minimumLengthFromShiftEndMinutes" : 6,
+        "exactStartTimeMinutes" : 6,
         "countsAsContiguousWorkTime" : true,
         "id" : "id",
         "flexibleStartTime" : true
       }, {
         "startTimeIncrementMinutes" : 6,
         "validationId" : "validationId",
-        "lengthMinutes" : 3,
-        "earliestStartTimeMinutes" : 6,
+        "lengthMinutes" : 6,
+        "earliestStartTimeMinutes" : 1,
         "description" : "description",
-        "latestStartTimeMinutes" : 1,
+        "latestStartTimeMinutes" : 2,
         "countsAsPaidTime" : true,
         "delete" : true,
         "activityCodeId" : "activityCodeId",
-        "minimumLengthFromShiftStartMinutes" : 6,
+        "minimumLengthFromShiftStartMinutes" : 5,
         "startTimeIsRelativeToShiftStart" : true,
-        "minimumLengthFromShiftEndMinutes" : 5,
-        "exactStartTimeMinutes" : 2,
+        "minimumLengthFromShiftEndMinutes" : 6,
+        "exactStartTimeMinutes" : 6,
         "countsAsContiguousWorkTime" : true,
         "id" : "id",
         "flexibleStartTime" : true
       } ],
-      "maximumPaidTimeMinutes" : 8,
+      "maximumPaidTimeMinutes" : 9,
       "name" : "name",
       "days" : "{}",
-      "minimumContiguousWorkTimeMinutes" : 9,
-      "exactPaidTimeMinutes" : 9,
-      "earliestStartTimeMinutesFromMidnight" : 7,
+      "minimumContiguousWorkTimeMinutes" : 6,
+      "exactPaidTimeMinutes" : 6,
+      "earliestStartTimeMinutesFromMidnight" : 1,
       "flexibleStartTime" : true,
-      "minimumPaidTimeMinutes" : 6
+      "minimumPaidTimeMinutes" : 8
     } ],
     "weeklyMinimumPaidMinutes" : 6,
     "id" : "id",
     "paidTimeGranularityMinutes" : 5,
     "maximumConsecutiveWorkingWeekends" : 9,
     "weeklyExactPaidMinutes" : 0,
+    "maximumWorkingWeekendsPerPlanningPeriod" : 6,
     "shiftStartVarianceType" : "ShiftStart",
     "maximumDays" : 2,
     "minimumWorkingDaysPerWeek" : 3,
@@ -9189,7 +9635,7 @@ open class WorkforceManagementAPI {
     "name" : "name",
     "minimumDaysOffPerPlanningPeriod" : 7,
     "constrainMaximumConsecutiveWorkingWeekends" : true,
-    "agentCount" : 6
+    "agentCount" : 7
   }, {
     "maximumDaysOffPerPlanningPeriod" : 1,
     "minimumPaidMinutesPerPlanningPeriod" : 1,
@@ -9202,134 +9648,138 @@ open class WorkforceManagementAPI {
     "valid" : true,
     "minimumShiftStartDistanceMinutes" : 4,
     "constrainMaximumConsecutiveWorkingDays" : true,
+    "constrainMaximumWorkingWeekendsPerPlanningPeriod" : true,
     "maximumConsecutiveWorkingDays" : 2,
     "constrainMinimumTimeBetweenShifts" : true,
     "shifts" : [ {
       "validationId" : "validationId",
-      "maximumContiguousWorkTimeMinutes" : 6,
+      "maximumContiguousWorkTimeMinutes" : 3,
       "constrainDayOff" : true,
       "flexiblePaidTime" : true,
       "delete" : true,
       "constrainStopTime" : true,
-      "latestStopTimeMinutesFromMidnight" : 4,
+      "latestStopTimeMinutesFromMidnight" : 5,
       "id" : "id",
       "constrainEarliestStopTime" : true,
-      "exactStartTimeMinutesFromMidnight" : 6,
+      "exactStartTimeMinutesFromMidnight" : 7,
       "dayOffRule" : "NextDayOff",
       "startIncrementMinutes" : 9,
       "constrainContiguousWorkTime" : true,
+      "planningPeriodConstraints" : "{}",
       "constrainLatestStopTime" : true,
-      "latestStartTimeMinutesFromMidnight" : 1,
-      "earliestStopTimeMinutesFromMidnight" : 5,
+      "latestStartTimeMinutesFromMidnight" : 4,
+      "earliestStopTimeMinutesFromMidnight" : 9,
       "activities" : [ {
         "startTimeIncrementMinutes" : 6,
         "validationId" : "validationId",
-        "lengthMinutes" : 3,
-        "earliestStartTimeMinutes" : 6,
+        "lengthMinutes" : 6,
+        "earliestStartTimeMinutes" : 1,
         "description" : "description",
-        "latestStartTimeMinutes" : 1,
+        "latestStartTimeMinutes" : 2,
         "countsAsPaidTime" : true,
         "delete" : true,
         "activityCodeId" : "activityCodeId",
-        "minimumLengthFromShiftStartMinutes" : 6,
+        "minimumLengthFromShiftStartMinutes" : 5,
         "startTimeIsRelativeToShiftStart" : true,
-        "minimumLengthFromShiftEndMinutes" : 5,
-        "exactStartTimeMinutes" : 2,
+        "minimumLengthFromShiftEndMinutes" : 6,
+        "exactStartTimeMinutes" : 6,
         "countsAsContiguousWorkTime" : true,
         "id" : "id",
         "flexibleStartTime" : true
       }, {
         "startTimeIncrementMinutes" : 6,
         "validationId" : "validationId",
-        "lengthMinutes" : 3,
-        "earliestStartTimeMinutes" : 6,
+        "lengthMinutes" : 6,
+        "earliestStartTimeMinutes" : 1,
         "description" : "description",
-        "latestStartTimeMinutes" : 1,
+        "latestStartTimeMinutes" : 2,
         "countsAsPaidTime" : true,
         "delete" : true,
         "activityCodeId" : "activityCodeId",
-        "minimumLengthFromShiftStartMinutes" : 6,
+        "minimumLengthFromShiftStartMinutes" : 5,
         "startTimeIsRelativeToShiftStart" : true,
-        "minimumLengthFromShiftEndMinutes" : 5,
-        "exactStartTimeMinutes" : 2,
+        "minimumLengthFromShiftEndMinutes" : 6,
+        "exactStartTimeMinutes" : 6,
         "countsAsContiguousWorkTime" : true,
         "id" : "id",
         "flexibleStartTime" : true
       } ],
-      "maximumPaidTimeMinutes" : 8,
+      "maximumPaidTimeMinutes" : 9,
       "name" : "name",
       "days" : "{}",
-      "minimumContiguousWorkTimeMinutes" : 9,
-      "exactPaidTimeMinutes" : 9,
-      "earliestStartTimeMinutesFromMidnight" : 7,
+      "minimumContiguousWorkTimeMinutes" : 6,
+      "exactPaidTimeMinutes" : 6,
+      "earliestStartTimeMinutesFromMidnight" : 1,
       "flexibleStartTime" : true,
-      "minimumPaidTimeMinutes" : 6
+      "minimumPaidTimeMinutes" : 8
     }, {
       "validationId" : "validationId",
-      "maximumContiguousWorkTimeMinutes" : 6,
+      "maximumContiguousWorkTimeMinutes" : 3,
       "constrainDayOff" : true,
       "flexiblePaidTime" : true,
       "delete" : true,
       "constrainStopTime" : true,
-      "latestStopTimeMinutesFromMidnight" : 4,
+      "latestStopTimeMinutesFromMidnight" : 5,
       "id" : "id",
       "constrainEarliestStopTime" : true,
-      "exactStartTimeMinutesFromMidnight" : 6,
+      "exactStartTimeMinutesFromMidnight" : 7,
       "dayOffRule" : "NextDayOff",
       "startIncrementMinutes" : 9,
       "constrainContiguousWorkTime" : true,
+      "planningPeriodConstraints" : "{}",
       "constrainLatestStopTime" : true,
-      "latestStartTimeMinutesFromMidnight" : 1,
-      "earliestStopTimeMinutesFromMidnight" : 5,
+      "latestStartTimeMinutesFromMidnight" : 4,
+      "earliestStopTimeMinutesFromMidnight" : 9,
       "activities" : [ {
         "startTimeIncrementMinutes" : 6,
         "validationId" : "validationId",
-        "lengthMinutes" : 3,
-        "earliestStartTimeMinutes" : 6,
+        "lengthMinutes" : 6,
+        "earliestStartTimeMinutes" : 1,
         "description" : "description",
-        "latestStartTimeMinutes" : 1,
+        "latestStartTimeMinutes" : 2,
         "countsAsPaidTime" : true,
         "delete" : true,
         "activityCodeId" : "activityCodeId",
-        "minimumLengthFromShiftStartMinutes" : 6,
+        "minimumLengthFromShiftStartMinutes" : 5,
         "startTimeIsRelativeToShiftStart" : true,
-        "minimumLengthFromShiftEndMinutes" : 5,
-        "exactStartTimeMinutes" : 2,
+        "minimumLengthFromShiftEndMinutes" : 6,
+        "exactStartTimeMinutes" : 6,
         "countsAsContiguousWorkTime" : true,
         "id" : "id",
         "flexibleStartTime" : true
       }, {
         "startTimeIncrementMinutes" : 6,
         "validationId" : "validationId",
-        "lengthMinutes" : 3,
-        "earliestStartTimeMinutes" : 6,
+        "lengthMinutes" : 6,
+        "earliestStartTimeMinutes" : 1,
         "description" : "description",
-        "latestStartTimeMinutes" : 1,
+        "latestStartTimeMinutes" : 2,
         "countsAsPaidTime" : true,
         "delete" : true,
         "activityCodeId" : "activityCodeId",
-        "minimumLengthFromShiftStartMinutes" : 6,
+        "minimumLengthFromShiftStartMinutes" : 5,
         "startTimeIsRelativeToShiftStart" : true,
-        "minimumLengthFromShiftEndMinutes" : 5,
-        "exactStartTimeMinutes" : 2,
+        "minimumLengthFromShiftEndMinutes" : 6,
+        "exactStartTimeMinutes" : 6,
         "countsAsContiguousWorkTime" : true,
         "id" : "id",
         "flexibleStartTime" : true
       } ],
-      "maximumPaidTimeMinutes" : 8,
+      "maximumPaidTimeMinutes" : 9,
       "name" : "name",
       "days" : "{}",
-      "minimumContiguousWorkTimeMinutes" : 9,
-      "exactPaidTimeMinutes" : 9,
-      "earliestStartTimeMinutesFromMidnight" : 7,
+      "minimumContiguousWorkTimeMinutes" : 6,
+      "exactPaidTimeMinutes" : 6,
+      "earliestStartTimeMinutesFromMidnight" : 1,
       "flexibleStartTime" : true,
-      "minimumPaidTimeMinutes" : 6
+      "minimumPaidTimeMinutes" : 8
     } ],
     "weeklyMinimumPaidMinutes" : 6,
     "id" : "id",
     "paidTimeGranularityMinutes" : 5,
     "maximumConsecutiveWorkingWeekends" : 9,
     "weeklyExactPaidMinutes" : 0,
+    "maximumWorkingWeekendsPerPlanningPeriod" : 6,
     "shiftStartVarianceType" : "ShiftStart",
     "maximumDays" : 2,
     "minimumWorkingDaysPerWeek" : 3,
@@ -9351,7 +9801,7 @@ open class WorkforceManagementAPI {
     "name" : "name",
     "minimumDaysOffPerPlanningPeriod" : 7,
     "constrainMaximumConsecutiveWorkingWeekends" : true,
-    "agentCount" : 6
+    "agentCount" : 7
   } ]
 }, statusCode=200}]
      
@@ -9505,8 +9955,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Deprecated, paging is not supported (optional)
@@ -9603,8 +10053,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return all divisions (optional)
@@ -11006,15 +11456,18 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
     /**
      Update business unit
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
      - parameter body: (body) body 
+     - parameter includeSchedulingDefaultMessageSeverities: (query) Whether to include scheduling default message severities (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementBusinessunit(businessUnitId: String, body: UpdateBusinessUnitRequest, completion: @escaping ((_ data: BusinessUnitResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = patchWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+    open class func patchWorkforcemanagementBusinessunit(businessUnitId: String, body: UpdateBusinessUnitRequest, includeSchedulingDefaultMessageSeverities: Bool? = nil, completion: @escaping ((_ data: BusinessUnitResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: businessUnitId, body: body, includeSchedulingDefaultMessageSeverities: includeSchedulingDefaultMessageSeverities)
         requestBuilder.execute { (response: Response<BusinessUnitResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -11047,10 +11500,11 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
      - parameter body: (body) body 
+     - parameter includeSchedulingDefaultMessageSeverities: (query) Whether to include scheduling default message severities (optional)
 
      - returns: RequestBuilder<BusinessUnitResponse> 
      */
-    open class func patchWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String, body: UpdateBusinessUnitRequest) -> RequestBuilder<BusinessUnitResponse> {        
+    open class func patchWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String, body: UpdateBusinessUnitRequest, includeSchedulingDefaultMessageSeverities: Bool? = nil) -> RequestBuilder<BusinessUnitResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11058,7 +11512,10 @@ open class WorkforceManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeSchedulingDefaultMessageSeverities": includeSchedulingDefaultMessageSeverities
+        ])
 
         let requestBuilder: RequestBuilder<BusinessUnitResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -11315,6 +11772,80 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AlternativeShiftBuSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update a capacity plan configuration
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitCapacityplan(businessUnitId: String, capacityPlanId: String, body: UpdateCapacityPlanRequest, completion: @escaping ((_ data: CapacityPlanResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitCapacityplanWithRequestBuilder(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId, body: body)
+        requestBuilder.execute { (response: Response<CapacityPlanResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a capacity plan configuration
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "fullTimeEquivalentWeeklyHours" : 0.8008281904610115,
+  "description" : "description",
+  "forecast" : "{}",
+  "id" : "id",
+  "startBusinessUnitDate" : "2000-01-23",
+  "endBusinessUnitDate" : "2000-01-23"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<CapacityPlanResponse> 
+     */
+    open class func patchWorkforcemanagementBusinessunitCapacityplanWithRequestBuilder(businessUnitId: String, capacityPlanId: String, body: UpdateCapacityPlanRequest) -> RequestBuilder<CapacityPlanResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let capacityPlanIdPreEscape = "\(capacityPlanId)"
+        let capacityPlanIdPostEscape = capacityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{capacityPlanId}", with: capacityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CapacityPlanResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -11584,6 +12115,13 @@ open class WorkforceManagementAPI {
   "managementUnit" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
+  "planningGroups" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "id" : "id",
   "users" : [ {
     "selfUri" : "https://openapi-generator.tech",
@@ -12610,134 +13148,138 @@ open class WorkforceManagementAPI {
   "valid" : true,
   "minimumShiftStartDistanceMinutes" : 4,
   "constrainMaximumConsecutiveWorkingDays" : true,
+  "constrainMaximumWorkingWeekendsPerPlanningPeriod" : true,
   "maximumConsecutiveWorkingDays" : 2,
   "constrainMinimumTimeBetweenShifts" : true,
   "shifts" : [ {
     "validationId" : "validationId",
-    "maximumContiguousWorkTimeMinutes" : 6,
+    "maximumContiguousWorkTimeMinutes" : 3,
     "constrainDayOff" : true,
     "flexiblePaidTime" : true,
     "delete" : true,
     "constrainStopTime" : true,
-    "latestStopTimeMinutesFromMidnight" : 4,
+    "latestStopTimeMinutesFromMidnight" : 5,
     "id" : "id",
     "constrainEarliestStopTime" : true,
-    "exactStartTimeMinutesFromMidnight" : 6,
+    "exactStartTimeMinutesFromMidnight" : 7,
     "dayOffRule" : "NextDayOff",
     "startIncrementMinutes" : 9,
     "constrainContiguousWorkTime" : true,
+    "planningPeriodConstraints" : "{}",
     "constrainLatestStopTime" : true,
-    "latestStartTimeMinutesFromMidnight" : 1,
-    "earliestStopTimeMinutesFromMidnight" : 5,
+    "latestStartTimeMinutesFromMidnight" : 4,
+    "earliestStopTimeMinutesFromMidnight" : 9,
     "activities" : [ {
       "startTimeIncrementMinutes" : 6,
       "validationId" : "validationId",
-      "lengthMinutes" : 3,
-      "earliestStartTimeMinutes" : 6,
+      "lengthMinutes" : 6,
+      "earliestStartTimeMinutes" : 1,
       "description" : "description",
-      "latestStartTimeMinutes" : 1,
+      "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "activityCodeId",
-      "minimumLengthFromShiftStartMinutes" : 6,
+      "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 5,
-      "exactStartTimeMinutes" : 2,
+      "minimumLengthFromShiftEndMinutes" : 6,
+      "exactStartTimeMinutes" : 6,
       "countsAsContiguousWorkTime" : true,
       "id" : "id",
       "flexibleStartTime" : true
     }, {
       "startTimeIncrementMinutes" : 6,
       "validationId" : "validationId",
-      "lengthMinutes" : 3,
-      "earliestStartTimeMinutes" : 6,
+      "lengthMinutes" : 6,
+      "earliestStartTimeMinutes" : 1,
       "description" : "description",
-      "latestStartTimeMinutes" : 1,
+      "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "activityCodeId",
-      "minimumLengthFromShiftStartMinutes" : 6,
+      "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 5,
-      "exactStartTimeMinutes" : 2,
+      "minimumLengthFromShiftEndMinutes" : 6,
+      "exactStartTimeMinutes" : 6,
       "countsAsContiguousWorkTime" : true,
       "id" : "id",
       "flexibleStartTime" : true
     } ],
-    "maximumPaidTimeMinutes" : 8,
+    "maximumPaidTimeMinutes" : 9,
     "name" : "name",
     "days" : "{}",
-    "minimumContiguousWorkTimeMinutes" : 9,
-    "exactPaidTimeMinutes" : 9,
-    "earliestStartTimeMinutesFromMidnight" : 7,
+    "minimumContiguousWorkTimeMinutes" : 6,
+    "exactPaidTimeMinutes" : 6,
+    "earliestStartTimeMinutesFromMidnight" : 1,
     "flexibleStartTime" : true,
-    "minimumPaidTimeMinutes" : 6
+    "minimumPaidTimeMinutes" : 8
   }, {
     "validationId" : "validationId",
-    "maximumContiguousWorkTimeMinutes" : 6,
+    "maximumContiguousWorkTimeMinutes" : 3,
     "constrainDayOff" : true,
     "flexiblePaidTime" : true,
     "delete" : true,
     "constrainStopTime" : true,
-    "latestStopTimeMinutesFromMidnight" : 4,
+    "latestStopTimeMinutesFromMidnight" : 5,
     "id" : "id",
     "constrainEarliestStopTime" : true,
-    "exactStartTimeMinutesFromMidnight" : 6,
+    "exactStartTimeMinutesFromMidnight" : 7,
     "dayOffRule" : "NextDayOff",
     "startIncrementMinutes" : 9,
     "constrainContiguousWorkTime" : true,
+    "planningPeriodConstraints" : "{}",
     "constrainLatestStopTime" : true,
-    "latestStartTimeMinutesFromMidnight" : 1,
-    "earliestStopTimeMinutesFromMidnight" : 5,
+    "latestStartTimeMinutesFromMidnight" : 4,
+    "earliestStopTimeMinutesFromMidnight" : 9,
     "activities" : [ {
       "startTimeIncrementMinutes" : 6,
       "validationId" : "validationId",
-      "lengthMinutes" : 3,
-      "earliestStartTimeMinutes" : 6,
+      "lengthMinutes" : 6,
+      "earliestStartTimeMinutes" : 1,
       "description" : "description",
-      "latestStartTimeMinutes" : 1,
+      "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "activityCodeId",
-      "minimumLengthFromShiftStartMinutes" : 6,
+      "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 5,
-      "exactStartTimeMinutes" : 2,
+      "minimumLengthFromShiftEndMinutes" : 6,
+      "exactStartTimeMinutes" : 6,
       "countsAsContiguousWorkTime" : true,
       "id" : "id",
       "flexibleStartTime" : true
     }, {
       "startTimeIncrementMinutes" : 6,
       "validationId" : "validationId",
-      "lengthMinutes" : 3,
-      "earliestStartTimeMinutes" : 6,
+      "lengthMinutes" : 6,
+      "earliestStartTimeMinutes" : 1,
       "description" : "description",
-      "latestStartTimeMinutes" : 1,
+      "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "activityCodeId",
-      "minimumLengthFromShiftStartMinutes" : 6,
+      "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 5,
-      "exactStartTimeMinutes" : 2,
+      "minimumLengthFromShiftEndMinutes" : 6,
+      "exactStartTimeMinutes" : 6,
       "countsAsContiguousWorkTime" : true,
       "id" : "id",
       "flexibleStartTime" : true
     } ],
-    "maximumPaidTimeMinutes" : 8,
+    "maximumPaidTimeMinutes" : 9,
     "name" : "name",
     "days" : "{}",
-    "minimumContiguousWorkTimeMinutes" : 9,
-    "exactPaidTimeMinutes" : 9,
-    "earliestStartTimeMinutesFromMidnight" : 7,
+    "minimumContiguousWorkTimeMinutes" : 6,
+    "exactPaidTimeMinutes" : 6,
+    "earliestStartTimeMinutesFromMidnight" : 1,
     "flexibleStartTime" : true,
-    "minimumPaidTimeMinutes" : 6
+    "minimumPaidTimeMinutes" : 8
   } ],
   "weeklyMinimumPaidMinutes" : 6,
   "id" : "id",
   "paidTimeGranularityMinutes" : 5,
   "maximumConsecutiveWorkingWeekends" : 9,
   "weeklyExactPaidMinutes" : 0,
+  "maximumWorkingWeekendsPerPlanningPeriod" : 6,
   "shiftStartVarianceType" : "ShiftStart",
   "maximumDays" : 2,
   "minimumWorkingDaysPerWeek" : 3,
@@ -12759,7 +13301,7 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "minimumDaysOffPerPlanningPeriod" : 7,
   "constrainMaximumConsecutiveWorkingWeekends" : true,
-  "agentCount" : 6
+  "agentCount" : 7
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -13808,6 +14350,8 @@ open class WorkforceManagementAPI {
         "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
+      "workPlanId" : "workPlanId",
+      "workPlanShiftId" : "workPlanShiftId",
       "id" : "id",
       "startDate" : "2000-01-23T04:56:07.000+00:00",
       "manuallyEdited" : true
@@ -13837,6 +14381,8 @@ open class WorkforceManagementAPI {
         "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
+      "workPlanId" : "workPlanId",
+      "workPlanShiftId" : "workPlanShiftId",
       "id" : "id",
       "startDate" : "2000-01-23T04:56:07.000+00:00",
       "manuallyEdited" : true
@@ -13890,6 +14436,8 @@ open class WorkforceManagementAPI {
         "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
+      "workPlanId" : "workPlanId",
+      "workPlanShiftId" : "workPlanShiftId",
       "id" : "id",
       "startDate" : "2000-01-23T04:56:07.000+00:00",
       "manuallyEdited" : true
@@ -13919,6 +14467,8 @@ open class WorkforceManagementAPI {
         "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
+      "workPlanId" : "workPlanId",
+      "workPlanShiftId" : "workPlanShiftId",
       "id" : "id",
       "startDate" : "2000-01-23T04:56:07.000+00:00",
       "manuallyEdited" : true
@@ -14734,6 +15284,513 @@ open class WorkforceManagementAPI {
     
     
     /**
+     Copy a capacity plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitCapacityplanCopy(businessUnitId: String, capacityPlanId: String, body: CopyCapacityPlanRequest, completion: @escaping ((_ data: CapacityPlanResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitCapacityplanCopyWithRequestBuilder(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId, body: body)
+        requestBuilder.execute { (response: Response<CapacityPlanResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Copy a capacity plan
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/copy
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "fullTimeEquivalentWeeklyHours" : 0.8008281904610115,
+  "description" : "description",
+  "forecast" : "{}",
+  "id" : "id",
+  "startBusinessUnitDate" : "2000-01-23",
+  "endBusinessUnitDate" : "2000-01-23"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<CapacityPlanResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitCapacityplanCopyWithRequestBuilder(businessUnitId: String, capacityPlanId: String, body: CopyCapacityPlanRequest) -> RequestBuilder<CapacityPlanResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/copy"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let capacityPlanIdPreEscape = "\(capacityPlanId)"
+        let capacityPlanIdPostEscape = capacityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{capacityPlanId}", with: capacityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CapacityPlanResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Regenerate requirements for capacity plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitCapacityplanRequirementGenerate(businessUnitId: String, capacityPlanId: String, completion: @escaping ((_ data: CapacityPlanStaffingRequirementResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitCapacityplanRequirementGenerateWithRequestBuilder(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId)
+        requestBuilder.execute { (response: Response<CapacityPlanStaffingRequirementResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Regenerate requirements for capacity plan
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/requirement/generate
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadTemplate" : "{}",
+  "referenceBusinessUnitDate" : "2000-01-23",
+  "businessUnit" : "{}",
+  "granularity" : "Weekly",
+  "downloadUrl" : "downloadUrl",
+  "errorCode" : "TimedOut",
+  "capacityPlan" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+
+     - returns: RequestBuilder<CapacityPlanStaffingRequirementResult> 
+     */
+    open class func postWorkforcemanagementBusinessunitCapacityplanRequirementGenerateWithRequestBuilder(businessUnitId: String, capacityPlanId: String) -> RequestBuilder<CapacityPlanStaffingRequirementResult> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/requirement/generate"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let capacityPlanIdPreEscape = "\(capacityPlanId)"
+        let capacityPlanIdPostEscape = capacityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{capacityPlanId}", with: capacityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CapacityPlanStaffingRequirementResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Create staffing group allocations for a capacity plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations(businessUnitId: String, capacityPlanId: String, body: CreateCapacityPlanStaffingGroupMetricChangeRequest, completion: @escaping ((_ data: CapacityPlanStaffingGroupMetricChangeResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationsWithRequestBuilder(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId, body: body)
+        requestBuilder.execute { (response: Response<CapacityPlanStaffingGroupMetricChangeResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create staffing group allocations for a capacity plan
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "notes" : "notes",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "weekStartNumber" : 6,
+  "metric" : "StartingWeeklyFullTimeEquivalentCount",
+  "createdBy" : "{}",
+  "numberOfWeeks" : 0,
+  "value" : 1.4658129805029452,
+  "version" : 5,
+  "staffingGroups" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ]
+}, statusCode=201}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<CapacityPlanStaffingGroupMetricChangeResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationsWithRequestBuilder(businessUnitId: String, capacityPlanId: String, body: CreateCapacityPlanStaffingGroupMetricChangeRequest) -> RequestBuilder<CapacityPlanStaffingGroupMetricChangeResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let capacityPlanIdPreEscape = "\(capacityPlanId)"
+        let capacityPlanIdPostEscape = capacityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{capacityPlanId}", with: capacityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CapacityPlanStaffingGroupMetricChangeResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Query staffing groups allocations history for a capacity plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQuery(businessUnitId: String, capacityPlanId: String, body: QueryCapacityPlanStaffingGroupMetricChangeHistory, completion: @escaping ((_ data: CapacityPlanStaffingGroupMetricChangeHistoryListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQueryWithRequestBuilder(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId, body: body)
+        requestBuilder.execute { (response: Response<CapacityPlanStaffingGroupMetricChangeHistoryListResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query staffing groups allocations history for a capacity plan
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "notes" : "notes",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "weekStartNumber" : 6,
+    "metric" : "StartingWeeklyFullTimeEquivalentCount",
+    "createdBy" : "{}",
+    "numberOfWeeks" : 0,
+    "value" : 1.4658129805029452,
+    "staffingGroups" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "notes" : "notes",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "weekStartNumber" : 6,
+    "metric" : "StartingWeeklyFullTimeEquivalentCount",
+    "createdBy" : "{}",
+    "numberOfWeeks" : 0,
+    "value" : 1.4658129805029452,
+    "staffingGroups" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<CapacityPlanStaffingGroupMetricChangeHistoryListResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQueryWithRequestBuilder(businessUnitId: String, capacityPlanId: String, body: QueryCapacityPlanStaffingGroupMetricChangeHistory) -> RequestBuilder<CapacityPlanStaffingGroupMetricChangeHistoryListResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory/query"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let capacityPlanIdPreEscape = "\(capacityPlanId)"
+        let capacityPlanIdPostEscape = capacityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{capacityPlanId}", with: capacityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CapacityPlanStaffingGroupMetricChangeHistoryListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Force regenerate the latest long term staffing requirements for a business unit
+     
+     - parameter businessUnitId: (path)  
+     - parameter weekDateId: (path) weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) forecastId of forecast 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate(businessUnitId: String, weekDateId: Date, forecastId: String, completion: @escaping ((_ data: LongTermRequirementsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerateWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId)
+        requestBuilder.execute { (response: Response<LongTermRequirementsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Force regenerate the latest long term staffing requirements for a business unit
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}/forceregenerate
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadUrl" : "downloadUrl",
+  "errorCode" : "TimedOut",
+  "status" : "Processing",
+  "longTermRequirements" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path)  
+     - parameter weekDateId: (path) weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) forecastId of forecast 
+
+     - returns: RequestBuilder<LongTermRequirementsResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerateWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String) -> RequestBuilder<LongTermRequirementsResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}/forceregenerate"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let forecastIdPreEscape = "\(forecastId)"
+        let forecastIdPostEscape = forecastIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{forecastId}", with: forecastIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LongTermRequirementsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create a new capacity plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitCapacityplans(businessUnitId: String, body: CapacityPlanRequest, completion: @escaping ((_ data: CapacityPlanResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitCapacityplansWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<CapacityPlanResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a new capacity plan
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "fullTimeEquivalentWeeklyHours" : 0.8008281904610115,
+  "description" : "description",
+  "forecast" : "{}",
+  "id" : "id",
+  "startBusinessUnitDate" : "2000-01-23",
+  "endBusinessUnitDate" : "2000-01-23"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<CapacityPlanResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitCapacityplansWithRequestBuilder(businessUnitId: String, body: CapacityPlanRequest) -> RequestBuilder<CapacityPlanResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CapacityPlanResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Delete capacity plans in a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitCapacityplansBulkRemove(businessUnitId: String, body: CapacityPlanDeleteRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitCapacityplansBulkRemoveWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete capacity plans in a business unit
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/bulk/remove
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postWorkforcemanagementBusinessunitCapacityplansBulkRemoveWithRequestBuilder(businessUnitId: String, body: CapacityPlanDeleteRequest) -> RequestBuilder<Void> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/bulk/remove"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
      Get intraday data for the given date for the requested planningGroupIds
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -14987,6 +16044,13 @@ open class WorkforceManagementAPI {
   "managementUnit" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
+  "planningGroups" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "id" : "id",
   "users" : [ {
     "selfUri" : "https://openapi-generator.tech",
@@ -15013,6 +16077,83 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<StaffingGroupResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Gets a list of planning group to staffing groups list association
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery(businessUnitId: String, body: QueryPlanningGroupToStaffingGroupsRequest, completion: @escaping ((_ data: PlanningGroupToStaffingGroupsListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQueryWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<PlanningGroupToStaffingGroupsListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets a list of planning group to staffing groups list association
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/planninggroups/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "planningGroup" : "{}",
+    "staffingGroups" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "planningGroup" : "{}",
+    "staffingGroups" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<PlanningGroupToStaffingGroupsListing> 
+     */
+    open class func postWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQueryWithRequestBuilder(businessUnitId: String, body: QueryPlanningGroupToStaffingGroupsRequest) -> RequestBuilder<PlanningGroupToStaffingGroupsListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/planninggroups/query"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PlanningGroupToStaffingGroupsListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -16687,14 +17828,17 @@ open class WorkforceManagementAPI {
 
     
     
+    
+    
     /**
      Add a new business unit
      
      - parameter body: (body) body 
+     - parameter includeSchedulingDefaultMessageSeverities: (query) Whether to include scheduling default message severities (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunits(body: CreateBusinessUnitRequest, completion: @escaping ((_ data: BusinessUnitResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementBusinessunitsWithRequestBuilder(body: body)
+    open class func postWorkforcemanagementBusinessunits(body: CreateBusinessUnitRequest, includeSchedulingDefaultMessageSeverities: Bool? = nil, completion: @escaping ((_ data: BusinessUnitResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitsWithRequestBuilder(body: body, includeSchedulingDefaultMessageSeverities: includeSchedulingDefaultMessageSeverities)
         requestBuilder.execute { (response: Response<BusinessUnitResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -16727,15 +17871,19 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter body: (body) body 
+     - parameter includeSchedulingDefaultMessageSeverities: (query) Whether to include scheduling default message severities (optional)
 
      - returns: RequestBuilder<BusinessUnitResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitsWithRequestBuilder(body: CreateBusinessUnitRequest) -> RequestBuilder<BusinessUnitResponse> {        
+    open class func postWorkforcemanagementBusinessunitsWithRequestBuilder(body: CreateBusinessUnitRequest, includeSchedulingDefaultMessageSeverities: Bool? = nil) -> RequestBuilder<BusinessUnitResponse> {        
         let path = "/api/v2/workforcemanagement/businessunits"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeSchedulingDefaultMessageSeverities": includeSchedulingDefaultMessageSeverities
+        ])
 
         let requestBuilder: RequestBuilder<BusinessUnitResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -18664,134 +19812,138 @@ open class WorkforceManagementAPI {
   "valid" : true,
   "minimumShiftStartDistanceMinutes" : 4,
   "constrainMaximumConsecutiveWorkingDays" : true,
+  "constrainMaximumWorkingWeekendsPerPlanningPeriod" : true,
   "maximumConsecutiveWorkingDays" : 2,
   "constrainMinimumTimeBetweenShifts" : true,
   "shifts" : [ {
     "validationId" : "validationId",
-    "maximumContiguousWorkTimeMinutes" : 6,
+    "maximumContiguousWorkTimeMinutes" : 3,
     "constrainDayOff" : true,
     "flexiblePaidTime" : true,
     "delete" : true,
     "constrainStopTime" : true,
-    "latestStopTimeMinutesFromMidnight" : 4,
+    "latestStopTimeMinutesFromMidnight" : 5,
     "id" : "id",
     "constrainEarliestStopTime" : true,
-    "exactStartTimeMinutesFromMidnight" : 6,
+    "exactStartTimeMinutesFromMidnight" : 7,
     "dayOffRule" : "NextDayOff",
     "startIncrementMinutes" : 9,
     "constrainContiguousWorkTime" : true,
+    "planningPeriodConstraints" : "{}",
     "constrainLatestStopTime" : true,
-    "latestStartTimeMinutesFromMidnight" : 1,
-    "earliestStopTimeMinutesFromMidnight" : 5,
+    "latestStartTimeMinutesFromMidnight" : 4,
+    "earliestStopTimeMinutesFromMidnight" : 9,
     "activities" : [ {
       "startTimeIncrementMinutes" : 6,
       "validationId" : "validationId",
-      "lengthMinutes" : 3,
-      "earliestStartTimeMinutes" : 6,
+      "lengthMinutes" : 6,
+      "earliestStartTimeMinutes" : 1,
       "description" : "description",
-      "latestStartTimeMinutes" : 1,
+      "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "activityCodeId",
-      "minimumLengthFromShiftStartMinutes" : 6,
+      "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 5,
-      "exactStartTimeMinutes" : 2,
+      "minimumLengthFromShiftEndMinutes" : 6,
+      "exactStartTimeMinutes" : 6,
       "countsAsContiguousWorkTime" : true,
       "id" : "id",
       "flexibleStartTime" : true
     }, {
       "startTimeIncrementMinutes" : 6,
       "validationId" : "validationId",
-      "lengthMinutes" : 3,
-      "earliestStartTimeMinutes" : 6,
+      "lengthMinutes" : 6,
+      "earliestStartTimeMinutes" : 1,
       "description" : "description",
-      "latestStartTimeMinutes" : 1,
+      "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "activityCodeId",
-      "minimumLengthFromShiftStartMinutes" : 6,
+      "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 5,
-      "exactStartTimeMinutes" : 2,
+      "minimumLengthFromShiftEndMinutes" : 6,
+      "exactStartTimeMinutes" : 6,
       "countsAsContiguousWorkTime" : true,
       "id" : "id",
       "flexibleStartTime" : true
     } ],
-    "maximumPaidTimeMinutes" : 8,
+    "maximumPaidTimeMinutes" : 9,
     "name" : "name",
     "days" : "{}",
-    "minimumContiguousWorkTimeMinutes" : 9,
-    "exactPaidTimeMinutes" : 9,
-    "earliestStartTimeMinutesFromMidnight" : 7,
+    "minimumContiguousWorkTimeMinutes" : 6,
+    "exactPaidTimeMinutes" : 6,
+    "earliestStartTimeMinutesFromMidnight" : 1,
     "flexibleStartTime" : true,
-    "minimumPaidTimeMinutes" : 6
+    "minimumPaidTimeMinutes" : 8
   }, {
     "validationId" : "validationId",
-    "maximumContiguousWorkTimeMinutes" : 6,
+    "maximumContiguousWorkTimeMinutes" : 3,
     "constrainDayOff" : true,
     "flexiblePaidTime" : true,
     "delete" : true,
     "constrainStopTime" : true,
-    "latestStopTimeMinutesFromMidnight" : 4,
+    "latestStopTimeMinutesFromMidnight" : 5,
     "id" : "id",
     "constrainEarliestStopTime" : true,
-    "exactStartTimeMinutesFromMidnight" : 6,
+    "exactStartTimeMinutesFromMidnight" : 7,
     "dayOffRule" : "NextDayOff",
     "startIncrementMinutes" : 9,
     "constrainContiguousWorkTime" : true,
+    "planningPeriodConstraints" : "{}",
     "constrainLatestStopTime" : true,
-    "latestStartTimeMinutesFromMidnight" : 1,
-    "earliestStopTimeMinutesFromMidnight" : 5,
+    "latestStartTimeMinutesFromMidnight" : 4,
+    "earliestStopTimeMinutesFromMidnight" : 9,
     "activities" : [ {
       "startTimeIncrementMinutes" : 6,
       "validationId" : "validationId",
-      "lengthMinutes" : 3,
-      "earliestStartTimeMinutes" : 6,
+      "lengthMinutes" : 6,
+      "earliestStartTimeMinutes" : 1,
       "description" : "description",
-      "latestStartTimeMinutes" : 1,
+      "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "activityCodeId",
-      "minimumLengthFromShiftStartMinutes" : 6,
+      "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 5,
-      "exactStartTimeMinutes" : 2,
+      "minimumLengthFromShiftEndMinutes" : 6,
+      "exactStartTimeMinutes" : 6,
       "countsAsContiguousWorkTime" : true,
       "id" : "id",
       "flexibleStartTime" : true
     }, {
       "startTimeIncrementMinutes" : 6,
       "validationId" : "validationId",
-      "lengthMinutes" : 3,
-      "earliestStartTimeMinutes" : 6,
+      "lengthMinutes" : 6,
+      "earliestStartTimeMinutes" : 1,
       "description" : "description",
-      "latestStartTimeMinutes" : 1,
+      "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "activityCodeId",
-      "minimumLengthFromShiftStartMinutes" : 6,
+      "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 5,
-      "exactStartTimeMinutes" : 2,
+      "minimumLengthFromShiftEndMinutes" : 6,
+      "exactStartTimeMinutes" : 6,
       "countsAsContiguousWorkTime" : true,
       "id" : "id",
       "flexibleStartTime" : true
     } ],
-    "maximumPaidTimeMinutes" : 8,
+    "maximumPaidTimeMinutes" : 9,
     "name" : "name",
     "days" : "{}",
-    "minimumContiguousWorkTimeMinutes" : 9,
-    "exactPaidTimeMinutes" : 9,
-    "earliestStartTimeMinutesFromMidnight" : 7,
+    "minimumContiguousWorkTimeMinutes" : 6,
+    "exactPaidTimeMinutes" : 6,
+    "earliestStartTimeMinutesFromMidnight" : 1,
     "flexibleStartTime" : true,
-    "minimumPaidTimeMinutes" : 6
+    "minimumPaidTimeMinutes" : 8
   } ],
   "weeklyMinimumPaidMinutes" : 6,
   "id" : "id",
   "paidTimeGranularityMinutes" : 5,
   "maximumConsecutiveWorkingWeekends" : 9,
   "weeklyExactPaidMinutes" : 0,
+  "maximumWorkingWeekendsPerPlanningPeriod" : 6,
   "shiftStartVarianceType" : "ShiftStart",
   "maximumDays" : 2,
   "minimumWorkingDaysPerWeek" : 3,
@@ -18813,7 +19965,7 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "minimumDaysOffPerPlanningPeriod" : 7,
   "constrainMaximumConsecutiveWorkingWeekends" : true,
-  "agentCount" : 6
+  "agentCount" : 7
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -19130,134 +20282,138 @@ open class WorkforceManagementAPI {
   "valid" : true,
   "minimumShiftStartDistanceMinutes" : 4,
   "constrainMaximumConsecutiveWorkingDays" : true,
+  "constrainMaximumWorkingWeekendsPerPlanningPeriod" : true,
   "maximumConsecutiveWorkingDays" : 2,
   "constrainMinimumTimeBetweenShifts" : true,
   "shifts" : [ {
     "validationId" : "validationId",
-    "maximumContiguousWorkTimeMinutes" : 6,
+    "maximumContiguousWorkTimeMinutes" : 3,
     "constrainDayOff" : true,
     "flexiblePaidTime" : true,
     "delete" : true,
     "constrainStopTime" : true,
-    "latestStopTimeMinutesFromMidnight" : 4,
+    "latestStopTimeMinutesFromMidnight" : 5,
     "id" : "id",
     "constrainEarliestStopTime" : true,
-    "exactStartTimeMinutesFromMidnight" : 6,
+    "exactStartTimeMinutesFromMidnight" : 7,
     "dayOffRule" : "NextDayOff",
     "startIncrementMinutes" : 9,
     "constrainContiguousWorkTime" : true,
+    "planningPeriodConstraints" : "{}",
     "constrainLatestStopTime" : true,
-    "latestStartTimeMinutesFromMidnight" : 1,
-    "earliestStopTimeMinutesFromMidnight" : 5,
+    "latestStartTimeMinutesFromMidnight" : 4,
+    "earliestStopTimeMinutesFromMidnight" : 9,
     "activities" : [ {
       "startTimeIncrementMinutes" : 6,
       "validationId" : "validationId",
-      "lengthMinutes" : 3,
-      "earliestStartTimeMinutes" : 6,
+      "lengthMinutes" : 6,
+      "earliestStartTimeMinutes" : 1,
       "description" : "description",
-      "latestStartTimeMinutes" : 1,
+      "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "activityCodeId",
-      "minimumLengthFromShiftStartMinutes" : 6,
+      "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 5,
-      "exactStartTimeMinutes" : 2,
+      "minimumLengthFromShiftEndMinutes" : 6,
+      "exactStartTimeMinutes" : 6,
       "countsAsContiguousWorkTime" : true,
       "id" : "id",
       "flexibleStartTime" : true
     }, {
       "startTimeIncrementMinutes" : 6,
       "validationId" : "validationId",
-      "lengthMinutes" : 3,
-      "earliestStartTimeMinutes" : 6,
+      "lengthMinutes" : 6,
+      "earliestStartTimeMinutes" : 1,
       "description" : "description",
-      "latestStartTimeMinutes" : 1,
+      "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "activityCodeId",
-      "minimumLengthFromShiftStartMinutes" : 6,
+      "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 5,
-      "exactStartTimeMinutes" : 2,
+      "minimumLengthFromShiftEndMinutes" : 6,
+      "exactStartTimeMinutes" : 6,
       "countsAsContiguousWorkTime" : true,
       "id" : "id",
       "flexibleStartTime" : true
     } ],
-    "maximumPaidTimeMinutes" : 8,
+    "maximumPaidTimeMinutes" : 9,
     "name" : "name",
     "days" : "{}",
-    "minimumContiguousWorkTimeMinutes" : 9,
-    "exactPaidTimeMinutes" : 9,
-    "earliestStartTimeMinutesFromMidnight" : 7,
+    "minimumContiguousWorkTimeMinutes" : 6,
+    "exactPaidTimeMinutes" : 6,
+    "earliestStartTimeMinutesFromMidnight" : 1,
     "flexibleStartTime" : true,
-    "minimumPaidTimeMinutes" : 6
+    "minimumPaidTimeMinutes" : 8
   }, {
     "validationId" : "validationId",
-    "maximumContiguousWorkTimeMinutes" : 6,
+    "maximumContiguousWorkTimeMinutes" : 3,
     "constrainDayOff" : true,
     "flexiblePaidTime" : true,
     "delete" : true,
     "constrainStopTime" : true,
-    "latestStopTimeMinutesFromMidnight" : 4,
+    "latestStopTimeMinutesFromMidnight" : 5,
     "id" : "id",
     "constrainEarliestStopTime" : true,
-    "exactStartTimeMinutesFromMidnight" : 6,
+    "exactStartTimeMinutesFromMidnight" : 7,
     "dayOffRule" : "NextDayOff",
     "startIncrementMinutes" : 9,
     "constrainContiguousWorkTime" : true,
+    "planningPeriodConstraints" : "{}",
     "constrainLatestStopTime" : true,
-    "latestStartTimeMinutesFromMidnight" : 1,
-    "earliestStopTimeMinutesFromMidnight" : 5,
+    "latestStartTimeMinutesFromMidnight" : 4,
+    "earliestStopTimeMinutesFromMidnight" : 9,
     "activities" : [ {
       "startTimeIncrementMinutes" : 6,
       "validationId" : "validationId",
-      "lengthMinutes" : 3,
-      "earliestStartTimeMinutes" : 6,
+      "lengthMinutes" : 6,
+      "earliestStartTimeMinutes" : 1,
       "description" : "description",
-      "latestStartTimeMinutes" : 1,
+      "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "activityCodeId",
-      "minimumLengthFromShiftStartMinutes" : 6,
+      "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 5,
-      "exactStartTimeMinutes" : 2,
+      "minimumLengthFromShiftEndMinutes" : 6,
+      "exactStartTimeMinutes" : 6,
       "countsAsContiguousWorkTime" : true,
       "id" : "id",
       "flexibleStartTime" : true
     }, {
       "startTimeIncrementMinutes" : 6,
       "validationId" : "validationId",
-      "lengthMinutes" : 3,
-      "earliestStartTimeMinutes" : 6,
+      "lengthMinutes" : 6,
+      "earliestStartTimeMinutes" : 1,
       "description" : "description",
-      "latestStartTimeMinutes" : 1,
+      "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "activityCodeId",
-      "minimumLengthFromShiftStartMinutes" : 6,
+      "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
-      "minimumLengthFromShiftEndMinutes" : 5,
-      "exactStartTimeMinutes" : 2,
+      "minimumLengthFromShiftEndMinutes" : 6,
+      "exactStartTimeMinutes" : 6,
       "countsAsContiguousWorkTime" : true,
       "id" : "id",
       "flexibleStartTime" : true
     } ],
-    "maximumPaidTimeMinutes" : 8,
+    "maximumPaidTimeMinutes" : 9,
     "name" : "name",
     "days" : "{}",
-    "minimumContiguousWorkTimeMinutes" : 9,
-    "exactPaidTimeMinutes" : 9,
-    "earliestStartTimeMinutesFromMidnight" : 7,
+    "minimumContiguousWorkTimeMinutes" : 6,
+    "exactPaidTimeMinutes" : 6,
+    "earliestStartTimeMinutesFromMidnight" : 1,
     "flexibleStartTime" : true,
-    "minimumPaidTimeMinutes" : 6
+    "minimumPaidTimeMinutes" : 8
   } ],
   "weeklyMinimumPaidMinutes" : 6,
   "id" : "id",
   "paidTimeGranularityMinutes" : 5,
   "maximumConsecutiveWorkingWeekends" : 9,
   "weeklyExactPaidMinutes" : 0,
+  "maximumWorkingWeekendsPerPlanningPeriod" : 6,
   "shiftStartVarianceType" : "ShiftStart",
   "maximumDays" : 2,
   "minimumWorkingDaysPerWeek" : 3,
@@ -19279,7 +20435,7 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "minimumDaysOffPerPlanningPeriod" : 7,
   "constrainMaximumConsecutiveWorkingWeekends" : true,
-  "agentCount" : 6
+  "agentCount" : 7
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 

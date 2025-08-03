@@ -1442,6 +1442,7 @@ open class UserRecordingsAPI {
           "anyFailedKillQuestions" : true
         },
         "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+        "divisionIds" : [ "divisionIds", "divisionIds" ],
         "changedDate" : "2000-01-23T04:56:07.000+00:00",
         "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
         "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
@@ -2972,6 +2973,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -2984,6 +2986,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -3012,6 +3015,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -3024,6 +3028,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -3067,6 +3072,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -3079,6 +3085,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -3107,6 +3114,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -3119,6 +3127,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -3853,7 +3862,8 @@ open class UserRecordingsAPI {
           "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
-          "agentOwnedRouting" : "{}"
+          "agentOwnedRouting" : "{}",
+          "conditionalGroupActivation" : "{}"
         },
         "isScoringIndex" : true,
         "status" : "PENDING",
@@ -4273,6 +4283,7 @@ open class UserRecordingsAPI {
           "anyFailedKillQuestions" : true
         },
         "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+        "divisionIds" : [ "divisionIds", "divisionIds" ],
         "changedDate" : "2000-01-23T04:56:07.000+00:00",
         "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
         "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
@@ -5803,6 +5814,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -5815,6 +5827,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -5843,6 +5856,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -5855,6 +5869,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -5898,6 +5913,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -5910,6 +5926,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -5938,6 +5955,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -5950,6 +5968,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -6684,7 +6703,8 @@ open class UserRecordingsAPI {
           "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
-          "agentOwnedRouting" : "{}"
+          "agentOwnedRouting" : "{}",
+          "conditionalGroupActivation" : "{}"
         },
         "isScoringIndex" : true,
         "status" : "PENDING",
@@ -8144,6 +8164,7 @@ open class UserRecordingsAPI {
           "anyFailedKillQuestions" : true
         },
         "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+        "divisionIds" : [ "divisionIds", "divisionIds" ],
         "changedDate" : "2000-01-23T04:56:07.000+00:00",
         "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
         "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
@@ -9674,6 +9695,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -9686,6 +9708,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -9714,6 +9737,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -9726,6 +9750,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -9769,6 +9794,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -9781,6 +9807,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -9809,6 +9836,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -9821,6 +9849,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -10555,7 +10584,8 @@ open class UserRecordingsAPI {
           "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
-          "agentOwnedRouting" : "{}"
+          "agentOwnedRouting" : "{}",
+          "conditionalGroupActivation" : "{}"
         },
         "isScoringIndex" : true,
         "status" : "PENDING",
@@ -10975,6 +11005,7 @@ open class UserRecordingsAPI {
           "anyFailedKillQuestions" : true
         },
         "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+        "divisionIds" : [ "divisionIds", "divisionIds" ],
         "changedDate" : "2000-01-23T04:56:07.000+00:00",
         "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
         "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
@@ -12505,6 +12536,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -12517,6 +12549,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -12545,6 +12578,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -12557,6 +12591,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -12600,6 +12635,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -12612,6 +12648,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -12640,6 +12677,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -12652,6 +12690,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -13386,7 +13425,8 @@ open class UserRecordingsAPI {
           "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
-          "agentOwnedRouting" : "{}"
+          "agentOwnedRouting" : "{}",
+          "conditionalGroupActivation" : "{}"
         },
         "isScoringIndex" : true,
         "status" : "PENDING",
@@ -15191,6 +15231,7 @@ open class UserRecordingsAPI {
             "anyFailedKillQuestions" : true
           },
           "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+          "divisionIds" : [ "divisionIds", "divisionIds" ],
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
@@ -16721,6 +16762,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -16733,6 +16775,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -16761,6 +16804,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -16773,6 +16817,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -16816,6 +16861,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -16828,6 +16874,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -16856,6 +16903,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -16868,6 +16916,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -17602,7 +17651,8 @@ open class UserRecordingsAPI {
             "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
-            "agentOwnedRouting" : "{}"
+            "agentOwnedRouting" : "{}",
+            "conditionalGroupActivation" : "{}"
           },
           "isScoringIndex" : true,
           "status" : "PENDING",
@@ -18022,6 +18072,7 @@ open class UserRecordingsAPI {
             "anyFailedKillQuestions" : true
           },
           "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+          "divisionIds" : [ "divisionIds", "divisionIds" ],
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
@@ -19552,6 +19603,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -19564,6 +19616,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -19592,6 +19645,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -19604,6 +19658,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -19647,6 +19702,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -19659,6 +19715,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -19687,6 +19744,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -19699,6 +19757,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -20433,7 +20492,8 @@ open class UserRecordingsAPI {
             "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
-            "agentOwnedRouting" : "{}"
+            "agentOwnedRouting" : "{}",
+            "conditionalGroupActivation" : "{}"
           },
           "isScoringIndex" : true,
           "status" : "PENDING",
@@ -21893,6 +21953,7 @@ open class UserRecordingsAPI {
             "anyFailedKillQuestions" : true
           },
           "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+          "divisionIds" : [ "divisionIds", "divisionIds" ],
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
@@ -23423,6 +23484,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -23435,6 +23497,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -23463,6 +23526,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -23475,6 +23539,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -23518,6 +23583,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -23530,6 +23596,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -23558,6 +23625,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -23570,6 +23638,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -24304,7 +24373,8 @@ open class UserRecordingsAPI {
             "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
-            "agentOwnedRouting" : "{}"
+            "agentOwnedRouting" : "{}",
+            "conditionalGroupActivation" : "{}"
           },
           "isScoringIndex" : true,
           "status" : "PENDING",
@@ -24724,6 +24794,7 @@ open class UserRecordingsAPI {
             "anyFailedKillQuestions" : true
           },
           "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+          "divisionIds" : [ "divisionIds", "divisionIds" ],
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
@@ -26254,6 +26325,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -26266,6 +26338,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -26294,6 +26367,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -26306,6 +26380,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -26349,6 +26424,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -26361,6 +26437,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -26389,6 +26466,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -26401,6 +26479,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -27135,7 +27214,8 @@ open class UserRecordingsAPI {
             "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
-            "agentOwnedRouting" : "{}"
+            "agentOwnedRouting" : "{}",
+            "conditionalGroupActivation" : "{}"
           },
           "isScoringIndex" : true,
           "status" : "PENDING",
@@ -28687,6 +28767,7 @@ open class UserRecordingsAPI {
             "anyFailedKillQuestions" : true
           },
           "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+          "divisionIds" : [ "divisionIds", "divisionIds" ],
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
@@ -30217,6 +30298,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -30229,6 +30311,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -30257,6 +30340,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -30269,6 +30353,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -30312,6 +30397,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -30324,6 +30410,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -30352,6 +30439,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -30364,6 +30452,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -31098,7 +31187,8 @@ open class UserRecordingsAPI {
             "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
-            "agentOwnedRouting" : "{}"
+            "agentOwnedRouting" : "{}",
+            "conditionalGroupActivation" : "{}"
           },
           "isScoringIndex" : true,
           "status" : "PENDING",
@@ -31518,6 +31608,7 @@ open class UserRecordingsAPI {
             "anyFailedKillQuestions" : true
           },
           "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+          "divisionIds" : [ "divisionIds", "divisionIds" ],
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
@@ -33048,6 +33139,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -33060,6 +33152,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -33088,6 +33181,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -33100,6 +33194,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -33143,6 +33238,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -33155,6 +33251,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -33183,6 +33280,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -33195,6 +33293,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -33929,7 +34028,8 @@ open class UserRecordingsAPI {
             "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
-            "agentOwnedRouting" : "{}"
+            "agentOwnedRouting" : "{}",
+            "conditionalGroupActivation" : "{}"
           },
           "isScoringIndex" : true,
           "status" : "PENDING",
@@ -35389,6 +35489,7 @@ open class UserRecordingsAPI {
             "anyFailedKillQuestions" : true
           },
           "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+          "divisionIds" : [ "divisionIds", "divisionIds" ],
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
@@ -36919,6 +37020,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -36931,6 +37033,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -36959,6 +37062,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -36971,6 +37075,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -37014,6 +37119,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -37026,6 +37132,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -37054,6 +37161,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -37066,6 +37174,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -37800,7 +37909,8 @@ open class UserRecordingsAPI {
             "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
-            "agentOwnedRouting" : "{}"
+            "agentOwnedRouting" : "{}",
+            "conditionalGroupActivation" : "{}"
           },
           "isScoringIndex" : true,
           "status" : "PENDING",
@@ -38220,6 +38330,7 @@ open class UserRecordingsAPI {
             "anyFailedKillQuestions" : true
           },
           "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+          "divisionIds" : [ "divisionIds", "divisionIds" ],
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
           "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
@@ -39750,6 +39861,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -39762,6 +39874,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -39790,6 +39903,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -39802,6 +39916,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -39845,6 +39960,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -39857,6 +39973,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -39885,6 +40002,7 @@ open class UserRecordingsAPI {
                   "naEnabled" : true,
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -39897,6 +40015,7 @@ open class UserRecordingsAPI {
                     } ]
                   }, {
                     "builtInType" : "Selected",
+                    "contextId" : "contextId",
                     "id" : "id",
                     "text" : "text",
                     "value" : 1,
@@ -40631,7 +40750,8 @@ open class UserRecordingsAPI {
             "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
-            "agentOwnedRouting" : "{}"
+            "agentOwnedRouting" : "{}",
+            "conditionalGroupActivation" : "{}"
           },
           "isScoringIndex" : true,
           "status" : "PENDING",
@@ -40840,8 +40960,8 @@ open class UserRecordingsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -42306,6 +42426,7 @@ open class UserRecordingsAPI {
           "anyFailedKillQuestions" : true
         },
         "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+        "divisionIds" : [ "divisionIds", "divisionIds" ],
         "changedDate" : "2000-01-23T04:56:07.000+00:00",
         "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
         "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
@@ -43836,6 +43957,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -43848,6 +43970,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -43876,6 +43999,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -43888,6 +44012,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -43931,6 +44056,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -43943,6 +44069,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -43971,6 +44098,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -43983,6 +44111,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -44717,7 +44846,8 @@ open class UserRecordingsAPI {
           "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
-          "agentOwnedRouting" : "{}"
+          "agentOwnedRouting" : "{}",
+          "conditionalGroupActivation" : "{}"
         },
         "isScoringIndex" : true,
         "status" : "PENDING",
@@ -45137,6 +45267,7 @@ open class UserRecordingsAPI {
           "anyFailedKillQuestions" : true
         },
         "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+        "divisionIds" : [ "divisionIds", "divisionIds" ],
         "changedDate" : "2000-01-23T04:56:07.000+00:00",
         "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
         "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
@@ -46667,6 +46798,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -46679,6 +46811,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -46707,6 +46840,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -46719,6 +46853,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -46762,6 +46897,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -46774,6 +46910,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -46802,6 +46939,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -46814,6 +46952,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -47548,7 +47687,8 @@ open class UserRecordingsAPI {
           "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
-          "agentOwnedRouting" : "{}"
+          "agentOwnedRouting" : "{}",
+          "conditionalGroupActivation" : "{}"
         },
         "isScoringIndex" : true,
         "status" : "PENDING",
@@ -49008,6 +49148,7 @@ open class UserRecordingsAPI {
           "anyFailedKillQuestions" : true
         },
         "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+        "divisionIds" : [ "divisionIds", "divisionIds" ],
         "changedDate" : "2000-01-23T04:56:07.000+00:00",
         "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
         "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
@@ -50538,6 +50679,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -50550,6 +50692,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -50578,6 +50721,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -50590,6 +50734,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -50633,6 +50778,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -50645,6 +50791,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -50673,6 +50820,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -50685,6 +50833,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -51419,7 +51568,8 @@ open class UserRecordingsAPI {
           "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
-          "agentOwnedRouting" : "{}"
+          "agentOwnedRouting" : "{}",
+          "conditionalGroupActivation" : "{}"
         },
         "isScoringIndex" : true,
         "status" : "PENDING",
@@ -51839,6 +51989,7 @@ open class UserRecordingsAPI {
           "anyFailedKillQuestions" : true
         },
         "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+        "divisionIds" : [ "divisionIds", "divisionIds" ],
         "changedDate" : "2000-01-23T04:56:07.000+00:00",
         "authorizedActions" : [ "authorizedActions", "authorizedActions" ],
         "conversationEndDate" : "2000-01-23T04:56:07.000+00:00",
@@ -53369,6 +53520,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -53381,6 +53533,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -53409,6 +53562,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -53421,6 +53575,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -53464,6 +53619,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -53476,6 +53632,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -53504,6 +53661,7 @@ open class UserRecordingsAPI {
                 "naEnabled" : true,
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -53516,6 +53674,7 @@ open class UserRecordingsAPI {
                   } ]
                 }, {
                   "builtInType" : "Selected",
+                  "contextId" : "contextId",
                   "id" : "id",
                   "text" : "text",
                   "value" : 1,
@@ -54250,7 +54409,8 @@ open class UserRecordingsAPI {
           "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
-          "agentOwnedRouting" : "{}"
+          "agentOwnedRouting" : "{}",
+          "conditionalGroupActivation" : "{}"
         },
         "isScoringIndex" : true,
         "status" : "PENDING",

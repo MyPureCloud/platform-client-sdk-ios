@@ -26,10 +26,10 @@
 | **externalUrl** | **String** | The URL to external document. | [optional] |
 | **source** | [**AddressableEntityRef**](AddressableEntityRef) | The reference to source associated with the document. | [optional] |
 | **readonly** | **Bool** | Whether the document is read-only. | [optional] |
-| **variations** | [**[DocumentVariationAnswer]**]([DocumentVariationAnswer]) | Variations of the document. | [optional] |
+| **variations** | [**[KnowledgeDocumentSearchVariation]**]([KnowledgeDocumentSearchVariation]) | Variations of the document. | [optional] |
 | **answer** | **String** | The answer to the query. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@172.0.0_
+_PureCloudPlatformClientV2@173.0.0_

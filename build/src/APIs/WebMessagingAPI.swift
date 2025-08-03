@@ -69,6 +69,7 @@ open class WebMessagingAPI {
       "datePicker" : "{}",
       "carousel" : "{}",
       "contentType" : "Attachment",
+      "listPicker" : "{}",
       "generic" : "{}",
       "card" : "{}"
     }, {
@@ -78,6 +79,7 @@ open class WebMessagingAPI {
       "datePicker" : "{}",
       "carousel" : "{}",
       "contentType" : "Attachment",
+      "listPicker" : "{}",
       "generic" : "{}",
       "card" : "{}"
     } ],
@@ -115,6 +117,7 @@ open class WebMessagingAPI {
       "datePicker" : "{}",
       "carousel" : "{}",
       "contentType" : "Attachment",
+      "listPicker" : "{}",
       "generic" : "{}",
       "card" : "{}"
     }, {
@@ -124,6 +127,7 @@ open class WebMessagingAPI {
       "datePicker" : "{}",
       "carousel" : "{}",
       "contentType" : "Attachment",
+      "listPicker" : "{}",
       "generic" : "{}",
       "card" : "{}"
     } ],
