@@ -15,4 +15,4 @@ Information about the recipient the message is sent to or received from.
 
 
 
-_PureCloudPlatformClientV2@173.0.0_
+_PureCloudPlatformClientV2@173.1.0_

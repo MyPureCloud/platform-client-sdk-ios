@@ -13,4 +13,4 @@ List of log capture user configurations including total count and entities
 
 
 
-_PureCloudPlatformClientV2@173.0.0_
+_PureCloudPlatformClientV2@173.1.0_

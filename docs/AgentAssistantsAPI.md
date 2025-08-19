@@ -660,4 +660,4 @@ AgentAssistantsAPI.putAssistantQueue(assistantId: assistantId, queueId: queueId,
 [**AssistantQueue**](AssistantQueue)
 
 
-_PureCloudPlatformClientV2@173.0.0_
+_PureCloudPlatformClientV2@173.1.0_

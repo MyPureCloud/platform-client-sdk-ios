@@ -14,4 +14,4 @@ Settings for a next-action of disconnecting, including the reason code for the d
 
 
 
-_PureCloudPlatformClientV2@173.0.0_
+_PureCloudPlatformClientV2@173.1.0_
