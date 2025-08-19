@@ -15,4 +15,4 @@ Call wrap up or disposition data.
 
 
 
-_PureCloudPlatformClientV2@173.0.0_
+_PureCloudPlatformClientV2@173.1.0_

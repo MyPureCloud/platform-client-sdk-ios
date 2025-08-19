@@ -1947,4 +1947,4 @@ LearningAPI.putLearningModuleRule(moduleId: moduleId, body: body) { (response, e
 [**LearningModuleRule**](LearningModuleRule)
 
 
-_PureCloudPlatformClientV2@173.0.0_
+_PureCloudPlatformClientV2@173.1.0_

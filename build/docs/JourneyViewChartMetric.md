@@ -14,4 +14,4 @@ A metric to measure within the chart
 
 
 
-_PureCloudPlatformClientV2@173.0.0_
+_PureCloudPlatformClientV2@173.1.0_

@@ -17,4 +17,4 @@ FilterRange is one of the attributes of a FilterPredicate
 
 
 
-_PureCloudPlatformClientV2@173.0.0_
+_PureCloudPlatformClientV2@173.1.0_

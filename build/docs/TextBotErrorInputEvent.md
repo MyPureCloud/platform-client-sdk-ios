@@ -12,4 +12,4 @@ Settings for an input event to the bot flow indicating an error has occurred.
 
 
 
-_PureCloudPlatformClientV2@173.0.0_
+_PureCloudPlatformClientV2@173.1.0_
