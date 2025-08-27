@@ -12,4 +12,4 @@ A datepicker available time that a user can take.
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

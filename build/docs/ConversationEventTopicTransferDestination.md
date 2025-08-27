@@ -12,4 +12,4 @@ Fields identifying the destination of a given conversation command.
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

@@ -15,6 +15,55 @@ open class WebMessagingAPI {
     
     
     /**
+     Delete device information
+     
+     - parameter deploymentId: (path) WebMessaging deployment id 
+     - parameter tokenId: (path) Device token id or cookie id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWebmessagingDeploymentPushdevice(deploymentId: String, tokenId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWebmessagingDeploymentPushdeviceWithRequestBuilder(deploymentId: deploymentId, tokenId: tokenId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete device information
+     - DELETE /api/v2/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}
+     
+     - parameter deploymentId: (path) WebMessaging deployment id 
+     - parameter tokenId: (path) Device token id or cookie id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWebmessagingDeploymentPushdeviceWithRequestBuilder(deploymentId: String, tokenId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}"
+        let deploymentIdPreEscape = "\(deploymentId)"
+        let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
+        let tokenIdPreEscape = "\(tokenId)"
+        let tokenIdPostEscape = tokenIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tokenId}", with: tokenIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Get the messages for a web messaging session.
      
      - parameter pageSize: (query) Page size (optional)
@@ -165,6 +214,112 @@ open class WebMessagingAPI {
         let requestBuilder: RequestBuilder<WebMessagingMessageEntityList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Edit device information
+     
+     - parameter deploymentId: (path) WebMessaging deployment id 
+     - parameter tokenId: (path) Device token id or cookie id 
+     - parameter body: (body) Request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWebmessagingDeploymentPushdevice(deploymentId: String, tokenId: String, body: PushDeviceUpdateRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWebmessagingDeploymentPushdeviceWithRequestBuilder(deploymentId: deploymentId, tokenId: tokenId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Edit device information
+     - PATCH /api/v2/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}
+     
+     - parameter deploymentId: (path) WebMessaging deployment id 
+     - parameter tokenId: (path) Device token id or cookie id 
+     - parameter body: (body) Request body 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func patchWebmessagingDeploymentPushdeviceWithRequestBuilder(deploymentId: String, tokenId: String, body: PushDeviceUpdateRequest) -> RequestBuilder<Void> {        
+        var path = "/api/v2/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}"
+        let deploymentIdPreEscape = "\(deploymentId)"
+        let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
+        let tokenIdPreEscape = "\(tokenId)"
+        let tokenIdPostEscape = tokenIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tokenId}", with: tokenIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Add a new device information
+     
+     - parameter deploymentId: (path) WebMessaging deployment id 
+     - parameter tokenId: (path) Device token id or cookie id 
+     - parameter body: (body) Request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWebmessagingDeploymentPushdevice(deploymentId: String, tokenId: String, body: PushDeviceInsertRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWebmessagingDeploymentPushdeviceWithRequestBuilder(deploymentId: deploymentId, tokenId: tokenId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add a new device information
+     - POST /api/v2/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}
+     
+     - parameter deploymentId: (path) WebMessaging deployment id 
+     - parameter tokenId: (path) Device token id or cookie id 
+     - parameter body: (body) Request body 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postWebmessagingDeploymentPushdeviceWithRequestBuilder(deploymentId: String, tokenId: String, body: PushDeviceInsertRequest) -> RequestBuilder<Void> {        
+        var path = "/api/v2/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}"
+        let deploymentIdPreEscape = "\(deploymentId)"
+        let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
+        let tokenIdPreEscape = "\(tokenId)"
+        let tokenIdPostEscape = tokenIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tokenId}", with: tokenIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
 }

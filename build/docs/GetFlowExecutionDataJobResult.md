@@ -15,4 +15,4 @@ This is a list of executionData links that can be used to download the complete 
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

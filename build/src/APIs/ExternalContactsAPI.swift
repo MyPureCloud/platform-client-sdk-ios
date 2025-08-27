@@ -564,6 +564,11 @@ open class ExternalContactsAPI {
   "lastName" : "lastName",
   "canonicalContact" : "{}",
   "workEmail" : "workEmail",
+  "appleOpaqueIds" : [ {
+    "value" : "value"
+  }, {
+    "value" : "value"
+  } ],
   "customFields" : {
     "key" : "{}"
   },
@@ -1501,6 +1506,11 @@ open class ExternalContactsAPI {
   "lastName" : "lastName",
   "canonicalContact" : "{}",
   "workEmail" : "workEmail",
+  "appleOpaqueIds" : [ {
+    "value" : "value"
+  }, {
+    "value" : "value"
+  } ],
   "customFields" : {
     "key" : "{}"
   },
@@ -1857,6 +1867,11 @@ open class ExternalContactsAPI {
     "lastName" : "lastName",
     "canonicalContact" : "{}",
     "workEmail" : "workEmail",
+    "appleOpaqueIds" : [ {
+      "value" : "value"
+    }, {
+      "value" : "value"
+    } ],
     "customFields" : {
       "key" : "{}"
     },
@@ -2129,6 +2144,11 @@ open class ExternalContactsAPI {
     "lastName" : "lastName",
     "canonicalContact" : "{}",
     "workEmail" : "workEmail",
+    "appleOpaqueIds" : [ {
+      "value" : "value"
+    }, {
+      "value" : "value"
+    } ],
     "customFields" : {
       "key" : "{}"
     },
@@ -4123,6 +4143,11 @@ open class ExternalContactsAPI {
     "lastName" : "lastName",
     "canonicalContact" : "{}",
     "workEmail" : "workEmail",
+    "appleOpaqueIds" : [ {
+      "value" : "value"
+    }, {
+      "value" : "value"
+    } ],
     "customFields" : {
       "key" : "{}"
     },
@@ -4395,6 +4420,11 @@ open class ExternalContactsAPI {
     "lastName" : "lastName",
     "canonicalContact" : "{}",
     "workEmail" : "workEmail",
+    "appleOpaqueIds" : [ {
+      "value" : "value"
+    }, {
+      "value" : "value"
+    } ],
     "customFields" : {
       "key" : "{}"
     },
@@ -6052,6 +6082,11 @@ open class ExternalContactsAPI {
     "lastName" : "lastName",
     "canonicalContact" : "{}",
     "workEmail" : "workEmail",
+    "appleOpaqueIds" : [ {
+      "value" : "value"
+    }, {
+      "value" : "value"
+    } ],
     "customFields" : {
       "key" : "{}"
     },
@@ -6324,6 +6359,11 @@ open class ExternalContactsAPI {
     "lastName" : "lastName",
     "canonicalContact" : "{}",
     "workEmail" : "workEmail",
+    "appleOpaqueIds" : [ {
+      "value" : "value"
+    }, {
+      "value" : "value"
+    } ],
     "customFields" : {
       "key" : "{}"
     },
@@ -6662,6 +6702,11 @@ open class ExternalContactsAPI {
     "lastName" : "lastName",
     "canonicalContact" : "{}",
     "workEmail" : "workEmail",
+    "appleOpaqueIds" : [ {
+      "value" : "value"
+    }, {
+      "value" : "value"
+    } ],
     "customFields" : {
       "key" : "{}"
     },
@@ -6934,6 +6979,11 @@ open class ExternalContactsAPI {
     "lastName" : "lastName",
     "canonicalContact" : "{}",
     "workEmail" : "workEmail",
+    "appleOpaqueIds" : [ {
+      "value" : "value"
+    }, {
+      "value" : "value"
+    } ],
     "customFields" : {
       "key" : "{}"
     },
@@ -7272,6 +7322,11 @@ open class ExternalContactsAPI {
     "lastName" : "lastName",
     "canonicalContact" : "{}",
     "workEmail" : "workEmail",
+    "appleOpaqueIds" : [ {
+      "value" : "value"
+    }, {
+      "value" : "value"
+    } ],
     "customFields" : {
       "key" : "{}"
     },
@@ -7544,6 +7599,11 @@ open class ExternalContactsAPI {
     "lastName" : "lastName",
     "canonicalContact" : "{}",
     "workEmail" : "workEmail",
+    "appleOpaqueIds" : [ {
+      "value" : "value"
+    }, {
+      "value" : "value"
+    } ],
     "customFields" : {
       "key" : "{}"
     },
@@ -10477,6 +10537,11 @@ open class ExternalContactsAPI {
   "lastName" : "lastName",
   "canonicalContact" : "{}",
   "workEmail" : "workEmail",
+  "appleOpaqueIds" : [ {
+    "value" : "value"
+  }, {
+    "value" : "value"
+  } ],
   "customFields" : {
     "key" : "{}"
   },
@@ -10802,6 +10867,11 @@ open class ExternalContactsAPI {
   "lastName" : "lastName",
   "canonicalContact" : "{}",
   "workEmail" : "workEmail",
+  "appleOpaqueIds" : [ {
+    "value" : "value"
+  }, {
+    "value" : "value"
+  } ],
   "customFields" : {
     "key" : "{}"
   },
@@ -11128,6 +11198,11 @@ open class ExternalContactsAPI {
   "lastName" : "lastName",
   "canonicalContact" : "{}",
   "workEmail" : "workEmail",
+  "appleOpaqueIds" : [ {
+    "value" : "value"
+  }, {
+    "value" : "value"
+  } ],
   "customFields" : {
     "key" : "{}"
   },
@@ -11514,6 +11589,11 @@ open class ExternalContactsAPI {
   "lastName" : "lastName",
   "canonicalContact" : "{}",
   "workEmail" : "workEmail",
+  "appleOpaqueIds" : [ {
+    "value" : "value"
+  }, {
+    "value" : "value"
+  } ],
   "customFields" : {
     "key" : "{}"
   },
@@ -11965,6 +12045,11 @@ open class ExternalContactsAPI {
   "lastName" : "lastName",
   "canonicalContact" : "{}",
   "workEmail" : "workEmail",
+  "appleOpaqueIds" : [ {
+    "value" : "value"
+  }, {
+    "value" : "value"
+  } ],
   "customFields" : {
     "key" : "{}"
   },
@@ -12302,6 +12387,11 @@ open class ExternalContactsAPI {
   "lastName" : "lastName",
   "canonicalContact" : "{}",
   "workEmail" : "workEmail",
+  "appleOpaqueIds" : [ {
+    "value" : "value"
+  }, {
+    "value" : "value"
+  } ],
   "customFields" : {
     "key" : "{}"
   },
@@ -13114,6 +13204,11 @@ open class ExternalContactsAPI {
   "lastName" : "lastName",
   "canonicalContact" : "{}",
   "workEmail" : "workEmail",
+  "appleOpaqueIds" : [ {
+    "value" : "value"
+  }, {
+    "value" : "value"
+  } ],
   "customFields" : {
     "key" : "{}"
   },
@@ -13973,6 +14068,11 @@ open class ExternalContactsAPI {
   "lastName" : "lastName",
   "canonicalContact" : "{}",
   "workEmail" : "workEmail",
+  "appleOpaqueIds" : [ {
+    "value" : "value"
+  }, {
+    "value" : "value"
+  } ],
   "customFields" : {
     "key" : "{}"
   },

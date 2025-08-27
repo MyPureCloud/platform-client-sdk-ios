@@ -27,4 +27,4 @@ A certificate authority represents an organization that has issued a digital cer
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

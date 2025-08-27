@@ -21,4 +21,4 @@ Details about the current state of a Flow execution
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

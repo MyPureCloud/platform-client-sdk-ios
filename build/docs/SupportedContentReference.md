@@ -14,4 +14,4 @@ Reference to supported content profile associated with the integration
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

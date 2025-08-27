@@ -16,4 +16,4 @@ Settings for a next-action of exiting the bot flow. Any output variables are ava
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

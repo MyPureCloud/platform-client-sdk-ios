@@ -212,4 +212,4 @@ GeolocationAPI.patchUserGeolocation(userId: userId, clientId: clientId, body: bo
 [**Geolocation**](Geolocation)
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

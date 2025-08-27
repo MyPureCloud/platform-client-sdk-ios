@@ -1200,4 +1200,4 @@ SearchAPI.postVoicemailSearch(body: body) { (response, error) in
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse)
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

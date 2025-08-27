@@ -236,6 +236,83 @@
     "return": "AssistantQueueListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assistantId: String = \"\" // Assistant ID\nlet body: [AssistantQueue] = [new AssistantQueue(...)] // \n\n// Update Queues for an Assistant.\nPatchAssistantQueuesRequest.patchAssistantQueues(assistantId: assistantId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchAssistantQueuesRequest.patchAssistantQueues was successful\")\n        dump(response)\n    }\n}"
   },
+  "postassistantqueueusersbulkadd": {
+    "operationId": "postassistantqueueusersbulkadd",
+    "functionName": "postAssistantQueueUsersBulkAdd",
+    "signature": "postAssistantQueueUsersBulkAdd(assistantId, queueId, body)",
+    "parameters": [
+      {
+        "name": "assistantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "queueId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "AssistantQueueUsersBulkAddRequest",
+        "required": "true"
+      }
+    ],
+    "return": "BulkResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assistantId: String = \"\" // Assistant ID\nlet queueId: String = \"\" // Queue ID\nlet body: AssistantQueueUsersBulkAddRequest = new AssistantQueueUsersBulkAddRequest(...) // \n\n// Bulk add users to assistant-queue (requires manual assignment mode).\nPostAssistantQueueUsersBulkAddRequest.postAssistantQueueUsersBulkAdd(assistantId: assistantId, queueId: queueId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAssistantQueueUsersBulkAddRequest.postAssistantQueueUsersBulkAdd was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postassistantqueueusersbulkremove": {
+    "operationId": "postassistantqueueusersbulkremove",
+    "functionName": "postAssistantQueueUsersBulkRemove",
+    "signature": "postAssistantQueueUsersBulkRemove(assistantId, queueId, body)",
+    "parameters": [
+      {
+        "name": "assistantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "queueId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "AssistantQueueUsersBulkRemoveRequest",
+        "required": "true"
+      }
+    ],
+    "return": "BulkResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assistantId: String = \"\" // Assistant ID\nlet queueId: String = \"\" // Queue ID\nlet body: AssistantQueueUsersBulkRemoveRequest = new AssistantQueueUsersBulkRemoveRequest(...) // \n\n// Bulk remove users from assistant-queue (requires manual assignment mode).\nPostAssistantQueueUsersBulkRemoveRequest.postAssistantQueueUsersBulkRemove(assistantId: assistantId, queueId: queueId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAssistantQueueUsersBulkRemoveRequest.postAssistantQueueUsersBulkRemove was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postassistantqueueusersquery": {
+    "operationId": "postassistantqueueusersquery",
+    "functionName": "postAssistantQueueUsersQuery",
+    "signature": "postAssistantQueueUsersQuery(assistantId, queueId, body, expand)",
+    "parameters": [
+      {
+        "name": "assistantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "queueId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "AssistantQueueUsersQueryRequest",
+        "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
+      }
+    ],
+    "return": "AssistantQueueUsersQueryResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assistantId: String = \"\" // Assistant ID\nlet queueId: String = \"\" // Queue ID\nlet body: AssistantQueueUsersQueryRequest = new AssistantQueueUsersQueryRequest(...) // \nlet expand: [String] = [\"\"] // Which fields, if any, to expand with.\n\n// Query for users in the assistant-queue (requires manual assignment mode).\nPostAssistantQueueUsersQueryRequest.postAssistantQueueUsersQuery(assistantId: assistantId, queueId: queueId, body: body, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAssistantQueueUsersQueryRequest.postAssistantQueueUsersQuery was successful\")\n        dump(response)\n    }\n}"
+  },
   "postassistants": {
     "operationId": "postassistants",
     "functionName": "postAssistants",
@@ -5531,7 +5608,7 @@
         "required": "false"
       }
     ],
-    "return": "PermissionCollectionEntityListing",
+    "return": "DomainPermissionEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet queryType: GetAuthorizationPermissionsRequest.QueryType_getAuthorizationPermissions = GetAuthorizationPermissionsRequest.QueryType_getAuthorizationPermissions.enummember // Query filter type\nlet query: String = \"\" // Comma-separated list of permissions or domains to query\n\n// Get all permissions.\nGetAuthorizationPermissionsRequest.getAuthorizationPermissions(pageSize: pageSize, pageNumber: pageNumber, queryType: queryType, query: query) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAuthorizationPermissionsRequest.getAuthorizationPermissions was successful\")\n        dump(response)\n    }\n}"
   },
   "getauthorizationproducts": {
@@ -8083,6 +8160,19 @@
     "return": "TagValue",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workspaceId: String = \"\" // Workspace ID\nlet tagId: String = \"\" // Tag ID\nlet body: TagValue = new TagValue(...) // Workspace\n\n// Update a workspace tag. Will update all documents with the new tag value.\nPutContentmanagementWorkspaceTagvalueRequest.putContentmanagementWorkspaceTagvalue(workspaceId: workspaceId, tagId: tagId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutContentmanagementWorkspaceTagvalueRequest.putContentmanagementWorkspaceTagvalue was successful\")\n        dump(response)\n    }\n}"
   },
+  "deleteconversation": {
+    "operationId": "deleteconversation",
+    "functionName": "deleteConversation",
+    "signature": "deleteConversation(conversationId)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\n\n// Update a conversation by disconnecting all of the participants\nDeleteConversationRequest.deleteConversation(conversationId: conversationId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteConversationRequest.deleteConversation was successful\")\n    }\n}"
+  },
   "deleteconversationparticipantcode": {
     "operationId": "deleteconversationparticipantcode",
     "functionName": "deleteConversationParticipantCode",
@@ -9936,6 +10026,24 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\nlet participantId: String = \"\" // participant ID\nlet body: ParticipantAttributes = new ParticipantAttributes(...) // Participant attributes\n\n// Update the attributes on a conversation participant.\nPatchConversationParticipantAttributesRequest.patchConversationParticipantAttributes(conversationId: conversationId, participantId: participantId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchConversationParticipantAttributesRequest.patchConversationParticipantAttributes was successful\")\n    }\n}"
   },
+  "patchconversationrecordingstate": {
+    "operationId": "patchconversationrecordingstate",
+    "functionName": "patchConversationRecordingstate",
+    "signature": "patchConversationRecordingstate(conversationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "SetRecordingState",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\nlet body: SetRecordingState = new SetRecordingState(...) // SetRecordingState\n\n// Update a conversation by setting its recording state\nPatchConversationRecordingstateRequest.patchConversationRecordingstate(conversationId: conversationId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchConversationRecordingstateRequest.patchConversationRecordingstate was successful\")\n    }\n}"
+  },
   "patchconversationsecureattributes": {
     "operationId": "patchconversationsecureattributes",
     "functionName": "patchConversationSecureattributes",
@@ -10067,6 +10175,24 @@
     ],
     "return": "Conversation",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet body: Conversation = new Conversation(...) // Conversation\n\n// Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants\nPatchConversationsCallRequest.patchConversationsCall(conversationId: conversationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchConversationsCallRequest.patchConversationsCall was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchconversationscallconference": {
+    "operationId": "patchconversationscallconference",
+    "functionName": "patchConversationsCallConference",
+    "signature": "patchConversationsCallConference(conversationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UpdateConferenceRequest",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet body: UpdateConferenceRequest = new UpdateConferenceRequest(...) // UpdateConferenceRequest\n\n// Update a conversation by merging in other conversations to create a conference\nPatchConversationsCallConferenceRequest.patchConversationsCallConference(conversationId: conversationId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchConversationsCallConferenceRequest.patchConversationsCallConference was successful\")\n    }\n}"
   },
   "patchconversationscallparticipant": {
     "operationId": "patchconversationscallparticipant",
@@ -35896,20 +36022,6 @@
     "return": "EmailOutboundDomainResult",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // domain ID\n\n// Get activation status (cname + dkim) of an outbound domain\nGetRoutingEmailOutboundDomainActivationRequest.getRoutingEmailOutboundDomainActivation(domainId: domainId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailOutboundDomainActivationRequest.getRoutingEmailOutboundDomainActivation was successful\")\n        dump(response)\n    }\n}"
   },
-  "getroutingemailoutbounddomainsearch": {
-    "operationId": "getroutingemailoutbounddomainsearch",
-    "functionName": "getRoutingEmailOutboundDomainSearch",
-    "signature": "getRoutingEmailOutboundDomainSearch(domainId)",
-    "parameters": [
-      {
-        "name": "domainId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "OutboundDomain",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // domain ID\n\n// Search a domain across organizations\nGetRoutingEmailOutboundDomainSearchRequest.getRoutingEmailOutboundDomainSearch(domainId: domainId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailOutboundDomainSearchRequest.getRoutingEmailOutboundDomainSearch was successful\")\n        dump(response)\n    }\n}"
-  },
   "getroutingemailoutbounddomains": {
     "operationId": "getroutingemailoutbounddomains",
     "functionName": "getRoutingEmailOutboundDomains",
@@ -37650,7 +37762,7 @@
       }
     ],
     "return": "TestMessage",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // domain ID\nlet body: TestMessage = new TestMessage(...) // TestMessage\n\n// Tests the custom SMTP server integration connection set on this domain\nPostRoutingEmailDomainTestconnectionRequest.postRoutingEmailDomainTestconnection(domainId: domainId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRoutingEmailDomainTestconnectionRequest.postRoutingEmailDomainTestconnection was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // domain ID\nlet body: TestMessage = new TestMessage(...) // TestMessage\n\n// Tests the custom SMTP server integration connection set on this ACD domain\nPostRoutingEmailDomainTestconnectionRequest.postRoutingEmailDomainTestconnection(domainId: domainId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRoutingEmailDomainTestconnectionRequest.postRoutingEmailDomainTestconnection was successful\")\n        dump(response)\n    }\n}"
   },
   "postroutingemaildomains": {
     "operationId": "postroutingemaildomains",
@@ -48320,6 +48432,24 @@
     "return": "DeploymentIdentityResolutionConfig",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // The deployment ID\nlet body: DeploymentIdentityResolutionConfig = new DeploymentIdentityResolutionConfig(...) // \n\n// Update identity resolution settings for a deployment.\nPutWebdeploymentsDeploymentIdentityresolutionRequest.putWebdeploymentsDeploymentIdentityresolution(deploymentId: deploymentId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutWebdeploymentsDeploymentIdentityresolutionRequest.putWebdeploymentsDeploymentIdentityresolution was successful\")\n        dump(response)\n    }\n}"
   },
+  "deletewebmessagingdeploymentpushdevice": {
+    "operationId": "deletewebmessagingdeploymentpushdevice",
+    "functionName": "deleteWebmessagingDeploymentPushdevice",
+    "signature": "deleteWebmessagingDeploymentPushdevice(deploymentId, tokenId)",
+    "parameters": [
+      {
+        "name": "deploymentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "tokenId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // WebMessaging deployment id\nlet tokenId: String = \"\" // Device token id or cookie id\n\n// Delete device information\nDeleteWebmessagingDeploymentPushdeviceRequest.deleteWebmessagingDeploymentPushdevice(deploymentId: deploymentId, tokenId: tokenId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteWebmessagingDeploymentPushdeviceRequest.deleteWebmessagingDeploymentPushdevice was successful\")\n    }\n}"
+  },
   "getwebmessagingmessages": {
     "operationId": "getwebmessagingmessages",
     "functionName": "getWebmessagingMessages",
@@ -48338,6 +48468,52 @@
     ],
     "return": "WebMessagingMessageEntityList",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\n\n// Get the messages for a web messaging session.\nGetWebmessagingMessagesRequest.getWebmessagingMessages(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebmessagingMessagesRequest.getWebmessagingMessages was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchwebmessagingdeploymentpushdevice": {
+    "operationId": "patchwebmessagingdeploymentpushdevice",
+    "functionName": "patchWebmessagingDeploymentPushdevice",
+    "signature": "patchWebmessagingDeploymentPushdevice(deploymentId, tokenId, body)",
+    "parameters": [
+      {
+        "name": "deploymentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "tokenId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "PushDeviceUpdateRequest",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // WebMessaging deployment id\nlet tokenId: String = \"\" // Device token id or cookie id\nlet body: PushDeviceUpdateRequest = new PushDeviceUpdateRequest(...) // Request body\n\n// Edit device information\nPatchWebmessagingDeploymentPushdeviceRequest.patchWebmessagingDeploymentPushdevice(deploymentId: deploymentId, tokenId: tokenId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchWebmessagingDeploymentPushdeviceRequest.patchWebmessagingDeploymentPushdevice was successful\")\n    }\n}"
+  },
+  "postwebmessagingdeploymentpushdevice": {
+    "operationId": "postwebmessagingdeploymentpushdevice",
+    "functionName": "postWebmessagingDeploymentPushdevice",
+    "signature": "postWebmessagingDeploymentPushdevice(deploymentId, tokenId, body)",
+    "parameters": [
+      {
+        "name": "deploymentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "tokenId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "PushDeviceInsertRequest",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // WebMessaging deployment id\nlet tokenId: String = \"\" // Device token id or cookie id\nlet body: PushDeviceInsertRequest = new PushDeviceInsertRequest(...) // Request body\n\n// Add a new device information\nPostWebmessagingDeploymentPushdeviceRequest.postWebmessagingDeploymentPushdevice(deploymentId: deploymentId, tokenId: tokenId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostWebmessagingDeploymentPushdeviceRequest.postWebmessagingDeploymentPushdevice was successful\")\n    }\n}"
   },
   "deletewidgetsdeployment": {
     "operationId": "deletewidgetsdeployment",

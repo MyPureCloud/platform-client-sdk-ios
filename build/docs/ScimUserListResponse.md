@@ -15,4 +15,4 @@ Defines a response for a list of SCIM users.
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

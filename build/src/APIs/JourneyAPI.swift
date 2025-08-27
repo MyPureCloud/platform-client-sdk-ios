@@ -3716,8 +3716,10 @@ open class JourneyAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "jsonSchema" : "{}",
+  "displayName" : "displayName",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
+  "rank" : 0,
   "description" : "description",
   "id" : "id",
   "source" : "Native"
@@ -3775,15 +3777,19 @@ open class JourneyAPI {
   "total" : 0,
   "entities" : [ {
     "jsonSchema" : "{}",
+    "displayName" : "displayName",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "rank" : 0,
     "description" : "description",
     "id" : "id",
     "source" : "Native"
   }, {
     "jsonSchema" : "{}",
+    "displayName" : "displayName",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "rank" : 0,
     "description" : "description",
     "id" : "id",
     "source" : "Native"

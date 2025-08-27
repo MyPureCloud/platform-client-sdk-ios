@@ -1059,9 +1059,9 @@ open class AuthorizationAPI {
      - parameter query: (query) Comma-separated list of permissions or domains to query (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAuthorizationPermissions(pageSize: Int? = nil, pageNumber: Int? = nil, queryType: QueryType_getAuthorizationPermissions? = nil, query: String? = nil, completion: @escaping ((_ data: PermissionCollectionEntityListing?,_ error: Error?) -> Void)) {
+    open class func getAuthorizationPermissions(pageSize: Int? = nil, pageNumber: Int? = nil, queryType: QueryType_getAuthorizationPermissions? = nil, query: String? = nil, completion: @escaping ((_ data: DomainPermissionEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getAuthorizationPermissionsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, queryType: queryType, query: query)
-        requestBuilder.execute { (response: Response<PermissionCollectionEntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<DomainPermissionEntityListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1146,9 +1146,9 @@ open class AuthorizationAPI {
      - parameter queryType: (query) Query filter type (optional)
      - parameter query: (query) Comma-separated list of permissions or domains to query (optional)
 
-     - returns: RequestBuilder<PermissionCollectionEntityListing> 
+     - returns: RequestBuilder<DomainPermissionEntityListing> 
      */
-    open class func getAuthorizationPermissionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, queryType: QueryType_getAuthorizationPermissions? = nil, query: String? = nil) -> RequestBuilder<PermissionCollectionEntityListing> {        
+    open class func getAuthorizationPermissionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, queryType: QueryType_getAuthorizationPermissions? = nil, query: String? = nil) -> RequestBuilder<DomainPermissionEntityListing> {        
         let path = "/api/v2/authorization/permissions"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -1161,7 +1161,7 @@ open class AuthorizationAPI {
             "query": query
         ])
 
-        let requestBuilder: RequestBuilder<PermissionCollectionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<DomainPermissionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }

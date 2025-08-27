@@ -2152,66 +2152,6 @@ open class RoutingAPI {
 
     
     
-    /**
-     Search a domain across organizations
-     
-     - parameter domainId: (path) domain ID 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getRoutingEmailOutboundDomainSearch(domainId: String, completion: @escaping ((_ data: OutboundDomain?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingEmailOutboundDomainSearchWithRequestBuilder(domainId: domainId)
-        requestBuilder.execute { (response: Response<OutboundDomain>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Search a domain across organizations
-     - GET /api/v2/routing/email/outbound/domains/{domainId}/search
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "cnameVerificationResult" : "{}",
-  "dkimVerificationResult" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
-  "senderType" : "Unknown",
-  "id" : "id"
-}, statusCode=200}]
-     
-     - parameter domainId: (path) domain ID 
-
-     - returns: RequestBuilder<OutboundDomain> 
-     */
-    open class func getRoutingEmailOutboundDomainSearchWithRequestBuilder(domainId: String) -> RequestBuilder<OutboundDomain> {        
-        var path = "/api/v2/routing/email/outbound/domains/{domainId}/search"
-        let domainIdPreEscape = "\(domainId)"
-        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<OutboundDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
-    }
-
-    
-    
     
     
     
@@ -13071,7 +13011,7 @@ open class RoutingAPI {
     
     
     /**
-     Tests the custom SMTP server integration connection set on this domain
+     Tests the custom SMTP server integration connection set on this ACD domain
      
      - parameter domainId: (path) domain ID 
      - parameter body: (body) TestMessage (optional)
@@ -13096,9 +13036,9 @@ open class RoutingAPI {
     }
 
     /**
-     Tests the custom SMTP server integration connection set on this domain
+     Tests the custom SMTP server integration connection set on this ACD domain
      - POST /api/v2/routing/email/domains/{domainId}/testconnection
-     - The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
+     - The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server used by the ACD domain. If the body is specified, there will be an attempt to send an email message to the server.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

@@ -769,6 +769,239 @@ open class AgentAssistantsAPI {
 
     
     
+    
+    
+    
+    
+    /**
+     Bulk add users to assistant-queue (requires manual assignment mode).
+     
+     - parameter assistantId: (path) Assistant ID 
+     - parameter queueId: (path) Queue ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAssistantQueueUsersBulkAdd(assistantId: String, queueId: String, body: AssistantQueueUsersBulkAddRequest, completion: @escaping ((_ data: BulkResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAssistantQueueUsersBulkAddWithRequestBuilder(assistantId: assistantId, queueId: queueId, body: body)
+        requestBuilder.execute { (response: Response<BulkResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk add users to assistant-queue (requires manual assignment mode).
+     - POST /api/v2/assistants/{assistantId}/queues/{queueId}/users/bulk/add
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorIndexes" : [ 6, 6 ],
+  "results" : [ {
+    "error" : "{}",
+    "entity" : "{}"
+  }, {
+    "error" : "{}",
+    "entity" : "{}"
+  } ],
+  "errorCount" : 0
+}, statusCode=200}]
+     
+     - parameter assistantId: (path) Assistant ID 
+     - parameter queueId: (path) Queue ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<BulkResponse> 
+     */
+    open class func postAssistantQueueUsersBulkAddWithRequestBuilder(assistantId: String, queueId: String, body: AssistantQueueUsersBulkAddRequest) -> RequestBuilder<BulkResponse> {        
+        var path = "/api/v2/assistants/{assistantId}/queues/{queueId}/users/bulk/add"
+        let assistantIdPreEscape = "\(assistantId)"
+        let assistantIdPostEscape = assistantIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{assistantId}", with: assistantIdPostEscape, options: .literal, range: nil)
+        let queueIdPreEscape = "\(queueId)"
+        let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{queueId}", with: queueIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Bulk remove users from assistant-queue (requires manual assignment mode).
+     
+     - parameter assistantId: (path) Assistant ID 
+     - parameter queueId: (path) Queue ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAssistantQueueUsersBulkRemove(assistantId: String, queueId: String, body: AssistantQueueUsersBulkRemoveRequest, completion: @escaping ((_ data: BulkResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAssistantQueueUsersBulkRemoveWithRequestBuilder(assistantId: assistantId, queueId: queueId, body: body)
+        requestBuilder.execute { (response: Response<BulkResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk remove users from assistant-queue (requires manual assignment mode).
+     - POST /api/v2/assistants/{assistantId}/queues/{queueId}/users/bulk/remove
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorIndexes" : [ 6, 6 ],
+  "results" : [ {
+    "error" : "{}",
+    "entity" : "{}"
+  }, {
+    "error" : "{}",
+    "entity" : "{}"
+  } ],
+  "errorCount" : 0
+}, statusCode=200}]
+     
+     - parameter assistantId: (path) Assistant ID 
+     - parameter queueId: (path) Queue ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<BulkResponse> 
+     */
+    open class func postAssistantQueueUsersBulkRemoveWithRequestBuilder(assistantId: String, queueId: String, body: AssistantQueueUsersBulkRemoveRequest) -> RequestBuilder<BulkResponse> {        
+        var path = "/api/v2/assistants/{assistantId}/queues/{queueId}/users/bulk/remove"
+        let assistantIdPreEscape = "\(assistantId)"
+        let assistantIdPostEscape = assistantIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{assistantId}", with: assistantIdPostEscape, options: .literal, range: nil)
+        let queueIdPreEscape = "\(queueId)"
+        let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{queueId}", with: queueIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum Expand_postAssistantQueueUsersQuery: String { 
+        case assistant = "assistant"
+        case copilot = "copilot"
+    }
+    
+    /**
+     Query for users in the assistant-queue (requires manual assignment mode).
+     
+     - parameter assistantId: (path) Assistant ID 
+     - parameter queueId: (path) Queue ID 
+     - parameter body: (body)  
+     - parameter expand: (query) Which fields, if any, to expand with. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAssistantQueueUsersQuery(assistantId: String, queueId: String, body: AssistantQueueUsersQueryRequest, expand: [String]? = nil, completion: @escaping ((_ data: AssistantQueueUsersQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAssistantQueueUsersQueryWithRequestBuilder(assistantId: assistantId, queueId: queueId, body: body, expand: expand)
+        requestBuilder.execute { (response: Response<AssistantQueueUsersQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query for users in the assistant-queue (requires manual assignment mode).
+     - POST /api/v2/assistants/{assistantId}/queues/{queueId}/users/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "queue" : "{}",
+  "users" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ]
+}, statusCode=200}]
+     
+     - parameter assistantId: (path) Assistant ID 
+     - parameter queueId: (path) Queue ID 
+     - parameter body: (body)  
+     - parameter expand: (query) Which fields, if any, to expand with. (optional)
+
+     - returns: RequestBuilder<AssistantQueueUsersQueryResponse> 
+     */
+    open class func postAssistantQueueUsersQueryWithRequestBuilder(assistantId: String, queueId: String, body: AssistantQueueUsersQueryRequest, expand: [String]? = nil) -> RequestBuilder<AssistantQueueUsersQueryResponse> {        
+        var path = "/api/v2/assistants/{assistantId}/queues/{queueId}/users/query"
+        let assistantIdPreEscape = "\(assistantId)"
+        let assistantIdPostEscape = assistantIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{assistantId}", with: assistantIdPostEscape, options: .literal, range: nil)
+        let queueIdPreEscape = "\(queueId)"
+        let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{queueId}", with: queueIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<AssistantQueueUsersQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Create an Assistant.
      

@@ -16,4 +16,4 @@ Definition of an Action Draft to be created or updated.
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

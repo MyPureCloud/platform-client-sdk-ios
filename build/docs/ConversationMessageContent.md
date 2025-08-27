@@ -23,4 +23,4 @@ Message content element. If contentType &#x3D; \&quot;Attachment\&quot; only one
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

@@ -18,4 +18,4 @@ This is a table of settings per a loglevel that define what will be logged in ex
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

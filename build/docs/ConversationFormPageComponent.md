@@ -15,4 +15,4 @@ Form component element. Examples include: List Picker, Date Picker, Wheel Picker
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_
