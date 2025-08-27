@@ -14,4 +14,4 @@ A numeric filter on an element within a journey view
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

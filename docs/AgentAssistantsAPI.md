@@ -14,6 +14,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAssistantsQueues**](AgentAssistantsAPI#getAssistantsQueues) | Get all queues assigned to any assistant. |
 | [**patchAssistant**](AgentAssistantsAPI#patchAssistant) | Update an assistant. |
 | [**patchAssistantQueues**](AgentAssistantsAPI#patchAssistantQueues) | Update Queues for an Assistant. |
+| [**postAssistantQueueUsersBulkAdd**](AgentAssistantsAPI#postAssistantQueueUsersBulkAdd) | Bulk add users to assistant-queue (requires manual assignment mode). |
+| [**postAssistantQueueUsersBulkRemove**](AgentAssistantsAPI#postAssistantQueueUsersBulkRemove) | Bulk remove users from assistant-queue (requires manual assignment mode). |
+| [**postAssistantQueueUsersQuery**](AgentAssistantsAPI#postAssistantQueueUsersQuery) | Query for users in the assistant-queue (requires manual assignment mode). |
 | [**postAssistants**](AgentAssistantsAPI#postAssistants) | Create an Assistant. |
 | [**putAssistantQueue**](AgentAssistantsAPI#putAssistantQueue) | Create a queue assistant association. |
 {: class="table-striped"}
@@ -556,6 +559,170 @@ AgentAssistantsAPI.patchAssistantQueues(assistantId: assistantId, body: body) { 
 [**AssistantQueueListing**](AssistantQueueListing)
 
 
+## postAssistantQueueUsersBulkAdd
+
+
+
+> [BulkResponse](BulkResponse) postAssistantQueueUsersBulkAdd(assistantId, queueId, body)
+
+Bulk add users to assistant-queue (requires manual assignment mode).
+
+
+
+Wraps POST /api/v2/assistants/{assistantId}/queues/{queueId}/users/bulk/add  
+
+Requires ANY permissions: 
+
+* assistants:queueUserAssignment:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let assistantId: String = "" // Assistant ID
+let queueId: String = "" // Queue ID
+let body: AssistantQueueUsersBulkAddRequest = new AssistantQueueUsersBulkAddRequest(...) // 
+
+// Code example
+AgentAssistantsAPI.postAssistantQueueUsersBulkAdd(assistantId: assistantId, queueId: queueId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AgentAssistantsAPI.postAssistantQueueUsersBulkAdd was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **assistantId** | **String**| Assistant ID | |
+| **queueId** | **String**| Queue ID | |
+| **body** | [**AssistantQueueUsersBulkAddRequest**](AssistantQueueUsersBulkAddRequest)|  | |
+
+
+### Return type
+
+[**BulkResponse**](BulkResponse)
+
+
+## postAssistantQueueUsersBulkRemove
+
+
+
+> [BulkResponse](BulkResponse) postAssistantQueueUsersBulkRemove(assistantId, queueId, body)
+
+Bulk remove users from assistant-queue (requires manual assignment mode).
+
+
+
+Wraps POST /api/v2/assistants/{assistantId}/queues/{queueId}/users/bulk/remove  
+
+Requires ANY permissions: 
+
+* assistants:queueUserAssignment:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let assistantId: String = "" // Assistant ID
+let queueId: String = "" // Queue ID
+let body: AssistantQueueUsersBulkRemoveRequest = new AssistantQueueUsersBulkRemoveRequest(...) // 
+
+// Code example
+AgentAssistantsAPI.postAssistantQueueUsersBulkRemove(assistantId: assistantId, queueId: queueId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AgentAssistantsAPI.postAssistantQueueUsersBulkRemove was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **assistantId** | **String**| Assistant ID | |
+| **queueId** | **String**| Queue ID | |
+| **body** | [**AssistantQueueUsersBulkRemoveRequest**](AssistantQueueUsersBulkRemoveRequest)|  | |
+
+
+### Return type
+
+[**BulkResponse**](BulkResponse)
+
+
+## postAssistantQueueUsersQuery
+
+
+
+> [AssistantQueueUsersQueryResponse](AssistantQueueUsersQueryResponse) postAssistantQueueUsersQuery(assistantId, queueId, body, expand)
+
+Query for users in the assistant-queue (requires manual assignment mode).
+
+
+
+Wraps POST /api/v2/assistants/{assistantId}/queues/{queueId}/users/query  
+
+Requires ANY permissions: 
+
+* assistants:queueUserAssignment:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let assistantId: String = "" // Assistant ID
+let queueId: String = "" // Queue ID
+let body: AssistantQueueUsersQueryRequest = new AssistantQueueUsersQueryRequest(...) // 
+let expand: [String] = [""] // Which fields, if any, to expand with.
+
+// Code example
+AgentAssistantsAPI.postAssistantQueueUsersQuery(assistantId: assistantId, queueId: queueId, body: body, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AgentAssistantsAPI.postAssistantQueueUsersQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **assistantId** | **String**| Assistant ID | |
+| **queueId** | **String**| Queue ID | |
+| **body** | [**AssistantQueueUsersQueryRequest**](AssistantQueueUsersQueryRequest)|  | |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand with. | [optional]<br />**Values**: assistant ("assistant"), copilot ("copilot") |
+
+
+### Return type
+
+[**AssistantQueueUsersQueryResponse**](AssistantQueueUsersQueryResponse)
+
+
 ## postAssistants
 
 
@@ -660,4 +827,4 @@ AgentAssistantsAPI.putAssistantQueue(assistantId: assistantId, queueId: queueId,
 [**AssistantQueue**](AssistantQueue)
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

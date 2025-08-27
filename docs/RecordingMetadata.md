@@ -23,12 +23,12 @@
 | **deleteDate** | [**Date**](Date) | The date the recording will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **exportDate** | [**Date**](Date) | The date the recording will be exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **exportedDate** | [**Date**](Date) | The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **maxAllowedRestorationsForOrg** | **Int** | How many archive restorations the organization is allowed to have. | [optional] |
-| **remainingRestorationsAllowedForOrg** | **Int** | The remaining archive restorations the organization has. | [optional] |
+| **maxAllowedRestorationsForOrg** | **Int** | How many archive restorations the organization is allowed to have. Deprecated - Always returns 10000 since the restoration limit is no longer enforced. | [optional] |
+| **remainingRestorationsAllowedForOrg** | **Int** | The remaining archive restorations the organization has. Deprecated - Always returns 10000 since the restoration limit is no longer enforced. | [optional] |
 | **sessionId** | **String** | The session id represents an external resource id, such as email, call, chat, etc | [optional] |
 | **region** | **String** | The region the source recording is stored in | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

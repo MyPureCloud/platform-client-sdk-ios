@@ -26,6 +26,7 @@
 | **whatsAppId** | [**WhatsAppId**](WhatsAppId) |  | [optional] |
 | **facebookId** | [**FacebookId**](FacebookId) |  | [optional] |
 | **instagramId** | [**InstagramId**](InstagramId) | User information for an Instagram account | [optional] |
+| **appleOpaqueIds** | [**[AppleOpaqueId]**](AppleOpaqueId) | User information for an Apple account | [optional] |
 | **externalIds** | [**[ExternalId]**](ExternalId) | A list of external identifiers that identify this contact in an external system | [optional] |
 | **identifiers** | [**[ContactIdentifier]**]([ContactIdentifier]) | Identifiers claimed by this contact | [optional] |
 | **modifyDate** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -46,4 +47,4 @@
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

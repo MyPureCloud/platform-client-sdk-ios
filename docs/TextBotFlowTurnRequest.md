@@ -14,4 +14,4 @@ Settings for a turn request to a bot flow.
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

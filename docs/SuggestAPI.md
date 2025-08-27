@@ -223,4 +223,4 @@ SuggestAPI.postSearchSuggest(body: body, profile: profile) { (response, error) i
 [**JsonNodeSearchResponse**](JsonNodeSearchResponse)
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

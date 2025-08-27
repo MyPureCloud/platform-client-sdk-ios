@@ -11,4 +11,4 @@ Model for setting the launch configuration for Nuance bots available to Genesys 
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

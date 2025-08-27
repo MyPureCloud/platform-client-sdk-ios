@@ -12,4 +12,4 @@ User information for a Facebook user interacting with a page or app
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

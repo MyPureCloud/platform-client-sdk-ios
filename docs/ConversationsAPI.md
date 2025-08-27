@@ -5,6 +5,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteAnalyticsConversationsDetailsJob**](ConversationsAPI#deleteAnalyticsConversationsDetailsJob) | Delete/cancel an async details job |
+| [**deleteConversation**](ConversationsAPI#deleteConversation) | Update a conversation by disconnecting all of the participants |
 | [**deleteConversationParticipantCode**](ConversationsAPI#deleteConversationParticipantCode) | Delete a code used to add a communication to this participant |
 | [**deleteConversationParticipantFlaggedreason**](ConversationsAPI#deleteConversationParticipantFlaggedreason) | Remove flagged reason from conversation participant. |
 | [**deleteConversationsCallParticipantConsult**](ConversationsAPI#deleteConversationsCallParticipantConsult) | Cancel the transfer |
@@ -111,12 +112,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsVideoParticipantCommunicationWrapup**](ConversationsAPI#getConversationsVideoParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
 | [**patchConversationParticipant**](ConversationsAPI#patchConversationParticipant) | Update a participant. |
 | [**patchConversationParticipantAttributes**](ConversationsAPI#patchConversationParticipantAttributes) | Update the attributes on a conversation participant. |
+| [**patchConversationRecordingstate**](ConversationsAPI#patchConversationRecordingstate) | Update a conversation by setting its recording state |
 | [**patchConversationSecureattributes**](ConversationsAPI#patchConversationSecureattributes) | Update the secure attributes on a conversation. |
 | [**patchConversationSummaryEngagements**](ConversationsAPI#patchConversationSummaryEngagements) | Update agent&#39;s engagement for the summary. |
 | [**patchConversationSummaryFeedback**](ConversationsAPI#patchConversationSummaryFeedback) | Update the feedback for the summary. |
 | [**patchConversationUtilizationlabel**](ConversationsAPI#patchConversationUtilizationlabel) | Update the utilization label on a conversation. When there is no value provided, the system default label is applied |
 | [**patchConversationsAftercallworkConversationIdParticipantCommunication**](ConversationsAPI#patchConversationsAftercallworkConversationIdParticipantCommunication) | Update after-call work for this conversation communication. |
 | [**patchConversationsCall**](ConversationsAPI#patchConversationsCall) | Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
+| [**patchConversationsCallConference**](ConversationsAPI#patchConversationsCallConference) | Update a conversation by merging in other conversations to create a conference |
 | [**patchConversationsCallParticipant**](ConversationsAPI#patchConversationsCallParticipant) | Update conversation participant |
 | [**patchConversationsCallParticipantAttributes**](ConversationsAPI#patchConversationsCallParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationsCallParticipantCommunication**](ConversationsAPI#patchConversationsCallParticipantCommunication) | Update conversation participant&#39;s communication by disconnecting it. This endpoint does not update wrapup. |
@@ -304,6 +307,55 @@ ConversationsAPI.deleteAnalyticsConversationsDetailsJob(jobId: jobId) { (error) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| jobId | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteConversation
+
+
+
+> Void deleteConversation(conversationId)
+
+Update a conversation by disconnecting all of the participants
+
+
+
+Wraps DELETE /api/v2/conversations/{conversationId}  
+
+Requires ANY permissions: 
+
+* conversation:communication:disconnect
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+
+// Code example
+ConversationsAPI.deleteConversation(conversationId: conversationId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.deleteConversation was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
 
 
 ### Return type
@@ -5764,6 +5816,57 @@ ConversationsAPI.patchConversationParticipantAttributes(conversationId: conversa
 `nil` (empty response body)
 
 
+## patchConversationRecordingstate
+
+
+
+> Void patchConversationRecordingstate(conversationId, body)
+
+Update a conversation by setting its recording state
+
+
+
+Wraps PATCH /api/v2/conversations/{conversationId}/recordingstate  
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let body: SetRecordingState = new SetRecordingState(...) // SetRecordingState
+
+// Code example
+ConversationsAPI.patchConversationRecordingstate(conversationId: conversationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.patchConversationRecordingstate was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
 ## patchConversationSecureattributes
 
 
@@ -6080,6 +6183,57 @@ ConversationsAPI.patchConversationsCall(conversationId: conversationId, body: bo
 ### Return type
 
 [**Conversation**](Conversation)
+
+
+## patchConversationsCallConference
+
+
+
+> Void patchConversationsCallConference(conversationId, body)
+
+Update a conversation by merging in other conversations to create a conference
+
+
+
+Wraps PATCH /api/v2/conversations/calls/{conversationId}/conference  
+
+Requires ANY permissions: 
+
+* conversation:conference:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let body: UpdateConferenceRequest = new UpdateConferenceRequest(...) // UpdateConferenceRequest
+
+// Code example
+ConversationsAPI.patchConversationsCallConference(conversationId: conversationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.patchConversationsCallConference was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **body** | [**UpdateConferenceRequest**](UpdateConferenceRequest)| UpdateConferenceRequest | |
+
+
+### Return type
+
+`nil` (empty response body)
 
 
 ## patchConversationsCallParticipant
@@ -13562,4 +13716,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

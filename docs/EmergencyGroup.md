@@ -25,4 +25,4 @@ A group of emergency call flows to use in an emergency.
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

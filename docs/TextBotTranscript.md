@@ -12,4 +12,4 @@ Data for a single bot flow transcript.
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

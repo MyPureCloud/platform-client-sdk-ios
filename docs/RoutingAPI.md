@@ -40,7 +40,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingEmailDomains**](RoutingAPI#getRoutingEmailDomains) | Get domains |
 | [**getRoutingEmailOutboundDomain**](RoutingAPI#getRoutingEmailOutboundDomain) | Get domain |
 | [**getRoutingEmailOutboundDomainActivation**](RoutingAPI#getRoutingEmailOutboundDomainActivation) | Get activation status (cname + dkim) of an outbound domain |
-| [**getRoutingEmailOutboundDomainSearch**](RoutingAPI#getRoutingEmailOutboundDomainSearch) | Search a domain across organizations |
 | [**getRoutingEmailOutboundDomains**](RoutingAPI#getRoutingEmailOutboundDomains) | Get outbound domains |
 | [**getRoutingEmailSetup**](RoutingAPI#getRoutingEmailSetup) | Get email setup |
 | [**getRoutingLanguage**](RoutingAPI#getRoutingLanguage) | Get a routing language |
@@ -117,7 +116,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postRoutingAssessments**](RoutingAPI#postRoutingAssessments) | Create a benefit assessment. |
 | [**postRoutingAssessmentsJobs**](RoutingAPI#postRoutingAssessmentsJobs) | Create a benefit assessment job. |
 | [**postRoutingEmailDomainRoutes**](RoutingAPI#postRoutingEmailDomainRoutes) | Create a route |
-| [**postRoutingEmailDomainTestconnection**](RoutingAPI#postRoutingEmailDomainTestconnection) | Tests the custom SMTP server integration connection set on this domain |
+| [**postRoutingEmailDomainTestconnection**](RoutingAPI#postRoutingEmailDomainTestconnection) | Tests the custom SMTP server integration connection set on this ACD domain |
 | [**postRoutingEmailDomains**](RoutingAPI#postRoutingEmailDomains) | Create a domain |
 | [**postRoutingEmailOutboundDomains**](RoutingAPI#postRoutingEmailOutboundDomains) | Create a domain |
 | [**postRoutingEmailOutboundDomainsSimulated**](RoutingAPI#postRoutingEmailOutboundDomainsSimulated) | Create a simulated domain |
@@ -1961,56 +1960,6 @@ RoutingAPI.getRoutingEmailOutboundDomainActivation(domainId: domainId) { (respon
 ### Return type
 
 [**EmailOutboundDomainResult**](EmailOutboundDomainResult)
-
-
-## getRoutingEmailOutboundDomainSearch
-
-
-
-> [OutboundDomain](OutboundDomain) getRoutingEmailOutboundDomainSearch(domainId)
-
-Search a domain across organizations
-
-
-
-Wraps GET /api/v2/routing/email/outbound/domains/{domainId}/search  
-
-Requires ALL permissions: 
-
-* routing:email:manage
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let domainId: String = "" // domain ID
-
-// Code example
-RoutingAPI.getRoutingEmailOutboundDomainSearch(domainId: domainId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("RoutingAPI.getRoutingEmailOutboundDomainSearch was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **domainId** | **String**| domain ID | |
-
-
-### Return type
-
-[**OutboundDomain**](OutboundDomain)
 
 
 ## getRoutingEmailOutboundDomains
@@ -6108,9 +6057,9 @@ RoutingAPI.postRoutingEmailDomainRoutes(domainName: domainName, body: body) { (r
 
 > [TestMessage](TestMessage) postRoutingEmailDomainTestconnection(domainId, body)
 
-Tests the custom SMTP server integration connection set on this domain
+Tests the custom SMTP server integration connection set on this ACD domain
 
-The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
+The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server used by the ACD domain. If the body is specified, there will be an attempt to send an email message to the server.
 
 
 
@@ -8006,4 +7955,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_

@@ -24,4 +24,4 @@ State information for an import job of rows to a datatable
 
 
 
-_PureCloudPlatformClientV2@173.1.0_
+_PureCloudPlatformClientV2@174.0.0_
