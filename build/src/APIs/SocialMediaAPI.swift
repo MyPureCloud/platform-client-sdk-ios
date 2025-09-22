@@ -173,6 +173,65 @@ open class SocialMediaAPI {
     
     
     /**
+     Delete a Instagram data ingestion rule.
+     
+     - parameter topicId: (path) topicId 
+     - parameter instagramIngestionRuleId: (path) instagramIngestionRuleId 
+     - parameter hardDelete: (query) Determines whether a Instagram data ingestion rule should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId(topicId: String, instagramIngestionRuleId: String, hardDelete: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdWithRequestBuilder(topicId: topicId, instagramIngestionRuleId: instagramIngestionRuleId, hardDelete: hardDelete)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a Instagram data ingestion rule.
+     - DELETE /api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter topicId: (path) topicId 
+     - parameter instagramIngestionRuleId: (path) instagramIngestionRuleId 
+     - parameter hardDelete: (query) Determines whether a Instagram data ingestion rule should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdWithRequestBuilder(topicId: String, instagramIngestionRuleId: String, hardDelete: Bool? = nil) -> RequestBuilder<Void> {        
+        var path = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}"
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let instagramIngestionRuleIdPreEscape = "\(instagramIngestionRuleId)"
+        let instagramIngestionRuleIdPostEscape = instagramIngestionRuleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{instagramIngestionRuleId}", with: instagramIngestionRuleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "hardDelete": hardDelete
+        ])
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
      Delete a open data ingestion rule.
      
      - parameter topicId: (path) topicId 
@@ -698,6 +757,9 @@ open class SocialMediaAPI {
         "escalationStatus" : "Unknown"
       },
       "id" : "id",
+      "contentModeration" : {
+        "flag" : "NotSafeForWork"
+      },
       "normalizedMessage" : {
         "metadata" : {
           "key" : "metadata"
@@ -780,6 +842,9 @@ open class SocialMediaAPI {
         "escalationStatus" : "Unknown"
       },
       "id" : "id",
+      "contentModeration" : {
+        "flag" : "NotSafeForWork"
+      },
       "normalizedMessage" : {
         "metadata" : {
           "key" : "metadata"
@@ -865,6 +930,9 @@ open class SocialMediaAPI {
         "escalationStatus" : "Unknown"
       },
       "id" : "id",
+      "contentModeration" : {
+        "flag" : "NotSafeForWork"
+      },
       "normalizedMessage" : {
         "metadata" : {
           "key" : "metadata"
@@ -947,6 +1015,9 @@ open class SocialMediaAPI {
         "escalationStatus" : "Unknown"
       },
       "id" : "id",
+      "contentModeration" : {
+        "flag" : "NotSafeForWork"
+      },
       "normalizedMessage" : {
         "metadata" : {
           "key" : "metadata"
@@ -1197,8 +1268,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter divisionId: (query) One division ID 
@@ -1378,8 +1449,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -1651,8 +1722,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -1682,6 +1753,283 @@ open class SocialMediaAPI {
         ])
 
         let requestBuilder: RequestBuilder<FacebookDataIngestionRuleVersionResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get a single Instagram data ingestion rule.
+     
+     - parameter topicId: (path) topicId 
+     - parameter instagramIngestionRuleId: (path) instagramIngestionRuleId 
+     - parameter includeDeleted: (query) Determines whether to include soft-deleted items in the result. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId(topicId: String, instagramIngestionRuleId: String, includeDeleted: Bool? = nil, completion: @escaping ((_ data: InstagramDataIngestionRuleResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdWithRequestBuilder(topicId: topicId, instagramIngestionRuleId: instagramIngestionRuleId, includeDeleted: includeDeleted)
+        requestBuilder.execute { (response: Response<InstagramDataIngestionRuleResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a single Instagram data ingestion rule.
+     - GET /api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "integrationId" : "integrationId",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "countries" : [ "countries", "countries" ],
+  "version" : 0,
+  "platform" : "platform",
+  "status" : "Active"
+}, statusCode=200}]
+     
+     - parameter topicId: (path) topicId 
+     - parameter instagramIngestionRuleId: (path) instagramIngestionRuleId 
+     - parameter includeDeleted: (query) Determines whether to include soft-deleted items in the result. (optional)
+
+     - returns: RequestBuilder<InstagramDataIngestionRuleResponse> 
+     */
+    open class func getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdWithRequestBuilder(topicId: String, instagramIngestionRuleId: String, includeDeleted: Bool? = nil) -> RequestBuilder<InstagramDataIngestionRuleResponse> {        
+        var path = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}"
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let instagramIngestionRuleIdPreEscape = "\(instagramIngestionRuleId)"
+        let instagramIngestionRuleIdPostEscape = instagramIngestionRuleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{instagramIngestionRuleId}", with: instagramIngestionRuleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeDeleted": includeDeleted
+        ])
+
+        let requestBuilder: RequestBuilder<InstagramDataIngestionRuleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get a single Instagram data ingestion rule version.
+     
+     - parameter topicId: (path) topicId 
+     - parameter instagramIngestionRuleId: (path) instagramIngestionRuleId 
+     - parameter dataIngestionRuleVersion: (path) version 
+     - parameter includeDeleted: (query) Determines whether to include soft-deleted item in the result. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersion(topicId: String, instagramIngestionRuleId: String, dataIngestionRuleVersion: String, includeDeleted: Bool? = nil, completion: @escaping ((_ data: InstagramDataIngestionRuleVersionResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersionWithRequestBuilder(topicId: topicId, instagramIngestionRuleId: instagramIngestionRuleId, dataIngestionRuleVersion: dataIngestionRuleVersion, includeDeleted: includeDeleted)
+        requestBuilder.execute { (response: Response<InstagramDataIngestionRuleVersionResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a single Instagram data ingestion rule version.
+     - GET /api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}/versions/{dataIngestionRuleVersion}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "integrationId" : "integrationId",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "countries" : [ "countries", "countries" ],
+  "version" : 0,
+  "platform" : "platform",
+  "status" : "Active"
+}, statusCode=200}]
+     
+     - parameter topicId: (path) topicId 
+     - parameter instagramIngestionRuleId: (path) instagramIngestionRuleId 
+     - parameter dataIngestionRuleVersion: (path) version 
+     - parameter includeDeleted: (query) Determines whether to include soft-deleted item in the result. (optional)
+
+     - returns: RequestBuilder<InstagramDataIngestionRuleVersionResponse> 
+     */
+    open class func getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersionWithRequestBuilder(topicId: String, instagramIngestionRuleId: String, dataIngestionRuleVersion: String, includeDeleted: Bool? = nil) -> RequestBuilder<InstagramDataIngestionRuleVersionResponse> {        
+        var path = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}/versions/{dataIngestionRuleVersion}"
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let instagramIngestionRuleIdPreEscape = "\(instagramIngestionRuleId)"
+        let instagramIngestionRuleIdPostEscape = instagramIngestionRuleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{instagramIngestionRuleId}", with: instagramIngestionRuleIdPostEscape, options: .literal, range: nil)
+        let dataIngestionRuleVersionPreEscape = "\(dataIngestionRuleVersion)"
+        let dataIngestionRuleVersionPostEscape = dataIngestionRuleVersionPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{dataIngestionRuleVersion}", with: dataIngestionRuleVersionPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeDeleted": includeDeleted
+        ])
+
+        let requestBuilder: RequestBuilder<InstagramDataIngestionRuleVersionResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get the Instagram data ingestion rule versions.
+     
+     - parameter topicId: (path) topicId 
+     - parameter instagramIngestionRuleId: (path) instagramIngestionRuleId 
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter includeDeleted: (query) Determines whether to include soft-deleted items in the result. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersions(topicId: String, instagramIngestionRuleId: String, pageNumber: Int? = nil, pageSize: Int? = nil, includeDeleted: Bool? = nil, completion: @escaping ((_ data: InstagramDataIngestionRuleVersionResponseEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersionsWithRequestBuilder(topicId: topicId, instagramIngestionRuleId: instagramIngestionRuleId, pageNumber: pageNumber, pageSize: pageSize, includeDeleted: includeDeleted)
+        requestBuilder.execute { (response: Response<InstagramDataIngestionRuleVersionResponseEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the Instagram data ingestion rule versions.
+     - GET /api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}/versions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "integrationId" : "integrationId",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "countries" : [ "countries", "countries" ],
+    "version" : 0,
+    "platform" : "platform",
+    "status" : "Active"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "integrationId" : "integrationId",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "countries" : [ "countries", "countries" ],
+    "version" : 0,
+    "platform" : "platform",
+    "status" : "Active"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter topicId: (path) topicId 
+     - parameter instagramIngestionRuleId: (path) instagramIngestionRuleId 
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter includeDeleted: (query) Determines whether to include soft-deleted items in the result. (optional)
+
+     - returns: RequestBuilder<InstagramDataIngestionRuleVersionResponseEntityListing> 
+     */
+    open class func getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersionsWithRequestBuilder(topicId: String, instagramIngestionRuleId: String, pageNumber: Int? = nil, pageSize: Int? = nil, includeDeleted: Bool? = nil) -> RequestBuilder<InstagramDataIngestionRuleVersionResponseEntityListing> {        
+        var path = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}/versions"
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let instagramIngestionRuleIdPreEscape = "\(instagramIngestionRuleId)"
+        let instagramIngestionRuleIdPostEscape = instagramIngestionRuleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{instagramIngestionRuleId}", with: instagramIngestionRuleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "includeDeleted": includeDeleted
+        ])
+
+        let requestBuilder: RequestBuilder<InstagramDataIngestionRuleVersionResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1928,8 +2276,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -2205,8 +2553,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -2334,8 +2682,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -2514,6 +2862,82 @@ open class SocialMediaAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FacebookDataIngestionRuleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update the status of a Instagram data ingestion rule.
+     
+     - parameter topicId: (path) topicId 
+     - parameter instagramIngestionRuleId: (path) instagramIngestionRuleId 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId(topicId: String, instagramIngestionRuleId: String, body: DataIngestionRuleStatusPatchRequest? = nil, completion: @escaping ((_ data: InstagramDataIngestionRuleResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdWithRequestBuilder(topicId: topicId, instagramIngestionRuleId: instagramIngestionRuleId, body: body)
+        requestBuilder.execute { (response: Response<InstagramDataIngestionRuleResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the status of a Instagram data ingestion rule.
+     - PATCH /api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "integrationId" : "integrationId",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "countries" : [ "countries", "countries" ],
+  "version" : 0,
+  "platform" : "platform",
+  "status" : "Active"
+}, statusCode=202}]
+     
+     - parameter topicId: (path) topicId 
+     - parameter instagramIngestionRuleId: (path) instagramIngestionRuleId 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<InstagramDataIngestionRuleResponse> 
+     */
+    open class func patchSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdWithRequestBuilder(topicId: String, instagramIngestionRuleId: String, body: DataIngestionRuleStatusPatchRequest? = nil) -> RequestBuilder<InstagramDataIngestionRuleResponse> {        
+        var path = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}"
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let instagramIngestionRuleIdPreEscape = "\(instagramIngestionRuleId)"
+        let instagramIngestionRuleIdPostEscape = instagramIngestionRuleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{instagramIngestionRuleId}", with: instagramIngestionRuleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<InstagramDataIngestionRuleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -2975,6 +3399,75 @@ open class SocialMediaAPI {
     
     
     /**
+     Create an Instagram data ingestion rule.
+     
+     - parameter topicId: (path) topicId 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postSocialmediaTopicDataingestionrulesInstagram(topicId: String, body: InstagramDataIngestionRuleRequest? = nil, completion: @escaping ((_ data: InstagramDataIngestionRuleResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postSocialmediaTopicDataingestionrulesInstagramWithRequestBuilder(topicId: topicId, body: body)
+        requestBuilder.execute { (response: Response<InstagramDataIngestionRuleResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create an Instagram data ingestion rule.
+     - POST /api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "integrationId" : "integrationId",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "countries" : [ "countries", "countries" ],
+  "version" : 0,
+  "platform" : "platform",
+  "status" : "Active"
+}, statusCode=202}]
+     
+     - parameter topicId: (path) topicId 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<InstagramDataIngestionRuleResponse> 
+     */
+    open class func postSocialmediaTopicDataingestionrulesInstagramWithRequestBuilder(topicId: String, body: InstagramDataIngestionRuleRequest? = nil) -> RequestBuilder<InstagramDataIngestionRuleResponse> {        
+        var path = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram"
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<InstagramDataIngestionRuleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Create an open data ingestion rule.
      
      - parameter topicId: (path) topicId 
@@ -3127,8 +3620,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=202}]
      
      - parameter topicId: (path) Topic ID 
@@ -3245,8 +3738,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=202}]
      
      - parameter topicId: (path) Topic ID 
@@ -3612,6 +4105,82 @@ open class SocialMediaAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FacebookDataIngestionRuleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update the Instagram data ingestion rule.
+     
+     - parameter topicId: (path) topicId 
+     - parameter instagramIngestionRuleId: (path) instagramIngestionRuleId 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId(topicId: String, instagramIngestionRuleId: String, body: InstagramDataIngestionRuleRequest? = nil, completion: @escaping ((_ data: InstagramDataIngestionRuleResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = putSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdWithRequestBuilder(topicId: topicId, instagramIngestionRuleId: instagramIngestionRuleId, body: body)
+        requestBuilder.execute { (response: Response<InstagramDataIngestionRuleResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the Instagram data ingestion rule.
+     - PUT /api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "integrationId" : "integrationId",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "countries" : [ "countries", "countries" ],
+  "version" : 0,
+  "platform" : "platform",
+  "status" : "Active"
+}, statusCode=202}]
+     
+     - parameter topicId: (path) topicId 
+     - parameter instagramIngestionRuleId: (path) instagramIngestionRuleId 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<InstagramDataIngestionRuleResponse> 
+     */
+    open class func putSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdWithRequestBuilder(topicId: String, instagramIngestionRuleId: String, body: InstagramDataIngestionRuleRequest? = nil) -> RequestBuilder<InstagramDataIngestionRuleResponse> {        
+        var path = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}"
+        let topicIdPreEscape = "\(topicId)"
+        let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{topicId}", with: topicIdPostEscape, options: .literal, range: nil)
+        let instagramIngestionRuleIdPreEscape = "\(instagramIngestionRuleId)"
+        let instagramIngestionRuleIdPostEscape = instagramIngestionRuleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{instagramIngestionRuleId}", with: instagramIngestionRuleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<InstagramDataIngestionRuleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

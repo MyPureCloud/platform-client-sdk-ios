@@ -486,8 +486,8 @@ open class LanguageUnderstandingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -812,6 +812,9 @@ open class LanguageUnderstandingAPI {
   "language" : "language",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "published" : true,
+  "languageVersions" : {
+    "key" : "languageVersions"
+  },
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "entities" : [ {
@@ -1116,6 +1119,9 @@ open class LanguageUnderstandingAPI {
     "language" : "language",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "published" : true,
+    "languageVersions" : {
+      "key" : "languageVersions"
+    },
     "datePublished" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "entities" : [ {
@@ -1264,6 +1270,9 @@ open class LanguageUnderstandingAPI {
     "language" : "language",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "published" : true,
+    "languageVersions" : {
+      "key" : "languageVersions"
+    },
     "datePublished" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "entities" : [ {
@@ -1290,8 +1299,8 @@ open class LanguageUnderstandingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -1385,8 +1394,8 @@ open class LanguageUnderstandingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1406,6 +1415,236 @@ open class LanguageUnderstandingAPI {
         ])
 
         let requestBuilder: RequestBuilder<NluDomainListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum SortOrder_getLanguageunderstandingIgnorephrase: String { 
+        case asc = "asc"
+        case desc = "desc"
+    }
+    
+    
+    
+    public enum SortBy_getLanguageunderstandingIgnorephrase: String { 
+        case datemodified = "dateModified"
+        case text = "text"
+    }
+    
+    
+    /**
+     Get list of all ignored phrases of the specified language code
+     
+     - parameter languageCode: (path) Language Code 
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 200. (optional)
+     - parameter pageNumber: (query) The page number for the listing (optional)
+     - parameter text: (query) The phrase text filter applied to the listing (optional)
+     - parameter sortOrder: (query) The sort order for the listing (optional)
+     - parameter sortBy: (query) The field to sort by for the listing (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLanguageunderstandingIgnorephrase(languageCode: String, pageSize: Int? = nil, pageNumber: Int? = nil, text: String? = nil, sortOrder: SortOrder_getLanguageunderstandingIgnorephrase? = nil, sortBy: SortBy_getLanguageunderstandingIgnorephrase? = nil, completion: @escaping ((_ data: IgnoredMinedPhraseListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLanguageunderstandingIgnorephraseWithRequestBuilder(languageCode: languageCode, pageSize: pageSize, pageNumber: pageNumber, text: text, sortOrder: sortOrder, sortBy: sortBy)
+        requestBuilder.execute { (response: Response<IgnoredMinedPhraseListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get list of all ignored phrases of the specified language code
+     - GET /api/v2/languageunderstanding/ignorephrases/{languageCode}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "mediaType" : "Chat",
+    "id" : "123e4567-e89b-12d3-a456-426614174000",
+    "text" : "want to pay bill",
+    "participant" : "Customer"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "mediaType" : "Chat",
+    "id" : "123e4567-e89b-12d3-a456-426614174000",
+    "text" : "want to pay bill",
+    "participant" : "Customer"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter languageCode: (path) Language Code 
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 200. (optional)
+     - parameter pageNumber: (query) The page number for the listing (optional)
+     - parameter text: (query) The phrase text filter applied to the listing (optional)
+     - parameter sortOrder: (query) The sort order for the listing (optional)
+     - parameter sortBy: (query) The field to sort by for the listing (optional)
+
+     - returns: RequestBuilder<IgnoredMinedPhraseListing> 
+     */
+    open class func getLanguageunderstandingIgnorephraseWithRequestBuilder(languageCode: String, pageSize: Int? = nil, pageNumber: Int? = nil, text: String? = nil, sortOrder: SortOrder_getLanguageunderstandingIgnorephrase? = nil, sortBy: SortBy_getLanguageunderstandingIgnorephrase? = nil) -> RequestBuilder<IgnoredMinedPhraseListing> {        
+        var path = "/api/v2/languageunderstanding/ignorephrases/{languageCode}"
+        let languageCodePreEscape = "\(languageCode)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "text": text, 
+            "sortOrder": sortOrder?.rawValue, 
+            "sortBy": sortBy?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<IgnoredMinedPhraseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum SortOrder_getLanguageunderstandingIgnoretopic: String { 
+        case asc = "asc"
+        case desc = "desc"
+    }
+    
+    
+    
+    public enum SortBy_getLanguageunderstandingIgnoretopic: String { 
+        case datemodified = "dateModified"
+        case text = "text"
+    }
+    
+    
+    /**
+     Get list of all ignored topics of the specified language code
+     
+     - parameter languageCode: (path) Language Code 
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 200. (optional)
+     - parameter pageNumber: (query) The page number for the listing (optional)
+     - parameter text: (query) The topic text filter applied to the listing (optional)
+     - parameter sortOrder: (query) The sort order for the listing (optional)
+     - parameter sortBy: (query) The field to sort by for the listing (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLanguageunderstandingIgnoretopic(languageCode: String, pageSize: Int? = nil, pageNumber: Int? = nil, text: String? = nil, sortOrder: SortOrder_getLanguageunderstandingIgnoretopic? = nil, sortBy: SortBy_getLanguageunderstandingIgnoretopic? = nil, completion: @escaping ((_ data: IgnoredMinedTopicListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLanguageunderstandingIgnoretopicWithRequestBuilder(languageCode: languageCode, pageSize: pageSize, pageNumber: pageNumber, text: text, sortOrder: sortOrder, sortBy: sortBy)
+        requestBuilder.execute { (response: Response<IgnoredMinedTopicListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get list of all ignored topics of the specified language code
+     - GET /api/v2/languageunderstanding/ignoretopics/{languageCode}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "mediaType" : "Chat",
+    "id" : "123e4567-e89b-12d3-a456-426614174000",
+    "text" : "want to pay bill",
+    "participant" : "Customer"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "mediaType" : "Chat",
+    "id" : "123e4567-e89b-12d3-a456-426614174000",
+    "text" : "want to pay bill",
+    "participant" : "Customer"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter languageCode: (path) Language Code 
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 200. (optional)
+     - parameter pageNumber: (query) The page number for the listing (optional)
+     - parameter text: (query) The topic text filter applied to the listing (optional)
+     - parameter sortOrder: (query) The sort order for the listing (optional)
+     - parameter sortBy: (query) The field to sort by for the listing (optional)
+
+     - returns: RequestBuilder<IgnoredMinedTopicListing> 
+     */
+    open class func getLanguageunderstandingIgnoretopicWithRequestBuilder(languageCode: String, pageSize: Int? = nil, pageNumber: Int? = nil, text: String? = nil, sortOrder: SortOrder_getLanguageunderstandingIgnoretopic? = nil, sortBy: SortBy_getLanguageunderstandingIgnoretopic? = nil) -> RequestBuilder<IgnoredMinedTopicListing> {        
+        var path = "/api/v2/languageunderstanding/ignoretopics/{languageCode}"
+        let languageCodePreEscape = "\(languageCode)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "text": text, 
+            "sortOrder": sortOrder?.rawValue, 
+            "sortBy": sortBy?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<IgnoredMinedTopicListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -2877,6 +3116,9 @@ open class LanguageUnderstandingAPI {
   "language" : "language",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "published" : true,
+  "languageVersions" : {
+    "key" : "languageVersions"
+  },
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "entities" : [ {
@@ -3087,6 +3329,9 @@ open class LanguageUnderstandingAPI {
     "language" : "language",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "published" : true,
+    "languageVersions" : {
+      "key" : "languageVersions"
+    },
     "datePublished" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "entities" : [ {
@@ -3299,6 +3544,9 @@ open class LanguageUnderstandingAPI {
   "language" : "language",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "published" : true,
+  "languageVersions" : {
+    "key" : "languageVersions"
+  },
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "entities" : [ {
@@ -3402,6 +3650,226 @@ open class LanguageUnderstandingAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<NluDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Add phrases to the ignored phrases list
+     
+     - parameter languageCode: (path) Language Code 
+     - parameter body: (body) Request body containing phrases to be ignored 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postLanguageunderstandingIgnorephrase(languageCode: String, body: IgnorePhrasesRequest, completion: @escaping ((_ data: IgnorePhrasesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLanguageunderstandingIgnorephraseWithRequestBuilder(languageCode: languageCode, body: body)
+        requestBuilder.execute { (response: Response<IgnorePhrasesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add phrases to the ignored phrases list
+     - POST /api/v2/languageunderstanding/ignorephrases/{languageCode}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "addedPhrases" : 6,
+  "updatedPhrases" : 1,
+  "totalPhrases" : 0
+}, statusCode=200}]
+     
+     - parameter languageCode: (path) Language Code 
+     - parameter body: (body) Request body containing phrases to be ignored 
+
+     - returns: RequestBuilder<IgnorePhrasesResponse> 
+     */
+    open class func postLanguageunderstandingIgnorephraseWithRequestBuilder(languageCode: String, body: IgnorePhrasesRequest) -> RequestBuilder<IgnorePhrasesResponse> {        
+        var path = "/api/v2/languageunderstanding/ignorephrases/{languageCode}"
+        let languageCodePreEscape = "\(languageCode)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<IgnorePhrasesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Delete ignored phrases
+     
+     - parameter languageCode: (path) Language Code 
+     - parameter body: (body) Request body containing entities to be removed 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postLanguageunderstandingIgnorephraseRemove(languageCode: String, body: RemoveEntitiesRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLanguageunderstandingIgnorephraseRemoveWithRequestBuilder(languageCode: languageCode, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete ignored phrases
+     - POST /api/v2/languageunderstanding/ignorephrases/{languageCode}/remove
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter languageCode: (path) Language Code 
+     - parameter body: (body) Request body containing entities to be removed 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postLanguageunderstandingIgnorephraseRemoveWithRequestBuilder(languageCode: String, body: RemoveEntitiesRequest) -> RequestBuilder<Void> {        
+        var path = "/api/v2/languageunderstanding/ignorephrases/{languageCode}/remove"
+        let languageCodePreEscape = "\(languageCode)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Add topics to the ignored topics list
+     
+     - parameter languageCode: (path) Language Code 
+     - parameter body: (body) Request body containing topics to be ignored 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postLanguageunderstandingIgnoretopic(languageCode: String, body: IgnoreTopicsRequest, completion: @escaping ((_ data: IgnoreTopicsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLanguageunderstandingIgnoretopicWithRequestBuilder(languageCode: languageCode, body: body)
+        requestBuilder.execute { (response: Response<IgnoreTopicsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add topics to the ignored topics list
+     - POST /api/v2/languageunderstanding/ignoretopics/{languageCode}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "addedTopics" : 6,
+  "updatedTopics" : 1,
+  "totalTopics" : 0
+}, statusCode=200}]
+     
+     - parameter languageCode: (path) Language Code 
+     - parameter body: (body) Request body containing topics to be ignored 
+
+     - returns: RequestBuilder<IgnoreTopicsResponse> 
+     */
+    open class func postLanguageunderstandingIgnoretopicWithRequestBuilder(languageCode: String, body: IgnoreTopicsRequest) -> RequestBuilder<IgnoreTopicsResponse> {        
+        var path = "/api/v2/languageunderstanding/ignoretopics/{languageCode}"
+        let languageCodePreEscape = "\(languageCode)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<IgnoreTopicsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Delete ignored topics
+     
+     - parameter languageCode: (path) Language Code 
+     - parameter body: (body) Request body containing entities to be removed 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postLanguageunderstandingIgnoretopicRemove(languageCode: String, body: RemoveEntitiesRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLanguageunderstandingIgnoretopicRemoveWithRequestBuilder(languageCode: languageCode, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete ignored topics
+     - POST /api/v2/languageunderstanding/ignoretopics/{languageCode}/remove
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter languageCode: (path) Language Code 
+     - parameter body: (body) Request body containing entities to be removed 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postLanguageunderstandingIgnoretopicRemoveWithRequestBuilder(languageCode: String, body: RemoveEntitiesRequest) -> RequestBuilder<Void> {        
+        var path = "/api/v2/languageunderstanding/ignoretopics/{languageCode}/remove"
+        let languageCodePreEscape = "\(languageCode)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -3824,6 +4292,9 @@ open class LanguageUnderstandingAPI {
   "language" : "language",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "published" : true,
+  "languageVersions" : {
+    "key" : "languageVersions"
+  },
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "entities" : [ {

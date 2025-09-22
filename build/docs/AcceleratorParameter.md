@@ -12,4 +12,4 @@ Input parameter for a CX infrastructure as code accelerator
 
 
 
-_PureCloudPlatformClientV2@174.0.0_
+_PureCloudPlatformClientV2@175.0.0_

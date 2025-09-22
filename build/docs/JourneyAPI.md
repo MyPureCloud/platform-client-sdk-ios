@@ -45,6 +45,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getJourneyViewsEventdefinition**](JourneyAPI#getJourneyViewsEventdefinition) | Get an Event Definition |
 | [**getJourneyViewsEventdefinitions**](JourneyAPI#getJourneyViewsEventdefinitions) | Get a list of Event Definitions |
 | [**getJourneyViewsJobs**](JourneyAPI#getJourneyViewsJobs) | Get the jobs for an organization. |
+| [**getJourneyViewsJobsMe**](JourneyAPI#getJourneyViewsJobsMe) | Get my jobs |
 | [**getJourneyViewsSchedules**](JourneyAPI#getJourneyViewsSchedules) | Get the journey schedules for an organization. |
 | [**patchJourneyActionmap**](JourneyAPI#patchJourneyActionmap) | Update single action map. |
 | [**patchJourneyActiontarget**](JourneyAPI#patchJourneyActiontarget) | Update a single action target. |
@@ -2234,6 +2235,62 @@ JourneyAPI.getJourneyViewsJobs(pageNumber: pageNumber, pageSize: pageSize, inter
 [**JourneyViewJobListing**](JourneyViewJobListing)
 
 
+## getJourneyViewsJobsMe
+
+
+
+> [JourneyViewJobListing](JourneyViewJobListing) getJourneyViewsJobsMe(pageNumber, pageSize, interval, statuses)
+
+Get my jobs
+
+
+
+Wraps GET /api/v2/journey/views/jobs/me  
+
+Requires ALL permissions: 
+
+* journey:viewsJobs:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // The number of the page to return
+let pageSize: Int = 0 // Max number of entities to return
+let interval: String = 2023-07-17T00:00:00Z/2023-07-18T00:00:00Z // An absolute timeframe for filtering the jobs, expressed as an ISO 8601 interval.
+let statuses: String = statuses=Accepted,Executing,Complete,Failed,Scheduled // Job statuses to filter for
+
+// Code example
+JourneyAPI.getJourneyViewsJobsMe(pageNumber: pageNumber, pageSize: pageSize, interval: interval, statuses: statuses) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyViewsJobsMe was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| The number of the page to return | [optional] |
+| **pageSize** | **Int**| Max number of entities to return | [optional] |
+| **interval** | **String**| An absolute timeframe for filtering the jobs, expressed as an ISO 8601 interval. | [optional] |
+| **statuses** | **String**| Job statuses to filter for | [optional] |
+
+
+### Return type
+
+[**JourneyViewJobListing**](JourneyViewJobListing)
+
+
 ## getJourneyViewsSchedules
 
 
@@ -3575,4 +3632,4 @@ JourneyAPI.putJourneyViewVersion(viewId: viewId, versionId: versionId, body: bod
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatformClientV2@174.0.0_
+_PureCloudPlatformClientV2@175.0.0_

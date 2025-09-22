@@ -13,12 +13,12 @@ List of users matching the learning module rule
 | **total** | **Int64** | The number of users matching search term | [optional] |
 | **unfilteredTotal** | **Int** | The total number of users | [optional] |
 | **firstUri** | **String** |  | [optional] |
-| **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
+| **nextUri** | **String** |  | [optional] |
 | **lastUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@174.0.0_
+_PureCloudPlatformClientV2@175.0.0_

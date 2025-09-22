@@ -1547,14 +1547,21 @@ open class RoutingAPI {
 
     
     
+    
+    public enum Expand_getRoutingEmailDomain: String { 
+        case settings = "settings"
+    }
+    
+    
     /**
      Get domain
      
      - parameter domainId: (path) domain ID 
+     - parameter expand: (query) Expand options. Valid values: settings (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingEmailDomain(domainId: String, completion: @escaping ((_ data: InboundDomain?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingEmailDomainWithRequestBuilder(domainId: domainId)
+    open class func getRoutingEmailDomain(domainId: String, expand: Expand_getRoutingEmailDomain? = nil, completion: @escaping ((_ data: InboundDomain?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailDomainWithRequestBuilder(domainId: domainId, expand: expand)
         requestBuilder.execute { (response: Response<InboundDomain>?, error) -> Void in
             do {
                 if let e = error {
@@ -1581,6 +1588,7 @@ open class RoutingAPI {
   "customSMTPServer" : "{}",
   "mailFromSettings" : "{}",
   "subDomain" : true,
+  "emailSetting" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "mxRecordStatus" : "VALID",
@@ -1588,10 +1596,11 @@ open class RoutingAPI {
 }, statusCode=200}]
      
      - parameter domainId: (path) domain ID 
+     - parameter expand: (query) Expand options. Valid values: settings (optional)
 
      - returns: RequestBuilder<InboundDomain> 
      */
-    open class func getRoutingEmailDomainWithRequestBuilder(domainId: String) -> RequestBuilder<InboundDomain> {        
+    open class func getRoutingEmailDomainWithRequestBuilder(domainId: String, expand: Expand_getRoutingEmailDomain? = nil) -> RequestBuilder<InboundDomain> {        
         var path = "/api/v2/routing/email/domains/{domainId}"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1599,7 +1608,10 @@ open class RoutingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand?.rawValue
+        ])
 
         let requestBuilder: RequestBuilder<InboundDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -1895,8 +1907,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter domainName: (path) email domain 
@@ -1936,6 +1948,12 @@ open class RoutingAPI {
     
     
     
+    
+    public enum Expand_getRoutingEmailDomains: String { 
+        case settings = "settings"
+    }
+    
+    
     /**
      Get domains
      
@@ -1943,10 +1961,11 @@ open class RoutingAPI {
      - parameter pageNumber: (query) Page number (optional)
      - parameter excludeStatus: (query) Exclude MX record data (optional)
      - parameter filter: (query) Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)
+     - parameter expand: (query) Expand options. Valid values: settings (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingEmailDomains(pageSize: Int? = nil, pageNumber: Int? = nil, excludeStatus: Bool? = nil, filter: String? = nil, completion: @escaping ((_ data: InboundDomainEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingEmailDomainsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, excludeStatus: excludeStatus, filter: filter)
+    open class func getRoutingEmailDomains(pageSize: Int? = nil, pageNumber: Int? = nil, excludeStatus: Bool? = nil, filter: String? = nil, expand: Expand_getRoutingEmailDomains? = nil, completion: @escaping ((_ data: InboundDomainEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailDomainsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, excludeStatus: excludeStatus, filter: filter, expand: expand)
         requestBuilder.execute { (response: Response<InboundDomainEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1977,6 +1996,7 @@ open class RoutingAPI {
     "customSMTPServer" : "{}",
     "mailFromSettings" : "{}",
     "subDomain" : true,
+    "emailSetting" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "mxRecordStatus" : "VALID",
@@ -1985,6 +2005,7 @@ open class RoutingAPI {
     "customSMTPServer" : "{}",
     "mailFromSettings" : "{}",
     "subDomain" : true,
+    "emailSetting" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "mxRecordStatus" : "VALID",
@@ -1994,18 +2015,19 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter excludeStatus: (query) Exclude MX record data (optional)
      - parameter filter: (query) Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)
+     - parameter expand: (query) Expand options. Valid values: settings (optional)
 
      - returns: RequestBuilder<InboundDomainEntityListing> 
      */
-    open class func getRoutingEmailDomainsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, excludeStatus: Bool? = nil, filter: String? = nil) -> RequestBuilder<InboundDomainEntityListing> {        
+    open class func getRoutingEmailDomainsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, excludeStatus: Bool? = nil, filter: String? = nil, expand: Expand_getRoutingEmailDomains? = nil) -> RequestBuilder<InboundDomainEntityListing> {        
         let path = "/api/v2/routing/email/domains"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -2015,7 +2037,8 @@ open class RoutingAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "excludeStatus": excludeStatus, 
-            "filter": filter
+            "filter": filter, 
+            "expand": expand?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<InboundDomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2025,14 +2048,21 @@ open class RoutingAPI {
 
     
     
+    
+    public enum Expand_getRoutingEmailOutboundDomain: String { 
+        case settings = "settings"
+    }
+    
+    
     /**
      Get domain
      
      - parameter domainId: (path) domain ID 
+     - parameter expand: (query) Expand options. Valid values: settings (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingEmailOutboundDomain(domainId: String, completion: @escaping ((_ data: OutboundDomain?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingEmailOutboundDomainWithRequestBuilder(domainId: domainId)
+    open class func getRoutingEmailOutboundDomain(domainId: String, expand: Expand_getRoutingEmailOutboundDomain? = nil, completion: @escaping ((_ data: OutboundDomain?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailOutboundDomainWithRequestBuilder(domainId: domainId, expand: expand)
         requestBuilder.execute { (response: Response<OutboundDomain>?, error) -> Void in
             do {
                 if let e = error {
@@ -2057,6 +2087,7 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "cnameVerificationResult" : "{}",
+  "emailSetting" : "{}",
   "dkimVerificationResult" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
@@ -2065,10 +2096,11 @@ open class RoutingAPI {
 }, statusCode=200}]
      
      - parameter domainId: (path) domain ID 
+     - parameter expand: (query) Expand options. Valid values: settings (optional)
 
      - returns: RequestBuilder<OutboundDomain> 
      */
-    open class func getRoutingEmailOutboundDomainWithRequestBuilder(domainId: String) -> RequestBuilder<OutboundDomain> {        
+    open class func getRoutingEmailOutboundDomainWithRequestBuilder(domainId: String, expand: Expand_getRoutingEmailOutboundDomain? = nil) -> RequestBuilder<OutboundDomain> {        
         var path = "/api/v2/routing/email/outbound/domains/{domainId}"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2076,7 +2108,10 @@ open class RoutingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand?.rawValue
+        ])
 
         let requestBuilder: RequestBuilder<OutboundDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -2117,6 +2152,7 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "senderStatus" : "RequestReceived",
+  "emailSetting" : "{}",
   "domainName" : "domainName",
   "senderType" : "Unknown",
   "dnsTxtSendingRecord" : {
@@ -2156,16 +2192,23 @@ open class RoutingAPI {
     
     
     
+    
+    public enum Expand_getRoutingEmailOutboundDomains: String { 
+        case settings = "settings"
+    }
+    
+    
     /**
      Get outbound domains
      
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter filter: (query) Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)
+     - parameter expand: (query) Expand options. Valid values: settings (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingEmailOutboundDomains(pageSize: Int? = nil, pageNumber: Int? = nil, filter: String? = nil, completion: @escaping ((_ data: OutboundDomainEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingEmailOutboundDomainsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, filter: filter)
+    open class func getRoutingEmailOutboundDomains(pageSize: Int? = nil, pageNumber: Int? = nil, filter: String? = nil, expand: Expand_getRoutingEmailOutboundDomains? = nil, completion: @escaping ((_ data: OutboundDomainEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailOutboundDomainsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, filter: filter, expand: expand)
         requestBuilder.execute { (response: Response<OutboundDomainEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -2194,6 +2237,7 @@ open class RoutingAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "cnameVerificationResult" : "{}",
+    "emailSetting" : "{}",
     "dkimVerificationResult" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
@@ -2201,6 +2245,7 @@ open class RoutingAPI {
     "id" : "id"
   }, {
     "cnameVerificationResult" : "{}",
+    "emailSetting" : "{}",
     "dkimVerificationResult" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
@@ -2211,17 +2256,18 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter filter: (query) Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)
+     - parameter expand: (query) Expand options. Valid values: settings (optional)
 
      - returns: RequestBuilder<OutboundDomainEntityListing> 
      */
-    open class func getRoutingEmailOutboundDomainsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, filter: String? = nil) -> RequestBuilder<OutboundDomainEntityListing> {        
+    open class func getRoutingEmailOutboundDomainsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, filter: String? = nil, expand: Expand_getRoutingEmailOutboundDomains? = nil) -> RequestBuilder<OutboundDomainEntityListing> {        
         let path = "/api/v2/routing/email/outbound/domains"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -2230,7 +2276,8 @@ open class RoutingAPI {
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
-            "filter": filter
+            "filter": filter, 
+            "expand": expand?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<OutboundDomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2417,8 +2464,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -2591,8 +2638,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter messengerType: (query) Messenger Type (optional)
@@ -4555,8 +4602,8 @@ open class RoutingAPI {
   "firstUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue ID 
@@ -5324,8 +5371,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue ID 
@@ -5441,8 +5488,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue ID 
@@ -5765,8 +5812,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -6092,8 +6139,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size [max value is 100] (optional)
@@ -6395,8 +6442,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size [max value is 500] (optional)
@@ -6693,8 +6740,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -7361,8 +7408,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -7517,8 +7564,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -7988,8 +8035,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter phoneNumber: (query) Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)
@@ -8394,8 +8441,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -8575,8 +8622,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -8756,8 +8803,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -9058,8 +9105,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -9160,8 +9207,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -9260,8 +9307,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -9607,6 +9654,7 @@ open class RoutingAPI {
   "customSMTPServer" : "{}",
   "mailFromSettings" : "{}",
   "subDomain" : true,
+  "emailSetting" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "mxRecordStatus" : "VALID",
@@ -9672,6 +9720,7 @@ open class RoutingAPI {
   "customSMTPServer" : "{}",
   "mailFromSettings" : "{}",
   "subDomain" : true,
+  "emailSetting" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "mxRecordStatus" : "VALID",
@@ -10511,8 +10560,8 @@ open class RoutingAPI {
   "firstUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue ID 
@@ -11249,8 +11298,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue ID 
@@ -12009,8 +12058,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -12166,8 +12215,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -12248,8 +12297,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -13086,7 +13135,7 @@ open class RoutingAPI {
      - parameter body: (body) Domain 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postRoutingEmailDomains(body: InboundDomain, completion: @escaping ((_ data: InboundDomain?,_ error: Error?) -> Void)) {
+    open class func postRoutingEmailDomains(body: InboundDomainCreateRequest, completion: @escaping ((_ data: InboundDomain?,_ error: Error?) -> Void)) {
         let requestBuilder = postRoutingEmailDomainsWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<InboundDomain>?, error) -> Void in
             do {
@@ -13114,6 +13163,7 @@ open class RoutingAPI {
   "customSMTPServer" : "{}",
   "mailFromSettings" : "{}",
   "subDomain" : true,
+  "emailSetting" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "mxRecordStatus" : "VALID",
@@ -13124,7 +13174,7 @@ open class RoutingAPI {
 
      - returns: RequestBuilder<InboundDomain> 
      */
-    open class func postRoutingEmailDomainsWithRequestBuilder(body: InboundDomain) -> RequestBuilder<InboundDomain> {        
+    open class func postRoutingEmailDomainsWithRequestBuilder(body: InboundDomainCreateRequest) -> RequestBuilder<InboundDomain> {        
         let path = "/api/v2/routing/email/domains"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -13144,7 +13194,7 @@ open class RoutingAPI {
      - parameter body: (body) Domain 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postRoutingEmailOutboundDomains(body: OutboundDomainRequest, completion: @escaping ((_ data: EmailOutboundDomainResult?,_ error: Error?) -> Void)) {
+    open class func postRoutingEmailOutboundDomains(body: OutboundDomainCreateRequest, completion: @escaping ((_ data: EmailOutboundDomainResult?,_ error: Error?) -> Void)) {
         let requestBuilder = postRoutingEmailOutboundDomainsWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<EmailOutboundDomainResult>?, error) -> Void in
             do {
@@ -13170,6 +13220,7 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "senderStatus" : "RequestReceived",
+  "emailSetting" : "{}",
   "domainName" : "domainName",
   "senderType" : "Unknown",
   "dnsTxtSendingRecord" : {
@@ -13188,7 +13239,7 @@ open class RoutingAPI {
 
      - returns: RequestBuilder<EmailOutboundDomainResult> 
      */
-    open class func postRoutingEmailOutboundDomainsWithRequestBuilder(body: OutboundDomainRequest) -> RequestBuilder<EmailOutboundDomainResult> {        
+    open class func postRoutingEmailOutboundDomainsWithRequestBuilder(body: OutboundDomainCreateRequest) -> RequestBuilder<EmailOutboundDomainResult> {        
         let path = "/api/v2/routing/email/outbound/domains"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -13208,7 +13259,7 @@ open class RoutingAPI {
      - parameter body: (body) Domain 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postRoutingEmailOutboundDomainsSimulated(body: OutboundDomainRequest, completion: @escaping ((_ data: EmailOutboundDomainResult?,_ error: Error?) -> Void)) {
+    open class func postRoutingEmailOutboundDomainsSimulated(body: OutboundDomainCreateRequest, completion: @escaping ((_ data: EmailOutboundDomainResult?,_ error: Error?) -> Void)) {
         let requestBuilder = postRoutingEmailOutboundDomainsSimulatedWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<EmailOutboundDomainResult>?, error) -> Void in
             do {
@@ -13234,6 +13285,7 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "senderStatus" : "RequestReceived",
+  "emailSetting" : "{}",
   "domainName" : "domainName",
   "senderType" : "Unknown",
   "dnsTxtSendingRecord" : {
@@ -13252,7 +13304,7 @@ open class RoutingAPI {
 
      - returns: RequestBuilder<EmailOutboundDomainResult> 
      */
-    open class func postRoutingEmailOutboundDomainsSimulatedWithRequestBuilder(body: OutboundDomainRequest) -> RequestBuilder<EmailOutboundDomainResult> {        
+    open class func postRoutingEmailOutboundDomainsSimulatedWithRequestBuilder(body: OutboundDomainCreateRequest) -> RequestBuilder<EmailOutboundDomainResult> {        
         let path = "/api/v2/routing/email/outbound/domains/simulated"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -14684,6 +14736,7 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "senderStatus" : "RequestReceived",
+  "emailSetting" : "{}",
   "domainName" : "domainName",
   "senderType" : "Unknown",
   "dnsTxtSendingRecord" : {
@@ -15642,8 +15695,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 

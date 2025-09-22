@@ -95,23 +95,22 @@ open class UserRecordingsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "durationMilliseconds" : 6,
   "workspace" : {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id"
   },
-  "read" : true,
-  "selfUri" : "https://openapi-generator.tech",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "durationMilliseconds" : 6,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "read" : true,
   "createdBy" : {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id"
   },
-  "contentUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "contentLength" : 0,
   "id" : "id",
   "thumbnails" : [ {
@@ -13658,100 +13657,6 @@ open class UserRecordingsAPI {
     
     
     
-    public enum FormatId_getUserrecordingMedia: String { 
-        case wav = "WAV"
-        case webm = "WEBM"
-        case wavUlaw = "WAV_ULAW"
-        case oggVorbis = "OGG_VORBIS"
-        case oggOpus = "OGG_OPUS"
-        case mp3 = "MP3"
-        case _none = "NONE"
-    }
-    
-    
-    
-    
-    /**
-     Download a user recording.
-     
-     - parameter recordingId: (path) User Recording ID 
-     - parameter formatId: (query) The desired media format. (optional)
-     - parameter async: (query) When set to true, api will return 202 response until the recording is ready for download (optional)
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getUserrecordingMedia(recordingId: String, formatId: FormatId_getUserrecordingMedia? = nil, async: Bool? = nil, completion: @escaping ((_ data: DownloadResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getUserrecordingMediaWithRequestBuilder(recordingId: recordingId, formatId: formatId, async: async)
-        requestBuilder.execute { (response: Response<DownloadResponse>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Download a user recording.
-     - GET /api/v2/userrecordings/{recordingId}/media
-     - API should migrate to use GET api/v2/userrecordings/{recordingId}/transcoding
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "contentLocationUri" : "contentLocationUri",
-  "imageUri" : "imageUri",
-  "resultUri" : "resultUri",
-  "selfUri" : "selfUri",
-  "id" : "id",
-  "state" : "Running",
-  "thumbnails" : [ {
-    "imageUri" : "imageUri",
-    "width" : 6,
-    "resolution" : "resolution",
-    "height" : 0
-  }, {
-    "imageUri" : "imageUri",
-    "width" : 6,
-    "resolution" : "resolution",
-    "height" : 0
-  } ]
-}, statusCode=200}]
-     
-     - parameter recordingId: (path) User Recording ID 
-     - parameter formatId: (query) The desired media format. (optional)
-     - parameter async: (query) When set to true, api will return 202 response until the recording is ready for download (optional)
-
-     - returns: RequestBuilder<DownloadResponse> 
-     */
-    open class func getUserrecordingMediaWithRequestBuilder(recordingId: String, formatId: FormatId_getUserrecordingMedia? = nil, async: Bool? = nil) -> RequestBuilder<DownloadResponse> {        
-        var path = "/api/v2/userrecordings/{recordingId}/media"
-        let recordingIdPreEscape = "\(recordingId)"
-        let recordingIdPostEscape = recordingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{recordingId}", with: recordingIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        var requestUrl = URLComponents(string: URLString)
-        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "formatId": formatId?.rawValue, 
-            "async": async
-        ])
-
-        let requestBuilder: RequestBuilder<DownloadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
-    }
-
-    
-    
-    
     public enum FormatId_getUserrecordingTranscoding: String { 
         case wav = "WAV"
         case webm = "WEBM"
@@ -13884,23 +13789,22 @@ open class UserRecordingsAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "durationMilliseconds" : 6,
     "workspace" : {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id"
     },
-    "read" : true,
-    "selfUri" : "https://openapi-generator.tech",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "durationMilliseconds" : 6,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "read" : true,
     "createdBy" : {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id"
     },
-    "contentUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "contentLength" : 0,
     "id" : "id",
     "thumbnails" : [ {
@@ -27420,23 +27324,22 @@ open class UserRecordingsAPI {
       } ]
     }
   }, {
+    "durationMilliseconds" : 6,
     "workspace" : {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id"
     },
-    "read" : true,
-    "selfUri" : "https://openapi-generator.tech",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "durationMilliseconds" : 6,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "read" : true,
     "createdBy" : {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id"
     },
-    "contentUri" : "https://openapi-generator.tech",
+    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "contentLength" : 0,
     "id" : "id",
     "thumbnails" : [ {
@@ -40960,8 +40863,8 @@ open class UserRecordingsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -41079,23 +40982,22 @@ open class UserRecordingsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "durationMilliseconds" : 6,
   "workspace" : {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id"
   },
-  "read" : true,
-  "selfUri" : "https://openapi-generator.tech",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "durationMilliseconds" : 6,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "read" : true,
   "createdBy" : {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id"
   },
-  "contentUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "contentLength" : 0,
   "id" : "id",
   "thumbnails" : [ {

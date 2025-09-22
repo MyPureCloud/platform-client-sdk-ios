@@ -967,8 +967,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1271,8 +1271,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1456,8 +1456,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1748,8 +1748,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -2053,8 +2053,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)
@@ -3603,8 +3603,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -3881,8 +3881,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) The number of the page to return (optional)
@@ -3894,6 +3894,105 @@ open class JourneyAPI {
      */
     open class func getJourneyViewsJobsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, interval: String? = nil, statuses: String? = nil) -> RequestBuilder<JourneyViewJobListing> {        
         let path = "/api/v2/journey/views/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "interval": interval, 
+            "statuses": statuses
+        ])
+
+        let requestBuilder: RequestBuilder<JourneyViewJobListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get my jobs
+     
+     - parameter pageNumber: (query) The number of the page to return (optional)
+     - parameter pageSize: (query) Max number of entities to return (optional)
+     - parameter interval: (query) An absolute timeframe for filtering the jobs, expressed as an ISO 8601 interval. (optional)
+     - parameter statuses: (query) Job statuses to filter for (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyViewsJobsMe(pageNumber: Int? = nil, pageSize: Int? = nil, interval: String? = nil, statuses: String? = nil, completion: @escaping ((_ data: JourneyViewJobListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyViewsJobsMeWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, interval: interval, statuses: statuses)
+        requestBuilder.execute { (response: Response<JourneyViewJobListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get my jobs
+     - GET /api/v2/journey/views/jobs/me
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "journeyView" : "{}",
+    "estimatedCompletionMargin" : 0,
+    "id" : "id",
+    "userId" : "userId",
+    "status" : "Accepted",
+    "dateCompletionEstimated" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "journeyView" : "{}",
+    "estimatedCompletionMargin" : 0,
+    "id" : "id",
+    "userId" : "userId",
+    "status" : "Accepted",
+    "dateCompletionEstimated" : "2000-01-23T04:56:07.000+00:00"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query) The number of the page to return (optional)
+     - parameter pageSize: (query) Max number of entities to return (optional)
+     - parameter interval: (query) An absolute timeframe for filtering the jobs, expressed as an ISO 8601 interval. (optional)
+     - parameter statuses: (query) Job statuses to filter for (optional)
+
+     - returns: RequestBuilder<JourneyViewJobListing> 
+     */
+    open class func getJourneyViewsJobsMeWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, interval: String? = nil, statuses: String? = nil) -> RequestBuilder<JourneyViewJobListing> {        
+        let path = "/api/v2/journey/views/jobs/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
@@ -3966,8 +4065,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) The number of the page to return (optional)
