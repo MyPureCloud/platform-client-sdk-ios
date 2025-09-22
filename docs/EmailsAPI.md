@@ -249,4 +249,4 @@ EmailsAPI.patchEmailsSettingsThreading(body: body) { (response, error) in
 [**EmailThreadingSettings**](EmailThreadingSettings)
 
 
-_PureCloudPlatformClientV2@174.0.0_
+_PureCloudPlatformClientV2@175.0.0_

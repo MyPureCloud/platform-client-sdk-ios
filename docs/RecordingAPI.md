@@ -2786,7 +2786,7 @@ RecordingAPI.putRecordingCrossplatformMediaretentionpolicy(policyId: policyId, b
 
 Execute the recording bulk job.
 
-A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording&#39;s retention.
+Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state. A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording&#39;s retention.
 
 
 
@@ -2894,7 +2894,7 @@ RecordingAPI.putRecordingKeyconfiguration(keyConfigurationId: keyConfigurationId
 
 Update a media retention policy
 
-Policy does not work retroactively
+Policy does not work retroactively. In the conditions.forUsers section, each user object can include the &#39;id&#39; field containing the user&#39;s unique identifier. Example: [{\&quot;id\&quot;:\&quot;&lt;userId&gt;\&quot;}].
 
 
 
@@ -3094,4 +3094,4 @@ RecordingAPI.putRecordingsDeletionprotection(protect: protect, body: body) { (er
 `nil` (empty response body)
 
 
-_PureCloudPlatformClientV2@174.0.0_
+_PureCloudPlatformClientV2@175.0.0_

@@ -6,7 +6,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteUserrecording**](UserRecordingsAPI#deleteUserrecording) | Delete a user recording. |
 | [**getUserrecording**](UserRecordingsAPI#getUserrecording) | Get a user recording. |
-| [**getUserrecordingMedia**](UserRecordingsAPI#getUserrecordingMedia) | Download a user recording. |
 | [**getUserrecordingTranscoding**](UserRecordingsAPI#getUserrecordingTranscoding) | Download a user recording. |
 | [**getUserrecordings**](UserRecordingsAPI#getUserrecordings) | Get a list of user recordings. |
 | [**getUserrecordingsSummary**](UserRecordingsAPI#getUserrecordingsSummary) | Get user recording summary |
@@ -111,61 +110,6 @@ UserRecordingsAPI.getUserrecording(recordingId: recordingId, expand: expand) { (
 ### Return type
 
 [**UserRecording**](UserRecording)
-
-
-## getUserrecordingMedia
-
-
-
-> [DownloadResponse](DownloadResponse) getUserrecordingMedia(recordingId, formatId, async)
-
-Download a user recording.
-
-API should migrate to use GET api/v2/userrecordings/{recordingId}/transcoding
-
-
-
-Wraps GET /api/v2/userrecordings/{recordingId}/media  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let recordingId: String = "" // User Recording ID
-let formatId: UserRecordingsAPI.FormatId_getUserrecordingMedia = UserRecordingsAPI.FormatId_getUserrecordingMedia.enummember // The desired media format.
-let async: Bool = true // When set to true, api will return 202 response until the recording is ready for download
-
-// Code example
-UserRecordingsAPI.getUserrecordingMedia(recordingId: recordingId, formatId: formatId, async: async) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("UserRecordingsAPI.getUserrecordingMedia was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **recordingId** | **String**| User Recording ID | |
-| **formatId** | **String**| The desired media format. | [optional]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
-| **async** | **Bool**| When set to true, api will return 202 response until the recording is ready for download | [optional] |
-
-
-### Return type
-
-[**DownloadResponse**](DownloadResponse)
 
 
 ## getUserrecordingTranscoding
@@ -371,4 +315,4 @@ UserRecordingsAPI.putUserrecording(recordingId: recordingId, body: body, expand:
 [**UserRecording**](UserRecording)
 
 
-_PureCloudPlatformClientV2@174.0.0_
+_PureCloudPlatformClientV2@175.0.0_

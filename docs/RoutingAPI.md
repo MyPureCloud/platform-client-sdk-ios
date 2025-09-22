@@ -1595,7 +1595,7 @@ This endpoint does not require any parameters.
 
 
 
-> [InboundDomain](InboundDomain) getRoutingEmailDomain(domainId)
+> [InboundDomain](InboundDomain) getRoutingEmailDomain(domainId, expand)
 
 Get domain
 
@@ -1616,9 +1616,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let domainId: String = "" // domain ID
+let expand: RoutingAPI.Expand_getRoutingEmailDomain = RoutingAPI.Expand_getRoutingEmailDomain.enummember // Expand options. Valid values: settings
 
 // Code example
-RoutingAPI.getRoutingEmailDomain(domainId: domainId) { (response, error) in
+RoutingAPI.getRoutingEmailDomain(domainId: domainId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1634,6 +1635,7 @@ RoutingAPI.getRoutingEmailDomain(domainId: domainId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **domainId** | **String**| domain ID | |
+| **expand** | **String**| Expand options. Valid values: settings | [optional]<br />**Values**: settings ("settings") |
 
 
 ### Return type
@@ -1810,7 +1812,7 @@ RoutingAPI.getRoutingEmailDomainRoutes(domainName: domainName, pageSize: pageSiz
 
 
 
-> [InboundDomainEntityListing](InboundDomainEntityListing) getRoutingEmailDomains(pageSize, pageNumber, excludeStatus, filter)
+> [InboundDomainEntityListing](InboundDomainEntityListing) getRoutingEmailDomains(pageSize, pageNumber, excludeStatus, filter, expand)
 
 Get domains
 
@@ -1834,9 +1836,10 @@ let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
 let excludeStatus: Bool = true // Exclude MX record data
 let filter: String = "" // Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter.
+let expand: RoutingAPI.Expand_getRoutingEmailDomains = RoutingAPI.Expand_getRoutingEmailDomains.enummember // Expand options. Valid values: settings
 
 // Code example
-RoutingAPI.getRoutingEmailDomains(pageSize: pageSize, pageNumber: pageNumber, excludeStatus: excludeStatus, filter: filter) { (response, error) in
+RoutingAPI.getRoutingEmailDomains(pageSize: pageSize, pageNumber: pageNumber, excludeStatus: excludeStatus, filter: filter, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1855,6 +1858,7 @@ RoutingAPI.getRoutingEmailDomains(pageSize: pageSize, pageNumber: pageNumber, ex
 | **pageNumber** | **Int**| Page number | [optional] |
 | **excludeStatus** | **Bool**| Exclude MX record data | [optional] |
 | **filter** | **String**| Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. | [optional] |
+| **expand** | **String**| Expand options. Valid values: settings | [optional]<br />**Values**: settings ("settings") |
 
 
 ### Return type
@@ -1866,7 +1870,7 @@ RoutingAPI.getRoutingEmailDomains(pageSize: pageSize, pageNumber: pageNumber, ex
 
 
 
-> [OutboundDomain](OutboundDomain) getRoutingEmailOutboundDomain(domainId)
+> [OutboundDomain](OutboundDomain) getRoutingEmailOutboundDomain(domainId, expand)
 
 Get domain
 
@@ -1887,9 +1891,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let domainId: String = "" // domain ID
+let expand: RoutingAPI.Expand_getRoutingEmailOutboundDomain = RoutingAPI.Expand_getRoutingEmailOutboundDomain.enummember // Expand options. Valid values: settings
 
 // Code example
-RoutingAPI.getRoutingEmailOutboundDomain(domainId: domainId) { (response, error) in
+RoutingAPI.getRoutingEmailOutboundDomain(domainId: domainId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1905,6 +1910,7 @@ RoutingAPI.getRoutingEmailOutboundDomain(domainId: domainId) { (response, error)
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **domainId** | **String**| domain ID | |
+| **expand** | **String**| Expand options. Valid values: settings | [optional]<br />**Values**: settings ("settings") |
 
 
 ### Return type
@@ -1966,7 +1972,7 @@ RoutingAPI.getRoutingEmailOutboundDomainActivation(domainId: domainId) { (respon
 
 
 
-> [OutboundDomainEntityListing](OutboundDomainEntityListing) getRoutingEmailOutboundDomains(pageSize, pageNumber, filter)
+> [OutboundDomainEntityListing](OutboundDomainEntityListing) getRoutingEmailOutboundDomains(pageSize, pageNumber, filter, expand)
 
 Get outbound domains
 
@@ -1989,9 +1995,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
 let filter: String = "" // Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter.
+let expand: RoutingAPI.Expand_getRoutingEmailOutboundDomains = RoutingAPI.Expand_getRoutingEmailOutboundDomains.enummember // Expand options. Valid values: settings
 
 // Code example
-RoutingAPI.getRoutingEmailOutboundDomains(pageSize: pageSize, pageNumber: pageNumber, filter: filter) { (response, error) in
+RoutingAPI.getRoutingEmailOutboundDomains(pageSize: pageSize, pageNumber: pageNumber, filter: filter, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2009,6 +2016,7 @@ RoutingAPI.getRoutingEmailOutboundDomains(pageSize: pageSize, pageNumber: pageNu
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **filter** | **String**| Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. | [optional] |
+| **expand** | **String**| Expand options. Valid values: settings | [optional]<br />**Values**: settings ("settings") |
 
 
 ### Return type
@@ -6129,7 +6137,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: InboundDomain = new InboundDomain(...) // Domain
+let body: InboundDomainCreateRequest = new InboundDomainCreateRequest(...) // Domain
 
 // Code example
 RoutingAPI.postRoutingEmailDomains(body: body) { (response, error) in
@@ -6147,7 +6155,7 @@ RoutingAPI.postRoutingEmailDomains(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**InboundDomain**](InboundDomain)| Domain | |
+| **body** | [**InboundDomainCreateRequest**](InboundDomainCreateRequest)| Domain | |
 
 
 ### Return type
@@ -6179,7 +6187,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: OutboundDomainRequest = new OutboundDomainRequest(...) // Domain
+let body: OutboundDomainCreateRequest = new OutboundDomainCreateRequest(...) // Domain
 
 // Code example
 RoutingAPI.postRoutingEmailOutboundDomains(body: body) { (response, error) in
@@ -6197,7 +6205,7 @@ RoutingAPI.postRoutingEmailOutboundDomains(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**OutboundDomainRequest**](OutboundDomainRequest)| Domain | |
+| **body** | [**OutboundDomainCreateRequest**](OutboundDomainCreateRequest)| Domain | |
 
 
 ### Return type
@@ -6229,7 +6237,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: OutboundDomainRequest = new OutboundDomainRequest(...) // Domain
+let body: OutboundDomainCreateRequest = new OutboundDomainCreateRequest(...) // Domain
 
 // Code example
 RoutingAPI.postRoutingEmailOutboundDomainsSimulated(body: body) { (response, error) in
@@ -6247,7 +6255,7 @@ RoutingAPI.postRoutingEmailOutboundDomainsSimulated(body: body) { (response, err
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**OutboundDomainRequest**](OutboundDomainRequest)| Domain | |
+| **body** | [**OutboundDomainCreateRequest**](OutboundDomainCreateRequest)| Domain | |
 
 
 ### Return type
@@ -7955,4 +7963,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@174.0.0_
+_PureCloudPlatformClientV2@175.0.0_

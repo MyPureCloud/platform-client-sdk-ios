@@ -15,4 +15,4 @@ Defines a SCIM schema.
 
 
 
-_PureCloudPlatformClientV2@174.0.0_
+_PureCloudPlatformClientV2@175.0.0_

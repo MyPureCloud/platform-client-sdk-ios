@@ -186,12 +186,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsCallParticipantMonitor**](ConversationsAPI#postConversationsCallParticipantMonitor) | Listen in on the conversation from the point of view of a given participant. |
 | [**postConversationsCallParticipantReplace**](ConversationsAPI#postConversationsCallParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsCallParticipants**](ConversationsAPI#postConversationsCallParticipants) | Add participants to a conversation |
+| [**postConversationsCallParticipantsUserUserId**](ConversationsAPI#postConversationsCallParticipantsUserUserId) | Add participants to a conversation without a user context |
 | [**postConversationsCallbackParticipantCommunicationWrapup**](ConversationsAPI#postConversationsCallbackParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsCallbackParticipantReplace**](ConversationsAPI#postConversationsCallbackParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsCallbacks**](ConversationsAPI#postConversationsCallbacks) | Create a Callback |
 | [**postConversationsCallbacksBulkDisconnect**](ConversationsAPI#postConversationsCallbacksBulkDisconnect) | Disconnect multiple scheduled callbacks |
 | [**postConversationsCallbacksBulkUpdate**](ConversationsAPI#postConversationsCallbacksBulkUpdate) | Update multiple scheduled callbacks |
 | [**postConversationsCalls**](ConversationsAPI#postConversationsCalls) | Create a call conversation |
+| [**postConversationsCallsUserUserId**](ConversationsAPI#postConversationsCallsUserUserId) | Create a call conversation on behalf of a user |
 | [**postConversationsChatCommunicationMessages**](ConversationsAPI#postConversationsChatCommunicationMessages) | Send a message on behalf of a communication in a chat conversation. |
 | [**postConversationsChatCommunicationTyping**](ConversationsAPI#postConversationsChatCommunicationTyping) | Send a typing-indicator on behalf of a communication in a chat conversation. |
 | [**postConversationsChatParticipantCommunicationWrapup**](ConversationsAPI#postConversationsChatParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
@@ -7502,6 +7504,7 @@ Wraps PATCH /api/v2/conversations/messages/{conversationId}
 Requires ANY permissions: 
 
 * conversation:communication:disconnect
+* conversation:message:park
 
 ### Example
 
@@ -9755,6 +9758,60 @@ ConversationsAPI.postConversationsCallParticipants(conversationId: conversationI
 [**Conversation**](Conversation)
 
 
+## postConversationsCallParticipantsUserUserId
+
+
+
+> [Conversation](Conversation) postConversationsCallParticipantsUserUserId(conversationId, userId, body)
+
+Add participants to a conversation without a user context
+
+
+
+Wraps POST /api/v2/conversations/calls/{conversationId}/participants/user/{userId}  
+
+Requires ANY permissions: 
+
+* conversation:agentlessCall:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let userId: String = "" // userId
+let body: Conversation = new Conversation(...) // Conversation
+
+// Code example
+ConversationsAPI.postConversationsCallParticipantsUserUserId(conversationId: conversationId, userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsCallParticipantsUserUserId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **userId** | **String**| userId | |
+| **body** | [**Conversation**](Conversation)| Conversation | |
+
+
+### Return type
+
+[**Conversation**](Conversation)
+
+
 ## postConversationsCallbackParticipantCommunicationWrapup
 
 
@@ -10054,6 +10111,59 @@ ConversationsAPI.postConversationsCalls(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CreateCallRequest**](CreateCallRequest)| Call request | |
+
+
+### Return type
+
+[**CreateCallResponse**](CreateCallResponse)
+
+
+## postConversationsCallsUserUserId
+
+
+
+> [CreateCallResponse](CreateCallResponse) postConversationsCallsUserUserId(userId, body)
+
+Create a call conversation on behalf of a user
+
+
+
+Wraps POST /api/v2/conversations/calls/user/{userId}  
+
+Requires ANY permissions: 
+
+* conversation:agentlessCall:add
+* conversation:call:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // userId
+let body: CreateCallRequest = new CreateCallRequest(...) // Call request
+
+// Code example
+ConversationsAPI.postConversationsCallsUserUserId(userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsCallsUserUserId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| userId | |
 | **body** | [**CreateCallRequest**](CreateCallRequest)| Call request | |
 
 
@@ -10715,6 +10825,8 @@ ConversationsAPI.postConversationsEmailParticipantReplace(conversationId: conver
 > Void postConversationsEmailReconnect(conversationId)
 
 Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation
+
+This request is not valid when using the Client Credentials OAuth grant.
 
 
 
@@ -13716,4 +13828,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@174.0.0_
+_PureCloudPlatformClientV2@175.0.0_

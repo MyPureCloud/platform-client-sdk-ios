@@ -16,6 +16,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getLanguageunderstandingDomainVersionReport**](LanguageUnderstandingAPI#getLanguageunderstandingDomainVersionReport) | Retrieved quality report for the specified NLU Domain Version |
 | [**getLanguageunderstandingDomainVersions**](LanguageUnderstandingAPI#getLanguageunderstandingDomainVersions) | Get all NLU Domain Versions for a given Domain. |
 | [**getLanguageunderstandingDomains**](LanguageUnderstandingAPI#getLanguageunderstandingDomains) | Get all NLU Domains. |
+| [**getLanguageunderstandingIgnorephrase**](LanguageUnderstandingAPI#getLanguageunderstandingIgnorephrase) | Get list of all ignored phrases of the specified language code |
+| [**getLanguageunderstandingIgnoretopic**](LanguageUnderstandingAPI#getLanguageunderstandingIgnoretopic) | Get list of all ignored topics of the specified language code |
 | [**getLanguageunderstandingMiner**](LanguageUnderstandingAPI#getLanguageunderstandingMiner) | Get information about a miner. |
 | [**getLanguageunderstandingMinerDraft**](LanguageUnderstandingAPI#getLanguageunderstandingMinerDraft) | Get information about a draft. |
 | [**getLanguageunderstandingMinerDrafts**](LanguageUnderstandingAPI#getLanguageunderstandingMinerDrafts) | Retrieve the list of drafts created. |
@@ -34,6 +36,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postLanguageunderstandingDomainVersionTrain**](LanguageUnderstandingAPI#postLanguageunderstandingDomainVersionTrain) | Train the draft NLU Domain Version. |
 | [**postLanguageunderstandingDomainVersions**](LanguageUnderstandingAPI#postLanguageunderstandingDomainVersions) | Create an NLU Domain Version. |
 | [**postLanguageunderstandingDomains**](LanguageUnderstandingAPI#postLanguageunderstandingDomains) | Create an NLU Domain. |
+| [**postLanguageunderstandingIgnorephrase**](LanguageUnderstandingAPI#postLanguageunderstandingIgnorephrase) | Add phrases to the ignored phrases list |
+| [**postLanguageunderstandingIgnorephraseRemove**](LanguageUnderstandingAPI#postLanguageunderstandingIgnorephraseRemove) | Delete ignored phrases |
+| [**postLanguageunderstandingIgnoretopic**](LanguageUnderstandingAPI#postLanguageunderstandingIgnoretopic) | Add topics to the ignored topics list |
+| [**postLanguageunderstandingIgnoretopicRemove**](LanguageUnderstandingAPI#postLanguageunderstandingIgnoretopicRemove) | Delete ignored topics |
 | [**postLanguageunderstandingMinerDrafts**](LanguageUnderstandingAPI#postLanguageunderstandingMinerDrafts) | Create a new draft resource. |
 | [**postLanguageunderstandingMinerExecute**](LanguageUnderstandingAPI#postLanguageunderstandingMinerExecute) | Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. |
 | [**postLanguageunderstandingMiners**](LanguageUnderstandingAPI#postLanguageunderstandingMiners) | Create a unique miner. |
@@ -692,6 +698,126 @@ LanguageUnderstandingAPI.getLanguageunderstandingDomains(pageNumber: pageNumber,
 ### Return type
 
 [**NluDomainListing**](NluDomainListing)
+
+
+## getLanguageunderstandingIgnorephrase
+
+
+
+> [IgnoredMinedPhraseListing](IgnoredMinedPhraseListing) getLanguageunderstandingIgnorephrase(languageCode, pageSize, pageNumber, text, sortOrder, sortBy)
+
+Get list of all ignored phrases of the specified language code
+
+
+
+Wraps GET /api/v2/languageunderstanding/ignorephrases/{languageCode}  
+
+Requires ALL permissions: 
+
+* languageUnderstanding:ignoredPhrase:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let languageCode: String = "" // Language Code
+let pageSize: Int = 0 // The page size for the listing. The max that will be returned is 200.
+let pageNumber: Int = 0 // The page number for the listing
+let text: String = "" // The phrase text filter applied to the listing
+let sortOrder: LanguageUnderstandingAPI.SortOrder_getLanguageunderstandingIgnorephrase = LanguageUnderstandingAPI.SortOrder_getLanguageunderstandingIgnorephrase.enummember // The sort order for the listing
+let sortBy: LanguageUnderstandingAPI.SortBy_getLanguageunderstandingIgnorephrase = LanguageUnderstandingAPI.SortBy_getLanguageunderstandingIgnorephrase.enummember // The field to sort by for the listing
+
+// Code example
+LanguageUnderstandingAPI.getLanguageunderstandingIgnorephrase(languageCode: languageCode, pageSize: pageSize, pageNumber: pageNumber, text: text, sortOrder: sortOrder, sortBy: sortBy) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LanguageUnderstandingAPI.getLanguageunderstandingIgnorephrase was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **languageCode** | **String**| Language Code | |
+| **pageSize** | **Int**| The page size for the listing. The max that will be returned is 200. | [optional] |
+| **pageNumber** | **Int**| The page number for the listing | [optional] |
+| **text** | **String**| The phrase text filter applied to the listing | [optional] |
+| **sortOrder** | **String**| The sort order for the listing | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
+| **sortBy** | **String**| The field to sort by for the listing | [optional]<br />**Values**: datemodified ("dateModified"), text ("text") |
+
+
+### Return type
+
+[**IgnoredMinedPhraseListing**](IgnoredMinedPhraseListing)
+
+
+## getLanguageunderstandingIgnoretopic
+
+
+
+> [IgnoredMinedTopicListing](IgnoredMinedTopicListing) getLanguageunderstandingIgnoretopic(languageCode, pageSize, pageNumber, text, sortOrder, sortBy)
+
+Get list of all ignored topics of the specified language code
+
+
+
+Wraps GET /api/v2/languageunderstanding/ignoretopics/{languageCode}  
+
+Requires ALL permissions: 
+
+* languageUnderstanding:ignoredTopic:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let languageCode: String = "" // Language Code
+let pageSize: Int = 0 // The page size for the listing. The max that will be returned is 200.
+let pageNumber: Int = 0 // The page number for the listing
+let text: String = "" // The topic text filter applied to the listing
+let sortOrder: LanguageUnderstandingAPI.SortOrder_getLanguageunderstandingIgnoretopic = LanguageUnderstandingAPI.SortOrder_getLanguageunderstandingIgnoretopic.enummember // The sort order for the listing
+let sortBy: LanguageUnderstandingAPI.SortBy_getLanguageunderstandingIgnoretopic = LanguageUnderstandingAPI.SortBy_getLanguageunderstandingIgnoretopic.enummember // The field to sort by for the listing
+
+// Code example
+LanguageUnderstandingAPI.getLanguageunderstandingIgnoretopic(languageCode: languageCode, pageSize: pageSize, pageNumber: pageNumber, text: text, sortOrder: sortOrder, sortBy: sortBy) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LanguageUnderstandingAPI.getLanguageunderstandingIgnoretopic was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **languageCode** | **String**| Language Code | |
+| **pageSize** | **Int**| The page size for the listing. The max that will be returned is 200. | [optional] |
+| **pageNumber** | **Int**| The page number for the listing | [optional] |
+| **text** | **String**| The topic text filter applied to the listing | [optional] |
+| **sortOrder** | **String**| The sort order for the listing | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
+| **sortBy** | **String**| The field to sort by for the listing | [optional]<br />**Values**: datemodified ("dateModified"), text ("text") |
+
+
+### Return type
+
+[**IgnoredMinedTopicListing**](IgnoredMinedTopicListing)
 
 
 ## getLanguageunderstandingMiner
@@ -1637,6 +1763,212 @@ LanguageUnderstandingAPI.postLanguageunderstandingDomains(body: body) { (respons
 [**NluDomain**](NluDomain)
 
 
+## postLanguageunderstandingIgnorephrase
+
+
+
+> [IgnorePhrasesResponse](IgnorePhrasesResponse) postLanguageunderstandingIgnorephrase(languageCode, body)
+
+Add phrases to the ignored phrases list
+
+
+
+Wraps POST /api/v2/languageunderstanding/ignorephrases/{languageCode}  
+
+Requires ALL permissions: 
+
+* languageUnderstanding:ignoredPhrase:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let languageCode: String = "" // Language Code
+let body: IgnorePhrasesRequest = new IgnorePhrasesRequest(...) // Request body containing phrases to be ignored
+
+// Code example
+LanguageUnderstandingAPI.postLanguageunderstandingIgnorephrase(languageCode: languageCode, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LanguageUnderstandingAPI.postLanguageunderstandingIgnorephrase was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **languageCode** | **String**| Language Code | |
+| **body** | [**IgnorePhrasesRequest**](IgnorePhrasesRequest)| Request body containing phrases to be ignored | |
+
+
+### Return type
+
+[**IgnorePhrasesResponse**](IgnorePhrasesResponse)
+
+
+## postLanguageunderstandingIgnorephraseRemove
+
+
+
+> Void postLanguageunderstandingIgnorephraseRemove(languageCode, body)
+
+Delete ignored phrases
+
+
+
+Wraps POST /api/v2/languageunderstanding/ignorephrases/{languageCode}/remove  
+
+Requires ALL permissions: 
+
+* languageUnderstanding:ignoredPhrase:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let languageCode: String = "" // Language Code
+let body: RemoveEntitiesRequest = new RemoveEntitiesRequest(...) // Request body containing entities to be removed
+
+// Code example
+LanguageUnderstandingAPI.postLanguageunderstandingIgnorephraseRemove(languageCode: languageCode, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("LanguageUnderstandingAPI.postLanguageunderstandingIgnorephraseRemove was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **languageCode** | **String**| Language Code | |
+| **body** | [**RemoveEntitiesRequest**](RemoveEntitiesRequest)| Request body containing entities to be removed | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## postLanguageunderstandingIgnoretopic
+
+
+
+> [IgnoreTopicsResponse](IgnoreTopicsResponse) postLanguageunderstandingIgnoretopic(languageCode, body)
+
+Add topics to the ignored topics list
+
+
+
+Wraps POST /api/v2/languageunderstanding/ignoretopics/{languageCode}  
+
+Requires ALL permissions: 
+
+* languageUnderstanding:ignoredTopic:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let languageCode: String = "" // Language Code
+let body: IgnoreTopicsRequest = new IgnoreTopicsRequest(...) // Request body containing topics to be ignored
+
+// Code example
+LanguageUnderstandingAPI.postLanguageunderstandingIgnoretopic(languageCode: languageCode, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LanguageUnderstandingAPI.postLanguageunderstandingIgnoretopic was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **languageCode** | **String**| Language Code | |
+| **body** | [**IgnoreTopicsRequest**](IgnoreTopicsRequest)| Request body containing topics to be ignored | |
+
+
+### Return type
+
+[**IgnoreTopicsResponse**](IgnoreTopicsResponse)
+
+
+## postLanguageunderstandingIgnoretopicRemove
+
+
+
+> Void postLanguageunderstandingIgnoretopicRemove(languageCode, body)
+
+Delete ignored topics
+
+
+
+Wraps POST /api/v2/languageunderstanding/ignoretopics/{languageCode}/remove  
+
+Requires ALL permissions: 
+
+* languageUnderstanding:ignoredTopic:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let languageCode: String = "" // Language Code
+let body: RemoveEntitiesRequest = new RemoveEntitiesRequest(...) // Request body containing entities to be removed
+
+// Code example
+LanguageUnderstandingAPI.postLanguageunderstandingIgnoretopicRemove(languageCode: languageCode, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("LanguageUnderstandingAPI.postLanguageunderstandingIgnoretopicRemove was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **languageCode** | **String**| Language Code | |
+| **body** | [**RemoveEntitiesRequest**](RemoveEntitiesRequest)| Request body containing entities to be removed | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
 ## postLanguageunderstandingMinerDrafts
 
 
@@ -1846,4 +2178,4 @@ LanguageUnderstandingAPI.putLanguageunderstandingDomainVersion(domainId: domainI
 [**NluDomainVersion**](NluDomainVersion)
 
 
-_PureCloudPlatformClientV2@174.0.0_
+_PureCloudPlatformClientV2@175.0.0_

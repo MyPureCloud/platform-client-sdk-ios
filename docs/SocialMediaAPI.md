@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteSocialmediaEscalationrule**](SocialMediaAPI#deleteSocialmediaEscalationrule) | Delete an escalation rule. |
 | [**deleteSocialmediaTopic**](SocialMediaAPI#deleteSocialmediaTopic) | Delete a social topic. |
 | [**deleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId**](SocialMediaAPI#deleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId) | Delete a Facebook data ingestion rule. |
+| [**deleteSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId**](SocialMediaAPI#deleteSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId) | Delete a Instagram data ingestion rule. |
 | [**deleteSocialmediaTopicDataingestionrulesOpenOpenId**](SocialMediaAPI#deleteSocialmediaTopicDataingestionrulesOpenOpenId) | Delete a open data ingestion rule. |
 | [**deleteSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId**](SocialMediaAPI#deleteSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId) | Delete a X (formally Twitter) data ingestion rule. |
 | [**getSocialmediaAnalyticsAggregatesJob**](SocialMediaAPI#getSocialmediaAnalyticsAggregatesJob) | Get status for async query for social media aggregates |
@@ -20,6 +21,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId) | Get a single Facebook data ingestion rule. |
 | [**getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersion**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersion) | Get a single Facebook data ingestion rule version. |
 | [**getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersions**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersions) | Get the Facebook data ingestion rule versions. |
+| [**getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId) | Get a single Instagram data ingestion rule. |
+| [**getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersion**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersion) | Get a single Instagram data ingestion rule version. |
+| [**getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersions**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersions) | Get the Instagram data ingestion rule versions. |
 | [**getSocialmediaTopicDataingestionrulesOpenOpenId**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesOpenOpenId) | Get a single open data ingestion rule. |
 | [**getSocialmediaTopicDataingestionrulesOpenOpenIdVersion**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesOpenOpenIdVersion) | Get a single Open data ingestion rule version. |
 | [**getSocialmediaTopicDataingestionrulesOpenOpenIdVersions**](SocialMediaAPI#getSocialmediaTopicDataingestionrulesOpenOpenIdVersions) | Get the Open data ingestion rule versions. |
@@ -29,6 +33,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSocialmediaTopics**](SocialMediaAPI#getSocialmediaTopics) | Retrieve all social topics. |
 | [**patchSocialmediaTopic**](SocialMediaAPI#patchSocialmediaTopic) | Update a social topic. |
 | [**patchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId**](SocialMediaAPI#patchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId) | Update the status of a Facebook data ingestion rule. |
+| [**patchSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId**](SocialMediaAPI#patchSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId) | Update the status of a Instagram data ingestion rule. |
 | [**patchSocialmediaTopicDataingestionrulesOpenOpenId**](SocialMediaAPI#patchSocialmediaTopicDataingestionrulesOpenOpenId) | Update the status of a open data ingestion rule. |
 | [**patchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId**](SocialMediaAPI#patchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId) | Update the status of a X (formally Twitter) data ingestion rule. |
 | [**postSocialmediaAnalyticsAggregatesJobs**](SocialMediaAPI#postSocialmediaAnalyticsAggregatesJobs) | Query for social media aggregates asynchronously |
@@ -36,6 +41,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postSocialmediaEscalationrules**](SocialMediaAPI#postSocialmediaEscalationrules) | Create an escalation rule. |
 | [**postSocialmediaEscalationsMessages**](SocialMediaAPI#postSocialmediaEscalationsMessages) | Escalate message to a conversation manually |
 | [**postSocialmediaTopicDataingestionrulesFacebook**](SocialMediaAPI#postSocialmediaTopicDataingestionrulesFacebook) | Create an Facebook data ingestion rule. |
+| [**postSocialmediaTopicDataingestionrulesInstagram**](SocialMediaAPI#postSocialmediaTopicDataingestionrulesInstagram) | Create an Instagram data ingestion rule. |
 | [**postSocialmediaTopicDataingestionrulesOpen**](SocialMediaAPI#postSocialmediaTopicDataingestionrulesOpen) | Create an open data ingestion rule. |
 | [**postSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk**](SocialMediaAPI#postSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk) | Ingest a list of Open Social Messages |
 | [**postSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk**](SocialMediaAPI#postSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk) | Ingest a list of Open Social Reactions |
@@ -44,6 +50,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postSocialmediaTwitterHistoricalTweets**](SocialMediaAPI#postSocialmediaTwitterHistoricalTweets) | Retrieves historical tweet count for search terms, optional countries list and the current limit and usage for the organization. |
 | [**putSocialmediaEscalationrule**](SocialMediaAPI#putSocialmediaEscalationrule) | Update the escalation rule. |
 | [**putSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId**](SocialMediaAPI#putSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId) | Update the Facebook data ingestion rule. |
+| [**putSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId**](SocialMediaAPI#putSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId) | Update the Instagram data ingestion rule. |
 | [**putSocialmediaTopicDataingestionrulesOpenOpenId**](SocialMediaAPI#putSocialmediaTopicDataingestionrulesOpenOpenId) | Update the open data ingestion rule. |
 | [**putSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId**](SocialMediaAPI#putSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId) | Update the X (formally Twitter) data ingestion rule. |
 {: class="table-striped"}
@@ -195,6 +202,59 @@ SocialMediaAPI.deleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestion
 | **topicId** | **String**| topicId | |
 | **facebookIngestionRuleId** | **String**| facebookIngestionRuleId | |
 | **hardDelete** | **Bool**| Determines whether a Facebook data ingestion rule should be soft-deleted (have it's state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. | [optional] |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId
+
+
+
+> Void deleteSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId(topicId, instagramIngestionRuleId, hardDelete)
+
+Delete a Instagram data ingestion rule.
+
+
+
+Wraps DELETE /api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}  
+
+Requires ANY permissions: 
+
+* socialmedia:instagramDataIngestionRule:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let topicId: String = "" // topicId
+let instagramIngestionRuleId: String = "" // instagramIngestionRuleId
+let hardDelete: Bool = true // Determines whether a Instagram data ingestion rule should be soft-deleted (have it's state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default.
+
+// Code example
+SocialMediaAPI.deleteSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId(topicId: topicId, instagramIngestionRuleId: instagramIngestionRuleId, hardDelete: hardDelete) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("SocialMediaAPI.deleteSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **topicId** | **String**| topicId | |
+| **instagramIngestionRuleId** | **String**| instagramIngestionRuleId | |
+| **hardDelete** | **Bool**| Determines whether a Instagram data ingestion rule should be soft-deleted (have it's state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. | [optional] |
 
 
 ### Return type
@@ -892,6 +952,174 @@ SocialMediaAPI.getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRul
 [**FacebookDataIngestionRuleVersionResponseEntityListing**](FacebookDataIngestionRuleVersionResponseEntityListing)
 
 
+## getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId
+
+
+
+> [InstagramDataIngestionRuleResponse](InstagramDataIngestionRuleResponse) getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId(topicId, instagramIngestionRuleId, includeDeleted)
+
+Get a single Instagram data ingestion rule.
+
+
+
+Wraps GET /api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}  
+
+Requires ALL permissions: 
+
+* socialmedia:instagramDataIngestionRule:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let topicId: String = "" // topicId
+let instagramIngestionRuleId: String = "" // instagramIngestionRuleId
+let includeDeleted: Bool = true // Determines whether to include soft-deleted items in the result.
+
+// Code example
+SocialMediaAPI.getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId(topicId: topicId, instagramIngestionRuleId: instagramIngestionRuleId, includeDeleted: includeDeleted) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SocialMediaAPI.getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **topicId** | **String**| topicId | |
+| **instagramIngestionRuleId** | **String**| instagramIngestionRuleId | |
+| **includeDeleted** | **Bool**| Determines whether to include soft-deleted items in the result. | [optional] |
+
+
+### Return type
+
+[**InstagramDataIngestionRuleResponse**](InstagramDataIngestionRuleResponse)
+
+
+## getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersion
+
+
+
+> [InstagramDataIngestionRuleVersionResponse](InstagramDataIngestionRuleVersionResponse) getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersion(topicId, instagramIngestionRuleId, dataIngestionRuleVersion, includeDeleted)
+
+Get a single Instagram data ingestion rule version.
+
+
+
+Wraps GET /api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}/versions/{dataIngestionRuleVersion}  
+
+Requires ALL permissions: 
+
+* socialmedia:instagramDataIngestionRule:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let topicId: String = "" // topicId
+let instagramIngestionRuleId: String = "" // instagramIngestionRuleId
+let dataIngestionRuleVersion: String = "" // version
+let includeDeleted: Bool = true // Determines whether to include soft-deleted item in the result.
+
+// Code example
+SocialMediaAPI.getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersion(topicId: topicId, instagramIngestionRuleId: instagramIngestionRuleId, dataIngestionRuleVersion: dataIngestionRuleVersion, includeDeleted: includeDeleted) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SocialMediaAPI.getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **topicId** | **String**| topicId | |
+| **instagramIngestionRuleId** | **String**| instagramIngestionRuleId | |
+| **dataIngestionRuleVersion** | **String**| version | |
+| **includeDeleted** | **Bool**| Determines whether to include soft-deleted item in the result. | [optional] |
+
+
+### Return type
+
+[**InstagramDataIngestionRuleVersionResponse**](InstagramDataIngestionRuleVersionResponse)
+
+
+## getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersions
+
+
+
+> [InstagramDataIngestionRuleVersionResponseEntityListing](InstagramDataIngestionRuleVersionResponseEntityListing) getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersions(topicId, instagramIngestionRuleId, pageNumber, pageSize, includeDeleted)
+
+Get the Instagram data ingestion rule versions.
+
+
+
+Wraps GET /api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}/versions  
+
+Requires ALL permissions: 
+
+* socialmedia:instagramDataIngestionRule:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let topicId: String = "" // topicId
+let instagramIngestionRuleId: String = "" // instagramIngestionRuleId
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let includeDeleted: Bool = true // Determines whether to include soft-deleted items in the result.
+
+// Code example
+SocialMediaAPI.getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersions(topicId: topicId, instagramIngestionRuleId: instagramIngestionRuleId, pageNumber: pageNumber, pageSize: pageSize, includeDeleted: includeDeleted) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SocialMediaAPI.getSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **topicId** | **String**| topicId | |
+| **instagramIngestionRuleId** | **String**| instagramIngestionRuleId | |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **includeDeleted** | **Bool**| Determines whether to include soft-deleted items in the result. | [optional] |
+
+
+### Return type
+
+[**InstagramDataIngestionRuleVersionResponseEntityListing**](InstagramDataIngestionRuleVersionResponseEntityListing)
+
+
 ## getSocialmediaTopicDataingestionrulesOpenOpenId
 
 
@@ -1390,6 +1618,60 @@ SocialMediaAPI.patchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionR
 [**FacebookDataIngestionRuleResponse**](FacebookDataIngestionRuleResponse)
 
 
+## patchSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId
+
+
+
+> [InstagramDataIngestionRuleResponse](InstagramDataIngestionRuleResponse) patchSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId(topicId, instagramIngestionRuleId, body)
+
+Update the status of a Instagram data ingestion rule.
+
+
+
+Wraps PATCH /api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}  
+
+Requires ALL permissions: 
+
+* socialmedia:instagramDataIngestionRule:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let topicId: String = "" // topicId
+let instagramIngestionRuleId: String = "" // instagramIngestionRuleId
+let body: DataIngestionRuleStatusPatchRequest = new DataIngestionRuleStatusPatchRequest(...) // 
+
+// Code example
+SocialMediaAPI.patchSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId(topicId: topicId, instagramIngestionRuleId: instagramIngestionRuleId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SocialMediaAPI.patchSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **topicId** | **String**| topicId | |
+| **instagramIngestionRuleId** | **String**| instagramIngestionRuleId | |
+| **body** | [**DataIngestionRuleStatusPatchRequest**](DataIngestionRuleStatusPatchRequest)|  | [optional] |
+
+
+### Return type
+
+[**InstagramDataIngestionRuleResponse**](InstagramDataIngestionRuleResponse)
+
+
 ## patchSocialmediaTopicDataingestionrulesOpenOpenId
 
 
@@ -1750,6 +2032,58 @@ SocialMediaAPI.postSocialmediaTopicDataingestionrulesFacebook(topicId: topicId, 
 ### Return type
 
 [**FacebookDataIngestionRuleResponse**](FacebookDataIngestionRuleResponse)
+
+
+## postSocialmediaTopicDataingestionrulesInstagram
+
+
+
+> [InstagramDataIngestionRuleResponse](InstagramDataIngestionRuleResponse) postSocialmediaTopicDataingestionrulesInstagram(topicId, body)
+
+Create an Instagram data ingestion rule.
+
+
+
+Wraps POST /api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram  
+
+Requires ANY permissions: 
+
+* socialmedia:instagramDataIngestionRule:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let topicId: String = "" // topicId
+let body: InstagramDataIngestionRuleRequest = new InstagramDataIngestionRuleRequest(...) // 
+
+// Code example
+SocialMediaAPI.postSocialmediaTopicDataingestionrulesInstagram(topicId: topicId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SocialMediaAPI.postSocialmediaTopicDataingestionrulesInstagram was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **topicId** | **String**| topicId | |
+| **body** | [**InstagramDataIngestionRuleRequest**](InstagramDataIngestionRuleRequest)|  | [optional] |
+
+
+### Return type
+
+[**InstagramDataIngestionRuleResponse**](InstagramDataIngestionRuleResponse)
 
 
 ## postSocialmediaTopicDataingestionrulesOpen
@@ -2174,6 +2508,60 @@ SocialMediaAPI.putSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRul
 [**FacebookDataIngestionRuleResponse**](FacebookDataIngestionRuleResponse)
 
 
+## putSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId
+
+
+
+> [InstagramDataIngestionRuleResponse](InstagramDataIngestionRuleResponse) putSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId(topicId, instagramIngestionRuleId, body)
+
+Update the Instagram data ingestion rule.
+
+
+
+Wraps PUT /api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}  
+
+Requires ALL permissions: 
+
+* socialmedia:instagramDataIngestionRule:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let topicId: String = "" // topicId
+let instagramIngestionRuleId: String = "" // instagramIngestionRuleId
+let body: InstagramDataIngestionRuleRequest = new InstagramDataIngestionRuleRequest(...) // 
+
+// Code example
+SocialMediaAPI.putSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId(topicId: topicId, instagramIngestionRuleId: instagramIngestionRuleId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SocialMediaAPI.putSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **topicId** | **String**| topicId | |
+| **instagramIngestionRuleId** | **String**| instagramIngestionRuleId | |
+| **body** | [**InstagramDataIngestionRuleRequest**](InstagramDataIngestionRuleRequest)|  | [optional] |
+
+
+### Return type
+
+[**InstagramDataIngestionRuleResponse**](InstagramDataIngestionRuleResponse)
+
+
 ## putSocialmediaTopicDataingestionrulesOpenOpenId
 
 
@@ -2282,4 +2670,4 @@ SocialMediaAPI.putSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleI
 [**TwitterDataIngestionRuleResponse**](TwitterDataIngestionRuleResponse)
 
 
-_PureCloudPlatformClientV2@174.0.0_
+_PureCloudPlatformClientV2@175.0.0_

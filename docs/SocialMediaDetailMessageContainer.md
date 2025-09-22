@@ -9,7 +9,8 @@
 | **_id** | **String** |  | [optional] |
 | **normalizedMessage** | [**ConversationNormalizedMessage**](ConversationNormalizedMessage) |  | [optional] |
 | **escalationInfo** | [**SocialMediaMessageEscalationInfo**](SocialMediaMessageEscalationInfo) |  | [optional] |
+| **contentModeration** | [**ContentModeration**](ContentModeration) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@174.0.0_
+_PureCloudPlatformClientV2@175.0.0_

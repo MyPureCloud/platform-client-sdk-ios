@@ -12,12 +12,12 @@
 | **total** | **Int64** |  | [optional] |
 | **allDivsPermitted** | **Bool** |  | [optional] |
 | **firstUri** | **String** |  | [optional] |
-| **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
+| **nextUri** | **String** |  | [optional] |
 | **lastUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@174.0.0_
+_PureCloudPlatformClientV2@175.0.0_
