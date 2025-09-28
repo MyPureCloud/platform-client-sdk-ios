@@ -13,4 +13,4 @@ A page in a form with title, subtitle, and components
 
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_

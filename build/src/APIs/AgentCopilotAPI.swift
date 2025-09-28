@@ -77,6 +77,83 @@ open class AgentCopilotAPI {
 
     
     
+    /**
+     Get information about the support of features for all the languages or only for a certain language.
+     
+     - parameter language: (query) Which language are the features supported for (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAssistantsCopilotFeaturesupport(language: String? = nil, completion: @escaping ((_ data: LanguageSupportResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAssistantsCopilotFeaturesupportWithRequestBuilder(language: language)
+        requestBuilder.execute { (response: Response<LanguageSupportResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get information about the support of features for all the languages or only for a certain language.
+     - GET /api/v2/assistants/copilot/featuresupport
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "languages" : [ {
+    "featureSupport" : [ {
+      "feature" : "feature",
+      "details" : "details",
+      "supportLevel" : "Supported"
+    }, {
+      "feature" : "feature",
+      "details" : "details",
+      "supportLevel" : "Supported"
+    } ],
+    "language" : "language"
+  }, {
+    "featureSupport" : [ {
+      "feature" : "feature",
+      "details" : "details",
+      "supportLevel" : "Supported"
+    }, {
+      "feature" : "feature",
+      "details" : "details",
+      "supportLevel" : "Supported"
+    } ],
+    "language" : "language"
+  } ]
+}, statusCode=200}]
+     
+     - parameter language: (query) Which language are the features supported for (optional)
+
+     - returns: RequestBuilder<LanguageSupportResponse> 
+     */
+    open class func getAssistantsCopilotFeaturesupportWithRequestBuilder(language: String? = nil) -> RequestBuilder<LanguageSupportResponse> {        
+        let path = "/api/v2/assistants/copilot/featuresupport"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "language": language
+        ])
+
+        let requestBuilder: RequestBuilder<LanguageSupportResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**

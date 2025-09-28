@@ -758,7 +758,8 @@ open class SocialMediaAPI {
       },
       "id" : "id",
       "contentModeration" : {
-        "flag" : "NotSafeForWork"
+        "flag" : "NotSafeForWork",
+        "categories" : [ "categories", "categories" ]
       },
       "normalizedMessage" : {
         "metadata" : {
@@ -780,10 +781,15 @@ open class SocialMediaAPI {
           "template" : "{}",
           "quickReplyV2" : "{}",
           "quickReply" : "{}",
+          "interactiveApplication" : "{}",
           "buttonResponse" : "{}",
+          "datePicker" : "{}",
           "carousel" : "{}",
+          "listPicker" : "{}",
           "push" : "{}",
+          "paymentResponse" : "{}",
           "attachment" : "{}",
+          "form" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -795,15 +801,21 @@ open class SocialMediaAPI {
           "text" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
-          "story" : "{}"
+          "story" : "{}",
+          "paymentRequest" : "{}"
         }, {
           "template" : "{}",
           "quickReplyV2" : "{}",
           "quickReply" : "{}",
+          "interactiveApplication" : "{}",
           "buttonResponse" : "{}",
+          "datePicker" : "{}",
           "carousel" : "{}",
+          "listPicker" : "{}",
           "push" : "{}",
+          "paymentResponse" : "{}",
           "attachment" : "{}",
+          "form" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -815,7 +827,8 @@ open class SocialMediaAPI {
           "text" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
-          "story" : "{}"
+          "story" : "{}",
+          "paymentRequest" : "{}"
         } ],
         "enrichment" : "{}",
         "id" : "id",
@@ -843,7 +856,8 @@ open class SocialMediaAPI {
       },
       "id" : "id",
       "contentModeration" : {
-        "flag" : "NotSafeForWork"
+        "flag" : "NotSafeForWork",
+        "categories" : [ "categories", "categories" ]
       },
       "normalizedMessage" : {
         "metadata" : {
@@ -865,10 +879,15 @@ open class SocialMediaAPI {
           "template" : "{}",
           "quickReplyV2" : "{}",
           "quickReply" : "{}",
+          "interactiveApplication" : "{}",
           "buttonResponse" : "{}",
+          "datePicker" : "{}",
           "carousel" : "{}",
+          "listPicker" : "{}",
           "push" : "{}",
+          "paymentResponse" : "{}",
           "attachment" : "{}",
+          "form" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -880,15 +899,21 @@ open class SocialMediaAPI {
           "text" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
-          "story" : "{}"
+          "story" : "{}",
+          "paymentRequest" : "{}"
         }, {
           "template" : "{}",
           "quickReplyV2" : "{}",
           "quickReply" : "{}",
+          "interactiveApplication" : "{}",
           "buttonResponse" : "{}",
+          "datePicker" : "{}",
           "carousel" : "{}",
+          "listPicker" : "{}",
           "push" : "{}",
+          "paymentResponse" : "{}",
           "attachment" : "{}",
+          "form" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -900,7 +925,8 @@ open class SocialMediaAPI {
           "text" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
-          "story" : "{}"
+          "story" : "{}",
+          "paymentRequest" : "{}"
         } ],
         "enrichment" : "{}",
         "id" : "id",
@@ -931,7 +957,8 @@ open class SocialMediaAPI {
       },
       "id" : "id",
       "contentModeration" : {
-        "flag" : "NotSafeForWork"
+        "flag" : "NotSafeForWork",
+        "categories" : [ "categories", "categories" ]
       },
       "normalizedMessage" : {
         "metadata" : {
@@ -953,10 +980,15 @@ open class SocialMediaAPI {
           "template" : "{}",
           "quickReplyV2" : "{}",
           "quickReply" : "{}",
+          "interactiveApplication" : "{}",
           "buttonResponse" : "{}",
+          "datePicker" : "{}",
           "carousel" : "{}",
+          "listPicker" : "{}",
           "push" : "{}",
+          "paymentResponse" : "{}",
           "attachment" : "{}",
+          "form" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -968,15 +1000,21 @@ open class SocialMediaAPI {
           "text" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
-          "story" : "{}"
+          "story" : "{}",
+          "paymentRequest" : "{}"
         }, {
           "template" : "{}",
           "quickReplyV2" : "{}",
           "quickReply" : "{}",
+          "interactiveApplication" : "{}",
           "buttonResponse" : "{}",
+          "datePicker" : "{}",
           "carousel" : "{}",
+          "listPicker" : "{}",
           "push" : "{}",
+          "paymentResponse" : "{}",
           "attachment" : "{}",
+          "form" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -988,7 +1026,8 @@ open class SocialMediaAPI {
           "text" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
-          "story" : "{}"
+          "story" : "{}",
+          "paymentRequest" : "{}"
         } ],
         "enrichment" : "{}",
         "id" : "id",
@@ -1016,7 +1055,8 @@ open class SocialMediaAPI {
       },
       "id" : "id",
       "contentModeration" : {
-        "flag" : "NotSafeForWork"
+        "flag" : "NotSafeForWork",
+        "categories" : [ "categories", "categories" ]
       },
       "normalizedMessage" : {
         "metadata" : {
@@ -1038,10 +1078,15 @@ open class SocialMediaAPI {
           "template" : "{}",
           "quickReplyV2" : "{}",
           "quickReply" : "{}",
+          "interactiveApplication" : "{}",
           "buttonResponse" : "{}",
+          "datePicker" : "{}",
           "carousel" : "{}",
+          "listPicker" : "{}",
           "push" : "{}",
+          "paymentResponse" : "{}",
           "attachment" : "{}",
+          "form" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -1053,15 +1098,21 @@ open class SocialMediaAPI {
           "text" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
-          "story" : "{}"
+          "story" : "{}",
+          "paymentRequest" : "{}"
         }, {
           "template" : "{}",
           "quickReplyV2" : "{}",
           "quickReply" : "{}",
+          "interactiveApplication" : "{}",
           "buttonResponse" : "{}",
+          "datePicker" : "{}",
           "carousel" : "{}",
+          "listPicker" : "{}",
           "push" : "{}",
+          "paymentResponse" : "{}",
           "attachment" : "{}",
+          "form" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -1073,7 +1124,8 @@ open class SocialMediaAPI {
           "text" : "{}",
           "contentType" : "Reactions",
           "card" : "{}",
-          "story" : "{}"
+          "story" : "{}",
+          "paymentRequest" : "{}"
         } ],
         "enrichment" : "{}",
         "id" : "id",
@@ -1265,8 +1317,8 @@ open class SocialMediaAPI {
     "status" : "Active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -1446,8 +1498,8 @@ open class SocialMediaAPI {
     "status" : "Active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -1719,8 +1771,8 @@ open class SocialMediaAPI {
     "status" : "Active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -1996,8 +2048,8 @@ open class SocialMediaAPI {
     "status" : "Active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -2273,8 +2325,8 @@ open class SocialMediaAPI {
     "externalSource" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -2550,8 +2602,8 @@ open class SocialMediaAPI {
     "status" : "Active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -2679,8 +2731,8 @@ open class SocialMediaAPI {
     "status" : "Active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -3617,8 +3669,8 @@ open class SocialMediaAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -3735,8 +3787,8 @@ open class SocialMediaAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"

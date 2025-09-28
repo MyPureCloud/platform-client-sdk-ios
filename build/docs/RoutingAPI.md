@@ -1603,9 +1603,10 @@ Get domain
 
 Wraps GET /api/v2/routing/email/domains/{domainId}  
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * routing:email:manage
+* routing:email:view
 
 ### Example
 
@@ -1712,7 +1713,7 @@ Wraps GET /api/v2/routing/email/domains/{domainName}/routes/{routeId}/identityre
 Requires ALL permissions: 
 
 * routing:email:manage
-* routing:identityResolution:view
+* routing:identityResolutionEmail:view
 
 ### Example
 
@@ -1878,9 +1879,10 @@ Get domain
 
 Wraps GET /api/v2/routing/email/outbound/domains/{domainId}  
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * routing:email:manage
+* routing:email:view
 
 ### Example
 
@@ -2438,7 +2440,7 @@ RoutingAPI.getRoutingPredictorModels(predictorId: predictorId) { (response, erro
 
 
 
-> [PredictorListing](PredictorListing) getRoutingPredictors(before, after, limit, pageSize, queueId)
+> [PredictorListing](PredictorListing) getRoutingPredictors(before, after, limit, pageSize, queueId, kpiId, state)
 
 Retrieve all predictors.
 
@@ -2464,9 +2466,11 @@ let after: String = "" // The cursor that points to the end of the set of entiti
 let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
 let queueId: [String] = [""] // Comma-separated list of queue Ids to filter by.
+let kpiId: String = "" // Standard or custom KPI id used to filter predictors.
+let state: RoutingAPI.State_getRoutingPredictors = RoutingAPI.State_getRoutingPredictors.enummember // The state used to filter predictors.
 
 // Code example
-RoutingAPI.getRoutingPredictors(before: before, after: after, limit: limit, pageSize: pageSize, queueId: queueId) { (response, error) in
+RoutingAPI.getRoutingPredictors(before: before, after: after, limit: limit, pageSize: pageSize, queueId: queueId, kpiId: kpiId, state: state) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2486,6 +2490,8 @@ RoutingAPI.getRoutingPredictors(before: before, after: after, limit: limit, page
 | **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **queueId** | [**[String]**](String)| Comma-separated list of queue Ids to filter by. | [optional] |
+| **kpiId** | **String**| Standard or custom KPI id used to filter predictors. | [optional] |
+| **state** | **String**| The state used to filter predictors. | [optional]<br />**Values**: created ("Created"), error ("Error"), active ("Active") |
 
 
 ### Return type
@@ -2622,7 +2628,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let queueId: String = "" // Queue ID
-let expand: RoutingAPI.Expand_getRoutingQueueAssistant = RoutingAPI.Expand_getRoutingQueueAssistant.enummember // Which fields, if any, to expand.
+let expand: [String] = [""] // Which fields, if any, to expand.
 
 // Code example
 RoutingAPI.getRoutingQueueAssistant(queueId: queueId, expand: expand) { (response, error) in
@@ -2641,7 +2647,7 @@ RoutingAPI.getRoutingQueueAssistant(queueId: queueId, expand: expand) { (respons
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **queueId** | **String**| Queue ID | |
-| **expand** | **String**| Which fields, if any, to expand. | [optional]<br />**Values**: assistant ("assistant") |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: assistant ("assistant"), copilot ("copilot") |
 
 
 ### Return type
@@ -2820,7 +2826,7 @@ Wraps GET /api/v2/routing/queues/{queueId}/identityresolution
 Requires ALL permissions: 
 
 * routing:queue:view
-* routing:identityResolution:view
+* queue:identityResolution:view
 
 ### Example
 
@@ -3992,7 +3998,7 @@ Wraps GET /api/v2/routing/sms/identityresolution/phonenumbers/{addressId}
 Requires ALL permissions: 
 
 * sms:phoneNumber:view
-* routing:identityResolution:view
+* sms:identityResolution:view
 
 ### Example
 
@@ -7199,7 +7205,7 @@ Wraps PUT /api/v2/routing/email/domains/{domainName}/routes/{routeId}/identityre
 Requires ALL permissions: 
 
 * routing:email:manage
-* routing:identityResolution:edit
+* routing:identityResolutionEmail:edit
 
 ### Example
 
@@ -7408,7 +7414,7 @@ Wraps PUT /api/v2/routing/queues/{queueId}/identityresolution
 Requires ALL permissions: 
 
 * routing:queue:edit
-* routing:identityResolution:edit
+* queue:identityResolution:edit
 
 ### Example
 
@@ -7561,7 +7567,7 @@ Wraps PUT /api/v2/routing/sms/identityresolution/phonenumbers/{addressId}
 Requires ALL permissions: 
 
 * sms:phoneNumber:edit
-* routing:identityResolution:edit
+* sms:identityResolution:edit
 
 ### Example
 
@@ -7963,4 +7969,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_

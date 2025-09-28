@@ -97,7 +97,8 @@ open class DataPrivacyAPI {
   "id" : "id",
   "type" : "Custom",
   "integrations" : [ "integrations", "integrations" ],
-  "enabled" : true
+  "enabled" : true,
+  "direction" : "inbound"
 }, statusCode=200}]
      
      - parameter ruleId: (path) ruleId 
@@ -159,7 +160,8 @@ open class DataPrivacyAPI {
     "id" : "id",
     "type" : "Custom",
     "integrations" : [ "integrations", "integrations" ],
-    "enabled" : true
+    "enabled" : true,
+    "direction" : "inbound"
   }, {
     "substituteCharacter" : "substituteCharacter",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -170,7 +172,8 @@ open class DataPrivacyAPI {
     "id" : "id",
     "type" : "Custom",
     "integrations" : [ "integrations", "integrations" ],
-    "enabled" : true
+    "enabled" : true,
+    "direction" : "inbound"
   } ]
 }, statusCode=200}]
 
@@ -233,7 +236,8 @@ open class DataPrivacyAPI {
   "id" : "id",
   "type" : "Custom",
   "integrations" : [ "integrations", "integrations" ],
-  "enabled" : true
+  "enabled" : true,
+  "direction" : "inbound"
 }, statusCode=200}]
      
      - parameter ruleId: (path) ruleId 
@@ -298,7 +302,8 @@ open class DataPrivacyAPI {
   "id" : "id",
   "type" : "Custom",
   "integrations" : [ "integrations", "integrations" ],
-  "enabled" : true
+  "enabled" : true,
+  "direction" : "inbound"
 }, statusCode=200}]
      
      - parameter body: (body) Details for creating masking rule resource 

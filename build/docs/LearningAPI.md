@@ -1897,7 +1897,7 @@ LearningAPI.putLearningModulePreview(moduleId: moduleId, body: body) { (response
 
 
 
-> [LearningModuleRule](LearningModuleRule) putLearningModuleRule(moduleId, body)
+> [LearningModuleRule](LearningModuleRule) putLearningModuleRule(moduleId, body, assign)
 
 Update a learning module rule
 
@@ -1921,9 +1921,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let moduleId: String = "" // The ID of the learning module
 let body: LearningModuleRule = new LearningModuleRule(...) // The learning module rule to be updated
+let assign: Bool = true // Whether to assign the module to users or not
 
 // Code example
-LearningAPI.putLearningModuleRule(moduleId: moduleId, body: body) { (response, error) in
+LearningAPI.putLearningModuleRule(moduleId: moduleId, body: body, assign: assign) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1940,6 +1941,7 @@ LearningAPI.putLearningModuleRule(moduleId: moduleId, body: body) { (response, e
 | ------------- | ------------- | ------------- | ------------- |
 | **moduleId** | **String**| The ID of the learning module | |
 | **body** | [**LearningModuleRule**](LearningModuleRule)| The learning module rule to be updated | |
+| **assign** | **Bool**| Whether to assign the module to users or not | [optional] |
 
 
 ### Return type
@@ -1947,4 +1949,4 @@ LearningAPI.putLearningModuleRule(moduleId: moduleId, body: body) { (response, e
 [**LearningModuleRule**](LearningModuleRule)
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_

@@ -379,8 +379,8 @@ open class SpeechTextAnalyticsAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -601,8 +601,8 @@ open class SpeechTextAnalyticsAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -1745,8 +1745,8 @@ open class SpeechTextAnalyticsAPI {
     "enabled" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -2168,6 +2168,7 @@ open class SpeechTextAnalyticsAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "published" : true,
+  "matchingType" : "Lexical",
   "tags" : [ "tags", "tags" ],
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
@@ -2256,6 +2257,7 @@ open class SpeechTextAnalyticsAPI {
     
     public enum SortBy_getSpeechandtextanalyticsTopics: String { 
         case name = "name"
+        case matchingtype = "matchingType"
     }
     
     
@@ -2312,6 +2314,7 @@ open class SpeechTextAnalyticsAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "published" : true,
+    "matchingType" : "Lexical",
     "tags" : [ "tags", "tags" ],
     "phrasesCount" : 6,
     "name" : "name",
@@ -2329,6 +2332,7 @@ open class SpeechTextAnalyticsAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "published" : true,
+    "matchingType" : "Lexical",
     "tags" : [ "tags", "tags" ],
     "phrasesCount" : 6,
     "name" : "name",
@@ -2463,6 +2467,9 @@ open class SpeechTextAnalyticsAPI {
         case ptBr = "pt-BR"
         case ptPt = "pt-PT"
         case svSe = "sv-SE"
+        case zhCn = "zh-CN"
+        case zhHk = "zh-HK"
+        case zhTw = "zh-TW"
     }
     
     
@@ -2560,6 +2567,9 @@ open class SpeechTextAnalyticsAPI {
         case ptBr = "pt-BR"
         case ptPt = "pt-PT"
         case svSe = "sv-SE"
+        case zhCn = "zh-CN"
+        case zhHk = "zh-HK"
+        case zhTw = "zh-TW"
     }
     
     
@@ -3433,6 +3443,7 @@ open class SpeechTextAnalyticsAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "published" : true,
+  "matchingType" : "Lexical",
   "tags" : [ "tags", "tags" ],
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
@@ -4219,6 +4230,7 @@ open class SpeechTextAnalyticsAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "published" : true,
+  "matchingType" : "Lexical",
   "tags" : [ "tags", "tags" ],
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",

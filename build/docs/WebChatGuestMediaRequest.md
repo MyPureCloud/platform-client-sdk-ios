@@ -17,4 +17,4 @@ Object representing the guest model of a media request of a chat conversation.
 
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_

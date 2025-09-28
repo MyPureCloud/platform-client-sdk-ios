@@ -288,10 +288,15 @@ open class TextbotsAPI {
       "template" : "{}",
       "quickReplyV2" : "{}",
       "quickReply" : "{}",
+      "interactiveApplication" : "{}",
       "buttonResponse" : "{}",
+      "datePicker" : "{}",
       "carousel" : "{}",
+      "listPicker" : "{}",
       "push" : "{}",
+      "paymentResponse" : "{}",
       "attachment" : "{}",
+      "form" : "{}",
       "location" : "{}",
       "reactions" : [ {
         "reactionType" : "None",
@@ -303,15 +308,21 @@ open class TextbotsAPI {
       "text" : "{}",
       "contentType" : "Reactions",
       "card" : "{}",
-      "story" : "{}"
+      "story" : "{}",
+      "paymentRequest" : "{}"
     }, {
       "template" : "{}",
       "quickReplyV2" : "{}",
       "quickReply" : "{}",
+      "interactiveApplication" : "{}",
       "buttonResponse" : "{}",
+      "datePicker" : "{}",
       "carousel" : "{}",
+      "listPicker" : "{}",
       "push" : "{}",
+      "paymentResponse" : "{}",
       "attachment" : "{}",
+      "form" : "{}",
       "location" : "{}",
       "reactions" : [ {
         "reactionType" : "None",
@@ -323,7 +334,8 @@ open class TextbotsAPI {
       "text" : "{}",
       "contentType" : "Reactions",
       "card" : "{}",
-      "story" : "{}"
+      "story" : "{}",
+      "paymentRequest" : "{}"
     } ]
   }, {
     "text" : "text",
@@ -332,10 +344,15 @@ open class TextbotsAPI {
       "template" : "{}",
       "quickReplyV2" : "{}",
       "quickReply" : "{}",
+      "interactiveApplication" : "{}",
       "buttonResponse" : "{}",
+      "datePicker" : "{}",
       "carousel" : "{}",
+      "listPicker" : "{}",
       "push" : "{}",
+      "paymentResponse" : "{}",
       "attachment" : "{}",
+      "form" : "{}",
       "location" : "{}",
       "reactions" : [ {
         "reactionType" : "None",
@@ -347,15 +364,21 @@ open class TextbotsAPI {
       "text" : "{}",
       "contentType" : "Reactions",
       "card" : "{}",
-      "story" : "{}"
+      "story" : "{}",
+      "paymentRequest" : "{}"
     }, {
       "template" : "{}",
       "quickReplyV2" : "{}",
       "quickReply" : "{}",
+      "interactiveApplication" : "{}",
       "buttonResponse" : "{}",
+      "datePicker" : "{}",
       "carousel" : "{}",
+      "listPicker" : "{}",
       "push" : "{}",
+      "paymentResponse" : "{}",
       "attachment" : "{}",
+      "form" : "{}",
       "location" : "{}",
       "reactions" : [ {
         "reactionType" : "None",
@@ -367,7 +390,8 @@ open class TextbotsAPI {
       "text" : "{}",
       "contentType" : "Reactions",
       "card" : "{}",
-      "story" : "{}"
+      "story" : "{}",
+      "paymentRequest" : "{}"
     } ]
   } ],
   "intentName" : "intentName",

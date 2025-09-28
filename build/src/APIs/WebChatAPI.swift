@@ -127,6 +127,7 @@ open class WebChatAPI {
     /**
      Remove WebChat deployment settings
      - DELETE /api/v2/webchat/settings
+     - This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -584,8 +585,8 @@ open class WebChatAPI {
     "email" : "email"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -819,6 +820,7 @@ open class WebChatAPI {
     /**
      Get WebChat deployment settings
      - GET /api/v2/webchat/settings
+     - This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -1268,6 +1270,7 @@ open class WebChatAPI {
     /**
      Update WebChat deployment settings
      - PUT /api/v2/webchat/settings
+     - This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

@@ -14270,6 +14270,74 @@ open class WorkforceManagementAPI {
 
     
     
+    
+    
+    
+    
+    /**
+     Fetch agent schedules for the logged in user's management unit
+     
+     - parameter body: (body) body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAgentschedulesManagementunitsMine(body: AgentMuScheduleQuery, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: AgentMuQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAgentschedulesManagementunitsMineWithRequestBuilder(body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<AgentMuQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Fetch agent schedules for the logged in user's management unit
+     - POST /api/v2/workforcemanagement/agentschedules/managementunits/mine
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "downloadUrl" : "downloadUrl",
+  "operationId" : "operationId",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter body: (body) body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<AgentMuQueryResponse> 
+     */
+    open class func postWorkforcemanagementAgentschedulesManagementunitsMineWithRequestBuilder(body: AgentMuScheduleQuery, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<AgentMuQueryResponse> {        
+        let path = "/api/v2/workforcemanagement/agentschedules/managementunits/mine"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceAsync": forceAsync, 
+            "forceDownloadService": forceDownloadService
+        ])
+
+        let requestBuilder: RequestBuilder<AgentMuQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Get published schedule for the current user
      

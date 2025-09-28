@@ -138,6 +138,11 @@ docs/AgentIntegrationsRequest.md
 docs/AgentIntegrationsResponse.md
 docs/AgentManagementUnitReference.md
 docs/AgentMaxUtilizationResponse.md
+docs/AgentMuQueryResponse.md
+docs/AgentMuScheduleItem.md
+docs/AgentMuScheduleQuery.md
+docs/AgentMuScheduleResult.md
+docs/AgentMuScheduleShift.md
 docs/AgentOwnedMappingPreview.md
 docs/AgentOwnedMappingPreviewListing.md
 docs/AgentOwnedRouting.md
@@ -146,6 +151,7 @@ docs/AgentPossibleWorkShiftsResponse.md
 docs/AgentQueryAdherenceExplanationsRequest.md
 docs/AgentQueryAdherenceExplanationsResponse.md
 docs/AgentQueueTimeRequest.md
+docs/AgentScheduleShiftActivity.md
 docs/AgentStateAgentQueryClause.md
 docs/AgentStateAgentQueryPredicate.md
 docs/AgentStateCountsRequest.md
@@ -263,7 +269,14 @@ docs/AppEventRequest.md
 docs/AppEventResponse.md
 docs/AppEventResponseSession.md
 docs/AppendToDncActionSettings.md
+docs/AppleAuthentication.md
+docs/AppleIMessageApp.md
+docs/AppleIntegration.md
+docs/AppleIntegrationEntityListing.md
+docs/AppleIntegrationRequest.md
+docs/AppleIntegrationUpdateRequest.md
 docs/AppleOpaqueId.md
+docs/ApplePay.md
 docs/ApprovalNamespace.md
 docs/ArchitectAPI.json
 docs/ArchitectAPI.md
@@ -1704,7 +1717,9 @@ docs/DisallowedEntityLearningAssignmentItem.md
 docs/DisallowedEntityLearningAssignmentReference.md
 docs/DisconnectReason.md
 docs/Disposition.md
+docs/DispositionAmdTimeout.md
 docs/DispositionParameters.md
+docs/DispositionSilentCallTimeout.md
 docs/Division.md
 docs/DivisionEntityRef.md
 docs/DivisionReference.md
@@ -1814,8 +1829,7 @@ docs/DomainOrganizationRole.md
 docs/DomainOrganizationRoleCreate.md
 docs/DomainOrganizationRoleUpdate.md
 docs/DomainPermission.md
-docs/DomainPermissionCollectionDomainPermission.md
-docs/DomainPermissionEntityListing.md
+docs/DomainPermissionCollection.md
 docs/DomainPermissionPolicy.md
 docs/DomainPhysicalCapabilities.md
 docs/DomainPhysicalInterface.md
@@ -2169,6 +2183,7 @@ docs/FaxTopicLockData.md
 docs/FaxTopicUserData.md
 docs/FaxTopicWorkspaceData.md
 docs/FeatureState.md
+docs/FeatureSupport.md
 docs/Feedback.md
 docs/FeedbackAddRequest.md
 docs/FeedbackUpdateRequest.md
@@ -2849,6 +2864,8 @@ docs/Language.md
 docs/LanguageEntityListing.md
 docs/LanguageOverride.md
 docs/LanguageReference.md
+docs/LanguageSupportInfoRecord.md
+docs/LanguageSupportResponse.md
 docs/LanguageUnderstandingAPI.json
 docs/LanguageUnderstandingAPI.md
 docs/LanguagesAPI.json
@@ -3236,6 +3253,8 @@ docs/NumberPlan.md
 docs/NumericRange.md
 docs/OAuthAPI.json
 docs/OAuthAPI.md
+docs/OAuthAppleAuthorizationResponse.md
+docs/OAuthAppleAuthorizationResponseError.md
 docs/OAuthAuthorization.md
 docs/OAuthAuthorizationListing.md
 docs/OAuthClient.md
@@ -3500,6 +3519,7 @@ docs/PerformancePredictionRecalculationUploadResponse.md
 docs/PerformancePredictionResponse.md
 docs/PerformancePredictionUploadSchema.md
 docs/PerformanceProfile.md
+docs/PermissionCollectionEntityListing.md
 docs/PermissionDetails.md
 docs/Permissions.md
 docs/PersistentConnectionChangeTopicErrorInfo.md
@@ -5637,6 +5657,7 @@ docs/deleteConversationRecordingAnnotation-example.txt
 docs/deleteConversationsCallParticipantConsult-example.txt
 docs/deleteConversationsEmailMessagesDraftAttachment-example.txt
 docs/deleteConversationsMessagesCachedmediaCachedMediaItemId-example.txt
+docs/deleteConversationsMessagingIntegrationsAppleIntegrationId-example.txt
 docs/deleteConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/deleteConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
 docs/deleteConversationsMessagingIntegrationsOpenIntegrationId-example.txt
@@ -5964,6 +5985,7 @@ docs/getAssistantCopilot-example.txt
 docs/getAssistantQueue-example.txt
 docs/getAssistantQueues-example.txt
 docs/getAssistants-example.txt
+docs/getAssistantsCopilotFeaturesupport-example.txt
 docs/getAssistantsQueues-example.txt
 docs/getAuditsQueryRealtimeServicemapping-example.txt
 docs/getAuditsQueryServicemapping-example.txt
@@ -6108,6 +6130,7 @@ docs/getConversationsMessagesCachedmedia-example.txt
 docs/getConversationsMessagesCachedmediaCachedMediaItemId-example.txt
 docs/getConversationsMessagingFacebookApp-example.txt
 docs/getConversationsMessagingFacebookPermissions-example.txt
+docs/getConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId-example.txt
 docs/getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId-example.txt
 docs/getConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId-example.txt
 docs/getConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId-example.txt
@@ -6115,6 +6138,8 @@ docs/getConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId
 docs/getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId-example.txt
 docs/getConversationsMessagingIntegrationTwitterOauthSettings-example.txt
 docs/getConversationsMessagingIntegrations-example.txt
+docs/getConversationsMessagingIntegrationsApple-example.txt
+docs/getConversationsMessagingIntegrationsAppleIntegrationId-example.txt
 docs/getConversationsMessagingIntegrationsFacebook-example.txt
 docs/getConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/getConversationsMessagingIntegrationsInstagram-example.txt
@@ -6126,6 +6151,7 @@ docs/getConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
 docs/getConversationsMessagingIntegrationsTwitterOauthSettings-example.txt
 docs/getConversationsMessagingIntegrationsWhatsapp-example.txt
 docs/getConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
+docs/getConversationsMessagingOauthAppleCallback-example.txt
 docs/getConversationsMessagingSetting-example.txt
 docs/getConversationsMessagingSettings-example.txt
 docs/getConversationsMessagingSettingsDefault-example.txt
@@ -7265,6 +7291,7 @@ docs/patchConversationsMessage-example.txt
 docs/patchConversationsMessageParticipant-example.txt
 docs/patchConversationsMessageParticipantAttributes-example.txt
 docs/patchConversationsMessageParticipantCommunication-example.txt
+docs/patchConversationsMessagingIntegrationsAppleIntegrationId-example.txt
 docs/patchConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/patchConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
 docs/patchConversationsMessagingIntegrationsOpenIntegrationId-example.txt
@@ -7610,6 +7637,7 @@ docs/postConversationsMessageParticipantReplace-example.txt
 docs/postConversationsMessages-example.txt
 docs/postConversationsMessagesAgentless-example.txt
 docs/postConversationsMessagesInboundOpen-example.txt
+docs/postConversationsMessagingIntegrationsApple-example.txt
 docs/postConversationsMessagingIntegrationsFacebook-example.txt
 docs/postConversationsMessagingIntegrationsInstagram-example.txt
 docs/postConversationsMessagingIntegrationsOpen-example.txt
@@ -8080,6 +8108,7 @@ docs/postWorkforcemanagementAgentAdherenceExplanationsQuery-example.txt
 docs/postWorkforcemanagementAgents-example.txt
 docs/postWorkforcemanagementAgentsIntegrationsHrisQuery-example.txt
 docs/postWorkforcemanagementAgentsMePossibleworkshifts-example.txt
+docs/postWorkforcemanagementAgentschedulesManagementunitsMine-example.txt
 docs/postWorkforcemanagementAgentschedulesMine-example.txt
 docs/postWorkforcemanagementAlternativeshiftsOffersJobs-example.txt
 docs/postWorkforcemanagementAlternativeshiftsOffersSearchJobs-example.txt
@@ -8203,6 +8232,7 @@ docs/putConversationsEmailMessagesDraft-example.txt
 docs/putConversationsEmailRecordingstate-example.txt
 docs/putConversationsKeyconfiguration-example.txt
 docs/putConversationsMessageRecordingstate-example.txt
+docs/putConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId-example.txt
 docs/putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId-example.txt
 docs/putConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId-example.txt
 docs/putConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId-example.txt
@@ -8634,6 +8664,11 @@ src/Models/AgentIntegrationsRequest.swift
 src/Models/AgentIntegrationsResponse.swift
 src/Models/AgentManagementUnitReference.swift
 src/Models/AgentMaxUtilizationResponse.swift
+src/Models/AgentMuQueryResponse.swift
+src/Models/AgentMuScheduleItem.swift
+src/Models/AgentMuScheduleQuery.swift
+src/Models/AgentMuScheduleResult.swift
+src/Models/AgentMuScheduleShift.swift
 src/Models/AgentOwnedMappingPreview.swift
 src/Models/AgentOwnedMappingPreviewListing.swift
 src/Models/AgentOwnedRouting.swift
@@ -8642,6 +8677,7 @@ src/Models/AgentPossibleWorkShiftsResponse.swift
 src/Models/AgentQueryAdherenceExplanationsRequest.swift
 src/Models/AgentQueryAdherenceExplanationsResponse.swift
 src/Models/AgentQueueTimeRequest.swift
+src/Models/AgentScheduleShiftActivity.swift
 src/Models/AgentStateAgentQueryClause.swift
 src/Models/AgentStateAgentQueryPredicate.swift
 src/Models/AgentStateCountsRequest.swift
@@ -8753,7 +8789,14 @@ src/Models/AppEventRequest.swift
 src/Models/AppEventResponse.swift
 src/Models/AppEventResponseSession.swift
 src/Models/AppendToDncActionSettings.swift
+src/Models/AppleAuthentication.swift
+src/Models/AppleIMessageApp.swift
+src/Models/AppleIntegration.swift
+src/Models/AppleIntegrationEntityListing.swift
+src/Models/AppleIntegrationRequest.swift
+src/Models/AppleIntegrationUpdateRequest.swift
 src/Models/AppleOpaqueId.swift
+src/Models/ApplePay.swift
 src/Models/ApprovalNamespace.swift
 src/Models/ArchitectDependencyTrackingBuildNotificationClient.swift
 src/Models/ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification.swift
@@ -10172,7 +10215,9 @@ src/Models/DisallowedEntityLearningAssignmentItem.swift
 src/Models/DisallowedEntityLearningAssignmentReference.swift
 src/Models/DisconnectReason.swift
 src/Models/Disposition.swift
+src/Models/DispositionAmdTimeout.swift
 src/Models/DispositionParameters.swift
+src/Models/DispositionSilentCallTimeout.swift
 src/Models/Division.swift
 src/Models/DivisionEntityRef.swift
 src/Models/DivisionReference.swift
@@ -10282,8 +10327,7 @@ src/Models/DomainOrganizationRole.swift
 src/Models/DomainOrganizationRoleCreate.swift
 src/Models/DomainOrganizationRoleUpdate.swift
 src/Models/DomainPermission.swift
-src/Models/DomainPermissionCollectionDomainPermission.swift
-src/Models/DomainPermissionEntityListing.swift
+src/Models/DomainPermissionCollection.swift
 src/Models/DomainPermissionPolicy.swift
 src/Models/DomainPhysicalCapabilities.swift
 src/Models/DomainPhysicalInterface.swift
@@ -10625,6 +10669,7 @@ src/Models/FaxTopicLockData.swift
 src/Models/FaxTopicUserData.swift
 src/Models/FaxTopicWorkspaceData.swift
 src/Models/FeatureState.swift
+src/Models/FeatureSupport.swift
 src/Models/Feedback.swift
 src/Models/FeedbackAddRequest.swift
 src/Models/FeedbackUpdateRequest.swift
@@ -11283,6 +11328,8 @@ src/Models/Language.swift
 src/Models/LanguageEntityListing.swift
 src/Models/LanguageOverride.swift
 src/Models/LanguageReference.swift
+src/Models/LanguageSupportInfoRecord.swift
+src/Models/LanguageSupportResponse.swift
 src/Models/LastAttemptByColumnConditionSettings.swift
 src/Models/LastAttemptOverallConditionSettings.swift
 src/Models/LastResultByColumnConditionSettings.swift
@@ -11653,6 +11700,8 @@ src/Models/NuanceOrganization.swift
 src/Models/Number.swift
 src/Models/NumberPlan.swift
 src/Models/NumericRange.swift
+src/Models/OAuthAppleAuthorizationResponse.swift
+src/Models/OAuthAppleAuthorizationResponseError.swift
 src/Models/OAuthAuthorization.swift
 src/Models/OAuthAuthorizationListing.swift
 src/Models/OAuthClient.swift
@@ -11907,6 +11956,7 @@ src/Models/PerformancePredictionRecalculationUploadResponse.swift
 src/Models/PerformancePredictionResponse.swift
 src/Models/PerformancePredictionUploadSchema.swift
 src/Models/PerformanceProfile.swift
+src/Models/PermissionCollectionEntityListing.swift
 src/Models/PermissionDetails.swift
 src/Models/Permissions.swift
 src/Models/PersistentConnectionChangeTopicErrorInfo.swift

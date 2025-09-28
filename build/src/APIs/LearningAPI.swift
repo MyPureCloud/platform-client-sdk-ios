@@ -472,9 +472,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 4,
-  "pageCount" : 7,
-  "pageNumber" : 2,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "assessmentCompletionPercentage" : 1.4658129,
@@ -621,9 +621,9 @@ open class LearningAPI {
     "user" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 3,
+  "lastUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -789,9 +789,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 4,
-  "pageCount" : 7,
-  "pageNumber" : 2,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "assessmentCompletionPercentage" : 1.4658129,
@@ -938,9 +938,9 @@ open class LearningAPI {
     "user" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 3,
+  "lastUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -1607,8 +1607,8 @@ open class LearningAPI {
     "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -2107,8 +2107,8 @@ open class LearningAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -3890,8 +3890,8 @@ open class LearningAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
@@ -4281,15 +4281,18 @@ open class LearningAPI {
     
     
     
+    
+    
     /**
      Update a learning module rule
      
      - parameter moduleId: (path) The ID of the learning module 
      - parameter body: (body) The learning module rule to be updated 
+     - parameter assign: (query) Whether to assign the module to users or not (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putLearningModuleRule(moduleId: String, body: LearningModuleRule, completion: @escaping ((_ data: LearningModuleRule?,_ error: Error?) -> Void)) {
-        let requestBuilder = putLearningModuleRuleWithRequestBuilder(moduleId: moduleId, body: body)
+    open class func putLearningModuleRule(moduleId: String, body: LearningModuleRule, assign: Bool? = nil, completion: @escaping ((_ data: LearningModuleRule?,_ error: Error?) -> Void)) {
+        let requestBuilder = putLearningModuleRuleWithRequestBuilder(moduleId: moduleId, body: body, assign: assign)
         requestBuilder.execute { (response: Response<LearningModuleRule>?, error) -> Void in
             do {
                 if let e = error {
@@ -4332,10 +4335,11 @@ open class LearningAPI {
      
      - parameter moduleId: (path) The ID of the learning module 
      - parameter body: (body) The learning module rule to be updated 
+     - parameter assign: (query) Whether to assign the module to users or not (optional)
 
      - returns: RequestBuilder<LearningModuleRule> 
      */
-    open class func putLearningModuleRuleWithRequestBuilder(moduleId: String, body: LearningModuleRule) -> RequestBuilder<LearningModuleRule> {        
+    open class func putLearningModuleRuleWithRequestBuilder(moduleId: String, body: LearningModuleRule, assign: Bool? = nil) -> RequestBuilder<LearningModuleRule> {        
         var path = "/api/v2/learning/modules/{moduleId}/rule"
         let moduleIdPreEscape = "\(moduleId)"
         let moduleIdPostEscape = moduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4343,7 +4347,10 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "assign": assign
+        ])
 
         let requestBuilder: RequestBuilder<LearningModuleRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

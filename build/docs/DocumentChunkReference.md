@@ -6,9 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** | The globally unique identifier for the document. | [optional] |
+| **_id** | **String** | The globally unique identifier for the document. | |
 | **title** | **String** | The title of the document. | [optional] |
+| **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_

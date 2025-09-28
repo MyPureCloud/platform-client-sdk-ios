@@ -11,7 +11,7 @@
 | **integrationId** | **String** | the integration service id for the bot&#39;s credentials | |
 | **botSessionId** | **String** | GUID for this bot&#39;s session | |
 | **postTextMessage** | [**PostTextMessage**](PostTextMessage) | Message to send to the bot | |
-| **languageCode** | **String** | The launguage code the bot will run under | [optional] |
+| **languageCode** | **String** | The language code the bot will run under | [optional] |
 | **botSessionTimeoutMinutes** | **Int** | Override timeout for the bot session. This should be greater than 10 minutes. | [optional] |
 | **botChannels** | **[String]** | The channels this bot is utilizing | [optional] |
 | **botCorrelationId** | **String** | Id for tracking the activity - this will be returned in the response | [optional] |
@@ -23,4 +23,4 @@
 
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_

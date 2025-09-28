@@ -2094,7 +2094,7 @@ Wraps GET /api/v2/architect/ivrs/{ivrId}/identityresolution
 Requires ALL permissions: 
 
 * routing:callRoute:view
-* routing:identityResolution:view
+* routing:identityResolutionIvr:view
 
 ### Example
 
@@ -7404,7 +7404,7 @@ Wraps PUT /api/v2/architect/ivrs/{ivrId}/identityresolution
 Requires ALL permissions: 
 
 * routing:callRoute:edit
-* routing:identityResolution:edit
+* routing:identityResolutionIvr:edit
 
 ### Example
 
@@ -8087,4 +8087,4 @@ ArchitectAPI.putFlowsOutcome(flowOutcomeId: flowOutcomeId, body: body) { (respon
 [**Operation**](Operation)
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_

@@ -17,7 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getQualityConversationsAuditsQueryTransactionId**](QualityAPI#getQualityConversationsAuditsQueryTransactionId) | Get status of audit query execution |
 | [**getQualityConversationsAuditsQueryTransactionIdResults**](QualityAPI#getQualityConversationsAuditsQueryTransactionIdResults) | Get results of audit query |
 | [**getQualityEvaluationsQuery**](QualityAPI#getQualityEvaluationsQuery) | Queries Evaluations and returns a paged list |
-| [**getQualityEvaluatorsActivity**](QualityAPI#getQualityEvaluatorsActivity) | Get an evaluator activity |
+| [**getQualityEvaluatorsActivity**](QualityAPI#getQualityEvaluatorsActivity) | Get an evaluator activity. To ensure optimal performance and prevent timeouts when processing large datasets, startTime and endTime fields are highly recommended for all requests. |
 | [**getQualityForm**](QualityAPI#getQualityForm) | Get an evaluation form |
 | [**getQualityFormVersions**](QualityAPI#getQualityFormVersions) | Gets all the revisions for a specific evaluation. |
 | [**getQualityForms**](QualityAPI#getQualityForms) | Get the list of evaluation forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding evaluation form. |
@@ -828,7 +828,7 @@ QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber
 
 > [EvaluatorActivityEntityListing](EvaluatorActivityEntityListing) getQualityEvaluatorsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, name, permission, group, agentTeamId)
 
-Get an evaluator activity
+Get an evaluator activity. To ensure optimal performance and prevent timeouts when processing large datasets, startTime and endTime fields are highly recommended for all requests.
 
 
 
@@ -3097,4 +3097,4 @@ QualityAPI.putQualitySurveysScorable(customerSurveyUrl: customerSurveyUrl, body:
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_
