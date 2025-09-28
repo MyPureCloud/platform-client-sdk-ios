@@ -14,4 +14,4 @@ Represents a cloned user in a trustor organization.
 
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_

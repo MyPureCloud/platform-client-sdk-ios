@@ -14,4 +14,4 @@ Action function runtime.
 
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_

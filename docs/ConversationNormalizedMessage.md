@@ -25,4 +25,4 @@ General rich media message structure with normalized feature support across many
 
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_

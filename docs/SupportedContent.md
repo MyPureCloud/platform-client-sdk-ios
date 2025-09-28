@@ -19,4 +19,4 @@ Supported content profile for inbound and outbound messages
 
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_

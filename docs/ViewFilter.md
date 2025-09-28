@@ -238,7 +238,8 @@
 | **empathyScoreCategories** | **[String]** | A set of Empathy Score Categories for filtering | [optional] |
 | **sentimentScoreCategories** | **[String]** | A set of Sentiment Score Categories  for filtering | [optional] |
 | **sentimentTrendCategories** | **[String]** | A set of Sentiment Trend Categories for filtering | [optional] |
+| **contentModerationFlags** | **[String]** | A set of Content Moderation Flags for filtering | [optional] |
 
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_

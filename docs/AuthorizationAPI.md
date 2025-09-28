@@ -750,7 +750,7 @@ AuthorizationAPI.getAuthorizationDivisionspermittedPagedSubjectId(subjectId: sub
 
 
 
-> [DomainPermissionEntityListing](DomainPermissionEntityListing) getAuthorizationPermissions(pageSize, pageNumber, queryType, query)
+> [PermissionCollectionEntityListing](PermissionCollectionEntityListing) getAuthorizationPermissions(pageSize, pageNumber, queryType, query)
 
 Get all permissions.
 
@@ -800,7 +800,7 @@ AuthorizationAPI.getAuthorizationPermissions(pageSize: pageSize, pageNumber: pag
 
 ### Return type
 
-[**DomainPermissionEntityListing**](DomainPermissionEntityListing)
+[**PermissionCollectionEntityListing**](PermissionCollectionEntityListing)
 
 
 ## getAuthorizationProducts
@@ -2499,4 +2499,4 @@ AuthorizationAPI.putUserRoles(subjectId: subjectId, body: body) { (response, err
 [**UserAuthorization**](UserAuthorization)
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_

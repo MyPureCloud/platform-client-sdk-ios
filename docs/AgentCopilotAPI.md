@@ -5,6 +5,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**getAssistantCopilot**](AgentCopilotAPI#getAssistantCopilot) | Get copilot configuration of an assistant. |
+| [**getAssistantsCopilotFeaturesupport**](AgentCopilotAPI#getAssistantsCopilotFeaturesupport) | Get information about the support of features for all the languages or only for a certain language. |
 | [**putAssistantCopilot**](AgentCopilotAPI#putAssistantCopilot) | Update agent copilot configuration |
 {: class="table-striped"}
 
@@ -59,6 +60,56 @@ AgentCopilotAPI.getAssistantCopilot(assistantId: assistantId) { (response, error
 [**Copilot**](Copilot)
 
 
+## getAssistantsCopilotFeaturesupport
+
+
+
+> [LanguageSupportResponse](LanguageSupportResponse) getAssistantsCopilotFeaturesupport(language)
+
+Get information about the support of features for all the languages or only for a certain language.
+
+
+
+Wraps GET /api/v2/assistants/copilot/featuresupport  
+
+Requires ALL permissions: 
+
+* assistants:copilot:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let language: String = "" // Which language are the features supported for
+
+// Code example
+AgentCopilotAPI.getAssistantsCopilotFeaturesupport(language: language) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AgentCopilotAPI.getAssistantsCopilotFeaturesupport was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **language** | **String**| Which language are the features supported for | [optional] |
+
+
+### Return type
+
+[**LanguageSupportResponse**](LanguageSupportResponse)
+
+
 ## putAssistantCopilot
 
 
@@ -111,4 +162,4 @@ AgentCopilotAPI.putAssistantCopilot(assistantId: assistantId, body: body) { (res
 [**Copilot**](Copilot)
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_

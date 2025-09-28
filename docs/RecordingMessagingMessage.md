@@ -28,7 +28,8 @@
 | **contentType** | **String** | Indicates the content type for this message | [optional] |
 | **socialVisibility** | **String** | For social media messages, the visibility of the message in the originating social platform | [optional] |
 | **events** | [**[ConversationMessageEvent]**]([ConversationMessageEvent]) | List of event elements | [optional] |
+| **interactiveApplication** | [**InteractiveApplication**](InteractiveApplication) | InteractiveApplication content. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_

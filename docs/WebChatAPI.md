@@ -135,6 +135,8 @@ WebChatAPI.deleteWebchatGuestConversationMember(conversationId: conversationId, 
 
 Remove WebChat deployment settings
 
+This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
+
 
 
 Wraps DELETE /api/v2/webchat/settings  
@@ -602,6 +604,8 @@ WebChatAPI.getWebchatGuestConversationMessages(conversationId: conversationId, a
 
 Get WebChat deployment settings
 
+This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
+
 
 
 Wraps GET /api/v2/webchat/settings  
@@ -964,6 +968,8 @@ WebChatAPI.putWebchatDeployment(deploymentId: deploymentId, body: body) { (respo
 
 Update WebChat deployment settings
 
+This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
+
 
 
 Wraps PUT /api/v2/webchat/settings  
@@ -1006,4 +1012,4 @@ WebChatAPI.putWebchatSettings(body: body) { (response, error) in
 [**WebChatSettings**](WebChatSettings)
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_

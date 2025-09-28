@@ -173,6 +173,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementAgents**](WorkforceManagementAPI#postWorkforcemanagementAgents) | Move agents in and out of management unit |
 | [**postWorkforcemanagementAgentsIntegrationsHrisQuery**](WorkforceManagementAPI#postWorkforcemanagementAgentsIntegrationsHrisQuery) | Query integrations for agents |
 | [**postWorkforcemanagementAgentsMePossibleworkshifts**](WorkforceManagementAPI#postWorkforcemanagementAgentsMePossibleworkshifts) | Get agent possible work shifts for requested time frame |
+| [**postWorkforcemanagementAgentschedulesManagementunitsMine**](WorkforceManagementAPI#postWorkforcemanagementAgentschedulesManagementunitsMine) | Fetch agent schedules for the logged in user&#39;s management unit |
 | [**postWorkforcemanagementAgentschedulesMine**](WorkforceManagementAPI#postWorkforcemanagementAgentschedulesMine) | Get published schedule for the current user |
 | [**postWorkforcemanagementAlternativeshiftsOffersJobs**](WorkforceManagementAPI#postWorkforcemanagementAlternativeshiftsOffersJobs) | Request a list of alternative shift offers for a given schedule |
 | [**postWorkforcemanagementAlternativeshiftsOffersSearchJobs**](WorkforceManagementAPI#postWorkforcemanagementAlternativeshiftsOffersSearchJobs) | Request a search of alternative shift offers for a given shift |
@@ -9415,6 +9416,60 @@ WorkforceManagementAPI.postWorkforcemanagementAgentsMePossibleworkshifts(body: b
 [**AgentPossibleWorkShiftsResponse**](AgentPossibleWorkShiftsResponse)
 
 
+## postWorkforcemanagementAgentschedulesManagementunitsMine
+
+
+
+> [AgentMuQueryResponse](AgentMuQueryResponse) postWorkforcemanagementAgentschedulesManagementunitsMine(body, forceAsync, forceDownloadService)
+
+Fetch agent schedules for the logged in user&#39;s management unit
+
+
+
+Wraps POST /api/v2/workforcemanagement/agentschedules/managementunits/mine  
+
+Requires ANY permissions: 
+
+* wfm:agentManagementUnitSchedule:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AgentMuScheduleQuery = new AgentMuScheduleQuery(...) // body
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementAgentschedulesManagementunitsMine(body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementAgentschedulesManagementunitsMine was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AgentMuScheduleQuery**](AgentMuScheduleQuery)| body | |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
+
+
+### Return type
+
+[**AgentMuQueryResponse**](AgentMuQueryResponse)
+
+
 ## postWorkforcemanagementAgentschedulesMine
 
 
@@ -14072,4 +14127,4 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatformClientV2@175.0.0_
+_PureCloudPlatformClientV2@176.0.0_
