@@ -379,8 +379,8 @@ open class SpeechTextAnalyticsAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -601,8 +601,8 @@ open class SpeechTextAnalyticsAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -1745,8 +1745,8 @@ open class SpeechTextAnalyticsAPI {
     "enabled" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -2223,6 +2223,8 @@ open class SpeechTextAnalyticsAPI {
     
     
     
+    
+    
     public enum State_getSpeechandtextanalyticsTopics: String { 
         case latest = "latest"
         case published = "published"
@@ -2273,6 +2275,7 @@ open class SpeechTextAnalyticsAPI {
      
      - parameter nextPage: (query) The key for listing the next page (optional)
      - parameter pageSize: (query) The page size for the listing. The max that will be returned is 500. (optional)
+     - parameter pageNumber: (query) The page number for the listing (optional)
      - parameter state: (query) Topic state. Defaults to latest (optional)
      - parameter name: (query) Case insensitive partial name to filter by (optional)
      - parameter ids: (query) Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)
@@ -2281,8 +2284,8 @@ open class SpeechTextAnalyticsAPI {
      - parameter sortOrder: (query) Sort order. Defaults to asc (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSpeechandtextanalyticsTopics(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsTopics? = nil, name: String? = nil, ids: [String]? = nil, dialects: [String]? = nil, sortBy: SortBy_getSpeechandtextanalyticsTopics? = nil, sortOrder: SortOrder_getSpeechandtextanalyticsTopics? = nil, completion: @escaping ((_ data: TopicsEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getSpeechandtextanalyticsTopicsWithRequestBuilder(nextPage: nextPage, pageSize: pageSize, state: state, name: name, ids: ids, dialects: dialects, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getSpeechandtextanalyticsTopics(nextPage: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, state: State_getSpeechandtextanalyticsTopics? = nil, name: String? = nil, ids: [String]? = nil, dialects: [String]? = nil, sortBy: SortBy_getSpeechandtextanalyticsTopics? = nil, sortOrder: SortOrder_getSpeechandtextanalyticsTopics? = nil, completion: @escaping ((_ data: TopicsEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsTopicsWithRequestBuilder(nextPage: nextPage, pageSize: pageSize, pageNumber: pageNumber, state: state, name: name, ids: ids, dialects: dialects, sortBy: sortBy, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<TopicsEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -2352,6 +2355,7 @@ open class SpeechTextAnalyticsAPI {
      
      - parameter nextPage: (query) The key for listing the next page (optional)
      - parameter pageSize: (query) The page size for the listing. The max that will be returned is 500. (optional)
+     - parameter pageNumber: (query) The page number for the listing (optional)
      - parameter state: (query) Topic state. Defaults to latest (optional)
      - parameter name: (query) Case insensitive partial name to filter by (optional)
      - parameter ids: (query) Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)
@@ -2361,7 +2365,7 @@ open class SpeechTextAnalyticsAPI {
 
      - returns: RequestBuilder<TopicsEntityListing> 
      */
-    open class func getSpeechandtextanalyticsTopicsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsTopics? = nil, name: String? = nil, ids: [String]? = nil, dialects: [String]? = nil, sortBy: SortBy_getSpeechandtextanalyticsTopics? = nil, sortOrder: SortOrder_getSpeechandtextanalyticsTopics? = nil) -> RequestBuilder<TopicsEntityListing> {        
+    open class func getSpeechandtextanalyticsTopicsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, state: State_getSpeechandtextanalyticsTopics? = nil, name: String? = nil, ids: [String]? = nil, dialects: [String]? = nil, sortBy: SortBy_getSpeechandtextanalyticsTopics? = nil, sortOrder: SortOrder_getSpeechandtextanalyticsTopics? = nil) -> RequestBuilder<TopicsEntityListing> {        
         let path = "/api/v2/speechandtextanalytics/topics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -2370,6 +2374,7 @@ open class SpeechTextAnalyticsAPI {
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "nextPage": nextPage, 
             "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON(), 
             "state": state?.rawValue, 
             "name": name, 
             "ids": ids, 

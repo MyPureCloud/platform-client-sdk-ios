@@ -6201,8 +6201,8 @@ open class QualityAPI {
     "lowestCriticalScore" : 9.301444
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -11480,8 +11480,8 @@ open class QualityAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -18850,8 +18850,8 @@ open class QualityAPI {
     "resourceType" : "EMAIL"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -19597,8 +19597,8 @@ open class QualityAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 9,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -20372,8 +20372,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -20887,8 +20887,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -21657,8 +21657,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -22175,8 +22175,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -23160,8 +23160,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -23645,8 +23645,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -24113,8 +24113,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -25122,8 +25122,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -25884,8 +25884,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -26601,8 +26601,8 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"

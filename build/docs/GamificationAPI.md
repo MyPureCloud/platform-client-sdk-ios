@@ -734,7 +734,7 @@ GamificationAPI.getGamificationContestsMe(pageNumber: pageNumber, pageSize: page
 
 
 
-> [InsightsSummary](InsightsSummary) getGamificationInsights(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, pageSize, pageNumber, sortKey, sortMetricId, sortOrder, userIds)
+> [InsightsSummary](InsightsSummary) getGamificationInsights(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, pageSize, pageNumber, sortKey, sortMetricId, sortOrder, userIds, reportsTo)
 
 Get insights summary
 
@@ -765,9 +765,10 @@ let sortKey: GamificationAPI.SortKey_getGamificationInsights = GamificationAPI.S
 let sortMetricId: String = "" // Sort Metric Id
 let sortOrder: GamificationAPI.SortOrder_getGamificationInsights = GamificationAPI.SortOrder_getGamificationInsights.enummember // Sort order
 let userIds: String = "" // A list of up to 100 comma-separated user Ids
+let reportsTo: String = "" // The reportsTo used by ABAC policies.
 
 // Code example
-GamificationAPI.getGamificationInsights(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, pageSize: pageSize, pageNumber: pageNumber, sortKey: sortKey, sortMetricId: sortMetricId, sortOrder: sortOrder, userIds: userIds) { (response, error) in
+GamificationAPI.getGamificationInsights(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, pageSize: pageSize, pageNumber: pageNumber, sortKey: sortKey, sortMetricId: sortMetricId, sortOrder: sortOrder, userIds: userIds, reportsTo: reportsTo) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -793,6 +794,7 @@ GamificationAPI.getGamificationInsights(filterType: filterType, filterId: filter
 | **sortMetricId** | **String**| Sort Metric Id | [optional] |
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
 | **userIds** | **String**| A list of up to 100 comma-separated user Ids | [optional] |
+| **reportsTo** | **String**| The reportsTo used by ABAC policies. | [optional] |
 
 
 ### Return type
@@ -986,7 +988,7 @@ GamificationAPI.getGamificationInsightsGroupsTrendsAll(filterType: filterType, f
 
 
 
-> [InsightsAgents](InsightsAgents) getGamificationInsightsMembers(filterType, filterId, granularity, startWorkday)
+> [InsightsAgents](InsightsAgents) getGamificationInsightsMembers(filterType, filterId, granularity, startWorkday, reportsTo)
 
 Query users in a profile during a period of time
 
@@ -1010,9 +1012,10 @@ let filterType: GamificationAPI.FilterType_getGamificationInsightsMembers = Gami
 let filterId: String = "" // ID for the filter type.
 let granularity: GamificationAPI.Granularity_getGamificationInsightsMembers = GamificationAPI.Granularity_getGamificationInsightsMembers.enummember // Granularity
 let startWorkday: Date = new Date(...) // The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let reportsTo: String = "" // The reportsTo used by ABAC policies.
 
 // Code example
-GamificationAPI.getGamificationInsightsMembers(filterType: filterType, filterId: filterId, granularity: granularity, startWorkday: startWorkday) { (response, error) in
+GamificationAPI.getGamificationInsightsMembers(filterType: filterType, filterId: filterId, granularity: granularity, startWorkday: startWorkday, reportsTo: reportsTo) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1031,6 +1034,7 @@ GamificationAPI.getGamificationInsightsMembers(filterType: filterType, filterId:
 | **filterId** | **String**| ID for the filter type. | |
 | **granularity** | **String**| Granularity |<br />**Values**: weekly ("Weekly"), monthly ("Monthly") |
 | **startWorkday** | **Date**| The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **reportsTo** | **String**| The reportsTo used by ABAC policies. | [optional] |
 
 
 ### Return type
@@ -1042,7 +1046,7 @@ GamificationAPI.getGamificationInsightsMembers(filterType: filterType, filterId:
 
 
 
-> [InsightsRankings](InsightsRankings) getGamificationInsightsRankings(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, sortKey, sortMetricId, sectionSize, userIds)
+> [InsightsRankings](InsightsRankings) getGamificationInsightsRankings(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, sortKey, sortMetricId, sectionSize, userIds, reportsTo)
 
 Get insights rankings
 
@@ -1071,9 +1075,10 @@ let sortKey: GamificationAPI.SortKey_getGamificationInsightsRankings = Gamificat
 let sortMetricId: String = "" // Sort Metric Id
 let sectionSize: Int = 0 // The number of top and bottom users to return before ties
 let userIds: String = "" // A list of up to 100 comma-separated user Ids
+let reportsTo: String = "" // The reportsTo used by ABAC policies.
 
 // Code example
-GamificationAPI.getGamificationInsightsRankings(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, sortKey: sortKey, sortMetricId: sortMetricId, sectionSize: sectionSize, userIds: userIds) { (response, error) in
+GamificationAPI.getGamificationInsightsRankings(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, sortKey: sortKey, sortMetricId: sortMetricId, sectionSize: sectionSize, userIds: userIds, reportsTo: reportsTo) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1097,6 +1102,7 @@ GamificationAPI.getGamificationInsightsRankings(filterType: filterType, filterId
 | **sortMetricId** | **String**| Sort Metric Id | [optional] |
 | **sectionSize** | **Int**| The number of top and bottom users to return before ties | [optional] |
 | **userIds** | **String**| A list of up to 100 comma-separated user Ids | [optional] |
+| **reportsTo** | **String**| The reportsTo used by ABAC policies. | [optional] |
 
 
 ### Return type
@@ -4232,4 +4238,4 @@ GamificationAPI.putGamificationStatus(status: status) { (response, error) in
 [**GamificationStatus**](GamificationStatus)
 
 
-_PureCloudPlatformClientV2@176.0.0_
+_PureCloudPlatformClientV2@177.0.0_

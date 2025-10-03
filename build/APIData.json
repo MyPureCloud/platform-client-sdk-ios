@@ -16133,7 +16133,7 @@
   "getgamificationinsights": {
     "operationId": "getgamificationinsights",
     "functionName": "getGamificationInsights",
-    "signature": "getGamificationInsights(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, pageSize, pageNumber, sortKey, sortMetricId, sortOrder, userIds)",
+    "signature": "getGamificationInsights(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, pageSize, pageNumber, sortKey, sortMetricId, sortOrder, userIds, reportsTo)",
     "parameters": [
       {
         "name": "filterType",
@@ -16189,10 +16189,15 @@
         "name": "userIds",
         "type": "String",
         "required": "false"
+      },
+      {
+        "name": "reportsTo",
+        "type": "String",
+        "required": "false"
       }
     ],
     "return": "InsightsSummary",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filterType: GetGamificationInsightsRequest.FilterType_getGamificationInsights = GetGamificationInsightsRequest.FilterType_getGamificationInsights.enummember // Filter type for the query request.\nlet filterId: String = \"\" // ID for the filter type.\nlet granularity: GetGamificationInsightsRequest.Granularity_getGamificationInsights = GetGamificationInsightsRequest.Granularity_getGamificationInsights.enummember // Granularity\nlet comparativePeriodStartWorkday: Date = new Date(...) // The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet primaryPeriodStartWorkday: Date = new Date(...) // The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortKey: GetGamificationInsightsRequest.SortKey_getGamificationInsights = GetGamificationInsightsRequest.SortKey_getGamificationInsights.enummember // Sort key\nlet sortMetricId: String = \"\" // Sort Metric Id\nlet sortOrder: GetGamificationInsightsRequest.SortOrder_getGamificationInsights = GetGamificationInsightsRequest.SortOrder_getGamificationInsights.enummember // Sort order\nlet userIds: String = \"\" // A list of up to 100 comma-separated user Ids\n\n// Get insights summary\nGetGamificationInsightsRequest.getGamificationInsights(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, pageSize: pageSize, pageNumber: pageNumber, sortKey: sortKey, sortMetricId: sortMetricId, sortOrder: sortOrder, userIds: userIds) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationInsightsRequest.getGamificationInsights was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filterType: GetGamificationInsightsRequest.FilterType_getGamificationInsights = GetGamificationInsightsRequest.FilterType_getGamificationInsights.enummember // Filter type for the query request.\nlet filterId: String = \"\" // ID for the filter type.\nlet granularity: GetGamificationInsightsRequest.Granularity_getGamificationInsights = GetGamificationInsightsRequest.Granularity_getGamificationInsights.enummember // Granularity\nlet comparativePeriodStartWorkday: Date = new Date(...) // The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet primaryPeriodStartWorkday: Date = new Date(...) // The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortKey: GetGamificationInsightsRequest.SortKey_getGamificationInsights = GetGamificationInsightsRequest.SortKey_getGamificationInsights.enummember // Sort key\nlet sortMetricId: String = \"\" // Sort Metric Id\nlet sortOrder: GetGamificationInsightsRequest.SortOrder_getGamificationInsights = GetGamificationInsightsRequest.SortOrder_getGamificationInsights.enummember // Sort order\nlet userIds: String = \"\" // A list of up to 100 comma-separated user Ids\nlet reportsTo: String = \"\" // The reportsTo used by ABAC policies.\n\n// Get insights summary\nGetGamificationInsightsRequest.getGamificationInsights(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, pageSize: pageSize, pageNumber: pageNumber, sortKey: sortKey, sortMetricId: sortMetricId, sortOrder: sortOrder, userIds: userIds, reportsTo: reportsTo) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationInsightsRequest.getGamificationInsights was successful\")\n        dump(response)\n    }\n}"
   },
   "getgamificationinsightsdetails": {
     "operationId": "getgamificationinsightsdetails",
@@ -16319,7 +16324,7 @@
   "getgamificationinsightsmembers": {
     "operationId": "getgamificationinsightsmembers",
     "functionName": "getGamificationInsightsMembers",
-    "signature": "getGamificationInsightsMembers(filterType, filterId, granularity, startWorkday)",
+    "signature": "getGamificationInsightsMembers(filterType, filterId, granularity, startWorkday, reportsTo)",
     "parameters": [
       {
         "name": "filterType",
@@ -16340,15 +16345,20 @@
         "name": "startWorkday",
         "type": "Date",
         "required": "true"
+      },
+      {
+        "name": "reportsTo",
+        "type": "String",
+        "required": "false"
       }
     ],
     "return": "InsightsAgents",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filterType: GetGamificationInsightsMembersRequest.FilterType_getGamificationInsightsMembers = GetGamificationInsightsMembersRequest.FilterType_getGamificationInsightsMembers.enummember // Filter type for the query request.\nlet filterId: String = \"\" // ID for the filter type.\nlet granularity: GetGamificationInsightsMembersRequest.Granularity_getGamificationInsightsMembers = GetGamificationInsightsMembersRequest.Granularity_getGamificationInsightsMembers.enummember // Granularity\nlet startWorkday: Date = new Date(...) // The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n\n// Query users in a profile during a period of time\nGetGamificationInsightsMembersRequest.getGamificationInsightsMembers(filterType: filterType, filterId: filterId, granularity: granularity, startWorkday: startWorkday) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationInsightsMembersRequest.getGamificationInsightsMembers was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filterType: GetGamificationInsightsMembersRequest.FilterType_getGamificationInsightsMembers = GetGamificationInsightsMembersRequest.FilterType_getGamificationInsightsMembers.enummember // Filter type for the query request.\nlet filterId: String = \"\" // ID for the filter type.\nlet granularity: GetGamificationInsightsMembersRequest.Granularity_getGamificationInsightsMembers = GetGamificationInsightsMembersRequest.Granularity_getGamificationInsightsMembers.enummember // Granularity\nlet startWorkday: Date = new Date(...) // The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet reportsTo: String = \"\" // The reportsTo used by ABAC policies.\n\n// Query users in a profile during a period of time\nGetGamificationInsightsMembersRequest.getGamificationInsightsMembers(filterType: filterType, filterId: filterId, granularity: granularity, startWorkday: startWorkday, reportsTo: reportsTo) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationInsightsMembersRequest.getGamificationInsightsMembers was successful\")\n        dump(response)\n    }\n}"
   },
   "getgamificationinsightsrankings": {
     "operationId": "getgamificationinsightsrankings",
     "functionName": "getGamificationInsightsRankings",
-    "signature": "getGamificationInsightsRankings(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, sortKey, sortMetricId, sectionSize, userIds)",
+    "signature": "getGamificationInsightsRankings(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, sortKey, sortMetricId, sectionSize, userIds, reportsTo)",
     "parameters": [
       {
         "name": "filterType",
@@ -16394,10 +16404,15 @@
         "name": "userIds",
         "type": "String",
         "required": "false"
+      },
+      {
+        "name": "reportsTo",
+        "type": "String",
+        "required": "false"
       }
     ],
     "return": "InsightsRankings",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filterType: GetGamificationInsightsRankingsRequest.FilterType_getGamificationInsightsRankings = GetGamificationInsightsRankingsRequest.FilterType_getGamificationInsightsRankings.enummember // Filter type for the query request.\nlet filterId: String = \"\" // ID for the filter type.\nlet granularity: GetGamificationInsightsRankingsRequest.Granularity_getGamificationInsightsRankings = GetGamificationInsightsRankingsRequest.Granularity_getGamificationInsightsRankings.enummember // Granularity\nlet comparativePeriodStartWorkday: Date = new Date(...) // The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet primaryPeriodStartWorkday: Date = new Date(...) // The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet sortKey: GetGamificationInsightsRankingsRequest.SortKey_getGamificationInsightsRankings = GetGamificationInsightsRankingsRequest.SortKey_getGamificationInsightsRankings.enummember // Sort key\nlet sortMetricId: String = \"\" // Sort Metric Id\nlet sectionSize: Int = 0 // The number of top and bottom users to return before ties\nlet userIds: String = \"\" // A list of up to 100 comma-separated user Ids\n\n// Get insights rankings\nGetGamificationInsightsRankingsRequest.getGamificationInsightsRankings(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, sortKey: sortKey, sortMetricId: sortMetricId, sectionSize: sectionSize, userIds: userIds) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationInsightsRankingsRequest.getGamificationInsightsRankings was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filterType: GetGamificationInsightsRankingsRequest.FilterType_getGamificationInsightsRankings = GetGamificationInsightsRankingsRequest.FilterType_getGamificationInsightsRankings.enummember // Filter type for the query request.\nlet filterId: String = \"\" // ID for the filter type.\nlet granularity: GetGamificationInsightsRankingsRequest.Granularity_getGamificationInsightsRankings = GetGamificationInsightsRankingsRequest.Granularity_getGamificationInsightsRankings.enummember // Granularity\nlet comparativePeriodStartWorkday: Date = new Date(...) // The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet primaryPeriodStartWorkday: Date = new Date(...) // The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet sortKey: GetGamificationInsightsRankingsRequest.SortKey_getGamificationInsightsRankings = GetGamificationInsightsRankingsRequest.SortKey_getGamificationInsightsRankings.enummember // Sort key\nlet sortMetricId: String = \"\" // Sort Metric Id\nlet sectionSize: Int = 0 // The number of top and bottom users to return before ties\nlet userIds: String = \"\" // A list of up to 100 comma-separated user Ids\nlet reportsTo: String = \"\" // The reportsTo used by ABAC policies.\n\n// Get insights rankings\nGetGamificationInsightsRankingsRequest.getGamificationInsightsRankings(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, sortKey: sortKey, sortMetricId: sortMetricId, sectionSize: sectionSize, userIds: userIds, reportsTo: reportsTo) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationInsightsRankingsRequest.getGamificationInsightsRankings was successful\")\n        dump(response)\n    }\n}"
   },
   "getgamificationinsightstrends": {
     "operationId": "getgamificationinsightstrends",
@@ -41972,7 +41987,7 @@
   "getspeechandtextanalyticstopics": {
     "operationId": "getspeechandtextanalyticstopics",
     "functionName": "getSpeechandtextanalyticsTopics",
-    "signature": "getSpeechandtextanalyticsTopics(nextPage, pageSize, state, name, ids, dialects, sortBy, sortOrder)",
+    "signature": "getSpeechandtextanalyticsTopics(nextPage, pageSize, pageNumber, state, name, ids, dialects, sortBy, sortOrder)",
     "parameters": [
       {
         "name": "nextPage",
@@ -41981,6 +41996,11 @@
       },
       {
         "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
         "type": "Int",
         "required": "false"
       },
@@ -42016,7 +42036,7 @@
       }
     ],
     "return": "TopicsEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nextPage: String = \"\" // The key for listing the next page\nlet pageSize: Int = 0 // The page size for the listing. The max that will be returned is 500.\nlet state: GetSpeechandtextanalyticsTopicsRequest.State_getSpeechandtextanalyticsTopics = GetSpeechandtextanalyticsTopicsRequest.State_getSpeechandtextanalyticsTopics.enummember // Topic state. Defaults to latest\nlet name: String = \"\" // Case insensitive partial name to filter by\nlet ids: [String] = [\"\"] // Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed.\nlet dialects: [String] = [\"\"] // Comma separated dialect strings to filter by. Maximum of 15 dialects allowed.\nlet sortBy: GetSpeechandtextanalyticsTopicsRequest.SortBy_getSpeechandtextanalyticsTopics = GetSpeechandtextanalyticsTopicsRequest.SortBy_getSpeechandtextanalyticsTopics.enummember // Sort results by. Defaults to name\nlet sortOrder: GetSpeechandtextanalyticsTopicsRequest.SortOrder_getSpeechandtextanalyticsTopics = GetSpeechandtextanalyticsTopicsRequest.SortOrder_getSpeechandtextanalyticsTopics.enummember // Sort order. Defaults to asc\n\n// Get the list of Speech & Text Analytics topics\nGetSpeechandtextanalyticsTopicsRequest.getSpeechandtextanalyticsTopics(nextPage: nextPage, pageSize: pageSize, state: state, name: name, ids: ids, dialects: dialects, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsTopicsRequest.getSpeechandtextanalyticsTopics was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nextPage: String = \"\" // The key for listing the next page\nlet pageSize: Int = 0 // The page size for the listing. The max that will be returned is 500.\nlet pageNumber: Int = 0 // The page number for the listing\nlet state: GetSpeechandtextanalyticsTopicsRequest.State_getSpeechandtextanalyticsTopics = GetSpeechandtextanalyticsTopicsRequest.State_getSpeechandtextanalyticsTopics.enummember // Topic state. Defaults to latest\nlet name: String = \"\" // Case insensitive partial name to filter by\nlet ids: [String] = [\"\"] // Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed.\nlet dialects: [String] = [\"\"] // Comma separated dialect strings to filter by. Maximum of 15 dialects allowed.\nlet sortBy: GetSpeechandtextanalyticsTopicsRequest.SortBy_getSpeechandtextanalyticsTopics = GetSpeechandtextanalyticsTopicsRequest.SortBy_getSpeechandtextanalyticsTopics.enummember // Sort results by. Defaults to name\nlet sortOrder: GetSpeechandtextanalyticsTopicsRequest.SortOrder_getSpeechandtextanalyticsTopics = GetSpeechandtextanalyticsTopicsRequest.SortOrder_getSpeechandtextanalyticsTopics.enummember // Sort order. Defaults to asc\n\n// Get the list of Speech & Text Analytics topics\nGetSpeechandtextanalyticsTopicsRequest.getSpeechandtextanalyticsTopics(nextPage: nextPage, pageSize: pageSize, pageNumber: pageNumber, state: state, name: name, ids: ids, dialects: dialects, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsTopicsRequest.getSpeechandtextanalyticsTopics was successful\")\n        dump(response)\n    }\n}"
   },
   "getspeechandtextanalyticstopicsdialects": {
     "operationId": "getspeechandtextanalyticstopicsdialects",
@@ -42733,12 +42753,12 @@
       },
       {
         "name": "expands",
-        "type": "String",
+        "type": "[String]",
         "required": "false"
       }
     ],
     "return": "Workitem",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workitemId: String = \"\" // Workitem ID\nlet expands: GetTaskmanagementWorkitemRequest.Expands_getTaskmanagementWorkitem = GetTaskmanagementWorkitemRequest.Expands_getTaskmanagementWorkitem.enummember // Which fields to expand. Comma separated if more than one.\n\n// Get a workitem\nGetTaskmanagementWorkitemRequest.getTaskmanagementWorkitem(workitemId: workitemId, expands: expands) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemRequest.getTaskmanagementWorkitem was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workitemId: String = \"\" // Workitem ID\nlet expands: [String] = [\"\"] // Which fields to expand. Comma separated if more than one.\n\n// Get a workitem\nGetTaskmanagementWorkitemRequest.getTaskmanagementWorkitem(workitemId: workitemId, expands: expands) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemRequest.getTaskmanagementWorkitem was successful\")\n        dump(response)\n    }\n}"
   },
   "gettaskmanagementworkitemhistory": {
     "operationId": "gettaskmanagementworkitemhistory",

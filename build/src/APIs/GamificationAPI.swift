@@ -230,8 +230,8 @@ open class GamificationAPI {
     "enabled" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -1018,8 +1018,8 @@ open class GamificationAPI {
     "status" : "Upcoming"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -1200,8 +1200,8 @@ open class GamificationAPI {
     "status" : "Upcoming"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -1286,6 +1286,8 @@ open class GamificationAPI {
     
     
     
+    
+    
     /**
      Get insights summary
      
@@ -1300,10 +1302,11 @@ open class GamificationAPI {
      - parameter sortMetricId: (query) Sort Metric Id (optional)
      - parameter sortOrder: (query) Sort order (optional)
      - parameter userIds: (query) A list of up to 100 comma-separated user Ids (optional)
+     - parameter reportsTo: (query) The reportsTo used by ABAC policies. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getGamificationInsights(filterType: FilterType_getGamificationInsights, filterId: String, granularity: Granularity_getGamificationInsights, comparativePeriodStartWorkday: Date, primaryPeriodStartWorkday: Date, pageSize: Int? = nil, pageNumber: Int? = nil, sortKey: SortKey_getGamificationInsights? = nil, sortMetricId: String? = nil, sortOrder: SortOrder_getGamificationInsights? = nil, userIds: String? = nil, completion: @escaping ((_ data: InsightsSummary?,_ error: Error?) -> Void)) {
-        let requestBuilder = getGamificationInsightsWithRequestBuilder(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, pageSize: pageSize, pageNumber: pageNumber, sortKey: sortKey, sortMetricId: sortMetricId, sortOrder: sortOrder, userIds: userIds)
+    open class func getGamificationInsights(filterType: FilterType_getGamificationInsights, filterId: String, granularity: Granularity_getGamificationInsights, comparativePeriodStartWorkday: Date, primaryPeriodStartWorkday: Date, pageSize: Int? = nil, pageNumber: Int? = nil, sortKey: SortKey_getGamificationInsights? = nil, sortMetricId: String? = nil, sortOrder: SortOrder_getGamificationInsights? = nil, userIds: String? = nil, reportsTo: String? = nil, completion: @escaping ((_ data: InsightsSummary?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationInsightsWithRequestBuilder(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, pageSize: pageSize, pageNumber: pageNumber, sortKey: sortKey, sortMetricId: sortMetricId, sortOrder: sortOrder, userIds: userIds, reportsTo: reportsTo)
         requestBuilder.execute { (response: Response<InsightsSummary>?, error) -> Void in
             do {
                 if let e = error {
@@ -1328,9 +1331,9 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "division" : "{}",
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
+  "total" : 2,
+  "pageCount" : 7,
+  "pageNumber" : 5,
   "performanceProfile" : "{}",
   "entities" : [ {
     "overallData" : "{}",
@@ -1369,7 +1372,7 @@ open class GamificationAPI {
   } ],
   "granularity" : "Daily",
   "comparativePeriod" : "{}",
-  "pageSize" : 0,
+  "pageSize" : 5,
   "primaryPeriod" : "{}"
 }, statusCode=200}]
      
@@ -1384,10 +1387,11 @@ open class GamificationAPI {
      - parameter sortMetricId: (query) Sort Metric Id (optional)
      - parameter sortOrder: (query) Sort order (optional)
      - parameter userIds: (query) A list of up to 100 comma-separated user Ids (optional)
+     - parameter reportsTo: (query) The reportsTo used by ABAC policies. (optional)
 
      - returns: RequestBuilder<InsightsSummary> 
      */
-    open class func getGamificationInsightsWithRequestBuilder(filterType: FilterType_getGamificationInsights, filterId: String, granularity: Granularity_getGamificationInsights, comparativePeriodStartWorkday: Date, primaryPeriodStartWorkday: Date, pageSize: Int? = nil, pageNumber: Int? = nil, sortKey: SortKey_getGamificationInsights? = nil, sortMetricId: String? = nil, sortOrder: SortOrder_getGamificationInsights? = nil, userIds: String? = nil) -> RequestBuilder<InsightsSummary> {        
+    open class func getGamificationInsightsWithRequestBuilder(filterType: FilterType_getGamificationInsights, filterId: String, granularity: Granularity_getGamificationInsights, comparativePeriodStartWorkday: Date, primaryPeriodStartWorkday: Date, pageSize: Int? = nil, pageNumber: Int? = nil, sortKey: SortKey_getGamificationInsights? = nil, sortMetricId: String? = nil, sortOrder: SortOrder_getGamificationInsights? = nil, userIds: String? = nil, reportsTo: String? = nil) -> RequestBuilder<InsightsSummary> {        
         let path = "/api/v2/gamification/insights"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -1404,7 +1408,8 @@ open class GamificationAPI {
             "sortKey": sortKey?.rawValue, 
             "sortMetricId": sortMetricId, 
             "sortOrder": sortOrder?.rawValue, 
-            "userIds": userIds
+            "userIds": userIds, 
+            "reportsTo": reportsTo
         ])
 
         let requestBuilder: RequestBuilder<InsightsSummary>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1750,6 +1755,8 @@ open class GamificationAPI {
     
     
     
+    
+    
     /**
      Query users in a profile during a period of time
      
@@ -1757,10 +1764,11 @@ open class GamificationAPI {
      - parameter filterId: (query) ID for the filter type. 
      - parameter granularity: (query) Granularity 
      - parameter startWorkday: (query) The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter reportsTo: (query) The reportsTo used by ABAC policies. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getGamificationInsightsMembers(filterType: FilterType_getGamificationInsightsMembers, filterId: String, granularity: Granularity_getGamificationInsightsMembers, startWorkday: Date, completion: @escaping ((_ data: InsightsAgents?,_ error: Error?) -> Void)) {
-        let requestBuilder = getGamificationInsightsMembersWithRequestBuilder(filterType: filterType, filterId: filterId, granularity: granularity, startWorkday: startWorkday)
+    open class func getGamificationInsightsMembers(filterType: FilterType_getGamificationInsightsMembers, filterId: String, granularity: Granularity_getGamificationInsightsMembers, startWorkday: Date, reportsTo: String? = nil, completion: @escaping ((_ data: InsightsAgents?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationInsightsMembersWithRequestBuilder(filterType: filterType, filterId: filterId, granularity: granularity, startWorkday: startWorkday, reportsTo: reportsTo)
         requestBuilder.execute { (response: Response<InsightsAgents>?, error) -> Void in
             do {
                 if let e = error {
@@ -1806,10 +1814,11 @@ open class GamificationAPI {
      - parameter filterId: (query) ID for the filter type. 
      - parameter granularity: (query) Granularity 
      - parameter startWorkday: (query) The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter reportsTo: (query) The reportsTo used by ABAC policies. (optional)
 
      - returns: RequestBuilder<InsightsAgents> 
      */
-    open class func getGamificationInsightsMembersWithRequestBuilder(filterType: FilterType_getGamificationInsightsMembers, filterId: String, granularity: Granularity_getGamificationInsightsMembers, startWorkday: Date) -> RequestBuilder<InsightsAgents> {        
+    open class func getGamificationInsightsMembersWithRequestBuilder(filterType: FilterType_getGamificationInsightsMembers, filterId: String, granularity: Granularity_getGamificationInsightsMembers, startWorkday: Date, reportsTo: String? = nil) -> RequestBuilder<InsightsAgents> {        
         let path = "/api/v2/gamification/insights/members"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -1819,7 +1828,8 @@ open class GamificationAPI {
             "filterType": filterType.rawValue, 
             "filterId": filterId, 
             "granularity": granularity.rawValue, 
-            "startWorkday": startWorkday.encodeToJSON()
+            "startWorkday": startWorkday.encodeToJSON(), 
+            "reportsTo": reportsTo
         ])
 
         let requestBuilder: RequestBuilder<InsightsAgents>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1864,6 +1874,8 @@ open class GamificationAPI {
     
     
     
+    
+    
     /**
      Get insights rankings
      
@@ -1876,10 +1888,11 @@ open class GamificationAPI {
      - parameter sortMetricId: (query) Sort Metric Id (optional)
      - parameter sectionSize: (query) The number of top and bottom users to return before ties (optional)
      - parameter userIds: (query) A list of up to 100 comma-separated user Ids (optional)
+     - parameter reportsTo: (query) The reportsTo used by ABAC policies. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getGamificationInsightsRankings(filterType: FilterType_getGamificationInsightsRankings, filterId: String, granularity: Granularity_getGamificationInsightsRankings, comparativePeriodStartWorkday: Date, primaryPeriodStartWorkday: Date, sortKey: SortKey_getGamificationInsightsRankings, sortMetricId: String? = nil, sectionSize: Int? = nil, userIds: String? = nil, completion: @escaping ((_ data: InsightsRankings?,_ error: Error?) -> Void)) {
-        let requestBuilder = getGamificationInsightsRankingsWithRequestBuilder(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, sortKey: sortKey, sortMetricId: sortMetricId, sectionSize: sectionSize, userIds: userIds)
+    open class func getGamificationInsightsRankings(filterType: FilterType_getGamificationInsightsRankings, filterId: String, granularity: Granularity_getGamificationInsightsRankings, comparativePeriodStartWorkday: Date, primaryPeriodStartWorkday: Date, sortKey: SortKey_getGamificationInsightsRankings, sortMetricId: String? = nil, sectionSize: Int? = nil, userIds: String? = nil, reportsTo: String? = nil, completion: @escaping ((_ data: InsightsRankings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationInsightsRankingsWithRequestBuilder(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, sortKey: sortKey, sortMetricId: sortMetricId, sectionSize: sectionSize, userIds: userIds, reportsTo: reportsTo)
         requestBuilder.execute { (response: Response<InsightsRankings>?, error) -> Void in
             do {
                 if let e = error {
@@ -1989,10 +2002,11 @@ open class GamificationAPI {
      - parameter sortMetricId: (query) Sort Metric Id (optional)
      - parameter sectionSize: (query) The number of top and bottom users to return before ties (optional)
      - parameter userIds: (query) A list of up to 100 comma-separated user Ids (optional)
+     - parameter reportsTo: (query) The reportsTo used by ABAC policies. (optional)
 
      - returns: RequestBuilder<InsightsRankings> 
      */
-    open class func getGamificationInsightsRankingsWithRequestBuilder(filterType: FilterType_getGamificationInsightsRankings, filterId: String, granularity: Granularity_getGamificationInsightsRankings, comparativePeriodStartWorkday: Date, primaryPeriodStartWorkday: Date, sortKey: SortKey_getGamificationInsightsRankings, sortMetricId: String? = nil, sectionSize: Int? = nil, userIds: String? = nil) -> RequestBuilder<InsightsRankings> {        
+    open class func getGamificationInsightsRankingsWithRequestBuilder(filterType: FilterType_getGamificationInsightsRankings, filterId: String, granularity: Granularity_getGamificationInsightsRankings, comparativePeriodStartWorkday: Date, primaryPeriodStartWorkday: Date, sortKey: SortKey_getGamificationInsightsRankings, sortMetricId: String? = nil, sectionSize: Int? = nil, userIds: String? = nil, reportsTo: String? = nil) -> RequestBuilder<InsightsRankings> {        
         let path = "/api/v2/gamification/insights/rankings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -2007,7 +2021,8 @@ open class GamificationAPI {
             "sortKey": sortKey.rawValue, 
             "sortMetricId": sortMetricId, 
             "sectionSize": sectionSize?.encodeToJSON(), 
-            "userIds": userIds
+            "userIds": userIds, 
+            "reportsTo": reportsTo
         ])
 
         let requestBuilder: RequestBuilder<InsightsRankings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

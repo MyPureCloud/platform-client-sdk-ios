@@ -813,6 +813,7 @@ open class TaskManagementAPI {
     
     
     
+    
     public enum Expands_getTaskmanagementWorkitem: String { 
         case type = "type"
         case workbin = "workbin"
@@ -821,7 +822,6 @@ open class TaskManagementAPI {
         case assignee = "assignee"
     }
     
-    
     /**
      Get a workitem
      
@@ -829,7 +829,7 @@ open class TaskManagementAPI {
      - parameter expands: (query) Which fields to expand. Comma separated if more than one. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getTaskmanagementWorkitem(workitemId: String, expands: Expands_getTaskmanagementWorkitem? = nil, completion: @escaping ((_ data: Workitem?,_ error: Error?) -> Void)) {
+    open class func getTaskmanagementWorkitem(workitemId: String, expands: [String]? = nil, completion: @escaping ((_ data: Workitem?,_ error: Error?) -> Void)) {
         let requestBuilder = getTaskmanagementWorkitemWithRequestBuilder(workitemId: workitemId, expands: expands)
         requestBuilder.execute { (response: Response<Workitem>?, error) -> Void in
             do {
@@ -918,7 +918,7 @@ open class TaskManagementAPI {
 
      - returns: RequestBuilder<Workitem> 
      */
-    open class func getTaskmanagementWorkitemWithRequestBuilder(workitemId: String, expands: Expands_getTaskmanagementWorkitem? = nil) -> RequestBuilder<Workitem> {        
+    open class func getTaskmanagementWorkitemWithRequestBuilder(workitemId: String, expands: [String]? = nil) -> RequestBuilder<Workitem> {        
         var path = "/api/v2/taskmanagement/workitems/{workitemId}"
         let workitemIdPreEscape = "\(workitemId)"
         let workitemIdPostEscape = workitemIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -928,7 +928,7 @@ open class TaskManagementAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "expands": expands?.rawValue
+            "expands": expands
         ])
 
         let requestBuilder: RequestBuilder<Workitem>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

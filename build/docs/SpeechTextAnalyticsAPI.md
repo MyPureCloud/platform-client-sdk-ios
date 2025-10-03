@@ -1645,7 +1645,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopic(topicId: topicId) { (respo
 
 
 
-> [TopicsEntityListing](TopicsEntityListing) getSpeechandtextanalyticsTopics(nextPage, pageSize, state, name, ids, dialects, sortBy, sortOrder)
+> [TopicsEntityListing](TopicsEntityListing) getSpeechandtextanalyticsTopics(nextPage, pageSize, pageNumber, state, name, ids, dialects, sortBy, sortOrder)
 
 Get the list of Speech &amp; Text Analytics topics
 
@@ -1667,6 +1667,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let nextPage: String = "" // The key for listing the next page
 let pageSize: Int = 0 // The page size for the listing. The max that will be returned is 500.
+let pageNumber: Int = 0 // The page number for the listing
 let state: SpeechTextAnalyticsAPI.State_getSpeechandtextanalyticsTopics = SpeechTextAnalyticsAPI.State_getSpeechandtextanalyticsTopics.enummember // Topic state. Defaults to latest
 let name: String = "" // Case insensitive partial name to filter by
 let ids: [String] = [""] // Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed.
@@ -1675,7 +1676,7 @@ let sortBy: SpeechTextAnalyticsAPI.SortBy_getSpeechandtextanalyticsTopics = Spee
 let sortOrder: SpeechTextAnalyticsAPI.SortOrder_getSpeechandtextanalyticsTopics = SpeechTextAnalyticsAPI.SortOrder_getSpeechandtextanalyticsTopics.enummember // Sort order. Defaults to asc
 
 // Code example
-SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopics(nextPage: nextPage, pageSize: pageSize, state: state, name: name, ids: ids, dialects: dialects, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopics(nextPage: nextPage, pageSize: pageSize, pageNumber: pageNumber, state: state, name: name, ids: ids, dialects: dialects, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1692,6 +1693,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopics(nextPage: nextPage, pageS
 | ------------- | ------------- | ------------- | ------------- |
 | **nextPage** | **String**| The key for listing the next page | [optional] |
 | **pageSize** | **Int**| The page size for the listing. The max that will be returned is 500. | [optional] |
+| **pageNumber** | **Int**| The page number for the listing | [optional] |
 | **state** | **String**| Topic state. Defaults to latest | [optional]<br />**Values**: latest ("latest"), published ("published") |
 | **name** | **String**| Case insensitive partial name to filter by | [optional] |
 | **ids** | [**[String]**](String)| Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. | [optional] |
@@ -3022,4 +3024,4 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsTopic(topicId: topicId, body: bo
 [**Topic**](Topic)
 
 
-_PureCloudPlatformClientV2@176.0.0_
+_PureCloudPlatformClientV2@177.0.0_

@@ -199,8 +199,6 @@ open class RecordingAPI {
       "time" : "2000-01-23T04:56:07.000+00:00"
     } ],
     "messagingTranscript" : [ {
-      "socialVisibility" : "Public",
-      "messageText" : "messageText",
       "quickReplies" : [ {
         "payload" : "payload",
         "isSelected" : true,
@@ -251,16 +249,26 @@ open class RecordingAPI {
         } ],
         "url" : "url"
       } ],
-      "workflow" : "{}",
       "interactiveApplication" : "{}",
       "fromUser" : "{}",
-      "fromExternalContact" : "{}",
       "purpose" : "purpose",
-      "buttonResponse" : "{}",
-      "datePicker" : "{}",
+      "listPicker" : "{}",
+      "buttonResponses" : [ {
+        "originatingMessageId" : "originatingMessageId",
+        "messageType" : "QuickReply",
+        "payload" : "payload",
+        "text" : "text",
+        "type" : "Button"
+      }, {
+        "originatingMessageId" : "originatingMessageId",
+        "messageType" : "QuickReply",
+        "payload" : "payload",
+        "text" : "text",
+        "type" : "Button"
+      } ],
       "participantId" : "participantId",
+      "paymentResponse" : "{}",
       "from" : "from",
-      "to" : "to",
       "id" : "id",
       "notificationTemplate" : "{}",
       "messageMediaAttachments" : [ {
@@ -277,14 +285,6 @@ open class RecordingAPI {
         "url" : "url"
       } ],
       "contentType" : "QuickReply",
-      "queue" : "{}",
-      "messageStickerAttachments" : [ {
-        "id" : "id",
-        "url" : "url"
-      }, {
-        "id" : "id",
-        "url" : "url"
-      } ],
       "events" : [ {
         "coBrowse" : "{}",
         "typing" : "{}",
@@ -299,10 +299,24 @@ open class RecordingAPI {
         "presence" : "{}"
       } ],
       "timestamp" : "2000-01-23T04:56:07.000+00:00",
+      "paymentRequest" : "{}",
+      "socialVisibility" : "Public",
+      "messageText" : "messageText",
+      "workflow" : "{}",
+      "fromExternalContact" : "{}",
+      "buttonResponse" : "{}",
+      "datePicker" : "{}",
+      "to" : "to",
+      "queue" : "{}",
+      "messageStickerAttachments" : [ {
+        "id" : "id",
+        "url" : "url"
+      }, {
+        "id" : "id",
+        "url" : "url"
+      } ],
       "story" : "{}"
     }, {
-      "socialVisibility" : "Public",
-      "messageText" : "messageText",
       "quickReplies" : [ {
         "payload" : "payload",
         "isSelected" : true,
@@ -353,16 +367,26 @@ open class RecordingAPI {
         } ],
         "url" : "url"
       } ],
-      "workflow" : "{}",
       "interactiveApplication" : "{}",
       "fromUser" : "{}",
-      "fromExternalContact" : "{}",
       "purpose" : "purpose",
-      "buttonResponse" : "{}",
-      "datePicker" : "{}",
+      "listPicker" : "{}",
+      "buttonResponses" : [ {
+        "originatingMessageId" : "originatingMessageId",
+        "messageType" : "QuickReply",
+        "payload" : "payload",
+        "text" : "text",
+        "type" : "Button"
+      }, {
+        "originatingMessageId" : "originatingMessageId",
+        "messageType" : "QuickReply",
+        "payload" : "payload",
+        "text" : "text",
+        "type" : "Button"
+      } ],
       "participantId" : "participantId",
+      "paymentResponse" : "{}",
       "from" : "from",
-      "to" : "to",
       "id" : "id",
       "notificationTemplate" : "{}",
       "messageMediaAttachments" : [ {
@@ -379,14 +403,6 @@ open class RecordingAPI {
         "url" : "url"
       } ],
       "contentType" : "QuickReply",
-      "queue" : "{}",
-      "messageStickerAttachments" : [ {
-        "id" : "id",
-        "url" : "url"
-      }, {
-        "id" : "id",
-        "url" : "url"
-      } ],
       "events" : [ {
         "coBrowse" : "{}",
         "typing" : "{}",
@@ -401,6 +417,22 @@ open class RecordingAPI {
         "presence" : "{}"
       } ],
       "timestamp" : "2000-01-23T04:56:07.000+00:00",
+      "paymentRequest" : "{}",
+      "socialVisibility" : "Public",
+      "messageText" : "messageText",
+      "workflow" : "{}",
+      "fromExternalContact" : "{}",
+      "buttonResponse" : "{}",
+      "datePicker" : "{}",
+      "to" : "to",
+      "queue" : "{}",
+      "messageStickerAttachments" : [ {
+        "id" : "id",
+        "url" : "url"
+      }, {
+        "id" : "id",
+        "url" : "url"
+      } ],
       "story" : "{}"
     } ],
     "annotations" : [ {
@@ -1548,8 +1580,6 @@ open class RecordingAPI {
     "time" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "messagingTranscript" : [ {
-    "socialVisibility" : "Public",
-    "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
       "isSelected" : true,
@@ -1600,16 +1630,26 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
-    "workflow" : "{}",
     "interactiveApplication" : "{}",
     "fromUser" : "{}",
-    "fromExternalContact" : "{}",
     "purpose" : "purpose",
-    "buttonResponse" : "{}",
-    "datePicker" : "{}",
+    "listPicker" : "{}",
+    "buttonResponses" : [ {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    }, {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    } ],
     "participantId" : "participantId",
+    "paymentResponse" : "{}",
     "from" : "from",
-    "to" : "to",
     "id" : "id",
     "notificationTemplate" : "{}",
     "messageMediaAttachments" : [ {
@@ -1626,14 +1666,6 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
-    "queue" : "{}",
-    "messageStickerAttachments" : [ {
-      "id" : "id",
-      "url" : "url"
-    }, {
-      "id" : "id",
-      "url" : "url"
-    } ],
     "events" : [ {
       "coBrowse" : "{}",
       "typing" : "{}",
@@ -1648,10 +1680,24 @@ open class RecordingAPI {
       "presence" : "{}"
     } ],
     "timestamp" : "2000-01-23T04:56:07.000+00:00",
+    "paymentRequest" : "{}",
+    "socialVisibility" : "Public",
+    "messageText" : "messageText",
+    "workflow" : "{}",
+    "fromExternalContact" : "{}",
+    "buttonResponse" : "{}",
+    "datePicker" : "{}",
+    "to" : "to",
+    "queue" : "{}",
+    "messageStickerAttachments" : [ {
+      "id" : "id",
+      "url" : "url"
+    }, {
+      "id" : "id",
+      "url" : "url"
+    } ],
     "story" : "{}"
   }, {
-    "socialVisibility" : "Public",
-    "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
       "isSelected" : true,
@@ -1702,16 +1748,26 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
-    "workflow" : "{}",
     "interactiveApplication" : "{}",
     "fromUser" : "{}",
-    "fromExternalContact" : "{}",
     "purpose" : "purpose",
-    "buttonResponse" : "{}",
-    "datePicker" : "{}",
+    "listPicker" : "{}",
+    "buttonResponses" : [ {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    }, {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    } ],
     "participantId" : "participantId",
+    "paymentResponse" : "{}",
     "from" : "from",
-    "to" : "to",
     "id" : "id",
     "notificationTemplate" : "{}",
     "messageMediaAttachments" : [ {
@@ -1728,14 +1784,6 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
-    "queue" : "{}",
-    "messageStickerAttachments" : [ {
-      "id" : "id",
-      "url" : "url"
-    }, {
-      "id" : "id",
-      "url" : "url"
-    } ],
     "events" : [ {
       "coBrowse" : "{}",
       "typing" : "{}",
@@ -1750,6 +1798,22 @@ open class RecordingAPI {
       "presence" : "{}"
     } ],
     "timestamp" : "2000-01-23T04:56:07.000+00:00",
+    "paymentRequest" : "{}",
+    "socialVisibility" : "Public",
+    "messageText" : "messageText",
+    "workflow" : "{}",
+    "fromExternalContact" : "{}",
+    "buttonResponse" : "{}",
+    "datePicker" : "{}",
+    "to" : "to",
+    "queue" : "{}",
+    "messageStickerAttachments" : [ {
+      "id" : "id",
+      "url" : "url"
+    }, {
+      "id" : "id",
+      "url" : "url"
+    } ],
     "story" : "{}"
   } ],
   "annotations" : [ {
@@ -3008,8 +3072,6 @@ open class RecordingAPI {
     "time" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "messagingTranscript" : [ {
-    "socialVisibility" : "Public",
-    "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
       "isSelected" : true,
@@ -3060,16 +3122,26 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
-    "workflow" : "{}",
     "interactiveApplication" : "{}",
     "fromUser" : "{}",
-    "fromExternalContact" : "{}",
     "purpose" : "purpose",
-    "buttonResponse" : "{}",
-    "datePicker" : "{}",
+    "listPicker" : "{}",
+    "buttonResponses" : [ {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    }, {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    } ],
     "participantId" : "participantId",
+    "paymentResponse" : "{}",
     "from" : "from",
-    "to" : "to",
     "id" : "id",
     "notificationTemplate" : "{}",
     "messageMediaAttachments" : [ {
@@ -3086,14 +3158,6 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
-    "queue" : "{}",
-    "messageStickerAttachments" : [ {
-      "id" : "id",
-      "url" : "url"
-    }, {
-      "id" : "id",
-      "url" : "url"
-    } ],
     "events" : [ {
       "coBrowse" : "{}",
       "typing" : "{}",
@@ -3108,10 +3172,24 @@ open class RecordingAPI {
       "presence" : "{}"
     } ],
     "timestamp" : "2000-01-23T04:56:07.000+00:00",
+    "paymentRequest" : "{}",
+    "socialVisibility" : "Public",
+    "messageText" : "messageText",
+    "workflow" : "{}",
+    "fromExternalContact" : "{}",
+    "buttonResponse" : "{}",
+    "datePicker" : "{}",
+    "to" : "to",
+    "queue" : "{}",
+    "messageStickerAttachments" : [ {
+      "id" : "id",
+      "url" : "url"
+    }, {
+      "id" : "id",
+      "url" : "url"
+    } ],
     "story" : "{}"
   }, {
-    "socialVisibility" : "Public",
-    "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
       "isSelected" : true,
@@ -3162,16 +3240,26 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
-    "workflow" : "{}",
     "interactiveApplication" : "{}",
     "fromUser" : "{}",
-    "fromExternalContact" : "{}",
     "purpose" : "purpose",
-    "buttonResponse" : "{}",
-    "datePicker" : "{}",
+    "listPicker" : "{}",
+    "buttonResponses" : [ {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    }, {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    } ],
     "participantId" : "participantId",
+    "paymentResponse" : "{}",
     "from" : "from",
-    "to" : "to",
     "id" : "id",
     "notificationTemplate" : "{}",
     "messageMediaAttachments" : [ {
@@ -3188,14 +3276,6 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
-    "queue" : "{}",
-    "messageStickerAttachments" : [ {
-      "id" : "id",
-      "url" : "url"
-    }, {
-      "id" : "id",
-      "url" : "url"
-    } ],
     "events" : [ {
       "coBrowse" : "{}",
       "typing" : "{}",
@@ -3210,6 +3290,22 @@ open class RecordingAPI {
       "presence" : "{}"
     } ],
     "timestamp" : "2000-01-23T04:56:07.000+00:00",
+    "paymentRequest" : "{}",
+    "socialVisibility" : "Public",
+    "messageText" : "messageText",
+    "workflow" : "{}",
+    "fromExternalContact" : "{}",
+    "buttonResponse" : "{}",
+    "datePicker" : "{}",
+    "to" : "to",
+    "queue" : "{}",
+    "messageStickerAttachments" : [ {
+      "id" : "id",
+      "url" : "url"
+    }, {
+      "id" : "id",
+      "url" : "url"
+    } ],
     "story" : "{}"
   } ],
   "annotations" : [ {
@@ -4055,8 +4151,6 @@ open class RecordingAPI {
       "time" : "2000-01-23T04:56:07.000+00:00"
     } ],
     "messagingTranscript" : [ {
-      "socialVisibility" : "Public",
-      "messageText" : "messageText",
       "quickReplies" : [ {
         "payload" : "payload",
         "isSelected" : true,
@@ -4107,16 +4201,26 @@ open class RecordingAPI {
         } ],
         "url" : "url"
       } ],
-      "workflow" : "{}",
       "interactiveApplication" : "{}",
       "fromUser" : "{}",
-      "fromExternalContact" : "{}",
       "purpose" : "purpose",
-      "buttonResponse" : "{}",
-      "datePicker" : "{}",
+      "listPicker" : "{}",
+      "buttonResponses" : [ {
+        "originatingMessageId" : "originatingMessageId",
+        "messageType" : "QuickReply",
+        "payload" : "payload",
+        "text" : "text",
+        "type" : "Button"
+      }, {
+        "originatingMessageId" : "originatingMessageId",
+        "messageType" : "QuickReply",
+        "payload" : "payload",
+        "text" : "text",
+        "type" : "Button"
+      } ],
       "participantId" : "participantId",
+      "paymentResponse" : "{}",
       "from" : "from",
-      "to" : "to",
       "id" : "id",
       "notificationTemplate" : "{}",
       "messageMediaAttachments" : [ {
@@ -4133,14 +4237,6 @@ open class RecordingAPI {
         "url" : "url"
       } ],
       "contentType" : "QuickReply",
-      "queue" : "{}",
-      "messageStickerAttachments" : [ {
-        "id" : "id",
-        "url" : "url"
-      }, {
-        "id" : "id",
-        "url" : "url"
-      } ],
       "events" : [ {
         "coBrowse" : "{}",
         "typing" : "{}",
@@ -4155,10 +4251,24 @@ open class RecordingAPI {
         "presence" : "{}"
       } ],
       "timestamp" : "2000-01-23T04:56:07.000+00:00",
+      "paymentRequest" : "{}",
+      "socialVisibility" : "Public",
+      "messageText" : "messageText",
+      "workflow" : "{}",
+      "fromExternalContact" : "{}",
+      "buttonResponse" : "{}",
+      "datePicker" : "{}",
+      "to" : "to",
+      "queue" : "{}",
+      "messageStickerAttachments" : [ {
+        "id" : "id",
+        "url" : "url"
+      }, {
+        "id" : "id",
+        "url" : "url"
+      } ],
       "story" : "{}"
     }, {
-      "socialVisibility" : "Public",
-      "messageText" : "messageText",
       "quickReplies" : [ {
         "payload" : "payload",
         "isSelected" : true,
@@ -4209,16 +4319,26 @@ open class RecordingAPI {
         } ],
         "url" : "url"
       } ],
-      "workflow" : "{}",
       "interactiveApplication" : "{}",
       "fromUser" : "{}",
-      "fromExternalContact" : "{}",
       "purpose" : "purpose",
-      "buttonResponse" : "{}",
-      "datePicker" : "{}",
+      "listPicker" : "{}",
+      "buttonResponses" : [ {
+        "originatingMessageId" : "originatingMessageId",
+        "messageType" : "QuickReply",
+        "payload" : "payload",
+        "text" : "text",
+        "type" : "Button"
+      }, {
+        "originatingMessageId" : "originatingMessageId",
+        "messageType" : "QuickReply",
+        "payload" : "payload",
+        "text" : "text",
+        "type" : "Button"
+      } ],
       "participantId" : "participantId",
+      "paymentResponse" : "{}",
       "from" : "from",
-      "to" : "to",
       "id" : "id",
       "notificationTemplate" : "{}",
       "messageMediaAttachments" : [ {
@@ -4235,14 +4355,6 @@ open class RecordingAPI {
         "url" : "url"
       } ],
       "contentType" : "QuickReply",
-      "queue" : "{}",
-      "messageStickerAttachments" : [ {
-        "id" : "id",
-        "url" : "url"
-      }, {
-        "id" : "id",
-        "url" : "url"
-      } ],
       "events" : [ {
         "coBrowse" : "{}",
         "typing" : "{}",
@@ -4257,6 +4369,22 @@ open class RecordingAPI {
         "presence" : "{}"
       } ],
       "timestamp" : "2000-01-23T04:56:07.000+00:00",
+      "paymentRequest" : "{}",
+      "socialVisibility" : "Public",
+      "messageText" : "messageText",
+      "workflow" : "{}",
+      "fromExternalContact" : "{}",
+      "buttonResponse" : "{}",
+      "datePicker" : "{}",
+      "to" : "to",
+      "queue" : "{}",
+      "messageStickerAttachments" : [ {
+        "id" : "id",
+        "url" : "url"
+      }, {
+        "id" : "id",
+        "url" : "url"
+      } ],
       "story" : "{}"
     } ],
     "annotations" : [ {
@@ -5175,8 +5303,6 @@ open class RecordingAPI {
     "time" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "messagingTranscript" : [ {
-    "socialVisibility" : "Public",
-    "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
       "isSelected" : true,
@@ -5227,16 +5353,26 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
-    "workflow" : "{}",
     "interactiveApplication" : "{}",
     "fromUser" : "{}",
-    "fromExternalContact" : "{}",
     "purpose" : "purpose",
-    "buttonResponse" : "{}",
-    "datePicker" : "{}",
+    "listPicker" : "{}",
+    "buttonResponses" : [ {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    }, {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    } ],
     "participantId" : "participantId",
+    "paymentResponse" : "{}",
     "from" : "from",
-    "to" : "to",
     "id" : "id",
     "notificationTemplate" : "{}",
     "messageMediaAttachments" : [ {
@@ -5253,14 +5389,6 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
-    "queue" : "{}",
-    "messageStickerAttachments" : [ {
-      "id" : "id",
-      "url" : "url"
-    }, {
-      "id" : "id",
-      "url" : "url"
-    } ],
     "events" : [ {
       "coBrowse" : "{}",
       "typing" : "{}",
@@ -5275,10 +5403,24 @@ open class RecordingAPI {
       "presence" : "{}"
     } ],
     "timestamp" : "2000-01-23T04:56:07.000+00:00",
+    "paymentRequest" : "{}",
+    "socialVisibility" : "Public",
+    "messageText" : "messageText",
+    "workflow" : "{}",
+    "fromExternalContact" : "{}",
+    "buttonResponse" : "{}",
+    "datePicker" : "{}",
+    "to" : "to",
+    "queue" : "{}",
+    "messageStickerAttachments" : [ {
+      "id" : "id",
+      "url" : "url"
+    }, {
+      "id" : "id",
+      "url" : "url"
+    } ],
     "story" : "{}"
   }, {
-    "socialVisibility" : "Public",
-    "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
       "isSelected" : true,
@@ -5329,16 +5471,26 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
-    "workflow" : "{}",
     "interactiveApplication" : "{}",
     "fromUser" : "{}",
-    "fromExternalContact" : "{}",
     "purpose" : "purpose",
-    "buttonResponse" : "{}",
-    "datePicker" : "{}",
+    "listPicker" : "{}",
+    "buttonResponses" : [ {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    }, {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    } ],
     "participantId" : "participantId",
+    "paymentResponse" : "{}",
     "from" : "from",
-    "to" : "to",
     "id" : "id",
     "notificationTemplate" : "{}",
     "messageMediaAttachments" : [ {
@@ -5355,14 +5507,6 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
-    "queue" : "{}",
-    "messageStickerAttachments" : [ {
-      "id" : "id",
-      "url" : "url"
-    }, {
-      "id" : "id",
-      "url" : "url"
-    } ],
     "events" : [ {
       "coBrowse" : "{}",
       "typing" : "{}",
@@ -5377,6 +5521,22 @@ open class RecordingAPI {
       "presence" : "{}"
     } ],
     "timestamp" : "2000-01-23T04:56:07.000+00:00",
+    "paymentRequest" : "{}",
+    "socialVisibility" : "Public",
+    "messageText" : "messageText",
+    "workflow" : "{}",
+    "fromExternalContact" : "{}",
+    "buttonResponse" : "{}",
+    "datePicker" : "{}",
+    "to" : "to",
+    "queue" : "{}",
+    "messageStickerAttachments" : [ {
+      "id" : "id",
+      "url" : "url"
+    }, {
+      "id" : "id",
+      "url" : "url"
+    } ],
     "story" : "{}"
   } ],
   "annotations" : [ {
@@ -6258,8 +6418,6 @@ open class RecordingAPI {
         "time" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "messagingTranscript" : [ {
-        "socialVisibility" : "Public",
-        "messageText" : "messageText",
         "quickReplies" : [ {
           "payload" : "payload",
           "isSelected" : true,
@@ -6310,16 +6468,26 @@ open class RecordingAPI {
           } ],
           "url" : "url"
         } ],
-        "workflow" : "{}",
         "interactiveApplication" : "{}",
         "fromUser" : "{}",
-        "fromExternalContact" : "{}",
         "purpose" : "purpose",
-        "buttonResponse" : "{}",
-        "datePicker" : "{}",
+        "listPicker" : "{}",
+        "buttonResponses" : [ {
+          "originatingMessageId" : "originatingMessageId",
+          "messageType" : "QuickReply",
+          "payload" : "payload",
+          "text" : "text",
+          "type" : "Button"
+        }, {
+          "originatingMessageId" : "originatingMessageId",
+          "messageType" : "QuickReply",
+          "payload" : "payload",
+          "text" : "text",
+          "type" : "Button"
+        } ],
         "participantId" : "participantId",
+        "paymentResponse" : "{}",
         "from" : "from",
-        "to" : "to",
         "id" : "id",
         "notificationTemplate" : "{}",
         "messageMediaAttachments" : [ {
@@ -6336,14 +6504,6 @@ open class RecordingAPI {
           "url" : "url"
         } ],
         "contentType" : "QuickReply",
-        "queue" : "{}",
-        "messageStickerAttachments" : [ {
-          "id" : "id",
-          "url" : "url"
-        }, {
-          "id" : "id",
-          "url" : "url"
-        } ],
         "events" : [ {
           "coBrowse" : "{}",
           "typing" : "{}",
@@ -6358,10 +6518,24 @@ open class RecordingAPI {
           "presence" : "{}"
         } ],
         "timestamp" : "2000-01-23T04:56:07.000+00:00",
+        "paymentRequest" : "{}",
+        "socialVisibility" : "Public",
+        "messageText" : "messageText",
+        "workflow" : "{}",
+        "fromExternalContact" : "{}",
+        "buttonResponse" : "{}",
+        "datePicker" : "{}",
+        "to" : "to",
+        "queue" : "{}",
+        "messageStickerAttachments" : [ {
+          "id" : "id",
+          "url" : "url"
+        }, {
+          "id" : "id",
+          "url" : "url"
+        } ],
         "story" : "{}"
       }, {
-        "socialVisibility" : "Public",
-        "messageText" : "messageText",
         "quickReplies" : [ {
           "payload" : "payload",
           "isSelected" : true,
@@ -6412,16 +6586,26 @@ open class RecordingAPI {
           } ],
           "url" : "url"
         } ],
-        "workflow" : "{}",
         "interactiveApplication" : "{}",
         "fromUser" : "{}",
-        "fromExternalContact" : "{}",
         "purpose" : "purpose",
-        "buttonResponse" : "{}",
-        "datePicker" : "{}",
+        "listPicker" : "{}",
+        "buttonResponses" : [ {
+          "originatingMessageId" : "originatingMessageId",
+          "messageType" : "QuickReply",
+          "payload" : "payload",
+          "text" : "text",
+          "type" : "Button"
+        }, {
+          "originatingMessageId" : "originatingMessageId",
+          "messageType" : "QuickReply",
+          "payload" : "payload",
+          "text" : "text",
+          "type" : "Button"
+        } ],
         "participantId" : "participantId",
+        "paymentResponse" : "{}",
         "from" : "from",
-        "to" : "to",
         "id" : "id",
         "notificationTemplate" : "{}",
         "messageMediaAttachments" : [ {
@@ -6438,14 +6622,6 @@ open class RecordingAPI {
           "url" : "url"
         } ],
         "contentType" : "QuickReply",
-        "queue" : "{}",
-        "messageStickerAttachments" : [ {
-          "id" : "id",
-          "url" : "url"
-        }, {
-          "id" : "id",
-          "url" : "url"
-        } ],
         "events" : [ {
           "coBrowse" : "{}",
           "typing" : "{}",
@@ -6460,6 +6636,22 @@ open class RecordingAPI {
           "presence" : "{}"
         } ],
         "timestamp" : "2000-01-23T04:56:07.000+00:00",
+        "paymentRequest" : "{}",
+        "socialVisibility" : "Public",
+        "messageText" : "messageText",
+        "workflow" : "{}",
+        "fromExternalContact" : "{}",
+        "buttonResponse" : "{}",
+        "datePicker" : "{}",
+        "to" : "to",
+        "queue" : "{}",
+        "messageStickerAttachments" : [ {
+          "id" : "id",
+          "url" : "url"
+        }, {
+          "id" : "id",
+          "url" : "url"
+        } ],
         "story" : "{}"
       } ],
       "annotations" : [ {
@@ -7279,8 +7471,6 @@ open class RecordingAPI {
         "time" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "messagingTranscript" : [ {
-        "socialVisibility" : "Public",
-        "messageText" : "messageText",
         "quickReplies" : [ {
           "payload" : "payload",
           "isSelected" : true,
@@ -7331,16 +7521,26 @@ open class RecordingAPI {
           } ],
           "url" : "url"
         } ],
-        "workflow" : "{}",
         "interactiveApplication" : "{}",
         "fromUser" : "{}",
-        "fromExternalContact" : "{}",
         "purpose" : "purpose",
-        "buttonResponse" : "{}",
-        "datePicker" : "{}",
+        "listPicker" : "{}",
+        "buttonResponses" : [ {
+          "originatingMessageId" : "originatingMessageId",
+          "messageType" : "QuickReply",
+          "payload" : "payload",
+          "text" : "text",
+          "type" : "Button"
+        }, {
+          "originatingMessageId" : "originatingMessageId",
+          "messageType" : "QuickReply",
+          "payload" : "payload",
+          "text" : "text",
+          "type" : "Button"
+        } ],
         "participantId" : "participantId",
+        "paymentResponse" : "{}",
         "from" : "from",
-        "to" : "to",
         "id" : "id",
         "notificationTemplate" : "{}",
         "messageMediaAttachments" : [ {
@@ -7357,14 +7557,6 @@ open class RecordingAPI {
           "url" : "url"
         } ],
         "contentType" : "QuickReply",
-        "queue" : "{}",
-        "messageStickerAttachments" : [ {
-          "id" : "id",
-          "url" : "url"
-        }, {
-          "id" : "id",
-          "url" : "url"
-        } ],
         "events" : [ {
           "coBrowse" : "{}",
           "typing" : "{}",
@@ -7379,10 +7571,24 @@ open class RecordingAPI {
           "presence" : "{}"
         } ],
         "timestamp" : "2000-01-23T04:56:07.000+00:00",
+        "paymentRequest" : "{}",
+        "socialVisibility" : "Public",
+        "messageText" : "messageText",
+        "workflow" : "{}",
+        "fromExternalContact" : "{}",
+        "buttonResponse" : "{}",
+        "datePicker" : "{}",
+        "to" : "to",
+        "queue" : "{}",
+        "messageStickerAttachments" : [ {
+          "id" : "id",
+          "url" : "url"
+        }, {
+          "id" : "id",
+          "url" : "url"
+        } ],
         "story" : "{}"
       }, {
-        "socialVisibility" : "Public",
-        "messageText" : "messageText",
         "quickReplies" : [ {
           "payload" : "payload",
           "isSelected" : true,
@@ -7433,16 +7639,26 @@ open class RecordingAPI {
           } ],
           "url" : "url"
         } ],
-        "workflow" : "{}",
         "interactiveApplication" : "{}",
         "fromUser" : "{}",
-        "fromExternalContact" : "{}",
         "purpose" : "purpose",
-        "buttonResponse" : "{}",
-        "datePicker" : "{}",
+        "listPicker" : "{}",
+        "buttonResponses" : [ {
+          "originatingMessageId" : "originatingMessageId",
+          "messageType" : "QuickReply",
+          "payload" : "payload",
+          "text" : "text",
+          "type" : "Button"
+        }, {
+          "originatingMessageId" : "originatingMessageId",
+          "messageType" : "QuickReply",
+          "payload" : "payload",
+          "text" : "text",
+          "type" : "Button"
+        } ],
         "participantId" : "participantId",
+        "paymentResponse" : "{}",
         "from" : "from",
-        "to" : "to",
         "id" : "id",
         "notificationTemplate" : "{}",
         "messageMediaAttachments" : [ {
@@ -7459,14 +7675,6 @@ open class RecordingAPI {
           "url" : "url"
         } ],
         "contentType" : "QuickReply",
-        "queue" : "{}",
-        "messageStickerAttachments" : [ {
-          "id" : "id",
-          "url" : "url"
-        }, {
-          "id" : "id",
-          "url" : "url"
-        } ],
         "events" : [ {
           "coBrowse" : "{}",
           "typing" : "{}",
@@ -7481,6 +7689,22 @@ open class RecordingAPI {
           "presence" : "{}"
         } ],
         "timestamp" : "2000-01-23T04:56:07.000+00:00",
+        "paymentRequest" : "{}",
+        "socialVisibility" : "Public",
+        "messageText" : "messageText",
+        "workflow" : "{}",
+        "fromExternalContact" : "{}",
+        "buttonResponse" : "{}",
+        "datePicker" : "{}",
+        "to" : "to",
+        "queue" : "{}",
+        "messageStickerAttachments" : [ {
+          "id" : "id",
+          "url" : "url"
+        }, {
+          "id" : "id",
+          "url" : "url"
+        } ],
         "story" : "{}"
       } ],
       "annotations" : [ {
@@ -8204,8 +8428,8 @@ open class RecordingAPI {
     "region" : "af-south-1"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -8473,8 +8697,8 @@ open class RecordingAPI {
     "order" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -8739,8 +8963,8 @@ open class RecordingAPI {
     "conversation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -8884,8 +9108,8 @@ open class RecordingAPI {
     "totalProcessedRecordings" : 5
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -9205,8 +9429,8 @@ open class RecordingAPI {
     "order" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -9408,8 +9632,8 @@ open class RecordingAPI {
     "createDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
@@ -10884,8 +11108,6 @@ open class RecordingAPI {
     "time" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "messagingTranscript" : [ {
-    "socialVisibility" : "Public",
-    "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
       "isSelected" : true,
@@ -10936,16 +11158,26 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
-    "workflow" : "{}",
     "interactiveApplication" : "{}",
     "fromUser" : "{}",
-    "fromExternalContact" : "{}",
     "purpose" : "purpose",
-    "buttonResponse" : "{}",
-    "datePicker" : "{}",
+    "listPicker" : "{}",
+    "buttonResponses" : [ {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    }, {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    } ],
     "participantId" : "participantId",
+    "paymentResponse" : "{}",
     "from" : "from",
-    "to" : "to",
     "id" : "id",
     "notificationTemplate" : "{}",
     "messageMediaAttachments" : [ {
@@ -10962,14 +11194,6 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
-    "queue" : "{}",
-    "messageStickerAttachments" : [ {
-      "id" : "id",
-      "url" : "url"
-    }, {
-      "id" : "id",
-      "url" : "url"
-    } ],
     "events" : [ {
       "coBrowse" : "{}",
       "typing" : "{}",
@@ -10984,10 +11208,24 @@ open class RecordingAPI {
       "presence" : "{}"
     } ],
     "timestamp" : "2000-01-23T04:56:07.000+00:00",
+    "paymentRequest" : "{}",
+    "socialVisibility" : "Public",
+    "messageText" : "messageText",
+    "workflow" : "{}",
+    "fromExternalContact" : "{}",
+    "buttonResponse" : "{}",
+    "datePicker" : "{}",
+    "to" : "to",
+    "queue" : "{}",
+    "messageStickerAttachments" : [ {
+      "id" : "id",
+      "url" : "url"
+    }, {
+      "id" : "id",
+      "url" : "url"
+    } ],
     "story" : "{}"
   }, {
-    "socialVisibility" : "Public",
-    "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
       "isSelected" : true,
@@ -11038,16 +11276,26 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
-    "workflow" : "{}",
     "interactiveApplication" : "{}",
     "fromUser" : "{}",
-    "fromExternalContact" : "{}",
     "purpose" : "purpose",
-    "buttonResponse" : "{}",
-    "datePicker" : "{}",
+    "listPicker" : "{}",
+    "buttonResponses" : [ {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    }, {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    } ],
     "participantId" : "participantId",
+    "paymentResponse" : "{}",
     "from" : "from",
-    "to" : "to",
     "id" : "id",
     "notificationTemplate" : "{}",
     "messageMediaAttachments" : [ {
@@ -11064,14 +11312,6 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
-    "queue" : "{}",
-    "messageStickerAttachments" : [ {
-      "id" : "id",
-      "url" : "url"
-    }, {
-      "id" : "id",
-      "url" : "url"
-    } ],
     "events" : [ {
       "coBrowse" : "{}",
       "typing" : "{}",
@@ -11086,6 +11326,22 @@ open class RecordingAPI {
       "presence" : "{}"
     } ],
     "timestamp" : "2000-01-23T04:56:07.000+00:00",
+    "paymentRequest" : "{}",
+    "socialVisibility" : "Public",
+    "messageText" : "messageText",
+    "workflow" : "{}",
+    "fromExternalContact" : "{}",
+    "buttonResponse" : "{}",
+    "datePicker" : "{}",
+    "to" : "to",
+    "queue" : "{}",
+    "messageStickerAttachments" : [ {
+      "id" : "id",
+      "url" : "url"
+    }, {
+      "id" : "id",
+      "url" : "url"
+    } ],
     "story" : "{}"
   } ],
   "annotations" : [ {
@@ -12015,8 +12271,6 @@ open class RecordingAPI {
     "time" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "messagingTranscript" : [ {
-    "socialVisibility" : "Public",
-    "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
       "isSelected" : true,
@@ -12067,16 +12321,26 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
-    "workflow" : "{}",
     "interactiveApplication" : "{}",
     "fromUser" : "{}",
-    "fromExternalContact" : "{}",
     "purpose" : "purpose",
-    "buttonResponse" : "{}",
-    "datePicker" : "{}",
+    "listPicker" : "{}",
+    "buttonResponses" : [ {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    }, {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    } ],
     "participantId" : "participantId",
+    "paymentResponse" : "{}",
     "from" : "from",
-    "to" : "to",
     "id" : "id",
     "notificationTemplate" : "{}",
     "messageMediaAttachments" : [ {
@@ -12093,14 +12357,6 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
-    "queue" : "{}",
-    "messageStickerAttachments" : [ {
-      "id" : "id",
-      "url" : "url"
-    }, {
-      "id" : "id",
-      "url" : "url"
-    } ],
     "events" : [ {
       "coBrowse" : "{}",
       "typing" : "{}",
@@ -12115,10 +12371,24 @@ open class RecordingAPI {
       "presence" : "{}"
     } ],
     "timestamp" : "2000-01-23T04:56:07.000+00:00",
+    "paymentRequest" : "{}",
+    "socialVisibility" : "Public",
+    "messageText" : "messageText",
+    "workflow" : "{}",
+    "fromExternalContact" : "{}",
+    "buttonResponse" : "{}",
+    "datePicker" : "{}",
+    "to" : "to",
+    "queue" : "{}",
+    "messageStickerAttachments" : [ {
+      "id" : "id",
+      "url" : "url"
+    }, {
+      "id" : "id",
+      "url" : "url"
+    } ],
     "story" : "{}"
   }, {
-    "socialVisibility" : "Public",
-    "messageText" : "messageText",
     "quickReplies" : [ {
       "payload" : "payload",
       "isSelected" : true,
@@ -12169,16 +12439,26 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
-    "workflow" : "{}",
     "interactiveApplication" : "{}",
     "fromUser" : "{}",
-    "fromExternalContact" : "{}",
     "purpose" : "purpose",
-    "buttonResponse" : "{}",
-    "datePicker" : "{}",
+    "listPicker" : "{}",
+    "buttonResponses" : [ {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    }, {
+      "originatingMessageId" : "originatingMessageId",
+      "messageType" : "QuickReply",
+      "payload" : "payload",
+      "text" : "text",
+      "type" : "Button"
+    } ],
     "participantId" : "participantId",
+    "paymentResponse" : "{}",
     "from" : "from",
-    "to" : "to",
     "id" : "id",
     "notificationTemplate" : "{}",
     "messageMediaAttachments" : [ {
@@ -12195,14 +12475,6 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
-    "queue" : "{}",
-    "messageStickerAttachments" : [ {
-      "id" : "id",
-      "url" : "url"
-    }, {
-      "id" : "id",
-      "url" : "url"
-    } ],
     "events" : [ {
       "coBrowse" : "{}",
       "typing" : "{}",
@@ -12217,6 +12489,22 @@ open class RecordingAPI {
       "presence" : "{}"
     } ],
     "timestamp" : "2000-01-23T04:56:07.000+00:00",
+    "paymentRequest" : "{}",
+    "socialVisibility" : "Public",
+    "messageText" : "messageText",
+    "workflow" : "{}",
+    "fromExternalContact" : "{}",
+    "buttonResponse" : "{}",
+    "datePicker" : "{}",
+    "to" : "to",
+    "queue" : "{}",
+    "messageStickerAttachments" : [ {
+      "id" : "id",
+      "url" : "url"
+    }, {
+      "id" : "id",
+      "url" : "url"
+    } ],
     "story" : "{}"
   } ],
   "annotations" : [ {

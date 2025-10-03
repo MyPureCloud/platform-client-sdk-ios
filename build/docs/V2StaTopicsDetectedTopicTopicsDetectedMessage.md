@@ -11,9 +11,10 @@
 | **recordingId** | **String** |  | [optional] |
 | **transcriptId** | **String** |  | [optional] |
 | **mediaType** | **String** |  | [optional] |
+| **programId** | **String** |  | [optional] |
 | **topics** | [**[V2StaTopicsDetectedTopicTopicDetected]**]([V2StaTopicsDetectedTopicTopicDetected]) |  | [optional] |
 | **participants** | [**[V2StaTopicsDetectedTopicParticipant]**]([V2StaTopicsDetectedTopicParticipant]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@176.0.0_
+_PureCloudPlatformClientV2@177.0.0_
