@@ -162,4 +162,4 @@ AgentCopilotAPI.putAssistantCopilot(assistantId: assistantId, body: body) { (res
 [**Copilot**](Copilot)
 
 
-_PureCloudPlatformClientV2@176.0.0_
+_PureCloudPlatformClientV2@177.0.0_

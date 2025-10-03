@@ -819,7 +819,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let workitemId: String = "" // Workitem ID
-let expands: TaskManagementAPI.Expands_getTaskmanagementWorkitem = TaskManagementAPI.Expands_getTaskmanagementWorkitem.enummember // Which fields to expand. Comma separated if more than one.
+let expands: [String] = [""] // Which fields to expand. Comma separated if more than one.
 
 // Code example
 TaskManagementAPI.getTaskmanagementWorkitem(workitemId: workitemId, expands: expands) { (response, error) in
@@ -838,7 +838,7 @@ TaskManagementAPI.getTaskmanagementWorkitem(workitemId: workitemId, expands: exp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **workitemId** | **String**| Workitem ID | |
-| **expands** | **String**| Which fields to expand. Comma separated if more than one. | [optional]<br />**Values**: type ("type"), workbin ("workbin"), status ("status"), queue ("queue"), assignee ("assignee") |
+| **expands** | [**[String]**](String)| Which fields to expand. Comma separated if more than one. | [optional]<br />**Values**: type ("type"), workbin ("workbin"), status ("status"), queue ("queue"), assignee ("assignee") |
 
 
 ### Return type
@@ -3959,4 +3959,4 @@ TaskManagementAPI.putTaskmanagementWorkitemsSchema(schemaId: schemaId, body: bod
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatformClientV2@176.0.0_
+_PureCloudPlatformClientV2@177.0.0_

@@ -12,4 +12,4 @@ A subset of the Journey System&#39;s customer data at a point-in-time (for exter
 
 
 
-_PureCloudPlatformClientV2@176.0.0_
+_PureCloudPlatformClientV2@177.0.0_

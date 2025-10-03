@@ -51,8 +51,9 @@
 | **recipientCountry** | **String** |  | [optional] |
 | **recipientType** | **String** |  | [optional] |
 | **byoSmsIntegrationId** | **String** |  | [optional] |
+| **engagementSource** | **String** |  | [optional] |
 | **monitoredParticipantId** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@176.0.0_
+_PureCloudPlatformClientV2@177.0.0_

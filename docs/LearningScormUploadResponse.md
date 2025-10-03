@@ -15,4 +15,4 @@ Learning SCORM upload response
 
 
 
-_PureCloudPlatformClientV2@176.0.0_
+_PureCloudPlatformClientV2@177.0.0_
