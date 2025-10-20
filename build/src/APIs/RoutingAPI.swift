@@ -1620,6 +1620,135 @@ open class RoutingAPI {
 
     
     
+    /**
+     Get domain dkim settings
+     
+     - parameter domainId: (path) domain ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingEmailDomainDkim(domainId: String, completion: @escaping ((_ data: VerificationResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailDomainDkimWithRequestBuilder(domainId: domainId)
+        requestBuilder.execute { (response: Response<VerificationResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get domain dkim settings
+     - GET /api/v2/routing/email/domains/{domainId}/dkim
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "records" : [ {
+    "name" : "name",
+    "type" : "type",
+    "value" : "value"
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "value" : "value"
+  } ],
+  "status" : "FAILED"
+}, statusCode=200}]
+     
+     - parameter domainId: (path) domain ID 
+
+     - returns: RequestBuilder<VerificationResult> 
+     */
+    open class func getRoutingEmailDomainDkimWithRequestBuilder(domainId: String) -> RequestBuilder<VerificationResult> {        
+        var path = "/api/v2/routing/email/domains/{domainId}/dkim"
+        let domainIdPreEscape = "\(domainId)"
+        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<VerificationResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get domain mail from settings
+     
+     - parameter domainId: (path) domain ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingEmailDomainMailfrom(domainId: String, completion: @escaping ((_ data: MailFromResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailDomainMailfromWithRequestBuilder(domainId: domainId)
+        requestBuilder.execute { (response: Response<MailFromResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get domain mail from settings
+     - GET /api/v2/routing/email/domains/{domainId}/mailfrom
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "records" : [ {
+    "name" : "name",
+    "type" : "type",
+    "value" : "value"
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "value" : "value"
+  } ],
+  "mailFromDomain" : "mailFromDomain",
+  "status" : "FAILED"
+}, statusCode=200}]
+     
+     - parameter domainId: (path) domain ID 
+
+     - returns: RequestBuilder<MailFromResult> 
+     */
+    open class func getRoutingEmailDomainMailfromWithRequestBuilder(domainId: String) -> RequestBuilder<MailFromResult> {        
+        var path = "/api/v2/routing/email/domains/{domainId}/mailfrom"
+        let domainIdPreEscape = "\(domainId)"
+        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MailFromResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     
@@ -1732,9 +1861,9 @@ open class RoutingAPI {
      - parameter routeId: (path) route ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingEmailDomainRouteIdentityresolution(domainName: String, routeId: String, completion: @escaping ((_ data: IdentityResolutionConfig?,_ error: Error?) -> Void)) {
+    open class func getRoutingEmailDomainRouteIdentityresolution(domainName: String, routeId: String, completion: @escaping ((_ data: RouteIdentityResolutionConfig?,_ error: Error?) -> Void)) {
         let requestBuilder = getRoutingEmailDomainRouteIdentityresolutionWithRequestBuilder(domainName: domainName, routeId: routeId)
-        requestBuilder.execute { (response: Response<IdentityResolutionConfig>?, error) -> Void in
+        requestBuilder.execute { (response: Response<RouteIdentityResolutionConfig>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1766,9 +1895,9 @@ open class RoutingAPI {
      - parameter domainName: (path) email domain 
      - parameter routeId: (path) route ID 
 
-     - returns: RequestBuilder<IdentityResolutionConfig> 
+     - returns: RequestBuilder<RouteIdentityResolutionConfig> 
      */
-    open class func getRoutingEmailDomainRouteIdentityresolutionWithRequestBuilder(domainName: String, routeId: String) -> RequestBuilder<IdentityResolutionConfig> {        
+    open class func getRoutingEmailDomainRouteIdentityresolutionWithRequestBuilder(domainName: String, routeId: String) -> RequestBuilder<RouteIdentityResolutionConfig> {        
         var path = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}/identityresolution"
         let domainNamePreEscape = "\(domainName)"
         let domainNamePostEscape = domainNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1781,7 +1910,7 @@ open class RoutingAPI {
         
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<IdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<RouteIdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1936,6 +2065,70 @@ open class RoutingAPI {
         ])
 
         let requestBuilder: RequestBuilder<InboundRouteEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get domain verification settings
+     
+     - parameter domainId: (path) domain ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingEmailDomainVerification(domainId: String, completion: @escaping ((_ data: VerificationResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailDomainVerificationWithRequestBuilder(domainId: domainId)
+        requestBuilder.execute { (response: Response<VerificationResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get domain verification settings
+     - GET /api/v2/routing/email/domains/{domainId}/verification
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "records" : [ {
+    "name" : "name",
+    "type" : "type",
+    "value" : "value"
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "value" : "value"
+  } ],
+  "status" : "FAILED"
+}, statusCode=200}]
+     
+     - parameter domainId: (path) domain ID 
+
+     - returns: RequestBuilder<VerificationResult> 
+     */
+    open class func getRoutingEmailDomainVerificationWithRequestBuilder(domainId: String) -> RequestBuilder<VerificationResult> {        
+        var path = "/api/v2/routing/email/domains/{domainId}/verification"
+        let domainIdPreEscape = "\(domainId)"
+        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<VerificationResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -7735,9 +7928,9 @@ open class RoutingAPI {
      - parameter addressId: (path) Address ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingSmsIdentityresolutionPhonenumber(addressId: String, completion: @escaping ((_ data: IdentityResolutionConfig?,_ error: Error?) -> Void)) {
+    open class func getRoutingSmsIdentityresolutionPhonenumber(addressId: String, completion: @escaping ((_ data: SmsIdentityResolutionConfig?,_ error: Error?) -> Void)) {
         let requestBuilder = getRoutingSmsIdentityresolutionPhonenumberWithRequestBuilder(addressId: addressId)
-        requestBuilder.execute { (response: Response<IdentityResolutionConfig>?, error) -> Void in
+        requestBuilder.execute { (response: Response<SmsIdentityResolutionConfig>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -7768,9 +7961,9 @@ open class RoutingAPI {
      
      - parameter addressId: (path) Address ID 
 
-     - returns: RequestBuilder<IdentityResolutionConfig> 
+     - returns: RequestBuilder<SmsIdentityResolutionConfig> 
      */
-    open class func getRoutingSmsIdentityresolutionPhonenumberWithRequestBuilder(addressId: String) -> RequestBuilder<IdentityResolutionConfig> {        
+    open class func getRoutingSmsIdentityresolutionPhonenumberWithRequestBuilder(addressId: String) -> RequestBuilder<SmsIdentityResolutionConfig> {        
         var path = "/api/v2/routing/sms/identityresolution/phonenumbers/{addressId}"
         let addressIdPreEscape = "\(addressId)"
         let addressIdPostEscape = addressIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -7780,7 +7973,7 @@ open class RoutingAPI {
         
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<IdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SmsIdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -12985,6 +13178,139 @@ open class RoutingAPI {
 
     
     
+    /**
+     Restart domain dkim
+     
+     - parameter domainId: (path) domain ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRoutingEmailDomainDkim(domainId: String, completion: @escaping ((_ data: VerificationResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingEmailDomainDkimWithRequestBuilder(domainId: domainId)
+        requestBuilder.execute { (response: Response<VerificationResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Restart domain dkim
+     - POST /api/v2/routing/email/domains/{domainId}/dkim
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "records" : [ {
+    "name" : "name",
+    "type" : "type",
+    "value" : "value"
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "value" : "value"
+  } ],
+  "status" : "FAILED"
+}, statusCode=200}]
+     
+     - parameter domainId: (path) domain ID 
+
+     - returns: RequestBuilder<VerificationResult> 
+     */
+    open class func postRoutingEmailDomainDkimWithRequestBuilder(domainId: String) -> RequestBuilder<VerificationResult> {        
+        var path = "/api/v2/routing/email/domains/{domainId}/dkim"
+        let domainIdPreEscape = "\(domainId)"
+        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<VerificationResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Set domain mail from settings
+     
+     - parameter domainId: (path) domain ID 
+     - parameter body: (body) Mail From Settings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRoutingEmailDomainMailfrom(domainId: String, body: MailFromResult, completion: @escaping ((_ data: MailFromResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingEmailDomainMailfromWithRequestBuilder(domainId: domainId, body: body)
+        requestBuilder.execute { (response: Response<MailFromResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Set domain mail from settings
+     - POST /api/v2/routing/email/domains/{domainId}/mailfrom
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "records" : [ {
+    "name" : "name",
+    "type" : "type",
+    "value" : "value"
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "value" : "value"
+  } ],
+  "mailFromDomain" : "mailFromDomain",
+  "status" : "FAILED"
+}, statusCode=200}]
+     
+     - parameter domainId: (path) domain ID 
+     - parameter body: (body) Mail From Settings 
+
+     - returns: RequestBuilder<MailFromResult> 
+     */
+    open class func postRoutingEmailDomainMailfromWithRequestBuilder(domainId: String, body: MailFromResult) -> RequestBuilder<MailFromResult> {        
+        var path = "/api/v2/routing/email/domains/{domainId}/mailfrom"
+        let domainIdPreEscape = "\(domainId)"
+        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MailFromResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**
@@ -13140,6 +13466,70 @@ open class RoutingAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TestMessage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Restart domain verification
+     
+     - parameter domainId: (path) domain ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRoutingEmailDomainVerification(domainId: String, completion: @escaping ((_ data: VerificationResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingEmailDomainVerificationWithRequestBuilder(domainId: domainId)
+        requestBuilder.execute { (response: Response<VerificationResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Restart domain verification
+     - POST /api/v2/routing/email/domains/{domainId}/verification
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "records" : [ {
+    "name" : "name",
+    "type" : "type",
+    "value" : "value"
+  }, {
+    "name" : "name",
+    "type" : "type",
+    "value" : "value"
+  } ],
+  "status" : "FAILED"
+}, statusCode=200}]
+     
+     - parameter domainId: (path) domain ID 
+
+     - returns: RequestBuilder<VerificationResult> 
+     */
+    open class func postRoutingEmailDomainVerificationWithRequestBuilder(domainId: String) -> RequestBuilder<VerificationResult> {        
+        var path = "/api/v2/routing/email/domains/{domainId}/verification"
+        let domainIdPreEscape = "\(domainId)"
+        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<VerificationResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -14664,9 +15054,9 @@ open class RoutingAPI {
      - parameter body: (body)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putRoutingEmailDomainRouteIdentityresolution(domainName: String, routeId: String, body: IdentityResolutionConfig, completion: @escaping ((_ data: IdentityResolutionConfig?,_ error: Error?) -> Void)) {
+    open class func putRoutingEmailDomainRouteIdentityresolution(domainName: String, routeId: String, body: RouteIdentityResolutionConfig, completion: @escaping ((_ data: RouteIdentityResolutionConfig?,_ error: Error?) -> Void)) {
         let requestBuilder = putRoutingEmailDomainRouteIdentityresolutionWithRequestBuilder(domainName: domainName, routeId: routeId, body: body)
-        requestBuilder.execute { (response: Response<IdentityResolutionConfig>?, error) -> Void in
+        requestBuilder.execute { (response: Response<RouteIdentityResolutionConfig>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -14699,9 +15089,9 @@ open class RoutingAPI {
      - parameter routeId: (path) route ID 
      - parameter body: (body)  
 
-     - returns: RequestBuilder<IdentityResolutionConfig> 
+     - returns: RequestBuilder<RouteIdentityResolutionConfig> 
      */
-    open class func putRoutingEmailDomainRouteIdentityresolutionWithRequestBuilder(domainName: String, routeId: String, body: IdentityResolutionConfig) -> RequestBuilder<IdentityResolutionConfig> {        
+    open class func putRoutingEmailDomainRouteIdentityresolutionWithRequestBuilder(domainName: String, routeId: String, body: RouteIdentityResolutionConfig) -> RequestBuilder<RouteIdentityResolutionConfig> {        
         var path = "/api/v2/routing/email/domains/{domainName}/routes/{routeId}/identityresolution"
         let domainNamePreEscape = "\(domainName)"
         let domainNamePostEscape = domainNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -14714,7 +15104,7 @@ open class RoutingAPI {
 
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<IdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<RouteIdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
@@ -15203,9 +15593,9 @@ open class RoutingAPI {
      - parameter body: (body)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putRoutingSmsIdentityresolutionPhonenumber(addressId: String, body: IdentityResolutionConfig, completion: @escaping ((_ data: IdentityResolutionConfig?,_ error: Error?) -> Void)) {
+    open class func putRoutingSmsIdentityresolutionPhonenumber(addressId: String, body: SmsIdentityResolutionConfig, completion: @escaping ((_ data: SmsIdentityResolutionConfig?,_ error: Error?) -> Void)) {
         let requestBuilder = putRoutingSmsIdentityresolutionPhonenumberWithRequestBuilder(addressId: addressId, body: body)
-        requestBuilder.execute { (response: Response<IdentityResolutionConfig>?, error) -> Void in
+        requestBuilder.execute { (response: Response<SmsIdentityResolutionConfig>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -15237,9 +15627,9 @@ open class RoutingAPI {
      - parameter addressId: (path) Address ID 
      - parameter body: (body)  
 
-     - returns: RequestBuilder<IdentityResolutionConfig> 
+     - returns: RequestBuilder<SmsIdentityResolutionConfig> 
      */
-    open class func putRoutingSmsIdentityresolutionPhonenumberWithRequestBuilder(addressId: String, body: IdentityResolutionConfig) -> RequestBuilder<IdentityResolutionConfig> {        
+    open class func putRoutingSmsIdentityresolutionPhonenumberWithRequestBuilder(addressId: String, body: SmsIdentityResolutionConfig) -> RequestBuilder<SmsIdentityResolutionConfig> {        
         var path = "/api/v2/routing/sms/identityresolution/phonenumbers/{addressId}"
         let addressIdPreEscape = "\(addressId)"
         let addressIdPostEscape = addressIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -15249,7 +15639,7 @@ open class RoutingAPI {
 
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<IdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SmsIdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

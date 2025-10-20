@@ -1177,14 +1177,21 @@ open class SocialMediaAPI {
 
     
     
+    
+    public enum Expand_getSocialmediaEscalationrule: String { 
+        case dataingestionrule = "dataIngestionRule"
+    }
+    
+    
     /**
      Get a single escalation rule.
      
      - parameter escalationRuleId: (path) escalationRuleId 
+     - parameter expand: (query) which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSocialmediaEscalationrule(escalationRuleId: String, completion: @escaping ((_ data: EscalationRuleResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getSocialmediaEscalationruleWithRequestBuilder(escalationRuleId: escalationRuleId)
+    open class func getSocialmediaEscalationrule(escalationRuleId: String, expand: Expand_getSocialmediaEscalationrule? = nil, completion: @escaping ((_ data: EscalationRuleResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSocialmediaEscalationruleWithRequestBuilder(escalationRuleId: escalationRuleId, expand: expand)
         requestBuilder.execute { (response: Response<EscalationRuleResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -1225,10 +1232,11 @@ open class SocialMediaAPI {
 }, statusCode=200}]
      
      - parameter escalationRuleId: (path) escalationRuleId 
+     - parameter expand: (query) which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<EscalationRuleResponse> 
      */
-    open class func getSocialmediaEscalationruleWithRequestBuilder(escalationRuleId: String) -> RequestBuilder<EscalationRuleResponse> {        
+    open class func getSocialmediaEscalationruleWithRequestBuilder(escalationRuleId: String, expand: Expand_getSocialmediaEscalationrule? = nil) -> RequestBuilder<EscalationRuleResponse> {        
         var path = "/api/v2/socialmedia/escalationrules/{escalationRuleId}"
         let escalationRuleIdPreEscape = "\(escalationRuleId)"
         let escalationRuleIdPostEscape = escalationRuleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1236,7 +1244,10 @@ open class SocialMediaAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand?.rawValue
+        ])
 
         let requestBuilder: RequestBuilder<EscalationRuleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

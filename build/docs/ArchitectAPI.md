@@ -2083,7 +2083,7 @@ ArchitectAPI.getArchitectIvr(ivrId: ivrId) { (response, error) in
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) getArchitectIvrIdentityresolution(ivrId)
+> [IVRIdentityResolutionConfig](IVRIdentityResolutionConfig) getArchitectIvrIdentityresolution(ivrId)
 
 Get an IVR IdentityResolutionConfig.
 
@@ -2127,7 +2127,7 @@ ArchitectAPI.getArchitectIvrIdentityresolution(ivrId: ivrId) { (response, error)
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**IVRIdentityResolutionConfig**](IVRIdentityResolutionConfig)
 
 
 ## getArchitectIvrs
@@ -7393,7 +7393,7 @@ ArchitectAPI.putArchitectIvr(ivrId: ivrId, body: body) { (response, error) in
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) putArchitectIvrIdentityresolution(ivrId, body)
+> [IVRIdentityResolutionConfig](IVRIdentityResolutionConfig) putArchitectIvrIdentityresolution(ivrId, body)
 
 Update an IVR IdentityResolutionConfig.
 
@@ -7415,7 +7415,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let ivrId: String = "" // IVR id
-let body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // 
+let body: IVRIdentityResolutionConfig = new IVRIdentityResolutionConfig(...) // 
 
 // Code example
 ArchitectAPI.putArchitectIvrIdentityresolution(ivrId: ivrId, body: body) { (response, error) in
@@ -7434,12 +7434,12 @@ ArchitectAPI.putArchitectIvrIdentityresolution(ivrId: ivrId, body: body) { (resp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ivrId** | **String**| IVR id | |
-| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  | |
+| **body** | [**IVRIdentityResolutionConfig**](IVRIdentityResolutionConfig)|  | |
 
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**IVRIdentityResolutionConfig**](IVRIdentityResolutionConfig)
 
 
 ## putArchitectPrompt
@@ -8087,4 +8087,4 @@ ArchitectAPI.putFlowsOutcome(flowOutcomeId: flowOutcomeId, body: body) { (respon
 [**Operation**](Operation)
 
 
-_PureCloudPlatformClientV2@177.0.0_
+_PureCloudPlatformClientV2@178.0.0_

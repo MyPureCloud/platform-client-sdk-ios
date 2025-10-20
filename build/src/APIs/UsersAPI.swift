@@ -20303,34 +20303,34 @@ open class UsersAPI {
   } ],
   "aggregations" : [ {
     "metric" : "metric",
-    "count" : 0,
+    "count" : 2,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     } ]
   }, {
     "metric" : "metric",
-    "count" : 0,
+    "count" : 2,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     } ]
   } ]

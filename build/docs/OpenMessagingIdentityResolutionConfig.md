@@ -7,11 +7,11 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
-| **division** | [**WritableStarrableDivision**](WritableStarrableDivision) | The division to which this entity belongs. | [optional] |
+| **division** | [**WritableStarrableDivision**](WritableStarrableDivision) | The division to use when performing identity resolution. | [optional] |
 | **resolveIdentities** | **Bool** | Whether the channel should resolve identities | |
 | **externalSource** | [**IdentityResolutionExternalSource**](IdentityResolutionExternalSource) | The external source used for stitching this channel. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@177.0.0_
+_PureCloudPlatformClientV2@178.0.0_

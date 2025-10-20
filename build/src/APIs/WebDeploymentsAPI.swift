@@ -1341,7 +1341,7 @@ open class WebDeploymentsAPI {
     
     
     /**
-     Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+     Exchange an oAuth code (obtained using the Authorization Code Flow or Implicit flow) for a JWT that can be used by webdeployments.
      
      - parameter body: (body) webDeploymentsOAuthExchangeRequest 
      - parameter completion: completion handler to receive the data and the error objects
@@ -1365,7 +1365,7 @@ open class WebDeploymentsAPI {
     }
 
     /**
-     Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+     Exchange an oAuth code (obtained using the Authorization Code Flow or Implicit flow) for a JWT that can be used by webdeployments.
      - POST /api/v2/webdeployments/token/oauthcodegrantjwtexchange
      - examples: [{contentType=application/json, example={
   "jwt" : "jwt",

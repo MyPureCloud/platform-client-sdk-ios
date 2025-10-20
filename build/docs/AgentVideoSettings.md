@@ -9,9 +9,10 @@ The settings for Agent Video
 |------------ | ------------- | ------------- | -------------|
 | **allowCamera** | **Bool** | whether or not agent camera is allowed | [optional] |
 | **allowScreenShare** | **Bool** | whether or not agent screen share is allowed | [optional] |
+| **allowMicrophone** | **Bool** | whether or not agent microphone is allowed | [optional] |
 | **background** | **String** | background for agent | [optional] |
 | **backgroundImage** | [**BackgroundImageSettings**](BackgroundImageSettings) | background image settings for agent | [optional] |
 
 
 
-_PureCloudPlatformClientV2@177.0.0_
+_PureCloudPlatformClientV2@178.0.0_

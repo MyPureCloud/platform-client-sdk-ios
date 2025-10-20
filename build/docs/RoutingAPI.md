@@ -34,9 +34,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingAvailablemediatypes**](RoutingAPI#getRoutingAvailablemediatypes) | Get available media types |
 | [**getRoutingDirectroutingbackupSettingsMe**](RoutingAPI#getRoutingDirectroutingbackupSettingsMe) | Get the user&#39;s Direct Routing Backup settings. |
 | [**getRoutingEmailDomain**](RoutingAPI#getRoutingEmailDomain) | Get domain |
+| [**getRoutingEmailDomainDkim**](RoutingAPI#getRoutingEmailDomainDkim) | Get domain dkim settings |
+| [**getRoutingEmailDomainMailfrom**](RoutingAPI#getRoutingEmailDomainMailfrom) | Get domain mail from settings |
 | [**getRoutingEmailDomainRoute**](RoutingAPI#getRoutingEmailDomainRoute) | Get a route |
 | [**getRoutingEmailDomainRouteIdentityresolution**](RoutingAPI#getRoutingEmailDomainRouteIdentityresolution) | Get a route identity resolution setting. |
 | [**getRoutingEmailDomainRoutes**](RoutingAPI#getRoutingEmailDomainRoutes) | Get routes |
+| [**getRoutingEmailDomainVerification**](RoutingAPI#getRoutingEmailDomainVerification) | Get domain verification settings |
 | [**getRoutingEmailDomains**](RoutingAPI#getRoutingEmailDomains) | Get domains |
 | [**getRoutingEmailOutboundDomain**](RoutingAPI#getRoutingEmailOutboundDomain) | Get domain |
 | [**getRoutingEmailOutboundDomainActivation**](RoutingAPI#getRoutingEmailOutboundDomainActivation) | Get activation status (cname + dkim) of an outbound domain |
@@ -115,8 +118,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsRoutingActivityQuery**](RoutingAPI#postAnalyticsRoutingActivityQuery) | Query for user activity observations |
 | [**postRoutingAssessments**](RoutingAPI#postRoutingAssessments) | Create a benefit assessment. |
 | [**postRoutingAssessmentsJobs**](RoutingAPI#postRoutingAssessmentsJobs) | Create a benefit assessment job. |
+| [**postRoutingEmailDomainDkim**](RoutingAPI#postRoutingEmailDomainDkim) | Restart domain dkim |
+| [**postRoutingEmailDomainMailfrom**](RoutingAPI#postRoutingEmailDomainMailfrom) | Set domain mail from settings |
 | [**postRoutingEmailDomainRoutes**](RoutingAPI#postRoutingEmailDomainRoutes) | Create a route |
 | [**postRoutingEmailDomainTestconnection**](RoutingAPI#postRoutingEmailDomainTestconnection) | Tests the custom SMTP server integration connection set on this ACD domain |
+| [**postRoutingEmailDomainVerification**](RoutingAPI#postRoutingEmailDomainVerification) | Restart domain verification |
 | [**postRoutingEmailDomains**](RoutingAPI#postRoutingEmailDomains) | Create a domain |
 | [**postRoutingEmailOutboundDomains**](RoutingAPI#postRoutingEmailOutboundDomains) | Create a domain |
 | [**postRoutingEmailOutboundDomainsSimulated**](RoutingAPI#postRoutingEmailOutboundDomainsSimulated) | Create a simulated domain |
@@ -1644,6 +1650,106 @@ RoutingAPI.getRoutingEmailDomain(domainId: domainId, expand: expand) { (response
 [**InboundDomain**](InboundDomain)
 
 
+## getRoutingEmailDomainDkim
+
+
+
+> [VerificationResult](VerificationResult) getRoutingEmailDomainDkim(domainId)
+
+Get domain dkim settings
+
+
+
+Wraps GET /api/v2/routing/email/domains/{domainId}/dkim  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // domain ID
+
+// Code example
+RoutingAPI.getRoutingEmailDomainDkim(domainId: domainId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingEmailDomainDkim was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| domain ID | |
+
+
+### Return type
+
+[**VerificationResult**](VerificationResult)
+
+
+## getRoutingEmailDomainMailfrom
+
+
+
+> [MailFromResult](MailFromResult) getRoutingEmailDomainMailfrom(domainId)
+
+Get domain mail from settings
+
+
+
+Wraps GET /api/v2/routing/email/domains/{domainId}/mailfrom  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // domain ID
+
+// Code example
+RoutingAPI.getRoutingEmailDomainMailfrom(domainId: domainId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingEmailDomainMailfrom was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| domain ID | |
+
+
+### Return type
+
+[**MailFromResult**](MailFromResult)
+
+
 ## getRoutingEmailDomainRoute
 
 
@@ -1702,7 +1808,7 @@ RoutingAPI.getRoutingEmailDomainRoute(domainName: domainName, routeId: routeId, 
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) getRoutingEmailDomainRouteIdentityresolution(domainName, routeId)
+> [RouteIdentityResolutionConfig](RouteIdentityResolutionConfig) getRoutingEmailDomainRouteIdentityresolution(domainName, routeId)
 
 Get a route identity resolution setting.
 
@@ -1748,7 +1854,7 @@ RoutingAPI.getRoutingEmailDomainRouteIdentityresolution(domainName: domainName, 
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**RouteIdentityResolutionConfig**](RouteIdentityResolutionConfig)
 
 
 ## getRoutingEmailDomainRoutes
@@ -1807,6 +1913,56 @@ RoutingAPI.getRoutingEmailDomainRoutes(domainName: domainName, pageSize: pageSiz
 ### Return type
 
 [**InboundRouteEntityListing**](InboundRouteEntityListing)
+
+
+## getRoutingEmailDomainVerification
+
+
+
+> [VerificationResult](VerificationResult) getRoutingEmailDomainVerification(domainId)
+
+Get domain verification settings
+
+
+
+Wraps GET /api/v2/routing/email/domains/{domainId}/verification  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // domain ID
+
+// Code example
+RoutingAPI.getRoutingEmailDomainVerification(domainId: domainId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingEmailDomainVerification was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| domain ID | |
+
+
+### Return type
+
+[**VerificationResult**](VerificationResult)
 
 
 ## getRoutingEmailDomains
@@ -3987,7 +4143,7 @@ RoutingAPI.getRoutingSmsAvailablephonenumbers(countryCode: countryCode, phoneNum
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) getRoutingSmsIdentityresolutionPhonenumber(addressId)
+> [SmsIdentityResolutionConfig](SmsIdentityResolutionConfig) getRoutingSmsIdentityresolutionPhonenumber(addressId)
 
 Get a SMS identity resolution settings.
 
@@ -4031,7 +4187,7 @@ RoutingAPI.getRoutingSmsIdentityresolutionPhonenumber(addressId: addressId) { (r
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**SmsIdentityResolutionConfig**](SmsIdentityResolutionConfig)
 
 
 ## getRoutingSmsPhonenumber
@@ -6013,6 +6169,108 @@ RoutingAPI.postRoutingAssessmentsJobs(body: body) { (response, error) in
 [**BenefitAssessmentJob**](BenefitAssessmentJob)
 
 
+## postRoutingEmailDomainDkim
+
+
+
+> [VerificationResult](VerificationResult) postRoutingEmailDomainDkim(domainId)
+
+Restart domain dkim
+
+
+
+Wraps POST /api/v2/routing/email/domains/{domainId}/dkim  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // domain ID
+
+// Code example
+RoutingAPI.postRoutingEmailDomainDkim(domainId: domainId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postRoutingEmailDomainDkim was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| domain ID | |
+
+
+### Return type
+
+[**VerificationResult**](VerificationResult)
+
+
+## postRoutingEmailDomainMailfrom
+
+
+
+> [MailFromResult](MailFromResult) postRoutingEmailDomainMailfrom(domainId, body)
+
+Set domain mail from settings
+
+
+
+Wraps POST /api/v2/routing/email/domains/{domainId}/mailfrom  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // domain ID
+let body: MailFromResult = new MailFromResult(...) // Mail From Settings
+
+// Code example
+RoutingAPI.postRoutingEmailDomainMailfrom(domainId: domainId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postRoutingEmailDomainMailfrom was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| domain ID | |
+| **body** | [**MailFromResult**](MailFromResult)| Mail From Settings | |
+
+
+### Return type
+
+[**MailFromResult**](MailFromResult)
+
+
 ## postRoutingEmailDomainRoutes
 
 
@@ -6117,6 +6375,56 @@ RoutingAPI.postRoutingEmailDomainTestconnection(domainId: domainId, body: body) 
 ### Return type
 
 [**TestMessage**](TestMessage)
+
+
+## postRoutingEmailDomainVerification
+
+
+
+> [VerificationResult](VerificationResult) postRoutingEmailDomainVerification(domainId)
+
+Restart domain verification
+
+
+
+Wraps POST /api/v2/routing/email/domains/{domainId}/verification  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // domain ID
+
+// Code example
+RoutingAPI.postRoutingEmailDomainVerification(domainId: domainId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postRoutingEmailDomainVerification was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| domain ID | |
+
+
+### Return type
+
+[**VerificationResult**](VerificationResult)
 
 
 ## postRoutingEmailDomains
@@ -7194,7 +7502,7 @@ RoutingAPI.putRoutingEmailDomainRoute(domainName: domainName, routeId: routeId, 
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) putRoutingEmailDomainRouteIdentityresolution(domainName, routeId, body)
+> [RouteIdentityResolutionConfig](RouteIdentityResolutionConfig) putRoutingEmailDomainRouteIdentityresolution(domainName, routeId, body)
 
 Update identity resolution settings for a route.
 
@@ -7217,7 +7525,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let domainName: String = "" // email domain
 let routeId: String = "" // route ID
-let body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // 
+let body: RouteIdentityResolutionConfig = new RouteIdentityResolutionConfig(...) // 
 
 // Code example
 RoutingAPI.putRoutingEmailDomainRouteIdentityresolution(domainName: domainName, routeId: routeId, body: body) { (response, error) in
@@ -7237,12 +7545,12 @@ RoutingAPI.putRoutingEmailDomainRouteIdentityresolution(domainName: domainName, 
 | ------------- | ------------- | ------------- | ------------- |
 | **domainName** | **String**| email domain | |
 | **routeId** | **String**| route ID | |
-| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  | |
+| **body** | [**RouteIdentityResolutionConfig**](RouteIdentityResolutionConfig)|  | |
 
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**RouteIdentityResolutionConfig**](RouteIdentityResolutionConfig)
 
 
 ## putRoutingEmailOutboundDomainActivation
@@ -7556,7 +7864,7 @@ RoutingAPI.putRoutingSettingsTranscription(body: body) { (response, error) in
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) putRoutingSmsIdentityresolutionPhonenumber(addressId, body)
+> [SmsIdentityResolutionConfig](SmsIdentityResolutionConfig) putRoutingSmsIdentityresolutionPhonenumber(addressId, body)
 
 Update an SMS identity resolution settings.
 
@@ -7578,7 +7886,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let addressId: String = "" // Address ID
-let body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // 
+let body: SmsIdentityResolutionConfig = new SmsIdentityResolutionConfig(...) // 
 
 // Code example
 RoutingAPI.putRoutingSmsIdentityresolutionPhonenumber(addressId: addressId, body: body) { (response, error) in
@@ -7597,12 +7905,12 @@ RoutingAPI.putRoutingSmsIdentityresolutionPhonenumber(addressId: addressId, body
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **addressId** | **String**| Address ID | |
-| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  | |
+| **body** | [**SmsIdentityResolutionConfig**](SmsIdentityResolutionConfig)|  | |
 
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**SmsIdentityResolutionConfig**](SmsIdentityResolutionConfig)
 
 
 ## putRoutingUserDirectroutingbackupSettings
@@ -7969,4 +8277,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@177.0.0_
+_PureCloudPlatformClientV2@178.0.0_

@@ -4663,9 +4663,9 @@ open class ArchitectAPI {
      - parameter ivrId: (path) IVR id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArchitectIvrIdentityresolution(ivrId: String, completion: @escaping ((_ data: IdentityResolutionConfig?,_ error: Error?) -> Void)) {
+    open class func getArchitectIvrIdentityresolution(ivrId: String, completion: @escaping ((_ data: IVRIdentityResolutionConfig?,_ error: Error?) -> Void)) {
         let requestBuilder = getArchitectIvrIdentityresolutionWithRequestBuilder(ivrId: ivrId)
-        requestBuilder.execute { (response: Response<IdentityResolutionConfig>?, error) -> Void in
+        requestBuilder.execute { (response: Response<IVRIdentityResolutionConfig>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -4696,9 +4696,9 @@ open class ArchitectAPI {
      
      - parameter ivrId: (path) IVR id 
 
-     - returns: RequestBuilder<IdentityResolutionConfig> 
+     - returns: RequestBuilder<IVRIdentityResolutionConfig> 
      */
-    open class func getArchitectIvrIdentityresolutionWithRequestBuilder(ivrId: String) -> RequestBuilder<IdentityResolutionConfig> {        
+    open class func getArchitectIvrIdentityresolutionWithRequestBuilder(ivrId: String) -> RequestBuilder<IVRIdentityResolutionConfig> {        
         var path = "/api/v2/architect/ivrs/{ivrId}/identityresolution"
         let ivrIdPreEscape = "\(ivrId)"
         let ivrIdPostEscape = ivrIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4708,7 +4708,7 @@ open class ArchitectAPI {
         
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<IdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<IVRIdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -34588,9 +34588,9 @@ open class ArchitectAPI {
      - parameter body: (body)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putArchitectIvrIdentityresolution(ivrId: String, body: IdentityResolutionConfig, completion: @escaping ((_ data: IdentityResolutionConfig?,_ error: Error?) -> Void)) {
+    open class func putArchitectIvrIdentityresolution(ivrId: String, body: IVRIdentityResolutionConfig, completion: @escaping ((_ data: IVRIdentityResolutionConfig?,_ error: Error?) -> Void)) {
         let requestBuilder = putArchitectIvrIdentityresolutionWithRequestBuilder(ivrId: ivrId, body: body)
-        requestBuilder.execute { (response: Response<IdentityResolutionConfig>?, error) -> Void in
+        requestBuilder.execute { (response: Response<IVRIdentityResolutionConfig>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -34622,9 +34622,9 @@ open class ArchitectAPI {
      - parameter ivrId: (path) IVR id 
      - parameter body: (body)  
 
-     - returns: RequestBuilder<IdentityResolutionConfig> 
+     - returns: RequestBuilder<IVRIdentityResolutionConfig> 
      */
-    open class func putArchitectIvrIdentityresolutionWithRequestBuilder(ivrId: String, body: IdentityResolutionConfig) -> RequestBuilder<IdentityResolutionConfig> {        
+    open class func putArchitectIvrIdentityresolutionWithRequestBuilder(ivrId: String, body: IVRIdentityResolutionConfig) -> RequestBuilder<IVRIdentityResolutionConfig> {        
         var path = "/api/v2/architect/ivrs/{ivrId}/identityresolution"
         let ivrIdPreEscape = "\(ivrId)"
         let ivrIdPostEscape = ivrIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -34634,7 +34634,7 @@ open class ArchitectAPI {
 
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<IdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<IVRIdentityResolutionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

@@ -1,0 +1,19 @@
+# ContractDefinition
+
+## ContractDefinition
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **name** | **String** |  | [optional] |
+| **title** | **String** |  | [optional] |
+| **_description** | **String** |  | [optional] |
+| **type** | **[String]** |  | [optional] |
+| **pattern** | **String** |  | [optional] |
+| **items** | [**ContractItems**](ContractItems) |  | [optional] |
+| **selfUri** | **String** | The URI for this object | [optional] |
+
+
+
+_PureCloudPlatformClientV2@178.0.0_

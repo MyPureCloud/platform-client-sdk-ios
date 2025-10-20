@@ -3094,4 +3094,4 @@ RecordingAPI.putRecordingsDeletionprotection(protect: protect, body: body) { (er
 `nil` (empty response body)
 
 
-_PureCloudPlatformClientV2@177.0.0_
+_PureCloudPlatformClientV2@178.0.0_

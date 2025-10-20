@@ -23,6 +23,7 @@ docs/ActionAggregateQueryFilter.md
 docs/ActionAggregateQueryPredicate.md
 docs/ActionAggregateQueryResponse.md
 docs/ActionAggregationQuery.md
+docs/ActionAggregationSort.md
 docs/ActionAggregationView.md
 docs/ActionCertificate.md
 docs/ActionCertificateListing.md
@@ -128,6 +129,7 @@ docs/AgentCopilotAggregateQueryFilter.md
 docs/AgentCopilotAggregateQueryPredicate.md
 docs/AgentCopilotAggregateQueryResponse.md
 docs/AgentCopilotAggregationQuery.md
+docs/AgentCopilotAggregationSort.md
 docs/AgentCopilotAggregationView.md
 docs/AgentCountRange.md
 docs/AgentDirectRoutingBackupSettings.md
@@ -271,6 +273,7 @@ docs/AppEventResponseSession.md
 docs/AppendToDncActionSettings.md
 docs/AppleAuthentication.md
 docs/AppleIMessageApp.md
+docs/AppleIdentityResolutionConfig.md
 docs/AppleIntegration.md
 docs/AppleIntegrationEntityListing.md
 docs/AppleIntegrationRequest.md
@@ -316,8 +319,6 @@ docs/ArchitectSystemPromptResourceNotificationSystemPromptResourceNotification.m
 docs/ArchiveRetention.md
 docs/ArrayNode.md
 docs/Article.md
-docs/ArticleContent.md
-docs/ArticleContentBody.md
 docs/ArticlesFilter.md
 docs/AssessmentForm.md
 docs/AssessmentFormQuestion.md
@@ -448,6 +449,7 @@ docs/BotAggregateQueryFilter.md
 docs/BotAggregateQueryPredicate.md
 docs/BotAggregateQueryResponse.md
 docs/BotAggregationQuery.md
+docs/BotAggregationSort.md
 docs/BotAggregationView.md
 docs/BotChannel.md
 docs/BotConnectorBot.md
@@ -620,6 +622,12 @@ docs/BulkUpdateShiftTradeStateResponse.md
 docs/BulkUpdateShiftTradeStateResult.md
 docs/BulkUpdateShiftTradeStateResultItem.md
 docs/Bullseye.md
+docs/BusinessRulesAPI.json
+docs/BusinessRulesAPI.md
+docs/BusinessRulesDataSchema.md
+docs/BusinessRulesDataSchemaListing.md
+docs/BusinessRulesSchemaCreateRequest.md
+docs/BusinessRulesSchemaUpdateRequest.md
 docs/BusinessUnitActivityCode.md
 docs/BusinessUnitActivityCodeListing.md
 docs/BusinessUnitListItem.md
@@ -685,6 +693,10 @@ docs/CampaignOutboundLinesAllocation.md
 docs/CampaignOutboundLinesDistribution.md
 docs/CampaignOutboundLinesReservation.md
 docs/CampaignPatchRequest.md
+docs/CampaignPerformanceData.md
+docs/CampaignPerformanceDataContactRate.md
+docs/CampaignPerformanceDataListing.md
+docs/CampaignPerformanceDataProgress.md
 docs/CampaignProgress.md
 docs/CampaignRule.md
 docs/CampaignRuleAction.md
@@ -742,7 +754,6 @@ docs/Category.md
 docs/CategoryCreateRequest.md
 docs/CategoryEntity.md
 docs/CategoryEntityListing.md
-docs/CategoryListing.md
 docs/CategoryReference.md
 docs/CategoryRequest.md
 docs/CategoryResponse.md
@@ -997,6 +1008,11 @@ docs/Context.md
 docs/ContextEntity.md
 docs/ContextIntent.md
 docs/ContextPattern.md
+docs/ContractDefinition.md
+docs/ContractItems.md
+docs/ContractJsonSchema.md
+docs/ContractPropertyDefinition.md
+docs/Contractual.md
 docs/Conversation.md
 docs/ConversationActivityData.md
 docs/ConversationActivityEntityData.md
@@ -1014,6 +1030,7 @@ docs/ConversationAggregateQueryFilter.md
 docs/ConversationAggregateQueryPredicate.md
 docs/ConversationAggregateQueryResponse.md
 docs/ConversationAggregationQuery.md
+docs/ConversationAggregationSort.md
 docs/ConversationAggregationView.md
 docs/ConversationAppSettings.md
 docs/ConversationAssociation.md
@@ -1421,6 +1438,7 @@ docs/CopilotTranscriptionConfig.md
 docs/CopyAttachmentsRequest.md
 docs/CopyBuForecastRequest.md
 docs/CopyCapacityPlanRequest.md
+docs/CopyDecisionTableRequest.md
 docs/CopyVoicemailMessage.md
 docs/CopyWorkPlan.md
 docs/CopyWorkPlanBid.md
@@ -1444,6 +1462,9 @@ docs/CreateCallbackOnConversationCommand.md
 docs/CreateCallbackResponse.md
 docs/CreateCapacityPlanStaffingGroupMetricChangeRequest.md
 docs/CreateCoachingAppointmentRequest.md
+docs/CreateDecisionTableColumnsRequest.md
+docs/CreateDecisionTableRequest.md
+docs/CreateDecisionTableRowRequest.md
 docs/CreateEmailRequest.md
 docs/CreateGeneralProgramTestPhraseDetectedPhrase.md
 docs/CreateGeneralProgramTestPhraseMatchedTranscript.md
@@ -1577,10 +1598,31 @@ docs/DatePicker.md
 docs/DatePickerAvailableDateTime.md
 docs/DateRange.md
 docs/DateRangeWithOptionalEnd.md
+docs/DecisionTable.md
+docs/DecisionTableColumnDefaultRowValue.md
+docs/DecisionTableColumns.md
+docs/DecisionTableContract.md
+docs/DecisionTableExecutionRequest.md
+docs/DecisionTableExecutionResponse.md
+docs/DecisionTableInputColumn.md
+docs/DecisionTableInputColumnExpression.md
+docs/DecisionTableInputColumnRequest.md
+docs/DecisionTableListing.md
+docs/DecisionTableOutputColumn.md
+docs/DecisionTableOutputColumnRequest.md
+docs/DecisionTableRow.md
+docs/DecisionTableRowEntityRef.md
+docs/DecisionTableRowExecutionOutput.md
+docs/DecisionTableRowListing.md
+docs/DecisionTableRowParameterValue.md
+docs/DecisionTableVersion.md
+docs/DecisionTableVersionEntity.md
+docs/DecisionTableVersionListing.md
 docs/DefaultAnswer.md
 docs/DefaultAnswersTo.md
 docs/DefaultGreetingList.md
 docs/DefaultObjective.md
+docs/Definition.md
 docs/DeletableUserReference.md
 docs/DeleteProgramResponse.md
 docs/DeleteRetention.md
@@ -1747,7 +1789,6 @@ docs/DnclistImportStatusObject.md
 docs/DnsRecordEntry.md
 docs/DoNotSendActionSettings.md
 docs/Document.md
-docs/DocumentArticle.md
 docs/DocumentAttribute.md
 docs/DocumentBody.md
 docs/DocumentBodyBlock.md
@@ -1779,7 +1820,6 @@ docs/DocumentBodyTableWithHighlight.md
 docs/DocumentBodyVideo.md
 docs/DocumentBodyVideoProperties.md
 docs/DocumentBodyWithHighlight.md
-docs/DocumentCategoryInput.md
 docs/DocumentChunkBlock.md
 docs/DocumentChunkReference.md
 docs/DocumentContentBlock.md
@@ -1787,10 +1827,8 @@ docs/DocumentContentBlockWithHighlight.md
 docs/DocumentContentHighlightIndex.md
 docs/DocumentElementLength.md
 docs/DocumentEntityListing.md
-docs/DocumentFaq.md
 docs/DocumentListContentBlock.md
 docs/DocumentListContentBlockWithHighlight.md
-docs/DocumentListing.md
 docs/DocumentQuery.md
 docs/DocumentQueryClause.md
 docs/DocumentQueryInterval.md
@@ -2159,6 +2197,7 @@ docs/FacebookDataIngestionRuleResponse.md
 docs/FacebookDataIngestionRuleVersionResponse.md
 docs/FacebookDataIngestionRuleVersionResponseEntityListing.md
 docs/FacebookId.md
+docs/FacebookIdentityResolutionConfig.md
 docs/FacebookIntegration.md
 docs/FacebookIntegrationEntityListing.md
 docs/FacebookIntegrationRequest.md
@@ -2221,6 +2260,7 @@ docs/FlowAggregateQueryFilter.md
 docs/FlowAggregateQueryPredicate.md
 docs/FlowAggregateQueryResponse.md
 docs/FlowAggregationQuery.md
+docs/FlowAggregationSort.md
 docs/FlowAggregationView.md
 docs/FlowCharacteristics.md
 docs/FlowDiagnosticInfo.md
@@ -2234,6 +2274,7 @@ docs/FlowExecutionAggregateQueryFilter.md
 docs/FlowExecutionAggregateQueryPredicate.md
 docs/FlowExecutionAggregateQueryResponse.md
 docs/FlowExecutionAggregationQuery.md
+docs/FlowExecutionAggregationSort.md
 docs/FlowExecutionAggregationView.md
 docs/FlowExecutionDataQueryResult.md
 docs/FlowExecutionLaunchRequest.md
@@ -2443,6 +2484,7 @@ docs/IVR.md
 docs/IVRDivisionView.md
 docs/IVRDivisionViewEntityListing.md
 docs/IVREntityListing.md
+docs/IVRIdentityResolutionConfig.md
 docs/IdentifierClaimRequest.md
 docs/IdentityNow.md
 docs/IdentityProvider.md
@@ -2450,7 +2492,6 @@ docs/IdentityProviderAPI.json
 docs/IdentityProviderAPI.md
 docs/IdentityProviderEntityListing.md
 docs/IdentityResolutionAutomergeConfig.md
-docs/IdentityResolutionConfig.md
 docs/IdentityResolutionExternalSource.md
 docs/IdentityResolutionQueueConfig.md
 docs/IdleEventTrigger.md
@@ -2468,10 +2509,8 @@ docs/IgnoredMinedPhraseListing.md
 docs/IgnoredMinedTopicListing.md
 docs/Image.md
 docs/ImapSettings.md
-docs/ImportError.md
 docs/ImportForecastResponse.md
 docs/ImportForecastUploadResponse.md
-docs/ImportReport.md
 docs/ImportScheduleUploadResponse.md
 docs/ImportScheduleUploadSchema.md
 docs/ImportScriptStatusResponse.md
@@ -2523,6 +2562,7 @@ docs/InstagramDataIngestionRuleResponse.md
 docs/InstagramDataIngestionRuleVersionResponse.md
 docs/InstagramDataIngestionRuleVersionResponseEntityListing.md
 docs/InstagramId.md
+docs/InstagramIdentityResolutionConfig.md
 docs/InstagramIntegration.md
 docs/InstagramIntegrationEntityListing.md
 docs/InstagramIntegrationRequest.md
@@ -2568,6 +2608,7 @@ docs/JourneyAggregateQueryFilter.md
 docs/JourneyAggregateQueryPredicate.md
 docs/JourneyAggregateQueryResponse.md
 docs/JourneyAggregationQuery.md
+docs/JourneyAggregationSort.md
 docs/JourneyAggregationView.md
 docs/JourneyApp.md
 docs/JourneyAppEventsNotificationActionMap.md
@@ -2715,6 +2756,7 @@ docs/JsonCursorSearchResponse.md
 docs/JsonNode.md
 docs/JsonNodeSearchResponse.md
 docs/JsonSchemaDocument.md
+docs/JsonSchemaWithDefinitions.md
 docs/JsonSearchResponse.md
 docs/KeyPerformanceIndicator.md
 docs/KeyPerformanceIndicatorAssessment.md
@@ -2737,6 +2779,7 @@ docs/KnowledgeAggregateQueryFilter.md
 docs/KnowledgeAggregateQueryPredicate.md
 docs/KnowledgeAggregateQueryResponse.md
 docs/KnowledgeAggregationQuery.md
+docs/KnowledgeAggregationSort.md
 docs/KnowledgeAggregationView.md
 docs/KnowledgeAnswerConfig.md
 docs/KnowledgeAnswerDocumentResponse.md
@@ -2748,23 +2791,18 @@ docs/KnowledgeBaseListing.md
 docs/KnowledgeBaseReference.md
 docs/KnowledgeBaseUpdateRequest.md
 docs/KnowledgeBaseWithDialectReference.md
-docs/KnowledgeCategory.md
-docs/KnowledgeCategoryRequest.md
 docs/KnowledgeContextReference.md
 docs/KnowledgeContextValueReference.md
 docs/KnowledgeConversationContext.md
 docs/KnowledgeConversationContextResponse.md
-docs/KnowledgeDocument.md
 docs/KnowledgeDocumentAlternative.md
 docs/KnowledgeDocumentBulkRemoveRequest.md
-docs/KnowledgeDocumentBulkRequest.md
 docs/KnowledgeDocumentBulkUpdateEntity.md
 docs/KnowledgeDocumentBulkUpdateRequest.md
 docs/KnowledgeDocumentBulkVersionAddEntity.md
 docs/KnowledgeDocumentBulkVersionAddRequest.md
 docs/KnowledgeDocumentChunkRequest.md
 docs/KnowledgeDocumentChunkResponse.md
-docs/KnowledgeDocumentContentUpload.md
 docs/KnowledgeDocumentCopy.md
 docs/KnowledgeDocumentCreateRequest.md
 docs/KnowledgeDocumentDescriptor.md
@@ -2782,7 +2820,6 @@ docs/KnowledgeDocumentQueryResult.md
 docs/KnowledgeDocumentQueryVariation.md
 docs/KnowledgeDocumentReference.md
 docs/KnowledgeDocumentReq.md
-docs/KnowledgeDocumentRequest.md
 docs/KnowledgeDocumentResponse.md
 docs/KnowledgeDocumentResponseListing.md
 docs/KnowledgeDocumentSearch.md
@@ -2804,7 +2841,6 @@ docs/KnowledgeExportJobDocumentsFilter.md
 docs/KnowledgeExportJobFilter.md
 docs/KnowledgeExportJobRequest.md
 docs/KnowledgeExportJobResponse.md
-docs/KnowledgeExtendedCategory.md
 docs/KnowledgeGroupStatistics.md
 docs/KnowledgeGuestAnswerDocumentResponse.md
 docs/KnowledgeGuestAnswerDocumentsResponse.md
@@ -2826,7 +2862,6 @@ docs/KnowledgeGuestSearchDocumentResponse.md
 docs/KnowledgeGuestSession.md
 docs/KnowledgeGuestSessionApp.md
 docs/KnowledgeGuestSessionContext.md
-docs/KnowledgeImport.md
 docs/KnowledgeImportJobError.md
 docs/KnowledgeImportJobReport.md
 docs/KnowledgeImportJobRequest.md
@@ -2847,16 +2882,12 @@ docs/KnowledgeParseJobResponse.md
 docs/KnowledgeParseRecord.md
 docs/KnowledgeSearchClientApplication.md
 docs/KnowledgeSearchDocumentResponse.md
-docs/KnowledgeSearchDocumentV1.md
-docs/KnowledgeSearchRequest.md
-docs/KnowledgeSearchResponse.md
 docs/KnowledgeSuggestionConfig.md
 docs/KnowledgeSyncJobReport.md
 docs/KnowledgeSyncJobRequest.md
 docs/KnowledgeSyncJobResponse.md
 docs/KnowledgeSyncJobStatistics.md
 docs/KnowledgeSyncRequest.md
-docs/KnowledgeTraining.md
 docs/KpiResult.md
 docs/Label.md
 docs/LabelCreateRequest.md
@@ -3016,6 +3047,7 @@ docs/ListedDictionaryFeedback.md
 docs/ListedProgram.md
 docs/ListedTopic.md
 docs/Listing.md
+docs/Literal.md
 docs/LocalDateRange.md
 docs/LocalEncryptionConfiguration.md
 docs/LocalEncryptionKeyRequest.md
@@ -3140,6 +3172,7 @@ docs/MessagingEndTransferEvent.md
 docs/MessagingExternalEstablishedEvent.md
 docs/MessagingFlowEstablishedEvent.md
 docs/MessagingHoldUpdatedEvent.md
+docs/MessagingIdentityResolutionConfig.md
 docs/MessagingInitialConfiguration.md
 docs/MessagingIntegration.md
 docs/MessagingIntegrationEntityListing.md
@@ -3438,6 +3471,7 @@ docs/OutboundPreviewCampaignPostContactOutboundPreviewCampaignPostContactEvent.m
 docs/OutboundPreviewCampaignPostContactVoiceAttributes.md
 docs/OutboundPreviewCampaignPreContactOutboundPreviewCampaignPreContactEvent.md
 docs/OutboundPreviewCampaignPreContactVoiceAttributes.md
+docs/OutboundQueueIdentityResolutionConfig.md
 docs/OutboundRoute.md
 docs/OutboundRouteBase.md
 docs/OutboundRouteBaseEntityListing.md
@@ -3465,6 +3499,7 @@ docs/OutcomeRequest.md
 docs/OutcomeScore.md
 docs/OutcomeScoresResult.md
 docs/OutlierInfo.md
+docs/OutputValue.md
 docs/OverallBestPoints.md
 docs/OverallBestPointsItem.md
 docs/OverrideDate.md
@@ -3646,6 +3681,7 @@ docs/PromptAssetCreate.md
 docs/PromptAssetEntityListing.md
 docs/PromptEntityListing.md
 docs/PropertyChange.md
+docs/PropertyDefinition.md
 docs/PropertyIndexRequest.md
 docs/ProvisionInfo.md
 docs/PublishDraftInput.md
@@ -3666,6 +3702,7 @@ docs/PureEngage.md
 docs/PushDeviceInsertRequest.md
 docs/PushDeviceUpdateRequest.md
 docs/PushIntegration.md
+docs/PutDecisionTableRowRequest.md
 docs/QMAuditQueryRequest.md
 docs/QualityAPI.json
 docs/QualityAPI.md
@@ -4018,6 +4055,7 @@ docs/RateLimitAggregateQueryFilter.md
 docs/RateLimitAggregateQueryPredicate.md
 docs/RateLimitAggregateQueryResponse.md
 docs/RateLimitAggregationQuery.md
+docs/RateLimitAggregationSort.md
 docs/RateLimitAggregationView.md
 docs/Reaction.md
 docs/RealTimeAdherenceExplanation.md
@@ -4135,6 +4173,7 @@ docs/ResolutionAggregateQueryFilter.md
 docs/ResolutionAggregateQueryPredicate.md
 docs/ResolutionAggregateQueryResponse.md
 docs/ResolutionAggregationQuery.md
+docs/ResolutionAggregationSort.md
 docs/ResolutionAggregationView.md
 docs/ResolutionDetailQueryClause.md
 docs/ResolutionDetailQueryFilter.md
@@ -4164,7 +4203,6 @@ docs/ResponseSubstitution.md
 docs/ResponseText.md
 docs/RestErrorDetail.md
 docs/RestorePresenceSettings.md
-docs/ResultCounters.md
 docs/RetentionDuration.md
 docs/ReverseWhitepagesLookupResult.md
 docs/ReviewAssessmentResults.md
@@ -4178,6 +4216,7 @@ docs/RoomParticipant.md
 docs/RoomParticipantResponse.md
 docs/RoomParticipantsResponse.md
 docs/RoomUpdateRequest.md
+docs/RouteIdentityResolutionConfig.md
 docs/RoutePathRequest.md
 docs/RoutePathResponse.md
 docs/RoutingAPI.json
@@ -4204,6 +4243,8 @@ docs/RoutingStatusDetailQueryClause.md
 docs/RoutingStatusDetailQueryFilter.md
 docs/RoutingStatusDetailQueryPredicate.md
 docs/RoutingTransferEvent.md
+docs/RowSearchFilter.md
+docs/RowSearchPredicate.md
 docs/RuleConfig.md
 docs/RuleEngineConfig.md
 docs/RuleSet.md
@@ -4296,6 +4337,7 @@ docs/SearchAPI.md
 docs/SearchAggregation.md
 docs/SearchAlternativeShiftTradesRequest.md
 docs/SearchCriteria.md
+docs/SearchDecisionTableRowsRequest.md
 docs/SearchRequest.md
 docs/SearchShiftTradeResponse.md
 docs/SearchShiftTradesRequest.md
@@ -4420,6 +4462,7 @@ docs/SmsAddressEntityListing.md
 docs/SmsAddressProvision.md
 docs/SmsAvailablePhoneNumber.md
 docs/SmsConfig.md
+docs/SmsIdentityResolutionConfig.md
 docs/SmsPhoneNumber.md
 docs/SmsPhoneNumberEntityListing.md
 docs/SmsPhoneNumberImport.md
@@ -4534,6 +4577,7 @@ docs/SummaryAggregateQueryFilter.md
 docs/SummaryAggregateQueryPredicate.md
 docs/SummaryAggregateQueryResponse.md
 docs/SummaryAggregationQuery.md
+docs/SummaryAggregationSort.md
 docs/SummaryAggregationView.md
 docs/SummaryGenerationConfig.md
 docs/SummarySetting.md
@@ -4573,6 +4617,7 @@ docs/SurveyAggregateQueryFilter.md
 docs/SurveyAggregateQueryPredicate.md
 docs/SurveyAggregateQueryResponse.md
 docs/SurveyAggregationQuery.md
+docs/SurveyAggregationSort.md
 docs/SurveyAggregationView.md
 docs/SurveyAssignment.md
 docs/SurveyDetailQueryClause.md
@@ -4607,6 +4652,7 @@ docs/TaskManagementAggregateQueryFilter.md
 docs/TaskManagementAggregateQueryPredicate.md
 docs/TaskManagementAggregateQueryResponse.md
 docs/TaskManagementAggregationQuery.md
+docs/TaskManagementAggregationSort.md
 docs/TaskManagementAggregationView.md
 docs/TaskManagementErrorDetails.md
 docs/Team.md
@@ -4731,13 +4777,13 @@ docs/TopicPhrase.md
 docs/TopicRequest.md
 docs/TopicsEntityListing.md
 docs/TrackingSettings.md
-docs/TrainingListing.md
 docs/TranscriptAggregateDataContainer.md
 docs/TranscriptAggregateQueryClause.md
 docs/TranscriptAggregateQueryFilter.md
 docs/TranscriptAggregateQueryPredicate.md
 docs/TranscriptAggregateQueryResponse.md
 docs/TranscriptAggregationQuery.md
+docs/TranscriptAggregationSort.md
 docs/TranscriptAggregationView.md
 docs/TranscriptSearchCriteria.md
 docs/TranscriptSearchRequest.md
@@ -4831,6 +4877,7 @@ docs/TwitterDataIngestionRuleResponse.md
 docs/TwitterDataIngestionRuleVersionResponse.md
 docs/TwitterDataIngestionRuleVersionResponseEntityListing.md
 docs/TwitterId.md
+docs/TwitterIdentityResolutionConfig.md
 docs/TwitterIntegration.md
 docs/TwitterIntegrationEntityListing.md
 docs/TwitterIntegrationRequest.md
@@ -4871,6 +4918,9 @@ docs/UpdateCapacityPlanRequest.md
 docs/UpdateCoachingAppointmentRequest.md
 docs/UpdateConferenceRequest.md
 docs/UpdateContactColumnActionSettings.md
+docs/UpdateDecisionTableColumnsRequest.md
+docs/UpdateDecisionTableRequest.md
+docs/UpdateDecisionTableVersionRequest.md
 docs/UpdateDraftInput.md
 docs/UpdateManagementUnitRequest.md
 docs/UpdateMuAgentRequest.md
@@ -4883,6 +4933,7 @@ docs/UpdateNotificationResponse.md
 docs/UpdateNotificationsRequest.md
 docs/UpdateNotificationsResponse.md
 docs/UpdatePlanningGroupRequest.md
+docs/UpdateRowIndexRequest.md
 docs/UpdateScheduleUploadResponse.md
 docs/UpdateScheduleUploadSchema.md
 docs/UpdateSegmentAssignmentRequest.md
@@ -5440,6 +5491,7 @@ docs/WhatsAppDefinition.md
 docs/WhatsAppEmbeddedSignupIntegrationActivationRequest.md
 docs/WhatsAppEmbeddedSignupIntegrationRequest.md
 docs/WhatsAppId.md
+docs/WhatsAppIdentityResolutionConfig.md
 docs/WhatsAppIntegration.md
 docs/WhatsAppIntegrationEntityListing.md
 docs/WhatsAppIntegrationRequest.md
@@ -5663,6 +5715,10 @@ docs/deleteAuthorizationDivision-example.txt
 docs/deleteAuthorizationRole-example.txt
 docs/deleteAuthorizationSubjectDivisionRole-example.txt
 docs/deleteAuthorizationSubjectDivisionRole-example.txt
+docs/deleteBusinessrulesDecisiontable-example.txt
+docs/deleteBusinessrulesDecisiontableVersion-example.txt
+docs/deleteBusinessrulesDecisiontableVersionRow-example.txt
+docs/deleteBusinessrulesSchema-example.txt
 docs/deleteChatsRoomMessage-example.txt
 docs/deleteChatsRoomMessagesPin-example.txt
 docs/deleteChatsRoomParticipant-example.txt
@@ -5753,9 +5809,6 @@ docs/deleteKnowledgeKnowledgebaseDocumentVariation-example.txt
 docs/deleteKnowledgeKnowledgebaseExportJob-example.txt
 docs/deleteKnowledgeKnowledgebaseImportJob-example.txt
 docs/deleteKnowledgeKnowledgebaseLabel-example.txt
-docs/deleteKnowledgeKnowledgebaseLanguageCategory-example.txt
-docs/deleteKnowledgeKnowledgebaseLanguageDocument-example.txt
-docs/deleteKnowledgeKnowledgebaseLanguageDocumentsImport-example.txt
 docs/deleteKnowledgeKnowledgebaseSourcesSalesforceSourceId-example.txt
 docs/deleteKnowledgeKnowledgebaseSourcesServicenowSourceId-example.txt
 docs/deleteKnowledgeKnowledgebaseSynchronizeJob-example.txt
@@ -6053,6 +6106,17 @@ docs/getAuthorizationSubjectsMe-example.txt
 docs/getAuthorizationSubjectsRolecounts-example.txt
 docs/getBillingReportsBillableusage-example.txt
 docs/getBillingTrusteebillingoverviewTrustorOrgId-example.txt
+docs/getBusinessrulesDecisiontable-example.txt
+docs/getBusinessrulesDecisiontableVersion-example.txt
+docs/getBusinessrulesDecisiontableVersionRow-example.txt
+docs/getBusinessrulesDecisiontableVersionRows-example.txt
+docs/getBusinessrulesDecisiontableVersions-example.txt
+docs/getBusinessrulesDecisiontables-example.txt
+docs/getBusinessrulesDecisiontablesSearch-example.txt
+docs/getBusinessrulesSchema-example.txt
+docs/getBusinessrulesSchemas-example.txt
+docs/getBusinessrulesSchemasCoretype-example.txt
+docs/getBusinessrulesSchemasCoretypes-example.txt
 docs/getCarrierservicesIntegrationsEmergencylocationsMe-example.txt
 docs/getChatsMessage-example.txt
 docs/getChatsRoom-example.txt
@@ -6517,14 +6581,6 @@ docs/getKnowledgeKnowledgebaseExportJob-example.txt
 docs/getKnowledgeKnowledgebaseImportJob-example.txt
 docs/getKnowledgeKnowledgebaseLabel-example.txt
 docs/getKnowledgeKnowledgebaseLabels-example.txt
-docs/getKnowledgeKnowledgebaseLanguageCategories-example.txt
-docs/getKnowledgeKnowledgebaseLanguageCategory-example.txt
-docs/getKnowledgeKnowledgebaseLanguageDocument-example.txt
-docs/getKnowledgeKnowledgebaseLanguageDocumentUpload-example.txt
-docs/getKnowledgeKnowledgebaseLanguageDocuments-example.txt
-docs/getKnowledgeKnowledgebaseLanguageDocumentsImport-example.txt
-docs/getKnowledgeKnowledgebaseLanguageTraining-example.txt
-docs/getKnowledgeKnowledgebaseLanguageTrainings-example.txt
 docs/getKnowledgeKnowledgebaseOperations-example.txt
 docs/getKnowledgeKnowledgebaseOperationsUsersQuery-example.txt
 docs/getKnowledgeKnowledgebaseParseJob-example.txt
@@ -6785,9 +6841,12 @@ docs/getRoutingAvailablemediatypes-example.txt
 docs/getRoutingDirectroutingbackupSettingsMe-example.txt
 docs/getRoutingDirectroutingbackupSettingsMe-example.txt
 docs/getRoutingEmailDomain-example.txt
+docs/getRoutingEmailDomainDkim-example.txt
+docs/getRoutingEmailDomainMailfrom-example.txt
 docs/getRoutingEmailDomainRoute-example.txt
 docs/getRoutingEmailDomainRouteIdentityresolution-example.txt
 docs/getRoutingEmailDomainRoutes-example.txt
+docs/getRoutingEmailDomainVerification-example.txt
 docs/getRoutingEmailDomains-example.txt
 docs/getRoutingEmailOutboundDomain-example.txt
 docs/getRoutingEmailOutboundDomainActivation-example.txt
@@ -7271,6 +7330,8 @@ docs/patchAssistant-example.txt
 docs/patchAssistantQueues-example.txt
 docs/patchAuthorizationRole-example.txt
 docs/patchAuthorizationSettings-example.txt
+docs/patchBusinessrulesDecisiontable-example.txt
+docs/patchBusinessrulesDecisiontableVersion-example.txt
 docs/patchChatsRoom-example.txt
 docs/patchChatsRoomMessage-example.txt
 docs/patchChatsSettings-example.txt
@@ -7295,6 +7356,7 @@ docs/patchConversationsCallParticipant-example.txt
 docs/patchConversationsCallParticipantAttributes-example.txt
 docs/patchConversationsCallParticipantCommunication-example.txt
 docs/patchConversationsCallParticipantConsult-example.txt
+docs/patchConversationsCallParticipantUserUserId-example.txt
 docs/patchConversationsCallback-example.txt
 docs/patchConversationsCallbackParticipant-example.txt
 docs/patchConversationsCallbackParticipantAttributes-example.txt
@@ -7358,10 +7420,6 @@ docs/patchKnowledgeKnowledgebaseDocumentVariation-example.txt
 docs/patchKnowledgeKnowledgebaseDocumentsSearchSearchId-example.txt
 docs/patchKnowledgeKnowledgebaseImportJob-example.txt
 docs/patchKnowledgeKnowledgebaseLabel-example.txt
-docs/patchKnowledgeKnowledgebaseLanguageCategory-example.txt
-docs/patchKnowledgeKnowledgebaseLanguageDocument-example.txt
-docs/patchKnowledgeKnowledgebaseLanguageDocuments-example.txt
-docs/patchKnowledgeKnowledgebaseLanguageDocumentsImport-example.txt
 docs/patchKnowledgeKnowledgebaseParseJob-example.txt
 docs/patchKnowledgeKnowledgebaseSynchronizeJob-example.txt
 docs/patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup-example.txt
@@ -7574,6 +7632,15 @@ docs/postAuthorizationSubjectBulkreplace-example.txt
 docs/postAuthorizationSubjectBulkreplace-example.txt
 docs/postAuthorizationSubjectDivisionRole-example.txt
 docs/postAuthorizationSubjectDivisionRole-example.txt
+docs/postBusinessrulesDecisiontableExecute-example.txt
+docs/postBusinessrulesDecisiontableVersionCopy-example.txt
+docs/postBusinessrulesDecisiontableVersionExecute-example.txt
+docs/postBusinessrulesDecisiontableVersionRows-example.txt
+docs/postBusinessrulesDecisiontableVersionRowsSearch-example.txt
+docs/postBusinessrulesDecisiontableVersionSync-example.txt
+docs/postBusinessrulesDecisiontableVersions-example.txt
+docs/postBusinessrulesDecisiontables-example.txt
+docs/postBusinessrulesSchemas-example.txt
 docs/postCarrierservicesIntegrationsEmergencylocationsMe-example.txt
 docs/postCertificateDetails-example.txt
 docs/postChatsRoomMessages-example.txt
@@ -7839,16 +7906,8 @@ docs/postKnowledgeKnowledgebaseDocumentsVersionsBulkAdd-example.txt
 docs/postKnowledgeKnowledgebaseExportJobs-example.txt
 docs/postKnowledgeKnowledgebaseImportJobs-example.txt
 docs/postKnowledgeKnowledgebaseLabels-example.txt
-docs/postKnowledgeKnowledgebaseLanguageCategories-example.txt
-docs/postKnowledgeKnowledgebaseLanguageDocumentUploads-example.txt
-docs/postKnowledgeKnowledgebaseLanguageDocuments-example.txt
-docs/postKnowledgeKnowledgebaseLanguageDocumentsImports-example.txt
-docs/postKnowledgeKnowledgebaseLanguageTrainingPromote-example.txt
-docs/postKnowledgeKnowledgebaseLanguageTrainings-example.txt
 docs/postKnowledgeKnowledgebaseParseJobImport-example.txt
 docs/postKnowledgeKnowledgebaseParseJobs-example.txt
-docs/postKnowledgeKnowledgebaseSearch-example.txt
-docs/postKnowledgeKnowledgebaseSearch-example.txt
 docs/postKnowledgeKnowledgebaseSourcesSalesforce-example.txt
 docs/postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync-example.txt
 docs/postKnowledgeKnowledgebaseSourcesServicenow-example.txt
@@ -7918,6 +7977,7 @@ docs/postOutboundCampaignStart-example.txt
 docs/postOutboundCampaignStop-example.txt
 docs/postOutboundCampaignrules-example.txt
 docs/postOutboundCampaigns-example.txt
+docs/postOutboundCampaignsPerformanceQuery-example.txt
 docs/postOutboundCampaignsProgress-example.txt
 docs/postOutboundContactlistClear-example.txt
 docs/postOutboundContactlistContacts-example.txt
@@ -7986,8 +8046,11 @@ docs/postResponsemanagementResponses-example.txt
 docs/postResponsemanagementResponsesQuery-example.txt
 docs/postRoutingAssessments-example.txt
 docs/postRoutingAssessmentsJobs-example.txt
+docs/postRoutingEmailDomainDkim-example.txt
+docs/postRoutingEmailDomainMailfrom-example.txt
 docs/postRoutingEmailDomainRoutes-example.txt
 docs/postRoutingEmailDomainTestconnection-example.txt
+docs/postRoutingEmailDomainVerification-example.txt
 docs/postRoutingEmailDomains-example.txt
 docs/postRoutingEmailOutboundDomains-example.txt
 docs/postRoutingEmailOutboundDomainsSimulated-example.txt
@@ -8240,6 +8303,9 @@ docs/putAuthorizationRoleUsersAdd-example.txt
 docs/putAuthorizationRoleUsersRemove-example.txt
 docs/putAuthorizationRolesDefault-example.txt
 docs/putAuthorizationRolesSettings-example.txt
+docs/putBusinessrulesDecisiontableVersionPublish-example.txt
+docs/putBusinessrulesDecisiontableVersionRow-example.txt
+docs/putBusinessrulesSchema-example.txt
 docs/putChatsMessageReactions-example.txt
 docs/putChatsSettings-example.txt
 docs/putContentmanagementWorkspace-example.txt
@@ -8488,6 +8554,7 @@ src/APIs/ArchitectAPI.swift
 src/APIs/AuditAPI.swift
 src/APIs/AuthorizationAPI.swift
 src/APIs/BillingAPI.swift
+src/APIs/BusinessRulesAPI.swift
 src/APIs/CarrierServicesAPI.swift
 src/APIs/ChatAPI.swift
 src/APIs/CoachingAPI.swift
@@ -8580,6 +8647,7 @@ src/Models/ActionAggregateQueryFilter.swift
 src/Models/ActionAggregateQueryPredicate.swift
 src/Models/ActionAggregateQueryResponse.swift
 src/Models/ActionAggregationQuery.swift
+src/Models/ActionAggregationSort.swift
 src/Models/ActionAggregationView.swift
 src/Models/ActionCertificate.swift
 src/Models/ActionCertificateListing.swift
@@ -8681,6 +8749,7 @@ src/Models/AgentCopilotAggregateQueryFilter.swift
 src/Models/AgentCopilotAggregateQueryPredicate.swift
 src/Models/AgentCopilotAggregateQueryResponse.swift
 src/Models/AgentCopilotAggregationQuery.swift
+src/Models/AgentCopilotAggregationSort.swift
 src/Models/AgentCopilotAggregationView.swift
 src/Models/AgentCountRange.swift
 src/Models/AgentDirectRoutingBackupSettings.swift
@@ -8818,6 +8887,7 @@ src/Models/AppEventResponseSession.swift
 src/Models/AppendToDncActionSettings.swift
 src/Models/AppleAuthentication.swift
 src/Models/AppleIMessageApp.swift
+src/Models/AppleIdentityResolutionConfig.swift
 src/Models/AppleIntegration.swift
 src/Models/AppleIntegrationEntityListing.swift
 src/Models/AppleIntegrationRequest.swift
@@ -8861,8 +8931,6 @@ src/Models/ArchitectSystemPromptResourceNotificationSystemPromptResourceNotifica
 src/Models/ArchiveRetention.swift
 src/Models/ArrayNode.swift
 src/Models/Article.swift
-src/Models/ArticleContent.swift
-src/Models/ArticleContentBody.swift
 src/Models/ArticlesFilter.swift
 src/Models/AssessmentForm.swift
 src/Models/AssessmentFormQuestion.swift
@@ -8987,6 +9055,7 @@ src/Models/BotAggregateQueryFilter.swift
 src/Models/BotAggregateQueryPredicate.swift
 src/Models/BotAggregateQueryResponse.swift
 src/Models/BotAggregationQuery.swift
+src/Models/BotAggregationSort.swift
 src/Models/BotAggregationView.swift
 src/Models/BotChannel.swift
 src/Models/BotConnectorBot.swift
@@ -9159,6 +9228,10 @@ src/Models/BulkUpdateShiftTradeStateResponse.swift
 src/Models/BulkUpdateShiftTradeStateResult.swift
 src/Models/BulkUpdateShiftTradeStateResultItem.swift
 src/Models/Bullseye.swift
+src/Models/BusinessRulesDataSchema.swift
+src/Models/BusinessRulesDataSchemaListing.swift
+src/Models/BusinessRulesSchemaCreateRequest.swift
+src/Models/BusinessRulesSchemaUpdateRequest.swift
 src/Models/BusinessUnitActivityCode.swift
 src/Models/BusinessUnitActivityCodeListing.swift
 src/Models/BusinessUnitListItem.swift
@@ -9224,6 +9297,10 @@ src/Models/CampaignOutboundLinesAllocation.swift
 src/Models/CampaignOutboundLinesDistribution.swift
 src/Models/CampaignOutboundLinesReservation.swift
 src/Models/CampaignPatchRequest.swift
+src/Models/CampaignPerformanceData.swift
+src/Models/CampaignPerformanceDataContactRate.swift
+src/Models/CampaignPerformanceDataListing.swift
+src/Models/CampaignPerformanceDataProgress.swift
 src/Models/CampaignProgress.swift
 src/Models/CampaignRule.swift
 src/Models/CampaignRuleAction.swift
@@ -9279,7 +9356,6 @@ src/Models/Category.swift
 src/Models/CategoryCreateRequest.swift
 src/Models/CategoryEntity.swift
 src/Models/CategoryEntityListing.swift
-src/Models/CategoryListing.swift
 src/Models/CategoryReference.swift
 src/Models/CategoryRequest.swift
 src/Models/CategoryResponse.swift
@@ -9528,6 +9604,11 @@ src/Models/Context.swift
 src/Models/ContextEntity.swift
 src/Models/ContextIntent.swift
 src/Models/ContextPattern.swift
+src/Models/ContractDefinition.swift
+src/Models/ContractItems.swift
+src/Models/ContractJsonSchema.swift
+src/Models/ContractPropertyDefinition.swift
+src/Models/Contractual.swift
 src/Models/Conversation.swift
 src/Models/ConversationActivityData.swift
 src/Models/ConversationActivityEntityData.swift
@@ -9545,6 +9626,7 @@ src/Models/ConversationAggregateQueryFilter.swift
 src/Models/ConversationAggregateQueryPredicate.swift
 src/Models/ConversationAggregateQueryResponse.swift
 src/Models/ConversationAggregationQuery.swift
+src/Models/ConversationAggregationSort.swift
 src/Models/ConversationAggregationView.swift
 src/Models/ConversationAppSettings.swift
 src/Models/ConversationAssociation.swift
@@ -9950,6 +10032,7 @@ src/Models/CopilotTranscriptionConfig.swift
 src/Models/CopyAttachmentsRequest.swift
 src/Models/CopyBuForecastRequest.swift
 src/Models/CopyCapacityPlanRequest.swift
+src/Models/CopyDecisionTableRequest.swift
 src/Models/CopyVoicemailMessage.swift
 src/Models/CopyWorkPlan.swift
 src/Models/CopyWorkPlanBid.swift
@@ -9973,6 +10056,9 @@ src/Models/CreateCallbackOnConversationCommand.swift
 src/Models/CreateCallbackResponse.swift
 src/Models/CreateCapacityPlanStaffingGroupMetricChangeRequest.swift
 src/Models/CreateCoachingAppointmentRequest.swift
+src/Models/CreateDecisionTableColumnsRequest.swift
+src/Models/CreateDecisionTableRequest.swift
+src/Models/CreateDecisionTableRowRequest.swift
 src/Models/CreateEmailRequest.swift
 src/Models/CreateGeneralProgramTestPhraseDetectedPhrase.swift
 src/Models/CreateGeneralProgramTestPhraseMatchedTranscript.swift
@@ -10102,10 +10188,31 @@ src/Models/DatePicker.swift
 src/Models/DatePickerAvailableDateTime.swift
 src/Models/DateRange.swift
 src/Models/DateRangeWithOptionalEnd.swift
+src/Models/DecisionTable.swift
+src/Models/DecisionTableColumnDefaultRowValue.swift
+src/Models/DecisionTableColumns.swift
+src/Models/DecisionTableContract.swift
+src/Models/DecisionTableExecutionRequest.swift
+src/Models/DecisionTableExecutionResponse.swift
+src/Models/DecisionTableInputColumn.swift
+src/Models/DecisionTableInputColumnExpression.swift
+src/Models/DecisionTableInputColumnRequest.swift
+src/Models/DecisionTableListing.swift
+src/Models/DecisionTableOutputColumn.swift
+src/Models/DecisionTableOutputColumnRequest.swift
+src/Models/DecisionTableRow.swift
+src/Models/DecisionTableRowEntityRef.swift
+src/Models/DecisionTableRowExecutionOutput.swift
+src/Models/DecisionTableRowListing.swift
+src/Models/DecisionTableRowParameterValue.swift
+src/Models/DecisionTableVersion.swift
+src/Models/DecisionTableVersionEntity.swift
+src/Models/DecisionTableVersionListing.swift
 src/Models/DefaultAnswer.swift
 src/Models/DefaultAnswersTo.swift
 src/Models/DefaultGreetingList.swift
 src/Models/DefaultObjective.swift
+src/Models/Definition.swift
 src/Models/DeletableUserReference.swift
 src/Models/DeleteProgramResponse.swift
 src/Models/DeleteRetention.swift
@@ -10272,7 +10379,6 @@ src/Models/DnclistImportStatusObject.swift
 src/Models/DnsRecordEntry.swift
 src/Models/DoNotSendActionSettings.swift
 src/Models/Document.swift
-src/Models/DocumentArticle.swift
 src/Models/DocumentAttribute.swift
 src/Models/DocumentBody.swift
 src/Models/DocumentBodyBlock.swift
@@ -10304,7 +10410,6 @@ src/Models/DocumentBodyTableWithHighlight.swift
 src/Models/DocumentBodyVideo.swift
 src/Models/DocumentBodyVideoProperties.swift
 src/Models/DocumentBodyWithHighlight.swift
-src/Models/DocumentCategoryInput.swift
 src/Models/DocumentChunkBlock.swift
 src/Models/DocumentChunkReference.swift
 src/Models/DocumentContentBlock.swift
@@ -10312,10 +10417,8 @@ src/Models/DocumentContentBlockWithHighlight.swift
 src/Models/DocumentContentHighlightIndex.swift
 src/Models/DocumentElementLength.swift
 src/Models/DocumentEntityListing.swift
-src/Models/DocumentFaq.swift
 src/Models/DocumentListContentBlock.swift
 src/Models/DocumentListContentBlockWithHighlight.swift
-src/Models/DocumentListing.swift
 src/Models/DocumentQuery.swift
 src/Models/DocumentQueryClause.swift
 src/Models/DocumentQueryInterval.swift
@@ -10674,6 +10777,7 @@ src/Models/FacebookDataIngestionRuleResponse.swift
 src/Models/FacebookDataIngestionRuleVersionResponse.swift
 src/Models/FacebookDataIngestionRuleVersionResponseEntityListing.swift
 src/Models/FacebookId.swift
+src/Models/FacebookIdentityResolutionConfig.swift
 src/Models/FacebookIntegration.swift
 src/Models/FacebookIntegrationEntityListing.swift
 src/Models/FacebookIntegrationRequest.swift
@@ -10734,6 +10838,7 @@ src/Models/FlowAggregateQueryFilter.swift
 src/Models/FlowAggregateQueryPredicate.swift
 src/Models/FlowAggregateQueryResponse.swift
 src/Models/FlowAggregationQuery.swift
+src/Models/FlowAggregationSort.swift
 src/Models/FlowAggregationView.swift
 src/Models/FlowCharacteristics.swift
 src/Models/FlowDiagnosticInfo.swift
@@ -10747,6 +10852,7 @@ src/Models/FlowExecutionAggregateQueryFilter.swift
 src/Models/FlowExecutionAggregateQueryPredicate.swift
 src/Models/FlowExecutionAggregateQueryResponse.swift
 src/Models/FlowExecutionAggregationQuery.swift
+src/Models/FlowExecutionAggregationSort.swift
 src/Models/FlowExecutionAggregationView.swift
 src/Models/FlowExecutionDataQueryResult.swift
 src/Models/FlowExecutionLaunchRequest.swift
@@ -10944,12 +11050,12 @@ src/Models/IVR.swift
 src/Models/IVRDivisionView.swift
 src/Models/IVRDivisionViewEntityListing.swift
 src/Models/IVREntityListing.swift
+src/Models/IVRIdentityResolutionConfig.swift
 src/Models/IdentifierClaimRequest.swift
 src/Models/IdentityNow.swift
 src/Models/IdentityProvider.swift
 src/Models/IdentityProviderEntityListing.swift
 src/Models/IdentityResolutionAutomergeConfig.swift
-src/Models/IdentityResolutionConfig.swift
 src/Models/IdentityResolutionExternalSource.swift
 src/Models/IdentityResolutionQueueConfig.swift
 src/Models/IdleEventTrigger.swift
@@ -10967,10 +11073,8 @@ src/Models/IgnoredMinedPhraseListing.swift
 src/Models/IgnoredMinedTopicListing.swift
 src/Models/Image.swift
 src/Models/ImapSettings.swift
-src/Models/ImportError.swift
 src/Models/ImportForecastResponse.swift
 src/Models/ImportForecastUploadResponse.swift
-src/Models/ImportReport.swift
 src/Models/ImportScheduleUploadResponse.swift
 src/Models/ImportScheduleUploadSchema.swift
 src/Models/ImportScriptStatusResponse.swift
@@ -11020,6 +11124,7 @@ src/Models/InstagramDataIngestionRuleResponse.swift
 src/Models/InstagramDataIngestionRuleVersionResponse.swift
 src/Models/InstagramDataIngestionRuleVersionResponseEntityListing.swift
 src/Models/InstagramId.swift
+src/Models/InstagramIdentityResolutionConfig.swift
 src/Models/InstagramIntegration.swift
 src/Models/InstagramIntegrationEntityListing.swift
 src/Models/InstagramIntegrationRequest.swift
@@ -11061,6 +11166,7 @@ src/Models/JourneyAggregateQueryFilter.swift
 src/Models/JourneyAggregateQueryPredicate.swift
 src/Models/JourneyAggregateQueryResponse.swift
 src/Models/JourneyAggregationQuery.swift
+src/Models/JourneyAggregationSort.swift
 src/Models/JourneyAggregationView.swift
 src/Models/JourneyApp.swift
 src/Models/JourneyAppEventsNotificationActionMap.swift
@@ -11208,6 +11314,7 @@ src/Models/JsonCursorSearchResponse.swift
 src/Models/JsonNode.swift
 src/Models/JsonNodeSearchResponse.swift
 src/Models/JsonSchemaDocument.swift
+src/Models/JsonSchemaWithDefinitions.swift
 src/Models/JsonSearchResponse.swift
 src/Models/KeyPerformanceIndicator.swift
 src/Models/KeyPerformanceIndicatorAssessment.swift
@@ -11228,6 +11335,7 @@ src/Models/KnowledgeAggregateQueryFilter.swift
 src/Models/KnowledgeAggregateQueryPredicate.swift
 src/Models/KnowledgeAggregateQueryResponse.swift
 src/Models/KnowledgeAggregationQuery.swift
+src/Models/KnowledgeAggregationSort.swift
 src/Models/KnowledgeAggregationView.swift
 src/Models/KnowledgeAnswerConfig.swift
 src/Models/KnowledgeAnswerDocumentResponse.swift
@@ -11239,23 +11347,18 @@ src/Models/KnowledgeBaseListing.swift
 src/Models/KnowledgeBaseReference.swift
 src/Models/KnowledgeBaseUpdateRequest.swift
 src/Models/KnowledgeBaseWithDialectReference.swift
-src/Models/KnowledgeCategory.swift
-src/Models/KnowledgeCategoryRequest.swift
 src/Models/KnowledgeContextReference.swift
 src/Models/KnowledgeContextValueReference.swift
 src/Models/KnowledgeConversationContext.swift
 src/Models/KnowledgeConversationContextResponse.swift
-src/Models/KnowledgeDocument.swift
 src/Models/KnowledgeDocumentAlternative.swift
 src/Models/KnowledgeDocumentBulkRemoveRequest.swift
-src/Models/KnowledgeDocumentBulkRequest.swift
 src/Models/KnowledgeDocumentBulkUpdateEntity.swift
 src/Models/KnowledgeDocumentBulkUpdateRequest.swift
 src/Models/KnowledgeDocumentBulkVersionAddEntity.swift
 src/Models/KnowledgeDocumentBulkVersionAddRequest.swift
 src/Models/KnowledgeDocumentChunkRequest.swift
 src/Models/KnowledgeDocumentChunkResponse.swift
-src/Models/KnowledgeDocumentContentUpload.swift
 src/Models/KnowledgeDocumentCopy.swift
 src/Models/KnowledgeDocumentCreateRequest.swift
 src/Models/KnowledgeDocumentDescriptor.swift
@@ -11273,7 +11376,6 @@ src/Models/KnowledgeDocumentQueryResult.swift
 src/Models/KnowledgeDocumentQueryVariation.swift
 src/Models/KnowledgeDocumentReference.swift
 src/Models/KnowledgeDocumentReq.swift
-src/Models/KnowledgeDocumentRequest.swift
 src/Models/KnowledgeDocumentResponse.swift
 src/Models/KnowledgeDocumentResponseListing.swift
 src/Models/KnowledgeDocumentSearch.swift
@@ -11295,7 +11397,6 @@ src/Models/KnowledgeExportJobDocumentsFilter.swift
 src/Models/KnowledgeExportJobFilter.swift
 src/Models/KnowledgeExportJobRequest.swift
 src/Models/KnowledgeExportJobResponse.swift
-src/Models/KnowledgeExtendedCategory.swift
 src/Models/KnowledgeGroupStatistics.swift
 src/Models/KnowledgeGuestAnswerDocumentResponse.swift
 src/Models/KnowledgeGuestAnswerDocumentsResponse.swift
@@ -11317,7 +11418,6 @@ src/Models/KnowledgeGuestSearchDocumentResponse.swift
 src/Models/KnowledgeGuestSession.swift
 src/Models/KnowledgeGuestSessionApp.swift
 src/Models/KnowledgeGuestSessionContext.swift
-src/Models/KnowledgeImport.swift
 src/Models/KnowledgeImportJobError.swift
 src/Models/KnowledgeImportJobReport.swift
 src/Models/KnowledgeImportJobRequest.swift
@@ -11338,16 +11438,12 @@ src/Models/KnowledgeParseJobResponse.swift
 src/Models/KnowledgeParseRecord.swift
 src/Models/KnowledgeSearchClientApplication.swift
 src/Models/KnowledgeSearchDocumentResponse.swift
-src/Models/KnowledgeSearchDocumentV1.swift
-src/Models/KnowledgeSearchRequest.swift
-src/Models/KnowledgeSearchResponse.swift
 src/Models/KnowledgeSuggestionConfig.swift
 src/Models/KnowledgeSyncJobReport.swift
 src/Models/KnowledgeSyncJobRequest.swift
 src/Models/KnowledgeSyncJobResponse.swift
 src/Models/KnowledgeSyncJobStatistics.swift
 src/Models/KnowledgeSyncRequest.swift
-src/Models/KnowledgeTraining.swift
 src/Models/KpiResult.swift
 src/Models/Label.swift
 src/Models/LabelCreateRequest.swift
@@ -11499,6 +11595,7 @@ src/Models/ListedDictionaryFeedback.swift
 src/Models/ListedProgram.swift
 src/Models/ListedTopic.swift
 src/Models/Listing.swift
+src/Models/Literal.swift
 src/Models/LocalDateRange.swift
 src/Models/LocalEncryptionConfiguration.swift
 src/Models/LocalEncryptionKeyRequest.swift
@@ -11617,6 +11714,7 @@ src/Models/MessagingEndTransferEvent.swift
 src/Models/MessagingExternalEstablishedEvent.swift
 src/Models/MessagingFlowEstablishedEvent.swift
 src/Models/MessagingHoldUpdatedEvent.swift
+src/Models/MessagingIdentityResolutionConfig.swift
 src/Models/MessagingInitialConfiguration.swift
 src/Models/MessagingIntegration.swift
 src/Models/MessagingIntegrationEntityListing.swift
@@ -11902,6 +12000,7 @@ src/Models/OutboundPreviewCampaignPostContactOutboundPreviewCampaignPostContactE
 src/Models/OutboundPreviewCampaignPostContactVoiceAttributes.swift
 src/Models/OutboundPreviewCampaignPreContactOutboundPreviewCampaignPreContactEvent.swift
 src/Models/OutboundPreviewCampaignPreContactVoiceAttributes.swift
+src/Models/OutboundQueueIdentityResolutionConfig.swift
 src/Models/OutboundRoute.swift
 src/Models/OutboundRouteBase.swift
 src/Models/OutboundRouteBaseEntityListing.swift
@@ -11929,6 +12028,7 @@ src/Models/OutcomeRequest.swift
 src/Models/OutcomeScore.swift
 src/Models/OutcomeScoresResult.swift
 src/Models/OutlierInfo.swift
+src/Models/OutputValue.swift
 src/Models/OverallBestPoints.swift
 src/Models/OverallBestPointsItem.swift
 src/Models/OverrideDate.swift
@@ -12106,6 +12206,7 @@ src/Models/PromptAssetCreate.swift
 src/Models/PromptAssetEntityListing.swift
 src/Models/PromptEntityListing.swift
 src/Models/PropertyChange.swift
+src/Models/PropertyDefinition.swift
 src/Models/PropertyIndexRequest.swift
 src/Models/ProvisionInfo.swift
 src/Models/PublishDraftInput.swift
@@ -12126,6 +12227,7 @@ src/Models/PureEngage.swift
 src/Models/PushDeviceInsertRequest.swift
 src/Models/PushDeviceUpdateRequest.swift
 src/Models/PushIntegration.swift
+src/Models/PutDecisionTableRowRequest.swift
 src/Models/QMAuditQueryRequest.swift
 src/Models/QualityAuditLogMessage.swift
 src/Models/QualityAuditQueryExecutionResultsResponse.swift
@@ -12475,6 +12577,7 @@ src/Models/RateLimitAggregateQueryFilter.swift
 src/Models/RateLimitAggregateQueryPredicate.swift
 src/Models/RateLimitAggregateQueryResponse.swift
 src/Models/RateLimitAggregationQuery.swift
+src/Models/RateLimitAggregationSort.swift
 src/Models/RateLimitAggregationView.swift
 src/Models/Reaction.swift
 src/Models/RealTimeAdherenceExplanation.swift
@@ -12590,6 +12693,7 @@ src/Models/ResolutionAggregateQueryFilter.swift
 src/Models/ResolutionAggregateQueryPredicate.swift
 src/Models/ResolutionAggregateQueryResponse.swift
 src/Models/ResolutionAggregationQuery.swift
+src/Models/ResolutionAggregationSort.swift
 src/Models/ResolutionAggregationView.swift
 src/Models/ResolutionDetailQueryClause.swift
 src/Models/ResolutionDetailQueryFilter.swift
@@ -12616,7 +12720,6 @@ src/Models/ResponseSubstitution.swift
 src/Models/ResponseText.swift
 src/Models/RestErrorDetail.swift
 src/Models/RestorePresenceSettings.swift
-src/Models/ResultCounters.swift
 src/Models/RetentionDuration.swift
 src/Models/ReverseWhitepagesLookupResult.swift
 src/Models/ReviewAssessmentResults.swift
@@ -12630,6 +12733,7 @@ src/Models/RoomParticipant.swift
 src/Models/RoomParticipantResponse.swift
 src/Models/RoomParticipantsResponse.swift
 src/Models/RoomUpdateRequest.swift
+src/Models/RouteIdentityResolutionConfig.swift
 src/Models/RoutePathRequest.swift
 src/Models/RoutePathResponse.swift
 src/Models/RoutingActivityData.swift
@@ -12654,6 +12758,8 @@ src/Models/RoutingStatusDetailQueryClause.swift
 src/Models/RoutingStatusDetailQueryFilter.swift
 src/Models/RoutingStatusDetailQueryPredicate.swift
 src/Models/RoutingTransferEvent.swift
+src/Models/RowSearchFilter.swift
+src/Models/RowSearchPredicate.swift
 src/Models/RuleConfig.swift
 src/Models/RuleEngineConfig.swift
 src/Models/RuleSet.swift
@@ -12738,6 +12844,7 @@ src/Models/SdkLibrary.swift
 src/Models/SearchAggregation.swift
 src/Models/SearchAlternativeShiftTradesRequest.swift
 src/Models/SearchCriteria.swift
+src/Models/SearchDecisionTableRowsRequest.swift
 src/Models/SearchRequest.swift
 src/Models/SearchShiftTradeResponse.swift
 src/Models/SearchShiftTradesRequest.swift
@@ -12860,6 +12967,7 @@ src/Models/SmsAddressEntityListing.swift
 src/Models/SmsAddressProvision.swift
 src/Models/SmsAvailablePhoneNumber.swift
 src/Models/SmsConfig.swift
+src/Models/SmsIdentityResolutionConfig.swift
 src/Models/SmsPhoneNumber.swift
 src/Models/SmsPhoneNumberEntityListing.swift
 src/Models/SmsPhoneNumberImport.swift
@@ -12966,6 +13074,7 @@ src/Models/SummaryAggregateQueryFilter.swift
 src/Models/SummaryAggregateQueryPredicate.swift
 src/Models/SummaryAggregateQueryResponse.swift
 src/Models/SummaryAggregationQuery.swift
+src/Models/SummaryAggregationSort.swift
 src/Models/SummaryAggregationView.swift
 src/Models/SummaryGenerationConfig.swift
 src/Models/SummarySetting.swift
@@ -13005,6 +13114,7 @@ src/Models/SurveyAggregateQueryFilter.swift
 src/Models/SurveyAggregateQueryPredicate.swift
 src/Models/SurveyAggregateQueryResponse.swift
 src/Models/SurveyAggregationQuery.swift
+src/Models/SurveyAggregationSort.swift
 src/Models/SurveyAggregationView.swift
 src/Models/SurveyAssignment.swift
 src/Models/SurveyDetailQueryClause.swift
@@ -13037,6 +13147,7 @@ src/Models/TaskManagementAggregateQueryFilter.swift
 src/Models/TaskManagementAggregateQueryPredicate.swift
 src/Models/TaskManagementAggregateQueryResponse.swift
 src/Models/TaskManagementAggregationQuery.swift
+src/Models/TaskManagementAggregationSort.swift
 src/Models/TaskManagementAggregationView.swift
 src/Models/TaskManagementErrorDetails.swift
 src/Models/Team.swift
@@ -13151,13 +13262,13 @@ src/Models/TopicPhrase.swift
 src/Models/TopicRequest.swift
 src/Models/TopicsEntityListing.swift
 src/Models/TrackingSettings.swift
-src/Models/TrainingListing.swift
 src/Models/TranscriptAggregateDataContainer.swift
 src/Models/TranscriptAggregateQueryClause.swift
 src/Models/TranscriptAggregateQueryFilter.swift
 src/Models/TranscriptAggregateQueryPredicate.swift
 src/Models/TranscriptAggregateQueryResponse.swift
 src/Models/TranscriptAggregationQuery.swift
+src/Models/TranscriptAggregationSort.swift
 src/Models/TranscriptAggregationView.swift
 src/Models/TranscriptSearchCriteria.swift
 src/Models/TranscriptSearchRequest.swift
@@ -13251,6 +13362,7 @@ src/Models/TwitterDataIngestionRuleResponse.swift
 src/Models/TwitterDataIngestionRuleVersionResponse.swift
 src/Models/TwitterDataIngestionRuleVersionResponseEntityListing.swift
 src/Models/TwitterId.swift
+src/Models/TwitterIdentityResolutionConfig.swift
 src/Models/TwitterIntegration.swift
 src/Models/TwitterIntegrationEntityListing.swift
 src/Models/TwitterIntegrationRequest.swift
@@ -13291,6 +13403,9 @@ src/Models/UpdateCapacityPlanRequest.swift
 src/Models/UpdateCoachingAppointmentRequest.swift
 src/Models/UpdateConferenceRequest.swift
 src/Models/UpdateContactColumnActionSettings.swift
+src/Models/UpdateDecisionTableColumnsRequest.swift
+src/Models/UpdateDecisionTableRequest.swift
+src/Models/UpdateDecisionTableVersionRequest.swift
 src/Models/UpdateDraftInput.swift
 src/Models/UpdateManagementUnitRequest.swift
 src/Models/UpdateMuAgentRequest.swift
@@ -13303,6 +13418,7 @@ src/Models/UpdateNotificationResponse.swift
 src/Models/UpdateNotificationsRequest.swift
 src/Models/UpdateNotificationsResponse.swift
 src/Models/UpdatePlanningGroupRequest.swift
+src/Models/UpdateRowIndexRequest.swift
 src/Models/UpdateScheduleUploadResponse.swift
 src/Models/UpdateScheduleUploadSchema.swift
 src/Models/UpdateSegmentAssignmentRequest.swift
@@ -13841,6 +13957,7 @@ src/Models/WhatsAppDefinition.swift
 src/Models/WhatsAppEmbeddedSignupIntegrationActivationRequest.swift
 src/Models/WhatsAppEmbeddedSignupIntegrationRequest.swift
 src/Models/WhatsAppId.swift
+src/Models/WhatsAppIdentityResolutionConfig.swift
 src/Models/WhatsAppIntegration.swift
 src/Models/WhatsAppIntegrationEntityListing.swift
 src/Models/WhatsAppIntegrationRequest.swift

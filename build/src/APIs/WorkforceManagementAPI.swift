@@ -2210,6 +2210,13 @@ open class WorkforceManagementAPI {
   } ],
   "countsAsWorkTime" : true,
   "name" : "name",
+  "planningGroups" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "id" : "id",
   "category" : "OnQueueWork",
   "countsTowardShrinkage" : true
@@ -2293,6 +2300,13 @@ open class WorkforceManagementAPI {
     } ],
     "countsAsWorkTime" : true,
     "name" : "name",
+    "planningGroups" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "id" : "id",
     "category" : "OnQueueWork",
     "countsTowardShrinkage" : true
@@ -2315,6 +2329,13 @@ open class WorkforceManagementAPI {
     } ],
     "countsAsWorkTime" : true,
     "name" : "name",
+    "planningGroups" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "id" : "id",
     "category" : "OnQueueWork",
     "countsTowardShrinkage" : true
@@ -4710,12 +4731,14 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   } ],
+  "autoPublishApprovedTimeOffRequests" : true,
   "autoApprovalRule" : "Never",
   "enabled" : true,
   "daysBeforeStartToExpireFromWaitlist" : 0,
   "managementUnitAssociation" : "{}",
   "name" : "name",
   "countAgainstTimeOffLimits" : true,
+  "restrictedActivityCodes" : "{}",
   "id" : "id",
   "businessUnitAssociation" : "{}",
   "hrisTimeOffType" : "{}"
@@ -4794,12 +4817,14 @@ open class WorkforceManagementAPI {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
     } ],
+    "autoPublishApprovedTimeOffRequests" : true,
     "autoApprovalRule" : "Never",
     "enabled" : true,
     "daysBeforeStartToExpireFromWaitlist" : 0,
     "managementUnitAssociation" : "{}",
     "name" : "name",
     "countAgainstTimeOffLimits" : true,
+    "restrictedActivityCodes" : "{}",
     "id" : "id",
     "businessUnitAssociation" : "{}",
     "hrisTimeOffType" : "{}"
@@ -4814,12 +4839,14 @@ open class WorkforceManagementAPI {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
     } ],
+    "autoPublishApprovedTimeOffRequests" : true,
     "autoApprovalRule" : "Never",
     "enabled" : true,
     "daysBeforeStartToExpireFromWaitlist" : 0,
     "managementUnitAssociation" : "{}",
     "name" : "name",
     "countAgainstTimeOffLimits" : true,
+    "restrictedActivityCodes" : "{}",
     "id" : "id",
     "businessUnitAssociation" : "{}",
     "hrisTimeOffType" : "{}"
@@ -11579,6 +11606,13 @@ open class WorkforceManagementAPI {
   } ],
   "countsAsWorkTime" : true,
   "name" : "name",
+  "planningGroups" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "id" : "id",
   "category" : "OnQueueWork",
   "countsTowardShrinkage" : true
@@ -12205,12 +12239,14 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   } ],
+  "autoPublishApprovedTimeOffRequests" : true,
   "autoApprovalRule" : "Never",
   "enabled" : true,
   "daysBeforeStartToExpireFromWaitlist" : 0,
   "managementUnitAssociation" : "{}",
   "name" : "name",
   "countAgainstTimeOffLimits" : true,
+  "restrictedActivityCodes" : "{}",
   "id" : "id",
   "businessUnitAssociation" : "{}",
   "hrisTimeOffType" : "{}"
@@ -14919,6 +14955,13 @@ open class WorkforceManagementAPI {
   } ],
   "countsAsWorkTime" : true,
   "name" : "name",
+  "planningGroups" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "id" : "id",
   "category" : "OnQueueWork",
   "countsTowardShrinkage" : true
@@ -16489,12 +16532,14 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   } ],
+  "autoPublishApprovedTimeOffRequests" : true,
   "autoApprovalRule" : "Never",
   "enabled" : true,
   "daysBeforeStartToExpireFromWaitlist" : 0,
   "managementUnitAssociation" : "{}",
   "name" : "name",
   "countAgainstTimeOffLimits" : true,
+  "restrictedActivityCodes" : "{}",
   "id" : "id",
   "businessUnitAssociation" : "{}",
   "hrisTimeOffType" : "{}"

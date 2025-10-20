@@ -9,7 +9,8 @@ The settings for User Video
 |------------ | ------------- | ------------- | -------------|
 | **allowCamera** | **Bool** | whether or not user camera is allowed | [optional] |
 | **allowScreenShare** | **Bool** | whether or not user screen share is allowed | [optional] |
+| **allowMicrophone** | **Bool** | whether or not user microphone is allowed | [optional] |
 
 
 
-_PureCloudPlatformClientV2@177.0.0_
+_PureCloudPlatformClientV2@178.0.0_

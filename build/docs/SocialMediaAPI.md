@@ -576,7 +576,7 @@ SocialMediaAPI.getSocialmediaAnalyticsMessagesJobResults(jobId: jobId, cursor: c
 
 
 
-> [EscalationRuleResponse](EscalationRuleResponse) getSocialmediaEscalationrule(escalationRuleId)
+> [EscalationRuleResponse](EscalationRuleResponse) getSocialmediaEscalationrule(escalationRuleId, expand)
 
 Get a single escalation rule.
 
@@ -597,9 +597,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let escalationRuleId: String = "" // escalationRuleId
+let expand: SocialMediaAPI.Expand_getSocialmediaEscalationrule = SocialMediaAPI.Expand_getSocialmediaEscalationrule.enummember // which fields, if any, to expand
 
 // Code example
-SocialMediaAPI.getSocialmediaEscalationrule(escalationRuleId: escalationRuleId) { (response, error) in
+SocialMediaAPI.getSocialmediaEscalationrule(escalationRuleId: escalationRuleId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -615,6 +616,7 @@ SocialMediaAPI.getSocialmediaEscalationrule(escalationRuleId: escalationRuleId) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **escalationRuleId** | **String**| escalationRuleId | |
+| **expand** | **String**| which fields, if any, to expand | [optional]<br />**Values**: dataingestionrule ("dataIngestionRule") |
 
 
 ### Return type
@@ -2670,4 +2672,4 @@ SocialMediaAPI.putSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleI
 [**TwitterDataIngestionRuleResponse**](TwitterDataIngestionRuleResponse)
 
 
-_PureCloudPlatformClientV2@177.0.0_
+_PureCloudPlatformClientV2@178.0.0_

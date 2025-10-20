@@ -123,6 +123,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postOutboundCampaignStop**](OutboundAPI#postOutboundCampaignStop) | Stop the campaign |
 | [**postOutboundCampaignrules**](OutboundAPI#postOutboundCampaignrules) | Create Campaign Rule |
 | [**postOutboundCampaigns**](OutboundAPI#postOutboundCampaigns) | Create a campaign. |
+| [**postOutboundCampaignsPerformanceQuery**](OutboundAPI#postOutboundCampaignsPerformanceQuery) | Get performance data for a list of campaigns |
 | [**postOutboundCampaignsProgress**](OutboundAPI#postOutboundCampaignsProgress) | Get progress for a list of campaigns |
 | [**postOutboundContactlistClear**](OutboundAPI#postOutboundContactlistClear) | Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled. |
 | [**postOutboundContactlistContacts**](OutboundAPI#postOutboundContactlistContacts) | Add contacts to a contact list. |
@@ -6537,6 +6538,57 @@ OutboundAPI.postOutboundCampaigns(body: body, useMaxCallsPerAgentDecimal: useMax
 [**Campaign**](Campaign)
 
 
+## postOutboundCampaignsPerformanceQuery
+
+
+
+> [CampaignPerformanceDataListing](CampaignPerformanceDataListing) postOutboundCampaignsPerformanceQuery(body)
+
+Get performance data for a list of campaigns
+
+
+
+Wraps POST /api/v2/outbound/campaigns/performance/query  
+
+Requires ANY permissions: 
+
+* outbound:performance:view
+* outbound:campaign:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: [String] = [""] // Campaign IDs. Maximum of 50 IDs allowed.
+
+// Code example
+OutboundAPI.postOutboundCampaignsPerformanceQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.postOutboundCampaignsPerformanceQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**[String]**](String)| Campaign IDs. Maximum of 50 IDs allowed. | |
+
+
+### Return type
+
+[**CampaignPerformanceDataListing**](CampaignPerformanceDataListing)
+
+
 ## postOutboundCampaignsProgress
 
 
@@ -9285,4 +9337,4 @@ OutboundAPI.putOutboundWrapupcodemappings(body: body) { (response, error) in
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatformClientV2@177.0.0_
+_PureCloudPlatformClientV2@178.0.0_

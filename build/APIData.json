@@ -2658,7 +2658,7 @@
         "required": "true"
       }
     ],
-    "return": "IdentityResolutionConfig",
+    "return": "IVRIdentityResolutionConfig",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ivrId: String = \"\" // IVR id\n\n// Get an IVR IdentityResolutionConfig.\nGetArchitectIvrIdentityresolutionRequest.getArchitectIvrIdentityresolution(ivrId: ivrId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetArchitectIvrIdentityresolutionRequest.getArchitectIvrIdentityresolution was successful\")\n        dump(response)\n    }\n}"
   },
   "getarchitectivrs": {
@@ -5044,12 +5044,12 @@
       },
       {
         "name": "body",
-        "type": "IdentityResolutionConfig",
+        "type": "IVRIdentityResolutionConfig",
         "required": "true"
       }
     ],
-    "return": "IdentityResolutionConfig",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ivrId: String = \"\" // IVR id\nlet body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // \n\n// Update an IVR IdentityResolutionConfig.\nPutArchitectIvrIdentityresolutionRequest.putArchitectIvrIdentityresolution(ivrId: ivrId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutArchitectIvrIdentityresolutionRequest.putArchitectIvrIdentityresolution was successful\")\n        dump(response)\n    }\n}"
+    "return": "IVRIdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ivrId: String = \"\" // IVR id\nlet body: IVRIdentityResolutionConfig = new IVRIdentityResolutionConfig(...) // \n\n// Update an IVR IdentityResolutionConfig.\nPutArchitectIvrIdentityresolutionRequest.putArchitectIvrIdentityresolution(ivrId: ivrId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutArchitectIvrIdentityresolutionRequest.putArchitectIvrIdentityresolution was successful\")\n        dump(response)\n    }\n}"
   },
   "putarchitectprompt": {
     "operationId": "putarchitectprompt",
@@ -6410,6 +6410,599 @@
     ],
     "return": "TrusteeBillingOverview",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet trustorOrgId: String = \"\" // The organization ID of the trustor (customer) organization.\nlet billingPeriodIndex: Int = 0 // 0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on.\n\n// Get the billing overview for an organization that is managed by a partner.\nGetBillingTrusteebillingoverviewTrustorOrgIdRequest.getBillingTrusteebillingoverviewTrustorOrgId(trustorOrgId: trustorOrgId, billingPeriodIndex: billingPeriodIndex) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetBillingTrusteebillingoverviewTrustorOrgIdRequest.getBillingTrusteebillingoverviewTrustorOrgId was successful\")\n        dump(response)\n    }\n}"
+  },
+  "deletebusinessrulesdecisiontable": {
+    "operationId": "deletebusinessrulesdecisiontable",
+    "functionName": "deleteBusinessrulesDecisiontable",
+    "signature": "deleteBusinessrulesDecisiontable(tableId, forceDelete)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "forceDelete",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\nlet forceDelete: Bool = true // Force delete decision table (under certain conditions)\n\n// Delete a decision table\nDeleteBusinessrulesDecisiontableRequest.deleteBusinessrulesDecisiontable(tableId: tableId, forceDelete: forceDelete) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteBusinessrulesDecisiontableRequest.deleteBusinessrulesDecisiontable was successful\")\n    }\n}"
+  },
+  "deletebusinessrulesdecisiontableversion": {
+    "operationId": "deletebusinessrulesdecisiontableversion",
+    "functionName": "deleteBusinessrulesDecisiontableVersion",
+    "signature": "deleteBusinessrulesDecisiontableVersion(tableId, tableVersion)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "tableVersion",
+        "type": "Int",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\nlet tableVersion: Int = 0 // Table Version\n\n// Delete a decision table version\nDeleteBusinessrulesDecisiontableVersionRequest.deleteBusinessrulesDecisiontableVersion(tableId: tableId, tableVersion: tableVersion) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteBusinessrulesDecisiontableVersionRequest.deleteBusinessrulesDecisiontableVersion was successful\")\n    }\n}"
+  },
+  "deletebusinessrulesdecisiontableversionrow": {
+    "operationId": "deletebusinessrulesdecisiontableversionrow",
+    "functionName": "deleteBusinessrulesDecisiontableVersionRow",
+    "signature": "deleteBusinessrulesDecisiontableVersionRow(tableId, tableVersion, rowId)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "tableVersion",
+        "type": "Int",
+        "required": "true"
+      },
+      {
+        "name": "rowId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\nlet tableVersion: Int = 0 // Table Version\nlet rowId: String = \"\" // Row ID\n\n// Delete a decision table row\nDeleteBusinessrulesDecisiontableVersionRowRequest.deleteBusinessrulesDecisiontableVersionRow(tableId: tableId, tableVersion: tableVersion, rowId: rowId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteBusinessrulesDecisiontableVersionRowRequest.deleteBusinessrulesDecisiontableVersionRow was successful\")\n    }\n}"
+  },
+  "deletebusinessrulesschema": {
+    "operationId": "deletebusinessrulesschema",
+    "functionName": "deleteBusinessrulesSchema",
+    "signature": "deleteBusinessrulesSchema(schemaId)",
+    "parameters": [
+      {
+        "name": "schemaId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaId: String = \"\" // Schema ID\n\n// Delete a schema\nDeleteBusinessrulesSchemaRequest.deleteBusinessrulesSchema(schemaId: schemaId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteBusinessrulesSchemaRequest.deleteBusinessrulesSchema was successful\")\n    }\n}"
+  },
+  "getbusinessrulesdecisiontable": {
+    "operationId": "getbusinessrulesdecisiontable",
+    "functionName": "getBusinessrulesDecisiontable",
+    "signature": "getBusinessrulesDecisiontable(tableId)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "DecisionTable",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\n\n// Get a decision table\nGetBusinessrulesDecisiontableRequest.getBusinessrulesDecisiontable(tableId: tableId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetBusinessrulesDecisiontableRequest.getBusinessrulesDecisiontable was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getbusinessrulesdecisiontableversion": {
+    "operationId": "getbusinessrulesdecisiontableversion",
+    "functionName": "getBusinessrulesDecisiontableVersion",
+    "signature": "getBusinessrulesDecisiontableVersion(tableId, tableVersion)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "tableVersion",
+        "type": "Int",
+        "required": "true"
+      }
+    ],
+    "return": "DecisionTableVersion",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\nlet tableVersion: Int = 0 // Table Version\n\n// Get a decision table version\nGetBusinessrulesDecisiontableVersionRequest.getBusinessrulesDecisiontableVersion(tableId: tableId, tableVersion: tableVersion) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetBusinessrulesDecisiontableVersionRequest.getBusinessrulesDecisiontableVersion was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getbusinessrulesdecisiontableversionrow": {
+    "operationId": "getbusinessrulesdecisiontableversionrow",
+    "functionName": "getBusinessrulesDecisiontableVersionRow",
+    "signature": "getBusinessrulesDecisiontableVersionRow(tableId, tableVersion, rowId)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "tableVersion",
+        "type": "Int",
+        "required": "true"
+      },
+      {
+        "name": "rowId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "DecisionTableRow",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\nlet tableVersion: Int = 0 // Table Version\nlet rowId: String = \"\" // Row ID\n\n// Get a decision table row\nGetBusinessrulesDecisiontableVersionRowRequest.getBusinessrulesDecisiontableVersionRow(tableId: tableId, tableVersion: tableVersion, rowId: rowId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetBusinessrulesDecisiontableVersionRowRequest.getBusinessrulesDecisiontableVersionRow was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getbusinessrulesdecisiontableversionrows": {
+    "operationId": "getbusinessrulesdecisiontableversionrows",
+    "functionName": "getBusinessrulesDecisiontableVersionRows",
+    "signature": "getBusinessrulesDecisiontableVersionRows(tableId, tableVersion, pageNumber, pageSize)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "tableVersion",
+        "type": "Int",
+        "required": "true"
+      },
+      {
+        "name": "pageNumber",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "DecisionTableRowListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\nlet tableVersion: Int = 0 // Table Version\nlet pageNumber: String = \"\" // Page number of the entities to return. Defaults to 1.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 100. Defaults to 25.\n\n// Get a list of decision table rows.\nGetBusinessrulesDecisiontableVersionRowsRequest.getBusinessrulesDecisiontableVersionRows(tableId: tableId, tableVersion: tableVersion, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetBusinessrulesDecisiontableVersionRowsRequest.getBusinessrulesDecisiontableVersionRows was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getbusinessrulesdecisiontableversions": {
+    "operationId": "getbusinessrulesdecisiontableversions",
+    "functionName": "getBusinessrulesDecisiontableVersions",
+    "signature": "getBusinessrulesDecisiontableVersions(tableId, after, pageSize)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "DecisionTableVersionListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 100.\n\n// Get a list of decision table versions\nGetBusinessrulesDecisiontableVersionsRequest.getBusinessrulesDecisiontableVersions(tableId: tableId, after: after, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetBusinessrulesDecisiontableVersionsRequest.getBusinessrulesDecisiontableVersions was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getbusinessrulesdecisiontables": {
+    "operationId": "getbusinessrulesdecisiontables",
+    "functionName": "getBusinessrulesDecisiontables",
+    "signature": "getBusinessrulesDecisiontables(after, pageSize, divisionIds, name)",
+    "parameters": [
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "divisionIds",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "DecisionTableListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 100.\nlet divisionIds: [String] = [\"\"] // One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned.\nlet name: String = \"\" // Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name.\n\n// Get a list of decision tables.\nGetBusinessrulesDecisiontablesRequest.getBusinessrulesDecisiontables(after: after, pageSize: pageSize, divisionIds: divisionIds, name: name) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetBusinessrulesDecisiontablesRequest.getBusinessrulesDecisiontables was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getbusinessrulesdecisiontablessearch": {
+    "operationId": "getbusinessrulesdecisiontablessearch",
+    "functionName": "getBusinessrulesDecisiontablesSearch",
+    "signature": "getBusinessrulesDecisiontablesSearch(after, pageSize, schemaId, name, withPublishedVersion, expand, ids)",
+    "parameters": [
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "schemaId",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "withPublishedVersion",
+        "type": "Bool",
+        "required": "false"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "ids",
+        "type": "[String]",
+        "required": "false"
+      }
+    ],
+    "return": "DecisionTableListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 100.\nlet schemaId: String = \"\" // Search for decision tables that use the schema with this ID. Cannot be combined with name search. Search results will not be paginated if used.\nlet name: String = \"\" // Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. Cannot be combined with schema search. Search results will not be paginated if used.\nlet withPublishedVersion: Bool = true // Filters results to only decision tables that have at least one version in Published status\nlet expand: [String] = [\"\"] // Fields to expand in response\nlet ids: [String] = [\"\"] // Decision table IDs to search for\n\n// Search for decision tables.\nGetBusinessrulesDecisiontablesSearchRequest.getBusinessrulesDecisiontablesSearch(after: after, pageSize: pageSize, schemaId: schemaId, name: name, withPublishedVersion: withPublishedVersion, expand: expand, ids: ids) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetBusinessrulesDecisiontablesSearchRequest.getBusinessrulesDecisiontablesSearch was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getbusinessrulesschema": {
+    "operationId": "getbusinessrulesschema",
+    "functionName": "getBusinessrulesSchema",
+    "signature": "getBusinessrulesSchema(schemaId)",
+    "parameters": [
+      {
+        "name": "schemaId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "BusinessRulesDataSchema",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaId: String = \"\" // Schema ID\n\n// Get a schema\nGetBusinessrulesSchemaRequest.getBusinessrulesSchema(schemaId: schemaId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetBusinessrulesSchemaRequest.getBusinessrulesSchema was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getbusinessrulesschemas": {
+    "operationId": "getbusinessrulesschemas",
+    "functionName": "getBusinessrulesSchemas",
+    "signature": "getBusinessrulesSchemas()",
+    "return": "BusinessRulesDataSchemaListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get a list of schemas.\nGetBusinessrulesSchemasRequest.getBusinessrulesSchemas() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetBusinessrulesSchemasRequest.getBusinessrulesSchemas was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getbusinessrulesschemascoretype": {
+    "operationId": "getbusinessrulesschemascoretype",
+    "functionName": "getBusinessrulesSchemasCoretype",
+    "signature": "getBusinessrulesSchemasCoretype(coreTypeName)",
+    "parameters": [
+      {
+        "name": "coreTypeName",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "Coretype",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet coreTypeName: String = \"\" // The core type's name\n\n// Get a specific named core type.\nGetBusinessrulesSchemasCoretypeRequest.getBusinessrulesSchemasCoretype(coreTypeName: coreTypeName) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetBusinessrulesSchemasCoretypeRequest.getBusinessrulesSchemasCoretype was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getbusinessrulesschemascoretypes": {
+    "operationId": "getbusinessrulesschemascoretypes",
+    "functionName": "getBusinessrulesSchemasCoretypes",
+    "signature": "getBusinessrulesSchemasCoretypes()",
+    "return": "CoretypeListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get the core types from which all schemas are built.\nGetBusinessrulesSchemasCoretypesRequest.getBusinessrulesSchemasCoretypes() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetBusinessrulesSchemasCoretypesRequest.getBusinessrulesSchemasCoretypes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchbusinessrulesdecisiontable": {
+    "operationId": "patchbusinessrulesdecisiontable",
+    "functionName": "patchBusinessrulesDecisiontable",
+    "signature": "patchBusinessrulesDecisiontable(tableId, body)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UpdateDecisionTableRequest",
+        "required": "true"
+      }
+    ],
+    "return": "DecisionTable",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\nlet body: UpdateDecisionTableRequest = new UpdateDecisionTableRequest(...) // Decision Table\n\n// Update a decision table\nPatchBusinessrulesDecisiontableRequest.patchBusinessrulesDecisiontable(tableId: tableId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchBusinessrulesDecisiontableRequest.patchBusinessrulesDecisiontable was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchbusinessrulesdecisiontableversion": {
+    "operationId": "patchbusinessrulesdecisiontableversion",
+    "functionName": "patchBusinessrulesDecisiontableVersion",
+    "signature": "patchBusinessrulesDecisiontableVersion(tableId, tableVersion, body)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "tableVersion",
+        "type": "Int",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UpdateDecisionTableVersionRequest",
+        "required": "true"
+      }
+    ],
+    "return": "DecisionTableVersion",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\nlet tableVersion: Int = 0 // Table Version\nlet body: UpdateDecisionTableVersionRequest = new UpdateDecisionTableVersionRequest(...) // Decision Table\n\n// Update a decision table version\nPatchBusinessrulesDecisiontableVersionRequest.patchBusinessrulesDecisiontableVersion(tableId: tableId, tableVersion: tableVersion, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchBusinessrulesDecisiontableVersionRequest.patchBusinessrulesDecisiontableVersion was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postbusinessrulesdecisiontableexecute": {
+    "operationId": "postbusinessrulesdecisiontableexecute",
+    "functionName": "postBusinessrulesDecisiontableExecute",
+    "signature": "postBusinessrulesDecisiontableExecute(tableId, body)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "DecisionTableExecutionRequest",
+        "required": "true"
+      }
+    ],
+    "return": "DecisionTableExecutionResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\nlet body: DecisionTableExecutionRequest = new DecisionTableExecutionRequest(...) // Decision Table\n\n// Execute a published decision table\nPostBusinessrulesDecisiontableExecuteRequest.postBusinessrulesDecisiontableExecute(tableId: tableId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostBusinessrulesDecisiontableExecuteRequest.postBusinessrulesDecisiontableExecute was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postbusinessrulesdecisiontableversioncopy": {
+    "operationId": "postbusinessrulesdecisiontableversioncopy",
+    "functionName": "postBusinessrulesDecisiontableVersionCopy",
+    "signature": "postBusinessrulesDecisiontableVersionCopy(tableId, tableVersion, body)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "tableVersion",
+        "type": "Int",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "CopyDecisionTableRequest",
+        "required": "true"
+      }
+    ],
+    "return": "DecisionTableVersion",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\nlet tableVersion: Int = 0 // Table Version\nlet body: CopyDecisionTableRequest = new CopyDecisionTableRequest(...) // Decision Table\n\n// Copy a decision table version\nPostBusinessrulesDecisiontableVersionCopyRequest.postBusinessrulesDecisiontableVersionCopy(tableId: tableId, tableVersion: tableVersion, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostBusinessrulesDecisiontableVersionCopyRequest.postBusinessrulesDecisiontableVersionCopy was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postbusinessrulesdecisiontableversionexecute": {
+    "operationId": "postbusinessrulesdecisiontableversionexecute",
+    "functionName": "postBusinessrulesDecisiontableVersionExecute",
+    "signature": "postBusinessrulesDecisiontableVersionExecute(tableId, tableVersion, body)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "tableVersion",
+        "type": "Int",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "DecisionTableExecutionRequest",
+        "required": "true"
+      }
+    ],
+    "return": "DecisionTableExecutionResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\nlet tableVersion: Int = 0 // Table Version\nlet body: DecisionTableExecutionRequest = new DecisionTableExecutionRequest(...) // Decision Table\n\n// Execute a decision table version\nPostBusinessrulesDecisiontableVersionExecuteRequest.postBusinessrulesDecisiontableVersionExecute(tableId: tableId, tableVersion: tableVersion, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostBusinessrulesDecisiontableVersionExecuteRequest.postBusinessrulesDecisiontableVersionExecute was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postbusinessrulesdecisiontableversionrows": {
+    "operationId": "postbusinessrulesdecisiontableversionrows",
+    "functionName": "postBusinessrulesDecisiontableVersionRows",
+    "signature": "postBusinessrulesDecisiontableVersionRows(tableId, tableVersion, body)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "tableVersion",
+        "type": "Int",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "CreateDecisionTableRowRequest",
+        "required": "true"
+      }
+    ],
+    "return": "DecisionTableRow",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\nlet tableVersion: Int = 0 // Table Version\nlet body: CreateDecisionTableRowRequest = new CreateDecisionTableRowRequest(...) // Create decision table row request\n\n// Create a decision table row\nPostBusinessrulesDecisiontableVersionRowsRequest.postBusinessrulesDecisiontableVersionRows(tableId: tableId, tableVersion: tableVersion, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostBusinessrulesDecisiontableVersionRowsRequest.postBusinessrulesDecisiontableVersionRows was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postbusinessrulesdecisiontableversionrowssearch": {
+    "operationId": "postbusinessrulesdecisiontableversionrowssearch",
+    "functionName": "postBusinessrulesDecisiontableVersionRowsSearch",
+    "signature": "postBusinessrulesDecisiontableVersionRowsSearch(tableId, tableVersion, body, pageNumber, pageSize)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "tableVersion",
+        "type": "Int",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "SearchDecisionTableRowsRequest",
+        "required": "true"
+      },
+      {
+        "name": "pageNumber",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "DecisionTableRowListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\nlet tableVersion: Int = 0 // Table Version\nlet body: SearchDecisionTableRowsRequest = new SearchDecisionTableRowsRequest(...) // Search decision table rows request\nlet pageNumber: String = \"\" // Page number of the entities to return. Defaults to 1.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 100. Defaults to 25.\n\n// Search for decision table rows\nPostBusinessrulesDecisiontableVersionRowsSearchRequest.postBusinessrulesDecisiontableVersionRowsSearch(tableId: tableId, tableVersion: tableVersion, body: body, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostBusinessrulesDecisiontableVersionRowsSearchRequest.postBusinessrulesDecisiontableVersionRowsSearch was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postbusinessrulesdecisiontableversionsync": {
+    "operationId": "postbusinessrulesdecisiontableversionsync",
+    "functionName": "postBusinessrulesDecisiontableVersionSync",
+    "signature": "postBusinessrulesDecisiontableVersionSync(tableId, tableVersion)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "tableVersion",
+        "type": "Int",
+        "required": "true"
+      }
+    ],
+    "return": "DecisionTableVersion",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\nlet tableVersion: Int = 0 // Table Version\n\n// Update the Business Rules Schema to the latest version for a given decision table version\nPostBusinessrulesDecisiontableVersionSyncRequest.postBusinessrulesDecisiontableVersionSync(tableId: tableId, tableVersion: tableVersion) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostBusinessrulesDecisiontableVersionSyncRequest.postBusinessrulesDecisiontableVersionSync was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postbusinessrulesdecisiontableversions": {
+    "operationId": "postbusinessrulesdecisiontableversions",
+    "functionName": "postBusinessrulesDecisiontableVersions",
+    "signature": "postBusinessrulesDecisiontableVersions(tableId)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "DecisionTableVersion",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\n\n// Create a new decision table version\nPostBusinessrulesDecisiontableVersionsRequest.postBusinessrulesDecisiontableVersions(tableId: tableId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostBusinessrulesDecisiontableVersionsRequest.postBusinessrulesDecisiontableVersions was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postbusinessrulesdecisiontables": {
+    "operationId": "postbusinessrulesdecisiontables",
+    "functionName": "postBusinessrulesDecisiontables",
+    "signature": "postBusinessrulesDecisiontables(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "CreateDecisionTableRequest",
+        "required": "true"
+      }
+    ],
+    "return": "DecisionTableVersion",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: CreateDecisionTableRequest = new CreateDecisionTableRequest(...) // Decision Table\n\n// Create a decision table\nPostBusinessrulesDecisiontablesRequest.postBusinessrulesDecisiontables(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostBusinessrulesDecisiontablesRequest.postBusinessrulesDecisiontables was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postbusinessrulesschemas": {
+    "operationId": "postbusinessrulesschemas",
+    "functionName": "postBusinessrulesSchemas",
+    "signature": "postBusinessrulesSchemas(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "BusinessRulesSchemaCreateRequest",
+        "required": "true"
+      }
+    ],
+    "return": "BusinessRulesDataSchema",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: BusinessRulesSchemaCreateRequest = new BusinessRulesSchemaCreateRequest(...) // Business Rules Schema Create Request\n\n// Create a schema\nPostBusinessrulesSchemasRequest.postBusinessrulesSchemas(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostBusinessrulesSchemasRequest.postBusinessrulesSchemas was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putbusinessrulesdecisiontableversionpublish": {
+    "operationId": "putbusinessrulesdecisiontableversionpublish",
+    "functionName": "putBusinessrulesDecisiontableVersionPublish",
+    "signature": "putBusinessrulesDecisiontableVersionPublish(tableId, tableVersion)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "tableVersion",
+        "type": "Int",
+        "required": "true"
+      }
+    ],
+    "return": "DecisionTableVersion",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\nlet tableVersion: Int = 0 // Table Version\n\n// Publish a decision table version\nPutBusinessrulesDecisiontableVersionPublishRequest.putBusinessrulesDecisiontableVersionPublish(tableId: tableId, tableVersion: tableVersion) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutBusinessrulesDecisiontableVersionPublishRequest.putBusinessrulesDecisiontableVersionPublish was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putbusinessrulesdecisiontableversionrow": {
+    "operationId": "putbusinessrulesdecisiontableversionrow",
+    "functionName": "putBusinessrulesDecisiontableVersionRow",
+    "signature": "putBusinessrulesDecisiontableVersionRow(tableId, tableVersion, rowId, body)",
+    "parameters": [
+      {
+        "name": "tableId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "tableVersion",
+        "type": "Int",
+        "required": "true"
+      },
+      {
+        "name": "rowId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "PutDecisionTableRowRequest",
+        "required": "true"
+      }
+    ],
+    "return": "DecisionTableRow",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tableId: String = \"\" // Table ID\nlet tableVersion: Int = 0 // Table Version\nlet rowId: String = \"\" // Row ID\nlet body: PutDecisionTableRowRequest = new PutDecisionTableRowRequest(...) // Full update decision table row request\n\n// Full update a decision table row\nPutBusinessrulesDecisiontableVersionRowRequest.putBusinessrulesDecisiontableVersionRow(tableId: tableId, tableVersion: tableVersion, rowId: rowId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutBusinessrulesDecisiontableVersionRowRequest.putBusinessrulesDecisiontableVersionRow was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putbusinessrulesschema": {
+    "operationId": "putbusinessrulesschema",
+    "functionName": "putBusinessrulesSchema",
+    "signature": "putBusinessrulesSchema(schemaId, body)",
+    "parameters": [
+      {
+        "name": "schemaId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "BusinessRulesSchemaUpdateRequest",
+        "required": "true"
+      }
+    ],
+    "return": "BusinessRulesDataSchema",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaId: String = \"\" // Schema ID\nlet body: BusinessRulesSchemaUpdateRequest = new BusinessRulesSchemaUpdateRequest(...) // Business Rules Schema Update Request\n\n// Update a schema\nPutBusinessrulesSchemaRequest.putBusinessrulesSchema(schemaId: schemaId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutBusinessrulesSchemaRequest.putBusinessrulesSchema was successful\")\n        dump(response)\n    }\n}"
   },
   "getcarrierservicesintegrationsemergencylocationsme": {
     "operationId": "getcarrierservicesintegrationsemergencylocationsme",
@@ -9559,7 +10152,7 @@
         "required": "true"
       }
     ],
-    "return": "IdentityResolutionConfig",
+    "return": "AppleIdentityResolutionConfig",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\n\n// Get Apple messaging integration identity resolution settings\nGetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdRequest.getConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId(integrationId: integrationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdRequest.getConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationsmessagingidentityresolutionintegrationsfacebookintegrationid": {
@@ -9573,7 +10166,7 @@
         "required": "true"
       }
     ],
-    "return": "IdentityResolutionConfig",
+    "return": "FacebookIdentityResolutionConfig",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\n\n// Get Facebook messaging integration identity resolution settings\nGetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdRequest.getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId: integrationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdRequest.getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationsmessagingidentityresolutionintegrationsinstagramintegrationid": {
@@ -9587,7 +10180,7 @@
         "required": "true"
       }
     ],
-    "return": "IdentityResolutionConfig",
+    "return": "InstagramIdentityResolutionConfig",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\n\n// Get an Instagram integration identity resolution settings\nGetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdRequest.getConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId(integrationId: integrationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdRequest.getConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationsmessagingidentityresolutionintegrationsopenintegrationid": {
@@ -9615,7 +10208,7 @@
         "required": "true"
       }
     ],
-    "return": "IdentityResolutionConfig",
+    "return": "TwitterIdentityResolutionConfig",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration Id\n\n// Get X (Formally Twitter) messaging integration identity resolution settings\nGetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdRequest.getConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId(integrationId: integrationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdRequest.getConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationsmessagingidentityresolutionintegrationswhatsappintegrationid": {
@@ -9629,7 +10222,7 @@
         "required": "true"
       }
     ],
-    "return": "IdentityResolutionConfig",
+    "return": "WhatsAppIdentityResolutionConfig",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\n\n// Get a whatsApp integration Identity Resolution settings\nGetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdRequest.getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId: integrationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdRequest.getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationsmessagingintegrationtwitteroauthsettings": {
@@ -10523,6 +11116,34 @@
     ],
     "return": "ConsultTransferResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet body: ConsultTransferUpdate = new ConsultTransferUpdate(...) // new speak to\n\n// Change who can speak\nPatchConversationsCallParticipantConsultRequest.patchConversationsCallParticipantConsult(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchConversationsCallParticipantConsultRequest.patchConversationsCallParticipantConsult was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchconversationscallparticipantuseruserid": {
+    "operationId": "patchconversationscallparticipantuseruserid",
+    "functionName": "patchConversationsCallParticipantUserUserId",
+    "signature": "patchConversationsCallParticipantUserUserId(conversationId, participantId, userId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "MediaParticipantRequest",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet userId: String = \"\" // userId\nlet body: MediaParticipantRequest = new MediaParticipantRequest(...) // Participant request\n\n// Update conversation participant on behalf of a user\nPatchConversationsCallParticipantUserUserIdRequest.patchConversationsCallParticipantUserUserId(conversationId: conversationId, participantId: participantId, userId: userId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchConversationsCallParticipantUserUserIdRequest.patchConversationsCallParticipantUserUserId was successful\")\n    }\n}"
   },
   "patchconversationscallback": {
     "operationId": "patchconversationscallback",
@@ -13087,12 +13708,12 @@
       },
       {
         "name": "body",
-        "type": "IdentityResolutionConfig",
+        "type": "AppleIdentityResolutionConfig",
         "required": "true"
       }
     ],
-    "return": "IdentityResolutionConfig",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // IdentityResolutionConfig\n\n// Create an identity resolution settings for a Apple messaging integration\nPutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId was successful\")\n        dump(response)\n    }\n}"
+    "return": "AppleIdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: AppleIdentityResolutionConfig = new AppleIdentityResolutionConfig(...) // IdentityResolutionConfig\n\n// Create an identity resolution settings for a Apple messaging integration\nPutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId was successful\")\n        dump(response)\n    }\n}"
   },
   "putconversationsmessagingidentityresolutionintegrationsfacebookintegrationid": {
     "operationId": "putconversationsmessagingidentityresolutionintegrationsfacebookintegrationid",
@@ -13106,12 +13727,12 @@
       },
       {
         "name": "body",
-        "type": "IdentityResolutionConfig",
+        "type": "FacebookIdentityResolutionConfig",
         "required": "true"
       }
     ],
-    "return": "IdentityResolutionConfig",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // IdentityResolutionConfig\n\n// Create an identity resolution settings for a Facebook messaging integration\nPutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId was successful\")\n        dump(response)\n    }\n}"
+    "return": "FacebookIdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: FacebookIdentityResolutionConfig = new FacebookIdentityResolutionConfig(...) // IdentityResolutionConfig\n\n// Create an identity resolution settings for a Facebook messaging integration\nPutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId was successful\")\n        dump(response)\n    }\n}"
   },
   "putconversationsmessagingidentityresolutionintegrationsinstagramintegrationid": {
     "operationId": "putconversationsmessagingidentityresolutionintegrationsinstagramintegrationid",
@@ -13125,12 +13746,12 @@
       },
       {
         "name": "body",
-        "type": "IdentityResolutionConfig",
+        "type": "InstagramIdentityResolutionConfig",
         "required": "true"
       }
     ],
-    "return": "IdentityResolutionConfig",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // IdentityResolutionConfig\n\n// Create identity resolution settings for an Instagram messaging integration\nPutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId was successful\")\n        dump(response)\n    }\n}"
+    "return": "InstagramIdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: InstagramIdentityResolutionConfig = new InstagramIdentityResolutionConfig(...) // IdentityResolutionConfig\n\n// Create identity resolution settings for an Instagram messaging integration\nPutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId was successful\")\n        dump(response)\n    }\n}"
   },
   "putconversationsmessagingidentityresolutionintegrationsopenintegrationid": {
     "operationId": "putconversationsmessagingidentityresolutionintegrationsopenintegrationid",
@@ -13163,12 +13784,12 @@
       },
       {
         "name": "body",
-        "type": "IdentityResolutionConfig",
+        "type": "TwitterIdentityResolutionConfig",
         "required": "true"
       }
     ],
-    "return": "IdentityResolutionConfig",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration Id\nlet body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // IdentityResolutionConfig\n\n// Create an identity resolution settings for an X (Formally Twitter) messaging integration\nPutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId was successful\")\n        dump(response)\n    }\n}"
+    "return": "TwitterIdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration Id\nlet body: TwitterIdentityResolutionConfig = new TwitterIdentityResolutionConfig(...) // IdentityResolutionConfig\n\n// Create an identity resolution settings for an X (Formally Twitter) messaging integration\nPutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId was successful\")\n        dump(response)\n    }\n}"
   },
   "putconversationsmessagingidentityresolutionintegrationswhatsappintegrationid": {
     "operationId": "putconversationsmessagingidentityresolutionintegrationswhatsappintegrationid",
@@ -13182,12 +13803,12 @@
       },
       {
         "name": "body",
-        "type": "IdentityResolutionConfig",
+        "type": "WhatsAppIdentityResolutionConfig",
         "required": "true"
       }
     ],
-    "return": "IdentityResolutionConfig",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // \n\n// Update a whatsApp integration Identity Resolution settings\nPutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId was successful\")\n        dump(response)\n    }\n}"
+    "return": "WhatsAppIdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: WhatsAppIdentityResolutionConfig = new WhatsAppIdentityResolutionConfig(...) // \n\n// Update a whatsApp integration Identity Resolution settings\nPutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdRequest.putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId was successful\")\n        dump(response)\n    }\n}"
   },
   "putconversationsmessagingsettingsdefault": {
     "operationId": "putconversationsmessagingsettingsdefault",
@@ -22302,77 +22923,6 @@
     "return": "LabelResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet labelId: String = \"\" // Label ID\n\n// Delete label\nDeleteKnowledgeKnowledgebaseLabelRequest.deleteKnowledgeKnowledgebaseLabel(knowledgeBaseId: knowledgeBaseId, labelId: labelId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"DeleteKnowledgeKnowledgebaseLabelRequest.deleteKnowledgeKnowledgebaseLabel was successful\")\n        dump(response)\n    }\n}"
   },
-  "deleteknowledgeknowledgebaselanguagecategory": {
-    "operationId": "deleteknowledgeknowledgebaselanguagecategory",
-    "functionName": "deleteKnowledgeKnowledgebaseLanguageCategory",
-    "signature": "deleteKnowledgeKnowledgebaseLanguageCategory(categoryId, knowledgeBaseId, languageCode)",
-    "parameters": [
-      {
-        "name": "categoryId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "KnowledgeCategory",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet categoryId: String = \"\" // Category ID\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: DeleteKnowledgeKnowledgebaseLanguageCategoryRequest.LanguageCode_deleteKnowledgeKnowledgebaseLanguageCategory = DeleteKnowledgeKnowledgebaseLanguageCategoryRequest.LanguageCode_deleteKnowledgeKnowledgebaseLanguageCategory.enummember // Language code, format: iso2-LOCALE\n\n// Delete category\nDeleteKnowledgeKnowledgebaseLanguageCategoryRequest.deleteKnowledgeKnowledgebaseLanguageCategory(categoryId: categoryId, knowledgeBaseId: knowledgeBaseId, languageCode: languageCode) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"DeleteKnowledgeKnowledgebaseLanguageCategoryRequest.deleteKnowledgeKnowledgebaseLanguageCategory was successful\")\n        dump(response)\n    }\n}"
-  },
-  "deleteknowledgeknowledgebaselanguagedocument": {
-    "operationId": "deleteknowledgeknowledgebaselanguagedocument",
-    "functionName": "deleteKnowledgeKnowledgebaseLanguageDocument",
-    "signature": "deleteKnowledgeKnowledgebaseLanguageDocument(documentId, knowledgeBaseId, languageCode)",
-    "parameters": [
-      {
-        "name": "documentId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "KnowledgeDocument",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: DeleteKnowledgeKnowledgebaseLanguageDocumentRequest.LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocument = DeleteKnowledgeKnowledgebaseLanguageDocumentRequest.LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocument.enummember // Language code, format: iso2-LOCALE\n\n// Delete document\nDeleteKnowledgeKnowledgebaseLanguageDocumentRequest.deleteKnowledgeKnowledgebaseLanguageDocument(documentId: documentId, knowledgeBaseId: knowledgeBaseId, languageCode: languageCode) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"DeleteKnowledgeKnowledgebaseLanguageDocumentRequest.deleteKnowledgeKnowledgebaseLanguageDocument was successful\")\n        dump(response)\n    }\n}"
-  },
-  "deleteknowledgeknowledgebaselanguagedocumentsimport": {
-    "operationId": "deleteknowledgeknowledgebaselanguagedocumentsimport",
-    "functionName": "deleteKnowledgeKnowledgebaseLanguageDocumentsImport",
-    "signature": "deleteKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId, languageCode, importId)",
-    "parameters": [
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "importId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: DeleteKnowledgeKnowledgebaseLanguageDocumentsImportRequest.LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocumentsImport = DeleteKnowledgeKnowledgebaseLanguageDocumentsImportRequest.LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocumentsImport.enummember // Language code, format: iso2-LOCALE\nlet importId: String = \"\" // Import ID\n\n// Delete import operation\nDeleteKnowledgeKnowledgebaseLanguageDocumentsImportRequest.deleteKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, importId: importId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteKnowledgeKnowledgebaseLanguageDocumentsImportRequest.deleteKnowledgeKnowledgebaseLanguageDocumentsImport was successful\")\n    }\n}"
-  },
   "deleteknowledgeknowledgebasesourcessalesforcesourceid": {
     "operationId": "deleteknowledgeknowledgebasesourcessalesforcesourceid",
     "functionName": "deleteKnowledgeKnowledgebaseSourcesSalesforceSourceId",
@@ -23151,283 +23701,6 @@
     "return": "LabelListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 200.\nlet name: String = \"\" // Filter to return the labels that contains the given phrase in the name.\nlet includeDocumentCount: Bool = true // If specified, retrieves the number of documents related to label.\n\n// Get labels\nGetKnowledgeKnowledgebaseLabelsRequest.getKnowledgeKnowledgebaseLabels(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, name: name, includeDocumentCount: includeDocumentCount) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeKnowledgebaseLabelsRequest.getKnowledgeKnowledgebaseLabels was successful\")\n        dump(response)\n    }\n}"
   },
-  "getknowledgeknowledgebaselanguagecategories": {
-    "operationId": "getknowledgeknowledgebaselanguagecategories",
-    "functionName": "getKnowledgeKnowledgebaseLanguageCategories",
-    "signature": "getKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId, languageCode, before, after, limit, pageSize, name)",
-    "parameters": [
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "before",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "after",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "limit",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "pageSize",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "name",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "CategoryListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: GetKnowledgeKnowledgebaseLanguageCategoriesRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageCategories = GetKnowledgeKnowledgebaseLanguageCategoriesRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageCategories.enummember // Language code, format: iso2-LOCALE\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet limit: String = \"\" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 200.\nlet name: String = \"\" // Filter to return the categories that starts with the given category name.\n\n// Get categories\nGetKnowledgeKnowledgebaseLanguageCategoriesRequest.getKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, before: before, after: after, limit: limit, pageSize: pageSize, name: name) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeKnowledgebaseLanguageCategoriesRequest.getKnowledgeKnowledgebaseLanguageCategories was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getknowledgeknowledgebaselanguagecategory": {
-    "operationId": "getknowledgeknowledgebaselanguagecategory",
-    "functionName": "getKnowledgeKnowledgebaseLanguageCategory",
-    "signature": "getKnowledgeKnowledgebaseLanguageCategory(categoryId, knowledgeBaseId, languageCode)",
-    "parameters": [
-      {
-        "name": "categoryId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "KnowledgeExtendedCategory",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet categoryId: String = \"\" // Category ID\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: GetKnowledgeKnowledgebaseLanguageCategoryRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageCategory = GetKnowledgeKnowledgebaseLanguageCategoryRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageCategory.enummember // Language code, format: iso2-LOCALE\n\n// Get category\nGetKnowledgeKnowledgebaseLanguageCategoryRequest.getKnowledgeKnowledgebaseLanguageCategory(categoryId: categoryId, knowledgeBaseId: knowledgeBaseId, languageCode: languageCode) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeKnowledgebaseLanguageCategoryRequest.getKnowledgeKnowledgebaseLanguageCategory was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getknowledgeknowledgebaselanguagedocument": {
-    "operationId": "getknowledgeknowledgebaselanguagedocument",
-    "functionName": "getKnowledgeKnowledgebaseLanguageDocument",
-    "signature": "getKnowledgeKnowledgebaseLanguageDocument(documentId, knowledgeBaseId, languageCode)",
-    "parameters": [
-      {
-        "name": "documentId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "KnowledgeDocument",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: GetKnowledgeKnowledgebaseLanguageDocumentRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageDocument = GetKnowledgeKnowledgebaseLanguageDocumentRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageDocument.enummember // Language code, format: iso2-LOCALE\n\n// Get document\nGetKnowledgeKnowledgebaseLanguageDocumentRequest.getKnowledgeKnowledgebaseLanguageDocument(documentId: documentId, knowledgeBaseId: knowledgeBaseId, languageCode: languageCode) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeKnowledgebaseLanguageDocumentRequest.getKnowledgeKnowledgebaseLanguageDocument was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getknowledgeknowledgebaselanguagedocumentupload": {
-    "operationId": "getknowledgeknowledgebaselanguagedocumentupload",
-    "functionName": "getKnowledgeKnowledgebaseLanguageDocumentUpload",
-    "signature": "getKnowledgeKnowledgebaseLanguageDocumentUpload(documentId, knowledgeBaseId, languageCode, uploadId)",
-    "parameters": [
-      {
-        "name": "documentId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "uploadId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "KnowledgeDocumentContentUpload",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: GetKnowledgeKnowledgebaseLanguageDocumentUploadRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentUpload = GetKnowledgeKnowledgebaseLanguageDocumentUploadRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentUpload.enummember // Language code, format: iso2-LOCALE\nlet uploadId: String = \"\" // UploadId\n\n// Get document content upload status\nGetKnowledgeKnowledgebaseLanguageDocumentUploadRequest.getKnowledgeKnowledgebaseLanguageDocumentUpload(documentId: documentId, knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, uploadId: uploadId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeKnowledgebaseLanguageDocumentUploadRequest.getKnowledgeKnowledgebaseLanguageDocumentUpload was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getknowledgeknowledgebaselanguagedocuments": {
-    "operationId": "getknowledgeknowledgebaselanguagedocuments",
-    "functionName": "getKnowledgeKnowledgebaseLanguageDocuments",
-    "signature": "getKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId, languageCode, before, after, limit, pageSize, categories, title, sortBy, sortOrder, documentIds)",
-    "parameters": [
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "before",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "after",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "limit",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "pageSize",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "categories",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "title",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "sortBy",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "sortOrder",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "documentIds",
-        "type": "[String]",
-        "required": "false"
-      }
-    ],
-    "return": "DocumentListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: GetKnowledgeKnowledgebaseLanguageDocumentsRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments = GetKnowledgeKnowledgebaseLanguageDocumentsRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments.enummember // Language code, format: iso2-LOCALE\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet limit: String = \"\" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 200.\nlet categories: String = \"\" // Filter by categories ids, comma separated values expected.\nlet title: String = \"\" // Filter by document title.\nlet sortBy: GetKnowledgeKnowledgebaseLanguageDocumentsRequest.SortBy_getKnowledgeKnowledgebaseLanguageDocuments = GetKnowledgeKnowledgebaseLanguageDocumentsRequest.SortBy_getKnowledgeKnowledgebaseLanguageDocuments.enummember // Sort by.\nlet sortOrder: GetKnowledgeKnowledgebaseLanguageDocumentsRequest.SortOrder_getKnowledgeKnowledgebaseLanguageDocuments = GetKnowledgeKnowledgebaseLanguageDocumentsRequest.SortOrder_getKnowledgeKnowledgebaseLanguageDocuments.enummember // Sort Order.\nlet documentIds: [String] = [\"\"] // Comma-separated list of document identifiers to fetch by.\n\n// Get documents\nGetKnowledgeKnowledgebaseLanguageDocumentsRequest.getKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, before: before, after: after, limit: limit, pageSize: pageSize, categories: categories, title: title, sortBy: sortBy, sortOrder: sortOrder, documentIds: documentIds) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeKnowledgebaseLanguageDocumentsRequest.getKnowledgeKnowledgebaseLanguageDocuments was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getknowledgeknowledgebaselanguagedocumentsimport": {
-    "operationId": "getknowledgeknowledgebaselanguagedocumentsimport",
-    "functionName": "getKnowledgeKnowledgebaseLanguageDocumentsImport",
-    "signature": "getKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId, languageCode, importId)",
-    "parameters": [
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "importId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "KnowledgeImport",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: GetKnowledgeKnowledgebaseLanguageDocumentsImportRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentsImport = GetKnowledgeKnowledgebaseLanguageDocumentsImportRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentsImport.enummember // Language code, format: iso2-LOCALE\nlet importId: String = \"\" // Import ID\n\n// Get import operation report\nGetKnowledgeKnowledgebaseLanguageDocumentsImportRequest.getKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, importId: importId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeKnowledgebaseLanguageDocumentsImportRequest.getKnowledgeKnowledgebaseLanguageDocumentsImport was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getknowledgeknowledgebaselanguagetraining": {
-    "operationId": "getknowledgeknowledgebaselanguagetraining",
-    "functionName": "getKnowledgeKnowledgebaseLanguageTraining",
-    "signature": "getKnowledgeKnowledgebaseLanguageTraining(knowledgeBaseId, languageCode, trainingId)",
-    "parameters": [
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "trainingId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "KnowledgeTraining",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: GetKnowledgeKnowledgebaseLanguageTrainingRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageTraining = GetKnowledgeKnowledgebaseLanguageTrainingRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageTraining.enummember // Language code, format: iso2-LOCALE\nlet trainingId: String = \"\" // Training ID\n\n// Get training detail\nGetKnowledgeKnowledgebaseLanguageTrainingRequest.getKnowledgeKnowledgebaseLanguageTraining(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, trainingId: trainingId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeKnowledgebaseLanguageTrainingRequest.getKnowledgeKnowledgebaseLanguageTraining was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getknowledgeknowledgebaselanguagetrainings": {
-    "operationId": "getknowledgeknowledgebaselanguagetrainings",
-    "functionName": "getKnowledgeKnowledgebaseLanguageTrainings",
-    "signature": "getKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId, languageCode, before, after, limit, pageSize, knowledgeDocumentsState)",
-    "parameters": [
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "before",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "after",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "limit",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "pageSize",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "knowledgeDocumentsState",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "TrainingListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: GetKnowledgeKnowledgebaseLanguageTrainingsRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageTrainings = GetKnowledgeKnowledgebaseLanguageTrainingsRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageTrainings.enummember // Language code, format: iso2-LOCALE\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet limit: String = \"\" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 200.\nlet knowledgeDocumentsState: GetKnowledgeKnowledgebaseLanguageTrainingsRequest.KnowledgeDocumentsState_getKnowledgeKnowledgebaseLanguageTrainings = GetKnowledgeKnowledgebaseLanguageTrainingsRequest.KnowledgeDocumentsState_getKnowledgeKnowledgebaseLanguageTrainings.enummember // Return the training with the specified state of the trained documents.\n\n// Get all trainings information for a knowledgebase\nGetKnowledgeKnowledgebaseLanguageTrainingsRequest.getKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, before: before, after: after, limit: limit, pageSize: pageSize, knowledgeDocumentsState: knowledgeDocumentsState) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeKnowledgebaseLanguageTrainingsRequest.getKnowledgeKnowledgebaseLanguageTrainings was successful\")\n        dump(response)\n    }\n}"
-  },
   "getknowledgeknowledgebaseoperations": {
     "operationId": "getknowledgeknowledgebaseoperations",
     "functionName": "getKnowledgeKnowledgebaseOperations",
@@ -24009,117 +24282,6 @@
     ],
     "return": "LabelResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet labelId: String = \"\" // Label ID\nlet body: LabelUpdateRequest = new LabelUpdateRequest(...) // \n\n// Update label\nPatchKnowledgeKnowledgebaseLabelRequest.patchKnowledgeKnowledgebaseLabel(knowledgeBaseId: knowledgeBaseId, labelId: labelId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchKnowledgeKnowledgebaseLabelRequest.patchKnowledgeKnowledgebaseLabel was successful\")\n        dump(response)\n    }\n}"
-  },
-  "patchknowledgeknowledgebaselanguagecategory": {
-    "operationId": "patchknowledgeknowledgebaselanguagecategory",
-    "functionName": "patchKnowledgeKnowledgebaseLanguageCategory",
-    "signature": "patchKnowledgeKnowledgebaseLanguageCategory(categoryId, knowledgeBaseId, languageCode, body)",
-    "parameters": [
-      {
-        "name": "categoryId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "KnowledgeCategoryRequest",
-        "required": "true"
-      }
-    ],
-    "return": "KnowledgeExtendedCategory",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet categoryId: String = \"\" // Category ID\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: PatchKnowledgeKnowledgebaseLanguageCategoryRequest.LanguageCode_patchKnowledgeKnowledgebaseLanguageCategory = PatchKnowledgeKnowledgebaseLanguageCategoryRequest.LanguageCode_patchKnowledgeKnowledgebaseLanguageCategory.enummember // Language code, format: iso2-LOCALE\nlet body: KnowledgeCategoryRequest = new KnowledgeCategoryRequest(...) // \n\n// Update category\nPatchKnowledgeKnowledgebaseLanguageCategoryRequest.patchKnowledgeKnowledgebaseLanguageCategory(categoryId: categoryId, knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchKnowledgeKnowledgebaseLanguageCategoryRequest.patchKnowledgeKnowledgebaseLanguageCategory was successful\")\n        dump(response)\n    }\n}"
-  },
-  "patchknowledgeknowledgebaselanguagedocument": {
-    "operationId": "patchknowledgeknowledgebaselanguagedocument",
-    "functionName": "patchKnowledgeKnowledgebaseLanguageDocument",
-    "signature": "patchKnowledgeKnowledgebaseLanguageDocument(documentId, knowledgeBaseId, languageCode, body)",
-    "parameters": [
-      {
-        "name": "documentId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "KnowledgeDocumentRequest",
-        "required": "true"
-      }
-    ],
-    "return": "KnowledgeDocument",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: PatchKnowledgeKnowledgebaseLanguageDocumentRequest.LanguageCode_patchKnowledgeKnowledgebaseLanguageDocument = PatchKnowledgeKnowledgebaseLanguageDocumentRequest.LanguageCode_patchKnowledgeKnowledgebaseLanguageDocument.enummember // Language code, format: iso2-LOCALE\nlet body: KnowledgeDocumentRequest = new KnowledgeDocumentRequest(...) // \n\n// Update document\nPatchKnowledgeKnowledgebaseLanguageDocumentRequest.patchKnowledgeKnowledgebaseLanguageDocument(documentId: documentId, knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchKnowledgeKnowledgebaseLanguageDocumentRequest.patchKnowledgeKnowledgebaseLanguageDocument was successful\")\n        dump(response)\n    }\n}"
-  },
-  "patchknowledgeknowledgebaselanguagedocuments": {
-    "operationId": "patchknowledgeknowledgebaselanguagedocuments",
-    "functionName": "patchKnowledgeKnowledgebaseLanguageDocuments",
-    "signature": "patchKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId, languageCode, body)",
-    "parameters": [
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "[KnowledgeDocumentBulkRequest]",
-        "required": "true"
-      }
-    ],
-    "return": "DocumentListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: PatchKnowledgeKnowledgebaseLanguageDocumentsRequest.LanguageCode_patchKnowledgeKnowledgebaseLanguageDocuments = PatchKnowledgeKnowledgebaseLanguageDocumentsRequest.LanguageCode_patchKnowledgeKnowledgebaseLanguageDocuments.enummember // Language code, format: iso2-LOCALE\nlet body: [KnowledgeDocumentBulkRequest] = [new KnowledgeDocumentBulkRequest(...)] // \n\n// Update documents collection\nPatchKnowledgeKnowledgebaseLanguageDocumentsRequest.patchKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchKnowledgeKnowledgebaseLanguageDocumentsRequest.patchKnowledgeKnowledgebaseLanguageDocuments was successful\")\n        dump(response)\n    }\n}"
-  },
-  "patchknowledgeknowledgebaselanguagedocumentsimport": {
-    "operationId": "patchknowledgeknowledgebaselanguagedocumentsimport",
-    "functionName": "patchKnowledgeKnowledgebaseLanguageDocumentsImport",
-    "signature": "patchKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId, languageCode, importId, body)",
-    "parameters": [
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "importId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ImportStatusRequest",
-        "required": "true"
-      }
-    ],
-    "return": "KnowledgeImport",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: PatchKnowledgeKnowledgebaseLanguageDocumentsImportRequest.LanguageCode_patchKnowledgeKnowledgebaseLanguageDocumentsImport = PatchKnowledgeKnowledgebaseLanguageDocumentsImportRequest.LanguageCode_patchKnowledgeKnowledgebaseLanguageDocumentsImport.enummember // Language code, format: iso2-LOCALE\nlet importId: String = \"\" // Import ID\nlet body: ImportStatusRequest = new ImportStatusRequest(...) // \n\n// Start import operation\nPatchKnowledgeKnowledgebaseLanguageDocumentsImportRequest.patchKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, importId: importId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchKnowledgeKnowledgebaseLanguageDocumentsImportRequest.patchKnowledgeKnowledgebaseLanguageDocumentsImport was successful\")\n        dump(response)\n    }\n}"
   },
   "patchknowledgeknowledgebaseparsejob": {
     "operationId": "patchknowledgeknowledgebaseparsejob",
@@ -24768,150 +24930,6 @@
     "return": "LabelResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet body: LabelCreateRequest = new LabelCreateRequest(...) // \n\n// Create new label\nPostKnowledgeKnowledgebaseLabelsRequest.postKnowledgeKnowledgebaseLabels(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseLabelsRequest.postKnowledgeKnowledgebaseLabels was successful\")\n        dump(response)\n    }\n}"
   },
-  "postknowledgeknowledgebaselanguagecategories": {
-    "operationId": "postknowledgeknowledgebaselanguagecategories",
-    "functionName": "postKnowledgeKnowledgebaseLanguageCategories",
-    "signature": "postKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId, languageCode, body)",
-    "parameters": [
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "KnowledgeCategoryRequest",
-        "required": "true"
-      }
-    ],
-    "return": "KnowledgeExtendedCategory",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: PostKnowledgeKnowledgebaseLanguageCategoriesRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageCategories = PostKnowledgeKnowledgebaseLanguageCategoriesRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageCategories.enummember // Language code, format: iso2-LOCALE\nlet body: KnowledgeCategoryRequest = new KnowledgeCategoryRequest(...) // \n\n// Create new category\nPostKnowledgeKnowledgebaseLanguageCategoriesRequest.postKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseLanguageCategoriesRequest.postKnowledgeKnowledgebaseLanguageCategories was successful\")\n        dump(response)\n    }\n}"
-  },
-  "postknowledgeknowledgebaselanguagedocumentuploads": {
-    "operationId": "postknowledgeknowledgebaselanguagedocumentuploads",
-    "functionName": "postKnowledgeKnowledgebaseLanguageDocumentUploads",
-    "signature": "postKnowledgeKnowledgebaseLanguageDocumentUploads(documentId, knowledgeBaseId, languageCode, body)",
-    "parameters": [
-      {
-        "name": "documentId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "KnowledgeDocumentContentUpload",
-        "required": "true"
-      }
-    ],
-    "return": "KnowledgeDocumentContentUpload",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: PostKnowledgeKnowledgebaseLanguageDocumentUploadsRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentUploads = PostKnowledgeKnowledgebaseLanguageDocumentUploadsRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentUploads.enummember // Language code, format: iso2-LOCALE\nlet body: KnowledgeDocumentContentUpload = new KnowledgeDocumentContentUpload(...) // \n\n// Upload Article Content\nPostKnowledgeKnowledgebaseLanguageDocumentUploadsRequest.postKnowledgeKnowledgebaseLanguageDocumentUploads(documentId: documentId, knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseLanguageDocumentUploadsRequest.postKnowledgeKnowledgebaseLanguageDocumentUploads was successful\")\n        dump(response)\n    }\n}"
-  },
-  "postknowledgeknowledgebaselanguagedocuments": {
-    "operationId": "postknowledgeknowledgebaselanguagedocuments",
-    "functionName": "postKnowledgeKnowledgebaseLanguageDocuments",
-    "signature": "postKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId, languageCode, body)",
-    "parameters": [
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "KnowledgeDocumentRequest",
-        "required": "true"
-      }
-    ],
-    "return": "KnowledgeDocument",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: PostKnowledgeKnowledgebaseLanguageDocumentsRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageDocuments = PostKnowledgeKnowledgebaseLanguageDocumentsRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageDocuments.enummember // Language code, format: iso2-LOCALE\nlet body: KnowledgeDocumentRequest = new KnowledgeDocumentRequest(...) // \n\n// Create document\nPostKnowledgeKnowledgebaseLanguageDocumentsRequest.postKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseLanguageDocumentsRequest.postKnowledgeKnowledgebaseLanguageDocuments was successful\")\n        dump(response)\n    }\n}"
-  },
-  "postknowledgeknowledgebaselanguagedocumentsimports": {
-    "operationId": "postknowledgeknowledgebaselanguagedocumentsimports",
-    "functionName": "postKnowledgeKnowledgebaseLanguageDocumentsImports",
-    "signature": "postKnowledgeKnowledgebaseLanguageDocumentsImports(knowledgeBaseId, languageCode, body)",
-    "parameters": [
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "KnowledgeImport",
-        "required": "true"
-      }
-    ],
-    "return": "KnowledgeImport",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: PostKnowledgeKnowledgebaseLanguageDocumentsImportsRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentsImports = PostKnowledgeKnowledgebaseLanguageDocumentsImportsRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentsImports.enummember // Language code, format: iso2-LOCALE\nlet body: KnowledgeImport = new KnowledgeImport(...) // \n\n// Create import operation\nPostKnowledgeKnowledgebaseLanguageDocumentsImportsRequest.postKnowledgeKnowledgebaseLanguageDocumentsImports(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseLanguageDocumentsImportsRequest.postKnowledgeKnowledgebaseLanguageDocumentsImports was successful\")\n        dump(response)\n    }\n}"
-  },
-  "postknowledgeknowledgebaselanguagetrainingpromote": {
-    "operationId": "postknowledgeknowledgebaselanguagetrainingpromote",
-    "functionName": "postKnowledgeKnowledgebaseLanguageTrainingPromote",
-    "signature": "postKnowledgeKnowledgebaseLanguageTrainingPromote(knowledgeBaseId, languageCode, trainingId)",
-    "parameters": [
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "trainingId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "KnowledgeTraining",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: PostKnowledgeKnowledgebaseLanguageTrainingPromoteRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageTrainingPromote = PostKnowledgeKnowledgebaseLanguageTrainingPromoteRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageTrainingPromote.enummember // Language code, format: iso2-LOCALE\nlet trainingId: String = \"\" // Training ID\n\n// Promote trained documents from draft state to active.\nPostKnowledgeKnowledgebaseLanguageTrainingPromoteRequest.postKnowledgeKnowledgebaseLanguageTrainingPromote(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, trainingId: trainingId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseLanguageTrainingPromoteRequest.postKnowledgeKnowledgebaseLanguageTrainingPromote was successful\")\n        dump(response)\n    }\n}"
-  },
-  "postknowledgeknowledgebaselanguagetrainings": {
-    "operationId": "postknowledgeknowledgebaselanguagetrainings",
-    "functionName": "postKnowledgeKnowledgebaseLanguageTrainings",
-    "signature": "postKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId, languageCode)",
-    "parameters": [
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "languageCode",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "KnowledgeTraining",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: PostKnowledgeKnowledgebaseLanguageTrainingsRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageTrainings = PostKnowledgeKnowledgebaseLanguageTrainingsRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageTrainings.enummember // Language code, format: iso2-LOCALE\n\n// Trigger training\nPostKnowledgeKnowledgebaseLanguageTrainingsRequest.postKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseLanguageTrainingsRequest.postKnowledgeKnowledgebaseLanguageTrainings was successful\")\n        dump(response)\n    }\n}"
-  },
   "postknowledgeknowledgebaseparsejobimport": {
     "operationId": "postknowledgeknowledgebaseparsejobimport",
     "functionName": "postKnowledgeKnowledgebaseParseJobImport",
@@ -24953,25 +24971,6 @@
     ],
     "return": "KnowledgeParseJobResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet body: KnowledgeParseJobRequest = new KnowledgeParseJobRequest(...) // \n\n// Create parse job\nPostKnowledgeKnowledgebaseParseJobsRequest.postKnowledgeKnowledgebaseParseJobs(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseParseJobsRequest.postKnowledgeKnowledgebaseParseJobs was successful\")\n        dump(response)\n    }\n}"
-  },
-  "postknowledgeknowledgebasesearch": {
-    "operationId": "postknowledgeknowledgebasesearch",
-    "functionName": "postKnowledgeKnowledgebaseSearch",
-    "signature": "postKnowledgeKnowledgebaseSearch(knowledgeBaseId, body)",
-    "parameters": [
-      {
-        "name": "knowledgeBaseId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "KnowledgeSearchRequest",
-        "required": "false"
-      }
-    ],
-    "return": "KnowledgeSearchResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet body: KnowledgeSearchRequest = new KnowledgeSearchRequest(...) // \n\n// Search Documents\nPostKnowledgeKnowledgebaseSearchRequest.postKnowledgeKnowledgebaseSearch(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseSearchRequest.postKnowledgeKnowledgebaseSearch was successful\")\n        dump(response)\n    }\n}"
   },
   "postknowledgeknowledgebasesourcessalesforce": {
     "operationId": "postknowledgeknowledgebasesourcessalesforce",
@@ -31661,6 +31660,20 @@
     "return": "Campaign",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: Campaign = new Campaign(...) // Campaign\nlet useMaxCallsPerAgentDecimal: Bool = true // Use maxCallsPerAgent with decimal precision\n\n// Create a campaign.\nPostOutboundCampaignsRequest.postOutboundCampaigns(body: body, useMaxCallsPerAgentDecimal: useMaxCallsPerAgentDecimal) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostOutboundCampaignsRequest.postOutboundCampaigns was successful\")\n        dump(response)\n    }\n}"
   },
+  "postoutboundcampaignsperformancequery": {
+    "operationId": "postoutboundcampaignsperformancequery",
+    "functionName": "postOutboundCampaignsPerformanceQuery",
+    "signature": "postOutboundCampaignsPerformanceQuery(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "[String]",
+        "required": "true"
+      }
+    ],
+    "return": "CampaignPerformanceDataListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: [String] = [\"\"] // Campaign IDs. Maximum of 50 IDs allowed.\n\n// Get performance data for a list of campaigns\nPostOutboundCampaignsPerformanceQueryRequest.postOutboundCampaignsPerformanceQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostOutboundCampaignsPerformanceQueryRequest.postOutboundCampaignsPerformanceQuery was successful\")\n        dump(response)\n    }\n}"
+  },
   "postoutboundcampaignsprogress": {
     "operationId": "postoutboundcampaignsprogress",
     "functionName": "postOutboundCampaignsProgress",
@@ -36434,6 +36447,34 @@
     "return": "InboundDomain",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // domain ID\nlet expand: GetRoutingEmailDomainRequest.Expand_getRoutingEmailDomain = GetRoutingEmailDomainRequest.Expand_getRoutingEmailDomain.enummember // Expand options. Valid values: settings\n\n// Get domain\nGetRoutingEmailDomainRequest.getRoutingEmailDomain(domainId: domainId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailDomainRequest.getRoutingEmailDomain was successful\")\n        dump(response)\n    }\n}"
   },
+  "getroutingemaildomaindkim": {
+    "operationId": "getroutingemaildomaindkim",
+    "functionName": "getRoutingEmailDomainDkim",
+    "signature": "getRoutingEmailDomainDkim(domainId)",
+    "parameters": [
+      {
+        "name": "domainId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "VerificationResult",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // domain ID\n\n// Get domain dkim settings\nGetRoutingEmailDomainDkimRequest.getRoutingEmailDomainDkim(domainId: domainId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailDomainDkimRequest.getRoutingEmailDomainDkim was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getroutingemaildomainmailfrom": {
+    "operationId": "getroutingemaildomainmailfrom",
+    "functionName": "getRoutingEmailDomainMailfrom",
+    "signature": "getRoutingEmailDomainMailfrom(domainId)",
+    "parameters": [
+      {
+        "name": "domainId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "MailFromResult",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // domain ID\n\n// Get domain mail from settings\nGetRoutingEmailDomainMailfromRequest.getRoutingEmailDomainMailfrom(domainId: domainId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailDomainMailfromRequest.getRoutingEmailDomainMailfrom was successful\")\n        dump(response)\n    }\n}"
+  },
   "getroutingemaildomainroute": {
     "operationId": "getroutingemaildomainroute",
     "functionName": "getRoutingEmailDomainRoute",
@@ -36474,7 +36515,7 @@
         "required": "true"
       }
     ],
-    "return": "IdentityResolutionConfig",
+    "return": "RouteIdentityResolutionConfig",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainName: String = \"\" // email domain\nlet routeId: String = \"\" // route ID\n\n// Get a route identity resolution setting.\nGetRoutingEmailDomainRouteIdentityresolutionRequest.getRoutingEmailDomainRouteIdentityresolution(domainName: domainName, routeId: routeId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailDomainRouteIdentityresolutionRequest.getRoutingEmailDomainRouteIdentityresolution was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingemaildomainroutes": {
@@ -36510,6 +36551,20 @@
     ],
     "return": "InboundRouteEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainName: String = \"\" // email domain\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet pattern: String = \"\" // Filter routes by the route's pattern property\nlet expand: [String] = [\"\"] // Which fields, if any, to expand\n\n// Get routes\nGetRoutingEmailDomainRoutesRequest.getRoutingEmailDomainRoutes(domainName: domainName, pageSize: pageSize, pageNumber: pageNumber, pattern: pattern, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailDomainRoutesRequest.getRoutingEmailDomainRoutes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getroutingemaildomainverification": {
+    "operationId": "getroutingemaildomainverification",
+    "functionName": "getRoutingEmailDomainVerification",
+    "signature": "getRoutingEmailDomainVerification(domainId)",
+    "parameters": [
+      {
+        "name": "domainId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "VerificationResult",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // domain ID\n\n// Get domain verification settings\nGetRoutingEmailDomainVerificationRequest.getRoutingEmailDomainVerification(domainId: domainId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailDomainVerificationRequest.getRoutingEmailDomainVerification was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingemaildomains": {
     "operationId": "getroutingemaildomains",
@@ -37519,7 +37574,7 @@
         "required": "true"
       }
     ],
-    "return": "IdentityResolutionConfig",
+    "return": "SmsIdentityResolutionConfig",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet addressId: String = \"\" // Address ID\n\n// Get a SMS identity resolution settings.\nGetRoutingSmsIdentityresolutionPhonenumberRequest.getRoutingSmsIdentityresolutionPhonenumber(addressId: addressId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingSmsIdentityresolutionPhonenumberRequest.getRoutingSmsIdentityresolutionPhonenumber was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingsmsphonenumber": {
@@ -38297,6 +38352,39 @@
     "return": "BenefitAssessmentJob",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: CreateBenefitAssessmentJobRequest = new CreateBenefitAssessmentJobRequest(...) // \n\n// Create a benefit assessment job.\nPostRoutingAssessmentsJobsRequest.postRoutingAssessmentsJobs(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRoutingAssessmentsJobsRequest.postRoutingAssessmentsJobs was successful\")\n        dump(response)\n    }\n}"
   },
+  "postroutingemaildomaindkim": {
+    "operationId": "postroutingemaildomaindkim",
+    "functionName": "postRoutingEmailDomainDkim",
+    "signature": "postRoutingEmailDomainDkim(domainId)",
+    "parameters": [
+      {
+        "name": "domainId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "VerificationResult",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // domain ID\n\n// Restart domain dkim\nPostRoutingEmailDomainDkimRequest.postRoutingEmailDomainDkim(domainId: domainId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRoutingEmailDomainDkimRequest.postRoutingEmailDomainDkim was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postroutingemaildomainmailfrom": {
+    "operationId": "postroutingemaildomainmailfrom",
+    "functionName": "postRoutingEmailDomainMailfrom",
+    "signature": "postRoutingEmailDomainMailfrom(domainId, body)",
+    "parameters": [
+      {
+        "name": "domainId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "MailFromResult",
+        "required": "true"
+      }
+    ],
+    "return": "MailFromResult",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // domain ID\nlet body: MailFromResult = new MailFromResult(...) // Mail From Settings\n\n// Set domain mail from settings\nPostRoutingEmailDomainMailfromRequest.postRoutingEmailDomainMailfrom(domainId: domainId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRoutingEmailDomainMailfromRequest.postRoutingEmailDomainMailfrom was successful\")\n        dump(response)\n    }\n}"
+  },
   "postroutingemaildomainroutes": {
     "operationId": "postroutingemaildomainroutes",
     "functionName": "postRoutingEmailDomainRoutes",
@@ -38334,6 +38422,20 @@
     ],
     "return": "TestMessage",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // domain ID\nlet body: TestMessage = new TestMessage(...) // TestMessage\n\n// Tests the custom SMTP server integration connection set on this ACD domain\nPostRoutingEmailDomainTestconnectionRequest.postRoutingEmailDomainTestconnection(domainId: domainId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRoutingEmailDomainTestconnectionRequest.postRoutingEmailDomainTestconnection was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postroutingemaildomainverification": {
+    "operationId": "postroutingemaildomainverification",
+    "functionName": "postRoutingEmailDomainVerification",
+    "signature": "postRoutingEmailDomainVerification(domainId)",
+    "parameters": [
+      {
+        "name": "domainId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "VerificationResult",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainId: String = \"\" // domain ID\n\n// Restart domain verification\nPostRoutingEmailDomainVerificationRequest.postRoutingEmailDomainVerification(domainId: domainId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRoutingEmailDomainVerificationRequest.postRoutingEmailDomainVerification was successful\")\n        dump(response)\n    }\n}"
   },
   "postroutingemaildomains": {
     "operationId": "postroutingemaildomains",
@@ -38693,12 +38795,12 @@
       },
       {
         "name": "body",
-        "type": "IdentityResolutionConfig",
+        "type": "RouteIdentityResolutionConfig",
         "required": "true"
       }
     ],
-    "return": "IdentityResolutionConfig",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainName: String = \"\" // email domain\nlet routeId: String = \"\" // route ID\nlet body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // \n\n// Update identity resolution settings for a route.\nPutRoutingEmailDomainRouteIdentityresolutionRequest.putRoutingEmailDomainRouteIdentityresolution(domainName: domainName, routeId: routeId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRoutingEmailDomainRouteIdentityresolutionRequest.putRoutingEmailDomainRouteIdentityresolution was successful\")\n        dump(response)\n    }\n}"
+    "return": "RouteIdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet domainName: String = \"\" // email domain\nlet routeId: String = \"\" // route ID\nlet body: RouteIdentityResolutionConfig = new RouteIdentityResolutionConfig(...) // \n\n// Update identity resolution settings for a route.\nPutRoutingEmailDomainRouteIdentityresolutionRequest.putRoutingEmailDomainRouteIdentityresolution(domainName: domainName, routeId: routeId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRoutingEmailDomainRouteIdentityresolutionRequest.putRoutingEmailDomainRouteIdentityresolution was successful\")\n        dump(response)\n    }\n}"
   },
   "putroutingemailoutbounddomainactivation": {
     "operationId": "putroutingemailoutbounddomainactivation",
@@ -38811,12 +38913,12 @@
       },
       {
         "name": "body",
-        "type": "IdentityResolutionConfig",
+        "type": "SmsIdentityResolutionConfig",
         "required": "true"
       }
     ],
-    "return": "IdentityResolutionConfig",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet addressId: String = \"\" // Address ID\nlet body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // \n\n// Update an SMS identity resolution settings.\nPutRoutingSmsIdentityresolutionPhonenumberRequest.putRoutingSmsIdentityresolutionPhonenumber(addressId: addressId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRoutingSmsIdentityresolutionPhonenumberRequest.putRoutingSmsIdentityresolutionPhonenumber was successful\")\n        dump(response)\n    }\n}"
+    "return": "SmsIdentityResolutionConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet addressId: String = \"\" // Address ID\nlet body: SmsIdentityResolutionConfig = new SmsIdentityResolutionConfig(...) // \n\n// Update an SMS identity resolution settings.\nPutRoutingSmsIdentityresolutionPhonenumberRequest.putRoutingSmsIdentityresolutionPhonenumber(addressId: addressId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRoutingSmsIdentityresolutionPhonenumberRequest.putRoutingSmsIdentityresolutionPhonenumber was successful\")\n        dump(response)\n    }\n}"
   },
   "putroutinguserdirectroutingbackupsettings": {
     "operationId": "putroutinguserdirectroutingbackupsettings",
@@ -40590,16 +40692,21 @@
   "getsocialmediaescalationrule": {
     "operationId": "getsocialmediaescalationrule",
     "functionName": "getSocialmediaEscalationrule",
-    "signature": "getSocialmediaEscalationrule(escalationRuleId)",
+    "signature": "getSocialmediaEscalationrule(escalationRuleId, expand)",
     "parameters": [
       {
         "name": "escalationRuleId",
         "type": "String",
         "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "String",
+        "required": "false"
       }
     ],
     "return": "EscalationRuleResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet escalationRuleId: String = \"\" // escalationRuleId\n\n// Get a single escalation rule.\nGetSocialmediaEscalationruleRequest.getSocialmediaEscalationrule(escalationRuleId: escalationRuleId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaEscalationruleRequest.getSocialmediaEscalationrule was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet escalationRuleId: String = \"\" // escalationRuleId\nlet expand: GetSocialmediaEscalationruleRequest.Expand_getSocialmediaEscalationrule = GetSocialmediaEscalationruleRequest.Expand_getSocialmediaEscalationrule.enummember // which fields, if any, to expand\n\n// Get a single escalation rule.\nGetSocialmediaEscalationruleRequest.getSocialmediaEscalationrule(escalationRuleId: escalationRuleId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaEscalationruleRequest.getSocialmediaEscalationrule was successful\")\n        dump(response)\n    }\n}"
   },
   "getsocialmediaescalationrules": {
     "operationId": "getsocialmediaescalationrules",
@@ -49088,7 +49195,7 @@
       }
     ],
     "return": "WebDeploymentsAuthorizationResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: WebDeploymentsOAuthExchangeRequest = new WebDeploymentsOAuthExchangeRequest(...) // webDeploymentsOAuthExchangeRequest\n\n// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.\nPostWebdeploymentsTokenOauthcodegrantjwtexchangeRequest.postWebdeploymentsTokenOauthcodegrantjwtexchange(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWebdeploymentsTokenOauthcodegrantjwtexchangeRequest.postWebdeploymentsTokenOauthcodegrantjwtexchange was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: WebDeploymentsOAuthExchangeRequest = new WebDeploymentsOAuthExchangeRequest(...) // webDeploymentsOAuthExchangeRequest\n\n// Exchange an oAuth code (obtained using the Authorization Code Flow or Implicit flow) for a JWT that can be used by webdeployments.\nPostWebdeploymentsTokenOauthcodegrantjwtexchangeRequest.postWebdeploymentsTokenOauthcodegrantjwtexchange(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWebdeploymentsTokenOauthcodegrantjwtexchangeRequest.postWebdeploymentsTokenOauthcodegrantjwtexchange was successful\")\n        dump(response)\n    }\n}"
   },
   "postwebdeploymentstokenrefresh": {
     "operationId": "postwebdeploymentstokenrefresh",

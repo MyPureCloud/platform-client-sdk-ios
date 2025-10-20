@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **callOnBehalfOfQueue** | [**IdentityResolutionConfig**](IdentityResolutionConfig) |  | [optional] |
+| **callOnBehalfOfQueue** | [**OutboundQueueIdentityResolutionConfig**](OutboundQueueIdentityResolutionConfig) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@177.0.0_
+_PureCloudPlatformClientV2@178.0.0_

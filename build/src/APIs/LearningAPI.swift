@@ -472,9 +472,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
+  "total" : 4,
+  "pageCount" : 7,
+  "pageNumber" : 2,
   "entities" : [ {
     "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "assessmentCompletionPercentage" : 1.4658129,
@@ -623,7 +623,7 @@ open class LearningAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 3,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -789,9 +789,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
+  "total" : 4,
+  "pageCount" : 7,
+  "pageNumber" : 2,
   "entities" : [ {
     "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "assessmentCompletionPercentage" : 1.4658129,
@@ -940,7 +940,7 @@ open class LearningAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 3,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
