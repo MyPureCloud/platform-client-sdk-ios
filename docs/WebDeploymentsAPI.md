@@ -20,7 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWebdeploymentsConfigurationVersionsDraftPublish**](WebDeploymentsAPI#postWebdeploymentsConfigurationVersionsDraftPublish) | Publish the configuration draft and create a new version |
 | [**postWebdeploymentsConfigurations**](WebDeploymentsAPI#postWebdeploymentsConfigurations) | Create a configuration draft |
 | [**postWebdeploymentsDeployments**](WebDeploymentsAPI#postWebdeploymentsDeployments) | Create a deployment |
-| [**postWebdeploymentsTokenOauthcodegrantjwtexchange**](WebDeploymentsAPI#postWebdeploymentsTokenOauthcodegrantjwtexchange) | Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments. |
+| [**postWebdeploymentsTokenOauthcodegrantjwtexchange**](WebDeploymentsAPI#postWebdeploymentsTokenOauthcodegrantjwtexchange) | Exchange an oAuth code (obtained using the Authorization Code Flow or Implicit flow) for a JWT that can be used by webdeployments. |
 | [**postWebdeploymentsTokenRefresh**](WebDeploymentsAPI#postWebdeploymentsTokenRefresh) | Refresh a JWT. |
 | [**putWebdeploymentsConfigurationVersionsDraft**](WebDeploymentsAPI#putWebdeploymentsConfigurationVersionsDraft) | Update the configuration draft |
 | [**putWebdeploymentsDeployment**](WebDeploymentsAPI#putWebdeploymentsDeployment) | Update a deployment |
@@ -845,7 +845,7 @@ WebDeploymentsAPI.postWebdeploymentsDeployments(deployment: deployment) { (respo
 
 > [WebDeploymentsAuthorizationResponse](WebDeploymentsAuthorizationResponse) postWebdeploymentsTokenOauthcodegrantjwtexchange(body)
 
-Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+Exchange an oAuth code (obtained using the Authorization Code Flow or Implicit flow) for a JWT that can be used by webdeployments.
 
 
 
@@ -1094,4 +1094,4 @@ WebDeploymentsAPI.putWebdeploymentsDeploymentIdentityresolution(deploymentId: de
 [**DeploymentIdentityResolutionConfig**](DeploymentIdentityResolutionConfig)
 
 
-_PureCloudPlatformClientV2@177.0.0_
+_PureCloudPlatformClientV2@178.0.0_

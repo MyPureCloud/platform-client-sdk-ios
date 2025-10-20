@@ -17,7 +17,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postDocumentationGknSearch**](SearchAPI#postDocumentationGknSearch) | Search gkn documentation |
 | [**postDocumentationSearch**](SearchAPI#postDocumentationSearch) | Search documentation |
 | [**postGroupsSearch**](SearchAPI#postGroupsSearch) | Search groups |
-| [**postKnowledgeKnowledgebaseSearch**](SearchAPI#postKnowledgeKnowledgebaseSearch) | Search Documents |
 | [**postLocationsSearch**](SearchAPI#postLocationsSearch) | Search locations |
 | [**postSearch**](SearchAPI#postSearch) | Search resources. |
 | [**postSearchSuggest**](SearchAPI#postSearchSuggest) | Suggest resources. |
@@ -693,58 +692,6 @@ SearchAPI.postGroupsSearch(body: body) { (response, error) in
 [**GroupsSearchResponse**](GroupsSearchResponse)
 
 
-## postKnowledgeKnowledgebaseSearch
-
-
-
-> [KnowledgeSearchResponse](KnowledgeSearchResponse) postKnowledgeKnowledgebaseSearch(knowledgeBaseId, body)
-
-Search Documents
-
-
-
-Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/search  
-
-Requires ALL permissions: 
-
-* knowledge:knowledgebase:search
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let knowledgeBaseId: String = "" // Knowledge base ID
-let body: KnowledgeSearchRequest = new KnowledgeSearchRequest(...) // 
-
-// Code example
-SearchAPI.postKnowledgeKnowledgebaseSearch(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("SearchAPI.postKnowledgeKnowledgebaseSearch was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **body** | [**KnowledgeSearchRequest**](KnowledgeSearchRequest)|  | [optional] |
-
-
-### Return type
-
-[**KnowledgeSearchResponse**](KnowledgeSearchResponse)
-
-
 ## postLocationsSearch
 
 
@@ -1200,4 +1147,4 @@ SearchAPI.postVoicemailSearch(body: body) { (response, error) in
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse)
 
 
-_PureCloudPlatformClientV2@177.0.0_
+_PureCloudPlatformClientV2@178.0.0_

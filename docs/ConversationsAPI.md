@@ -129,6 +129,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsCallParticipantAttributes**](ConversationsAPI#patchConversationsCallParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationsCallParticipantCommunication**](ConversationsAPI#patchConversationsCallParticipantCommunication) | Update conversation participant&#39;s communication by disconnecting it. This endpoint does not update wrapup. |
 | [**patchConversationsCallParticipantConsult**](ConversationsAPI#patchConversationsCallParticipantConsult) | Change who can speak |
+| [**patchConversationsCallParticipantUserUserId**](ConversationsAPI#patchConversationsCallParticipantUserUserId) | Update conversation participant on behalf of a user |
 | [**patchConversationsCallback**](ConversationsAPI#patchConversationsCallback) | Update a conversation by disconnecting all of the participants |
 | [**patchConversationsCallbackParticipant**](ConversationsAPI#patchConversationsCallbackParticipant) | Update conversation participant |
 | [**patchConversationsCallbackParticipantAttributes**](ConversationsAPI#patchConversationsCallbackParticipantAttributes) | Update the attributes on a conversation participant. |
@@ -4246,7 +4247,7 @@ This endpoint does not require any parameters.
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) getConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId(integrationId)
+> [AppleIdentityResolutionConfig](AppleIdentityResolutionConfig) getConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId(integrationId)
 
 Get Apple messaging integration identity resolution settings
 
@@ -4290,14 +4291,14 @@ ConversationsAPI.getConversationsMessagingIdentityresolutionIntegrationsAppleInt
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**AppleIdentityResolutionConfig**](AppleIdentityResolutionConfig)
 
 
 ## getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId)
+> [FacebookIdentityResolutionConfig](FacebookIdentityResolutionConfig) getConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId)
 
 Get Facebook messaging integration identity resolution settings
 
@@ -4341,14 +4342,14 @@ ConversationsAPI.getConversationsMessagingIdentityresolutionIntegrationsFacebook
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**FacebookIdentityResolutionConfig**](FacebookIdentityResolutionConfig)
 
 
 ## getConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) getConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId(integrationId)
+> [InstagramIdentityResolutionConfig](InstagramIdentityResolutionConfig) getConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId(integrationId)
 
 Get an Instagram integration identity resolution settings
 
@@ -4392,7 +4393,7 @@ ConversationsAPI.getConversationsMessagingIdentityresolutionIntegrationsInstagra
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**InstagramIdentityResolutionConfig**](InstagramIdentityResolutionConfig)
 
 
 ## getConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId
@@ -4450,7 +4451,7 @@ ConversationsAPI.getConversationsMessagingIdentityresolutionIntegrationsOpenInte
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) getConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId(integrationId)
+> [TwitterIdentityResolutionConfig](TwitterIdentityResolutionConfig) getConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId(integrationId)
 
 Get X (Formally Twitter) messaging integration identity resolution settings
 
@@ -4494,14 +4495,14 @@ ConversationsAPI.getConversationsMessagingIdentityresolutionIntegrationsTwitterI
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**TwitterIdentityResolutionConfig**](TwitterIdentityResolutionConfig)
 
 
 ## getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId)
+> [WhatsAppIdentityResolutionConfig](WhatsAppIdentityResolutionConfig) getConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId)
 
 Get a whatsApp integration Identity Resolution settings
 
@@ -4545,7 +4546,7 @@ ConversationsAPI.getConversationsMessagingIdentityresolutionIntegrationsWhatsapp
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**WhatsAppIdentityResolutionConfig**](WhatsAppIdentityResolutionConfig)
 
 
 ## getConversationsMessagingIntegrationTwitterOauthSettings
@@ -6723,6 +6724,64 @@ ConversationsAPI.patchConversationsCallParticipantConsult(conversationId: conver
 ### Return type
 
 [**ConsultTransferResponse**](ConsultTransferResponse)
+
+
+## patchConversationsCallParticipantUserUserId
+
+
+
+> Void patchConversationsCallParticipantUserUserId(conversationId, participantId, userId, body)
+
+Update conversation participant on behalf of a user
+
+
+
+Wraps PATCH /api/v2/conversations/calls/{conversationId}/participants/{participantId}/user/{userId}  
+
+Requires ANY permissions: 
+
+* conversation:participant:wrapup
+* conversation:call:record
+* conversation:communication:disconnect
+* conversation:agentlessCall:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let userId: String = "" // userId
+let body: MediaParticipantRequest = new MediaParticipantRequest(...) // Participant request
+
+// Code example
+ConversationsAPI.patchConversationsCallParticipantUserUserId(conversationId: conversationId, participantId: participantId, userId: userId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.patchConversationsCallParticipantUserUserId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **userId** | **String**| userId | |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant request | |
+
+
+### Return type
+
+`nil` (empty response body)
 
 
 ## patchConversationsCallback
@@ -13626,7 +13685,7 @@ ConversationsAPI.putConversationsMessageRecordingstate(conversationId: conversat
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) putConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId(integrationId, body)
+> [AppleIdentityResolutionConfig](AppleIdentityResolutionConfig) putConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId(integrationId, body)
 
 Create an identity resolution settings for a Apple messaging integration
 
@@ -13648,7 +13707,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let integrationId: String = "" // Integration ID
-let body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // IdentityResolutionConfig
+let body: AppleIdentityResolutionConfig = new AppleIdentityResolutionConfig(...) // IdentityResolutionConfig
 
 // Code example
 ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId(integrationId: integrationId, body: body) { (response, error) in
@@ -13667,19 +13726,19 @@ ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsAppleInt
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
-| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)| IdentityResolutionConfig | |
+| **body** | [**AppleIdentityResolutionConfig**](AppleIdentityResolutionConfig)| IdentityResolutionConfig | |
 
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**AppleIdentityResolutionConfig**](AppleIdentityResolutionConfig)
 
 
 ## putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId, body)
+> [FacebookIdentityResolutionConfig](FacebookIdentityResolutionConfig) putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId, body)
 
 Create an identity resolution settings for a Facebook messaging integration
 
@@ -13701,7 +13760,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let integrationId: String = "" // Integration ID
-let body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // IdentityResolutionConfig
+let body: FacebookIdentityResolutionConfig = new FacebookIdentityResolutionConfig(...) // IdentityResolutionConfig
 
 // Code example
 ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId: integrationId, body: body) { (response, error) in
@@ -13720,19 +13779,19 @@ ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsFacebook
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
-| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)| IdentityResolutionConfig | |
+| **body** | [**FacebookIdentityResolutionConfig**](FacebookIdentityResolutionConfig)| IdentityResolutionConfig | |
 
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**FacebookIdentityResolutionConfig**](FacebookIdentityResolutionConfig)
 
 
 ## putConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) putConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId(integrationId, body)
+> [InstagramIdentityResolutionConfig](InstagramIdentityResolutionConfig) putConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId(integrationId, body)
 
 Create identity resolution settings for an Instagram messaging integration
 
@@ -13754,7 +13813,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let integrationId: String = "" // Integration ID
-let body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // IdentityResolutionConfig
+let body: InstagramIdentityResolutionConfig = new InstagramIdentityResolutionConfig(...) // IdentityResolutionConfig
 
 // Code example
 ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId(integrationId: integrationId, body: body) { (response, error) in
@@ -13773,12 +13832,12 @@ ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsInstagra
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
-| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)| IdentityResolutionConfig | |
+| **body** | [**InstagramIdentityResolutionConfig**](InstagramIdentityResolutionConfig)| IdentityResolutionConfig | |
 
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**InstagramIdentityResolutionConfig**](InstagramIdentityResolutionConfig)
 
 
 ## putConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId
@@ -13838,7 +13897,7 @@ ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsOpenInte
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) putConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId(integrationId, body)
+> [TwitterIdentityResolutionConfig](TwitterIdentityResolutionConfig) putConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId(integrationId, body)
 
 Create an identity resolution settings for an X (Formally Twitter) messaging integration
 
@@ -13860,7 +13919,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let integrationId: String = "" // Integration Id
-let body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // IdentityResolutionConfig
+let body: TwitterIdentityResolutionConfig = new TwitterIdentityResolutionConfig(...) // IdentityResolutionConfig
 
 // Code example
 ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId(integrationId: integrationId, body: body) { (response, error) in
@@ -13879,19 +13938,19 @@ ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsTwitterI
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration Id | |
-| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)| IdentityResolutionConfig | |
+| **body** | [**TwitterIdentityResolutionConfig**](TwitterIdentityResolutionConfig)| IdentityResolutionConfig | |
 
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**TwitterIdentityResolutionConfig**](TwitterIdentityResolutionConfig)
 
 
 ## putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId
 
 
 
-> [IdentityResolutionConfig](IdentityResolutionConfig) putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId, body)
+> [WhatsAppIdentityResolutionConfig](WhatsAppIdentityResolutionConfig) putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId, body)
 
 Update a whatsApp integration Identity Resolution settings
 
@@ -13913,7 +13972,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let integrationId: String = "" // Integration ID
-let body: IdentityResolutionConfig = new IdentityResolutionConfig(...) // 
+let body: WhatsAppIdentityResolutionConfig = new WhatsAppIdentityResolutionConfig(...) // 
 
 // Code example
 ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId: integrationId, body: body) { (response, error) in
@@ -13932,12 +13991,12 @@ ConversationsAPI.putConversationsMessagingIdentityresolutionIntegrationsWhatsapp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
-| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  | |
+| **body** | [**WhatsAppIdentityResolutionConfig**](WhatsAppIdentityResolutionConfig)|  | |
 
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**WhatsAppIdentityResolutionConfig**](WhatsAppIdentityResolutionConfig)
 
 
 ## putConversationsMessagingSettingsDefault
@@ -14254,4 +14313,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@177.0.0_
+_PureCloudPlatformClientV2@178.0.0_

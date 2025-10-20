@@ -14,7 +14,8 @@
 | **body** | **String** | Body text of the content offer. | [optional] |
 | **callToAction** | [**CallToAction**](CallToAction) | Properties customizing the call to action button on the content offer. | [optional] |
 | **style** | [**ContentOfferStylingConfiguration**](ContentOfferStylingConfiguration) | Properties customizing the styling of the content offer. | [optional] |
+| **imageAltText** | **String** | Image description text for accessibility compliance and assistive technology support. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@177.0.0_
+_PureCloudPlatformClientV2@178.0.0_

@@ -15,9 +15,10 @@
 | **flattenMultivaluedDimensions** | **Bool** | Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;) | [optional] |
 | **views** | [**[AgentCopilotAggregationView]**]([AgentCopilotAggregationView]) | Custom derived metric views | [optional] |
 | **alternateTimeDimension** | **String** | Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \&quot;eventTime\&quot; uses the actual time of the data event. | [optional] |
-| **queryType** | **String** | Query type to use. Use groupBy for all matching results, and topN for just top N results for the requested metric (group by exactly 1 dimension) | [optional] |
-| **limit** | **Int** | How many results you want in the topN list. Only applicable for topN query type. | [optional] |
+| **queryType** | **String** | Query type to use. Use groupBy for all matching results, and topN/bottomN for N results ordered by the sortMetric. Default is groupBy. | [optional] |
+| **sortMetric** | [**AgentCopilotAggregationSort**](AgentCopilotAggregationSort) | Required when requesting multiple metrics. Only applicable for topN/bottomN query type. | [optional] |
+| **limit** | **Int** | How many results you want in an ordered list. Only applicable for topN/bottomN query type. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@177.0.0_
+_PureCloudPlatformClientV2@178.0.0_
