@@ -4452,7 +4452,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastPl
 
 
 
-> [BuForecastStaffingRequirementsResultResponse](BuForecastStaffingRequirementsResultResponse) getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId, weekDateId, forecastId, weekNumbers)
+> [BuForecastStaffingRequirementsResultResponse](BuForecastStaffingRequirementsResultResponse) getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId, weekDateId, forecastId, weekNumbers, expand)
 
 Get the staffing requirement by planning group for a forecast
 
@@ -4476,9 +4476,10 @@ let businessUnitId: String = "" // The ID of the business unit to which the fore
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let forecastId: String = "" // The ID of the forecast
 let weekNumbers: [String] = [""] // The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified
+let expand: [String] = [""] // Expand to include minimum staffing values in (staffing requirement response or applied to base staffing requirement values)
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, weekNumbers: weekNumbers) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, weekNumbers: weekNumbers, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4497,6 +4498,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastSt
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| The ID of the forecast | |
 | **weekNumbers** | [**[String]**](String)| The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified | [optional] |
+| **expand** | [**[String]**](String)| Expand to include minimum staffing values in (staffing requirement response or applied to base staffing requirement values) | [optional]<br />**Values**: resultsPlanninggroupstaffingrequirementsMinimumstaffperinterval ("results.planningGroupStaffingRequirements.minimumStaffPerInterval"), resultsPlanninggroupstaffingrequirementsEffectivestaffperinterval ("results.planningGroupStaffingRequirements.effectiveStaffPerInterval") |
 
 
 ### Return type
@@ -14127,4 +14129,4 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatformClientV2@178.0.0_
+_PureCloudPlatformClientV2@179.0.0_

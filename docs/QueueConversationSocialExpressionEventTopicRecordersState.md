@@ -10,7 +10,8 @@ Contains the states of different recorders.
 | **adhocState** | **String** | Indicates the state of the adhoc recorder. | [optional] |
 | **customerExperienceState** | **String** | Indicates the state of the customer experience recorder. | [optional] |
 | **agentExperienceState** | **String** | Indicates the state of the agent experience recorder. | [optional] |
+| **snippetState** | **String** | State of the snippet recording for this session. Note that snippets may never be paused. Valid values are in Constants.java with a prefix of RECORDER_STATE_*. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@178.0.0_
+_PureCloudPlatformClientV2@179.0.0_

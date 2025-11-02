@@ -1865,4 +1865,4 @@ IdentityProviderAPI.putIdentityprovidersSalesforce(body: body) { (response, erro
 [**IdentityProvider**](IdentityProvider)
 
 
-_PureCloudPlatformClientV2@178.0.0_
+_PureCloudPlatformClientV2@179.0.0_

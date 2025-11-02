@@ -14,6 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getCoachingAppointmentsMe**](CoachingAPI#getCoachingAppointmentsMe) | Get my appointments for a given date range |
 | [**getCoachingNotification**](CoachingAPI#getCoachingNotification) | Get an existing notification |
 | [**getCoachingNotifications**](CoachingAPI#getCoachingNotifications) | Retrieve the list of your notifications. |
+| [**getCoachingScheduleslotsJob**](CoachingAPI#getCoachingScheduleslotsJob) | Retrieve the status of the job for the slots where a coaching appointment can be scheduled. |
 | [**patchCoachingAppointment**](CoachingAPI#patchCoachingAppointment) | Update an existing appointment |
 | [**patchCoachingAppointmentAnnotation**](CoachingAPI#patchCoachingAppointmentAnnotation) | Update an existing annotation. |
 | [**patchCoachingAppointmentStatus**](CoachingAPI#patchCoachingAppointmentStatus) | Update the status of a coaching appointment |
@@ -22,6 +23,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postCoachingAppointmentConversations**](CoachingAPI#postCoachingAppointmentConversations) | Add a conversation to an appointment |
 | [**postCoachingAppointments**](CoachingAPI#postCoachingAppointments) | Create a new appointment |
 | [**postCoachingAppointmentsAggregatesQuery**](CoachingAPI#postCoachingAppointmentsAggregatesQuery) | Retrieve aggregated appointment data |
+| [**postCoachingScheduleslotsJobs**](CoachingAPI#postCoachingScheduleslotsJobs) | Start job to retrieve the slots where a coaching appointment can be scheduled. |
 | [**postCoachingScheduleslotsQuery**](CoachingAPI#postCoachingScheduleslotsQuery) | Get list of possible slots where a coaching appointment can be scheduled. |
 {: class="table-striped"}
 
@@ -596,6 +598,56 @@ CoachingAPI.getCoachingNotifications(pageNumber: pageNumber, pageSize: pageSize,
 [**CoachingNotificationList**](CoachingNotificationList)
 
 
+## getCoachingScheduleslotsJob
+
+
+
+> [CoachingScheduleSlotsJobResponse](CoachingScheduleSlotsJobResponse) getCoachingScheduleslotsJob(jobId)
+
+Retrieve the status of the job for the slots where a coaching appointment can be scheduled.
+
+
+
+Wraps GET /api/v2/coaching/scheduleslots/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* coaching:scheduleSlotJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // The ID of job
+
+// Code example
+CoachingAPI.getCoachingScheduleslotsJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("CoachingAPI.getCoachingScheduleslotsJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| The ID of job | |
+
+
+### Return type
+
+[**CoachingScheduleSlotsJobResponse**](CoachingScheduleSlotsJobResponse)
+
+
 ## patchCoachingAppointment
 
 
@@ -1024,6 +1076,56 @@ CoachingAPI.postCoachingAppointmentsAggregatesQuery(body: body) { (response, err
 [**CoachingAppointmentAggregateResponse**](CoachingAppointmentAggregateResponse)
 
 
+## postCoachingScheduleslotsJobs
+
+
+
+> [CoachingScheduleSlotsJobResponse](CoachingScheduleSlotsJobResponse) postCoachingScheduleslotsJobs(body)
+
+Start job to retrieve the slots where a coaching appointment can be scheduled.
+
+
+
+Wraps POST /api/v2/coaching/scheduleslots/jobs  
+
+Requires ANY permissions: 
+
+* coaching:scheduleSlotJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CoachingScheduleSlotsJobRequest = new CoachingScheduleSlotsJobRequest(...) // The slots search request
+
+// Code example
+CoachingAPI.postCoachingScheduleslotsJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("CoachingAPI.postCoachingScheduleslotsJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CoachingScheduleSlotsJobRequest**](CoachingScheduleSlotsJobRequest)| The slots search request | |
+
+
+### Return type
+
+[**CoachingScheduleSlotsJobResponse**](CoachingScheduleSlotsJobResponse)
+
+
 ## postCoachingScheduleslotsQuery
 
 
@@ -1074,4 +1176,4 @@ CoachingAPI.postCoachingScheduleslotsQuery(body: body) { (response, error) in
 [**CoachingSlotsResponse**](CoachingSlotsResponse)
 
 
-_PureCloudPlatformClientV2@178.0.0_
+_PureCloudPlatformClientV2@179.0.0_

@@ -34,7 +34,9 @@
 | **engagementSource** | **String** | Provide more visibility into what integrations customers are creating with Open Messaging. String values are defined in the Constants.java named ENGAGEMENT_SOURCE_* | [optional] |
 | **byoSmsIntegrationId** | **String** |  | [optional] |
 | **queueMediaSettings** | [**ConversationEventTopicQueueMediaSettings**](ConversationEventTopicQueueMediaSettings) | Represents the queue setting for this media. | [optional] |
+| **resumeTime** | [**Date**](Date) | The time when a parked message should resume. | [optional] |
+| **parkTime** | [**Date**](Date) | The time when an  parked message was parked. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@178.0.0_
+_PureCloudPlatformClientV2@179.0.0_

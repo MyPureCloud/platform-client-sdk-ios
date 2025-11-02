@@ -12,4 +12,4 @@ A representation of data fields to be gathered for installing the accelerator
 
 
 
-_PureCloudPlatformClientV2@178.0.0_
+_PureCloudPlatformClientV2@179.0.0_

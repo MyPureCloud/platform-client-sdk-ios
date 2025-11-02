@@ -372,4 +372,4 @@ AuditAPI.postAuditsQueryRealtimeRelated(body: body, expand: expand) { (response,
 [**AuditRealtimeRelatedResultsResponse**](AuditRealtimeRelatedResultsResponse)
 
 
-_PureCloudPlatformClientV2@178.0.0_
+_PureCloudPlatformClientV2@179.0.0_

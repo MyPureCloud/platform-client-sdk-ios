@@ -17,8 +17,8 @@ Settings concerning journey events
 | **idleEvents** | [**[IdleEventTrigger]**]([IdleEventTrigger]) | Tracks when and where a visitor becomes inactive on a webpage. | [optional] |
 | **inViewportEvents** | [**[SelectorEventTrigger]**]([SelectorEventTrigger]) | Tracks when elements become visible or hidden on screen. | [optional] |
 | **scrollDepthEvents** | [**[ScrollPercentageEventTrigger]**]([ScrollPercentageEventTrigger]) | Tracks when a visitor scrolls to a specific percentage of a webpage. | [optional] |
-| **trackingSettings** | [**JSON**](JSON) | Configuration settings for tracking behavior and filtering | [optional] |
+| **trackingSettings** | [**TrackingSettings**](TrackingSettings) | Configuration settings for tracking behavior and filtering | [optional] |
 
 
 
-_PureCloudPlatformClientV2@178.0.0_
+_PureCloudPlatformClientV2@179.0.0_
