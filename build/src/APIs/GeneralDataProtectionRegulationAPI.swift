@@ -174,6 +174,8 @@ open class GeneralDataProtectionRegulationAPI {
         case twitter = "TWITTER"
         case instagram = "INSTAGRAM"
         case facebook = "FACEBOOK"
+        case appleMessages = "APPLE_MESSAGES"
+        case externalId = "EXTERNAL_ID"
     }
     
     

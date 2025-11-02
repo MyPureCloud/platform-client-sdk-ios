@@ -14,7 +14,8 @@
 | **transcriptionStartTimeMs** | **Int64** |  | [optional] |
 | **transcripts** | [**[TranscriptionTopicTranscriptResult]**]([TranscriptionTopicTranscriptResult]) |  | [optional] |
 | **status** | [**TranscriptionTopicTranscriptionRequestStatus**](TranscriptionTopicTranscriptionRequestStatus) |  | [optional] |
+| **speechTextAnalyticsProgramId** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@178.0.0_
+_PureCloudPlatformClientV2@179.0.0_

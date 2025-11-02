@@ -7919,6 +7919,20 @@
     "return": "CoachingNotificationList",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet expand: [String] = [\"\"] // Indicates a field in the response which should be expanded.\n\n// Retrieve the list of your notifications.\nGetCoachingNotificationsRequest.getCoachingNotifications(pageNumber: pageNumber, pageSize: pageSize, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetCoachingNotificationsRequest.getCoachingNotifications was successful\")\n        dump(response)\n    }\n}"
   },
+  "getcoachingscheduleslotsjob": {
+    "operationId": "getcoachingscheduleslotsjob",
+    "functionName": "getCoachingScheduleslotsJob",
+    "signature": "getCoachingScheduleslotsJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "CoachingScheduleSlotsJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // The ID of job\n\n// Retrieve the status of the job for the slots where a coaching appointment can be scheduled.\nGetCoachingScheduleslotsJobRequest.getCoachingScheduleslotsJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetCoachingScheduleslotsJobRequest.getCoachingScheduleslotsJob was successful\")\n        dump(response)\n    }\n}"
+  },
   "patchcoachingappointment": {
     "operationId": "patchcoachingappointment",
     "functionName": "patchCoachingAppointment",
@@ -8065,6 +8079,20 @@
     ],
     "return": "CoachingAppointmentAggregateResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: CoachingAppointmentAggregateRequest = new CoachingAppointmentAggregateRequest(...) // Aggregate Request\n\n// Retrieve aggregated appointment data\nPostCoachingAppointmentsAggregatesQueryRequest.postCoachingAppointmentsAggregatesQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostCoachingAppointmentsAggregatesQueryRequest.postCoachingAppointmentsAggregatesQuery was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postcoachingscheduleslotsjobs": {
+    "operationId": "postcoachingscheduleslotsjobs",
+    "functionName": "postCoachingScheduleslotsJobs",
+    "signature": "postCoachingScheduleslotsJobs(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "CoachingScheduleSlotsJobRequest",
+        "required": "true"
+      }
+    ],
+    "return": "CoachingScheduleSlotsJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: CoachingScheduleSlotsJobRequest = new CoachingScheduleSlotsJobRequest(...) // The slots search request\n\n// Start job to retrieve the slots where a coaching appointment can be scheduled.\nPostCoachingScheduleslotsJobsRequest.postCoachingScheduleslotsJobs(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostCoachingScheduleslotsJobsRequest.postCoachingScheduleslotsJobs was successful\")\n        dump(response)\n    }\n}"
   },
   "postcoachingscheduleslotsquery": {
     "operationId": "postcoachingscheduleslotsquery",
@@ -9107,6 +9135,59 @@
     "return": "Conversation",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\n\n// Get conversation\nGetConversationRequest.getConversation(conversationId: conversationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationRequest.getConversation was successful\")\n        dump(response)\n    }\n}"
   },
+  "getconversationcommunicationinternalmessage": {
+    "operationId": "getconversationcommunicationinternalmessage",
+    "functionName": "getConversationCommunicationInternalmessage",
+    "signature": "getConversationCommunicationInternalmessage(conversationId, communicationId, messageId)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "messageId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "InternalMessageData",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet communicationId: String = \"\" // communicationId\nlet messageId: String = \"\" // messageId\n\n// Get message\nGetConversationCommunicationInternalmessageRequest.getConversationCommunicationInternalmessage(conversationId: conversationId, communicationId: communicationId, messageId: messageId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationCommunicationInternalmessageRequest.getConversationCommunicationInternalmessage was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationcommunicationinternalmessages": {
+    "operationId": "getconversationcommunicationinternalmessages",
+    "functionName": "getConversationCommunicationInternalmessages",
+    "signature": "getConversationCommunicationInternalmessages(conversationId, communicationId, pageSize, pageNumber)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "InternalMessageDataEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet communicationId: String = \"\" // communicationId\nlet pageSize: Int = 0 // Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 200.\nlet pageNumber: Int = 0 // Page number\n\n// Get messages for communication\nGetConversationCommunicationInternalmessagesRequest.getConversationCommunicationInternalmessages(conversationId: conversationId, communicationId: communicationId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationCommunicationInternalmessagesRequest.getConversationCommunicationInternalmessages was successful\")\n        dump(response)\n    }\n}"
+  },
   "getconversationparticipantsecureivrsession": {
     "operationId": "getconversationparticipantsecureivrsession",
     "functionName": "getConversationParticipantSecureivrsession",
@@ -9907,6 +9988,27 @@
     "signature": "getConversationsEmails()",
     "return": "EmailConversationEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get active email conversations for the logged in user\nGetConversationsEmailsRequest.getConversationsEmails() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsEmailsRequest.getConversationsEmails was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationsinternalmessage": {
+    "operationId": "getconversationsinternalmessage",
+    "functionName": "getConversationsInternalmessage",
+    "signature": "getConversationsInternalmessage(conversationId)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "InternalMessageConversation",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\n\n// Get internal message conversation\nGetConversationsInternalmessageRequest.getConversationsInternalmessage(conversationId: conversationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsInternalmessageRequest.getConversationsInternalmessage was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationsinternalmessages": {
+    "operationId": "getconversationsinternalmessages",
+    "functionName": "getConversationsInternalmessages",
+    "signature": "getConversationsInternalmessages()",
+    "return": "InternalMessageConversationEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get active internal message conversations for the logged in user\nGetConversationsInternalmessagesRequest.getConversationsInternalmessages() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsInternalmessagesRequest.getConversationsInternalmessages was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationskeyconfiguration": {
     "operationId": "getconversationskeyconfiguration",
@@ -11916,6 +12018,30 @@
     "return": "CobrowseWebMessagingSession",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // Conversation ID\n\n// Creates a cobrowse session. Requires \\\"conversation:cobrowse:add\\\" (for web messaging) or \\\"conversation:cobrowsevoice:add\\\" permission.\nPostConversationCobrowseRequest.postConversationCobrowse(conversationId: conversationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationCobrowseRequest.postConversationCobrowse was successful\")\n        dump(response)\n    }\n}"
   },
+  "postconversationcommunicationinternalmessages": {
+    "operationId": "postconversationcommunicationinternalmessages",
+    "functionName": "postConversationCommunicationInternalmessages",
+    "signature": "postConversationCommunicationInternalmessages(conversationId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "InternalMessageRequest",
+        "required": "true"
+      }
+    ],
+    "return": "InternalMessageData",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet communicationId: String = \"\" // communicationId\nlet body: InternalMessageRequest = new InternalMessageRequest(...) // Message\n\n// Send internal message\nPostConversationCommunicationInternalmessagesRequest.postConversationCommunicationInternalmessages(conversationId: conversationId, communicationId: communicationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationCommunicationInternalmessagesRequest.postConversationCommunicationInternalmessages was successful\")\n        dump(response)\n    }\n}"
+  },
   "postconversationdisconnect": {
     "operationId": "postconversationdisconnect",
     "functionName": "postConversationDisconnect",
@@ -11975,6 +12101,30 @@
       }
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\nlet participantId: String = \"\" // participant ID\nlet body: Digits = new Digits(...) // Digits\n\n// Sends DTMF to the participant\nPostConversationParticipantDigitsRequest.postConversationParticipantDigits(conversationId: conversationId, participantId: participantId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostConversationParticipantDigitsRequest.postConversationParticipantDigits was successful\")\n    }\n}"
+  },
+  "postconversationparticipantinternalmessagesuserscommunications": {
+    "operationId": "postconversationparticipantinternalmessagesuserscommunications",
+    "functionName": "postConversationParticipantInternalmessagesUsersCommunications",
+    "signature": "postConversationParticipantInternalmessagesUsersCommunications(conversationId, participantId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "MessagingConferWithUserRequest",
+        "required": "true"
+      }
+    ],
+    "return": "MessagingConferResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\nlet participantId: String = \"\" // participant ID\nlet body: MessagingConferWithUserRequest = new MessagingConferWithUserRequest(...) // Confer request\n\n// Setup internal message communication with user\nPostConversationParticipantInternalmessagesUsersCommunicationsRequest.postConversationParticipantInternalmessagesUsersCommunications(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationParticipantInternalmessagesUsersCommunicationsRequest.postConversationParticipantInternalmessagesUsersCommunications was successful\")\n        dump(response)\n    }\n}"
   },
   "postconversationparticipantreplace": {
     "operationId": "postconversationparticipantreplace",
@@ -16941,6 +17091,45 @@
     ],
     "return": "InsightsTrend",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filterType: GetGamificationInsightsGroupsTrendsAllRequest.FilterType_getGamificationInsightsGroupsTrendsAll = GetGamificationInsightsGroupsTrendsAllRequest.FilterType_getGamificationInsightsGroupsTrendsAll.enummember // Filter type for the query request.\nlet filterId: String = \"\" // ID for the filter type.\nlet granularity: GetGamificationInsightsGroupsTrendsAllRequest.Granularity_getGamificationInsightsGroupsTrendsAll = GetGamificationInsightsGroupsTrendsAllRequest.Granularity_getGamificationInsightsGroupsTrendsAll.enummember // Granularity\nlet comparativePeriodStartWorkday: Date = new Date(...) // The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet comparativePeriodEndWorkday: Date = new Date(...) // The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet primaryPeriodStartWorkday: Date = new Date(...) // The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet primaryPeriodEndWorkday: Date = new Date(...) // The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n\n// Get insights overall trend\nGetGamificationInsightsGroupsTrendsAllRequest.getGamificationInsightsGroupsTrendsAll(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, comparativePeriodEndWorkday: comparativePeriodEndWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, primaryPeriodEndWorkday: primaryPeriodEndWorkday) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationInsightsGroupsTrendsAllRequest.getGamificationInsightsGroupsTrendsAll was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getgamificationinsightsmanagers": {
+    "operationId": "getgamificationinsightsmanagers",
+    "functionName": "getGamificationInsightsManagers",
+    "signature": "getGamificationInsightsManagers(filterType, filterId, granularity, startWorkday, pageSize, pageNumber)",
+    "parameters": [
+      {
+        "name": "filterType",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "filterId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "granularity",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "startWorkday",
+        "type": "Date",
+        "required": "true"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "InsightsAgents",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filterType: GetGamificationInsightsManagersRequest.FilterType_getGamificationInsightsManagers = GetGamificationInsightsManagersRequest.FilterType_getGamificationInsightsManagers.enummember // Filter type for the query request.\nlet filterId: String = \"\" // ID for the filter type.\nlet granularity: GetGamificationInsightsManagersRequest.Granularity_getGamificationInsightsManagers = GetGamificationInsightsManagersRequest.Granularity_getGamificationInsightsManagers.enummember // Granularity\nlet startWorkday: Date = new Date(...) // The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\n\n// Query managers in a profile during a period of time\nGetGamificationInsightsManagersRequest.getGamificationInsightsManagers(filterType: filterType, filterId: filterId, granularity: granularity, startWorkday: startWorkday, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationInsightsManagersRequest.getGamificationInsightsManagers was successful\")\n        dump(response)\n    }\n}"
   },
   "getgamificationinsightsmembers": {
     "operationId": "getgamificationinsightsmembers",
@@ -26587,6 +26776,20 @@
     "return": "LearningModuleCoverArtResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet coverArtId: String = \"\" // Key identifier for the cover art\n\n// Get a specific Learning Module cover art using ID\nGetLearningModulesCoverartCoverArtIdRequest.getLearningModulesCoverartCoverArtId(coverArtId: coverArtId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLearningModulesCoverartCoverArtIdRequest.getLearningModulesCoverartCoverArtId was successful\")\n        dump(response)\n    }\n}"
   },
+  "getlearningscheduleslotsjob": {
+    "operationId": "getlearningscheduleslotsjob",
+    "functionName": "getLearningScheduleslotsJob",
+    "signature": "getLearningScheduleslotsJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "LearningScheduleSlotsJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // The ID of the job\n\n// Retrieve the status of the job for the slots where a learning activity can be scheduled.\nGetLearningScheduleslotsJobRequest.getLearningScheduleslotsJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLearningScheduleslotsJobRequest.getLearningScheduleslotsJob was successful\")\n        dump(response)\n    }\n}"
+  },
   "getlearningscormscormid": {
     "operationId": "getlearningscormscormid",
     "functionName": "getLearningScormScormId",
@@ -26860,6 +27063,20 @@
     ],
     "return": "LearningAssignmentUserListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet body: LearningAssignmentUserQuery = new LearningAssignmentUserQuery(...) // The learning module rule to fetch users\n\n// Get users for learning module rule\nPostLearningRulesQueryRequest.postLearningRulesQuery(pageSize: pageSize, pageNumber: pageNumber, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostLearningRulesQueryRequest.postLearningRulesQuery was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postlearningscheduleslotsjobs": {
+    "operationId": "postlearningscheduleslotsjobs",
+    "functionName": "postLearningScheduleslotsJobs",
+    "signature": "postLearningScheduleslotsJobs(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "LearningScheduleSlotsJobRequest",
+        "required": "true"
+      }
+    ],
+    "return": "LearningScheduleSlotsJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: LearningScheduleSlotsJobRequest = new LearningScheduleSlotsJobRequest(...) // The slots search request\n\n// Start job to retrieve slots where a learning activity can be scheduled.\nPostLearningScheduleslotsJobsRequest.postLearningScheduleslotsJobs(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostLearningScheduleslotsJobsRequest.postLearningScheduleslotsJobs was successful\")\n        dump(response)\n    }\n}"
   },
   "postlearningscheduleslotsquery": {
     "operationId": "postlearningscheduleslotsquery",
@@ -50886,7 +51103,7 @@
   "getworkforcemanagementbusinessunitweekshorttermforecaststaffingrequirement": {
     "operationId": "getworkforcemanagementbusinessunitweekshorttermforecaststaffingrequirement",
     "functionName": "getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement",
-    "signature": "getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId, weekDateId, forecastId, weekNumbers)",
+    "signature": "getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId, weekDateId, forecastId, weekNumbers, expand)",
     "parameters": [
       {
         "name": "businessUnitId",
@@ -50907,10 +51124,15 @@
         "name": "weekNumbers",
         "type": "[String]",
         "required": "false"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
       }
     ],
     "return": "BuForecastStaffingRequirementsResultResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit to which the forecast belongs\nlet weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet forecastId: String = \"\" // The ID of the forecast\nlet weekNumbers: [String] = [\"\"] // The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified\n\n// Get the staffing requirement by planning group for a forecast\nGetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementRequest.getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, weekNumbers: weekNumbers) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementRequest.getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit to which the forecast belongs\nlet weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet forecastId: String = \"\" // The ID of the forecast\nlet weekNumbers: [String] = [\"\"] // The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified\nlet expand: [String] = [\"\"] // Expand to include minimum staffing values in (staffing requirement response or applied to base staffing requirement values)\n\n// Get the staffing requirement by planning group for a forecast\nGetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementRequest.getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, weekNumbers: weekNumbers, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementRequest.getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement was successful\")\n        dump(response)\n    }\n}"
   },
   "getworkforcemanagementbusinessunitweekshorttermforecasts": {
     "operationId": "getworkforcemanagementbusinessunitweekshorttermforecasts",

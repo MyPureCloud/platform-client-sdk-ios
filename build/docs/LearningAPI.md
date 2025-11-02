@@ -18,6 +18,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getLearningModules**](LearningAPI#getLearningModules) | Get all learning modules of an organization |
 | [**getLearningModulesAssignments**](LearningAPI#getLearningModulesAssignments) | Get all learning modules of an organization including assignments for a specific user |
 | [**getLearningModulesCoverartCoverArtId**](LearningAPI#getLearningModulesCoverartCoverArtId) | Get a specific Learning Module cover art using ID |
+| [**getLearningScheduleslotsJob**](LearningAPI#getLearningScheduleslotsJob) | Retrieve the status of the job for the slots where a learning activity can be scheduled. |
 | [**getLearningScormScormId**](LearningAPI#getLearningScormScormId) | Get Learning SCORM Result |
 | [**patchLearningAssignment**](LearningAPI#patchLearningAssignment) | Update Learning Assignment |
 | [**patchLearningAssignmentReschedule**](LearningAPI#patchLearningAssignmentReschedule) | Reschedule Learning Assignment |
@@ -34,6 +35,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postLearningModulePublish**](LearningAPI#postLearningModulePublish) | Publish a Learning module |
 | [**postLearningModules**](LearningAPI#postLearningModules) | Create a new learning module |
 | [**postLearningRulesQuery**](LearningAPI#postLearningRulesQuery) | Get users for learning module rule |
+| [**postLearningScheduleslotsJobs**](LearningAPI#postLearningScheduleslotsJobs) | Start job to retrieve slots where a learning activity can be scheduled. |
 | [**postLearningScheduleslotsQuery**](LearningAPI#postLearningScheduleslotsQuery) | Get list of possible slots where a learning activity can be scheduled. |
 | [**postLearningScorm**](LearningAPI#postLearningScorm) | Create a SCORM package upload request |
 | [**putLearningModule**](LearningAPI#putLearningModule) | Update a learning module |
@@ -850,6 +852,56 @@ LearningAPI.getLearningModulesCoverartCoverArtId(coverArtId: coverArtId) { (resp
 ### Return type
 
 [**LearningModuleCoverArtResponse**](LearningModuleCoverArtResponse)
+
+
+## getLearningScheduleslotsJob
+
+
+
+> [LearningScheduleSlotsJobResponse](LearningScheduleSlotsJobResponse) getLearningScheduleslotsJob(jobId)
+
+Retrieve the status of the job for the slots where a learning activity can be scheduled.
+
+
+
+Wraps GET /api/v2/learning/scheduleslots/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* learning:scheduleSlotJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // The ID of the job
+
+// Code example
+LearningAPI.getLearningScheduleslotsJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.getLearningScheduleslotsJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| The ID of the job | |
+
+
+### Return type
+
+[**LearningScheduleSlotsJobResponse**](LearningScheduleSlotsJobResponse)
 
 
 ## getLearningScormScormId
@@ -1685,6 +1737,56 @@ LearningAPI.postLearningRulesQuery(pageSize: pageSize, pageNumber: pageNumber, b
 [**LearningAssignmentUserListing**](LearningAssignmentUserListing)
 
 
+## postLearningScheduleslotsJobs
+
+
+
+> [LearningScheduleSlotsJobResponse](LearningScheduleSlotsJobResponse) postLearningScheduleslotsJobs(body)
+
+Start job to retrieve slots where a learning activity can be scheduled.
+
+
+
+Wraps POST /api/v2/learning/scheduleslots/jobs  
+
+Requires ANY permissions: 
+
+* learning:scheduleSlotJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: LearningScheduleSlotsJobRequest = new LearningScheduleSlotsJobRequest(...) // The slots search request
+
+// Code example
+LearningAPI.postLearningScheduleslotsJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.postLearningScheduleslotsJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**LearningScheduleSlotsJobRequest**](LearningScheduleSlotsJobRequest)| The slots search request | |
+
+
+### Return type
+
+[**LearningScheduleSlotsJobResponse**](LearningScheduleSlotsJobResponse)
+
+
 ## postLearningScheduleslotsQuery
 
 
@@ -1949,4 +2051,4 @@ LearningAPI.putLearningModuleRule(moduleId: moduleId, body: body, assign: assign
 [**LearningModuleRule**](LearningModuleRule)
 
 
-_PureCloudPlatformClientV2@178.0.0_
+_PureCloudPlatformClientV2@179.0.0_

@@ -1738,6 +1738,111 @@ open class GamificationAPI {
     }
 
     
+    public enum FilterType_getGamificationInsightsManagers: String { 
+        case performanceProfile = "PerformanceProfile"
+        case division = "Division"
+    }
+    
+    
+    
+    
+    
+    public enum Granularity_getGamificationInsightsManagers: String { 
+        case weekly = "Weekly"
+        case monthly = "Monthly"
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Query managers in a profile during a period of time
+     
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter startWorkday: (query) The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationInsightsManagers(filterType: FilterType_getGamificationInsightsManagers, filterId: String, granularity: Granularity_getGamificationInsightsManagers, startWorkday: Date, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: InsightsAgents?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationInsightsManagersWithRequestBuilder(filterType: filterType, filterId: filterId, granularity: granularity, startWorkday: startWorkday, pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<InsightsAgents>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query managers in a profile during a period of time
+     - GET /api/v2/gamification/insights/managers
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "performanceProfile" : "{}",
+  "dateEndWorkday" : "2000-01-23",
+  "entities" : [ {
+    "manager" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "manager" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "granularity" : "Daily",
+  "dateStartWorkday" : "2000-01-23"
+}, statusCode=200}]
+     
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter startWorkday: (query) The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+
+     - returns: RequestBuilder<InsightsAgents> 
+     */
+    open class func getGamificationInsightsManagersWithRequestBuilder(filterType: FilterType_getGamificationInsightsManagers, filterId: String, granularity: Granularity_getGamificationInsightsManagers, startWorkday: Date, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<InsightsAgents> {        
+        let path = "/api/v2/gamification/insights/managers"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "filterType": filterType.rawValue, 
+            "filterId": filterId, 
+            "granularity": granularity.rawValue, 
+            "startWorkday": startWorkday.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<InsightsAgents>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
     public enum FilterType_getGamificationInsightsMembers: String { 
         case performanceProfile = "PerformanceProfile"
         case division = "Division"

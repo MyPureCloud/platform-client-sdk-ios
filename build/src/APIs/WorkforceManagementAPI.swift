@@ -6234,6 +6234,13 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
+    public enum Expand_getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement: String { 
+        case resultsPlanninggroupstaffingrequirementsMinimumstaffperinterval = "results.planningGroupStaffingRequirements.minimumStaffPerInterval"
+        case resultsPlanninggroupstaffingrequirementsEffectivestaffperinterval = "results.planningGroupStaffingRequirements.effectiveStaffPerInterval"
+    }
+    
     /**
      Get the staffing requirement by planning group for a forecast
      
@@ -6241,10 +6248,11 @@ open class WorkforceManagementAPI {
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast 
      - parameter weekNumbers: (query) The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)
+     - parameter expand: (query) Expand to include minimum staffing values in (staffing requirement response or applied to base staffing requirement values) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId: String, weekDateId: Date, forecastId: String, weekNumbers: [String]? = nil, completion: @escaping ((_ data: BuForecastStaffingRequirementsResultResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, weekNumbers: weekNumbers)
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId: String, weekDateId: Date, forecastId: String, weekNumbers: [String]? = nil, expand: [String]? = nil, completion: @escaping ((_ data: BuForecastStaffingRequirementsResultResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, weekNumbers: weekNumbers, expand: expand)
         requestBuilder.execute { (response: Response<BuForecastStaffingRequirementsResultResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -6278,10 +6286,14 @@ open class WorkforceManagementAPI {
     "weekNumber" : 1,
     "planningGroupStaffingRequirements" : [ {
       "staffingRequirementsPerInterval" : [ 5.962133916683182, 5.962133916683182 ],
-      "planningGroupId" : "planningGroupId"
+      "planningGroupId" : "planningGroupId",
+      "minimumStaffPerInterval" : [ 5.637376656633329, 5.637376656633329 ],
+      "effectiveStaffPerInterval" : [ 2.3021358869347655, 2.3021358869347655 ]
     }, {
       "staffingRequirementsPerInterval" : [ 5.962133916683182, 5.962133916683182 ],
-      "planningGroupId" : "planningGroupId"
+      "planningGroupId" : "planningGroupId",
+      "minimumStaffPerInterval" : [ 5.637376656633329, 5.637376656633329 ],
+      "effectiveStaffPerInterval" : [ 2.3021358869347655, 2.3021358869347655 ]
     } ]
   }, {
     "downloadUrlExpirationDate" : "2000-01-23T04:56:07.000+00:00",
@@ -6289,10 +6301,14 @@ open class WorkforceManagementAPI {
     "weekNumber" : 1,
     "planningGroupStaffingRequirements" : [ {
       "staffingRequirementsPerInterval" : [ 5.962133916683182, 5.962133916683182 ],
-      "planningGroupId" : "planningGroupId"
+      "planningGroupId" : "planningGroupId",
+      "minimumStaffPerInterval" : [ 5.637376656633329, 5.637376656633329 ],
+      "effectiveStaffPerInterval" : [ 2.3021358869347655, 2.3021358869347655 ]
     }, {
       "staffingRequirementsPerInterval" : [ 5.962133916683182, 5.962133916683182 ],
-      "planningGroupId" : "planningGroupId"
+      "planningGroupId" : "planningGroupId",
+      "minimumStaffPerInterval" : [ 5.637376656633329, 5.637376656633329 ],
+      "effectiveStaffPerInterval" : [ 2.3021358869347655, 2.3021358869347655 ]
     } ]
   } ],
   "businessUnitId" : "businessUnitId",
@@ -6303,10 +6319,11 @@ open class WorkforceManagementAPI {
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast 
      - parameter weekNumbers: (query) The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)
+     - parameter expand: (query) Expand to include minimum staffing values in (staffing requirement response or applied to base staffing requirement values) (optional)
 
      - returns: RequestBuilder<BuForecastStaffingRequirementsResultResponse> 
      */
-    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String, weekNumbers: [String]? = nil) -> RequestBuilder<BuForecastStaffingRequirementsResultResponse> {        
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String, weekNumbers: [String]? = nil, expand: [String]? = nil) -> RequestBuilder<BuForecastStaffingRequirementsResultResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/staffingrequirement"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -6322,7 +6339,8 @@ open class WorkforceManagementAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "weekNumbers": weekNumbers
+            "weekNumbers": weekNumbers, 
+            "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<BuForecastStaffingRequirementsResultResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

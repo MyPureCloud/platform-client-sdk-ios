@@ -1086,6 +1086,79 @@ open class CoachingAPI {
 
     
     
+    /**
+     Retrieve the status of the job for the slots where a coaching appointment can be scheduled.
+     
+     - parameter jobId: (path) The ID of job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getCoachingScheduleslotsJob(jobId: String, completion: @escaping ((_ data: CoachingScheduleSlotsJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getCoachingScheduleslotsJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<CoachingScheduleSlotsJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve the status of the job for the slots where a coaching appointment can be scheduled.
+     - GET /api/v2/coaching/scheduleslots/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "activityCodeId" : "activityCodeId",
+  "slotsType" : "BestTime",
+  "lengthInMinutes" : 0,
+  "facilitatorIds" : [ "facilitatorIds", "facilitatorIds" ],
+  "attendeeIds" : [ "attendeeIds", "attendeeIds" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "results" : [ {
+    "interval" : "interval",
+    "slot" : "{}",
+    "hasConflict" : true,
+    "status" : "InProgress"
+  }, {
+    "interval" : "interval",
+    "slot" : "{}",
+    "hasConflict" : true,
+    "status" : "InProgress"
+  } ],
+  "businessUnitId" : "businessUnitId"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The ID of job 
+
+     - returns: RequestBuilder<CoachingScheduleSlotsJobResponse> 
+     */
+    open class func getCoachingScheduleslotsJobWithRequestBuilder(jobId: String) -> RequestBuilder<CoachingScheduleSlotsJobResponse> {        
+        var path = "/api/v2/coaching/scheduleslots/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CoachingScheduleSlotsJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**
@@ -1703,6 +1776,76 @@ open class CoachingAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CoachingAppointmentAggregateResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Start job to retrieve the slots where a coaching appointment can be scheduled.
+     
+     - parameter body: (body) The slots search request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postCoachingScheduleslotsJobs(body: CoachingScheduleSlotsJobRequest, completion: @escaping ((_ data: CoachingScheduleSlotsJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postCoachingScheduleslotsJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<CoachingScheduleSlotsJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Start job to retrieve the slots where a coaching appointment can be scheduled.
+     - POST /api/v2/coaching/scheduleslots/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "activityCodeId" : "activityCodeId",
+  "slotsType" : "BestTime",
+  "lengthInMinutes" : 0,
+  "facilitatorIds" : [ "facilitatorIds", "facilitatorIds" ],
+  "attendeeIds" : [ "attendeeIds", "attendeeIds" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "results" : [ {
+    "interval" : "interval",
+    "slot" : "{}",
+    "hasConflict" : true,
+    "status" : "InProgress"
+  }, {
+    "interval" : "interval",
+    "slot" : "{}",
+    "hasConflict" : true,
+    "status" : "InProgress"
+  } ],
+  "businessUnitId" : "businessUnitId"
+}, statusCode=202}]
+     
+     - parameter body: (body) The slots search request 
+
+     - returns: RequestBuilder<CoachingScheduleSlotsJobResponse> 
+     */
+    open class func postCoachingScheduleslotsJobsWithRequestBuilder(body: CoachingScheduleSlotsJobRequest) -> RequestBuilder<CoachingScheduleSlotsJobResponse> {        
+        let path = "/api/v2/coaching/scheduleslots/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CoachingScheduleSlotsJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

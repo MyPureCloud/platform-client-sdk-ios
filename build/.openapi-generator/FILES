@@ -821,6 +821,11 @@ docs/CoachingAppointmentStatusResponse.md
 docs/CoachingAppointmentStatusResponseList.md
 docs/CoachingNotification.md
 docs/CoachingNotificationList.md
+docs/CoachingScheduleSlotsJobRequest.md
+docs/CoachingScheduleSlotsJobResponse.md
+docs/CoachingScheduleSlotsJobResult.md
+docs/CoachingScheduleSlotsJobSchedule.md
+docs/CoachingScheduleSlotsJobSlot.md
 docs/CoachingSlot.md
 docs/CoachingSlotsRequest.md
 docs/CoachingSlotsResponse.md
@@ -1034,6 +1039,7 @@ docs/ConversationAggregationSort.md
 docs/ConversationAggregationView.md
 docs/ConversationAppSettings.md
 docs/ConversationAssociation.md
+docs/ConversationAttributeFilter.md
 docs/ConversationBasic.md
 docs/ConversationCallEventTopicCallConversation.md
 docs/ConversationCallEventTopicCallMediaParticipant.md
@@ -1330,6 +1336,9 @@ docs/ConversationResponseSuggestionsTopicSuggestedIntentSlot.md
 docs/ConversationResponseSuggestionsTopicSuggestionContext.md
 docs/ConversationResponseSuggestionsTopicSuggestionFeedback.md
 docs/ConversationRoutingData.md
+docs/ConversationSchemaAttribute.md
+docs/ConversationSchemaData.md
+docs/ConversationSchemaReference.md
 docs/ConversationScreenShareEventTopicConversationDivisionMembership.md
 docs/ConversationScreenShareEventTopicConversationRoutingData.md
 docs/ConversationScreenShareEventTopicDetail.md
@@ -2586,7 +2595,13 @@ docs/IntentFeedback.md
 docs/IntentReference.md
 docs/InteractiveApplication.md
 docs/InternalMessage.md
+docs/InternalMessageConversation.md
+docs/InternalMessageConversationEntityListing.md
+docs/InternalMessageData.md
+docs/InternalMessageDataEntityListing.md
 docs/InternalMessageDetails.md
+docs/InternalMessageMediaParticipant.md
+docs/InternalMessageRequest.md
 docs/IntradayPerformancePredictionData.md
 docs/IntradayPlanningGroupRequest.md
 docs/InvalidAssignment.md
@@ -2882,6 +2897,7 @@ docs/KnowledgeParseJobResponse.md
 docs/KnowledgeParseRecord.md
 docs/KnowledgeSearchClientApplication.md
 docs/KnowledgeSearchDocumentResponse.md
+docs/KnowledgeSetting.md
 docs/KnowledgeSuggestionConfig.md
 docs/KnowledgeSyncJobReport.md
 docs/KnowledgeSyncJobRequest.md
@@ -2982,6 +2998,11 @@ docs/LearningModuleRule.md
 docs/LearningModuleRuleParts.md
 docs/LearningModuleSummary.md
 docs/LearningModulesDomainEntityListing.md
+docs/LearningScheduleSlotsJobRequest.md
+docs/LearningScheduleSlotsJobResponse.md
+docs/LearningScheduleSlotsJobResult.md
+docs/LearningScheduleSlotsJobSchedule.md
+docs/LearningScheduleSlotsJobSlot.md
 docs/LearningScheduleSlotsQueryRequest.md
 docs/LearningScheduleSlotsQueryResponse.md
 docs/LearningScormResponse.md
@@ -3167,6 +3188,8 @@ docs/MessagingCampaignScheduleEntityListing.md
 docs/MessagingCommunicationAnsweredEvent.md
 docs/MessagingCommunicationDispositionAppliedEvent.md
 docs/MessagingCommunicationEndedEvent.md
+docs/MessagingConferResponse.md
+docs/MessagingConferWithUserRequest.md
 docs/MessagingConfigListing.md
 docs/MessagingEndTransferEvent.md
 docs/MessagingExternalEstablishedEvent.md
@@ -4561,11 +4584,13 @@ docs/SuggestAPI.json
 docs/SuggestAPI.md
 docs/SuggestSearchCriteria.md
 docs/SuggestSearchRequest.md
+docs/SuggestedSearchChunk.md
 docs/Suggestion.md
 docs/SuggestionCannedResponse.md
 docs/SuggestionContext.md
 docs/SuggestionEngagement.md
 docs/SuggestionFeedback.md
+docs/SuggestionGeneratedKnowledgeAnswer.md
 docs/SuggestionKnowledgeAnswer.md
 docs/SuggestionKnowledgeArticle.md
 docs/SuggestionKnowledgeSearch.md
@@ -4698,7 +4723,11 @@ docs/TestTopicPhraseJob.md
 docs/TestTopicPhraseJobRequest.md
 docs/TestTopicPhraseJobs.md
 docs/TestTopicPhrasePhrase.md
+docs/TestTopicPhraseTestPhraseDetectedPhrase.md
+docs/TestTopicPhraseTestPhraseMatchedTranscript.md
+docs/TestTopicPhraseTestTopicPhraseResults.md
 docs/TestTopicPhraseTopic.md
+docs/TestTopicPhraseTopicsDefinitionsJob.md
 docs/TextBotChannel.md
 docs/TextBotDisconnectAction.md
 docs/TextBotErrorInputEvent.md
@@ -4810,6 +4839,7 @@ docs/TransferResponseModifiedBy.md
 docs/TransferToAgentRequest.md
 docs/TransferToExternalRequest.md
 docs/TransferToQueueRequest.md
+docs/TransfersFullTimeEquivalent.md
 docs/TranslateSupportedLanguage.md
 docs/TranslateSupportedLanguageList.md
 docs/TrendData.md
@@ -4999,6 +5029,7 @@ docs/UserConversationSummary.md
 docs/UserConversationsEventMediaSummary.md
 docs/UserConversationsEventMediaSummaryDetail.md
 docs/UserConversationsEventUserConversationSummary.md
+docs/UserCustomAttributes.md
 docs/UserDetailQueryClause.md
 docs/UserDetailQueryFilter.md
 docs/UserDetailQueryPredicate.md
@@ -5143,12 +5174,9 @@ docs/V2MobiusRulesTopicCondition.md
 docs/V2MobiusRulesTopicConditionRulePredicate.md
 docs/V2MobiusRulesTopicEntityProperties.md
 docs/V2MobiusRulesTopicRule.md
-docs/V2QueueObservationMetricData.md
-docs/V2QueueObservationMetricGroup.md
-docs/V2QueueObservationMetricStats.md
-docs/V2QueueObservationObservation.md
-docs/V2QueueObservationObservationNotification.md
-docs/V2QueueObservationScoredAgent.md
+docs/V2QueueObservationMetricCountData.md
+docs/V2QueueObservationMetricCountGroup.md
+docs/V2QueueObservationObservationCountNotification.md
 docs/V2ReprocessJobStateChangedTopicJobStateChanged.md
 docs/V2SessionConversationsSummarySettingsPreviewEventConversationFollowupAction.md
 docs/V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage.md
@@ -5156,6 +5184,7 @@ docs/V2SessionConversationsSummarySettingsPreviewEventConversationResolutionMess
 docs/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryExtractedEntity.md
 docs/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryMessage.md
 docs/V2SessionConversationsSummarySettingsPreviewEventConversationSummarySettingsPreviewMessage.md
+docs/V2StaConversationCategoriesStaConversationCategoriesMessage.md
 docs/V2StaEmpathyOverallTopicAgentEmpathyScore.md
 docs/V2StaEmpathyOverallTopicOverallEmpathyMessage.md
 docs/V2StaSentimentOverallTopicOverallSentimentMessage.md
@@ -6139,6 +6168,7 @@ docs/getCoachingAppointments-example.txt
 docs/getCoachingAppointmentsMe-example.txt
 docs/getCoachingNotification-example.txt
 docs/getCoachingNotifications-example.txt
+docs/getCoachingScheduleslotsJob-example.txt
 docs/getContentmanagementDocument-example.txt
 docs/getContentmanagementDocumentContent-example.txt
 docs/getContentmanagementDocuments-example.txt
@@ -6159,6 +6189,8 @@ docs/getContentmanagementWorkspaceTagvalue-example.txt
 docs/getContentmanagementWorkspaceTagvalues-example.txt
 docs/getContentmanagementWorkspaces-example.txt
 docs/getConversation-example.txt
+docs/getConversationCommunicationInternalmessage-example.txt
+docs/getConversationCommunicationInternalmessages-example.txt
 docs/getConversationParticipantSecureivrsession-example.txt
 docs/getConversationParticipantSecureivrsessions-example.txt
 docs/getConversationParticipantWrapup-example.txt
@@ -6207,6 +6239,8 @@ docs/getConversationsEmailParticipantWrapup-example.txt
 docs/getConversationsEmailParticipantWrapupcodes-example.txt
 docs/getConversationsEmailSettings-example.txt
 docs/getConversationsEmails-example.txt
+docs/getConversationsInternalmessage-example.txt
+docs/getConversationsInternalmessages-example.txt
 docs/getConversationsKeyconfiguration-example.txt
 docs/getConversationsKeyconfigurations-example.txt
 docs/getConversationsMessage-example.txt
@@ -6387,6 +6421,7 @@ docs/getGamificationInsights-example.txt
 docs/getGamificationInsightsDetails-example.txt
 docs/getGamificationInsightsGroupsTrends-example.txt
 docs/getGamificationInsightsGroupsTrendsAll-example.txt
+docs/getGamificationInsightsManagers-example.txt
 docs/getGamificationInsightsMembers-example.txt
 docs/getGamificationInsightsRankings-example.txt
 docs/getGamificationInsightsTrends-example.txt
@@ -6631,6 +6666,7 @@ docs/getLearningModuleVersion-example.txt
 docs/getLearningModules-example.txt
 docs/getLearningModulesAssignments-example.txt
 docs/getLearningModulesCoverartCoverArtId-example.txt
+docs/getLearningScheduleslotsJob-example.txt
 docs/getLearningScormScormId-example.txt
 docs/getLicenseDefinition-example.txt
 docs/getLicenseDefinitions-example.txt
@@ -7654,6 +7690,7 @@ docs/postCoachingAppointmentAnnotations-example.txt
 docs/postCoachingAppointmentConversations-example.txt
 docs/postCoachingAppointments-example.txt
 docs/postCoachingAppointmentsAggregatesQuery-example.txt
+docs/postCoachingScheduleslotsJobs-example.txt
 docs/postCoachingScheduleslotsQuery-example.txt
 docs/postContentmanagementDocument-example.txt
 docs/postContentmanagementDocumentContent-example.txt
@@ -7666,9 +7703,11 @@ docs/postContentmanagementWorkspaces-example.txt
 docs/postConversationAssign-example.txt
 docs/postConversationBarge-example.txt
 docs/postConversationCobrowse-example.txt
+docs/postConversationCommunicationInternalmessages-example.txt
 docs/postConversationDisconnect-example.txt
 docs/postConversationParticipantCallbacks-example.txt
 docs/postConversationParticipantDigits-example.txt
+docs/postConversationParticipantInternalmessagesUsersCommunications-example.txt
 docs/postConversationParticipantReplace-example.txt
 docs/postConversationParticipantReplaceAgent-example.txt
 docs/postConversationParticipantReplaceExternal-example.txt
@@ -7942,6 +7981,7 @@ docs/postLearningModuleJobs-example.txt
 docs/postLearningModulePublish-example.txt
 docs/postLearningModules-example.txt
 docs/postLearningRulesQuery-example.txt
+docs/postLearningScheduleslotsJobs-example.txt
 docs/postLearningScheduleslotsQuery-example.txt
 docs/postLearningScorm-example.txt
 docs/postLicenseInfer-example.txt
@@ -9419,6 +9459,11 @@ src/Models/CoachingAppointmentStatusResponse.swift
 src/Models/CoachingAppointmentStatusResponseList.swift
 src/Models/CoachingNotification.swift
 src/Models/CoachingNotificationList.swift
+src/Models/CoachingScheduleSlotsJobRequest.swift
+src/Models/CoachingScheduleSlotsJobResponse.swift
+src/Models/CoachingScheduleSlotsJobResult.swift
+src/Models/CoachingScheduleSlotsJobSchedule.swift
+src/Models/CoachingScheduleSlotsJobSlot.swift
 src/Models/CoachingSlot.swift
 src/Models/CoachingSlotsRequest.swift
 src/Models/CoachingSlotsResponse.swift
@@ -9630,6 +9675,7 @@ src/Models/ConversationAggregationSort.swift
 src/Models/ConversationAggregationView.swift
 src/Models/ConversationAppSettings.swift
 src/Models/ConversationAssociation.swift
+src/Models/ConversationAttributeFilter.swift
 src/Models/ConversationBasic.swift
 src/Models/ConversationCallEventTopicCallConversation.swift
 src/Models/ConversationCallEventTopicCallMediaParticipant.swift
@@ -9926,6 +9972,9 @@ src/Models/ConversationResponseSuggestionsTopicSuggestedIntentSlot.swift
 src/Models/ConversationResponseSuggestionsTopicSuggestionContext.swift
 src/Models/ConversationResponseSuggestionsTopicSuggestionFeedback.swift
 src/Models/ConversationRoutingData.swift
+src/Models/ConversationSchemaAttribute.swift
+src/Models/ConversationSchemaData.swift
+src/Models/ConversationSchemaReference.swift
 src/Models/ConversationScreenShareEventTopicConversationDivisionMembership.swift
 src/Models/ConversationScreenShareEventTopicConversationRoutingData.swift
 src/Models/ConversationScreenShareEventTopicDetail.swift
@@ -11146,7 +11195,13 @@ src/Models/IntentFeedback.swift
 src/Models/IntentReference.swift
 src/Models/InteractiveApplication.swift
 src/Models/InternalMessage.swift
+src/Models/InternalMessageConversation.swift
+src/Models/InternalMessageConversationEntityListing.swift
+src/Models/InternalMessageData.swift
+src/Models/InternalMessageDataEntityListing.swift
 src/Models/InternalMessageDetails.swift
+src/Models/InternalMessageMediaParticipant.swift
+src/Models/InternalMessageRequest.swift
 src/Models/IntradayPerformancePredictionData.swift
 src/Models/IntradayPlanningGroupRequest.swift
 src/Models/InvalidAssignment.swift
@@ -11438,6 +11493,7 @@ src/Models/KnowledgeParseJobResponse.swift
 src/Models/KnowledgeParseRecord.swift
 src/Models/KnowledgeSearchClientApplication.swift
 src/Models/KnowledgeSearchDocumentResponse.swift
+src/Models/KnowledgeSetting.swift
 src/Models/KnowledgeSuggestionConfig.swift
 src/Models/KnowledgeSyncJobReport.swift
 src/Models/KnowledgeSyncJobRequest.swift
@@ -11532,6 +11588,11 @@ src/Models/LearningModuleRule.swift
 src/Models/LearningModuleRuleParts.swift
 src/Models/LearningModuleSummary.swift
 src/Models/LearningModulesDomainEntityListing.swift
+src/Models/LearningScheduleSlotsJobRequest.swift
+src/Models/LearningScheduleSlotsJobResponse.swift
+src/Models/LearningScheduleSlotsJobResult.swift
+src/Models/LearningScheduleSlotsJobSchedule.swift
+src/Models/LearningScheduleSlotsJobSlot.swift
 src/Models/LearningScheduleSlotsQueryRequest.swift
 src/Models/LearningScheduleSlotsQueryResponse.swift
 src/Models/LearningScormResponse.swift
@@ -11709,6 +11770,8 @@ src/Models/MessagingCampaignScheduleEntityListing.swift
 src/Models/MessagingCommunicationAnsweredEvent.swift
 src/Models/MessagingCommunicationDispositionAppliedEvent.swift
 src/Models/MessagingCommunicationEndedEvent.swift
+src/Models/MessagingConferResponse.swift
+src/Models/MessagingConferWithUserRequest.swift
 src/Models/MessagingConfigListing.swift
 src/Models/MessagingEndTransferEvent.swift
 src/Models/MessagingExternalEstablishedEvent.swift
@@ -13058,11 +13121,13 @@ src/Models/Subscription.swift
 src/Models/SubscriptionOverviewUsage.swift
 src/Models/SuggestSearchCriteria.swift
 src/Models/SuggestSearchRequest.swift
+src/Models/SuggestedSearchChunk.swift
 src/Models/Suggestion.swift
 src/Models/SuggestionCannedResponse.swift
 src/Models/SuggestionContext.swift
 src/Models/SuggestionEngagement.swift
 src/Models/SuggestionFeedback.swift
+src/Models/SuggestionGeneratedKnowledgeAnswer.swift
 src/Models/SuggestionKnowledgeAnswer.swift
 src/Models/SuggestionKnowledgeArticle.swift
 src/Models/SuggestionKnowledgeSearch.swift
@@ -13187,7 +13252,11 @@ src/Models/TestTopicPhraseJob.swift
 src/Models/TestTopicPhraseJobRequest.swift
 src/Models/TestTopicPhraseJobs.swift
 src/Models/TestTopicPhrasePhrase.swift
+src/Models/TestTopicPhraseTestPhraseDetectedPhrase.swift
+src/Models/TestTopicPhraseTestPhraseMatchedTranscript.swift
+src/Models/TestTopicPhraseTestTopicPhraseResults.swift
 src/Models/TestTopicPhraseTopic.swift
+src/Models/TestTopicPhraseTopicsDefinitionsJob.swift
 src/Models/TextBotChannel.swift
 src/Models/TextBotDisconnectAction.swift
 src/Models/TextBotErrorInputEvent.swift
@@ -13295,6 +13364,7 @@ src/Models/TransferResponseModifiedBy.swift
 src/Models/TransferToAgentRequest.swift
 src/Models/TransferToExternalRequest.swift
 src/Models/TransferToQueueRequest.swift
+src/Models/TransfersFullTimeEquivalent.swift
 src/Models/TranslateSupportedLanguage.swift
 src/Models/TranslateSupportedLanguageList.swift
 src/Models/TrendData.swift
@@ -13480,6 +13550,7 @@ src/Models/UserConversationSummary.swift
 src/Models/UserConversationsEventMediaSummary.swift
 src/Models/UserConversationsEventMediaSummaryDetail.swift
 src/Models/UserConversationsEventUserConversationSummary.swift
+src/Models/UserCustomAttributes.swift
 src/Models/UserDetailQueryClause.swift
 src/Models/UserDetailQueryFilter.swift
 src/Models/UserDetailQueryPredicate.swift
@@ -13618,12 +13689,9 @@ src/Models/V2MobiusRulesTopicCondition.swift
 src/Models/V2MobiusRulesTopicConditionRulePredicate.swift
 src/Models/V2MobiusRulesTopicEntityProperties.swift
 src/Models/V2MobiusRulesTopicRule.swift
-src/Models/V2QueueObservationMetricData.swift
-src/Models/V2QueueObservationMetricGroup.swift
-src/Models/V2QueueObservationMetricStats.swift
-src/Models/V2QueueObservationObservation.swift
-src/Models/V2QueueObservationObservationNotification.swift
-src/Models/V2QueueObservationScoredAgent.swift
+src/Models/V2QueueObservationMetricCountData.swift
+src/Models/V2QueueObservationMetricCountGroup.swift
+src/Models/V2QueueObservationObservationCountNotification.swift
 src/Models/V2ReprocessJobStateChangedTopicJobStateChanged.swift
 src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationFollowupAction.swift
 src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage.swift
@@ -13631,6 +13699,7 @@ src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationResoluti
 src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryExtractedEntity.swift
 src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryMessage.swift
 src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationSummarySettingsPreviewMessage.swift
+src/Models/V2StaConversationCategoriesStaConversationCategoriesMessage.swift
 src/Models/V2StaEmpathyOverallTopicAgentEmpathyScore.swift
 src/Models/V2StaEmpathyOverallTopicOverallEmpathyMessage.swift
 src/Models/V2StaSentimentOverallTopicOverallSentimentMessage.swift

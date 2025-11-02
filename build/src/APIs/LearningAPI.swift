@@ -472,9 +472,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 4,
-  "pageCount" : 7,
-  "pageNumber" : 2,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "assessmentCompletionPercentage" : 1.4658129,
@@ -623,7 +623,7 @@ open class LearningAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 3,
+  "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -789,9 +789,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 4,
-  "pageCount" : 7,
-  "pageNumber" : 2,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "assessmentCompletionPercentage" : 1.4658129,
@@ -940,7 +940,7 @@ open class LearningAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 3,
+  "pageSize" : 0,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -2205,6 +2205,76 @@ open class LearningAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningModuleCoverArtResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Retrieve the status of the job for the slots where a learning activity can be scheduled.
+     
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLearningScheduleslotsJob(jobId: String, completion: @escaping ((_ data: LearningScheduleSlotsJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLearningScheduleslotsJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<LearningScheduleSlotsJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve the status of the job for the slots where a learning activity can be scheduled.
+     - GET /api/v2/learning/scheduleslots/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "activityCodeId" : "activityCodeId",
+  "slotsType" : "BestTime",
+  "lengthInMinutes" : 0,
+  "userIds" : [ "userIds", "userIds" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "results" : [ {
+    "interval" : "interval",
+    "slot" : "{}",
+    "status" : "InProgress"
+  }, {
+    "interval" : "interval",
+    "slot" : "{}",
+    "status" : "InProgress"
+  } ],
+  "businessUnitId" : "businessUnitId"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<LearningScheduleSlotsJobResponse> 
+     */
+    open class func getLearningScheduleslotsJobWithRequestBuilder(jobId: String) -> RequestBuilder<LearningScheduleSlotsJobResponse> {        
+        var path = "/api/v2/learning/scheduleslots/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LearningScheduleSlotsJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -3916,6 +3986,73 @@ open class LearningAPI {
         ])
 
         let requestBuilder: RequestBuilder<LearningAssignmentUserListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Start job to retrieve slots where a learning activity can be scheduled.
+     
+     - parameter body: (body) The slots search request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postLearningScheduleslotsJobs(body: LearningScheduleSlotsJobRequest, completion: @escaping ((_ data: LearningScheduleSlotsJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLearningScheduleslotsJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<LearningScheduleSlotsJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Start job to retrieve slots where a learning activity can be scheduled.
+     - POST /api/v2/learning/scheduleslots/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "activityCodeId" : "activityCodeId",
+  "slotsType" : "BestTime",
+  "lengthInMinutes" : 0,
+  "userIds" : [ "userIds", "userIds" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "results" : [ {
+    "interval" : "interval",
+    "slot" : "{}",
+    "status" : "InProgress"
+  }, {
+    "interval" : "interval",
+    "slot" : "{}",
+    "status" : "InProgress"
+  } ],
+  "businessUnitId" : "businessUnitId"
+}, statusCode=202}]
+     
+     - parameter body: (body) The slots search request 
+
+     - returns: RequestBuilder<LearningScheduleSlotsJobResponse> 
+     */
+    open class func postLearningScheduleslotsJobsWithRequestBuilder(body: LearningScheduleSlotsJobRequest) -> RequestBuilder<LearningScheduleSlotsJobResponse> {        
+        let path = "/api/v2/learning/scheduleslots/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LearningScheduleSlotsJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

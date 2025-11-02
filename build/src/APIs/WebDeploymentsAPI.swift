@@ -948,7 +948,9 @@ open class WebDeploymentsAPI {
   "division" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "resolveIdentities" : true,
-  "id" : "id"
+  "automerge" : "{}",
+  "id" : "id",
+  "externalSource" : "{}"
 }, statusCode=200}]
      
      - parameter deploymentId: (path) The deployment ID 
@@ -1654,7 +1656,9 @@ open class WebDeploymentsAPI {
   "division" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "resolveIdentities" : true,
-  "id" : "id"
+  "automerge" : "{}",
+  "id" : "id",
+  "externalSource" : "{}"
 }, statusCode=200}]
      
      - parameter deploymentId: (path) The deployment ID 

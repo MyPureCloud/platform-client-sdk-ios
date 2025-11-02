@@ -26,6 +26,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAnalyticsConversationsDetailsJobResults**](ConversationsAPI#getAnalyticsConversationsDetailsJobResults) | Fetch a page of results for an async details job |
 | [**getAnalyticsConversationsDetailsJobsAvailability**](ConversationsAPI#getAnalyticsConversationsDetailsJobsAvailability) | Lookup the datalake availability date and time |
 | [**getConversation**](ConversationsAPI#getConversation) | Get conversation |
+| [**getConversationCommunicationInternalmessage**](ConversationsAPI#getConversationCommunicationInternalmessage) | Get message |
+| [**getConversationCommunicationInternalmessages**](ConversationsAPI#getConversationCommunicationInternalmessages) | Get messages for communication |
 | [**getConversationParticipantSecureivrsession**](ConversationsAPI#getConversationParticipantSecureivrsession) | Fetch info on a secure session |
 | [**getConversationParticipantSecureivrsessions**](ConversationsAPI#getConversationParticipantSecureivrsessions) | Get a list of secure sessions for this participant. |
 | [**getConversationParticipantWrapup**](ConversationsAPI#getConversationParticipantWrapup) | Get the wrap-up for this conversation participant.  |
@@ -68,6 +70,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsEmailParticipantWrapupcodes**](ConversationsAPI#getConversationsEmailParticipantWrapupcodes) | Get list of wrapup codes for this conversation participant |
 | [**getConversationsEmailSettings**](ConversationsAPI#getConversationsEmailSettings) | Get emails settings for a given conversation |
 | [**getConversationsEmails**](ConversationsAPI#getConversationsEmails) | Get active email conversations for the logged in user |
+| [**getConversationsInternalmessage**](ConversationsAPI#getConversationsInternalmessage) | Get internal message conversation |
+| [**getConversationsInternalmessages**](ConversationsAPI#getConversationsInternalmessages) | Get active internal message conversations for the logged in user |
 | [**getConversationsKeyconfiguration**](ConversationsAPI#getConversationsKeyconfiguration) | Get the encryption key configurations |
 | [**getConversationsKeyconfigurations**](ConversationsAPI#getConversationsKeyconfigurations) | Get a list of key configurations data |
 | [**getConversationsMessage**](ConversationsAPI#getConversationsMessage) | Get message conversation |
@@ -171,9 +175,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationAssign**](ConversationsAPI#postConversationAssign) | Attempts to manually assign a specified conversation to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. |
 | [**postConversationBarge**](ConversationsAPI#postConversationBarge) | Barge a conversation creating a barged in conference of connected participants. |
 | [**postConversationCobrowse**](ConversationsAPI#postConversationCobrowse) | Creates a cobrowse session. Requires \&quot;conversation:cobrowse:add\&quot; (for web messaging) or \&quot;conversation:cobrowsevoice:add\&quot; permission. |
+| [**postConversationCommunicationInternalmessages**](ConversationsAPI#postConversationCommunicationInternalmessages) | Send internal message |
 | [**postConversationDisconnect**](ConversationsAPI#postConversationDisconnect) | Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation. |
 | [**postConversationParticipantCallbacks**](ConversationsAPI#postConversationParticipantCallbacks) | Create a new callback for the specified participant on the conversation. |
 | [**postConversationParticipantDigits**](ConversationsAPI#postConversationParticipantDigits) | Sends DTMF to the participant |
+| [**postConversationParticipantInternalmessagesUsersCommunications**](ConversationsAPI#postConversationParticipantInternalmessagesUsersCommunications) | Setup internal message communication with user |
 | [**postConversationParticipantReplace**](ConversationsAPI#postConversationParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationParticipantReplaceAgent**](ConversationsAPI#postConversationParticipantReplaceAgent) | Replace this participant with the specified agent |
 | [**postConversationParticipantReplaceExternal**](ConversationsAPI#postConversationParticipantReplaceExternal) | Replace this participant with the an external contact |
@@ -1371,6 +1377,116 @@ ConversationsAPI.getConversation(conversationId: conversationId) { (response, er
 [**Conversation**](Conversation)
 
 
+## getConversationCommunicationInternalmessage
+
+
+
+> [InternalMessageData](InternalMessageData) getConversationCommunicationInternalmessage(conversationId, communicationId, messageId)
+
+Get message
+
+
+
+Wraps GET /api/v2/conversations/{conversationId}/communications/{communicationId}/internalmessages/{messageId}  
+
+Requires ANY permissions: 
+
+* conversation:internalMessaging:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let communicationId: String = "" // communicationId
+let messageId: String = "" // messageId
+
+// Code example
+ConversationsAPI.getConversationCommunicationInternalmessage(conversationId: conversationId, communicationId: communicationId, messageId: messageId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationCommunicationInternalmessage was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **communicationId** | **String**| communicationId | |
+| **messageId** | **String**| messageId | |
+
+
+### Return type
+
+[**InternalMessageData**](InternalMessageData)
+
+
+## getConversationCommunicationInternalmessages
+
+
+
+> [InternalMessageDataEntityListing](InternalMessageDataEntityListing) getConversationCommunicationInternalmessages(conversationId, communicationId, pageSize, pageNumber)
+
+Get messages for communication
+
+
+
+Wraps GET /api/v2/conversations/{conversationId}/communications/{communicationId}/internalmessages  
+
+Requires ANY permissions: 
+
+* conversation:internalMessaging:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let communicationId: String = "" // communicationId
+let pageSize: Int = 0 // Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 200.
+let pageNumber: Int = 0 // Page number
+
+// Code example
+ConversationsAPI.getConversationCommunicationInternalmessages(conversationId: conversationId, communicationId: communicationId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationCommunicationInternalmessages was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **communicationId** | **String**| communicationId | |
+| **pageSize** | **Int**| Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 200. | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+
+
+### Return type
+
+[**InternalMessageDataEntityListing**](InternalMessageDataEntityListing)
+
+
 ## getConversationParticipantSecureivrsession
 
 
@@ -1732,7 +1848,7 @@ ConversationsAPI.getConversationSuggestions(conversationId: conversationId, befo
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
-| **type** | **String**| Suggestion type to filter by. | [optional]<br />**Values**: faq ("Faq"), article ("Article"), knowledgeArticle ("KnowledgeArticle"), knowledgeSearch ("KnowledgeSearch"), cannedResponse ("CannedResponse"), script ("Script") |
+| **type** | **String**| Suggestion type to filter by. | [optional]<br />**Values**: faq ("Faq"), article ("Article"), knowledgeArticle ("KnowledgeArticle"), knowledgeSearch ("KnowledgeSearch"), cannedResponse ("CannedResponse"), script ("Script"), suggestedKnowledgeAnswer ("SuggestedKnowledgeAnswer") |
 | **state** | **String**| Suggestion state to filter Copilot suggestions. | [optional]<br />**Values**: suggested ("Suggested"), accepted ("Accepted"), dismissed ("Dismissed"), failed ("Failed"), rated ("Rated") |
 
 
@@ -3529,6 +3645,102 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**EmailConversationEntityListing**](EmailConversationEntityListing)
+
+
+## getConversationsInternalmessage
+
+
+
+> [InternalMessageConversation](InternalMessageConversation) getConversationsInternalmessage(conversationId)
+
+Get internal message conversation
+
+
+
+Wraps GET /api/v2/conversations/internalmessages/{conversationId}  
+
+Requires ANY permissions: 
+
+* conversation:internalMessaging:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+
+// Code example
+ConversationsAPI.getConversationsInternalmessage(conversationId: conversationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsInternalmessage was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+
+
+### Return type
+
+[**InternalMessageConversation**](InternalMessageConversation)
+
+
+## getConversationsInternalmessages
+
+
+
+> [InternalMessageConversationEntityListing](InternalMessageConversationEntityListing) getConversationsInternalmessages()
+
+Get active internal message conversations for the logged in user
+
+
+
+Wraps GET /api/v2/conversations/internalmessages  
+
+Requires ANY permissions: 
+
+* conversation:internalMessaging:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ConversationsAPI.getConversationsInternalmessages() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsInternalmessages was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**InternalMessageConversationEntityListing**](InternalMessageConversationEntityListing)
 
 
 ## getConversationsKeyconfiguration
@@ -8975,6 +9187,62 @@ ConversationsAPI.postConversationCobrowse(conversationId: conversationId) { (res
 [**CobrowseWebMessagingSession**](CobrowseWebMessagingSession)
 
 
+## postConversationCommunicationInternalmessages
+
+
+
+> [InternalMessageData](InternalMessageData) postConversationCommunicationInternalmessages(conversationId, communicationId, body)
+
+Send internal message
+
+Send a new internal message for an existing communication.
+
+
+
+Wraps POST /api/v2/conversations/{conversationId}/communications/{communicationId}/internalmessages  
+
+Requires ANY permissions: 
+
+* conversation:internalMessaging:create
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let communicationId: String = "" // communicationId
+let body: InternalMessageRequest = new InternalMessageRequest(...) // Message
+
+// Code example
+ConversationsAPI.postConversationCommunicationInternalmessages(conversationId: conversationId, communicationId: communicationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationCommunicationInternalmessages was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **communicationId** | **String**| communicationId | |
+| **body** | [**InternalMessageRequest**](InternalMessageRequest)| Message | |
+
+
+### Return type
+
+[**InternalMessageData**](InternalMessageData)
+
+
 ## postConversationDisconnect
 
 
@@ -9128,6 +9396,62 @@ ConversationsAPI.postConversationParticipantDigits(conversationId: conversationI
 ### Return type
 
 `nil` (empty response body)
+
+
+## postConversationParticipantInternalmessagesUsersCommunications
+
+
+
+> [MessagingConferResponse](MessagingConferResponse) postConversationParticipantInternalmessagesUsersCommunications(conversationId, participantId, body)
+
+Setup internal message communication with user
+
+The target user of the digital consultation must have the &#x60;conversation:internalMessaging:accept&#x60; permission.
+
+
+
+Wraps POST /api/v2/conversations/{conversationId}/participants/{participantId}/internalmessages/users/communications  
+
+Requires ANY permissions: 
+
+* conversation:internalMessaging:setupWithUser
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let participantId: String = "" // participant ID
+let body: MessagingConferWithUserRequest = new MessagingConferWithUserRequest(...) // Confer request
+
+// Code example
+ConversationsAPI.postConversationParticipantInternalmessagesUsersCommunications(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationParticipantInternalmessagesUsersCommunications was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **participantId** | **String**| participant ID | |
+| **body** | [**MessagingConferWithUserRequest**](MessagingConferWithUserRequest)| Confer request | |
+
+
+### Return type
+
+[**MessagingConferResponse**](MessagingConferResponse)
 
 
 ## postConversationParticipantReplace
@@ -12014,7 +12338,7 @@ ConversationsAPI.postConversationsMessageInboundOpenStructuredResponse(integrati
 
 Get messages in batch
 
-The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\&quot;a3069a33b-bbb1-4703-9d68-061d9e9db96e\&quot;, \&quot;55bc6be3-078c-4a49-a4e6-1e05776ed7e8\&quot;]
+The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\&quot;a3069a33b-bbb1-4703-9d68-061d9e9db96e\&quot;, \&quot;55bc6be3-078c-4a49-a4e6-1e05776ed7e8\&quot;]. The max messages you can request in the body is 1,000. Best practice is to limit to only the messages you need in each request, rather than request large batches by default.
 
 
 
@@ -14313,4 +14637,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@178.0.0_
+_PureCloudPlatformClientV2@179.0.0_

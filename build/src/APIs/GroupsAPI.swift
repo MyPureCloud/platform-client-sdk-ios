@@ -1015,6 +1015,7 @@ open class GroupsAPI {
         case workplanbidranks = "workPlanBidRanks"
         case externalcontactssettings = "externalContactsSettings"
         case groups = "groups"
+        case customattributes = "customAttributes"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"

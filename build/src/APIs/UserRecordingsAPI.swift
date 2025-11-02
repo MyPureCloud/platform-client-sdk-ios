@@ -2958,20 +2958,21 @@ open class UserRecordingsAPI {
               },
               "name" : "name",
               "questions" : [ {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -3000,20 +3001,21 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               }, {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -3043,6 +3045,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
@@ -3057,20 +3060,21 @@ open class UserRecordingsAPI {
               },
               "name" : "name",
               "questions" : [ {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -3099,20 +3103,21 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               }, {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -3142,6 +3147,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
@@ -5799,20 +5805,21 @@ open class UserRecordingsAPI {
               },
               "name" : "name",
               "questions" : [ {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -5841,20 +5848,21 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               }, {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -5884,6 +5892,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
@@ -5898,20 +5907,21 @@ open class UserRecordingsAPI {
               },
               "name" : "name",
               "questions" : [ {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -5940,20 +5950,21 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               }, {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -5983,6 +5994,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
@@ -9684,20 +9696,21 @@ open class UserRecordingsAPI {
               },
               "name" : "name",
               "questions" : [ {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -9726,20 +9739,21 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               }, {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -9769,6 +9783,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
@@ -9783,20 +9798,21 @@ open class UserRecordingsAPI {
               },
               "name" : "name",
               "questions" : [ {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -9825,20 +9841,21 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               }, {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -9868,6 +9885,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
@@ -12525,20 +12543,21 @@ open class UserRecordingsAPI {
               },
               "name" : "name",
               "questions" : [ {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -12567,20 +12586,21 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               }, {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -12610,6 +12630,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
@@ -12624,20 +12645,21 @@ open class UserRecordingsAPI {
               },
               "name" : "name",
               "questions" : [ {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -12666,20 +12688,21 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               }, {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -12709,6 +12732,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
@@ -16660,20 +16684,21 @@ open class UserRecordingsAPI {
                 },
                 "name" : "name",
                 "questions" : [ {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -16702,20 +16727,21 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 }, {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -16745,6 +16771,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
@@ -16759,20 +16786,21 @@ open class UserRecordingsAPI {
                 },
                 "name" : "name",
                 "questions" : [ {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -16801,20 +16829,21 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 }, {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -16844,6 +16873,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
@@ -19501,20 +19531,21 @@ open class UserRecordingsAPI {
                 },
                 "name" : "name",
                 "questions" : [ {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -19543,20 +19574,21 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 }, {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -19586,6 +19618,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
@@ -19600,20 +19633,21 @@ open class UserRecordingsAPI {
                 },
                 "name" : "name",
                 "questions" : [ {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -19642,20 +19676,21 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 }, {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -19685,6 +19720,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
@@ -23386,20 +23422,21 @@ open class UserRecordingsAPI {
                 },
                 "name" : "name",
                 "questions" : [ {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -23428,20 +23465,21 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 }, {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -23471,6 +23509,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
@@ -23485,20 +23524,21 @@ open class UserRecordingsAPI {
                 },
                 "name" : "name",
                 "questions" : [ {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -23527,20 +23567,21 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 }, {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -23570,6 +23611,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
@@ -26227,20 +26269,21 @@ open class UserRecordingsAPI {
                 },
                 "name" : "name",
                 "questions" : [ {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -26269,20 +26312,21 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 }, {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -26312,6 +26356,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
@@ -26326,20 +26371,21 @@ open class UserRecordingsAPI {
                 },
                 "name" : "name",
                 "questions" : [ {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -26368,20 +26414,21 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 }, {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -26411,6 +26458,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
@@ -30203,20 +30251,21 @@ open class UserRecordingsAPI {
                 },
                 "name" : "name",
                 "questions" : [ {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -30245,20 +30294,21 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 }, {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -30288,6 +30338,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
@@ -30302,20 +30353,21 @@ open class UserRecordingsAPI {
                 },
                 "name" : "name",
                 "questions" : [ {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -30344,20 +30396,21 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 }, {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -30387,6 +30440,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
@@ -33044,20 +33098,21 @@ open class UserRecordingsAPI {
                 },
                 "name" : "name",
                 "questions" : [ {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -33086,20 +33141,21 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 }, {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -33129,6 +33185,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
@@ -33143,20 +33200,21 @@ open class UserRecordingsAPI {
                 },
                 "name" : "name",
                 "questions" : [ {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -33185,20 +33243,21 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 }, {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -33228,6 +33287,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
@@ -36929,20 +36989,21 @@ open class UserRecordingsAPI {
                 },
                 "name" : "name",
                 "questions" : [ {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -36971,20 +37032,21 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 }, {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -37014,6 +37076,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
@@ -37028,20 +37091,21 @@ open class UserRecordingsAPI {
                 },
                 "name" : "name",
                 "questions" : [ {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -37070,20 +37134,21 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 }, {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -37113,6 +37178,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
@@ -39770,20 +39836,21 @@ open class UserRecordingsAPI {
                 },
                 "name" : "name",
                 "questions" : [ {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -39812,20 +39879,21 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 }, {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -39855,6 +39923,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
@@ -39869,20 +39938,21 @@ open class UserRecordingsAPI {
                 },
                 "name" : "name",
                 "questions" : [ {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -39911,20 +39981,21 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 }, {
+                  "defaultAnswer" : "{}",
                   "helpText" : "helpText",
                   "commentsRequired" : true,
-                  "multipleSelectOptionQuestions" : [ null, null ],
                   "visibilityCondition" : {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
                   "contextId" : "contextId",
-                  "isCritical" : true,
-                  "id" : "id",
-                  "text" : "text",
                   "type" : "multipleChoiceQuestion",
                   "isKill" : true,
                   "naEnabled" : true,
+                  "multipleSelectOptionQuestions" : [ null, null ],
+                  "isCritical" : true,
+                  "id" : "id",
+                  "text" : "text",
                   "answerOptions" : [ {
                     "builtInType" : "Selected",
                     "contextId" : "contextId",
@@ -39954,6 +40025,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
@@ -43869,20 +43941,21 @@ open class UserRecordingsAPI {
               },
               "name" : "name",
               "questions" : [ {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -43911,20 +43984,21 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               }, {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -43954,6 +44028,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
@@ -43968,20 +44043,21 @@ open class UserRecordingsAPI {
               },
               "name" : "name",
               "questions" : [ {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -44010,20 +44086,21 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               }, {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -44053,6 +44130,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
@@ -46710,20 +46788,21 @@ open class UserRecordingsAPI {
               },
               "name" : "name",
               "questions" : [ {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -46752,20 +46831,21 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               }, {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -46795,6 +46875,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
@@ -46809,20 +46890,21 @@ open class UserRecordingsAPI {
               },
               "name" : "name",
               "questions" : [ {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -46851,20 +46933,21 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               }, {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -46894,6 +46977,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
@@ -50595,20 +50679,21 @@ open class UserRecordingsAPI {
               },
               "name" : "name",
               "questions" : [ {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -50637,20 +50722,21 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               }, {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -50680,6 +50766,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
@@ -50694,20 +50781,21 @@ open class UserRecordingsAPI {
               },
               "name" : "name",
               "questions" : [ {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -50736,20 +50824,21 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               }, {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -50779,6 +50868,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
@@ -53436,20 +53526,21 @@ open class UserRecordingsAPI {
               },
               "name" : "name",
               "questions" : [ {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -53478,20 +53569,21 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               }, {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -53521,6 +53613,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
@@ -53535,20 +53628,21 @@ open class UserRecordingsAPI {
               },
               "name" : "name",
               "questions" : [ {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -53577,20 +53671,21 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               }, {
+                "defaultAnswer" : "{}",
                 "helpText" : "helpText",
                 "commentsRequired" : true,
-                "multipleSelectOptionQuestions" : [ null, null ],
                 "visibilityCondition" : {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
                 "contextId" : "contextId",
-                "isCritical" : true,
-                "id" : "id",
-                "text" : "text",
                 "type" : "multipleChoiceQuestion",
                 "isKill" : true,
                 "naEnabled" : true,
+                "multipleSelectOptionQuestions" : [ null, null ],
+                "isCritical" : true,
+                "id" : "id",
+                "text" : "text",
                 "answerOptions" : [ {
                   "builtInType" : "Selected",
                   "contextId" : "contextId",
@@ -53620,6 +53715,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,

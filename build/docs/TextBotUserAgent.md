@@ -11,4 +11,4 @@ Information about the caller executing a bot flow.
 
 
 
-_PureCloudPlatformClientV2@178.0.0_
+_PureCloudPlatformClientV2@179.0.0_

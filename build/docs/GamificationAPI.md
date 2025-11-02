@@ -20,6 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getGamificationInsightsDetails**](GamificationAPI#getGamificationInsightsDetails) | Get insights details for the current user |
 | [**getGamificationInsightsGroupsTrends**](GamificationAPI#getGamificationInsightsGroupsTrends) | Get insights overall trend for the current user |
 | [**getGamificationInsightsGroupsTrendsAll**](GamificationAPI#getGamificationInsightsGroupsTrendsAll) | Get insights overall trend |
+| [**getGamificationInsightsManagers**](GamificationAPI#getGamificationInsightsManagers) | Query managers in a profile during a period of time |
 | [**getGamificationInsightsMembers**](GamificationAPI#getGamificationInsightsMembers) | Query users in a profile during a period of time |
 | [**getGamificationInsightsRankings**](GamificationAPI#getGamificationInsightsRankings) | Get insights rankings |
 | [**getGamificationInsightsTrends**](GamificationAPI#getGamificationInsightsTrends) | Get insights user trend for the current user |
@@ -982,6 +983,66 @@ GamificationAPI.getGamificationInsightsGroupsTrendsAll(filterType: filterType, f
 ### Return type
 
 [**InsightsTrend**](InsightsTrend)
+
+
+## getGamificationInsightsManagers
+
+
+
+> [InsightsAgents](InsightsAgents) getGamificationInsightsManagers(filterType, filterId, granularity, startWorkday, pageSize, pageNumber)
+
+Query managers in a profile during a period of time
+
+
+
+Wraps GET /api/v2/gamification/insights/managers  
+
+Requires ANY permissions: 
+
+* gamification:insights:viewAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let filterType: GamificationAPI.FilterType_getGamificationInsightsManagers = GamificationAPI.FilterType_getGamificationInsightsManagers.enummember // Filter type for the query request.
+let filterId: String = "" // ID for the filter type.
+let granularity: GamificationAPI.Granularity_getGamificationInsightsManagers = GamificationAPI.Granularity_getGamificationInsightsManagers.enummember // Granularity
+let startWorkday: Date = new Date(...) // The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+
+// Code example
+GamificationAPI.getGamificationInsightsManagers(filterType: filterType, filterId: filterId, granularity: granularity, startWorkday: startWorkday, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationInsightsManagers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filterType** | **String**| Filter type for the query request. |<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
+| **filterId** | **String**| ID for the filter type. | |
+| **granularity** | **String**| Granularity |<br />**Values**: weekly ("Weekly"), monthly ("Monthly") |
+| **startWorkday** | **Date**| The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+
+
+### Return type
+
+[**InsightsAgents**](InsightsAgents)
 
 
 ## getGamificationInsightsMembers
@@ -4238,4 +4299,4 @@ GamificationAPI.putGamificationStatus(status: status) { (response, error) in
 [**GamificationStatus**](GamificationStatus)
 
 
-_PureCloudPlatformClientV2@178.0.0_
+_PureCloudPlatformClientV2@179.0.0_

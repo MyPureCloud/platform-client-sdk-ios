@@ -274,4 +274,4 @@ WidgetsAPI.putWidgetsDeployment(deploymentId: deploymentId, body: body) { (respo
 [**WidgetDeployment**](WidgetDeployment)
 
 
-_PureCloudPlatformClientV2@178.0.0_
+_PureCloudPlatformClientV2@179.0.0_

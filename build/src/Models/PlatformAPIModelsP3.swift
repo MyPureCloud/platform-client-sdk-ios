@@ -228,22 +228,22 @@ public class ActionCertificateListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [ActionCertificate]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [ActionCertificate]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -477,22 +477,22 @@ public class ActionTemplateListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [ActionTemplate]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [ActionTemplate]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -1737,22 +1737,22 @@ public class AlertListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [CommonAlert]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [CommonAlert]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -4210,22 +4210,22 @@ public class BotConnectorBotVersionSummaryEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [BotVersionSummary]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [BotVersionSummary]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -5388,22 +5388,22 @@ public class CachedMediaItemEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [CachedMediaItem]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [CachedMediaItem]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -6115,22 +6115,22 @@ public class CertificateAuthorityEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [DomainCertificateAuthority]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [DomainCertificateAuthority]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -6400,22 +6400,22 @@ public class CoachingAnnotationList: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [CoachingAnnotation]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [CoachingAnnotation]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -6530,6 +6530,42 @@ public class CoachingAppointmentStatusResponse: Codable {
 
 
 
+public class CoachingScheduleSlotsJobResult: Codable {
+
+
+
+    public enum Status: String, Codable { 
+        case inProgress = "InProgress"
+        case complete = "Complete"
+        case error = "Error"
+    }
+
+
+
+
+
+    /** The interval of the job. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
+    public var interval: String?
+    /** The status of the job */
+    public var status: Status?
+    /** The slot found from the job */
+    public var slot: CoachingScheduleSlotsJobSlot?
+    /** True if the slot conflicts with a Coaching Appointment */
+    public var hasConflict: Bool?
+
+    public init(interval: String?, status: Status?, slot: CoachingScheduleSlotsJobSlot?, hasConflict: Bool?) {
+        self.interval = interval
+        self.status = status
+        self.slot = slot
+        self.hasConflict = hasConflict
+    }
+
+
+}
+
+
+
+
 public class CoachingSlotsRequest: Codable {
 
 
@@ -6622,22 +6658,22 @@ public class CommandStatusEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [CommandStatus]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [CommandStatus]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -6674,22 +6710,22 @@ public class CommonCampaignEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [CommonCampaign]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [CommonCampaign]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -6873,22 +6909,22 @@ public class ConsumingResourcesEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [Dependency]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [Dependency]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -7052,22 +7088,22 @@ public class ContactListFilterEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [ContactListFilter]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [ContactListFilter]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -8956,129 +8992,6 @@ public class ConversationContentCard: Codable {
 
 
 
-
-public class DID: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum State: String, Codable { 
-        case active = "active"
-        case inactive = "inactive"
-        case deleted = "deleted"
-    }
-
-
-
-
-
-
-
-
-
-
-
-    public enum OwnerType: String, Codable { 
-        case user = "USER"
-        case phone = "PHONE"
-        case ivrConfig = "IVR_CONFIG"
-        case group = "GROUP"
-    }
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    /** The name of the entity. */
-    public var name: String?
-    /** The division to which this entity belongs. */
-    public var division: Division?
-    /** The resource's description. */
-    public var _description: String?
-    /** The current version of the resource. */
-    public var version: Int?
-    /** The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateCreated: Date?
-    /** The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateModified: Date?
-    /** The ID of the user that last modified the resource. */
-    public var modifiedBy: String?
-    /** The ID of the user that created the resource. */
-    public var createdBy: String?
-    /** Indicates if the resource is active, inactive, or deleted. */
-    public var state: State?
-    /** The application that last modified the resource. */
-    public var modifiedByApp: String?
-    /** The application that created the resource. */
-    public var createdByApp: String?
-    public var phoneNumber: String?
-    public var didPool: DomainEntityRef?
-    /** A Uri reference to the owner of this DID, which is either a User or an IVR */
-    public var owner: DomainEntityRef?
-    public var ownerType: OwnerType?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, phoneNumber: String?, didPool: DomainEntityRef?, owner: DomainEntityRef?, ownerType: OwnerType?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.division = division
-        self._description = _description
-        self.version = version
-        self.dateCreated = dateCreated
-        self.dateModified = dateModified
-        self.modifiedBy = modifiedBy
-        self.createdBy = createdBy
-        self.state = state
-        self.modifiedByApp = modifiedByApp
-        self.createdByApp = createdByApp
-        self.phoneNumber = phoneNumber
-        self.didPool = didPool
-        self.owner = owner
-        self.ownerType = ownerType
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case division
-        case _description = "description"
-        case version
-        case dateCreated
-        case dateModified
-        case modifiedBy
-        case createdBy
-        case state
-        case modifiedByApp
-        case createdByApp
-        case phoneNumber
-        case didPool
-        case owner
-        case ownerType
-        case selfUri
-    }
-
-
-}
-
-
-
 /** DateTimePicker content object. */
 
 public class ConversationContentDatePicker: Codable {
@@ -9860,12 +9773,14 @@ public class ConversationEventTopicMessage: Codable {
         case alerting = "alerting"
         case connected = "connected"
         case disconnected = "disconnected"
+        case parked = "parked"
     }
 
     public enum InitialState: String, Codable { 
         case alerting = "alerting"
         case connected = "connected"
         case disconnected = "disconnected"
+        case parked = "parked"
     }
 
     public enum Direction: String, Codable { 
@@ -9957,6 +9872,10 @@ public class ConversationEventTopicMessage: Codable {
 
 
 
+
+
+
+
     /** A globally unique identifier for this communication. */
     public var _id: String?
     public var state: State?
@@ -10010,8 +9929,12 @@ public class ConversationEventTopicMessage: Codable {
     public var byoSmsIntegrationId: String?
     /** Represents the queue setting for this media. */
     public var queueMediaSettings: ConversationEventTopicQueueMediaSettings?
+    /** The time when a parked message should resume. */
+    public var resumeTime: Date?
+    /** The time when an  parked message was parked. */
+    public var parkTime: Date?
 
-    public init(_id: String?, state: State?, initialState: InitialState?, direction: Direction?, held: Bool?, errorInfo: ConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: ConversationEventTopicAddress?, fromAddress: ConversationEventTopicAddress?, messages: [ConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: ConversationEventTopicJourneyContext?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, engagementSource: String?, byoSmsIntegrationId: String?, queueMediaSettings: ConversationEventTopicQueueMediaSettings?) {
+    public init(_id: String?, state: State?, initialState: InitialState?, direction: Direction?, held: Bool?, errorInfo: ConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: ConversationEventTopicAddress?, fromAddress: ConversationEventTopicAddress?, messages: [ConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: ConversationEventTopicJourneyContext?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, engagementSource: String?, byoSmsIntegrationId: String?, queueMediaSettings: ConversationEventTopicQueueMediaSettings?, resumeTime: Date?, parkTime: Date?) {
         self._id = _id
         self.state = state
         self.initialState = initialState
@@ -10040,6 +9963,8 @@ public class ConversationEventTopicMessage: Codable {
         self.engagementSource = engagementSource
         self.byoSmsIntegrationId = byoSmsIntegrationId
         self.queueMediaSettings = queueMediaSettings
+        self.resumeTime = resumeTime
+        self.parkTime = parkTime
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -10071,6 +9996,8 @@ public class ConversationEventTopicMessage: Codable {
         case engagementSource
         case byoSmsIntegrationId
         case queueMediaSettings
+        case resumeTime
+        case parkTime
     }
 
 
@@ -11397,6 +11324,39 @@ public class ConversationResponseSuggestionsTopicSuggestionFeedback: Codable {
 
 
 
+public class ConversationSchemaReference: Codable {
+
+
+
+
+
+
+
+    /** The id of the schema. */
+    public var _id: String?
+    /** The version of the schema. */
+    public var version: Int?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, version: Int?, selfUri: String?) {
+        self._id = _id
+        self.version = version
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case version
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class ConversationScreenShareEventTopicConversationRoutingData: Codable {
 
 
@@ -12014,6 +11974,129 @@ public class ConversationSummaryExtractedEntity: Codable {
     public init(label: String?, value: String?) {
         self.label = label
         self.value = value
+    }
+
+
+}
+
+
+
+
+public class DID: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum State: String, Codable { 
+        case active = "active"
+        case inactive = "inactive"
+        case deleted = "deleted"
+    }
+
+
+
+
+
+
+
+
+
+
+
+    public enum OwnerType: String, Codable { 
+        case user = "USER"
+        case phone = "PHONE"
+        case ivrConfig = "IVR_CONFIG"
+        case group = "GROUP"
+    }
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The name of the entity. */
+    public var name: String?
+    /** The division to which this entity belongs. */
+    public var division: Division?
+    /** The resource's description. */
+    public var _description: String?
+    /** The current version of the resource. */
+    public var version: Int?
+    /** The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+    /** The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateModified: Date?
+    /** The ID of the user that last modified the resource. */
+    public var modifiedBy: String?
+    /** The ID of the user that created the resource. */
+    public var createdBy: String?
+    /** Indicates if the resource is active, inactive, or deleted. */
+    public var state: State?
+    /** The application that last modified the resource. */
+    public var modifiedByApp: String?
+    /** The application that created the resource. */
+    public var createdByApp: String?
+    public var phoneNumber: String?
+    public var didPool: DomainEntityRef?
+    /** A Uri reference to the owner of this DID, which is either a User or an IVR */
+    public var owner: DomainEntityRef?
+    public var ownerType: OwnerType?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, phoneNumber: String?, didPool: DomainEntityRef?, owner: DomainEntityRef?, ownerType: OwnerType?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.division = division
+        self._description = _description
+        self.version = version
+        self.dateCreated = dateCreated
+        self.dateModified = dateModified
+        self.modifiedBy = modifiedBy
+        self.createdBy = createdBy
+        self.state = state
+        self.modifiedByApp = modifiedByApp
+        self.createdByApp = createdByApp
+        self.phoneNumber = phoneNumber
+        self.didPool = didPool
+        self.owner = owner
+        self.ownerType = ownerType
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case division
+        case _description = "description"
+        case version
+        case dateCreated
+        case dateModified
+        case modifiedBy
+        case createdBy
+        case state
+        case modifiedByApp
+        case createdByApp
+        case phoneNumber
+        case didPool
+        case owner
+        case ownerType
+        case selfUri
     }
 
 
@@ -13572,22 +13655,22 @@ public class DashboardUserListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [DashboardUser]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [DashboardUser]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -13663,22 +13746,22 @@ public class DataIngestionRuleResponseEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [DataIngestionRuleResponse]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [DataIngestionRuleResponse]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -14036,22 +14119,22 @@ public class DecisionTableRowListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [DecisionTableRow]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [DecisionTableRow]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -14253,22 +14336,22 @@ public class DependencyObjectEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [DependencyObject]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [DependencyObject]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -15051,22 +15134,22 @@ public class DialerEventEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [EventLog]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [EventLog]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -15348,22 +15431,22 @@ public class DialogflowAgentSummaryEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [DialogflowAgentSummary]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [DialogflowAgentSummary]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -15400,22 +15483,22 @@ public class DialogflowCXAgentSummaryEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [DialogflowCXAgentSummary]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [DialogflowCXAgentSummary]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -16526,22 +16609,22 @@ public class DomainEntityListingEvaluationForm: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [EvaluationForm]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [EvaluationForm]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -18207,6 +18290,8 @@ public class EvaluationQuestion: Codable {
 
 
 
+
+
     public var _id: String?
     /** An identifier for this question that stays the same across versions of the form. */
     public var contextId: String?
@@ -18220,10 +18305,12 @@ public class EvaluationQuestion: Codable {
     public var answerOptions: [AnswerOption]?
     /** Only used by Multiple Select type questions. A list of multiple choice questions representing selectable options. */
     public var multipleSelectOptionQuestions: [EvaluationQuestion]?
-    public var isCritical: Bool?
+    /** The default selected answer for the question */
+    public var defaultAnswer: DefaultAnswer?
     public var isKill: Bool?
+    public var isCritical: Bool?
 
-    public init(_id: String?, contextId: String?, text: String?, helpText: String?, type: ModelType?, naEnabled: Bool?, commentsRequired: Bool?, visibilityCondition: VisibilityCondition?, answerOptions: [AnswerOption]?, multipleSelectOptionQuestions: [EvaluationQuestion]?, isCritical: Bool?, isKill: Bool?) {
+    public init(_id: String?, contextId: String?, text: String?, helpText: String?, type: ModelType?, naEnabled: Bool?, commentsRequired: Bool?, visibilityCondition: VisibilityCondition?, answerOptions: [AnswerOption]?, multipleSelectOptionQuestions: [EvaluationQuestion]?, defaultAnswer: DefaultAnswer?, isKill: Bool?, isCritical: Bool?) {
         self._id = _id
         self.contextId = contextId
         self.text = text
@@ -18234,8 +18321,9 @@ public class EvaluationQuestion: Codable {
         self.visibilityCondition = visibilityCondition
         self.answerOptions = answerOptions
         self.multipleSelectOptionQuestions = multipleSelectOptionQuestions
-        self.isCritical = isCritical
+        self.defaultAnswer = defaultAnswer
         self.isKill = isKill
+        self.isCritical = isCritical
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -18249,8 +18337,9 @@ public class EvaluationQuestion: Codable {
         case visibilityCondition
         case answerOptions
         case multipleSelectOptionQuestions
-        case isCritical
+        case defaultAnswer
         case isKill
+        case isCritical
     }
 
 
@@ -18260,6 +18349,8 @@ public class EvaluationQuestion: Codable {
 
 
 public class EvaluationQuestionGroup: Codable {
+
+
 
 
 
@@ -18295,8 +18386,10 @@ public class EvaluationQuestionGroup: Codable {
     public var manualWeight: Bool?
     public var questions: [EvaluationQuestion]?
     public var visibilityCondition: VisibilityCondition?
+    /** Default scoring settings for the questions within this question group. */
+    public var defaultAnswersTo: DefaultAnswersTo?
 
-    public init(_id: String?, contextId: String?, name: String?, type: String?, defaultAnswersToHighest: Bool?, defaultAnswersToNA: Bool?, naEnabled: Bool?, weight: Float?, manualWeight: Bool?, questions: [EvaluationQuestion]?, visibilityCondition: VisibilityCondition?) {
+    public init(_id: String?, contextId: String?, name: String?, type: String?, defaultAnswersToHighest: Bool?, defaultAnswersToNA: Bool?, naEnabled: Bool?, weight: Float?, manualWeight: Bool?, questions: [EvaluationQuestion]?, visibilityCondition: VisibilityCondition?, defaultAnswersTo: DefaultAnswersTo?) {
         self._id = _id
         self.contextId = contextId
         self.name = name
@@ -18308,6 +18401,7 @@ public class EvaluationQuestionGroup: Codable {
         self.manualWeight = manualWeight
         self.questions = questions
         self.visibilityCondition = visibilityCondition
+        self.defaultAnswersTo = defaultAnswersTo
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -18322,6 +18416,7 @@ public class EvaluationQuestionGroup: Codable {
         case manualWeight
         case questions
         case visibilityCondition
+        case defaultAnswersTo
     }
 
 
@@ -18384,22 +18479,22 @@ public class EvaluatorActivityEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [EvaluatorActivity]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [EvaluatorActivity]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -18786,23 +18881,23 @@ public class ExtensionEntityListing: Codable {
     /** The total organization-wide number of entities. */
     public var totalNumberOfEntities: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [Extension]?, pageSize: Int?, pageNumber: Int?, total: Int64?, totalNumberOfEntities: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [Extension]?, pageSize: Int?, pageNumber: Int?, total: Int64?, totalNumberOfEntities: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.totalNumberOfEntities = totalNumberOfEntities
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -18843,23 +18938,23 @@ public class ExtensionPoolEntityListing: Codable {
     /** The total organization-wide number of entities. */
     public var totalNumberOfEntities: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [ExtensionPool]?, pageSize: Int?, pageNumber: Int?, total: Int64?, totalNumberOfEntities: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [ExtensionPool]?, pageSize: Int?, pageNumber: Int?, total: Int64?, totalNumberOfEntities: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.totalNumberOfEntities = totalNumberOfEntities
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -19671,23 +19766,23 @@ public class ExternalOrganizationListing: Codable {
     public var total: Int64?
     public var partialResults: Bool?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [ExternalOrganization]?, pageSize: Int?, pageNumber: Int?, total: Int64?, partialResults: Bool?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [ExternalOrganization]?, pageSize: Int?, pageNumber: Int?, total: Int64?, partialResults: Bool?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.partialResults = partialResults
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -19994,22 +20089,22 @@ public class FileSpecificationTemplateEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [FileSpecificationTemplate]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [FileSpecificationTemplate]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -20409,6 +20504,49 @@ public class FlowObservationQueryPredicate: Codable {
 
 
 
+/** Form configuration for response management */
+
+public class Form: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** Description of the form */
+    public var formDescription: String?
+    /** Message displayed when response is received */
+    public var receivedMessage: FormMessage?
+    /** Message displayed as reply */
+    public var replyMessage: FormMessage?
+    /** Introduction section of the form */
+    public var introduction: FormIntroduction?
+    /** Pages of the form */
+    public var formPages: [FormPage]?
+    /** Whether to show a summary after form completion */
+    public var showSummary: Bool?
+
+    public init(formDescription: String?, receivedMessage: FormMessage?, replyMessage: FormMessage?, introduction: FormIntroduction?, formPages: [FormPage]?, showSummary: Bool?) {
+        self.formDescription = formDescription
+        self.receivedMessage = receivedMessage
+        self.replyMessage = replyMessage
+        self.introduction = introduction
+        self.formPages = formPages
+        self.showSummary = showSummary
+    }
+
+
+}
+
+
+
 
 public class FlowOutcomeDetailEventTopicFlowOutcomeEvent: Codable {
 
@@ -20697,22 +20835,22 @@ public class FlowResultEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [FlowExecutionDataQueryResult]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [FlowExecutionDataQueryResult]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -20895,49 +21033,6 @@ public class ForecastServiceGoalTemplateImpactOverrideResponse: Codable {
         self.serviceLevel = serviceLevel
         self.averageSpeedOfAnswer = averageSpeedOfAnswer
         self.abandonRate = abandonRate
-    }
-
-
-}
-
-
-
-/** Form configuration for response management */
-
-public class Form: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** Description of the form */
-    public var formDescription: String?
-    /** Message displayed when response is received */
-    public var receivedMessage: FormMessage?
-    /** Message displayed as reply */
-    public var replyMessage: FormMessage?
-    /** Introduction section of the form */
-    public var introduction: FormIntroduction?
-    /** Pages of the form */
-    public var formPages: [FormPage]?
-    /** Whether to show a summary after form completion */
-    public var showSummary: Bool?
-
-    public init(formDescription: String?, receivedMessage: FormMessage?, replyMessage: FormMessage?, introduction: FormIntroduction?, formPages: [FormPage]?, showSummary: Bool?) {
-        self.formDescription = formDescription
-        self.receivedMessage = receivedMessage
-        self.replyMessage = replyMessage
-        self.introduction = introduction
-        self.formPages = formPages
-        self.showSummary = showSummary
     }
 
 
@@ -22740,6 +22835,345 @@ public class IntentFeedback: Codable {
 
 
 
+public class InternalMessageMediaParticipant: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum State: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case converting = "converting"
+        case uploading = "uploading"
+        case transmitting = "transmitting"
+        case parked = "parked"
+        case _none = "none"
+    }
+
+    public enum Direction: String, Codable { 
+        case inbound = "inbound"
+        case outbound = "outbound"
+    }
+
+    public enum DisconnectType: String, Codable { 
+        case endpoint = "endpoint"
+        case endpointDonotdisturb = "endpoint.donotdisturb"
+        case client = "client"
+        case system = "system"
+        case transfer = "transfer"
+        case transferConference = "transfer.conference"
+        case transferConsult = "transfer.consult"
+        case transferDonotdisturb = "transfer.donotdisturb"
+        case transferForward = "transfer.forward"
+        case transferNoanswer = "transfer.noanswer"
+        case transferNotavailable = "transfer.notavailable"
+        case transportFailure = "transport.failure"
+        case error = "error"
+        case peer = "peer"
+        case other = "other"
+        case spam = "spam"
+        case inactivity = "inactivity"
+        case sessionExpired = "session.expired"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum FlaggedReason: String, Codable { 
+        case general = "general"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The unique participant ID. */
+    public var _id: String?
+    /** The display friendly name of the participant. */
+    public var name: String?
+    /** The participant address. */
+    public var address: String?
+    /** The time when this participant first joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var startTime: Date?
+    /** The timestamp when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var startAlertingTime: Date?
+    /** The time when this participant went connected for this media (eg: video connected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var connectedTime: Date?
+    /** The time when this participant went disconnected for this media (eg: video disconnected time). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var endTime: Date?
+    /** The time when this participant's hold started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var startHoldTime: Date?
+    /** The participant's purpose.  Values can be: 'agent', 'user', 'customer', 'external', 'acd', 'ivr */
+    public var purpose: String?
+    /** The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting */
+    public var state: State?
+    /** The participant's direction.  Values can be: 'inbound' or 'outbound' */
+    public var direction: Direction?
+    /** The reason the participant was disconnected from the conversation. */
+    public var disconnectType: DisconnectType?
+    /** Value is true when the participant is on hold. */
+    public var held: Bool?
+    /** Value is true when the participant requires wrap-up. */
+    public var wrapupRequired: Bool?
+    /** The wrap-up prompt indicating the type of wrap-up to be performed. */
+    public var wrapupPrompt: String?
+    /** List of roles this participant's media has had on the conversation, ie monitor, coach, etc */
+    public var mediaRoles: [String]?
+    /** The PureCloud user for this participant. */
+    public var user: DomainEntityRef?
+    /** The PureCloud queue for this participant. */
+    public var queue: DomainEntityRef?
+    /** The PureCloud team for this participant. */
+    public var team: DomainEntityRef?
+    /** A list of ad-hoc attributes for the participant. */
+    public var attributes: [String:String]?
+    /** If the conversation ends in error, contains additional error details. */
+    public var errorInfo: ErrorInfo?
+    /** The Engage script that should be used by this participant. */
+    public var script: DomainEntityRef?
+    /** The amount of time the participant has to complete wrap-up. */
+    public var wrapupTimeoutMs: Int?
+    /** Value is true when the participant has skipped wrap-up. */
+    public var wrapupSkipped: Bool?
+    /** Specifies how long the agent has to answer an interaction before being marked as not responding. */
+    public var alertingTimeoutMs: Int?
+    /** The source provider for the communication. */
+    public var provider: String?
+    /** If this participant represents an external contact, then this will be the reference for the external contact. */
+    public var externalContact: DomainEntityRef?
+    /** If this participant represents an external contact, then this will be the initial division for the external contact. This value will not be updated if the external contact is reassigned. */
+    public var externalContactInitialDivisionId: String?
+    /** If this participant represents an external org, then this will be the reference for the external org. */
+    public var externalOrganization: DomainEntityRef?
+    /** Wrapup for this participant, if it has been applied. */
+    public var wrapup: Wrapup?
+    /** The peer communication corresponding to a matching leg for this communication. */
+    public var peer: String?
+    /** The reason specifying why participant flagged the conversation. */
+    public var flaggedReason: FlaggedReason?
+    /** Journey System data/context that is applicable to this communication.  When used for historical purposes, the context should be immutable.  When null, there is no applicable Journey System context. */
+    public var journeyContext: JourneyContext?
+    /** Information on how a communication should be routed to an agent. */
+    public var conversationRoutingData: ConversationRoutingData?
+    /** The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var startAcwTime: Date?
+    /** The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var endAcwTime: Date?
+    /** The time when this participant's communication was last parked.  Does not reset on resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var parkTime: Date?
+    /** The time when this participant's communications will resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var resumeTime: Date?
+    /** The internal message communication ID. */
+    public var internalMessageId: String?
+    /** The user participant on receiving side of the internal message conversation. */
+    public var targetUser: AddressableEntityRef?
+    /** The user participant on sending side of the internal message conversation. */
+    public var sourceUser: AddressableEntityRef?
+    /** Address for the participant on receiving side of the internal message communication. */
+    public var toAddress: Address?
+    /** Address for the participant on the sending side of the internal message communication. */
+    public var fromAddress: Address?
+    /** Message instance details on the communication. */
+    public var messages: [InternalMessageDetails]?
+
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, startAlertingTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, mediaRoles: [String]?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalContactInitialDivisionId: String?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, parkTime: Date?, resumeTime: Date?, internalMessageId: String?, targetUser: AddressableEntityRef?, sourceUser: AddressableEntityRef?, toAddress: Address?, fromAddress: Address?, messages: [InternalMessageDetails]?) {
+        self._id = _id
+        self.name = name
+        self.address = address
+        self.startTime = startTime
+        self.startAlertingTime = startAlertingTime
+        self.connectedTime = connectedTime
+        self.endTime = endTime
+        self.startHoldTime = startHoldTime
+        self.purpose = purpose
+        self.state = state
+        self.direction = direction
+        self.disconnectType = disconnectType
+        self.held = held
+        self.wrapupRequired = wrapupRequired
+        self.wrapupPrompt = wrapupPrompt
+        self.mediaRoles = mediaRoles
+        self.user = user
+        self.queue = queue
+        self.team = team
+        self.attributes = attributes
+        self.errorInfo = errorInfo
+        self.script = script
+        self.wrapupTimeoutMs = wrapupTimeoutMs
+        self.wrapupSkipped = wrapupSkipped
+        self.alertingTimeoutMs = alertingTimeoutMs
+        self.provider = provider
+        self.externalContact = externalContact
+        self.externalContactInitialDivisionId = externalContactInitialDivisionId
+        self.externalOrganization = externalOrganization
+        self.wrapup = wrapup
+        self.peer = peer
+        self.flaggedReason = flaggedReason
+        self.journeyContext = journeyContext
+        self.conversationRoutingData = conversationRoutingData
+        self.startAcwTime = startAcwTime
+        self.endAcwTime = endAcwTime
+        self.parkTime = parkTime
+        self.resumeTime = resumeTime
+        self.internalMessageId = internalMessageId
+        self.targetUser = targetUser
+        self.sourceUser = sourceUser
+        self.toAddress = toAddress
+        self.fromAddress = fromAddress
+        self.messages = messages
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case address
+        case startTime
+        case startAlertingTime
+        case connectedTime
+        case endTime
+        case startHoldTime
+        case purpose
+        case state
+        case direction
+        case disconnectType
+        case held
+        case wrapupRequired
+        case wrapupPrompt
+        case mediaRoles
+        case user
+        case queue
+        case team
+        case attributes
+        case errorInfo
+        case script
+        case wrapupTimeoutMs
+        case wrapupSkipped
+        case alertingTimeoutMs
+        case provider
+        case externalContact
+        case externalContactInitialDivisionId
+        case externalOrganization
+        case wrapup
+        case peer
+        case flaggedReason
+        case journeyContext
+        case conversationRoutingData
+        case startAcwTime
+        case endAcwTime
+        case parkTime
+        case resumeTime
+        case internalMessageId
+        case targetUser
+        case sourceUser
+        case toAddress
+        case fromAddress
+        case messages
+    }
+
+
+}
+
+
+
+/** Configuration for filtering tracking based on IP addresses. */
+
+public class IpFilter: Codable {
+
+
+
+
+
+    /** IP address or CIDR range to filter (e.g. '192.168.1.0/24'). */
+    public var ipAddress: String?
+    /** Descriptive name for the IP address filter. */
+    public var name: String?
+
+    public init(ipAddress: String?, name: String?) {
+        self.ipAddress = ipAddress
+        self.name = name
+    }
+
+
+}
+
+
+
+
 public class Items: Codable {
 
 
@@ -23638,22 +24072,22 @@ public class JourneyViewListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [JourneyView]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [JourneyView]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -25540,6 +25974,37 @@ public class LearningModulePublishResponse: Codable {
 
 
 
+
+public class LearningScheduleSlotsJobResult: Codable {
+
+
+
+    public enum Status: String, Codable { 
+        case inProgress = "InProgress"
+        case complete = "Complete"
+        case error = "Error"
+    }
+
+
+
+    /** The interval of the job. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
+    public var interval: String?
+    /** The status of the job */
+    public var status: Status?
+    /** The slot found from the job */
+    public var slot: LearningScheduleSlotsJobSlot?
+
+    public init(interval: String?, status: Status?, slot: LearningScheduleSlotsJobSlot?) {
+        self.interval = interval
+        self.status = status
+        self.slot = slot
+    }
+
+
+}
+
+
+
 /** Learning SCORM package */
 
 public class LearningScormResponse: Codable {
@@ -25884,23 +26349,23 @@ public class LineEntityListing: Codable {
     /** The total organization-wide number of entities. */
     public var totalNumberOfEntities: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [Line]?, pageSize: Int?, pageNumber: Int?, total: Int64?, totalNumberOfEntities: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [Line]?, pageSize: Int?, pageNumber: Int?, total: Int64?, totalNumberOfEntities: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.totalNumberOfEntities = totalNumberOfEntities
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -26314,22 +26779,22 @@ public class LogicalInterfaceEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [DomainLogicalInterface]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [DomainLogicalInterface]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -27265,22 +27730,22 @@ public class MessagingConfigListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [MessagingSetting]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [MessagingSetting]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -27317,22 +27782,22 @@ public class MessagingIntegrationEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [MessagingIntegration]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [MessagingIntegration]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -30907,22 +31372,22 @@ public class PhysicalInterfaceEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [DomainPhysicalInterface]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [DomainPhysicalInterface]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -31786,22 +32251,22 @@ public class PromptEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [Prompt]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [Prompt]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -34105,12 +34570,14 @@ public class QueueConversationVideoEventTopicMessage: Codable {
         case alerting = "alerting"
         case connected = "connected"
         case disconnected = "disconnected"
+        case parked = "parked"
     }
 
     public enum InitialState: String, Codable { 
         case alerting = "alerting"
         case connected = "connected"
         case disconnected = "disconnected"
+        case parked = "parked"
     }
 
     public enum Direction: String, Codable { 
@@ -34202,6 +34669,10 @@ public class QueueConversationVideoEventTopicMessage: Codable {
 
 
 
+
+
+
+
     /** A globally unique identifier for this communication. */
     public var _id: String?
     public var state: State?
@@ -34255,8 +34726,12 @@ public class QueueConversationVideoEventTopicMessage: Codable {
     public var byoSmsIntegrationId: String?
     /** Represents the queue setting for this media. */
     public var queueMediaSettings: QueueConversationVideoEventTopicQueueMediaSettings?
+    /** The time when a parked message should resume. */
+    public var resumeTime: Date?
+    /** The time when an  parked message was parked. */
+    public var parkTime: Date?
 
-    public init(_id: String?, state: State?, initialState: InitialState?, direction: Direction?, held: Bool?, errorInfo: QueueConversationVideoEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationVideoEventTopicAddress?, fromAddress: QueueConversationVideoEventTopicAddress?, messages: [QueueConversationVideoEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: QueueConversationVideoEventTopicJourneyContext?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, engagementSource: String?, byoSmsIntegrationId: String?, queueMediaSettings: QueueConversationVideoEventTopicQueueMediaSettings?) {
+    public init(_id: String?, state: State?, initialState: InitialState?, direction: Direction?, held: Bool?, errorInfo: QueueConversationVideoEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationVideoEventTopicAddress?, fromAddress: QueueConversationVideoEventTopicAddress?, messages: [QueueConversationVideoEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: QueueConversationVideoEventTopicJourneyContext?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, engagementSource: String?, byoSmsIntegrationId: String?, queueMediaSettings: QueueConversationVideoEventTopicQueueMediaSettings?, resumeTime: Date?, parkTime: Date?) {
         self._id = _id
         self.state = state
         self.initialState = initialState
@@ -34285,6 +34760,8 @@ public class QueueConversationVideoEventTopicMessage: Codable {
         self.engagementSource = engagementSource
         self.byoSmsIntegrationId = byoSmsIntegrationId
         self.queueMediaSettings = queueMediaSettings
+        self.resumeTime = resumeTime
+        self.parkTime = parkTime
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -34316,6 +34793,8 @@ public class QueueConversationVideoEventTopicMessage: Codable {
         case engagementSource
         case byoSmsIntegrationId
         case queueMediaSettings
+        case resumeTime
+        case parkTime
     }
 
 
@@ -34652,22 +35131,22 @@ public class QueueEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [Queue]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [Queue]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -34697,18 +35176,18 @@ public class QueueMemberEntityListing: Codable {
     public var pageNumber: Int?
     public var pageSize: Int?
     public var firstUri: String?
+    public var selfUri: String?
     public var previousUri: String?
     public var nextUri: String?
-    public var selfUri: String?
 
-    public init(entities: [QueueMember]?, pageNumber: Int?, pageSize: Int?, firstUri: String?, previousUri: String?, nextUri: String?, selfUri: String?) {
+    public init(entities: [QueueMember]?, pageNumber: Int?, pageSize: Int?, firstUri: String?, selfUri: String?, previousUri: String?, nextUri: String?) {
         self.entities = entities
         self.pageNumber = pageNumber
         self.pageSize = pageSize
         self.firstUri = firstUri
+        self.selfUri = selfUri
         self.previousUri = previousUri
         self.nextUri = nextUri
-        self.selfUri = selfUri
     }
 
 
@@ -34744,22 +35223,22 @@ public class QueueMemberEntityListingV1: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [QueueMember]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [QueueMember]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -35501,6 +35980,8 @@ public class ReplacementTerm: Codable {
         case twitter = "TWITTER"
         case instagram = "INSTAGRAM"
         case facebook = "FACEBOOK"
+        case appleMessages = "APPLE_MESSAGES"
+        case externalId = "EXTERNAL_ID"
     }
 
 
@@ -35551,22 +36032,22 @@ public class ReportingExportJobListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [ReportingExportJobResponse]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [ReportingExportJobResponse]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -36486,22 +36967,22 @@ public class ResponseEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [ModelResponse]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [ModelResponse]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -36538,22 +37019,22 @@ public class ResponseSetEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [ResponseSet]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [ResponseSet]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -37494,22 +37975,22 @@ public class SecurityProfileEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [SecurityProfile]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [SecurityProfile]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -37651,84 +38132,6 @@ public class ServiceGoalTemplateImpactOverride: Codable {
 
 
 
-public class Share: Codable {
-
-
-
-
-
-    public enum SharedEntityType: String, Codable { 
-        case document = "DOCUMENT"
-    }
-
-
-
-    public enum MemberType: String, Codable { 
-        case user = "USER"
-        case group = "GROUP"
-        case _public = "PUBLIC"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    public var name: String?
-    public var sharedEntityType: SharedEntityType?
-    public var sharedEntity: DomainEntityRef?
-    public var memberType: MemberType?
-    public var member: DomainEntityRef?
-    public var sharedBy: DomainEntityRef?
-    public var workspace: DomainEntityRef?
-    public var user: User?
-    public var group: Group?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, sharedEntityType: SharedEntityType?, sharedEntity: DomainEntityRef?, memberType: MemberType?, member: DomainEntityRef?, sharedBy: DomainEntityRef?, workspace: DomainEntityRef?, user: User?, group: Group?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.sharedEntityType = sharedEntityType
-        self.sharedEntity = sharedEntity
-        self.memberType = memberType
-        self.member = member
-        self.sharedBy = sharedBy
-        self.workspace = workspace
-        self.user = user
-        self.group = group
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case sharedEntityType
-        case sharedEntity
-        case memberType
-        case member
-        case sharedBy
-        case workspace
-        case user
-        case group
-        case selfUri
-    }
-
-
-}
-
-
-
-
 public class ServiceNowSourceRequest: Codable {
 
 
@@ -37811,9 +38214,9 @@ public class SetContentTemplateActionSettings: Codable {
 
 
 
-    /** A string of sms contentTemplateId. */
+    /** A String containing the SMS contentTemplateId. */
     public var smsContentTemplateId: String?
-    /** A string of email contentTemplateId. */
+    /** A String containing the Email contentTemplateId. */
     public var emailContentTemplateId: String?
 
     public init(smsContentTemplateId: String?, emailContentTemplateId: String?) {
@@ -37861,6 +38264,84 @@ public class Settings: Codable {
         self.callbacksInheritRoutingFromInboundCall = callbacksInheritRoutingFromInboundCall
         self.completeAcwWhenAgentTransitionsOffline = completeAcwWhenAgentTransitionsOffline
         self.totalActiveCallback = totalActiveCallback
+    }
+
+
+}
+
+
+
+
+public class Share: Codable {
+
+
+
+
+
+    public enum SharedEntityType: String, Codable { 
+        case document = "DOCUMENT"
+    }
+
+
+
+    public enum MemberType: String, Codable { 
+        case user = "USER"
+        case group = "GROUP"
+        case _public = "PUBLIC"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    public var sharedEntityType: SharedEntityType?
+    public var sharedEntity: DomainEntityRef?
+    public var memberType: MemberType?
+    public var member: DomainEntityRef?
+    public var sharedBy: DomainEntityRef?
+    public var workspace: DomainEntityRef?
+    public var user: User?
+    public var group: Group?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, sharedEntityType: SharedEntityType?, sharedEntity: DomainEntityRef?, memberType: MemberType?, member: DomainEntityRef?, sharedBy: DomainEntityRef?, workspace: DomainEntityRef?, user: User?, group: Group?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.sharedEntityType = sharedEntityType
+        self.sharedEntity = sharedEntity
+        self.memberType = memberType
+        self.member = member
+        self.sharedBy = sharedBy
+        self.workspace = workspace
+        self.user = user
+        self.group = group
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case sharedEntityType
+        case sharedEntity
+        case memberType
+        case member
+        case sharedBy
+        case workspace
+        case user
+        case group
+        case selfUri
     }
 
 
@@ -38033,22 +38514,22 @@ public class SmsAddressEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [SmsAddress]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [SmsAddress]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -38152,22 +38633,22 @@ public class SocialEscalationResponseEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [EscalationRuleResponse]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [EscalationRuleResponse]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -38266,6 +38747,8 @@ public class StaffingGroupMetricChangeResponse: Codable {
         case newHiresFullTimeEquivalentCount = "NewHiresFullTimeEquivalentCount"
         case attritionPercentage = "AttritionPercentage"
         case shrinkagePercentage = "ShrinkagePercentage"
+        case transfersFullTimeEquivalentCount = "TransfersFullTimeEquivalentCount"
+        case extraTimeUnderTimeFullTimeEquivalentCount = "ExtraTimeUnderTimeFullTimeEquivalentCount"
     }
 
 
@@ -38498,6 +38981,7 @@ public class Suggestion: Codable {
         case knowledgeSearch = "KnowledgeSearch"
         case cannedResponse = "CannedResponse"
         case script = "Script"
+        case suggestedKnowledgeAnswer = "SuggestedKnowledgeAnswer"
     }
 
 
@@ -39241,22 +39725,22 @@ public class SystemPromptEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [SystemPrompt]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [SystemPrompt]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -40592,6 +41076,8 @@ public class TranscriptionTopicTranscriptionMessage: Codable {
 
 
 
+
+
     public var eventTime: Date?
     public var organizationId: String?
     public var conversationId: String?
@@ -40600,8 +41086,9 @@ public class TranscriptionTopicTranscriptionMessage: Codable {
     public var transcriptionStartTimeMs: Int64?
     public var transcripts: [TranscriptionTopicTranscriptResult]?
     public var status: TranscriptionTopicTranscriptionRequestStatus?
+    public var speechTextAnalyticsProgramId: String?
 
-    public init(eventTime: Date?, organizationId: String?, conversationId: String?, communicationId: String?, sessionStartTimeMs: Int64?, transcriptionStartTimeMs: Int64?, transcripts: [TranscriptionTopicTranscriptResult]?, status: TranscriptionTopicTranscriptionRequestStatus?) {
+    public init(eventTime: Date?, organizationId: String?, conversationId: String?, communicationId: String?, sessionStartTimeMs: Int64?, transcriptionStartTimeMs: Int64?, transcripts: [TranscriptionTopicTranscriptResult]?, status: TranscriptionTopicTranscriptionRequestStatus?, speechTextAnalyticsProgramId: String?) {
         self.eventTime = eventTime
         self.organizationId = organizationId
         self.conversationId = conversationId
@@ -40610,6 +41097,7 @@ public class TranscriptionTopicTranscriptionMessage: Codable {
         self.transcriptionStartTimeMs = transcriptionStartTimeMs
         self.transcripts = transcripts
         self.status = status
+        self.speechTextAnalyticsProgramId = speechTextAnalyticsProgramId
     }
 
 
@@ -40927,23 +41415,23 @@ public class TrunkEntityListing: Codable {
     /** The total organization-wide number of entities. */
     public var totalNumberOfEntities: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [Trunk]?, pageSize: Int?, pageNumber: Int?, total: Int64?, totalNumberOfEntities: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [Trunk]?, pageSize: Int?, pageNumber: Int?, total: Int64?, totalNumberOfEntities: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.totalNumberOfEntities = totalNumberOfEntities
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -41240,22 +41728,22 @@ public class TtsVoiceEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [TtsVoiceEntity]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [TtsVoiceEntity]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -42232,22 +42720,22 @@ public class UserQueueEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var nextUri: String?
     public var lastUri: String?
     public var selfUri: String?
+    public var previousUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [UserQueue]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [UserQueue]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
-        self.previousUri = previousUri
-        self.nextUri = nextUri
         self.lastUri = lastUri
         self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.nextUri = nextUri
         self.pageCount = pageCount
     }
 
@@ -42924,26 +43412,6 @@ public class V2MobiusRulesTopicEntityProperties: Codable {
         self.group = group
         self.queue = queue
         self.team = team
-    }
-
-
-}
-
-
-
-
-public class V2QueueObservationMetricGroup: Codable {
-
-
-
-
-
-    public var group: [String:String]?
-    public var data: V2QueueObservationMetricData?
-
-    public init(group: [String:String]?, data: V2QueueObservationMetricData?) {
-        self.group = group
-        self.data = data
     }
 
 
@@ -45054,43 +45522,6 @@ public class WfmUserNotificationTopicAdherenceExplanationNotification: Codable {
 
 
 
-public class WfmVersionedEntityMetadata: Codable {
-
-
-
-
-
-
-
-
-
-
-
-    /** The version of the associated entity.  Used to prevent conflicts on concurrent edits */
-    public var version: Int?
-    /** The user who last modified the associated entity. The id may be 'System' if it was an automated process */
-    public var modifiedBy: UserReference?
-    /** The date the associated entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateModified: Date?
-    /** The user who created the associated entity, if available. The id may be 'System' if it was an automated process */
-    public var createdBy: UserReference?
-    /** The date the associated entity was created, if available. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateCreated: Date?
-
-    public init(version: Int?, modifiedBy: UserReference?, dateModified: Date?, createdBy: UserReference?, dateCreated: Date?) {
-        self.version = version
-        self.modifiedBy = modifiedBy
-        self.dateModified = dateModified
-        self.createdBy = createdBy
-        self.dateCreated = dateCreated
-    }
-
-
-}
-
-
-
-
 public class WfmUserNotificationTopicBusinessUnit: Codable {
 
 
@@ -45234,6 +45665,43 @@ public class WfmUserScheduleAdherenceUpdatedTopicUserReference: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
+    }
+
+
+}
+
+
+
+
+public class WfmVersionedEntityMetadata: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** The version of the associated entity.  Used to prevent conflicts on concurrent edits */
+    public var version: Int?
+    /** The user who last modified the associated entity. The id may be 'System' if it was an automated process */
+    public var modifiedBy: UserReference?
+    /** The date the associated entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateModified: Date?
+    /** The user who created the associated entity, if available. The id may be 'System' if it was an automated process */
+    public var createdBy: UserReference?
+    /** The date the associated entity was created, if available. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+
+    public init(version: Int?, modifiedBy: UserReference?, dateModified: Date?, createdBy: UserReference?, dateCreated: Date?) {
+        self.version = version
+        self.modifiedBy = modifiedBy
+        self.dateModified = dateModified
+        self.createdBy = createdBy
+        self.dateCreated = dateCreated
     }
 
 
@@ -47230,53 +47698,6 @@ public class WorkitemStatusListing: Codable {
 
 
 
-public class Wrapup: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The user configured wrap up code id. */
-    public var code: String?
-    /** The user configured wrap up code name. */
-    public var name: String?
-    /** Text entered by the agent to describe the call or disposition. */
-    public var notes: String?
-    /** List of tags selected by the agent to describe the call or disposition. */
-    public var tags: [String]?
-    /** The length of time in seconds that the agent spent doing after call work. */
-    public var durationSeconds: Int?
-    /** The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var endTime: Date?
-    /** Indicates if this is a pending save and should not require a code to be specified.  This allows someone to save some temporary wrapup that will be used later. */
-    public var provisional: Bool?
-
-    public init(code: String?, name: String?, notes: String?, tags: [String]?, durationSeconds: Int?, endTime: Date?, provisional: Bool?) {
-        self.code = code
-        self.name = name
-        self.notes = notes
-        self.tags = tags
-        self.durationSeconds = durationSeconds
-        self.endTime = endTime
-        self.provisional = provisional
-    }
-
-
-}
-
-
-
-
 public class WorkitemWrapup: Codable {
 
 
@@ -48503,6 +48924,53 @@ public class WrapUpCodeConfig: Codable {
 
     public init(values: [String]?) {
         self.values = values
+    }
+
+
+}
+
+
+
+
+public class Wrapup: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The user configured wrap up code id. */
+    public var code: String?
+    /** The user configured wrap up code name. */
+    public var name: String?
+    /** Text entered by the agent to describe the call or disposition. */
+    public var notes: String?
+    /** List of tags selected by the agent to describe the call or disposition. */
+    public var tags: [String]?
+    /** The length of time in seconds that the agent spent doing after call work. */
+    public var durationSeconds: Int?
+    /** The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var endTime: Date?
+    /** Indicates if this is a pending save and should not require a code to be specified.  This allows someone to save some temporary wrapup that will be used later. */
+    public var provisional: Bool?
+
+    public init(code: String?, name: String?, notes: String?, tags: [String]?, durationSeconds: Int?, endTime: Date?, provisional: Bool?) {
+        self.code = code
+        self.name = name
+        self.notes = notes
+        self.tags = tags
+        self.durationSeconds = durationSeconds
+        self.endTime = endTime
+        self.provisional = provisional
     }
 
 

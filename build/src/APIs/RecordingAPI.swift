@@ -139,10 +139,6 @@ open class RecordingAPI {
         "contentType" : "contentType"
       } ],
       "subject" : "subject",
-      "replyTo" : {
-        "name" : "name",
-        "email" : "email"
-      },
       "textBody" : "textBody",
       "from" : {
         "name" : "name",
@@ -187,10 +183,6 @@ open class RecordingAPI {
         "contentType" : "contentType"
       } ],
       "subject" : "subject",
-      "replyTo" : {
-        "name" : "name",
-        "email" : "email"
-      },
       "textBody" : "textBody",
       "from" : {
         "name" : "name",
@@ -1528,10 +1520,6 @@ open class RecordingAPI {
       "contentType" : "contentType"
     } ],
     "subject" : "subject",
-    "replyTo" : {
-      "name" : "name",
-      "email" : "email"
-    },
     "textBody" : "textBody",
     "from" : {
       "name" : "name",
@@ -1576,10 +1564,6 @@ open class RecordingAPI {
       "contentType" : "contentType"
     } ],
     "subject" : "subject",
-    "replyTo" : {
-      "name" : "name",
-      "email" : "email"
-    },
     "textBody" : "textBody",
     "from" : {
       "name" : "name",
@@ -3028,10 +3012,6 @@ open class RecordingAPI {
       "contentType" : "contentType"
     } ],
     "subject" : "subject",
-    "replyTo" : {
-      "name" : "name",
-      "email" : "email"
-    },
     "textBody" : "textBody",
     "from" : {
       "name" : "name",
@@ -3076,10 +3056,6 @@ open class RecordingAPI {
       "contentType" : "contentType"
     } ],
     "subject" : "subject",
-    "replyTo" : {
-      "name" : "name",
-      "email" : "email"
-    },
     "textBody" : "textBody",
     "from" : {
       "name" : "name",
@@ -4115,10 +4091,6 @@ open class RecordingAPI {
         "contentType" : "contentType"
       } ],
       "subject" : "subject",
-      "replyTo" : {
-        "name" : "name",
-        "email" : "email"
-      },
       "textBody" : "textBody",
       "from" : {
         "name" : "name",
@@ -4163,10 +4135,6 @@ open class RecordingAPI {
         "contentType" : "contentType"
       } ],
       "subject" : "subject",
-      "replyTo" : {
-        "name" : "name",
-        "email" : "email"
-      },
       "textBody" : "textBody",
       "from" : {
         "name" : "name",
@@ -5275,10 +5243,6 @@ open class RecordingAPI {
       "contentType" : "contentType"
     } ],
     "subject" : "subject",
-    "replyTo" : {
-      "name" : "name",
-      "email" : "email"
-    },
     "textBody" : "textBody",
     "from" : {
       "name" : "name",
@@ -5323,10 +5287,6 @@ open class RecordingAPI {
       "contentType" : "contentType"
     } ],
     "subject" : "subject",
-    "replyTo" : {
-      "name" : "name",
-      "email" : "email"
-    },
     "textBody" : "textBody",
     "from" : {
       "name" : "name",
@@ -6398,10 +6358,6 @@ open class RecordingAPI {
           "contentType" : "contentType"
         } ],
         "subject" : "subject",
-        "replyTo" : {
-          "name" : "name",
-          "email" : "email"
-        },
         "textBody" : "textBody",
         "from" : {
           "name" : "name",
@@ -6446,10 +6402,6 @@ open class RecordingAPI {
           "contentType" : "contentType"
         } ],
         "subject" : "subject",
-        "replyTo" : {
-          "name" : "name",
-          "email" : "email"
-        },
         "textBody" : "textBody",
         "from" : {
           "name" : "name",
@@ -7459,10 +7411,6 @@ open class RecordingAPI {
           "contentType" : "contentType"
         } ],
         "subject" : "subject",
-        "replyTo" : {
-          "name" : "name",
-          "email" : "email"
-        },
         "textBody" : "textBody",
         "from" : {
           "name" : "name",
@@ -7507,10 +7455,6 @@ open class RecordingAPI {
           "contentType" : "contentType"
         } ],
         "subject" : "subject",
-        "replyTo" : {
-          "name" : "name",
-          "email" : "email"
-        },
         "textBody" : "textBody",
         "from" : {
           "name" : "name",
@@ -11104,10 +11048,6 @@ open class RecordingAPI {
       "contentType" : "contentType"
     } ],
     "subject" : "subject",
-    "replyTo" : {
-      "name" : "name",
-      "email" : "email"
-    },
     "textBody" : "textBody",
     "from" : {
       "name" : "name",
@@ -11152,10 +11092,6 @@ open class RecordingAPI {
       "contentType" : "contentType"
     } ],
     "subject" : "subject",
-    "replyTo" : {
-      "name" : "name",
-      "email" : "email"
-    },
     "textBody" : "textBody",
     "from" : {
       "name" : "name",
@@ -12275,10 +12211,6 @@ open class RecordingAPI {
       "contentType" : "contentType"
     } ],
     "subject" : "subject",
-    "replyTo" : {
-      "name" : "name",
-      "email" : "email"
-    },
     "textBody" : "textBody",
     "from" : {
       "name" : "name",
@@ -12323,10 +12255,6 @@ open class RecordingAPI {
       "contentType" : "contentType"
     } ],
     "subject" : "subject",
-    "replyTo" : {
-      "name" : "name",
-      "email" : "email"
-    },
     "textBody" : "textBody",
     "from" : {
       "name" : "name",
