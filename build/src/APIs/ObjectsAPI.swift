@@ -455,7 +455,7 @@ open class ObjectsAPI {
      
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter pageSize: (query) Page size (max 200, default 25) (optional)
      - parameter _id: (query) Optionally request specific divisions by their IDs (optional)
      - parameter name: (query) Optionally request specific divisions by division name (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -512,7 +512,7 @@ open class ObjectsAPI {
      
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter pageSize: (query) Page size (max 200, default 25) (optional)
      - parameter _id: (query) Optionally request specific divisions by their IDs (optional)
      - parameter name: (query) Optionally request specific divisions by division name (optional)
 

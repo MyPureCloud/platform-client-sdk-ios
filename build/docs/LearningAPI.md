@@ -675,7 +675,7 @@ LearningAPI.getLearningModuleVersion(moduleId: moduleId, versionId: versionId, e
 
 
 
-> [LearningModulesDomainEntityListing](LearningModulesDomainEntityListing) getLearningModules(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses, externalIds)
+> [LearningModuleList](LearningModuleList) getLearningModules(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses, externalIds)
 
 Get all learning modules of an organization
 
@@ -738,7 +738,7 @@ LearningAPI.getLearningModules(isArchived: isArchived, types: types, pageSize: p
 
 ### Return type
 
-[**LearningModulesDomainEntityListing**](LearningModulesDomainEntityListing)
+[**LearningModuleList**](LearningModuleList)
 
 
 ## getLearningModulesAssignments
@@ -2051,4 +2051,4 @@ LearningAPI.putLearningModuleRule(moduleId: moduleId, body: body, assign: assign
 [**LearningModuleRule**](LearningModuleRule)
 
 
-_PureCloudPlatformClientV2@179.0.0_
+_PureCloudPlatformClientV2@180.0.0_

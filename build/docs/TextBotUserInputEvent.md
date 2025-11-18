@@ -12,4 +12,4 @@ Settings for an input event to the bot flow indicating user input is available.
 
 
 
-_PureCloudPlatformClientV2@179.0.0_
+_PureCloudPlatformClientV2@180.0.0_

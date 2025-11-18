@@ -20,4 +20,4 @@ Conversation settings that handles chats within the messenger
 
 
 
-_PureCloudPlatformClientV2@179.0.0_
+_PureCloudPlatformClientV2@180.0.0_

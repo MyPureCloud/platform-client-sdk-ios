@@ -11,7 +11,8 @@ Button response object representing the click of a structured message button, su
 | **type** | **String** | Describes the button that resulted in the Button Response. | [optional] |
 | **text** | **String** | The response text from the button click. | |
 | **payload** | **String** | The response payload associated with the clicked button. | |
+| **originatingMessageId** | **String** | Id of original structured message that this message responds to. | |
 
 
 
-_PureCloudPlatformClientV2@179.0.0_
+_PureCloudPlatformClientV2@180.0.0_

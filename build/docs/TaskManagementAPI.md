@@ -2623,7 +2623,7 @@ TaskManagementAPI.patchTaskmanagementWorkitemAssignment(workitemId: workitemId, 
 
 
 
-> [WorkitemWrapup](WorkitemWrapup) patchTaskmanagementWorkitemUserWrapups(workitemId, userId, body)
+> Void patchTaskmanagementWorkitemUserWrapups(workitemId, userId, body)
 
 Add/Remove a wrapup code for a given user in a workitem.
 
@@ -2648,12 +2648,11 @@ let userId: String = "" // The ID of the user
 let body: WorkitemWrapupUpdate = new WorkitemWrapupUpdate(...) // Request body to add/remove a wrapup code for a workitem
 
 // Code example
-TaskManagementAPI.patchTaskmanagementWorkitemUserWrapups(workitemId: workitemId, userId: userId, body: body) { (response, error) in
+TaskManagementAPI.patchTaskmanagementWorkitemUserWrapups(workitemId: workitemId, userId: userId, body: body) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("TaskManagementAPI.patchTaskmanagementWorkitemUserWrapups was successful")
-        dump(response)
     }
 }
 ```
@@ -2670,14 +2669,14 @@ TaskManagementAPI.patchTaskmanagementWorkitemUserWrapups(workitemId: workitemId,
 
 ### Return type
 
-[**WorkitemWrapup**](WorkitemWrapup)
+`nil` (empty response body)
 
 
 ## patchTaskmanagementWorkitemUsersMeWrapups
 
 
 
-> [WorkitemWrapup](WorkitemWrapup) patchTaskmanagementWorkitemUsersMeWrapups(workitemId, body)
+> Void patchTaskmanagementWorkitemUsersMeWrapups(workitemId, body)
 
 Add/Remove a wrapup code for the current user in a workitem.
 
@@ -2701,12 +2700,11 @@ let workitemId: String = "" // The ID of the Workitem.
 let body: WorkitemWrapupUpdate = new WorkitemWrapupUpdate(...) // Request body to add/remove the wrapup code for workitem
 
 // Code example
-TaskManagementAPI.patchTaskmanagementWorkitemUsersMeWrapups(workitemId: workitemId, body: body) { (response, error) in
+TaskManagementAPI.patchTaskmanagementWorkitemUsersMeWrapups(workitemId: workitemId, body: body) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("TaskManagementAPI.patchTaskmanagementWorkitemUsersMeWrapups was successful")
-        dump(response)
     }
 }
 ```
@@ -2722,7 +2720,7 @@ TaskManagementAPI.patchTaskmanagementWorkitemUsersMeWrapups(workitemId: workitem
 
 ### Return type
 
-[**WorkitemWrapup**](WorkitemWrapup)
+`nil` (empty response body)
 
 
 ## patchTaskmanagementWorkitemsBulkAddJob
@@ -3959,4 +3957,4 @@ TaskManagementAPI.putTaskmanagementWorkitemsSchema(schemaId: schemaId, body: bod
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatformClientV2@179.0.0_
+_PureCloudPlatformClientV2@180.0.0_

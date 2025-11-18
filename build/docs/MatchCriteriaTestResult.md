@@ -17,4 +17,4 @@ Results of a matching expression
 
 
 
-_PureCloudPlatformClientV2@179.0.0_
+_PureCloudPlatformClientV2@180.0.0_

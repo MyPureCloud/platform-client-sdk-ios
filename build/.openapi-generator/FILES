@@ -157,6 +157,7 @@ docs/AgentScheduleShiftActivity.md
 docs/AgentStateAgentQueryClause.md
 docs/AgentStateAgentQueryPredicate.md
 docs/AgentStateCountsRequest.md
+docs/AgentStateEventTopicAgentStateEventNotification.md
 docs/AgentStateIsOutOfOfficeCount.md
 docs/AgentStatePresenceCount.md
 docs/AgentStateQueryRequest.md
@@ -1157,6 +1158,8 @@ docs/ConversationContentQuickReplyV2.md
 docs/ConversationContentReaction.md
 docs/ConversationContentReceivedReplyMessage.md
 docs/ConversationContentRequiredContactField.md
+docs/ConversationContentRichLink.md
+docs/ConversationContentRichLinkHeader.md
 docs/ConversationContentRoadsideAssistance.md
 docs/ConversationContentStory.md
 docs/ConversationContentText.md
@@ -2198,6 +2201,7 @@ docs/ExternalOrganizationIdentifierClaimRequest.md
 docs/ExternalOrganizationIdentifierListing.md
 docs/ExternalOrganizationListing.md
 docs/ExternalOrganizationTrustorLink.md
+docs/ExternalPageMetadata.md
 docs/ExternalSegment.md
 docs/ExternalSource.md
 docs/FacebookAppCredentials.md
@@ -2649,6 +2653,7 @@ docs/JourneyAppEventsNotificationSegmentAssignmentMessage.md
 docs/JourneyAppEventsNotificationSession.md
 docs/JourneyAppEventsNotificationWebActionMessage.md
 docs/JourneyCampaign.md
+docs/JourneyCaseAssociation.md
 docs/JourneyContext.md
 docs/JourneyCustomer.md
 docs/JourneyCustomerSession.md
@@ -2721,6 +2726,8 @@ docs/JourneyViewElementFilterRange.md
 docs/JourneyViewElementFilterRangeData.md
 docs/JourneyViewJob.md
 docs/JourneyViewJobListing.md
+docs/JourneyViewJobNotificationTopicJourneyView.md
+docs/JourneyViewJobNotificationTopicJourneyViewJobNotificationEventV2.md
 docs/JourneyViewLink.md
 docs/JourneyViewLinkTimeConstraint.md
 docs/JourneyViewListing.md
@@ -2979,6 +2986,7 @@ docs/LearningModuleInformStep.md
 docs/LearningModuleInformStepRequest.md
 docs/LearningModuleJobRequest.md
 docs/LearningModuleJobResponse.md
+docs/LearningModuleList.md
 docs/LearningModulePreviewGetResponse.md
 docs/LearningModulePreviewGetResponseAssignment.md
 docs/LearningModulePreviewGetResponseStep.md
@@ -2997,7 +3005,6 @@ docs/LearningModuleRequest.md
 docs/LearningModuleRule.md
 docs/LearningModuleRuleParts.md
 docs/LearningModuleSummary.md
-docs/LearningModulesDomainEntityListing.md
 docs/LearningScheduleSlotsJobRequest.md
 docs/LearningScheduleSlotsJobResponse.md
 docs/LearningScheduleSlotsJobResult.md
@@ -3167,6 +3174,7 @@ docs/MessageInfo.md
 docs/MessageMedia.md
 docs/MessageMediaAttachment.md
 docs/MessageMediaData.md
+docs/MessageMediaListing.md
 docs/MessageMediaParticipant.md
 docs/MessageMediaPolicy.md
 docs/MessageMediaPolicyConditions.md
@@ -4424,6 +4432,7 @@ docs/SetSmsPhoneNumberActionSettings.md
 docs/SetTimeOffIntegrationStatusRequest.md
 docs/SetTimeOffLimitValuesRequest.md
 docs/SetUuiDataRequest.md
+docs/SetWhatsAppIntegrationActionSettings.md
 docs/SetWrapperDayOfWeek.md
 docs/SetWrapperRoutePathRequest.md
 docs/SetWrapperString.md
@@ -6244,6 +6253,7 @@ docs/getConversationsInternalmessages-example.txt
 docs/getConversationsKeyconfiguration-example.txt
 docs/getConversationsKeyconfigurations-example.txt
 docs/getConversationsMessage-example.txt
+docs/getConversationsMessageCommunicationMessagesMedia-example.txt
 docs/getConversationsMessageCommunicationMessagesMediaMediaId-example.txt
 docs/getConversationsMessageDetails-example.txt
 docs/getConversationsMessageMessage-example.txt
@@ -8817,6 +8827,7 @@ src/Models/AgentScheduleShiftActivity.swift
 src/Models/AgentStateAgentQueryClause.swift
 src/Models/AgentStateAgentQueryPredicate.swift
 src/Models/AgentStateCountsRequest.swift
+src/Models/AgentStateEventTopicAgentStateEventNotification.swift
 src/Models/AgentStateIsOutOfOfficeCount.swift
 src/Models/AgentStatePresenceCount.swift
 src/Models/AgentStateQueryRequest.swift
@@ -9793,6 +9804,8 @@ src/Models/ConversationContentQuickReplyV2.swift
 src/Models/ConversationContentReaction.swift
 src/Models/ConversationContentReceivedReplyMessage.swift
 src/Models/ConversationContentRequiredContactField.swift
+src/Models/ConversationContentRichLink.swift
+src/Models/ConversationContentRichLinkHeader.swift
 src/Models/ConversationContentRoadsideAssistance.swift
 src/Models/ConversationContentStory.swift
 src/Models/ConversationContentText.swift
@@ -10818,6 +10831,7 @@ src/Models/ExternalOrganizationIdentifierClaimRequest.swift
 src/Models/ExternalOrganizationIdentifierListing.swift
 src/Models/ExternalOrganizationListing.swift
 src/Models/ExternalOrganizationTrustorLink.swift
+src/Models/ExternalPageMetadata.swift
 src/Models/ExternalSegment.swift
 src/Models/ExternalSource.swift
 src/Models/FacebookAppCredentials.swift
@@ -11247,6 +11261,7 @@ src/Models/JourneyAppEventsNotificationSegmentAssignmentMessage.swift
 src/Models/JourneyAppEventsNotificationSession.swift
 src/Models/JourneyAppEventsNotificationWebActionMessage.swift
 src/Models/JourneyCampaign.swift
+src/Models/JourneyCaseAssociation.swift
 src/Models/JourneyContext.swift
 src/Models/JourneyCustomer.swift
 src/Models/JourneyCustomerSession.swift
@@ -11319,6 +11334,8 @@ src/Models/JourneyViewElementFilterRange.swift
 src/Models/JourneyViewElementFilterRangeData.swift
 src/Models/JourneyViewJob.swift
 src/Models/JourneyViewJobListing.swift
+src/Models/JourneyViewJobNotificationTopicJourneyView.swift
+src/Models/JourneyViewJobNotificationTopicJourneyViewJobNotificationEventV2.swift
 src/Models/JourneyViewLink.swift
 src/Models/JourneyViewLinkTimeConstraint.swift
 src/Models/JourneyViewListing.swift
@@ -11569,6 +11586,7 @@ src/Models/LearningModuleInformStep.swift
 src/Models/LearningModuleInformStepRequest.swift
 src/Models/LearningModuleJobRequest.swift
 src/Models/LearningModuleJobResponse.swift
+src/Models/LearningModuleList.swift
 src/Models/LearningModulePreviewGetResponse.swift
 src/Models/LearningModulePreviewGetResponseAssignment.swift
 src/Models/LearningModulePreviewGetResponseStep.swift
@@ -11587,7 +11605,6 @@ src/Models/LearningModuleRequest.swift
 src/Models/LearningModuleRule.swift
 src/Models/LearningModuleRuleParts.swift
 src/Models/LearningModuleSummary.swift
-src/Models/LearningModulesDomainEntityListing.swift
 src/Models/LearningScheduleSlotsJobRequest.swift
 src/Models/LearningScheduleSlotsJobResponse.swift
 src/Models/LearningScheduleSlotsJobResult.swift
@@ -11751,6 +11768,7 @@ src/Models/MessageInfo.swift
 src/Models/MessageMedia.swift
 src/Models/MessageMediaAttachment.swift
 src/Models/MessageMediaData.swift
+src/Models/MessageMediaListing.swift
 src/Models/MessageMediaParticipant.swift
 src/Models/MessageMediaPolicy.swift
 src/Models/MessageMediaPolicyConditions.swift
@@ -12971,6 +12989,7 @@ src/Models/SetSmsPhoneNumberActionSettings.swift
 src/Models/SetTimeOffIntegrationStatusRequest.swift
 src/Models/SetTimeOffLimitValuesRequest.swift
 src/Models/SetUuiDataRequest.swift
+src/Models/SetWhatsAppIntegrationActionSettings.swift
 src/Models/SetWrapperDayOfWeek.swift
 src/Models/SetWrapperRoutePathRequest.swift
 src/Models/SetWrapperString.swift

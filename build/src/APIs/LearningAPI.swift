@@ -472,9 +472,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
+  "total" : 4,
+  "pageCount" : 7,
+  "pageNumber" : 2,
   "entities" : [ {
     "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "assessmentCompletionPercentage" : 1.4658129,
@@ -623,7 +623,7 @@ open class LearningAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 3,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -789,9 +789,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
+  "total" : 4,
+  "pageCount" : 7,
+  "pageNumber" : 2,
   "entities" : [ {
     "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "assessmentCompletionPercentage" : 1.4658129,
@@ -940,7 +940,7 @@ open class LearningAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 3,
   "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -1487,9 +1487,9 @@ open class LearningAPI {
      - parameter externalIds: (query) Specifies the module external IDs to filter by. Only one ID is allowed (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLearningModules(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, isPublished: IsPublished_getLearningModules? = nil, statuses: [String]? = nil, externalIds: [String]? = nil, completion: @escaping ((_ data: LearningModulesDomainEntityListing?,_ error: Error?) -> Void)) {
+    open class func getLearningModules(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, isPublished: IsPublished_getLearningModules? = nil, statuses: [String]? = nil, externalIds: [String]? = nil, completion: @escaping ((_ data: LearningModuleList?,_ error: Error?) -> Void)) {
         let requestBuilder = getLearningModulesWithRequestBuilder(isArchived: isArchived, types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand, isPublished: isPublished, statuses: statuses, externalIds: externalIds)
-        requestBuilder.execute { (response: Response<LearningModulesDomainEntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<LearningModuleList>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1513,8 +1513,9 @@ open class LearningAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "total" : 7,
-  "pageCount" : 9,
+  "pageCount" : 3,
   "pageNumber" : 2,
+  "totalLegacyRules" : 9,
   "entities" : [ {
     "reassignSummaryData" : "{}",
     "archivalMode" : "Graceful",
@@ -1626,9 +1627,9 @@ open class LearningAPI {
      - parameter statuses: (query) Specifies the module statuses to filter by (optional)
      - parameter externalIds: (query) Specifies the module external IDs to filter by. Only one ID is allowed (optional)
 
-     - returns: RequestBuilder<LearningModulesDomainEntityListing> 
+     - returns: RequestBuilder<LearningModuleList> 
      */
-    open class func getLearningModulesWithRequestBuilder(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, isPublished: IsPublished_getLearningModules? = nil, statuses: [String]? = nil, externalIds: [String]? = nil) -> RequestBuilder<LearningModulesDomainEntityListing> {        
+    open class func getLearningModulesWithRequestBuilder(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, isPublished: IsPublished_getLearningModules? = nil, statuses: [String]? = nil, externalIds: [String]? = nil) -> RequestBuilder<LearningModuleList> {        
         let path = "/api/v2/learning/modules"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -1648,7 +1649,7 @@ open class LearningAPI {
             "externalIds": externalIds
         ])
 
-        let requestBuilder: RequestBuilder<LearningModulesDomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<LearningModuleList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }

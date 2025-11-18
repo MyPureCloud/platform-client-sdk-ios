@@ -5634,7 +5634,7 @@
       }
     ],
     "return": "AuthzDivisionCursorListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 200.\nlet _id: [String] = [\"\"] // Optionally request specific divisions by their IDs\nlet name: String = \"\" // Optionally request specific divisions by division name\n\n// Retrieve a list of all divisions defined for the organization with cursor\nGetAuthorizationDivisionsQueryRequest.getAuthorizationDivisionsQuery(before: before, after: after, pageSize: pageSize, _id: _id, name: name) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAuthorizationDivisionsQueryRequest.getAuthorizationDivisionsQuery was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Page size (max 200, default 25)\nlet _id: [String] = [\"\"] // Optionally request specific divisions by their IDs\nlet name: String = \"\" // Optionally request specific divisions by division name\n\n// Retrieve a list of all divisions defined for the organization with cursor\nGetAuthorizationDivisionsQueryRequest.getAuthorizationDivisionsQuery(before: before, after: after, pageSize: pageSize, _id: _id, name: name) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAuthorizationDivisionsQueryRequest.getAuthorizationDivisionsQuery was successful\")\n        dump(response)\n    }\n}"
   },
   "getauthorizationdivisionspermittedme": {
     "operationId": "getauthorizationdivisionspermittedme",
@@ -10044,6 +10044,40 @@
     ],
     "return": "MessageConversation",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\n\n// Get message conversation\nGetConversationsMessageRequest.getConversationsMessage(conversationId: conversationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessageRequest.getConversationsMessage was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationsmessagecommunicationmessagesmedia": {
+    "operationId": "getconversationsmessagecommunicationmessagesmedia",
+    "functionName": "getConversationsMessageCommunicationMessagesMedia",
+    "signature": "getConversationsMessageCommunicationMessagesMedia(conversationId, communicationId, status, pageNumber, pageSize)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "status",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "MessageMediaListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet communicationId: String = \"\" // communicationId\nlet status: GetConversationsMessageCommunicationMessagesMediaRequest.Status_getConversationsMessageCommunicationMessagesMedia = GetConversationsMessageCommunicationMessagesMediaRequest.Status_getConversationsMessageCommunicationMessagesMedia.enummember // The status on which to filter the response.\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\n\n// Get message media list by status\nGetConversationsMessageCommunicationMessagesMediaRequest.getConversationsMessageCommunicationMessagesMedia(conversationId: conversationId, communicationId: communicationId, status: status, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessageCommunicationMessagesMediaRequest.getConversationsMessageCommunicationMessagesMedia was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationsmessagecommunicationmessagesmediamediaid": {
     "operationId": "getconversationsmessagecommunicationmessagesmediamediaid",
@@ -26715,7 +26749,7 @@
         "required": "false"
       }
     ],
-    "return": "LearningModulesDomainEntityListing",
+    "return": "LearningModuleList",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet isArchived: Bool = true // Archive status\nlet types: [String] = [\"\"] // Specifies the module types. Informational, AssessedContent and Assessment are deprecated\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortOrder: GetLearningModulesRequest.SortOrder_getLearningModules = GetLearningModulesRequest.SortOrder_getLearningModules.enummember // Sort order\nlet sortBy: GetLearningModulesRequest.SortBy_getLearningModules = GetLearningModulesRequest.SortBy_getLearningModules.enummember // Sort by\nlet searchTerm: String = \"\" // Search Term (searchable by name)\nlet expand: [String] = [\"\"] // Fields to expand in response(case insensitive)\nlet isPublished: GetLearningModulesRequest.IsPublished_getLearningModules = GetLearningModulesRequest.IsPublished_getLearningModules.enummember // Specifies if only the Unpublished (isPublished is \\\"False\\\") or Published (isPublished is \\\"True\\\") modules are returned. If isPublished is \\\"Any\\\" or omitted, both types are returned\nlet statuses: [String] = [\"\"] // Specifies the module statuses to filter by\nlet externalIds: [String] = [\"\"] // Specifies the module external IDs to filter by. Only one ID is allowed\n\n// Get all learning modules of an organization\nGetLearningModulesRequest.getLearningModules(isArchived: isArchived, types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand, isPublished: isPublished, statuses: statuses, externalIds: externalIds) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLearningModulesRequest.getLearningModules was successful\")\n        dump(response)\n    }\n}"
   },
   "getlearningmodulesassignments": {
@@ -43769,8 +43803,7 @@
         "required": "true"
       }
     ],
-    "return": "WorkitemWrapup",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workitemId: String = \"\" // The ID of the Workitem.\nlet userId: String = \"\" // The ID of the user\nlet body: WorkitemWrapupUpdate = new WorkitemWrapupUpdate(...) // Request body to add/remove a wrapup code for a workitem\n\n// Add/Remove a wrapup code for a given user in a workitem.\nPatchTaskmanagementWorkitemUserWrapupsRequest.patchTaskmanagementWorkitemUserWrapups(workitemId: workitemId, userId: userId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchTaskmanagementWorkitemUserWrapupsRequest.patchTaskmanagementWorkitemUserWrapups was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workitemId: String = \"\" // The ID of the Workitem.\nlet userId: String = \"\" // The ID of the user\nlet body: WorkitemWrapupUpdate = new WorkitemWrapupUpdate(...) // Request body to add/remove a wrapup code for a workitem\n\n// Add/Remove a wrapup code for a given user in a workitem.\nPatchTaskmanagementWorkitemUserWrapupsRequest.patchTaskmanagementWorkitemUserWrapups(workitemId: workitemId, userId: userId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchTaskmanagementWorkitemUserWrapupsRequest.patchTaskmanagementWorkitemUserWrapups was successful\")\n    }\n}"
   },
   "patchtaskmanagementworkitemusersmewrapups": {
     "operationId": "patchtaskmanagementworkitemusersmewrapups",
@@ -43788,8 +43821,7 @@
         "required": "true"
       }
     ],
-    "return": "WorkitemWrapup",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workitemId: String = \"\" // The ID of the Workitem.\nlet body: WorkitemWrapupUpdate = new WorkitemWrapupUpdate(...) // Request body to add/remove the wrapup code for workitem\n\n// Add/Remove a wrapup code for the current user in a workitem.\nPatchTaskmanagementWorkitemUsersMeWrapupsRequest.patchTaskmanagementWorkitemUsersMeWrapups(workitemId: workitemId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchTaskmanagementWorkitemUsersMeWrapupsRequest.patchTaskmanagementWorkitemUsersMeWrapups was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workitemId: String = \"\" // The ID of the Workitem.\nlet body: WorkitemWrapupUpdate = new WorkitemWrapupUpdate(...) // Request body to add/remove the wrapup code for workitem\n\n// Add/Remove a wrapup code for the current user in a workitem.\nPatchTaskmanagementWorkitemUsersMeWrapupsRequest.patchTaskmanagementWorkitemUsersMeWrapups(workitemId: workitemId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchTaskmanagementWorkitemUsersMeWrapupsRequest.patchTaskmanagementWorkitemUsersMeWrapups was successful\")\n    }\n}"
   },
   "patchtaskmanagementworkitemsbulkaddjob": {
     "operationId": "patchtaskmanagementworkitemsbulkaddjob",

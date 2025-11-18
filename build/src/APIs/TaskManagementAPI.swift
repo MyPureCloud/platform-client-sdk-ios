@@ -4117,19 +4117,12 @@ open class TaskManagementAPI {
      - parameter body: (body) Request body to add/remove a wrapup code for a workitem 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchTaskmanagementWorkitemUserWrapups(workitemId: String, userId: String, body: WorkitemWrapupUpdate, completion: @escaping ((_ data: WorkitemWrapup?,_ error: Error?) -> Void)) {
+    open class func patchTaskmanagementWorkitemUserWrapups(workitemId: String, userId: String, body: WorkitemWrapupUpdate, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         let requestBuilder = patchTaskmanagementWorkitemUserWrapupsWithRequestBuilder(workitemId: workitemId, userId: userId, body: body)
-        requestBuilder.execute { (response: Response<WorkitemWrapup>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
                 completion(nil, error)
             }
         }
@@ -4141,21 +4134,14 @@ open class TaskManagementAPI {
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "wrapupCode" : "{}",
-  "workitem" : "{}",
-  "modifiedBy" : "{}",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "user" : "{}"
-}, statusCode=200}]
      
      - parameter workitemId: (path) The ID of the Workitem. 
      - parameter userId: (path) The ID of the user 
      - parameter body: (body) Request body to add/remove a wrapup code for a workitem 
 
-     - returns: RequestBuilder<WorkitemWrapup> 
+     - returns: RequestBuilder<Void> 
      */
-    open class func patchTaskmanagementWorkitemUserWrapupsWithRequestBuilder(workitemId: String, userId: String, body: WorkitemWrapupUpdate) -> RequestBuilder<WorkitemWrapup> {        
+    open class func patchTaskmanagementWorkitemUserWrapupsWithRequestBuilder(workitemId: String, userId: String, body: WorkitemWrapupUpdate) -> RequestBuilder<Void> {        
         var path = "/api/v2/taskmanagement/workitems/{workitemId}/users/{userId}/wrapups"
         let workitemIdPreEscape = "\(workitemId)"
         let workitemIdPostEscape = workitemIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4168,7 +4154,7 @@ open class TaskManagementAPI {
 
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<WorkitemWrapup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -4184,19 +4170,12 @@ open class TaskManagementAPI {
      - parameter body: (body) Request body to add/remove the wrapup code for workitem 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchTaskmanagementWorkitemUsersMeWrapups(workitemId: String, body: WorkitemWrapupUpdate, completion: @escaping ((_ data: WorkitemWrapup?,_ error: Error?) -> Void)) {
+    open class func patchTaskmanagementWorkitemUsersMeWrapups(workitemId: String, body: WorkitemWrapupUpdate, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         let requestBuilder = patchTaskmanagementWorkitemUsersMeWrapupsWithRequestBuilder(workitemId: workitemId, body: body)
-        requestBuilder.execute { (response: Response<WorkitemWrapup>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
                 completion(nil, error)
             }
         }
@@ -4208,20 +4187,13 @@ open class TaskManagementAPI {
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "wrapupCode" : "{}",
-  "workitem" : "{}",
-  "modifiedBy" : "{}",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "user" : "{}"
-}, statusCode=200}]
      
      - parameter workitemId: (path) The ID of the Workitem. 
      - parameter body: (body) Request body to add/remove the wrapup code for workitem 
 
-     - returns: RequestBuilder<WorkitemWrapup> 
+     - returns: RequestBuilder<Void> 
      */
-    open class func patchTaskmanagementWorkitemUsersMeWrapupsWithRequestBuilder(workitemId: String, body: WorkitemWrapupUpdate) -> RequestBuilder<WorkitemWrapup> {        
+    open class func patchTaskmanagementWorkitemUsersMeWrapupsWithRequestBuilder(workitemId: String, body: WorkitemWrapupUpdate) -> RequestBuilder<Void> {        
         var path = "/api/v2/taskmanagement/workitems/{workitemId}/users/me/wrapups"
         let workitemIdPreEscape = "\(workitemId)"
         let workitemIdPostEscape = workitemIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4231,7 +4203,7 @@ open class TaskManagementAPI {
 
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<WorkitemWrapup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }

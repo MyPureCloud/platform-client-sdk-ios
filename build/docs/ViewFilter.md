@@ -239,7 +239,9 @@
 | **sentimentScoreCategories** | **[String]** | A set of Sentiment Score Categories  for filtering | [optional] |
 | **sentimentTrendCategories** | **[String]** | A set of Sentiment Trend Categories for filtering | [optional] |
 | **contentModerationFlags** | **[String]** | A set of Content Moderation Flags for filtering | [optional] |
+| **sessionExpired** | **Bool** | Filter to indicate for if session is expired | [optional] |
+| **engagementSource** | **[String]** | The engagement sources used to filter the view | [optional] |
 
 
 
-_PureCloudPlatformClientV2@179.0.0_
+_PureCloudPlatformClientV2@180.0.0_

@@ -3605,6 +3605,8 @@ open class WorkforceManagementAPI {
         case workPlanBidGroups = "WorkPlanBidGroups"
         case workPlanRotations = "WorkPlanRotations"
         case workPlans = "WorkPlans"
+        case scheduleBid = "ScheduleBid"
+        case scheduleBidGroup = "ScheduleBidGroup"
     }
     
     
@@ -6873,6 +6875,8 @@ open class WorkforceManagementAPI {
         case workPlanBidGroups = "WorkPlanBidGroups"
         case workPlanRotations = "WorkPlanRotations"
         case workPlans = "WorkPlans"
+        case scheduleBid = "ScheduleBid"
+        case scheduleBidGroup = "ScheduleBidGroup"
     }
     
     
@@ -9926,6 +9930,8 @@ open class WorkforceManagementAPI {
         case workPlanBidGroups = "WorkPlanBidGroups"
         case workPlanRotations = "WorkPlanRotations"
         case workPlans = "WorkPlans"
+        case scheduleBid = "ScheduleBid"
+        case scheduleBidGroup = "ScheduleBidGroup"
     }
     
     

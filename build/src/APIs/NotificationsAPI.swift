@@ -215,11 +215,13 @@ open class NotificationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "missingPermissions" : [ "missingPermissions", "missingPermissions" ],
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "Permitted",
     "rejectionReason" : "rejectionReason"
   }, {
+    "missingPermissions" : [ "missingPermissions", "missingPermissions" ],
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "Permitted",
@@ -400,11 +402,13 @@ open class NotificationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "missingPermissions" : [ "missingPermissions", "missingPermissions" ],
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "Permitted",
     "rejectionReason" : "rejectionReason"
   }, {
+    "missingPermissions" : [ "missingPermissions", "missingPermissions" ],
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "Permitted",
@@ -526,11 +530,13 @@ open class NotificationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "missingPermissions" : [ "missingPermissions", "missingPermissions" ],
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "Permitted",
     "rejectionReason" : "rejectionReason"
   }, {
+    "missingPermissions" : [ "missingPermissions", "missingPermissions" ],
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "Permitted",
