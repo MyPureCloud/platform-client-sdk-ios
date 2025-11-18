@@ -17,9 +17,9 @@
 | **answerOptions** | [**[AnswerOption]**]([AnswerOption]) | Options from which to choose an answer for this question. Only used by Multiple Choice type questions. | [optional] |
 | **multipleSelectOptionQuestions** | [**[EvaluationQuestion]**]([EvaluationQuestion]) | Only used by Multiple Select type questions. A list of multiple choice questions representing selectable options. | [optional] |
 | **defaultAnswer** | [**DefaultAnswer**](DefaultAnswer) | The default selected answer for the question | [optional] |
-| **isKill** | **Bool** |  | [optional] |
 | **isCritical** | **Bool** |  | [optional] |
+| **isKill** | **Bool** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@179.0.0_
+_PureCloudPlatformClientV2@180.0.0_

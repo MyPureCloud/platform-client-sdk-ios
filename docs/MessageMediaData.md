@@ -13,8 +13,10 @@
 | **contentLengthBytes** | **Int** | The optional content length of the the media object, in bytes. | [optional] |
 | **uploadUrl** | **String** | The URL returned to upload an attachment | [optional] |
 | **status** | **String** | The status of the media, indicates if the media is in the process of uploading. If the upload fails, the media becomes invalid | [optional] |
+| **conversationId** | **String** |  | [optional] |
+| **communicationId** | **String** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@179.0.0_
+_PureCloudPlatformClientV2@180.0.0_

@@ -75,6 +75,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsKeyconfiguration**](ConversationsAPI#getConversationsKeyconfiguration) | Get the encryption key configurations |
 | [**getConversationsKeyconfigurations**](ConversationsAPI#getConversationsKeyconfigurations) | Get a list of key configurations data |
 | [**getConversationsMessage**](ConversationsAPI#getConversationsMessage) | Get message conversation |
+| [**getConversationsMessageCommunicationMessagesMedia**](ConversationsAPI#getConversationsMessageCommunicationMessagesMedia) | Get message media list by status |
 | [**getConversationsMessageCommunicationMessagesMediaMediaId**](ConversationsAPI#getConversationsMessageCommunicationMessagesMediaMediaId) | Get media |
 | [**getConversationsMessageDetails**](ConversationsAPI#getConversationsMessageDetails) | Get message |
 | [**getConversationsMessageMessage**](ConversationsAPI#getConversationsMessageMessage) | Get conversation message |
@@ -3886,6 +3887,64 @@ ConversationsAPI.getConversationsMessage(conversationId: conversationId) { (resp
 ### Return type
 
 [**MessageConversation**](MessageConversation)
+
+
+## getConversationsMessageCommunicationMessagesMedia
+
+
+
+> [MessageMediaListing](MessageMediaListing) getConversationsMessageCommunicationMessagesMedia(conversationId, communicationId, status, pageNumber, pageSize)
+
+Get message media list by status
+
+
+
+Wraps GET /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media  
+
+Requires ANY permissions: 
+
+* conversation:messageMedia:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let communicationId: String = "" // communicationId
+let status: ConversationsAPI.Status_getConversationsMessageCommunicationMessagesMedia = ConversationsAPI.Status_getConversationsMessageCommunicationMessagesMedia.enummember // The status on which to filter the response.
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+
+// Code example
+ConversationsAPI.getConversationsMessageCommunicationMessagesMedia(conversationId: conversationId, communicationId: communicationId, status: status, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessageCommunicationMessagesMedia was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **communicationId** | **String**| communicationId | |
+| **status** | **String**| The status on which to filter the response. | [optional]<br />**Values**: uploading ("uploading"), valid ("valid"), invalid ("invalid") |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+
+
+### Return type
+
+[**MessageMediaListing**](MessageMediaListing)
 
 
 ## getConversationsMessageCommunicationMessagesMediaMediaId
@@ -14637,4 +14696,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@179.0.0_
+_PureCloudPlatformClientV2@180.0.0_

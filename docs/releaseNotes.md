@@ -1,275 +1,202 @@
-Platform API version: 9727
+Platform API version: 9766
 
 
 
 
-# Major Changes (2 changes)
+# Major Changes (5 changes)
 
-**GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/staffingrequirement** (1 change)
+**PATCH /api/v2/taskmanagement/workitems/{workitemId}/users/{userId}/wrapups** (1 change)
 
-* Parameter expand was added
+* Response 200 was removed
 
-**RecordingEmailMessage** (1 change)
+**PATCH /api/v2/taskmanagement/workitems/{workitemId}/users/me/wrapups** (1 change)
 
-* Property replyTo was removed
+* Response 200 was removed
+
+**GET /api/v2/learning/modules** (1 change)
+
+* Response 200 type was changed from LearningModulesDomainEntityListing to LearningModuleList
+
+**LearningModulesDomainEntityListing** (1 change)
+
+* Model LearningModulesDomainEntityListing was removed
+
+**WebMessagingButtonResponse** (1 change)
+
+* Required property originatingMessageId was added
 
 
-# Minor Changes (80 changes)
+# Minor Changes (46 changes)
 
-**/api/v2/conversations/internalmessages** (2 changes)
+**/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media** (1 change)
 
-* Path was added
-* Operation GET was added
+* Operation get was added. Summary: Get message media list by status
 
-**/api/v2/conversations/internalmessages/{conversationId}** (2 changes)
+**PATCH /api/v2/taskmanagement/workitems/{workitemId}/users/{userId}/wrapups** (1 change)
 
-* Path was added
-* Operation GET was added
+* Response 204 was added
 
-**/api/v2/conversations/{conversationId}/communications/{communicationId}/internalmessages/{messageId}** (2 changes)
+**PATCH /api/v2/taskmanagement/workitems/{workitemId}/users/me/wrapups** (1 change)
 
-* Path was added
-* Operation GET was added
+* Response 204 was added
 
-**/api/v2/conversations/{conversationId}/communications/{communicationId}/internalmessages** (3 changes)
+**AnalyticsSession** (1 change)
 
-* Path was added
-* Operation GET was added
-* Operation POST was added
+* Enum value OpenMessaging was added to property engagementSource
 
-**/api/v2/conversations/{conversationId}/participants/{participantId}/internalmessages/users/communications** (2 changes)
+**ViewFilter** (2 changes)
 
-* Path was added
-* Operation POST was added
+* Optional property sessionExpired was added
+* Optional property engagementSource was added
 
-**/api/v2/gamification/insights/managers** (2 changes)
+**ReportingExportJobResponse** (1 change)
 
-* Path was added
-* Operation GET was added
+* Enum value PREDICTIVE_ROUTING_THROUGHPUT_VIEW was added to property viewType
 
-**/api/v2/coaching/scheduleslots/jobs/{jobId}** (2 changes)
+**ReportingExportMetadataJobResponse** (1 change)
 
-* Path was added
-* Operation GET was added
+* Enum value PREDICTIVE_ROUTING_THROUGHPUT_VIEW was added to property viewType
 
-**/api/v2/coaching/scheduleslots/jobs** (2 changes)
+**ReportingExportJobRequest** (1 change)
 
-* Path was added
-* Operation POST was added
+* Enum value PREDICTIVE_ROUTING_THROUGHPUT_VIEW was added to property viewType
 
-**/api/v2/learning/scheduleslots/jobs/{jobId}** (2 changes)
-
-* Path was added
-* Operation GET was added
-
-**/api/v2/learning/scheduleslots/jobs** (2 changes)
-
-* Path was added
-* Operation POST was added
-
-**CopilotAction** (1 change)
-
-* Enum value ThirdPartyAction was added to property actionType
-
-**CopilotFallbackAction** (1 change)
-
-* Enum value ThirdPartyAction was added to property actionType
-
-**ConversationAttributeFilter** (1 change)
+**JourneyCaseAssociation** (1 change)
 
 * Model was added
 
-**ConversationSchemaAttribute** (1 change)
+**Session** (2 changes)
+
+* externalContact is no longer readonly
+* conversation is no longer readonly
+
+**ConversationMessageMetadataContent** (1 change)
+
+* Enum value RichLink was added to property contentType
+
+**Message** (1 change)
+
+* Enum value OpenMessaging was added to property engagementSource
+
+**ConversationContentInput** (2 changes)
+
+* Optional property keyboardType was added
+* Optional property autoCompleteType was added
+
+**ConversationContentReceivedReplyMessage** (2 changes)
+
+* Optional property header was added
+* Optional property buttonLabel was added
+
+**ConversationContentRichLink** (1 change)
 
 * Model was added
 
-**ConversationSchemaData** (1 change)
+**ConversationContentRichLinkHeader** (1 change)
 
 * Model was added
 
-**ConversationSchemaReference** (1 change)
+**ConversationMessageContent** (1 change)
+
+* Enum value RichLink was added to property contentType
+
+**MessageMediaData** (2 changes)
+
+* Optional property conversationId was added
+* Optional property communicationId was added
+
+**MessageMediaListing** (1 change)
 
 * Model was added
 
-**KnowledgeSetting** (1 change)
+**SetWhatsAppIntegrationActionSettings** (1 change)
 
 * Model was added
 
-**KnowledgeSuggestionConfig** (1 change)
+**IpAddressRange** (1 change)
 
-* Enum value GenesysKnowledgeV3 was added to property vendorName
+* Enum value encryption was added to property service
 
-**UserCustomAttributes** (1 change)
+**ChannelTopic** (1 change)
 
-* Model was added
+* Optional property missingPermissions was added
 
-**EvaluationQuestion** (1 change)
+**RecordingMessagingMessage** (2 changes)
 
-* Optional property defaultAnswer was added
+* Optional property form was added
+* Optional property roadsideAssistance was added
 
-**EvaluationQuestionGroup** (1 change)
-
-* Optional property defaultAnswersTo was added
-
-**EvaluationSource** (1 change)
-
-* Enum value Program was added to property type
-
-**PhoneNumberColumn** (1 change)
-
-* Optional property callableTimeColumnName was added
-
-**InternalMessageConversation** (1 change)
+**ExternalPageMetadata** (1 change)
 
 * Model was added
 
-**InternalMessageConversationEntityListing** (1 change)
+**SchedulerMessageTypeSeverity** (1 change)
+
+* Enum value UnableToScheduleMinCoverageForPlanningGroup was added to property type
+
+**AdherenceSettings** (1 change)
+
+* Optional property ignoredActivityCodeIds was added
+
+**ShiftTradeExternalActivityRule** (1 change)
+
+* Enum value Opportunity was added to property externalActivityType
+
+**ShiftTradeActivityPreviewResponse** (1 change)
+
+* Enum value Opportunity was added to property externalActivityType
+
+**BuAgentScheduleActivity** (1 change)
+
+* Enum value Opportunity was added to property externalActivityType
+
+**AvailableTimeOffRange** (1 change)
+
+* Enum value FifteenMinutes was added to property granularity
+
+**ScheduleGenerationMessage** (1 change)
+
+* Enum value UnableToScheduleMinCoverageForPlanningGroup was added to property type
+
+**SchedulerMessageArgument** (1 change)
+
+* Enum value PlanningGroupId was added to property type
+
+**BuTimeOffLimitValueRange** (1 change)
+
+* Enum value FifteenMinutes was added to property granularity
+
+**TimeOffLimit** (1 change)
+
+* Enum value FifteenMinutes was added to property granularity
+
+**CreateTimeOffLimitRequest** (1 change)
+
+* Enum value FifteenMinutes was added to property granularity
+
+**TimeOffLimitRange** (1 change)
+
+* Enum value FifteenMinutes was added to property granularity
+
+**TimeOffLimitValueRange** (1 change)
+
+* Enum value FifteenMinutes was added to property granularity
+
+**ScheduleActivity** (1 change)
+
+* Enum value Opportunity was added to property externalActivityType
+
+**LearningModuleList** (1 change)
 
 * Model was added
 
-**InternalMessageMediaParticipant** (1 change)
+**LearningSlotScheduleActivity** (1 change)
 
-* Model was added
-
-**InternalMessageData** (1 change)
-
-* Model was added
-
-**InternalMessageRequest** (1 change)
-
-* Model was added
-
-**InternalMessageDataEntityListing** (1 change)
-
-* Model was added
-
-**MessagingConferResponse** (1 change)
-
-* Model was added
-
-**MessagingConferWithUserRequest** (1 change)
-
-* Model was added
-
-**SuggestedSearchChunk** (1 change)
-
-* Model was added
-
-**Suggestion** (1 change)
-
-* Enum value SuggestedKnowledgeAnswer was added to property type
-
-**SuggestionGeneratedKnowledgeAnswer** (1 change)
-
-* Model was added
-
-**ReplacementTerm** (2 changes)
-
-* Enum value APPLE_MESSAGES was added to property type
-* Enum value EXTERNAL_ID was added to property type
-
-**SocialHandle** (1 change)
-
-* Enum value APPLE_MESSAGES was added to property type
-
-**DependencyStatus** (1 change)
-
-* Enum value BUILDQUEUED was added to property status
-
-**IpFilter** (2 changes)
-
-* Optional property ipAddress was added
-* Optional property name was added
-
-**TrackingSettings** (4 changes)
-
-* Optional property excludedQueryParameters was added
-* Optional property shouldKeepUrlFragment was added
-* Optional property searchQueryParameters was added
-* Optional property ipFilters was added
-
-**DeploymentIdentityResolutionConfig** (2 changes)
-
-* Optional property externalSource was added
-* Optional property automerge was added
-
-**StaffingRequirementsPlanningGroupData** (2 changes)
-
-* Optional property minimumStaffPerInterval was added
-* Optional property effectiveStaffPerInterval was added
-
-**TimeOffSettingsResponse** (2 changes)
-
-* Optional property submissionRangeType was added
-* Optional property submissionLatestDate was added
-
-**TimeOffSettingsRequest** (2 changes)
-
-* Optional property submissionRangeType was added
-* Optional property submissionLatestDate was added
-
-**CapacityPlanStaffingGroupMetricChangeResponse** (2 changes)
-
-* Enum value TransfersFullTimeEquivalentCount was added to property metric
-* Enum value ExtraTimeUnderTimeFullTimeEquivalentCount was added to property metric
-
-**TransfersFullTimeEquivalent** (1 change)
-
-* Model was added
-
-**CreateCapacityPlanStaffingGroupMetricChangeRequest** (2 changes)
-
-* Enum value TransfersFullTimeEquivalentCount was added to property metric
-* Enum value ExtraTimeUnderTimeFullTimeEquivalentCount was added to property metric
-
-**StaffingGroupMetricChangeResponse** (2 changes)
-
-* Enum value TransfersFullTimeEquivalentCount was added to property metric
-* Enum value ExtraTimeUnderTimeFullTimeEquivalentCount was added to property metric
-
-**CoachingScheduleSlotsJobResponse** (1 change)
-
-* Model was added
-
-**CoachingScheduleSlotsJobResult** (1 change)
-
-* Model was added
-
-**CoachingScheduleSlotsJobSchedule** (1 change)
-
-* Model was added
-
-**CoachingScheduleSlotsJobSlot** (1 change)
-
-* Model was added
-
-**CoachingScheduleSlotsJobRequest** (1 change)
-
-* Model was added
-
-**LearningScheduleSlotsJobResponse** (1 change)
-
-* Model was added
-
-**LearningScheduleSlotsJobResult** (1 change)
-
-* Model was added
-
-**LearningScheduleSlotsJobSchedule** (1 change)
-
-* Model was added
-
-**LearningScheduleSlotsJobSlot** (1 change)
-
-* Model was added
-
-**LearningScheduleSlotsJobRequest** (1 change)
-
-* Model was added
+* Enum value Opportunity was added to property externalActivityType
 
 
 # Point Changes (1 change)
 
-**POST /api/v2/conversations/messages/{conversationId}/messages/bulk** (1 change)
+**GET /api/v2/authorization/divisions/query** (1 change)
 
-* Description was changed
+* Description was changed for parameter pageSize

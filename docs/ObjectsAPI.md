@@ -358,7 +358,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
-let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let pageSize: String = "" // Page size (max 200, default 25)
 let _id: [String] = [""] // Optionally request specific divisions by their IDs
 let name: String = "" // Optionally request specific divisions by division name
 
@@ -380,7 +380,7 @@ ObjectsAPI.getAuthorizationDivisionsQuery(before: before, after: after, pageSize
 | ------------- | ------------- | ------------- | ------------- |
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
-| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **pageSize** | **String**| Page size (max 200, default 25) | [optional] |
 | **_id** | [**[String]**](String)| Optionally request specific divisions by their IDs | [optional] |
 | **name** | **String**| Optionally request specific divisions by division name | [optional] |
 
@@ -599,4 +599,4 @@ ObjectsAPI.putAuthorizationDivision(divisionId: divisionId, body: body) { (respo
 [**AuthzDivision**](AuthzDivision)
 
 
-_PureCloudPlatformClientV2@179.0.0_
+_PureCloudPlatformClientV2@180.0.0_
