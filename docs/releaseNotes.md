@@ -1,202 +1,168 @@
-Platform API version: 9766
+Platform API version: 9782
 
 
 
 
-# Major Changes (5 changes)
-
-**PATCH /api/v2/taskmanagement/workitems/{workitemId}/users/{userId}/wrapups** (1 change)
-
-* Response 200 was removed
-
-**PATCH /api/v2/taskmanagement/workitems/{workitemId}/users/me/wrapups** (1 change)
-
-* Response 200 was removed
-
-**GET /api/v2/learning/modules** (1 change)
-
-* Response 200 type was changed from LearningModulesDomainEntityListing to LearningModuleList
-
-**LearningModulesDomainEntityListing** (1 change)
-
-* Model LearningModulesDomainEntityListing was removed
-
-**WebMessagingButtonResponse** (1 change)
-
-* Required property originatingMessageId was added
-
-
-# Minor Changes (46 changes)
-
-**/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media** (1 change)
-
-* Operation get was added. Summary: Get message media list by status
-
-**PATCH /api/v2/taskmanagement/workitems/{workitemId}/users/{userId}/wrapups** (1 change)
-
-* Response 204 was added
-
-**PATCH /api/v2/taskmanagement/workitems/{workitemId}/users/me/wrapups** (1 change)
-
-* Response 204 was added
-
-**AnalyticsSession** (1 change)
-
-* Enum value OpenMessaging was added to property engagementSource
-
-**ViewFilter** (2 changes)
-
-* Optional property sessionExpired was added
-* Optional property engagementSource was added
-
-**ReportingExportJobResponse** (1 change)
-
-* Enum value PREDICTIVE_ROUTING_THROUGHPUT_VIEW was added to property viewType
-
-**ReportingExportMetadataJobResponse** (1 change)
-
-* Enum value PREDICTIVE_ROUTING_THROUGHPUT_VIEW was added to property viewType
-
-**ReportingExportJobRequest** (1 change)
-
-* Enum value PREDICTIVE_ROUTING_THROUGHPUT_VIEW was added to property viewType
+# Major Changes (1 change)
 
 **JourneyCaseAssociation** (1 change)
 
-* Model was added
+* Property case was removed
 
-**Session** (2 changes)
 
-* externalContact is no longer readonly
-* conversation is no longer readonly
+# Minor Changes (44 changes)
 
-**ConversationMessageMetadataContent** (1 change)
+**/api/v2/conversations/videos/meetings/{meetingId}** (2 changes)
 
-* Enum value RichLink was added to property contentType
+* Path was added
+* Operation GET was added
 
-**Message** (1 change)
+**/api/v2/conversations/videos/meetings** (2 changes)
 
-* Enum value OpenMessaging was added to property engagementSource
+* Path was added
+* Operation POST was added
 
-**ConversationContentInput** (2 changes)
+**/api/v2/workforcemanagement/agents/me/adherence/historical/jobs/{jobId}** (2 changes)
 
-* Optional property keyboardType was added
-* Optional property autoCompleteType was added
+* Path was added
+* Operation GET was added
 
-**ConversationContentReceivedReplyMessage** (2 changes)
+**/api/v2/workforcemanagement/agents/me/adherence/historical/jobs** (2 changes)
 
-* Optional property header was added
-* Optional property buttonLabel was added
+* Path was added
+* Operation POST was added
 
-**ConversationContentRichLink** (1 change)
+**ActionAggregationSort** (1 change)
 
-* Model was added
+* Enum value average was added to property function
 
-**ConversationContentRichLinkHeader** (1 change)
+**AgentCopilotAggregateQueryPredicate** (2 changes)
 
-* Model was added
+* Enum value chunkCount was added to property dimension
+* Enum value hasGeneratedAnswer was added to property dimension
 
-**ConversationMessageContent** (1 change)
+**AgentCopilotAggregationSort** (2 changes)
 
-* Enum value RichLink was added to property contentType
+* Enum value nKnowledgeAnswerSuggestions was added to property name
+* Enum value average was added to property function
 
-**MessageMediaData** (2 changes)
+**AgentCopilotAggregationView** (1 change)
 
-* Optional property conversationId was added
-* Optional property communicationId was added
+* Enum value nKnowledgeAnswerSuggestions was added to property target
 
-**MessageMediaListing** (1 change)
+**AgentCopilotAggregationQuery** (3 changes)
 
-* Model was added
+* Enum value chunkCount was added to property groupBy
+* Enum value hasGeneratedAnswer was added to property groupBy
+* Enum value nKnowledgeAnswerSuggestions was added to property metrics
 
-**SetWhatsAppIntegrationActionSettings** (1 change)
+**BotAggregationSort** (1 change)
 
-* Model was added
+* Enum value average was added to property function
 
-**IpAddressRange** (1 change)
+**ConversationAggregationSort** (1 change)
 
-* Enum value encryption was added to property service
+* Enum value average was added to property function
 
-**ChannelTopic** (1 change)
+**FlowExecutionAggregationSort** (1 change)
 
-* Optional property missingPermissions was added
+* Enum value average was added to property function
 
-**RecordingMessagingMessage** (2 changes)
+**FlowAggregationSort** (1 change)
 
-* Optional property form was added
-* Optional property roadsideAssistance was added
+* Enum value average was added to property function
 
-**ExternalPageMetadata** (1 change)
+**JourneyAggregationSort** (1 change)
 
-* Model was added
+* Enum value average was added to property function
 
-**SchedulerMessageTypeSeverity** (1 change)
+**KnowledgeAggregationSort** (1 change)
 
-* Enum value UnableToScheduleMinCoverageForPlanningGroup was added to property type
+* Enum value average was added to property function
 
-**AdherenceSettings** (1 change)
+**RateLimitAggregationSort** (1 change)
 
-* Optional property ignoredActivityCodeIds was added
+* Enum value average was added to property function
 
-**ShiftTradeExternalActivityRule** (1 change)
+**ResolutionAggregationSort** (1 change)
 
-* Enum value Opportunity was added to property externalActivityType
+* Enum value average was added to property function
 
-**ShiftTradeActivityPreviewResponse** (1 change)
+**SummaryAggregationSort** (1 change)
 
-* Enum value Opportunity was added to property externalActivityType
+* Enum value average was added to property function
 
-**BuAgentScheduleActivity** (1 change)
+**SurveyAggregationSort** (1 change)
 
-* Enum value Opportunity was added to property externalActivityType
+* Enum value average was added to property function
 
-**AvailableTimeOffRange** (1 change)
+**TaskManagementAggregationSort** (1 change)
 
-* Enum value FifteenMinutes was added to property granularity
+* Enum value average was added to property function
 
-**ScheduleGenerationMessage** (1 change)
+**TranscriptAggregationSort** (1 change)
 
-* Enum value UnableToScheduleMinCoverageForPlanningGroup was added to property type
+* Enum value average was added to property function
 
-**SchedulerMessageArgument** (1 change)
+**ReportingTurnAction** (1 change)
 
-* Enum value PlanningGroupId was added to property type
+* Enum value CallAgenticVirtualAgentAction was added to property actionType
 
-**BuTimeOffLimitValueRange** (1 change)
+**JourneyCaseAssociation** (1 change)
 
-* Enum value FifteenMinutes was added to property granularity
+* Optional property associatedCase was added
 
-**TimeOffLimit** (1 change)
+**ConversationContentInput** (1 change)
 
-* Enum value FifteenMinutes was added to property granularity
+* Enum value Url was added to property autoCompleteType
 
-**CreateTimeOffLimitRequest** (1 change)
-
-* Enum value FifteenMinutes was added to property granularity
-
-**TimeOffLimitRange** (1 change)
-
-* Enum value FifteenMinutes was added to property granularity
-
-**TimeOffLimitValueRange** (1 change)
-
-* Enum value FifteenMinutes was added to property granularity
-
-**ScheduleActivity** (1 change)
-
-* Enum value Opportunity was added to property externalActivityType
-
-**LearningModuleList** (1 change)
+**MeetingIdRecord** (1 change)
 
 * Model was added
 
-**LearningSlotScheduleActivity** (1 change)
+**GenerateMeetingIdRequest** (1 change)
 
-* Enum value Opportunity was added to property externalActivityType
+* Model was added
+
+**Metabase** (1 change)
+
+* Enum value TIE_CLOUD_PROXY_CALLSESSION was added to property type
+
+**WorkitemDateBasedCondition** (1 change)
+
+* Enum value dateCreated was added to property attribute
+
+**AgentAdherenceDayMetrics** (1 change)
+
+* Model was added
+
+**AgentAdherenceScheduledActivity** (1 change)
+
+* Model was added
+
+**SecondaryPresenceLookupItem** (1 change)
+
+* Model was added
+
+**WfmAgentHistoricalAdherenceJobReference** (1 change)
+
+* Model was added
+
+**WfmAgentHistoricalAdherenceResponse** (1 change)
+
+* Model was added
+
+**WfmAgentHistoricalAdherenceResult** (1 change)
+
+* Model was added
+
+**WfmHistoricalAdherenceQueryForAgent** (1 change)
+
+* Model was added
+
+**WorkitemDateBasedConditionUpdate** (1 change)
+
+* Enum value dateCreated was added to property attribute
 
 
-# Point Changes (1 change)
-
-**GET /api/v2/authorization/divisions/query** (1 change)
-
-* Description was changed for parameter pageSize
+# Point Changes (0 changes)

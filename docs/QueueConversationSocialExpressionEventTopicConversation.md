@@ -16,8 +16,10 @@
 | **utilizationLabelId** | **String** |  | [optional] |
 | **securePause** | **Bool** |  | [optional] |
 | **inactivityTimeout** | [**Date**](Date) |  | [optional] |
+| **associatedConversation** | [**QueueConversationSocialExpressionEventTopicDomainEntityRef**](QueueConversationSocialExpressionEventTopicDomainEntityRef) |  | [optional] |
+| **consultationConversations** | [**[QueueConversationSocialExpressionEventTopicDomainEntityRef]**]([QueueConversationSocialExpressionEventTopicDomainEntityRef]) |  | [optional] |
 | **divisions** | [**[QueueConversationSocialExpressionEventTopicConversationDivisionMembership]**]([QueueConversationSocialExpressionEventTopicConversationDivisionMembership]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@180.0.0_
+_PureCloudPlatformClientV2@181.0.0_
