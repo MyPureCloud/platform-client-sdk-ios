@@ -118,6 +118,8 @@ docs/AgentActivityChangedTopicOutOfOffice.md
 docs/AgentActivityChangedTopicPresence.md
 docs/AgentActivityChangedTopicRoutingStatus.md
 docs/AgentActivityEntityListing.md
+docs/AgentAdherenceDayMetrics.md
+docs/AgentAdherenceScheduledActivity.md
 docs/AgentAssistantsAPI.json
 docs/AgentAssistantsAPI.md
 docs/AgentBidWorkPlanOverrideRequest.md
@@ -1414,6 +1416,12 @@ docs/ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity.md
 docs/ConversationSummaryTopicVirtualAgentsTriggerSource.md
 docs/ConversationSummaryWrapupCode.md
 docs/ConversationTagsUpdate.md
+docs/ConversationThirdPartyActionSuggestionsTopicSuggestedIntent.md
+docs/ConversationThirdPartyActionSuggestionsTopicSuggestedIntentSlot.md
+docs/ConversationThirdPartyActionSuggestionsTopicSuggestionContext.md
+docs/ConversationThirdPartyActionSuggestionsTopicSuggestionFeedback.md
+docs/ConversationThirdPartyActionSuggestionsTopicThirdPartyActionSuggestionEvent.md
+docs/ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion.md
 docs/ConversationThreadingWindow.md
 docs/ConversationThreadingWindowSetting.md
 docs/ConversationUser.md
@@ -2399,6 +2407,7 @@ docs/GeneralProgramJobRequest.md
 docs/GeneralTopic.md
 docs/GeneralTopicsEntityListing.md
 docs/GenerateBuForecastRequest.md
+docs/GenerateMeetingIdRequest.md
 docs/GenericSAML.md
 docs/GenericTemplate.md
 docs/GenesysBotConnector.md
@@ -2784,14 +2793,6 @@ docs/KeyPerformanceIndicator.md
 docs/KeyPerformanceIndicatorAssessment.md
 docs/KeyRotationSchedule.md
 docs/KeyValue.md
-docs/KlaxonHeartBeatAlertsTopicHeartBeatAlert.md
-docs/KlaxonHeartBeatAlertsTopicNotificationUser.md
-docs/KlaxonHeartBeatRulesTopicHeartBeatRule.md
-docs/KlaxonHeartBeatRulesTopicNotificationUser.md
-docs/KlaxonInteractionStatsAlertsTopicInteractionStatAlert.md
-docs/KlaxonInteractionStatsAlertsTopicNotificationUser.md
-docs/KlaxonInteractionStatsRulesTopicInteractionStatRule.md
-docs/KlaxonInteractionStatsRulesTopicNotificationUser.md
 docs/Knowledge.md
 docs/KnowledgeAPI.json
 docs/KnowledgeAPI.md
@@ -3155,6 +3156,7 @@ docs/MediaType.md
 docs/MediaTypeAccess.md
 docs/MediaTypes.md
 docs/MediaUtilization.md
+docs/MeetingIdRecord.md
 docs/Member.md
 docs/MemberEntity.md
 docs/MemberGroup.md
@@ -4376,6 +4378,7 @@ docs/SearchShiftTradesResponse.md
 docs/SearchSort.md
 docs/SearchUpdateRequest.md
 docs/SecondaryPresence.md
+docs/SecondaryPresenceLookupItem.md
 docs/Section.md
 docs/SecureSession.md
 docs/SecureSessionEntityListing.md
@@ -5358,6 +5361,9 @@ docs/WfmAgentAdherenceExplanationChangedBusinessUnitTopicAdherenceExplanationCha
 docs/WfmAgentAdherenceExplanationChangedBusinessUnitTopicBusinessUnit.md
 docs/WfmAgentAdherenceExplanationChangedBusinessUnitTopicManagementUnit.md
 docs/WfmAgentAdherenceExplanationChangedBusinessUnitTopicUserReference.md
+docs/WfmAgentHistoricalAdherenceJobReference.md
+docs/WfmAgentHistoricalAdherenceResponse.md
+docs/WfmAgentHistoricalAdherenceResult.md
 docs/WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate.md
 docs/WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification.md
 docs/WfmAgentScheduleUpdateTopicUserReference.md
@@ -5435,6 +5441,7 @@ docs/WfmHistoricalAdherenceBulkUserDayMetrics.md
 docs/WfmHistoricalAdherenceBulkUserResult.md
 docs/WfmHistoricalAdherenceCalculationsCompleteTopicWfmHistoricalAdherenceCalculationsCompleteNotice.md
 docs/WfmHistoricalAdherenceQuery.md
+docs/WfmHistoricalAdherenceQueryForAgent.md
 docs/WfmHistoricalAdherenceQueryForTeams.md
 docs/WfmHistoricalAdherenceQueryForUsers.md
 docs/WfmHistoricalAdherenceResponse.md
@@ -6300,6 +6307,7 @@ docs/getConversationsSocialParticipantCommunicationWrapup-example.txt
 docs/getConversationsSummariesSetting-example.txt
 docs/getConversationsSummariesSettings-example.txt
 docs/getConversationsVideoParticipantCommunicationWrapup-example.txt
+docs/getConversationsVideosMeeting-example.txt
 docs/getDataextensionsCoretype-example.txt
 docs/getDataextensionsCoretypes-example.txt
 docs/getDataextensionsLimits-example.txt
@@ -7259,6 +7267,7 @@ docs/getWorkforcemanagementAdherenceHistoricalBulkJob-example.txt
 docs/getWorkforcemanagementAdherenceHistoricalJob-example.txt
 docs/getWorkforcemanagementAgentAdherenceExplanation-example.txt
 docs/getWorkforcemanagementAgentManagementunit-example.txt
+docs/getWorkforcemanagementAgentsMeAdherenceHistoricalJob-example.txt
 docs/getWorkforcemanagementAgentsMeManagementunit-example.txt
 docs/getWorkforcemanagementAlternativeshiftsOffersJob-example.txt
 docs/getWorkforcemanagementAlternativeshiftsOffersSearchJob-example.txt
@@ -7796,6 +7805,7 @@ docs/postConversationsSocialParticipantCommunicationWrapup-example.txt
 docs/postConversationsSummariesPreview-example.txt
 docs/postConversationsSummariesSettings-example.txt
 docs/postConversationsVideoParticipantCommunicationWrapup-example.txt
+docs/postConversationsVideosMeetings-example.txt
 docs/postDataprivacyMaskingrules-example.txt
 docs/postDataprivacyMaskingrulesValidate-example.txt
 docs/postDiagnosticsLogcaptureBrowserEntriesDownloadJobs-example.txt
@@ -8247,6 +8257,7 @@ docs/postWorkforcemanagementAgentAdherenceExplanations-example.txt
 docs/postWorkforcemanagementAgentAdherenceExplanationsQuery-example.txt
 docs/postWorkforcemanagementAgents-example.txt
 docs/postWorkforcemanagementAgentsIntegrationsHrisQuery-example.txt
+docs/postWorkforcemanagementAgentsMeAdherenceHistoricalJobs-example.txt
 docs/postWorkforcemanagementAgentsMePossibleworkshifts-example.txt
 docs/postWorkforcemanagementAgentschedulesManagementunitsMine-example.txt
 docs/postWorkforcemanagementAgentschedulesMine-example.txt
@@ -8792,6 +8803,8 @@ src/Models/AgentActivityChangedTopicOutOfOffice.swift
 src/Models/AgentActivityChangedTopicPresence.swift
 src/Models/AgentActivityChangedTopicRoutingStatus.swift
 src/Models/AgentActivityEntityListing.swift
+src/Models/AgentAdherenceDayMetrics.swift
+src/Models/AgentAdherenceScheduledActivity.swift
 src/Models/AgentBidWorkPlanOverrideRequest.swift
 src/Models/AgentCopilotAggregateDataContainer.swift
 src/Models/AgentCopilotAggregateQueryClause.swift
@@ -10060,6 +10073,12 @@ src/Models/ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity.swi
 src/Models/ConversationSummaryTopicVirtualAgentsTriggerSource.swift
 src/Models/ConversationSummaryWrapupCode.swift
 src/Models/ConversationTagsUpdate.swift
+src/Models/ConversationThirdPartyActionSuggestionsTopicSuggestedIntent.swift
+src/Models/ConversationThirdPartyActionSuggestionsTopicSuggestedIntentSlot.swift
+src/Models/ConversationThirdPartyActionSuggestionsTopicSuggestionContext.swift
+src/Models/ConversationThirdPartyActionSuggestionsTopicSuggestionFeedback.swift
+src/Models/ConversationThirdPartyActionSuggestionsTopicThirdPartyActionSuggestionEvent.swift
+src/Models/ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion.swift
 src/Models/ConversationThreadingWindow.swift
 src/Models/ConversationThreadingWindowSetting.swift
 src/Models/ConversationUser.swift
@@ -11021,6 +11040,7 @@ src/Models/GeneralProgramJobRequest.swift
 src/Models/GeneralTopic.swift
 src/Models/GeneralTopicsEntityListing.swift
 src/Models/GenerateBuForecastRequest.swift
+src/Models/GenerateMeetingIdRequest.swift
 src/Models/GenericSAML.swift
 src/Models/GenericTemplate.swift
 src/Models/GenesysBotConnector.swift
@@ -11392,14 +11412,6 @@ src/Models/KeyPerformanceIndicator.swift
 src/Models/KeyPerformanceIndicatorAssessment.swift
 src/Models/KeyRotationSchedule.swift
 src/Models/KeyValue.swift
-src/Models/KlaxonHeartBeatAlertsTopicHeartBeatAlert.swift
-src/Models/KlaxonHeartBeatAlertsTopicNotificationUser.swift
-src/Models/KlaxonHeartBeatRulesTopicHeartBeatRule.swift
-src/Models/KlaxonHeartBeatRulesTopicNotificationUser.swift
-src/Models/KlaxonInteractionStatsAlertsTopicInteractionStatAlert.swift
-src/Models/KlaxonInteractionStatsAlertsTopicNotificationUser.swift
-src/Models/KlaxonInteractionStatsRulesTopicInteractionStatRule.swift
-src/Models/KlaxonInteractionStatsRulesTopicNotificationUser.swift
 src/Models/Knowledge.swift
 src/Models/KnowledgeAggregateDataContainer.swift
 src/Models/KnowledgeAggregateQueryClause.swift
@@ -11749,6 +11761,7 @@ src/Models/MediaType.swift
 src/Models/MediaTypeAccess.swift
 src/Models/MediaTypes.swift
 src/Models/MediaUtilization.swift
+src/Models/MeetingIdRecord.swift
 src/Models/Member.swift
 src/Models/MemberEntity.swift
 src/Models/MemberGroup.swift
@@ -12933,6 +12946,7 @@ src/Models/SearchShiftTradesResponse.swift
 src/Models/SearchSort.swift
 src/Models/SearchUpdateRequest.swift
 src/Models/SecondaryPresence.swift
+src/Models/SecondaryPresenceLookupItem.swift
 src/Models/Section.swift
 src/Models/SecureSession.swift
 src/Models/SecureSessionEntityListing.swift
@@ -13874,6 +13888,9 @@ src/Models/WfmAgentAdherenceExplanationChangedBusinessUnitTopicAdherenceExplanat
 src/Models/WfmAgentAdherenceExplanationChangedBusinessUnitTopicBusinessUnit.swift
 src/Models/WfmAgentAdherenceExplanationChangedBusinessUnitTopicManagementUnit.swift
 src/Models/WfmAgentAdherenceExplanationChangedBusinessUnitTopicUserReference.swift
+src/Models/WfmAgentHistoricalAdherenceJobReference.swift
+src/Models/WfmAgentHistoricalAdherenceResponse.swift
+src/Models/WfmAgentHistoricalAdherenceResult.swift
 src/Models/WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate.swift
 src/Models/WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification.swift
 src/Models/WfmAgentScheduleUpdateTopicUserReference.swift
@@ -13951,6 +13968,7 @@ src/Models/WfmHistoricalAdherenceBulkUserDayMetrics.swift
 src/Models/WfmHistoricalAdherenceBulkUserResult.swift
 src/Models/WfmHistoricalAdherenceCalculationsCompleteTopicWfmHistoricalAdherenceCalculationsCompleteNotice.swift
 src/Models/WfmHistoricalAdherenceQuery.swift
+src/Models/WfmHistoricalAdherenceQueryForAgent.swift
 src/Models/WfmHistoricalAdherenceQueryForTeams.swift
 src/Models/WfmHistoricalAdherenceQueryForUsers.swift
 src/Models/WfmHistoricalAdherenceResponse.swift

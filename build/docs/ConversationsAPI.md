@@ -120,6 +120,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsSettings**](ConversationsAPI#getConversationsSettings) | Get Settings |
 | [**getConversationsSocialParticipantCommunicationWrapup**](ConversationsAPI#getConversationsSocialParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
 | [**getConversationsVideoParticipantCommunicationWrapup**](ConversationsAPI#getConversationsVideoParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
+| [**getConversationsVideosMeeting**](ConversationsAPI#getConversationsVideosMeeting) | Gets a record for a given meetingId |
 | [**patchConversationParticipant**](ConversationsAPI#patchConversationParticipant) | Update a participant. |
 | [**patchConversationParticipantAttributes**](ConversationsAPI#patchConversationParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationRecordingstate**](ConversationsAPI#patchConversationRecordingstate) | Update a conversation by setting its recording state |
@@ -255,6 +256,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsScreenshareParticipantCommunicationWrapup**](ConversationsAPI#postConversationsScreenshareParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsSocialParticipantCommunicationWrapup**](ConversationsAPI#postConversationsSocialParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsVideoParticipantCommunicationWrapup**](ConversationsAPI#postConversationsVideoParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
+| [**postConversationsVideosMeetings**](ConversationsAPI#postConversationsVideosMeetings) | Generate a meetingId for a given conferenceId |
 | [**putConversationParticipantFlaggedreason**](ConversationsAPI#putConversationParticipantFlaggedreason) | Set flagged reason on conversation participant to indicate bad conversation quality. |
 | [**putConversationSecureattributes**](ConversationsAPI#putConversationSecureattributes) | Set the secure attributes on a conversation. |
 | [**putConversationTags**](ConversationsAPI#putConversationTags) | Update the tags on a conversation. |
@@ -6250,6 +6252,56 @@ ConversationsAPI.getConversationsVideoParticipantCommunicationWrapup(conversatio
 ### Return type
 
 [**AssignedWrapupCode**](AssignedWrapupCode)
+
+
+## getConversationsVideosMeeting
+
+
+
+> [MeetingIdRecord](MeetingIdRecord) getConversationsVideosMeeting(meetingId)
+
+Gets a record for a given meetingId
+
+
+
+Wraps GET /api/v2/conversations/videos/meetings/{meetingId}  
+
+Requires ANY permissions: 
+
+* video:video:access
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let meetingId: String = "" // meetingId
+
+// Code example
+ConversationsAPI.getConversationsVideosMeeting(meetingId: meetingId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsVideosMeeting was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **meetingId** | **String**| meetingId | |
+
+
+### Return type
+
+[**MeetingIdRecord**](MeetingIdRecord)
 
 
 ## patchConversationParticipant
@@ -13436,6 +13488,56 @@ ConversationsAPI.postConversationsVideoParticipantCommunicationWrapup(conversati
 `nil` (empty response body)
 
 
+## postConversationsVideosMeetings
+
+
+
+> [MeetingIdRecord](MeetingIdRecord) postConversationsVideosMeetings(body)
+
+Generate a meetingId for a given conferenceId
+
+
+
+Wraps POST /api/v2/conversations/videos/meetings  
+
+Requires ANY permissions: 
+
+* video:video:access
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: GenerateMeetingIdRequest = new GenerateMeetingIdRequest(...) // MeetingIdRequest
+
+// Code example
+ConversationsAPI.postConversationsVideosMeetings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsVideosMeetings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**GenerateMeetingIdRequest**](GenerateMeetingIdRequest)| MeetingIdRequest | |
+
+
+### Return type
+
+[**MeetingIdRecord**](MeetingIdRecord)
+
+
 ## putConversationParticipantFlaggedreason
 
 
@@ -14696,4 +14798,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@180.0.0_
+_PureCloudPlatformClientV2@181.0.0_

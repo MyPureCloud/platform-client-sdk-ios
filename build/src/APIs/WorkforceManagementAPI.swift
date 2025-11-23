@@ -1479,6 +1479,64 @@ open class WorkforceManagementAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    /**
+     Request to fetch the status of the agent adherence job. Only the user who started the operation can query the status
+     
+     - parameter jobId: (path) ID of the job to get 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementAgentsMeAdherenceHistoricalJob(jobId: String, completion: @escaping ((_ data: WfmAgentHistoricalAdherenceResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementAgentsMeAdherenceHistoricalJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<WfmAgentHistoricalAdherenceResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Request to fetch the status of the agent adherence job. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/agents/me/adherence/historical/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "downloadUrls" : [ "downloadUrls", "downloadUrls" ],
+  "job" : "{}"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) ID of the job to get 
+
+     - returns: RequestBuilder<WfmAgentHistoricalAdherenceResponse> 
+     */
+    open class func getWorkforcemanagementAgentsMeAdherenceHistoricalJobWithRequestBuilder(jobId: String) -> RequestBuilder<WfmAgentHistoricalAdherenceResponse> {        
+        var path = "/api/v2/workforcemanagement/agents/me/adherence/historical/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WfmAgentHistoricalAdherenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     /**
      Get the management unit to which the currently logged in agent belongs
      
@@ -14234,6 +14292,75 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AgentsIntegrationsListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    public enum Expand_postWorkforcemanagementAgentsMeAdherenceHistoricalJobs: String { 
+        case exceptioninfo = "exceptionInfo"
+        case actuals = "actuals"
+        case scheduledactivities = "scheduledActivities"
+        case conformance = "conformance"
+    }
+    
+    
+    
+    /**
+     Request an agent historical adherence report
+     
+     - parameter expand: (query) Which fields, if any, to expand with. wfm:AgentHistoricalAdherenceConformance:view permission is required for conformance, and wfm:agentSchedule:view permission is required for scheduledActivities. (optional)
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAgentsMeAdherenceHistoricalJobs(expand: [String]? = nil, body: WfmHistoricalAdherenceQueryForAgent? = nil, completion: @escaping ((_ data: WfmAgentHistoricalAdherenceResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAgentsMeAdherenceHistoricalJobsWithRequestBuilder(expand: expand, body: body)
+        requestBuilder.execute { (response: Response<WfmAgentHistoricalAdherenceResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Request an agent historical adherence report
+     - POST /api/v2/workforcemanagement/agents/me/adherence/historical/jobs
+     - The maximum supported range for historical adherence queries is 31 days, or 7 days when the expand query parameter includes any of the following: exceptionInfo, actuals, scheduledActivities
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "downloadUrls" : [ "downloadUrls", "downloadUrls" ],
+  "job" : "{}"
+}, statusCode=202}]
+     
+     - parameter expand: (query) Which fields, if any, to expand with. wfm:AgentHistoricalAdherenceConformance:view permission is required for conformance, and wfm:agentSchedule:view permission is required for scheduledActivities. (optional)
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<WfmAgentHistoricalAdherenceResponse> 
+     */
+    open class func postWorkforcemanagementAgentsMeAdherenceHistoricalJobsWithRequestBuilder(expand: [String]? = nil, body: WfmHistoricalAdherenceQueryForAgent? = nil) -> RequestBuilder<WfmAgentHistoricalAdherenceResponse> {        
+        let path = "/api/v2/workforcemanagement/agents/me/adherence/historical/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<WfmAgentHistoricalAdherenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

@@ -10939,6 +10939,20 @@
     "return": "AssignedWrapupCode",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet provisional: Bool = true // Indicates whether or not to fetch provisional wrap-up code.\n\n// Get the wrap-up for this conversation communication. \nGetConversationsVideoParticipantCommunicationWrapupRequest.getConversationsVideoParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, provisional: provisional) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsVideoParticipantCommunicationWrapupRequest.getConversationsVideoParticipantCommunicationWrapup was successful\")\n        dump(response)\n    }\n}"
   },
+  "getconversationsvideosmeeting": {
+    "operationId": "getconversationsvideosmeeting",
+    "functionName": "getConversationsVideosMeeting",
+    "signature": "getConversationsVideosMeeting(meetingId)",
+    "parameters": [
+      {
+        "name": "meetingId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "MeetingIdRecord",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet meetingId: String = \"\" // meetingId\n\n// Gets a record for a given meetingId\nGetConversationsVideosMeetingRequest.getConversationsVideosMeeting(meetingId: meetingId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsVideosMeetingRequest.getConversationsVideosMeeting was successful\")\n        dump(response)\n    }\n}"
+  },
   "patchconversationparticipant": {
     "operationId": "patchconversationparticipant",
     "functionName": "patchConversationParticipant",
@@ -13642,6 +13656,20 @@
       }
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet body: WrapupInput = new WrapupInput(...) // Wrap-up\n\n// Apply wrap-up for this conversation communication\nPostConversationsVideoParticipantCommunicationWrapupRequest.postConversationsVideoParticipantCommunicationWrapup(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostConversationsVideoParticipantCommunicationWrapupRequest.postConversationsVideoParticipantCommunicationWrapup was successful\")\n    }\n}"
+  },
+  "postconversationsvideosmeetings": {
+    "operationId": "postconversationsvideosmeetings",
+    "functionName": "postConversationsVideosMeetings",
+    "signature": "postConversationsVideosMeetings(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "GenerateMeetingIdRequest",
+        "required": "true"
+      }
+    ],
+    "return": "MeetingIdRecord",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: GenerateMeetingIdRequest = new GenerateMeetingIdRequest(...) // MeetingIdRequest\n\n// Generate a meetingId for a given conferenceId\nPostConversationsVideosMeetingsRequest.postConversationsVideosMeetings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsVideosMeetingsRequest.postConversationsVideosMeetings was successful\")\n        dump(response)\n    }\n}"
   },
   "putconversationparticipantflaggedreason": {
     "operationId": "putconversationparticipantflaggedreason",
@@ -50111,6 +50139,20 @@
     "return": "AgentManagementUnitReference",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet agentId: String = \"\" // The ID of the agent to look up\n\n// Get the management unit to which the agent belongs\nGetWorkforcemanagementAgentManagementunitRequest.getWorkforcemanagementAgentManagementunit(agentId: agentId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementAgentManagementunitRequest.getWorkforcemanagementAgentManagementunit was successful\")\n        dump(response)\n    }\n}"
   },
+  "getworkforcemanagementagentsmeadherencehistoricaljob": {
+    "operationId": "getworkforcemanagementagentsmeadherencehistoricaljob",
+    "functionName": "getWorkforcemanagementAgentsMeAdherenceHistoricalJob",
+    "signature": "getWorkforcemanagementAgentsMeAdherenceHistoricalJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "WfmAgentHistoricalAdherenceResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // ID of the job to get\n\n// Request to fetch the status of the agent adherence job. Only the user who started the operation can query the status\nGetWorkforcemanagementAgentsMeAdherenceHistoricalJobRequest.getWorkforcemanagementAgentsMeAdherenceHistoricalJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementAgentsMeAdherenceHistoricalJobRequest.getWorkforcemanagementAgentsMeAdherenceHistoricalJob was successful\")\n        dump(response)\n    }\n}"
+  },
   "getworkforcemanagementagentsmemanagementunit": {
     "operationId": "getworkforcemanagementagentsmemanagementunit",
     "functionName": "getWorkforcemanagementAgentsMeManagementunit",
@@ -52896,6 +52938,25 @@
     ],
     "return": "AgentsIntegrationsListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: QueryAgentsIntegrationsRequest = new QueryAgentsIntegrationsRequest(...) // body\n\n// Query integrations for agents\nPostWorkforcemanagementAgentsIntegrationsHrisQueryRequest.postWorkforcemanagementAgentsIntegrationsHrisQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementAgentsIntegrationsHrisQueryRequest.postWorkforcemanagementAgentsIntegrationsHrisQuery was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementagentsmeadherencehistoricaljobs": {
+    "operationId": "postworkforcemanagementagentsmeadherencehistoricaljobs",
+    "functionName": "postWorkforcemanagementAgentsMeAdherenceHistoricalJobs",
+    "signature": "postWorkforcemanagementAgentsMeAdherenceHistoricalJobs(expand, body)",
+    "parameters": [
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "body",
+        "type": "WfmHistoricalAdherenceQueryForAgent",
+        "required": "false"
+      }
+    ],
+    "return": "WfmAgentHistoricalAdherenceResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet expand: [String] = [\"\"] // Which fields, if any, to expand with. wfm:AgentHistoricalAdherenceConformance:view permission is required for conformance, and wfm:agentSchedule:view permission is required for scheduledActivities.\nlet body: WfmHistoricalAdherenceQueryForAgent = new WfmHistoricalAdherenceQueryForAgent(...) // body\n\n// Request an agent historical adherence report\nPostWorkforcemanagementAgentsMeAdherenceHistoricalJobsRequest.postWorkforcemanagementAgentsMeAdherenceHistoricalJobs(expand: expand, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementAgentsMeAdherenceHistoricalJobsRequest.postWorkforcemanagementAgentsMeAdherenceHistoricalJobs was successful\")\n        dump(response)\n    }\n}"
   },
   "postworkforcemanagementagentsmepossibleworkshifts": {
     "operationId": "postworkforcemanagementagentsmepossibleworkshifts",

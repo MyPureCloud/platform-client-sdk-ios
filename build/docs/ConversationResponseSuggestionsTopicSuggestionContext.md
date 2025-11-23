@@ -14,7 +14,8 @@
 | **utteranceId** | [**UUID**](UUID) |  | [optional] |
 | **messageId** | **String** |  | [optional] |
 | **queryStatement** | **String** |  | [optional] |
+| **language** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@180.0.0_
+_PureCloudPlatformClientV2@181.0.0_
