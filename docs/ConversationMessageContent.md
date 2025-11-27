@@ -29,4 +29,4 @@ Message content element. If contentType &#x3D; \&quot;Attachment\&quot; only one
 
 
 
-_PureCloudPlatformClientV2@181.0.0_
+_PureCloudPlatformClientV2@182.0.0_

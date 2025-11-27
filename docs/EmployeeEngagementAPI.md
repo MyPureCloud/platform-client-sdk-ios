@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteEmployeeengagementCelebration**](EmployeeEngagementAPI#deleteEmployeeengagementCelebration) | Deletes a celebration |
 | [**getEmployeeengagementCelebrations**](EmployeeEngagementAPI#getEmployeeengagementCelebrations) | Get all celebrations |
 | [**getEmployeeengagementRecognition**](EmployeeEngagementAPI#getEmployeeengagementRecognition) | Gets a single recognition |
+| [**getEmployeeengagementRecognitions**](EmployeeEngagementAPI#getEmployeeengagementRecognitions) | Gets sent recognitions |
 | [**patchEmployeeengagementCelebration**](EmployeeEngagementAPI#patchEmployeeengagementCelebration) | Set a state for a celebration |
 | [**postEmployeeengagementRecognitions**](EmployeeEngagementAPI#postEmployeeengagementRecognitions) | Creates a recognition |
 {: class="table-striped"}
@@ -163,6 +164,66 @@ EmployeeEngagementAPI.getEmployeeengagementRecognition(recognitionId: recognitio
 [**Recognition**](Recognition)
 
 
+## getEmployeeengagementRecognitions
+
+
+
+> [Recognitions](Recognitions) getEmployeeengagementRecognitions(direction, recipient, dateStart, dateEnd, pageSize, pageNumber)
+
+Gets sent recognitions
+
+
+
+Wraps GET /api/v2/employeeengagement/recognitions  
+
+Requires ANY permissions: 
+
+* engagement:recognition:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let direction: EmployeeEngagementAPI.Direction_getEmployeeengagementRecognitions = EmployeeEngagementAPI.Direction_getEmployeeengagementRecognitions.enummember // The direction of the recognitions.
+let recipient: String = "" // The ID of the recipient (when direction is sent).
+let dateStart: Date = new Date(...) // The start date of the search range. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+let dateEnd: Date = new Date(...) // The end date of the search range. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+
+// Code example
+EmployeeEngagementAPI.getEmployeeengagementRecognitions(direction: direction, recipient: recipient, dateStart: dateStart, dateEnd: dateEnd, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("EmployeeEngagementAPI.getEmployeeengagementRecognitions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **direction** | **String**| The direction of the recognitions. | [optional]<br />**Values**: sent ("sent"), received ("received") |
+| **recipient** | **String**| The ID of the recipient (when direction is sent). | [optional] |
+| **dateStart** | **Date**| The start date of the search range. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateEnd** | **Date**| The end date of the search range. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+
+
+### Return type
+
+[**Recognitions**](Recognitions)
+
+
 ## patchEmployeeengagementCelebration
 
 
@@ -264,4 +325,4 @@ EmployeeEngagementAPI.postEmployeeengagementRecognitions(body: body) { (response
 [**RecognitionBase**](RecognitionBase)
 
 
-_PureCloudPlatformClientV2@181.0.0_
+_PureCloudPlatformClientV2@182.0.0_

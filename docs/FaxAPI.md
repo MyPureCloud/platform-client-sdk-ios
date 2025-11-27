@@ -403,4 +403,4 @@ FaxAPI.putFaxSettings(body: body) { (response, error) in
 [**FaxConfig**](FaxConfig)
 
 
-_PureCloudPlatformClientV2@181.0.0_
+_PureCloudPlatformClientV2@182.0.0_

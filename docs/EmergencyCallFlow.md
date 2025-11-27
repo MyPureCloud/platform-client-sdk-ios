@@ -12,4 +12,4 @@ An emergency flow associates a call flow to use in an emergency with the ivr(s) 
 
 
 
-_PureCloudPlatformClientV2@181.0.0_
+_PureCloudPlatformClientV2@182.0.0_

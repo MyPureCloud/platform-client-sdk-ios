@@ -1,0 +1,15 @@
+# RecordingMessageReceipt
+
+## RecordingMessageReceipt
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **_id** | **String** | The id of the message receipt. Message receipts will have the same ID as the message they reference. | [optional] |
+| **status** | **String** | The message receipt status | [optional] |
+| **reasons** | [**[RecordingMessageReceiptReason]**]([RecordingMessageReceiptReason]) | List of reasons for a message receipt that indicates the message has failed. Only used with Failed status. | [optional] |
+
+
+
+_PureCloudPlatformClientV2@182.0.0_

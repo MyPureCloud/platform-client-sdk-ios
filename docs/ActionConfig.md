@@ -13,4 +13,4 @@ Defines components of the Action Config.
 
 
 
-_PureCloudPlatformClientV2@181.0.0_
+_PureCloudPlatformClientV2@182.0.0_
