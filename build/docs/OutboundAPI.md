@@ -4769,7 +4769,7 @@ OutboundAPI.getOutboundMessagingcampaignProgress(messagingCampaignId: messagingC
 
 
 
-> [MessagingCampaignEntityListing](MessagingCampaignEntityListing) getOutboundMessagingcampaigns(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, _id, contentTemplateId, campaignStatus)
+> [MessagingCampaignEntityListing](MessagingCampaignEntityListing) getOutboundMessagingcampaigns(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, _id, contentTemplateId, campaignStatus, ruleSetIds)
 
 Query a list of Messaging Campaigns
 
@@ -4803,9 +4803,10 @@ let senderSmsPhoneNumber: String = "" // Sender SMS Phone Number
 let _id: [String] = [""] // A list of messaging campaign ids to bulk fetch
 let contentTemplateId: String = "" // Content template ID
 let campaignStatus: OutboundAPI.CampaignStatus_getOutboundMessagingcampaigns = OutboundAPI.CampaignStatus_getOutboundMessagingcampaigns.enummember // Campaign Status
+let ruleSetIds: [String] = [""] // Ruleset ID(s)
 
 // Code example
-OutboundAPI.getOutboundMessagingcampaigns(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, contactListId: contactListId, divisionId: divisionId, type: type, senderSmsPhoneNumber: senderSmsPhoneNumber, _id: _id, contentTemplateId: contentTemplateId, campaignStatus: campaignStatus) { (response, error) in
+OutboundAPI.getOutboundMessagingcampaigns(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, contactListId: contactListId, divisionId: divisionId, type: type, senderSmsPhoneNumber: senderSmsPhoneNumber, _id: _id, contentTemplateId: contentTemplateId, campaignStatus: campaignStatus, ruleSetIds: ruleSetIds) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4832,6 +4833,7 @@ OutboundAPI.getOutboundMessagingcampaigns(pageSize: pageSize, pageNumber: pageNu
 | **_id** | [**[String]**](String)| A list of messaging campaign ids to bulk fetch | [optional] |
 | **contentTemplateId** | **String**| Content template ID | [optional] |
 | **campaignStatus** | **String**| Campaign Status | [optional]<br />**Values**: on ("on"), stopping ("stopping"), off ("off"), complete ("complete"), invalid ("invalid"), forcedOff ("forced_off"), forcedStopping ("forced_stopping") |
+| **ruleSetIds** | [**[String]**](String)| Ruleset ID(s) | [optional] |
 
 
 ### Return type
@@ -9337,4 +9339,4 @@ OutboundAPI.putOutboundWrapupcodemappings(body: body) { (response, error) in
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatformClientV2@181.0.0_
+_PureCloudPlatformClientV2@182.0.0_

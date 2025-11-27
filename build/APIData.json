@@ -14353,6 +14353,45 @@
     "return": "Recognition",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet recognitionId: String = \"\" // The Recognition ID\n\n// Gets a single recognition\nGetEmployeeengagementRecognitionRequest.getEmployeeengagementRecognition(recognitionId: recognitionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetEmployeeengagementRecognitionRequest.getEmployeeengagementRecognition was successful\")\n        dump(response)\n    }\n}"
   },
+  "getemployeeengagementrecognitions": {
+    "operationId": "getemployeeengagementrecognitions",
+    "functionName": "getEmployeeengagementRecognitions",
+    "signature": "getEmployeeengagementRecognitions(direction, recipient, dateStart, dateEnd, pageSize, pageNumber)",
+    "parameters": [
+      {
+        "name": "direction",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "recipient",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "dateStart",
+        "type": "Date",
+        "required": "false"
+      },
+      {
+        "name": "dateEnd",
+        "type": "Date",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "Recognitions",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet direction: GetEmployeeengagementRecognitionsRequest.Direction_getEmployeeengagementRecognitions = GetEmployeeengagementRecognitionsRequest.Direction_getEmployeeengagementRecognitions.enummember // The direction of the recognitions.\nlet recipient: String = \"\" // The ID of the recipient (when direction is sent).\nlet dateStart: Date = new Date(...) // The start date of the search range. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z\nlet dateEnd: Date = new Date(...) // The end date of the search range. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\n\n// Gets sent recognitions\nGetEmployeeengagementRecognitionsRequest.getEmployeeengagementRecognitions(direction: direction, recipient: recipient, dateStart: dateStart, dateEnd: dateEnd, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetEmployeeengagementRecognitionsRequest.getEmployeeengagementRecognitions was successful\")\n        dump(response)\n    }\n}"
+  },
   "patchemployeeengagementcelebration": {
     "operationId": "patchemployeeengagementcelebration",
     "functionName": "patchEmployeeengagementCelebration",
@@ -31328,7 +31367,7 @@
   "getoutboundmessagingcampaigns": {
     "operationId": "getoutboundmessagingcampaigns",
     "functionName": "getOutboundMessagingcampaigns",
-    "signature": "getOutboundMessagingcampaigns(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, _id, contentTemplateId, campaignStatus)",
+    "signature": "getOutboundMessagingcampaigns(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, _id, contentTemplateId, campaignStatus, ruleSetIds)",
     "parameters": [
       {
         "name": "pageSize",
@@ -31389,10 +31428,15 @@
         "name": "campaignStatus",
         "type": "String",
         "required": "false"
+      },
+      {
+        "name": "ruleSetIds",
+        "type": "[String]",
+        "required": "false"
       }
     ],
     "return": "MessagingCampaignEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size. The max that will be returned is 100.\nlet pageNumber: Int = 0 // Page number\nlet sortBy: GetOutboundMessagingcampaignsRequest.SortBy_getOutboundMessagingcampaigns = GetOutboundMessagingcampaignsRequest.SortBy_getOutboundMessagingcampaigns.enummember // The field to sort by\nlet sortOrder: GetOutboundMessagingcampaignsRequest.SortOrder_getOutboundMessagingcampaigns = GetOutboundMessagingcampaignsRequest.SortOrder_getOutboundMessagingcampaigns.enummember // The direction to sort\nlet name: String = \"\" // Name\nlet contactListId: String = \"\" // Contact List ID\nlet divisionId: [String] = [\"\"] // Division ID(s)\nlet type: GetOutboundMessagingcampaignsRequest.ModelType_getOutboundMessagingcampaigns = GetOutboundMessagingcampaignsRequest.ModelType_getOutboundMessagingcampaigns.enummember // Campaign Type\nlet senderSmsPhoneNumber: String = \"\" // Sender SMS Phone Number\nlet _id: [String] = [\"\"] // A list of messaging campaign ids to bulk fetch\nlet contentTemplateId: String = \"\" // Content template ID\nlet campaignStatus: GetOutboundMessagingcampaignsRequest.CampaignStatus_getOutboundMessagingcampaigns = GetOutboundMessagingcampaignsRequest.CampaignStatus_getOutboundMessagingcampaigns.enummember // Campaign Status\n\n// Query a list of Messaging Campaigns\nGetOutboundMessagingcampaignsRequest.getOutboundMessagingcampaigns(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, contactListId: contactListId, divisionId: divisionId, type: type, senderSmsPhoneNumber: senderSmsPhoneNumber, _id: _id, contentTemplateId: contentTemplateId, campaignStatus: campaignStatus) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundMessagingcampaignsRequest.getOutboundMessagingcampaigns was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size. The max that will be returned is 100.\nlet pageNumber: Int = 0 // Page number\nlet sortBy: GetOutboundMessagingcampaignsRequest.SortBy_getOutboundMessagingcampaigns = GetOutboundMessagingcampaignsRequest.SortBy_getOutboundMessagingcampaigns.enummember // The field to sort by\nlet sortOrder: GetOutboundMessagingcampaignsRequest.SortOrder_getOutboundMessagingcampaigns = GetOutboundMessagingcampaignsRequest.SortOrder_getOutboundMessagingcampaigns.enummember // The direction to sort\nlet name: String = \"\" // Name\nlet contactListId: String = \"\" // Contact List ID\nlet divisionId: [String] = [\"\"] // Division ID(s)\nlet type: GetOutboundMessagingcampaignsRequest.ModelType_getOutboundMessagingcampaigns = GetOutboundMessagingcampaignsRequest.ModelType_getOutboundMessagingcampaigns.enummember // Campaign Type\nlet senderSmsPhoneNumber: String = \"\" // Sender SMS Phone Number\nlet _id: [String] = [\"\"] // A list of messaging campaign ids to bulk fetch\nlet contentTemplateId: String = \"\" // Content template ID\nlet campaignStatus: GetOutboundMessagingcampaignsRequest.CampaignStatus_getOutboundMessagingcampaigns = GetOutboundMessagingcampaignsRequest.CampaignStatus_getOutboundMessagingcampaigns.enummember // Campaign Status\nlet ruleSetIds: [String] = [\"\"] // Ruleset ID(s)\n\n// Query a list of Messaging Campaigns\nGetOutboundMessagingcampaignsRequest.getOutboundMessagingcampaigns(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, contactListId: contactListId, divisionId: divisionId, type: type, senderSmsPhoneNumber: senderSmsPhoneNumber, _id: _id, contentTemplateId: contentTemplateId, campaignStatus: campaignStatus, ruleSetIds: ruleSetIds) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundMessagingcampaignsRequest.getOutboundMessagingcampaigns was successful\")\n        dump(response)\n    }\n}"
   },
   "getoutboundmessagingcampaignsdivisionview": {
     "operationId": "getoutboundmessagingcampaignsdivisionview",

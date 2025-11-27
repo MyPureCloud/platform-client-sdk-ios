@@ -382,8 +382,8 @@ open class SpeechTextAnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The page size for the listing. The max that will be returned is 25. (optional)
@@ -604,8 +604,8 @@ open class SpeechTextAnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter conversationId: (path) The id of the conversation 
@@ -1748,8 +1748,8 @@ open class SpeechTextAnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The page size for the listing. The max that will be returned is 100. (optional)
@@ -2189,10 +2189,12 @@ open class SpeechTextAnalyticsAPI {
   } ],
   "phrases" : [ {
     "sentiment" : "Unspecified",
+    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   }, {
     "sentiment" : "Unspecified",
+    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   } ],
@@ -3469,10 +3471,12 @@ open class SpeechTextAnalyticsAPI {
   } ],
   "phrases" : [ {
     "sentiment" : "Unspecified",
+    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   }, {
     "sentiment" : "Unspecified",
+    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   } ],
@@ -4256,10 +4260,12 @@ open class SpeechTextAnalyticsAPI {
   } ],
   "phrases" : [ {
     "sentiment" : "Unspecified",
+    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   }, {
     "sentiment" : "Unspecified",
+    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   } ],

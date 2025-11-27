@@ -967,8 +967,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1271,8 +1271,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1456,8 +1456,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1748,8 +1748,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -2053,8 +2053,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)
@@ -3091,6 +3091,101 @@ open class JourneyAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "charts" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "metrics" : [ {
+      "values" : [ {
+        "groupByAttributes" : [ {
+          "attribute" : "attribute",
+          "value" : "value"
+        }, {
+          "attribute" : "attribute",
+          "value" : "value"
+        } ],
+        "value" : 6
+      }, {
+        "groupByAttributes" : [ {
+          "attribute" : "attribute",
+          "value" : "value"
+        }, {
+          "attribute" : "attribute",
+          "value" : "value"
+        } ],
+        "value" : 6
+      } ],
+      "id" : "id"
+    }, {
+      "values" : [ {
+        "groupByAttributes" : [ {
+          "attribute" : "attribute",
+          "value" : "value"
+        }, {
+          "attribute" : "attribute",
+          "value" : "value"
+        } ],
+        "value" : 6
+      }, {
+        "groupByAttributes" : [ {
+          "attribute" : "attribute",
+          "value" : "value"
+        }, {
+          "attribute" : "attribute",
+          "value" : "value"
+        } ],
+        "value" : 6
+      } ],
+      "id" : "id"
+    } ],
+    "version" : 0
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "metrics" : [ {
+      "values" : [ {
+        "groupByAttributes" : [ {
+          "attribute" : "attribute",
+          "value" : "value"
+        }, {
+          "attribute" : "attribute",
+          "value" : "value"
+        } ],
+        "value" : 6
+      }, {
+        "groupByAttributes" : [ {
+          "attribute" : "attribute",
+          "value" : "value"
+        }, {
+          "attribute" : "attribute",
+          "value" : "value"
+        } ],
+        "value" : 6
+      } ],
+      "id" : "id"
+    }, {
+      "values" : [ {
+        "groupByAttributes" : [ {
+          "attribute" : "attribute",
+          "value" : "value"
+        }, {
+          "attribute" : "attribute",
+          "value" : "value"
+        } ],
+        "value" : 6
+      }, {
+        "groupByAttributes" : [ {
+          "attribute" : "attribute",
+          "value" : "value"
+        }, {
+          "attribute" : "attribute",
+          "value" : "value"
+        } ],
+        "value" : 6
+      } ],
+      "id" : "id"
+    } ],
+    "version" : 0
+  } ],
   "elements" : [ {
     "followedBy" : [ {
       "connectionCount" : 0,
@@ -3603,8 +3698,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -3881,8 +3976,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) The number of the page to return (optional)
@@ -3980,8 +4075,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) The number of the page to return (optional)
@@ -4065,8 +4160,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) The number of the page to return (optional)

@@ -624,8 +624,8 @@ open class LearningAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. Fetch assignments for learning module ID (optional)
@@ -941,8 +941,8 @@ open class LearningAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. Fetch assignments for learning module ID (optional)
@@ -1512,10 +1512,10 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 7,
-  "pageCount" : 3,
-  "pageNumber" : 2,
-  "totalLegacyRules" : 9,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "totalLegacyRules" : 5,
   "entities" : [ {
     "reassignSummaryData" : "{}",
     "archivalMode" : "Graceful",
@@ -1610,9 +1610,9 @@ open class LearningAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 5,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter isArchived: (query) Archive status (optional)
@@ -2111,8 +2111,8 @@ open class LearningAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userIds: (query) The IDs of the users to include 
@@ -3964,8 +3964,8 @@ open class LearningAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "unfilteredTotal" : 5
 }, statusCode=200}]
      

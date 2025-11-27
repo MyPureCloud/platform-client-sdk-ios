@@ -4102,6 +4102,7 @@ docs/RecipientListing.md
 docs/RecipientRequest.md
 docs/Recognition.md
 docs/RecognitionBase.md
+docs/Recognitions.md
 docs/Record.md
 docs/RecordersState.md
 docs/Recording.md
@@ -4132,6 +4133,8 @@ docs/RecordingJobEntityListing.md
 docs/RecordingJobFailedRecording.md
 docs/RecordingJobsQuery.md
 docs/RecordingLocation.md
+docs/RecordingMessageReceipt.md
+docs/RecordingMessageReceiptReason.md
 docs/RecordingMessagingMessage.md
 docs/RecordingMetadata.md
 docs/RecordingNotificationTemplate.md
@@ -6326,6 +6329,7 @@ docs/getEmailsSettingsThreading-example.txt
 docs/getEmailsSettingsThreading-example.txt
 docs/getEmployeeengagementCelebrations-example.txt
 docs/getEmployeeengagementRecognition-example.txt
+docs/getEmployeeengagementRecognitions-example.txt
 docs/getEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/getEmployeeperformanceExternalmetricsDefinitions-example.txt
 docs/getExternalcontactsContact-example.txt
@@ -12685,6 +12689,7 @@ src/Models/RecipientListing.swift
 src/Models/RecipientRequest.swift
 src/Models/Recognition.swift
 src/Models/RecognitionBase.swift
+src/Models/Recognitions.swift
 src/Models/Record.swift
 src/Models/RecordersState.swift
 src/Models/Recording.swift
@@ -12713,6 +12718,8 @@ src/Models/RecordingJobEntityListing.swift
 src/Models/RecordingJobFailedRecording.swift
 src/Models/RecordingJobsQuery.swift
 src/Models/RecordingLocation.swift
+src/Models/RecordingMessageReceipt.swift
+src/Models/RecordingMessageReceiptReason.swift
 src/Models/RecordingMessagingMessage.swift
 src/Models/RecordingMetadata.swift
 src/Models/RecordingNotificationTemplate.swift

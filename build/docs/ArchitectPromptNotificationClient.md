@@ -12,4 +12,4 @@ The client who initiated the change.
 
 
 
-_PureCloudPlatformClientV2@181.0.0_
+_PureCloudPlatformClientV2@182.0.0_

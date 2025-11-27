@@ -119,8 +119,8 @@ open class EmployeeEngagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query)  (optional)
@@ -206,6 +206,121 @@ open class EmployeeEngagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Recognition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    public enum Direction_getEmployeeengagementRecognitions: String { 
+        case sent = "sent"
+        case received = "received"
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Gets sent recognitions
+     
+     - parameter direction: (query) The direction of the recognitions. (optional)
+     - parameter recipient: (query) The ID of the recipient (when direction is sent). (optional)
+     - parameter dateStart: (query) The start date of the search range. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+     - parameter dateEnd: (query) The end date of the search range. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getEmployeeengagementRecognitions(direction: Direction_getEmployeeengagementRecognitions? = nil, recipient: String? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: Recognitions?,_ error: Error?) -> Void)) {
+        let requestBuilder = getEmployeeengagementRecognitionsWithRequestBuilder(direction: direction, recipient: recipient, dateStart: dateStart, dateEnd: dateEnd, pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<Recognitions>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets sent recognitions
+     - GET /api/v2/employeeengagement/recognitions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "dateAcknowledged" : "2023-01-01T01:01:01Z",
+    "note" : "note",
+    "dateCreated" : "2023-01-01T01:01:01Z",
+    "createdBy" : "{}",
+    "contextType" : "Interaction",
+    "selfUri" : "https://openapi-generator.tech",
+    "recipient" : "{}",
+    "contextId" : "contextId",
+    "id" : "id",
+    "type" : "ThankYou",
+    "title" : "title",
+    "dateDisplayed" : "2023-01-01T01:01:01Z"
+  }, {
+    "dateAcknowledged" : "2023-01-01T01:01:01Z",
+    "note" : "note",
+    "dateCreated" : "2023-01-01T01:01:01Z",
+    "createdBy" : "{}",
+    "contextType" : "Interaction",
+    "selfUri" : "https://openapi-generator.tech",
+    "recipient" : "{}",
+    "contextId" : "contextId",
+    "id" : "id",
+    "type" : "ThankYou",
+    "title" : "title",
+    "dateDisplayed" : "2023-01-01T01:01:01Z"
+  } ],
+  "pageSize" : 0
+}, statusCode=200}]
+     
+     - parameter direction: (query) The direction of the recognitions. (optional)
+     - parameter recipient: (query) The ID of the recipient (when direction is sent). (optional)
+     - parameter dateStart: (query) The start date of the search range. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+     - parameter dateEnd: (query) The end date of the search range. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+
+     - returns: RequestBuilder<Recognitions> 
+     */
+    open class func getEmployeeengagementRecognitionsWithRequestBuilder(direction: Direction_getEmployeeengagementRecognitions? = nil, recipient: String? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<Recognitions> {        
+        let path = "/api/v2/employeeengagement/recognitions"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "direction": direction?.rawValue, 
+            "recipient": recipient, 
+            "dateStart": dateStart?.encodeToJSON(), 
+            "dateEnd": dateEnd?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<Recognitions>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
