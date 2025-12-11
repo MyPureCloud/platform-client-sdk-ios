@@ -801,7 +801,7 @@ open class JourneyAPI {
      - parameter filterValue: (query) Value to filter by. Requires &#39;filterValue&#39; to also be set. (optional)
      - parameter actionMapIds: (query) IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. (optional)
      - parameter queryFields: (query) Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
-     - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
+     - parameter queryValue: (query) Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getJourneyActionmaps(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, filterField: String? = nil, filterValue: String? = nil, actionMapIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil, completion: @escaping ((_ data: ActionMapListing?,_ error: Error?) -> Void)) {
@@ -967,8 +967,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -978,7 +978,7 @@ open class JourneyAPI {
      - parameter filterValue: (query) Value to filter by. Requires &#39;filterValue&#39; to also be set. (optional)
      - parameter actionMapIds: (query) IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. (optional)
      - parameter queryFields: (query) Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
-     - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
+     - parameter queryValue: (query) Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)
 
      - returns: RequestBuilder<ActionMapListing> 
      */
@@ -1271,8 +1271,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1398,7 +1398,7 @@ open class JourneyAPI {
      - parameter mediaType: (query) Media type (optional)
      - parameter state: (query) Action template state. (optional)
      - parameter queryFields: (query) ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
-     - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
+     - parameter queryValue: (query) Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getJourneyActiontemplates(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, mediaType: MediaType_getJourneyActiontemplates? = nil, state: State_getJourneyActiontemplates? = nil, queryFields: [String]? = nil, queryValue: String? = nil, completion: @escaping ((_ data: ActionTemplateListing?,_ error: Error?) -> Void)) {
@@ -1456,8 +1456,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1466,7 +1466,7 @@ open class JourneyAPI {
      - parameter mediaType: (query) Media type (optional)
      - parameter state: (query) Action template state. (optional)
      - parameter queryFields: (query) ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
-     - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
+     - parameter queryValue: (query) Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)
 
      - returns: RequestBuilder<ActionTemplateListing> 
      */
@@ -1686,7 +1686,7 @@ open class JourneyAPI {
      - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)
      - parameter outcomeIds: (query) IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. (optional)
      - parameter queryFields: (query) Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
-     - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
+     - parameter queryValue: (query) Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getJourneyOutcomes(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, outcomeIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil, completion: @escaping ((_ data: OutcomeListing?,_ error: Error?) -> Void)) {
@@ -1748,8 +1748,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1757,7 +1757,7 @@ open class JourneyAPI {
      - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)
      - parameter outcomeIds: (query) IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. (optional)
      - parameter queryFields: (query) Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
-     - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
+     - parameter queryValue: (query) Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)
 
      - returns: RequestBuilder<OutcomeListing> 
      */
@@ -1985,7 +1985,7 @@ open class JourneyAPI {
      - parameter isActive: (query) Determines whether or not to show only active segments. (optional)
      - parameter segmentIds: (query) IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional)
      - parameter queryFields: (query) Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
-     - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
+     - parameter queryValue: (query) Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getJourneySegments(sortBy: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, isActive: Bool? = nil, segmentIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil, completion: @escaping ((_ data: SegmentListing?,_ error: Error?) -> Void)) {
@@ -2053,8 +2053,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)
@@ -2063,7 +2063,7 @@ open class JourneyAPI {
      - parameter isActive: (query) Determines whether or not to show only active segments. (optional)
      - parameter segmentIds: (query) IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional)
      - parameter queryFields: (query) Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
-     - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
+     - parameter queryValue: (query) Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)
 
      - returns: RequestBuilder<SegmentListing> 
      */
@@ -3698,8 +3698,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -3976,8 +3976,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) The number of the page to return (optional)
@@ -4075,8 +4075,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) The number of the page to return (optional)
@@ -4160,8 +4160,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) The number of the page to return (optional)

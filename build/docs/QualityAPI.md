@@ -1246,7 +1246,7 @@ Retrieve a list of the latest published evaluation form versions by context ids
 
 Wraps GET /api/v2/quality/forms/evaluations/bulk/contexts  
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * quality:evaluationForm:view
 
@@ -1464,7 +1464,7 @@ Retrieve a list of survey forms by their ids
 
 Wraps GET /api/v2/quality/forms/surveys/bulk  
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * quality:surveyForm:view
 
@@ -1514,7 +1514,7 @@ Retrieve a list of the latest form versions by context ids
 
 Wraps GET /api/v2/quality/forms/surveys/bulk/contexts  
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * quality:surveyForm:view
 
@@ -3097,4 +3097,4 @@ QualityAPI.putQualitySurveysScorable(customerSurveyUrl: customerSurveyUrl, body:
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatformClientV2@182.0.0_
+_PureCloudPlatformClientV2@183.0.0_

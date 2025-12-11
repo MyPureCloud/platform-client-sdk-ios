@@ -264,8 +264,8 @@ open class AIStudioAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter language: (query) Filter by matching language - case insensitive. (optional)
@@ -415,6 +415,110 @@ open class AIStudioAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SummarySetting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Add a turn to a guide session.
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter guideSessionId: (path) Guide Session ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postGuideSessionTurns(guideId: String, guideSessionId: String, body: GuideSessionTurnRequest, completion: @escaping ((_ data: GuideSessionTurnResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGuideSessionTurnsWithRequestBuilder(guideId: guideId, guideSessionId: guideSessionId, body: body)
+        requestBuilder.execute { (response: Response<GuideSessionTurnResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add a turn to a guide session.
+     - POST /api/v2/guides/{guideId}/sessions/{guideSessionId}/turns
+     - Creates a new turn in the specified guide session with the provided request data. If the session ID doesn't exist, a new session will be created automatically.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "SUCCESSFUL_COLLECTION",
+  "response" : "{}",
+  "outputVariables" : [ {
+    "name" : "name",
+    "value" : "value"
+  }, {
+    "name" : "name",
+    "value" : "value"
+  } ],
+  "invocationId" : "invocationId",
+  "status" : "IN_PROGRESS",
+  "invocations" : [ {
+    "id" : "id",
+    "parameters" : [ {
+      "name" : "name",
+      "type" : "String",
+      "value" : "value"
+    }, {
+      "name" : "name",
+      "type" : "String",
+      "value" : "value"
+    } ],
+    "group" : "group",
+    "actionName" : "actionName"
+  }, {
+    "id" : "id",
+    "parameters" : [ {
+      "name" : "name",
+      "type" : "String",
+      "value" : "value"
+    }, {
+      "name" : "name",
+      "type" : "String",
+      "value" : "value"
+    } ],
+    "group" : "group",
+    "actionName" : "actionName"
+  } ]
+}, statusCode=200}]
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter guideSessionId: (path) Guide Session ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<GuideSessionTurnResponse> 
+     */
+    open class func postGuideSessionTurnsWithRequestBuilder(guideId: String, guideSessionId: String, body: GuideSessionTurnRequest) -> RequestBuilder<GuideSessionTurnResponse> {        
+        var path = "/api/v2/guides/{guideId}/sessions/{guideSessionId}/turns"
+        let guideIdPreEscape = "\(guideId)"
+        let guideIdPostEscape = guideIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{guideId}", with: guideIdPostEscape, options: .literal, range: nil)
+        let guideSessionIdPreEscape = "\(guideSessionId)"
+        let guideSessionIdPostEscape = guideSessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{guideSessionId}", with: guideSessionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GuideSessionTurnResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

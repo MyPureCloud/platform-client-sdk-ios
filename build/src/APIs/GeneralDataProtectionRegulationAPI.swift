@@ -44,6 +44,7 @@ open class GeneralDataProtectionRegulationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "resultsUrl" : "resultsUrl",
+  "resultsUrls" : [ "resultsUrls", "resultsUrls" ],
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "requestType" : "GDPR_EXPORT",
   "createdBy" : "{}",
@@ -115,6 +116,7 @@ open class GeneralDataProtectionRegulationAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "resultsUrl" : "resultsUrl",
+    "resultsUrls" : [ "resultsUrls", "resultsUrls" ],
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "requestType" : "GDPR_EXPORT",
     "createdBy" : "{}",
@@ -126,6 +128,7 @@ open class GeneralDataProtectionRegulationAPI {
     "status" : "INITIATED"
   }, {
     "resultsUrl" : "resultsUrl",
+    "resultsUrls" : [ "resultsUrls", "resultsUrls" ],
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "requestType" : "GDPR_EXPORT",
     "createdBy" : "{}",
@@ -140,8 +143,8 @@ open class GeneralDataProtectionRegulationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -261,8 +264,8 @@ open class GeneralDataProtectionRegulationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter searchType: (query) Search Type 
@@ -323,6 +326,7 @@ open class GeneralDataProtectionRegulationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "resultsUrl" : "resultsUrl",
+  "resultsUrls" : [ "resultsUrls", "resultsUrls" ],
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "requestType" : "GDPR_EXPORT",
   "createdBy" : "{}",

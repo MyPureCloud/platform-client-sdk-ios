@@ -16,4 +16,4 @@ A criteria type that can be used in tandem with other criteria type to create qu
 
 
 
-_PureCloudPlatformClientV2@182.0.0_
+_PureCloudPlatformClientV2@183.0.0_

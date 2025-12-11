@@ -12,8 +12,9 @@ Template button object
 | **index** | **Int64** | index of the button in the list. | |
 | **phoneNumber** | **String** | Button phone number. | [optional] |
 | **url** | **String** | Button URL link. | [optional] |
+| **payload** | **String** | Content of the payload to be included in the quick reply response when the button is pressed. | [optional] |
 | **parameters** | [**[ConversationNotificationTemplateParameter]**]([ConversationNotificationTemplateParameter]) | Template parameters for placeholders in the button. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@182.0.0_
+_PureCloudPlatformClientV2@183.0.0_

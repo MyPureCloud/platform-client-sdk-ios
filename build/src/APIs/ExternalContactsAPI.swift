@@ -1425,8 +1425,8 @@ open class ExternalContactsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "partialResults" : true
 }, statusCode=200}]
      
@@ -4987,8 +4987,8 @@ open class ExternalContactsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "partialResults" : true
 }, statusCode=200}]
      
@@ -5107,8 +5107,8 @@ open class ExternalContactsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "partialResults" : true
 }, statusCode=200}]
      
@@ -5438,8 +5438,8 @@ open class ExternalContactsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "partialResults" : true
 }, statusCode=200}]
      
@@ -9040,19 +9040,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Contact ids 
@@ -9104,19 +9106,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Contacts 
@@ -9168,19 +9172,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Contact ids 
@@ -9236,19 +9242,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Contact Enrich Requests 
@@ -9304,19 +9312,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Contact ids 
@@ -9368,19 +9378,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Contact ids 
@@ -9432,19 +9444,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Contacts 
@@ -9496,19 +9510,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Note ids 
@@ -9560,19 +9576,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Notes 
@@ -9624,19 +9642,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Note ids 
@@ -9688,19 +9708,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Notes 
@@ -9752,19 +9774,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Organizations ids 
@@ -9816,19 +9840,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Organizations 
@@ -9880,19 +9906,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Organizations ids 
@@ -9948,19 +9976,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) External Organization Enrich Requests 
@@ -10016,19 +10046,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Organization ids 
@@ -10080,19 +10112,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Organizations 
@@ -10144,19 +10178,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Relationships ids 
@@ -10208,19 +10244,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Relationships 
@@ -10272,19 +10310,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Relationships ids 
@@ -10336,19 +10376,21 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "errorIndexes" : [ 6, 6 ],
+  "errorIndexes" : [ 1, 1 ],
   "results" : [ {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   }, {
     "success" : true,
     "id" : "id",
     "error" : "{}",
-    "entity" : "{}"
+    "entity" : "{}",
+    "status" : 0
   } ],
-  "errorCount" : 0
+  "errorCount" : 6
 }, statusCode=200}]
      
      - parameter body: (body) Relationships 

@@ -5,6 +5,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteAuthorizationDivision**](AuthorizationAPI#deleteAuthorizationDivision) | Delete a division. |
+| [**deleteAuthorizationPoliciesTargetSubjectSubjectId**](AuthorizationAPI#deleteAuthorizationPoliciesTargetSubjectSubjectId) | Delete an access control policy |
 | [**deleteAuthorizationRole**](AuthorizationAPI#deleteAuthorizationRole) | Delete an organization role. |
 | [**deleteAuthorizationSubjectDivisionRole**](AuthorizationAPI#deleteAuthorizationSubjectDivisionRole) | Delete a grant of a role in a division |
 | [**getAuthorizationDivision**](AuthorizationAPI#getAuthorizationDivision) | Returns an authorization division. |
@@ -18,6 +19,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAuthorizationDivisionspermittedPagedMe**](AuthorizationAPI#getAuthorizationDivisionspermittedPagedMe) | Returns which divisions the current user has the given permission in. |
 | [**getAuthorizationDivisionspermittedPagedSubjectId**](AuthorizationAPI#getAuthorizationDivisionspermittedPagedSubjectId) | Returns which divisions the specified user has the given permission in. |
 | [**getAuthorizationPermissions**](AuthorizationAPI#getAuthorizationPermissions) | Get all permissions. |
+| [**getAuthorizationPolicies**](AuthorizationAPI#getAuthorizationPolicies) | Get a page of access policies for an organization |
+| [**getAuthorizationPoliciesSubjectSubjectId**](AuthorizationAPI#getAuthorizationPoliciesSubjectSubjectId) | Get a page of access policies for a given subject |
+| [**getAuthorizationPoliciesTarget**](AuthorizationAPI#getAuthorizationPoliciesTarget) | Get a page of access policies for a given policy target |
+| [**getAuthorizationPoliciesTargetSubjectSubjectId**](AuthorizationAPI#getAuthorizationPoliciesTargetSubjectSubjectId) | Get an access control policy for a specified resource target and subject |
+| [**getAuthorizationPoliciesTargets**](AuthorizationAPI#getAuthorizationPoliciesTargets) | Get a map of policy targets to valid attributes for those targets |
+| [**getAuthorizationPolicy**](AuthorizationAPI#getAuthorizationPolicy) | Get an access control policy with the specified policy ID |
+| [**getAuthorizationPolicyAttributes**](AuthorizationAPI#getAuthorizationPolicyAttributes) | Get the list of attributes used to evaluate an access control policy with the specified policy ID |
 | [**getAuthorizationProducts**](AuthorizationAPI#getAuthorizationProducts) | Get the list of enabled products |
 | [**getAuthorizationRole**](AuthorizationAPI#getAuthorizationRole) | Get a single organization role. |
 | [**getAuthorizationRoleComparedefaultRightRoleId**](AuthorizationAPI#getAuthorizationRoleComparedefaultRightRoleId) | Get an org role to default role comparison |
@@ -35,6 +43,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAuthorizationDivisionObject**](AuthorizationAPI#postAuthorizationDivisionObject) | Assign a list of objects to a division |
 | [**postAuthorizationDivisionRestore**](AuthorizationAPI#postAuthorizationDivisionRestore) | Recreate a previously deleted division. |
 | [**postAuthorizationDivisions**](AuthorizationAPI#postAuthorizationDivisions) | Create a division. |
+| [**postAuthorizationPoliciesTarget**](AuthorizationAPI#postAuthorizationPoliciesTarget) | Add an access control policy for a specified resource target and subject |
+| [**postAuthorizationPoliciesTargetValidate**](AuthorizationAPI#postAuthorizationPoliciesTargetValidate) | Validate the conditions and attributes of an access control policy for a specified resource target |
+| [**postAuthorizationPolicySimulate**](AuthorizationAPI#postAuthorizationPolicySimulate) | Simulate a request and evaluate the specified policy ID against the provided values |
 | [**postAuthorizationRole**](AuthorizationAPI#postAuthorizationRole) | Bulk-grant subjects and divisions with an organization role. |
 | [**postAuthorizationRoleComparedefaultRightRoleId**](AuthorizationAPI#postAuthorizationRoleComparedefaultRightRoleId) | Get an unsaved org role to default role comparison |
 | [**postAuthorizationRoles**](AuthorizationAPI#postAuthorizationRoles) | Create an organization role. |
@@ -44,6 +55,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAuthorizationSubjectBulkreplace**](AuthorizationAPI#postAuthorizationSubjectBulkreplace) | Replace subject&#39;s roles and divisions with the exact list supplied in the request. |
 | [**postAuthorizationSubjectDivisionRole**](AuthorizationAPI#postAuthorizationSubjectDivisionRole) | Make a grant of a role in a division |
 | [**putAuthorizationDivision**](AuthorizationAPI#putAuthorizationDivision) | Update a division. |
+| [**putAuthorizationPoliciesTarget**](AuthorizationAPI#putAuthorizationPoliciesTarget) | Add an access control policy for a specified resource target and subject, overwriting any existing policy |
+| [**putAuthorizationPolicy**](AuthorizationAPI#putAuthorizationPolicy) | Update an access control policy with a given ID |
 | [**putAuthorizationRole**](AuthorizationAPI#putAuthorizationRole) | Update an organization role. |
 | [**putAuthorizationRoleUsersAdd**](AuthorizationAPI#putAuthorizationRoleUsersAdd) | Sets the users for the role |
 | [**putAuthorizationRoleUsersRemove**](AuthorizationAPI#putAuthorizationRoleUsersRemove) | Removes the users from the role |
@@ -97,6 +110,57 @@ AuthorizationAPI.deleteAuthorizationDivision(divisionId: divisionId, force: forc
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
 | **force** | **Bool**| DEPRECATED -  Force delete this division. Warning: This option may cause any remaining objects in this division to be inaccessible. | [optional] |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteAuthorizationPoliciesTargetSubjectSubjectId
+
+
+
+> Void deleteAuthorizationPoliciesTargetSubjectSubjectId(targetName, subjectId)
+
+Delete an access control policy
+
+
+
+Wraps DELETE /api/v2/authorization/policies/targets/{targetName}/subject/{subjectId}  
+
+Requires ANY permissions: 
+
+* authorization:policy:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let targetName: String = "" // The domain:entity:action target to which the policy is applied
+let subjectId: String = "" // The ID of the subject to which the policy is applied
+
+// Code example
+AuthorizationAPI.deleteAuthorizationPoliciesTargetSubjectSubjectId(targetName: targetName, subjectId: subjectId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("AuthorizationAPI.deleteAuthorizationPoliciesTargetSubjectSubjectId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **targetName** | **String**| The domain:entity:action target to which the policy is applied | |
+| **subjectId** | **String**| The ID of the subject to which the policy is applied | |
 
 
 ### Return type
@@ -801,6 +865,364 @@ AuthorizationAPI.getAuthorizationPermissions(pageSize: pageSize, pageNumber: pag
 ### Return type
 
 [**PermissionCollectionEntityListing**](PermissionCollectionEntityListing)
+
+
+## getAuthorizationPolicies
+
+
+
+> [AuthorizationPolicyEntityListing](AuthorizationPolicyEntityListing) getAuthorizationPolicies(after, pageSize)
+
+Get a page of access policies for an organization
+
+
+
+Wraps GET /api/v2/authorization/policies  
+
+Requires ANY permissions: 
+
+* authorization:policy:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: Int = 0 // Number of entities to return. Maximum of 200.
+
+// Code example
+AuthorizationAPI.getAuthorizationPolicies(after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.getAuthorizationPolicies was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **Int**| Number of entities to return. Maximum of 200. | [optional] |
+
+
+### Return type
+
+[**AuthorizationPolicyEntityListing**](AuthorizationPolicyEntityListing)
+
+
+## getAuthorizationPoliciesSubjectSubjectId
+
+
+
+> [AuthorizationPolicyEntityListing](AuthorizationPolicyEntityListing) getAuthorizationPoliciesSubjectSubjectId(subjectId, after, pageSize)
+
+Get a page of access policies for a given subject
+
+
+
+Wraps GET /api/v2/authorization/policies/subject/{subjectId}  
+
+Requires ANY permissions: 
+
+* authorization:policy:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let subjectId: String = "" // The ID of the subject to which policies are applied
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: Int = 0 // Number of entities to return. Maximum of 200.
+
+// Code example
+AuthorizationAPI.getAuthorizationPoliciesSubjectSubjectId(subjectId: subjectId, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.getAuthorizationPoliciesSubjectSubjectId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **subjectId** | **String**| The ID of the subject to which policies are applied | |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **Int**| Number of entities to return. Maximum of 200. | [optional] |
+
+
+### Return type
+
+[**AuthorizationPolicyEntityListing**](AuthorizationPolicyEntityListing)
+
+
+## getAuthorizationPoliciesTarget
+
+
+
+> [AuthorizationPolicyEntityListing](AuthorizationPolicyEntityListing) getAuthorizationPoliciesTarget(targetName, after, pageSize)
+
+Get a page of access policies for a given policy target
+
+
+
+Wraps GET /api/v2/authorization/policies/targets/{targetName}  
+
+Requires ANY permissions: 
+
+* authorization:policy:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let targetName: String = "" // The domain:entity:action resource target to which policies are applied
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: Int = 0 // Number of entities to return. Maximum of 200.
+
+// Code example
+AuthorizationAPI.getAuthorizationPoliciesTarget(targetName: targetName, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.getAuthorizationPoliciesTarget was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **targetName** | **String**| The domain:entity:action resource target to which policies are applied | |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **Int**| Number of entities to return. Maximum of 200. | [optional] |
+
+
+### Return type
+
+[**AuthorizationPolicyEntityListing**](AuthorizationPolicyEntityListing)
+
+
+## getAuthorizationPoliciesTargetSubjectSubjectId
+
+
+
+> [AuthorizationPolicy](AuthorizationPolicy) getAuthorizationPoliciesTargetSubjectSubjectId(targetName, subjectId)
+
+Get an access control policy for a specified resource target and subject
+
+
+
+Wraps GET /api/v2/authorization/policies/targets/{targetName}/subject/{subjectId}  
+
+Requires ANY permissions: 
+
+* authorization:policy:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let targetName: String = "" // The domain:entity:action resource target to which the policy is applied
+let subjectId: String = "" // The ID of the subject to which the policy is applied
+
+// Code example
+AuthorizationAPI.getAuthorizationPoliciesTargetSubjectSubjectId(targetName: targetName, subjectId: subjectId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.getAuthorizationPoliciesTargetSubjectSubjectId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **targetName** | **String**| The domain:entity:action resource target to which the policy is applied | |
+| **subjectId** | **String**| The ID of the subject to which the policy is applied | |
+
+
+### Return type
+
+[**AuthorizationPolicy**](AuthorizationPolicy)
+
+
+## getAuthorizationPoliciesTargets
+
+
+
+> [TargetAttributes](TargetAttributes) getAuthorizationPoliciesTargets()
+
+Get a map of policy targets to valid attributes for those targets
+
+
+
+Wraps GET /api/v2/authorization/policies/targets  
+
+Requires ANY permissions: 
+
+* authorization:policy:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+AuthorizationAPI.getAuthorizationPoliciesTargets() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.getAuthorizationPoliciesTargets was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**TargetAttributes**](TargetAttributes)
+
+
+## getAuthorizationPolicy
+
+
+
+> [AuthorizationPolicy](AuthorizationPolicy) getAuthorizationPolicy(policyId)
+
+Get an access control policy with the specified policy ID
+
+
+
+Wraps GET /api/v2/authorization/policies/{policyId}  
+
+Requires ANY permissions: 
+
+* authorization:policy:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let policyId: String = "" // The ID of the policy to retrieve
+
+// Code example
+AuthorizationAPI.getAuthorizationPolicy(policyId: policyId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.getAuthorizationPolicy was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **policyId** | **String**| The ID of the policy to retrieve | |
+
+
+### Return type
+
+[**AuthorizationPolicy**](AuthorizationPolicy)
+
+
+## getAuthorizationPolicyAttributes
+
+
+
+> [PolicyAttributeSet](PolicyAttributeSet) getAuthorizationPolicyAttributes(policyId)
+
+Get the list of attributes used to evaluate an access control policy with the specified policy ID
+
+
+
+Wraps GET /api/v2/authorization/policies/{policyId}/attributes  
+
+Requires ANY permissions: 
+
+* authorization:policy:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let policyId: String = "" // The ID of the policy to retrieve attributes
+
+// Code example
+AuthorizationAPI.getAuthorizationPolicyAttributes(policyId: policyId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.getAuthorizationPolicyAttributes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **policyId** | **String**| The ID of the policy to retrieve attributes | |
+
+
+### Return type
+
+[**PolicyAttributeSet**](PolicyAttributeSet)
 
 
 ## getAuthorizationProducts
@@ -1708,6 +2130,162 @@ AuthorizationAPI.postAuthorizationDivisions(body: body) { (response, error) in
 [**AuthzDivision**](AuthzDivision)
 
 
+## postAuthorizationPoliciesTarget
+
+
+
+> [AuthorizationPolicy](AuthorizationPolicy) postAuthorizationPoliciesTarget(targetName, body)
+
+Add an access control policy for a specified resource target and subject
+
+
+
+Wraps POST /api/v2/authorization/policies/targets/{targetName}  
+
+Requires ANY permissions: 
+
+* authorization:policy:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let targetName: String = "" // The domain:entity:action target to which the policy will be applied
+let body: AuthorizationPolicy = new AuthorizationPolicy(...) // Access control policy
+
+// Code example
+AuthorizationAPI.postAuthorizationPoliciesTarget(targetName: targetName, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.postAuthorizationPoliciesTarget was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **targetName** | **String**| The domain:entity:action target to which the policy will be applied | |
+| **body** | [**AuthorizationPolicy**](AuthorizationPolicy)| Access control policy | |
+
+
+### Return type
+
+[**AuthorizationPolicy**](AuthorizationPolicy)
+
+
+## postAuthorizationPoliciesTargetValidate
+
+
+
+> [ValidationErrorListing](ValidationErrorListing) postAuthorizationPoliciesTargetValidate(targetName, body)
+
+Validate the conditions and attributes of an access control policy for a specified resource target
+
+
+
+Wraps POST /api/v2/authorization/policies/targets/{targetName}/validate  
+
+Requires ANY permissions: 
+
+* authorization:policy:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let targetName: String = "" // The domain:entity:action target to which the policy will be applied
+let body: AuthorizationPolicy = new AuthorizationPolicy(...) // Access control policy
+
+// Code example
+AuthorizationAPI.postAuthorizationPoliciesTargetValidate(targetName: targetName, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.postAuthorizationPoliciesTargetValidate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **targetName** | **String**| The domain:entity:action target to which the policy will be applied | |
+| **body** | [**AuthorizationPolicy**](AuthorizationPolicy)| Access control policy | |
+
+
+### Return type
+
+[**ValidationErrorListing**](ValidationErrorListing)
+
+
+## postAuthorizationPolicySimulate
+
+
+
+> [PolicyTestResult](PolicyTestResult) postAuthorizationPolicySimulate(policyId, body)
+
+Simulate a request and evaluate the specified policy ID against the provided values
+
+
+
+Wraps POST /api/v2/authorization/policies/{policyId}/simulate  
+
+Requires ANY permissions: 
+
+* authorization:policy:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let policyId: String = "" // The ID of the policy to test the simulated data against
+let body: PolicyTestPayload = new PolicyTestPayload(...) // A map of attribute names to type and simulated data value
+
+// Code example
+AuthorizationAPI.postAuthorizationPolicySimulate(policyId: policyId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.postAuthorizationPolicySimulate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **policyId** | **String**| The ID of the policy to test the simulated data against | |
+| **body** | [**PolicyTestPayload**](PolicyTestPayload)| A map of attribute names to type and simulated data value | |
+
+
+### Return type
+
+[**PolicyTestResult**](PolicyTestResult)
+
+
 ## postAuthorizationRole
 
 
@@ -2186,6 +2764,111 @@ AuthorizationAPI.putAuthorizationDivision(divisionId: divisionId, body: body) { 
 [**AuthzDivision**](AuthzDivision)
 
 
+## putAuthorizationPoliciesTarget
+
+
+
+> [AuthorizationPolicy](AuthorizationPolicy) putAuthorizationPoliciesTarget(targetName, body)
+
+Add an access control policy for a specified resource target and subject, overwriting any existing policy
+
+
+
+Wraps PUT /api/v2/authorization/policies/targets/{targetName}  
+
+Requires ANY permissions: 
+
+* authorization:policy:edit
+* authorization:policy:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let targetName: String = "" // The domain:entity:action target to which the policy will be applied
+let body: AuthorizationPolicy = new AuthorizationPolicy(...) // Access control policy
+
+// Code example
+AuthorizationAPI.putAuthorizationPoliciesTarget(targetName: targetName, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.putAuthorizationPoliciesTarget was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **targetName** | **String**| The domain:entity:action target to which the policy will be applied | |
+| **body** | [**AuthorizationPolicy**](AuthorizationPolicy)| Access control policy | |
+
+
+### Return type
+
+[**AuthorizationPolicy**](AuthorizationPolicy)
+
+
+## putAuthorizationPolicy
+
+
+
+> [AuthorizationPolicy](AuthorizationPolicy) putAuthorizationPolicy(policyId, body)
+
+Update an access control policy with a given ID
+
+
+
+Wraps PUT /api/v2/authorization/policies/{policyId}  
+
+Requires ANY permissions: 
+
+* authorization:policy:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let policyId: String = "" // The ID of the policy to update
+let body: AuthorizationPolicy = new AuthorizationPolicy(...) // Access control policy
+
+// Code example
+AuthorizationAPI.putAuthorizationPolicy(policyId: policyId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.putAuthorizationPolicy was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **policyId** | **String**| The ID of the policy to update | |
+| **body** | [**AuthorizationPolicy**](AuthorizationPolicy)| Access control policy | |
+
+
+### Return type
+
+[**AuthorizationPolicy**](AuthorizationPolicy)
+
+
 ## putAuthorizationRole
 
 
@@ -2499,4 +3182,4 @@ AuthorizationAPI.putUserRoles(subjectId: subjectId, body: body) { (response, err
 [**UserAuthorization**](UserAuthorization)
 
 
-_PureCloudPlatformClientV2@182.0.0_
+_PureCloudPlatformClientV2@183.0.0_

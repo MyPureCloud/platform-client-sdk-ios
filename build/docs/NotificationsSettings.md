@@ -12,4 +12,4 @@ Notification settings that handles messenger notifications
 
 
 
-_PureCloudPlatformClientV2@182.0.0_
+_PureCloudPlatformClientV2@183.0.0_

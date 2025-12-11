@@ -28,10 +28,9 @@
 | **supportedLanguages** | [**[SupportedLanguage]**]([SupportedLanguage]) | List of supported languages for the published version of the flow. | [optional] |
 | **compatibleFlowTypes** | **[String]** | Compatible flow types designate which flow types are allowed to embed a flow’s configuration within their own flow configuration.  Currently the only flows that can be embedded are Common Module flows and the embedding flow can invoke them using the Call Common Module action. | [optional] |
 | **worktypeId** | **String** |  | [optional] |
-| **virtualAgentEnabled** | **Bool** |  | [optional] |
-| **agenticVirtualAgentEnabled** | **Bool** |  | [optional] |
+| **virtualAgentEnabled** | **Bool** | Indicates whether virtual agent is enabled for this flow. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@182.0.0_
+_PureCloudPlatformClientV2@183.0.0_

@@ -4380,6 +4380,10 @@ open class KnowledgeAPI {
         case viVn = "vi-VN"
         case ukUa = "uk-UA"
         case csCz = "cs-CZ"
+        case filPh = "fil-PH"
+        case msMy = "ms-MY"
+        case heIl = "he-IL"
+        case elGr = "el-GR"
     }
     
     

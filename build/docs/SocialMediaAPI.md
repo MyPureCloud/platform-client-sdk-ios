@@ -682,7 +682,7 @@ SocialMediaAPI.getSocialmediaEscalationrules(divisionId: divisionId, pageNumber:
 
 
 
-> [SocialTopicResponse](SocialTopicResponse) getSocialmediaTopic(topicId, includeDeleted)
+> [SocialTopicWithDataIngestionRuleMetadataResponse](SocialTopicWithDataIngestionRuleMetadataResponse) getSocialmediaTopic(topicId, includeDeleted)
 
 Get a single social topic.
 
@@ -727,7 +727,7 @@ SocialMediaAPI.getSocialmediaTopic(topicId: topicId, includeDeleted: includeDele
 
 ### Return type
 
-[**SocialTopicResponse**](SocialTopicResponse)
+[**SocialTopicWithDataIngestionRuleMetadataResponse**](SocialTopicWithDataIngestionRuleMetadataResponse)
 
 
 ## getSocialmediaTopicDataingestionrules
@@ -1462,7 +1462,7 @@ SocialMediaAPI.getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleI
 
 
 
-> [SocialTopicResponseEntityListing](SocialTopicResponseEntityListing) getSocialmediaTopics(pageNumber, pageSize, divisionIds, includeDeleted)
+> [SocialTopicResponseEntityListing](SocialTopicResponseEntityListing) getSocialmediaTopics(pageNumber, pageSize, divisionIds, includeDeleted, name)
 
 Retrieve all social topics.
 
@@ -1486,9 +1486,10 @@ let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
 let divisionIds: [String] = [""] // One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned.
 let includeDeleted: Bool = true // Determines whether to include soft-deleted items in the result.
+let name: String = "" // Search for topic by name that contains the given search string, search is case insensitive
 
 // Code example
-SocialMediaAPI.getSocialmediaTopics(pageNumber: pageNumber, pageSize: pageSize, divisionIds: divisionIds, includeDeleted: includeDeleted) { (response, error) in
+SocialMediaAPI.getSocialmediaTopics(pageNumber: pageNumber, pageSize: pageSize, divisionIds: divisionIds, includeDeleted: includeDeleted, name: name) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1507,6 +1508,7 @@ SocialMediaAPI.getSocialmediaTopics(pageNumber: pageNumber, pageSize: pageSize, 
 | **pageSize** | **Int**| Page size | [optional] |
 | **divisionIds** | [**[String]**](String)| One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. | [optional] |
 | **includeDeleted** | **Bool**| Determines whether to include soft-deleted items in the result. | [optional] |
+| **name** | **String**| Search for topic by name that contains the given search string, search is case insensitive | [optional] |
 
 
 ### Return type
@@ -2672,4 +2674,4 @@ SocialMediaAPI.putSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleI
 [**TwitterDataIngestionRuleResponse**](TwitterDataIngestionRuleResponse)
 
 
-_PureCloudPlatformClientV2@182.0.0_
+_PureCloudPlatformClientV2@183.0.0_

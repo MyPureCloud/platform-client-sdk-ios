@@ -614,7 +614,7 @@ let filterField: String = "" // Field to filter by (e.g. filterField=weight or f
 let filterValue: String = "" // Value to filter by. Requires 'filterValue' to also be set.
 let actionMapIds: [String] = [""] // IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request.
 let queryFields: [String] = [""] // Action Map field(s) to query on. Requires 'queryValue' to also be set.
-let queryValue: String = "" // Value to query on. Requires 'queryFields' to also be set.
+let queryValue: String = "" // Value to query on using fuzzy matching. Requires 'queryFields' to also be set.
 
 // Code example
 JourneyAPI.getJourneyActionmaps(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, filterField: filterField, filterValue: filterValue, actionMapIds: actionMapIds, queryFields: queryFields, queryValue: queryValue) { (response, error) in
@@ -639,7 +639,7 @@ JourneyAPI.getJourneyActionmaps(pageNumber: pageNumber, pageSize: pageSize, sort
 | **filterValue** | **String**| Value to filter by. Requires 'filterValue' to also be set. | [optional] |
 | **actionMapIds** | [**[String]**](String)| IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. | [optional] |
 | **queryFields** | [**[String]**](String)| Action Map field(s) to query on. Requires 'queryValue' to also be set. | [optional] |
-| **queryValue** | **String**| Value to query on. Requires 'queryFields' to also be set. | [optional] |
+| **queryValue** | **String**| Value to query on using fuzzy matching. Requires 'queryFields' to also be set. | [optional] |
 
 
 ### Return type
@@ -929,7 +929,7 @@ let sortBy: String = "" // Field(s) to sort by. Prefix with '-' for descending (
 let mediaType: JourneyAPI.MediaType_getJourneyActiontemplates = JourneyAPI.MediaType_getJourneyActiontemplates.enummember // Media type
 let state: JourneyAPI.State_getJourneyActiontemplates = JourneyAPI.State_getJourneyActiontemplates.enummember // Action template state.
 let queryFields: [String] = [""] // ActionTemplate field(s) to query on. Requires 'queryValue' to also be set.
-let queryValue: String = "" // Value to query on. Requires 'queryFields' to also be set.
+let queryValue: String = "" // Value to query on using fuzzy matching. Requires 'queryFields' to also be set.
 
 // Code example
 JourneyAPI.getJourneyActiontemplates(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, mediaType: mediaType, state: state, queryFields: queryFields, queryValue: queryValue) { (response, error) in
@@ -953,7 +953,7 @@ JourneyAPI.getJourneyActiontemplates(pageNumber: pageNumber, pageSize: pageSize,
 | **mediaType** | **String**| Media type | [optional]<br />**Values**: webchat ("webchat"), webmessagingoffer ("webMessagingOffer"), contentoffer ("contentOffer"), integrationaction ("integrationAction"), architectflow ("architectFlow"), openaction ("openAction") |
 | **state** | **String**| Action template state. | [optional]<br />**Values**: active ("Active"), inactive ("Inactive"), deleted ("Deleted") |
 | **queryFields** | [**[String]**](String)| ActionTemplate field(s) to query on. Requires 'queryValue' to also be set. | [optional] |
-| **queryValue** | **String**| Value to query on. Requires 'queryFields' to also be set. | [optional] |
+| **queryValue** | **String**| Value to query on using fuzzy matching. Requires 'queryFields' to also be set. | [optional] |
 
 
 ### Return type
@@ -1101,7 +1101,7 @@ let pageSize: Int = 0 // Page size
 let sortBy: String = "" // Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with '-' for descending (e.g. sortBy=displayName,-createdDate).
 let outcomeIds: [String] = [""] // IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request.
 let queryFields: [String] = [""] // Outcome field(s) to query on. Requires 'queryValue' to also be set.
-let queryValue: String = "" // Value to query on. Requires 'queryFields' to also be set.
+let queryValue: String = "" // Value to query on using fuzzy matching. Requires 'queryFields' to also be set.
 
 // Code example
 JourneyAPI.getJourneyOutcomes(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, outcomeIds: outcomeIds, queryFields: queryFields, queryValue: queryValue) { (response, error) in
@@ -1124,7 +1124,7 @@ JourneyAPI.getJourneyOutcomes(pageNumber: pageNumber, pageSize: pageSize, sortBy
 | **sortBy** | **String**| Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with '-' for descending (e.g. sortBy=displayName,-createdDate). | [optional] |
 | **outcomeIds** | [**[String]**](String)| IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. | [optional] |
 | **queryFields** | [**[String]**](String)| Outcome field(s) to query on. Requires 'queryValue' to also be set. | [optional] |
-| **queryValue** | **String**| Value to query on. Requires 'queryFields' to also be set. | [optional] |
+| **queryValue** | **String**| Value to query on using fuzzy matching. Requires 'queryFields' to also be set. | [optional] |
 
 
 ### Return type
@@ -1308,7 +1308,7 @@ let pageNumber: Int = 0 // Page number
 let isActive: Bool = true // Determines whether or not to show only active segments.
 let segmentIds: [String] = [""] // IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request.
 let queryFields: [String] = [""] // Segment field(s) to query on. Requires 'queryValue' to also be set.
-let queryValue: String = "" // Value to query on. Requires 'queryFields' to also be set.
+let queryValue: String = "" // Value to query on using fuzzy matching. Requires 'queryFields' to also be set.
 
 // Code example
 JourneyAPI.getJourneySegments(sortBy: sortBy, pageSize: pageSize, pageNumber: pageNumber, isActive: isActive, segmentIds: segmentIds, queryFields: queryFields, queryValue: queryValue) { (response, error) in
@@ -1332,7 +1332,7 @@ JourneyAPI.getJourneySegments(sortBy: sortBy, pageSize: pageSize, pageNumber: pa
 | **isActive** | **Bool**| Determines whether or not to show only active segments. | [optional] |
 | **segmentIds** | [**[String]**](String)| IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. | [optional] |
 | **queryFields** | [**[String]**](String)| Segment field(s) to query on. Requires 'queryValue' to also be set. | [optional] |
-| **queryValue** | **String**| Value to query on. Requires 'queryFields' to also be set. | [optional] |
+| **queryValue** | **String**| Value to query on using fuzzy matching. Requires 'queryFields' to also be set. | [optional] |
 
 
 ### Return type
@@ -3632,4 +3632,4 @@ JourneyAPI.putJourneyViewVersion(viewId: viewId, versionId: versionId, body: bod
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatformClientV2@182.0.0_
+_PureCloudPlatformClientV2@183.0.0_

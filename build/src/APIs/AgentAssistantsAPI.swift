@@ -161,6 +161,51 @@ open class AgentAssistantsAPI {
 
     
     
+    /**
+     Delete an agent checklist
+     
+     - parameter agentChecklistId: (path) Agent Checklist ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteAssistantsAgentchecklist(agentChecklistId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteAssistantsAgentchecklistWithRequestBuilder(agentChecklistId: agentChecklistId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete an agent checklist
+     - DELETE /api/v2/assistants/agentchecklists/{agentChecklistId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter agentChecklistId: (path) Agent Checklist ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteAssistantsAgentchecklistWithRequestBuilder(agentChecklistId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/assistants/agentchecklists/{agentChecklistId}"
+        let agentChecklistIdPreEscape = "\(agentChecklistId)"
+        let agentChecklistIdPostEscape = agentChecklistIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentChecklistId}", with: agentChecklistIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     public enum Expand_getAssistant: String { 
         case copilot = "copilot"
@@ -521,6 +566,340 @@ open class AgentAssistantsAPI {
         ])
 
         let requestBuilder: RequestBuilder<AssistantListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get an agent checklist
+     
+     - parameter agentChecklistId: (path) Agent Checklist ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAssistantsAgentchecklist(agentChecklistId: String, completion: @escaping ((_ data: AgentChecklist?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAssistantsAgentchecklistWithRequestBuilder(agentChecklistId: agentChecklistId)
+        requestBuilder.execute { (response: Response<AgentChecklist>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an agent checklist
+     - GET /api/v2/assistants/agentchecklists/{agentChecklistId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "checklistItems" : [ {
+    "important" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "automatedCheckEnabled" : true
+  }, {
+    "important" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "automatedCheckEnabled" : true
+  }, {
+    "important" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "automatedCheckEnabled" : true
+  }, {
+    "important" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "automatedCheckEnabled" : true
+  }, {
+    "important" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "automatedCheckEnabled" : true
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "language" : "language",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter agentChecklistId: (path) Agent Checklist ID 
+
+     - returns: RequestBuilder<AgentChecklist> 
+     */
+    open class func getAssistantsAgentchecklistWithRequestBuilder(agentChecklistId: String) -> RequestBuilder<AgentChecklist> {        
+        var path = "/api/v2/assistants/agentchecklists/{agentChecklistId}"
+        let agentChecklistIdPreEscape = "\(agentChecklistId)"
+        let agentChecklistIdPostEscape = agentChecklistIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentChecklistId}", with: agentChecklistIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentChecklist>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum SortOrder_getAssistantsAgentchecklists: String { 
+        case asc = "asc"
+        case desc = "desc"
+    }
+    
+    
+    
+    public enum SortBy_getAssistantsAgentchecklists: String { 
+        case datemodified = "dateModified"
+        case language = "language"
+        case name = "name"
+    }
+    
+    
+    /**
+     Get the list of agent checklists
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 100. (optional)
+     - parameter namePrefix: (query) The agent checklist name prefix filter applied to the listing. (optional)
+     - parameter language: (query) The agent checklist language filter applied to the listing. (optional)
+     - parameter sortOrder: (query) The sort order for the listing (optional)
+     - parameter sortBy: (query) The field to sort by for the listing. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAssistantsAgentchecklists(before: String? = nil, after: String? = nil, pageSize: String? = nil, namePrefix: String? = nil, language: String? = nil, sortOrder: SortOrder_getAssistantsAgentchecklists? = nil, sortBy: SortBy_getAssistantsAgentchecklists? = nil, completion: @escaping ((_ data: AgentChecklistListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAssistantsAgentchecklistsWithRequestBuilder(before: before, after: after, pageSize: pageSize, namePrefix: namePrefix, language: language, sortOrder: sortOrder, sortBy: sortBy)
+        requestBuilder.execute { (response: Response<AgentChecklistListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the list of agent checklists
+     - GET /api/v2/assistants/agentchecklists
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "checklistItems" : [ {
+      "important" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "automatedCheckEnabled" : true
+    }, {
+      "important" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "automatedCheckEnabled" : true
+    }, {
+      "important" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "automatedCheckEnabled" : true
+    }, {
+      "important" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "automatedCheckEnabled" : true
+    }, {
+      "important" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "automatedCheckEnabled" : true
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "language" : "language",
+    "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "checklistItems" : [ {
+      "important" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "automatedCheckEnabled" : true
+    }, {
+      "important" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "automatedCheckEnabled" : true
+    }, {
+      "important" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "automatedCheckEnabled" : true
+    }, {
+      "important" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "automatedCheckEnabled" : true
+    }, {
+      "important" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "automatedCheckEnabled" : true
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "language" : "language",
+    "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 100. (optional)
+     - parameter namePrefix: (query) The agent checklist name prefix filter applied to the listing. (optional)
+     - parameter language: (query) The agent checklist language filter applied to the listing. (optional)
+     - parameter sortOrder: (query) The sort order for the listing (optional)
+     - parameter sortBy: (query) The field to sort by for the listing. (optional)
+
+     - returns: RequestBuilder<AgentChecklistListing> 
+     */
+    open class func getAssistantsAgentchecklistsWithRequestBuilder(before: String? = nil, after: String? = nil, pageSize: String? = nil, namePrefix: String? = nil, language: String? = nil, sortOrder: SortOrder_getAssistantsAgentchecklists? = nil, sortBy: SortBy_getAssistantsAgentchecklists? = nil) -> RequestBuilder<AgentChecklistListing> {        
+        let path = "/api/v2/assistants/agentchecklists"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize, 
+            "namePrefix": namePrefix, 
+            "language": language, 
+            "sortOrder": sortOrder?.rawValue, 
+            "sortBy": sortBy?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<AgentChecklistListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get the list of supported languages
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAssistantsAgentchecklistsLanguages(completion: @escaping ((_ data: EntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAssistantsAgentchecklistsLanguagesWithRequestBuilder()
+        requestBuilder.execute { (response: Response<EntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the list of supported languages
+     - GET /api/v2/assistants/agentchecklists/languages
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ "{}", "{}" ]
+}, statusCode=200}]
+
+     - returns: RequestBuilder<EntityListing> 
+     */
+    open class func getAssistantsAgentchecklistsLanguagesWithRequestBuilder() -> RequestBuilder<EntityListing> {        
+        let path = "/api/v2/assistants/agentchecklists/languages"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1065,6 +1444,101 @@ open class AgentAssistantsAPI {
 
     
     
+    /**
+     Create an agent checklist
+     
+     - parameter body: (body) Request body containing details of checklist to be added 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAssistantsAgentchecklists(body: AgentChecklist, completion: @escaping ((_ data: AgentChecklist?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAssistantsAgentchecklistsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AgentChecklist>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create an agent checklist
+     - POST /api/v2/assistants/agentchecklists
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "checklistItems" : [ {
+    "important" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "automatedCheckEnabled" : true
+  }, {
+    "important" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "automatedCheckEnabled" : true
+  }, {
+    "important" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "automatedCheckEnabled" : true
+  }, {
+    "important" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "automatedCheckEnabled" : true
+  }, {
+    "important" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "automatedCheckEnabled" : true
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "language" : "language",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter body: (body) Request body containing details of checklist to be added 
+
+     - returns: RequestBuilder<AgentChecklist> 
+     */
+    open class func postAssistantsAgentchecklistsWithRequestBuilder(body: AgentChecklist) -> RequestBuilder<AgentChecklist> {        
+        let path = "/api/v2/assistants/agentchecklists"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentChecklist>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     
@@ -1130,6 +1604,108 @@ open class AgentAssistantsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AssistantQueue>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update an agent checklist
+     
+     - parameter agentChecklistId: (path) Agent Checklist ID 
+     - parameter body: (body) Request body containing details of checklist to be updated 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putAssistantsAgentchecklist(agentChecklistId: String, body: AgentChecklist, completion: @escaping ((_ data: AgentChecklist?,_ error: Error?) -> Void)) {
+        let requestBuilder = putAssistantsAgentchecklistWithRequestBuilder(agentChecklistId: agentChecklistId, body: body)
+        requestBuilder.execute { (response: Response<AgentChecklist>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an agent checklist
+     - PUT /api/v2/assistants/agentchecklists/{agentChecklistId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "checklistItems" : [ {
+    "important" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "automatedCheckEnabled" : true
+  }, {
+    "important" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "automatedCheckEnabled" : true
+  }, {
+    "important" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "automatedCheckEnabled" : true
+  }, {
+    "important" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "automatedCheckEnabled" : true
+  }, {
+    "important" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "automatedCheckEnabled" : true
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "language" : "language",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter agentChecklistId: (path) Agent Checklist ID 
+     - parameter body: (body) Request body containing details of checklist to be updated 
+
+     - returns: RequestBuilder<AgentChecklist> 
+     */
+    open class func putAssistantsAgentchecklistWithRequestBuilder(agentChecklistId: String, body: AgentChecklist) -> RequestBuilder<AgentChecklist> {        
+        var path = "/api/v2/assistants/agentchecklists/{agentChecklistId}"
+        let agentChecklistIdPreEscape = "\(agentChecklistId)"
+        let agentChecklistIdPostEscape = agentChecklistIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentChecklistId}", with: agentChecklistIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentChecklist>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

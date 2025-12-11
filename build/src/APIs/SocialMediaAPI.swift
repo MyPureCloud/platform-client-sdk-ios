@@ -1331,8 +1331,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter divisionId: (query) One division ID 
@@ -1369,9 +1369,9 @@ open class SocialMediaAPI {
      - parameter includeDeleted: (query) Determines whether to include soft-deleted items in the result. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSocialmediaTopic(topicId: String, includeDeleted: Bool? = nil, completion: @escaping ((_ data: SocialTopicResponse?,_ error: Error?) -> Void)) {
+    open class func getSocialmediaTopic(topicId: String, includeDeleted: Bool? = nil, completion: @escaping ((_ data: SocialTopicWithDataIngestionRuleMetadataResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = getSocialmediaTopicWithRequestBuilder(topicId: topicId, includeDeleted: includeDeleted)
-        requestBuilder.execute { (response: Response<SocialTopicResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<SocialTopicWithDataIngestionRuleMetadataResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1420,9 +1420,9 @@ open class SocialMediaAPI {
      - parameter topicId: (path) topicId 
      - parameter includeDeleted: (query) Determines whether to include soft-deleted items in the result. (optional)
 
-     - returns: RequestBuilder<SocialTopicResponse> 
+     - returns: RequestBuilder<SocialTopicWithDataIngestionRuleMetadataResponse> 
      */
-    open class func getSocialmediaTopicWithRequestBuilder(topicId: String, includeDeleted: Bool? = nil) -> RequestBuilder<SocialTopicResponse> {        
+    open class func getSocialmediaTopicWithRequestBuilder(topicId: String, includeDeleted: Bool? = nil) -> RequestBuilder<SocialTopicWithDataIngestionRuleMetadataResponse> {        
         var path = "/api/v2/socialmedia/topics/{topicId}"
         let topicIdPreEscape = "\(topicId)"
         let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1435,7 +1435,7 @@ open class SocialMediaAPI {
             "includeDeleted": includeDeleted
         ])
 
-        let requestBuilder: RequestBuilder<SocialTopicResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SocialTopicWithDataIngestionRuleMetadataResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1512,8 +1512,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -1785,8 +1785,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -2062,8 +2062,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -2339,8 +2339,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -2616,8 +2616,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter topicId: (path) topicId 
@@ -2659,6 +2659,8 @@ open class SocialMediaAPI {
     
     
     
+    
+    
     /**
      Retrieve all social topics.
      
@@ -2666,10 +2668,11 @@ open class SocialMediaAPI {
      - parameter pageSize: (query) Page size (optional)
      - parameter divisionIds: (query) One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. (optional)
      - parameter includeDeleted: (query) Determines whether to include soft-deleted items in the result. (optional)
+     - parameter name: (query) Search for topic by name that contains the given search string, search is case insensitive (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSocialmediaTopics(pageNumber: Int? = nil, pageSize: Int? = nil, divisionIds: [String]? = nil, includeDeleted: Bool? = nil, completion: @escaping ((_ data: SocialTopicResponseEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getSocialmediaTopicsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, divisionIds: divisionIds, includeDeleted: includeDeleted)
+    open class func getSocialmediaTopics(pageNumber: Int? = nil, pageSize: Int? = nil, divisionIds: [String]? = nil, includeDeleted: Bool? = nil, name: String? = nil, completion: @escaping ((_ data: SocialTopicResponseEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSocialmediaTopicsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, divisionIds: divisionIds, includeDeleted: includeDeleted, name: name)
         requestBuilder.execute { (response: Response<SocialTopicResponseEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -2698,19 +2701,6 @@ open class SocialMediaAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "dataIngestionRulesMetadata" : [ {
-      "countByStatus" : {
-        "key" : 0
-      },
-      "totalCount" : 6,
-      "platform" : "platform"
-    }, {
-      "countByStatus" : {
-        "key" : 0
-      },
-      "totalCount" : 6,
-      "platform" : "platform"
-    } ],
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
@@ -2720,19 +2710,6 @@ open class SocialMediaAPI {
     "status" : "Active"
   }, {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "dataIngestionRulesMetadata" : [ {
-      "countByStatus" : {
-        "key" : 0
-      },
-      "totalCount" : 6,
-      "platform" : "platform"
-    }, {
-      "countByStatus" : {
-        "key" : 0
-      },
-      "totalCount" : 6,
-      "platform" : "platform"
-    } ],
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
@@ -2745,18 +2722,19 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter divisionIds: (query) One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. (optional)
      - parameter includeDeleted: (query) Determines whether to include soft-deleted items in the result. (optional)
+     - parameter name: (query) Search for topic by name that contains the given search string, search is case insensitive (optional)
 
      - returns: RequestBuilder<SocialTopicResponseEntityListing> 
      */
-    open class func getSocialmediaTopicsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, divisionIds: [String]? = nil, includeDeleted: Bool? = nil) -> RequestBuilder<SocialTopicResponseEntityListing> {        
+    open class func getSocialmediaTopicsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, divisionIds: [String]? = nil, includeDeleted: Bool? = nil, name: String? = nil) -> RequestBuilder<SocialTopicResponseEntityListing> {        
         let path = "/api/v2/socialmedia/topics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -2766,7 +2744,8 @@ open class SocialMediaAPI {
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "divisionIds": divisionIds, 
-            "includeDeleted": includeDeleted
+            "includeDeleted": includeDeleted, 
+            "name": name
         ])
 
         let requestBuilder: RequestBuilder<SocialTopicResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2811,19 +2790,6 @@ open class SocialMediaAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "dataIngestionRulesMetadata" : [ {
-    "countByStatus" : {
-      "key" : 0
-    },
-    "totalCount" : 6,
-    "platform" : "platform"
-  }, {
-    "countByStatus" : {
-      "key" : 0
-    },
-    "totalCount" : 6,
-    "platform" : "platform"
-  } ],
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "description" : "description",
@@ -3683,8 +3649,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=202}]
      
      - parameter topicId: (path) Topic ID 
@@ -3801,8 +3767,8 @@ open class SocialMediaAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=202}]
      
      - parameter topicId: (path) Topic ID 
@@ -3932,19 +3898,6 @@ open class SocialMediaAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "dataIngestionRulesMetadata" : [ {
-    "countByStatus" : {
-      "key" : 0
-    },
-    "totalCount" : 6,
-    "platform" : "platform"
-  }, {
-    "countByStatus" : {
-      "key" : 0
-    },
-    "totalCount" : 6,
-    "platform" : "platform"
-  } ],
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "description" : "description",

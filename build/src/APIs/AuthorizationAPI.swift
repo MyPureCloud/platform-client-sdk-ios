@@ -64,6 +64,58 @@ open class AuthorizationAPI {
 
     
     
+    
+    
+    /**
+     Delete an access control policy
+     
+     - parameter targetName: (path) The domain:entity:action target to which the policy is applied 
+     - parameter subjectId: (path) The ID of the subject to which the policy is applied 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteAuthorizationPoliciesTargetSubjectSubjectId(targetName: String, subjectId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteAuthorizationPoliciesTargetSubjectSubjectIdWithRequestBuilder(targetName: targetName, subjectId: subjectId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete an access control policy
+     - DELETE /api/v2/authorization/policies/targets/{targetName}/subject/{subjectId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter targetName: (path) The domain:entity:action target to which the policy is applied 
+     - parameter subjectId: (path) The ID of the subject to which the policy is applied 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteAuthorizationPoliciesTargetSubjectSubjectIdWithRequestBuilder(targetName: String, subjectId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/authorization/policies/targets/{targetName}/subject/{subjectId}"
+        let targetNamePreEscape = "\(targetName)"
+        let targetNamePostEscape = targetNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{targetName}", with: targetNamePostEscape, options: .literal, range: nil)
+        let subjectIdPreEscape = "\(subjectId)"
+        let subjectIdPostEscape = subjectIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{subjectId}", with: subjectIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Delete an organization role.
      
@@ -453,8 +505,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -554,8 +606,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -909,8 +961,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
@@ -1006,8 +1058,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter subjectId: (path) Subject ID (user or group) 
@@ -1137,8 +1189,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -1162,6 +1214,605 @@ open class AuthorizationAPI {
         ])
 
         let requestBuilder: RequestBuilder<PermissionCollectionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a page of access policies for an organization
+     
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAuthorizationPolicies(after: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: AuthorizationPolicyEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationPoliciesWithRequestBuilder(after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<AuthorizationPolicyEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a page of access policies for an organization
+     - GET /api/v2/authorization/policies
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "condition" : "{}",
+    "subject" : "{}",
+    "effect" : "ALLOW",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "targetResource" : "targetResource",
+    "description" : "description",
+    "active" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "presetAttributes" : {
+      "key" : {
+        "type" : "type",
+        "value" : "value"
+      }
+    }
+  }, {
+    "condition" : "{}",
+    "subject" : "{}",
+    "effect" : "ALLOW",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "targetResource" : "targetResource",
+    "description" : "description",
+    "active" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "presetAttributes" : {
+      "key" : {
+        "type" : "type",
+        "value" : "value"
+      }
+    }
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+
+     - returns: RequestBuilder<AuthorizationPolicyEntityListing> 
+     */
+    open class func getAuthorizationPoliciesWithRequestBuilder(after: String? = nil, pageSize: Int? = nil) -> RequestBuilder<AuthorizationPolicyEntityListing> {        
+        let path = "/api/v2/authorization/policies"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<AuthorizationPolicyEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get a page of access policies for a given subject
+     
+     - parameter subjectId: (path) The ID of the subject to which policies are applied 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAuthorizationPoliciesSubjectSubjectId(subjectId: String, after: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: AuthorizationPolicyEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationPoliciesSubjectSubjectIdWithRequestBuilder(subjectId: subjectId, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<AuthorizationPolicyEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a page of access policies for a given subject
+     - GET /api/v2/authorization/policies/subject/{subjectId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "condition" : "{}",
+    "subject" : "{}",
+    "effect" : "ALLOW",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "targetResource" : "targetResource",
+    "description" : "description",
+    "active" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "presetAttributes" : {
+      "key" : {
+        "type" : "type",
+        "value" : "value"
+      }
+    }
+  }, {
+    "condition" : "{}",
+    "subject" : "{}",
+    "effect" : "ALLOW",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "targetResource" : "targetResource",
+    "description" : "description",
+    "active" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "presetAttributes" : {
+      "key" : {
+        "type" : "type",
+        "value" : "value"
+      }
+    }
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter subjectId: (path) The ID of the subject to which policies are applied 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+
+     - returns: RequestBuilder<AuthorizationPolicyEntityListing> 
+     */
+    open class func getAuthorizationPoliciesSubjectSubjectIdWithRequestBuilder(subjectId: String, after: String? = nil, pageSize: Int? = nil) -> RequestBuilder<AuthorizationPolicyEntityListing> {        
+        var path = "/api/v2/authorization/policies/subject/{subjectId}"
+        let subjectIdPreEscape = "\(subjectId)"
+        let subjectIdPostEscape = subjectIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{subjectId}", with: subjectIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<AuthorizationPolicyEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get a page of access policies for a given policy target
+     
+     - parameter targetName: (path) The domain:entity:action resource target to which policies are applied 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAuthorizationPoliciesTarget(targetName: String, after: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: AuthorizationPolicyEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationPoliciesTargetWithRequestBuilder(targetName: targetName, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<AuthorizationPolicyEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a page of access policies for a given policy target
+     - GET /api/v2/authorization/policies/targets/{targetName}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "condition" : "{}",
+    "subject" : "{}",
+    "effect" : "ALLOW",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "targetResource" : "targetResource",
+    "description" : "description",
+    "active" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "presetAttributes" : {
+      "key" : {
+        "type" : "type",
+        "value" : "value"
+      }
+    }
+  }, {
+    "condition" : "{}",
+    "subject" : "{}",
+    "effect" : "ALLOW",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "targetResource" : "targetResource",
+    "description" : "description",
+    "active" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "presetAttributes" : {
+      "key" : {
+        "type" : "type",
+        "value" : "value"
+      }
+    }
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter targetName: (path) The domain:entity:action resource target to which policies are applied 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+
+     - returns: RequestBuilder<AuthorizationPolicyEntityListing> 
+     */
+    open class func getAuthorizationPoliciesTargetWithRequestBuilder(targetName: String, after: String? = nil, pageSize: Int? = nil) -> RequestBuilder<AuthorizationPolicyEntityListing> {        
+        var path = "/api/v2/authorization/policies/targets/{targetName}"
+        let targetNamePreEscape = "\(targetName)"
+        let targetNamePostEscape = targetNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{targetName}", with: targetNamePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<AuthorizationPolicyEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get an access control policy for a specified resource target and subject
+     
+     - parameter targetName: (path) The domain:entity:action resource target to which the policy is applied 
+     - parameter subjectId: (path) The ID of the subject to which the policy is applied 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAuthorizationPoliciesTargetSubjectSubjectId(targetName: String, subjectId: String, completion: @escaping ((_ data: AuthorizationPolicy?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationPoliciesTargetSubjectSubjectIdWithRequestBuilder(targetName: targetName, subjectId: subjectId)
+        requestBuilder.execute { (response: Response<AuthorizationPolicy>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an access control policy for a specified resource target and subject
+     - GET /api/v2/authorization/policies/targets/{targetName}/subject/{subjectId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "condition" : "{}",
+  "subject" : "{}",
+  "effect" : "ALLOW",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "targetResource" : "targetResource",
+  "description" : "description",
+  "active" : true,
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "presetAttributes" : {
+    "key" : {
+      "type" : "type",
+      "value" : "value"
+    }
+  }
+}, statusCode=200}]
+     
+     - parameter targetName: (path) The domain:entity:action resource target to which the policy is applied 
+     - parameter subjectId: (path) The ID of the subject to which the policy is applied 
+
+     - returns: RequestBuilder<AuthorizationPolicy> 
+     */
+    open class func getAuthorizationPoliciesTargetSubjectSubjectIdWithRequestBuilder(targetName: String, subjectId: String) -> RequestBuilder<AuthorizationPolicy> {        
+        var path = "/api/v2/authorization/policies/targets/{targetName}/subject/{subjectId}"
+        let targetNamePreEscape = "\(targetName)"
+        let targetNamePostEscape = targetNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{targetName}", with: targetNamePostEscape, options: .literal, range: nil)
+        let subjectIdPreEscape = "\(subjectId)"
+        let subjectIdPostEscape = subjectIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{subjectId}", with: subjectIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AuthorizationPolicy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get a map of policy targets to valid attributes for those targets
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAuthorizationPoliciesTargets(completion: @escaping ((_ data: TargetAttributes?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationPoliciesTargetsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<TargetAttributes>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a map of policy targets to valid attributes for those targets
+     - GET /api/v2/authorization/policies/targets
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "targetAttributes" : {
+    "key" : {
+      "policyAttributes" : [ {
+        "featureToggle" : "featureToggle",
+        "name" : "name",
+        "description" : "description",
+        "type" : "BOOLEAN"
+      }, {
+        "featureToggle" : "featureToggle",
+        "name" : "name",
+        "description" : "description",
+        "type" : "BOOLEAN"
+      } ],
+      "description" : "description"
+    }
+  },
+  "baseAttributes" : [ {
+    "featureToggle" : "featureToggle",
+    "name" : "name",
+    "description" : "description",
+    "type" : "BOOLEAN"
+  }, {
+    "featureToggle" : "featureToggle",
+    "name" : "name",
+    "description" : "description",
+    "type" : "BOOLEAN"
+  } ]
+}, statusCode=200}]
+
+     - returns: RequestBuilder<TargetAttributes> 
+     */
+    open class func getAuthorizationPoliciesTargetsWithRequestBuilder() -> RequestBuilder<TargetAttributes> {        
+        let path = "/api/v2/authorization/policies/targets"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TargetAttributes>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get an access control policy with the specified policy ID
+     
+     - parameter policyId: (path) The ID of the policy to retrieve 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAuthorizationPolicy(policyId: String, completion: @escaping ((_ data: AuthorizationPolicy?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationPolicyWithRequestBuilder(policyId: policyId)
+        requestBuilder.execute { (response: Response<AuthorizationPolicy>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an access control policy with the specified policy ID
+     - GET /api/v2/authorization/policies/{policyId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "condition" : "{}",
+  "subject" : "{}",
+  "effect" : "ALLOW",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "targetResource" : "targetResource",
+  "description" : "description",
+  "active" : true,
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "presetAttributes" : {
+    "key" : {
+      "type" : "type",
+      "value" : "value"
+    }
+  }
+}, statusCode=200}]
+     
+     - parameter policyId: (path) The ID of the policy to retrieve 
+
+     - returns: RequestBuilder<AuthorizationPolicy> 
+     */
+    open class func getAuthorizationPolicyWithRequestBuilder(policyId: String) -> RequestBuilder<AuthorizationPolicy> {        
+        var path = "/api/v2/authorization/policies/{policyId}"
+        let policyIdPreEscape = "\(policyId)"
+        let policyIdPostEscape = policyIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{policyId}", with: policyIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AuthorizationPolicy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get the list of attributes used to evaluate an access control policy with the specified policy ID
+     
+     - parameter policyId: (path) The ID of the policy to retrieve attributes 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAuthorizationPolicyAttributes(policyId: String, completion: @escaping ((_ data: PolicyAttributeSet?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationPolicyAttributesWithRequestBuilder(policyId: policyId)
+        requestBuilder.execute { (response: Response<PolicyAttributeSet>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the list of attributes used to evaluate an access control policy with the specified policy ID
+     - GET /api/v2/authorization/policies/{policyId}/attributes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "policyAttributes" : [ {
+    "featureToggle" : "featureToggle",
+    "name" : "name",
+    "description" : "description",
+    "type" : "BOOLEAN"
+  }, {
+    "featureToggle" : "featureToggle",
+    "name" : "name",
+    "description" : "description",
+    "type" : "BOOLEAN"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "presetAttributes" : {
+    "key" : {
+      "type" : "type",
+      "value" : "value"
+    }
+  }
+}, statusCode=200}]
+     
+     - parameter policyId: (path) The ID of the policy to retrieve attributes 
+
+     - returns: RequestBuilder<PolicyAttributeSet> 
+     */
+    open class func getAuthorizationPolicyAttributesWithRequestBuilder(policyId: String) -> RequestBuilder<PolicyAttributeSet> {        
+        var path = "/api/v2/authorization/policies/{policyId}/attributes"
+        let policyIdPreEscape = "\(policyId)"
+        let policyIdPostEscape = policyIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{policyId}", with: policyIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PolicyAttributeSet>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -11683,8 +12334,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter roleId: (path) Role ID 
@@ -15297,8 +15948,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -17895,6 +18546,219 @@ open class AuthorizationAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AuthzDivision>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Add an access control policy for a specified resource target and subject
+     
+     - parameter targetName: (path) The domain:entity:action target to which the policy will be applied 
+     - parameter body: (body) Access control policy 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAuthorizationPoliciesTarget(targetName: String, body: AuthorizationPolicy, completion: @escaping ((_ data: AuthorizationPolicy?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAuthorizationPoliciesTargetWithRequestBuilder(targetName: targetName, body: body)
+        requestBuilder.execute { (response: Response<AuthorizationPolicy>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add an access control policy for a specified resource target and subject
+     - POST /api/v2/authorization/policies/targets/{targetName}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "condition" : "{}",
+  "subject" : "{}",
+  "effect" : "ALLOW",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "targetResource" : "targetResource",
+  "description" : "description",
+  "active" : true,
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "presetAttributes" : {
+    "key" : {
+      "type" : "type",
+      "value" : "value"
+    }
+  }
+}, statusCode=200}]
+     
+     - parameter targetName: (path) The domain:entity:action target to which the policy will be applied 
+     - parameter body: (body) Access control policy 
+
+     - returns: RequestBuilder<AuthorizationPolicy> 
+     */
+    open class func postAuthorizationPoliciesTargetWithRequestBuilder(targetName: String, body: AuthorizationPolicy) -> RequestBuilder<AuthorizationPolicy> {        
+        var path = "/api/v2/authorization/policies/targets/{targetName}"
+        let targetNamePreEscape = "\(targetName)"
+        let targetNamePostEscape = targetNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{targetName}", with: targetNamePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AuthorizationPolicy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Validate the conditions and attributes of an access control policy for a specified resource target
+     
+     - parameter targetName: (path) The domain:entity:action target to which the policy will be applied 
+     - parameter body: (body) Access control policy 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAuthorizationPoliciesTargetValidate(targetName: String, body: AuthorizationPolicy, completion: @escaping ((_ data: ValidationErrorListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAuthorizationPoliciesTargetValidateWithRequestBuilder(targetName: targetName, body: body)
+        requestBuilder.execute { (response: Response<ValidationErrorListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Validate the conditions and attributes of an access control policy for a specified resource target
+     - POST /api/v2/authorization/policies/targets/{targetName}/validate
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "errorType" : "errorType",
+    "arguments" : {
+      "key" : "arguments"
+    },
+    "message" : "message"
+  }, {
+    "errorType" : "errorType",
+    "arguments" : {
+      "key" : "arguments"
+    },
+    "message" : "message"
+  } ]
+}, statusCode=200}]
+     
+     - parameter targetName: (path) The domain:entity:action target to which the policy will be applied 
+     - parameter body: (body) Access control policy 
+
+     - returns: RequestBuilder<ValidationErrorListing> 
+     */
+    open class func postAuthorizationPoliciesTargetValidateWithRequestBuilder(targetName: String, body: AuthorizationPolicy) -> RequestBuilder<ValidationErrorListing> {        
+        var path = "/api/v2/authorization/policies/targets/{targetName}/validate"
+        let targetNamePreEscape = "\(targetName)"
+        let targetNamePostEscape = targetNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{targetName}", with: targetNamePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ValidationErrorListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Simulate a request and evaluate the specified policy ID against the provided values
+     
+     - parameter policyId: (path) The ID of the policy to test the simulated data against 
+     - parameter body: (body) A map of attribute names to type and simulated data value 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAuthorizationPolicySimulate(policyId: String, body: PolicyTestPayload, completion: @escaping ((_ data: PolicyTestResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAuthorizationPolicySimulateWithRequestBuilder(policyId: policyId, body: body)
+        requestBuilder.execute { (response: Response<PolicyTestResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Simulate a request and evaluate the specified policy ID against the provided values
+     - POST /api/v2/authorization/policies/{policyId}/simulate
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "result",
+  "policyConditionResults" : [ {
+    "result" : true,
+    "name" : "name"
+  }, {
+    "result" : true,
+    "name" : "name"
+  } ],
+  "name" : "name",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter policyId: (path) The ID of the policy to test the simulated data against 
+     - parameter body: (body) A map of attribute names to type and simulated data value 
+
+     - returns: RequestBuilder<PolicyTestResult> 
+     */
+    open class func postAuthorizationPolicySimulateWithRequestBuilder(policyId: String, body: PolicyTestPayload) -> RequestBuilder<PolicyTestResult> {        
+        var path = "/api/v2/authorization/policies/{policyId}/simulate"
+        let policyIdPreEscape = "\(policyId)"
+        let policyIdPostEscape = policyIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{policyId}", with: policyIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PolicyTestResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -31782,8 +32646,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter force: (query) Restore default roles (optional)
@@ -32095,6 +32959,154 @@ open class AuthorizationAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AuthzDivision>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Add an access control policy for a specified resource target and subject, overwriting any existing policy
+     
+     - parameter targetName: (path) The domain:entity:action target to which the policy will be applied 
+     - parameter body: (body) Access control policy 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putAuthorizationPoliciesTarget(targetName: String, body: AuthorizationPolicy, completion: @escaping ((_ data: AuthorizationPolicy?,_ error: Error?) -> Void)) {
+        let requestBuilder = putAuthorizationPoliciesTargetWithRequestBuilder(targetName: targetName, body: body)
+        requestBuilder.execute { (response: Response<AuthorizationPolicy>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add an access control policy for a specified resource target and subject, overwriting any existing policy
+     - PUT /api/v2/authorization/policies/targets/{targetName}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "condition" : "{}",
+  "subject" : "{}",
+  "effect" : "ALLOW",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "targetResource" : "targetResource",
+  "description" : "description",
+  "active" : true,
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "presetAttributes" : {
+    "key" : {
+      "type" : "type",
+      "value" : "value"
+    }
+  }
+}, statusCode=200}]
+     
+     - parameter targetName: (path) The domain:entity:action target to which the policy will be applied 
+     - parameter body: (body) Access control policy 
+
+     - returns: RequestBuilder<AuthorizationPolicy> 
+     */
+    open class func putAuthorizationPoliciesTargetWithRequestBuilder(targetName: String, body: AuthorizationPolicy) -> RequestBuilder<AuthorizationPolicy> {        
+        var path = "/api/v2/authorization/policies/targets/{targetName}"
+        let targetNamePreEscape = "\(targetName)"
+        let targetNamePostEscape = targetNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{targetName}", with: targetNamePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AuthorizationPolicy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update an access control policy with a given ID
+     
+     - parameter policyId: (path) The ID of the policy to update 
+     - parameter body: (body) Access control policy 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putAuthorizationPolicy(policyId: String, body: AuthorizationPolicy, completion: @escaping ((_ data: AuthorizationPolicy?,_ error: Error?) -> Void)) {
+        let requestBuilder = putAuthorizationPolicyWithRequestBuilder(policyId: policyId, body: body)
+        requestBuilder.execute { (response: Response<AuthorizationPolicy>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an access control policy with a given ID
+     - PUT /api/v2/authorization/policies/{policyId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "condition" : "{}",
+  "subject" : "{}",
+  "effect" : "ALLOW",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "targetResource" : "targetResource",
+  "description" : "description",
+  "active" : true,
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "presetAttributes" : {
+    "key" : {
+      "type" : "type",
+      "value" : "value"
+    }
+  }
+}, statusCode=200}]
+     
+     - parameter policyId: (path) The ID of the policy to update 
+     - parameter body: (body) Access control policy 
+
+     - returns: RequestBuilder<AuthorizationPolicy> 
+     */
+    open class func putAuthorizationPolicyWithRequestBuilder(policyId: String, body: AuthorizationPolicy) -> RequestBuilder<AuthorizationPolicy> {        
+        var path = "/api/v2/authorization/policies/{policyId}"
+        let policyIdPreEscape = "\(policyId)"
+        let policyIdPostEscape = policyIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{policyId}", with: policyIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AuthorizationPolicy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
@@ -37454,8 +38466,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter body: (body) Organization roles list 

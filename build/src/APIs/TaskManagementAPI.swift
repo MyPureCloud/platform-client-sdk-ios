@@ -2697,6 +2697,7 @@ open class TaskManagementAPI {
   "defaultExpirationSeconds" : 6,
   "defaultScript" : "{}",
   "name" : "name",
+  "unassignedDivisionContactsEnabled" : true,
   "statuses" : [ {
     "defaultDestinationStatus" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -3578,6 +3579,7 @@ open class TaskManagementAPI {
   "defaultExpirationSeconds" : 6,
   "defaultScript" : "{}",
   "name" : "name",
+  "unassignedDivisionContactsEnabled" : true,
   "statuses" : [ {
     "defaultDestinationStatus" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -3723,6 +3725,7 @@ open class TaskManagementAPI {
     "defaultExpirationSeconds" : 6,
     "defaultScript" : "{}",
     "name" : "name",
+    "unassignedDivisionContactsEnabled" : true,
     "statuses" : [ {
       "defaultDestinationStatus" : "{}",
       "selfUri" : "https://openapi-generator.tech",
@@ -3796,6 +3799,7 @@ open class TaskManagementAPI {
     "defaultExpirationSeconds" : 6,
     "defaultScript" : "{}",
     "name" : "name",
+    "unassignedDivisionContactsEnabled" : true,
     "statuses" : [ {
       "defaultDestinationStatus" : "{}",
       "selfUri" : "https://openapi-generator.tech",
@@ -4408,6 +4412,7 @@ open class TaskManagementAPI {
   "defaultExpirationSeconds" : 6,
   "defaultScript" : "{}",
   "name" : "name",
+  "unassignedDivisionContactsEnabled" : true,
   "statuses" : [ {
     "defaultDestinationStatus" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -5922,6 +5927,7 @@ open class TaskManagementAPI {
   "defaultExpirationSeconds" : 6,
   "defaultScript" : "{}",
   "name" : "name",
+  "unassignedDivisionContactsEnabled" : true,
   "statuses" : [ {
     "defaultDestinationStatus" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -6045,6 +6051,7 @@ open class TaskManagementAPI {
     "defaultExpirationSeconds" : 6,
     "defaultScript" : "{}",
     "name" : "name",
+    "unassignedDivisionContactsEnabled" : true,
     "statuses" : [ {
       "defaultDestinationStatus" : "{}",
       "selfUri" : "https://openapi-generator.tech",
@@ -6117,6 +6124,7 @@ open class TaskManagementAPI {
     "defaultExpirationSeconds" : 6,
     "defaultScript" : "{}",
     "name" : "name",
+    "unassignedDivisionContactsEnabled" : true,
     "statuses" : [ {
       "defaultDestinationStatus" : "{}",
       "selfUri" : "https://openapi-generator.tech",
