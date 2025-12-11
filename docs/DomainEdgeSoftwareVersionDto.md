@@ -11,10 +11,10 @@
 | **edgeVersion** | **String** |  | [optional] |
 | **publishDate** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **edgeUri** | **String** |  | [optional] |
-| **current** | **Bool** |  | [optional] |
 | **latestRelease** | **Bool** |  | [optional] |
+| **current** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@182.0.0_
+_PureCloudPlatformClientV2@183.0.0_

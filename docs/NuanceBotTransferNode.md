@@ -15,4 +15,4 @@ Model for a Nuance bot transfer node
 
 
 
-_PureCloudPlatformClientV2@182.0.0_
+_PureCloudPlatformClientV2@183.0.0_

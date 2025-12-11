@@ -14,4 +14,4 @@ Represents the queue setting for this media.
 
 
 
-_PureCloudPlatformClientV2@182.0.0_
+_PureCloudPlatformClientV2@183.0.0_

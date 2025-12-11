@@ -14,4 +14,4 @@ Channel-specific information that describes the message and the message channel/
 
 
 
-_PureCloudPlatformClientV2@182.0.0_
+_PureCloudPlatformClientV2@183.0.0_

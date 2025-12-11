@@ -14,4 +14,4 @@ An outbound-messaging messaging campaign email Config
 
 
 
-_PureCloudPlatformClientV2@182.0.0_
+_PureCloudPlatformClientV2@183.0.0_

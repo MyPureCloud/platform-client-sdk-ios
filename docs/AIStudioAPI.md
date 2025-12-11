@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsSummariesSettings**](AIStudioAPI#getConversationsSummariesSettings) | Get all summary settings. |
 | [**postConversationsSummariesPreview**](AIStudioAPI#postConversationsSummariesPreview) | Trigger summary preview event generation. |
 | [**postConversationsSummariesSettings**](AIStudioAPI#postConversationsSummariesSettings) | Create a summary setting. |
+| [**postGuideSessionTurns**](AIStudioAPI#postGuideSessionTurns) | Add a turn to a guide session. |
 | [**putConversationsSummariesSetting**](AIStudioAPI#putConversationsSummariesSetting) | Update a summary setting. |
 {: class="table-striped"}
 
@@ -271,6 +272,62 @@ AIStudioAPI.postConversationsSummariesSettings(body: body) { (response, error) i
 [**SummarySetting**](SummarySetting)
 
 
+## postGuideSessionTurns
+
+
+
+> [GuideSessionTurnResponse](GuideSessionTurnResponse) postGuideSessionTurns(guideId, guideSessionId, body)
+
+Add a turn to a guide session.
+
+Creates a new turn in the specified guide session with the provided request data. If the session ID doesn&#39;t exist, a new session will be created automatically.
+
+
+
+Wraps POST /api/v2/guides/{guideId}/sessions/{guideSessionId}/turns  
+
+Requires ALL permissions: 
+
+* aiStudio:guideSessionTurn:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let guideId: String = "" // Guide ID
+let guideSessionId: String = "" // Guide Session ID
+let body: GuideSessionTurnRequest = new GuideSessionTurnRequest(...) // 
+
+// Code example
+AIStudioAPI.postGuideSessionTurns(guideId: guideId, guideSessionId: guideSessionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.postGuideSessionTurns was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **guideId** | **String**| Guide ID | |
+| **guideSessionId** | **String**| Guide Session ID | |
+| **body** | [**GuideSessionTurnRequest**](GuideSessionTurnRequest)|  | |
+
+
+### Return type
+
+[**GuideSessionTurnResponse**](GuideSessionTurnResponse)
+
+
 ## putConversationsSummariesSetting
 
 
@@ -323,4 +380,4 @@ AIStudioAPI.putConversationsSummariesSetting(summarySettingId: summarySettingId,
 [**SummarySetting**](SummarySetting)
 
 
-_PureCloudPlatformClientV2@182.0.0_
+_PureCloudPlatformClientV2@183.0.0_

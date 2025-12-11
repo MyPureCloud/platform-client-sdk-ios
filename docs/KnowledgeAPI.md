@@ -2501,7 +2501,7 @@ KnowledgeAPI.getKnowledgeKnowledgebases(before: before, after: after, limit: lim
 | **limit** | **String**| Number of entities to return. Maximum of 100. Deprecated in favour of pageSize | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 100. | [optional] |
 | **name** | **String**| Filter by Name. | [optional] |
-| **coreLanguage** | **String**| Filter by core language. | [optional]<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP"), arAe ("ar-AE"), zhCn ("zh-CN"), zhTw ("zh-TW"), zhHk ("zh-HK"), koKr ("ko-KR"), plPl ("pl-PL"), hiIn ("hi-IN"), thTh ("th-TH"), huHu ("hu-HU"), viVn ("vi-VN"), ukUa ("uk-UA"), csCz ("cs-CZ") |
+| **coreLanguage** | **String**| Filter by core language. | [optional]<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP"), arAe ("ar-AE"), zhCn ("zh-CN"), zhTw ("zh-TW"), zhHk ("zh-HK"), koKr ("ko-KR"), plPl ("pl-PL"), hiIn ("hi-IN"), thTh ("th-TH"), huHu ("hu-HU"), viVn ("vi-VN"), ukUa ("uk-UA"), csCz ("cs-CZ"), filPh ("fil-PH"), msMy ("ms-MY"), heIl ("he-IL"), elGr ("el-GR") |
 | **published** | **Bool**| Filter by published status. | [optional] |
 | **sortBy** | **String**| Sort by. | [optional]<br />**Values**: name ("Name"), date ("Date") |
 | **sortOrder** | **String**| Sort Order. | [optional]<br />**Values**: asc ("ASC"), ascending ("ascending"), desc ("DESC"), descending ("descending") |
@@ -5202,4 +5202,4 @@ KnowledgeAPI.putKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId:
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatformClientV2@182.0.0_
+_PureCloudPlatformClientV2@183.0.0_

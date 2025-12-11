@@ -7,10 +7,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteAssistant**](AgentAssistantsAPI#deleteAssistant) | Delete an assistant. |
 | [**deleteAssistantQueue**](AgentAssistantsAPI#deleteAssistantQueue) | Disassociate a queue from an assistant. |
 | [**deleteAssistantQueues**](AgentAssistantsAPI#deleteAssistantQueues) | Disassociate the queues from an assistant for the given assistant ID and queue IDs. |
+| [**deleteAssistantsAgentchecklist**](AgentAssistantsAPI#deleteAssistantsAgentchecklist) | Delete an agent checklist |
 | [**getAssistant**](AgentAssistantsAPI#getAssistant) | Get an assistant. |
 | [**getAssistantQueue**](AgentAssistantsAPI#getAssistantQueue) | Get queue Information for an assistant. |
 | [**getAssistantQueues**](AgentAssistantsAPI#getAssistantQueues) | Get all the queues associated with an assistant. |
 | [**getAssistants**](AgentAssistantsAPI#getAssistants) | Get all assistants. |
+| [**getAssistantsAgentchecklist**](AgentAssistantsAPI#getAssistantsAgentchecklist) | Get an agent checklist |
+| [**getAssistantsAgentchecklists**](AgentAssistantsAPI#getAssistantsAgentchecklists) | Get the list of agent checklists |
+| [**getAssistantsAgentchecklistsLanguages**](AgentAssistantsAPI#getAssistantsAgentchecklistsLanguages) | Get the list of supported languages |
 | [**getAssistantsQueues**](AgentAssistantsAPI#getAssistantsQueues) | Get all queues assigned to any assistant. |
 | [**patchAssistant**](AgentAssistantsAPI#patchAssistant) | Update an assistant. |
 | [**patchAssistantQueues**](AgentAssistantsAPI#patchAssistantQueues) | Update Queues for an Assistant. |
@@ -18,7 +22,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAssistantQueueUsersBulkRemove**](AgentAssistantsAPI#postAssistantQueueUsersBulkRemove) | Bulk remove users from assistant-queue (requires manual assignment mode). |
 | [**postAssistantQueueUsersQuery**](AgentAssistantsAPI#postAssistantQueueUsersQuery) | Query for users in the assistant-queue (requires manual assignment mode). |
 | [**postAssistants**](AgentAssistantsAPI#postAssistants) | Create an Assistant. |
+| [**postAssistantsAgentchecklists**](AgentAssistantsAPI#postAssistantsAgentchecklists) | Create an agent checklist |
 | [**putAssistantQueue**](AgentAssistantsAPI#putAssistantQueue) | Create a queue assistant association. |
+| [**putAssistantsAgentchecklist**](AgentAssistantsAPI#putAssistantsAgentchecklist) | Update an agent checklist |
 {: class="table-striped"}
 
 
@@ -166,6 +172,55 @@ AgentAssistantsAPI.deleteAssistantQueues(assistantId: assistantId, queueIds: que
 | ------------- | ------------- | ------------- | ------------- |
 | **assistantId** | **String**| Assistant ID | |
 | **queueIds** | **String**| Comma-separated identifiers of the queues that need to be deleted. | [optional] |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteAssistantsAgentchecklist
+
+
+
+> Void deleteAssistantsAgentchecklist(agentChecklistId)
+
+Delete an agent checklist
+
+
+
+Wraps DELETE /api/v2/assistants/agentchecklists/{agentChecklistId}  
+
+Requires ALL permissions: 
+
+* assistants:agentchecklist:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let agentChecklistId: String = "" // Agent Checklist ID
+
+// Code example
+AgentAssistantsAPI.deleteAssistantsAgentchecklist(agentChecklistId: agentChecklistId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("AgentAssistantsAPI.deleteAssistantsAgentchecklist was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **agentChecklistId** | **String**| Agent Checklist ID | |
 
 
 ### Return type
@@ -395,6 +450,164 @@ AgentAssistantsAPI.getAssistants(before: before, after: after, limit: limit, pag
 ### Return type
 
 [**AssistantListing**](AssistantListing)
+
+
+## getAssistantsAgentchecklist
+
+
+
+> [AgentChecklist](AgentChecklist) getAssistantsAgentchecklist(agentChecklistId)
+
+Get an agent checklist
+
+
+
+Wraps GET /api/v2/assistants/agentchecklists/{agentChecklistId}  
+
+Requires ALL permissions: 
+
+* assistants:agentchecklist:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let agentChecklistId: String = "" // Agent Checklist ID
+
+// Code example
+AgentAssistantsAPI.getAssistantsAgentchecklist(agentChecklistId: agentChecklistId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AgentAssistantsAPI.getAssistantsAgentchecklist was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **agentChecklistId** | **String**| Agent Checklist ID | |
+
+
+### Return type
+
+[**AgentChecklist**](AgentChecklist)
+
+
+## getAssistantsAgentchecklists
+
+
+
+> [AgentChecklistListing](AgentChecklistListing) getAssistantsAgentchecklists(before, after, pageSize, namePrefix, language, sortOrder, sortBy)
+
+Get the list of agent checklists
+
+
+
+Wraps GET /api/v2/assistants/agentchecklists  
+
+Requires ALL permissions: 
+
+* assistants:agentchecklist:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // The page size for the listing. The max that will be returned is 100.
+let namePrefix: String = "" // The agent checklist name prefix filter applied to the listing.
+let language: String = "" // The agent checklist language filter applied to the listing.
+let sortOrder: AgentAssistantsAPI.SortOrder_getAssistantsAgentchecklists = AgentAssistantsAPI.SortOrder_getAssistantsAgentchecklists.enummember // The sort order for the listing
+let sortBy: AgentAssistantsAPI.SortBy_getAssistantsAgentchecklists = AgentAssistantsAPI.SortBy_getAssistantsAgentchecklists.enummember // The field to sort by for the listing.
+
+// Code example
+AgentAssistantsAPI.getAssistantsAgentchecklists(before: before, after: after, pageSize: pageSize, namePrefix: namePrefix, language: language, sortOrder: sortOrder, sortBy: sortBy) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AgentAssistantsAPI.getAssistantsAgentchecklists was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| The page size for the listing. The max that will be returned is 100. | [optional] |
+| **namePrefix** | **String**| The agent checklist name prefix filter applied to the listing. | [optional] |
+| **language** | **String**| The agent checklist language filter applied to the listing. | [optional] |
+| **sortOrder** | **String**| The sort order for the listing | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
+| **sortBy** | **String**| The field to sort by for the listing. | [optional]<br />**Values**: datemodified ("dateModified"), language ("language"), name ("name") |
+
+
+### Return type
+
+[**AgentChecklistListing**](AgentChecklistListing)
+
+
+## getAssistantsAgentchecklistsLanguages
+
+
+
+> [EntityListing](EntityListing) getAssistantsAgentchecklistsLanguages()
+
+Get the list of supported languages
+
+
+
+Wraps GET /api/v2/assistants/agentchecklists/languages  
+
+Requires ALL permissions: 
+
+* assistants:agentchecklist:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+AgentAssistantsAPI.getAssistantsAgentchecklistsLanguages() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AgentAssistantsAPI.getAssistantsAgentchecklistsLanguages was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**EntityListing**](EntityListing)
 
 
 ## getAssistantsQueues
@@ -773,6 +986,56 @@ AgentAssistantsAPI.postAssistants(body: body) { (response, error) in
 [**Assistant**](Assistant)
 
 
+## postAssistantsAgentchecklists
+
+
+
+> [AgentChecklist](AgentChecklist) postAssistantsAgentchecklists(body)
+
+Create an agent checklist
+
+
+
+Wraps POST /api/v2/assistants/agentchecklists  
+
+Requires ALL permissions: 
+
+* assistants:agentchecklist:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AgentChecklist = new AgentChecklist(...) // Request body containing details of checklist to be added
+
+// Code example
+AgentAssistantsAPI.postAssistantsAgentchecklists(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AgentAssistantsAPI.postAssistantsAgentchecklists was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AgentChecklist**](AgentChecklist)| Request body containing details of checklist to be added | |
+
+
+### Return type
+
+[**AgentChecklist**](AgentChecklist)
+
+
 ## putAssistantQueue
 
 
@@ -827,4 +1090,56 @@ AgentAssistantsAPI.putAssistantQueue(assistantId: assistantId, queueId: queueId,
 [**AssistantQueue**](AssistantQueue)
 
 
-_PureCloudPlatformClientV2@182.0.0_
+## putAssistantsAgentchecklist
+
+
+
+> [AgentChecklist](AgentChecklist) putAssistantsAgentchecklist(agentChecklistId, body)
+
+Update an agent checklist
+
+
+
+Wraps PUT /api/v2/assistants/agentchecklists/{agentChecklistId}  
+
+Requires ALL permissions: 
+
+* assistants:agentchecklist:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let agentChecklistId: String = "" // Agent Checklist ID
+let body: AgentChecklist = new AgentChecklist(...) // Request body containing details of checklist to be updated
+
+// Code example
+AgentAssistantsAPI.putAssistantsAgentchecklist(agentChecklistId: agentChecklistId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AgentAssistantsAPI.putAssistantsAgentchecklist was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **agentChecklistId** | **String**| Agent Checklist ID | |
+| **body** | [**AgentChecklist**](AgentChecklist)| Request body containing details of checklist to be updated | |
+
+
+### Return type
+
+[**AgentChecklist**](AgentChecklist)
+
+
+_PureCloudPlatformClientV2@183.0.0_

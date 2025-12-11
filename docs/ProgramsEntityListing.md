@@ -8,10 +8,10 @@
 |------------ | ------------- | ------------- | -------------|
 | **entities** | [**[ListedProgram]**]([ListedProgram]) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
-| **selfUri** | **String** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
+| **selfUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@182.0.0_
+_PureCloudPlatformClientV2@183.0.0_
