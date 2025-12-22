@@ -11,4 +11,4 @@ Settings for a user&#39;s mobile notifications
 
 
 
-_PureCloudPlatformClientV2@183.0.0_
+_PureCloudPlatformClientV2@183.1.0_

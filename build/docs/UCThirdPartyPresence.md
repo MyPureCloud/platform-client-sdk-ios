@@ -14,4 +14,4 @@ Update a Genesys Cloud user&#39;s presence from a given 3rd-party integration
 
 
 
-_PureCloudPlatformClientV2@183.0.0_
+_PureCloudPlatformClientV2@183.1.0_

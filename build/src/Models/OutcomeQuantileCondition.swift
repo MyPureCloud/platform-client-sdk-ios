@@ -1,0 +1,26 @@
+
+
+public class OutcomeQuantileCondition: Codable {
+
+
+
+
+
+
+
+    /** The outcome ID. */
+    public var outcomeId: String?
+    /** This Outcome Quantile Condition is met when sessionMaxQuantile of the OutcomeScore is above this value, (unless fallbackQuantile is set). Range 0.00-1.00 */
+    public var maxQuantileThreshold: Float?
+    /** (Optional) If set, this Condition is met when maxQuantileThreshold is met, AND the current quantile of the OutcomeScore is below this fallbackQuantileThreshold. Range 0.00-1.00 */
+    public var fallbackQuantileThreshold: Float?
+
+    public init(outcomeId: String?, maxQuantileThreshold: Float?, fallbackQuantileThreshold: Float?) {
+        self.outcomeId = outcomeId
+        self.maxQuantileThreshold = maxQuantileThreshold
+        self.fallbackQuantileThreshold = fallbackQuantileThreshold
+    }
+
+
+}
+

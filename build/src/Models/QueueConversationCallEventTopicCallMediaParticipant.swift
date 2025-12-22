@@ -1,0 +1,362 @@
+
+
+public class QueueConversationCallEventTopicCallMediaParticipant: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum State: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case converting = "converting"
+        case uploading = "uploading"
+        case transmitting = "transmitting"
+        case scheduled = "scheduled"
+        case parked = "parked"
+        case _none = "none"
+    }
+
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case converting = "converting"
+        case uploading = "uploading"
+        case transmitting = "transmitting"
+        case scheduled = "scheduled"
+        case parked = "parked"
+        case _none = "none"
+    }
+
+    public enum Direction: String, Codable { 
+        case inbound = "inbound"
+        case outbound = "outbound"
+    }
+
+    public enum DisconnectType: String, Codable { 
+        case endpoint = "endpoint"
+        case endpointDnd = "endpoint.dnd"
+        case client = "client"
+        case system = "system"
+        case transfer = "transfer"
+        case timeout = "timeout"
+        case transferConference = "transfer.conference"
+        case transferConsult = "transfer.consult"
+        case transferForward = "transfer.forward"
+        case transferNoanswer = "transfer.noanswer"
+        case transferNotavailable = "transfer.notavailable"
+        case transferDnd = "transfer.dnd"
+        case transportFailure = "transport.failure"
+        case error = "error"
+        case peer = "peer"
+        case other = "other"
+        case spam = "spam"
+        case uncallable = "uncallable"
+        case inactivity = "inactivity"
+        case sessionExpired = "session.expired"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum FlaggedReason: String, Codable { 
+        case general = "general"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum RecordingState: String, Codable { 
+        case _none = "none"
+        case active = "active"
+        case paused = "paused"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public var _id: String?
+    public var name: String?
+    public var address: String?
+    public var startTime: Date?
+    public var connectedTime: Date?
+    public var endTime: Date?
+    public var startHoldTime: Date?
+    public var purpose: String?
+    public var state: State?
+    public var initialState: InitialState?
+    public var direction: Direction?
+    public var disconnectType: DisconnectType?
+    public var held: Bool?
+    public var wrapupRequired: Bool?
+    public var wrapupPrompt: String?
+    public var user: QueueConversationCallEventTopicUriReference?
+    public var queue: QueueConversationCallEventTopicUriReference?
+    public var team: QueueConversationCallEventTopicUriReference?
+    public var attributes: [String:String]?
+    public var errorInfo: QueueConversationCallEventTopicErrorBody?
+    public var script: QueueConversationCallEventTopicUriReference?
+    public var wrapupTimeoutMs: Int64?
+    public var wrapupSkipped: Bool?
+    public var alertingTimeoutMs: Int64?
+    public var provider: String?
+    public var externalContact: QueueConversationCallEventTopicUriReference?
+    public var externalContactInitialDivisionId: String?
+    public var externalOrganization: QueueConversationCallEventTopicUriReference?
+    public var wrapup: QueueConversationCallEventTopicWrapup?
+    public var conversationRoutingData: QueueConversationCallEventTopicConversationRoutingData?
+    public var peer: String?
+    public var screenRecordingState: String?
+    public var flaggedReason: FlaggedReason?
+    public var journeyContext: QueueConversationCallEventTopicJourneyContext?
+    public var startAcwTime: Date?
+    public var endAcwTime: Date?
+    public var resumeTime: Date?
+    public var parkTime: Date?
+    public var mediaRoles: [String]?
+    public var queueMediaSettings: QueueConversationCallEventTopicQueueMediaSettings?
+    public var muted: Bool?
+    public var confined: Bool?
+    public var recording: Bool?
+    public var recordingState: RecordingState?
+    public var recordersState: QueueConversationCallEventTopicRecordersState?
+    public var disposition: QueueConversationCallEventTopicDisposition?
+    public var transferSource: String?
+    public var securePause: Bool?
+    public var group: QueueConversationCallEventTopicUriReference?
+    public var ani: String?
+    public var dnis: String?
+    public var documentId: String?
+    public var monitoredParticipantId: String?
+    public var coachedParticipantId: String?
+    public var bargedParticipantId: String?
+    public var bargedTime: Date?
+    public var consultParticipantId: String?
+    public var faxStatus: QueueConversationCallEventTopicFaxStatus?
+
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, initialState: InitialState?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationCallEventTopicUriReference?, queue: QueueConversationCallEventTopicUriReference?, team: QueueConversationCallEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationCallEventTopicErrorBody?, script: QueueConversationCallEventTopicUriReference?, wrapupTimeoutMs: Int64?, wrapupSkipped: Bool?, alertingTimeoutMs: Int64?, provider: String?, externalContact: QueueConversationCallEventTopicUriReference?, externalContactInitialDivisionId: String?, externalOrganization: QueueConversationCallEventTopicUriReference?, wrapup: QueueConversationCallEventTopicWrapup?, conversationRoutingData: QueueConversationCallEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationCallEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, resumeTime: Date?, parkTime: Date?, mediaRoles: [String]?, queueMediaSettings: QueueConversationCallEventTopicQueueMediaSettings?, muted: Bool?, confined: Bool?, recording: Bool?, recordingState: RecordingState?, recordersState: QueueConversationCallEventTopicRecordersState?, disposition: QueueConversationCallEventTopicDisposition?, transferSource: String?, securePause: Bool?, group: QueueConversationCallEventTopicUriReference?, ani: String?, dnis: String?, documentId: String?, monitoredParticipantId: String?, coachedParticipantId: String?, bargedParticipantId: String?, bargedTime: Date?, consultParticipantId: String?, faxStatus: QueueConversationCallEventTopicFaxStatus?) {
+        self._id = _id
+        self.name = name
+        self.address = address
+        self.startTime = startTime
+        self.connectedTime = connectedTime
+        self.endTime = endTime
+        self.startHoldTime = startHoldTime
+        self.purpose = purpose
+        self.state = state
+        self.initialState = initialState
+        self.direction = direction
+        self.disconnectType = disconnectType
+        self.held = held
+        self.wrapupRequired = wrapupRequired
+        self.wrapupPrompt = wrapupPrompt
+        self.user = user
+        self.queue = queue
+        self.team = team
+        self.attributes = attributes
+        self.errorInfo = errorInfo
+        self.script = script
+        self.wrapupTimeoutMs = wrapupTimeoutMs
+        self.wrapupSkipped = wrapupSkipped
+        self.alertingTimeoutMs = alertingTimeoutMs
+        self.provider = provider
+        self.externalContact = externalContact
+        self.externalContactInitialDivisionId = externalContactInitialDivisionId
+        self.externalOrganization = externalOrganization
+        self.wrapup = wrapup
+        self.conversationRoutingData = conversationRoutingData
+        self.peer = peer
+        self.screenRecordingState = screenRecordingState
+        self.flaggedReason = flaggedReason
+        self.journeyContext = journeyContext
+        self.startAcwTime = startAcwTime
+        self.endAcwTime = endAcwTime
+        self.resumeTime = resumeTime
+        self.parkTime = parkTime
+        self.mediaRoles = mediaRoles
+        self.queueMediaSettings = queueMediaSettings
+        self.muted = muted
+        self.confined = confined
+        self.recording = recording
+        self.recordingState = recordingState
+        self.recordersState = recordersState
+        self.disposition = disposition
+        self.transferSource = transferSource
+        self.securePause = securePause
+        self.group = group
+        self.ani = ani
+        self.dnis = dnis
+        self.documentId = documentId
+        self.monitoredParticipantId = monitoredParticipantId
+        self.coachedParticipantId = coachedParticipantId
+        self.bargedParticipantId = bargedParticipantId
+        self.bargedTime = bargedTime
+        self.consultParticipantId = consultParticipantId
+        self.faxStatus = faxStatus
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case address
+        case startTime
+        case connectedTime
+        case endTime
+        case startHoldTime
+        case purpose
+        case state
+        case initialState
+        case direction
+        case disconnectType
+        case held
+        case wrapupRequired
+        case wrapupPrompt
+        case user
+        case queue
+        case team
+        case attributes
+        case errorInfo
+        case script
+        case wrapupTimeoutMs
+        case wrapupSkipped
+        case alertingTimeoutMs
+        case provider
+        case externalContact
+        case externalContactInitialDivisionId
+        case externalOrganization
+        case wrapup
+        case conversationRoutingData
+        case peer
+        case screenRecordingState
+        case flaggedReason
+        case journeyContext
+        case startAcwTime
+        case endAcwTime
+        case resumeTime
+        case parkTime
+        case mediaRoles
+        case queueMediaSettings
+        case muted
+        case confined
+        case recording
+        case recordingState
+        case recordersState
+        case disposition
+        case transferSource
+        case securePause
+        case group
+        case ani
+        case dnis
+        case documentId
+        case monitoredParticipantId
+        case coachedParticipantId
+        case bargedParticipantId
+        case bargedTime
+        case consultParticipantId
+        case faxStatus
+    }
+
+
+}
+

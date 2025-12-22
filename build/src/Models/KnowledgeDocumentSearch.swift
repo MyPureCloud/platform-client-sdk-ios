@@ -1,0 +1,80 @@
+
+
+public class KnowledgeDocumentSearch: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum QueryType: String, Codable { 
+        case autoSearch = "AutoSearch"
+        case manualSearch = "ManualSearch"
+        case suggestion = "Suggestion"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** Query to search content in the knowledge base. Maximum of 30 records per query can be fetched. */
+    public var query: String?
+    /** Page size of the returned results. */
+    public var pageSize: Int?
+    /** Page number of the returned results. */
+    public var pageNumber: Int?
+    /** The globally unique identifier for the search. */
+    public var searchId: String?
+    /** The total number of documents matching the query. */
+    public var total: Int?
+    /** Number of pages returned in the result calculated according to the pageSize and the total */
+    public var pageCount: Int?
+    /** The type of the query that initiates the search. */
+    public var queryType: QueryType?
+    /** Documents matching the search query. */
+    public var results: [KnowledgeDocumentSearchResult]?
+    /** The client application details from which search happened. */
+    public var application: KnowledgeSearchClientApplication?
+    /** Conversation context information if the search is initiated in the context of a conversation. */
+    public var conversationContext: KnowledgeConversationContextResponse?
+    /** The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold. */
+    public var confidenceThreshold: Float?
+    /** The results with AI-generated answer if the answerMode request property contains \"AnswerGeneration\". */
+    public var answerGeneration: KnowledgeAnswerGenerationResponse?
+    /** Indicates whether the search query should be preprocessed. */
+    public var preprocessQuery: Bool?
+
+    public init(query: String?, pageSize: Int?, pageNumber: Int?, searchId: String?, total: Int?, pageCount: Int?, queryType: QueryType?, results: [KnowledgeDocumentSearchResult]?, application: KnowledgeSearchClientApplication?, conversationContext: KnowledgeConversationContextResponse?, confidenceThreshold: Float?, answerGeneration: KnowledgeAnswerGenerationResponse?, preprocessQuery: Bool?) {
+        self.query = query
+        self.pageSize = pageSize
+        self.pageNumber = pageNumber
+        self.searchId = searchId
+        self.total = total
+        self.pageCount = pageCount
+        self.queryType = queryType
+        self.results = results
+        self.application = application
+        self.conversationContext = conversationContext
+        self.confidenceThreshold = confidenceThreshold
+        self.answerGeneration = answerGeneration
+        self.preprocessQuery = preprocessQuery
+    }
+
+
+}
+

@@ -1,0 +1,57 @@
+
+
+public class ContactlistImportStatusImportStatus: Codable {
+
+    public enum ImportState: String, Codable { 
+        case inProgress = "IN_PROGRESS"
+        case failed = "FAILED"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** current status of the import */
+    public var importState: ImportState?
+    /** total number of records to be imported */
+    public var totalRecords: Int64?
+    /** number of records finished importing */
+    public var completedRecords: Int64?
+    /** percentage of records finished importing */
+    public var percentageComplete: Int64?
+    /** if the import has failed, the reason for the failure */
+    public var failureReason: String?
+    /** The ids for target contact lists */
+    public var targetContactListIds: [String]?
+    /** The prefix used for target contact list names */
+    public var listNamePrefix: String?
+    public var additionalProperties: [String:JSON]?
+    public var getAdditionalProperties: [String:JSON]?
+
+    public init(importState: ImportState?, totalRecords: Int64?, completedRecords: Int64?, percentageComplete: Int64?, failureReason: String?, targetContactListIds: [String]?, listNamePrefix: String?, additionalProperties: [String:JSON]?, getAdditionalProperties: [String:JSON]?) {
+        self.importState = importState
+        self.totalRecords = totalRecords
+        self.completedRecords = completedRecords
+        self.percentageComplete = percentageComplete
+        self.failureReason = failureReason
+        self.targetContactListIds = targetContactListIds
+        self.listNamePrefix = listNamePrefix
+        self.additionalProperties = additionalProperties
+        self.getAdditionalProperties = getAdditionalProperties
+    }
+
+
+}
+

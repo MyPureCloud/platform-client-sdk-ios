@@ -11,4 +11,4 @@ List of resources created or modified as a result of running an accelerator
 
 
 
-_PureCloudPlatformClientV2@183.0.0_
+_PureCloudPlatformClientV2@183.1.0_

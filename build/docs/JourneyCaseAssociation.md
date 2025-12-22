@@ -15,4 +15,4 @@ The representation of a case association on a journey session.
 
 
 
-_PureCloudPlatformClientV2@183.0.0_
+_PureCloudPlatformClientV2@183.1.0_

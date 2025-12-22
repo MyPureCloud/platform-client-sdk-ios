@@ -1,0 +1,21 @@
+
+
+public class IdleTokenTimeout: Codable {
+
+
+
+
+
+    /** Token timeout length in seconds. Must be at least 5 minutes and 8 hours or less (if HIPAA is disabled) or 15 minutes or less (if HIPAA is enabled). */
+    public var idleTokenTimeoutSeconds: Int?
+    /** Indicates whether the Token Timeout should be enabled or disabled. */
+    public var enableIdleTokenTimeout: Bool?
+
+    public init(idleTokenTimeoutSeconds: Int?, enableIdleTokenTimeout: Bool?) {
+        self.idleTokenTimeoutSeconds = idleTokenTimeoutSeconds
+        self.enableIdleTokenTimeout = enableIdleTokenTimeout
+    }
+
+
+}
+

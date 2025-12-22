@@ -1,0 +1,29 @@
+
+
+public class KnowledgeExportJobDocumentsFilter: Codable {
+
+
+
+
+
+
+
+
+
+    /** Retrieves the documents modified in specified date and time range. Cannot be used together with entities filter. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
+    public var interval: String?
+    /** Retrieves the documents with the given ids. Cannot be used together with internal filter. */
+    public var entities: [Entity]?
+    public var sourceId: String?
+    public var includeDocumentsWithFileBody: Bool?
+
+    public init(interval: String?, entities: [Entity]?, sourceId: String?, includeDocumentsWithFileBody: Bool?) {
+        self.interval = interval
+        self.entities = entities
+        self.sourceId = sourceId
+        self.includeDocumentsWithFileBody = includeDocumentsWithFileBody
+    }
+
+
+}
+

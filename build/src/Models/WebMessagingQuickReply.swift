@@ -1,0 +1,34 @@
+
+/** Quick reply object */
+
+public class WebMessagingQuickReply: Codable {
+
+
+
+
+
+
+
+    public enum Action: String, Codable { 
+        case message = "Message"
+    }
+
+    /** Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply. */
+    public var text: String?
+    /** Content of the payload included in the quick reply response. Could be an ID identifying the quick reply response. */
+    public var payload: String?
+    /** URL of an image associated with the quick reply. */
+    public var image: String?
+    /** Specifies the type of action that is triggered upon clicking the quick reply. */
+    public var action: Action?
+
+    public init(text: String?, payload: String?, image: String?, action: Action?) {
+        self.text = text
+        self.payload = payload
+        self.image = image
+        self.action = action
+    }
+
+
+}
+
