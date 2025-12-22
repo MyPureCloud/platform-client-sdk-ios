@@ -686,4 +686,4 @@ OAuthAPI.putOauthClient(clientId: clientId, body: body) { (response, error) in
 [**OAuthClient**](OAuthClient)
 
 
-_PureCloudPlatformClientV2@183.0.0_
+_PureCloudPlatformClientV2@183.1.0_

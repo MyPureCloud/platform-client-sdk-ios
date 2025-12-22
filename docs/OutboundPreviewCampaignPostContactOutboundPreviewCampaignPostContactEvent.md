@@ -28,7 +28,8 @@
 | **isRightPartyContact** | **Bool** |  | [optional] |
 | **callAnalysisDisposition** | **String** |  | [optional] |
 | **agentId** | **String** |  | [optional] |
+| **isPreviewAutoEnded** | **Bool** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@183.0.0_
+_PureCloudPlatformClientV2@183.1.0_

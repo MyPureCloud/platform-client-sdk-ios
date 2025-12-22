@@ -13,4 +13,4 @@ Payment response object representing the status of a payment transaction.
 
 
 
-_PureCloudPlatformClientV2@183.0.0_
+_PureCloudPlatformClientV2@183.1.0_

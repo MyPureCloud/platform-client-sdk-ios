@@ -16,4 +16,4 @@ Contains a metadata representation for a JSON schema stored in DataTables along 
 
 
 
-_PureCloudPlatformClientV2@183.0.0_
+_PureCloudPlatformClientV2@183.1.0_

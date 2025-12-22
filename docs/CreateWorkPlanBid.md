@@ -18,4 +18,4 @@ Create work plan bid model
 
 
 
-_PureCloudPlatformClientV2@183.0.0_
+_PureCloudPlatformClientV2@183.1.0_
