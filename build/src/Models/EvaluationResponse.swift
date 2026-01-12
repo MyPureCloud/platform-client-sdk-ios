@@ -14,6 +14,8 @@ public class EvaluationResponse: Codable {
 
 
 
+
+
     public enum Status: String, Codable { 
         case pending = "PENDING"
         case inprogress = "INPROGRESS"
@@ -48,6 +50,7 @@ public class EvaluationResponse: Codable {
         case email = "EMAIL"
         case message = "MESSAGE"
         case internalMessage = "INTERNAL_MESSAGE"
+        case screenMonitoring = "SCREEN_MONITORING"
         case socialExpression = "SOCIAL_EXPRESSION"
         case video = "VIDEO"
         case screenshare = "SCREENSHARE"
@@ -85,8 +88,6 @@ public class EvaluationResponse: Codable {
 
 
 
-
-
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -95,6 +96,7 @@ public class EvaluationResponse: Codable {
     public var evaluationForm: EvaluationFormResponse?
     public var evaluator: User?
     public var agent: User?
+    public var calibration: AddressableEntityRef?
     public var status: Status?
     public var answers: EvaluationScoringSet?
     public var agentHasRead: Bool?
@@ -141,15 +143,15 @@ public class EvaluationResponse: Codable {
     public var aiScoring: AiScoring?
     /** The URI for this object */
     public var selfUri: String?
-    public var calibration: AddressableEntityRef?
 
-    public init(_id: String?, name: String?, conversation: ConversationReference?, evaluationForm: EvaluationFormResponse?, evaluator: User?, agent: User?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, assignee: User?, assigneeApplicable: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, revisionCreatedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, assigned: Bool?, dateAssigneeChanged: Date?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, isScoringIndex: Bool?, authorizedActions: [String]?, hasAssistanceFailed: Bool?, evaluationSource: EvaluationSource?, aiScoring: AiScoring?, selfUri: String?, calibration: AddressableEntityRef?) {
+    public init(_id: String?, name: String?, conversation: ConversationReference?, evaluationForm: EvaluationFormResponse?, evaluator: User?, agent: User?, calibration: AddressableEntityRef?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, assignee: User?, assigneeApplicable: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, revisionCreatedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, assigned: Bool?, dateAssigneeChanged: Date?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, isScoringIndex: Bool?, authorizedActions: [String]?, hasAssistanceFailed: Bool?, evaluationSource: EvaluationSource?, aiScoring: AiScoring?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.conversation = conversation
         self.evaluationForm = evaluationForm
         self.evaluator = evaluator
         self.agent = agent
+        self.calibration = calibration
         self.status = status
         self.answers = answers
         self.agentHasRead = agentHasRead
@@ -176,7 +178,6 @@ public class EvaluationResponse: Codable {
         self.evaluationSource = evaluationSource
         self.aiScoring = aiScoring
         self.selfUri = selfUri
-        self.calibration = calibration
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -186,6 +187,7 @@ public class EvaluationResponse: Codable {
         case evaluationForm
         case evaluator
         case agent
+        case calibration
         case status
         case answers
         case agentHasRead
@@ -212,7 +214,6 @@ public class EvaluationResponse: Codable {
         case evaluationSource
         case aiScoring
         case selfUri
-        case calibration
     }
 
 

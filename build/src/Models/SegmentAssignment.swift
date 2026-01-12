@@ -18,17 +18,17 @@ public class SegmentAssignment: Codable {
     public var dateForUnassignment: Date?
     /** The segment the assignment is for. */
     public var segment: SegmentAssignmentSegment?
-    /** For session-scoped segments, the session for which the segment was assigned. */
-    public var session: SegmentAssignmentSession?
     /** External contact of the customer to which the segment is assigned. */
     public var externalContact: AddressableEntityRef?
+    /** For session-scoped segments, the session for which the segment was assigned. */
+    public var session: SegmentAssignmentSession?
 
-    public init(dateAssigned: Date?, dateForUnassignment: Date?, segment: SegmentAssignmentSegment?, session: SegmentAssignmentSession?, externalContact: AddressableEntityRef?) {
+    public init(dateAssigned: Date?, dateForUnassignment: Date?, segment: SegmentAssignmentSegment?, externalContact: AddressableEntityRef?, session: SegmentAssignmentSession?) {
         self.dateAssigned = dateAssigned
         self.dateForUnassignment = dateForUnassignment
         self.segment = segment
-        self.session = session
         self.externalContact = externalContact
+        self.session = session
     }
 
 

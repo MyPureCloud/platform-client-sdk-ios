@@ -12,4 +12,4 @@ Defines a SCIM PATCH request. See section 3.5.2 \&quot;Modifying with PATCH\&quo
 
 
 
-_PureCloudPlatformClientV2@183.1.0_
+_PureCloudPlatformClientV2@184.0.0_

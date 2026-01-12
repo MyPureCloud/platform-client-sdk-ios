@@ -1462,7 +1462,7 @@ SocialMediaAPI.getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleI
 
 
 
-> [SocialTopicResponseEntityListing](SocialTopicResponseEntityListing) getSocialmediaTopics(pageNumber, pageSize, divisionIds, includeDeleted, name)
+> [SocialTopicResponseEntityListing](SocialTopicResponseEntityListing) getSocialmediaTopics(pageNumber, pageSize, divisionIds, includeDeleted, name, ids)
 
 Retrieve all social topics.
 
@@ -1487,9 +1487,10 @@ let pageSize: Int = 0 // Page size
 let divisionIds: [String] = [""] // One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned.
 let includeDeleted: Bool = true // Determines whether to include soft-deleted items in the result.
 let name: String = "" // Search for topic by name that contains the given search string, search is case insensitive
+let ids: [String] = [""] // One or more topic IDs to search through the topics.
 
 // Code example
-SocialMediaAPI.getSocialmediaTopics(pageNumber: pageNumber, pageSize: pageSize, divisionIds: divisionIds, includeDeleted: includeDeleted, name: name) { (response, error) in
+SocialMediaAPI.getSocialmediaTopics(pageNumber: pageNumber, pageSize: pageSize, divisionIds: divisionIds, includeDeleted: includeDeleted, name: name, ids: ids) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1509,6 +1510,7 @@ SocialMediaAPI.getSocialmediaTopics(pageNumber: pageNumber, pageSize: pageSize, 
 | **divisionIds** | [**[String]**](String)| One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. | [optional] |
 | **includeDeleted** | **Bool**| Determines whether to include soft-deleted items in the result. | [optional] |
 | **name** | **String**| Search for topic by name that contains the given search string, search is case insensitive | [optional] |
+| **ids** | [**[String]**](String)| One or more topic IDs to search through the topics. | [optional] |
 
 
 ### Return type
@@ -2674,4 +2676,4 @@ SocialMediaAPI.putSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleI
 [**TwitterDataIngestionRuleResponse**](TwitterDataIngestionRuleResponse)
 
 
-_PureCloudPlatformClientV2@183.1.0_
+_PureCloudPlatformClientV2@184.0.0_

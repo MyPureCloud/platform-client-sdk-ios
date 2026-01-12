@@ -28,4 +28,4 @@ Defines the phone numbers, operating hours, and the Architect flows to execute f
 
 
 
-_PureCloudPlatformClientV2@183.1.0_
+_PureCloudPlatformClientV2@184.0.0_

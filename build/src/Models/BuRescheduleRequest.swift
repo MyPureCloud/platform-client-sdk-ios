@@ -28,6 +28,8 @@ public class BuRescheduleRequest: Codable {
 
 
 
+
+
     /** The start of the range to reschedule.  Defaults to the beginning of the schedule. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startDate: Date?
     /** The end of the range to reschedule.  Defaults the the end of the schedule. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -50,8 +52,10 @@ public class BuRescheduleRequest: Codable {
     public var activitySmoothingType: ActivitySmoothingType?
     /** Overrides the default BU level induce schedule variability setting for this reschedule run */
     public var induceScheduleVariability: Bool?
+    /** Whether to use original unavailable times from schedule generation or latest saved unavailable times for this reschedule run */
+    public var useUnavailableTimesSnapshot: Bool?
 
-    public init(startDate: Date?, endDate: Date?, agentIds: [String]?, activityCodeIds: [String]?, managementUnitIds: [String]?, doNotChangeWeeklyPaidTime: Bool?, doNotChangeDailyPaidTime: Bool?, doNotChangeShiftStartTimes: Bool?, doNotChangeManuallyEditedShifts: Bool?, activitySmoothingType: ActivitySmoothingType?, induceScheduleVariability: Bool?) {
+    public init(startDate: Date?, endDate: Date?, agentIds: [String]?, activityCodeIds: [String]?, managementUnitIds: [String]?, doNotChangeWeeklyPaidTime: Bool?, doNotChangeDailyPaidTime: Bool?, doNotChangeShiftStartTimes: Bool?, doNotChangeManuallyEditedShifts: Bool?, activitySmoothingType: ActivitySmoothingType?, induceScheduleVariability: Bool?, useUnavailableTimesSnapshot: Bool?) {
         self.startDate = startDate
         self.endDate = endDate
         self.agentIds = agentIds
@@ -63,6 +67,7 @@ public class BuRescheduleRequest: Codable {
         self.doNotChangeManuallyEditedShifts = doNotChangeManuallyEditedShifts
         self.activitySmoothingType = activitySmoothingType
         self.induceScheduleVariability = induceScheduleVariability
+        self.useUnavailableTimesSnapshot = useUnavailableTimesSnapshot
     }
 
 

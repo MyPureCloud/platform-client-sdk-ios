@@ -59,6 +59,7 @@ public class ConversationAggregationSort: Codable {
         case tpark = "tPark"
         case tparkcomplete = "tParkComplete"
         case tscreenmonitoring = "tScreenMonitoring"
+        case tsnippetrecord = "tSnippetRecord"
         case ttalk = "tTalk"
         case ttalkcomplete = "tTalkComplete"
         case tuserresponsetime = "tUserResponseTime"

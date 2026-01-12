@@ -365,6 +365,78 @@ open class AgentAssistantsAPI {
     
     
     
+    /**
+     Get job details.
+     
+     - parameter assistantId: (path) Assistant ID 
+     - parameter queueId: (path) Queue ID 
+     - parameter jobId: (path) Job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAssistantQueueUsersJob(assistantId: String, queueId: String, jobId: String, completion: @escaping ((_ data: AssistantQueueUsersJobsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAssistantQueueUsersJobWithRequestBuilder(assistantId: assistantId, queueId: queueId, jobId: jobId)
+        requestBuilder.execute { (response: Response<AssistantQueueUsersJobsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get job details.
+     - GET /api/v2/assistants/{assistantId}/queues/{queueId}/users/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "errorInfo" : "{}",
+  "id" : "id",
+  "status" : "InProgress"
+}, statusCode=200}]
+     
+     - parameter assistantId: (path) Assistant ID 
+     - parameter queueId: (path) Queue ID 
+     - parameter jobId: (path) Job ID 
+
+     - returns: RequestBuilder<AssistantQueueUsersJobsResponse> 
+     */
+    open class func getAssistantQueueUsersJobWithRequestBuilder(assistantId: String, queueId: String, jobId: String) -> RequestBuilder<AssistantQueueUsersJobsResponse> {        
+        var path = "/api/v2/assistants/{assistantId}/queues/{queueId}/users/jobs/{jobId}"
+        let assistantIdPreEscape = "\(assistantId)"
+        let assistantIdPostEscape = assistantIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{assistantId}", with: assistantIdPostEscape, options: .literal, range: nil)
+        let queueIdPreEscape = "\(queueId)"
+        let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{queueId}", with: queueIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AssistantQueueUsersJobsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
     
     
     
@@ -1290,6 +1362,75 @@ open class AgentAssistantsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BulkResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Start a new job to assistant-queue.
+     
+     - parameter assistantId: (path) Assistant ID 
+     - parameter queueId: (path) Queue ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAssistantQueueUsersJobs(assistantId: String, queueId: String, body: AssistantQueueUsersJobsRequest, completion: @escaping ((_ data: AssistantQueueUsersJobsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAssistantQueueUsersJobsWithRequestBuilder(assistantId: assistantId, queueId: queueId, body: body)
+        requestBuilder.execute { (response: Response<AssistantQueueUsersJobsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Start a new job to assistant-queue.
+     - POST /api/v2/assistants/{assistantId}/queues/{queueId}/users/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "errorInfo" : "{}",
+  "id" : "id",
+  "status" : "InProgress"
+}, statusCode=200}]
+     
+     - parameter assistantId: (path) Assistant ID 
+     - parameter queueId: (path) Queue ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<AssistantQueueUsersJobsResponse> 
+     */
+    open class func postAssistantQueueUsersJobsWithRequestBuilder(assistantId: String, queueId: String, body: AssistantQueueUsersJobsRequest) -> RequestBuilder<AssistantQueueUsersJobsResponse> {        
+        var path = "/api/v2/assistants/{assistantId}/queues/{queueId}/users/jobs"
+        let assistantIdPreEscape = "\(assistantId)"
+        let assistantIdPostEscape = assistantIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{assistantId}", with: assistantIdPostEscape, options: .literal, range: nil)
+        let queueIdPreEscape = "\(queueId)"
+        let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{queueId}", with: queueIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AssistantQueueUsersJobsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

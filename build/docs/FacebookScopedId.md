@@ -11,4 +11,4 @@ Scoped ID for a Facebook user interacting with a page or app
 
 
 
-_PureCloudPlatformClientV2@183.1.0_
+_PureCloudPlatformClientV2@184.0.0_

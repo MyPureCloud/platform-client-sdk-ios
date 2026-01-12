@@ -6,10 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **confidence** | **Float** | The AI confidence value. | [optional] |
 | **text** | **String** | The text of the reason. | [optional] |
 | **_description** | **String** | The description. | [optional] |
-| **confidence** | **Float** | The AI confidence value. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@183.1.0_
+_PureCloudPlatformClientV2@184.0.0_

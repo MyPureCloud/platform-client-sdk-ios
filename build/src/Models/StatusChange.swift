@@ -60,6 +60,7 @@ public class StatusChange: Codable {
         case cobrowse = "cobrowse"
         case contentManagement = "content.management"
         case conversation = "conversation"
+        case copilot = "copilot"
         case dataactions = "dataactions"
         case datatables = "datatables"
         case directory = "directory"
@@ -119,6 +120,7 @@ public class StatusChange: Codable {
         case webhooks = "webhooks"
         case workforceManagementAgentAvailability = "workforce.management.agent.availability"
         case workforceManagement = "workforce.management"
+        case workforceManagementSelfSchedule = "workforce.management.self.schedule"
         case workforceManagementShiftTrading = "workforce.management.shift.trading"
         case system = "system"
     }

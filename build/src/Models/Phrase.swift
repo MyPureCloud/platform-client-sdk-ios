@@ -20,22 +20,17 @@ public class Phrase: Codable {
         case negative = "Negative"
     }
 
-
-
     /** The phrase text */
     public var text: String?
     /** The phrase strictness, default value is null */
     public var strictness: Strictness?
     /** The phrase sentiment, default value is Unspecified. Note: Sentiment value for phrases is currently not in use and has no impact to the system. */
     public var sentiment: Sentiment?
-    /** Indicates whether the phrase is AI generated */
-    public var isAIGenerated: Bool?
 
-    public init(text: String?, strictness: Strictness?, sentiment: Sentiment?, isAIGenerated: Bool?) {
+    public init(text: String?, strictness: Strictness?, sentiment: Sentiment?) {
         self.text = text
         self.strictness = strictness
         self.sentiment = sentiment
-        self.isAIGenerated = isAIGenerated
     }
 
 

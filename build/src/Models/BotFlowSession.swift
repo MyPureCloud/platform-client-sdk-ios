@@ -12,6 +12,8 @@ public class BotFlowSession: Codable {
 
 
 
+
+
     public enum BotResult: String, Codable { 
         case unknown = "Unknown"
         case exitRequestedByUser = "ExitRequestedByUser"
@@ -48,12 +50,12 @@ public class BotFlowSession: Codable {
 
 
 
-
-
     /** The ID of the bot session. */
     public var _id: String?
     /** The flow associated to this bot session. */
     public var flow: Entity?
+    /** The conversation details, across potentially multiple Bot Flow sessions. */
+    public var conversation: AddressableEntityRef?
     /** Channel-specific information that describes the message channel/provider. */
     public var channel: BotChannel?
     /** The initial language of operation for the session. */
@@ -68,12 +70,11 @@ public class BotFlowSession: Codable {
     public var dateCreated: Date?
     /** Timestamp indicating when the session was completed. Note: The 'interval' query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCompleted: Date?
-    /** The conversation details, across potentially multiple Bot Flow sessions. */
-    public var conversation: AddressableEntityRef?
 
-    public init(_id: String?, flow: Entity?, channel: BotChannel?, language: String?, endLanguage: String?, botResult: BotResult?, botResultCategory: BotResultCategory?, dateCreated: Date?, dateCompleted: Date?, conversation: AddressableEntityRef?) {
+    public init(_id: String?, flow: Entity?, conversation: AddressableEntityRef?, channel: BotChannel?, language: String?, endLanguage: String?, botResult: BotResult?, botResultCategory: BotResultCategory?, dateCreated: Date?, dateCompleted: Date?) {
         self._id = _id
         self.flow = flow
+        self.conversation = conversation
         self.channel = channel
         self.language = language
         self.endLanguage = endLanguage
@@ -81,12 +82,12 @@ public class BotFlowSession: Codable {
         self.botResultCategory = botResultCategory
         self.dateCreated = dateCreated
         self.dateCompleted = dateCompleted
-        self.conversation = conversation
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case flow
+        case conversation
         case channel
         case language
         case endLanguage
@@ -94,7 +95,6 @@ public class BotFlowSession: Codable {
         case botResultCategory
         case dateCreated
         case dateCompleted
-        case conversation
     }
 
 

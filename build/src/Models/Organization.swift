@@ -18,6 +18,8 @@ public class Organization: Codable {
 
 
 
+
+
     public enum State: String, Codable { 
         case active = "active"
         case inactive = "inactive"
@@ -42,8 +44,6 @@ public class Organization: Codable {
 
 
 
-
-
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -55,6 +55,8 @@ public class Organization: Codable {
     public var thirdPartyOrgName: String?
     public var thirdPartyURI: String?
     public var domain: String?
+    /** The state of features available for the organization. */
+    public var features: [String:Bool]?
     /** The current version of the organization. */
     public var version: Int?
     /** The current state. Examples are active, inactive, deleted. */
@@ -67,10 +69,8 @@ public class Organization: Codable {
     public var productPlatform: ProductPlatform?
     /** The URI for this object */
     public var selfUri: String?
-    /** The state of features available for the organization. */
-    public var features: [String:Bool]?
 
-    public init(_id: String?, name: String?, defaultLanguage: String?, defaultCountryCode: String?, thirdPartyOrgName: String?, thirdPartyURI: String?, domain: String?, version: Int?, state: State?, defaultSiteId: String?, supportURI: String?, voicemailEnabled: Bool?, productPlatform: ProductPlatform?, selfUri: String?, features: [String:Bool]?) {
+    public init(_id: String?, name: String?, defaultLanguage: String?, defaultCountryCode: String?, thirdPartyOrgName: String?, thirdPartyURI: String?, domain: String?, features: [String:Bool]?, version: Int?, state: State?, defaultSiteId: String?, supportURI: String?, voicemailEnabled: Bool?, productPlatform: ProductPlatform?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.defaultLanguage = defaultLanguage
@@ -78,6 +78,7 @@ public class Organization: Codable {
         self.thirdPartyOrgName = thirdPartyOrgName
         self.thirdPartyURI = thirdPartyURI
         self.domain = domain
+        self.features = features
         self.version = version
         self.state = state
         self.defaultSiteId = defaultSiteId
@@ -85,7 +86,6 @@ public class Organization: Codable {
         self.voicemailEnabled = voicemailEnabled
         self.productPlatform = productPlatform
         self.selfUri = selfUri
-        self.features = features
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -96,6 +96,7 @@ public class Organization: Codable {
         case thirdPartyOrgName
         case thirdPartyURI
         case domain
+        case features
         case version
         case state
         case defaultSiteId
@@ -103,7 +104,6 @@ public class Organization: Codable {
         case voicemailEnabled
         case productPlatform
         case selfUri
-        case features
     }
 
 

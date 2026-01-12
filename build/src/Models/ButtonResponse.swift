@@ -28,7 +28,7 @@ public class ButtonResponse: Codable {
     public var text: String?
     /** Content of the textback payload after clicking a button */
     public var payload: String?
-    /** Button response message type that captures QuickReply , Cards and Carousel .This is used  as label for Card selection */
+    /** Button response message type that captures QuickReply , Cards and Carousel.This is used  as label for Card selection */
     public var messageType: MessageType?
     /** Reference to the ID of the original message (e.g., list picker) this button response is replying to. */
     public var originatingMessageId: String?

@@ -91,6 +91,8 @@ public class ConversationEventTopicParticipant: Codable {
 
 
 
+
+
     /** A globally unique identifier for this conversation. */
     public var _id: String?
     /** The timestamp when this participant was connected to the conversation in the provider clock. */
@@ -156,12 +158,13 @@ public class ConversationEventTopicParticipant: Codable {
     public var emails: [ConversationEventTopicEmail]?
     public var messages: [ConversationEventTopicMessage]?
     public var internalMessages: [ConversationEventTopicInternalMessage]?
+    public var screenMonitorings: [ConversationEventTopicScreenMonitoring]?
     public var screenshares: [ConversationEventTopicScreenShare]?
     public var socialExpressions: [ConversationEventTopicSocialExpression]?
     public var videos: [ConversationEventTopicVideo]?
     public var workflow: ConversationEventTopicWorkflow?
 
-    public init(_id: String?, connectedTime: Date?, endTime: Date?, userId: String?, externalContactId: String?, externalContactInitialDivisionId: String?, externalOrganizationId: String?, name: String?, queueId: String?, groupId: String?, teamId: String?, purpose: String?, consultParticipantId: String?, address: String?, wrapupRequired: Bool?, wrapupExpected: Bool?, wrapupPrompt: String?, wrapupTimeoutMs: Int64?, wrapup: ConversationEventTopicWrapup?, startAcwTime: Date?, endAcwTime: Date?, conversationRoutingData: ConversationEventTopicConversationRoutingData?, alertingTimeoutMs: Int64?, monitoredParticipantId: String?, coachedParticipantId: String?, bargedParticipantId: String?, mediaRoles: [String]?, screenRecordingState: ScreenRecordingState?, flaggedReason: String?, attributes: [String:String]?, calls: [ConversationEventTopicCall]?, callbacks: [ConversationEventTopicCallback]?, chats: [ConversationEventTopicChat]?, cobrowsesessions: [ConversationEventTopicCobrowse]?, emails: [ConversationEventTopicEmail]?, messages: [ConversationEventTopicMessage]?, internalMessages: [ConversationEventTopicInternalMessage]?, screenshares: [ConversationEventTopicScreenShare]?, socialExpressions: [ConversationEventTopicSocialExpression]?, videos: [ConversationEventTopicVideo]?, workflow: ConversationEventTopicWorkflow?) {
+    public init(_id: String?, connectedTime: Date?, endTime: Date?, userId: String?, externalContactId: String?, externalContactInitialDivisionId: String?, externalOrganizationId: String?, name: String?, queueId: String?, groupId: String?, teamId: String?, purpose: String?, consultParticipantId: String?, address: String?, wrapupRequired: Bool?, wrapupExpected: Bool?, wrapupPrompt: String?, wrapupTimeoutMs: Int64?, wrapup: ConversationEventTopicWrapup?, startAcwTime: Date?, endAcwTime: Date?, conversationRoutingData: ConversationEventTopicConversationRoutingData?, alertingTimeoutMs: Int64?, monitoredParticipantId: String?, coachedParticipantId: String?, bargedParticipantId: String?, mediaRoles: [String]?, screenRecordingState: ScreenRecordingState?, flaggedReason: String?, attributes: [String:String]?, calls: [ConversationEventTopicCall]?, callbacks: [ConversationEventTopicCallback]?, chats: [ConversationEventTopicChat]?, cobrowsesessions: [ConversationEventTopicCobrowse]?, emails: [ConversationEventTopicEmail]?, messages: [ConversationEventTopicMessage]?, internalMessages: [ConversationEventTopicInternalMessage]?, screenMonitorings: [ConversationEventTopicScreenMonitoring]?, screenshares: [ConversationEventTopicScreenShare]?, socialExpressions: [ConversationEventTopicSocialExpression]?, videos: [ConversationEventTopicVideo]?, workflow: ConversationEventTopicWorkflow?) {
         self._id = _id
         self.connectedTime = connectedTime
         self.endTime = endTime
@@ -199,6 +202,7 @@ public class ConversationEventTopicParticipant: Codable {
         self.emails = emails
         self.messages = messages
         self.internalMessages = internalMessages
+        self.screenMonitorings = screenMonitorings
         self.screenshares = screenshares
         self.socialExpressions = socialExpressions
         self.videos = videos
@@ -243,6 +247,7 @@ public class ConversationEventTopicParticipant: Codable {
         case emails
         case messages
         case internalMessages
+        case screenMonitorings
         case screenshares
         case socialExpressions
         case videos

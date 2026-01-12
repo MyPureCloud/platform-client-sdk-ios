@@ -13,7 +13,9 @@ Input component configuration
 | **placeholderText** | **String** | Placeholder text for the input | [optional] |
 | **isMultipleLine** | **Bool** | Whether the input supports multiple lines | |
 | **isRequired** | **Bool** | Whether the input is required | |
+| **keyboardType** | **String** | Type of keyboard to be shown | [optional] |
+| **autoCompleteType** | **String** | A string value representing the keyboard and system information about the expected semantic meaning for the content that users enter | [optional] |
 
 
 
-_PureCloudPlatformClientV2@183.1.0_
+_PureCloudPlatformClientV2@184.0.0_

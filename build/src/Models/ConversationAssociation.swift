@@ -16,6 +16,7 @@ public class ConversationAssociation: Codable {
         case email = "EMAIL"
         case message = "MESSAGE"
         case internalMessage = "INTERNAL_MESSAGE"
+        case screenMonitoring = "SCREEN_MONITORING"
         case socialExpression = "SOCIAL_EXPRESSION"
         case video = "VIDEO"
         case screenshare = "SCREENSHARE"

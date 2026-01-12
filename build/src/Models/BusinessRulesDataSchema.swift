@@ -40,7 +40,7 @@ public class BusinessRulesDataSchema: Codable {
     public var enabled: Bool?
     /** The URI of the user that created this schema. */
     public var createdBy: DomainEntityRef?
-    /** The date and time this schema was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    /** The date and time this schema version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** A JSON schema defining the extension to the built-in entity type. */
     public var jsonSchema: JsonSchemaDocument?

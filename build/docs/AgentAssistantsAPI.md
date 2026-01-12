@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteAssistantsAgentchecklist**](AgentAssistantsAPI#deleteAssistantsAgentchecklist) | Delete an agent checklist |
 | [**getAssistant**](AgentAssistantsAPI#getAssistant) | Get an assistant. |
 | [**getAssistantQueue**](AgentAssistantsAPI#getAssistantQueue) | Get queue Information for an assistant. |
+| [**getAssistantQueueUsersJob**](AgentAssistantsAPI#getAssistantQueueUsersJob) | Get job details. |
 | [**getAssistantQueues**](AgentAssistantsAPI#getAssistantQueues) | Get all the queues associated with an assistant. |
 | [**getAssistants**](AgentAssistantsAPI#getAssistants) | Get all assistants. |
 | [**getAssistantsAgentchecklist**](AgentAssistantsAPI#getAssistantsAgentchecklist) | Get an agent checklist |
@@ -20,6 +21,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchAssistantQueues**](AgentAssistantsAPI#patchAssistantQueues) | Update Queues for an Assistant. |
 | [**postAssistantQueueUsersBulkAdd**](AgentAssistantsAPI#postAssistantQueueUsersBulkAdd) | Bulk add users to assistant-queue (requires manual assignment mode). |
 | [**postAssistantQueueUsersBulkRemove**](AgentAssistantsAPI#postAssistantQueueUsersBulkRemove) | Bulk remove users from assistant-queue (requires manual assignment mode). |
+| [**postAssistantQueueUsersJobs**](AgentAssistantsAPI#postAssistantQueueUsersJobs) | Start a new job to assistant-queue. |
 | [**postAssistantQueueUsersQuery**](AgentAssistantsAPI#postAssistantQueueUsersQuery) | Query for users in the assistant-queue (requires manual assignment mode). |
 | [**postAssistants**](AgentAssistantsAPI#postAssistants) | Create an Assistant. |
 | [**postAssistantsAgentchecklists**](AgentAssistantsAPI#postAssistantsAgentchecklists) | Create an agent checklist |
@@ -332,6 +334,60 @@ AgentAssistantsAPI.getAssistantQueue(assistantId: assistantId, queueId: queueId,
 ### Return type
 
 [**AssistantQueue**](AssistantQueue)
+
+
+## getAssistantQueueUsersJob
+
+
+
+> [AssistantQueueUsersJobsResponse](AssistantQueueUsersJobsResponse) getAssistantQueueUsersJob(assistantId, queueId, jobId)
+
+Get job details.
+
+
+
+Wraps GET /api/v2/assistants/{assistantId}/queues/{queueId}/users/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* assistants:queueUserJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let assistantId: String = "" // Assistant ID
+let queueId: String = "" // Queue ID
+let jobId: String = "" // Job ID
+
+// Code example
+AgentAssistantsAPI.getAssistantQueueUsersJob(assistantId: assistantId, queueId: queueId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AgentAssistantsAPI.getAssistantQueueUsersJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **assistantId** | **String**| Assistant ID | |
+| **queueId** | **String**| Queue ID | |
+| **jobId** | **String**| Job ID | |
+
+
+### Return type
+
+[**AssistantQueueUsersJobsResponse**](AssistantQueueUsersJobsResponse)
 
 
 ## getAssistantQueues
@@ -880,6 +936,60 @@ AgentAssistantsAPI.postAssistantQueueUsersBulkRemove(assistantId: assistantId, q
 [**BulkResponse**](BulkResponse)
 
 
+## postAssistantQueueUsersJobs
+
+
+
+> [AssistantQueueUsersJobsResponse](AssistantQueueUsersJobsResponse) postAssistantQueueUsersJobs(assistantId, queueId, body)
+
+Start a new job to assistant-queue.
+
+
+
+Wraps POST /api/v2/assistants/{assistantId}/queues/{queueId}/users/jobs  
+
+Requires ANY permissions: 
+
+* assistants:queueUserJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let assistantId: String = "" // Assistant ID
+let queueId: String = "" // Queue ID
+let body: AssistantQueueUsersJobsRequest = new AssistantQueueUsersJobsRequest(...) // 
+
+// Code example
+AgentAssistantsAPI.postAssistantQueueUsersJobs(assistantId: assistantId, queueId: queueId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AgentAssistantsAPI.postAssistantQueueUsersJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **assistantId** | **String**| Assistant ID | |
+| **queueId** | **String**| Queue ID | |
+| **body** | [**AssistantQueueUsersJobsRequest**](AssistantQueueUsersJobsRequest)|  | |
+
+
+### Return type
+
+[**AssistantQueueUsersJobsResponse**](AssistantQueueUsersJobsResponse)
+
+
 ## postAssistantQueueUsersQuery
 
 
@@ -1142,4 +1252,4 @@ AgentAssistantsAPI.putAssistantsAgentchecklist(agentChecklistId: agentChecklistI
 [**AgentChecklist**](AgentChecklist)
 
 
-_PureCloudPlatformClientV2@183.1.0_
+_PureCloudPlatformClientV2@184.0.0_

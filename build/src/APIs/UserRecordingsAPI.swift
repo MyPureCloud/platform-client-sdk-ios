@@ -156,7 +156,7 @@ open class UserRecordingsAPI {
         "id" : "id"
       } ]
     } ],
-    "maxParticipants" : 0,
+    "maxParticipants" : 7,
     "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
     "conversationIds" : [ "conversationIds", "conversationIds" ],
     "securePause" : true,
@@ -349,7 +349,7 @@ open class UserRecordingsAPI {
         "wrapup" : "{}",
         "initialState" : "alerting",
         "videoMuted" : true,
-        "peerCount" : 7,
+        "peerCount" : 1,
         "msids" : [ "msids", "msids" ],
         "afterCallWorkRequired" : true,
         "audioMuted" : true,
@@ -369,7 +369,7 @@ open class UserRecordingsAPI {
         "wrapup" : "{}",
         "initialState" : "alerting",
         "videoMuted" : true,
-        "peerCount" : 7,
+        "peerCount" : 1,
         "msids" : [ "msids", "msids" ],
         "afterCallWorkRequired" : true,
         "audioMuted" : true,
@@ -385,6 +385,57 @@ open class UserRecordingsAPI {
       } ],
       "externalOrganizationId" : "externalOrganizationId",
       "conversationRoutingData" : "{}",
+      "screenMonitorings" : [ {
+        "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+        "initialState" : "none",
+        "screenMonitoring" : "{}",
+        "monitoringType" : "Unknown",
+        "provider" : "provider",
+        "count" : 4,
+        "disconnectType" : "system",
+        "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+        "id" : "id",
+        "state" : "none",
+        "targetUser" : "{}",
+        "segments" : [ {
+          "howEnded" : "howEnded",
+          "disconnectType" : "disconnectType",
+          "startTime" : "2000-01-23T04:56:07.000+00:00",
+          "endTime" : "2000-01-23T04:56:07.000+00:00",
+          "type" : "type"
+        }, {
+          "howEnded" : "howEnded",
+          "disconnectType" : "disconnectType",
+          "startTime" : "2000-01-23T04:56:07.000+00:00",
+          "endTime" : "2000-01-23T04:56:07.000+00:00",
+          "type" : "type"
+        } ]
+      }, {
+        "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+        "initialState" : "none",
+        "screenMonitoring" : "{}",
+        "monitoringType" : "Unknown",
+        "provider" : "provider",
+        "count" : 4,
+        "disconnectType" : "system",
+        "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+        "id" : "id",
+        "state" : "none",
+        "targetUser" : "{}",
+        "segments" : [ {
+          "howEnded" : "howEnded",
+          "disconnectType" : "disconnectType",
+          "startTime" : "2000-01-23T04:56:07.000+00:00",
+          "endTime" : "2000-01-23T04:56:07.000+00:00",
+          "type" : "type"
+        }, {
+          "howEnded" : "howEnded",
+          "disconnectType" : "disconnectType",
+          "startTime" : "2000-01-23T04:56:07.000+00:00",
+          "endTime" : "2000-01-23T04:56:07.000+00:00",
+          "type" : "type"
+        } ]
+      } ],
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
@@ -731,7 +782,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "initialState" : "alerting",
-        "peerCount" : 4,
+        "peerCount" : 7,
         "afterCallWorkRequired" : true,
         "sharing" : true,
         "segments" : [ {
@@ -760,7 +811,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "initialState" : "alerting",
-        "peerCount" : 4,
+        "peerCount" : 7,
         "afterCallWorkRequired" : true,
         "sharing" : true,
         "segments" : [ {
@@ -1330,23 +1381,23 @@ open class UserRecordingsAPI {
         "evaluationSource" : "{}",
         "redacted" : true,
         "answers" : {
-          "totalNonCriticalScore" : 5.025005,
+          "totalNonCriticalScore" : 9.965781,
           "comments" : "comments",
           "privateComments" : "privateComments",
           "agentComments" : "agentComments",
-          "totalCriticalScore" : 4.9652185,
+          "totalCriticalScore" : 5.025005,
           "questionGroupScores" : [ {
-            "totalNonCriticalScore" : 9.018348,
-            "totalCriticalScoreUnweighted" : 1.284659,
-            "totalNonCriticalScoreUnweighted" : 6.778325,
+            "totalNonCriticalScore" : 6.4384236,
+            "totalCriticalScoreUnweighted" : 2.8841622,
+            "totalNonCriticalScoreUnweighted" : 6.878052,
             "systemMarkedNA" : true,
             "markedNA" : true,
-            "totalScoreUnweighted" : 3.5571952,
-            "maxTotalNonCriticalScore" : 6.4384236,
+            "totalScoreUnweighted" : 6.965118,
+            "maxTotalNonCriticalScore" : 3.5571952,
             "questionScores" : [ {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -1357,7 +1408,7 @@ open class UserRecordingsAPI {
             }, {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -1367,25 +1418,25 @@ open class UserRecordingsAPI {
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
-            "totalScore" : 9.965781,
-            "maxTotalScore" : 9.36931,
-            "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-            "totalCriticalScore" : 6.6835623,
-            "maxTotalCriticalScore" : 8.762042,
-            "maxTotalCriticalScoreUnweighted" : 2.8841622,
-            "maxTotalScoreUnweighted" : 6.965118
+            "totalScore" : 9.36931,
+            "maxTotalScore" : 6.6835623,
+            "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+            "totalCriticalScore" : 8.762042,
+            "maxTotalCriticalScore" : 9.018348,
+            "maxTotalCriticalScoreUnweighted" : 6.778325,
+            "maxTotalScoreUnweighted" : 1.284659
           }, {
-            "totalNonCriticalScore" : 9.018348,
-            "totalCriticalScoreUnweighted" : 1.284659,
-            "totalNonCriticalScoreUnweighted" : 6.778325,
+            "totalNonCriticalScore" : 6.4384236,
+            "totalCriticalScoreUnweighted" : 2.8841622,
+            "totalNonCriticalScoreUnweighted" : 6.878052,
             "systemMarkedNA" : true,
             "markedNA" : true,
-            "totalScoreUnweighted" : 3.5571952,
-            "maxTotalNonCriticalScore" : 6.4384236,
+            "totalScoreUnweighted" : 6.965118,
+            "maxTotalNonCriticalScore" : 3.5571952,
             "questionScores" : [ {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -1396,7 +1447,7 @@ open class UserRecordingsAPI {
             }, {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -1406,40 +1457,40 @@ open class UserRecordingsAPI {
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
-            "totalScore" : 9.965781,
-            "maxTotalScore" : 9.36931,
-            "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-            "totalCriticalScore" : 6.6835623,
-            "maxTotalCriticalScore" : 8.762042,
-            "maxTotalCriticalScoreUnweighted" : 2.8841622,
-            "maxTotalScoreUnweighted" : 6.965118
+            "totalScore" : 9.36931,
+            "maxTotalScore" : 6.6835623,
+            "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+            "totalCriticalScore" : 8.762042,
+            "maxTotalCriticalScore" : 9.018348,
+            "maxTotalCriticalScoreUnweighted" : 6.778325,
+            "maxTotalScoreUnweighted" : 1.284659
           } ],
           "transcriptTopics" : [ {
             "duration" : {
-              "totalMilliseconds" : 3
+              "totalMilliseconds" : 7
             },
             "offset" : "{}",
-            "recordingLocation" : 7,
+            "recordingLocation" : 0,
             "startTimeMilliseconds" : 3,
-            "confidence" : 6,
+            "confidence" : 3,
             "name" : "name",
             "topicPhrase" : "topicPhrase",
             "id" : "id",
             "transcriptPhrase" : "transcriptPhrase"
           }, {
             "duration" : {
-              "totalMilliseconds" : 3
+              "totalMilliseconds" : 7
             },
             "offset" : "{}",
-            "recordingLocation" : 7,
+            "recordingLocation" : 0,
             "startTimeMilliseconds" : 3,
-            "confidence" : 6,
+            "confidence" : 3,
             "name" : "name",
             "topicPhrase" : "topicPhrase",
             "id" : "id",
             "transcriptPhrase" : "transcriptPhrase"
           } ],
-          "totalScore" : 1.1730742,
+          "totalScore" : 4.9652185,
           "anyFailedKillQuestions" : true
         },
         "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -2339,7 +2390,7 @@ open class UserRecordingsAPI {
             "geolocation" : "{}"
           } ],
           "contextId" : "contextId",
-          "averageScore" : 1,
+          "averageScore" : 6,
           "calibrator" : {
             "workPlanBidRanks" : "{}",
             "addresses" : [ {
@@ -2635,7 +2686,7 @@ open class UserRecordingsAPI {
             "username" : "username",
             "geolocation" : "{}"
           },
-          "highScore" : 6,
+          "highScore" : 7,
           "createdDate" : "2000-01-23T04:56:07.000+00:00",
           "expertEvaluator" : {
             "workPlanBidRanks" : "{}",
@@ -2934,7 +2985,7 @@ open class UserRecordingsAPI {
           },
           "name" : "name",
           "id" : "id",
-          "lowScore" : 7,
+          "lowScore" : 1,
           "conversation" : {
             "selfUri" : "https://openapi-generator.tech",
             "id" : "id"
@@ -3044,7 +3095,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               } ],
-              "weight" : 1.2315135,
+              "weight" : 1.0246457,
               "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
@@ -3146,7 +3197,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               } ],
-              "weight" : 1.2315135,
+              "weight" : 1.0246457,
               "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
@@ -4177,23 +4228,23 @@ open class UserRecordingsAPI {
         "evaluationSource" : "{}",
         "redacted" : true,
         "answers" : {
-          "totalNonCriticalScore" : 5.025005,
+          "totalNonCriticalScore" : 9.965781,
           "comments" : "comments",
           "privateComments" : "privateComments",
           "agentComments" : "agentComments",
-          "totalCriticalScore" : 4.9652185,
+          "totalCriticalScore" : 5.025005,
           "questionGroupScores" : [ {
-            "totalNonCriticalScore" : 9.018348,
-            "totalCriticalScoreUnweighted" : 1.284659,
-            "totalNonCriticalScoreUnweighted" : 6.778325,
+            "totalNonCriticalScore" : 6.4384236,
+            "totalCriticalScoreUnweighted" : 2.8841622,
+            "totalNonCriticalScoreUnweighted" : 6.878052,
             "systemMarkedNA" : true,
             "markedNA" : true,
-            "totalScoreUnweighted" : 3.5571952,
-            "maxTotalNonCriticalScore" : 6.4384236,
+            "totalScoreUnweighted" : 6.965118,
+            "maxTotalNonCriticalScore" : 3.5571952,
             "questionScores" : [ {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -4204,7 +4255,7 @@ open class UserRecordingsAPI {
             }, {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -4214,25 +4265,25 @@ open class UserRecordingsAPI {
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
-            "totalScore" : 9.965781,
-            "maxTotalScore" : 9.36931,
-            "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-            "totalCriticalScore" : 6.6835623,
-            "maxTotalCriticalScore" : 8.762042,
-            "maxTotalCriticalScoreUnweighted" : 2.8841622,
-            "maxTotalScoreUnweighted" : 6.965118
+            "totalScore" : 9.36931,
+            "maxTotalScore" : 6.6835623,
+            "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+            "totalCriticalScore" : 8.762042,
+            "maxTotalCriticalScore" : 9.018348,
+            "maxTotalCriticalScoreUnweighted" : 6.778325,
+            "maxTotalScoreUnweighted" : 1.284659
           }, {
-            "totalNonCriticalScore" : 9.018348,
-            "totalCriticalScoreUnweighted" : 1.284659,
-            "totalNonCriticalScoreUnweighted" : 6.778325,
+            "totalNonCriticalScore" : 6.4384236,
+            "totalCriticalScoreUnweighted" : 2.8841622,
+            "totalNonCriticalScoreUnweighted" : 6.878052,
             "systemMarkedNA" : true,
             "markedNA" : true,
-            "totalScoreUnweighted" : 3.5571952,
-            "maxTotalNonCriticalScore" : 6.4384236,
+            "totalScoreUnweighted" : 6.965118,
+            "maxTotalNonCriticalScore" : 3.5571952,
             "questionScores" : [ {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -4243,7 +4294,7 @@ open class UserRecordingsAPI {
             }, {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -4253,40 +4304,40 @@ open class UserRecordingsAPI {
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
-            "totalScore" : 9.965781,
-            "maxTotalScore" : 9.36931,
-            "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-            "totalCriticalScore" : 6.6835623,
-            "maxTotalCriticalScore" : 8.762042,
-            "maxTotalCriticalScoreUnweighted" : 2.8841622,
-            "maxTotalScoreUnweighted" : 6.965118
+            "totalScore" : 9.36931,
+            "maxTotalScore" : 6.6835623,
+            "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+            "totalCriticalScore" : 8.762042,
+            "maxTotalCriticalScore" : 9.018348,
+            "maxTotalCriticalScoreUnweighted" : 6.778325,
+            "maxTotalScoreUnweighted" : 1.284659
           } ],
           "transcriptTopics" : [ {
             "duration" : {
-              "totalMilliseconds" : 3
+              "totalMilliseconds" : 7
             },
             "offset" : "{}",
-            "recordingLocation" : 7,
+            "recordingLocation" : 0,
             "startTimeMilliseconds" : 3,
-            "confidence" : 6,
+            "confidence" : 3,
             "name" : "name",
             "topicPhrase" : "topicPhrase",
             "id" : "id",
             "transcriptPhrase" : "transcriptPhrase"
           }, {
             "duration" : {
-              "totalMilliseconds" : 3
+              "totalMilliseconds" : 7
             },
             "offset" : "{}",
-            "recordingLocation" : 7,
+            "recordingLocation" : 0,
             "startTimeMilliseconds" : 3,
-            "confidence" : 6,
+            "confidence" : 3,
             "name" : "name",
             "topicPhrase" : "topicPhrase",
             "id" : "id",
             "transcriptPhrase" : "transcriptPhrase"
           } ],
-          "totalScore" : 1.1730742,
+          "totalScore" : 4.9652185,
           "anyFailedKillQuestions" : true
         },
         "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -5186,7 +5237,7 @@ open class UserRecordingsAPI {
             "geolocation" : "{}"
           } ],
           "contextId" : "contextId",
-          "averageScore" : 1,
+          "averageScore" : 6,
           "calibrator" : {
             "workPlanBidRanks" : "{}",
             "addresses" : [ {
@@ -5482,7 +5533,7 @@ open class UserRecordingsAPI {
             "username" : "username",
             "geolocation" : "{}"
           },
-          "highScore" : 6,
+          "highScore" : 7,
           "createdDate" : "2000-01-23T04:56:07.000+00:00",
           "expertEvaluator" : {
             "workPlanBidRanks" : "{}",
@@ -5781,7 +5832,7 @@ open class UserRecordingsAPI {
           },
           "name" : "name",
           "id" : "id",
-          "lowScore" : 7,
+          "lowScore" : 1,
           "conversation" : {
             "selfUri" : "https://openapi-generator.tech",
             "id" : "id"
@@ -5891,7 +5942,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               } ],
-              "weight" : 1.2315135,
+              "weight" : 1.0246457,
               "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
@@ -5993,7 +6044,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               } ],
-              "weight" : 1.2315135,
+              "weight" : 1.0246457,
               "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
@@ -7087,7 +7138,7 @@ open class UserRecordingsAPI {
         "wrapup" : "{}",
         "initialState" : "alerting",
         "videoMuted" : true,
-        "peerCount" : 7,
+        "peerCount" : 1,
         "msids" : [ "msids", "msids" ],
         "afterCallWorkRequired" : true,
         "audioMuted" : true,
@@ -7107,7 +7158,7 @@ open class UserRecordingsAPI {
         "wrapup" : "{}",
         "initialState" : "alerting",
         "videoMuted" : true,
-        "peerCount" : 7,
+        "peerCount" : 1,
         "msids" : [ "msids", "msids" ],
         "afterCallWorkRequired" : true,
         "audioMuted" : true,
@@ -7123,6 +7174,57 @@ open class UserRecordingsAPI {
       } ],
       "externalOrganizationId" : "externalOrganizationId",
       "conversationRoutingData" : "{}",
+      "screenMonitorings" : [ {
+        "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+        "initialState" : "none",
+        "screenMonitoring" : "{}",
+        "monitoringType" : "Unknown",
+        "provider" : "provider",
+        "count" : 4,
+        "disconnectType" : "system",
+        "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+        "id" : "id",
+        "state" : "none",
+        "targetUser" : "{}",
+        "segments" : [ {
+          "howEnded" : "howEnded",
+          "disconnectType" : "disconnectType",
+          "startTime" : "2000-01-23T04:56:07.000+00:00",
+          "endTime" : "2000-01-23T04:56:07.000+00:00",
+          "type" : "type"
+        }, {
+          "howEnded" : "howEnded",
+          "disconnectType" : "disconnectType",
+          "startTime" : "2000-01-23T04:56:07.000+00:00",
+          "endTime" : "2000-01-23T04:56:07.000+00:00",
+          "type" : "type"
+        } ]
+      }, {
+        "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+        "initialState" : "none",
+        "screenMonitoring" : "{}",
+        "monitoringType" : "Unknown",
+        "provider" : "provider",
+        "count" : 4,
+        "disconnectType" : "system",
+        "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+        "id" : "id",
+        "state" : "none",
+        "targetUser" : "{}",
+        "segments" : [ {
+          "howEnded" : "howEnded",
+          "disconnectType" : "disconnectType",
+          "startTime" : "2000-01-23T04:56:07.000+00:00",
+          "endTime" : "2000-01-23T04:56:07.000+00:00",
+          "type" : "type"
+        }, {
+          "howEnded" : "howEnded",
+          "disconnectType" : "disconnectType",
+          "startTime" : "2000-01-23T04:56:07.000+00:00",
+          "endTime" : "2000-01-23T04:56:07.000+00:00",
+          "type" : "type"
+        } ]
+      } ],
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
@@ -7469,7 +7571,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "initialState" : "alerting",
-        "peerCount" : 4,
+        "peerCount" : 7,
         "afterCallWorkRequired" : true,
         "sharing" : true,
         "segments" : [ {
@@ -7498,7 +7600,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "initialState" : "alerting",
-        "peerCount" : 4,
+        "peerCount" : 7,
         "afterCallWorkRequired" : true,
         "sharing" : true,
         "segments" : [ {
@@ -8068,23 +8170,23 @@ open class UserRecordingsAPI {
         "evaluationSource" : "{}",
         "redacted" : true,
         "answers" : {
-          "totalNonCriticalScore" : 5.025005,
+          "totalNonCriticalScore" : 9.965781,
           "comments" : "comments",
           "privateComments" : "privateComments",
           "agentComments" : "agentComments",
-          "totalCriticalScore" : 4.9652185,
+          "totalCriticalScore" : 5.025005,
           "questionGroupScores" : [ {
-            "totalNonCriticalScore" : 9.018348,
-            "totalCriticalScoreUnweighted" : 1.284659,
-            "totalNonCriticalScoreUnweighted" : 6.778325,
+            "totalNonCriticalScore" : 6.4384236,
+            "totalCriticalScoreUnweighted" : 2.8841622,
+            "totalNonCriticalScoreUnweighted" : 6.878052,
             "systemMarkedNA" : true,
             "markedNA" : true,
-            "totalScoreUnweighted" : 3.5571952,
-            "maxTotalNonCriticalScore" : 6.4384236,
+            "totalScoreUnweighted" : 6.965118,
+            "maxTotalNonCriticalScore" : 3.5571952,
             "questionScores" : [ {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -8095,7 +8197,7 @@ open class UserRecordingsAPI {
             }, {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -8105,25 +8207,25 @@ open class UserRecordingsAPI {
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
-            "totalScore" : 9.965781,
-            "maxTotalScore" : 9.36931,
-            "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-            "totalCriticalScore" : 6.6835623,
-            "maxTotalCriticalScore" : 8.762042,
-            "maxTotalCriticalScoreUnweighted" : 2.8841622,
-            "maxTotalScoreUnweighted" : 6.965118
+            "totalScore" : 9.36931,
+            "maxTotalScore" : 6.6835623,
+            "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+            "totalCriticalScore" : 8.762042,
+            "maxTotalCriticalScore" : 9.018348,
+            "maxTotalCriticalScoreUnweighted" : 6.778325,
+            "maxTotalScoreUnweighted" : 1.284659
           }, {
-            "totalNonCriticalScore" : 9.018348,
-            "totalCriticalScoreUnweighted" : 1.284659,
-            "totalNonCriticalScoreUnweighted" : 6.778325,
+            "totalNonCriticalScore" : 6.4384236,
+            "totalCriticalScoreUnweighted" : 2.8841622,
+            "totalNonCriticalScoreUnweighted" : 6.878052,
             "systemMarkedNA" : true,
             "markedNA" : true,
-            "totalScoreUnweighted" : 3.5571952,
-            "maxTotalNonCriticalScore" : 6.4384236,
+            "totalScoreUnweighted" : 6.965118,
+            "maxTotalNonCriticalScore" : 3.5571952,
             "questionScores" : [ {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -8134,7 +8236,7 @@ open class UserRecordingsAPI {
             }, {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -8144,40 +8246,40 @@ open class UserRecordingsAPI {
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
-            "totalScore" : 9.965781,
-            "maxTotalScore" : 9.36931,
-            "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-            "totalCriticalScore" : 6.6835623,
-            "maxTotalCriticalScore" : 8.762042,
-            "maxTotalCriticalScoreUnweighted" : 2.8841622,
-            "maxTotalScoreUnweighted" : 6.965118
+            "totalScore" : 9.36931,
+            "maxTotalScore" : 6.6835623,
+            "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+            "totalCriticalScore" : 8.762042,
+            "maxTotalCriticalScore" : 9.018348,
+            "maxTotalCriticalScoreUnweighted" : 6.778325,
+            "maxTotalScoreUnweighted" : 1.284659
           } ],
           "transcriptTopics" : [ {
             "duration" : {
-              "totalMilliseconds" : 3
+              "totalMilliseconds" : 7
             },
             "offset" : "{}",
-            "recordingLocation" : 7,
+            "recordingLocation" : 0,
             "startTimeMilliseconds" : 3,
-            "confidence" : 6,
+            "confidence" : 3,
             "name" : "name",
             "topicPhrase" : "topicPhrase",
             "id" : "id",
             "transcriptPhrase" : "transcriptPhrase"
           }, {
             "duration" : {
-              "totalMilliseconds" : 3
+              "totalMilliseconds" : 7
             },
             "offset" : "{}",
-            "recordingLocation" : 7,
+            "recordingLocation" : 0,
             "startTimeMilliseconds" : 3,
-            "confidence" : 6,
+            "confidence" : 3,
             "name" : "name",
             "topicPhrase" : "topicPhrase",
             "id" : "id",
             "transcriptPhrase" : "transcriptPhrase"
           } ],
-          "totalScore" : 1.1730742,
+          "totalScore" : 4.9652185,
           "anyFailedKillQuestions" : true
         },
         "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -9077,7 +9179,7 @@ open class UserRecordingsAPI {
             "geolocation" : "{}"
           } ],
           "contextId" : "contextId",
-          "averageScore" : 1,
+          "averageScore" : 6,
           "calibrator" : {
             "workPlanBidRanks" : "{}",
             "addresses" : [ {
@@ -9373,7 +9475,7 @@ open class UserRecordingsAPI {
             "username" : "username",
             "geolocation" : "{}"
           },
-          "highScore" : 6,
+          "highScore" : 7,
           "createdDate" : "2000-01-23T04:56:07.000+00:00",
           "expertEvaluator" : {
             "workPlanBidRanks" : "{}",
@@ -9672,7 +9774,7 @@ open class UserRecordingsAPI {
           },
           "name" : "name",
           "id" : "id",
-          "lowScore" : 7,
+          "lowScore" : 1,
           "conversation" : {
             "selfUri" : "https://openapi-generator.tech",
             "id" : "id"
@@ -9782,7 +9884,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               } ],
-              "weight" : 1.2315135,
+              "weight" : 1.0246457,
               "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
@@ -9884,7 +9986,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               } ],
-              "weight" : 1.2315135,
+              "weight" : 1.0246457,
               "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
@@ -10915,23 +11017,23 @@ open class UserRecordingsAPI {
         "evaluationSource" : "{}",
         "redacted" : true,
         "answers" : {
-          "totalNonCriticalScore" : 5.025005,
+          "totalNonCriticalScore" : 9.965781,
           "comments" : "comments",
           "privateComments" : "privateComments",
           "agentComments" : "agentComments",
-          "totalCriticalScore" : 4.9652185,
+          "totalCriticalScore" : 5.025005,
           "questionGroupScores" : [ {
-            "totalNonCriticalScore" : 9.018348,
-            "totalCriticalScoreUnweighted" : 1.284659,
-            "totalNonCriticalScoreUnweighted" : 6.778325,
+            "totalNonCriticalScore" : 6.4384236,
+            "totalCriticalScoreUnweighted" : 2.8841622,
+            "totalNonCriticalScoreUnweighted" : 6.878052,
             "systemMarkedNA" : true,
             "markedNA" : true,
-            "totalScoreUnweighted" : 3.5571952,
-            "maxTotalNonCriticalScore" : 6.4384236,
+            "totalScoreUnweighted" : 6.965118,
+            "maxTotalNonCriticalScore" : 3.5571952,
             "questionScores" : [ {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -10942,7 +11044,7 @@ open class UserRecordingsAPI {
             }, {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -10952,25 +11054,25 @@ open class UserRecordingsAPI {
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
-            "totalScore" : 9.965781,
-            "maxTotalScore" : 9.36931,
-            "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-            "totalCriticalScore" : 6.6835623,
-            "maxTotalCriticalScore" : 8.762042,
-            "maxTotalCriticalScoreUnweighted" : 2.8841622,
-            "maxTotalScoreUnweighted" : 6.965118
+            "totalScore" : 9.36931,
+            "maxTotalScore" : 6.6835623,
+            "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+            "totalCriticalScore" : 8.762042,
+            "maxTotalCriticalScore" : 9.018348,
+            "maxTotalCriticalScoreUnweighted" : 6.778325,
+            "maxTotalScoreUnweighted" : 1.284659
           }, {
-            "totalNonCriticalScore" : 9.018348,
-            "totalCriticalScoreUnweighted" : 1.284659,
-            "totalNonCriticalScoreUnweighted" : 6.778325,
+            "totalNonCriticalScore" : 6.4384236,
+            "totalCriticalScoreUnweighted" : 2.8841622,
+            "totalNonCriticalScoreUnweighted" : 6.878052,
             "systemMarkedNA" : true,
             "markedNA" : true,
-            "totalScoreUnweighted" : 3.5571952,
-            "maxTotalNonCriticalScore" : 6.4384236,
+            "totalScoreUnweighted" : 6.965118,
+            "maxTotalNonCriticalScore" : 3.5571952,
             "questionScores" : [ {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -10981,7 +11083,7 @@ open class UserRecordingsAPI {
             }, {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -10991,40 +11093,40 @@ open class UserRecordingsAPI {
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
-            "totalScore" : 9.965781,
-            "maxTotalScore" : 9.36931,
-            "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-            "totalCriticalScore" : 6.6835623,
-            "maxTotalCriticalScore" : 8.762042,
-            "maxTotalCriticalScoreUnweighted" : 2.8841622,
-            "maxTotalScoreUnweighted" : 6.965118
+            "totalScore" : 9.36931,
+            "maxTotalScore" : 6.6835623,
+            "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+            "totalCriticalScore" : 8.762042,
+            "maxTotalCriticalScore" : 9.018348,
+            "maxTotalCriticalScoreUnweighted" : 6.778325,
+            "maxTotalScoreUnweighted" : 1.284659
           } ],
           "transcriptTopics" : [ {
             "duration" : {
-              "totalMilliseconds" : 3
+              "totalMilliseconds" : 7
             },
             "offset" : "{}",
-            "recordingLocation" : 7,
+            "recordingLocation" : 0,
             "startTimeMilliseconds" : 3,
-            "confidence" : 6,
+            "confidence" : 3,
             "name" : "name",
             "topicPhrase" : "topicPhrase",
             "id" : "id",
             "transcriptPhrase" : "transcriptPhrase"
           }, {
             "duration" : {
-              "totalMilliseconds" : 3
+              "totalMilliseconds" : 7
             },
             "offset" : "{}",
-            "recordingLocation" : 7,
+            "recordingLocation" : 0,
             "startTimeMilliseconds" : 3,
-            "confidence" : 6,
+            "confidence" : 3,
             "name" : "name",
             "topicPhrase" : "topicPhrase",
             "id" : "id",
             "transcriptPhrase" : "transcriptPhrase"
           } ],
-          "totalScore" : 1.1730742,
+          "totalScore" : 4.9652185,
           "anyFailedKillQuestions" : true
         },
         "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -11924,7 +12026,7 @@ open class UserRecordingsAPI {
             "geolocation" : "{}"
           } ],
           "contextId" : "contextId",
-          "averageScore" : 1,
+          "averageScore" : 6,
           "calibrator" : {
             "workPlanBidRanks" : "{}",
             "addresses" : [ {
@@ -12220,7 +12322,7 @@ open class UserRecordingsAPI {
             "username" : "username",
             "geolocation" : "{}"
           },
-          "highScore" : 6,
+          "highScore" : 7,
           "createdDate" : "2000-01-23T04:56:07.000+00:00",
           "expertEvaluator" : {
             "workPlanBidRanks" : "{}",
@@ -12519,7 +12621,7 @@ open class UserRecordingsAPI {
           },
           "name" : "name",
           "id" : "id",
-          "lowScore" : 7,
+          "lowScore" : 1,
           "conversation" : {
             "selfUri" : "https://openapi-generator.tech",
             "id" : "id"
@@ -12629,7 +12731,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               } ],
-              "weight" : 1.2315135,
+              "weight" : 1.0246457,
               "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
@@ -12731,7 +12833,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               } ],
-              "weight" : 1.2315135,
+              "weight" : 1.0246457,
               "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
@@ -13882,7 +13984,7 @@ open class UserRecordingsAPI {
           "id" : "id"
         } ]
       } ],
-      "maxParticipants" : 0,
+      "maxParticipants" : 7,
       "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
       "conversationIds" : [ "conversationIds", "conversationIds" ],
       "securePause" : true,
@@ -14075,7 +14177,7 @@ open class UserRecordingsAPI {
           "wrapup" : "{}",
           "initialState" : "alerting",
           "videoMuted" : true,
-          "peerCount" : 7,
+          "peerCount" : 1,
           "msids" : [ "msids", "msids" ],
           "afterCallWorkRequired" : true,
           "audioMuted" : true,
@@ -14095,7 +14197,7 @@ open class UserRecordingsAPI {
           "wrapup" : "{}",
           "initialState" : "alerting",
           "videoMuted" : true,
-          "peerCount" : 7,
+          "peerCount" : 1,
           "msids" : [ "msids", "msids" ],
           "afterCallWorkRequired" : true,
           "audioMuted" : true,
@@ -14111,6 +14213,57 @@ open class UserRecordingsAPI {
         } ],
         "externalOrganizationId" : "externalOrganizationId",
         "conversationRoutingData" : "{}",
+        "screenMonitorings" : [ {
+          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "initialState" : "none",
+          "screenMonitoring" : "{}",
+          "monitoringType" : "Unknown",
+          "provider" : "provider",
+          "count" : 4,
+          "disconnectType" : "system",
+          "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id",
+          "state" : "none",
+          "targetUser" : "{}",
+          "segments" : [ {
+            "howEnded" : "howEnded",
+            "disconnectType" : "disconnectType",
+            "startTime" : "2000-01-23T04:56:07.000+00:00",
+            "endTime" : "2000-01-23T04:56:07.000+00:00",
+            "type" : "type"
+          }, {
+            "howEnded" : "howEnded",
+            "disconnectType" : "disconnectType",
+            "startTime" : "2000-01-23T04:56:07.000+00:00",
+            "endTime" : "2000-01-23T04:56:07.000+00:00",
+            "type" : "type"
+          } ]
+        }, {
+          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "initialState" : "none",
+          "screenMonitoring" : "{}",
+          "monitoringType" : "Unknown",
+          "provider" : "provider",
+          "count" : 4,
+          "disconnectType" : "system",
+          "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id",
+          "state" : "none",
+          "targetUser" : "{}",
+          "segments" : [ {
+            "howEnded" : "howEnded",
+            "disconnectType" : "disconnectType",
+            "startTime" : "2000-01-23T04:56:07.000+00:00",
+            "endTime" : "2000-01-23T04:56:07.000+00:00",
+            "type" : "type"
+          }, {
+            "howEnded" : "howEnded",
+            "disconnectType" : "disconnectType",
+            "startTime" : "2000-01-23T04:56:07.000+00:00",
+            "endTime" : "2000-01-23T04:56:07.000+00:00",
+            "type" : "type"
+          } ]
+        } ],
         "wrapupRequired" : true,
         "connectedTime" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
@@ -14457,7 +14610,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "initialState" : "alerting",
-          "peerCount" : 4,
+          "peerCount" : 7,
           "afterCallWorkRequired" : true,
           "sharing" : true,
           "segments" : [ {
@@ -14486,7 +14639,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "initialState" : "alerting",
-          "peerCount" : 4,
+          "peerCount" : 7,
           "afterCallWorkRequired" : true,
           "sharing" : true,
           "segments" : [ {
@@ -15056,23 +15209,23 @@ open class UserRecordingsAPI {
           "evaluationSource" : "{}",
           "redacted" : true,
           "answers" : {
-            "totalNonCriticalScore" : 5.025005,
+            "totalNonCriticalScore" : 9.965781,
             "comments" : "comments",
             "privateComments" : "privateComments",
             "agentComments" : "agentComments",
-            "totalCriticalScore" : 4.9652185,
+            "totalCriticalScore" : 5.025005,
             "questionGroupScores" : [ {
-              "totalNonCriticalScore" : 9.018348,
-              "totalCriticalScoreUnweighted" : 1.284659,
-              "totalNonCriticalScoreUnweighted" : 6.778325,
+              "totalNonCriticalScore" : 6.4384236,
+              "totalCriticalScoreUnweighted" : 2.8841622,
+              "totalNonCriticalScoreUnweighted" : 6.878052,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 3.5571952,
-              "maxTotalNonCriticalScore" : 6.4384236,
+              "totalScoreUnweighted" : 6.965118,
+              "maxTotalNonCriticalScore" : 3.5571952,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -15083,7 +15236,7 @@ open class UserRecordingsAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -15093,25 +15246,25 @@ open class UserRecordingsAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.965781,
-              "maxTotalScore" : 9.36931,
-              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-              "totalCriticalScore" : 6.6835623,
-              "maxTotalCriticalScore" : 8.762042,
-              "maxTotalCriticalScoreUnweighted" : 2.8841622,
-              "maxTotalScoreUnweighted" : 6.965118
+              "totalScore" : 9.36931,
+              "maxTotalScore" : 6.6835623,
+              "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+              "totalCriticalScore" : 8.762042,
+              "maxTotalCriticalScore" : 9.018348,
+              "maxTotalCriticalScoreUnweighted" : 6.778325,
+              "maxTotalScoreUnweighted" : 1.284659
             }, {
-              "totalNonCriticalScore" : 9.018348,
-              "totalCriticalScoreUnweighted" : 1.284659,
-              "totalNonCriticalScoreUnweighted" : 6.778325,
+              "totalNonCriticalScore" : 6.4384236,
+              "totalCriticalScoreUnweighted" : 2.8841622,
+              "totalNonCriticalScoreUnweighted" : 6.878052,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 3.5571952,
-              "maxTotalNonCriticalScore" : 6.4384236,
+              "totalScoreUnweighted" : 6.965118,
+              "maxTotalNonCriticalScore" : 3.5571952,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -15122,7 +15275,7 @@ open class UserRecordingsAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -15132,40 +15285,40 @@ open class UserRecordingsAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.965781,
-              "maxTotalScore" : 9.36931,
-              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-              "totalCriticalScore" : 6.6835623,
-              "maxTotalCriticalScore" : 8.762042,
-              "maxTotalCriticalScoreUnweighted" : 2.8841622,
-              "maxTotalScoreUnweighted" : 6.965118
+              "totalScore" : 9.36931,
+              "maxTotalScore" : 6.6835623,
+              "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+              "totalCriticalScore" : 8.762042,
+              "maxTotalCriticalScore" : 9.018348,
+              "maxTotalCriticalScoreUnweighted" : 6.778325,
+              "maxTotalScoreUnweighted" : 1.284659
             } ],
             "transcriptTopics" : [ {
               "duration" : {
-                "totalMilliseconds" : 3
+                "totalMilliseconds" : 7
               },
               "offset" : "{}",
-              "recordingLocation" : 7,
+              "recordingLocation" : 0,
               "startTimeMilliseconds" : 3,
-              "confidence" : 6,
+              "confidence" : 3,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             }, {
               "duration" : {
-                "totalMilliseconds" : 3
+                "totalMilliseconds" : 7
               },
               "offset" : "{}",
-              "recordingLocation" : 7,
+              "recordingLocation" : 0,
               "startTimeMilliseconds" : 3,
-              "confidence" : 6,
+              "confidence" : 3,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             } ],
-            "totalScore" : 1.1730742,
+            "totalScore" : 4.9652185,
             "anyFailedKillQuestions" : true
           },
           "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -16065,7 +16218,7 @@ open class UserRecordingsAPI {
               "geolocation" : "{}"
             } ],
             "contextId" : "contextId",
-            "averageScore" : 1,
+            "averageScore" : 6,
             "calibrator" : {
               "workPlanBidRanks" : "{}",
               "addresses" : [ {
@@ -16361,7 +16514,7 @@ open class UserRecordingsAPI {
               "username" : "username",
               "geolocation" : "{}"
             },
-            "highScore" : 6,
+            "highScore" : 7,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
               "workPlanBidRanks" : "{}",
@@ -16660,7 +16813,7 @@ open class UserRecordingsAPI {
             },
             "name" : "name",
             "id" : "id",
-            "lowScore" : 7,
+            "lowScore" : 1,
             "conversation" : {
               "selfUri" : "https://openapi-generator.tech",
               "id" : "id"
@@ -16770,7 +16923,7 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 } ],
-                "weight" : 1.2315135,
+                "weight" : 1.0246457,
                 "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
@@ -16872,7 +17025,7 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 } ],
-                "weight" : 1.2315135,
+                "weight" : 1.0246457,
                 "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
@@ -17903,23 +18056,23 @@ open class UserRecordingsAPI {
           "evaluationSource" : "{}",
           "redacted" : true,
           "answers" : {
-            "totalNonCriticalScore" : 5.025005,
+            "totalNonCriticalScore" : 9.965781,
             "comments" : "comments",
             "privateComments" : "privateComments",
             "agentComments" : "agentComments",
-            "totalCriticalScore" : 4.9652185,
+            "totalCriticalScore" : 5.025005,
             "questionGroupScores" : [ {
-              "totalNonCriticalScore" : 9.018348,
-              "totalCriticalScoreUnweighted" : 1.284659,
-              "totalNonCriticalScoreUnweighted" : 6.778325,
+              "totalNonCriticalScore" : 6.4384236,
+              "totalCriticalScoreUnweighted" : 2.8841622,
+              "totalNonCriticalScoreUnweighted" : 6.878052,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 3.5571952,
-              "maxTotalNonCriticalScore" : 6.4384236,
+              "totalScoreUnweighted" : 6.965118,
+              "maxTotalNonCriticalScore" : 3.5571952,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -17930,7 +18083,7 @@ open class UserRecordingsAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -17940,25 +18093,25 @@ open class UserRecordingsAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.965781,
-              "maxTotalScore" : 9.36931,
-              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-              "totalCriticalScore" : 6.6835623,
-              "maxTotalCriticalScore" : 8.762042,
-              "maxTotalCriticalScoreUnweighted" : 2.8841622,
-              "maxTotalScoreUnweighted" : 6.965118
+              "totalScore" : 9.36931,
+              "maxTotalScore" : 6.6835623,
+              "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+              "totalCriticalScore" : 8.762042,
+              "maxTotalCriticalScore" : 9.018348,
+              "maxTotalCriticalScoreUnweighted" : 6.778325,
+              "maxTotalScoreUnweighted" : 1.284659
             }, {
-              "totalNonCriticalScore" : 9.018348,
-              "totalCriticalScoreUnweighted" : 1.284659,
-              "totalNonCriticalScoreUnweighted" : 6.778325,
+              "totalNonCriticalScore" : 6.4384236,
+              "totalCriticalScoreUnweighted" : 2.8841622,
+              "totalNonCriticalScoreUnweighted" : 6.878052,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 3.5571952,
-              "maxTotalNonCriticalScore" : 6.4384236,
+              "totalScoreUnweighted" : 6.965118,
+              "maxTotalNonCriticalScore" : 3.5571952,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -17969,7 +18122,7 @@ open class UserRecordingsAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -17979,40 +18132,40 @@ open class UserRecordingsAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.965781,
-              "maxTotalScore" : 9.36931,
-              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-              "totalCriticalScore" : 6.6835623,
-              "maxTotalCriticalScore" : 8.762042,
-              "maxTotalCriticalScoreUnweighted" : 2.8841622,
-              "maxTotalScoreUnweighted" : 6.965118
+              "totalScore" : 9.36931,
+              "maxTotalScore" : 6.6835623,
+              "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+              "totalCriticalScore" : 8.762042,
+              "maxTotalCriticalScore" : 9.018348,
+              "maxTotalCriticalScoreUnweighted" : 6.778325,
+              "maxTotalScoreUnweighted" : 1.284659
             } ],
             "transcriptTopics" : [ {
               "duration" : {
-                "totalMilliseconds" : 3
+                "totalMilliseconds" : 7
               },
               "offset" : "{}",
-              "recordingLocation" : 7,
+              "recordingLocation" : 0,
               "startTimeMilliseconds" : 3,
-              "confidence" : 6,
+              "confidence" : 3,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             }, {
               "duration" : {
-                "totalMilliseconds" : 3
+                "totalMilliseconds" : 7
               },
               "offset" : "{}",
-              "recordingLocation" : 7,
+              "recordingLocation" : 0,
               "startTimeMilliseconds" : 3,
-              "confidence" : 6,
+              "confidence" : 3,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             } ],
-            "totalScore" : 1.1730742,
+            "totalScore" : 4.9652185,
             "anyFailedKillQuestions" : true
           },
           "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -18912,7 +19065,7 @@ open class UserRecordingsAPI {
               "geolocation" : "{}"
             } ],
             "contextId" : "contextId",
-            "averageScore" : 1,
+            "averageScore" : 6,
             "calibrator" : {
               "workPlanBidRanks" : "{}",
               "addresses" : [ {
@@ -19208,7 +19361,7 @@ open class UserRecordingsAPI {
               "username" : "username",
               "geolocation" : "{}"
             },
-            "highScore" : 6,
+            "highScore" : 7,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
               "workPlanBidRanks" : "{}",
@@ -19507,7 +19660,7 @@ open class UserRecordingsAPI {
             },
             "name" : "name",
             "id" : "id",
-            "lowScore" : 7,
+            "lowScore" : 1,
             "conversation" : {
               "selfUri" : "https://openapi-generator.tech",
               "id" : "id"
@@ -19617,7 +19770,7 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 } ],
-                "weight" : 1.2315135,
+                "weight" : 1.0246457,
                 "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
@@ -19719,7 +19872,7 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 } ],
-                "weight" : 1.2315135,
+                "weight" : 1.0246457,
                 "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
@@ -20813,7 +20966,7 @@ open class UserRecordingsAPI {
           "wrapup" : "{}",
           "initialState" : "alerting",
           "videoMuted" : true,
-          "peerCount" : 7,
+          "peerCount" : 1,
           "msids" : [ "msids", "msids" ],
           "afterCallWorkRequired" : true,
           "audioMuted" : true,
@@ -20833,7 +20986,7 @@ open class UserRecordingsAPI {
           "wrapup" : "{}",
           "initialState" : "alerting",
           "videoMuted" : true,
-          "peerCount" : 7,
+          "peerCount" : 1,
           "msids" : [ "msids", "msids" ],
           "afterCallWorkRequired" : true,
           "audioMuted" : true,
@@ -20849,6 +21002,57 @@ open class UserRecordingsAPI {
         } ],
         "externalOrganizationId" : "externalOrganizationId",
         "conversationRoutingData" : "{}",
+        "screenMonitorings" : [ {
+          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "initialState" : "none",
+          "screenMonitoring" : "{}",
+          "monitoringType" : "Unknown",
+          "provider" : "provider",
+          "count" : 4,
+          "disconnectType" : "system",
+          "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id",
+          "state" : "none",
+          "targetUser" : "{}",
+          "segments" : [ {
+            "howEnded" : "howEnded",
+            "disconnectType" : "disconnectType",
+            "startTime" : "2000-01-23T04:56:07.000+00:00",
+            "endTime" : "2000-01-23T04:56:07.000+00:00",
+            "type" : "type"
+          }, {
+            "howEnded" : "howEnded",
+            "disconnectType" : "disconnectType",
+            "startTime" : "2000-01-23T04:56:07.000+00:00",
+            "endTime" : "2000-01-23T04:56:07.000+00:00",
+            "type" : "type"
+          } ]
+        }, {
+          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "initialState" : "none",
+          "screenMonitoring" : "{}",
+          "monitoringType" : "Unknown",
+          "provider" : "provider",
+          "count" : 4,
+          "disconnectType" : "system",
+          "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id",
+          "state" : "none",
+          "targetUser" : "{}",
+          "segments" : [ {
+            "howEnded" : "howEnded",
+            "disconnectType" : "disconnectType",
+            "startTime" : "2000-01-23T04:56:07.000+00:00",
+            "endTime" : "2000-01-23T04:56:07.000+00:00",
+            "type" : "type"
+          }, {
+            "howEnded" : "howEnded",
+            "disconnectType" : "disconnectType",
+            "startTime" : "2000-01-23T04:56:07.000+00:00",
+            "endTime" : "2000-01-23T04:56:07.000+00:00",
+            "type" : "type"
+          } ]
+        } ],
         "wrapupRequired" : true,
         "connectedTime" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
@@ -21195,7 +21399,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "initialState" : "alerting",
-          "peerCount" : 4,
+          "peerCount" : 7,
           "afterCallWorkRequired" : true,
           "sharing" : true,
           "segments" : [ {
@@ -21224,7 +21428,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "initialState" : "alerting",
-          "peerCount" : 4,
+          "peerCount" : 7,
           "afterCallWorkRequired" : true,
           "sharing" : true,
           "segments" : [ {
@@ -21794,23 +21998,23 @@ open class UserRecordingsAPI {
           "evaluationSource" : "{}",
           "redacted" : true,
           "answers" : {
-            "totalNonCriticalScore" : 5.025005,
+            "totalNonCriticalScore" : 9.965781,
             "comments" : "comments",
             "privateComments" : "privateComments",
             "agentComments" : "agentComments",
-            "totalCriticalScore" : 4.9652185,
+            "totalCriticalScore" : 5.025005,
             "questionGroupScores" : [ {
-              "totalNonCriticalScore" : 9.018348,
-              "totalCriticalScoreUnweighted" : 1.284659,
-              "totalNonCriticalScoreUnweighted" : 6.778325,
+              "totalNonCriticalScore" : 6.4384236,
+              "totalCriticalScoreUnweighted" : 2.8841622,
+              "totalNonCriticalScoreUnweighted" : 6.878052,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 3.5571952,
-              "maxTotalNonCriticalScore" : 6.4384236,
+              "totalScoreUnweighted" : 6.965118,
+              "maxTotalNonCriticalScore" : 3.5571952,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -21821,7 +22025,7 @@ open class UserRecordingsAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -21831,25 +22035,25 @@ open class UserRecordingsAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.965781,
-              "maxTotalScore" : 9.36931,
-              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-              "totalCriticalScore" : 6.6835623,
-              "maxTotalCriticalScore" : 8.762042,
-              "maxTotalCriticalScoreUnweighted" : 2.8841622,
-              "maxTotalScoreUnweighted" : 6.965118
+              "totalScore" : 9.36931,
+              "maxTotalScore" : 6.6835623,
+              "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+              "totalCriticalScore" : 8.762042,
+              "maxTotalCriticalScore" : 9.018348,
+              "maxTotalCriticalScoreUnweighted" : 6.778325,
+              "maxTotalScoreUnweighted" : 1.284659
             }, {
-              "totalNonCriticalScore" : 9.018348,
-              "totalCriticalScoreUnweighted" : 1.284659,
-              "totalNonCriticalScoreUnweighted" : 6.778325,
+              "totalNonCriticalScore" : 6.4384236,
+              "totalCriticalScoreUnweighted" : 2.8841622,
+              "totalNonCriticalScoreUnweighted" : 6.878052,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 3.5571952,
-              "maxTotalNonCriticalScore" : 6.4384236,
+              "totalScoreUnweighted" : 6.965118,
+              "maxTotalNonCriticalScore" : 3.5571952,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -21860,7 +22064,7 @@ open class UserRecordingsAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -21870,40 +22074,40 @@ open class UserRecordingsAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.965781,
-              "maxTotalScore" : 9.36931,
-              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-              "totalCriticalScore" : 6.6835623,
-              "maxTotalCriticalScore" : 8.762042,
-              "maxTotalCriticalScoreUnweighted" : 2.8841622,
-              "maxTotalScoreUnweighted" : 6.965118
+              "totalScore" : 9.36931,
+              "maxTotalScore" : 6.6835623,
+              "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+              "totalCriticalScore" : 8.762042,
+              "maxTotalCriticalScore" : 9.018348,
+              "maxTotalCriticalScoreUnweighted" : 6.778325,
+              "maxTotalScoreUnweighted" : 1.284659
             } ],
             "transcriptTopics" : [ {
               "duration" : {
-                "totalMilliseconds" : 3
+                "totalMilliseconds" : 7
               },
               "offset" : "{}",
-              "recordingLocation" : 7,
+              "recordingLocation" : 0,
               "startTimeMilliseconds" : 3,
-              "confidence" : 6,
+              "confidence" : 3,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             }, {
               "duration" : {
-                "totalMilliseconds" : 3
+                "totalMilliseconds" : 7
               },
               "offset" : "{}",
-              "recordingLocation" : 7,
+              "recordingLocation" : 0,
               "startTimeMilliseconds" : 3,
-              "confidence" : 6,
+              "confidence" : 3,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             } ],
-            "totalScore" : 1.1730742,
+            "totalScore" : 4.9652185,
             "anyFailedKillQuestions" : true
           },
           "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -22803,7 +23007,7 @@ open class UserRecordingsAPI {
               "geolocation" : "{}"
             } ],
             "contextId" : "contextId",
-            "averageScore" : 1,
+            "averageScore" : 6,
             "calibrator" : {
               "workPlanBidRanks" : "{}",
               "addresses" : [ {
@@ -23099,7 +23303,7 @@ open class UserRecordingsAPI {
               "username" : "username",
               "geolocation" : "{}"
             },
-            "highScore" : 6,
+            "highScore" : 7,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
               "workPlanBidRanks" : "{}",
@@ -23398,7 +23602,7 @@ open class UserRecordingsAPI {
             },
             "name" : "name",
             "id" : "id",
-            "lowScore" : 7,
+            "lowScore" : 1,
             "conversation" : {
               "selfUri" : "https://openapi-generator.tech",
               "id" : "id"
@@ -23508,7 +23712,7 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 } ],
-                "weight" : 1.2315135,
+                "weight" : 1.0246457,
                 "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
@@ -23610,7 +23814,7 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 } ],
-                "weight" : 1.2315135,
+                "weight" : 1.0246457,
                 "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
@@ -24641,23 +24845,23 @@ open class UserRecordingsAPI {
           "evaluationSource" : "{}",
           "redacted" : true,
           "answers" : {
-            "totalNonCriticalScore" : 5.025005,
+            "totalNonCriticalScore" : 9.965781,
             "comments" : "comments",
             "privateComments" : "privateComments",
             "agentComments" : "agentComments",
-            "totalCriticalScore" : 4.9652185,
+            "totalCriticalScore" : 5.025005,
             "questionGroupScores" : [ {
-              "totalNonCriticalScore" : 9.018348,
-              "totalCriticalScoreUnweighted" : 1.284659,
-              "totalNonCriticalScoreUnweighted" : 6.778325,
+              "totalNonCriticalScore" : 6.4384236,
+              "totalCriticalScoreUnweighted" : 2.8841622,
+              "totalNonCriticalScoreUnweighted" : 6.878052,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 3.5571952,
-              "maxTotalNonCriticalScore" : 6.4384236,
+              "totalScoreUnweighted" : 6.965118,
+              "maxTotalNonCriticalScore" : 3.5571952,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -24668,7 +24872,7 @@ open class UserRecordingsAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -24678,25 +24882,25 @@ open class UserRecordingsAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.965781,
-              "maxTotalScore" : 9.36931,
-              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-              "totalCriticalScore" : 6.6835623,
-              "maxTotalCriticalScore" : 8.762042,
-              "maxTotalCriticalScoreUnweighted" : 2.8841622,
-              "maxTotalScoreUnweighted" : 6.965118
+              "totalScore" : 9.36931,
+              "maxTotalScore" : 6.6835623,
+              "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+              "totalCriticalScore" : 8.762042,
+              "maxTotalCriticalScore" : 9.018348,
+              "maxTotalCriticalScoreUnweighted" : 6.778325,
+              "maxTotalScoreUnweighted" : 1.284659
             }, {
-              "totalNonCriticalScore" : 9.018348,
-              "totalCriticalScoreUnweighted" : 1.284659,
-              "totalNonCriticalScoreUnweighted" : 6.778325,
+              "totalNonCriticalScore" : 6.4384236,
+              "totalCriticalScoreUnweighted" : 2.8841622,
+              "totalNonCriticalScoreUnweighted" : 6.878052,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 3.5571952,
-              "maxTotalNonCriticalScore" : 6.4384236,
+              "totalScoreUnweighted" : 6.965118,
+              "maxTotalNonCriticalScore" : 3.5571952,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -24707,7 +24911,7 @@ open class UserRecordingsAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -24717,40 +24921,40 @@ open class UserRecordingsAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.965781,
-              "maxTotalScore" : 9.36931,
-              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-              "totalCriticalScore" : 6.6835623,
-              "maxTotalCriticalScore" : 8.762042,
-              "maxTotalCriticalScoreUnweighted" : 2.8841622,
-              "maxTotalScoreUnweighted" : 6.965118
+              "totalScore" : 9.36931,
+              "maxTotalScore" : 6.6835623,
+              "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+              "totalCriticalScore" : 8.762042,
+              "maxTotalCriticalScore" : 9.018348,
+              "maxTotalCriticalScoreUnweighted" : 6.778325,
+              "maxTotalScoreUnweighted" : 1.284659
             } ],
             "transcriptTopics" : [ {
               "duration" : {
-                "totalMilliseconds" : 3
+                "totalMilliseconds" : 7
               },
               "offset" : "{}",
-              "recordingLocation" : 7,
+              "recordingLocation" : 0,
               "startTimeMilliseconds" : 3,
-              "confidence" : 6,
+              "confidence" : 3,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             }, {
               "duration" : {
-                "totalMilliseconds" : 3
+                "totalMilliseconds" : 7
               },
               "offset" : "{}",
-              "recordingLocation" : 7,
+              "recordingLocation" : 0,
               "startTimeMilliseconds" : 3,
-              "confidence" : 6,
+              "confidence" : 3,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             } ],
-            "totalScore" : 1.1730742,
+            "totalScore" : 4.9652185,
             "anyFailedKillQuestions" : true
           },
           "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -25650,7 +25854,7 @@ open class UserRecordingsAPI {
               "geolocation" : "{}"
             } ],
             "contextId" : "contextId",
-            "averageScore" : 1,
+            "averageScore" : 6,
             "calibrator" : {
               "workPlanBidRanks" : "{}",
               "addresses" : [ {
@@ -25946,7 +26150,7 @@ open class UserRecordingsAPI {
               "username" : "username",
               "geolocation" : "{}"
             },
-            "highScore" : 6,
+            "highScore" : 7,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
               "workPlanBidRanks" : "{}",
@@ -26245,7 +26449,7 @@ open class UserRecordingsAPI {
             },
             "name" : "name",
             "id" : "id",
-            "lowScore" : 7,
+            "lowScore" : 1,
             "conversation" : {
               "selfUri" : "https://openapi-generator.tech",
               "id" : "id"
@@ -26355,7 +26559,7 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 } ],
-                "weight" : 1.2315135,
+                "weight" : 1.0246457,
                 "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
@@ -26457,7 +26661,7 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 } ],
-                "weight" : 1.2315135,
+                "weight" : 1.0246457,
                 "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
@@ -27449,7 +27653,7 @@ open class UserRecordingsAPI {
           "id" : "id"
         } ]
       } ],
-      "maxParticipants" : 0,
+      "maxParticipants" : 7,
       "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
       "conversationIds" : [ "conversationIds", "conversationIds" ],
       "securePause" : true,
@@ -27642,7 +27846,7 @@ open class UserRecordingsAPI {
           "wrapup" : "{}",
           "initialState" : "alerting",
           "videoMuted" : true,
-          "peerCount" : 7,
+          "peerCount" : 1,
           "msids" : [ "msids", "msids" ],
           "afterCallWorkRequired" : true,
           "audioMuted" : true,
@@ -27662,7 +27866,7 @@ open class UserRecordingsAPI {
           "wrapup" : "{}",
           "initialState" : "alerting",
           "videoMuted" : true,
-          "peerCount" : 7,
+          "peerCount" : 1,
           "msids" : [ "msids", "msids" ],
           "afterCallWorkRequired" : true,
           "audioMuted" : true,
@@ -27678,6 +27882,57 @@ open class UserRecordingsAPI {
         } ],
         "externalOrganizationId" : "externalOrganizationId",
         "conversationRoutingData" : "{}",
+        "screenMonitorings" : [ {
+          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "initialState" : "none",
+          "screenMonitoring" : "{}",
+          "monitoringType" : "Unknown",
+          "provider" : "provider",
+          "count" : 4,
+          "disconnectType" : "system",
+          "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id",
+          "state" : "none",
+          "targetUser" : "{}",
+          "segments" : [ {
+            "howEnded" : "howEnded",
+            "disconnectType" : "disconnectType",
+            "startTime" : "2000-01-23T04:56:07.000+00:00",
+            "endTime" : "2000-01-23T04:56:07.000+00:00",
+            "type" : "type"
+          }, {
+            "howEnded" : "howEnded",
+            "disconnectType" : "disconnectType",
+            "startTime" : "2000-01-23T04:56:07.000+00:00",
+            "endTime" : "2000-01-23T04:56:07.000+00:00",
+            "type" : "type"
+          } ]
+        }, {
+          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "initialState" : "none",
+          "screenMonitoring" : "{}",
+          "monitoringType" : "Unknown",
+          "provider" : "provider",
+          "count" : 4,
+          "disconnectType" : "system",
+          "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id",
+          "state" : "none",
+          "targetUser" : "{}",
+          "segments" : [ {
+            "howEnded" : "howEnded",
+            "disconnectType" : "disconnectType",
+            "startTime" : "2000-01-23T04:56:07.000+00:00",
+            "endTime" : "2000-01-23T04:56:07.000+00:00",
+            "type" : "type"
+          }, {
+            "howEnded" : "howEnded",
+            "disconnectType" : "disconnectType",
+            "startTime" : "2000-01-23T04:56:07.000+00:00",
+            "endTime" : "2000-01-23T04:56:07.000+00:00",
+            "type" : "type"
+          } ]
+        } ],
         "wrapupRequired" : true,
         "connectedTime" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
@@ -28024,7 +28279,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "initialState" : "alerting",
-          "peerCount" : 4,
+          "peerCount" : 7,
           "afterCallWorkRequired" : true,
           "sharing" : true,
           "segments" : [ {
@@ -28053,7 +28308,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "initialState" : "alerting",
-          "peerCount" : 4,
+          "peerCount" : 7,
           "afterCallWorkRequired" : true,
           "sharing" : true,
           "segments" : [ {
@@ -28623,23 +28878,23 @@ open class UserRecordingsAPI {
           "evaluationSource" : "{}",
           "redacted" : true,
           "answers" : {
-            "totalNonCriticalScore" : 5.025005,
+            "totalNonCriticalScore" : 9.965781,
             "comments" : "comments",
             "privateComments" : "privateComments",
             "agentComments" : "agentComments",
-            "totalCriticalScore" : 4.9652185,
+            "totalCriticalScore" : 5.025005,
             "questionGroupScores" : [ {
-              "totalNonCriticalScore" : 9.018348,
-              "totalCriticalScoreUnweighted" : 1.284659,
-              "totalNonCriticalScoreUnweighted" : 6.778325,
+              "totalNonCriticalScore" : 6.4384236,
+              "totalCriticalScoreUnweighted" : 2.8841622,
+              "totalNonCriticalScoreUnweighted" : 6.878052,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 3.5571952,
-              "maxTotalNonCriticalScore" : 6.4384236,
+              "totalScoreUnweighted" : 6.965118,
+              "maxTotalNonCriticalScore" : 3.5571952,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -28650,7 +28905,7 @@ open class UserRecordingsAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -28660,25 +28915,25 @@ open class UserRecordingsAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.965781,
-              "maxTotalScore" : 9.36931,
-              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-              "totalCriticalScore" : 6.6835623,
-              "maxTotalCriticalScore" : 8.762042,
-              "maxTotalCriticalScoreUnweighted" : 2.8841622,
-              "maxTotalScoreUnweighted" : 6.965118
+              "totalScore" : 9.36931,
+              "maxTotalScore" : 6.6835623,
+              "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+              "totalCriticalScore" : 8.762042,
+              "maxTotalCriticalScore" : 9.018348,
+              "maxTotalCriticalScoreUnweighted" : 6.778325,
+              "maxTotalScoreUnweighted" : 1.284659
             }, {
-              "totalNonCriticalScore" : 9.018348,
-              "totalCriticalScoreUnweighted" : 1.284659,
-              "totalNonCriticalScoreUnweighted" : 6.778325,
+              "totalNonCriticalScore" : 6.4384236,
+              "totalCriticalScoreUnweighted" : 2.8841622,
+              "totalNonCriticalScoreUnweighted" : 6.878052,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 3.5571952,
-              "maxTotalNonCriticalScore" : 6.4384236,
+              "totalScoreUnweighted" : 6.965118,
+              "maxTotalNonCriticalScore" : 3.5571952,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -28689,7 +28944,7 @@ open class UserRecordingsAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -28699,40 +28954,40 @@ open class UserRecordingsAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.965781,
-              "maxTotalScore" : 9.36931,
-              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-              "totalCriticalScore" : 6.6835623,
-              "maxTotalCriticalScore" : 8.762042,
-              "maxTotalCriticalScoreUnweighted" : 2.8841622,
-              "maxTotalScoreUnweighted" : 6.965118
+              "totalScore" : 9.36931,
+              "maxTotalScore" : 6.6835623,
+              "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+              "totalCriticalScore" : 8.762042,
+              "maxTotalCriticalScore" : 9.018348,
+              "maxTotalCriticalScoreUnweighted" : 6.778325,
+              "maxTotalScoreUnweighted" : 1.284659
             } ],
             "transcriptTopics" : [ {
               "duration" : {
-                "totalMilliseconds" : 3
+                "totalMilliseconds" : 7
               },
               "offset" : "{}",
-              "recordingLocation" : 7,
+              "recordingLocation" : 0,
               "startTimeMilliseconds" : 3,
-              "confidence" : 6,
+              "confidence" : 3,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             }, {
               "duration" : {
-                "totalMilliseconds" : 3
+                "totalMilliseconds" : 7
               },
               "offset" : "{}",
-              "recordingLocation" : 7,
+              "recordingLocation" : 0,
               "startTimeMilliseconds" : 3,
-              "confidence" : 6,
+              "confidence" : 3,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             } ],
-            "totalScore" : 1.1730742,
+            "totalScore" : 4.9652185,
             "anyFailedKillQuestions" : true
           },
           "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -29632,7 +29887,7 @@ open class UserRecordingsAPI {
               "geolocation" : "{}"
             } ],
             "contextId" : "contextId",
-            "averageScore" : 1,
+            "averageScore" : 6,
             "calibrator" : {
               "workPlanBidRanks" : "{}",
               "addresses" : [ {
@@ -29928,7 +30183,7 @@ open class UserRecordingsAPI {
               "username" : "username",
               "geolocation" : "{}"
             },
-            "highScore" : 6,
+            "highScore" : 7,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
               "workPlanBidRanks" : "{}",
@@ -30227,7 +30482,7 @@ open class UserRecordingsAPI {
             },
             "name" : "name",
             "id" : "id",
-            "lowScore" : 7,
+            "lowScore" : 1,
             "conversation" : {
               "selfUri" : "https://openapi-generator.tech",
               "id" : "id"
@@ -30337,7 +30592,7 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 } ],
-                "weight" : 1.2315135,
+                "weight" : 1.0246457,
                 "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
@@ -30439,7 +30694,7 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 } ],
-                "weight" : 1.2315135,
+                "weight" : 1.0246457,
                 "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
@@ -31470,23 +31725,23 @@ open class UserRecordingsAPI {
           "evaluationSource" : "{}",
           "redacted" : true,
           "answers" : {
-            "totalNonCriticalScore" : 5.025005,
+            "totalNonCriticalScore" : 9.965781,
             "comments" : "comments",
             "privateComments" : "privateComments",
             "agentComments" : "agentComments",
-            "totalCriticalScore" : 4.9652185,
+            "totalCriticalScore" : 5.025005,
             "questionGroupScores" : [ {
-              "totalNonCriticalScore" : 9.018348,
-              "totalCriticalScoreUnweighted" : 1.284659,
-              "totalNonCriticalScoreUnweighted" : 6.778325,
+              "totalNonCriticalScore" : 6.4384236,
+              "totalCriticalScoreUnweighted" : 2.8841622,
+              "totalNonCriticalScoreUnweighted" : 6.878052,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 3.5571952,
-              "maxTotalNonCriticalScore" : 6.4384236,
+              "totalScoreUnweighted" : 6.965118,
+              "maxTotalNonCriticalScore" : 3.5571952,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -31497,7 +31752,7 @@ open class UserRecordingsAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -31507,25 +31762,25 @@ open class UserRecordingsAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.965781,
-              "maxTotalScore" : 9.36931,
-              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-              "totalCriticalScore" : 6.6835623,
-              "maxTotalCriticalScore" : 8.762042,
-              "maxTotalCriticalScoreUnweighted" : 2.8841622,
-              "maxTotalScoreUnweighted" : 6.965118
+              "totalScore" : 9.36931,
+              "maxTotalScore" : 6.6835623,
+              "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+              "totalCriticalScore" : 8.762042,
+              "maxTotalCriticalScore" : 9.018348,
+              "maxTotalCriticalScoreUnweighted" : 6.778325,
+              "maxTotalScoreUnweighted" : 1.284659
             }, {
-              "totalNonCriticalScore" : 9.018348,
-              "totalCriticalScoreUnweighted" : 1.284659,
-              "totalNonCriticalScoreUnweighted" : 6.778325,
+              "totalNonCriticalScore" : 6.4384236,
+              "totalCriticalScoreUnweighted" : 2.8841622,
+              "totalNonCriticalScoreUnweighted" : 6.878052,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 3.5571952,
-              "maxTotalNonCriticalScore" : 6.4384236,
+              "totalScoreUnweighted" : 6.965118,
+              "maxTotalNonCriticalScore" : 3.5571952,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -31536,7 +31791,7 @@ open class UserRecordingsAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -31546,40 +31801,40 @@ open class UserRecordingsAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.965781,
-              "maxTotalScore" : 9.36931,
-              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-              "totalCriticalScore" : 6.6835623,
-              "maxTotalCriticalScore" : 8.762042,
-              "maxTotalCriticalScoreUnweighted" : 2.8841622,
-              "maxTotalScoreUnweighted" : 6.965118
+              "totalScore" : 9.36931,
+              "maxTotalScore" : 6.6835623,
+              "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+              "totalCriticalScore" : 8.762042,
+              "maxTotalCriticalScore" : 9.018348,
+              "maxTotalCriticalScoreUnweighted" : 6.778325,
+              "maxTotalScoreUnweighted" : 1.284659
             } ],
             "transcriptTopics" : [ {
               "duration" : {
-                "totalMilliseconds" : 3
+                "totalMilliseconds" : 7
               },
               "offset" : "{}",
-              "recordingLocation" : 7,
+              "recordingLocation" : 0,
               "startTimeMilliseconds" : 3,
-              "confidence" : 6,
+              "confidence" : 3,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             }, {
               "duration" : {
-                "totalMilliseconds" : 3
+                "totalMilliseconds" : 7
               },
               "offset" : "{}",
-              "recordingLocation" : 7,
+              "recordingLocation" : 0,
               "startTimeMilliseconds" : 3,
-              "confidence" : 6,
+              "confidence" : 3,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             } ],
-            "totalScore" : 1.1730742,
+            "totalScore" : 4.9652185,
             "anyFailedKillQuestions" : true
           },
           "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -32479,7 +32734,7 @@ open class UserRecordingsAPI {
               "geolocation" : "{}"
             } ],
             "contextId" : "contextId",
-            "averageScore" : 1,
+            "averageScore" : 6,
             "calibrator" : {
               "workPlanBidRanks" : "{}",
               "addresses" : [ {
@@ -32775,7 +33030,7 @@ open class UserRecordingsAPI {
               "username" : "username",
               "geolocation" : "{}"
             },
-            "highScore" : 6,
+            "highScore" : 7,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
               "workPlanBidRanks" : "{}",
@@ -33074,7 +33329,7 @@ open class UserRecordingsAPI {
             },
             "name" : "name",
             "id" : "id",
-            "lowScore" : 7,
+            "lowScore" : 1,
             "conversation" : {
               "selfUri" : "https://openapi-generator.tech",
               "id" : "id"
@@ -33184,7 +33439,7 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 } ],
-                "weight" : 1.2315135,
+                "weight" : 1.0246457,
                 "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
@@ -33286,7 +33541,7 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 } ],
-                "weight" : 1.2315135,
+                "weight" : 1.0246457,
                 "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
@@ -34380,7 +34635,7 @@ open class UserRecordingsAPI {
           "wrapup" : "{}",
           "initialState" : "alerting",
           "videoMuted" : true,
-          "peerCount" : 7,
+          "peerCount" : 1,
           "msids" : [ "msids", "msids" ],
           "afterCallWorkRequired" : true,
           "audioMuted" : true,
@@ -34400,7 +34655,7 @@ open class UserRecordingsAPI {
           "wrapup" : "{}",
           "initialState" : "alerting",
           "videoMuted" : true,
-          "peerCount" : 7,
+          "peerCount" : 1,
           "msids" : [ "msids", "msids" ],
           "afterCallWorkRequired" : true,
           "audioMuted" : true,
@@ -34416,6 +34671,57 @@ open class UserRecordingsAPI {
         } ],
         "externalOrganizationId" : "externalOrganizationId",
         "conversationRoutingData" : "{}",
+        "screenMonitorings" : [ {
+          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "initialState" : "none",
+          "screenMonitoring" : "{}",
+          "monitoringType" : "Unknown",
+          "provider" : "provider",
+          "count" : 4,
+          "disconnectType" : "system",
+          "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id",
+          "state" : "none",
+          "targetUser" : "{}",
+          "segments" : [ {
+            "howEnded" : "howEnded",
+            "disconnectType" : "disconnectType",
+            "startTime" : "2000-01-23T04:56:07.000+00:00",
+            "endTime" : "2000-01-23T04:56:07.000+00:00",
+            "type" : "type"
+          }, {
+            "howEnded" : "howEnded",
+            "disconnectType" : "disconnectType",
+            "startTime" : "2000-01-23T04:56:07.000+00:00",
+            "endTime" : "2000-01-23T04:56:07.000+00:00",
+            "type" : "type"
+          } ]
+        }, {
+          "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "initialState" : "none",
+          "screenMonitoring" : "{}",
+          "monitoringType" : "Unknown",
+          "provider" : "provider",
+          "count" : 4,
+          "disconnectType" : "system",
+          "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+          "id" : "id",
+          "state" : "none",
+          "targetUser" : "{}",
+          "segments" : [ {
+            "howEnded" : "howEnded",
+            "disconnectType" : "disconnectType",
+            "startTime" : "2000-01-23T04:56:07.000+00:00",
+            "endTime" : "2000-01-23T04:56:07.000+00:00",
+            "type" : "type"
+          }, {
+            "howEnded" : "howEnded",
+            "disconnectType" : "disconnectType",
+            "startTime" : "2000-01-23T04:56:07.000+00:00",
+            "endTime" : "2000-01-23T04:56:07.000+00:00",
+            "type" : "type"
+          } ]
+        } ],
         "wrapupRequired" : true,
         "connectedTime" : "2000-01-23T04:56:07.000+00:00",
         "id" : "id",
@@ -34762,7 +35068,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "initialState" : "alerting",
-          "peerCount" : 4,
+          "peerCount" : 7,
           "afterCallWorkRequired" : true,
           "sharing" : true,
           "segments" : [ {
@@ -34791,7 +35097,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "initialState" : "alerting",
-          "peerCount" : 4,
+          "peerCount" : 7,
           "afterCallWorkRequired" : true,
           "sharing" : true,
           "segments" : [ {
@@ -35361,23 +35667,23 @@ open class UserRecordingsAPI {
           "evaluationSource" : "{}",
           "redacted" : true,
           "answers" : {
-            "totalNonCriticalScore" : 5.025005,
+            "totalNonCriticalScore" : 9.965781,
             "comments" : "comments",
             "privateComments" : "privateComments",
             "agentComments" : "agentComments",
-            "totalCriticalScore" : 4.9652185,
+            "totalCriticalScore" : 5.025005,
             "questionGroupScores" : [ {
-              "totalNonCriticalScore" : 9.018348,
-              "totalCriticalScoreUnweighted" : 1.284659,
-              "totalNonCriticalScoreUnweighted" : 6.778325,
+              "totalNonCriticalScore" : 6.4384236,
+              "totalCriticalScoreUnweighted" : 2.8841622,
+              "totalNonCriticalScoreUnweighted" : 6.878052,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 3.5571952,
-              "maxTotalNonCriticalScore" : 6.4384236,
+              "totalScoreUnweighted" : 6.965118,
+              "maxTotalNonCriticalScore" : 3.5571952,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -35388,7 +35694,7 @@ open class UserRecordingsAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -35398,25 +35704,25 @@ open class UserRecordingsAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.965781,
-              "maxTotalScore" : 9.36931,
-              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-              "totalCriticalScore" : 6.6835623,
-              "maxTotalCriticalScore" : 8.762042,
-              "maxTotalCriticalScoreUnweighted" : 2.8841622,
-              "maxTotalScoreUnweighted" : 6.965118
+              "totalScore" : 9.36931,
+              "maxTotalScore" : 6.6835623,
+              "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+              "totalCriticalScore" : 8.762042,
+              "maxTotalCriticalScore" : 9.018348,
+              "maxTotalCriticalScoreUnweighted" : 6.778325,
+              "maxTotalScoreUnweighted" : 1.284659
             }, {
-              "totalNonCriticalScore" : 9.018348,
-              "totalCriticalScoreUnweighted" : 1.284659,
-              "totalNonCriticalScoreUnweighted" : 6.778325,
+              "totalNonCriticalScore" : 6.4384236,
+              "totalCriticalScoreUnweighted" : 2.8841622,
+              "totalNonCriticalScoreUnweighted" : 6.878052,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 3.5571952,
-              "maxTotalNonCriticalScore" : 6.4384236,
+              "totalScoreUnweighted" : 6.965118,
+              "maxTotalNonCriticalScore" : 3.5571952,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -35427,7 +35733,7 @@ open class UserRecordingsAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -35437,40 +35743,40 @@ open class UserRecordingsAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.965781,
-              "maxTotalScore" : 9.36931,
-              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-              "totalCriticalScore" : 6.6835623,
-              "maxTotalCriticalScore" : 8.762042,
-              "maxTotalCriticalScoreUnweighted" : 2.8841622,
-              "maxTotalScoreUnweighted" : 6.965118
+              "totalScore" : 9.36931,
+              "maxTotalScore" : 6.6835623,
+              "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+              "totalCriticalScore" : 8.762042,
+              "maxTotalCriticalScore" : 9.018348,
+              "maxTotalCriticalScoreUnweighted" : 6.778325,
+              "maxTotalScoreUnweighted" : 1.284659
             } ],
             "transcriptTopics" : [ {
               "duration" : {
-                "totalMilliseconds" : 3
+                "totalMilliseconds" : 7
               },
               "offset" : "{}",
-              "recordingLocation" : 7,
+              "recordingLocation" : 0,
               "startTimeMilliseconds" : 3,
-              "confidence" : 6,
+              "confidence" : 3,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             }, {
               "duration" : {
-                "totalMilliseconds" : 3
+                "totalMilliseconds" : 7
               },
               "offset" : "{}",
-              "recordingLocation" : 7,
+              "recordingLocation" : 0,
               "startTimeMilliseconds" : 3,
-              "confidence" : 6,
+              "confidence" : 3,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             } ],
-            "totalScore" : 1.1730742,
+            "totalScore" : 4.9652185,
             "anyFailedKillQuestions" : true
           },
           "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -36370,7 +36676,7 @@ open class UserRecordingsAPI {
               "geolocation" : "{}"
             } ],
             "contextId" : "contextId",
-            "averageScore" : 1,
+            "averageScore" : 6,
             "calibrator" : {
               "workPlanBidRanks" : "{}",
               "addresses" : [ {
@@ -36666,7 +36972,7 @@ open class UserRecordingsAPI {
               "username" : "username",
               "geolocation" : "{}"
             },
-            "highScore" : 6,
+            "highScore" : 7,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
               "workPlanBidRanks" : "{}",
@@ -36965,7 +37271,7 @@ open class UserRecordingsAPI {
             },
             "name" : "name",
             "id" : "id",
-            "lowScore" : 7,
+            "lowScore" : 1,
             "conversation" : {
               "selfUri" : "https://openapi-generator.tech",
               "id" : "id"
@@ -37075,7 +37381,7 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 } ],
-                "weight" : 1.2315135,
+                "weight" : 1.0246457,
                 "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
@@ -37177,7 +37483,7 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 } ],
-                "weight" : 1.2315135,
+                "weight" : 1.0246457,
                 "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
@@ -38208,23 +38514,23 @@ open class UserRecordingsAPI {
           "evaluationSource" : "{}",
           "redacted" : true,
           "answers" : {
-            "totalNonCriticalScore" : 5.025005,
+            "totalNonCriticalScore" : 9.965781,
             "comments" : "comments",
             "privateComments" : "privateComments",
             "agentComments" : "agentComments",
-            "totalCriticalScore" : 4.9652185,
+            "totalCriticalScore" : 5.025005,
             "questionGroupScores" : [ {
-              "totalNonCriticalScore" : 9.018348,
-              "totalCriticalScoreUnweighted" : 1.284659,
-              "totalNonCriticalScoreUnweighted" : 6.778325,
+              "totalNonCriticalScore" : 6.4384236,
+              "totalCriticalScoreUnweighted" : 2.8841622,
+              "totalNonCriticalScoreUnweighted" : 6.878052,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 3.5571952,
-              "maxTotalNonCriticalScore" : 6.4384236,
+              "totalScoreUnweighted" : 6.965118,
+              "maxTotalNonCriticalScore" : 3.5571952,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -38235,7 +38541,7 @@ open class UserRecordingsAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -38245,25 +38551,25 @@ open class UserRecordingsAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.965781,
-              "maxTotalScore" : 9.36931,
-              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-              "totalCriticalScore" : 6.6835623,
-              "maxTotalCriticalScore" : 8.762042,
-              "maxTotalCriticalScoreUnweighted" : 2.8841622,
-              "maxTotalScoreUnweighted" : 6.965118
+              "totalScore" : 9.36931,
+              "maxTotalScore" : 6.6835623,
+              "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+              "totalCriticalScore" : 8.762042,
+              "maxTotalCriticalScore" : 9.018348,
+              "maxTotalCriticalScoreUnweighted" : 6.778325,
+              "maxTotalScoreUnweighted" : 1.284659
             }, {
-              "totalNonCriticalScore" : 9.018348,
-              "totalCriticalScoreUnweighted" : 1.284659,
-              "totalNonCriticalScoreUnweighted" : 6.778325,
+              "totalNonCriticalScore" : 6.4384236,
+              "totalCriticalScoreUnweighted" : 2.8841622,
+              "totalNonCriticalScoreUnweighted" : 6.878052,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 3.5571952,
-              "maxTotalNonCriticalScore" : 6.4384236,
+              "totalScoreUnweighted" : 6.965118,
+              "maxTotalNonCriticalScore" : 3.5571952,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -38274,7 +38580,7 @@ open class UserRecordingsAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 5,
+                "score" : 6,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -38284,40 +38590,40 @@ open class UserRecordingsAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.965781,
-              "maxTotalScore" : 9.36931,
-              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-              "totalCriticalScore" : 6.6835623,
-              "maxTotalCriticalScore" : 8.762042,
-              "maxTotalCriticalScoreUnweighted" : 2.8841622,
-              "maxTotalScoreUnweighted" : 6.965118
+              "totalScore" : 9.36931,
+              "maxTotalScore" : 6.6835623,
+              "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+              "totalCriticalScore" : 8.762042,
+              "maxTotalCriticalScore" : 9.018348,
+              "maxTotalCriticalScoreUnweighted" : 6.778325,
+              "maxTotalScoreUnweighted" : 1.284659
             } ],
             "transcriptTopics" : [ {
               "duration" : {
-                "totalMilliseconds" : 3
+                "totalMilliseconds" : 7
               },
               "offset" : "{}",
-              "recordingLocation" : 7,
+              "recordingLocation" : 0,
               "startTimeMilliseconds" : 3,
-              "confidence" : 6,
+              "confidence" : 3,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             }, {
               "duration" : {
-                "totalMilliseconds" : 3
+                "totalMilliseconds" : 7
               },
               "offset" : "{}",
-              "recordingLocation" : 7,
+              "recordingLocation" : 0,
               "startTimeMilliseconds" : 3,
-              "confidence" : 6,
+              "confidence" : 3,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             } ],
-            "totalScore" : 1.1730742,
+            "totalScore" : 4.9652185,
             "anyFailedKillQuestions" : true
           },
           "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -39217,7 +39523,7 @@ open class UserRecordingsAPI {
               "geolocation" : "{}"
             } ],
             "contextId" : "contextId",
-            "averageScore" : 1,
+            "averageScore" : 6,
             "calibrator" : {
               "workPlanBidRanks" : "{}",
               "addresses" : [ {
@@ -39513,7 +39819,7 @@ open class UserRecordingsAPI {
               "username" : "username",
               "geolocation" : "{}"
             },
-            "highScore" : 6,
+            "highScore" : 7,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
               "workPlanBidRanks" : "{}",
@@ -39812,7 +40118,7 @@ open class UserRecordingsAPI {
             },
             "name" : "name",
             "id" : "id",
-            "lowScore" : 7,
+            "lowScore" : 1,
             "conversation" : {
               "selfUri" : "https://openapi-generator.tech",
               "id" : "id"
@@ -39922,7 +40228,7 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 } ],
-                "weight" : 1.2315135,
+                "weight" : 1.0246457,
                 "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
@@ -40024,7 +40330,7 @@ open class UserRecordingsAPI {
                     } ]
                   } ]
                 } ],
-                "weight" : 1.2315135,
+                "weight" : 1.0246457,
                 "defaultAnswersTo" : "{}",
                 "contextId" : "contextId",
                 "id" : "id",
@@ -41139,7 +41445,7 @@ open class UserRecordingsAPI {
         "id" : "id"
       } ]
     } ],
-    "maxParticipants" : 0,
+    "maxParticipants" : 7,
     "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
     "conversationIds" : [ "conversationIds", "conversationIds" ],
     "securePause" : true,
@@ -41332,7 +41638,7 @@ open class UserRecordingsAPI {
         "wrapup" : "{}",
         "initialState" : "alerting",
         "videoMuted" : true,
-        "peerCount" : 7,
+        "peerCount" : 1,
         "msids" : [ "msids", "msids" ],
         "afterCallWorkRequired" : true,
         "audioMuted" : true,
@@ -41352,7 +41658,7 @@ open class UserRecordingsAPI {
         "wrapup" : "{}",
         "initialState" : "alerting",
         "videoMuted" : true,
-        "peerCount" : 7,
+        "peerCount" : 1,
         "msids" : [ "msids", "msids" ],
         "afterCallWorkRequired" : true,
         "audioMuted" : true,
@@ -41368,6 +41674,57 @@ open class UserRecordingsAPI {
       } ],
       "externalOrganizationId" : "externalOrganizationId",
       "conversationRoutingData" : "{}",
+      "screenMonitorings" : [ {
+        "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+        "initialState" : "none",
+        "screenMonitoring" : "{}",
+        "monitoringType" : "Unknown",
+        "provider" : "provider",
+        "count" : 4,
+        "disconnectType" : "system",
+        "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+        "id" : "id",
+        "state" : "none",
+        "targetUser" : "{}",
+        "segments" : [ {
+          "howEnded" : "howEnded",
+          "disconnectType" : "disconnectType",
+          "startTime" : "2000-01-23T04:56:07.000+00:00",
+          "endTime" : "2000-01-23T04:56:07.000+00:00",
+          "type" : "type"
+        }, {
+          "howEnded" : "howEnded",
+          "disconnectType" : "disconnectType",
+          "startTime" : "2000-01-23T04:56:07.000+00:00",
+          "endTime" : "2000-01-23T04:56:07.000+00:00",
+          "type" : "type"
+        } ]
+      }, {
+        "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+        "initialState" : "none",
+        "screenMonitoring" : "{}",
+        "monitoringType" : "Unknown",
+        "provider" : "provider",
+        "count" : 4,
+        "disconnectType" : "system",
+        "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+        "id" : "id",
+        "state" : "none",
+        "targetUser" : "{}",
+        "segments" : [ {
+          "howEnded" : "howEnded",
+          "disconnectType" : "disconnectType",
+          "startTime" : "2000-01-23T04:56:07.000+00:00",
+          "endTime" : "2000-01-23T04:56:07.000+00:00",
+          "type" : "type"
+        }, {
+          "howEnded" : "howEnded",
+          "disconnectType" : "disconnectType",
+          "startTime" : "2000-01-23T04:56:07.000+00:00",
+          "endTime" : "2000-01-23T04:56:07.000+00:00",
+          "type" : "type"
+        } ]
+      } ],
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
@@ -41714,7 +42071,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "initialState" : "alerting",
-        "peerCount" : 4,
+        "peerCount" : 7,
         "afterCallWorkRequired" : true,
         "sharing" : true,
         "segments" : [ {
@@ -41743,7 +42100,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "initialState" : "alerting",
-        "peerCount" : 4,
+        "peerCount" : 7,
         "afterCallWorkRequired" : true,
         "sharing" : true,
         "segments" : [ {
@@ -42313,23 +42670,23 @@ open class UserRecordingsAPI {
         "evaluationSource" : "{}",
         "redacted" : true,
         "answers" : {
-          "totalNonCriticalScore" : 5.025005,
+          "totalNonCriticalScore" : 9.965781,
           "comments" : "comments",
           "privateComments" : "privateComments",
           "agentComments" : "agentComments",
-          "totalCriticalScore" : 4.9652185,
+          "totalCriticalScore" : 5.025005,
           "questionGroupScores" : [ {
-            "totalNonCriticalScore" : 9.018348,
-            "totalCriticalScoreUnweighted" : 1.284659,
-            "totalNonCriticalScoreUnweighted" : 6.778325,
+            "totalNonCriticalScore" : 6.4384236,
+            "totalCriticalScoreUnweighted" : 2.8841622,
+            "totalNonCriticalScoreUnweighted" : 6.878052,
             "systemMarkedNA" : true,
             "markedNA" : true,
-            "totalScoreUnweighted" : 3.5571952,
-            "maxTotalNonCriticalScore" : 6.4384236,
+            "totalScoreUnweighted" : 6.965118,
+            "maxTotalNonCriticalScore" : 3.5571952,
             "questionScores" : [ {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -42340,7 +42697,7 @@ open class UserRecordingsAPI {
             }, {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -42350,25 +42707,25 @@ open class UserRecordingsAPI {
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
-            "totalScore" : 9.965781,
-            "maxTotalScore" : 9.36931,
-            "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-            "totalCriticalScore" : 6.6835623,
-            "maxTotalCriticalScore" : 8.762042,
-            "maxTotalCriticalScoreUnweighted" : 2.8841622,
-            "maxTotalScoreUnweighted" : 6.965118
+            "totalScore" : 9.36931,
+            "maxTotalScore" : 6.6835623,
+            "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+            "totalCriticalScore" : 8.762042,
+            "maxTotalCriticalScore" : 9.018348,
+            "maxTotalCriticalScoreUnweighted" : 6.778325,
+            "maxTotalScoreUnweighted" : 1.284659
           }, {
-            "totalNonCriticalScore" : 9.018348,
-            "totalCriticalScoreUnweighted" : 1.284659,
-            "totalNonCriticalScoreUnweighted" : 6.778325,
+            "totalNonCriticalScore" : 6.4384236,
+            "totalCriticalScoreUnweighted" : 2.8841622,
+            "totalNonCriticalScoreUnweighted" : 6.878052,
             "systemMarkedNA" : true,
             "markedNA" : true,
-            "totalScoreUnweighted" : 3.5571952,
-            "maxTotalNonCriticalScore" : 6.4384236,
+            "totalScoreUnweighted" : 6.965118,
+            "maxTotalNonCriticalScore" : 3.5571952,
             "questionScores" : [ {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -42379,7 +42736,7 @@ open class UserRecordingsAPI {
             }, {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -42389,40 +42746,40 @@ open class UserRecordingsAPI {
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
-            "totalScore" : 9.965781,
-            "maxTotalScore" : 9.36931,
-            "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-            "totalCriticalScore" : 6.6835623,
-            "maxTotalCriticalScore" : 8.762042,
-            "maxTotalCriticalScoreUnweighted" : 2.8841622,
-            "maxTotalScoreUnweighted" : 6.965118
+            "totalScore" : 9.36931,
+            "maxTotalScore" : 6.6835623,
+            "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+            "totalCriticalScore" : 8.762042,
+            "maxTotalCriticalScore" : 9.018348,
+            "maxTotalCriticalScoreUnweighted" : 6.778325,
+            "maxTotalScoreUnweighted" : 1.284659
           } ],
           "transcriptTopics" : [ {
             "duration" : {
-              "totalMilliseconds" : 3
+              "totalMilliseconds" : 7
             },
             "offset" : "{}",
-            "recordingLocation" : 7,
+            "recordingLocation" : 0,
             "startTimeMilliseconds" : 3,
-            "confidence" : 6,
+            "confidence" : 3,
             "name" : "name",
             "topicPhrase" : "topicPhrase",
             "id" : "id",
             "transcriptPhrase" : "transcriptPhrase"
           }, {
             "duration" : {
-              "totalMilliseconds" : 3
+              "totalMilliseconds" : 7
             },
             "offset" : "{}",
-            "recordingLocation" : 7,
+            "recordingLocation" : 0,
             "startTimeMilliseconds" : 3,
-            "confidence" : 6,
+            "confidence" : 3,
             "name" : "name",
             "topicPhrase" : "topicPhrase",
             "id" : "id",
             "transcriptPhrase" : "transcriptPhrase"
           } ],
-          "totalScore" : 1.1730742,
+          "totalScore" : 4.9652185,
           "anyFailedKillQuestions" : true
         },
         "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -43322,7 +43679,7 @@ open class UserRecordingsAPI {
             "geolocation" : "{}"
           } ],
           "contextId" : "contextId",
-          "averageScore" : 1,
+          "averageScore" : 6,
           "calibrator" : {
             "workPlanBidRanks" : "{}",
             "addresses" : [ {
@@ -43618,7 +43975,7 @@ open class UserRecordingsAPI {
             "username" : "username",
             "geolocation" : "{}"
           },
-          "highScore" : 6,
+          "highScore" : 7,
           "createdDate" : "2000-01-23T04:56:07.000+00:00",
           "expertEvaluator" : {
             "workPlanBidRanks" : "{}",
@@ -43917,7 +44274,7 @@ open class UserRecordingsAPI {
           },
           "name" : "name",
           "id" : "id",
-          "lowScore" : 7,
+          "lowScore" : 1,
           "conversation" : {
             "selfUri" : "https://openapi-generator.tech",
             "id" : "id"
@@ -44027,7 +44384,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               } ],
-              "weight" : 1.2315135,
+              "weight" : 1.0246457,
               "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
@@ -44129,7 +44486,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               } ],
-              "weight" : 1.2315135,
+              "weight" : 1.0246457,
               "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
@@ -45160,23 +45517,23 @@ open class UserRecordingsAPI {
         "evaluationSource" : "{}",
         "redacted" : true,
         "answers" : {
-          "totalNonCriticalScore" : 5.025005,
+          "totalNonCriticalScore" : 9.965781,
           "comments" : "comments",
           "privateComments" : "privateComments",
           "agentComments" : "agentComments",
-          "totalCriticalScore" : 4.9652185,
+          "totalCriticalScore" : 5.025005,
           "questionGroupScores" : [ {
-            "totalNonCriticalScore" : 9.018348,
-            "totalCriticalScoreUnweighted" : 1.284659,
-            "totalNonCriticalScoreUnweighted" : 6.778325,
+            "totalNonCriticalScore" : 6.4384236,
+            "totalCriticalScoreUnweighted" : 2.8841622,
+            "totalNonCriticalScoreUnweighted" : 6.878052,
             "systemMarkedNA" : true,
             "markedNA" : true,
-            "totalScoreUnweighted" : 3.5571952,
-            "maxTotalNonCriticalScore" : 6.4384236,
+            "totalScoreUnweighted" : 6.965118,
+            "maxTotalNonCriticalScore" : 3.5571952,
             "questionScores" : [ {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -45187,7 +45544,7 @@ open class UserRecordingsAPI {
             }, {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -45197,25 +45554,25 @@ open class UserRecordingsAPI {
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
-            "totalScore" : 9.965781,
-            "maxTotalScore" : 9.36931,
-            "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-            "totalCriticalScore" : 6.6835623,
-            "maxTotalCriticalScore" : 8.762042,
-            "maxTotalCriticalScoreUnweighted" : 2.8841622,
-            "maxTotalScoreUnweighted" : 6.965118
+            "totalScore" : 9.36931,
+            "maxTotalScore" : 6.6835623,
+            "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+            "totalCriticalScore" : 8.762042,
+            "maxTotalCriticalScore" : 9.018348,
+            "maxTotalCriticalScoreUnweighted" : 6.778325,
+            "maxTotalScoreUnweighted" : 1.284659
           }, {
-            "totalNonCriticalScore" : 9.018348,
-            "totalCriticalScoreUnweighted" : 1.284659,
-            "totalNonCriticalScoreUnweighted" : 6.778325,
+            "totalNonCriticalScore" : 6.4384236,
+            "totalCriticalScoreUnweighted" : 2.8841622,
+            "totalNonCriticalScoreUnweighted" : 6.878052,
             "systemMarkedNA" : true,
             "markedNA" : true,
-            "totalScoreUnweighted" : 3.5571952,
-            "maxTotalNonCriticalScore" : 6.4384236,
+            "totalScoreUnweighted" : 6.965118,
+            "maxTotalNonCriticalScore" : 3.5571952,
             "questionScores" : [ {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -45226,7 +45583,7 @@ open class UserRecordingsAPI {
             }, {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -45236,40 +45593,40 @@ open class UserRecordingsAPI {
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
-            "totalScore" : 9.965781,
-            "maxTotalScore" : 9.36931,
-            "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-            "totalCriticalScore" : 6.6835623,
-            "maxTotalCriticalScore" : 8.762042,
-            "maxTotalCriticalScoreUnweighted" : 2.8841622,
-            "maxTotalScoreUnweighted" : 6.965118
+            "totalScore" : 9.36931,
+            "maxTotalScore" : 6.6835623,
+            "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+            "totalCriticalScore" : 8.762042,
+            "maxTotalCriticalScore" : 9.018348,
+            "maxTotalCriticalScoreUnweighted" : 6.778325,
+            "maxTotalScoreUnweighted" : 1.284659
           } ],
           "transcriptTopics" : [ {
             "duration" : {
-              "totalMilliseconds" : 3
+              "totalMilliseconds" : 7
             },
             "offset" : "{}",
-            "recordingLocation" : 7,
+            "recordingLocation" : 0,
             "startTimeMilliseconds" : 3,
-            "confidence" : 6,
+            "confidence" : 3,
             "name" : "name",
             "topicPhrase" : "topicPhrase",
             "id" : "id",
             "transcriptPhrase" : "transcriptPhrase"
           }, {
             "duration" : {
-              "totalMilliseconds" : 3
+              "totalMilliseconds" : 7
             },
             "offset" : "{}",
-            "recordingLocation" : 7,
+            "recordingLocation" : 0,
             "startTimeMilliseconds" : 3,
-            "confidence" : 6,
+            "confidence" : 3,
             "name" : "name",
             "topicPhrase" : "topicPhrase",
             "id" : "id",
             "transcriptPhrase" : "transcriptPhrase"
           } ],
-          "totalScore" : 1.1730742,
+          "totalScore" : 4.9652185,
           "anyFailedKillQuestions" : true
         },
         "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -46169,7 +46526,7 @@ open class UserRecordingsAPI {
             "geolocation" : "{}"
           } ],
           "contextId" : "contextId",
-          "averageScore" : 1,
+          "averageScore" : 6,
           "calibrator" : {
             "workPlanBidRanks" : "{}",
             "addresses" : [ {
@@ -46465,7 +46822,7 @@ open class UserRecordingsAPI {
             "username" : "username",
             "geolocation" : "{}"
           },
-          "highScore" : 6,
+          "highScore" : 7,
           "createdDate" : "2000-01-23T04:56:07.000+00:00",
           "expertEvaluator" : {
             "workPlanBidRanks" : "{}",
@@ -46764,7 +47121,7 @@ open class UserRecordingsAPI {
           },
           "name" : "name",
           "id" : "id",
-          "lowScore" : 7,
+          "lowScore" : 1,
           "conversation" : {
             "selfUri" : "https://openapi-generator.tech",
             "id" : "id"
@@ -46874,7 +47231,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               } ],
-              "weight" : 1.2315135,
+              "weight" : 1.0246457,
               "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
@@ -46976,7 +47333,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               } ],
-              "weight" : 1.2315135,
+              "weight" : 1.0246457,
               "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
@@ -48070,7 +48427,7 @@ open class UserRecordingsAPI {
         "wrapup" : "{}",
         "initialState" : "alerting",
         "videoMuted" : true,
-        "peerCount" : 7,
+        "peerCount" : 1,
         "msids" : [ "msids", "msids" ],
         "afterCallWorkRequired" : true,
         "audioMuted" : true,
@@ -48090,7 +48447,7 @@ open class UserRecordingsAPI {
         "wrapup" : "{}",
         "initialState" : "alerting",
         "videoMuted" : true,
-        "peerCount" : 7,
+        "peerCount" : 1,
         "msids" : [ "msids", "msids" ],
         "afterCallWorkRequired" : true,
         "audioMuted" : true,
@@ -48106,6 +48463,57 @@ open class UserRecordingsAPI {
       } ],
       "externalOrganizationId" : "externalOrganizationId",
       "conversationRoutingData" : "{}",
+      "screenMonitorings" : [ {
+        "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+        "initialState" : "none",
+        "screenMonitoring" : "{}",
+        "monitoringType" : "Unknown",
+        "provider" : "provider",
+        "count" : 4,
+        "disconnectType" : "system",
+        "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+        "id" : "id",
+        "state" : "none",
+        "targetUser" : "{}",
+        "segments" : [ {
+          "howEnded" : "howEnded",
+          "disconnectType" : "disconnectType",
+          "startTime" : "2000-01-23T04:56:07.000+00:00",
+          "endTime" : "2000-01-23T04:56:07.000+00:00",
+          "type" : "type"
+        }, {
+          "howEnded" : "howEnded",
+          "disconnectType" : "disconnectType",
+          "startTime" : "2000-01-23T04:56:07.000+00:00",
+          "endTime" : "2000-01-23T04:56:07.000+00:00",
+          "type" : "type"
+        } ]
+      }, {
+        "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
+        "initialState" : "none",
+        "screenMonitoring" : "{}",
+        "monitoringType" : "Unknown",
+        "provider" : "provider",
+        "count" : 4,
+        "disconnectType" : "system",
+        "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+        "id" : "id",
+        "state" : "none",
+        "targetUser" : "{}",
+        "segments" : [ {
+          "howEnded" : "howEnded",
+          "disconnectType" : "disconnectType",
+          "startTime" : "2000-01-23T04:56:07.000+00:00",
+          "endTime" : "2000-01-23T04:56:07.000+00:00",
+          "type" : "type"
+        }, {
+          "howEnded" : "howEnded",
+          "disconnectType" : "disconnectType",
+          "startTime" : "2000-01-23T04:56:07.000+00:00",
+          "endTime" : "2000-01-23T04:56:07.000+00:00",
+          "type" : "type"
+        } ]
+      } ],
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
@@ -48452,7 +48860,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "initialState" : "alerting",
-        "peerCount" : 4,
+        "peerCount" : 7,
         "afterCallWorkRequired" : true,
         "sharing" : true,
         "segments" : [ {
@@ -48481,7 +48889,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "initialState" : "alerting",
-        "peerCount" : 4,
+        "peerCount" : 7,
         "afterCallWorkRequired" : true,
         "sharing" : true,
         "segments" : [ {
@@ -49051,23 +49459,23 @@ open class UserRecordingsAPI {
         "evaluationSource" : "{}",
         "redacted" : true,
         "answers" : {
-          "totalNonCriticalScore" : 5.025005,
+          "totalNonCriticalScore" : 9.965781,
           "comments" : "comments",
           "privateComments" : "privateComments",
           "agentComments" : "agentComments",
-          "totalCriticalScore" : 4.9652185,
+          "totalCriticalScore" : 5.025005,
           "questionGroupScores" : [ {
-            "totalNonCriticalScore" : 9.018348,
-            "totalCriticalScoreUnweighted" : 1.284659,
-            "totalNonCriticalScoreUnweighted" : 6.778325,
+            "totalNonCriticalScore" : 6.4384236,
+            "totalCriticalScoreUnweighted" : 2.8841622,
+            "totalNonCriticalScoreUnweighted" : 6.878052,
             "systemMarkedNA" : true,
             "markedNA" : true,
-            "totalScoreUnweighted" : 3.5571952,
-            "maxTotalNonCriticalScore" : 6.4384236,
+            "totalScoreUnweighted" : 6.965118,
+            "maxTotalNonCriticalScore" : 3.5571952,
             "questionScores" : [ {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -49078,7 +49486,7 @@ open class UserRecordingsAPI {
             }, {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -49088,25 +49496,25 @@ open class UserRecordingsAPI {
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
-            "totalScore" : 9.965781,
-            "maxTotalScore" : 9.36931,
-            "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-            "totalCriticalScore" : 6.6835623,
-            "maxTotalCriticalScore" : 8.762042,
-            "maxTotalCriticalScoreUnweighted" : 2.8841622,
-            "maxTotalScoreUnweighted" : 6.965118
+            "totalScore" : 9.36931,
+            "maxTotalScore" : 6.6835623,
+            "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+            "totalCriticalScore" : 8.762042,
+            "maxTotalCriticalScore" : 9.018348,
+            "maxTotalCriticalScoreUnweighted" : 6.778325,
+            "maxTotalScoreUnweighted" : 1.284659
           }, {
-            "totalNonCriticalScore" : 9.018348,
-            "totalCriticalScoreUnweighted" : 1.284659,
-            "totalNonCriticalScoreUnweighted" : 6.778325,
+            "totalNonCriticalScore" : 6.4384236,
+            "totalCriticalScoreUnweighted" : 2.8841622,
+            "totalNonCriticalScoreUnweighted" : 6.878052,
             "systemMarkedNA" : true,
             "markedNA" : true,
-            "totalScoreUnweighted" : 3.5571952,
-            "maxTotalNonCriticalScore" : 6.4384236,
+            "totalScoreUnweighted" : 6.965118,
+            "maxTotalNonCriticalScore" : 3.5571952,
             "questionScores" : [ {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -49117,7 +49525,7 @@ open class UserRecordingsAPI {
             }, {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -49127,40 +49535,40 @@ open class UserRecordingsAPI {
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
-            "totalScore" : 9.965781,
-            "maxTotalScore" : 9.36931,
-            "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-            "totalCriticalScore" : 6.6835623,
-            "maxTotalCriticalScore" : 8.762042,
-            "maxTotalCriticalScoreUnweighted" : 2.8841622,
-            "maxTotalScoreUnweighted" : 6.965118
+            "totalScore" : 9.36931,
+            "maxTotalScore" : 6.6835623,
+            "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+            "totalCriticalScore" : 8.762042,
+            "maxTotalCriticalScore" : 9.018348,
+            "maxTotalCriticalScoreUnweighted" : 6.778325,
+            "maxTotalScoreUnweighted" : 1.284659
           } ],
           "transcriptTopics" : [ {
             "duration" : {
-              "totalMilliseconds" : 3
+              "totalMilliseconds" : 7
             },
             "offset" : "{}",
-            "recordingLocation" : 7,
+            "recordingLocation" : 0,
             "startTimeMilliseconds" : 3,
-            "confidence" : 6,
+            "confidence" : 3,
             "name" : "name",
             "topicPhrase" : "topicPhrase",
             "id" : "id",
             "transcriptPhrase" : "transcriptPhrase"
           }, {
             "duration" : {
-              "totalMilliseconds" : 3
+              "totalMilliseconds" : 7
             },
             "offset" : "{}",
-            "recordingLocation" : 7,
+            "recordingLocation" : 0,
             "startTimeMilliseconds" : 3,
-            "confidence" : 6,
+            "confidence" : 3,
             "name" : "name",
             "topicPhrase" : "topicPhrase",
             "id" : "id",
             "transcriptPhrase" : "transcriptPhrase"
           } ],
-          "totalScore" : 1.1730742,
+          "totalScore" : 4.9652185,
           "anyFailedKillQuestions" : true
         },
         "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -50060,7 +50468,7 @@ open class UserRecordingsAPI {
             "geolocation" : "{}"
           } ],
           "contextId" : "contextId",
-          "averageScore" : 1,
+          "averageScore" : 6,
           "calibrator" : {
             "workPlanBidRanks" : "{}",
             "addresses" : [ {
@@ -50356,7 +50764,7 @@ open class UserRecordingsAPI {
             "username" : "username",
             "geolocation" : "{}"
           },
-          "highScore" : 6,
+          "highScore" : 7,
           "createdDate" : "2000-01-23T04:56:07.000+00:00",
           "expertEvaluator" : {
             "workPlanBidRanks" : "{}",
@@ -50655,7 +51063,7 @@ open class UserRecordingsAPI {
           },
           "name" : "name",
           "id" : "id",
-          "lowScore" : 7,
+          "lowScore" : 1,
           "conversation" : {
             "selfUri" : "https://openapi-generator.tech",
             "id" : "id"
@@ -50765,7 +51173,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               } ],
-              "weight" : 1.2315135,
+              "weight" : 1.0246457,
               "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
@@ -50867,7 +51275,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               } ],
-              "weight" : 1.2315135,
+              "weight" : 1.0246457,
               "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
@@ -51898,23 +52306,23 @@ open class UserRecordingsAPI {
         "evaluationSource" : "{}",
         "redacted" : true,
         "answers" : {
-          "totalNonCriticalScore" : 5.025005,
+          "totalNonCriticalScore" : 9.965781,
           "comments" : "comments",
           "privateComments" : "privateComments",
           "agentComments" : "agentComments",
-          "totalCriticalScore" : 4.9652185,
+          "totalCriticalScore" : 5.025005,
           "questionGroupScores" : [ {
-            "totalNonCriticalScore" : 9.018348,
-            "totalCriticalScoreUnweighted" : 1.284659,
-            "totalNonCriticalScoreUnweighted" : 6.778325,
+            "totalNonCriticalScore" : 6.4384236,
+            "totalCriticalScoreUnweighted" : 2.8841622,
+            "totalNonCriticalScoreUnweighted" : 6.878052,
             "systemMarkedNA" : true,
             "markedNA" : true,
-            "totalScoreUnweighted" : 3.5571952,
-            "maxTotalNonCriticalScore" : 6.4384236,
+            "totalScoreUnweighted" : 6.965118,
+            "maxTotalNonCriticalScore" : 3.5571952,
             "questionScores" : [ {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -51925,7 +52333,7 @@ open class UserRecordingsAPI {
             }, {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -51935,25 +52343,25 @@ open class UserRecordingsAPI {
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
-            "totalScore" : 9.965781,
-            "maxTotalScore" : 9.36931,
-            "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-            "totalCriticalScore" : 6.6835623,
-            "maxTotalCriticalScore" : 8.762042,
-            "maxTotalCriticalScoreUnweighted" : 2.8841622,
-            "maxTotalScoreUnweighted" : 6.965118
+            "totalScore" : 9.36931,
+            "maxTotalScore" : 6.6835623,
+            "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+            "totalCriticalScore" : 8.762042,
+            "maxTotalCriticalScore" : 9.018348,
+            "maxTotalCriticalScoreUnweighted" : 6.778325,
+            "maxTotalScoreUnweighted" : 1.284659
           }, {
-            "totalNonCriticalScore" : 9.018348,
-            "totalCriticalScoreUnweighted" : 1.284659,
-            "totalNonCriticalScoreUnweighted" : 6.778325,
+            "totalNonCriticalScore" : 6.4384236,
+            "totalCriticalScoreUnweighted" : 2.8841622,
+            "totalNonCriticalScoreUnweighted" : 6.878052,
             "systemMarkedNA" : true,
             "markedNA" : true,
-            "totalScoreUnweighted" : 3.5571952,
-            "maxTotalNonCriticalScore" : 6.4384236,
+            "totalScoreUnweighted" : 6.965118,
+            "maxTotalNonCriticalScore" : 3.5571952,
             "questionScores" : [ {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -51964,7 +52372,7 @@ open class UserRecordingsAPI {
             }, {
               "answerId" : "answerId",
               "failedKillQuestion" : true,
-              "score" : 5,
+              "score" : 6,
               "questionId" : "questionId",
               "systemMarkedNA" : true,
               "comments" : "comments",
@@ -51974,40 +52382,40 @@ open class UserRecordingsAPI {
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
-            "totalScore" : 9.965781,
-            "maxTotalScore" : 9.36931,
-            "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-            "totalCriticalScore" : 6.6835623,
-            "maxTotalCriticalScore" : 8.762042,
-            "maxTotalCriticalScoreUnweighted" : 2.8841622,
-            "maxTotalScoreUnweighted" : 6.965118
+            "totalScore" : 9.36931,
+            "maxTotalScore" : 6.6835623,
+            "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+            "totalCriticalScore" : 8.762042,
+            "maxTotalCriticalScore" : 9.018348,
+            "maxTotalCriticalScoreUnweighted" : 6.778325,
+            "maxTotalScoreUnweighted" : 1.284659
           } ],
           "transcriptTopics" : [ {
             "duration" : {
-              "totalMilliseconds" : 3
+              "totalMilliseconds" : 7
             },
             "offset" : "{}",
-            "recordingLocation" : 7,
+            "recordingLocation" : 0,
             "startTimeMilliseconds" : 3,
-            "confidence" : 6,
+            "confidence" : 3,
             "name" : "name",
             "topicPhrase" : "topicPhrase",
             "id" : "id",
             "transcriptPhrase" : "transcriptPhrase"
           }, {
             "duration" : {
-              "totalMilliseconds" : 3
+              "totalMilliseconds" : 7
             },
             "offset" : "{}",
-            "recordingLocation" : 7,
+            "recordingLocation" : 0,
             "startTimeMilliseconds" : 3,
-            "confidence" : 6,
+            "confidence" : 3,
             "name" : "name",
             "topicPhrase" : "topicPhrase",
             "id" : "id",
             "transcriptPhrase" : "transcriptPhrase"
           } ],
-          "totalScore" : 1.1730742,
+          "totalScore" : 4.9652185,
           "anyFailedKillQuestions" : true
         },
         "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -52907,7 +53315,7 @@ open class UserRecordingsAPI {
             "geolocation" : "{}"
           } ],
           "contextId" : "contextId",
-          "averageScore" : 1,
+          "averageScore" : 6,
           "calibrator" : {
             "workPlanBidRanks" : "{}",
             "addresses" : [ {
@@ -53203,7 +53611,7 @@ open class UserRecordingsAPI {
             "username" : "username",
             "geolocation" : "{}"
           },
-          "highScore" : 6,
+          "highScore" : 7,
           "createdDate" : "2000-01-23T04:56:07.000+00:00",
           "expertEvaluator" : {
             "workPlanBidRanks" : "{}",
@@ -53502,7 +53910,7 @@ open class UserRecordingsAPI {
           },
           "name" : "name",
           "id" : "id",
-          "lowScore" : 7,
+          "lowScore" : 1,
           "conversation" : {
             "selfUri" : "https://openapi-generator.tech",
             "id" : "id"
@@ -53612,7 +54020,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               } ],
-              "weight" : 1.2315135,
+              "weight" : 1.0246457,
               "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",
@@ -53714,7 +54122,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ]
               } ],
-              "weight" : 1.2315135,
+              "weight" : 1.0246457,
               "defaultAnswersTo" : "{}",
               "contextId" : "contextId",
               "id" : "id",

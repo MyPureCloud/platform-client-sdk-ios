@@ -3716,8 +3716,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   }, {
@@ -3729,8 +3729,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   } ],
@@ -7605,8 +7605,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]
@@ -10045,8 +10045,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   }, {
@@ -10058,8 +10058,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   } ],
@@ -10143,8 +10143,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   }, {
@@ -10156,8 +10156,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "version" : 0
   } ],
@@ -10904,6 +10904,113 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffRequestList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get availability management unit's settings for agent
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementUnavailabletimesSettings(completion: @escaping ((_ data: ManagementUnitAvailabilitySettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementUnavailabletimesSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<ManagementUnitAvailabilitySettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get availability management unit's settings for agent
+     - GET /api/v2/workforcemanagement/unavailabletimes/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "enabled" : true
+}, statusCode=200}]
+
+     - returns: RequestBuilder<ManagementUnitAvailabilitySettingsResponse> 
+     */
+    open class func getWorkforcemanagementUnavailabletimesSettingsWithRequestBuilder() -> RequestBuilder<ManagementUnitAvailabilitySettingsResponse> {        
+        let path = "/api/v2/workforcemanagement/unavailabletimes/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ManagementUnitAvailabilitySettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Query agent unavailable times validation job
+     
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementUnavailabletimesValidationJob(jobId: String, completion: @escaping ((_ data: QueryAgentUnavailableTimesValidationJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementUnavailabletimesValidationJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<QueryAgentUnavailableTimesValidationJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query agent unavailable times validation job
+     - GET /api/v2/workforcemanagement/unavailabletimes/validation/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "agent" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<QueryAgentUnavailableTimesValidationJobResponse> 
+     */
+    open class func getWorkforcemanagementUnavailabletimesValidationJobWithRequestBuilder(jobId: String) -> RequestBuilder<QueryAgentUnavailableTimesValidationJobResponse> {        
+        var path = "/api/v2/workforcemanagement/unavailabletimes/validation/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<QueryAgentUnavailableTimesValidationJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -12657,8 +12764,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]
@@ -13022,6 +13129,65 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserTimeOffIntegrationStatusResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update management unit availability settings
+     
+     - parameter managementUnitId: (path) The ID of the management unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementManagementunitUnavailabletimesSettings(managementUnitId: String, body: UpdateManagementUnitsSettingsRequest, completion: @escaping ((_ data: ManagementUnitAvailabilitySettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementManagementunitUnavailabletimesSettingsWithRequestBuilder(managementUnitId: managementUnitId, body: body)
+        requestBuilder.execute { (response: Response<ManagementUnitAvailabilitySettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update management unit availability settings
+     - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/unavailabletimes/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<ManagementUnitAvailabilitySettingsResponse> 
+     */
+    open class func patchWorkforcemanagementManagementunitUnavailabletimesSettingsWithRequestBuilder(managementUnitId: String, body: UpdateManagementUnitsSettingsRequest) -> RequestBuilder<ManagementUnitAvailabilitySettingsResponse> {        
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/unavailabletimes/settings"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ManagementUnitAvailabilitySettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -13618,6 +13784,66 @@ open class WorkforceManagementAPI {
 
     
     
+    /**
+     Update agent unavailable times
+     
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementUnavailabletimes(body: UpdateUnavailableTimesRequest, completion: @escaping ((_ data: UnavailableTimeListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementUnavailabletimesWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<UnavailableTimeListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update agent unavailable times
+     - PATCH /api/v2/workforcemanagement/unavailabletimes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "notes" : "notes",
+    "timeSpan" : "{}",
+    "id" : "id"
+  }, {
+    "notes" : "notes",
+    "timeSpan" : "{}",
+    "id" : "id"
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<UnavailableTimeListing> 
+     */
+    open class func patchWorkforcemanagementUnavailabletimesWithRequestBuilder(body: UpdateUnavailableTimesRequest) -> RequestBuilder<UnavailableTimeListing> {        
+        let path = "/api/v2/workforcemanagement/unavailabletimes"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UnavailableTimeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**
@@ -14157,6 +14383,73 @@ open class WorkforceManagementAPI {
         ])
 
         let requestBuilder: RequestBuilder<AgentQueryAdherenceExplanationsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get agent unavailable times
+     
+     - parameter agentId: (path) The ID of the agent 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAgentUnavailabletimesQuery(agentId: String, body: QueryAgentUnavailableTimesRequest, completion: @escaping ((_ data: UnavailableTimeListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAgentUnavailabletimesQueryWithRequestBuilder(agentId: agentId, body: body)
+        requestBuilder.execute { (response: Response<UnavailableTimeListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get agent unavailable times
+     - POST /api/v2/workforcemanagement/agents/{agentId}/unavailabletimes/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "notes" : "notes",
+    "timeSpan" : "{}",
+    "id" : "id"
+  }, {
+    "notes" : "notes",
+    "timeSpan" : "{}",
+    "id" : "id"
+  } ]
+}, statusCode=200}]
+     
+     - parameter agentId: (path) The ID of the agent 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<UnavailableTimeListing> 
+     */
+    open class func postWorkforcemanagementAgentUnavailabletimesQueryWithRequestBuilder(agentId: String, body: QueryAgentUnavailableTimesRequest) -> RequestBuilder<UnavailableTimeListing> {        
+        var path = "/api/v2/workforcemanagement/agents/{agentId}/unavailabletimes/query"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UnavailableTimeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -16715,6 +17008,137 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BuTimeOffPlanResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get agent schedule generation unavailable times
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitUnavailabletimesSchedulesQuery(businessUnitId: String, body: QueryAgentScheduleUnavailableTimesRequest, completion: @escaping ((_ data: QueryAgentScheduleUnavailableTimesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitUnavailabletimesSchedulesQueryWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<QueryAgentScheduleUnavailableTimesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get agent schedule generation unavailable times
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/unavailabletimes/schedules/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "consideredInScheduleGeneration" : true,
+  "scheduleGenerationUnavailableTimes" : [ {
+    "notes" : "notes",
+    "timeSpan" : "{}"
+  }, {
+    "notes" : "notes",
+    "timeSpan" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<QueryAgentScheduleUnavailableTimesResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitUnavailabletimesSchedulesQueryWithRequestBuilder(businessUnitId: String, body: QueryAgentScheduleUnavailableTimesRequest) -> RequestBuilder<QueryAgentScheduleUnavailableTimesResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/unavailabletimes/schedules/query"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<QueryAgentScheduleUnavailableTimesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Query availability management units settings
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitUnavailabletimesSettingsQuery(businessUnitId: String, body: QueryAvailabilityManagementUnitsSettingsRequest, completion: @escaping ((_ data: QueryAvailabilityManagementUnitsSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitUnavailabletimesSettingsQueryWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<QueryAvailabilityManagementUnitsSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query availability management units settings
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/unavailabletimes/settings/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "managementUnits" : [ {
+    "managementUnit" : "{}",
+    "enabled" : true
+  }, {
+    "managementUnit" : "{}",
+    "enabled" : true
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<QueryAvailabilityManagementUnitsSettingsResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitUnavailabletimesSettingsQueryWithRequestBuilder(businessUnitId: String, body: QueryAvailabilityManagementUnitsSettingsRequest) -> RequestBuilder<QueryAvailabilityManagementUnitsSettingsResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/unavailabletimes/settings/query"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<QueryAvailabilityManagementUnitsSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -20771,8 +21195,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]
@@ -21445,6 +21869,120 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffIntegrationStatusResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get agent unavailable times
+     
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementUnavailabletimesQuery(body: QueryAgentUnavailableTimesRequest, completion: @escaping ((_ data: UnavailableTimeListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementUnavailabletimesQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<UnavailableTimeListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get agent unavailable times
+     - POST /api/v2/workforcemanagement/unavailabletimes/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "notes" : "notes",
+    "timeSpan" : "{}",
+    "id" : "id"
+  }, {
+    "notes" : "notes",
+    "timeSpan" : "{}",
+    "id" : "id"
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<UnavailableTimeListing> 
+     */
+    open class func postWorkforcemanagementUnavailabletimesQueryWithRequestBuilder(body: QueryAgentUnavailableTimesRequest) -> RequestBuilder<UnavailableTimeListing> {        
+        let path = "/api/v2/workforcemanagement/unavailabletimes/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UnavailableTimeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Validates proposed changes to an agent's unavailable time spans against scheduling rules and constraints for a specific week
+     
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementUnavailabletimesValidationJobs(body: ValidateAgentUnavailableTimesRequest, completion: @escaping ((_ data: ValidateAgentUnavailableTimesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementUnavailabletimesValidationJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ValidateAgentUnavailableTimesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Validates proposed changes to an agent's unavailable time spans against scheduling rules and constraints for a specific week
+     - POST /api/v2/workforcemanagement/unavailabletimes/validation/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "id" : "id",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<ValidateAgentUnavailableTimesResponse> 
+     */
+    open class func postWorkforcemanagementUnavailabletimesValidationJobsWithRequestBuilder(body: ValidateAgentUnavailableTimesRequest) -> RequestBuilder<ValidateAgentUnavailableTimesResponse> {        
+        let path = "/api/v2/workforcemanagement/unavailabletimes/validation/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ValidateAgentUnavailableTimesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

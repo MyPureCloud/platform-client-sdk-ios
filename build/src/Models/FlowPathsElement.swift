@@ -30,15 +30,15 @@ public class FlowPathsElement: Codable {
 
 
 
+
+
+
+
     public enum FlowOutcomeValue: String, Codable { 
         case failure = "FAILURE"
         case success = "SUCCESS"
         case unknown = "UNKNOWN"
     }
-
-
-
-
 
     /** Unique identifier of the parent element. Will be null for the root element. */
     public var parentId: String?
@@ -48,21 +48,21 @@ public class FlowPathsElement: Codable {
     public var count: Int?
     /** Details of flows involved in journeys that include this element. */
     public var flows: [FlowPathsFlowDetails]?
-    /** The value of the flow outcome, if the element type is Outcome. */
-    public var flowOutcomeValue: FlowOutcomeValue?
     /** The flow milestone, set if the element type is Milestone. */
     public var flowMilestone: AddressableEntityRef?
     /** The flow outcome, set if the element type is Outcome or Milestone. */
     public var flowOutcome: AddressableEntityRef?
+    /** The value of the flow outcome, if the element type is Outcome. */
+    public var flowOutcomeValue: FlowOutcomeValue?
 
-    public init(parentId: String?, type: ModelType?, count: Int?, flows: [FlowPathsFlowDetails]?, flowOutcomeValue: FlowOutcomeValue?, flowMilestone: AddressableEntityRef?, flowOutcome: AddressableEntityRef?) {
+    public init(parentId: String?, type: ModelType?, count: Int?, flows: [FlowPathsFlowDetails]?, flowMilestone: AddressableEntityRef?, flowOutcome: AddressableEntityRef?, flowOutcomeValue: FlowOutcomeValue?) {
         self.parentId = parentId
         self.type = type
         self.count = count
         self.flows = flows
-        self.flowOutcomeValue = flowOutcomeValue
         self.flowMilestone = flowMilestone
         self.flowOutcome = flowOutcome
+        self.flowOutcomeValue = flowOutcomeValue
     }
 
 

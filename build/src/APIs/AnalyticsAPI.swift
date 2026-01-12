@@ -156,11 +156,17 @@ open class AnalyticsAPI {
     "requestedLanguageId" : "requestedLanguageId",
     "segmentType" : "alert"
   } ],
+  "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+  "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+  "isOutOfOffice" : true,
   "sessionCount" : 0,
+  "systemPresence" : "UNKNOWN",
   "divisionId" : "divisionId",
   "managerId" : "managerId",
+  "routingStatus" : "UNKNOWN",
   "userName" : "userName",
-  "userId" : "userId"
+  "userId" : "userId",
+  "organizationPresenceId" : "organizationPresenceId"
 }, statusCode=200}]
      
      - parameter userId: (path) userId 
@@ -535,9 +541,9 @@ open class AnalyticsAPI {
     "language" : "language",
     "id" : "id",
     "flow" : "{}",
+    "conversation" : "{}",
     "botResult" : "Unknown",
-    "botResultCategory" : "Unknown",
-    "conversation" : "{}"
+    "botResultCategory" : "Unknown"
   }, {
     "endLanguage" : "endLanguage",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -546,9 +552,9 @@ open class AnalyticsAPI {
     "language" : "language",
     "id" : "id",
     "flow" : "{}",
+    "conversation" : "{}",
     "botResult" : "Unknown",
-    "botResultCategory" : "Unknown",
-    "conversation" : "{}"
+    "botResultCategory" : "Unknown"
   } ],
   "selfUri" : "selfUri",
   "nextUri" : "nextUri",
@@ -752,6 +758,7 @@ open class AnalyticsAPI {
       "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
       "protocolCallId" : "protocolCallId",
       "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+      "snippetRecording" : true,
       "flowOutType" : "flowOutType",
       "mediaType" : "callback",
       "outboundCampaignId" : "outboundCampaignId",
@@ -963,6 +970,7 @@ open class AnalyticsAPI {
       "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
       "protocolCallId" : "protocolCallId",
       "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+      "snippetRecording" : true,
       "flowOutType" : "flowOutType",
       "mediaType" : "callback",
       "outboundCampaignId" : "outboundCampaignId",
@@ -1185,6 +1193,7 @@ open class AnalyticsAPI {
       "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
       "protocolCallId" : "protocolCallId",
       "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+      "snippetRecording" : true,
       "flowOutType" : "flowOutType",
       "mediaType" : "callback",
       "outboundCampaignId" : "outboundCampaignId",
@@ -1396,6 +1405,7 @@ open class AnalyticsAPI {
       "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
       "protocolCallId" : "protocolCallId",
       "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+      "snippetRecording" : true,
       "flowOutType" : "flowOutType",
       "mediaType" : "callback",
       "outboundCampaignId" : "outboundCampaignId",
@@ -1768,6 +1778,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -1979,6 +1990,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -2201,6 +2213,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -2412,6 +2425,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -2730,6 +2744,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -2941,6 +2956,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -3163,6 +3179,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -3374,6 +3391,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -3814,6 +3832,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -4025,6 +4044,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -4250,6 +4270,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -4461,6 +4482,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -4782,6 +4804,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -4993,6 +5016,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -5218,6 +5242,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -5429,6 +5454,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -7815,14 +7841,24 @@ open class AnalyticsAPI {
 
     
     
+    
+    
+    public enum GroupBy_postAnalyticsAgentsStatusCounts: String { 
+        case segmenttype = "segmentType"
+        case presence = "presence"
+        case routingstatus = "routingStatus"
+        case isoutofoffice = "isOutOfOffice"
+    }
+    
     /**
      Count agents by different groupings
      
      - parameter body: (body) query 
+     - parameter groupBy: (query) Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAnalyticsAgentsStatusCounts(body: AgentStateCountsRequest, completion: @escaping ((_ data: AnalyticsAgentStateCountsResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postAnalyticsAgentsStatusCountsWithRequestBuilder(body: body)
+    open class func postAnalyticsAgentsStatusCounts(body: AgentStateCountsRequest, groupBy: [String]? = nil, completion: @escaping ((_ data: AnalyticsAgentStateCountsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsAgentsStatusCountsWithRequestBuilder(body: body, groupBy: groupBy)
         requestBuilder.execute { (response: Response<AnalyticsAgentStateCountsResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -7846,25 +7882,52 @@ open class AnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "routingStatusCounts" : [ {
+    "count" : 1,
+    "routingStatus" : "UNKNOWN"
+  }, {
+    "count" : 1,
+    "routingStatus" : "UNKNOWN"
+  } ],
   "segmentCounts" : [ {
     "count" : 0,
     "segmentType" : "alert"
   }, {
     "count" : 0,
     "segmentType" : "alert"
+  } ],
+  "isOutOfOfficeCounts" : [ {
+    "isOutOfOffice" : true,
+    "count" : 5
+  }, {
+    "isOutOfOffice" : true,
+    "count" : 5
+  } ],
+  "presenceCounts" : [ {
+    "systemPresence" : "UNKNOWN",
+    "count" : 6,
+    "organizationPresenceId" : "organizationPresenceId"
+  }, {
+    "systemPresence" : "UNKNOWN",
+    "count" : 6,
+    "organizationPresenceId" : "organizationPresenceId"
   } ]
 }, statusCode=200}]
      
      - parameter body: (body) query 
+     - parameter groupBy: (query) Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType (optional)
 
      - returns: RequestBuilder<AnalyticsAgentStateCountsResponse> 
      */
-    open class func postAnalyticsAgentsStatusCountsWithRequestBuilder(body: AgentStateCountsRequest) -> RequestBuilder<AnalyticsAgentStateCountsResponse> {        
+    open class func postAnalyticsAgentsStatusCountsWithRequestBuilder(body: AgentStateCountsRequest, groupBy: [String]? = nil) -> RequestBuilder<AnalyticsAgentStateCountsResponse> {        
         let path = "/api/v2/analytics/agents/status/counts"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "groupBy": groupBy
+        ])
 
         let requestBuilder: RequestBuilder<AnalyticsAgentStateCountsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -7928,11 +7991,17 @@ open class AnalyticsAPI {
       "requestedLanguageId" : "requestedLanguageId",
       "segmentType" : "alert"
     } ],
+    "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+    "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+    "isOutOfOffice" : true,
     "sessionCount" : 0,
+    "systemPresence" : "UNKNOWN",
     "divisionId" : "divisionId",
     "managerId" : "managerId",
+    "routingStatus" : "UNKNOWN",
     "userName" : "userName",
-    "userId" : "userId"
+    "userId" : "userId",
+    "organizationPresenceId" : "organizationPresenceId"
   }, {
     "sessions" : [ {
       "sessionStart" : "2000-01-23T04:56:07.000+00:00",
@@ -7957,11 +8026,17 @@ open class AnalyticsAPI {
       "requestedLanguageId" : "requestedLanguageId",
       "segmentType" : "alert"
     } ],
+    "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+    "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+    "isOutOfOffice" : true,
     "sessionCount" : 0,
+    "systemPresence" : "UNKNOWN",
     "divisionId" : "divisionId",
     "managerId" : "managerId",
+    "routingStatus" : "UNKNOWN",
     "userName" : "userName",
-    "userId" : "userId"
+    "userId" : "userId",
+    "organizationPresenceId" : "organizationPresenceId"
   } ]
 }, statusCode=200}]
      
@@ -9241,6 +9316,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -9452,6 +9528,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -9674,6 +9751,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -9885,6 +9963,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -10203,6 +10282,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -10414,6 +10494,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -10636,6 +10717,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",
@@ -10847,6 +10929,7 @@ open class AnalyticsAPI {
         "activeSkillIds" : [ "activeSkillIds", "activeSkillIds" ],
         "protocolCallId" : "protocolCallId",
         "destinationAddresses" : [ "destinationAddresses", "destinationAddresses" ],
+        "snippetRecording" : true,
         "flowOutType" : "flowOutType",
         "mediaType" : "callback",
         "outboundCampaignId" : "outboundCampaignId",

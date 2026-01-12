@@ -4,6 +4,8 @@ public class RecordingJob: Codable {
 
 
 
+
+
     public enum State: String, Codable { 
         case fulfilled = "FULFILLED"
         case pending = "PENDING"
@@ -35,10 +37,10 @@ public class RecordingJob: Codable {
 
 
 
-
-
     /** The globally unique identifier for the object. */
     public var _id: String?
+    /** Details of the user created the job */
+    public var user: AddressableEntityRef?
     /** The current state of the job. */
     public var state: State?
     /** Original query of the job. */
@@ -63,11 +65,10 @@ public class RecordingJob: Codable {
     public var failedRecordings: String?
     /** The URI for this object */
     public var selfUri: String?
-    /** Details of the user created the job */
-    public var user: AddressableEntityRef?
 
-    public init(_id: String?, state: State?, recordingJobsQuery: RecordingJobsQuery?, dateCreated: Date?, totalConversations: Int?, totalRecordings: Int?, totalSkippedRecordings: Int?, totalFailedRecordings: Int?, totalProcessedRecordings: Int?, percentProgress: Int?, errorMessage: String?, failedRecordings: String?, selfUri: String?, user: AddressableEntityRef?) {
+    public init(_id: String?, user: AddressableEntityRef?, state: State?, recordingJobsQuery: RecordingJobsQuery?, dateCreated: Date?, totalConversations: Int?, totalRecordings: Int?, totalSkippedRecordings: Int?, totalFailedRecordings: Int?, totalProcessedRecordings: Int?, percentProgress: Int?, errorMessage: String?, failedRecordings: String?, selfUri: String?) {
         self._id = _id
+        self.user = user
         self.state = state
         self.recordingJobsQuery = recordingJobsQuery
         self.dateCreated = dateCreated
@@ -80,11 +81,11 @@ public class RecordingJob: Codable {
         self.errorMessage = errorMessage
         self.failedRecordings = failedRecordings
         self.selfUri = selfUri
-        self.user = user
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
+        case user
         case state
         case recordingJobsQuery
         case dateCreated
@@ -97,7 +98,6 @@ public class RecordingJob: Codable {
         case errorMessage
         case failedRecordings
         case selfUri
-        case user
     }
 
 

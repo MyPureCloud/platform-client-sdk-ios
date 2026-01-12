@@ -12,4 +12,4 @@ Defines a SCIM resource type&#39;s schema extension.
 
 
 
-_PureCloudPlatformClientV2@183.1.0_
+_PureCloudPlatformClientV2@184.0.0_

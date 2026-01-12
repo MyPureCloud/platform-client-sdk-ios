@@ -14,4 +14,4 @@ Open Channel-specific information that describes the message and the message cha
 
 
 
-_PureCloudPlatformClientV2@183.1.0_
+_PureCloudPlatformClientV2@184.0.0_

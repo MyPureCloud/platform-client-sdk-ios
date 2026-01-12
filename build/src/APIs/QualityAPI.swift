@@ -933,7 +933,7 @@ open class QualityAPI {
     "geolocation" : "{}"
   } ],
   "contextId" : "contextId",
-  "averageScore" : 1,
+  "averageScore" : 6,
   "calibrator" : {
     "workPlanBidRanks" : "{}",
     "addresses" : [ {
@@ -1229,7 +1229,7 @@ open class QualityAPI {
     "username" : "username",
     "geolocation" : "{}"
   },
-  "highScore" : 6,
+  "highScore" : 7,
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "expertEvaluator" : {
     "workPlanBidRanks" : "{}",
@@ -1528,7 +1528,7 @@ open class QualityAPI {
   },
   "name" : "name",
   "id" : "id",
-  "lowScore" : 7,
+  "lowScore" : 1,
   "conversation" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -1638,7 +1638,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -1740,7 +1740,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -2114,23 +2114,23 @@ open class QualityAPI {
   "evaluationSource" : "{}",
   "redacted" : true,
   "answers" : {
-    "totalNonCriticalScore" : 5.025005,
+    "totalNonCriticalScore" : 9.965781,
     "comments" : "comments",
     "privateComments" : "privateComments",
     "agentComments" : "agentComments",
-    "totalCriticalScore" : 4.9652185,
+    "totalCriticalScore" : 5.025005,
     "questionGroupScores" : [ {
-      "totalNonCriticalScore" : 9.018348,
-      "totalCriticalScoreUnweighted" : 1.284659,
-      "totalNonCriticalScoreUnweighted" : 6.778325,
+      "totalNonCriticalScore" : 6.4384236,
+      "totalCriticalScoreUnweighted" : 2.8841622,
+      "totalNonCriticalScoreUnweighted" : 6.878052,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 3.5571952,
-      "maxTotalNonCriticalScore" : 6.4384236,
+      "totalScoreUnweighted" : 6.965118,
+      "maxTotalNonCriticalScore" : 3.5571952,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 5,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -2141,7 +2141,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 5,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -2151,25 +2151,25 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 9.965781,
-      "maxTotalScore" : 9.36931,
-      "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-      "totalCriticalScore" : 6.6835623,
-      "maxTotalCriticalScore" : 8.762042,
-      "maxTotalCriticalScoreUnweighted" : 2.8841622,
-      "maxTotalScoreUnweighted" : 6.965118
+      "totalScore" : 9.36931,
+      "maxTotalScore" : 6.6835623,
+      "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+      "totalCriticalScore" : 8.762042,
+      "maxTotalCriticalScore" : 9.018348,
+      "maxTotalCriticalScoreUnweighted" : 6.778325,
+      "maxTotalScoreUnweighted" : 1.284659
     }, {
-      "totalNonCriticalScore" : 9.018348,
-      "totalCriticalScoreUnweighted" : 1.284659,
-      "totalNonCriticalScoreUnweighted" : 6.778325,
+      "totalNonCriticalScore" : 6.4384236,
+      "totalCriticalScoreUnweighted" : 2.8841622,
+      "totalNonCriticalScoreUnweighted" : 6.878052,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 3.5571952,
-      "maxTotalNonCriticalScore" : 6.4384236,
+      "totalScoreUnweighted" : 6.965118,
+      "maxTotalNonCriticalScore" : 3.5571952,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 5,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -2180,7 +2180,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 5,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -2190,40 +2190,40 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 9.965781,
-      "maxTotalScore" : 9.36931,
-      "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-      "totalCriticalScore" : 6.6835623,
-      "maxTotalCriticalScore" : 8.762042,
-      "maxTotalCriticalScoreUnweighted" : 2.8841622,
-      "maxTotalScoreUnweighted" : 6.965118
+      "totalScore" : 9.36931,
+      "maxTotalScore" : 6.6835623,
+      "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+      "totalCriticalScore" : 8.762042,
+      "maxTotalCriticalScore" : 9.018348,
+      "maxTotalCriticalScoreUnweighted" : 6.778325,
+      "maxTotalScoreUnweighted" : 1.284659
     } ],
     "transcriptTopics" : [ {
       "duration" : {
-        "totalMilliseconds" : 3
+        "totalMilliseconds" : 7
       },
       "offset" : "{}",
-      "recordingLocation" : 7,
+      "recordingLocation" : 0,
       "startTimeMilliseconds" : 3,
-      "confidence" : 6,
+      "confidence" : 3,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     }, {
       "duration" : {
-        "totalMilliseconds" : 3
+        "totalMilliseconds" : 7
       },
       "offset" : "{}",
-      "recordingLocation" : 7,
+      "recordingLocation" : 0,
       "startTimeMilliseconds" : 3,
-      "confidence" : 6,
+      "confidence" : 3,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     } ],
-    "totalScore" : 1.1730742,
+    "totalScore" : 4.9652185,
     "anyFailedKillQuestions" : true
   },
   "changedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -2232,7 +2232,10 @@ open class QualityAPI {
   "hasAssistanceFailed" : true,
   "id" : "id",
   "rescore" : true,
-  "calibration" : "{}",
+  "calibration" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
   "conversation" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -3105,6 +3108,58 @@ open class QualityAPI {
         let formIdPreEscape = "\(formId)"
         let formIdPostEscape = formIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{formId}", with: formIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Delete an Agent Scoring Rule
+     
+     - parameter programId: (path) Program ID from Speech and Text Analytics 
+     - parameter ruleId: (path) Agent Scoring Rule ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteQualityProgramAgentscoringrule(programId: String, ruleId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteQualityProgramAgentscoringruleWithRequestBuilder(programId: programId, ruleId: ruleId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete an Agent Scoring Rule
+     - DELETE /api/v2/quality/programs/{programId}/agentscoringrules/{ruleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter programId: (path) Program ID from Speech and Text Analytics 
+     - parameter ruleId: (path) Agent Scoring Rule ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteQualityProgramAgentscoringruleWithRequestBuilder(programId: String, ruleId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/quality/programs/{programId}/agentscoringrules/{ruleId}"
+        let programIdPreEscape = "\(programId)"
+        let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{programId}", with: programIdPostEscape, options: .literal, range: nil)
+        let ruleIdPreEscape = "\(ruleId)"
+        let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
@@ -7187,7 +7242,7 @@ open class QualityAPI {
     "geolocation" : "{}"
   } ],
   "contextId" : "contextId",
-  "averageScore" : 1,
+  "averageScore" : 6,
   "calibrator" : {
     "workPlanBidRanks" : "{}",
     "addresses" : [ {
@@ -7483,7 +7538,7 @@ open class QualityAPI {
     "username" : "username",
     "geolocation" : "{}"
   },
-  "highScore" : 6,
+  "highScore" : 7,
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "expertEvaluator" : {
     "workPlanBidRanks" : "{}",
@@ -7782,7 +7837,7 @@ open class QualityAPI {
   },
   "name" : "name",
   "id" : "id",
-  "lowScore" : 7,
+  "lowScore" : 1,
   "conversation" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -7892,7 +7947,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -7994,7 +8049,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -8982,7 +9037,7 @@ open class QualityAPI {
       "geolocation" : "{}"
     } ],
     "contextId" : "contextId",
-    "averageScore" : 1,
+    "averageScore" : 6,
     "calibrator" : {
       "workPlanBidRanks" : "{}",
       "addresses" : [ {
@@ -9278,7 +9333,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     },
-    "highScore" : 6,
+    "highScore" : 7,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
       "workPlanBidRanks" : "{}",
@@ -9577,7 +9632,7 @@ open class QualityAPI {
     },
     "name" : "name",
     "id" : "id",
-    "lowScore" : 7,
+    "lowScore" : 1,
     "conversation" : {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -9687,7 +9742,7 @@ open class QualityAPI {
             } ]
           } ]
         } ],
-        "weight" : 1.2315135,
+        "weight" : 1.0246457,
         "defaultAnswersTo" : "{}",
         "contextId" : "contextId",
         "id" : "id",
@@ -9789,7 +9844,7 @@ open class QualityAPI {
             } ]
           } ]
         } ],
-        "weight" : 1.2315135,
+        "weight" : 1.0246457,
         "defaultAnswersTo" : "{}",
         "contextId" : "contextId",
         "id" : "id",
@@ -10686,7 +10741,7 @@ open class QualityAPI {
       "geolocation" : "{}"
     } ],
     "contextId" : "contextId",
-    "averageScore" : 1,
+    "averageScore" : 6,
     "calibrator" : {
       "workPlanBidRanks" : "{}",
       "addresses" : [ {
@@ -10982,7 +11037,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     },
-    "highScore" : 6,
+    "highScore" : 7,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
       "workPlanBidRanks" : "{}",
@@ -11281,7 +11336,7 @@ open class QualityAPI {
     },
     "name" : "name",
     "id" : "id",
-    "lowScore" : 7,
+    "lowScore" : 1,
     "conversation" : {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -11391,7 +11446,7 @@ open class QualityAPI {
             } ]
           } ]
         } ],
-        "weight" : 1.2315135,
+        "weight" : 1.0246457,
         "defaultAnswersTo" : "{}",
         "contextId" : "contextId",
         "id" : "id",
@@ -11493,7 +11548,7 @@ open class QualityAPI {
             } ]
           } ]
         } ],
-        "weight" : 1.2315135,
+        "weight" : 1.0246457,
         "defaultAnswersTo" : "{}",
         "contextId" : "contextId",
         "id" : "id",
@@ -11888,23 +11943,23 @@ open class QualityAPI {
   "evaluationSource" : "{}",
   "redacted" : true,
   "answers" : {
-    "totalNonCriticalScore" : 5.025005,
+    "totalNonCriticalScore" : 9.965781,
     "comments" : "comments",
     "privateComments" : "privateComments",
     "agentComments" : "agentComments",
-    "totalCriticalScore" : 4.9652185,
+    "totalCriticalScore" : 5.025005,
     "questionGroupScores" : [ {
-      "totalNonCriticalScore" : 9.018348,
-      "totalCriticalScoreUnweighted" : 1.284659,
-      "totalNonCriticalScoreUnweighted" : 6.778325,
+      "totalNonCriticalScore" : 6.4384236,
+      "totalCriticalScoreUnweighted" : 2.8841622,
+      "totalNonCriticalScoreUnweighted" : 6.878052,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 3.5571952,
-      "maxTotalNonCriticalScore" : 6.4384236,
+      "totalScoreUnweighted" : 6.965118,
+      "maxTotalNonCriticalScore" : 3.5571952,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 5,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -11915,7 +11970,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 5,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -11925,25 +11980,25 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 9.965781,
-      "maxTotalScore" : 9.36931,
-      "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-      "totalCriticalScore" : 6.6835623,
-      "maxTotalCriticalScore" : 8.762042,
-      "maxTotalCriticalScoreUnweighted" : 2.8841622,
-      "maxTotalScoreUnweighted" : 6.965118
+      "totalScore" : 9.36931,
+      "maxTotalScore" : 6.6835623,
+      "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+      "totalCriticalScore" : 8.762042,
+      "maxTotalCriticalScore" : 9.018348,
+      "maxTotalCriticalScoreUnweighted" : 6.778325,
+      "maxTotalScoreUnweighted" : 1.284659
     }, {
-      "totalNonCriticalScore" : 9.018348,
-      "totalCriticalScoreUnweighted" : 1.284659,
-      "totalNonCriticalScoreUnweighted" : 6.778325,
+      "totalNonCriticalScore" : 6.4384236,
+      "totalCriticalScoreUnweighted" : 2.8841622,
+      "totalNonCriticalScoreUnweighted" : 6.878052,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 3.5571952,
-      "maxTotalNonCriticalScore" : 6.4384236,
+      "totalScoreUnweighted" : 6.965118,
+      "maxTotalNonCriticalScore" : 3.5571952,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 5,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -11954,7 +12009,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 5,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -11964,40 +12019,40 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 9.965781,
-      "maxTotalScore" : 9.36931,
-      "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-      "totalCriticalScore" : 6.6835623,
-      "maxTotalCriticalScore" : 8.762042,
-      "maxTotalCriticalScoreUnweighted" : 2.8841622,
-      "maxTotalScoreUnweighted" : 6.965118
+      "totalScore" : 9.36931,
+      "maxTotalScore" : 6.6835623,
+      "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+      "totalCriticalScore" : 8.762042,
+      "maxTotalCriticalScore" : 9.018348,
+      "maxTotalCriticalScoreUnweighted" : 6.778325,
+      "maxTotalScoreUnweighted" : 1.284659
     } ],
     "transcriptTopics" : [ {
       "duration" : {
-        "totalMilliseconds" : 3
+        "totalMilliseconds" : 7
       },
       "offset" : "{}",
-      "recordingLocation" : 7,
+      "recordingLocation" : 0,
       "startTimeMilliseconds" : 3,
-      "confidence" : 6,
+      "confidence" : 3,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     }, {
       "duration" : {
-        "totalMilliseconds" : 3
+        "totalMilliseconds" : 7
       },
       "offset" : "{}",
-      "recordingLocation" : 7,
+      "recordingLocation" : 0,
       "startTimeMilliseconds" : 3,
-      "confidence" : 6,
+      "confidence" : 3,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     } ],
-    "totalScore" : 1.1730742,
+    "totalScore" : 4.9652185,
     "anyFailedKillQuestions" : true
   },
   "changedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -12006,7 +12061,10 @@ open class QualityAPI {
   "hasAssistanceFailed" : true,
   "id" : "id",
   "rescore" : true,
-  "calibration" : "{}",
+  "calibration" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
   "conversation" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -13492,23 +13550,23 @@ open class QualityAPI {
     "evaluationSource" : "{}",
     "redacted" : true,
     "answers" : {
-      "totalNonCriticalScore" : 5.025005,
+      "totalNonCriticalScore" : 9.965781,
       "comments" : "comments",
       "privateComments" : "privateComments",
       "agentComments" : "agentComments",
-      "totalCriticalScore" : 4.9652185,
+      "totalCriticalScore" : 5.025005,
       "questionGroupScores" : [ {
-        "totalNonCriticalScore" : 9.018348,
-        "totalCriticalScoreUnweighted" : 1.284659,
-        "totalNonCriticalScoreUnweighted" : 6.778325,
+        "totalNonCriticalScore" : 6.4384236,
+        "totalCriticalScoreUnweighted" : 2.8841622,
+        "totalNonCriticalScoreUnweighted" : 6.878052,
         "systemMarkedNA" : true,
         "markedNA" : true,
-        "totalScoreUnweighted" : 3.5571952,
-        "maxTotalNonCriticalScore" : 6.4384236,
+        "totalScoreUnweighted" : 6.965118,
+        "maxTotalNonCriticalScore" : 3.5571952,
         "questionScores" : [ {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 5,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -13519,7 +13577,7 @@ open class QualityAPI {
         }, {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 5,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -13529,25 +13587,25 @@ open class QualityAPI {
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
-        "totalScore" : 9.965781,
-        "maxTotalScore" : 9.36931,
-        "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-        "totalCriticalScore" : 6.6835623,
-        "maxTotalCriticalScore" : 8.762042,
-        "maxTotalCriticalScoreUnweighted" : 2.8841622,
-        "maxTotalScoreUnweighted" : 6.965118
+        "totalScore" : 9.36931,
+        "maxTotalScore" : 6.6835623,
+        "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+        "totalCriticalScore" : 8.762042,
+        "maxTotalCriticalScore" : 9.018348,
+        "maxTotalCriticalScoreUnweighted" : 6.778325,
+        "maxTotalScoreUnweighted" : 1.284659
       }, {
-        "totalNonCriticalScore" : 9.018348,
-        "totalCriticalScoreUnweighted" : 1.284659,
-        "totalNonCriticalScoreUnweighted" : 6.778325,
+        "totalNonCriticalScore" : 6.4384236,
+        "totalCriticalScoreUnweighted" : 2.8841622,
+        "totalNonCriticalScoreUnweighted" : 6.878052,
         "systemMarkedNA" : true,
         "markedNA" : true,
-        "totalScoreUnweighted" : 3.5571952,
-        "maxTotalNonCriticalScore" : 6.4384236,
+        "totalScoreUnweighted" : 6.965118,
+        "maxTotalNonCriticalScore" : 3.5571952,
         "questionScores" : [ {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 5,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -13558,7 +13616,7 @@ open class QualityAPI {
         }, {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 5,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -13568,40 +13626,40 @@ open class QualityAPI {
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
-        "totalScore" : 9.965781,
-        "maxTotalScore" : 9.36931,
-        "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-        "totalCriticalScore" : 6.6835623,
-        "maxTotalCriticalScore" : 8.762042,
-        "maxTotalCriticalScoreUnweighted" : 2.8841622,
-        "maxTotalScoreUnweighted" : 6.965118
+        "totalScore" : 9.36931,
+        "maxTotalScore" : 6.6835623,
+        "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+        "totalCriticalScore" : 8.762042,
+        "maxTotalCriticalScore" : 9.018348,
+        "maxTotalCriticalScoreUnweighted" : 6.778325,
+        "maxTotalScoreUnweighted" : 1.284659
       } ],
       "transcriptTopics" : [ {
         "duration" : {
-          "totalMilliseconds" : 3
+          "totalMilliseconds" : 7
         },
         "offset" : "{}",
-        "recordingLocation" : 7,
+        "recordingLocation" : 0,
         "startTimeMilliseconds" : 3,
-        "confidence" : 6,
+        "confidence" : 3,
         "name" : "name",
         "topicPhrase" : "topicPhrase",
         "id" : "id",
         "transcriptPhrase" : "transcriptPhrase"
       }, {
         "duration" : {
-          "totalMilliseconds" : 3
+          "totalMilliseconds" : 7
         },
         "offset" : "{}",
-        "recordingLocation" : 7,
+        "recordingLocation" : 0,
         "startTimeMilliseconds" : 3,
-        "confidence" : 6,
+        "confidence" : 3,
         "name" : "name",
         "topicPhrase" : "topicPhrase",
         "id" : "id",
         "transcriptPhrase" : "transcriptPhrase"
       } ],
-      "totalScore" : 1.1730742,
+      "totalScore" : 4.9652185,
       "anyFailedKillQuestions" : true
     },
     "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -14501,7 +14559,7 @@ open class QualityAPI {
         "geolocation" : "{}"
       } ],
       "contextId" : "contextId",
-      "averageScore" : 1,
+      "averageScore" : 6,
       "calibrator" : {
         "workPlanBidRanks" : "{}",
         "addresses" : [ {
@@ -14797,7 +14855,7 @@ open class QualityAPI {
         "username" : "username",
         "geolocation" : "{}"
       },
-      "highScore" : 6,
+      "highScore" : 7,
       "createdDate" : "2000-01-23T04:56:07.000+00:00",
       "expertEvaluator" : {
         "workPlanBidRanks" : "{}",
@@ -15096,7 +15154,7 @@ open class QualityAPI {
       },
       "name" : "name",
       "id" : "id",
-      "lowScore" : 7,
+      "lowScore" : 1,
       "conversation" : {
         "selfUri" : "https://openapi-generator.tech",
         "id" : "id"
@@ -15206,7 +15264,7 @@ open class QualityAPI {
               } ]
             } ]
           } ],
-          "weight" : 1.2315135,
+          "weight" : 1.0246457,
           "defaultAnswersTo" : "{}",
           "contextId" : "contextId",
           "id" : "id",
@@ -15308,7 +15366,7 @@ open class QualityAPI {
               } ]
             } ]
           } ],
-          "weight" : 1.2315135,
+          "weight" : 1.0246457,
           "defaultAnswersTo" : "{}",
           "contextId" : "contextId",
           "id" : "id",
@@ -16339,23 +16397,23 @@ open class QualityAPI {
     "evaluationSource" : "{}",
     "redacted" : true,
     "answers" : {
-      "totalNonCriticalScore" : 5.025005,
+      "totalNonCriticalScore" : 9.965781,
       "comments" : "comments",
       "privateComments" : "privateComments",
       "agentComments" : "agentComments",
-      "totalCriticalScore" : 4.9652185,
+      "totalCriticalScore" : 5.025005,
       "questionGroupScores" : [ {
-        "totalNonCriticalScore" : 9.018348,
-        "totalCriticalScoreUnweighted" : 1.284659,
-        "totalNonCriticalScoreUnweighted" : 6.778325,
+        "totalNonCriticalScore" : 6.4384236,
+        "totalCriticalScoreUnweighted" : 2.8841622,
+        "totalNonCriticalScoreUnweighted" : 6.878052,
         "systemMarkedNA" : true,
         "markedNA" : true,
-        "totalScoreUnweighted" : 3.5571952,
-        "maxTotalNonCriticalScore" : 6.4384236,
+        "totalScoreUnweighted" : 6.965118,
+        "maxTotalNonCriticalScore" : 3.5571952,
         "questionScores" : [ {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 5,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -16366,7 +16424,7 @@ open class QualityAPI {
         }, {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 5,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -16376,25 +16434,25 @@ open class QualityAPI {
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
-        "totalScore" : 9.965781,
-        "maxTotalScore" : 9.36931,
-        "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-        "totalCriticalScore" : 6.6835623,
-        "maxTotalCriticalScore" : 8.762042,
-        "maxTotalCriticalScoreUnweighted" : 2.8841622,
-        "maxTotalScoreUnweighted" : 6.965118
+        "totalScore" : 9.36931,
+        "maxTotalScore" : 6.6835623,
+        "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+        "totalCriticalScore" : 8.762042,
+        "maxTotalCriticalScore" : 9.018348,
+        "maxTotalCriticalScoreUnweighted" : 6.778325,
+        "maxTotalScoreUnweighted" : 1.284659
       }, {
-        "totalNonCriticalScore" : 9.018348,
-        "totalCriticalScoreUnweighted" : 1.284659,
-        "totalNonCriticalScoreUnweighted" : 6.778325,
+        "totalNonCriticalScore" : 6.4384236,
+        "totalCriticalScoreUnweighted" : 2.8841622,
+        "totalNonCriticalScoreUnweighted" : 6.878052,
         "systemMarkedNA" : true,
         "markedNA" : true,
-        "totalScoreUnweighted" : 3.5571952,
-        "maxTotalNonCriticalScore" : 6.4384236,
+        "totalScoreUnweighted" : 6.965118,
+        "maxTotalNonCriticalScore" : 3.5571952,
         "questionScores" : [ {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 5,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -16405,7 +16463,7 @@ open class QualityAPI {
         }, {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 5,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -16415,40 +16473,40 @@ open class QualityAPI {
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
-        "totalScore" : 9.965781,
-        "maxTotalScore" : 9.36931,
-        "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-        "totalCriticalScore" : 6.6835623,
-        "maxTotalCriticalScore" : 8.762042,
-        "maxTotalCriticalScoreUnweighted" : 2.8841622,
-        "maxTotalScoreUnweighted" : 6.965118
+        "totalScore" : 9.36931,
+        "maxTotalScore" : 6.6835623,
+        "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+        "totalCriticalScore" : 8.762042,
+        "maxTotalCriticalScore" : 9.018348,
+        "maxTotalCriticalScoreUnweighted" : 6.778325,
+        "maxTotalScoreUnweighted" : 1.284659
       } ],
       "transcriptTopics" : [ {
         "duration" : {
-          "totalMilliseconds" : 3
+          "totalMilliseconds" : 7
         },
         "offset" : "{}",
-        "recordingLocation" : 7,
+        "recordingLocation" : 0,
         "startTimeMilliseconds" : 3,
-        "confidence" : 6,
+        "confidence" : 3,
         "name" : "name",
         "topicPhrase" : "topicPhrase",
         "id" : "id",
         "transcriptPhrase" : "transcriptPhrase"
       }, {
         "duration" : {
-          "totalMilliseconds" : 3
+          "totalMilliseconds" : 7
         },
         "offset" : "{}",
-        "recordingLocation" : 7,
+        "recordingLocation" : 0,
         "startTimeMilliseconds" : 3,
-        "confidence" : 6,
+        "confidence" : 3,
         "name" : "name",
         "topicPhrase" : "topicPhrase",
         "id" : "id",
         "transcriptPhrase" : "transcriptPhrase"
       } ],
-      "totalScore" : 1.1730742,
+      "totalScore" : 4.9652185,
       "anyFailedKillQuestions" : true
     },
     "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -17348,7 +17406,7 @@ open class QualityAPI {
         "geolocation" : "{}"
       } ],
       "contextId" : "contextId",
-      "averageScore" : 1,
+      "averageScore" : 6,
       "calibrator" : {
         "workPlanBidRanks" : "{}",
         "addresses" : [ {
@@ -17644,7 +17702,7 @@ open class QualityAPI {
         "username" : "username",
         "geolocation" : "{}"
       },
-      "highScore" : 6,
+      "highScore" : 7,
       "createdDate" : "2000-01-23T04:56:07.000+00:00",
       "expertEvaluator" : {
         "workPlanBidRanks" : "{}",
@@ -17943,7 +18001,7 @@ open class QualityAPI {
       },
       "name" : "name",
       "id" : "id",
-      "lowScore" : 7,
+      "lowScore" : 1,
       "conversation" : {
         "selfUri" : "https://openapi-generator.tech",
         "id" : "id"
@@ -18053,7 +18111,7 @@ open class QualityAPI {
               } ]
             } ]
           } ],
-          "weight" : 1.2315135,
+          "weight" : 1.0246457,
           "defaultAnswersTo" : "{}",
           "contextId" : "contextId",
           "id" : "id",
@@ -18155,7 +18213,7 @@ open class QualityAPI {
               } ]
             } ]
           } ],
-          "weight" : 1.2315135,
+          "weight" : 1.0246457,
           "defaultAnswersTo" : "{}",
           "contextId" : "contextId",
           "id" : "id",
@@ -19819,7 +19877,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -19921,7 +19979,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -19956,16 +20014,19 @@ open class QualityAPI {
     
     
     
+    
+    
     /**
      Gets all the revisions for a specific evaluation.
      
      - parameter formId: (path) Form ID 
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
+     - parameter sortOrder: (query) Sort order (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityFormVersions(formId: String, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: EvaluationFormResponseEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getQualityFormVersionsWithRequestBuilder(formId: formId, pageSize: pageSize, pageNumber: pageNumber)
+    open class func getQualityFormVersions(formId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationFormResponseEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityFormVersionsWithRequestBuilder(formId: formId, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<EvaluationFormResponseEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -20098,7 +20159,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -20200,7 +20261,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -20314,7 +20375,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -20416,7 +20477,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -20436,10 +20497,11 @@ open class QualityAPI {
      - parameter formId: (path) Form ID 
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
+     - parameter sortOrder: (query) Sort order (optional)
 
      - returns: RequestBuilder<EvaluationFormResponseEntityListing> 
      */
-    open class func getQualityFormVersionsWithRequestBuilder(formId: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<EvaluationFormResponseEntityListing> {        
+    open class func getQualityFormVersionsWithRequestBuilder(formId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: String? = nil) -> RequestBuilder<EvaluationFormResponseEntityListing> {        
         var path = "/api/v2/quality/forms/{formId}/versions"
         let formIdPreEscape = "\(formId)"
         let formIdPostEscape = formIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -20450,7 +20512,8 @@ open class QualityAPI {
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
-            "pageNumber": pageNumber?.encodeToJSON()
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "sortOrder": sortOrder
         ])
 
         let requestBuilder: RequestBuilder<EvaluationFormResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -20625,7 +20688,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -20727,7 +20790,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -20841,7 +20904,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -20943,7 +21006,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -21131,7 +21194,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -21233,7 +21296,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -21413,7 +21476,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -21515,7 +21578,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -21629,7 +21692,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -21731,7 +21794,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -21943,7 +22006,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -22045,7 +22108,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -22159,7 +22222,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -22261,7 +22324,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -22449,7 +22512,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -22551,7 +22614,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -24496,6 +24559,169 @@ open class QualityAPI {
 
     
     
+    
+    
+    /**
+     Get an Agent Scoring Rule
+     
+     - parameter programId: (path) Program ID from Speech and Text Analytics 
+     - parameter ruleId: (path) Agent Scoring Rule ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getQualityProgramAgentscoringrule(programId: String, ruleId: String, completion: @escaping ((_ data: AgentScoringRule?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityProgramAgentscoringruleWithRequestBuilder(programId: programId, ruleId: ruleId)
+        requestBuilder.execute { (response: Response<AgentScoringRule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an Agent Scoring Rule
+     - GET /api/v2/quality/programs/{programId}/agentscoringrules/{ruleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "samplingType" : "All",
+  "submissionType" : "Automated",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "samplingPercentage" : 8.017481076419653,
+  "evaluationFormContextId" : "evaluationFormContextId",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "published" : true,
+  "programId" : "programId",
+  "enabled" : true,
+  "evaluator" : "{}"
+}, statusCode=200}]
+     
+     - parameter programId: (path) Program ID from Speech and Text Analytics 
+     - parameter ruleId: (path) Agent Scoring Rule ID 
+
+     - returns: RequestBuilder<AgentScoringRule> 
+     */
+    open class func getQualityProgramAgentscoringruleWithRequestBuilder(programId: String, ruleId: String) -> RequestBuilder<AgentScoringRule> {        
+        var path = "/api/v2/quality/programs/{programId}/agentscoringrules/{ruleId}"
+        let programIdPreEscape = "\(programId)"
+        let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{programId}", with: programIdPostEscape, options: .literal, range: nil)
+        let ruleIdPreEscape = "\(ruleId)"
+        let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentScoringRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get Agent Scoring Rules for a program
+     
+     - parameter programId: (path) Program ID from Speech and Text Analytics 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getQualityProgramAgentscoringrules(programId: String, completion: @escaping ((_ data: AgentScoringRuleEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityProgramAgentscoringrulesWithRequestBuilder(programId: programId)
+        requestBuilder.execute { (response: Response<AgentScoringRuleEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Agent Scoring Rules for a program
+     - GET /api/v2/quality/programs/{programId}/agentscoringrules
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "samplingType" : "All",
+    "submissionType" : "Automated",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "samplingPercentage" : 8.017481076419653,
+    "evaluationFormContextId" : "evaluationFormContextId",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "published" : true,
+    "programId" : "programId",
+    "enabled" : true,
+    "evaluator" : "{}"
+  }, {
+    "samplingType" : "All",
+    "submissionType" : "Automated",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "samplingPercentage" : 8.017481076419653,
+    "evaluationFormContextId" : "evaluationFormContextId",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "published" : true,
+    "programId" : "programId",
+    "enabled" : true,
+    "evaluator" : "{}"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter programId: (path) Program ID from Speech and Text Analytics 
+
+     - returns: RequestBuilder<AgentScoringRuleEntityListing> 
+     */
+    open class func getQualityProgramAgentscoringrulesWithRequestBuilder(programId: String) -> RequestBuilder<AgentScoringRuleEntityListing> {        
+        var path = "/api/v2/quality/programs/{programId}/agentscoringrules"
+        let programIdPreEscape = "\(programId)"
+        let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{programId}", with: programIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentScoringRuleEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Get the published evaluation forms.
      
@@ -24632,7 +24858,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -24734,7 +24960,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -24914,7 +25140,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -25016,7 +25242,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -25130,7 +25356,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -25232,7 +25458,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -25412,7 +25638,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -25514,7 +25740,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -25694,7 +25920,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -25796,7 +26022,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -25910,7 +26136,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -26012,7 +26238,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -28946,7 +29172,7 @@ open class QualityAPI {
     "geolocation" : "{}"
   } ],
   "contextId" : "contextId",
-  "averageScore" : 1,
+  "averageScore" : 6,
   "calibrator" : {
     "workPlanBidRanks" : "{}",
     "addresses" : [ {
@@ -29242,7 +29468,7 @@ open class QualityAPI {
     "username" : "username",
     "geolocation" : "{}"
   },
-  "highScore" : 6,
+  "highScore" : 7,
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "expertEvaluator" : {
     "workPlanBidRanks" : "{}",
@@ -29541,7 +29767,7 @@ open class QualityAPI {
   },
   "name" : "name",
   "id" : "id",
-  "lowScore" : 7,
+  "lowScore" : 1,
   "conversation" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -29651,7 +29877,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -29753,7 +29979,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -30124,23 +30350,23 @@ open class QualityAPI {
   "evaluationSource" : "{}",
   "redacted" : true,
   "answers" : {
-    "totalNonCriticalScore" : 5.025005,
+    "totalNonCriticalScore" : 9.965781,
     "comments" : "comments",
     "privateComments" : "privateComments",
     "agentComments" : "agentComments",
-    "totalCriticalScore" : 4.9652185,
+    "totalCriticalScore" : 5.025005,
     "questionGroupScores" : [ {
-      "totalNonCriticalScore" : 9.018348,
-      "totalCriticalScoreUnweighted" : 1.284659,
-      "totalNonCriticalScoreUnweighted" : 6.778325,
+      "totalNonCriticalScore" : 6.4384236,
+      "totalCriticalScoreUnweighted" : 2.8841622,
+      "totalNonCriticalScoreUnweighted" : 6.878052,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 3.5571952,
-      "maxTotalNonCriticalScore" : 6.4384236,
+      "totalScoreUnweighted" : 6.965118,
+      "maxTotalNonCriticalScore" : 3.5571952,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 5,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -30151,7 +30377,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 5,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -30161,25 +30387,25 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 9.965781,
-      "maxTotalScore" : 9.36931,
-      "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-      "totalCriticalScore" : 6.6835623,
-      "maxTotalCriticalScore" : 8.762042,
-      "maxTotalCriticalScoreUnweighted" : 2.8841622,
-      "maxTotalScoreUnweighted" : 6.965118
+      "totalScore" : 9.36931,
+      "maxTotalScore" : 6.6835623,
+      "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+      "totalCriticalScore" : 8.762042,
+      "maxTotalCriticalScore" : 9.018348,
+      "maxTotalCriticalScoreUnweighted" : 6.778325,
+      "maxTotalScoreUnweighted" : 1.284659
     }, {
-      "totalNonCriticalScore" : 9.018348,
-      "totalCriticalScoreUnweighted" : 1.284659,
-      "totalNonCriticalScoreUnweighted" : 6.778325,
+      "totalNonCriticalScore" : 6.4384236,
+      "totalCriticalScoreUnweighted" : 2.8841622,
+      "totalNonCriticalScoreUnweighted" : 6.878052,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 3.5571952,
-      "maxTotalNonCriticalScore" : 6.4384236,
+      "totalScoreUnweighted" : 6.965118,
+      "maxTotalNonCriticalScore" : 3.5571952,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 5,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -30190,7 +30416,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 5,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -30200,40 +30426,40 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 9.965781,
-      "maxTotalScore" : 9.36931,
-      "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-      "totalCriticalScore" : 6.6835623,
-      "maxTotalCriticalScore" : 8.762042,
-      "maxTotalCriticalScoreUnweighted" : 2.8841622,
-      "maxTotalScoreUnweighted" : 6.965118
+      "totalScore" : 9.36931,
+      "maxTotalScore" : 6.6835623,
+      "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+      "totalCriticalScore" : 8.762042,
+      "maxTotalCriticalScore" : 9.018348,
+      "maxTotalCriticalScoreUnweighted" : 6.778325,
+      "maxTotalScoreUnweighted" : 1.284659
     } ],
     "transcriptTopics" : [ {
       "duration" : {
-        "totalMilliseconds" : 3
+        "totalMilliseconds" : 7
       },
       "offset" : "{}",
-      "recordingLocation" : 7,
+      "recordingLocation" : 0,
       "startTimeMilliseconds" : 3,
-      "confidence" : 6,
+      "confidence" : 3,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     }, {
       "duration" : {
-        "totalMilliseconds" : 3
+        "totalMilliseconds" : 7
       },
       "offset" : "{}",
-      "recordingLocation" : 7,
+      "recordingLocation" : 0,
       "startTimeMilliseconds" : 3,
-      "confidence" : 6,
+      "confidence" : 3,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     } ],
-    "totalScore" : 1.1730742,
+    "totalScore" : 4.9652185,
     "anyFailedKillQuestions" : true
   },
   "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -31133,7 +31359,7 @@ open class QualityAPI {
       "geolocation" : "{}"
     } ],
     "contextId" : "contextId",
-    "averageScore" : 1,
+    "averageScore" : 6,
     "calibrator" : {
       "workPlanBidRanks" : "{}",
       "addresses" : [ {
@@ -31429,7 +31655,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     },
-    "highScore" : 6,
+    "highScore" : 7,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
       "workPlanBidRanks" : "{}",
@@ -31728,7 +31954,7 @@ open class QualityAPI {
     },
     "name" : "name",
     "id" : "id",
-    "lowScore" : 7,
+    "lowScore" : 1,
     "conversation" : {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -31838,7 +32064,7 @@ open class QualityAPI {
             } ]
           } ]
         } ],
-        "weight" : 1.2315135,
+        "weight" : 1.0246457,
         "defaultAnswersTo" : "{}",
         "contextId" : "contextId",
         "id" : "id",
@@ -31940,7 +32166,7 @@ open class QualityAPI {
             } ]
           } ]
         } ],
-        "weight" : 1.2315135,
+        "weight" : 1.0246457,
         "defaultAnswersTo" : "{}",
         "contextId" : "contextId",
         "id" : "id",
@@ -33171,23 +33397,23 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalNonCriticalScore" : 5.025005,
+  "totalNonCriticalScore" : 9.965781,
   "comments" : "comments",
   "privateComments" : "privateComments",
   "agentComments" : "agentComments",
-  "totalCriticalScore" : 4.9652185,
+  "totalCriticalScore" : 5.025005,
   "questionGroupScores" : [ {
-    "totalNonCriticalScore" : 9.018348,
-    "totalCriticalScoreUnweighted" : 1.284659,
-    "totalNonCriticalScoreUnweighted" : 6.778325,
+    "totalNonCriticalScore" : 6.4384236,
+    "totalCriticalScoreUnweighted" : 2.8841622,
+    "totalNonCriticalScoreUnweighted" : 6.878052,
     "systemMarkedNA" : true,
     "markedNA" : true,
-    "totalScoreUnweighted" : 3.5571952,
-    "maxTotalNonCriticalScore" : 6.4384236,
+    "totalScoreUnweighted" : 6.965118,
+    "maxTotalNonCriticalScore" : 3.5571952,
     "questionScores" : [ {
       "answerId" : "answerId",
       "failedKillQuestion" : true,
-      "score" : 5,
+      "score" : 6,
       "questionId" : "questionId",
       "systemMarkedNA" : true,
       "comments" : "comments",
@@ -33198,7 +33424,7 @@ open class QualityAPI {
     }, {
       "answerId" : "answerId",
       "failedKillQuestion" : true,
-      "score" : 5,
+      "score" : 6,
       "questionId" : "questionId",
       "systemMarkedNA" : true,
       "comments" : "comments",
@@ -33208,25 +33434,25 @@ open class QualityAPI {
       "assistedAnswerId" : "assistedAnswerId"
     } ],
     "questionGroupId" : "questionGroupId",
-    "totalScore" : 9.965781,
-    "maxTotalScore" : 9.36931,
-    "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-    "totalCriticalScore" : 6.6835623,
-    "maxTotalCriticalScore" : 8.762042,
-    "maxTotalCriticalScoreUnweighted" : 2.8841622,
-    "maxTotalScoreUnweighted" : 6.965118
+    "totalScore" : 9.36931,
+    "maxTotalScore" : 6.6835623,
+    "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+    "totalCriticalScore" : 8.762042,
+    "maxTotalCriticalScore" : 9.018348,
+    "maxTotalCriticalScoreUnweighted" : 6.778325,
+    "maxTotalScoreUnweighted" : 1.284659
   }, {
-    "totalNonCriticalScore" : 9.018348,
-    "totalCriticalScoreUnweighted" : 1.284659,
-    "totalNonCriticalScoreUnweighted" : 6.778325,
+    "totalNonCriticalScore" : 6.4384236,
+    "totalCriticalScoreUnweighted" : 2.8841622,
+    "totalNonCriticalScoreUnweighted" : 6.878052,
     "systemMarkedNA" : true,
     "markedNA" : true,
-    "totalScoreUnweighted" : 3.5571952,
-    "maxTotalNonCriticalScore" : 6.4384236,
+    "totalScoreUnweighted" : 6.965118,
+    "maxTotalNonCriticalScore" : 3.5571952,
     "questionScores" : [ {
       "answerId" : "answerId",
       "failedKillQuestion" : true,
-      "score" : 5,
+      "score" : 6,
       "questionId" : "questionId",
       "systemMarkedNA" : true,
       "comments" : "comments",
@@ -33237,7 +33463,7 @@ open class QualityAPI {
     }, {
       "answerId" : "answerId",
       "failedKillQuestion" : true,
-      "score" : 5,
+      "score" : 6,
       "questionId" : "questionId",
       "systemMarkedNA" : true,
       "comments" : "comments",
@@ -33247,40 +33473,40 @@ open class QualityAPI {
       "assistedAnswerId" : "assistedAnswerId"
     } ],
     "questionGroupId" : "questionGroupId",
-    "totalScore" : 9.965781,
-    "maxTotalScore" : 9.36931,
-    "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-    "totalCriticalScore" : 6.6835623,
-    "maxTotalCriticalScore" : 8.762042,
-    "maxTotalCriticalScoreUnweighted" : 2.8841622,
-    "maxTotalScoreUnweighted" : 6.965118
+    "totalScore" : 9.36931,
+    "maxTotalScore" : 6.6835623,
+    "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+    "totalCriticalScore" : 8.762042,
+    "maxTotalCriticalScore" : 9.018348,
+    "maxTotalCriticalScoreUnweighted" : 6.778325,
+    "maxTotalScoreUnweighted" : 1.284659
   } ],
   "transcriptTopics" : [ {
     "duration" : {
-      "totalMilliseconds" : 3
+      "totalMilliseconds" : 7
     },
     "offset" : "{}",
-    "recordingLocation" : 7,
+    "recordingLocation" : 0,
     "startTimeMilliseconds" : 3,
-    "confidence" : 6,
+    "confidence" : 3,
     "name" : "name",
     "topicPhrase" : "topicPhrase",
     "id" : "id",
     "transcriptPhrase" : "transcriptPhrase"
   }, {
     "duration" : {
-      "totalMilliseconds" : 3
+      "totalMilliseconds" : 7
     },
     "offset" : "{}",
-    "recordingLocation" : 7,
+    "recordingLocation" : 0,
     "startTimeMilliseconds" : 3,
-    "confidence" : 6,
+    "confidence" : 3,
     "name" : "name",
     "topicPhrase" : "topicPhrase",
     "id" : "id",
     "transcriptPhrase" : "transcriptPhrase"
   } ],
-  "totalScore" : 1.1730742,
+  "totalScore" : 4.9652185,
   "anyFailedKillQuestions" : true
 }, statusCode=200}]
      
@@ -33438,7 +33664,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -33540,7 +33766,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -33704,7 +33930,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -33806,7 +34032,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -34079,6 +34305,77 @@ open class QualityAPI {
 
     
     
+    
+    
+    /**
+     Create an Agent Scoring Rule
+     
+     - parameter programId: (path) Program ID from Speech and Text Analytics 
+     - parameter body: (body) Agent Scoring Rule 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postQualityProgramAgentscoringrules(programId: String, body: AgentScoringRule, completion: @escaping ((_ data: AgentScoringRule?,_ error: Error?) -> Void)) {
+        let requestBuilder = postQualityProgramAgentscoringrulesWithRequestBuilder(programId: programId, body: body)
+        requestBuilder.execute { (response: Response<AgentScoringRule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create an Agent Scoring Rule
+     - POST /api/v2/quality/programs/{programId}/agentscoringrules
+     - Creates a new Agent Scoring Rule for AI-powered automated evaluation of agent interactions. The rule defines how interactions should be selected and evaluated using the specified evaluation form.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "samplingType" : "All",
+  "submissionType" : "Automated",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "samplingPercentage" : 8.017481076419653,
+  "evaluationFormContextId" : "evaluationFormContextId",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "published" : true,
+  "programId" : "programId",
+  "enabled" : true,
+  "evaluator" : "{}"
+}, statusCode=200}]
+     
+     - parameter programId: (path) Program ID from Speech and Text Analytics 
+     - parameter body: (body) Agent Scoring Rule 
+
+     - returns: RequestBuilder<AgentScoringRule> 
+     */
+    open class func postQualityProgramAgentscoringrulesWithRequestBuilder(programId: String, body: AgentScoringRule) -> RequestBuilder<AgentScoringRule> {        
+        var path = "/api/v2/quality/programs/{programId}/agentscoringrules"
+        let programIdPreEscape = "\(programId)"
+        let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{programId}", with: programIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentScoringRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Publish an evaluation form.
      
@@ -34215,7 +34512,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -34317,7 +34614,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -34481,7 +34778,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -34583,7 +34880,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -35885,7 +36182,7 @@ open class QualityAPI {
     "geolocation" : "{}"
   } ],
   "contextId" : "contextId",
-  "averageScore" : 1,
+  "averageScore" : 6,
   "calibrator" : {
     "workPlanBidRanks" : "{}",
     "addresses" : [ {
@@ -36181,7 +36478,7 @@ open class QualityAPI {
     "username" : "username",
     "geolocation" : "{}"
   },
-  "highScore" : 6,
+  "highScore" : 7,
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "expertEvaluator" : {
     "workPlanBidRanks" : "{}",
@@ -36480,7 +36777,7 @@ open class QualityAPI {
   },
   "name" : "name",
   "id" : "id",
-  "lowScore" : 7,
+  "lowScore" : 1,
   "conversation" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -36590,7 +36887,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -36692,7 +36989,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.2315135,
+      "weight" : 1.0246457,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -37067,23 +37364,23 @@ open class QualityAPI {
   "evaluationSource" : "{}",
   "redacted" : true,
   "answers" : {
-    "totalNonCriticalScore" : 5.025005,
+    "totalNonCriticalScore" : 9.965781,
     "comments" : "comments",
     "privateComments" : "privateComments",
     "agentComments" : "agentComments",
-    "totalCriticalScore" : 4.9652185,
+    "totalCriticalScore" : 5.025005,
     "questionGroupScores" : [ {
-      "totalNonCriticalScore" : 9.018348,
-      "totalCriticalScoreUnweighted" : 1.284659,
-      "totalNonCriticalScoreUnweighted" : 6.778325,
+      "totalNonCriticalScore" : 6.4384236,
+      "totalCriticalScoreUnweighted" : 2.8841622,
+      "totalNonCriticalScoreUnweighted" : 6.878052,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 3.5571952,
-      "maxTotalNonCriticalScore" : 6.4384236,
+      "totalScoreUnweighted" : 6.965118,
+      "maxTotalNonCriticalScore" : 3.5571952,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 5,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -37094,7 +37391,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 5,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -37104,25 +37401,25 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 9.965781,
-      "maxTotalScore" : 9.36931,
-      "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-      "totalCriticalScore" : 6.6835623,
-      "maxTotalCriticalScore" : 8.762042,
-      "maxTotalCriticalScoreUnweighted" : 2.8841622,
-      "maxTotalScoreUnweighted" : 6.965118
+      "totalScore" : 9.36931,
+      "maxTotalScore" : 6.6835623,
+      "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+      "totalCriticalScore" : 8.762042,
+      "maxTotalCriticalScore" : 9.018348,
+      "maxTotalCriticalScoreUnweighted" : 6.778325,
+      "maxTotalScoreUnweighted" : 1.284659
     }, {
-      "totalNonCriticalScore" : 9.018348,
-      "totalCriticalScoreUnweighted" : 1.284659,
-      "totalNonCriticalScoreUnweighted" : 6.778325,
+      "totalNonCriticalScore" : 6.4384236,
+      "totalCriticalScoreUnweighted" : 2.8841622,
+      "totalNonCriticalScoreUnweighted" : 6.878052,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 3.5571952,
-      "maxTotalNonCriticalScore" : 6.4384236,
+      "totalScoreUnweighted" : 6.965118,
+      "maxTotalNonCriticalScore" : 3.5571952,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 5,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -37133,7 +37430,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 5,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -37143,40 +37440,40 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 9.965781,
-      "maxTotalScore" : 9.36931,
-      "maxTotalNonCriticalScoreUnweighted" : 6.878052,
-      "totalCriticalScore" : 6.6835623,
-      "maxTotalCriticalScore" : 8.762042,
-      "maxTotalCriticalScoreUnweighted" : 2.8841622,
-      "maxTotalScoreUnweighted" : 6.965118
+      "totalScore" : 9.36931,
+      "maxTotalScore" : 6.6835623,
+      "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+      "totalCriticalScore" : 8.762042,
+      "maxTotalCriticalScore" : 9.018348,
+      "maxTotalCriticalScoreUnweighted" : 6.778325,
+      "maxTotalScoreUnweighted" : 1.284659
     } ],
     "transcriptTopics" : [ {
       "duration" : {
-        "totalMilliseconds" : 3
+        "totalMilliseconds" : 7
       },
       "offset" : "{}",
-      "recordingLocation" : 7,
+      "recordingLocation" : 0,
       "startTimeMilliseconds" : 3,
-      "confidence" : 6,
+      "confidence" : 3,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     }, {
       "duration" : {
-        "totalMilliseconds" : 3
+        "totalMilliseconds" : 7
       },
       "offset" : "{}",
-      "recordingLocation" : 7,
+      "recordingLocation" : 0,
       "startTimeMilliseconds" : 3,
-      "confidence" : 6,
+      "confidence" : 3,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     } ],
-    "totalScore" : 1.1730742,
+    "totalScore" : 4.9652185,
     "anyFailedKillQuestions" : true
   },
   "changedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -37185,7 +37482,10 @@ open class QualityAPI {
   "hasAssistanceFailed" : true,
   "id" : "id",
   "rescore" : true,
-  "calibration" : "{}",
+  "calibration" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
   "conversation" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -38075,7 +38375,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -38177,7 +38477,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -38348,7 +38648,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -38450,7 +38750,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.2315135,
+    "weight" : 1.0246457,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -38815,6 +39115,83 @@ open class QualityAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SurveyForm>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update an Agent Scoring Rule
+     
+     - parameter programId: (path) Program ID from Speech and Text Analytics 
+     - parameter ruleId: (path) Agent Scoring Rule ID 
+     - parameter body: (body) Agent Scoring Rule 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putQualityProgramAgentscoringrule(programId: String, ruleId: String, body: AgentScoringRule, completion: @escaping ((_ data: AgentScoringRule?,_ error: Error?) -> Void)) {
+        let requestBuilder = putQualityProgramAgentscoringruleWithRequestBuilder(programId: programId, ruleId: ruleId, body: body)
+        requestBuilder.execute { (response: Response<AgentScoringRule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an Agent Scoring Rule
+     - PUT /api/v2/quality/programs/{programId}/agentscoringrules/{ruleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "samplingType" : "All",
+  "submissionType" : "Automated",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "samplingPercentage" : 8.017481076419653,
+  "evaluationFormContextId" : "evaluationFormContextId",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "published" : true,
+  "programId" : "programId",
+  "enabled" : true,
+  "evaluator" : "{}"
+}, statusCode=200}]
+     
+     - parameter programId: (path) Program ID from Speech and Text Analytics 
+     - parameter ruleId: (path) Agent Scoring Rule ID 
+     - parameter body: (body) Agent Scoring Rule 
+
+     - returns: RequestBuilder<AgentScoringRule> 
+     */
+    open class func putQualityProgramAgentscoringruleWithRequestBuilder(programId: String, ruleId: String, body: AgentScoringRule) -> RequestBuilder<AgentScoringRule> {        
+        var path = "/api/v2/quality/programs/{programId}/agentscoringrules/{ruleId}"
+        let programIdPreEscape = "\(programId)"
+        let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{programId}", with: programIdPostEscape, options: .literal, range: nil)
+        let ruleIdPreEscape = "\(ruleId)"
+        let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentScoringRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

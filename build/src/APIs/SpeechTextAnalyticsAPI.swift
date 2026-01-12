@@ -2189,12 +2189,10 @@ open class SpeechTextAnalyticsAPI {
   } ],
   "phrases" : [ {
     "sentiment" : "Unspecified",
-    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   }, {
     "sentiment" : "Unspecified",
-    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   } ],
@@ -2474,9 +2472,11 @@ open class SpeechTextAnalyticsAPI {
         case ptBr = "pt-BR"
         case ptPt = "pt-PT"
         case svSe = "sv-SE"
+        case trTr = "tr-TR"
         case zhCn = "zh-CN"
         case zhHk = "zh-HK"
         case zhTw = "zh-TW"
+        case zuZa = "zu-ZA"
     }
     
     
@@ -2574,9 +2574,11 @@ open class SpeechTextAnalyticsAPI {
         case ptBr = "pt-BR"
         case ptPt = "pt-PT"
         case svSe = "sv-SE"
+        case trTr = "tr-TR"
         case zhCn = "zh-CN"
         case zhHk = "zh-HK"
         case zhTw = "zh-TW"
+        case zuZa = "zu-ZA"
     }
     
     
@@ -3471,12 +3473,10 @@ open class SpeechTextAnalyticsAPI {
   } ],
   "phrases" : [ {
     "sentiment" : "Unspecified",
-    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   }, {
     "sentiment" : "Unspecified",
-    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   } ],
@@ -4260,12 +4260,10 @@ open class SpeechTextAnalyticsAPI {
   } ],
   "phrases" : [ {
     "sentiment" : "Unspecified",
-    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   }, {
     "sentiment" : "Unspecified",
-    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   } ],

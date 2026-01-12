@@ -38,6 +38,9 @@ public class KnowledgeBaseWithDialectReference: Codable {
         case nbNo = "nb-NO"
         case csCz = "cs-CZ"
         case huHu = "hu-HU"
+        case thTh = "th-TH"
+        case plPl = "pl-PL"
+        case nlBe = "nl-BE"
     }
 
 

@@ -4,6 +4,10 @@ public class ConversationSessionSummary: Codable {
 
 
 
+
+
+
+
     public enum Status: String, Codable { 
         case pending = "Pending"
         case queued = "Queued"
@@ -40,12 +44,12 @@ public class ConversationSessionSummary: Codable {
 
 
 
-
-
-
-
+    /** The id of the summary. */
+    public var _id: String?
     /** The text of the summary. */
     public var text: String?
+    /** The AI confidence value. */
+    public var confidence: Float?
     /** The status of the conversation summary. */
     public var status: Status?
     /** The media type of the conversation. */
@@ -64,17 +68,15 @@ public class ConversationSessionSummary: Codable {
     public var resolution: ConversationSummaryResolution?
     /** The created date of the summary. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
-    /** The id of the summary. */
-    public var _id: String?
-    /** The AI confidence value. */
-    public var confidence: Float?
-    /** The list of participants. */
-    public var participants: [AddressableEntityRef]?
     /** The communication object of the summary. */
     public var communication: Entity?
+    /** The list of participants. */
+    public var participants: [AddressableEntityRef]?
 
-    public init(text: String?, status: Status?, mediaType: MediaType?, language: String?, predictedWrapupCodes: [ConversationSummaryWrapupCode]?, editedSummary: ConversationEditedInput?, reason: ConversationSummaryReason?, followup: ConversationSummaryFollowup?, resolution: ConversationSummaryResolution?, dateCreated: Date?, _id: String?, confidence: Float?, participants: [AddressableEntityRef]?, communication: Entity?) {
+    public init(_id: String?, text: String?, confidence: Float?, status: Status?, mediaType: MediaType?, language: String?, predictedWrapupCodes: [ConversationSummaryWrapupCode]?, editedSummary: ConversationEditedInput?, reason: ConversationSummaryReason?, followup: ConversationSummaryFollowup?, resolution: ConversationSummaryResolution?, dateCreated: Date?, communication: Entity?, participants: [AddressableEntityRef]?) {
+        self._id = _id
         self.text = text
+        self.confidence = confidence
         self.status = status
         self.mediaType = mediaType
         self.language = language
@@ -84,14 +86,14 @@ public class ConversationSessionSummary: Codable {
         self.followup = followup
         self.resolution = resolution
         self.dateCreated = dateCreated
-        self._id = _id
-        self.confidence = confidence
-        self.participants = participants
         self.communication = communication
+        self.participants = participants
     }
 
     public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
         case text
+        case confidence
         case status
         case mediaType
         case language
@@ -101,10 +103,8 @@ public class ConversationSessionSummary: Codable {
         case followup
         case resolution
         case dateCreated
-        case _id = "id"
-        case confidence
-        case participants
         case communication
+        case participants
     }
 
 

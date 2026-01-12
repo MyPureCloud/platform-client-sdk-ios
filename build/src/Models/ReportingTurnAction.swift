@@ -84,6 +84,7 @@ public class ReportingTurnAction: Codable {
         case getAttributesAction = "GetAttributesAction"
         case setAttributesAction = "SetAttributesAction"
         case sendInteractiveApplicationAction = "SendInteractiveApplicationAction"
+        case sendRichLinkAction = "SendRichLinkAction"
         case unknown = "Unknown"
     }
 

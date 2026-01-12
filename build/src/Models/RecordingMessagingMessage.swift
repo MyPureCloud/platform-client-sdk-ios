@@ -64,6 +64,7 @@ public class RecordingMessagingMessage: Codable {
         case paymentRequest = "PaymentRequest"
         case paymentResponse = "PaymentResponse"
         case form = "Form"
+        case richLink = "RichLink"
         case roadsideAssistance = "RoadsideAssistance"
     }
 

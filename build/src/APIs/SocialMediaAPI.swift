@@ -2661,6 +2661,8 @@ open class SocialMediaAPI {
     
     
     
+    
+    
     /**
      Retrieve all social topics.
      
@@ -2669,10 +2671,11 @@ open class SocialMediaAPI {
      - parameter divisionIds: (query) One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. (optional)
      - parameter includeDeleted: (query) Determines whether to include soft-deleted items in the result. (optional)
      - parameter name: (query) Search for topic by name that contains the given search string, search is case insensitive (optional)
+     - parameter ids: (query) One or more topic IDs to search through the topics. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSocialmediaTopics(pageNumber: Int? = nil, pageSize: Int? = nil, divisionIds: [String]? = nil, includeDeleted: Bool? = nil, name: String? = nil, completion: @escaping ((_ data: SocialTopicResponseEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getSocialmediaTopicsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, divisionIds: divisionIds, includeDeleted: includeDeleted, name: name)
+    open class func getSocialmediaTopics(pageNumber: Int? = nil, pageSize: Int? = nil, divisionIds: [String]? = nil, includeDeleted: Bool? = nil, name: String? = nil, ids: [String]? = nil, completion: @escaping ((_ data: SocialTopicResponseEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSocialmediaTopicsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, divisionIds: divisionIds, includeDeleted: includeDeleted, name: name, ids: ids)
         requestBuilder.execute { (response: Response<SocialTopicResponseEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -2731,10 +2734,11 @@ open class SocialMediaAPI {
      - parameter divisionIds: (query) One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. (optional)
      - parameter includeDeleted: (query) Determines whether to include soft-deleted items in the result. (optional)
      - parameter name: (query) Search for topic by name that contains the given search string, search is case insensitive (optional)
+     - parameter ids: (query) One or more topic IDs to search through the topics. (optional)
 
      - returns: RequestBuilder<SocialTopicResponseEntityListing> 
      */
-    open class func getSocialmediaTopicsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, divisionIds: [String]? = nil, includeDeleted: Bool? = nil, name: String? = nil) -> RequestBuilder<SocialTopicResponseEntityListing> {        
+    open class func getSocialmediaTopicsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, divisionIds: [String]? = nil, includeDeleted: Bool? = nil, name: String? = nil, ids: [String]? = nil) -> RequestBuilder<SocialTopicResponseEntityListing> {        
         let path = "/api/v2/socialmedia/topics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -2745,7 +2749,8 @@ open class SocialMediaAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             "divisionIds": divisionIds, 
             "includeDeleted": includeDeleted, 
-            "name": name
+            "name": name, 
+            "ids": ids
         ])
 
         let requestBuilder: RequestBuilder<SocialTopicResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

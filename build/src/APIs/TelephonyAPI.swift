@@ -10,6 +10,118 @@ import Foundation
 
 
 open class TelephonyAPI {
+    
+    
+    /**
+     Get an agent's greetings.
+     
+     - parameter agentId: (path) User ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyAgentGreetings(agentId: String, completion: @escaping ((_ data: AgentGreeting?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyAgentGreetingsWithRequestBuilder(agentId: agentId)
+        requestBuilder.execute { (response: Response<AgentGreeting>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an agent's greetings.
+     - GET /api/v2/telephony/agents/{agentId}/greetings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "inboundPrompt" : "{}",
+  "outboundPrompt" : "{}",
+  "outboundPromptDefaultLanguage" : "outboundPromptDefaultLanguage",
+  "inboundPromptDefaultLanguage" : "inboundPromptDefaultLanguage",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter agentId: (path) User ID 
+
+     - returns: RequestBuilder<AgentGreeting> 
+     */
+    open class func getTelephonyAgentGreetingsWithRequestBuilder(agentId: String) -> RequestBuilder<AgentGreeting> {        
+        var path = "/api/v2/telephony/agents/{agentId}/greetings"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentGreeting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get the agent's own greetings.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyAgentsGreetingsMe(completion: @escaping ((_ data: SelfAgentGreeting?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyAgentsGreetingsMeWithRequestBuilder()
+        requestBuilder.execute { (response: Response<SelfAgentGreeting>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the agent's own greetings.
+     - GET /api/v2/telephony/agents/greetings/me
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "inboundPrompt" : "{}",
+  "outboundPrompt" : "{}",
+  "outboundPromptDefaultLanguage" : "outboundPromptDefaultLanguage",
+  "inboundPromptDefaultLanguage" : "inboundPromptDefaultLanguage",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<SelfAgentGreeting> 
+     */
+    open class func getTelephonyAgentsGreetingsMeWithRequestBuilder() -> RequestBuilder<SelfAgentGreeting> {        
+        let path = "/api/v2/telephony/agents/greetings/me"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SelfAgentGreeting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     /**
      Retrieve the list of AWS regions media can stream through.
      
@@ -487,6 +599,127 @@ open class TelephonyAPI {
         let requestBuilder: RequestBuilder<SipDownloadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Updates an agent's greetings.
+     
+     - parameter agentId: (path) User ID 
+     - parameter body: (body) Agent Greeting 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putTelephonyAgentGreetings(agentId: String, body: AgentGreeting, completion: @escaping ((_ data: AgentGreeting?,_ error: Error?) -> Void)) {
+        let requestBuilder = putTelephonyAgentGreetingsWithRequestBuilder(agentId: agentId, body: body)
+        requestBuilder.execute { (response: Response<AgentGreeting>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Updates an agent's greetings.
+     - PUT /api/v2/telephony/agents/{agentId}/greetings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "inboundPrompt" : "{}",
+  "outboundPrompt" : "{}",
+  "outboundPromptDefaultLanguage" : "outboundPromptDefaultLanguage",
+  "inboundPromptDefaultLanguage" : "inboundPromptDefaultLanguage",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter agentId: (path) User ID 
+     - parameter body: (body) Agent Greeting 
+
+     - returns: RequestBuilder<AgentGreeting> 
+     */
+    open class func putTelephonyAgentGreetingsWithRequestBuilder(agentId: String, body: AgentGreeting) -> RequestBuilder<AgentGreeting> {        
+        var path = "/api/v2/telephony/agents/{agentId}/greetings"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentGreeting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Updates the agent's own greetings.
+     
+     - parameter body: (body) Agent Greeting 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putTelephonyAgentsGreetingsMe(body: SelfAgentGreeting, completion: @escaping ((_ data: SelfAgentGreeting?,_ error: Error?) -> Void)) {
+        let requestBuilder = putTelephonyAgentsGreetingsMeWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<SelfAgentGreeting>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Updates the agent's own greetings.
+     - PUT /api/v2/telephony/agents/greetings/me
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "inboundPrompt" : "{}",
+  "outboundPrompt" : "{}",
+  "outboundPromptDefaultLanguage" : "outboundPromptDefaultLanguage",
+  "inboundPromptDefaultLanguage" : "inboundPromptDefaultLanguage",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter body: (body) Agent Greeting 
+
+     - returns: RequestBuilder<SelfAgentGreeting> 
+     */
+    open class func putTelephonyAgentsGreetingsMeWithRequestBuilder(body: SelfAgentGreeting) -> RequestBuilder<SelfAgentGreeting> {        
+        let path = "/api/v2/telephony/agents/greetings/me"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SelfAgentGreeting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
 }

@@ -9,8 +9,7 @@
 | **text** | **String** | The phrase text | |
 | **strictness** | **String** | The phrase strictness, default value is null | [optional] |
 | **sentiment** | **String** | The phrase sentiment, default value is Unspecified. Note: Sentiment value for phrases is currently not in use and has no impact to the system. | [optional] |
-| **isAIGenerated** | **Bool** | Indicates whether the phrase is AI generated | [optional] |
 
 
 
-_PureCloudPlatformClientV2@183.1.0_
+_PureCloudPlatformClientV2@184.0.0_

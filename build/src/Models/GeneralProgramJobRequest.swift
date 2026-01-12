@@ -38,9 +38,11 @@ public class GeneralProgramJobRequest: Codable {
         case ptBr = "pt-BR"
         case ptPt = "pt-PT"
         case svSe = "sv-SE"
+        case trTr = "tr-TR"
         case zhCn = "zh-CN"
         case zhHk = "zh-HK"
         case zhTw = "zh-TW"
+        case zuZa = "zu-ZA"
     }
 
     public enum Mode: String, Codable { 

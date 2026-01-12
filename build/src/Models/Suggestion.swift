@@ -4,6 +4,10 @@ public class Suggestion: Codable {
 
 
 
+
+
+
+
     public enum ModelType: String, Codable { 
         case faq = "Faq"
         case article = "Article"
@@ -51,12 +55,12 @@ public class Suggestion: Codable {
 
 
 
-
-
-
-
     /** The globally unique identifier for the object. */
     public var _id: String?
+    /** The conversation that the suggestions correspond to. */
+    public var conversation: AddressableEntityRef?
+    /** The assistant that was used to provide the suggestions. */
+    public var assistant: AddressableEntityRef?
     /** The type of the documents for which the suggestion is. */
     public var type: ModelType?
     /** The Faq from the knowledgebase that was provided as the suggestion. */
@@ -83,13 +87,11 @@ public class Suggestion: Codable {
     public var script: SuggestionScript?
     /** The URI for this object */
     public var selfUri: String?
-    /** The conversation that the suggestions correspond to. */
-    public var conversation: AddressableEntityRef?
-    /** The assistant that was used to provide the suggestions. */
-    public var assistant: AddressableEntityRef?
 
-    public init(_id: String?, type: ModelType?, faq: Faq?, article: Article?, dateCreated: Date?, answerRecordId: String?, triggerType: TriggerType?, context: SuggestionContext?, state: State?, knowledgeSearch: SuggestionKnowledgeSearch?, knowledgeArticle: SuggestionKnowledgeArticle?, cannedResponse: SuggestionCannedResponse?, script: SuggestionScript?, selfUri: String?, conversation: AddressableEntityRef?, assistant: AddressableEntityRef?) {
+    public init(_id: String?, conversation: AddressableEntityRef?, assistant: AddressableEntityRef?, type: ModelType?, faq: Faq?, article: Article?, dateCreated: Date?, answerRecordId: String?, triggerType: TriggerType?, context: SuggestionContext?, state: State?, knowledgeSearch: SuggestionKnowledgeSearch?, knowledgeArticle: SuggestionKnowledgeArticle?, cannedResponse: SuggestionCannedResponse?, script: SuggestionScript?, selfUri: String?) {
         self._id = _id
+        self.conversation = conversation
+        self.assistant = assistant
         self.type = type
         self.faq = faq
         self.article = article
@@ -103,12 +105,12 @@ public class Suggestion: Codable {
         self.cannedResponse = cannedResponse
         self.script = script
         self.selfUri = selfUri
-        self.conversation = conversation
-        self.assistant = assistant
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
+        case conversation
+        case assistant
         case type
         case faq
         case article
@@ -122,8 +124,6 @@ public class Suggestion: Codable {
         case cannedResponse
         case script
         case selfUri
-        case conversation
-        case assistant
     }
 
 

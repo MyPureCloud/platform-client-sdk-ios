@@ -94,6 +94,10 @@ public class ParticipantBasic: Codable {
 
 
 
+
+
+
+
     public enum ScreenRecordingState: String, Codable { 
         case requested = "requested"
         case active = "active"
@@ -106,8 +110,6 @@ public class ParticipantBasic: Codable {
     public enum FlaggedReason: String, Codable { 
         case general = "general"
     }
-
-
 
 
 
@@ -187,6 +189,8 @@ public class ParticipantBasic: Codable {
     public var cobrowsesessions: [Cobrowsesession]?
     public var emails: [Email]?
     public var messages: [Message]?
+    public var internalMessages: [InternalMessage]?
+    public var screenMonitorings: [ScreenMonitoring]?
     public var screenshares: [Screenshare]?
     public var socialExpressions: [SocialExpression]?
     public var videos: [Video]?
@@ -199,11 +203,10 @@ public class ParticipantBasic: Codable {
     public var startAcwTime: Date?
     /** The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var endAcwTime: Date?
-    public var internalMessages: [InternalMessage]?
     /** If this participant barged in a participant's call, then this will be the id of the targeted participant. */
     public var bargedParticipantId: String?
 
-    public init(_id: String?, startTime: Date?, endTime: Date?, connectedTime: Date?, name: String?, userUri: String?, userId: String?, externalContactId: String?, externalContactInitialDivisionId: String?, externalOrganizationId: String?, queueId: String?, groupId: String?, teamId: String?, queueName: String?, purpose: String?, participantType: String?, consultParticipantId: String?, address: String?, ani: String?, aniName: String?, dnis: String?, locale: String?, wrapupRequired: Bool?, wrapupPrompt: WrapupPrompt?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, wrapup: Wrapup?, mediaRoles: [String]?, conversationRoutingData: ConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, coachedParticipantId: String?, attributes: [String:String]?, calls: [CallBasic]?, callbacks: [CallbackBasic]?, chats: [ConversationChat]?, cobrowsesessions: [Cobrowsesession]?, emails: [Email]?, messages: [Message]?, screenshares: [Screenshare]?, socialExpressions: [SocialExpression]?, videos: [Video]?, evaluations: [Evaluation]?, screenRecordingState: ScreenRecordingState?, flaggedReason: FlaggedReason?, startAcwTime: Date?, endAcwTime: Date?, internalMessages: [InternalMessage]?, bargedParticipantId: String?) {
+    public init(_id: String?, startTime: Date?, endTime: Date?, connectedTime: Date?, name: String?, userUri: String?, userId: String?, externalContactId: String?, externalContactInitialDivisionId: String?, externalOrganizationId: String?, queueId: String?, groupId: String?, teamId: String?, queueName: String?, purpose: String?, participantType: String?, consultParticipantId: String?, address: String?, ani: String?, aniName: String?, dnis: String?, locale: String?, wrapupRequired: Bool?, wrapupPrompt: WrapupPrompt?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, wrapup: Wrapup?, mediaRoles: [String]?, conversationRoutingData: ConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, coachedParticipantId: String?, attributes: [String:String]?, calls: [CallBasic]?, callbacks: [CallbackBasic]?, chats: [ConversationChat]?, cobrowsesessions: [Cobrowsesession]?, emails: [Email]?, messages: [Message]?, internalMessages: [InternalMessage]?, screenMonitorings: [ScreenMonitoring]?, screenshares: [Screenshare]?, socialExpressions: [SocialExpression]?, videos: [Video]?, evaluations: [Evaluation]?, screenRecordingState: ScreenRecordingState?, flaggedReason: FlaggedReason?, startAcwTime: Date?, endAcwTime: Date?, bargedParticipantId: String?) {
         self._id = _id
         self.startTime = startTime
         self.endTime = endTime
@@ -243,6 +246,8 @@ public class ParticipantBasic: Codable {
         self.cobrowsesessions = cobrowsesessions
         self.emails = emails
         self.messages = messages
+        self.internalMessages = internalMessages
+        self.screenMonitorings = screenMonitorings
         self.screenshares = screenshares
         self.socialExpressions = socialExpressions
         self.videos = videos
@@ -251,7 +256,6 @@ public class ParticipantBasic: Codable {
         self.flaggedReason = flaggedReason
         self.startAcwTime = startAcwTime
         self.endAcwTime = endAcwTime
-        self.internalMessages = internalMessages
         self.bargedParticipantId = bargedParticipantId
     }
 
@@ -295,6 +299,8 @@ public class ParticipantBasic: Codable {
         case cobrowsesessions
         case emails
         case messages
+        case internalMessages
+        case screenMonitorings
         case screenshares
         case socialExpressions
         case videos
@@ -303,7 +309,6 @@ public class ParticipantBasic: Codable {
         case flaggedReason
         case startAcwTime
         case endAcwTime
-        case internalMessages
         case bargedParticipantId
     }
 

@@ -50,12 +50,12 @@ public class SendAgentlessOutboundMessageResponse: Codable {
     public var message: MessageData?
     /** The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var timestamp: Date?
-    /** The URI for this object */
-    public var selfUri: String?
     /** Details of the user created the job */
     public var user: AddressableEntityRef?
+    /** The URI for this object */
+    public var selfUri: String?
 
-    public init(_id: String?, conversationId: String?, fromAddress: String?, toAddress: String?, messengerType: MessengerType?, textBody: String?, messagingTemplate: SendMessagingTemplateRequest?, useExistingActiveConversation: Bool?, message: MessageData?, timestamp: Date?, selfUri: String?, user: AddressableEntityRef?) {
+    public init(_id: String?, conversationId: String?, fromAddress: String?, toAddress: String?, messengerType: MessengerType?, textBody: String?, messagingTemplate: SendMessagingTemplateRequest?, useExistingActiveConversation: Bool?, message: MessageData?, timestamp: Date?, user: AddressableEntityRef?, selfUri: String?) {
         self._id = _id
         self.conversationId = conversationId
         self.fromAddress = fromAddress
@@ -66,8 +66,8 @@ public class SendAgentlessOutboundMessageResponse: Codable {
         self.useExistingActiveConversation = useExistingActiveConversation
         self.message = message
         self.timestamp = timestamp
-        self.selfUri = selfUri
         self.user = user
+        self.selfUri = selfUri
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -81,8 +81,8 @@ public class SendAgentlessOutboundMessageResponse: Codable {
         case useExistingActiveConversation
         case message
         case timestamp
-        case selfUri
         case user
+        case selfUri
     }
 
 

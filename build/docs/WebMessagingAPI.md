@@ -216,4 +216,4 @@ WebMessagingAPI.postWebmessagingDeploymentPushdevice(deploymentId: deploymentId,
 `nil` (empty response body)
 
 
-_PureCloudPlatformClientV2@183.1.0_
+_PureCloudPlatformClientV2@184.0.0_

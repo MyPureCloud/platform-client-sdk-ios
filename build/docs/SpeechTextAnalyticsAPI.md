@@ -1794,7 +1794,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopicsGeneral(dialect: dialect) 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **dialect** | **String**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]<br />**Values**: ar001 ("ar-001"), arAe ("ar-AE"), arBh ("ar-BH"), arEg ("ar-EG"), arIl ("ar-IL"), arSa ("ar-SA"), arTn ("ar-TN"), daDk ("da-DK"), deCh ("de-CH"), deDe ("de-DE"), enAu ("en-AU"), enGb ("en-GB"), enHk ("en-HK"), enIe ("en-IE"), enIn ("en-IN"), enNz ("en-NZ"), enSg ("en-SG"), enUs ("en-US"), enZa ("en-ZA"), esEs ("es-ES"), esUs ("es-US"), fiFi ("fi-FI"), frCa ("fr-CA"), frFr ("fr-FR"), heIl ("he-IL"), hiIn ("hi-IN"), itIt ("it-IT"), jaJp ("ja-JP"), koKr ("ko-KR"), nbNo ("nb-NO"), nlNl ("nl-NL"), plPl ("pl-PL"), ptBr ("pt-BR"), ptPt ("pt-PT"), svSe ("sv-SE"), zhCn ("zh-CN"), zhHk ("zh-HK"), zhTw ("zh-TW") |
+| **dialect** | **String**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]<br />**Values**: ar001 ("ar-001"), arAe ("ar-AE"), arBh ("ar-BH"), arEg ("ar-EG"), arIl ("ar-IL"), arSa ("ar-SA"), arTn ("ar-TN"), daDk ("da-DK"), deCh ("de-CH"), deDe ("de-DE"), enAu ("en-AU"), enGb ("en-GB"), enHk ("en-HK"), enIe ("en-IE"), enIn ("en-IN"), enNz ("en-NZ"), enSg ("en-SG"), enUs ("en-US"), enZa ("en-ZA"), esEs ("es-ES"), esUs ("es-US"), fiFi ("fi-FI"), frCa ("fr-CA"), frFr ("fr-FR"), heIl ("he-IL"), hiIn ("hi-IN"), itIt ("it-IT"), jaJp ("ja-JP"), koKr ("ko-KR"), nbNo ("nb-NO"), nlNl ("nl-NL"), plPl ("pl-PL"), ptBr ("pt-BR"), ptPt ("pt-PT"), svSe ("sv-SE"), trTr ("tr-TR"), zhCn ("zh-CN"), zhHk ("zh-HK"), zhTw ("zh-TW"), zuZa ("zu-ZA") |
 
 
 ### Return type
@@ -1844,7 +1844,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopicsGeneralStatus(dialect: dia
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **dialect** | **String**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]<br />**Values**: ar001 ("ar-001"), arAe ("ar-AE"), arBh ("ar-BH"), arEg ("ar-EG"), arIl ("ar-IL"), arSa ("ar-SA"), arTn ("ar-TN"), daDk ("da-DK"), deCh ("de-CH"), deDe ("de-DE"), enAu ("en-AU"), enGb ("en-GB"), enHk ("en-HK"), enIe ("en-IE"), enIn ("en-IN"), enNz ("en-NZ"), enSg ("en-SG"), enUs ("en-US"), enZa ("en-ZA"), esEs ("es-ES"), esUs ("es-US"), fiFi ("fi-FI"), frCa ("fr-CA"), frFr ("fr-FR"), heIl ("he-IL"), hiIn ("hi-IN"), itIt ("it-IT"), jaJp ("ja-JP"), koKr ("ko-KR"), nbNo ("nb-NO"), nlNl ("nl-NL"), plPl ("pl-PL"), ptBr ("pt-BR"), ptPt ("pt-PT"), svSe ("sv-SE"), zhCn ("zh-CN"), zhHk ("zh-HK"), zhTw ("zh-TW") |
+| **dialect** | **String**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]<br />**Values**: ar001 ("ar-001"), arAe ("ar-AE"), arBh ("ar-BH"), arEg ("ar-EG"), arIl ("ar-IL"), arSa ("ar-SA"), arTn ("ar-TN"), daDk ("da-DK"), deCh ("de-CH"), deDe ("de-DE"), enAu ("en-AU"), enGb ("en-GB"), enHk ("en-HK"), enIe ("en-IE"), enIn ("en-IN"), enNz ("en-NZ"), enSg ("en-SG"), enUs ("en-US"), enZa ("en-ZA"), esEs ("es-ES"), esUs ("es-US"), fiFi ("fi-FI"), frCa ("fr-CA"), frFr ("fr-FR"), heIl ("he-IL"), hiIn ("hi-IN"), itIt ("it-IT"), jaJp ("ja-JP"), koKr ("ko-KR"), nbNo ("nb-NO"), nlNl ("nl-NL"), plPl ("pl-PL"), ptBr ("pt-BR"), ptPt ("pt-PT"), svSe ("sv-SE"), trTr ("tr-TR"), zhCn ("zh-CN"), zhHk ("zh-HK"), zhTw ("zh-TW"), zuZa ("zu-ZA") |
 
 
 ### Return type
@@ -3024,4 +3024,4 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsTopic(topicId: topicId, body: bo
 [**Topic**](Topic)
 
 
-_PureCloudPlatformClientV2@183.1.0_
+_PureCloudPlatformClientV2@184.0.0_
