@@ -1393,7 +1393,7 @@ AnalyticsAPI.postAnalyticsAgentcopilotsAggregatesQuery(body: body) { (response, 
 
 
 
-> [AnalyticsAgentStateCountsResponse](AnalyticsAgentStateCountsResponse) postAnalyticsAgentsStatusCounts(body)
+> [AnalyticsAgentStateCountsResponse](AnalyticsAgentStateCountsResponse) postAnalyticsAgentsStatusCounts(body, groupBy)
 
 Count agents by different groupings
 
@@ -1414,9 +1414,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: AgentStateCountsRequest = new AgentStateCountsRequest(...) // query
+let groupBy: [String] = [""] // Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType
 
 // Code example
-AnalyticsAPI.postAnalyticsAgentsStatusCounts(body: body) { (response, error) in
+AnalyticsAPI.postAnalyticsAgentsStatusCounts(body: body, groupBy: groupBy) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1432,6 +1433,7 @@ AnalyticsAPI.postAnalyticsAgentsStatusCounts(body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**AgentStateCountsRequest**](AgentStateCountsRequest)| query | |
+| **groupBy** | [**[String]**](String)| Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType | [optional]<br />**Values**: segmenttype ("segmentType"), presence ("presence"), routingstatus ("routingStatus"), isoutofoffice ("isOutOfOffice") |
 
 
 ### Return type
@@ -3116,4 +3118,4 @@ AnalyticsAPI.putAnalyticsDataretentionSettings(body: body) { (response, error) i
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatformClientV2@183.1.0_
+_PureCloudPlatformClientV2@184.0.0_

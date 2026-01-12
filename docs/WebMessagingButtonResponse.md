@@ -15,4 +15,4 @@ Button response object representing the click of a structured message button, su
 
 
 
-_PureCloudPlatformClientV2@183.1.0_
+_PureCloudPlatformClientV2@184.0.0_

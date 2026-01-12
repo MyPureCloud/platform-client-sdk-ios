@@ -11,4 +11,4 @@ Used to retrieve a set of executionData history by the respective ids
 
 
 
-_PureCloudPlatformClientV2@183.1.0_
+_PureCloudPlatformClientV2@184.0.0_

@@ -4,13 +4,113 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**getTelephonyAgentGreetings**](TelephonyAPI#getTelephonyAgentGreetings) | Get an agent&#39;s greetings. |
+| [**getTelephonyAgentsGreetingsMe**](TelephonyAPI#getTelephonyAgentsGreetingsMe) | Get the agent&#39;s own greetings. |
 | [**getTelephonyMediaregions**](TelephonyAPI#getTelephonyMediaregions) | Retrieve the list of AWS regions media can stream through. |
 | [**getTelephonySipmessagesConversation**](TelephonyAPI#getTelephonySipmessagesConversation) | Get a SIP message. |
 | [**getTelephonySipmessagesConversationHeaders**](TelephonyAPI#getTelephonySipmessagesConversationHeaders) | Get SIP headers. |
 | [**getTelephonySiptraces**](TelephonyAPI#getTelephonySiptraces) | Fetch SIP metadata |
 | [**getTelephonySiptracesDownloadDownloadId**](TelephonyAPI#getTelephonySiptracesDownloadDownloadId) | Get signed S3 URL for a pcap download |
 | [**postTelephonySiptracesDownload**](TelephonyAPI#postTelephonySiptracesDownload) | Request a download of a pcap file to S3 |
+| [**putTelephonyAgentGreetings**](TelephonyAPI#putTelephonyAgentGreetings) | Updates an agent&#39;s greetings. |
+| [**putTelephonyAgentsGreetingsMe**](TelephonyAPI#putTelephonyAgentsGreetingsMe) | Updates the agent&#39;s own greetings. |
 {: class="table-striped"}
+
+
+## getTelephonyAgentGreetings
+
+
+
+> [AgentGreeting](AgentGreeting) getTelephonyAgentGreetings(agentId)
+
+Get an agent&#39;s greetings.
+
+
+
+Wraps GET /api/v2/telephony/agents/{agentId}/greetings  
+
+Requires ANY permissions: 
+
+* telephony:otherAgentGreeting:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let agentId: String = "" // User ID
+
+// Code example
+TelephonyAPI.getTelephonyAgentGreetings(agentId: agentId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyAPI.getTelephonyAgentGreetings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **agentId** | **String**| User ID | |
+
+
+### Return type
+
+[**AgentGreeting**](AgentGreeting)
+
+
+## getTelephonyAgentsGreetingsMe
+
+
+
+> [SelfAgentGreeting](SelfAgentGreeting) getTelephonyAgentsGreetingsMe()
+
+Get the agent&#39;s own greetings.
+
+
+
+Wraps GET /api/v2/telephony/agents/greetings/me  
+
+Requires ANY permissions: 
+
+* telephony:selfAgentGreeting:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+TelephonyAPI.getTelephonyAgentsGreetingsMe() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyAPI.getTelephonyAgentsGreetingsMe was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**SelfAgentGreeting**](SelfAgentGreeting)
 
 
 ## getTelephonyMediaregions
@@ -327,4 +427,106 @@ TelephonyAPI.postTelephonySiptracesDownload(sIPSearchPublicRequest: sIPSearchPub
 [**SipDownloadResponse**](SipDownloadResponse)
 
 
-_PureCloudPlatformClientV2@183.1.0_
+## putTelephonyAgentGreetings
+
+
+
+> [AgentGreeting](AgentGreeting) putTelephonyAgentGreetings(agentId, body)
+
+Updates an agent&#39;s greetings.
+
+
+
+Wraps PUT /api/v2/telephony/agents/{agentId}/greetings  
+
+Requires ANY permissions: 
+
+* telephony:otherAgentGreeting:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let agentId: String = "" // User ID
+let body: AgentGreeting = new AgentGreeting(...) // Agent Greeting
+
+// Code example
+TelephonyAPI.putTelephonyAgentGreetings(agentId: agentId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyAPI.putTelephonyAgentGreetings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **agentId** | **String**| User ID | |
+| **body** | [**AgentGreeting**](AgentGreeting)| Agent Greeting | |
+
+
+### Return type
+
+[**AgentGreeting**](AgentGreeting)
+
+
+## putTelephonyAgentsGreetingsMe
+
+
+
+> [SelfAgentGreeting](SelfAgentGreeting) putTelephonyAgentsGreetingsMe(body)
+
+Updates the agent&#39;s own greetings.
+
+
+
+Wraps PUT /api/v2/telephony/agents/greetings/me  
+
+Requires ANY permissions: 
+
+* telephony:selfAgentGreeting:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: SelfAgentGreeting = new SelfAgentGreeting(...) // Agent Greeting
+
+// Code example
+TelephonyAPI.putTelephonyAgentsGreetingsMe(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyAPI.putTelephonyAgentsGreetingsMe was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**SelfAgentGreeting**](SelfAgentGreeting)| Agent Greeting | |
+
+
+### Return type
+
+[**SelfAgentGreeting**](SelfAgentGreeting)
+
+
+_PureCloudPlatformClientV2@184.0.0_

@@ -11,4 +11,4 @@ Request to create a new Business Rules Schema
 
 
 
-_PureCloudPlatformClientV2@183.1.0_
+_PureCloudPlatformClientV2@184.0.0_
