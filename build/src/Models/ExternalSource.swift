@@ -14,7 +14,7 @@ public class ExternalSource: Codable {
 
     /** The globally unique identifier for the object. */
     public var _id: String?
-    /** The name of the external source. */
+    /** The name of the external source. Must be unique. Max: 200 characters. Leading and trailing whitespace stripped. */
     public var name: String?
     public var active: Bool?
     public var linkConfiguration: LinkConfiguration?

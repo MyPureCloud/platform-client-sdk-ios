@@ -1146,9 +1146,9 @@ open class SpeechTextAnalyticsAPI {
      - parameter programId: (path) The id of the program 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSpeechandtextanalyticsProgramMappings(programId: String, completion: @escaping ((_ data: ProgramMappings?,_ error: Error?) -> Void)) {
+    open class func getSpeechandtextanalyticsProgramMappings(programId: String, completion: @escaping ((_ data: TopicsDefinitionsProgramMappings?,_ error: Error?) -> Void)) {
         let requestBuilder = getSpeechandtextanalyticsProgramMappingsWithRequestBuilder(programId: programId)
-        requestBuilder.execute { (response: Response<ProgramMappings>?, error) -> Void in
+        requestBuilder.execute { (response: Response<TopicsDefinitionsProgramMappings>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1199,9 +1199,9 @@ open class SpeechTextAnalyticsAPI {
      
      - parameter programId: (path) The id of the program 
 
-     - returns: RequestBuilder<ProgramMappings> 
+     - returns: RequestBuilder<TopicsDefinitionsProgramMappings> 
      */
-    open class func getSpeechandtextanalyticsProgramMappingsWithRequestBuilder(programId: String) -> RequestBuilder<ProgramMappings> {        
+    open class func getSpeechandtextanalyticsProgramMappingsWithRequestBuilder(programId: String) -> RequestBuilder<TopicsDefinitionsProgramMappings> {        
         var path = "/api/v2/speechandtextanalytics/programs/{programId}/mappings"
         let programIdPreEscape = "\(programId)"
         let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1211,7 +1211,7 @@ open class SpeechTextAnalyticsAPI {
         
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<ProgramMappings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<TopicsDefinitionsProgramMappings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1520,9 +1520,9 @@ open class SpeechTextAnalyticsAPI {
      - parameter pageSize: (query) The page size for the listing (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSpeechandtextanalyticsProgramsMappings(nextPage: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: ProgramsMappingsEntityListing?,_ error: Error?) -> Void)) {
+    open class func getSpeechandtextanalyticsProgramsMappings(nextPage: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: TopicsDefinitionsProgramsMappingsEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getSpeechandtextanalyticsProgramsMappingsWithRequestBuilder(nextPage: nextPage, pageSize: pageSize)
-        requestBuilder.execute { (response: Response<ProgramsMappingsEntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<TopicsDefinitionsProgramsMappingsEntityListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1605,9 +1605,9 @@ open class SpeechTextAnalyticsAPI {
      - parameter nextPage: (query) The key for listing the next page (optional)
      - parameter pageSize: (query) The page size for the listing (optional)
 
-     - returns: RequestBuilder<ProgramsMappingsEntityListing> 
+     - returns: RequestBuilder<TopicsDefinitionsProgramsMappingsEntityListing> 
      */
-    open class func getSpeechandtextanalyticsProgramsMappingsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil) -> RequestBuilder<ProgramsMappingsEntityListing> {        
+    open class func getSpeechandtextanalyticsProgramsMappingsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil) -> RequestBuilder<TopicsDefinitionsProgramsMappingsEntityListing> {        
         let path = "/api/v2/speechandtextanalytics/programs/mappings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -1618,7 +1618,7 @@ open class SpeechTextAnalyticsAPI {
             "pageSize": pageSize?.encodeToJSON()
         ])
 
-        let requestBuilder: RequestBuilder<ProgramsMappingsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<TopicsDefinitionsProgramsMappingsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -3930,9 +3930,9 @@ open class SpeechTextAnalyticsAPI {
      - parameter body: (body) The program to set mappings for 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putSpeechandtextanalyticsProgramMappings(programId: String, body: ProgramMappingsRequest, completion: @escaping ((_ data: ProgramMappings?,_ error: Error?) -> Void)) {
+    open class func putSpeechandtextanalyticsProgramMappings(programId: String, body: ProgramMappingsRequest, completion: @escaping ((_ data: TopicsDefinitionsProgramMappings?,_ error: Error?) -> Void)) {
         let requestBuilder = putSpeechandtextanalyticsProgramMappingsWithRequestBuilder(programId: programId, body: body)
-        requestBuilder.execute { (response: Response<ProgramMappings>?, error) -> Void in
+        requestBuilder.execute { (response: Response<TopicsDefinitionsProgramMappings>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -3984,9 +3984,9 @@ open class SpeechTextAnalyticsAPI {
      - parameter programId: (path) The id of the program 
      - parameter body: (body) The program to set mappings for 
 
-     - returns: RequestBuilder<ProgramMappings> 
+     - returns: RequestBuilder<TopicsDefinitionsProgramMappings> 
      */
-    open class func putSpeechandtextanalyticsProgramMappingsWithRequestBuilder(programId: String, body: ProgramMappingsRequest) -> RequestBuilder<ProgramMappings> {        
+    open class func putSpeechandtextanalyticsProgramMappingsWithRequestBuilder(programId: String, body: ProgramMappingsRequest) -> RequestBuilder<TopicsDefinitionsProgramMappings> {        
         var path = "/api/v2/speechandtextanalytics/programs/{programId}/mappings"
         let programIdPreEscape = "\(programId)"
         let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3996,7 +3996,7 @@ open class SpeechTextAnalyticsAPI {
 
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<ProgramMappings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<TopicsDefinitionsProgramMappings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

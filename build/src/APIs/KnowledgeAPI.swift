@@ -4713,6 +4713,62 @@ open class KnowledgeAPI {
     
     
     /**
+     Register chunk search result.
+     
+     - parameter knowledgeBaseId: (path) Knowledge Base ID 
+     - parameter searchId: (path) Unique identifier of search request 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchKnowledgeKnowledgebaseChunksSearchSearchId(knowledgeBaseId: String, searchId: String, body: ChunkSearchRegisterRequest? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchKnowledgeKnowledgebaseChunksSearchSearchIdWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, searchId: searchId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Register chunk search result.
+     - PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/chunks/search/{searchId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter knowledgeBaseId: (path) Knowledge Base ID 
+     - parameter searchId: (path) Unique identifier of search request 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func patchKnowledgeKnowledgebaseChunksSearchSearchIdWithRequestBuilder(knowledgeBaseId: String, searchId: String, body: ChunkSearchRegisterRequest? = nil) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/chunks/search/{searchId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let searchIdPreEscape = "\(searchId)"
+        let searchIdPostEscape = searchIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{searchId}", with: searchIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
      Update document.
      
      - parameter knowledgeBaseId: (path) Knowledge base ID. 

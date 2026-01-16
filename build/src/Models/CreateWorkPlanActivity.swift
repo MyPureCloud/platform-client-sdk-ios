@@ -28,6 +28,8 @@ public class CreateWorkPlanActivity: Codable {
 
 
 
+
+
     /** ID of the activity code associated with this activity */
     public var activityCodeId: String?
     /** Description of the activity */
@@ -54,8 +56,10 @@ public class CreateWorkPlanActivity: Codable {
     public var minimumLengthFromShiftStartMinutes: Int?
     /** The minimum duration between shift item (e.g., break or meal) end and shift end in minutes */
     public var minimumLengthFromShiftEndMinutes: Int?
+    /** The maximum duration between shift item (e.g., break or meal) end and shift end in minutes */
+    public var maximumLengthFromShiftEndMinutes: Int?
 
-    public init(activityCodeId: String?, _description: String?, lengthMinutes: Int?, startTimeIsRelativeToShiftStart: Bool?, flexibleStartTime: Bool?, earliestStartTimeMinutes: Int?, latestStartTimeMinutes: Int?, exactStartTimeMinutes: Int?, startTimeIncrementMinutes: Int?, countsAsPaidTime: Bool?, countsAsContiguousWorkTime: Bool?, minimumLengthFromShiftStartMinutes: Int?, minimumLengthFromShiftEndMinutes: Int?) {
+    public init(activityCodeId: String?, _description: String?, lengthMinutes: Int?, startTimeIsRelativeToShiftStart: Bool?, flexibleStartTime: Bool?, earliestStartTimeMinutes: Int?, latestStartTimeMinutes: Int?, exactStartTimeMinutes: Int?, startTimeIncrementMinutes: Int?, countsAsPaidTime: Bool?, countsAsContiguousWorkTime: Bool?, minimumLengthFromShiftStartMinutes: Int?, minimumLengthFromShiftEndMinutes: Int?, maximumLengthFromShiftEndMinutes: Int?) {
         self.activityCodeId = activityCodeId
         self._description = _description
         self.lengthMinutes = lengthMinutes
@@ -69,6 +73,7 @@ public class CreateWorkPlanActivity: Codable {
         self.countsAsContiguousWorkTime = countsAsContiguousWorkTime
         self.minimumLengthFromShiftStartMinutes = minimumLengthFromShiftStartMinutes
         self.minimumLengthFromShiftEndMinutes = minimumLengthFromShiftEndMinutes
+        self.maximumLengthFromShiftEndMinutes = maximumLengthFromShiftEndMinutes
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -85,6 +90,7 @@ public class CreateWorkPlanActivity: Codable {
         case countsAsContiguousWorkTime
         case minimumLengthFromShiftStartMinutes
         case minimumLengthFromShiftEndMinutes
+        case maximumLengthFromShiftEndMinutes
     }
 
 

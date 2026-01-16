@@ -246,16 +246,17 @@ open class AgentAssistantsAPI {
      - examples: [{contentType=application/json, example={
   "googleDialogflowConfig" : "{}",
   "copilot" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "transcriptionConfig" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
   "knowledgeSuggestionConfig" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
-  "transcriptionConfig" : "{}",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : "{}",
   "id" : "id",
-  "state" : "Active"
+  "state" : "Active",
+  "variationParent" : "{}"
 }, statusCode=200}]
      
      - parameter assistantId: (path) Assistant ID 
@@ -584,29 +585,31 @@ open class AgentAssistantsAPI {
   "entities" : [ {
     "googleDialogflowConfig" : "{}",
     "copilot" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "transcriptionConfig" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
     "knowledgeSuggestionConfig" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
-    "transcriptionConfig" : "{}",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
     "id" : "id",
-    "state" : "Active"
+    "state" : "Active",
+    "variationParent" : "{}"
   }, {
     "googleDialogflowConfig" : "{}",
     "copilot" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "transcriptionConfig" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
     "knowledgeSuggestionConfig" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
-    "transcriptionConfig" : "{}",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
     "id" : "id",
-    "state" : "Active"
+    "state" : "Active",
+    "variationParent" : "{}"
   } ],
   "selfUri" : "selfUri",
   "nextUri" : "nextUri",
@@ -1110,16 +1113,17 @@ open class AgentAssistantsAPI {
      - examples: [{contentType=application/json, example={
   "googleDialogflowConfig" : "{}",
   "copilot" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "transcriptionConfig" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
   "knowledgeSuggestionConfig" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
-  "transcriptionConfig" : "{}",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : "{}",
   "id" : "id",
-  "state" : "Active"
+  "state" : "Active",
+  "variationParent" : "{}"
 }, statusCode=200}]
      
      - parameter assistantId: (path) Assistant ID 
@@ -1555,16 +1559,17 @@ open class AgentAssistantsAPI {
      - examples: [{contentType=application/json, example={
   "googleDialogflowConfig" : "{}",
   "copilot" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "transcriptionConfig" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
   "knowledgeSuggestionConfig" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
-  "transcriptionConfig" : "{}",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : "{}",
   "id" : "id",
-  "state" : "Active"
+  "state" : "Active",
+  "variationParent" : "{}"
 }, statusCode=200}]
      
      - parameter body: (body)  

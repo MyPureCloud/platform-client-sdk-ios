@@ -29,6 +29,8 @@ public class Assistant: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of the assistant that will assist the agent. */
@@ -53,8 +55,10 @@ public class Assistant: Codable {
     public var copilot: Copilot?
     /** The URI for this object */
     public var selfUri: String?
+    /** The parent assistant if this assistant is a variation of an assistant */
+    public var variationParent: AddressableEntityRef?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, createdBy: UserReference?, modifiedBy: UserReference?, googleDialogflowConfig: GoogleDialogflowConfig?, transcriptionConfig: TranscriptionConfig?, knowledgeSuggestionConfig: KnowledgeSuggestionConfig?, state: State?, copilot: Copilot?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, createdBy: UserReference?, modifiedBy: UserReference?, googleDialogflowConfig: GoogleDialogflowConfig?, transcriptionConfig: TranscriptionConfig?, knowledgeSuggestionConfig: KnowledgeSuggestionConfig?, state: State?, copilot: Copilot?, selfUri: String?, variationParent: AddressableEntityRef?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -67,6 +71,7 @@ public class Assistant: Codable {
         self.state = state
         self.copilot = copilot
         self.selfUri = selfUri
+        self.variationParent = variationParent
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -82,6 +87,7 @@ public class Assistant: Codable {
         case state
         case copilot
         case selfUri
+        case variationParent
     }
 
 

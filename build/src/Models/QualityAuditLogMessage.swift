@@ -62,6 +62,7 @@ public class QualityAuditLogMessage: Codable {
         case screenRecording = "ScreenRecording"
         case survey = "Survey"
         case snippetRecording = "SnippetRecording"
+        case screenMonitoring = "ScreenMonitoring"
     }
 
 

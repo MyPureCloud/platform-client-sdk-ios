@@ -7,7 +7,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
-| **name** | **String** | The name of the company. | |
+| **name** | **String** | The name of the company. Max: 1000 characters. Leading and trailing whitespace stripped. | |
 | **division** | [**WritableStarrableDivision**](WritableStarrableDivision) | The division to which this entity belongs. | [optional] |
 | **companyType** | **String** |  | [optional] |
 | **industry** | **String** |  | [optional] |
@@ -27,10 +27,10 @@
 | **schema** | [**DataSchema**](DataSchema) | The schema defining custom fields for this contact | [optional] |
 | **customFields** | [**[String:JSON]**](JSON) | Custom fields defined in the schema referenced by schemaId and schemaVersion. | [optional] |
 | **identifiers** | [**[ExternalOrganizationIdentifier]**]([ExternalOrganizationIdentifier]) | Identifiers claimed by this external org | [optional] |
-| **externalIds** | [**[ExternalId]**](ExternalId) | A list of external identifiers that identify this External Organization in an external system | [optional] |
+| **externalIds** | [**[ExternalId]**](ExternalId) | A list of external identifiers that identify this External Organization in an external system. Max 10 items. | [optional] |
 | **externalDataSources** | [**[ExternalDataSource]**]([ExternalDataSource]) | Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@184.0.0_
+_PureCloudPlatformClientV2@185.0.0_

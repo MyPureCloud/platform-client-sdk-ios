@@ -1,6 +1,6 @@
 
 
-public class ProgramsMappingsEntityListing: Codable {
+public class TopicsDefinitionsProgramsMappingsEntityListing: Codable {
 
 
 
@@ -12,13 +12,13 @@ public class ProgramsMappingsEntityListing: Codable {
 
 
 
-    public var entities: [ProgramMappings]?
+    public var entities: [TopicsDefinitionsProgramMappings]?
     public var pageSize: Int?
     public var nextUri: String?
     public var selfUri: String?
     public var pageCount: Int?
 
-    public init(entities: [ProgramMappings]?, pageSize: Int?, nextUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [TopicsDefinitionsProgramMappings]?, pageSize: Int?, nextUri: String?, selfUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.nextUri = nextUri

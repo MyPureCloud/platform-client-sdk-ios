@@ -1,6 +1,6 @@
 
 
-public class ProgramMappings: Codable {
+public class TopicsDefinitionsProgramMappings: Codable {
 
 
 

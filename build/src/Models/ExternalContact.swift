@@ -86,30 +86,39 @@ public class ExternalContact: Codable {
     public var _id: String?
     /** The division to which this entity belongs. */
     public var division: WritableStarrableDivision?
-    /** The first name of the contact. */
+    /** The first name of the contact. Max: 1000 characters. Leading and trailing whitespace stripped. */
     public var firstName: String?
+    /** The middle name of the contact. Max: 1000 characters. Leading and trailing whitespace stripped. */
     public var middleName: String?
-    /** The last name of the contact. */
+    /** The last name of the contact. Max: 1000 characters. Leading and trailing whitespace stripped. */
     public var lastName: String?
+    /** The salutation of the contact. Max: 1000 characters. Leading and trailing whitespace stripped. */
     public var salutation: String?
+    /** The title of the contact. Max: 1000 characters. Leading and trailing whitespace stripped. */
     public var title: String?
     public var workPhone: PhoneNumber?
     public var cellPhone: PhoneNumber?
     public var homePhone: PhoneNumber?
     public var otherPhone: PhoneNumber?
+    /** The work email of the contact. Max: 256 characters. Leading and trailing whitespace stripped. Valid email format */
     public var workEmail: String?
+    /** The personal email of the contact. Max: 256 characters. Leading and trailing whitespace stripped. Valid email format */
     public var personalEmail: String?
+    /** The other email of the contact. Max: 256 characters. Leading and trailing whitespace stripped. Valid email format */
     public var otherEmail: String?
     public var address: ContactAddress?
+    /** User information for a Twitter account */
     public var twitterId: TwitterId?
     public var lineId: LineId?
+    /** User information for a WhatsApp account */
     public var whatsAppId: WhatsAppId?
+    /** User information for a Facebook account */
     public var facebookId: FacebookId?
     /** User information for an Instagram account */
     public var instagramId: InstagramId?
-    /** User information for an Apple account */
+    /** User information for an Apple account. Max: 10 ids */
     public var appleOpaqueIds: [AppleOpaqueId]?
-    /** A list of external identifiers that identify this contact in an external system */
+    /** A list of external identifiers that identify this contact in an external system. Max: 10 ids */
     public var externalIds: [ExternalId]?
     /** Identifiers claimed by this contact */
     public var identifiers: [ContactIdentifier]?
@@ -119,7 +128,7 @@ public class ExternalContact: Codable {
     public var createDate: Date?
     public var externalOrganization: ExternalOrganization?
     public var surveyOptOut: Bool?
-    /** A string that identifies an external system-of-record resource that may have more detailed information on the contact. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace. */
+    /** A string that identifies an external system-of-record resource that may have more detailed information on the contact. Should be a valid URL (including the http/https protocol, port, and path [if any]). Leading and trailing whitespace stripped. Max 1000 characters. */
     public var externalSystemUrl: String?
     /** The schema defining custom fields for this contact */
     public var schema: DataSchema?

@@ -5,11 +5,25 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteConversationsSummariesSetting**](AIStudioAPI#deleteConversationsSummariesSetting) | Delete a summary setting. |
+| [**deleteGuideJobs**](AIStudioAPI#deleteGuideJobs) | Start the deletion of a guide. |
 | [**getConversationsSummariesSetting**](AIStudioAPI#getConversationsSummariesSetting) | Receive a summary setting. |
 | [**getConversationsSummariesSettings**](AIStudioAPI#getConversationsSummariesSettings) | Get all summary settings. |
+| [**getGuide**](AIStudioAPI#getGuide) | Get guide. |
+| [**getGuideJob**](AIStudioAPI#getGuideJob) | Get the specified guide deletion job. |
+| [**getGuideVersion**](AIStudioAPI#getGuideVersion) | Get a guide version. |
+| [**getGuideVersionJob**](AIStudioAPI#getGuideVersionJob) | Get the status of the publishing job for this guide version. |
+| [**getGuides**](AIStudioAPI#getGuides) | Get all guides. |
+| [**getGuidesJob**](AIStudioAPI#getGuidesJob) | Get the status of the guide content generation job. |
+| [**patchGuide**](AIStudioAPI#patchGuide) | Update a guide. |
+| [**patchGuideVersion**](AIStudioAPI#patchGuideVersion) | Update a guide version. |
 | [**postConversationsSummariesPreview**](AIStudioAPI#postConversationsSummariesPreview) | Trigger summary preview event generation. |
 | [**postConversationsSummariesSettings**](AIStudioAPI#postConversationsSummariesSettings) | Create a summary setting. |
 | [**postGuideSessionTurns**](AIStudioAPI#postGuideSessionTurns) | Add a turn to a guide session. |
+| [**postGuideVersionJobs**](AIStudioAPI#postGuideVersionJobs) | Start the publishing of a guide version. |
+| [**postGuideVersions**](AIStudioAPI#postGuideVersions) | Create a guide version. |
+| [**postGuides**](AIStudioAPI#postGuides) | Create a guide. |
+| [**postGuidesJobs**](AIStudioAPI#postGuidesJobs) | Start a guide content generation job. |
+| [**postGuidesUploads**](AIStudioAPI#postGuidesUploads) | Generate presigned URL for uploading a file content to generate guide |
 | [**putConversationsSummariesSetting**](AIStudioAPI#putConversationsSummariesSetting) | Update a summary setting. |
 {: class="table-striped"}
 
@@ -61,6 +75,56 @@ AIStudioAPI.deleteConversationsSummariesSetting(summarySettingId: summarySetting
 ### Return type
 
 `nil` (empty response body)
+
+
+## deleteGuideJobs
+
+
+
+> [GuideJob](GuideJob) deleteGuideJobs(guideId)
+
+Start the deletion of a guide.
+
+
+
+Wraps DELETE /api/v2/guides/{guideId}/jobs  
+
+Requires ALL permissions: 
+
+* aiStudio:guideJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let guideId: String = "" // Guide ID
+
+// Code example
+AIStudioAPI.deleteGuideJobs(guideId: guideId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.deleteGuideJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **guideId** | **String**| Guide ID | |
+
+
+### Return type
+
+[**GuideJob**](GuideJob)
 
 
 ## getConversationsSummariesSetting
@@ -171,6 +235,432 @@ AIStudioAPI.getConversationsSummariesSettings(language: language, name: name, so
 ### Return type
 
 [**SummarySettingEntityListing**](SummarySettingEntityListing)
+
+
+## getGuide
+
+
+
+> [Guide](Guide) getGuide(guideId)
+
+Get guide.
+
+
+
+Wraps GET /api/v2/guides/{guideId}  
+
+Requires ALL permissions: 
+
+* aiStudio:guide:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let guideId: String = "" // Guide ID
+
+// Code example
+AIStudioAPI.getGuide(guideId: guideId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.getGuide was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **guideId** | **String**| Guide ID | |
+
+
+### Return type
+
+[**Guide**](Guide)
+
+
+## getGuideJob
+
+
+
+> [GuideJob](GuideJob) getGuideJob(guideId, jobId)
+
+Get the specified guide deletion job.
+
+
+
+Wraps GET /api/v2/guides/{guideId}/jobs/{jobId}  
+
+Requires ALL permissions: 
+
+* aiStudio:guideJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let guideId: String = "" // Guide ID
+let jobId: String = "" // jobId
+
+// Code example
+AIStudioAPI.getGuideJob(guideId: guideId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.getGuideJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **guideId** | **String**| Guide ID | |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+[**GuideJob**](GuideJob)
+
+
+## getGuideVersion
+
+
+
+> [GuideVersion](GuideVersion) getGuideVersion(guideId, versionId)
+
+Get a guide version.
+
+
+
+Wraps GET /api/v2/guides/{guideId}/versions/{versionId}  
+
+Requires ALL permissions: 
+
+* aiStudio:guideVersion:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let guideId: String = "" // Guide ID
+let versionId: String = "" // Version ID
+
+// Code example
+AIStudioAPI.getGuideVersion(guideId: guideId, versionId: versionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.getGuideVersion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **guideId** | **String**| Guide ID | |
+| **versionId** | **String**| Version ID | |
+
+
+### Return type
+
+[**GuideVersion**](GuideVersion)
+
+
+## getGuideVersionJob
+
+
+
+> [GuideVersionPublishJob](GuideVersionPublishJob) getGuideVersionJob(guideId, versionId, jobId)
+
+Get the status of the publishing job for this guide version.
+
+
+
+Wraps GET /api/v2/guides/{guideId}/versions/{versionId}/jobs/{jobId}  
+
+Requires ALL permissions: 
+
+* aiStudio:guideVersionJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let guideId: String = "" // Guide ID
+let versionId: String = "" // Version ID
+let jobId: String = "" // jobId
+
+// Code example
+AIStudioAPI.getGuideVersionJob(guideId: guideId, versionId: versionId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.getGuideVersionJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **guideId** | **String**| Guide ID | |
+| **versionId** | **String**| Version ID | |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+[**GuideVersionPublishJob**](GuideVersionPublishJob)
+
+
+## getGuides
+
+
+
+> [GuideEntityListing](GuideEntityListing) getGuides(name, nameContains, status, sortBy, sortOrder, pageNumber, pageSize)
+
+Get all guides.
+
+
+
+Wraps GET /api/v2/guides  
+
+Requires ALL permissions: 
+
+* aiStudio:guide:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let name: String = "" // Filter by matching name - case insensitive.
+let nameContains: String = "" // Filter by name contains - case insensitive.
+let status: AIStudioAPI.Status_getGuides = AIStudioAPI.Status_getGuides.enummember // Filter by status.
+let sortBy: AIStudioAPI.SortBy_getGuides = AIStudioAPI.SortBy_getGuides.enummember // Sort by. Default value dateModified.
+let sortOrder: AIStudioAPI.SortOrder_getGuides = AIStudioAPI.SortOrder_getGuides.enummember // Sort Order. Default value desc.
+let pageNumber: Int = 0 // Page number.
+let pageSize: Int = 0 // Page size. The maximum page size is 100.
+
+// Code example
+AIStudioAPI.getGuides(name: name, nameContains: nameContains, status: status, sortBy: sortBy, sortOrder: sortOrder, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.getGuides was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **name** | **String**| Filter by matching name - case insensitive. | [optional] |
+| **nameContains** | **String**| Filter by name contains - case insensitive. | [optional] |
+| **status** | **String**| Filter by status. | [optional]<br />**Values**: published ("Published"), draft ("Draft") |
+| **sortBy** | **String**| Sort by. Default value dateModified. | [optional]<br />**Values**: datemodified ("dateModified"), name ("name"), status ("status") |
+| **sortOrder** | **String**| Sort Order. Default value desc. | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
+| **pageNumber** | **Int**| Page number. | [optional] |
+| **pageSize** | **Int**| Page size. The maximum page size is 100. | [optional] |
+
+
+### Return type
+
+[**GuideEntityListing**](GuideEntityListing)
+
+
+## getGuidesJob
+
+
+
+> [GuideContentGenerationJob](GuideContentGenerationJob) getGuidesJob(jobId)
+
+Get the status of the guide content generation job.
+
+
+
+Wraps GET /api/v2/guides/jobs/{jobId}  
+
+Requires ALL permissions: 
+
+* aiStudio:guideJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+AIStudioAPI.getGuidesJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.getGuidesJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+[**GuideContentGenerationJob**](GuideContentGenerationJob)
+
+
+## patchGuide
+
+
+
+> [Guide](Guide) patchGuide(guideId, body)
+
+Update a guide.
+
+
+
+Wraps PATCH /api/v2/guides/{guideId}  
+
+Requires ALL permissions: 
+
+* aiStudio:guide:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let guideId: String = "" // Guide ID
+let body: UpdateGuide = new UpdateGuide(...) // 
+
+// Code example
+AIStudioAPI.patchGuide(guideId: guideId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.patchGuide was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **guideId** | **String**| Guide ID | |
+| **body** | [**UpdateGuide**](UpdateGuide)|  | |
+
+
+### Return type
+
+[**Guide**](Guide)
+
+
+## patchGuideVersion
+
+
+
+> [GuideVersion](GuideVersion) patchGuideVersion(guideId, versionId, body)
+
+Update a guide version.
+
+
+
+Wraps PATCH /api/v2/guides/{guideId}/versions/{versionId}  
+
+Requires ALL permissions: 
+
+* aiStudio:guideVersion:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let guideId: String = "" // Guide ID
+let versionId: String = "" // Version ID
+let body: UpdateGuideVersion = new UpdateGuideVersion(...) // 
+
+// Code example
+AIStudioAPI.patchGuideVersion(guideId: guideId, versionId: versionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.patchGuideVersion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **guideId** | **String**| Guide ID | |
+| **versionId** | **String**| Version ID | |
+| **body** | [**UpdateGuideVersion**](UpdateGuideVersion)|  | |
+
+
+### Return type
+
+[**GuideVersion**](GuideVersion)
 
 
 ## postConversationsSummariesPreview
@@ -328,6 +818,262 @@ AIStudioAPI.postGuideSessionTurns(guideId: guideId, guideSessionId: guideSession
 [**GuideSessionTurnResponse**](GuideSessionTurnResponse)
 
 
+## postGuideVersionJobs
+
+
+
+> [GuideVersionPublishJob](GuideVersionPublishJob) postGuideVersionJobs(guideId, versionId, body)
+
+Start the publishing of a guide version.
+
+
+
+Wraps POST /api/v2/guides/{guideId}/versions/{versionId}/jobs  
+
+Requires ALL permissions: 
+
+* aiStudio:guideVersionJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let guideId: String = "" // Guide ID
+let versionId: String = "" // Version ID
+let body: GuideVersionPublishJobRequest = new GuideVersionPublishJobRequest(...) // 
+
+// Code example
+AIStudioAPI.postGuideVersionJobs(guideId: guideId, versionId: versionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.postGuideVersionJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **guideId** | **String**| Guide ID | |
+| **versionId** | **String**| Version ID | |
+| **body** | [**GuideVersionPublishJobRequest**](GuideVersionPublishJobRequest)|  | |
+
+
+### Return type
+
+[**GuideVersionPublishJob**](GuideVersionPublishJob)
+
+
+## postGuideVersions
+
+
+
+> [GuideVersion](GuideVersion) postGuideVersions(guideId, body)
+
+Create a guide version.
+
+
+
+Wraps POST /api/v2/guides/{guideId}/versions  
+
+Requires ALL permissions: 
+
+* aiStudio:guideVersion:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let guideId: String = "" // Guide ID
+let body: CreateGuideVersion = new CreateGuideVersion(...) // 
+
+// Code example
+AIStudioAPI.postGuideVersions(guideId: guideId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.postGuideVersions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **guideId** | **String**| Guide ID | |
+| **body** | [**CreateGuideVersion**](CreateGuideVersion)|  | [optional] |
+
+
+### Return type
+
+[**GuideVersion**](GuideVersion)
+
+
+## postGuides
+
+
+
+> [Guide](Guide) postGuides(body)
+
+Create a guide.
+
+
+
+Wraps POST /api/v2/guides  
+
+Requires ALL permissions: 
+
+* aiStudio:guide:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CreateGuide = new CreateGuide(...) // 
+
+// Code example
+AIStudioAPI.postGuides(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.postGuides was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CreateGuide**](CreateGuide)|  | |
+
+
+### Return type
+
+[**Guide**](Guide)
+
+
+## postGuidesJobs
+
+
+
+> [GuideContentGenerationJob](GuideContentGenerationJob) postGuidesJobs(body)
+
+Start a guide content generation job.
+
+
+
+Wraps POST /api/v2/guides/jobs  
+
+Requires ALL permissions: 
+
+* aiStudio:guideJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: GenerateGuideContentRequest = new GenerateGuideContentRequest(...) // 
+
+// Code example
+AIStudioAPI.postGuidesJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.postGuidesJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**GenerateGuideContentRequest**](GenerateGuideContentRequest)|  | |
+
+
+### Return type
+
+[**GuideContentGenerationJob**](GuideContentGenerationJob)
+
+
+## postGuidesUploads
+
+
+
+> [UploadUrlResponse](UploadUrlResponse) postGuidesUploads(body)
+
+Generate presigned URL for uploading a file content to generate guide
+
+
+
+Wraps POST /api/v2/guides/uploads  
+
+Requires ALL permissions: 
+
+* aiStudio:guide:upload
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: UploadUrlRequest = new UploadUrlRequest(...) // query
+
+// Code example
+AIStudioAPI.postGuidesUploads(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AIStudioAPI.postGuidesUploads was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**UploadUrlRequest**](UploadUrlRequest)| query | |
+
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse)
+
+
 ## putConversationsSummariesSetting
 
 
@@ -380,4 +1126,4 @@ AIStudioAPI.putConversationsSummariesSetting(summarySettingId: summarySettingId,
 [**SummarySetting**](SummarySetting)
 
 
-_PureCloudPlatformClientV2@184.0.0_
+_PureCloudPlatformClientV2@185.0.0_

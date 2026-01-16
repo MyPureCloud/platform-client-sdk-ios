@@ -575,13 +575,7 @@ open class ExternalContactsAPI {
   "mergeOperation" : "{}",
   "title" : "title",
   "type" : "Ephemeral",
-  "twitterId" : {
-    "profileUrl" : "profileUrl",
-    "name" : "name",
-    "verified" : true,
-    "id" : "id",
-    "screenName" : "screenName"
-  },
+  "twitterId" : "{}",
   "personalEmail" : "personalEmail",
   "division" : "{}",
   "mergeSet" : [ {
@@ -638,37 +632,14 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "facebookId" : {
-    "displayName" : "displayName",
-    "ids" : [ {
-      "scopedId" : "scopedId"
-    }, {
-      "scopedId" : "scopedId"
-    } ]
-  },
+  "facebookId" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "externalIds" : [ {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   }, {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   } ],
   "lineId" : {
     "displayName" : "displayName",
@@ -713,26 +684,10 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "industry" : "industry",
     "employeeCount" : 6,
@@ -803,10 +758,7 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "whatsAppId" : {
-    "phoneNumber" : "{}",
-    "displayName" : "displayName"
-  },
+  "whatsAppId" : "{}",
   "externalDataSources" : [ {
     "platform" : "SALESFORCE",
     "url" : "url"
@@ -1352,7 +1304,7 @@ open class ExternalContactsAPI {
      List notes for an external contact
      
      - parameter contactId: (path) ExternalContact Id 
-     - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
+     - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageSize &lt;&#x3D; 100; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter pageNumber: (query) Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter sortOrder: (query) The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)
      - parameter expand: (query) which fields, if any, to expand (optional)
@@ -1431,7 +1383,7 @@ open class ExternalContactsAPI {
 }, statusCode=200}]
      
      - parameter contactId: (path) ExternalContact Id 
-     - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
+     - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageSize &lt;&#x3D; 100; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter pageNumber: (query) Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter sortOrder: (query) The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)
      - parameter expand: (query) which fields, if any, to expand (optional)
@@ -1517,13 +1469,7 @@ open class ExternalContactsAPI {
   "mergeOperation" : "{}",
   "title" : "title",
   "type" : "Ephemeral",
-  "twitterId" : {
-    "profileUrl" : "profileUrl",
-    "name" : "name",
-    "verified" : true,
-    "id" : "id",
-    "screenName" : "screenName"
-  },
+  "twitterId" : "{}",
   "personalEmail" : "personalEmail",
   "division" : "{}",
   "mergeSet" : [ {
@@ -1580,37 +1526,14 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "facebookId" : {
-    "displayName" : "displayName",
-    "ids" : [ {
-      "scopedId" : "scopedId"
-    }, {
-      "scopedId" : "scopedId"
-    } ]
-  },
+  "facebookId" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "externalIds" : [ {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   }, {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   } ],
   "lineId" : {
     "displayName" : "displayName",
@@ -1655,26 +1578,10 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "industry" : "industry",
     "employeeCount" : 6,
@@ -1745,10 +1652,7 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "whatsAppId" : {
-    "phoneNumber" : "{}",
-    "displayName" : "displayName"
-  },
+  "whatsAppId" : "{}",
   "externalDataSources" : [ {
     "platform" : "SALESFORCE",
     "url" : "url"
@@ -1878,13 +1782,7 @@ open class ExternalContactsAPI {
     "mergeOperation" : "{}",
     "title" : "title",
     "type" : "Ephemeral",
-    "twitterId" : {
-      "profileUrl" : "profileUrl",
-      "name" : "name",
-      "verified" : true,
-      "id" : "id",
-      "screenName" : "screenName"
-    },
+    "twitterId" : "{}",
     "personalEmail" : "personalEmail",
     "division" : "{}",
     "mergeSet" : [ {
@@ -1941,37 +1839,14 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "facebookId" : {
-      "displayName" : "displayName",
-      "ids" : [ {
-        "scopedId" : "scopedId"
-      }, {
-        "scopedId" : "scopedId"
-      } ]
-    },
+    "facebookId" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "lineId" : {
       "displayName" : "displayName",
@@ -2016,26 +1891,10 @@ open class ExternalContactsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "externalIds" : [ {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       }, {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       } ],
       "industry" : "industry",
       "employeeCount" : 6,
@@ -2106,10 +1965,7 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "whatsAppId" : {
-      "phoneNumber" : "{}",
-      "displayName" : "displayName"
-    },
+    "whatsAppId" : "{}",
     "externalDataSources" : [ {
       "platform" : "SALESFORCE",
       "url" : "url"
@@ -2155,13 +2011,7 @@ open class ExternalContactsAPI {
     "mergeOperation" : "{}",
     "title" : "title",
     "type" : "Ephemeral",
-    "twitterId" : {
-      "profileUrl" : "profileUrl",
-      "name" : "name",
-      "verified" : true,
-      "id" : "id",
-      "screenName" : "screenName"
-    },
+    "twitterId" : "{}",
     "personalEmail" : "personalEmail",
     "division" : "{}",
     "mergeSet" : [ {
@@ -2218,37 +2068,14 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "facebookId" : {
-      "displayName" : "displayName",
-      "ids" : [ {
-        "scopedId" : "scopedId"
-      }, {
-        "scopedId" : "scopedId"
-      } ]
-    },
+    "facebookId" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "lineId" : {
       "displayName" : "displayName",
@@ -2293,26 +2120,10 @@ open class ExternalContactsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "externalIds" : [ {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       }, {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       } ],
       "industry" : "industry",
       "employeeCount" : 6,
@@ -2383,10 +2194,7 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "whatsAppId" : {
-      "phoneNumber" : "{}",
-      "displayName" : "displayName"
-    },
+    "whatsAppId" : "{}",
     "externalDataSources" : [ {
       "platform" : "SALESFORCE",
       "url" : "url"
@@ -3973,26 +3781,10 @@ open class ExternalContactsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "externalIds" : [ {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   }, {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   } ],
   "industry" : "industry",
   "employeeCount" : 6,
@@ -4154,13 +3946,7 @@ open class ExternalContactsAPI {
     "mergeOperation" : "{}",
     "title" : "title",
     "type" : "Ephemeral",
-    "twitterId" : {
-      "profileUrl" : "profileUrl",
-      "name" : "name",
-      "verified" : true,
-      "id" : "id",
-      "screenName" : "screenName"
-    },
+    "twitterId" : "{}",
     "personalEmail" : "personalEmail",
     "division" : "{}",
     "mergeSet" : [ {
@@ -4217,37 +4003,14 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "facebookId" : {
-      "displayName" : "displayName",
-      "ids" : [ {
-        "scopedId" : "scopedId"
-      }, {
-        "scopedId" : "scopedId"
-      } ]
-    },
+    "facebookId" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "lineId" : {
       "displayName" : "displayName",
@@ -4292,26 +4055,10 @@ open class ExternalContactsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "externalIds" : [ {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       }, {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       } ],
       "industry" : "industry",
       "employeeCount" : 6,
@@ -4382,10 +4129,7 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "whatsAppId" : {
-      "phoneNumber" : "{}",
-      "displayName" : "displayName"
-    },
+    "whatsAppId" : "{}",
     "externalDataSources" : [ {
       "platform" : "SALESFORCE",
       "url" : "url"
@@ -4431,13 +4175,7 @@ open class ExternalContactsAPI {
     "mergeOperation" : "{}",
     "title" : "title",
     "type" : "Ephemeral",
-    "twitterId" : {
-      "profileUrl" : "profileUrl",
-      "name" : "name",
-      "verified" : true,
-      "id" : "id",
-      "screenName" : "screenName"
-    },
+    "twitterId" : "{}",
     "personalEmail" : "personalEmail",
     "division" : "{}",
     "mergeSet" : [ {
@@ -4494,37 +4232,14 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "facebookId" : {
-      "displayName" : "displayName",
-      "ids" : [ {
-        "scopedId" : "scopedId"
-      }, {
-        "scopedId" : "scopedId"
-      } ]
-    },
+    "facebookId" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "lineId" : {
       "displayName" : "displayName",
@@ -4569,26 +4284,10 @@ open class ExternalContactsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "externalIds" : [ {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       }, {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       } ],
       "industry" : "industry",
       "employeeCount" : 6,
@@ -4659,10 +4358,7 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "whatsAppId" : {
-      "phoneNumber" : "{}",
-      "displayName" : "displayName"
-    },
+    "whatsAppId" : "{}",
     "externalDataSources" : [ {
       "platform" : "SALESFORCE",
       "url" : "url"
@@ -5240,26 +4936,10 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "industry" : "industry",
     "employeeCount" : 6,
@@ -5354,26 +5034,10 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "industry" : "industry",
     "employeeCount" : 6,
@@ -6093,13 +5757,7 @@ open class ExternalContactsAPI {
     "mergeOperation" : "{}",
     "title" : "title",
     "type" : "Ephemeral",
-    "twitterId" : {
-      "profileUrl" : "profileUrl",
-      "name" : "name",
-      "verified" : true,
-      "id" : "id",
-      "screenName" : "screenName"
-    },
+    "twitterId" : "{}",
     "personalEmail" : "personalEmail",
     "division" : "{}",
     "mergeSet" : [ {
@@ -6156,37 +5814,14 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "facebookId" : {
-      "displayName" : "displayName",
-      "ids" : [ {
-        "scopedId" : "scopedId"
-      }, {
-        "scopedId" : "scopedId"
-      } ]
-    },
+    "facebookId" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "lineId" : {
       "displayName" : "displayName",
@@ -6231,26 +5866,10 @@ open class ExternalContactsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "externalIds" : [ {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       }, {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       } ],
       "industry" : "industry",
       "employeeCount" : 6,
@@ -6321,10 +5940,7 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "whatsAppId" : {
-      "phoneNumber" : "{}",
-      "displayName" : "displayName"
-    },
+    "whatsAppId" : "{}",
     "externalDataSources" : [ {
       "platform" : "SALESFORCE",
       "url" : "url"
@@ -6370,13 +5986,7 @@ open class ExternalContactsAPI {
     "mergeOperation" : "{}",
     "title" : "title",
     "type" : "Ephemeral",
-    "twitterId" : {
-      "profileUrl" : "profileUrl",
-      "name" : "name",
-      "verified" : true,
-      "id" : "id",
-      "screenName" : "screenName"
-    },
+    "twitterId" : "{}",
     "personalEmail" : "personalEmail",
     "division" : "{}",
     "mergeSet" : [ {
@@ -6433,37 +6043,14 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "facebookId" : {
-      "displayName" : "displayName",
-      "ids" : [ {
-        "scopedId" : "scopedId"
-      }, {
-        "scopedId" : "scopedId"
-      } ]
-    },
+    "facebookId" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "lineId" : {
       "displayName" : "displayName",
@@ -6508,26 +6095,10 @@ open class ExternalContactsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "externalIds" : [ {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       }, {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       } ],
       "industry" : "industry",
       "employeeCount" : 6,
@@ -6598,10 +6169,7 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "whatsAppId" : {
-      "phoneNumber" : "{}",
-      "displayName" : "displayName"
-    },
+    "whatsAppId" : "{}",
     "externalDataSources" : [ {
       "platform" : "SALESFORCE",
       "url" : "url"
@@ -6713,13 +6281,7 @@ open class ExternalContactsAPI {
     "mergeOperation" : "{}",
     "title" : "title",
     "type" : "Ephemeral",
-    "twitterId" : {
-      "profileUrl" : "profileUrl",
-      "name" : "name",
-      "verified" : true,
-      "id" : "id",
-      "screenName" : "screenName"
-    },
+    "twitterId" : "{}",
     "personalEmail" : "personalEmail",
     "division" : "{}",
     "mergeSet" : [ {
@@ -6776,37 +6338,14 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "facebookId" : {
-      "displayName" : "displayName",
-      "ids" : [ {
-        "scopedId" : "scopedId"
-      }, {
-        "scopedId" : "scopedId"
-      } ]
-    },
+    "facebookId" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "lineId" : {
       "displayName" : "displayName",
@@ -6851,26 +6390,10 @@ open class ExternalContactsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "externalIds" : [ {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       }, {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       } ],
       "industry" : "industry",
       "employeeCount" : 6,
@@ -6941,10 +6464,7 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "whatsAppId" : {
-      "phoneNumber" : "{}",
-      "displayName" : "displayName"
-    },
+    "whatsAppId" : "{}",
     "externalDataSources" : [ {
       "platform" : "SALESFORCE",
       "url" : "url"
@@ -6990,13 +6510,7 @@ open class ExternalContactsAPI {
     "mergeOperation" : "{}",
     "title" : "title",
     "type" : "Ephemeral",
-    "twitterId" : {
-      "profileUrl" : "profileUrl",
-      "name" : "name",
-      "verified" : true,
-      "id" : "id",
-      "screenName" : "screenName"
-    },
+    "twitterId" : "{}",
     "personalEmail" : "personalEmail",
     "division" : "{}",
     "mergeSet" : [ {
@@ -7053,37 +6567,14 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "facebookId" : {
-      "displayName" : "displayName",
-      "ids" : [ {
-        "scopedId" : "scopedId"
-      }, {
-        "scopedId" : "scopedId"
-      } ]
-    },
+    "facebookId" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "lineId" : {
       "displayName" : "displayName",
@@ -7128,26 +6619,10 @@ open class ExternalContactsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "externalIds" : [ {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       }, {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       } ],
       "industry" : "industry",
       "employeeCount" : 6,
@@ -7218,10 +6693,7 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "whatsAppId" : {
-      "phoneNumber" : "{}",
-      "displayName" : "displayName"
-    },
+    "whatsAppId" : "{}",
     "externalDataSources" : [ {
       "platform" : "SALESFORCE",
       "url" : "url"
@@ -7333,13 +6805,7 @@ open class ExternalContactsAPI {
     "mergeOperation" : "{}",
     "title" : "title",
     "type" : "Ephemeral",
-    "twitterId" : {
-      "profileUrl" : "profileUrl",
-      "name" : "name",
-      "verified" : true,
-      "id" : "id",
-      "screenName" : "screenName"
-    },
+    "twitterId" : "{}",
     "personalEmail" : "personalEmail",
     "division" : "{}",
     "mergeSet" : [ {
@@ -7396,37 +6862,14 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "facebookId" : {
-      "displayName" : "displayName",
-      "ids" : [ {
-        "scopedId" : "scopedId"
-      }, {
-        "scopedId" : "scopedId"
-      } ]
-    },
+    "facebookId" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "lineId" : {
       "displayName" : "displayName",
@@ -7471,26 +6914,10 @@ open class ExternalContactsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "externalIds" : [ {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       }, {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       } ],
       "industry" : "industry",
       "employeeCount" : 6,
@@ -7561,10 +6988,7 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "whatsAppId" : {
-      "phoneNumber" : "{}",
-      "displayName" : "displayName"
-    },
+    "whatsAppId" : "{}",
     "externalDataSources" : [ {
       "platform" : "SALESFORCE",
       "url" : "url"
@@ -7610,13 +7034,7 @@ open class ExternalContactsAPI {
     "mergeOperation" : "{}",
     "title" : "title",
     "type" : "Ephemeral",
-    "twitterId" : {
-      "profileUrl" : "profileUrl",
-      "name" : "name",
-      "verified" : true,
-      "id" : "id",
-      "screenName" : "screenName"
-    },
+    "twitterId" : "{}",
     "personalEmail" : "personalEmail",
     "division" : "{}",
     "mergeSet" : [ {
@@ -7673,37 +7091,14 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "facebookId" : {
-      "displayName" : "displayName",
-      "ids" : [ {
-        "scopedId" : "scopedId"
-      }, {
-        "scopedId" : "scopedId"
-      } ]
-    },
+    "facebookId" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "lineId" : {
       "displayName" : "displayName",
@@ -7748,26 +7143,10 @@ open class ExternalContactsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "externalIds" : [ {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       }, {
         "value" : "value",
-        "externalSource" : {
-          "linkConfiguration" : {
-            "uriTemplate" : "uriTemplate"
-          },
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "active" : true,
-          "id" : "id"
-        }
+        "externalSource" : "{}"
       } ],
       "industry" : "industry",
       "employeeCount" : 6,
@@ -7838,10 +7217,7 @@ open class ExternalContactsAPI {
       "display" : "display",
       "userInput" : "userInput"
     },
-    "whatsAppId" : {
-      "phoneNumber" : "{}",
-      "displayName" : "displayName"
-    },
+    "whatsAppId" : "{}",
     "externalDataSources" : [ {
       "platform" : "SALESFORCE",
       "url" : "url"
@@ -8174,26 +7550,10 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "industry" : "industry",
     "employeeCount" : 6,
@@ -8288,26 +7648,10 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "industry" : "industry",
     "employeeCount" : 6,
@@ -8468,26 +7812,10 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "industry" : "industry",
     "employeeCount" : 6,
@@ -8582,26 +7910,10 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "industry" : "industry",
     "employeeCount" : 6,
@@ -10590,13 +9902,7 @@ open class ExternalContactsAPI {
   "mergeOperation" : "{}",
   "title" : "title",
   "type" : "Ephemeral",
-  "twitterId" : {
-    "profileUrl" : "profileUrl",
-    "name" : "name",
-    "verified" : true,
-    "id" : "id",
-    "screenName" : "screenName"
-  },
+  "twitterId" : "{}",
   "personalEmail" : "personalEmail",
   "division" : "{}",
   "mergeSet" : [ {
@@ -10653,37 +9959,14 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "facebookId" : {
-    "displayName" : "displayName",
-    "ids" : [ {
-      "scopedId" : "scopedId"
-    }, {
-      "scopedId" : "scopedId"
-    } ]
-  },
+  "facebookId" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "externalIds" : [ {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   }, {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   } ],
   "lineId" : {
     "displayName" : "displayName",
@@ -10728,26 +10011,10 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "industry" : "industry",
     "employeeCount" : 6,
@@ -10818,10 +10085,7 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "whatsAppId" : {
-    "phoneNumber" : "{}",
-    "displayName" : "displayName"
-  },
+  "whatsAppId" : "{}",
   "externalDataSources" : [ {
     "platform" : "SALESFORCE",
     "url" : "url"
@@ -10920,13 +10184,7 @@ open class ExternalContactsAPI {
   "mergeOperation" : "{}",
   "title" : "title",
   "type" : "Ephemeral",
-  "twitterId" : {
-    "profileUrl" : "profileUrl",
-    "name" : "name",
-    "verified" : true,
-    "id" : "id",
-    "screenName" : "screenName"
-  },
+  "twitterId" : "{}",
   "personalEmail" : "personalEmail",
   "division" : "{}",
   "mergeSet" : [ {
@@ -10983,37 +10241,14 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "facebookId" : {
-    "displayName" : "displayName",
-    "ids" : [ {
-      "scopedId" : "scopedId"
-    }, {
-      "scopedId" : "scopedId"
-    } ]
-  },
+  "facebookId" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "externalIds" : [ {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   }, {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   } ],
   "lineId" : {
     "displayName" : "displayName",
@@ -11058,26 +10293,10 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "industry" : "industry",
     "employeeCount" : 6,
@@ -11148,10 +10367,7 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "whatsAppId" : {
-    "phoneNumber" : "{}",
-    "displayName" : "displayName"
-  },
+  "whatsAppId" : "{}",
   "externalDataSources" : [ {
     "platform" : "SALESFORCE",
     "url" : "url"
@@ -11251,13 +10467,7 @@ open class ExternalContactsAPI {
   "mergeOperation" : "{}",
   "title" : "title",
   "type" : "Ephemeral",
-  "twitterId" : {
-    "profileUrl" : "profileUrl",
-    "name" : "name",
-    "verified" : true,
-    "id" : "id",
-    "screenName" : "screenName"
-  },
+  "twitterId" : "{}",
   "personalEmail" : "personalEmail",
   "division" : "{}",
   "mergeSet" : [ {
@@ -11314,37 +10524,14 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "facebookId" : {
-    "displayName" : "displayName",
-    "ids" : [ {
-      "scopedId" : "scopedId"
-    }, {
-      "scopedId" : "scopedId"
-    } ]
-  },
+  "facebookId" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "externalIds" : [ {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   }, {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   } ],
   "lineId" : {
     "displayName" : "displayName",
@@ -11389,26 +10576,10 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "industry" : "industry",
     "employeeCount" : 6,
@@ -11479,10 +10650,7 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "whatsAppId" : {
-    "phoneNumber" : "{}",
-    "displayName" : "displayName"
-  },
+  "whatsAppId" : "{}",
   "externalDataSources" : [ {
     "platform" : "SALESFORCE",
     "url" : "url"
@@ -11642,13 +10810,7 @@ open class ExternalContactsAPI {
   "mergeOperation" : "{}",
   "title" : "title",
   "type" : "Ephemeral",
-  "twitterId" : {
-    "profileUrl" : "profileUrl",
-    "name" : "name",
-    "verified" : true,
-    "id" : "id",
-    "screenName" : "screenName"
-  },
+  "twitterId" : "{}",
   "personalEmail" : "personalEmail",
   "division" : "{}",
   "mergeSet" : [ {
@@ -11705,37 +10867,14 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "facebookId" : {
-    "displayName" : "displayName",
-    "ids" : [ {
-      "scopedId" : "scopedId"
-    }, {
-      "scopedId" : "scopedId"
-    } ]
-  },
+  "facebookId" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "externalIds" : [ {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   }, {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   } ],
   "lineId" : {
     "displayName" : "displayName",
@@ -11780,26 +10919,10 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "industry" : "industry",
     "employeeCount" : 6,
@@ -11870,10 +10993,7 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "whatsAppId" : {
-    "phoneNumber" : "{}",
-    "displayName" : "displayName"
-  },
+  "whatsAppId" : "{}",
   "externalDataSources" : [ {
     "platform" : "SALESFORCE",
     "url" : "url"
@@ -12098,13 +11218,7 @@ open class ExternalContactsAPI {
   "mergeOperation" : "{}",
   "title" : "title",
   "type" : "Ephemeral",
-  "twitterId" : {
-    "profileUrl" : "profileUrl",
-    "name" : "name",
-    "verified" : true,
-    "id" : "id",
-    "screenName" : "screenName"
-  },
+  "twitterId" : "{}",
   "personalEmail" : "personalEmail",
   "division" : "{}",
   "mergeSet" : [ {
@@ -12161,37 +11275,14 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "facebookId" : {
-    "displayName" : "displayName",
-    "ids" : [ {
-      "scopedId" : "scopedId"
-    }, {
-      "scopedId" : "scopedId"
-    } ]
-  },
+  "facebookId" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "externalIds" : [ {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   }, {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   } ],
   "lineId" : {
     "displayName" : "displayName",
@@ -12236,26 +11327,10 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "industry" : "industry",
     "employeeCount" : 6,
@@ -12326,10 +11401,7 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "whatsAppId" : {
-    "phoneNumber" : "{}",
-    "displayName" : "displayName"
-  },
+  "whatsAppId" : "{}",
   "externalDataSources" : [ {
     "platform" : "SALESFORCE",
     "url" : "url"
@@ -12440,13 +11512,7 @@ open class ExternalContactsAPI {
   "mergeOperation" : "{}",
   "title" : "title",
   "type" : "Ephemeral",
-  "twitterId" : {
-    "profileUrl" : "profileUrl",
-    "name" : "name",
-    "verified" : true,
-    "id" : "id",
-    "screenName" : "screenName"
-  },
+  "twitterId" : "{}",
   "personalEmail" : "personalEmail",
   "division" : "{}",
   "mergeSet" : [ {
@@ -12503,37 +11569,14 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "facebookId" : {
-    "displayName" : "displayName",
-    "ids" : [ {
-      "scopedId" : "scopedId"
-    }, {
-      "scopedId" : "scopedId"
-    } ]
-  },
+  "facebookId" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "externalIds" : [ {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   }, {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   } ],
   "lineId" : {
     "displayName" : "displayName",
@@ -12578,26 +11621,10 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "industry" : "industry",
     "employeeCount" : 6,
@@ -12668,10 +11695,7 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "whatsAppId" : {
-    "phoneNumber" : "{}",
-    "displayName" : "displayName"
-  },
+  "whatsAppId" : "{}",
   "externalDataSources" : [ {
     "platform" : "SALESFORCE",
     "url" : "url"
@@ -12800,26 +11824,10 @@ open class ExternalContactsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "externalIds" : [ {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   }, {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   } ],
   "industry" : "industry",
   "employeeCount" : 6,
@@ -13257,13 +12265,7 @@ open class ExternalContactsAPI {
   "mergeOperation" : "{}",
   "title" : "title",
   "type" : "Ephemeral",
-  "twitterId" : {
-    "profileUrl" : "profileUrl",
-    "name" : "name",
-    "verified" : true,
-    "id" : "id",
-    "screenName" : "screenName"
-  },
+  "twitterId" : "{}",
   "personalEmail" : "personalEmail",
   "division" : "{}",
   "mergeSet" : [ {
@@ -13320,37 +12322,14 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "facebookId" : {
-    "displayName" : "displayName",
-    "ids" : [ {
-      "scopedId" : "scopedId"
-    }, {
-      "scopedId" : "scopedId"
-    } ]
-  },
+  "facebookId" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "externalIds" : [ {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   }, {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   } ],
   "lineId" : {
     "displayName" : "displayName",
@@ -13395,26 +12374,10 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "industry" : "industry",
     "employeeCount" : 6,
@@ -13485,10 +12448,7 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "whatsAppId" : {
-    "phoneNumber" : "{}",
-    "displayName" : "displayName"
-  },
+  "whatsAppId" : "{}",
   "externalDataSources" : [ {
     "platform" : "SALESFORCE",
     "url" : "url"
@@ -13677,26 +12637,10 @@ open class ExternalContactsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "externalIds" : [ {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   }, {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   } ],
   "industry" : "industry",
   "employeeCount" : 6,
@@ -13845,26 +12789,10 @@ open class ExternalContactsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "externalIds" : [ {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   }, {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   } ],
   "industry" : "industry",
   "employeeCount" : 6,
@@ -14121,13 +13049,7 @@ open class ExternalContactsAPI {
   "mergeOperation" : "{}",
   "title" : "title",
   "type" : "Ephemeral",
-  "twitterId" : {
-    "profileUrl" : "profileUrl",
-    "name" : "name",
-    "verified" : true,
-    "id" : "id",
-    "screenName" : "screenName"
-  },
+  "twitterId" : "{}",
   "personalEmail" : "personalEmail",
   "division" : "{}",
   "mergeSet" : [ {
@@ -14184,37 +13106,14 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "facebookId" : {
-    "displayName" : "displayName",
-    "ids" : [ {
-      "scopedId" : "scopedId"
-    }, {
-      "scopedId" : "scopedId"
-    } ]
-  },
+  "facebookId" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "externalIds" : [ {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   }, {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   } ],
   "lineId" : {
     "displayName" : "displayName",
@@ -14259,26 +13158,10 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalIds" : [ {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     }, {
       "value" : "value",
-      "externalSource" : {
-        "linkConfiguration" : {
-          "uriTemplate" : "uriTemplate"
-        },
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "active" : true,
-        "id" : "id"
-      }
+      "externalSource" : "{}"
     } ],
     "industry" : "industry",
     "employeeCount" : 6,
@@ -14349,10 +13232,7 @@ open class ExternalContactsAPI {
     "display" : "display",
     "userInput" : "userInput"
   },
-  "whatsAppId" : {
-    "phoneNumber" : "{}",
-    "displayName" : "displayName"
-  },
+  "whatsAppId" : "{}",
   "externalDataSources" : [ {
     "platform" : "SALESFORCE",
     "url" : "url"
@@ -14946,26 +13826,10 @@ open class ExternalContactsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "externalIds" : [ {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   }, {
     "value" : "value",
-    "externalSource" : {
-      "linkConfiguration" : {
-        "uriTemplate" : "uriTemplate"
-      },
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "active" : true,
-      "id" : "id"
-    }
+    "externalSource" : "{}"
   } ],
   "industry" : "industry",
   "employeeCount" : 6,

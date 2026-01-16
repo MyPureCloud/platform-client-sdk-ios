@@ -529,4 +529,4 @@ TelephonyAPI.putTelephonyAgentsGreetingsMe(body: body) { (response, error) in
 [**SelfAgentGreeting**](SelfAgentGreeting)
 
 
-_PureCloudPlatformClientV2@184.0.0_
+_PureCloudPlatformClientV2@185.0.0_

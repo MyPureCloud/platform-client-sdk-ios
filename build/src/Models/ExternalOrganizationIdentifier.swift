@@ -24,7 +24,7 @@ public class ExternalOrganizationIdentifier: Codable {
     public var division: WritableStarrableDivision?
     /** The type of this identifier */
     public var type: ModelType?
-    /** The string value of the identifier. Will vary in syntax by type. */
+    /** The string value of the identifier. Will vary in syntax by type. Max: 255 characters. */
     public var value: String?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?

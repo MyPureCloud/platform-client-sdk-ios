@@ -12,4 +12,4 @@ Configuration information for the integration
 
 
 
-_PureCloudPlatformClientV2@184.0.0_
+_PureCloudPlatformClientV2@185.0.0_

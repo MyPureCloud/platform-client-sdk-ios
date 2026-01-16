@@ -16,7 +16,7 @@ public class PhoneNumber: Codable {
 
 
 
-    /** The displayed form of the phone number string. Users should input the phone number in this field, but it will be altered by the API on write. If the phone number can be read as E164, the value will be replaced with international formatted-version of the number. If the number cannot be read as E164, the value will be preserved as-is. In both cases, the provided input string will be copied to the userInput field. */
+    /** The displayed form of the phone number string. Users should input the phone number in this field, but it will be altered by the API on write. If the phone number can be read as E164, the value will be replaced with international formatted-version of the number. If the number cannot be read as E164, the value will be preserved as-is. In both cases, the provided input string will be copied to the userInput field. Max: 512 characters. */
     public var display: String?
     /** An optional extension for the provided phone number. */
     public var _extension: Int64?
@@ -28,7 +28,7 @@ public class PhoneNumber: Codable {
     public var userInput: String?
     /** The E164-formatted form of the provided phone number. This field is not user-writeable and will only be set when the provided phone number could be read as E164. */
     public var e164: String?
-    /** The detected country code from the provided phone number. This field is not user-writeable and will only be set when the provided phone number could be read as E164. */
+    /** The detected country code from the provided phone number. This field is not user-writeable and will only be set when the provided phone number could be read as E164. Max: 4 characters. */
     public var countryCode: String?
 
     public init(display: String?, _extension: Int64?, acceptsSMS: Bool?, normalizationCountryCode: String?, userInput: String?, e164: String?, countryCode: String?) {

@@ -33,6 +33,7 @@ public class Note: Codable {
     public var entityId: String?
     /** This is only need to be set when using Bulk API. Using any other value than contact or organization will result in null being used. */
     public var entityType: EntityType?
+    /** Between 1 and 32,000 characters. */
     public var noteText: String?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifyDate: Date?

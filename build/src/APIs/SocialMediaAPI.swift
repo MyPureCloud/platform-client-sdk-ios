@@ -2674,9 +2674,9 @@ open class SocialMediaAPI {
      - parameter ids: (query) One or more topic IDs to search through the topics. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSocialmediaTopics(pageNumber: Int? = nil, pageSize: Int? = nil, divisionIds: [String]? = nil, includeDeleted: Bool? = nil, name: String? = nil, ids: [String]? = nil, completion: @escaping ((_ data: SocialTopicResponseEntityListing?,_ error: Error?) -> Void)) {
+    open class func getSocialmediaTopics(pageNumber: Int? = nil, pageSize: Int? = nil, divisionIds: [String]? = nil, includeDeleted: Bool? = nil, name: String? = nil, ids: [String]? = nil, completion: @escaping ((_ data: SocialTopicWithDataIngestionRuleMetadataResponseEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getSocialmediaTopicsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, divisionIds: divisionIds, includeDeleted: includeDeleted, name: name, ids: ids)
-        requestBuilder.execute { (response: Response<SocialTopicResponseEntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<SocialTopicWithDataIngestionRuleMetadataResponseEntityListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -2704,6 +2704,19 @@ open class SocialMediaAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dataIngestionRulesMetadata" : [ {
+      "countByStatus" : {
+        "key" : 0
+      },
+      "totalCount" : 6,
+      "platform" : "platform"
+    }, {
+      "countByStatus" : {
+        "key" : 0
+      },
+      "totalCount" : 6,
+      "platform" : "platform"
+    } ],
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
@@ -2713,6 +2726,19 @@ open class SocialMediaAPI {
     "status" : "Active"
   }, {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dataIngestionRulesMetadata" : [ {
+      "countByStatus" : {
+        "key" : 0
+      },
+      "totalCount" : 6,
+      "platform" : "platform"
+    }, {
+      "countByStatus" : {
+        "key" : 0
+      },
+      "totalCount" : 6,
+      "platform" : "platform"
+    } ],
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
@@ -2736,9 +2762,9 @@ open class SocialMediaAPI {
      - parameter name: (query) Search for topic by name that contains the given search string, search is case insensitive (optional)
      - parameter ids: (query) One or more topic IDs to search through the topics. (optional)
 
-     - returns: RequestBuilder<SocialTopicResponseEntityListing> 
+     - returns: RequestBuilder<SocialTopicWithDataIngestionRuleMetadataResponseEntityListing> 
      */
-    open class func getSocialmediaTopicsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, divisionIds: [String]? = nil, includeDeleted: Bool? = nil, name: String? = nil, ids: [String]? = nil) -> RequestBuilder<SocialTopicResponseEntityListing> {        
+    open class func getSocialmediaTopicsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, divisionIds: [String]? = nil, includeDeleted: Bool? = nil, name: String? = nil, ids: [String]? = nil) -> RequestBuilder<SocialTopicWithDataIngestionRuleMetadataResponseEntityListing> {        
         let path = "/api/v2/socialmedia/topics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -2753,7 +2779,7 @@ open class SocialMediaAPI {
             "ids": ids
         ])
 
-        let requestBuilder: RequestBuilder<SocialTopicResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SocialTopicWithDataIngestionRuleMetadataResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }

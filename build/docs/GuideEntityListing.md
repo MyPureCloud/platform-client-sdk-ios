@@ -1,12 +1,12 @@
-# SocialTopicResponseEntityListing
+# GuideEntityListing
 
-## SocialTopicResponseEntityListing
+## GuideEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[SocialTopicResponse]**]([SocialTopicResponse]) |  | [optional] |
+| **entities** | [**[Guide]**]([Guide]) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -19,4 +19,4 @@
 
 
 
-_PureCloudPlatformClientV2@184.0.0_
+_PureCloudPlatformClientV2@185.0.0_

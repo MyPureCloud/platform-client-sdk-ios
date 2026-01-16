@@ -12,6 +12,20 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet summarySettingId: String = \"\" // Summary setting id\n\n// Delete a summary setting.\nDeleteConversationsSummariesSettingRequest.deleteConversationsSummariesSetting(summarySettingId: summarySettingId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteConversationsSummariesSettingRequest.deleteConversationsSummariesSetting was successful\")\n    }\n}"
   },
+  "deleteguidejobs": {
+    "operationId": "deleteguidejobs",
+    "functionName": "deleteGuideJobs",
+    "signature": "deleteGuideJobs(guideId)",
+    "parameters": [
+      {
+        "name": "guideId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "GuideJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet guideId: String = \"\" // Guide ID\n\n// Start the deletion of a guide.\nDeleteGuideJobsRequest.deleteGuideJobs(guideId: guideId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"DeleteGuideJobsRequest.deleteGuideJobs was successful\")\n        dump(response)\n    }\n}"
+  },
   "getconversationssummariessetting": {
     "operationId": "getconversationssummariessetting",
     "functionName": "getConversationsSummariesSetting",
@@ -65,6 +79,183 @@
     "return": "SummarySettingEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet language: String = \"\" // Filter by matching language - case insensitive.\nlet name: String = \"\" // Filter by partially matching name - case insensitive.\nlet sortBy: GetConversationsSummariesSettingsRequest.SortBy_getConversationsSummariesSettings = GetConversationsSummariesSettingsRequest.SortBy_getConversationsSummariesSettings.enummember // Sort by. Default value dateModified.\nlet sortOrder: GetConversationsSummariesSettingsRequest.SortOrder_getConversationsSummariesSettings = GetConversationsSummariesSettingsRequest.SortOrder_getConversationsSummariesSettings.enummember // Sort Order. Default value desc.\nlet pageNumber: Int = 0 // Page number.\nlet pageSize: Int = 0 // Page size. The maximum page size is 100.\n\n// Get all summary settings.\nGetConversationsSummariesSettingsRequest.getConversationsSummariesSettings(language: language, name: name, sortBy: sortBy, sortOrder: sortOrder, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsSummariesSettingsRequest.getConversationsSummariesSettings was successful\")\n        dump(response)\n    }\n}"
   },
+  "getguide": {
+    "operationId": "getguide",
+    "functionName": "getGuide",
+    "signature": "getGuide(guideId)",
+    "parameters": [
+      {
+        "name": "guideId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "Guide",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet guideId: String = \"\" // Guide ID\n\n// Get guide.\nGetGuideRequest.getGuide(guideId: guideId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGuideRequest.getGuide was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getguidejob": {
+    "operationId": "getguidejob",
+    "functionName": "getGuideJob",
+    "signature": "getGuideJob(guideId, jobId)",
+    "parameters": [
+      {
+        "name": "guideId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "GuideJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet guideId: String = \"\" // Guide ID\nlet jobId: String = \"\" // jobId\n\n// Get the specified guide deletion job.\nGetGuideJobRequest.getGuideJob(guideId: guideId, jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGuideJobRequest.getGuideJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getguideversion": {
+    "operationId": "getguideversion",
+    "functionName": "getGuideVersion",
+    "signature": "getGuideVersion(guideId, versionId)",
+    "parameters": [
+      {
+        "name": "guideId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "versionId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "GuideVersion",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet guideId: String = \"\" // Guide ID\nlet versionId: String = \"\" // Version ID\n\n// Get a guide version.\nGetGuideVersionRequest.getGuideVersion(guideId: guideId, versionId: versionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGuideVersionRequest.getGuideVersion was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getguideversionjob": {
+    "operationId": "getguideversionjob",
+    "functionName": "getGuideVersionJob",
+    "signature": "getGuideVersionJob(guideId, versionId, jobId)",
+    "parameters": [
+      {
+        "name": "guideId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "versionId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "GuideVersionPublishJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet guideId: String = \"\" // Guide ID\nlet versionId: String = \"\" // Version ID\nlet jobId: String = \"\" // jobId\n\n// Get the status of the publishing job for this guide version.\nGetGuideVersionJobRequest.getGuideVersionJob(guideId: guideId, versionId: versionId, jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGuideVersionJobRequest.getGuideVersionJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getguides": {
+    "operationId": "getguides",
+    "functionName": "getGuides",
+    "signature": "getGuides(name, nameContains, status, sortBy, sortOrder, pageNumber, pageSize)",
+    "parameters": [
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "nameContains",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "status",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sortBy",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "GuideEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet name: String = \"\" // Filter by matching name - case insensitive.\nlet nameContains: String = \"\" // Filter by name contains - case insensitive.\nlet status: GetGuidesRequest.Status_getGuides = GetGuidesRequest.Status_getGuides.enummember // Filter by status.\nlet sortBy: GetGuidesRequest.SortBy_getGuides = GetGuidesRequest.SortBy_getGuides.enummember // Sort by. Default value dateModified.\nlet sortOrder: GetGuidesRequest.SortOrder_getGuides = GetGuidesRequest.SortOrder_getGuides.enummember // Sort Order. Default value desc.\nlet pageNumber: Int = 0 // Page number.\nlet pageSize: Int = 0 // Page size. The maximum page size is 100.\n\n// Get all guides.\nGetGuidesRequest.getGuides(name: name, nameContains: nameContains, status: status, sortBy: sortBy, sortOrder: sortOrder, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGuidesRequest.getGuides was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getguidesjob": {
+    "operationId": "getguidesjob",
+    "functionName": "getGuidesJob",
+    "signature": "getGuidesJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "GuideContentGenerationJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // jobId\n\n// Get the status of the guide content generation job.\nGetGuidesJobRequest.getGuidesJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGuidesJobRequest.getGuidesJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchguide": {
+    "operationId": "patchguide",
+    "functionName": "patchGuide",
+    "signature": "patchGuide(guideId, body)",
+    "parameters": [
+      {
+        "name": "guideId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UpdateGuide",
+        "required": "true"
+      }
+    ],
+    "return": "Guide",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet guideId: String = \"\" // Guide ID\nlet body: UpdateGuide = new UpdateGuide(...) // \n\n// Update a guide.\nPatchGuideRequest.patchGuide(guideId: guideId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchGuideRequest.patchGuide was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchguideversion": {
+    "operationId": "patchguideversion",
+    "functionName": "patchGuideVersion",
+    "signature": "patchGuideVersion(guideId, versionId, body)",
+    "parameters": [
+      {
+        "name": "guideId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "versionId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UpdateGuideVersion",
+        "required": "true"
+      }
+    ],
+    "return": "GuideVersion",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet guideId: String = \"\" // Guide ID\nlet versionId: String = \"\" // Version ID\nlet body: UpdateGuideVersion = new UpdateGuideVersion(...) // \n\n// Update a guide version.\nPatchGuideVersionRequest.patchGuideVersion(guideId: guideId, versionId: versionId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchGuideVersionRequest.patchGuideVersion was successful\")\n        dump(response)\n    }\n}"
+  },
   "postconversationssummariespreview": {
     "operationId": "postconversationssummariespreview",
     "functionName": "postConversationsSummariesPreview",
@@ -115,6 +306,91 @@
     ],
     "return": "GuideSessionTurnResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet guideId: String = \"\" // Guide ID\nlet guideSessionId: String = \"\" // Guide Session ID\nlet body: GuideSessionTurnRequest = new GuideSessionTurnRequest(...) // \n\n// Add a turn to a guide session.\nPostGuideSessionTurnsRequest.postGuideSessionTurns(guideId: guideId, guideSessionId: guideSessionId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostGuideSessionTurnsRequest.postGuideSessionTurns was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postguideversionjobs": {
+    "operationId": "postguideversionjobs",
+    "functionName": "postGuideVersionJobs",
+    "signature": "postGuideVersionJobs(guideId, versionId, body)",
+    "parameters": [
+      {
+        "name": "guideId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "versionId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "GuideVersionPublishJobRequest",
+        "required": "true"
+      }
+    ],
+    "return": "GuideVersionPublishJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet guideId: String = \"\" // Guide ID\nlet versionId: String = \"\" // Version ID\nlet body: GuideVersionPublishJobRequest = new GuideVersionPublishJobRequest(...) // \n\n// Start the publishing of a guide version.\nPostGuideVersionJobsRequest.postGuideVersionJobs(guideId: guideId, versionId: versionId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostGuideVersionJobsRequest.postGuideVersionJobs was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postguideversions": {
+    "operationId": "postguideversions",
+    "functionName": "postGuideVersions",
+    "signature": "postGuideVersions(guideId, body)",
+    "parameters": [
+      {
+        "name": "guideId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "CreateGuideVersion",
+        "required": "false"
+      }
+    ],
+    "return": "GuideVersion",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet guideId: String = \"\" // Guide ID\nlet body: CreateGuideVersion = new CreateGuideVersion(...) // \n\n// Create a guide version.\nPostGuideVersionsRequest.postGuideVersions(guideId: guideId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostGuideVersionsRequest.postGuideVersions was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postguides": {
+    "operationId": "postguides",
+    "functionName": "postGuides",
+    "signature": "postGuides(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "CreateGuide",
+        "required": "true"
+      }
+    ],
+    "return": "Guide",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: CreateGuide = new CreateGuide(...) // \n\n// Create a guide.\nPostGuidesRequest.postGuides(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostGuidesRequest.postGuides was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postguidesjobs": {
+    "operationId": "postguidesjobs",
+    "functionName": "postGuidesJobs",
+    "signature": "postGuidesJobs(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "GenerateGuideContentRequest",
+        "required": "true"
+      }
+    ],
+    "return": "GuideContentGenerationJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: GenerateGuideContentRequest = new GenerateGuideContentRequest(...) // \n\n// Start a guide content generation job.\nPostGuidesJobsRequest.postGuidesJobs(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostGuidesJobsRequest.postGuidesJobs was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postguidesuploads": {
+    "operationId": "postguidesuploads",
+    "functionName": "postGuidesUploads",
+    "signature": "postGuidesUploads(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "UploadUrlRequest",
+        "required": "true"
+      }
+    ],
+    "return": "UploadUrlResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: UploadUrlRequest = new UploadUrlRequest(...) // query\n\n// Generate presigned URL for uploading a file content to generate guide\nPostGuidesUploadsRequest.postGuidesUploads(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostGuidesUploadsRequest.postGuidesUploads was successful\")\n        dump(response)\n    }\n}"
   },
   "putconversationssummariessetting": {
     "operationId": "putconversationssummariessetting",
@@ -15453,7 +15729,7 @@
       }
     ],
     "return": "NoteListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactId: String = \"\" // ExternalContact Id\nlet pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)\nlet pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)\nlet sortOrder: String = \"\" // The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \\\"createDate:asc\\\", \\\"createDate:desc\\\"\nlet expand: [String] = [\"\"] // which fields, if any, to expand\n\n// List notes for an external contact\nGetExternalcontactsContactNotesRequest.getExternalcontactsContactNotes(contactId: contactId, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsContactNotesRequest.getExternalcontactsContactNotes was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactId: String = \"\" // ExternalContact Id\nlet pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageSize <= 100; pageNumber * pageSize must be <= 1,000)\nlet pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)\nlet sortOrder: String = \"\" // The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \\\"createDate:asc\\\", \\\"createDate:desc\\\"\nlet expand: [String] = [\"\"] // which fields, if any, to expand\n\n// List notes for an external contact\nGetExternalcontactsContactNotesRequest.getExternalcontactsContactNotes(contactId: contactId, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsContactNotesRequest.getExternalcontactsContactNotes was successful\")\n        dump(response)\n    }\n}"
   },
   "getexternalcontactscontactunresolved": {
     "operationId": "getexternalcontactscontactunresolved",
@@ -25435,6 +25711,29 @@
     ],
     "return": "CategoryResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet categoryId: String = \"\" // Category ID\nlet body: CategoryUpdateRequest = new CategoryUpdateRequest(...) // \n\n// Update category\nPatchKnowledgeKnowledgebaseCategoryRequest.patchKnowledgeKnowledgebaseCategory(knowledgeBaseId: knowledgeBaseId, categoryId: categoryId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchKnowledgeKnowledgebaseCategoryRequest.patchKnowledgeKnowledgebaseCategory was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchknowledgeknowledgebasechunkssearchsearchid": {
+    "operationId": "patchknowledgeknowledgebasechunkssearchsearchid",
+    "functionName": "patchKnowledgeKnowledgebaseChunksSearchSearchId",
+    "signature": "patchKnowledgeKnowledgebaseChunksSearchSearchId(knowledgeBaseId, searchId, body)",
+    "parameters": [
+      {
+        "name": "knowledgeBaseId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "searchId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ChunkSearchRegisterRequest",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge Base ID\nlet searchId: String = \"\" // Unique identifier of search request\nlet body: ChunkSearchRegisterRequest = new ChunkSearchRegisterRequest(...) // \n\n// Register chunk search result.\nPatchKnowledgeKnowledgebaseChunksSearchSearchIdRequest.patchKnowledgeKnowledgebaseChunksSearchSearchId(knowledgeBaseId: knowledgeBaseId, searchId: searchId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchKnowledgeKnowledgebaseChunksSearchSearchIdRequest.patchKnowledgeKnowledgebaseChunksSearchSearchId was successful\")\n    }\n}"
   },
   "patchknowledgeknowledgebasedocument": {
     "operationId": "patchknowledgeknowledgebasedocument",
@@ -42602,7 +42901,7 @@
         "required": "false"
       }
     ],
-    "return": "SocialTopicResponseEntityListing",
+    "return": "SocialTopicWithDataIngestionRuleMetadataResponseEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet divisionIds: [String] = [\"\"] // One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned.\nlet includeDeleted: Bool = true // Determines whether to include soft-deleted items in the result.\nlet name: String = \"\" // Search for topic by name that contains the given search string, search is case insensitive\nlet ids: [String] = [\"\"] // One or more topic IDs to search through the topics.\n\n// Retrieve all social topics.\nGetSocialmediaTopicsRequest.getSocialmediaTopics(pageNumber: pageNumber, pageSize: pageSize, divisionIds: divisionIds, includeDeleted: includeDeleted, name: name, ids: ids) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaTopicsRequest.getSocialmediaTopics was successful\")\n        dump(response)\n    }\n}"
   },
   "patchsocialmediatopic": {
@@ -43345,7 +43644,7 @@
         "required": "true"
       }
     ],
-    "return": "ProgramMappings",
+    "return": "TopicsDefinitionsProgramMappings",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet programId: String = \"\" // The id of the program\n\n// Get Speech & Text Analytics program mappings to queues and flows by id\nGetSpeechandtextanalyticsProgramMappingsRequest.getSpeechandtextanalyticsProgramMappings(programId: programId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsProgramMappingsRequest.getSpeechandtextanalyticsProgramMappings was successful\")\n        dump(response)\n    }\n}"
   },
   "getspeechandtextanalyticsprogramsettingsinsights": {
@@ -43430,7 +43729,7 @@
         "required": "false"
       }
     ],
-    "return": "ProgramsMappingsEntityListing",
+    "return": "TopicsDefinitionsProgramsMappingsEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nextPage: String = \"\" // The key for listing the next page\nlet pageSize: Int = 0 // The page size for the listing\n\n// Get the list of Speech & Text Analytics programs mappings to queues and flows\nGetSpeechandtextanalyticsProgramsMappingsRequest.getSpeechandtextanalyticsProgramsMappings(nextPage: nextPage, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsProgramsMappingsRequest.getSpeechandtextanalyticsProgramsMappings was successful\")\n        dump(response)\n    }\n}"
   },
   "getspeechandtextanalyticsprogramspublishjob": {
@@ -43905,7 +44204,7 @@
         "required": "true"
       }
     ],
-    "return": "ProgramMappings",
+    "return": "TopicsDefinitionsProgramMappings",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet programId: String = \"\" // The id of the program\nlet body: ProgramMappingsRequest = new ProgramMappingsRequest(...) // The program to set mappings for\n\n// Set Speech & Text Analytics program mappings to queues and flows\nPutSpeechandtextanalyticsProgramMappingsRequest.putSpeechandtextanalyticsProgramMappings(programId: programId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutSpeechandtextanalyticsProgramMappingsRequest.putSpeechandtextanalyticsProgramMappings was successful\")\n        dump(response)\n    }\n}"
   },
   "putspeechandtextanalyticsprogramsettingsinsights": {

@@ -52,7 +52,7 @@ public class ExternalOrganization: Codable {
 
     /** The globally unique identifier for the object. */
     public var _id: String?
-    /** The name of the company. */
+    /** The name of the company. Max: 1000 characters. Leading and trailing whitespace stripped. */
     public var name: String?
     /** The division to which this entity belongs. */
     public var division: WritableStarrableDivision?
@@ -80,7 +80,7 @@ public class ExternalOrganization: Codable {
     public var customFields: [String:JSON]?
     /** Identifiers claimed by this external org */
     public var identifiers: [ExternalOrganizationIdentifier]?
-    /** A list of external identifiers that identify this External Organization in an external system */
+    /** A list of external identifiers that identify this External Organization in an external system. Max 10 items. */
     public var externalIds: [ExternalId]?
     /** Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param. */
     public var externalDataSources: [ExternalDataSource]?

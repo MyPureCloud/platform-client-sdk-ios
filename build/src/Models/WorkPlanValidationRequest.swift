@@ -63,6 +63,11 @@ public class WorkPlanValidationRequest: Codable {
         case shiftStartAndPaidDuration = "ShiftStartAndPaidDuration"
     }
 
+    public enum ShiftStartVariancePeriod: String, Codable { 
+        case weekly = "Weekly"
+        case planningPeriod = "PlanningPeriod"
+    }
+
 
 
 
@@ -130,6 +135,8 @@ public class WorkPlanValidationRequest: Codable {
     public var optionalDays: SetWrapperDayOfWeek?
     /** This constraint ensures that an agent starts each workday within a user-defined time threshold */
     public var shiftStartVarianceType: ShiftStartVarianceType?
+    /** The length of the period over which the maximum shift start time variance is applied */
+    public var shiftStartVariancePeriod: ShiftStartVariancePeriod?
     /** Variance in minutes among start times of shifts in this work plan */
     public var shiftStartVariances: ListWrapperShiftStartVariance?
     /** Shifts in this work plan */
@@ -141,7 +148,7 @@ public class WorkPlanValidationRequest: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, enabled: Bool?, valid: Bool?, constrainWeeklyPaidTime: Bool?, flexibleWeeklyPaidTime: Bool?, weeklyExactPaidMinutes: Int?, weeklyMinimumPaidMinutes: Int?, weeklyMaximumPaidMinutes: Int?, constrainPaidTimeGranularity: Bool?, paidTimeGranularityMinutes: Int?, constrainMinimumTimeBetweenShifts: Bool?, minimumTimeBetweenShiftsMinutes: Int?, maximumDays: Int?, minimumConsecutiveNonWorkingMinutesPerWeek: Int?, constrainMaximumConsecutiveWorkingWeekends: Bool?, maximumConsecutiveWorkingWeekends: Int?, minimumWorkingDaysPerWeek: Int?, constrainMaximumConsecutiveWorkingDays: Bool?, maximumConsecutiveWorkingDays: Int?, minimumShiftStartDistanceMinutes: Int?, minimumDaysOffPerPlanningPeriod: Int?, maximumDaysOffPerPlanningPeriod: Int?, minimumPaidMinutesPerPlanningPeriod: Int?, maximumPaidMinutesPerPlanningPeriod: Int?, constrainMaximumWorkingWeekendsPerPlanningPeriod: Bool?, maximumWorkingWeekendsPerPlanningPeriod: Int?, optionalDays: SetWrapperDayOfWeek?, shiftStartVarianceType: ShiftStartVarianceType?, shiftStartVariances: ListWrapperShiftStartVariance?, shifts: [WorkPlanShift]?, agents: [DeletableUserReference]?, agentCount: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, enabled: Bool?, valid: Bool?, constrainWeeklyPaidTime: Bool?, flexibleWeeklyPaidTime: Bool?, weeklyExactPaidMinutes: Int?, weeklyMinimumPaidMinutes: Int?, weeklyMaximumPaidMinutes: Int?, constrainPaidTimeGranularity: Bool?, paidTimeGranularityMinutes: Int?, constrainMinimumTimeBetweenShifts: Bool?, minimumTimeBetweenShiftsMinutes: Int?, maximumDays: Int?, minimumConsecutiveNonWorkingMinutesPerWeek: Int?, constrainMaximumConsecutiveWorkingWeekends: Bool?, maximumConsecutiveWorkingWeekends: Int?, minimumWorkingDaysPerWeek: Int?, constrainMaximumConsecutiveWorkingDays: Bool?, maximumConsecutiveWorkingDays: Int?, minimumShiftStartDistanceMinutes: Int?, minimumDaysOffPerPlanningPeriod: Int?, maximumDaysOffPerPlanningPeriod: Int?, minimumPaidMinutesPerPlanningPeriod: Int?, maximumPaidMinutesPerPlanningPeriod: Int?, constrainMaximumWorkingWeekendsPerPlanningPeriod: Bool?, maximumWorkingWeekendsPerPlanningPeriod: Int?, optionalDays: SetWrapperDayOfWeek?, shiftStartVarianceType: ShiftStartVarianceType?, shiftStartVariancePeriod: ShiftStartVariancePeriod?, shiftStartVariances: ListWrapperShiftStartVariance?, shifts: [WorkPlanShift]?, agents: [DeletableUserReference]?, agentCount: Int?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.enabled = enabled
@@ -171,6 +178,7 @@ public class WorkPlanValidationRequest: Codable {
         self.maximumWorkingWeekendsPerPlanningPeriod = maximumWorkingWeekendsPerPlanningPeriod
         self.optionalDays = optionalDays
         self.shiftStartVarianceType = shiftStartVarianceType
+        self.shiftStartVariancePeriod = shiftStartVariancePeriod
         self.shiftStartVariances = shiftStartVariances
         self.shifts = shifts
         self.agents = agents
@@ -208,6 +216,7 @@ public class WorkPlanValidationRequest: Codable {
         case maximumWorkingWeekendsPerPlanningPeriod
         case optionalDays
         case shiftStartVarianceType
+        case shiftStartVariancePeriod
         case shiftStartVariances
         case shifts
         case agents

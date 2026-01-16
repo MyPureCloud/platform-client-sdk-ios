@@ -411,6 +411,7 @@ docs/AuditTopicDomainEntityRef.md
 docs/AuditTopicMessageInfo.md
 docs/AuditTopicPropertyChange.md
 docs/AuthenticationSettings.md
+docs/AuthoringKnowledgeSettings.md
 docs/AuthorizationAPI.json
 docs/AuthorizationAPI.md
 docs/AuthorizationPolicy.md
@@ -773,7 +774,10 @@ docs/CapacityPlanningRequirementsResultTopicStaffingRequirementsNotification.md
 docs/CapacityPlansListResponse.md
 docs/Card.md
 docs/CardAction.md
+docs/CardBodyText.md
 docs/CardParameters.md
+docs/Carousel.md
+docs/CarouselCard.md
 docs/CarouselParameters.md
 docs/CarrierServicesAPI.json
 docs/CarrierServicesAPI.md
@@ -832,6 +836,7 @@ docs/ChecklistInferenceJobCreationResponse.md
 docs/ChecklistInferenceJobPayload.md
 docs/ChecklistInferenceJobResponse.md
 docs/ChecklistItem.md
+docs/ChunkSearchRegisterRequest.md
 docs/ClientApp.md
 docs/ClientAppConfigurationInfo.md
 docs/ClientAppEntityListing.md
@@ -1273,7 +1278,6 @@ docs/ConversationEventTopicPhoneNumberColumn.md
 docs/ConversationEventTopicQueueMediaSettings.md
 docs/ConversationEventTopicRecordersState.md
 docs/ConversationEventTopicScoredAgent.md
-docs/ConversationEventTopicScreenMonitoring.md
 docs/ConversationEventTopicScreenShare.md
 docs/ConversationEventTopicSocialExpression.md
 docs/ConversationEventTopicTransferDestination.md
@@ -1528,6 +1532,8 @@ docs/CreateGeneralProgramTestPhraseDetectedPhrase.md
 docs/CreateGeneralProgramTestPhraseMatchedTranscript.md
 docs/CreateGeneralProgramTestTopicPhraseResults.md
 docs/CreateGeneralProgramTopicsDefinitionsJob.md
+docs/CreateGuide.md
+docs/CreateGuideVersion.md
 docs/CreateIntegrationRequest.md
 docs/CreateManagementUnitApiRequest.md
 docs/CreateManagementUnitSettingsRequest.md
@@ -1638,6 +1644,7 @@ docs/DashboardConfigurationQueryRequest.md
 docs/DashboardUser.md
 docs/DashboardUserListing.md
 docs/DashboardsSharedWith.md
+docs/DataAction.md
 docs/DataActionConditionPredicate.md
 docs/DataActionConditionSettings.md
 docs/DataActionContactColumnFieldMapping.md
@@ -2454,7 +2461,9 @@ docs/GeneralProgramJobRequest.md
 docs/GeneralTopic.md
 docs/GeneralTopicsEntityListing.md
 docs/GenerateBuForecastRequest.md
+docs/GenerateGuideContentRequest.md
 docs/GenerateMeetingIdRequest.md
+docs/GeneratedGuideContent.md
 docs/GenericSAML.md
 docs/GenericTemplate.md
 docs/GenesysBotConnector.md
@@ -2514,6 +2523,10 @@ docs/GuestCategoryReference.md
 docs/GuestCategoryResponseListing.md
 docs/GuestMemberInfo.md
 docs/GuestResponseCategory.md
+docs/Guide.md
+docs/GuideContentGenerationJob.md
+docs/GuideEntityListing.md
+docs/GuideJob.md
 docs/GuideSessionInputEvent.md
 docs/GuideSessionTurnInvocationData.md
 docs/GuideSessionTurnInvocationParameters.md
@@ -2522,6 +2535,12 @@ docs/GuideSessionTurnRequest.md
 docs/GuideSessionTurnResponse.md
 docs/GuideSessionTurnResponseData.md
 docs/GuideSessionVariable.md
+docs/GuideVersion.md
+docs/GuideVersionPublish.md
+docs/GuideVersionPublishJob.md
+docs/GuideVersionPublishJobRequest.md
+docs/GuideVersionRef.md
+docs/GuideVersionResources.md
 docs/HeadcountForecast.md
 docs/HeadcountInterval.md
 docs/Header.md
@@ -2966,6 +2985,7 @@ docs/KnowledgeParseRecord.md
 docs/KnowledgeSearchClientApplication.md
 docs/KnowledgeSearchDocumentResponse.md
 docs/KnowledgeSetting.md
+docs/KnowledgeSettings.md
 docs/KnowledgeSuggestionConfig.md
 docs/KnowledgeSyncJobReport.md
 docs/KnowledgeSyncJobRequest.md
@@ -3763,7 +3783,6 @@ docs/ProgramInsightsSettings.md
 docs/ProgramInsightsSettingsEntityListing.md
 docs/ProgramJob.md
 docs/ProgramJobRequest.md
-docs/ProgramMappings.md
 docs/ProgramMappingsRequest.md
 docs/ProgramRequest.md
 docs/ProgramTopicLinksTestPhraseDetectedPhrase.md
@@ -3773,7 +3792,6 @@ docs/ProgramTopicLinksTopicsDefinitionsJob.md
 docs/ProgramTranscriptionEngine.md
 docs/ProgramTranscriptionEngines.md
 docs/ProgramsEntityListing.md
-docs/ProgramsMappingsEntityListing.md
 docs/ProgressConsultTransferEvent.md
 docs/ProgressTransferEvent.md
 docs/Prompt.md
@@ -3981,7 +3999,6 @@ docs/QueueConversationEventTopicPhoneNumberColumn.md
 docs/QueueConversationEventTopicQueueMediaSettings.md
 docs/QueueConversationEventTopicRecordersState.md
 docs/QueueConversationEventTopicScoredAgent.md
-docs/QueueConversationEventTopicScreenMonitoring.md
 docs/QueueConversationEventTopicScreenShare.md
 docs/QueueConversationEventTopicSocialExpression.md
 docs/QueueConversationEventTopicTransferDestination.md
@@ -4075,7 +4092,6 @@ docs/QueueConversationSocialExpressionEventTopicPhoneNumberColumn.md
 docs/QueueConversationSocialExpressionEventTopicQueueMediaSettings.md
 docs/QueueConversationSocialExpressionEventTopicRecordersState.md
 docs/QueueConversationSocialExpressionEventTopicScoredAgent.md
-docs/QueueConversationSocialExpressionEventTopicScreenMonitoring.md
 docs/QueueConversationSocialExpressionEventTopicScreenShare.md
 docs/QueueConversationSocialExpressionEventTopicSocialExpression.md
 docs/QueueConversationSocialExpressionEventTopicTransferDestination.md
@@ -4126,7 +4142,6 @@ docs/QueueConversationVideoEventTopicPhoneNumberColumn.md
 docs/QueueConversationVideoEventTopicQueueMediaSettings.md
 docs/QueueConversationVideoEventTopicRecordersState.md
 docs/QueueConversationVideoEventTopicScoredAgent.md
-docs/QueueConversationVideoEventTopicScreenMonitoring.md
 docs/QueueConversationVideoEventTopicScreenShare.md
 docs/QueueConversationVideoEventTopicSocialExpression.md
 docs/QueueConversationVideoEventTopicTransferDestination.md
@@ -4615,8 +4630,8 @@ docs/SocialMediaStatisticalSummary.md
 docs/SocialTopicPatchRequest.md
 docs/SocialTopicRequest.md
 docs/SocialTopicResponse.md
-docs/SocialTopicResponseEntityListing.md
 docs/SocialTopicWithDataIngestionRuleMetadataResponse.md
+docs/SocialTopicWithDataIngestionRuleMetadataResponseEntityListing.md
 docs/SortItem.md
 docs/Source.md
 docs/SourceBaseResponse.md
@@ -4670,6 +4685,7 @@ docs/StationsAPI.md
 docs/StatisticalResponse.md
 docs/StatisticalSummary.md
 docs/StatusChange.md
+docs/StatusInfo.md
 docs/StopSettings.md
 docs/StorySetting.md
 docs/StreetAddress.md
@@ -4908,6 +4924,8 @@ docs/TopicJobRequest.md
 docs/TopicOffset.md
 docs/TopicPhrase.md
 docs/TopicRequest.md
+docs/TopicsDefinitionsProgramMappings.md
+docs/TopicsDefinitionsProgramsMappingsEntityListing.md
 docs/TopicsEntityListing.md
 docs/TrackingSettings.md
 docs/TranscriptAggregateDataContainer.md
@@ -5065,6 +5083,8 @@ docs/UpdateDecisionTableColumnsRequest.md
 docs/UpdateDecisionTableRequest.md
 docs/UpdateDecisionTableVersionRequest.md
 docs/UpdateDraftInput.md
+docs/UpdateGuide.md
+docs/UpdateGuideVersion.md
 docs/UpdateManagementUnitRequest.md
 docs/UpdateManagementUnitsSettingsRequest.md
 docs/UpdateMuAgentRequest.md
@@ -5342,6 +5362,7 @@ docs/ValueWrapperMonthlyPlanningPeriodSettings.md
 docs/ValueWrapperPlanningPeriodSettings.md
 docs/ValueWrapperString.md
 docs/ValueWrapperUserSearchRule.md
+docs/Variable.md
 docs/VerificationResult.md
 docs/Verifier.md
 docs/VerifierEntityListing.md
@@ -5851,7 +5872,6 @@ docs/WritableDialerContact.md
 docs/WritableDivision.md
 docs/WritableEntity.md
 docs/WritableStarrableDivision.md
-docs/YearMonth.md
 docs/deleteAlertingAlert-example.txt
 docs/deleteAlertingAlertsAll-example.txt
 docs/deleteAlertingRule-example.txt
@@ -5946,6 +5966,7 @@ docs/deleteGamificationContest-example.txt
 docs/deleteGreeting-example.txt
 docs/deleteGroup-example.txt
 docs/deleteGroupMembers-example.txt
+docs/deleteGuideJobs-example.txt
 docs/deleteIdentityprovider-example.txt
 docs/deleteIdentityprovidersAdfs-example.txt
 docs/deleteIdentityprovidersCic-example.txt
@@ -6642,6 +6663,12 @@ docs/getGroupProfile-example.txt
 docs/getGroups-example.txt
 docs/getGroupsSearch-example.txt
 docs/getGroupsSearch-example.txt
+docs/getGuide-example.txt
+docs/getGuideJob-example.txt
+docs/getGuideVersion-example.txt
+docs/getGuideVersionJob-example.txt
+docs/getGuides-example.txt
+docs/getGuidesJob-example.txt
 docs/getIdentityprovider-example.txt
 docs/getIdentityproviders-example.txt
 docs/getIdentityprovidersAdfs-example.txt
@@ -7610,6 +7637,8 @@ docs/patchExternalcontactsOrganizationIdentifiers-example.txt
 docs/patchFlowsInstancesSettingsExecutiondata-example.txt
 docs/patchGamificationContest-example.txt
 docs/patchGeolocationsSettings-example.txt
+docs/patchGuide-example.txt
+docs/patchGuideVersion-example.txt
 docs/patchIntegration-example.txt
 docs/patchIntegrationsAction-example.txt
 docs/patchIntegrationsActionDraft-example.txt
@@ -7624,6 +7653,7 @@ docs/patchJourneyViewVersionJob-example.txt
 docs/patchKnowledgeGuestSessionDocumentsSearchSearchId-example.txt
 docs/patchKnowledgeKnowledgebase-example.txt
 docs/patchKnowledgeKnowledgebaseCategory-example.txt
+docs/patchKnowledgeKnowledgebaseChunksSearchSearchId-example.txt
 docs/patchKnowledgeKnowledgebaseDocument-example.txt
 docs/patchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId-example.txt
 docs/patchKnowledgeKnowledgebaseDocumentVariation-example.txt
@@ -8075,6 +8105,12 @@ docs/postGroups-example.txt
 docs/postGroupsSearch-example.txt
 docs/postGroupsSearch-example.txt
 docs/postGuideSessionTurns-example.txt
+docs/postGuideVersionJobs-example.txt
+docs/postGuideVersions-example.txt
+docs/postGuides-example.txt
+docs/postGuidesJobs-example.txt
+docs/postGuidesUploads-example.txt
+docs/postGuidesUploads-example.txt
 docs/postIdentityproviders-example.txt
 docs/postInfrastructureascodeJobs-example.txt
 docs/postIntegrations-example.txt
@@ -9271,6 +9307,7 @@ src/Models/AuditTopicDomainEntityRef.swift
 src/Models/AuditTopicMessageInfo.swift
 src/Models/AuditTopicPropertyChange.swift
 src/Models/AuthenticationSettings.swift
+src/Models/AuthoringKnowledgeSettings.swift
 src/Models/AuthorizationPolicy.swift
 src/Models/AuthorizationPolicyEntityListing.swift
 src/Models/AuthorizationSettings.swift
@@ -9627,7 +9664,10 @@ src/Models/CapacityPlanningRequirementsResultTopicStaffingRequirementsNotificati
 src/Models/CapacityPlansListResponse.swift
 src/Models/Card.swift
 src/Models/CardAction.swift
+src/Models/CardBodyText.swift
 src/Models/CardParameters.swift
+src/Models/Carousel.swift
+src/Models/CarouselCard.swift
 src/Models/CarouselParameters.swift
 src/Models/CaseReference.swift
 src/Models/CategoriesEntityListing.swift
@@ -9682,6 +9722,7 @@ src/Models/ChecklistInferenceJobCreationResponse.swift
 src/Models/ChecklistInferenceJobPayload.swift
 src/Models/ChecklistInferenceJobResponse.swift
 src/Models/ChecklistItem.swift
+src/Models/ChunkSearchRegisterRequest.swift
 src/Models/ClientApp.swift
 src/Models/ClientAppConfigurationInfo.swift
 src/Models/ClientAppEntityListing.swift
@@ -10119,7 +10160,6 @@ src/Models/ConversationEventTopicPhoneNumberColumn.swift
 src/Models/ConversationEventTopicQueueMediaSettings.swift
 src/Models/ConversationEventTopicRecordersState.swift
 src/Models/ConversationEventTopicScoredAgent.swift
-src/Models/ConversationEventTopicScreenMonitoring.swift
 src/Models/ConversationEventTopicScreenShare.swift
 src/Models/ConversationEventTopicSocialExpression.swift
 src/Models/ConversationEventTopicTransferDestination.swift
@@ -10372,6 +10412,8 @@ src/Models/CreateGeneralProgramTestPhraseDetectedPhrase.swift
 src/Models/CreateGeneralProgramTestPhraseMatchedTranscript.swift
 src/Models/CreateGeneralProgramTestTopicPhraseResults.swift
 src/Models/CreateGeneralProgramTopicsDefinitionsJob.swift
+src/Models/CreateGuide.swift
+src/Models/CreateGuideVersion.swift
 src/Models/CreateIntegrationRequest.swift
 src/Models/CreateManagementUnitApiRequest.swift
 src/Models/CreateManagementUnitSettingsRequest.swift
@@ -10482,6 +10524,7 @@ src/Models/DashboardConfigurationQueryRequest.swift
 src/Models/DashboardUser.swift
 src/Models/DashboardUserListing.swift
 src/Models/DashboardsSharedWith.swift
+src/Models/DataAction.swift
 src/Models/DataActionConditionPredicate.swift
 src/Models/DataActionConditionSettings.swift
 src/Models/DataActionContactColumnFieldMapping.swift
@@ -11276,7 +11319,9 @@ src/Models/GeneralProgramJobRequest.swift
 src/Models/GeneralTopic.swift
 src/Models/GeneralTopicsEntityListing.swift
 src/Models/GenerateBuForecastRequest.swift
+src/Models/GenerateGuideContentRequest.swift
 src/Models/GenerateMeetingIdRequest.swift
+src/Models/GeneratedGuideContent.swift
 src/Models/GenericSAML.swift
 src/Models/GenericTemplate.swift
 src/Models/GenesysBotConnector.swift
@@ -11330,6 +11375,10 @@ src/Models/GuestCategoryReference.swift
 src/Models/GuestCategoryResponseListing.swift
 src/Models/GuestMemberInfo.swift
 src/Models/GuestResponseCategory.swift
+src/Models/Guide.swift
+src/Models/GuideContentGenerationJob.swift
+src/Models/GuideEntityListing.swift
+src/Models/GuideJob.swift
 src/Models/GuideSessionInputEvent.swift
 src/Models/GuideSessionTurnInvocationData.swift
 src/Models/GuideSessionTurnInvocationParameters.swift
@@ -11338,6 +11387,12 @@ src/Models/GuideSessionTurnRequest.swift
 src/Models/GuideSessionTurnResponse.swift
 src/Models/GuideSessionTurnResponseData.swift
 src/Models/GuideSessionVariable.swift
+src/Models/GuideVersion.swift
+src/Models/GuideVersionPublish.swift
+src/Models/GuideVersionPublishJob.swift
+src/Models/GuideVersionPublishJobRequest.swift
+src/Models/GuideVersionRef.swift
+src/Models/GuideVersionResources.swift
 src/Models/HeadcountForecast.swift
 src/Models/HeadcountInterval.swift
 src/Models/Header.swift
@@ -11770,6 +11825,7 @@ src/Models/KnowledgeParseRecord.swift
 src/Models/KnowledgeSearchClientApplication.swift
 src/Models/KnowledgeSearchDocumentResponse.swift
 src/Models/KnowledgeSetting.swift
+src/Models/KnowledgeSettings.swift
 src/Models/KnowledgeSuggestionConfig.swift
 src/Models/KnowledgeSyncJobReport.swift
 src/Models/KnowledgeSyncJobRequest.swift
@@ -12536,7 +12592,6 @@ src/Models/ProgramInsightsSettings.swift
 src/Models/ProgramInsightsSettingsEntityListing.swift
 src/Models/ProgramJob.swift
 src/Models/ProgramJobRequest.swift
-src/Models/ProgramMappings.swift
 src/Models/ProgramMappingsRequest.swift
 src/Models/ProgramRequest.swift
 src/Models/ProgramTopicLinksTestPhraseDetectedPhrase.swift
@@ -12546,7 +12601,6 @@ src/Models/ProgramTopicLinksTopicsDefinitionsJob.swift
 src/Models/ProgramTranscriptionEngine.swift
 src/Models/ProgramTranscriptionEngines.swift
 src/Models/ProgramsEntityListing.swift
-src/Models/ProgramsMappingsEntityListing.swift
 src/Models/ProgressConsultTransferEvent.swift
 src/Models/ProgressTransferEvent.swift
 src/Models/Prompt.swift
@@ -12752,7 +12806,6 @@ src/Models/QueueConversationEventTopicPhoneNumberColumn.swift
 src/Models/QueueConversationEventTopicQueueMediaSettings.swift
 src/Models/QueueConversationEventTopicRecordersState.swift
 src/Models/QueueConversationEventTopicScoredAgent.swift
-src/Models/QueueConversationEventTopicScreenMonitoring.swift
 src/Models/QueueConversationEventTopicScreenShare.swift
 src/Models/QueueConversationEventTopicSocialExpression.swift
 src/Models/QueueConversationEventTopicTransferDestination.swift
@@ -12846,7 +12899,6 @@ src/Models/QueueConversationSocialExpressionEventTopicPhoneNumberColumn.swift
 src/Models/QueueConversationSocialExpressionEventTopicQueueMediaSettings.swift
 src/Models/QueueConversationSocialExpressionEventTopicRecordersState.swift
 src/Models/QueueConversationSocialExpressionEventTopicScoredAgent.swift
-src/Models/QueueConversationSocialExpressionEventTopicScreenMonitoring.swift
 src/Models/QueueConversationSocialExpressionEventTopicScreenShare.swift
 src/Models/QueueConversationSocialExpressionEventTopicSocialExpression.swift
 src/Models/QueueConversationSocialExpressionEventTopicTransferDestination.swift
@@ -12897,7 +12949,6 @@ src/Models/QueueConversationVideoEventTopicPhoneNumberColumn.swift
 src/Models/QueueConversationVideoEventTopicQueueMediaSettings.swift
 src/Models/QueueConversationVideoEventTopicRecordersState.swift
 src/Models/QueueConversationVideoEventTopicScoredAgent.swift
-src/Models/QueueConversationVideoEventTopicScreenMonitoring.swift
 src/Models/QueueConversationVideoEventTopicScreenShare.swift
 src/Models/QueueConversationVideoEventTopicSocialExpression.swift
 src/Models/QueueConversationVideoEventTopicTransferDestination.swift
@@ -13366,8 +13417,8 @@ src/Models/SocialMediaStatisticalSummary.swift
 src/Models/SocialTopicPatchRequest.swift
 src/Models/SocialTopicRequest.swift
 src/Models/SocialTopicResponse.swift
-src/Models/SocialTopicResponseEntityListing.swift
 src/Models/SocialTopicWithDataIngestionRuleMetadataResponse.swift
+src/Models/SocialTopicWithDataIngestionRuleMetadataResponseEntityListing.swift
 src/Models/SortItem.swift
 src/Models/Source.swift
 src/Models/SourceBaseResponse.swift
@@ -13417,6 +13468,7 @@ src/Models/StationEntityListing.swift
 src/Models/StatisticalResponse.swift
 src/Models/StatisticalSummary.swift
 src/Models/StatusChange.swift
+src/Models/StatusInfo.swift
 src/Models/StopSettings.swift
 src/Models/StorySetting.swift
 src/Models/StreetAddress.swift
@@ -13641,6 +13693,8 @@ src/Models/TopicJobRequest.swift
 src/Models/TopicOffset.swift
 src/Models/TopicPhrase.swift
 src/Models/TopicRequest.swift
+src/Models/TopicsDefinitionsProgramMappings.swift
+src/Models/TopicsDefinitionsProgramsMappingsEntityListing.swift
 src/Models/TopicsEntityListing.swift
 src/Models/TrackingSettings.swift
 src/Models/TranscriptAggregateDataContainer.swift
@@ -13798,6 +13852,8 @@ src/Models/UpdateDecisionTableColumnsRequest.swift
 src/Models/UpdateDecisionTableRequest.swift
 src/Models/UpdateDecisionTableVersionRequest.swift
 src/Models/UpdateDraftInput.swift
+src/Models/UpdateGuide.swift
+src/Models/UpdateGuideVersion.swift
 src/Models/UpdateManagementUnitRequest.swift
 src/Models/UpdateManagementUnitsSettingsRequest.swift
 src/Models/UpdateMuAgentRequest.swift
@@ -14065,6 +14121,7 @@ src/Models/ValueWrapperMonthlyPlanningPeriodSettings.swift
 src/Models/ValueWrapperPlanningPeriodSettings.swift
 src/Models/ValueWrapperString.swift
 src/Models/ValueWrapperUserSearchRule.swift
+src/Models/Variable.swift
 src/Models/VerificationResult.swift
 src/Models/Verifier.swift
 src/Models/VerifierEntityListing.swift
@@ -14561,6 +14618,5 @@ src/Models/WritableDialerContact.swift
 src/Models/WritableDivision.swift
 src/Models/WritableEntity.swift
 src/Models/WritableStarrableDivision.swift
-src/Models/YearMonth.swift
 src/SdkConfiguration.swift
 src/UrlSessionImplementations.swift

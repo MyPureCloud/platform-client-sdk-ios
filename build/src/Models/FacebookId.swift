@@ -7,9 +7,9 @@ public class FacebookId: Codable {
 
 
 
-    /** The set of scopedIds that this person has. Each scopedId is specific to a page or app that the user interacts with. */
+    /** The set of scopedIds that this person has. Each scopedId is specific to a page or app that the user interacts with. Max: 1 Id */
     public var ids: [FacebookScopedId]?
-    /** The displayName of this person's Facebook account. Roughly translates to user.first_name + ' ' + user.last_name in the Facebook API. */
+    /** The displayName of this person's Facebook account. Roughly translates to user.first_name + ' ' + user.last_name in the Facebook API. Max: 100 characters. */
     public var displayName: String?
 
     public init(ids: [FacebookScopedId]?, displayName: String?) {

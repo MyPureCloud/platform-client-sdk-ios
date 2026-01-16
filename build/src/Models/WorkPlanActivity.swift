@@ -34,6 +34,8 @@ public class WorkPlanActivity: Codable {
 
 
 
+
+
     /** ID of the activity code associated with this activity */
     public var activityCodeId: String?
     /** Description of the activity */
@@ -60,6 +62,8 @@ public class WorkPlanActivity: Codable {
     public var minimumLengthFromShiftStartMinutes: Int?
     /** The minimum duration between shift item (e.g., break or meal) end and shift end in minutes */
     public var minimumLengthFromShiftEndMinutes: Int?
+    /** The maximum duration between shift item (e.g., break or meal) end and shift end in minutes */
+    public var maximumLengthFromShiftEndMinutes: Int?
     /** ID of the activity. This is required only for the case of updating an existing activity */
     public var _id: String?
     /** If marked true for updating an existing activity, the activity will be permanently deleted */
@@ -67,7 +71,7 @@ public class WorkPlanActivity: Codable {
     /** ID of the activity in the context of work plan validation */
     public var validationId: String?
 
-    public init(activityCodeId: String?, _description: String?, lengthMinutes: Int?, startTimeIsRelativeToShiftStart: Bool?, flexibleStartTime: Bool?, earliestStartTimeMinutes: Int?, latestStartTimeMinutes: Int?, exactStartTimeMinutes: Int?, startTimeIncrementMinutes: Int?, countsAsPaidTime: Bool?, countsAsContiguousWorkTime: Bool?, minimumLengthFromShiftStartMinutes: Int?, minimumLengthFromShiftEndMinutes: Int?, _id: String?, delete: Bool?, validationId: String?) {
+    public init(activityCodeId: String?, _description: String?, lengthMinutes: Int?, startTimeIsRelativeToShiftStart: Bool?, flexibleStartTime: Bool?, earliestStartTimeMinutes: Int?, latestStartTimeMinutes: Int?, exactStartTimeMinutes: Int?, startTimeIncrementMinutes: Int?, countsAsPaidTime: Bool?, countsAsContiguousWorkTime: Bool?, minimumLengthFromShiftStartMinutes: Int?, minimumLengthFromShiftEndMinutes: Int?, maximumLengthFromShiftEndMinutes: Int?, _id: String?, delete: Bool?, validationId: String?) {
         self.activityCodeId = activityCodeId
         self._description = _description
         self.lengthMinutes = lengthMinutes
@@ -81,6 +85,7 @@ public class WorkPlanActivity: Codable {
         self.countsAsContiguousWorkTime = countsAsContiguousWorkTime
         self.minimumLengthFromShiftStartMinutes = minimumLengthFromShiftStartMinutes
         self.minimumLengthFromShiftEndMinutes = minimumLengthFromShiftEndMinutes
+        self.maximumLengthFromShiftEndMinutes = maximumLengthFromShiftEndMinutes
         self._id = _id
         self.delete = delete
         self.validationId = validationId
@@ -100,6 +105,7 @@ public class WorkPlanActivity: Codable {
         case countsAsContiguousWorkTime
         case minimumLengthFromShiftStartMinutes
         case minimumLengthFromShiftEndMinutes
+        case maximumLengthFromShiftEndMinutes
         case _id = "id"
         case delete
         case validationId

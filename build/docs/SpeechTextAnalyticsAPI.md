@@ -942,7 +942,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgram(programId: programId) { 
 
 
 
-> [ProgramMappings](ProgramMappings) getSpeechandtextanalyticsProgramMappings(programId)
+> [TopicsDefinitionsProgramMappings](TopicsDefinitionsProgramMappings) getSpeechandtextanalyticsProgramMappings(programId)
 
 Get Speech &amp; Text Analytics program mappings to queues and flows by id
 
@@ -985,7 +985,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramMappings(programId: progr
 
 ### Return type
 
-[**ProgramMappings**](ProgramMappings)
+[**TopicsDefinitionsProgramMappings**](TopicsDefinitionsProgramMappings)
 
 
 ## getSpeechandtextanalyticsProgramSettingsInsights
@@ -1200,7 +1200,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsGeneralJob(jobId: jobId)
 
 
 
-> [ProgramsMappingsEntityListing](ProgramsMappingsEntityListing) getSpeechandtextanalyticsProgramsMappings(nextPage, pageSize)
+> [TopicsDefinitionsProgramsMappingsEntityListing](TopicsDefinitionsProgramsMappingsEntityListing) getSpeechandtextanalyticsProgramsMappings(nextPage, pageSize)
 
 Get the list of Speech &amp; Text Analytics programs mappings to queues and flows
 
@@ -1245,7 +1245,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsMappings(nextPage: nextP
 
 ### Return type
 
-[**ProgramsMappingsEntityListing**](ProgramsMappingsEntityListing)
+[**TopicsDefinitionsProgramsMappingsEntityListing**](TopicsDefinitionsProgramsMappingsEntityListing)
 
 
 ## getSpeechandtextanalyticsProgramsPublishjob
@@ -2769,7 +2769,7 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsProgram(programId: programId, bo
 
 
 
-> [ProgramMappings](ProgramMappings) putSpeechandtextanalyticsProgramMappings(programId, body)
+> [TopicsDefinitionsProgramMappings](TopicsDefinitionsProgramMappings) putSpeechandtextanalyticsProgramMappings(programId, body)
 
 Set Speech &amp; Text Analytics program mappings to queues and flows
 
@@ -2814,7 +2814,7 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsProgramMappings(programId: progr
 
 ### Return type
 
-[**ProgramMappings**](ProgramMappings)
+[**TopicsDefinitionsProgramMappings**](TopicsDefinitionsProgramMappings)
 
 
 ## putSpeechandtextanalyticsProgramSettingsInsights
@@ -3024,4 +3024,4 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsTopic(topicId: topicId, body: bo
 [**Topic**](Topic)
 
 
-_PureCloudPlatformClientV2@184.0.0_
+_PureCloudPlatformClientV2@185.0.0_

@@ -6,6 +6,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**getKnowledgeKnowledgebaseUploadsUrlsJob**](UploadsAPI#getKnowledgeKnowledgebaseUploadsUrlsJob) | Get content upload from URL job status |
 | [**postGamificationContestsUploadsPrizeimages**](UploadsAPI#postGamificationContestsUploadsPrizeimages) | Generates pre-signed URL to upload a prize image for gamification contests |
+| [**postGuidesUploads**](UploadsAPI#postGuidesUploads) | Generate presigned URL for uploading a file content to generate guide |
 | [**postIntegrationsActionDraftFunctionUpload**](UploadsAPI#postIntegrationsActionDraftFunctionUpload) | Create upload presigned URL for draft function package file. |
 | [**postKnowledgeDocumentuploads**](UploadsAPI#postKnowledgeDocumentuploads) | Creates a presigned URL for uploading a knowledge import file with a set of documents |
 | [**postKnowledgeKnowledgebaseUploadsUrlsJobs**](UploadsAPI#postKnowledgeKnowledgebaseUploadsUrlsJobs) | Create content upload from URL job |
@@ -112,6 +113,56 @@ UploadsAPI.postGamificationContestsUploadsPrizeimages(body: body) { (response, e
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**GamificationContestPrizeImageUploadUrlRequest**](GamificationContestPrizeImageUploadUrlRequest)| query | |
+
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse)
+
+
+## postGuidesUploads
+
+
+
+> [UploadUrlResponse](UploadUrlResponse) postGuidesUploads(body)
+
+Generate presigned URL for uploading a file content to generate guide
+
+
+
+Wraps POST /api/v2/guides/uploads  
+
+Requires ALL permissions: 
+
+* aiStudio:guide:upload
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: UploadUrlRequest = new UploadUrlRequest(...) // query
+
+// Code example
+UploadsAPI.postGuidesUploads(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UploadsAPI.postGuidesUploads was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**UploadUrlRequest**](UploadUrlRequest)| query | |
 
 
 ### Return type
@@ -525,4 +576,4 @@ UploadsAPI.postUploadsWorkforcemanagementHistoricaldataCsv(body: body) { (respon
 [**UploadUrlResponse**](UploadUrlResponse)
 
 
-_PureCloudPlatformClientV2@184.0.0_
+_PureCloudPlatformClientV2@185.0.0_

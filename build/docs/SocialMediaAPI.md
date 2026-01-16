@@ -1462,7 +1462,7 @@ SocialMediaAPI.getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleI
 
 
 
-> [SocialTopicResponseEntityListing](SocialTopicResponseEntityListing) getSocialmediaTopics(pageNumber, pageSize, divisionIds, includeDeleted, name, ids)
+> [SocialTopicWithDataIngestionRuleMetadataResponseEntityListing](SocialTopicWithDataIngestionRuleMetadataResponseEntityListing) getSocialmediaTopics(pageNumber, pageSize, divisionIds, includeDeleted, name, ids)
 
 Retrieve all social topics.
 
@@ -1515,7 +1515,7 @@ SocialMediaAPI.getSocialmediaTopics(pageNumber: pageNumber, pageSize: pageSize, 
 
 ### Return type
 
-[**SocialTopicResponseEntityListing**](SocialTopicResponseEntityListing)
+[**SocialTopicWithDataIngestionRuleMetadataResponseEntityListing**](SocialTopicWithDataIngestionRuleMetadataResponseEntityListing)
 
 
 ## patchSocialmediaTopic
@@ -2676,4 +2676,4 @@ SocialMediaAPI.putSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleI
 [**TwitterDataIngestionRuleResponse**](TwitterDataIngestionRuleResponse)
 
 
-_PureCloudPlatformClientV2@184.0.0_
+_PureCloudPlatformClientV2@185.0.0_

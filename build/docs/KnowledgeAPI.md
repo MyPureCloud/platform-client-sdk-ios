@@ -50,6 +50,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchKnowledgeGuestSessionDocumentsSearchSearchId**](KnowledgeAPI#patchKnowledgeGuestSessionDocumentsSearchSearchId) | Update search result. |
 | [**patchKnowledgeKnowledgebase**](KnowledgeAPI#patchKnowledgeKnowledgebase) | Update knowledge base |
 | [**patchKnowledgeKnowledgebaseCategory**](KnowledgeAPI#patchKnowledgeKnowledgebaseCategory) | Update category |
+| [**patchKnowledgeKnowledgebaseChunksSearchSearchId**](KnowledgeAPI#patchKnowledgeKnowledgebaseChunksSearchSearchId) | Register chunk search result. |
 | [**patchKnowledgeKnowledgebaseDocument**](KnowledgeAPI#patchKnowledgeKnowledgebaseDocument) | Update document. |
 | [**patchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId**](KnowledgeAPI#patchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId) | Update feedback on a document |
 | [**patchKnowledgeKnowledgebaseDocumentVariation**](KnowledgeAPI#patchKnowledgeKnowledgebaseDocumentVariation) | Update a variation for a document. |
@@ -2670,6 +2671,59 @@ KnowledgeAPI.patchKnowledgeKnowledgebaseCategory(knowledgeBaseId: knowledgeBaseI
 [**CategoryResponse**](CategoryResponse)
 
 
+## patchKnowledgeKnowledgebaseChunksSearchSearchId
+
+
+
+> Void patchKnowledgeKnowledgebaseChunksSearchSearchId(knowledgeBaseId, searchId, body)
+
+Register chunk search result.
+
+
+
+Wraps PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/chunks/search/{searchId}  
+
+Requires ALL permissions: 
+
+* knowledge:knowledgebase:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge Base ID
+let searchId: String = "" // Unique identifier of search request
+let body: ChunkSearchRegisterRequest = new ChunkSearchRegisterRequest(...) // 
+
+// Code example
+KnowledgeAPI.patchKnowledgeKnowledgebaseChunksSearchSearchId(knowledgeBaseId: knowledgeBaseId, searchId: searchId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("KnowledgeAPI.patchKnowledgeKnowledgebaseChunksSearchSearchId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge Base ID | |
+| **searchId** | **String**| Unique identifier of search request | |
+| **body** | [**ChunkSearchRegisterRequest**](ChunkSearchRegisterRequest)|  | [optional] |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
 ## patchKnowledgeKnowledgebaseDocument
 
 
@@ -5202,4 +5256,4 @@ KnowledgeAPI.putKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId:
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatformClientV2@184.0.0_
+_PureCloudPlatformClientV2@185.0.0_

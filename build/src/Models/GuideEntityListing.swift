@@ -1,6 +1,6 @@
 
 
-public class SocialTopicResponseEntityListing: Codable {
+public class GuideEntityListing: Codable {
 
 
 
@@ -22,7 +22,7 @@ public class SocialTopicResponseEntityListing: Codable {
 
 
 
-    public var entities: [SocialTopicResponse]?
+    public var entities: [Guide]?
     public var pageSize: Int?
     public var pageNumber: Int?
     public var total: Int64?
@@ -33,7 +33,7 @@ public class SocialTopicResponseEntityListing: Codable {
     public var selfUri: String?
     public var pageCount: Int?
 
-    public init(entities: [SocialTopicResponse]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [Guide]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber

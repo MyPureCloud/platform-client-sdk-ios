@@ -9193,6 +9193,7 @@ open class WorkforceManagementAPI {
       "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
+      "maximumLengthFromShiftEndMinutes" : 3,
       "activityCodeId" : "activityCodeId",
       "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
@@ -9210,6 +9211,7 @@ open class WorkforceManagementAPI {
       "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
+      "maximumLengthFromShiftEndMinutes" : 3,
       "activityCodeId" : "activityCodeId",
       "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
@@ -9254,6 +9256,7 @@ open class WorkforceManagementAPI {
       "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
+      "maximumLengthFromShiftEndMinutes" : 3,
       "activityCodeId" : "activityCodeId",
       "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
@@ -9271,6 +9274,7 @@ open class WorkforceManagementAPI {
       "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
+      "maximumLengthFromShiftEndMinutes" : 3,
       "activityCodeId" : "activityCodeId",
       "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
@@ -9316,7 +9320,8 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "minimumDaysOffPerPlanningPeriod" : 7,
   "constrainMaximumConsecutiveWorkingWeekends" : true,
-  "agentCount" : 7
+  "agentCount" : 7,
+  "shiftStartVariancePeriod" : "Weekly"
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -9621,6 +9626,7 @@ open class WorkforceManagementAPI {
         "latestStartTimeMinutes" : 2,
         "countsAsPaidTime" : true,
         "delete" : true,
+        "maximumLengthFromShiftEndMinutes" : 3,
         "activityCodeId" : "activityCodeId",
         "minimumLengthFromShiftStartMinutes" : 5,
         "startTimeIsRelativeToShiftStart" : true,
@@ -9638,6 +9644,7 @@ open class WorkforceManagementAPI {
         "latestStartTimeMinutes" : 2,
         "countsAsPaidTime" : true,
         "delete" : true,
+        "maximumLengthFromShiftEndMinutes" : 3,
         "activityCodeId" : "activityCodeId",
         "minimumLengthFromShiftStartMinutes" : 5,
         "startTimeIsRelativeToShiftStart" : true,
@@ -9682,6 +9689,7 @@ open class WorkforceManagementAPI {
         "latestStartTimeMinutes" : 2,
         "countsAsPaidTime" : true,
         "delete" : true,
+        "maximumLengthFromShiftEndMinutes" : 3,
         "activityCodeId" : "activityCodeId",
         "minimumLengthFromShiftStartMinutes" : 5,
         "startTimeIsRelativeToShiftStart" : true,
@@ -9699,6 +9707,7 @@ open class WorkforceManagementAPI {
         "latestStartTimeMinutes" : 2,
         "countsAsPaidTime" : true,
         "delete" : true,
+        "maximumLengthFromShiftEndMinutes" : 3,
         "activityCodeId" : "activityCodeId",
         "minimumLengthFromShiftStartMinutes" : 5,
         "startTimeIsRelativeToShiftStart" : true,
@@ -9744,7 +9753,8 @@ open class WorkforceManagementAPI {
     "name" : "name",
     "minimumDaysOffPerPlanningPeriod" : 7,
     "constrainMaximumConsecutiveWorkingWeekends" : true,
-    "agentCount" : 7
+    "agentCount" : 7,
+    "shiftStartVariancePeriod" : "Weekly"
   }, {
     "maximumDaysOffPerPlanningPeriod" : 1,
     "minimumPaidMinutesPerPlanningPeriod" : 1,
@@ -9787,6 +9797,7 @@ open class WorkforceManagementAPI {
         "latestStartTimeMinutes" : 2,
         "countsAsPaidTime" : true,
         "delete" : true,
+        "maximumLengthFromShiftEndMinutes" : 3,
         "activityCodeId" : "activityCodeId",
         "minimumLengthFromShiftStartMinutes" : 5,
         "startTimeIsRelativeToShiftStart" : true,
@@ -9804,6 +9815,7 @@ open class WorkforceManagementAPI {
         "latestStartTimeMinutes" : 2,
         "countsAsPaidTime" : true,
         "delete" : true,
+        "maximumLengthFromShiftEndMinutes" : 3,
         "activityCodeId" : "activityCodeId",
         "minimumLengthFromShiftStartMinutes" : 5,
         "startTimeIsRelativeToShiftStart" : true,
@@ -9848,6 +9860,7 @@ open class WorkforceManagementAPI {
         "latestStartTimeMinutes" : 2,
         "countsAsPaidTime" : true,
         "delete" : true,
+        "maximumLengthFromShiftEndMinutes" : 3,
         "activityCodeId" : "activityCodeId",
         "minimumLengthFromShiftStartMinutes" : 5,
         "startTimeIsRelativeToShiftStart" : true,
@@ -9865,6 +9878,7 @@ open class WorkforceManagementAPI {
         "latestStartTimeMinutes" : 2,
         "countsAsPaidTime" : true,
         "delete" : true,
+        "maximumLengthFromShiftEndMinutes" : 3,
         "activityCodeId" : "activityCodeId",
         "minimumLengthFromShiftStartMinutes" : 5,
         "startTimeIsRelativeToShiftStart" : true,
@@ -9910,7 +9924,8 @@ open class WorkforceManagementAPI {
     "name" : "name",
     "minimumDaysOffPerPlanningPeriod" : 7,
     "constrainMaximumConsecutiveWorkingWeekends" : true,
-    "agentCount" : 7
+    "agentCount" : 7,
+    "shiftStartVariancePeriod" : "Weekly"
   } ]
 }, statusCode=200}]
      
@@ -13465,6 +13480,7 @@ open class WorkforceManagementAPI {
       "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
+      "maximumLengthFromShiftEndMinutes" : 3,
       "activityCodeId" : "activityCodeId",
       "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
@@ -13482,6 +13498,7 @@ open class WorkforceManagementAPI {
       "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
+      "maximumLengthFromShiftEndMinutes" : 3,
       "activityCodeId" : "activityCodeId",
       "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
@@ -13526,6 +13543,7 @@ open class WorkforceManagementAPI {
       "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
+      "maximumLengthFromShiftEndMinutes" : 3,
       "activityCodeId" : "activityCodeId",
       "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
@@ -13543,6 +13561,7 @@ open class WorkforceManagementAPI {
       "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
+      "maximumLengthFromShiftEndMinutes" : 3,
       "activityCodeId" : "activityCodeId",
       "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
@@ -13588,7 +13607,8 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "minimumDaysOffPerPlanningPeriod" : 7,
   "constrainMaximumConsecutiveWorkingWeekends" : true,
-  "agentCount" : 7
+  "agentCount" : 7,
+  "shiftStartVariancePeriod" : "Weekly"
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -20533,6 +20553,7 @@ open class WorkforceManagementAPI {
       "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
+      "maximumLengthFromShiftEndMinutes" : 3,
       "activityCodeId" : "activityCodeId",
       "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
@@ -20550,6 +20571,7 @@ open class WorkforceManagementAPI {
       "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
+      "maximumLengthFromShiftEndMinutes" : 3,
       "activityCodeId" : "activityCodeId",
       "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
@@ -20594,6 +20616,7 @@ open class WorkforceManagementAPI {
       "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
+      "maximumLengthFromShiftEndMinutes" : 3,
       "activityCodeId" : "activityCodeId",
       "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
@@ -20611,6 +20634,7 @@ open class WorkforceManagementAPI {
       "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
+      "maximumLengthFromShiftEndMinutes" : 3,
       "activityCodeId" : "activityCodeId",
       "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
@@ -20656,7 +20680,8 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "minimumDaysOffPerPlanningPeriod" : 7,
   "constrainMaximumConsecutiveWorkingWeekends" : true,
-  "agentCount" : 7
+  "agentCount" : 7,
+  "shiftStartVariancePeriod" : "Weekly"
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -21003,6 +21028,7 @@ open class WorkforceManagementAPI {
       "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
+      "maximumLengthFromShiftEndMinutes" : 3,
       "activityCodeId" : "activityCodeId",
       "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
@@ -21020,6 +21046,7 @@ open class WorkforceManagementAPI {
       "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
+      "maximumLengthFromShiftEndMinutes" : 3,
       "activityCodeId" : "activityCodeId",
       "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
@@ -21064,6 +21091,7 @@ open class WorkforceManagementAPI {
       "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
+      "maximumLengthFromShiftEndMinutes" : 3,
       "activityCodeId" : "activityCodeId",
       "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
@@ -21081,6 +21109,7 @@ open class WorkforceManagementAPI {
       "latestStartTimeMinutes" : 2,
       "countsAsPaidTime" : true,
       "delete" : true,
+      "maximumLengthFromShiftEndMinutes" : 3,
       "activityCodeId" : "activityCodeId",
       "minimumLengthFromShiftStartMinutes" : 5,
       "startTimeIsRelativeToShiftStart" : true,
@@ -21126,7 +21155,8 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "minimumDaysOffPerPlanningPeriod" : 7,
   "constrainMaximumConsecutiveWorkingWeekends" : true,
-  "agentCount" : 7
+  "agentCount" : 7,
+  "shiftStartVariancePeriod" : "Weekly"
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 

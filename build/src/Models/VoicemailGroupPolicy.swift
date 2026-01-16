@@ -34,6 +34,8 @@ public class VoicemailGroupPolicy: Codable {
 
 
 
+
+
     public var name: String?
     /** The group associated with the policy */
     public var group: Group?
@@ -61,8 +63,10 @@ public class VoicemailGroupPolicy: Codable {
     public var interactiveResponsePromptId: String?
     /** Whether user should be prompted with a confirmation prompt when connecting to a Group Ring call */
     public var interactiveResponseRequired: Bool?
+    /** Whether the group phone number should be included in users' caller id lists */
+    public var includeGroupNumberInUserCallerIdLists: Bool?
 
-    public init(name: String?, group: Group?, enabled: Bool?, sendEmailNotifications: Bool?, disableEmailPii: Bool?, includeEmailTranscriptions: Bool?, languagePreference: String?, emailPolicy: GroupEmailPolicy?, rotateCallsSecs: Int?, stopRingingAfterRotations: Int?, overflowGroupId: String?, groupAlertType: GroupAlertType?, interactiveResponsePromptId: String?, interactiveResponseRequired: Bool?) {
+    public init(name: String?, group: Group?, enabled: Bool?, sendEmailNotifications: Bool?, disableEmailPii: Bool?, includeEmailTranscriptions: Bool?, languagePreference: String?, emailPolicy: GroupEmailPolicy?, rotateCallsSecs: Int?, stopRingingAfterRotations: Int?, overflowGroupId: String?, groupAlertType: GroupAlertType?, interactiveResponsePromptId: String?, interactiveResponseRequired: Bool?, includeGroupNumberInUserCallerIdLists: Bool?) {
         self.name = name
         self.group = group
         self.enabled = enabled
@@ -77,6 +81,7 @@ public class VoicemailGroupPolicy: Codable {
         self.groupAlertType = groupAlertType
         self.interactiveResponsePromptId = interactiveResponsePromptId
         self.interactiveResponseRequired = interactiveResponseRequired
+        self.includeGroupNumberInUserCallerIdLists = includeGroupNumberInUserCallerIdLists
     }
 
 

@@ -58,6 +58,124 @@ open class AIStudioAPI {
     
     
     /**
+     Start the deletion of a guide.
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteGuideJobs(guideId: String, completion: @escaping ((_ data: GuideJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteGuideJobsWithRequestBuilder(guideId: guideId)
+        requestBuilder.execute { (response: Response<GuideJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Start the deletion of a guide.
+     - DELETE /api/v2/guides/{guideId}/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "errors" : [ {
+    "messageWithParams" : "messageWithParams",
+    "code" : "code",
+    "entityName" : "entityName",
+    "limit" : {
+      "namespace" : "workforce.management.forecast",
+      "value" : 7,
+      "key" : "key"
+    },
+    "entityId" : "entityId",
+    "contextId" : "contextId",
+    "details" : [ {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    }, {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    } ],
+    "messageParams" : {
+      "key" : "messageParams"
+    },
+    "message" : "message",
+    "errors" : [ null, null ],
+    "status" : 2
+  }, {
+    "messageWithParams" : "messageWithParams",
+    "code" : "code",
+    "entityName" : "entityName",
+    "limit" : {
+      "namespace" : "workforce.management.forecast",
+      "value" : 7,
+      "key" : "key"
+    },
+    "entityId" : "entityId",
+    "contextId" : "contextId",
+    "details" : [ {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    }, {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    } ],
+    "messageParams" : {
+      "key" : "messageParams"
+    },
+    "message" : "message",
+    "errors" : [ null, null ],
+    "status" : 2
+  } ],
+  "guide" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "status" : "InProgress"
+}, statusCode=200}]
+     
+     - parameter guideId: (path) Guide ID 
+
+     - returns: RequestBuilder<GuideJob> 
+     */
+    open class func deleteGuideJobsWithRequestBuilder(guideId: String) -> RequestBuilder<GuideJob> {        
+        var path = "/api/v2/guides/{guideId}/jobs"
+        let guideIdPreEscape = "\(guideId)"
+        let guideIdPostEscape = guideIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{guideId}", with: guideIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GuideJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Receive a summary setting.
      
      - parameter summarySettingId: (path) Summary setting id 
@@ -300,6 +418,844 @@ open class AIStudioAPI {
     
     
     /**
+     Get guide.
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGuide(guideId: String, completion: @escaping ((_ data: Guide?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGuideWithRequestBuilder(guideId: guideId)
+        requestBuilder.execute { (response: Response<Guide>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get guide.
+     - GET /api/v2/guides/{guideId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "latestProductionReadyVersion" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "latestSavedVersion" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "source" : "Manual",
+  "status" : "Published"
+}, statusCode=200}]
+     
+     - parameter guideId: (path) Guide ID 
+
+     - returns: RequestBuilder<Guide> 
+     */
+    open class func getGuideWithRequestBuilder(guideId: String) -> RequestBuilder<Guide> {        
+        var path = "/api/v2/guides/{guideId}"
+        let guideIdPreEscape = "\(guideId)"
+        let guideIdPostEscape = guideIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{guideId}", with: guideIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Guide>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get the specified guide deletion job.
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter jobId: (path) jobId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGuideJob(guideId: String, jobId: String, completion: @escaping ((_ data: GuideJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGuideJobWithRequestBuilder(guideId: guideId, jobId: jobId)
+        requestBuilder.execute { (response: Response<GuideJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the specified guide deletion job.
+     - GET /api/v2/guides/{guideId}/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "errors" : [ {
+    "messageWithParams" : "messageWithParams",
+    "code" : "code",
+    "entityName" : "entityName",
+    "limit" : {
+      "namespace" : "workforce.management.forecast",
+      "value" : 7,
+      "key" : "key"
+    },
+    "entityId" : "entityId",
+    "contextId" : "contextId",
+    "details" : [ {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    }, {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    } ],
+    "messageParams" : {
+      "key" : "messageParams"
+    },
+    "message" : "message",
+    "errors" : [ null, null ],
+    "status" : 2
+  }, {
+    "messageWithParams" : "messageWithParams",
+    "code" : "code",
+    "entityName" : "entityName",
+    "limit" : {
+      "namespace" : "workforce.management.forecast",
+      "value" : 7,
+      "key" : "key"
+    },
+    "entityId" : "entityId",
+    "contextId" : "contextId",
+    "details" : [ {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    }, {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    } ],
+    "messageParams" : {
+      "key" : "messageParams"
+    },
+    "message" : "message",
+    "errors" : [ null, null ],
+    "status" : 2
+  } ],
+  "guide" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "status" : "InProgress"
+}, statusCode=200}]
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter jobId: (path) jobId 
+
+     - returns: RequestBuilder<GuideJob> 
+     */
+    open class func getGuideJobWithRequestBuilder(guideId: String, jobId: String) -> RequestBuilder<GuideJob> {        
+        var path = "/api/v2/guides/{guideId}/jobs/{jobId}"
+        let guideIdPreEscape = "\(guideId)"
+        let guideIdPostEscape = guideIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{guideId}", with: guideIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GuideJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a guide version.
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter versionId: (path) Version ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGuideVersion(guideId: String, versionId: String, completion: @escaping ((_ data: GuideVersion?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGuideVersionWithRequestBuilder(guideId: guideId, versionId: versionId)
+        requestBuilder.execute { (response: Response<GuideVersion>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a guide version.
+     - GET /api/v2/guides/{guideId}/versions/{versionId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "variables" : [ {
+    "scope" : "Input",
+    "name" : "name",
+    "description" : "description",
+    "type" : "String"
+  }, {
+    "scope" : "Input",
+    "name" : "name",
+    "description" : "description",
+    "type" : "String"
+  } ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "knowledgeSettings" : "{}",
+  "instruction" : "instruction",
+  "selfUri" : "https://openapi-generator.tech",
+  "resources" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "state" : "Draft",
+  "version" : "version",
+  "guide" : "{}"
+}, statusCode=200}]
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter versionId: (path) Version ID 
+
+     - returns: RequestBuilder<GuideVersion> 
+     */
+    open class func getGuideVersionWithRequestBuilder(guideId: String, versionId: String) -> RequestBuilder<GuideVersion> {        
+        var path = "/api/v2/guides/{guideId}/versions/{versionId}"
+        let guideIdPreEscape = "\(guideId)"
+        let guideIdPostEscape = guideIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{guideId}", with: guideIdPostEscape, options: .literal, range: nil)
+        let versionIdPreEscape = "\(versionId)"
+        let versionIdPostEscape = versionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{versionId}", with: versionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GuideVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get the status of the publishing job for this guide version.
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter versionId: (path) Version ID 
+     - parameter jobId: (path) jobId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGuideVersionJob(guideId: String, versionId: String, jobId: String, completion: @escaping ((_ data: GuideVersionPublishJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGuideVersionJobWithRequestBuilder(guideId: guideId, versionId: versionId, jobId: jobId)
+        requestBuilder.execute { (response: Response<GuideVersionPublishJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the status of the publishing job for this guide version.
+     - GET /api/v2/guides/{guideId}/versions/{versionId}/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "guideVersion" : {
+    "variables" : [ {
+      "scope" : "Input",
+      "name" : "name",
+      "description" : "description",
+      "type" : "String"
+    }, {
+      "scope" : "Input",
+      "name" : "name",
+      "description" : "description",
+      "type" : "String"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "knowledgeSettings" : "{}",
+    "instruction" : "instruction",
+    "selfUri" : "https://openapi-generator.tech",
+    "resources" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "state" : "Draft",
+    "version" : "version",
+    "guide" : "{}"
+  },
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "errors" : [ {
+    "messageWithParams" : "messageWithParams",
+    "code" : "code",
+    "entityName" : "entityName",
+    "limit" : {
+      "namespace" : "workforce.management.forecast",
+      "value" : 7,
+      "key" : "key"
+    },
+    "entityId" : "entityId",
+    "contextId" : "contextId",
+    "details" : [ {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    }, {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    } ],
+    "messageParams" : {
+      "key" : "messageParams"
+    },
+    "message" : "message",
+    "errors" : [ null, null ],
+    "status" : 2
+  }, {
+    "messageWithParams" : "messageWithParams",
+    "code" : "code",
+    "entityName" : "entityName",
+    "limit" : {
+      "namespace" : "workforce.management.forecast",
+      "value" : 7,
+      "key" : "key"
+    },
+    "entityId" : "entityId",
+    "contextId" : "contextId",
+    "details" : [ {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    }, {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    } ],
+    "messageParams" : {
+      "key" : "messageParams"
+    },
+    "message" : "message",
+    "errors" : [ null, null ],
+    "status" : 2
+  } ],
+  "guide" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "status" : "InProgress"
+}, statusCode=200}]
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter versionId: (path) Version ID 
+     - parameter jobId: (path) jobId 
+
+     - returns: RequestBuilder<GuideVersionPublishJob> 
+     */
+    open class func getGuideVersionJobWithRequestBuilder(guideId: String, versionId: String, jobId: String) -> RequestBuilder<GuideVersionPublishJob> {        
+        var path = "/api/v2/guides/{guideId}/versions/{versionId}/jobs/{jobId}"
+        let guideIdPreEscape = "\(guideId)"
+        let guideIdPostEscape = guideIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{guideId}", with: guideIdPostEscape, options: .literal, range: nil)
+        let versionIdPreEscape = "\(versionId)"
+        let versionIdPostEscape = versionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{versionId}", with: versionIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GuideVersionPublishJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    public enum Status_getGuides: String { 
+        case published = "Published"
+        case draft = "Draft"
+    }
+    
+    
+    
+    public enum SortBy_getGuides: String { 
+        case datemodified = "dateModified"
+        case name = "name"
+        case status = "status"
+    }
+    
+    
+    
+    public enum SortOrder_getGuides: String { 
+        case asc = "asc"
+        case desc = "desc"
+    }
+    
+    
+    
+    
+    
+    
+    /**
+     Get all guides.
+     
+     - parameter name: (query) Filter by matching name - case insensitive. (optional)
+     - parameter nameContains: (query) Filter by name contains - case insensitive. (optional)
+     - parameter status: (query) Filter by status. (optional)
+     - parameter sortBy: (query) Sort by. Default value dateModified. (optional)
+     - parameter sortOrder: (query) Sort Order. Default value desc. (optional)
+     - parameter pageNumber: (query) Page number. (optional)
+     - parameter pageSize: (query) Page size. The maximum page size is 100. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGuides(name: String? = nil, nameContains: String? = nil, status: Status_getGuides? = nil, sortBy: SortBy_getGuides? = nil, sortOrder: SortOrder_getGuides? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: GuideEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGuidesWithRequestBuilder(name: name, nameContains: nameContains, status: status, sortBy: sortBy, sortOrder: sortOrder, pageNumber: pageNumber, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<GuideEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get all guides.
+     - GET /api/v2/guides
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "latestProductionReadyVersion" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "latestSavedVersion" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "source" : "Manual",
+    "status" : "Published"
+  }, {
+    "latestProductionReadyVersion" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "latestSavedVersion" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "source" : "Manual",
+    "status" : "Published"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter name: (query) Filter by matching name - case insensitive. (optional)
+     - parameter nameContains: (query) Filter by name contains - case insensitive. (optional)
+     - parameter status: (query) Filter by status. (optional)
+     - parameter sortBy: (query) Sort by. Default value dateModified. (optional)
+     - parameter sortOrder: (query) Sort Order. Default value desc. (optional)
+     - parameter pageNumber: (query) Page number. (optional)
+     - parameter pageSize: (query) Page size. The maximum page size is 100. (optional)
+
+     - returns: RequestBuilder<GuideEntityListing> 
+     */
+    open class func getGuidesWithRequestBuilder(name: String? = nil, nameContains: String? = nil, status: Status_getGuides? = nil, sortBy: SortBy_getGuides? = nil, sortOrder: SortOrder_getGuides? = nil, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<GuideEntityListing> {        
+        let path = "/api/v2/guides"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "name": name, 
+            "nameContains": nameContains, 
+            "status": status?.rawValue, 
+            "sortBy": sortBy?.rawValue, 
+            "sortOrder": sortOrder?.rawValue, 
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<GuideEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get the status of the guide content generation job.
+     
+     - parameter jobId: (path) jobId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGuidesJob(jobId: String, completion: @escaping ((_ data: GuideContentGenerationJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGuidesJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<GuideContentGenerationJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the status of the guide content generation job.
+     - GET /api/v2/guides/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "guideContent" : {
+    "variables" : [ {
+      "scope" : "Input",
+      "name" : "name",
+      "description" : "description",
+      "type" : "String"
+    }, {
+      "scope" : "Input",
+      "name" : "name",
+      "description" : "description",
+      "type" : "String"
+    } ],
+    "instruction" : "instruction",
+    "resources" : "{}"
+  },
+  "errors" : [ {
+    "messageWithParams" : "messageWithParams",
+    "code" : "code",
+    "entityName" : "entityName",
+    "limit" : {
+      "namespace" : "workforce.management.forecast",
+      "value" : 7,
+      "key" : "key"
+    },
+    "entityId" : "entityId",
+    "contextId" : "contextId",
+    "details" : [ {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    }, {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    } ],
+    "messageParams" : {
+      "key" : "messageParams"
+    },
+    "message" : "message",
+    "errors" : [ null, null ],
+    "status" : 2
+  }, {
+    "messageWithParams" : "messageWithParams",
+    "code" : "code",
+    "entityName" : "entityName",
+    "limit" : {
+      "namespace" : "workforce.management.forecast",
+      "value" : 7,
+      "key" : "key"
+    },
+    "entityId" : "entityId",
+    "contextId" : "contextId",
+    "details" : [ {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    }, {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    } ],
+    "messageParams" : {
+      "key" : "messageParams"
+    },
+    "message" : "message",
+    "errors" : [ null, null ],
+    "status" : 2
+  } ],
+  "guide" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "status" : "InProgress"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) jobId 
+
+     - returns: RequestBuilder<GuideContentGenerationJob> 
+     */
+    open class func getGuidesJobWithRequestBuilder(jobId: String) -> RequestBuilder<GuideContentGenerationJob> {        
+        var path = "/api/v2/guides/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GuideContentGenerationJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update a guide.
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchGuide(guideId: String, body: UpdateGuide, completion: @escaping ((_ data: Guide?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchGuideWithRequestBuilder(guideId: guideId, body: body)
+        requestBuilder.execute { (response: Response<Guide>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a guide.
+     - PATCH /api/v2/guides/{guideId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "latestProductionReadyVersion" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "latestSavedVersion" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "source" : "Manual",
+  "status" : "Published"
+}, statusCode=200}]
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<Guide> 
+     */
+    open class func patchGuideWithRequestBuilder(guideId: String, body: UpdateGuide) -> RequestBuilder<Guide> {        
+        var path = "/api/v2/guides/{guideId}"
+        let guideIdPreEscape = "\(guideId)"
+        let guideIdPostEscape = guideIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{guideId}", with: guideIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Guide>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update a guide version.
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter versionId: (path) Version ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchGuideVersion(guideId: String, versionId: String, body: UpdateGuideVersion, completion: @escaping ((_ data: GuideVersion?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchGuideVersionWithRequestBuilder(guideId: guideId, versionId: versionId, body: body)
+        requestBuilder.execute { (response: Response<GuideVersion>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a guide version.
+     - PATCH /api/v2/guides/{guideId}/versions/{versionId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "variables" : [ {
+    "scope" : "Input",
+    "name" : "name",
+    "description" : "description",
+    "type" : "String"
+  }, {
+    "scope" : "Input",
+    "name" : "name",
+    "description" : "description",
+    "type" : "String"
+  } ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "knowledgeSettings" : "{}",
+  "instruction" : "instruction",
+  "selfUri" : "https://openapi-generator.tech",
+  "resources" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "state" : "Draft",
+  "version" : "version",
+  "guide" : "{}"
+}, statusCode=200}]
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter versionId: (path) Version ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<GuideVersion> 
+     */
+    open class func patchGuideVersionWithRequestBuilder(guideId: String, versionId: String, body: UpdateGuideVersion) -> RequestBuilder<GuideVersion> {        
+        var path = "/api/v2/guides/{guideId}/versions/{versionId}"
+        let guideIdPreEscape = "\(guideId)"
+        let guideIdPostEscape = guideIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{guideId}", with: guideIdPostEscape, options: .literal, range: nil)
+        let versionIdPreEscape = "\(versionId)"
+        let versionIdPostEscape = versionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{versionId}", with: versionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GuideVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Trigger summary preview event generation.
      
      - parameter body: (body)  
@@ -519,6 +1475,481 @@ open class AIStudioAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<GuideSessionTurnResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Start the publishing of a guide version.
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter versionId: (path) Version ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postGuideVersionJobs(guideId: String, versionId: String, body: GuideVersionPublishJobRequest, completion: @escaping ((_ data: GuideVersionPublishJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGuideVersionJobsWithRequestBuilder(guideId: guideId, versionId: versionId, body: body)
+        requestBuilder.execute { (response: Response<GuideVersionPublishJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Start the publishing of a guide version.
+     - POST /api/v2/guides/{guideId}/versions/{versionId}/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "guideVersion" : {
+    "variables" : [ {
+      "scope" : "Input",
+      "name" : "name",
+      "description" : "description",
+      "type" : "String"
+    }, {
+      "scope" : "Input",
+      "name" : "name",
+      "description" : "description",
+      "type" : "String"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "knowledgeSettings" : "{}",
+    "instruction" : "instruction",
+    "selfUri" : "https://openapi-generator.tech",
+    "resources" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "state" : "Draft",
+    "version" : "version",
+    "guide" : "{}"
+  },
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "errors" : [ {
+    "messageWithParams" : "messageWithParams",
+    "code" : "code",
+    "entityName" : "entityName",
+    "limit" : {
+      "namespace" : "workforce.management.forecast",
+      "value" : 7,
+      "key" : "key"
+    },
+    "entityId" : "entityId",
+    "contextId" : "contextId",
+    "details" : [ {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    }, {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    } ],
+    "messageParams" : {
+      "key" : "messageParams"
+    },
+    "message" : "message",
+    "errors" : [ null, null ],
+    "status" : 2
+  }, {
+    "messageWithParams" : "messageWithParams",
+    "code" : "code",
+    "entityName" : "entityName",
+    "limit" : {
+      "namespace" : "workforce.management.forecast",
+      "value" : 7,
+      "key" : "key"
+    },
+    "entityId" : "entityId",
+    "contextId" : "contextId",
+    "details" : [ {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    }, {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    } ],
+    "messageParams" : {
+      "key" : "messageParams"
+    },
+    "message" : "message",
+    "errors" : [ null, null ],
+    "status" : 2
+  } ],
+  "guide" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "status" : "InProgress"
+}, statusCode=200}]
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter versionId: (path) Version ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<GuideVersionPublishJob> 
+     */
+    open class func postGuideVersionJobsWithRequestBuilder(guideId: String, versionId: String, body: GuideVersionPublishJobRequest) -> RequestBuilder<GuideVersionPublishJob> {        
+        var path = "/api/v2/guides/{guideId}/versions/{versionId}/jobs"
+        let guideIdPreEscape = "\(guideId)"
+        let guideIdPostEscape = guideIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{guideId}", with: guideIdPostEscape, options: .literal, range: nil)
+        let versionIdPreEscape = "\(versionId)"
+        let versionIdPostEscape = versionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{versionId}", with: versionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GuideVersionPublishJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create a guide version.
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postGuideVersions(guideId: String, body: CreateGuideVersion? = nil, completion: @escaping ((_ data: GuideVersion?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGuideVersionsWithRequestBuilder(guideId: guideId, body: body)
+        requestBuilder.execute { (response: Response<GuideVersion>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a guide version.
+     - POST /api/v2/guides/{guideId}/versions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "variables" : [ {
+    "scope" : "Input",
+    "name" : "name",
+    "description" : "description",
+    "type" : "String"
+  }, {
+    "scope" : "Input",
+    "name" : "name",
+    "description" : "description",
+    "type" : "String"
+  } ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "knowledgeSettings" : "{}",
+  "instruction" : "instruction",
+  "selfUri" : "https://openapi-generator.tech",
+  "resources" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "state" : "Draft",
+  "version" : "version",
+  "guide" : "{}"
+}, statusCode=200}]
+     
+     - parameter guideId: (path) Guide ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<GuideVersion> 
+     */
+    open class func postGuideVersionsWithRequestBuilder(guideId: String, body: CreateGuideVersion? = nil) -> RequestBuilder<GuideVersion> {        
+        var path = "/api/v2/guides/{guideId}/versions"
+        let guideIdPreEscape = "\(guideId)"
+        let guideIdPostEscape = guideIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{guideId}", with: guideIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GuideVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create a guide.
+     
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postGuides(body: CreateGuide, completion: @escaping ((_ data: Guide?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGuidesWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Guide>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a guide.
+     - POST /api/v2/guides
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "latestProductionReadyVersion" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "latestSavedVersion" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "source" : "Manual",
+  "status" : "Published"
+}, statusCode=200}]
+     
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<Guide> 
+     */
+    open class func postGuidesWithRequestBuilder(body: CreateGuide) -> RequestBuilder<Guide> {        
+        let path = "/api/v2/guides"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Guide>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Start a guide content generation job.
+     
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postGuidesJobs(body: GenerateGuideContentRequest, completion: @escaping ((_ data: GuideContentGenerationJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGuidesJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<GuideContentGenerationJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Start a guide content generation job.
+     - POST /api/v2/guides/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "guideContent" : {
+    "variables" : [ {
+      "scope" : "Input",
+      "name" : "name",
+      "description" : "description",
+      "type" : "String"
+    }, {
+      "scope" : "Input",
+      "name" : "name",
+      "description" : "description",
+      "type" : "String"
+    } ],
+    "instruction" : "instruction",
+    "resources" : "{}"
+  },
+  "errors" : [ {
+    "messageWithParams" : "messageWithParams",
+    "code" : "code",
+    "entityName" : "entityName",
+    "limit" : {
+      "namespace" : "workforce.management.forecast",
+      "value" : 7,
+      "key" : "key"
+    },
+    "entityId" : "entityId",
+    "contextId" : "contextId",
+    "details" : [ {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    }, {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    } ],
+    "messageParams" : {
+      "key" : "messageParams"
+    },
+    "message" : "message",
+    "errors" : [ null, null ],
+    "status" : 2
+  }, {
+    "messageWithParams" : "messageWithParams",
+    "code" : "code",
+    "entityName" : "entityName",
+    "limit" : {
+      "namespace" : "workforce.management.forecast",
+      "value" : 7,
+      "key" : "key"
+    },
+    "entityId" : "entityId",
+    "contextId" : "contextId",
+    "details" : [ {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    }, {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    } ],
+    "messageParams" : {
+      "key" : "messageParams"
+    },
+    "message" : "message",
+    "errors" : [ null, null ],
+    "status" : 2
+  } ],
+  "guide" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "status" : "InProgress"
+}, statusCode=200}]
+     
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<GuideContentGenerationJob> 
+     */
+    open class func postGuidesJobsWithRequestBuilder(body: GenerateGuideContentRequest) -> RequestBuilder<GuideContentGenerationJob> {        
+        let path = "/api/v2/guides/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GuideContentGenerationJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Generate presigned URL for uploading a file content to generate guide
+     
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postGuidesUploads(body: UploadUrlRequest, completion: @escaping ((_ data: UploadUrlResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGuidesUploadsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<UploadUrlResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Generate presigned URL for uploading a file content to generate guide
+     - POST /api/v2/guides/uploads
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "headers"
+  },
+  "uploadKey" : "uploadKey",
+  "url" : "url"
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<UploadUrlResponse> 
+     */
+    open class func postGuidesUploadsWithRequestBuilder(body: UploadUrlRequest) -> RequestBuilder<UploadUrlResponse> {        
+        let path = "/api/v2/guides/uploads"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

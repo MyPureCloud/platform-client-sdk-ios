@@ -91,8 +91,6 @@ public class QueueConversationSocialExpressionEventTopicParticipant: Codable {
 
 
 
-
-
     /** A globally unique identifier for this conversation. */
     public var _id: String?
     /** The timestamp when this participant was connected to the conversation in the provider clock. */
@@ -158,13 +156,12 @@ public class QueueConversationSocialExpressionEventTopicParticipant: Codable {
     public var emails: [QueueConversationSocialExpressionEventTopicEmail]?
     public var messages: [QueueConversationSocialExpressionEventTopicMessage]?
     public var internalMessages: [QueueConversationSocialExpressionEventTopicInternalMessage]?
-    public var screenMonitorings: [QueueConversationSocialExpressionEventTopicScreenMonitoring]?
     public var screenshares: [QueueConversationSocialExpressionEventTopicScreenShare]?
     public var socialExpressions: [QueueConversationSocialExpressionEventTopicSocialExpression]?
     public var videos: [QueueConversationSocialExpressionEventTopicVideo]?
     public var workflow: QueueConversationSocialExpressionEventTopicWorkflow?
 
-    public init(_id: String?, connectedTime: Date?, endTime: Date?, userId: String?, externalContactId: String?, externalContactInitialDivisionId: String?, externalOrganizationId: String?, name: String?, queueId: String?, groupId: String?, teamId: String?, purpose: String?, consultParticipantId: String?, address: String?, wrapupRequired: Bool?, wrapupExpected: Bool?, wrapupPrompt: String?, wrapupTimeoutMs: Int64?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, startAcwTime: Date?, endAcwTime: Date?, conversationRoutingData: QueueConversationSocialExpressionEventTopicConversationRoutingData?, alertingTimeoutMs: Int64?, monitoredParticipantId: String?, coachedParticipantId: String?, bargedParticipantId: String?, mediaRoles: [String]?, screenRecordingState: ScreenRecordingState?, flaggedReason: String?, attributes: [String:String]?, calls: [QueueConversationSocialExpressionEventTopicCall]?, callbacks: [QueueConversationSocialExpressionEventTopicCallback]?, chats: [QueueConversationSocialExpressionEventTopicChat]?, cobrowsesessions: [QueueConversationSocialExpressionEventTopicCobrowse]?, emails: [QueueConversationSocialExpressionEventTopicEmail]?, messages: [QueueConversationSocialExpressionEventTopicMessage]?, internalMessages: [QueueConversationSocialExpressionEventTopicInternalMessage]?, screenMonitorings: [QueueConversationSocialExpressionEventTopicScreenMonitoring]?, screenshares: [QueueConversationSocialExpressionEventTopicScreenShare]?, socialExpressions: [QueueConversationSocialExpressionEventTopicSocialExpression]?, videos: [QueueConversationSocialExpressionEventTopicVideo]?, workflow: QueueConversationSocialExpressionEventTopicWorkflow?) {
+    public init(_id: String?, connectedTime: Date?, endTime: Date?, userId: String?, externalContactId: String?, externalContactInitialDivisionId: String?, externalOrganizationId: String?, name: String?, queueId: String?, groupId: String?, teamId: String?, purpose: String?, consultParticipantId: String?, address: String?, wrapupRequired: Bool?, wrapupExpected: Bool?, wrapupPrompt: String?, wrapupTimeoutMs: Int64?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, startAcwTime: Date?, endAcwTime: Date?, conversationRoutingData: QueueConversationSocialExpressionEventTopicConversationRoutingData?, alertingTimeoutMs: Int64?, monitoredParticipantId: String?, coachedParticipantId: String?, bargedParticipantId: String?, mediaRoles: [String]?, screenRecordingState: ScreenRecordingState?, flaggedReason: String?, attributes: [String:String]?, calls: [QueueConversationSocialExpressionEventTopicCall]?, callbacks: [QueueConversationSocialExpressionEventTopicCallback]?, chats: [QueueConversationSocialExpressionEventTopicChat]?, cobrowsesessions: [QueueConversationSocialExpressionEventTopicCobrowse]?, emails: [QueueConversationSocialExpressionEventTopicEmail]?, messages: [QueueConversationSocialExpressionEventTopicMessage]?, internalMessages: [QueueConversationSocialExpressionEventTopicInternalMessage]?, screenshares: [QueueConversationSocialExpressionEventTopicScreenShare]?, socialExpressions: [QueueConversationSocialExpressionEventTopicSocialExpression]?, videos: [QueueConversationSocialExpressionEventTopicVideo]?, workflow: QueueConversationSocialExpressionEventTopicWorkflow?) {
         self._id = _id
         self.connectedTime = connectedTime
         self.endTime = endTime
@@ -202,7 +199,6 @@ public class QueueConversationSocialExpressionEventTopicParticipant: Codable {
         self.emails = emails
         self.messages = messages
         self.internalMessages = internalMessages
-        self.screenMonitorings = screenMonitorings
         self.screenshares = screenshares
         self.socialExpressions = socialExpressions
         self.videos = videos
@@ -247,7 +243,6 @@ public class QueueConversationSocialExpressionEventTopicParticipant: Codable {
         case emails
         case messages
         case internalMessages
-        case screenMonitorings
         case screenshares
         case socialExpressions
         case videos
