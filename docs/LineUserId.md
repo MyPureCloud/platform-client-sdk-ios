@@ -7,8 +7,8 @@ Channel-specific User ID for Line accounts
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **userId** | **String** | The unique channel-specific userId for the user | [optional] |
+| **userId** | **String** | The unique channel-specific userId for the user. Max: 255 characters. | |
 
 
 
-_PureCloudPlatformClientV2@184.0.0_
+_PureCloudPlatformClientV2@185.0.0_

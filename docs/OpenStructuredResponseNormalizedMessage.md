@@ -16,4 +16,4 @@ Open Messaging rich media response normalized message structure
 
 
 
-_PureCloudPlatformClientV2@184.0.0_
+_PureCloudPlatformClientV2@185.0.0_

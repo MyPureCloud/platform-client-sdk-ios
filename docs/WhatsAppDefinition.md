@@ -16,4 +16,4 @@ A WhatsApp messaging template definition as defined in the WhatsApp Business Man
 
 
 
-_PureCloudPlatformClientV2@184.0.0_
+_PureCloudPlatformClientV2@185.0.0_

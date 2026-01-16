@@ -926,7 +926,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let contactId: String = "" // ExternalContact Id
-let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
+let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageSize <= 100; pageNumber * pageSize must be <= 1,000)
 let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let sortOrder: String = "" // The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \"createDate:asc\", \"createDate:desc\"
 let expand: [String] = [""] // which fields, if any, to expand
@@ -948,7 +948,7 @@ ExternalContactsAPI.getExternalcontactsContactNotes(contactId: contactId, pageSi
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contactId** | **String**| ExternalContact Id | |
-| **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
+| **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageSize <= 100; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **sortOrder** | **String**| The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \"createDate:asc\", \"createDate:desc\" | [optional] |
 | **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: author ("author"), externaldatasources ("externalDataSources"), division ("division") |
@@ -6372,4 +6372,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@184.0.0_
+_PureCloudPlatformClientV2@185.0.0_

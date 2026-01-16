@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **externalSource** | [**ExternalSource**](ExternalSource) |  | [optional] |
-| **value** | **String** |  | [optional] |
+| **externalSource** | [**ExternalSource**](ExternalSource) | The external source of the identifier. Max: 255 characters. Leading and trailing whitespace stripped. | |
+| **value** | **String** | The string value of the identifier. Max: 255 characters. Leading and trailing whitespace stripped. | |
 
 
 
-_PureCloudPlatformClientV2@184.0.0_
+_PureCloudPlatformClientV2@185.0.0_

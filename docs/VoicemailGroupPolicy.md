@@ -20,7 +20,8 @@
 | **groupAlertType** | **String** | Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin. | [optional] |
 | **interactiveResponsePromptId** | **String** | The prompt to use when connecting a user to a Group Ring call | [optional] |
 | **interactiveResponseRequired** | **Bool** | Whether user should be prompted with a confirmation prompt when connecting to a Group Ring call | [optional] |
+| **includeGroupNumberInUserCallerIdLists** | **Bool** | Whether the group phone number should be included in users&#39; caller id lists | [optional] |
 
 
 
-_PureCloudPlatformClientV2@184.0.0_
+_PureCloudPlatformClientV2@185.0.0_
