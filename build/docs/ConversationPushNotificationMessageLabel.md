@@ -12,4 +12,4 @@ A Push notification message label.
 
 
 
-_PureCloudPlatformClientV2@185.0.0_
+_PureCloudPlatformClientV2@186.0.0_

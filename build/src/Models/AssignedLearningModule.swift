@@ -44,6 +44,8 @@ public class AssignedLearningModule: Codable {
 
 
 
+
+
     public enum ModelType: String, Codable { 
         case informational = "Informational"
         case assessedContent = "AssessedContent"
@@ -95,6 +97,8 @@ public class AssignedLearningModule: Codable {
     public var enforceContentOrder: Bool?
     /** Allows to view Assessment results in detail */
     public var reviewAssessmentResults: ReviewAssessmentResults?
+    /** The auto assignment settings for this module */
+    public var autoAssign: LearningModuleAutoAssignResponse?
     /** The current assignments for the requested users */
     public var currentAssignments: [LearningAssignment]?
     /** The URI for this object */
@@ -124,7 +128,7 @@ public class AssignedLearningModule: Codable {
     /** The mode of archival for learning module */
     public var archivalMode: ArchivalMode?
 
-    public init(_id: String?, name: String?, excludedFromCatalog: Bool?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, version: Int?, externalId: String?, source: Source?, rule: LearningModuleRule?, enforceContentOrder: Bool?, reviewAssessmentResults: ReviewAssessmentResults?, currentAssignments: [LearningAssignment]?, selfUri: String?, isArchived: Bool?, isPublished: Bool?, _description: String?, completionTimeInDays: Int?, type: ModelType?, informSteps: [LearningModuleInformStep]?, assessmentForm: AssessmentForm?, summaryData: LearningModuleSummary?, reassignSummaryData: LearningModuleReassignSummary?, coverArt: LearningModuleCoverArtResponse?, lengthInMinutes: Int?, archivalMode: ArchivalMode?) {
+    public init(_id: String?, name: String?, excludedFromCatalog: Bool?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, version: Int?, externalId: String?, source: Source?, rule: LearningModuleRule?, enforceContentOrder: Bool?, reviewAssessmentResults: ReviewAssessmentResults?, autoAssign: LearningModuleAutoAssignResponse?, currentAssignments: [LearningAssignment]?, selfUri: String?, isArchived: Bool?, isPublished: Bool?, _description: String?, completionTimeInDays: Int?, type: ModelType?, informSteps: [LearningModuleInformStep]?, assessmentForm: AssessmentForm?, summaryData: LearningModuleSummary?, reassignSummaryData: LearningModuleReassignSummary?, coverArt: LearningModuleCoverArtResponse?, lengthInMinutes: Int?, archivalMode: ArchivalMode?) {
         self._id = _id
         self.name = name
         self.excludedFromCatalog = excludedFromCatalog
@@ -138,6 +142,7 @@ public class AssignedLearningModule: Codable {
         self.rule = rule
         self.enforceContentOrder = enforceContentOrder
         self.reviewAssessmentResults = reviewAssessmentResults
+        self.autoAssign = autoAssign
         self.currentAssignments = currentAssignments
         self.selfUri = selfUri
         self.isArchived = isArchived
@@ -168,6 +173,7 @@ public class AssignedLearningModule: Codable {
         case rule
         case enforceContentOrder
         case reviewAssessmentResults
+        case autoAssign
         case currentAssignments
         case selfUri
         case isArchived

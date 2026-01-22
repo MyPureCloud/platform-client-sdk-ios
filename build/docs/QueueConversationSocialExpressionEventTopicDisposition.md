@@ -14,4 +14,4 @@ Call resolution data for Dialer bulk make calls commands.
 
 
 
-_PureCloudPlatformClientV2@185.0.0_
+_PureCloudPlatformClientV2@186.0.0_

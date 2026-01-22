@@ -22,6 +22,19 @@ public class ListedDictionaryFeedback: Codable {
 
 
 
+    public enum TranscriptionEngine: String, Codable { 
+        case genesys = "Genesys"
+        case genesysExtended = "GenesysExtended"
+    }
+
+    public enum Status: String, Codable { 
+        case active = "Active"
+        case pending = "Pending"
+        case failed = "Failed"
+    }
+
+
+
 
 
     /** The globally unique identifier for the object. */
@@ -42,10 +55,16 @@ public class ListedDictionaryFeedback: Codable {
     public var dateModified: Date?
     /** The Id of the user who modified the dictionary feedback */
     public var modifiedBy: UserReference?
+    /** The transcription engine for the dictionary feedback. Only returned when GenesysExtended feature is enabled. */
+    public var transcriptionEngine: TranscriptionEngine?
+    /** The status of the dictionary feedback. Only returned when GenesysExtended feature is enabled. */
+    public var status: Status?
+    /** The display name for the dictionary feedback. Only returned when GenesysExtended feature is enabled. This field is only valid for Extended Services transcription engine. */
+    public var displayAs: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, term: String?, dialect: String?, boostValue: Float?, source: Source?, dateCreated: Date?, createdBy: UserReference?, dateModified: Date?, modifiedBy: UserReference?, selfUri: String?) {
+    public init(_id: String?, term: String?, dialect: String?, boostValue: Float?, source: Source?, dateCreated: Date?, createdBy: UserReference?, dateModified: Date?, modifiedBy: UserReference?, transcriptionEngine: TranscriptionEngine?, status: Status?, displayAs: String?, selfUri: String?) {
         self._id = _id
         self.term = term
         self.dialect = dialect
@@ -55,6 +74,9 @@ public class ListedDictionaryFeedback: Codable {
         self.createdBy = createdBy
         self.dateModified = dateModified
         self.modifiedBy = modifiedBy
+        self.transcriptionEngine = transcriptionEngine
+        self.status = status
+        self.displayAs = displayAs
         self.selfUri = selfUri
     }
 
@@ -68,6 +90,9 @@ public class ListedDictionaryFeedback: Codable {
         case createdBy
         case dateModified
         case modifiedBy
+        case transcriptionEngine
+        case status
+        case displayAs
         case selfUri
     }
 

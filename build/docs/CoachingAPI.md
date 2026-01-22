@@ -1176,4 +1176,4 @@ CoachingAPI.postCoachingScheduleslotsQuery(body: body) { (response, error) in
 [**CoachingSlotsResponse**](CoachingSlotsResponse)
 
 
-_PureCloudPlatformClientV2@185.0.0_
+_PureCloudPlatformClientV2@186.0.0_

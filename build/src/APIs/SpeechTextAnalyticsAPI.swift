@@ -894,6 +894,13 @@ open class SpeechTextAnalyticsAPI {
     
     
     
+    public enum TranscriptionEngine_getSpeechandtextanalyticsDictionaryfeedback: String { 
+        case genesys = "Genesys"
+        case genesysExtended = "GenesysExtended"
+    }
+    
+    
+    
     
     
     
@@ -901,12 +908,13 @@ open class SpeechTextAnalyticsAPI {
      Get the list of Speech & Text Analytics dictionary feedbacks
      
      - parameter dialect: (query) The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)
+     - parameter transcriptionEngine: (query) Filter by transcription engine (optional)
      - parameter nextPage: (query) The key for listing the next page (optional)
      - parameter pageSize: (query) The page size for the listing (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSpeechandtextanalyticsDictionaryfeedback(dialect: String? = nil, nextPage: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: DictionaryFeedbackEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getSpeechandtextanalyticsDictionaryfeedbackWithRequestBuilder(dialect: dialect, nextPage: nextPage, pageSize: pageSize)
+    open class func getSpeechandtextanalyticsDictionaryfeedback(dialect: String? = nil, transcriptionEngine: TranscriptionEngine_getSpeechandtextanalyticsDictionaryfeedback? = nil, nextPage: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: DictionaryFeedbackEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsDictionaryfeedbackWithRequestBuilder(dialect: dialect, transcriptionEngine: transcriptionEngine, nextPage: nextPage, pageSize: pageSize)
         requestBuilder.execute { (response: Response<DictionaryFeedbackEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -933,27 +941,33 @@ open class SpeechTextAnalyticsAPI {
   "pageCount" : 1,
   "total" : 5,
   "entities" : [ {
+    "transcriptionEngine" : "Genesys",
     "dialect" : "en-US",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "source" : "Manual",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
+    "displayAs" : "displayAs",
     "term" : "term",
     "boostValue" : 0.8008282,
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
     "id" : "id",
-    "source" : "Manual"
+    "status" : "Active"
   }, {
+    "transcriptionEngine" : "Genesys",
     "dialect" : "en-US",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "source" : "Manual",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
+    "displayAs" : "displayAs",
     "term" : "term",
     "boostValue" : 0.8008282,
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
     "id" : "id",
-    "source" : "Manual"
+    "status" : "Active"
   } ],
   "selfUri" : "selfUri",
   "pageSize" : 6,
@@ -961,12 +975,13 @@ open class SpeechTextAnalyticsAPI {
 }, statusCode=200}]
      
      - parameter dialect: (query) The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)
+     - parameter transcriptionEngine: (query) Filter by transcription engine (optional)
      - parameter nextPage: (query) The key for listing the next page (optional)
      - parameter pageSize: (query) The page size for the listing (optional)
 
      - returns: RequestBuilder<DictionaryFeedbackEntityListing> 
      */
-    open class func getSpeechandtextanalyticsDictionaryfeedbackWithRequestBuilder(dialect: String? = nil, nextPage: String? = nil, pageSize: Int? = nil) -> RequestBuilder<DictionaryFeedbackEntityListing> {        
+    open class func getSpeechandtextanalyticsDictionaryfeedbackWithRequestBuilder(dialect: String? = nil, transcriptionEngine: TranscriptionEngine_getSpeechandtextanalyticsDictionaryfeedback? = nil, nextPage: String? = nil, pageSize: Int? = nil) -> RequestBuilder<DictionaryFeedbackEntityListing> {        
         let path = "/api/v2/speechandtextanalytics/dictionaryfeedback"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -974,6 +989,7 @@ open class SpeechTextAnalyticsAPI {
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "dialect": dialect, 
+            "transcriptionEngine": transcriptionEngine?.rawValue, 
             "nextPage": nextPage, 
             "pageSize": pageSize?.encodeToJSON()
         ])
@@ -1016,6 +1032,7 @@ open class SpeechTextAnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "transcriptionEngine" : "Genesys",
   "examplePhrases" : [ {
     "phrase" : "phrase",
     "source" : "Manual"
@@ -1024,16 +1041,18 @@ open class SpeechTextAnalyticsAPI {
     "source" : "Manual"
   } ],
   "dialect" : "en-US",
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "createdBy" : "{}",
   "soundsLike" : [ "soundsLike", "soundsLike" ],
   "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "source" : "Manual",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "displayAs" : "displayAs",
   "term" : "term",
   "boostValue" : 0.8008282,
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : "{}",
   "id" : "id",
-  "source" : "Manual"
+  "status" : "Active"
 }, statusCode=200}]
      
      - parameter dictionaryFeedbackId: (path) The Id of the Dictionary Feedback 
@@ -1357,16 +1376,34 @@ open class SpeechTextAnalyticsAPI {
     }
     
     
+    
+    
+    
+    public enum SortBy_getSpeechandtextanalyticsPrograms: String { 
+        case name = "name"
+    }
+    
+    
+    
+    public enum SortOrder_getSpeechandtextanalyticsPrograms: String { 
+        case asc = "asc"
+        case desc = "desc"
+    }
+    
+    
     /**
      Get the list of Speech & Text Analytics programs
      
      - parameter nextPage: (query) The key for listing the next page (optional)
      - parameter pageSize: (query) The page size for the listing (optional)
      - parameter state: (query) Program state. Defaults to Latest (optional)
+     - parameter name: (query) Case insensitive partial name to filter by (optional)
+     - parameter sortBy: (query) Sort results by. Defaults to name (optional)
+     - parameter sortOrder: (query) Sort order. Defaults to asc (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSpeechandtextanalyticsPrograms(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsPrograms? = nil, completion: @escaping ((_ data: ProgramsEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getSpeechandtextanalyticsProgramsWithRequestBuilder(nextPage: nextPage, pageSize: pageSize, state: state)
+    open class func getSpeechandtextanalyticsPrograms(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsPrograms? = nil, name: String? = nil, sortBy: SortBy_getSpeechandtextanalyticsPrograms? = nil, sortOrder: SortOrder_getSpeechandtextanalyticsPrograms? = nil, completion: @escaping ((_ data: ProgramsEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsProgramsWithRequestBuilder(nextPage: nextPage, pageSize: pageSize, state: state, name: name, sortBy: sortBy, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<ProgramsEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1426,10 +1463,13 @@ open class SpeechTextAnalyticsAPI {
      - parameter nextPage: (query) The key for listing the next page (optional)
      - parameter pageSize: (query) The page size for the listing (optional)
      - parameter state: (query) Program state. Defaults to Latest (optional)
+     - parameter name: (query) Case insensitive partial name to filter by (optional)
+     - parameter sortBy: (query) Sort results by. Defaults to name (optional)
+     - parameter sortOrder: (query) Sort order. Defaults to asc (optional)
 
      - returns: RequestBuilder<ProgramsEntityListing> 
      */
-    open class func getSpeechandtextanalyticsProgramsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsPrograms? = nil) -> RequestBuilder<ProgramsEntityListing> {        
+    open class func getSpeechandtextanalyticsProgramsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsPrograms? = nil, name: String? = nil, sortBy: SortBy_getSpeechandtextanalyticsPrograms? = nil, sortOrder: SortOrder_getSpeechandtextanalyticsPrograms? = nil) -> RequestBuilder<ProgramsEntityListing> {        
         let path = "/api/v2/speechandtextanalytics/programs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -1438,7 +1478,10 @@ open class SpeechTextAnalyticsAPI {
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "nextPage": nextPage, 
             "pageSize": pageSize?.encodeToJSON(), 
-            "state": state?.rawValue
+            "state": state?.rawValue, 
+            "name": name, 
+            "sortBy": sortBy?.rawValue, 
+            "sortOrder": sortOrder?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<ProgramsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3108,6 +3151,7 @@ open class SpeechTextAnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "transcriptionEngine" : "Genesys",
   "examplePhrases" : [ {
     "phrase" : "phrase",
     "source" : "Manual"
@@ -3116,16 +3160,18 @@ open class SpeechTextAnalyticsAPI {
     "source" : "Manual"
   } ],
   "dialect" : "en-US",
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "createdBy" : "{}",
   "soundsLike" : [ "soundsLike", "soundsLike" ],
   "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "source" : "Manual",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "displayAs" : "displayAs",
   "term" : "term",
   "boostValue" : 0.8008282,
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : "{}",
   "id" : "id",
-  "source" : "Manual"
+  "status" : "Active"
 }, statusCode=201}]
      
      - parameter body: (body) The DictionaryFeedback to create 
@@ -3792,6 +3838,7 @@ open class SpeechTextAnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "transcriptionEngine" : "Genesys",
   "examplePhrases" : [ {
     "phrase" : "phrase",
     "source" : "Manual"
@@ -3800,16 +3847,18 @@ open class SpeechTextAnalyticsAPI {
     "source" : "Manual"
   } ],
   "dialect" : "en-US",
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "createdBy" : "{}",
   "soundsLike" : [ "soundsLike", "soundsLike" ],
   "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "source" : "Manual",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "displayAs" : "displayAs",
   "term" : "term",
   "boostValue" : 0.8008282,
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : "{}",
   "id" : "id",
-  "source" : "Manual"
+  "status" : "Active"
 }, statusCode=200}]
      
      - parameter dictionaryFeedbackId: (path) The Id of the Dictionary Feedback 

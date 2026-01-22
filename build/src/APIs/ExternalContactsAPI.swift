@@ -1298,6 +1298,7 @@ open class ExternalContactsAPI {
         case author = "author"
         case externaldatasources = "externalDataSources"
         case division = "division"
+        case mergeset = "mergeset"
     }
     
     /**
@@ -1307,7 +1308,7 @@ open class ExternalContactsAPI {
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageSize &lt;&#x3D; 100; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter pageNumber: (query) Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter sortOrder: (query) The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)
-     - parameter expand: (query) which fields, if any, to expand (optional)
+     - parameter expand: (query) which fields, if any, to expand. mergeset will include notes attached to ancestor contacts which have been merged into this one. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getExternalcontactsContactNotes(contactId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: String? = nil, expand: [String]? = nil, completion: @escaping ((_ data: NoteListing?,_ error: Error?) -> Void)) {
@@ -1386,7 +1387,7 @@ open class ExternalContactsAPI {
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageSize &lt;&#x3D; 100; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter pageNumber: (query) Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional)
      - parameter sortOrder: (query) The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)
-     - parameter expand: (query) which fields, if any, to expand (optional)
+     - parameter expand: (query) which fields, if any, to expand. mergeset will include notes attached to ancestor contacts which have been merged into this one. (optional)
 
      - returns: RequestBuilder<NoteListing> 
      */

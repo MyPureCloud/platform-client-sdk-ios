@@ -27,6 +27,8 @@ public class EvaluationFormResponse: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The evaluation form name */
@@ -43,12 +45,14 @@ public class EvaluationFormResponse: Codable {
     public var evaluationSettings: EvaluationSettings?
     /** A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the 'expand=publishHistory' query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable). */
     public var publishedVersions: DomainEntityListingEvaluationForm?
+    /** The name of the form's most recently published version */
+    public var latestVersionFormName: String?
     /** AI scoring settings for the evaluation form. */
     public var aiScoring: AiScoringSettings?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, modifiedDate: Date?, published: Bool?, contextId: String?, questionGroups: [EvaluationQuestionGroup]?, weightMode: WeightMode?, evaluationSettings: EvaluationSettings?, publishedVersions: DomainEntityListingEvaluationForm?, aiScoring: AiScoringSettings?, selfUri: String?) {
+    public init(_id: String?, name: String?, modifiedDate: Date?, published: Bool?, contextId: String?, questionGroups: [EvaluationQuestionGroup]?, weightMode: WeightMode?, evaluationSettings: EvaluationSettings?, publishedVersions: DomainEntityListingEvaluationForm?, latestVersionFormName: String?, aiScoring: AiScoringSettings?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.modifiedDate = modifiedDate
@@ -58,6 +62,7 @@ public class EvaluationFormResponse: Codable {
         self.weightMode = weightMode
         self.evaluationSettings = evaluationSettings
         self.publishedVersions = publishedVersions
+        self.latestVersionFormName = latestVersionFormName
         self.aiScoring = aiScoring
         self.selfUri = selfUri
     }
@@ -72,6 +77,7 @@ public class EvaluationFormResponse: Codable {
         case weightMode
         case evaluationSettings
         case publishedVersions
+        case latestVersionFormName
         case aiScoring
         case selfUri
     }

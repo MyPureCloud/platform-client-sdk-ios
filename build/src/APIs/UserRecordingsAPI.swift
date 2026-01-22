@@ -2991,6 +2991,7 @@ open class UserRecordingsAPI {
             "id" : "id"
           },
           "evaluationForm" : {
+            "latestVersionFormName" : "latestVersionFormName",
             "evaluationSettings" : "{}",
             "publishedVersions" : "{}",
             "aiScoring" : "{}",
@@ -5838,6 +5839,7 @@ open class UserRecordingsAPI {
             "id" : "id"
           },
           "evaluationForm" : {
+            "latestVersionFormName" : "latestVersionFormName",
             "evaluationSettings" : "{}",
             "publishedVersions" : "{}",
             "aiScoring" : "{}",
@@ -9780,6 +9782,7 @@ open class UserRecordingsAPI {
             "id" : "id"
           },
           "evaluationForm" : {
+            "latestVersionFormName" : "latestVersionFormName",
             "evaluationSettings" : "{}",
             "publishedVersions" : "{}",
             "aiScoring" : "{}",
@@ -12627,6 +12630,7 @@ open class UserRecordingsAPI {
             "id" : "id"
           },
           "evaluationForm" : {
+            "latestVersionFormName" : "latestVersionFormName",
             "evaluationSettings" : "{}",
             "publishedVersions" : "{}",
             "aiScoring" : "{}",
@@ -16819,6 +16823,7 @@ open class UserRecordingsAPI {
               "id" : "id"
             },
             "evaluationForm" : {
+              "latestVersionFormName" : "latestVersionFormName",
               "evaluationSettings" : "{}",
               "publishedVersions" : "{}",
               "aiScoring" : "{}",
@@ -19666,6 +19671,7 @@ open class UserRecordingsAPI {
               "id" : "id"
             },
             "evaluationForm" : {
+              "latestVersionFormName" : "latestVersionFormName",
               "evaluationSettings" : "{}",
               "publishedVersions" : "{}",
               "aiScoring" : "{}",
@@ -23608,6 +23614,7 @@ open class UserRecordingsAPI {
               "id" : "id"
             },
             "evaluationForm" : {
+              "latestVersionFormName" : "latestVersionFormName",
               "evaluationSettings" : "{}",
               "publishedVersions" : "{}",
               "aiScoring" : "{}",
@@ -26455,6 +26462,7 @@ open class UserRecordingsAPI {
               "id" : "id"
             },
             "evaluationForm" : {
+              "latestVersionFormName" : "latestVersionFormName",
               "evaluationSettings" : "{}",
               "publishedVersions" : "{}",
               "aiScoring" : "{}",
@@ -30488,6 +30496,7 @@ open class UserRecordingsAPI {
               "id" : "id"
             },
             "evaluationForm" : {
+              "latestVersionFormName" : "latestVersionFormName",
               "evaluationSettings" : "{}",
               "publishedVersions" : "{}",
               "aiScoring" : "{}",
@@ -33335,6 +33344,7 @@ open class UserRecordingsAPI {
               "id" : "id"
             },
             "evaluationForm" : {
+              "latestVersionFormName" : "latestVersionFormName",
               "evaluationSettings" : "{}",
               "publishedVersions" : "{}",
               "aiScoring" : "{}",
@@ -37277,6 +37287,7 @@ open class UserRecordingsAPI {
               "id" : "id"
             },
             "evaluationForm" : {
+              "latestVersionFormName" : "latestVersionFormName",
               "evaluationSettings" : "{}",
               "publishedVersions" : "{}",
               "aiScoring" : "{}",
@@ -40124,6 +40135,7 @@ open class UserRecordingsAPI {
               "id" : "id"
             },
             "evaluationForm" : {
+              "latestVersionFormName" : "latestVersionFormName",
               "evaluationSettings" : "{}",
               "publishedVersions" : "{}",
               "aiScoring" : "{}",
@@ -44280,6 +44292,7 @@ open class UserRecordingsAPI {
             "id" : "id"
           },
           "evaluationForm" : {
+            "latestVersionFormName" : "latestVersionFormName",
             "evaluationSettings" : "{}",
             "publishedVersions" : "{}",
             "aiScoring" : "{}",
@@ -47127,6 +47140,7 @@ open class UserRecordingsAPI {
             "id" : "id"
           },
           "evaluationForm" : {
+            "latestVersionFormName" : "latestVersionFormName",
             "evaluationSettings" : "{}",
             "publishedVersions" : "{}",
             "aiScoring" : "{}",
@@ -51069,6 +51083,7 @@ open class UserRecordingsAPI {
             "id" : "id"
           },
           "evaluationForm" : {
+            "latestVersionFormName" : "latestVersionFormName",
             "evaluationSettings" : "{}",
             "publishedVersions" : "{}",
             "aiScoring" : "{}",
@@ -53916,6 +53931,7 @@ open class UserRecordingsAPI {
             "id" : "id"
           },
           "evaluationForm" : {
+            "latestVersionFormName" : "latestVersionFormName",
             "evaluationSettings" : "{}",
             "publishedVersions" : "{}",
             "aiScoring" : "{}",

@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteConversation**](ConversationsAPI#deleteConversation) | Update a conversation by disconnecting all of the participants |
 | [**deleteConversationParticipantCode**](ConversationsAPI#deleteConversationParticipantCode) | Delete a code used to add a communication to this participant |
 | [**deleteConversationParticipantFlaggedreason**](ConversationsAPI#deleteConversationParticipantFlaggedreason) | Remove flagged reason from conversation participant. |
+| [**deleteConversationsCallParticipantCommunicationPostflowaction**](ConversationsAPI#deleteConversationsCallParticipantCommunicationPostflowaction) | Remove mandatory post call actions. |
 | [**deleteConversationsCallParticipantConsult**](ConversationsAPI#deleteConversationsCallParticipantConsult) | Cancel the transfer |
 | [**deleteConversationsEmailMessagesDraftAttachment**](ConversationsAPI#deleteConversationsEmailMessagesDraftAttachment) | Delete attachment from draft |
 | [**deleteConversationsMessagesCachedmediaCachedMediaItemId**](ConversationsAPI#deleteConversationsMessagesCachedmediaCachedMediaItemId) | Remove a cached media item asychronously |
@@ -137,6 +138,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsCallParticipant**](ConversationsAPI#patchConversationsCallParticipant) | Update conversation participant |
 | [**patchConversationsCallParticipantAttributes**](ConversationsAPI#patchConversationsCallParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationsCallParticipantCommunication**](ConversationsAPI#patchConversationsCallParticipantCommunication) | Update conversation participant&#39;s communication by disconnecting it. This endpoint does not update wrapup. |
+| [**patchConversationsCallParticipantCommunicationPostflowaction**](ConversationsAPI#patchConversationsCallParticipantCommunicationPostflowaction) | Set mandatory post call actions.  If both values are null or blank error will occur. |
 | [**patchConversationsCallParticipantConsult**](ConversationsAPI#patchConversationsCallParticipantConsult) | Change who can speak |
 | [**patchConversationsCallParticipantUserUserId**](ConversationsAPI#patchConversationsCallParticipantUserUserId) | Update conversation participant on behalf of a user |
 | [**patchConversationsCallback**](ConversationsAPI#patchConversationsCallback) | Update a conversation by disconnecting all of the participants |
@@ -489,6 +491,59 @@ ConversationsAPI.deleteConversationParticipantFlaggedreason(conversationId: conv
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversation ID | |
 | **participantId** | **String**| participant ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteConversationsCallParticipantCommunicationPostflowaction
+
+
+
+> Void deleteConversationsCallParticipantCommunicationPostflowaction(conversationId, participantId, communicationId)
+
+Remove mandatory post call actions.
+
+
+
+Wraps DELETE /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/postflowaction  
+
+Requires ANY permissions: 
+
+* conversation:call:deleteMandatoryPostFlowAction
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+
+// Code example
+ConversationsAPI.deleteConversationsCallParticipantCommunicationPostflowaction(conversationId: conversationId, participantId: participantId, communicationId: communicationId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.deleteConversationsCallParticipantCommunicationPostflowaction was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
 
 
 ### Return type
@@ -7167,6 +7222,61 @@ ConversationsAPI.patchConversationsCallParticipantCommunication(conversationId: 
 ### Return type
 
 [**JSON**](JSON)
+
+
+## patchConversationsCallParticipantCommunicationPostflowaction
+
+
+
+> Void patchConversationsCallParticipantCommunicationPostflowaction(conversationId, participantId, communicationId, body)
+
+Set mandatory post call actions.  If both values are null or blank error will occur.
+
+
+
+Wraps PATCH /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/postflowaction  
+
+Requires ANY permissions: 
+
+* conversation:call:setMandatoryPostFlowAction
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let body: MandatoryPostCallActionInput = new MandatoryPostCallActionInput(...) // Action
+
+// Code example
+ConversationsAPI.patchConversationsCallParticipantCommunicationPostflowaction(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.patchConversationsCallParticipantCommunicationPostflowaction was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **communicationId** | **String**| communicationId | |
+| **body** | [**MandatoryPostCallActionInput**](MandatoryPostCallActionInput)| Action | [optional] |
+
+
+### Return type
+
+`nil` (empty response body)
 
 
 ## patchConversationsCallParticipantConsult
@@ -15417,4 +15527,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@185.0.0_
+_PureCloudPlatformClientV2@186.0.0_

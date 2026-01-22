@@ -14381,7 +14381,7 @@ open class RoutingAPI {
      - parameter body: (body) Skill 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postRoutingSkills(body: RoutingSkill, completion: @escaping ((_ data: RoutingSkill?,_ error: Error?) -> Void)) {
+    open class func postRoutingSkills(body: CreateRoutingSkill, completion: @escaping ((_ data: RoutingSkill?,_ error: Error?) -> Void)) {
         let requestBuilder = postRoutingSkillsWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<RoutingSkill>?, error) -> Void in
             do {
@@ -14418,7 +14418,7 @@ open class RoutingAPI {
 
      - returns: RequestBuilder<RoutingSkill> 
      */
-    open class func postRoutingSkillsWithRequestBuilder(body: RoutingSkill) -> RequestBuilder<RoutingSkill> {        
+    open class func postRoutingSkillsWithRequestBuilder(body: CreateRoutingSkill) -> RequestBuilder<RoutingSkill> {        
         let path = "/api/v2/routing/skills"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)

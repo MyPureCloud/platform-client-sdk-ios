@@ -22,6 +22,19 @@ public class DictionaryFeedback: Codable {
 
 
 
+    public enum TranscriptionEngine: String, Codable { 
+        case genesys = "Genesys"
+        case genesysExtended = "GenesysExtended"
+    }
+
+    public enum Status: String, Codable { 
+        case active = "Active"
+        case pending = "Pending"
+        case failed = "Failed"
+    }
+
+
+
 
 
 
@@ -46,14 +59,20 @@ public class DictionaryFeedback: Codable {
     public var dateModified: Date?
     /** The Id of the user who modified the dictionary feedback */
     public var modifiedBy: UserReference?
-    /** A list of at least 3 and up to 20 unique phrases that are example usage of the term */
+    /** The transcription engine for the dictionary feedback. Only returned when GenesysExtended feature is enabled. */
+    public var transcriptionEngine: TranscriptionEngine?
+    /** The status of the dictionary feedback. Only returned when GenesysExtended feature is enabled. */
+    public var status: Status?
+    /** The display name for the dictionary feedback. Only returned when GenesysExtended feature is enabled. This field is only valid for Extended Services transcription engine. */
+    public var displayAs: String?
+    /** A list of at least 3 and up to 20 unique phrases that are example usage of the term. This field is only valid and required for Genesys transcription engine. */
     public var examplePhrases: [DictionaryFeedbackExamplePhrase]?
-    /** A list of up to 10 terms that give examples of how the term sounds */
+    /** A list of up to 10 terms that give examples of how the term sounds. This field is only valid for Genesys transcription engine. */
     public var soundsLike: [String]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, term: String?, dialect: String?, boostValue: Float?, source: Source?, dateCreated: Date?, createdBy: UserReference?, dateModified: Date?, modifiedBy: UserReference?, examplePhrases: [DictionaryFeedbackExamplePhrase]?, soundsLike: [String]?, selfUri: String?) {
+    public init(_id: String?, term: String?, dialect: String?, boostValue: Float?, source: Source?, dateCreated: Date?, createdBy: UserReference?, dateModified: Date?, modifiedBy: UserReference?, transcriptionEngine: TranscriptionEngine?, status: Status?, displayAs: String?, examplePhrases: [DictionaryFeedbackExamplePhrase]?, soundsLike: [String]?, selfUri: String?) {
         self._id = _id
         self.term = term
         self.dialect = dialect
@@ -63,6 +82,9 @@ public class DictionaryFeedback: Codable {
         self.createdBy = createdBy
         self.dateModified = dateModified
         self.modifiedBy = modifiedBy
+        self.transcriptionEngine = transcriptionEngine
+        self.status = status
+        self.displayAs = displayAs
         self.examplePhrases = examplePhrases
         self.soundsLike = soundsLike
         self.selfUri = selfUri
@@ -78,6 +100,9 @@ public class DictionaryFeedback: Codable {
         case createdBy
         case dateModified
         case modifiedBy
+        case transcriptionEngine
+        case status
+        case displayAs
         case examplePhrases
         case soundsLike
         case selfUri

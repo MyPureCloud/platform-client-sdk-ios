@@ -19,7 +19,8 @@ Create coaching appointment request
 | **externalLinks** | **[String]** | The list of external links related to the appointment | [optional] |
 | **location** | **String** | The location of the appointment | [optional] |
 | **shareInsightsData** | **Bool** | Whether to share the insight data | [optional] |
+| **addToSchedule** | **Bool** | If True, adds the appointment to their schedule | [optional] |
 
 
 
-_PureCloudPlatformClientV2@185.0.0_
+_PureCloudPlatformClientV2@186.0.0_

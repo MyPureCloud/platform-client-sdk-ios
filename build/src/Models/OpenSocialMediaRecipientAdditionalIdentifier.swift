@@ -6,6 +6,7 @@ public class OpenSocialMediaRecipientAdditionalIdentifier: Codable {
         case topic = "Topic"
         case ingestionRule = "IngestionRule"
         case ingestionRuleVersion = "IngestionRuleVersion"
+        case phoneNumber = "PhoneNumber"
     }
 
 

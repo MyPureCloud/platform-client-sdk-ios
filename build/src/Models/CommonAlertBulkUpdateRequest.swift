@@ -6,6 +6,7 @@ public class CommonAlertBulkUpdateRequest: Codable {
         case mute = "Mute"
         case snooze = "Snooze"
         case unread = "Unread"
+        case close = "Close"
     }
 
 

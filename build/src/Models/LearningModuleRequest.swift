@@ -33,6 +33,8 @@ public class LearningModuleRequest: Codable {
 
 
 
+
+
     /** The name of learning module */
     public var name: String?
     /** The description of learning module */
@@ -57,8 +59,10 @@ public class LearningModuleRequest: Codable {
     public var enforceContentOrder: Bool?
     /** Allows to view Assessment results in detail */
     public var reviewAssessmentResults: ReviewAssessmentResults?
+    /** The configuration for linking a module to a rule */
+    public var autoAssign: LearningModuleAutoAssignRequest?
 
-    public init(name: String?, _description: String?, completionTimeInDays: Int?, informSteps: [LearningModuleInformStepRequest]?, type: ModelType?, assessmentForm: AssessmentForm?, coverArt: LearningModuleCoverArtRequest?, lengthInMinutes: Int?, excludedFromCatalog: Bool?, externalId: String?, enforceContentOrder: Bool?, reviewAssessmentResults: ReviewAssessmentResults?) {
+    public init(name: String?, _description: String?, completionTimeInDays: Int?, informSteps: [LearningModuleInformStepRequest]?, type: ModelType?, assessmentForm: AssessmentForm?, coverArt: LearningModuleCoverArtRequest?, lengthInMinutes: Int?, excludedFromCatalog: Bool?, externalId: String?, enforceContentOrder: Bool?, reviewAssessmentResults: ReviewAssessmentResults?, autoAssign: LearningModuleAutoAssignRequest?) {
         self.name = name
         self._description = _description
         self.completionTimeInDays = completionTimeInDays
@@ -71,6 +75,7 @@ public class LearningModuleRequest: Codable {
         self.externalId = externalId
         self.enforceContentOrder = enforceContentOrder
         self.reviewAssessmentResults = reviewAssessmentResults
+        self.autoAssign = autoAssign
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -86,6 +91,7 @@ public class LearningModuleRequest: Codable {
         case externalId
         case enforceContentOrder
         case reviewAssessmentResults
+        case autoAssign
     }
 
 

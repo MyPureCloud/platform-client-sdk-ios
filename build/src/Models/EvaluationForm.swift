@@ -22,6 +22,8 @@ public class EvaluationForm: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The evaluation form name */
@@ -36,12 +38,14 @@ public class EvaluationForm: Codable {
     public var publishedVersions: DomainEntityListingEvaluationForm?
     /** Settings for evaluations associated with this form */
     public var evaluationSettings: EvaluationSettings?
+    /** The name of the form's most recently published version */
+    public var latestVersionFormName: String?
     /** AI scoring settings for the evaluation form. */
     public var aiScoring: AiScoringSettings?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, modifiedDate: Date?, published: Bool?, contextId: String?, questionGroups: [EvaluationQuestionGroup]?, publishedVersions: DomainEntityListingEvaluationForm?, evaluationSettings: EvaluationSettings?, aiScoring: AiScoringSettings?, selfUri: String?) {
+    public init(_id: String?, name: String?, modifiedDate: Date?, published: Bool?, contextId: String?, questionGroups: [EvaluationQuestionGroup]?, publishedVersions: DomainEntityListingEvaluationForm?, evaluationSettings: EvaluationSettings?, latestVersionFormName: String?, aiScoring: AiScoringSettings?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.modifiedDate = modifiedDate
@@ -50,6 +54,7 @@ public class EvaluationForm: Codable {
         self.questionGroups = questionGroups
         self.publishedVersions = publishedVersions
         self.evaluationSettings = evaluationSettings
+        self.latestVersionFormName = latestVersionFormName
         self.aiScoring = aiScoring
         self.selfUri = selfUri
     }
@@ -63,6 +68,7 @@ public class EvaluationForm: Codable {
         case questionGroups
         case publishedVersions
         case evaluationSettings
+        case latestVersionFormName
         case aiScoring
         case selfUri
     }

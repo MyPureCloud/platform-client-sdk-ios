@@ -29,6 +29,8 @@ public class UpdateCoachingAppointmentRequest: Codable {
 
 
 
+
+
     /** The name of coaching appointment. */
     public var name: String?
     /** The description of coaching appointment. */
@@ -51,8 +53,10 @@ public class UpdateCoachingAppointmentRequest: Codable {
     public var location: String?
     /** Whether to share the insight data */
     public var shareInsightsData: Bool?
+    /** If True, adds the appointment to their schedule */
+    public var addToSchedule: Bool?
 
-    public init(name: String?, _description: String?, dateStart: Date?, lengthInMinutes: Int?, conversationIds: [String]?, documentIds: [String]?, status: Status?, wfmSchedule: WfmScheduleReference?, externalLinks: [String]?, location: String?, shareInsightsData: Bool?) {
+    public init(name: String?, _description: String?, dateStart: Date?, lengthInMinutes: Int?, conversationIds: [String]?, documentIds: [String]?, status: Status?, wfmSchedule: WfmScheduleReference?, externalLinks: [String]?, location: String?, shareInsightsData: Bool?, addToSchedule: Bool?) {
         self.name = name
         self._description = _description
         self.dateStart = dateStart
@@ -64,6 +68,7 @@ public class UpdateCoachingAppointmentRequest: Codable {
         self.externalLinks = externalLinks
         self.location = location
         self.shareInsightsData = shareInsightsData
+        self.addToSchedule = addToSchedule
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -78,6 +83,7 @@ public class UpdateCoachingAppointmentRequest: Codable {
         case externalLinks
         case location
         case shareInsightsData
+        case addToSchedule
     }
 
 

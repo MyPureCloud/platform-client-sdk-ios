@@ -9659,6 +9659,29 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\nlet participantId: String = \"\" // participant ID\n\n// Remove flagged reason from conversation participant.\nDeleteConversationParticipantFlaggedreasonRequest.deleteConversationParticipantFlaggedreason(conversationId: conversationId, participantId: participantId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteConversationParticipantFlaggedreasonRequest.deleteConversationParticipantFlaggedreason was successful\")\n    }\n}"
   },
+  "deleteconversationscallparticipantcommunicationpostflowaction": {
+    "operationId": "deleteconversationscallparticipantcommunicationpostflowaction",
+    "functionName": "deleteConversationsCallParticipantCommunicationPostflowaction",
+    "signature": "deleteConversationsCallParticipantCommunicationPostflowaction(conversationId, participantId, communicationId)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\n\n// Remove mandatory post call actions.\nDeleteConversationsCallParticipantCommunicationPostflowactionRequest.deleteConversationsCallParticipantCommunicationPostflowaction(conversationId: conversationId, participantId: participantId, communicationId: communicationId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteConversationsCallParticipantCommunicationPostflowactionRequest.deleteConversationsCallParticipantCommunicationPostflowaction was successful\")\n    }\n}"
+  },
   "deleteconversationscallparticipantconsult": {
     "operationId": "deleteconversationscallparticipantconsult",
     "functionName": "deleteConversationsCallParticipantConsult",
@@ -12012,6 +12035,34 @@
     ],
     "return": "JSON",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet body: MediaParticipantRequest = new MediaParticipantRequest(...) // Participant\n\n// Update conversation participant's communication by disconnecting it. This endpoint does not update wrapup.\nPatchConversationsCallParticipantCommunicationRequest.patchConversationsCallParticipantCommunication(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchConversationsCallParticipantCommunicationRequest.patchConversationsCallParticipantCommunication was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchconversationscallparticipantcommunicationpostflowaction": {
+    "operationId": "patchconversationscallparticipantcommunicationpostflowaction",
+    "functionName": "patchConversationsCallParticipantCommunicationPostflowaction",
+    "signature": "patchConversationsCallParticipantCommunicationPostflowaction(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "MandatoryPostCallActionInput",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet body: MandatoryPostCallActionInput = new MandatoryPostCallActionInput(...) // Action\n\n// Set mandatory post call actions.  If both values are null or blank error will occur.\nPatchConversationsCallParticipantCommunicationPostflowactionRequest.patchConversationsCallParticipantCommunicationPostflowaction(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchConversationsCallParticipantCommunicationPostflowactionRequest.patchConversationsCallParticipantCommunicationPostflowaction was successful\")\n    }\n}"
   },
   "patchconversationscallparticipantconsult": {
     "operationId": "patchconversationscallparticipantconsult",
@@ -15729,7 +15780,7 @@
       }
     ],
     "return": "NoteListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactId: String = \"\" // ExternalContact Id\nlet pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageSize <= 100; pageNumber * pageSize must be <= 1,000)\nlet pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)\nlet sortOrder: String = \"\" // The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \\\"createDate:asc\\\", \\\"createDate:desc\\\"\nlet expand: [String] = [\"\"] // which fields, if any, to expand\n\n// List notes for an external contact\nGetExternalcontactsContactNotesRequest.getExternalcontactsContactNotes(contactId: contactId, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsContactNotesRequest.getExternalcontactsContactNotes was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactId: String = \"\" // ExternalContact Id\nlet pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageSize <= 100; pageNumber * pageSize must be <= 1,000)\nlet pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)\nlet sortOrder: String = \"\" // The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \\\"createDate:asc\\\", \\\"createDate:desc\\\"\nlet expand: [String] = [\"\"] // which fields, if any, to expand. mergeset will include notes attached to ancestor contacts which have been merged into this one.\n\n// List notes for an external contact\nGetExternalcontactsContactNotesRequest.getExternalcontactsContactNotes(contactId: contactId, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsContactNotesRequest.getExternalcontactsContactNotes was successful\")\n        dump(response)\n    }\n}"
   },
   "getexternalcontactscontactunresolved": {
     "operationId": "getexternalcontactscontactunresolved",
@@ -35545,6 +35596,25 @@
     "return": "EvaluationFormResponseEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet sortBy: String = \"\" // variable name requested to sort by\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet expand: GetQualityFormsEvaluationsRequest.Expand_getQualityFormsEvaluations = GetQualityFormsEvaluationsRequest.Expand_getQualityFormsEvaluations.enummember // If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions\nlet name: String = \"\" // Name\nlet sortOrder: String = \"\" // Order to sort results, either asc or desc\n\n// Get the list of evaluation forms\nGetQualityFormsEvaluationsRequest.getQualityFormsEvaluations(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, nextPage: nextPage, previousPage: previousPage, expand: expand, name: name, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsEvaluationsRequest.getQualityFormsEvaluations was successful\")\n        dump(response)\n    }\n}"
   },
+  "getqualityformsevaluationsbulk": {
+    "operationId": "getqualityformsevaluationsbulk",
+    "functionName": "getQualityFormsEvaluationsBulk",
+    "signature": "getQualityFormsEvaluationsBulk(_id, includeLatestVersionFormName)",
+    "parameters": [
+      {
+        "name": "_id",
+        "type": "[String]",
+        "required": "true"
+      },
+      {
+        "name": "includeLatestVersionFormName",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "EvaluationFormResponseEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet _id: [String] = [\"\"] // A comma-delimited list of valid evaluation form ids. The maximum number of ids allowed in this list is 100\nlet includeLatestVersionFormName: Bool = true // Whether to include the name of the form's most recently published version\n\n// Retrieve a list of evaluation forms by their ids\nGetQualityFormsEvaluationsBulkRequest.getQualityFormsEvaluationsBulk(_id: _id, includeLatestVersionFormName: includeLatestVersionFormName) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsEvaluationsBulkRequest.getQualityFormsEvaluationsBulk was successful\")\n        dump(response)\n    }\n}"
+  },
   "getqualityformsevaluationsbulkcontexts": {
     "operationId": "getqualityformsevaluationsbulkcontexts",
     "functionName": "getQualityFormsEvaluationsBulkContexts",
@@ -35973,6 +36043,20 @@
     "return": "EvaluationScoringSet",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: EvaluationFormAndScoringSet = new EvaluationFormAndScoringSet(...) // evaluationAndScoringSet\n\n// Score evaluation\nPostQualityEvaluationsScoringRequest.postQualityEvaluationsScoring(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostQualityEvaluationsScoringRequest.postQualityEvaluationsScoring was successful\")\n        dump(response)\n    }\n}"
   },
+  "postqualityevaluationssearch": {
+    "operationId": "postqualityevaluationssearch",
+    "functionName": "postQualityEvaluationsSearch",
+    "signature": "postQualityEvaluationsSearch(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "EvaluationSearchRequestDTO",
+        "required": "true"
+      }
+    ],
+    "return": "EvaluationSearchResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: EvaluationSearchRequestDTO = new EvaluationSearchRequestDTO(...) // Evaluation search request\n\n// Search evaluations based along specified criteria\nPostQualityEvaluationsSearchRequest.postQualityEvaluationsSearch(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostQualityEvaluationsSearchRequest.postQualityEvaluationsSearch was successful\")\n        dump(response)\n    }\n}"
+  },
   "postqualityforms": {
     "operationId": "postqualityforms",
     "functionName": "postQualityForms",
@@ -36075,6 +36159,20 @@
     ],
     "return": "SurveyForm",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: PublishForm = new PublishForm(...) // Survey form\n\n// Publish a survey form.\nPostQualityPublishedformsSurveysRequest.postQualityPublishedformsSurveys(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostQualityPublishedformsSurveysRequest.postQualityPublishedformsSurveys was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postqualitysurveys": {
+    "operationId": "postqualitysurveys",
+    "functionName": "postQualitySurveys",
+    "signature": "postQualitySurveys(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "CreateSurveyRequest",
+        "required": "true"
+      }
+    ],
+    "return": "Survey",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: CreateSurveyRequest = new CreateSurveyRequest(...) // Survey creation request\n\n// Create a survey for a conversation\nPostQualitySurveysRequest.postQualitySurveys(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostQualitySurveysRequest.postQualitySurveys was successful\")\n        dump(response)\n    }\n}"
   },
   "postqualitysurveysscoring": {
     "operationId": "postqualitysurveysscoring",
@@ -40362,12 +40460,12 @@
     "parameters": [
       {
         "name": "body",
-        "type": "RoutingSkill",
+        "type": "CreateRoutingSkill",
         "required": "true"
       }
     ],
     "return": "RoutingSkill",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: RoutingSkill = new RoutingSkill(...) // Skill\n\n// Create Skill\nPostRoutingSkillsRequest.postRoutingSkills(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRoutingSkillsRequest.postRoutingSkills was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: CreateRoutingSkill = new CreateRoutingSkill(...) // Skill\n\n// Create Skill\nPostRoutingSkillsRequest.postRoutingSkills(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRoutingSkillsRequest.postRoutingSkills was successful\")\n        dump(response)\n    }\n}"
   },
   "postroutingsmsaddresses": {
     "operationId": "postroutingsmsaddresses",
@@ -43584,10 +43682,15 @@
   "getspeechandtextanalyticsdictionaryfeedback": {
     "operationId": "getspeechandtextanalyticsdictionaryfeedback",
     "functionName": "getSpeechandtextanalyticsDictionaryfeedback",
-    "signature": "getSpeechandtextanalyticsDictionaryfeedback(dialect, nextPage, pageSize)",
+    "signature": "getSpeechandtextanalyticsDictionaryfeedback(dialect, transcriptionEngine, nextPage, pageSize)",
     "parameters": [
       {
         "name": "dialect",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "transcriptionEngine",
         "type": "String",
         "required": "false"
       },
@@ -43603,7 +43706,7 @@
       }
     ],
     "return": "DictionaryFeedbackEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dialect: String = en-US // The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard\nlet nextPage: String = \"\" // The key for listing the next page\nlet pageSize: Int = 0 // The page size for the listing\n\n// Get the list of Speech & Text Analytics dictionary feedbacks\nGetSpeechandtextanalyticsDictionaryfeedbackRequest.getSpeechandtextanalyticsDictionaryfeedback(dialect: dialect, nextPage: nextPage, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsDictionaryfeedbackRequest.getSpeechandtextanalyticsDictionaryfeedback was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dialect: String = en-US // The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard\nlet transcriptionEngine: GetSpeechandtextanalyticsDictionaryfeedbackRequest.TranscriptionEngine_getSpeechandtextanalyticsDictionaryfeedback = GetSpeechandtextanalyticsDictionaryfeedbackRequest.TranscriptionEngine_getSpeechandtextanalyticsDictionaryfeedback.enummember // Filter by transcription engine\nlet nextPage: String = \"\" // The key for listing the next page\nlet pageSize: Int = 0 // The page size for the listing\n\n// Get the list of Speech & Text Analytics dictionary feedbacks\nGetSpeechandtextanalyticsDictionaryfeedbackRequest.getSpeechandtextanalyticsDictionaryfeedback(dialect: dialect, transcriptionEngine: transcriptionEngine, nextPage: nextPage, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsDictionaryfeedbackRequest.getSpeechandtextanalyticsDictionaryfeedback was successful\")\n        dump(response)\n    }\n}"
   },
   "getspeechandtextanalyticsdictionaryfeedbackdictionaryfeedbackid": {
     "operationId": "getspeechandtextanalyticsdictionaryfeedbackdictionaryfeedbackid",
@@ -43678,7 +43781,7 @@
   "getspeechandtextanalyticsprograms": {
     "operationId": "getspeechandtextanalyticsprograms",
     "functionName": "getSpeechandtextanalyticsPrograms",
-    "signature": "getSpeechandtextanalyticsPrograms(nextPage, pageSize, state)",
+    "signature": "getSpeechandtextanalyticsPrograms(nextPage, pageSize, state, name, sortBy, sortOrder)",
     "parameters": [
       {
         "name": "nextPage",
@@ -43694,10 +43797,25 @@
         "name": "state",
         "type": "String",
         "required": "false"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sortBy",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
       }
     ],
     "return": "ProgramsEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nextPage: String = \"\" // The key for listing the next page\nlet pageSize: Int = 0 // The page size for the listing\nlet state: GetSpeechandtextanalyticsProgramsRequest.State_getSpeechandtextanalyticsPrograms = GetSpeechandtextanalyticsProgramsRequest.State_getSpeechandtextanalyticsPrograms.enummember // Program state. Defaults to Latest\n\n// Get the list of Speech & Text Analytics programs\nGetSpeechandtextanalyticsProgramsRequest.getSpeechandtextanalyticsPrograms(nextPage: nextPage, pageSize: pageSize, state: state) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsProgramsRequest.getSpeechandtextanalyticsPrograms was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nextPage: String = \"\" // The key for listing the next page\nlet pageSize: Int = 0 // The page size for the listing\nlet state: GetSpeechandtextanalyticsProgramsRequest.State_getSpeechandtextanalyticsPrograms = GetSpeechandtextanalyticsProgramsRequest.State_getSpeechandtextanalyticsPrograms.enummember // Program state. Defaults to Latest\nlet name: String = \"\" // Case insensitive partial name to filter by\nlet sortBy: GetSpeechandtextanalyticsProgramsRequest.SortBy_getSpeechandtextanalyticsPrograms = GetSpeechandtextanalyticsProgramsRequest.SortBy_getSpeechandtextanalyticsPrograms.enummember // Sort results by. Defaults to name\nlet sortOrder: GetSpeechandtextanalyticsProgramsRequest.SortOrder_getSpeechandtextanalyticsPrograms = GetSpeechandtextanalyticsProgramsRequest.SortOrder_getSpeechandtextanalyticsPrograms.enummember // Sort order. Defaults to asc\n\n// Get the list of Speech & Text Analytics programs\nGetSpeechandtextanalyticsProgramsRequest.getSpeechandtextanalyticsPrograms(nextPage: nextPage, pageSize: pageSize, state: state, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsProgramsRequest.getSpeechandtextanalyticsPrograms was successful\")\n        dump(response)\n    }\n}"
   },
   "getspeechandtextanalyticsprogramsgeneraljob": {
     "operationId": "getspeechandtextanalyticsprogramsgeneraljob",

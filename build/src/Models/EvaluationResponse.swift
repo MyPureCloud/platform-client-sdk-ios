@@ -42,6 +42,10 @@ public class EvaluationResponse: Codable {
 
 
 
+
+
+
+
     public enum MediaType: String, Codable { 
         case call = "CALL"
         case callback = "CALLBACK"
@@ -55,6 +59,8 @@ public class EvaluationResponse: Codable {
         case video = "VIDEO"
         case screenshare = "SCREENSHARE"
     }
+
+
 
 
 
@@ -107,13 +113,19 @@ public class EvaluationResponse: Codable {
     public var releaseDate: Date?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var assignedDate: Date?
+    /** Date the first version of this evaluation was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var createdDate: Date?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var changedDate: Date?
+    /** Date the evaluation was last submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var submittedDate: Date?
     /** Date of when evaluation revision is created. Null if there is no revision. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var revisionCreatedDate: Date?
     public var queue: Queue?
     /** List of different communication types used in conversation. */
     public var mediaType: [MediaType]?
+    /** Evaluation is assigned in the following division(s). */
+    public var divisionIds: [String]?
     /** Is only true when evaluation is re-scored. */
     public var rescore: Bool?
     /** Date of conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -144,7 +156,7 @@ public class EvaluationResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, conversation: ConversationReference?, evaluationForm: EvaluationFormResponse?, evaluator: User?, agent: User?, calibration: AddressableEntityRef?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, assignee: User?, assigneeApplicable: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, revisionCreatedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, assigned: Bool?, dateAssigneeChanged: Date?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, isScoringIndex: Bool?, authorizedActions: [String]?, hasAssistanceFailed: Bool?, evaluationSource: EvaluationSource?, aiScoring: AiScoring?, selfUri: String?) {
+    public init(_id: String?, name: String?, conversation: ConversationReference?, evaluationForm: EvaluationFormResponse?, evaluator: User?, agent: User?, calibration: AddressableEntityRef?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, assignee: User?, assigneeApplicable: Bool?, releaseDate: Date?, assignedDate: Date?, createdDate: Date?, changedDate: Date?, submittedDate: Date?, revisionCreatedDate: Date?, queue: Queue?, mediaType: [MediaType]?, divisionIds: [String]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, assigned: Bool?, dateAssigneeChanged: Date?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, isScoringIndex: Bool?, authorizedActions: [String]?, hasAssistanceFailed: Bool?, evaluationSource: EvaluationSource?, aiScoring: AiScoring?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.conversation = conversation
@@ -159,10 +171,13 @@ public class EvaluationResponse: Codable {
         self.assigneeApplicable = assigneeApplicable
         self.releaseDate = releaseDate
         self.assignedDate = assignedDate
+        self.createdDate = createdDate
         self.changedDate = changedDate
+        self.submittedDate = submittedDate
         self.revisionCreatedDate = revisionCreatedDate
         self.queue = queue
         self.mediaType = mediaType
+        self.divisionIds = divisionIds
         self.rescore = rescore
         self.conversationDate = conversationDate
         self.conversationEndDate = conversationEndDate
@@ -195,10 +210,13 @@ public class EvaluationResponse: Codable {
         case assigneeApplicable
         case releaseDate
         case assignedDate
+        case createdDate
         case changedDate
+        case submittedDate
         case revisionCreatedDate
         case queue
         case mediaType
+        case divisionIds
         case rescore
         case conversationDate
         case conversationEndDate

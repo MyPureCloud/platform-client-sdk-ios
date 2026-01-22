@@ -14,4 +14,4 @@ Form introduction section with title, subtitle, image, and button text
 
 
 
-_PureCloudPlatformClientV2@185.0.0_
+_PureCloudPlatformClientV2@186.0.0_

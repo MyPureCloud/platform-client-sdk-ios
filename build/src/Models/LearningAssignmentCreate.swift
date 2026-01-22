@@ -10,6 +10,10 @@ public class LearningAssignmentCreate: Codable {
 
 
 
+
+
+    /** If True, adds the assignment to their schedule */
+    public var addToSchedule: Bool?
     /** The Learning module Id associated with this assignment */
     public var moduleId: String?
     /** The User for whom the assignment is assigned */
@@ -19,7 +23,8 @@ public class LearningAssignmentCreate: Codable {
     /** The length in minutes of assignment */
     public var lengthInMinutes: Int?
 
-    public init(moduleId: String?, userId: String?, recommendedCompletionDate: Date?, lengthInMinutes: Int?) {
+    public init(addToSchedule: Bool?, moduleId: String?, userId: String?, recommendedCompletionDate: Date?, lengthInMinutes: Int?) {
+        self.addToSchedule = addToSchedule
         self.moduleId = moduleId
         self.userId = userId
         self.recommendedCompletionDate = recommendedCompletionDate

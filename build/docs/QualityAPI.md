@@ -25,6 +25,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getQualityFormsEvaluation**](QualityAPI#getQualityFormsEvaluation) | Get an evaluation form |
 | [**getQualityFormsEvaluationVersions**](QualityAPI#getQualityFormsEvaluationVersions) | Gets all the revisions for a specific evaluation. |
 | [**getQualityFormsEvaluations**](QualityAPI#getQualityFormsEvaluations) | Get the list of evaluation forms |
+| [**getQualityFormsEvaluationsBulk**](QualityAPI#getQualityFormsEvaluationsBulk) | Retrieve a list of evaluation forms by their ids |
 | [**getQualityFormsEvaluationsBulkContexts**](QualityAPI#getQualityFormsEvaluationsBulkContexts) | Retrieve a list of the latest published evaluation form versions by context ids |
 | [**getQualityFormsSurvey**](QualityAPI#getQualityFormsSurvey) | Get a survey form |
 | [**getQualityFormsSurveyVersions**](QualityAPI#getQualityFormsSurveyVersions) | Gets all the revisions for a specific survey. |
@@ -49,6 +50,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postQualityConversationsAuditsQuery**](QualityAPI#postQualityConversationsAuditsQuery) | Create audit query execution |
 | [**postQualityEvaluationsAggregatesQueryMe**](QualityAPI#postQualityEvaluationsAggregatesQueryMe) | Query for evaluation aggregates for the current user |
 | [**postQualityEvaluationsScoring**](QualityAPI#postQualityEvaluationsScoring) | Score evaluation |
+| [**postQualityEvaluationsSearch**](QualityAPI#postQualityEvaluationsSearch) | Search evaluations based along specified criteria |
 | [**postQualityForms**](QualityAPI#postQualityForms) | Create an evaluation form. |
 | [**postQualityFormsEvaluations**](QualityAPI#postQualityFormsEvaluations) | Create an evaluation form. |
 | [**postQualityFormsSurveys**](QualityAPI#postQualityFormsSurveys) | Create a survey form. |
@@ -56,6 +58,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postQualityPublishedforms**](QualityAPI#postQualityPublishedforms) | Publish an evaluation form. |
 | [**postQualityPublishedformsEvaluations**](QualityAPI#postQualityPublishedformsEvaluations) | Publish an evaluation form. |
 | [**postQualityPublishedformsSurveys**](QualityAPI#postQualityPublishedformsSurveys) | Publish a survey form. |
+| [**postQualitySurveys**](QualityAPI#postQualitySurveys) | Create a survey for a conversation |
 | [**postQualitySurveysScoring**](QualityAPI#postQualitySurveysScoring) | Score survey |
 | [**putQualityCalibration**](QualityAPI#putQualityCalibration) | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
 | [**putQualityConversationEvaluation**](QualityAPI#putQualityConversationEvaluation) | Update an evaluation |
@@ -1285,6 +1288,58 @@ QualityAPI.getQualityFormsEvaluations(pageSize: pageSize, pageNumber: pageNumber
 | **expand** | **String**| If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions | [optional]<br />**Values**: publishhistory ("publishHistory") |
 | **name** | **String**| Name | [optional] |
 | **sortOrder** | **String**| Order to sort results, either asc or desc | [optional] |
+
+
+### Return type
+
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing)
+
+
+## getQualityFormsEvaluationsBulk
+
+
+
+> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing) getQualityFormsEvaluationsBulk(_id, includeLatestVersionFormName)
+
+Retrieve a list of evaluation forms by their ids
+
+
+
+Wraps GET /api/v2/quality/forms/evaluations/bulk  
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let _id: [String] = [""] // A comma-delimited list of valid evaluation form ids. The maximum number of ids allowed in this list is 100
+let includeLatestVersionFormName: Bool = true // Whether to include the name of the form's most recently published version
+
+// Code example
+QualityAPI.getQualityFormsEvaluationsBulk(_id: _id, includeLatestVersionFormName: includeLatestVersionFormName) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.getQualityFormsEvaluationsBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **_id** | [**[String]**](String)| A comma-delimited list of valid evaluation form ids. The maximum number of ids allowed in this list is 100 | |
+| **includeLatestVersionFormName** | **Bool**| Whether to include the name of the form's most recently published version | [optional] |
 
 
 ### Return type
@@ -2537,6 +2592,58 @@ QualityAPI.postQualityEvaluationsScoring(body: body) { (response, error) in
 [**EvaluationScoringSet**](EvaluationScoringSet)
 
 
+## postQualityEvaluationsSearch
+
+
+
+> [EvaluationSearchResponse](EvaluationSearchResponse) postQualityEvaluationsSearch(body)
+
+Search evaluations based along specified criteria
+
+Search Rules: 1. Time Range    - Time Range: Max 3 months (required) 2. Question Group Level Query: Use at least one field containing &#39;questionGroup&#39; in name + exactly one questionGroupId 3. Question Level Query: Use at least one field containing &#39;question&#39; in name + exactly one questionId 4. Mixed Queries: questionId alone is sufficient 5. Search Logic:    - Multiple criteria: AND operation    - Multiple values per criterion: OR operation    EXAMPLE: (agentId₁ OR agentId₂) AND (evaluatorId₁ OR evaluatorId₂) 5. Aggregations:    - Omit or set pageSize &#x3D; 0    - Choose: multiple aggregations OR single aggregation with multiple sub-aggregations    - To aggregate against question fields, one must query by either a questionId OR a single top level TERM questionId aggregation AND query by a single formID or questionGroupId, or list of questionIds    - To aggregate against question group fields, one must query either a questionId/questionGroupId OR a single top level TERM questionGroupId aggregation AND query by a single formID or list of questionGroupIds 
+
+
+
+Wraps POST /api/v2/quality/evaluations/search  
+
+Requires ANY permissions: 
+
+* quality:evaluation:searchAny
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: EvaluationSearchRequestDTO = new EvaluationSearchRequestDTO(...) // Evaluation search request
+
+// Code example
+QualityAPI.postQualityEvaluationsSearch(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.postQualityEvaluationsSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**EvaluationSearchRequestDTO**](EvaluationSearchRequestDTO)| Evaluation search request | |
+
+
+### Return type
+
+[**EvaluationSearchResponse**](EvaluationSearchResponse)
+
+
 ## postQualityForms
 
 
@@ -2889,6 +2996,56 @@ QualityAPI.postQualityPublishedformsSurveys(body: body) { (response, error) in
 ### Return type
 
 [**SurveyForm**](SurveyForm)
+
+
+## postQualitySurveys
+
+
+
+> [Survey](Survey) postQualitySurveys(body)
+
+Create a survey for a conversation
+
+
+
+Wraps POST /api/v2/quality/surveys  
+
+Requires ANY permissions: 
+
+* quality:survey:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CreateSurveyRequest = new CreateSurveyRequest(...) // Survey creation request
+
+// Code example
+QualityAPI.postQualitySurveys(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.postQualitySurveys was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CreateSurveyRequest**](CreateSurveyRequest)| Survey creation request | |
+
+
+### Return type
+
+[**Survey**](Survey)
 
 
 ## postQualitySurveysScoring
@@ -3365,4 +3522,4 @@ QualityAPI.putQualitySurveysScorable(customerSurveyUrl: customerSurveyUrl, body:
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatformClientV2@185.0.0_
+_PureCloudPlatformClientV2@186.0.0_
