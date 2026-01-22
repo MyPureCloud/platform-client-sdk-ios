@@ -14,4 +14,4 @@ Open Social Messaging rich media event structure
 
 
 
-_PureCloudPlatformClientV2@185.0.0_
+_PureCloudPlatformClientV2@186.0.0_

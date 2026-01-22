@@ -14,4 +14,4 @@ Response object from launching a flow.
 
 
 
-_PureCloudPlatformClientV2@185.0.0_
+_PureCloudPlatformClientV2@186.0.0_

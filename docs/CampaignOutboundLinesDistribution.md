@@ -17,4 +17,4 @@ Lines distribution information or Campaign&#39;s Edge Group or Site
 
 
 
-_PureCloudPlatformClientV2@185.0.0_
+_PureCloudPlatformClientV2@186.0.0_

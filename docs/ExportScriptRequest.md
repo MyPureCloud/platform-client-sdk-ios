@@ -12,4 +12,4 @@ Creating an exported script via Download Service
 
 
 
-_PureCloudPlatformClientV2@185.0.0_
+_PureCloudPlatformClientV2@186.0.0_

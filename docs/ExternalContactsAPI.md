@@ -929,7 +929,7 @@ let contactId: String = "" // ExternalContact Id
 let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageSize <= 100; pageNumber * pageSize must be <= 1,000)
 let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let sortOrder: String = "" // The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \"createDate:asc\", \"createDate:desc\"
-let expand: [String] = [""] // which fields, if any, to expand
+let expand: [String] = [""] // which fields, if any, to expand. mergeset will include notes attached to ancestor contacts which have been merged into this one.
 
 // Code example
 ExternalContactsAPI.getExternalcontactsContactNotes(contactId: contactId, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, expand: expand) { (response, error) in
@@ -951,7 +951,7 @@ ExternalContactsAPI.getExternalcontactsContactNotes(contactId: contactId, pageSi
 | **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageSize <= 100; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **sortOrder** | **String**| The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \"createDate:asc\", \"createDate:desc\" | [optional] |
-| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: author ("author"), externaldatasources ("externalDataSources"), division ("division") |
+| **expand** | [**[String]**](String)| which fields, if any, to expand. mergeset will include notes attached to ancestor contacts which have been merged into this one. | [optional]<br />**Values**: author ("author"), externaldatasources ("externalDataSources"), division ("division"), mergeset ("mergeset") |
 
 
 ### Return type
@@ -6372,4 +6372,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@185.0.0_
+_PureCloudPlatformClientV2@186.0.0_

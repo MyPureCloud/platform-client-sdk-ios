@@ -788,7 +788,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsConversationSummaries(conversati
 
 
 
-> [DictionaryFeedbackEntityListing](DictionaryFeedbackEntityListing) getSpeechandtextanalyticsDictionaryfeedback(dialect, nextPage, pageSize)
+> [DictionaryFeedbackEntityListing](DictionaryFeedbackEntityListing) getSpeechandtextanalyticsDictionaryfeedback(dialect, transcriptionEngine, nextPage, pageSize)
 
 Get the list of Speech &amp; Text Analytics dictionary feedbacks
 
@@ -809,11 +809,12 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let dialect: String = en-US // The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard
+let transcriptionEngine: SpeechTextAnalyticsAPI.TranscriptionEngine_getSpeechandtextanalyticsDictionaryfeedback = SpeechTextAnalyticsAPI.TranscriptionEngine_getSpeechandtextanalyticsDictionaryfeedback.enummember // Filter by transcription engine
 let nextPage: String = "" // The key for listing the next page
 let pageSize: Int = 0 // The page size for the listing
 
 // Code example
-SpeechTextAnalyticsAPI.getSpeechandtextanalyticsDictionaryfeedback(dialect: dialect, nextPage: nextPage, pageSize: pageSize) { (response, error) in
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsDictionaryfeedback(dialect: dialect, transcriptionEngine: transcriptionEngine, nextPage: nextPage, pageSize: pageSize) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -829,6 +830,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsDictionaryfeedback(dialect: dial
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **dialect** | **String**| The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional] |
+| **transcriptionEngine** | **String**| Filter by transcription engine | [optional]<br />**Values**: genesys ("Genesys"), genesysExtended ("GenesysExtended") |
 | **nextPage** | **String**| The key for listing the next page | [optional] |
 | **pageSize** | **Int**| The page size for the listing | [optional] |
 
@@ -1093,7 +1095,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramTranscriptionengines(prog
 
 
 
-> [ProgramsEntityListing](ProgramsEntityListing) getSpeechandtextanalyticsPrograms(nextPage, pageSize, state)
+> [ProgramsEntityListing](ProgramsEntityListing) getSpeechandtextanalyticsPrograms(nextPage, pageSize, state, name, sortBy, sortOrder)
 
 Get the list of Speech &amp; Text Analytics programs
 
@@ -1116,9 +1118,12 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let nextPage: String = "" // The key for listing the next page
 let pageSize: Int = 0 // The page size for the listing
 let state: SpeechTextAnalyticsAPI.State_getSpeechandtextanalyticsPrograms = SpeechTextAnalyticsAPI.State_getSpeechandtextanalyticsPrograms.enummember // Program state. Defaults to Latest
+let name: String = "" // Case insensitive partial name to filter by
+let sortBy: SpeechTextAnalyticsAPI.SortBy_getSpeechandtextanalyticsPrograms = SpeechTextAnalyticsAPI.SortBy_getSpeechandtextanalyticsPrograms.enummember // Sort results by. Defaults to name
+let sortOrder: SpeechTextAnalyticsAPI.SortOrder_getSpeechandtextanalyticsPrograms = SpeechTextAnalyticsAPI.SortOrder_getSpeechandtextanalyticsPrograms.enummember // Sort order. Defaults to asc
 
 // Code example
-SpeechTextAnalyticsAPI.getSpeechandtextanalyticsPrograms(nextPage: nextPage, pageSize: pageSize, state: state) { (response, error) in
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsPrograms(nextPage: nextPage, pageSize: pageSize, state: state, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1136,6 +1141,9 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsPrograms(nextPage: nextPage, pag
 | **nextPage** | **String**| The key for listing the next page | [optional] |
 | **pageSize** | **Int**| The page size for the listing | [optional] |
 | **state** | **String**| Program state. Defaults to Latest | [optional]<br />**Values**: latest ("Latest"), published ("Published") |
+| **name** | **String**| Case insensitive partial name to filter by | [optional] |
+| **sortBy** | **String**| Sort results by. Defaults to name | [optional]<br />**Values**: name ("name") |
+| **sortOrder** | **String**| Sort order. Defaults to asc | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
 
 
 ### Return type
@@ -3024,4 +3032,4 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsTopic(topicId: topicId, body: bo
 [**Topic**](Topic)
 
 
-_PureCloudPlatformClientV2@185.0.0_
+_PureCloudPlatformClientV2@186.0.0_

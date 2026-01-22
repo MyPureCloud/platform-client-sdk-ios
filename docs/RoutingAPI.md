@@ -767,9 +767,10 @@ Delete Routing Skill
 
 Wraps DELETE /api/v2/routing/skills/{skillId}  
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * routing:skill:manage
+* routing:skill:delete
 
 ### Example
 
@@ -7004,6 +7005,7 @@ Wraps POST /api/v2/routing/skills
 Requires ANY permissions: 
 
 * routing:skill:manage
+* routing:skill:create
 
 ### Example
 
@@ -7013,7 +7015,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: RoutingSkill = new RoutingSkill(...) // Skill
+let body: CreateRoutingSkill = new CreateRoutingSkill(...) // Skill
 
 // Code example
 RoutingAPI.postRoutingSkills(body: body) { (response, error) in
@@ -7031,7 +7033,7 @@ RoutingAPI.postRoutingSkills(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**RoutingSkill**](RoutingSkill)| Skill | |
+| **body** | [**CreateRoutingSkill**](CreateRoutingSkill)| Skill | |
 
 
 ### Return type
@@ -8277,4 +8279,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@185.0.0_
+_PureCloudPlatformClientV2@186.0.0_
