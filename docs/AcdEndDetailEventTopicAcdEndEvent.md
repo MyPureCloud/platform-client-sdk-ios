@@ -30,6 +30,7 @@
 | **requestedRoutings** | **[String]** |  | [optional] |
 | **usedRouting** | **String** |  | [optional] |
 | **requestedRoutingSkillIds** | [**[UUID]**]([UUID]) |  | [optional] |
+| **requestedSkillExpressionIds** | [**[UUID]**]([UUID]) |  | [optional] |
 | **requestedLanguageId** | **String** |  | [optional] |
 | **requestedRoutingUserIds** | [**[UUID]**]([UUID]) |  | [optional] |
 | **routingPriority** | **Int64** |  | [optional] |

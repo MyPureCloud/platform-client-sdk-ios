@@ -12,6 +12,7 @@
 | **organizationId** | **String** |  | [optional] |
 | **userId** | **String** |  | [optional] |
 | **oauthClientId** | **String** |  | [optional] |
+| **oauthClientOrgId** | **String** |  | [optional] |
 | **reason** | **String** |  | [optional] |
 | **message** | **String** |  | [optional] |
 | **data** | [**[String:JSON]**](JSON) |  | [optional] |

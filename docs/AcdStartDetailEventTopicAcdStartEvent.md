@@ -29,6 +29,7 @@
 | **utilizationLabel** | **String** |  | [optional] |
 | **routingPriority** | **Int64** |  | [optional] |
 | **requestedRoutingSkillIds** | [**[UUID]**]([UUID]) |  | [optional] |
+| **skillExpressionApplied** | **Bool** |  | [optional] |
 
 
 

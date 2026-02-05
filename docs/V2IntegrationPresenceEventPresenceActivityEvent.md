@@ -14,6 +14,7 @@
 | **message** | **String** |  | [optional] |
 | **currentDisplaySourceId** | [**UUID**](UUID) |  | [optional] |
 | **previousDisplaySourceId** | [**UUID**](UUID) |  | [optional] |
+| **futurePresenceDefinition** | [**V2IntegrationPresenceEventOrganizationPresence**](V2IntegrationPresenceEventOrganizationPresence) |  | [optional] |
 
 
 
