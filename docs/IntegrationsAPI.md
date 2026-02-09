@@ -953,7 +953,7 @@ IntegrationsAPI.getIntegrationsActionTemplate(actionId: actionId, fileName: file
 
 
 
-> [ActionEntityListing](ActionEntityListing) getIntegrationsActions(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, ids, secure, includeAuthActions)
+> [ActionEntityListing](ActionEntityListing) getIntegrationsActions(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, ids, secure, includeAuthActions, includeConfig)
 
 Retrieves all actions associated with filters passed in via query param.
 
@@ -985,9 +985,10 @@ let name: String = "" // Filter by partial or complete action name.
 let ids: String = "" // Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids.
 let secure: IntegrationsAPI.Secure_getIntegrationsActions = IntegrationsAPI.Secure_getIntegrationsActions.enummember // Filter based on 'secure' configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions.
 let includeAuthActions: IntegrationsAPI.IncludeAuthActions_getIntegrationsActions = IntegrationsAPI.IncludeAuthActions_getIntegrationsActions.enummember // Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
+let includeConfig: IntegrationsAPI.IncludeConfig_getIntegrationsActions = IntegrationsAPI.IncludeConfig_getIntegrationsActions.enummember // Return config in response.
 
 // Code example
-IntegrationsAPI.getIntegrationsActions(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, ids: ids, secure: secure, includeAuthActions: includeAuthActions) { (response, error) in
+IntegrationsAPI.getIntegrationsActions(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, ids: ids, secure: secure, includeAuthActions: includeAuthActions, includeConfig: includeConfig) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1013,6 +1014,7 @@ IntegrationsAPI.getIntegrationsActions(pageSize: pageSize, pageNumber: pageNumbe
 | **ids** | **String**| Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. | [optional] |
 | **secure** | **String**| Filter based on 'secure' configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 | **includeAuthActions** | **String**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional]<br />**Values**: _true ("true"), _false ("false") |
+| **includeConfig** | **Bool**| Return config in response. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 
 
 ### Return type
@@ -1185,7 +1187,7 @@ This endpoint does not require any parameters.
 
 
 
-> [ActionEntityListing](ActionEntityListing) getIntegrationsActionsDrafts(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, ids, secure, includeAuthActions)
+> [ActionEntityListing](ActionEntityListing) getIntegrationsActionsDrafts(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, ids, secure, includeAuthActions, includeConfig)
 
 Retrieves all action drafts associated with the filters passed in via query param.
 
@@ -1217,9 +1219,10 @@ let name: String = "" // Filter by partial or complete action name.
 let ids: String = "" // Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids.
 let secure: IntegrationsAPI.Secure_getIntegrationsActionsDrafts = IntegrationsAPI.Secure_getIntegrationsActionsDrafts.enummember // Filter based on 'secure' configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions.
 let includeAuthActions: IntegrationsAPI.IncludeAuthActions_getIntegrationsActionsDrafts = IntegrationsAPI.IncludeAuthActions_getIntegrationsActionsDrafts.enummember // Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
+let includeConfig: IntegrationsAPI.IncludeConfig_getIntegrationsActionsDrafts = IntegrationsAPI.IncludeConfig_getIntegrationsActionsDrafts.enummember // Return config in response.
 
 // Code example
-IntegrationsAPI.getIntegrationsActionsDrafts(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, ids: ids, secure: secure, includeAuthActions: includeAuthActions) { (response, error) in
+IntegrationsAPI.getIntegrationsActionsDrafts(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, ids: ids, secure: secure, includeAuthActions: includeAuthActions, includeConfig: includeConfig) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1245,6 +1248,7 @@ IntegrationsAPI.getIntegrationsActionsDrafts(pageSize: pageSize, pageNumber: pag
 | **ids** | **String**| Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. | [optional] |
 | **secure** | **String**| Filter based on 'secure' configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 | **includeAuthActions** | **String**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional]<br />**Values**: _true ("true"), _false ("false") |
+| **includeConfig** | **Bool**| Return config in response. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 
 
 ### Return type
@@ -4762,4 +4766,4 @@ IntegrationsAPI.putIntegrationsUnifiedcommunicationThirdpartypresences(ucIntegra
 **String**
 
 
-_PureCloudPlatformClientV2@186.0.0_
+_PureCloudPlatformClientV2@187.0.0_

@@ -3231,6 +3231,8 @@ UsersAPI.patchUserQueue(queueId: queueId, userId: userId, body: body) { (respons
 
 Join or unjoin a set of queues for a user
 
+Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
+
 
 
 Wraps PATCH /api/v2/users/{userId}/queues  
@@ -5200,4 +5202,4 @@ UsersAPI.putUserVerifier(userId: userId, verifierId: verifierId, body: body) { (
 [**Verifier**](Verifier)
 
 
-_PureCloudPlatformClientV2@186.0.0_
+_PureCloudPlatformClientV2@187.0.0_

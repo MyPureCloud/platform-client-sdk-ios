@@ -17,10 +17,13 @@
 | **customEntities** | [**[SummarySettingCustomEntity]**]([SummarySettingCustomEntity]) | Custom entity definition. | [optional] |
 | **settingType** | **String** | Type of the summary setting. | [optional] |
 | **prompt** | **String** | Custom prompt of summary setting. | [optional] |
+| **serviceType** | **String** | Service type for summarization. Can be &#39;Native&#39; for Genesys native summarization engine or &#39;External&#39; for external service. If specified as &#39;External&#39;, integrationId must be provided. | [optional] |
+| **integrationId** | **String** | Integration ID for the external summarization service. Required when serviceType is External. | [optional] |
+| **timeoutDuration** | **Int** | Timeout duration in seconds for the external summarization service request. | [optional] |
 | **dateCreated** | [**Date**](Date) | The date and time the setting was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **dateModified** | [**Date**](Date) | The date and time the setting was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@186.0.0_
+_PureCloudPlatformClientV2@187.0.0_
