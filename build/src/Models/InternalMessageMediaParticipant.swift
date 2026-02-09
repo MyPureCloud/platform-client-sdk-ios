@@ -59,6 +59,7 @@ public class InternalMessageMediaParticipant: Codable {
         case spam = "spam"
         case inactivity = "inactivity"
         case sessionExpired = "session.expired"
+        case takeover = "takeover"
     }
 
 

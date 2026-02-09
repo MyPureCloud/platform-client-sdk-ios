@@ -14,7 +14,8 @@
 | **message** | **String** |  | [optional] |
 | **currentDisplaySourceId** | [**UUID**](UUID) |  | [optional] |
 | **previousDisplaySourceId** | [**UUID**](UUID) |  | [optional] |
+| **futurePresenceDefinition** | [**V2IntegrationPresenceEventOrganizationPresence**](V2IntegrationPresenceEventOrganizationPresence) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@186.0.0_
+_PureCloudPlatformClientV2@187.0.0_

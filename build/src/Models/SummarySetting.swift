@@ -39,6 +39,15 @@ public class SummarySetting: Codable {
 
 
 
+    public enum ServiceType: String, Codable { 
+        case native = "Native"
+        case external = "External"
+    }
+
+
+
+
+
 
 
 
@@ -67,6 +76,12 @@ public class SummarySetting: Codable {
     public var settingType: SettingType?
     /** Custom prompt of summary setting. */
     public var prompt: String?
+    /** Service type for summarization. Can be 'Native' for Genesys native summarization engine or 'External' for external service. If specified as 'External', integrationId must be provided. */
+    public var serviceType: ServiceType?
+    /** Integration ID for the external summarization service. Required when serviceType is External. */
+    public var integrationId: String?
+    /** Timeout duration in seconds for the external summarization service request. */
+    public var timeoutDuration: Int?
     /** The date and time the setting was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** The date and time the setting was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -74,7 +89,7 @@ public class SummarySetting: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, language: String?, summaryType: SummaryType?, format: Format?, maskPII: SummarySettingPII?, participantLabels: SummarySettingParticipantLabels?, predefinedInsights: [PredefinedInsights]?, customEntities: [SummarySettingCustomEntity]?, settingType: SettingType?, prompt: String?, dateCreated: Date?, dateModified: Date?, selfUri: String?) {
+    public init(_id: String?, name: String?, language: String?, summaryType: SummaryType?, format: Format?, maskPII: SummarySettingPII?, participantLabels: SummarySettingParticipantLabels?, predefinedInsights: [PredefinedInsights]?, customEntities: [SummarySettingCustomEntity]?, settingType: SettingType?, prompt: String?, serviceType: ServiceType?, integrationId: String?, timeoutDuration: Int?, dateCreated: Date?, dateModified: Date?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.language = language
@@ -86,6 +101,9 @@ public class SummarySetting: Codable {
         self.customEntities = customEntities
         self.settingType = settingType
         self.prompt = prompt
+        self.serviceType = serviceType
+        self.integrationId = integrationId
+        self.timeoutDuration = timeoutDuration
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.selfUri = selfUri
@@ -103,6 +121,9 @@ public class SummarySetting: Codable {
         case customEntities
         case settingType
         case prompt
+        case serviceType
+        case integrationId
+        case timeoutDuration
         case dateCreated
         case dateModified
         case selfUri

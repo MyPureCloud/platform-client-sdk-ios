@@ -505,8 +505,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -606,8 +606,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -961,8 +961,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
@@ -1058,8 +1058,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter subjectId: (path) Subject ID (user or group) 
@@ -1189,8 +1189,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -12334,8 +12334,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter roleId: (path) Role ID 
@@ -15948,8 +15948,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -18369,6 +18369,7 @@ open class AuthorizationAPI {
         case extensionpool = "EXTENSIONPOOL"
         case skillgroup = "SKILLGROUP"
         case script = "SCRIPT"
+        case library = "LIBRARY"
     }
     
     
@@ -18554,15 +18555,18 @@ open class AuthorizationAPI {
     
     
     
+    
+    
     /**
      Add an access control policy for a specified resource target and subject
      
      - parameter targetName: (path) The domain:entity:action target to which the policy will be applied 
      - parameter body: (body) Access control policy 
+     - parameter skipLockoutCheck: (query) Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAuthorizationPoliciesTarget(targetName: String, body: AuthorizationPolicy, completion: @escaping ((_ data: AuthorizationPolicy?,_ error: Error?) -> Void)) {
-        let requestBuilder = postAuthorizationPoliciesTargetWithRequestBuilder(targetName: targetName, body: body)
+    open class func postAuthorizationPoliciesTarget(targetName: String, body: AuthorizationPolicy, skipLockoutCheck: Bool? = nil, completion: @escaping ((_ data: AuthorizationPolicy?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAuthorizationPoliciesTargetWithRequestBuilder(targetName: targetName, body: body, skipLockoutCheck: skipLockoutCheck)
         requestBuilder.execute { (response: Response<AuthorizationPolicy>?, error) -> Void in
             do {
                 if let e = error {
@@ -18606,10 +18610,11 @@ open class AuthorizationAPI {
      
      - parameter targetName: (path) The domain:entity:action target to which the policy will be applied 
      - parameter body: (body) Access control policy 
+     - parameter skipLockoutCheck: (query) Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional)
 
      - returns: RequestBuilder<AuthorizationPolicy> 
      */
-    open class func postAuthorizationPoliciesTargetWithRequestBuilder(targetName: String, body: AuthorizationPolicy) -> RequestBuilder<AuthorizationPolicy> {        
+    open class func postAuthorizationPoliciesTargetWithRequestBuilder(targetName: String, body: AuthorizationPolicy, skipLockoutCheck: Bool? = nil) -> RequestBuilder<AuthorizationPolicy> {        
         var path = "/api/v2/authorization/policies/targets/{targetName}"
         let targetNamePreEscape = "\(targetName)"
         let targetNamePostEscape = targetNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -18617,7 +18622,10 @@ open class AuthorizationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "skipLockoutCheck": skipLockoutCheck
+        ])
 
         let requestBuilder: RequestBuilder<AuthorizationPolicy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -32646,8 +32654,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter force: (query) Restore default roles (optional)
@@ -32967,15 +32975,18 @@ open class AuthorizationAPI {
     
     
     
+    
+    
     /**
      Add an access control policy for a specified resource target and subject, overwriting any existing policy
      
      - parameter targetName: (path) The domain:entity:action target to which the policy will be applied 
      - parameter body: (body) Access control policy 
+     - parameter skipLockoutCheck: (query) Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putAuthorizationPoliciesTarget(targetName: String, body: AuthorizationPolicy, completion: @escaping ((_ data: AuthorizationPolicy?,_ error: Error?) -> Void)) {
-        let requestBuilder = putAuthorizationPoliciesTargetWithRequestBuilder(targetName: targetName, body: body)
+    open class func putAuthorizationPoliciesTarget(targetName: String, body: AuthorizationPolicy, skipLockoutCheck: Bool? = nil, completion: @escaping ((_ data: AuthorizationPolicy?,_ error: Error?) -> Void)) {
+        let requestBuilder = putAuthorizationPoliciesTargetWithRequestBuilder(targetName: targetName, body: body, skipLockoutCheck: skipLockoutCheck)
         requestBuilder.execute { (response: Response<AuthorizationPolicy>?, error) -> Void in
             do {
                 if let e = error {
@@ -33019,10 +33030,11 @@ open class AuthorizationAPI {
      
      - parameter targetName: (path) The domain:entity:action target to which the policy will be applied 
      - parameter body: (body) Access control policy 
+     - parameter skipLockoutCheck: (query) Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional)
 
      - returns: RequestBuilder<AuthorizationPolicy> 
      */
-    open class func putAuthorizationPoliciesTargetWithRequestBuilder(targetName: String, body: AuthorizationPolicy) -> RequestBuilder<AuthorizationPolicy> {        
+    open class func putAuthorizationPoliciesTargetWithRequestBuilder(targetName: String, body: AuthorizationPolicy, skipLockoutCheck: Bool? = nil) -> RequestBuilder<AuthorizationPolicy> {        
         var path = "/api/v2/authorization/policies/targets/{targetName}"
         let targetNamePreEscape = "\(targetName)"
         let targetNamePostEscape = targetNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -33030,7 +33042,10 @@ open class AuthorizationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "skipLockoutCheck": skipLockoutCheck
+        ])
 
         let requestBuilder: RequestBuilder<AuthorizationPolicy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -33041,15 +33056,18 @@ open class AuthorizationAPI {
     
     
     
+    
+    
     /**
      Update an access control policy with a given ID
      
      - parameter policyId: (path) The ID of the policy to update 
      - parameter body: (body) Access control policy 
+     - parameter skipLockoutCheck: (query) Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putAuthorizationPolicy(policyId: String, body: AuthorizationPolicy, completion: @escaping ((_ data: AuthorizationPolicy?,_ error: Error?) -> Void)) {
-        let requestBuilder = putAuthorizationPolicyWithRequestBuilder(policyId: policyId, body: body)
+    open class func putAuthorizationPolicy(policyId: String, body: AuthorizationPolicy, skipLockoutCheck: Bool? = nil, completion: @escaping ((_ data: AuthorizationPolicy?,_ error: Error?) -> Void)) {
+        let requestBuilder = putAuthorizationPolicyWithRequestBuilder(policyId: policyId, body: body, skipLockoutCheck: skipLockoutCheck)
         requestBuilder.execute { (response: Response<AuthorizationPolicy>?, error) -> Void in
             do {
                 if let e = error {
@@ -33093,10 +33111,11 @@ open class AuthorizationAPI {
      
      - parameter policyId: (path) The ID of the policy to update 
      - parameter body: (body) Access control policy 
+     - parameter skipLockoutCheck: (query) Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional)
 
      - returns: RequestBuilder<AuthorizationPolicy> 
      */
-    open class func putAuthorizationPolicyWithRequestBuilder(policyId: String, body: AuthorizationPolicy) -> RequestBuilder<AuthorizationPolicy> {        
+    open class func putAuthorizationPolicyWithRequestBuilder(policyId: String, body: AuthorizationPolicy, skipLockoutCheck: Bool? = nil) -> RequestBuilder<AuthorizationPolicy> {        
         var path = "/api/v2/authorization/policies/{policyId}"
         let policyIdPreEscape = "\(policyId)"
         let policyIdPostEscape = policyIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -33104,7 +33123,10 @@ open class AuthorizationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "skipLockoutCheck": skipLockoutCheck
+        ])
 
         let requestBuilder: RequestBuilder<AuthorizationPolicy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -38466,8 +38488,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter body: (body) Organization roles list 

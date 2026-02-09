@@ -32,6 +32,7 @@ public class AcdEndDetailEventTopicAcdEndEvent: Codable {
         case dndTransfer = "DND_TRANSFER"
         case inactivity = "INACTIVITY"
         case sessionExpired = "SESSION_EXPIRED"
+        case takeover = "TAKEOVER"
     }
 
     public enum MediaType: String, Codable { 
@@ -142,6 +143,8 @@ public class AcdEndDetailEventTopicAcdEndEvent: Codable {
 
 
 
+
+
     public var eventTime: Int64?
     public var conversationId: String?
     public var participantId: String?
@@ -166,6 +169,7 @@ public class AcdEndDetailEventTopicAcdEndEvent: Codable {
     public var requestedRoutings: [RequestedRoutings]?
     public var usedRouting: UsedRouting?
     public var requestedRoutingSkillIds: [UUID]?
+    public var requestedSkillExpressionIds: [UUID]?
     public var requestedLanguageId: String?
     public var requestedRoutingUserIds: [UUID]?
     public var routingPriority: Int64?
@@ -175,7 +179,7 @@ public class AcdEndDetailEventTopicAcdEndEvent: Codable {
     public var utilizationLabel: String?
     public var flowType: String?
 
-    public init(eventTime: Int64?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int64?, subject: String?, messageType: MessageType?, queueId: String?, divisionId: String?, acdOutcome: AcdOutcome?, answeredUserId: String?, requestedRoutings: [RequestedRoutings]?, usedRouting: UsedRouting?, requestedRoutingSkillIds: [UUID]?, requestedLanguageId: String?, requestedRoutingUserIds: [UUID]?, routingPriority: Int64?, connectedDurationMs: Int64?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?, utilizationLabel: String?, flowType: String?) {
+    public init(eventTime: Int64?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int64?, subject: String?, messageType: MessageType?, queueId: String?, divisionId: String?, acdOutcome: AcdOutcome?, answeredUserId: String?, requestedRoutings: [RequestedRoutings]?, usedRouting: UsedRouting?, requestedRoutingSkillIds: [UUID]?, requestedSkillExpressionIds: [UUID]?, requestedLanguageId: String?, requestedRoutingUserIds: [UUID]?, routingPriority: Int64?, connectedDurationMs: Int64?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?, utilizationLabel: String?, flowType: String?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
@@ -200,6 +204,7 @@ public class AcdEndDetailEventTopicAcdEndEvent: Codable {
         self.requestedRoutings = requestedRoutings
         self.usedRouting = usedRouting
         self.requestedRoutingSkillIds = requestedRoutingSkillIds
+        self.requestedSkillExpressionIds = requestedSkillExpressionIds
         self.requestedLanguageId = requestedLanguageId
         self.requestedRoutingUserIds = requestedRoutingUserIds
         self.routingPriority = routingPriority

@@ -29,6 +29,8 @@ public class EvaluationFormResponse: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The evaluation form name */
@@ -49,10 +51,12 @@ public class EvaluationFormResponse: Codable {
     public var latestVersionFormName: String?
     /** AI scoring settings for the evaluation form. */
     public var aiScoring: AiScoringSettings?
+    /** The language dialect for this evaluation form. Supported dialects: ar, cs, da, de, en-US, es, fi, fr, fr-CA, he, hi, it, ja, ko, nl, no, pl, pt-BR, pt-PT, ru, sv, th, tr, uk, zh-CN, zh-TW */
+    public var dialect: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, modifiedDate: Date?, published: Bool?, contextId: String?, questionGroups: [EvaluationQuestionGroup]?, weightMode: WeightMode?, evaluationSettings: EvaluationSettings?, publishedVersions: DomainEntityListingEvaluationForm?, latestVersionFormName: String?, aiScoring: AiScoringSettings?, selfUri: String?) {
+    public init(_id: String?, name: String?, modifiedDate: Date?, published: Bool?, contextId: String?, questionGroups: [EvaluationQuestionGroup]?, weightMode: WeightMode?, evaluationSettings: EvaluationSettings?, publishedVersions: DomainEntityListingEvaluationForm?, latestVersionFormName: String?, aiScoring: AiScoringSettings?, dialect: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.modifiedDate = modifiedDate
@@ -64,6 +68,7 @@ public class EvaluationFormResponse: Codable {
         self.publishedVersions = publishedVersions
         self.latestVersionFormName = latestVersionFormName
         self.aiScoring = aiScoring
+        self.dialect = dialect
         self.selfUri = selfUri
     }
 
@@ -79,6 +84,7 @@ public class EvaluationFormResponse: Codable {
         case publishedVersions
         case latestVersionFormName
         case aiScoring
+        case dialect
         case selfUri
     }
 

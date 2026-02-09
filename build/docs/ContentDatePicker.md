@@ -16,4 +16,4 @@ DatePicker content object.
 
 
 
-_PureCloudPlatformClientV2@186.0.0_
+_PureCloudPlatformClientV2@187.0.0_

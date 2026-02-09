@@ -1,10 +1,10 @@
-# ScreenRecordingAPI
+# BackgroundAssistantAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**postScreenrecordingToken**](ScreenRecordingAPI#postScreenrecordingToken) | Sign identifying information for screen recording |
+| [**postScreenrecordingToken**](BackgroundAssistantAPI#postScreenrecordingToken) | Sign identifying information for screen recording |
 {: class="table-striped"}
 
 
@@ -31,14 +31,14 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: ScreenRecordingUserAuthenticatedInfo = new ScreenRecordingUserAuthenticatedInfo(...) // 
+let body: BackgroundAssistantUserAuthenticatedInfo = new BackgroundAssistantUserAuthenticatedInfo(...) // 
 
 // Code example
-ScreenRecordingAPI.postScreenrecordingToken(body: body) { (response, error) in
+BackgroundAssistantAPI.postScreenrecordingToken(body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
-        print("ScreenRecordingAPI.postScreenrecordingToken was successful")
+        print("BackgroundAssistantAPI.postScreenrecordingToken was successful")
         dump(response)
     }
 }
@@ -49,7 +49,7 @@ ScreenRecordingAPI.postScreenrecordingToken(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ScreenRecordingUserAuthenticatedInfo**](ScreenRecordingUserAuthenticatedInfo)|  | [optional] |
+| **body** | [**BackgroundAssistantUserAuthenticatedInfo**](BackgroundAssistantUserAuthenticatedInfo)|  | [optional] |
 
 
 ### Return type
@@ -57,4 +57,4 @@ ScreenRecordingAPI.postScreenrecordingToken(body: body) { (response, error) in
 [**SignedData**](SignedData)
 
 
-_PureCloudPlatformClientV2@186.0.0_
+_PureCloudPlatformClientV2@187.0.0_

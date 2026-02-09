@@ -30,6 +30,7 @@
 | **requestedRoutings** | **[String]** |  | [optional] |
 | **usedRouting** | **String** |  | [optional] |
 | **requestedRoutingSkillIds** | [**[UUID]**]([UUID]) |  | [optional] |
+| **requestedSkillExpressionIds** | [**[UUID]**]([UUID]) |  | [optional] |
 | **requestedLanguageId** | **String** |  | [optional] |
 | **requestedRoutingUserIds** | [**[UUID]**]([UUID]) |  | [optional] |
 | **routingPriority** | **Int64** |  | [optional] |
@@ -41,4 +42,4 @@
 
 
 
-_PureCloudPlatformClientV2@186.0.0_
+_PureCloudPlatformClientV2@187.0.0_

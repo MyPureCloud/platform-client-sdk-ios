@@ -44,6 +44,8 @@ public class RecordingMessagingMessage: Codable {
 
 
 
+
+
     public enum ContentType: String, Codable { 
         case quickReply = "QuickReply"
         case story = "Story"
@@ -85,6 +87,8 @@ public class RecordingMessagingMessage: Codable {
 
 
 
+
+
     /** The message sender session id. */
     public var from: String?
     /** The user who sent this message. */
@@ -97,6 +101,8 @@ public class RecordingMessagingMessage: Codable {
     public var timestamp: Date?
     /** A globally unique identifier for this communication. */
     public var _id: String?
+    /** Status of the message */
+    public var status: String?
     /** A well known string that specifies the purpose or type of the participant on this communication. */
     public var purpose: String?
     /** A globally unique identifier for the participant on this communication. */
@@ -143,14 +149,17 @@ public class RecordingMessagingMessage: Codable {
     public var form: RecordingForm?
     /** Roadside Assistance content. */
     public var roadsideAssistance: RecordingRoadsideAssistance?
+    /** List of message receipts */
+    public var messageReceipts: [RecordingMessageReceipt]?
 
-    public init(from: String?, fromUser: User?, fromExternalContact: ExternalContact?, to: String?, timestamp: Date?, _id: String?, purpose: String?, participantId: String?, queue: AddressableEntityRef?, workflow: AddressableEntityRef?, messageText: String?, messageMediaAttachments: [MessageMediaAttachment]?, messageStickerAttachments: [MessageStickerAttachment]?, quickReplies: [QuickReply]?, buttonResponse: ButtonResponse?, buttonResponses: [ButtonResponse]?, story: RecordingContentStory?, cards: [Card]?, notificationTemplate: RecordingNotificationTemplate?, datePicker: DatePicker?, listPicker: ListPicker?, contentType: ContentType?, socialVisibility: SocialVisibility?, events: [ConversationMessageEvent]?, interactiveApplication: InteractiveApplication?, paymentRequest: PaymentRequest?, paymentResponse: PaymentResponse?, form: RecordingForm?, roadsideAssistance: RecordingRoadsideAssistance?) {
+    public init(from: String?, fromUser: User?, fromExternalContact: ExternalContact?, to: String?, timestamp: Date?, _id: String?, status: String?, purpose: String?, participantId: String?, queue: AddressableEntityRef?, workflow: AddressableEntityRef?, messageText: String?, messageMediaAttachments: [MessageMediaAttachment]?, messageStickerAttachments: [MessageStickerAttachment]?, quickReplies: [QuickReply]?, buttonResponse: ButtonResponse?, buttonResponses: [ButtonResponse]?, story: RecordingContentStory?, cards: [Card]?, notificationTemplate: RecordingNotificationTemplate?, datePicker: DatePicker?, listPicker: ListPicker?, contentType: ContentType?, socialVisibility: SocialVisibility?, events: [ConversationMessageEvent]?, interactiveApplication: InteractiveApplication?, paymentRequest: PaymentRequest?, paymentResponse: PaymentResponse?, form: RecordingForm?, roadsideAssistance: RecordingRoadsideAssistance?, messageReceipts: [RecordingMessageReceipt]?) {
         self.from = from
         self.fromUser = fromUser
         self.fromExternalContact = fromExternalContact
         self.to = to
         self.timestamp = timestamp
         self._id = _id
+        self.status = status
         self.purpose = purpose
         self.participantId = participantId
         self.queue = queue
@@ -174,6 +183,7 @@ public class RecordingMessagingMessage: Codable {
         self.paymentResponse = paymentResponse
         self.form = form
         self.roadsideAssistance = roadsideAssistance
+        self.messageReceipts = messageReceipts
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -183,6 +193,7 @@ public class RecordingMessagingMessage: Codable {
         case to
         case timestamp
         case _id = "id"
+        case status
         case purpose
         case participantId
         case queue
@@ -206,6 +217,7 @@ public class RecordingMessagingMessage: Codable {
         case paymentResponse
         case form
         case roadsideAssistance
+        case messageReceipts
     }
 
 

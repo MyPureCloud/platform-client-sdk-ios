@@ -2063,8 +2063,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter name: (query) Object name to search for 
@@ -2262,94 +2262,6 @@ open class ArchitectAPI {
     
     
     
-    public enum ResourceType_getArchitectDependencytrackingConsumedresources: String { 
-        case acdlanguage = "ACDLANGUAGE"
-        case acdskill = "ACDSKILL"
-        case acdwrapupcode = "ACDWRAPUPCODE"
-        case agenticvirtualagent = "AGENTICVIRTUALAGENT"
-        case agenticvirtualagentversion = "AGENTICVIRTUALAGENTVERSION"
-        case audioconnectorbot = "AUDIOCONNECTORBOT"
-        case botconnectorbot = "BOTCONNECTORBOT"
-        case botconnectorintegration = "BOTCONNECTORINTEGRATION"
-        case botflow = "BOTFLOW"
-        case bridgeaction = "BRIDGEACTION"
-        case commonmoduleflow = "COMMONMODULEFLOW"
-        case composerscript = "COMPOSERSCRIPT"
-        case contactlist = "CONTACTLIST"
-        case conversationcustomattributeschema = "CONVERSATIONCUSTOMATTRIBUTESCHEMA"
-        case dataaction = "DATAACTION"
-        case datatable = "DATATABLE"
-        case decisiontable = "DECISIONTABLE"
-        case dialogenginebot = "DIALOGENGINEBOT"
-        case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
-        case dialogflowagent = "DIALOGFLOWAGENT"
-        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
-        case digitalaudio = "DIGITALAUDIO"
-        case digitalbotconnector = "DIGITALBOTCONNECTOR"
-        case digitalbotconnectorintegration = "DIGITALBOTCONNECTORINTEGRATION"
-        case digitalbotflow = "DIGITALBOTFLOW"
-        case division = "DIVISION"
-        case emailroute = "EMAILROUTE"
-        case emergencygroup = "EMERGENCYGROUP"
-        case file = "FILE"
-        case flowaction = "FLOWACTION"
-        case flowdatatype = "FLOWDATATYPE"
-        case flowmilestone = "FLOWMILESTONE"
-        case flowoutcome = "FLOWOUTCOME"
-        case grammar = "GRAMMAR"
-        case group = "GROUP"
-        case guide = "GUIDE"
-        case guideversion = "GUIDEVERSION"
-        case image = "IMAGE"
-        case inboundcallflow = "INBOUNDCALLFLOW"
-        case inboundchatflow = "INBOUNDCHATFLOW"
-        case inboundemailflow = "INBOUNDEMAILFLOW"
-        case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
-        case inqueuecallflow = "INQUEUECALLFLOW"
-        case inqueueemailflow = "INQUEUEEMAILFLOW"
-        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
-        case ivrconfiguration = "IVRCONFIGURATION"
-        case knowledgebase = "KNOWLEDGEBASE"
-        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
-        case knowledgesetting = "KNOWLEDGESETTING"
-        case language = "LANGUAGE"
-        case lexbot = "LEXBOT"
-        case lexbotalias = "LEXBOTALIAS"
-        case lexv2bot = "LEXV2BOT"
-        case lexv2botalias = "LEXV2BOTALIAS"
-        case nludomain = "NLUDOMAIN"
-        case nuancemixbot = "NUANCEMIXBOT"
-        case nuancemixintegration = "NUANCEMIXINTEGRATION"
-        case oauthclient = "OAUTHCLIENT"
-        case outboundcallflow = "OUTBOUNDCALLFLOW"
-        case queue = "QUEUE"
-        case recordingpolicy = "RECORDINGPOLICY"
-        case response = "RESPONSE"
-        case responseasset = "RESPONSEASSET"
-        case schedule = "SCHEDULE"
-        case schedulegroup = "SCHEDULEGROUP"
-        case secureaction = "SECUREACTION"
-        case securecallflow = "SECURECALLFLOW"
-        case smsphonenumber = "SMSPHONENUMBER"
-        case sttengine = "STTENGINE"
-        case surveyform = "SURVEYFORM"
-        case surveyinviteflow = "SURVEYINVITEFLOW"
-        case systemprompt = "SYSTEMPROMPT"
-        case ttsengine = "TTSENGINE"
-        case ttsvoice = "TTSVOICE"
-        case user = "USER"
-        case userprompt = "USERPROMPT"
-        case utilizationlabel = "UTILIZATIONLABEL"
-        case video = "VIDEO"
-        case voiceflow = "VOICEFLOW"
-        case voicemailflow = "VOICEMAILFLOW"
-        case voicesurveyflow = "VOICESURVEYFLOW"
-        case widget = "WIDGET"
-        case workflow = "WORKFLOW"
-        case workitemflow = "WORKITEMFLOW"
-        case worktype = "WORKTYPE"
-    }
-    
     
     
     
@@ -2360,7 +2272,7 @@ open class ArchitectAPI {
      - parameter _id: (query) Consuming object ID 
      - parameter version: (query) Consuming object version 
      - parameter objectType: (query) Consuming object type.  Only versioned types are allowed here. 
-     - parameter resourceType: (query) Types of consumed resources to show (optional)
+     - parameter resourceType: (query) Types of consumed resources to show. (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -2416,14 +2328,14 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter _id: (query) Consuming object ID 
      - parameter version: (query) Consuming object version 
      - parameter objectType: (query) Consuming object type.  Only versioned types are allowed here. 
-     - parameter resourceType: (query) Types of consumed resources to show (optional)
+     - parameter resourceType: (query) Types of consumed resources to show. (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter pageSize: (query) Page size (optional)
 
@@ -2543,94 +2455,6 @@ open class ArchitectAPI {
     
     
     
-    public enum ResourceType_getArchitectDependencytrackingConsumingresources: String { 
-        case acdlanguage = "ACDLANGUAGE"
-        case acdskill = "ACDSKILL"
-        case acdwrapupcode = "ACDWRAPUPCODE"
-        case agenticvirtualagent = "AGENTICVIRTUALAGENT"
-        case agenticvirtualagentversion = "AGENTICVIRTUALAGENTVERSION"
-        case audioconnectorbot = "AUDIOCONNECTORBOT"
-        case botconnectorbot = "BOTCONNECTORBOT"
-        case botconnectorintegration = "BOTCONNECTORINTEGRATION"
-        case botflow = "BOTFLOW"
-        case bridgeaction = "BRIDGEACTION"
-        case commonmoduleflow = "COMMONMODULEFLOW"
-        case composerscript = "COMPOSERSCRIPT"
-        case contactlist = "CONTACTLIST"
-        case conversationcustomattributeschema = "CONVERSATIONCUSTOMATTRIBUTESCHEMA"
-        case dataaction = "DATAACTION"
-        case datatable = "DATATABLE"
-        case decisiontable = "DECISIONTABLE"
-        case dialogenginebot = "DIALOGENGINEBOT"
-        case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
-        case dialogflowagent = "DIALOGFLOWAGENT"
-        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
-        case digitalaudio = "DIGITALAUDIO"
-        case digitalbotconnector = "DIGITALBOTCONNECTOR"
-        case digitalbotconnectorintegration = "DIGITALBOTCONNECTORINTEGRATION"
-        case digitalbotflow = "DIGITALBOTFLOW"
-        case division = "DIVISION"
-        case emailroute = "EMAILROUTE"
-        case emergencygroup = "EMERGENCYGROUP"
-        case file = "FILE"
-        case flowaction = "FLOWACTION"
-        case flowdatatype = "FLOWDATATYPE"
-        case flowmilestone = "FLOWMILESTONE"
-        case flowoutcome = "FLOWOUTCOME"
-        case grammar = "GRAMMAR"
-        case group = "GROUP"
-        case guide = "GUIDE"
-        case guideversion = "GUIDEVERSION"
-        case image = "IMAGE"
-        case inboundcallflow = "INBOUNDCALLFLOW"
-        case inboundchatflow = "INBOUNDCHATFLOW"
-        case inboundemailflow = "INBOUNDEMAILFLOW"
-        case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
-        case inqueuecallflow = "INQUEUECALLFLOW"
-        case inqueueemailflow = "INQUEUEEMAILFLOW"
-        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
-        case ivrconfiguration = "IVRCONFIGURATION"
-        case knowledgebase = "KNOWLEDGEBASE"
-        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
-        case knowledgesetting = "KNOWLEDGESETTING"
-        case language = "LANGUAGE"
-        case lexbot = "LEXBOT"
-        case lexbotalias = "LEXBOTALIAS"
-        case lexv2bot = "LEXV2BOT"
-        case lexv2botalias = "LEXV2BOTALIAS"
-        case nludomain = "NLUDOMAIN"
-        case nuancemixbot = "NUANCEMIXBOT"
-        case nuancemixintegration = "NUANCEMIXINTEGRATION"
-        case oauthclient = "OAUTHCLIENT"
-        case outboundcallflow = "OUTBOUNDCALLFLOW"
-        case queue = "QUEUE"
-        case recordingpolicy = "RECORDINGPOLICY"
-        case response = "RESPONSE"
-        case responseasset = "RESPONSEASSET"
-        case schedule = "SCHEDULE"
-        case schedulegroup = "SCHEDULEGROUP"
-        case secureaction = "SECUREACTION"
-        case securecallflow = "SECURECALLFLOW"
-        case smsphonenumber = "SMSPHONENUMBER"
-        case sttengine = "STTENGINE"
-        case surveyform = "SURVEYFORM"
-        case surveyinviteflow = "SURVEYINVITEFLOW"
-        case systemprompt = "SYSTEMPROMPT"
-        case ttsengine = "TTSENGINE"
-        case ttsvoice = "TTSVOICE"
-        case user = "USER"
-        case userprompt = "USERPROMPT"
-        case utilizationlabel = "UTILIZATIONLABEL"
-        case video = "VIDEO"
-        case voiceflow = "VOICEFLOW"
-        case voicemailflow = "VOICEMAILFLOW"
-        case voicesurveyflow = "VOICESURVEYFLOW"
-        case widget = "WIDGET"
-        case workflow = "WORKFLOW"
-        case workitemflow = "WORKITEMFLOW"
-        case worktype = "WORKTYPE"
-    }
-    
     
     
     
@@ -2707,8 +2531,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter _id: (query) Consumed object ID 
@@ -3076,8 +2900,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter name: (query) Name to search for (optional)
@@ -3622,8 +3446,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -3973,8 +3797,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter name: (query) Name to search for (optional)
@@ -4226,8 +4050,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -4327,8 +4151,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -4642,8 +4466,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -4915,8 +4739,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -5022,8 +4846,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -5779,8 +5603,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter promptId: (path) Prompt ID 
@@ -5955,8 +5779,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -6304,8 +6128,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -6409,8 +6233,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -6535,8 +6359,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -6638,8 +6462,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -7404,8 +7228,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter promptId: (path) Prompt ID 
@@ -7585,8 +7409,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -11891,8 +11715,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter flowId: (path) Flow ID 
@@ -16149,8 +15973,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter type: (query) Type (optional)
@@ -16668,8 +16492,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter datatableId: (path) id of datatable 
@@ -16784,8 +16608,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter expand: (query) Expand instructions for the result (optional)
@@ -16974,8 +16798,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter expand: (query) Expand instructions for the result (optional)
@@ -17142,8 +16966,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter type: (query) Type (optional)
@@ -17689,8 +17513,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter expand: (query) Expand instructions for the result (optional)
@@ -18063,8 +17887,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -18172,8 +17996,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -19311,8 +19135,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -19420,8 +19244,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -33947,8 +33771,8 @@ open class ArchitectAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter body: (body) query 

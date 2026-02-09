@@ -206,10 +206,13 @@ open class AIStudioAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "serviceType" : "Native",
   "summaryType" : "Concise",
   "selfUri" : "https://openapi-generator.tech",
   "format" : "TextBlock",
+  "integrationId" : "integrationId",
   "language" : "language",
+  "timeoutDuration" : 30,
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "customEntities" : [ {
     "description" : "description",
@@ -318,10 +321,13 @@ open class AIStudioAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "serviceType" : "Native",
     "summaryType" : "Concise",
     "selfUri" : "https://openapi-generator.tech",
     "format" : "TextBlock",
+    "integrationId" : "integrationId",
     "language" : "language",
+    "timeoutDuration" : 30,
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "customEntities" : [ {
       "description" : "description",
@@ -348,10 +354,13 @@ open class AIStudioAPI {
     "prompt" : "prompt",
     "predefinedInsights" : [ "ReasonForCall", "ReasonForCall" ]
   }, {
+    "serviceType" : "Native",
     "summaryType" : "Concise",
     "selfUri" : "https://openapi-generator.tech",
     "format" : "TextBlock",
+    "integrationId" : "integrationId",
     "language" : "language",
+    "timeoutDuration" : 30,
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "customEntities" : [ {
       "description" : "description",
@@ -382,8 +391,8 @@ open class AIStudioAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter language: (query) Filter by matching language - case insensitive. (optional)
@@ -933,8 +942,8 @@ open class AIStudioAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter name: (query) Filter by matching name - case insensitive. (optional)
@@ -1328,10 +1337,13 @@ open class AIStudioAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "serviceType" : "Native",
   "summaryType" : "Concise",
   "selfUri" : "https://openapi-generator.tech",
   "format" : "TextBlock",
+  "integrationId" : "integrationId",
   "language" : "language",
+  "timeoutDuration" : 30,
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "customEntities" : [ {
     "description" : "description",
@@ -1990,10 +2002,13 @@ open class AIStudioAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "serviceType" : "Native",
   "summaryType" : "Concise",
   "selfUri" : "https://openapi-generator.tech",
   "format" : "TextBlock",
+  "integrationId" : "integrationId",
   "language" : "language",
+  "timeoutDuration" : 30,
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "customEntities" : [ {
     "description" : "description",

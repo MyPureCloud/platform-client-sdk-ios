@@ -12,4 +12,4 @@ A botConnector&#39;s bot intention
 
 
 
-_PureCloudPlatformClientV2@186.0.0_
+_PureCloudPlatformClientV2@187.0.0_

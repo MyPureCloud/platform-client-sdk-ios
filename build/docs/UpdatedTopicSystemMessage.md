@@ -12,10 +12,11 @@
 | **organizationId** | **String** |  | [optional] |
 | **userId** | **String** |  | [optional] |
 | **oauthClientId** | **String** |  | [optional] |
+| **oauthClientOrgId** | **String** |  | [optional] |
 | **reason** | **String** |  | [optional] |
 | **message** | **String** |  | [optional] |
 | **data** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@186.0.0_
+_PureCloudPlatformClientV2@187.0.0_

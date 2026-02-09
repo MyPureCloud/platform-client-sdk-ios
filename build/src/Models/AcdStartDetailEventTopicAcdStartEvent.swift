@@ -75,6 +75,8 @@ public class AcdStartDetailEventTopicAcdStartEvent: Codable {
 
 
 
+
+
     public var eventTime: Int64?
     public var conversationId: String?
     public var participantId: String?
@@ -98,8 +100,9 @@ public class AcdStartDetailEventTopicAcdStartEvent: Codable {
     public var utilizationLabel: String?
     public var routingPriority: Int64?
     public var requestedRoutingSkillIds: [UUID]?
+    public var skillExpressionApplied: Bool?
 
-    public init(eventTime: Int64?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int64?, subject: String?, messageType: MessageType?, queueId: String?, divisionId: String?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?, utilizationLabel: String?, routingPriority: Int64?, requestedRoutingSkillIds: [UUID]?) {
+    public init(eventTime: Int64?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int64?, subject: String?, messageType: MessageType?, queueId: String?, divisionId: String?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?, utilizationLabel: String?, routingPriority: Int64?, requestedRoutingSkillIds: [UUID]?, skillExpressionApplied: Bool?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
@@ -123,6 +126,7 @@ public class AcdStartDetailEventTopicAcdStartEvent: Codable {
         self.utilizationLabel = utilizationLabel
         self.routingPriority = routingPriority
         self.requestedRoutingSkillIds = requestedRoutingSkillIds
+        self.skillExpressionApplied = skillExpressionApplied
     }
 
 

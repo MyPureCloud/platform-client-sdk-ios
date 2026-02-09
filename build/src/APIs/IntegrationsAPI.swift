@@ -475,8 +475,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -1251,6 +1251,8 @@ open class IntegrationsAPI {
     }
     
     
+    
+    
     /**
      Retrieves all actions associated with filters passed in via query param.
      
@@ -1265,10 +1267,11 @@ open class IntegrationsAPI {
      - parameter ids: (query) Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. (optional)
      - parameter secure: (query) Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional)
      - parameter includeAuthActions: (query) Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)
+     - parameter includeConfig: (query) Return config in response. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIntegrationsActions(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActions? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActions? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActions? = nil, completion: @escaping ((_ data: ActionEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getIntegrationsActionsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, ids: ids, secure: secure, includeAuthActions: includeAuthActions)
+    open class func getIntegrationsActions(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActions? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActions? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActions? = nil, includeConfig: Bool? = nil, completion: @escaping ((_ data: ActionEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsActionsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, ids: ids, secure: secure, includeAuthActions: includeAuthActions, includeConfig: includeConfig)
         requestBuilder.execute { (response: Response<ActionEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1320,8 +1323,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -1335,10 +1338,11 @@ open class IntegrationsAPI {
      - parameter ids: (query) Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. (optional)
      - parameter secure: (query) Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional)
      - parameter includeAuthActions: (query) Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)
+     - parameter includeConfig: (query) Return config in response. (optional)
 
      - returns: RequestBuilder<ActionEntityListing> 
      */
-    open class func getIntegrationsActionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActions? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActions? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActions? = nil) -> RequestBuilder<ActionEntityListing> {        
+    open class func getIntegrationsActionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActions? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActions? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActions? = nil, includeConfig: Bool? = nil) -> RequestBuilder<ActionEntityListing> {        
         let path = "/api/v2/integrations/actions"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -1355,7 +1359,8 @@ open class IntegrationsAPI {
             "name": name, 
             "ids": ids, 
             "secure": secure?.rawValue, 
-            "includeAuthActions": includeAuthActions?.rawValue
+            "includeAuthActions": includeAuthActions?.rawValue, 
+            "includeConfig": includeConfig
         ])
 
         let requestBuilder: RequestBuilder<ActionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1529,8 +1534,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter status: (query) Indicates the validity of the certificate in question. (optional)
@@ -1647,6 +1652,8 @@ open class IntegrationsAPI {
     }
     
     
+    
+    
     /**
      Retrieves all action drafts associated with the filters passed in via query param.
      
@@ -1661,10 +1668,11 @@ open class IntegrationsAPI {
      - parameter ids: (query) Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. (optional)
      - parameter secure: (query) Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional)
      - parameter includeAuthActions: (query) Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)
+     - parameter includeConfig: (query) Return config in response. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIntegrationsActionsDrafts(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActionsDrafts? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActionsDrafts? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActionsDrafts? = nil, completion: @escaping ((_ data: ActionEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getIntegrationsActionsDraftsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, ids: ids, secure: secure, includeAuthActions: includeAuthActions)
+    open class func getIntegrationsActionsDrafts(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActionsDrafts? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActionsDrafts? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActionsDrafts? = nil, includeConfig: Bool? = nil, completion: @escaping ((_ data: ActionEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsActionsDraftsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, ids: ids, secure: secure, includeAuthActions: includeAuthActions, includeConfig: includeConfig)
         requestBuilder.execute { (response: Response<ActionEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1716,8 +1724,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -1731,10 +1739,11 @@ open class IntegrationsAPI {
      - parameter ids: (query) Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. (optional)
      - parameter secure: (query) Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional)
      - parameter includeAuthActions: (query) Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)
+     - parameter includeConfig: (query) Return config in response. (optional)
 
      - returns: RequestBuilder<ActionEntityListing> 
      */
-    open class func getIntegrationsActionsDraftsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActionsDrafts? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActionsDrafts? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActionsDrafts? = nil) -> RequestBuilder<ActionEntityListing> {        
+    open class func getIntegrationsActionsDraftsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActionsDrafts? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActionsDrafts? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActionsDrafts? = nil, includeConfig: Bool? = nil) -> RequestBuilder<ActionEntityListing> {        
         let path = "/api/v2/integrations/actions/drafts"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -1751,7 +1760,8 @@ open class IntegrationsAPI {
             "name": name, 
             "ids": ids, 
             "secure": secure?.rawValue, 
-            "includeAuthActions": includeAuthActions?.rawValue
+            "includeAuthActions": includeAuthActions?.rawValue, 
+            "includeConfig": includeConfig
         ])
 
         let requestBuilder: RequestBuilder<ActionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1985,8 +1995,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter integrationId: (path) The integration ID for this bot group 
@@ -2224,8 +2234,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter integrationId: (path) The integration ID for this group of bots 
@@ -2333,8 +2343,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -2463,8 +2473,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -2616,8 +2626,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -2773,8 +2783,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
 
      - returns: RequestBuilder<CredentialTypeListing> 
@@ -2843,8 +2853,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -3064,8 +3074,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -3221,8 +3231,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -3463,8 +3473,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter botId: (path) The bot ID 
@@ -3553,8 +3563,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -3804,8 +3814,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter botId: (path) The Bot ID 
@@ -3898,8 +3908,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -4550,8 +4560,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
@@ -4865,8 +4875,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
@@ -5007,8 +5017,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -5250,8 +5260,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter engineId: (path) The engine ID 
@@ -5382,8 +5392,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -5789,8 +5799,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -6002,8 +6012,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -6112,8 +6122,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)

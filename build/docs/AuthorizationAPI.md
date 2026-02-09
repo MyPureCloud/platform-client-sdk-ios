@@ -2018,7 +2018,7 @@ AuthorizationAPI.postAuthorizationDivisionObject(divisionId: divisionId, objectT
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
-| **objectType** | **String**| The type of the objects. Must be one of the valid object types |<br />**Values**: queue ("QUEUE"), campaign ("CAMPAIGN"), contactlist ("CONTACTLIST"), dnclist ("DNCLIST"), emailcampaign ("EMAILCAMPAIGN"), messagingcampaign ("MESSAGINGCAMPAIGN"), managementunit ("MANAGEMENTUNIT"), businessunit ("BUSINESSUNIT"), flow ("FLOW"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), user ("USER"), callroute ("CALLROUTE"), emergencygroups ("EMERGENCYGROUPS"), routingschedules ("ROUTINGSCHEDULES"), routingschedulegroups ("ROUTINGSCHEDULEGROUPS"), datatables ("DATATABLES"), team ("TEAM"), workbin ("WORKBIN"), worktype ("WORKTYPE"), extensionpool ("EXTENSIONPOOL"), skillgroup ("SKILLGROUP"), script ("SCRIPT") |
+| **objectType** | **String**| The type of the objects. Must be one of the valid object types |<br />**Values**: queue ("QUEUE"), campaign ("CAMPAIGN"), contactlist ("CONTACTLIST"), dnclist ("DNCLIST"), emailcampaign ("EMAILCAMPAIGN"), messagingcampaign ("MESSAGINGCAMPAIGN"), managementunit ("MANAGEMENTUNIT"), businessunit ("BUSINESSUNIT"), flow ("FLOW"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), user ("USER"), callroute ("CALLROUTE"), emergencygroups ("EMERGENCYGROUPS"), routingschedules ("ROUTINGSCHEDULES"), routingschedulegroups ("ROUTINGSCHEDULEGROUPS"), datatables ("DATATABLES"), team ("TEAM"), workbin ("WORKBIN"), worktype ("WORKTYPE"), extensionpool ("EXTENSIONPOOL"), skillgroup ("SKILLGROUP"), script ("SCRIPT"), library ("LIBRARY") |
 | **body** | [**[String]**](String)| Object Id List | |
 
 
@@ -2134,7 +2134,7 @@ AuthorizationAPI.postAuthorizationDivisions(body: body) { (response, error) in
 
 
 
-> [AuthorizationPolicy](AuthorizationPolicy) postAuthorizationPoliciesTarget(targetName, body)
+> [AuthorizationPolicy](AuthorizationPolicy) postAuthorizationPoliciesTarget(targetName, body, skipLockoutCheck)
 
 Add an access control policy for a specified resource target and subject
 
@@ -2156,9 +2156,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let targetName: String = "" // The domain:entity:action target to which the policy will be applied
 let body: AuthorizationPolicy = new AuthorizationPolicy(...) // Access control policy
+let skipLockoutCheck: Bool = true // Skip lockout check; if true, policy will not be evaluated against current context for lockout risk
 
 // Code example
-AuthorizationAPI.postAuthorizationPoliciesTarget(targetName: targetName, body: body) { (response, error) in
+AuthorizationAPI.postAuthorizationPoliciesTarget(targetName: targetName, body: body, skipLockoutCheck: skipLockoutCheck) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2175,6 +2176,7 @@ AuthorizationAPI.postAuthorizationPoliciesTarget(targetName: targetName, body: b
 | ------------- | ------------- | ------------- | ------------- |
 | **targetName** | **String**| The domain:entity:action target to which the policy will be applied | |
 | **body** | [**AuthorizationPolicy**](AuthorizationPolicy)| Access control policy | |
+| **skipLockoutCheck** | **Bool**| Skip lockout check; if true, policy will not be evaluated against current context for lockout risk | [optional] |
 
 
 ### Return type
@@ -2768,7 +2770,7 @@ AuthorizationAPI.putAuthorizationDivision(divisionId: divisionId, body: body) { 
 
 
 
-> [AuthorizationPolicy](AuthorizationPolicy) putAuthorizationPoliciesTarget(targetName, body)
+> [AuthorizationPolicy](AuthorizationPolicy) putAuthorizationPoliciesTarget(targetName, body, skipLockoutCheck)
 
 Add an access control policy for a specified resource target and subject, overwriting any existing policy
 
@@ -2791,9 +2793,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let targetName: String = "" // The domain:entity:action target to which the policy will be applied
 let body: AuthorizationPolicy = new AuthorizationPolicy(...) // Access control policy
+let skipLockoutCheck: Bool = true // Skip lockout check; if true, policy will not be evaluated against current context for lockout risk
 
 // Code example
-AuthorizationAPI.putAuthorizationPoliciesTarget(targetName: targetName, body: body) { (response, error) in
+AuthorizationAPI.putAuthorizationPoliciesTarget(targetName: targetName, body: body, skipLockoutCheck: skipLockoutCheck) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2810,6 +2813,7 @@ AuthorizationAPI.putAuthorizationPoliciesTarget(targetName: targetName, body: bo
 | ------------- | ------------- | ------------- | ------------- |
 | **targetName** | **String**| The domain:entity:action target to which the policy will be applied | |
 | **body** | [**AuthorizationPolicy**](AuthorizationPolicy)| Access control policy | |
+| **skipLockoutCheck** | **Bool**| Skip lockout check; if true, policy will not be evaluated against current context for lockout risk | [optional] |
 
 
 ### Return type
@@ -2821,7 +2825,7 @@ AuthorizationAPI.putAuthorizationPoliciesTarget(targetName: targetName, body: bo
 
 
 
-> [AuthorizationPolicy](AuthorizationPolicy) putAuthorizationPolicy(policyId, body)
+> [AuthorizationPolicy](AuthorizationPolicy) putAuthorizationPolicy(policyId, body, skipLockoutCheck)
 
 Update an access control policy with a given ID
 
@@ -2843,9 +2847,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let policyId: String = "" // The ID of the policy to update
 let body: AuthorizationPolicy = new AuthorizationPolicy(...) // Access control policy
+let skipLockoutCheck: Bool = true // Skip lockout check; if true, policy will not be evaluated against current context for lockout risk
 
 // Code example
-AuthorizationAPI.putAuthorizationPolicy(policyId: policyId, body: body) { (response, error) in
+AuthorizationAPI.putAuthorizationPolicy(policyId: policyId, body: body, skipLockoutCheck: skipLockoutCheck) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2862,6 +2867,7 @@ AuthorizationAPI.putAuthorizationPolicy(policyId: policyId, body: body) { (respo
 | ------------- | ------------- | ------------- | ------------- |
 | **policyId** | **String**| The ID of the policy to update | |
 | **body** | [**AuthorizationPolicy**](AuthorizationPolicy)| Access control policy | |
+| **skipLockoutCheck** | **Bool**| Skip lockout check; if true, policy will not be evaluated against current context for lockout risk | [optional] |
 
 
 ### Return type
@@ -3182,4 +3188,4 @@ AuthorizationAPI.putUserRoles(subjectId: subjectId, body: body) { (response, err
 [**UserAuthorization**](UserAuthorization)
 
 
-_PureCloudPlatformClientV2@186.0.0_
+_PureCloudPlatformClientV2@187.0.0_

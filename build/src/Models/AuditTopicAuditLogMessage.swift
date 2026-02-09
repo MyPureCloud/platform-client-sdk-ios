@@ -71,6 +71,7 @@ public class AuditTopicAuditLogMessage: Codable {
         case businessRules = "BusinessRules"
         case socialEscalationRules = "SocialEscalationRules"
         case alerting = "Alerting"
+        case assistants = "Assistants"
     }
 
 
@@ -229,6 +230,7 @@ public class AuditTopicAuditLogMessage: Codable {
         case organizationAuthorizationTrust = "OrganizationAuthorizationTrust"
         case organizationAuthorizationUserTrust = "OrganizationAuthorizationUserTrust"
         case mfaverifier = "MFAVerifier"
+        case identityProvider = "IdentityProvider"
         case role = "Role"
         case roleSettings = "RoleSettings"
         case policy = "Policy"
@@ -319,6 +321,8 @@ public class AuditTopicAuditLogMessage: Codable {
         case historicalData = "HistoricalData"
         case staffingGroup = "StaffingGroup"
         case capacityPlan = "CapacityPlan"
+        case scheduleBid = "ScheduleBid"
+        case scheduleBidGroup = "ScheduleBidGroup"
         case trigger = "Trigger"
         case response = "Response"
         case responseLibrary = "ResponseLibrary"
@@ -385,6 +389,7 @@ public class AuditTopicAuditLogMessage: Codable {
         case insightSettings = "InsightSettings"
         case analyticsReportingSettings = "AnalyticsReportingSettings"
         case customCalculations = "CustomCalculations"
+        case savedViews = "SavedViews"
         case scheduledExports = "ScheduledExports"
         case exports = "Exports"
         case exportPdfTemplates = "ExportPdfTemplates"
@@ -423,6 +428,7 @@ public class AuditTopicAuditLogMessage: Codable {
         case conversation = "Conversation"
         case organizationSuspension = "OrganizationSuspension"
         case operationalEvent = "OperationalEvent"
+        case allowAndBlockNumber = "AllowAndBlockNumber"
         case participant = "Participant"
         case contactSchema = "ContactSchema"
         case externalOrganizationSchema = "ExternalOrganizationSchema"
@@ -463,6 +469,8 @@ public class AuditTopicAuditLogMessage: Codable {
         case relationship = "Relationship"
         case externalOrg = "ExternalOrg"
         case socialMediaMessage = "SocialMediaMessage"
+        case assistant = "Assistant"
+        case assistantQueue = "AssistantQueue"
     }
 
 

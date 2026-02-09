@@ -21,6 +21,8 @@ public class V2IntegrationPresenceEventPresenceActivityEvent: Codable {
 
 
 
+
+
     public var userId: UUID?
     public var eventType: EventType?
     public var source: String?
@@ -29,8 +31,9 @@ public class V2IntegrationPresenceEventPresenceActivityEvent: Codable {
     public var message: String?
     public var currentDisplaySourceId: UUID?
     public var previousDisplaySourceId: UUID?
+    public var futurePresenceDefinition: V2IntegrationPresenceEventOrganizationPresence?
 
-    public init(userId: UUID?, eventType: EventType?, source: String?, modifiedDate: Date?, presenceDefinition: V2IntegrationPresenceEventOrganizationPresence?, message: String?, currentDisplaySourceId: UUID?, previousDisplaySourceId: UUID?) {
+    public init(userId: UUID?, eventType: EventType?, source: String?, modifiedDate: Date?, presenceDefinition: V2IntegrationPresenceEventOrganizationPresence?, message: String?, currentDisplaySourceId: UUID?, previousDisplaySourceId: UUID?, futurePresenceDefinition: V2IntegrationPresenceEventOrganizationPresence?) {
         self.userId = userId
         self.eventType = eventType
         self.source = source
@@ -39,6 +42,7 @@ public class V2IntegrationPresenceEventPresenceActivityEvent: Codable {
         self.message = message
         self.currentDisplaySourceId = currentDisplaySourceId
         self.previousDisplaySourceId = previousDisplaySourceId
+        self.futurePresenceDefinition = futurePresenceDefinition
     }
 
 

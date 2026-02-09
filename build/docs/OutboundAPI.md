@@ -136,6 +136,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postOutboundContactlistfiltersBulkRetrieve**](OutboundAPI#postOutboundContactlistfiltersBulkRetrieve) | Retrieve multiple contact list filters |
 | [**postOutboundContactlistfiltersPreview**](OutboundAPI#postOutboundContactlistfiltersPreview) | Get a preview of the output of a contact list filter |
 | [**postOutboundContactlists**](OutboundAPI#postOutboundContactlists) | Create a contact List. |
+| [**postOutboundContactlistsUploads**](OutboundAPI#postOutboundContactlistsUploads) | Generate presigned upload URL for contact list. |
 | [**postOutboundContactlisttemplates**](OutboundAPI#postOutboundContactlisttemplates) | Create Contact List Template |
 | [**postOutboundContactlisttemplatesBulkAdd**](OutboundAPI#postOutboundContactlisttemplatesBulkAdd) | Add multiple contact list templates |
 | [**postOutboundContactlisttemplatesBulkRetrieve**](OutboundAPI#postOutboundContactlisttemplatesBulkRetrieve) | Get multiple contact list templates |
@@ -145,6 +146,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postOutboundDnclistExport**](OutboundAPI#postOutboundDnclistExport) | Initiate the export of a dnc list. |
 | [**postOutboundDnclistPhonenumbers**](OutboundAPI#postOutboundDnclistPhonenumbers) | Add phone numbers to a DNC list. |
 | [**postOutboundDnclists**](OutboundAPI#postOutboundDnclists) | Create dialer DNC list |
+| [**postOutboundDnclistsUploads**](OutboundAPI#postOutboundDnclistsUploads) | Generate presigned upload URL for dnc list. |
 | [**postOutboundFilespecificationtemplates**](OutboundAPI#postOutboundFilespecificationtemplates) | Create File Specification Template |
 | [**postOutboundImporttemplates**](OutboundAPI#postOutboundImporttemplates) | Create Import Template |
 | [**postOutboundImporttemplatesBulkAdd**](OutboundAPI#postOutboundImporttemplatesBulkAdd) | Add multiple import templates |
@@ -7211,6 +7213,56 @@ OutboundAPI.postOutboundContactlists(body: body) { (response, error) in
 [**ContactList**](ContactList)
 
 
+## postOutboundContactlistsUploads
+
+
+
+> [UploadUrlResponse](UploadUrlResponse) postOutboundContactlistsUploads(body)
+
+Generate presigned upload URL for contact list.
+
+
+
+Wraps POST /api/v2/outbound/contactlists/uploads  
+
+Requires ANY permissions: 
+
+* outbound:contactList:upload
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ContactListUploadUrlRequest = new ContactListUploadUrlRequest(...) // contactListUploadUrlRequest
+
+// Code example
+OutboundAPI.postOutboundContactlistsUploads(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.postOutboundContactlistsUploads was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ContactListUploadUrlRequest**](ContactListUploadUrlRequest)| contactListUploadUrlRequest | |
+
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse)
+
+
 ## postOutboundContactlisttemplates
 
 
@@ -7669,6 +7721,56 @@ OutboundAPI.postOutboundDnclists(body: body) { (response, error) in
 ### Return type
 
 [**DncList**](DncList)
+
+
+## postOutboundDnclistsUploads
+
+
+
+> [UploadUrlResponse](UploadUrlResponse) postOutboundDnclistsUploads(body)
+
+Generate presigned upload URL for dnc list.
+
+
+
+Wraps POST /api/v2/outbound/dnclists/uploads  
+
+Requires ANY permissions: 
+
+* outbound:dncList:upload
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: DNCListUploadUrlRequest = new DNCListUploadUrlRequest(...) // dncListUploadUrlRequest
+
+// Code example
+OutboundAPI.postOutboundDnclistsUploads(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.postOutboundDnclistsUploads was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**DNCListUploadUrlRequest**](DNCListUploadUrlRequest)| dncListUploadUrlRequest | |
+
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse)
 
 
 ## postOutboundFilespecificationtemplates
@@ -9339,4 +9441,4 @@ OutboundAPI.putOutboundWrapupcodemappings(body: body) { (response, error) in
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatformClientV2@186.0.0_
+_PureCloudPlatformClientV2@187.0.0_

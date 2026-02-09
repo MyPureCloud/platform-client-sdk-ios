@@ -9,6 +9,9 @@ public class TimeOffRequestQueryBody: Codable {
 
     public enum Statuses: String, Codable { 
         case pending = "PENDING"
+        case approved = "APPROVED"
+        case denied = "DENIED"
+        case canceled = "CANCELED"
     }
 
     public enum Substatuses: String, Codable { 

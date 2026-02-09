@@ -32,6 +32,10 @@ public class Miner: Codable {
         case arIl = "ar-il"
         case arSa = "ar-sa"
         case arTn = "ar-tn"
+        case daDk = "da-dk"
+        case fiFi = "fi-fi"
+        case svSe = "sv-se"
+        case nbNo = "nb-no"
     }
 
     public enum MinerType: String, Codable { 

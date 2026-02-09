@@ -45,6 +45,10 @@ public class CallbackMediaSettings: Codable {
 
 
 
+
+
+
+
     /** Indicates if auto-answer is enabled for the given media type or subtype (default is false).  Subtype settings take precedence over media type settings. */
     public var enableAutoAnswer: Bool?
     /** The alerting timeout for the media type, in seconds */
@@ -77,8 +81,12 @@ public class CallbackMediaSettings: Codable {
     public var answeringMachineReactionType: AnsweringMachineReactionType?
     /** The inbound flow to transfer to if an answering machine is detected during the outbound call of a customer first callback when answeringMachineReactionType is set to TransferToFlow. */
     public var answeringMachineFlow: DomainEntityRef?
+    /** The identifier of the edge group that will place the calls. Can be set to specify custom edge group instead of default one. */
+    public var edgeGroup: DomainEntityRef?
+    /** The identifier of the site to be used for dialing; can be set in place of an edge group. */
+    public var site: DomainEntityRef?
 
-    public init(enableAutoAnswer: Bool?, alertingTimeoutSeconds: Int?, serviceLevel: ServiceLevel?, autoAnswerAlertToneSeconds: Double?, manualAnswerAlertToneSeconds: Double?, mode: Mode?, enableAutoDialAndEnd: Bool?, autoDialDelaySeconds: Int?, autoEndDelaySeconds: Int?, pacingModifier: Double?, maxRetryCount: Int?, retryDelaySeconds: Int?, liveVoiceReactionType: LiveVoiceReactionType?, liveVoiceFlow: DomainEntityRef?, answeringMachineReactionType: AnsweringMachineReactionType?, answeringMachineFlow: DomainEntityRef?) {
+    public init(enableAutoAnswer: Bool?, alertingTimeoutSeconds: Int?, serviceLevel: ServiceLevel?, autoAnswerAlertToneSeconds: Double?, manualAnswerAlertToneSeconds: Double?, mode: Mode?, enableAutoDialAndEnd: Bool?, autoDialDelaySeconds: Int?, autoEndDelaySeconds: Int?, pacingModifier: Double?, maxRetryCount: Int?, retryDelaySeconds: Int?, liveVoiceReactionType: LiveVoiceReactionType?, liveVoiceFlow: DomainEntityRef?, answeringMachineReactionType: AnsweringMachineReactionType?, answeringMachineFlow: DomainEntityRef?, edgeGroup: DomainEntityRef?, site: DomainEntityRef?) {
         self.enableAutoAnswer = enableAutoAnswer
         self.alertingTimeoutSeconds = alertingTimeoutSeconds
         self.serviceLevel = serviceLevel
@@ -95,6 +103,8 @@ public class CallbackMediaSettings: Codable {
         self.liveVoiceFlow = liveVoiceFlow
         self.answeringMachineReactionType = answeringMachineReactionType
         self.answeringMachineFlow = answeringMachineFlow
+        self.edgeGroup = edgeGroup
+        self.site = site
     }
 
 

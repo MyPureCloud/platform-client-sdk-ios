@@ -234,7 +234,7 @@ AgentAssistantsAPI.deleteAssistantsAgentchecklist(agentChecklistId: agentCheckli
 
 
 
-> [Assistant](Assistant) getAssistant(assistantId, expand)
+> [Assistant](Assistant) getAssistant(assistantId, expand, languageVariation, fallbackToPrimaryAssistant)
 
 Get an assistant.
 
@@ -256,9 +256,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let assistantId: String = "" // Assistant ID
 let expand: AgentAssistantsAPI.Expand_getAssistant = AgentAssistantsAPI.Expand_getAssistant.enummember // Which fields, if any, to expand.
+let languageVariation: String = "" // Language variation
+let fallbackToPrimaryAssistant: Bool = true // Fall back to primary assistant if specified variation is not found
 
 // Code example
-AgentAssistantsAPI.getAssistant(assistantId: assistantId, expand: expand) { (response, error) in
+AgentAssistantsAPI.getAssistant(assistantId: assistantId, expand: expand, languageVariation: languageVariation, fallbackToPrimaryAssistant: fallbackToPrimaryAssistant) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -275,6 +277,8 @@ AgentAssistantsAPI.getAssistant(assistantId: assistantId, expand: expand) { (res
 | ------------- | ------------- | ------------- | ------------- |
 | **assistantId** | **String**| Assistant ID | |
 | **expand** | **String**| Which fields, if any, to expand. | [optional]<br />**Values**: copilot ("copilot") |
+| **languageVariation** | **String**| Language variation | [optional] |
+| **fallbackToPrimaryAssistant** | **Bool**| Fall back to primary assistant if specified variation is not found | [optional] |
 
 
 ### Return type
@@ -1252,4 +1256,4 @@ AgentAssistantsAPI.putAssistantsAgentchecklist(agentChecklistId: agentChecklistI
 [**AgentChecklist**](AgentChecklist)
 
 
-_PureCloudPlatformClientV2@186.0.0_
+_PureCloudPlatformClientV2@187.0.0_

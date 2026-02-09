@@ -271,6 +271,29 @@ open class RecordingAPI {
       "participantId" : "participantId",
       "paymentResponse" : "{}",
       "roadsideAssistance" : "{}",
+      "messageReceipts" : [ {
+        "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+        "reasons" : [ {
+          "code" : "MessageExpired",
+          "message" : "message"
+        }, {
+          "code" : "MessageExpired",
+          "message" : "message"
+        } ],
+        "id" : "id",
+        "status" : "Sent"
+      }, {
+        "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+        "reasons" : [ {
+          "code" : "MessageExpired",
+          "message" : "message"
+        }, {
+          "code" : "MessageExpired",
+          "message" : "message"
+        } ],
+        "id" : "id",
+        "status" : "Sent"
+      } ],
       "from" : "from",
       "id" : "id",
       "notificationTemplate" : "{}",
@@ -319,6 +342,7 @@ open class RecordingAPI {
         "id" : "id",
         "url" : "url"
       } ],
+      "status" : "status",
       "story" : "{}"
     }, {
       "quickReplies" : [ {
@@ -391,6 +415,29 @@ open class RecordingAPI {
       "participantId" : "participantId",
       "paymentResponse" : "{}",
       "roadsideAssistance" : "{}",
+      "messageReceipts" : [ {
+        "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+        "reasons" : [ {
+          "code" : "MessageExpired",
+          "message" : "message"
+        }, {
+          "code" : "MessageExpired",
+          "message" : "message"
+        } ],
+        "id" : "id",
+        "status" : "Sent"
+      }, {
+        "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+        "reasons" : [ {
+          "code" : "MessageExpired",
+          "message" : "message"
+        }, {
+          "code" : "MessageExpired",
+          "message" : "message"
+        } ],
+        "id" : "id",
+        "status" : "Sent"
+      } ],
       "from" : "from",
       "id" : "id",
       "notificationTemplate" : "{}",
@@ -439,6 +486,7 @@ open class RecordingAPI {
         "id" : "id",
         "url" : "url"
       } ],
+      "status" : "status",
       "story" : "{}"
     } ],
     "annotations" : [ {
@@ -1658,6 +1706,29 @@ open class RecordingAPI {
     "participantId" : "participantId",
     "paymentResponse" : "{}",
     "roadsideAssistance" : "{}",
+    "messageReceipts" : [ {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    }, {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    } ],
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -1706,6 +1777,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "status" : "status",
     "story" : "{}"
   }, {
     "quickReplies" : [ {
@@ -1778,6 +1850,29 @@ open class RecordingAPI {
     "participantId" : "participantId",
     "paymentResponse" : "{}",
     "roadsideAssistance" : "{}",
+    "messageReceipts" : [ {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    }, {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    } ],
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -1826,6 +1921,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "status" : "status",
     "story" : "{}"
   } ],
   "annotations" : [ {
@@ -3156,6 +3252,29 @@ open class RecordingAPI {
     "participantId" : "participantId",
     "paymentResponse" : "{}",
     "roadsideAssistance" : "{}",
+    "messageReceipts" : [ {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    }, {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    } ],
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -3204,6 +3323,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "status" : "status",
     "story" : "{}"
   }, {
     "quickReplies" : [ {
@@ -3276,6 +3396,29 @@ open class RecordingAPI {
     "participantId" : "participantId",
     "paymentResponse" : "{}",
     "roadsideAssistance" : "{}",
+    "messageReceipts" : [ {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    }, {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    } ],
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -3324,6 +3467,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "status" : "status",
     "story" : "{}"
   } ],
   "annotations" : [ {
@@ -4241,6 +4385,29 @@ open class RecordingAPI {
       "participantId" : "participantId",
       "paymentResponse" : "{}",
       "roadsideAssistance" : "{}",
+      "messageReceipts" : [ {
+        "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+        "reasons" : [ {
+          "code" : "MessageExpired",
+          "message" : "message"
+        }, {
+          "code" : "MessageExpired",
+          "message" : "message"
+        } ],
+        "id" : "id",
+        "status" : "Sent"
+      }, {
+        "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+        "reasons" : [ {
+          "code" : "MessageExpired",
+          "message" : "message"
+        }, {
+          "code" : "MessageExpired",
+          "message" : "message"
+        } ],
+        "id" : "id",
+        "status" : "Sent"
+      } ],
       "from" : "from",
       "id" : "id",
       "notificationTemplate" : "{}",
@@ -4289,6 +4456,7 @@ open class RecordingAPI {
         "id" : "id",
         "url" : "url"
       } ],
+      "status" : "status",
       "story" : "{}"
     }, {
       "quickReplies" : [ {
@@ -4361,6 +4529,29 @@ open class RecordingAPI {
       "participantId" : "participantId",
       "paymentResponse" : "{}",
       "roadsideAssistance" : "{}",
+      "messageReceipts" : [ {
+        "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+        "reasons" : [ {
+          "code" : "MessageExpired",
+          "message" : "message"
+        }, {
+          "code" : "MessageExpired",
+          "message" : "message"
+        } ],
+        "id" : "id",
+        "status" : "Sent"
+      }, {
+        "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+        "reasons" : [ {
+          "code" : "MessageExpired",
+          "message" : "message"
+        }, {
+          "code" : "MessageExpired",
+          "message" : "message"
+        } ],
+        "id" : "id",
+        "status" : "Sent"
+      } ],
       "from" : "from",
       "id" : "id",
       "notificationTemplate" : "{}",
@@ -4409,6 +4600,7 @@ open class RecordingAPI {
         "id" : "id",
         "url" : "url"
       } ],
+      "status" : "status",
       "story" : "{}"
     } ],
     "annotations" : [ {
@@ -5399,6 +5591,29 @@ open class RecordingAPI {
     "participantId" : "participantId",
     "paymentResponse" : "{}",
     "roadsideAssistance" : "{}",
+    "messageReceipts" : [ {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    }, {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    } ],
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -5447,6 +5662,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "status" : "status",
     "story" : "{}"
   }, {
     "quickReplies" : [ {
@@ -5519,6 +5735,29 @@ open class RecordingAPI {
     "participantId" : "participantId",
     "paymentResponse" : "{}",
     "roadsideAssistance" : "{}",
+    "messageReceipts" : [ {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    }, {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    } ],
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -5567,6 +5806,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "status" : "status",
     "story" : "{}"
   } ],
   "annotations" : [ {
@@ -6520,6 +6760,29 @@ open class RecordingAPI {
         "participantId" : "participantId",
         "paymentResponse" : "{}",
         "roadsideAssistance" : "{}",
+        "messageReceipts" : [ {
+          "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+          "reasons" : [ {
+            "code" : "MessageExpired",
+            "message" : "message"
+          }, {
+            "code" : "MessageExpired",
+            "message" : "message"
+          } ],
+          "id" : "id",
+          "status" : "Sent"
+        }, {
+          "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+          "reasons" : [ {
+            "code" : "MessageExpired",
+            "message" : "message"
+          }, {
+            "code" : "MessageExpired",
+            "message" : "message"
+          } ],
+          "id" : "id",
+          "status" : "Sent"
+        } ],
         "from" : "from",
         "id" : "id",
         "notificationTemplate" : "{}",
@@ -6568,6 +6831,7 @@ open class RecordingAPI {
           "id" : "id",
           "url" : "url"
         } ],
+        "status" : "status",
         "story" : "{}"
       }, {
         "quickReplies" : [ {
@@ -6640,6 +6904,29 @@ open class RecordingAPI {
         "participantId" : "participantId",
         "paymentResponse" : "{}",
         "roadsideAssistance" : "{}",
+        "messageReceipts" : [ {
+          "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+          "reasons" : [ {
+            "code" : "MessageExpired",
+            "message" : "message"
+          }, {
+            "code" : "MessageExpired",
+            "message" : "message"
+          } ],
+          "id" : "id",
+          "status" : "Sent"
+        }, {
+          "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+          "reasons" : [ {
+            "code" : "MessageExpired",
+            "message" : "message"
+          }, {
+            "code" : "MessageExpired",
+            "message" : "message"
+          } ],
+          "id" : "id",
+          "status" : "Sent"
+        } ],
         "from" : "from",
         "id" : "id",
         "notificationTemplate" : "{}",
@@ -6688,6 +6975,7 @@ open class RecordingAPI {
           "id" : "id",
           "url" : "url"
         } ],
+        "status" : "status",
         "story" : "{}"
       } ],
       "annotations" : [ {
@@ -7579,6 +7867,29 @@ open class RecordingAPI {
         "participantId" : "participantId",
         "paymentResponse" : "{}",
         "roadsideAssistance" : "{}",
+        "messageReceipts" : [ {
+          "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+          "reasons" : [ {
+            "code" : "MessageExpired",
+            "message" : "message"
+          }, {
+            "code" : "MessageExpired",
+            "message" : "message"
+          } ],
+          "id" : "id",
+          "status" : "Sent"
+        }, {
+          "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+          "reasons" : [ {
+            "code" : "MessageExpired",
+            "message" : "message"
+          }, {
+            "code" : "MessageExpired",
+            "message" : "message"
+          } ],
+          "id" : "id",
+          "status" : "Sent"
+        } ],
         "from" : "from",
         "id" : "id",
         "notificationTemplate" : "{}",
@@ -7627,6 +7938,7 @@ open class RecordingAPI {
           "id" : "id",
           "url" : "url"
         } ],
+        "status" : "status",
         "story" : "{}"
       }, {
         "quickReplies" : [ {
@@ -7699,6 +8011,29 @@ open class RecordingAPI {
         "participantId" : "participantId",
         "paymentResponse" : "{}",
         "roadsideAssistance" : "{}",
+        "messageReceipts" : [ {
+          "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+          "reasons" : [ {
+            "code" : "MessageExpired",
+            "message" : "message"
+          }, {
+            "code" : "MessageExpired",
+            "message" : "message"
+          } ],
+          "id" : "id",
+          "status" : "Sent"
+        }, {
+          "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+          "reasons" : [ {
+            "code" : "MessageExpired",
+            "message" : "message"
+          }, {
+            "code" : "MessageExpired",
+            "message" : "message"
+          } ],
+          "id" : "id",
+          "status" : "Sent"
+        } ],
         "from" : "from",
         "id" : "id",
         "notificationTemplate" : "{}",
@@ -7747,6 +8082,7 @@ open class RecordingAPI {
           "id" : "id",
           "url" : "url"
         } ],
+        "status" : "status",
         "story" : "{}"
       } ],
       "annotations" : [ {
@@ -8473,8 +8809,8 @@ open class RecordingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -8742,8 +9078,8 @@ open class RecordingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -9008,8 +9344,8 @@ open class RecordingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter jobId: (path) jobId 
@@ -9153,8 +9489,8 @@ open class RecordingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -9474,8 +9810,8 @@ open class RecordingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -9677,8 +10013,8 @@ open class RecordingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -11222,6 +11558,29 @@ open class RecordingAPI {
     "participantId" : "participantId",
     "paymentResponse" : "{}",
     "roadsideAssistance" : "{}",
+    "messageReceipts" : [ {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    }, {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    } ],
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -11270,6 +11629,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "status" : "status",
     "story" : "{}"
   }, {
     "quickReplies" : [ {
@@ -11342,6 +11702,29 @@ open class RecordingAPI {
     "participantId" : "participantId",
     "paymentResponse" : "{}",
     "roadsideAssistance" : "{}",
+    "messageReceipts" : [ {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    }, {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    } ],
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -11390,6 +11773,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "status" : "status",
     "story" : "{}"
   } ],
   "annotations" : [ {
@@ -12391,6 +12775,29 @@ open class RecordingAPI {
     "participantId" : "participantId",
     "paymentResponse" : "{}",
     "roadsideAssistance" : "{}",
+    "messageReceipts" : [ {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    }, {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    } ],
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -12439,6 +12846,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "status" : "status",
     "story" : "{}"
   }, {
     "quickReplies" : [ {
@@ -12511,6 +12919,29 @@ open class RecordingAPI {
     "participantId" : "participantId",
     "paymentResponse" : "{}",
     "roadsideAssistance" : "{}",
+    "messageReceipts" : [ {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    }, {
+      "receiptTime" : "2000-01-23T04:56:07.000+00:00",
+      "reasons" : [ {
+        "code" : "MessageExpired",
+        "message" : "message"
+      }, {
+        "code" : "MessageExpired",
+        "message" : "message"
+      } ],
+      "id" : "id",
+      "status" : "Sent"
+    } ],
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -12559,6 +12990,7 @@ open class RecordingAPI {
       "id" : "id",
       "url" : "url"
     } ],
+    "status" : "status",
     "story" : "{}"
   } ],
   "annotations" : [ {

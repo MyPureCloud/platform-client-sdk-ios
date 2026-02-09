@@ -2036,8 +2036,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter domainName: (path) email domain 
@@ -2208,8 +2208,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -2449,8 +2449,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -2657,8 +2657,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -2831,8 +2831,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter messengerType: (query) Messenger Type (optional)
@@ -3620,15 +3620,21 @@ open class RoutingAPI {
         case copilot = "copilot"
     }
     
+    
+    
+    
+    
     /**
      Get an assistant associated with a queue.
      
      - parameter queueId: (path) Queue ID 
      - parameter expand: (query) Which fields, if any, to expand. (optional)
+     - parameter languageVariation: (query) Language variation (optional)
+     - parameter fallbackToPrimaryAssistant: (query) Fall back to primary assistant if specified variation is not found (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingQueueAssistant(queueId: String, expand: [String]? = nil, completion: @escaping ((_ data: AssistantQueue?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingQueueAssistantWithRequestBuilder(queueId: queueId, expand: expand)
+    open class func getRoutingQueueAssistant(queueId: String, expand: [String]? = nil, languageVariation: String? = nil, fallbackToPrimaryAssistant: Bool? = nil, completion: @escaping ((_ data: AssistantQueue?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueueAssistantWithRequestBuilder(queueId: queueId, expand: expand, languageVariation: languageVariation, fallbackToPrimaryAssistant: fallbackToPrimaryAssistant)
         requestBuilder.execute { (response: Response<AssistantQueue>?, error) -> Void in
             do {
                 if let e = error {
@@ -3662,10 +3668,12 @@ open class RoutingAPI {
      
      - parameter queueId: (path) Queue ID 
      - parameter expand: (query) Which fields, if any, to expand. (optional)
+     - parameter languageVariation: (query) Language variation (optional)
+     - parameter fallbackToPrimaryAssistant: (query) Fall back to primary assistant if specified variation is not found (optional)
 
      - returns: RequestBuilder<AssistantQueue> 
      */
-    open class func getRoutingQueueAssistantWithRequestBuilder(queueId: String, expand: [String]? = nil) -> RequestBuilder<AssistantQueue> {        
+    open class func getRoutingQueueAssistantWithRequestBuilder(queueId: String, expand: [String]? = nil, languageVariation: String? = nil, fallbackToPrimaryAssistant: Bool? = nil) -> RequestBuilder<AssistantQueue> {        
         var path = "/api/v2/routing/queues/{queueId}/assistant"
         let queueIdPreEscape = "\(queueId)"
         let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3675,7 +3683,9 @@ open class RoutingAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "expand": expand
+            "expand": expand, 
+            "languageVariation": languageVariation, 
+            "fallbackToPrimaryAssistant": fallbackToPrimaryAssistant
         ])
 
         let requestBuilder: RequestBuilder<AssistantQueue>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -4813,8 +4823,8 @@ open class RoutingAPI {
   "firstUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue ID 
@@ -5583,8 +5593,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue ID 
@@ -5700,8 +5710,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue ID 
@@ -6024,8 +6034,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -6351,8 +6361,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size [max value is 100] (optional)
@@ -6654,8 +6664,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size [max value is 500] (optional)
@@ -6952,8 +6962,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -7620,8 +7630,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -7776,8 +7786,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -8247,8 +8257,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter phoneNumber: (query) Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)
@@ -8653,8 +8663,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -8834,8 +8844,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -9015,8 +9025,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -9317,8 +9327,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -9419,8 +9429,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -9519,8 +9529,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -9775,7 +9785,7 @@ open class RoutingAPI {
     /**
      Update attributes of an in-queue conversation
      - PATCH /api/v2/routing/conversations/{conversationId}
-     - Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
+     - Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, skillExpression, languageId, and priority.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -9955,6 +9965,71 @@ open class RoutingAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<InboundDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP).
+     
+     - parameter domainId: (path) domain ID 
+     - parameter body: (body) Domain settings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchRoutingEmailOutboundDomain(domainId: String, body: OutboundDomainPatchRequest, completion: @escaping ((_ data: OutboundDomain?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchRoutingEmailOutboundDomainWithRequestBuilder(domainId: domainId, body: body)
+        requestBuilder.execute { (response: Response<OutboundDomain>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP).
+     - PATCH /api/v2/routing/email/outbound/domains/{domainId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "cnameVerificationResult" : "{}",
+  "emailSetting" : "{}",
+  "dkimVerificationResult" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "senderType" : "Unknown",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter domainId: (path) domain ID 
+     - parameter body: (body) Domain settings 
+
+     - returns: RequestBuilder<OutboundDomain> 
+     */
+    open class func patchRoutingEmailOutboundDomainWithRequestBuilder(domainId: String, body: OutboundDomainPatchRequest) -> RequestBuilder<OutboundDomain> {        
+        var path = "/api/v2/routing/email/outbound/domains/{domainId}"
+        let domainIdPreEscape = "\(domainId)"
+        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OutboundDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -10149,6 +10224,7 @@ open class RoutingAPI {
     /**
      Join or unjoin a set of up to 100 users for a queue
      - PATCH /api/v2/routing/queues/{queueId}/members
+     - Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -10772,8 +10848,8 @@ open class RoutingAPI {
   "firstUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue ID 
@@ -11510,8 +11586,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue ID 
@@ -12042,6 +12118,7 @@ open class RoutingAPI {
     /**
      Join or unjoin a set of queues for a user
      - PATCH /api/v2/users/{userId}/queues
+     - Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -12270,8 +12347,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -12427,8 +12504,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -12509,8 +12586,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -13591,6 +13668,78 @@ open class RoutingAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<InboundDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Tests the custom SMTP server integration connection set on this outbound domain
+     
+     - parameter domainId: (path) domain ID 
+     - parameter body: (body) TestMessage (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRoutingEmailOutboundDomainTestconnection(domainId: String, body: TestMessage? = nil, completion: @escaping ((_ data: TestMessage?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingEmailOutboundDomainTestconnectionWithRequestBuilder(domainId: domainId, body: body)
+        requestBuilder.execute { (response: Response<TestMessage>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Tests the custom SMTP server integration connection set on this outbound domain
+     - POST /api/v2/routing/email/outbound/domains/{domainId}/testconnection
+     - The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server for the outbound domain. If the body is specified, there will be an attempt to send an email message to the server.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "htmlBody" : "htmlBody",
+  "subject" : "subject",
+  "from" : "{}",
+  "textBody" : "textBody",
+  "id" : "id",
+  "to" : [ {
+    "name" : "name",
+    "email" : "email"
+  }, {
+    "name" : "name",
+    "email" : "email"
+  } ],
+  "time" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+     
+     - parameter domainId: (path) domain ID 
+     - parameter body: (body) TestMessage (optional)
+
+     - returns: RequestBuilder<TestMessage> 
+     */
+    open class func postRoutingEmailOutboundDomainTestconnectionWithRequestBuilder(domainId: String, body: TestMessage? = nil) -> RequestBuilder<TestMessage> {        
+        var path = "/api/v2/routing/email/outbound/domains/{domainId}/testconnection"
+        let domainIdPreEscape = "\(domainId)"
+        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TestMessage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -16104,8 +16253,8 @@ open class RoutingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 

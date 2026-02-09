@@ -1,6 +1,6 @@
 
 
-public class ScreenRecordingUserAuthenticatedInfo: Codable {
+public class BackgroundAssistantUserAuthenticatedInfo: Codable {
 
 
 

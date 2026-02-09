@@ -32,6 +32,7 @@ public class VoicemailEndDetailEventTopicVoicemailEndEvent: Codable {
         case dndTransfer = "DND_TRANSFER"
         case inactivity = "INACTIVITY"
         case sessionExpired = "SESSION_EXPIRED"
+        case takeover = "TAKEOVER"
     }
 
     public enum MediaType: String, Codable { 

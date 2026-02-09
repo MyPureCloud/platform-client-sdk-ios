@@ -1,6 +1,6 @@
 
 
-public class CaseReference: Codable {
+public class UsersRuleReference: Codable {
 
 
 

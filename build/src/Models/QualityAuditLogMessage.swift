@@ -18,6 +18,7 @@ public class QualityAuditLogMessage: Codable {
         case recordingService = "RecordingService"
         case recordingPlaybackService = "RecordingPlaybackService"
         case qualityService = "QualityService"
+        case horusService = "HorusService"
     }
 
     public enum Level: String, Codable { 
@@ -50,6 +51,8 @@ public class QualityAuditLogMessage: Codable {
         case applyProtection = "ApplyProtection"
         case revokeProtection = "RevokeProtection"
         case updateRetention = "UpdateRetention"
+        case start = "Start"
+        case stop = "Stop"
     }
 
 

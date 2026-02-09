@@ -101,6 +101,7 @@ public class Session: Codable {
         case doNotDisturbEndpoint = "DoNotDisturbEndpoint"
         case doNotDisturbTransfer = "DoNotDisturbTransfer"
         case sessionExpired = "SessionExpired"
+        case takeover = "Takeover"
     }
 
     public enum LastAcdOutcome: String, Codable { 

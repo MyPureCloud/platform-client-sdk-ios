@@ -18,6 +18,8 @@ public class SystemMessageSystemMessage: Codable {
 
 
 
+
+
     public enum Reason: String, Codable { 
         case anotherChannelSubscribed = "another_channel_subscribed"
         case userTokensRevoked = "user_tokens_revoked"
@@ -33,17 +35,19 @@ public class SystemMessageSystemMessage: Codable {
     public var organizationId: String?
     public var userId: String?
     public var oauthClientId: String?
+    public var oauthClientOrgId: String?
     public var reason: Reason?
     public var message: String?
     public var data: [String:JSON]?
 
-    public init(channelId: String?, systemTopicType: SystemTopicType?, correlationId: String?, organizationId: String?, userId: String?, oauthClientId: String?, reason: Reason?, message: String?, data: [String:JSON]?) {
+    public init(channelId: String?, systemTopicType: SystemTopicType?, correlationId: String?, organizationId: String?, userId: String?, oauthClientId: String?, oauthClientOrgId: String?, reason: Reason?, message: String?, data: [String:JSON]?) {
         self.channelId = channelId
         self.systemTopicType = systemTopicType
         self.correlationId = correlationId
         self.organizationId = organizationId
         self.userId = userId
         self.oauthClientId = oauthClientId
+        self.oauthClientOrgId = oauthClientOrgId
         self.reason = reason
         self.message = message
         self.data = data

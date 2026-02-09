@@ -212,15 +212,21 @@ open class AgentAssistantsAPI {
     }
     
     
+    
+    
+    
+    
     /**
      Get an assistant.
      
      - parameter assistantId: (path) Assistant ID 
      - parameter expand: (query) Which fields, if any, to expand. (optional)
+     - parameter languageVariation: (query) Language variation (optional)
+     - parameter fallbackToPrimaryAssistant: (query) Fall back to primary assistant if specified variation is not found (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAssistant(assistantId: String, expand: Expand_getAssistant? = nil, completion: @escaping ((_ data: Assistant?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAssistantWithRequestBuilder(assistantId: assistantId, expand: expand)
+    open class func getAssistant(assistantId: String, expand: Expand_getAssistant? = nil, languageVariation: String? = nil, fallbackToPrimaryAssistant: Bool? = nil, completion: @escaping ((_ data: Assistant?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAssistantWithRequestBuilder(assistantId: assistantId, expand: expand, languageVariation: languageVariation, fallbackToPrimaryAssistant: fallbackToPrimaryAssistant)
         requestBuilder.execute { (response: Response<Assistant>?, error) -> Void in
             do {
                 if let e = error {
@@ -261,10 +267,12 @@ open class AgentAssistantsAPI {
      
      - parameter assistantId: (path) Assistant ID 
      - parameter expand: (query) Which fields, if any, to expand. (optional)
+     - parameter languageVariation: (query) Language variation (optional)
+     - parameter fallbackToPrimaryAssistant: (query) Fall back to primary assistant if specified variation is not found (optional)
 
      - returns: RequestBuilder<Assistant> 
      */
-    open class func getAssistantWithRequestBuilder(assistantId: String, expand: Expand_getAssistant? = nil) -> RequestBuilder<Assistant> {        
+    open class func getAssistantWithRequestBuilder(assistantId: String, expand: Expand_getAssistant? = nil, languageVariation: String? = nil, fallbackToPrimaryAssistant: Bool? = nil) -> RequestBuilder<Assistant> {        
         var path = "/api/v2/assistants/{assistantId}"
         let assistantIdPreEscape = "\(assistantId)"
         let assistantIdPostEscape = assistantIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -274,7 +282,9 @@ open class AgentAssistantsAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "expand": expand?.rawValue
+            "expand": expand?.rawValue, 
+            "languageVariation": languageVariation, 
+            "fallbackToPrimaryAssistant": fallbackToPrimaryAssistant
         ])
 
         let requestBuilder: RequestBuilder<Assistant>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

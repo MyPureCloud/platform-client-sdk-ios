@@ -27,6 +27,7 @@ public class AnalyticsConversationSegment: Codable {
         case sessionexpired = "sessionExpired"
         case spam = "spam"
         case system = "system"
+        case takeover = "takeover"
         case timeout = "timeout"
         case transfer = "transfer"
         case transportfailure = "transportFailure"

@@ -1536,6 +1536,7 @@ open class QualityAPI {
   "evaluationForm" : {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -6269,8 +6270,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -7849,6 +7850,7 @@ open class QualityAPI {
   "evaluationForm" : {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -9645,6 +9647,7 @@ open class QualityAPI {
     "evaluationForm" : {
       "latestVersionFormName" : "latestVersionFormName",
       "evaluationSettings" : "{}",
+      "dialect" : "dialect",
       "publishedVersions" : "{}",
       "aiScoring" : "{}",
       "selfUri" : "https://openapi-generator.tech",
@@ -11350,6 +11353,7 @@ open class QualityAPI {
     "evaluationForm" : {
       "latestVersionFormName" : "latestVersionFormName",
       "evaluationSettings" : "{}",
+      "dialect" : "dialect",
       "publishedVersions" : "{}",
       "aiScoring" : "{}",
       "selfUri" : "https://openapi-generator.tech",
@@ -11569,8 +11573,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter calibratorId: (query) user id of calibrator 
@@ -15172,6 +15176,7 @@ open class QualityAPI {
       "evaluationForm" : {
         "latestVersionFormName" : "latestVersionFormName",
         "evaluationSettings" : "{}",
+        "dialect" : "dialect",
         "publishedVersions" : "{}",
         "aiScoring" : "{}",
         "selfUri" : "https://openapi-generator.tech",
@@ -18020,6 +18025,7 @@ open class QualityAPI {
       "evaluationForm" : {
         "latestVersionFormName" : "latestVersionFormName",
         "evaluationSettings" : "{}",
+        "dialect" : "dialect",
         "publishedVersions" : "{}",
         "aiScoring" : "{}",
         "selfUri" : "https://openapi-generator.tech",
@@ -18959,8 +18965,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -19706,8 +19712,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 9,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -19786,15 +19792,16 @@ open class QualityAPI {
      - examples: [{contentType=application/json, example={
   "latestVersionFormName" : "latestVersionFormName",
   "evaluationSettings" : "{}",
+  "dialect" : "dialect",
   "weightMode" : "SCALED",
+  "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "published" : true,
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-  "contextId" : "contextId",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "defaultAnswersToHighest" : true,
     "manualWeight" : true,
@@ -20069,15 +20076,16 @@ open class QualityAPI {
   "entities" : [ {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "weightMode" : "SCALED",
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -20286,15 +20294,16 @@ open class QualityAPI {
   }, {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "weightMode" : "SCALED",
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -20505,8 +20514,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter formId: (path) Form ID 
@@ -20600,15 +20609,16 @@ open class QualityAPI {
   "entities" : [ {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "weightMode" : "SCALED",
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -20817,15 +20827,16 @@ open class QualityAPI {
   }, {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "weightMode" : "SCALED",
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -21036,8 +21047,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -21108,15 +21119,16 @@ open class QualityAPI {
      - examples: [{contentType=application/json, example={
   "latestVersionFormName" : "latestVersionFormName",
   "evaluationSettings" : "{}",
+  "dialect" : "dialect",
   "weightMode" : "SCALED",
+  "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "published" : true,
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-  "contextId" : "contextId",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "defaultAnswersToHighest" : true,
     "manualWeight" : true,
@@ -21391,15 +21403,16 @@ open class QualityAPI {
   "entities" : [ {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "weightMode" : "SCALED",
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -21608,15 +21621,16 @@ open class QualityAPI {
   }, {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "weightMode" : "SCALED",
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -21827,8 +21841,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter formId: (path) Form ID 
@@ -21923,15 +21937,16 @@ open class QualityAPI {
   "entities" : [ {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "weightMode" : "SCALED",
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -22140,15 +22155,16 @@ open class QualityAPI {
   }, {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "weightMode" : "SCALED",
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -22359,8 +22375,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -22438,15 +22454,16 @@ open class QualityAPI {
   "entities" : [ {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "weightMode" : "SCALED",
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -22655,15 +22672,16 @@ open class QualityAPI {
   }, {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "weightMode" : "SCALED",
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -22874,8 +22892,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter _id: (query) A comma-delimited list of valid evaluation form ids. The maximum number of ids allowed in this list is 100 
@@ -22934,15 +22952,16 @@ open class QualityAPI {
      - examples: [{contentType=application/json, example={
   "latestVersionFormName" : "latestVersionFormName",
   "evaluationSettings" : "{}",
+  "dialect" : "dialect",
   "weightMode" : "SCALED",
+  "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "published" : true,
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-  "contextId" : "contextId",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "defaultAnswersToHighest" : true,
     "manualWeight" : true,
@@ -23854,8 +23873,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter formId: (path) Form ID 
@@ -24339,8 +24358,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -24807,8 +24826,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter _id: (query) A comma-delimited list of valid survey form ids 
@@ -25223,8 +25242,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter programId: (path) Program ID from Speech and Text Analytics 
@@ -25281,15 +25300,16 @@ open class QualityAPI {
      - examples: [{contentType=application/json, example={
   "latestVersionFormName" : "latestVersionFormName",
   "evaluationSettings" : "{}",
+  "dialect" : "dialect",
   "weightMode" : "SCALED",
+  "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "published" : true,
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-  "contextId" : "contextId",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "defaultAnswersToHighest" : true,
     "manualWeight" : true,
@@ -25564,15 +25584,16 @@ open class QualityAPI {
   "entities" : [ {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "weightMode" : "SCALED",
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -25781,15 +25802,16 @@ open class QualityAPI {
   }, {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "weightMode" : "SCALED",
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -26000,8 +26022,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -26064,15 +26086,16 @@ open class QualityAPI {
      - examples: [{contentType=application/json, example={
   "latestVersionFormName" : "latestVersionFormName",
   "evaluationSettings" : "{}",
+  "dialect" : "dialect",
   "weightMode" : "SCALED",
+  "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "published" : true,
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-  "contextId" : "contextId",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "defaultAnswersToHighest" : true,
     "manualWeight" : true,
@@ -26347,15 +26370,16 @@ open class QualityAPI {
   "entities" : [ {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "weightMode" : "SCALED",
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -26564,15 +26588,16 @@ open class QualityAPI {
   }, {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "weightMode" : "SCALED",
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -26783,8 +26808,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -27500,8 +27525,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -30307,6 +30332,7 @@ open class QualityAPI {
   "evaluationForm" : {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -32495,6 +32521,7 @@ open class QualityAPI {
     "evaluationForm" : {
       "latestVersionFormName" : "latestVersionFormName",
       "evaluationSettings" : "{}",
+      "dialect" : "dialect",
       "publishedVersions" : "{}",
       "aiScoring" : "{}",
       "selfUri" : "https://openapi-generator.tech",
@@ -36481,15 +36508,16 @@ open class QualityAPI {
      - examples: [{contentType=application/json, example={
   "latestVersionFormName" : "latestVersionFormName",
   "evaluationSettings" : "{}",
+  "dialect" : "dialect",
   "weightMode" : "SCALED",
+  "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "published" : true,
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-  "contextId" : "contextId",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "defaultAnswersToHighest" : true,
     "manualWeight" : true,
@@ -36748,15 +36776,16 @@ open class QualityAPI {
      - examples: [{contentType=application/json, example={
   "latestVersionFormName" : "latestVersionFormName",
   "evaluationSettings" : "{}",
+  "dialect" : "dialect",
   "weightMode" : "SCALED",
+  "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "published" : true,
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-  "contextId" : "contextId",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "defaultAnswersToHighest" : true,
     "manualWeight" : true,
@@ -37331,15 +37360,16 @@ open class QualityAPI {
      - examples: [{contentType=application/json, example={
   "latestVersionFormName" : "latestVersionFormName",
   "evaluationSettings" : "{}",
+  "dialect" : "dialect",
   "weightMode" : "SCALED",
+  "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "published" : true,
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-  "contextId" : "contextId",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "defaultAnswersToHighest" : true,
     "manualWeight" : true,
@@ -37598,15 +37628,16 @@ open class QualityAPI {
      - examples: [{contentType=application/json, example={
   "latestVersionFormName" : "latestVersionFormName",
   "evaluationSettings" : "{}",
+  "dialect" : "dialect",
   "weightMode" : "SCALED",
+  "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "published" : true,
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-  "contextId" : "contextId",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "defaultAnswersToHighest" : true,
     "manualWeight" : true,
@@ -39843,6 +39874,7 @@ open class QualityAPI {
   "evaluationForm" : {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
+    "dialect" : "dialect",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -41334,15 +41366,16 @@ open class QualityAPI {
      - examples: [{contentType=application/json, example={
   "latestVersionFormName" : "latestVersionFormName",
   "evaluationSettings" : "{}",
+  "dialect" : "dialect",
   "weightMode" : "SCALED",
+  "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "published" : true,
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-  "contextId" : "contextId",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "defaultAnswersToHighest" : true,
     "manualWeight" : true,
@@ -41608,15 +41641,16 @@ open class QualityAPI {
      - examples: [{contentType=application/json, example={
   "latestVersionFormName" : "latestVersionFormName",
   "evaluationSettings" : "{}",
+  "dialect" : "dialect",
   "weightMode" : "SCALED",
+  "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "published" : true,
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-  "contextId" : "contextId",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "defaultAnswersToHighest" : true,
     "manualWeight" : true,

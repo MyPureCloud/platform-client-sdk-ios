@@ -17,6 +17,8 @@ public class WorkitemQueryJobCreate: Codable {
         case assignee = "assignee"
         case reporter = "reporter"
         case queue = "queue"
+        case _case = "case"
+        case externalcontact = "externalContact"
     }
 
 

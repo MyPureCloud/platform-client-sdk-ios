@@ -382,8 +382,8 @@ open class SpeechTextAnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The page size for the listing. The max that will be returned is 25. (optional)
@@ -604,8 +604,8 @@ open class SpeechTextAnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter conversationId: (path) The id of the conversation 
@@ -908,7 +908,7 @@ open class SpeechTextAnalyticsAPI {
      Get the list of Speech & Text Analytics dictionary feedbacks
      
      - parameter dialect: (query) The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)
-     - parameter transcriptionEngine: (query) Filter by transcription engine (optional)
+     - parameter transcriptionEngine: (query) Filter by transcription engine, If not provided, all transcription engines will be considered (optional)
      - parameter nextPage: (query) The key for listing the next page (optional)
      - parameter pageSize: (query) The page size for the listing (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -975,7 +975,7 @@ open class SpeechTextAnalyticsAPI {
 }, statusCode=200}]
      
      - parameter dialect: (query) The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)
-     - parameter transcriptionEngine: (query) Filter by transcription engine (optional)
+     - parameter transcriptionEngine: (query) Filter by transcription engine, If not provided, all transcription engines will be considered (optional)
      - parameter nextPage: (query) The key for listing the next page (optional)
      - parameter pageSize: (query) The page size for the listing (optional)
 
@@ -1791,8 +1791,8 @@ open class SpeechTextAnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The page size for the listing. The max that will be returned is 100. (optional)
@@ -1814,6 +1814,70 @@ open class SpeechTextAnalyticsAPI {
         ])
 
         let requestBuilder: RequestBuilder<ProgramInsightsSettingsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get a Speech & Text Analytics program-topic links job by id
+     
+     - parameter jobId: (path) The id of the program-topic links job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsProgramsTopiclinksJob(jobId: String, completion: @escaping ((_ data: ProgramTopicLinksJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsProgramsTopiclinksJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<ProgramTopicLinksJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a Speech & Text Analytics program-topic links job by id
+     - GET /api/v2/speechandtextanalytics/programs/topiclinks/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Running",
+  "programId" : "programId"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The id of the program-topic links job 
+
+     - returns: RequestBuilder<ProgramTopicLinksJob> 
+     */
+    open class func getSpeechandtextanalyticsProgramsTopiclinksJobWithRequestBuilder(jobId: String) -> RequestBuilder<ProgramTopicLinksJob> {        
+        var path = "/api/v2/speechandtextanalytics/programs/topiclinks/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ProgramTopicLinksJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }

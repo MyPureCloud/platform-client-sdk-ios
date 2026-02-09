@@ -71,6 +71,7 @@ public class SegmentDetailQueryPredicate: Codable {
         case requestedrouting = "requestedRouting"
         case requestedroutingskillid = "requestedRoutingSkillId"
         case scoredagentid = "scoredAgentId"
+        case screenmonitoreduserid = "screenMonitoredUserId"
         case screenrecording = "screenRecording"
         case scriptid = "scriptId"
         case segmentend = "segmentEnd"

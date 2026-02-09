@@ -22,7 +22,9 @@
 | **liveVoiceFlow** | [**DomainEntityRef**](DomainEntityRef) | The inbound flow to transfer to if a live voice is detected during the outbound call of a customer first callback. | [optional] |
 | **answeringMachineReactionType** | **String** | The action to take if an answering machine is detected during the outbound call of a customer first callback. | [optional] |
 | **answeringMachineFlow** | [**DomainEntityRef**](DomainEntityRef) | The inbound flow to transfer to if an answering machine is detected during the outbound call of a customer first callback when answeringMachineReactionType is set to TransferToFlow. | [optional] |
+| **edgeGroup** | [**DomainEntityRef**](DomainEntityRef) | The identifier of the edge group that will place the calls. Can be set to specify custom edge group instead of default one. | [optional] |
+| **site** | [**DomainEntityRef**](DomainEntityRef) | The identifier of the site to be used for dialing; can be set in place of an edge group. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@186.0.0_
+_PureCloudPlatformClientV2@187.0.0_

@@ -31,6 +31,7 @@ public class DictionaryFeedback: Codable {
         case active = "Active"
         case pending = "Pending"
         case failed = "Failed"
+        case saved = "Saved"
     }
 
 

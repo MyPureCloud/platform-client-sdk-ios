@@ -29,6 +29,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSpeechandtextanalyticsProgramsMappings**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsMappings) | Get the list of Speech &amp; Text Analytics programs mappings to queues and flows |
 | [**getSpeechandtextanalyticsProgramsPublishjob**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsPublishjob) | Get a Speech &amp; Text Analytics publish programs job by id |
 | [**getSpeechandtextanalyticsProgramsSettingsInsights**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsSettingsInsights) | Get the list of program AI Insights settings for the organization |
+| [**getSpeechandtextanalyticsProgramsTopiclinksJob**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsTopiclinksJob) | Get a Speech &amp; Text Analytics program-topic links job by id |
 | [**getSpeechandtextanalyticsProgramsTranscriptionenginesDialects**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsTranscriptionenginesDialects) | Get supported dialects for each transcription engine |
 | [**getSpeechandtextanalyticsProgramsUnpublished**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsUnpublished) | Get the list of Speech &amp; Text Analytics unpublished programs |
 | [**getSpeechandtextanalyticsSentimentDialects**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsSentimentDialects) | Get the list of Speech &amp; Text Analytics sentiment supported dialects |
@@ -809,7 +810,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let dialect: String = en-US // The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard
-let transcriptionEngine: SpeechTextAnalyticsAPI.TranscriptionEngine_getSpeechandtextanalyticsDictionaryfeedback = SpeechTextAnalyticsAPI.TranscriptionEngine_getSpeechandtextanalyticsDictionaryfeedback.enummember // Filter by transcription engine
+let transcriptionEngine: SpeechTextAnalyticsAPI.TranscriptionEngine_getSpeechandtextanalyticsDictionaryfeedback = SpeechTextAnalyticsAPI.TranscriptionEngine_getSpeechandtextanalyticsDictionaryfeedback.enummember // Filter by transcription engine, If not provided, all transcription engines will be considered
 let nextPage: String = "" // The key for listing the next page
 let pageSize: Int = 0 // The page size for the listing
 
@@ -830,7 +831,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsDictionaryfeedback(dialect: dial
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **dialect** | **String**| The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional] |
-| **transcriptionEngine** | **String**| Filter by transcription engine | [optional]<br />**Values**: genesys ("Genesys"), genesysExtended ("GenesysExtended") |
+| **transcriptionEngine** | **String**| Filter by transcription engine, If not provided, all transcription engines will be considered | [optional]<br />**Values**: genesys ("Genesys"), genesysExtended ("GenesysExtended") |
 | **nextPage** | **String**| The key for listing the next page | [optional] |
 | **pageSize** | **Int**| The page size for the listing | [optional] |
 
@@ -1359,6 +1360,56 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsSettingsInsights(pageSiz
 ### Return type
 
 [**ProgramInsightsSettingsEntityListing**](ProgramInsightsSettingsEntityListing)
+
+
+## getSpeechandtextanalyticsProgramsTopiclinksJob
+
+
+
+> [ProgramTopicLinksJob](ProgramTopicLinksJob) getSpeechandtextanalyticsProgramsTopiclinksJob(jobId)
+
+Get a Speech &amp; Text Analytics program-topic links job by id
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/programs/topiclinks/jobs/{jobId}  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // The id of the program-topic links job
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsTopiclinksJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsTopiclinksJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| The id of the program-topic links job | |
+
+
+### Return type
+
+[**ProgramTopicLinksJob**](ProgramTopicLinksJob)
 
 
 ## getSpeechandtextanalyticsProgramsTranscriptionenginesDialects
@@ -3032,4 +3083,4 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsTopic(topicId: topicId, body: bo
 [**Topic**](Topic)
 
 
-_PureCloudPlatformClientV2@186.0.0_
+_PureCloudPlatformClientV2@187.0.0_

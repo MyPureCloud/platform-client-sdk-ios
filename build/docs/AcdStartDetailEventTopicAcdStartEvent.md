@@ -29,7 +29,8 @@
 | **utilizationLabel** | **String** |  | [optional] |
 | **routingPriority** | **Int64** |  | [optional] |
 | **requestedRoutingSkillIds** | [**[UUID]**]([UUID]) |  | [optional] |
+| **skillExpressionApplied** | **Bool** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@186.0.0_
+_PureCloudPlatformClientV2@187.0.0_

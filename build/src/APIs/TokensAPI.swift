@@ -201,7 +201,20 @@ open class TokensAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "inactivityTimeoutGroupBundles" : [ {
+    "inactivityTimeoutUnit" : "Minutes",
+    "timeoutSeconds" : 1,
+    "groups" : [ "groups", "groups" ],
+    "priority" : 6
+  }, {
+    "inactivityTimeoutUnit" : "Minutes",
+    "timeoutSeconds" : 1,
+    "groups" : [ "groups", "groups" ],
+    "priority" : 6
+  } ],
   "idleTokenTimeoutSeconds" : 300,
+  "inactivityTimeoutGroupsEnabled" : true,
+  "inactivityTimeoutUnit" : "Minutes",
   "enableIdleTokenTimeout" : true
 }, statusCode=200}]
 
@@ -289,7 +302,20 @@ open class TokensAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "inactivityTimeoutGroupBundles" : [ {
+    "inactivityTimeoutUnit" : "Minutes",
+    "timeoutSeconds" : 1,
+    "groups" : [ "groups", "groups" ],
+    "priority" : 6
+  }, {
+    "inactivityTimeoutUnit" : "Minutes",
+    "timeoutSeconds" : 1,
+    "groups" : [ "groups", "groups" ],
+    "priority" : 6
+  } ],
   "idleTokenTimeoutSeconds" : 300,
+  "inactivityTimeoutGroupsEnabled" : true,
+  "inactivityTimeoutUnit" : "Minutes",
   "enableIdleTokenTimeout" : true
 }, statusCode=200}]
      

@@ -100,6 +100,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchRoutingConversation**](RoutingAPI#patchRoutingConversation) | Update attributes of an in-queue conversation |
 | [**patchRoutingEmailDomain**](RoutingAPI#patchRoutingEmailDomain) | Update domain settings |
 | [**patchRoutingEmailDomainValidate**](RoutingAPI#patchRoutingEmailDomainValidate) | Validate domain settings |
+| [**patchRoutingEmailOutboundDomain**](RoutingAPI#patchRoutingEmailOutboundDomain) | Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP). |
 | [**patchRoutingPredictor**](RoutingAPI#patchRoutingPredictor) | Update single predictor. |
 | [**patchRoutingQueueMember**](RoutingAPI#patchRoutingQueueMember) | Update the ring number OR joined status for a queue member. |
 | [**patchRoutingQueueMembers**](RoutingAPI#patchRoutingQueueMembers) | Join or unjoin a set of up to 100 users for a queue |
@@ -124,6 +125,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postRoutingEmailDomainTestconnection**](RoutingAPI#postRoutingEmailDomainTestconnection) | Tests the custom SMTP server integration connection set on this ACD domain |
 | [**postRoutingEmailDomainVerification**](RoutingAPI#postRoutingEmailDomainVerification) | Restart domain verification |
 | [**postRoutingEmailDomains**](RoutingAPI#postRoutingEmailDomains) | Create a domain |
+| [**postRoutingEmailOutboundDomainTestconnection**](RoutingAPI#postRoutingEmailOutboundDomainTestconnection) | Tests the custom SMTP server integration connection set on this outbound domain |
 | [**postRoutingEmailOutboundDomains**](RoutingAPI#postRoutingEmailOutboundDomains) | Create a domain |
 | [**postRoutingEmailOutboundDomainsSimulated**](RoutingAPI#postRoutingEmailOutboundDomainsSimulated) | Create a simulated domain |
 | [**postRoutingLanguages**](RoutingAPI#postRoutingLanguages) | Create Language |
@@ -2764,7 +2766,7 @@ RoutingAPI.getRoutingQueue(queueId: queueId, expand: expand) { (response, error)
 
 
 
-> [AssistantQueue](AssistantQueue) getRoutingQueueAssistant(queueId, expand)
+> [AssistantQueue](AssistantQueue) getRoutingQueueAssistant(queueId, expand, languageVariation, fallbackToPrimaryAssistant)
 
 Get an assistant associated with a queue.
 
@@ -2786,9 +2788,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let queueId: String = "" // Queue ID
 let expand: [String] = [""] // Which fields, if any, to expand.
+let languageVariation: String = "" // Language variation
+let fallbackToPrimaryAssistant: Bool = true // Fall back to primary assistant if specified variation is not found
 
 // Code example
-RoutingAPI.getRoutingQueueAssistant(queueId: queueId, expand: expand) { (response, error) in
+RoutingAPI.getRoutingQueueAssistant(queueId: queueId, expand: expand, languageVariation: languageVariation, fallbackToPrimaryAssistant: fallbackToPrimaryAssistant) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2805,6 +2809,8 @@ RoutingAPI.getRoutingQueueAssistant(queueId: queueId, expand: expand) { (respons
 | ------------- | ------------- | ------------- | ------------- |
 | **queueId** | **String**| Queue ID | |
 | **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: assistant ("assistant"), copilot ("copilot") |
+| **languageVariation** | **String**| Language variation | [optional] |
+| **fallbackToPrimaryAssistant** | **Bool**| Fall back to primary assistant if specified variation is not found | [optional] |
 
 
 ### Return type
@@ -5075,7 +5081,7 @@ RoutingAPI.getUserSkillgroups(userId: userId, pageSize: pageSize, after: after, 
 
 Update attributes of an in-queue conversation
 
-Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
+Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, skillExpression, languageId, and priority.
 
 
 
@@ -5225,6 +5231,58 @@ RoutingAPI.patchRoutingEmailDomainValidate(domainId: domainId, body: body) { (re
 [**InboundDomain**](InboundDomain)
 
 
+## patchRoutingEmailOutboundDomain
+
+
+
+> [OutboundDomain](OutboundDomain) patchRoutingEmailOutboundDomain(domainId, body)
+
+Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP).
+
+
+
+Wraps PATCH /api/v2/routing/email/outbound/domains/{domainId}  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // domain ID
+let body: OutboundDomainPatchRequest = new OutboundDomainPatchRequest(...) // Domain settings
+
+// Code example
+RoutingAPI.patchRoutingEmailOutboundDomain(domainId: domainId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.patchRoutingEmailOutboundDomain was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| domain ID | |
+| **body** | [**OutboundDomainPatchRequest**](OutboundDomainPatchRequest)| Domain settings | |
+
+
+### Return type
+
+[**OutboundDomain**](OutboundDomain)
+
+
 ## patchRoutingPredictor
 
 
@@ -5339,6 +5397,8 @@ RoutingAPI.patchRoutingQueueMember(queueId: queueId, memberId: memberId, body: b
 > [QueueMemberEntityListing](QueueMemberEntityListing) patchRoutingQueueMembers(queueId, body)
 
 Join or unjoin a set of up to 100 users for a queue
+
+Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
 
 
 
@@ -5757,6 +5817,8 @@ RoutingAPI.patchUserQueue(queueId: queueId, userId: userId, body: body) { (respo
 > [UserQueueEntityListing](UserQueueEntityListing) patchUserQueues(userId, body, divisionId)
 
 Join or unjoin a set of queues for a user
+
+Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
 
 
 
@@ -6476,6 +6538,60 @@ RoutingAPI.postRoutingEmailDomains(body: body) { (response, error) in
 ### Return type
 
 [**InboundDomain**](InboundDomain)
+
+
+## postRoutingEmailOutboundDomainTestconnection
+
+
+
+> [TestMessage](TestMessage) postRoutingEmailOutboundDomainTestconnection(domainId, body)
+
+Tests the custom SMTP server integration connection set on this outbound domain
+
+The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server for the outbound domain. If the body is specified, there will be an attempt to send an email message to the server.
+
+
+
+Wraps POST /api/v2/routing/email/outbound/domains/{domainId}/testconnection  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // domain ID
+let body: TestMessage = new TestMessage(...) // TestMessage
+
+// Code example
+RoutingAPI.postRoutingEmailOutboundDomainTestconnection(domainId: domainId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postRoutingEmailOutboundDomainTestconnection was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| domain ID | |
+| **body** | [**TestMessage**](TestMessage)| TestMessage | [optional] |
+
+
+### Return type
+
+[**TestMessage**](TestMessage)
 
 
 ## postRoutingEmailOutboundDomains
@@ -8279,4 +8395,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@186.0.0_
+_PureCloudPlatformClientV2@187.0.0_

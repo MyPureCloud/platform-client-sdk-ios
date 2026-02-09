@@ -18,6 +18,12 @@ public class WorkPlanBiddingAdminNotificationTopicWorkPlanBiddingNotification: C
         case published = "Published"
     }
 
+    public enum BidType: String, Codable { 
+        case unknown = "Unknown"
+        case workPlanBid = "WorkPlanBid"
+        case scheduleBid = "ScheduleBid"
+    }
+
 
 
 
@@ -47,6 +53,7 @@ public class WorkPlanBiddingAdminNotificationTopicWorkPlanBiddingNotification: C
     public var _id: String?
     public var buId: String?
     public var status: Status?
+    public var bidType: BidType?
     public var bidWindowStartDate: String?
     public var bidWindowEndDate: String?
     public var effectiveDate: String?
@@ -54,10 +61,11 @@ public class WorkPlanBiddingAdminNotificationTopicWorkPlanBiddingNotification: C
     public var rankingTiebreakerType: RankingTiebreakerType?
     public var workPlanFieldsVisibleToAgents: [WorkPlanFieldsVisibleToAgents]?
 
-    public init(_id: String?, buId: String?, status: Status?, bidWindowStartDate: String?, bidWindowEndDate: String?, effectiveDate: String?, agentRankingType: AgentRankingType?, rankingTiebreakerType: RankingTiebreakerType?, workPlanFieldsVisibleToAgents: [WorkPlanFieldsVisibleToAgents]?) {
+    public init(_id: String?, buId: String?, status: Status?, bidType: BidType?, bidWindowStartDate: String?, bidWindowEndDate: String?, effectiveDate: String?, agentRankingType: AgentRankingType?, rankingTiebreakerType: RankingTiebreakerType?, workPlanFieldsVisibleToAgents: [WorkPlanFieldsVisibleToAgents]?) {
         self._id = _id
         self.buId = buId
         self.status = status
+        self.bidType = bidType
         self.bidWindowStartDate = bidWindowStartDate
         self.bidWindowEndDate = bidWindowEndDate
         self.effectiveDate = effectiveDate
@@ -70,6 +78,7 @@ public class WorkPlanBiddingAdminNotificationTopicWorkPlanBiddingNotification: C
         case _id = "id"
         case buId
         case status
+        case bidType
         case bidWindowStartDate
         case bidWindowEndDate
         case effectiveDate
