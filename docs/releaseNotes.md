@@ -1,312 +1,350 @@
-Platform API version: 10012
+Platform API version: 10068
 
 
 
 
-# Major Changes (15 changes)
+# Major Changes (13 changes)
 
-**POST /api/v2/authorization/policies/targets/{targetName}** (1 change)
+**POST /api/v2/quality/surveys** (1 change)
 
-* Parameter skipLockoutCheck was added
+* Response 200 type was changed from Survey to CreateSurveyResponse
 
-**PUT /api/v2/authorization/policies/targets/{targetName}** (1 change)
+**GET /api/v2/webdeployments/configurations** (3 changes)
 
-* Parameter skipLockoutCheck was added
+* Parameter pageSize was added
+* Parameter before was added
+* Parameter after was added
 
-**PUT /api/v2/authorization/policies/{policyId}** (1 change)
+**GET /api/v2/webdeployments/configurations/{configurationId}/versions** (3 changes)
 
-* Parameter skipLockoutCheck was added
+* Parameter pageSize was added
+* Parameter before was added
+* Parameter after was added
 
-**GET /api/v2/assistants/{assistantId}** (2 changes)
+**GET /api/v2/webdeployments/deployments** (3 changes)
 
-* Parameter languageVariation was added
-* Parameter fallbackToPrimaryAssistant was added
+* Parameter pageSize was added
+* Parameter before was added
+* Parameter after was added
 
-**POST /api/v2/screenrecording/token** (2 changes)
+**ButtonQuickReplyPayload** (1 change)
 
-* Tag Screen Recording was removed
-* Tag Background Assistant was added
+* Model ButtonQuickReplyPayload was removed
 
-**GET /api/v2/integrations/actions/drafts** (1 change)
+**ViewFilter** (1 change)
 
-* Parameter includeConfig was added
+* Property engagementSource was removed
 
-**GET /api/v2/integrations/actions** (1 change)
+**CardParameters** (1 change)
 
-* Parameter includeConfig was added
-
-**GET /api/v2/routing/queues/{queueId}/assistant** (2 changes)
-
-* Parameter languageVariation was added
-* Parameter fallbackToPrimaryAssistant was added
-
-**ScreenRecordingUserAuthenticatedInfo** (1 change)
-
-* Model ScreenRecordingUserAuthenticatedInfo was removed
-
-**CaseReference** (1 change)
-
-* Model CaseReference was removed
-
-**OAuthClientListing** (1 change)
-
-* Model OAuthClientListing was removed
-
-**OAuthClientEntityListing** (1 change)
-
-* Property entities was changed from OAuthClientListing[] to OAuthClient[]
+* Property buttonQuickReplyPayloads was removed
 
 
-# Minor Changes (81 changes)
+# Minor Changes (94 changes)
 
-**/api/v2/assistants/{assistantId}/variations/{variationId}** (4 changes)
+**/api/v2/conversations/{conversationId}/customattributes/{attributesId}** (3 changes)
+
+* Path was added
+* Operation GET was added
+* Operation DELETE was added
+
+**/api/v2/conversations/{conversationId}/customattributes** (4 changes)
 
 * Path was added
 * Operation GET was added
 * Operation PUT was added
+* Operation PATCH was added
+
+**/api/v2/conversations/{conversationId}/customattributes/bulk** (3 changes)
+
+* Path was added
+* Operation PUT was added
+* Operation PATCH was added
+
+**/api/v2/conversations/customattributes/search** (2 changes)
+
+* Path was added
+* Operation POST was added
+
+**/api/v2/conversations/customattributes/schemas/coretypes/{coreTypeName}** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/conversations/customattributes/schemas/coretypes** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/conversations/customattributes/schemas/limits** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/conversations/customattributes/schemas/{schemaId}** (3 changes)
+
+* Path was added
+* Operation GET was added
+* Operation PUT was added
+
+**/api/v2/conversations/customattributes/schemas/{schemaId}/versions** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/conversations/customattributes/schemas/{schemaId}/versions/{versionId}** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/conversations/customattributes/schemas** (3 changes)
+
+* Path was added
+* Operation GET was added
+* Operation POST was added
+
+**/api/v2/routing/skills/{skillId}** (1 change)
+
+* Operation patch was added. Summary: Update Routing Skill Division
+
+**/api/v2/users/rules/{ruleId}/dependents** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/users/rules/{ruleId}/dependents/{ruleType}/{typeId}** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/users/rules/{ruleId}** (4 changes)
+
+* Path was added
+* Operation GET was added
 * Operation DELETE was added
+* Operation PATCH was added
 
-**/api/v2/assistants/{assistantId}/variations** (3 changes)
+**/api/v2/users/rules** (3 changes)
 
 * Path was added
 * Operation GET was added
 * Operation POST was added
 
-**/api/v2/outbound/contactlists/uploads** (2 changes)
+**/api/v2/users/rules/query** (2 changes)
 
 * Path was added
 * Operation POST was added
 
-**/api/v2/outbound/dnclists/uploads** (2 changes)
-
-* Path was added
-* Operation POST was added
-
-**/api/v2/routing/email/outbound/domains/{domainId}** (1 change)
-
-* Operation patch was added. Summary: Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP).
-
-**/api/v2/routing/email/outbound/domains/{domainId}/testconnection** (2 changes)
-
-* Path was added
-* Operation POST was added
-
-**/api/v2/speechandtextanalytics/programs/topiclinks/jobs/{jobId}** (2 changes)
+**/api/v2/users/rules/settings/{ruleType}** (2 changes)
 
 * Path was added
 * Operation GET was added
 
-**AnalyticsConversationSegment** (1 change)
+**TaskManagementAggregateQueryPredicate** (1 change)
+
+* Enum value caseId was added to property dimension
+
+**TaskManagementAggregationQuery** (1 change)
+
+* Enum value caseId was added to property groupBy
+
+**ReportingTurn** (1 change)
+
+* Enum value GuardrailsViolation was added to property askActionResult
+
+**ReportingTurnAction** (1 change)
+
+* Enum value SendDigitalCarouselAction was added to property actionType
+
+**ViewFilter** (2 changes)
+
+* Optional property engagementSources was added
+* Optional property isSnippetRecorded was added
+
+**Copilot** (2 changes)
+
+* Optional property autoSearchConfig was added
+* Optional property manualSearchConfig was added
+
+**HeaderEntry** (1 change)
+
+* Model was added
+
+**Message** (1 change)
 
 * Enum value takeover was added to property disconnectType
 
-**SegmentDetailQueryPredicate** (1 change)
-
-* Enum value screenMonitoredUserId was added to property dimension
-
-**KnowledgeAggregateQueryPredicate** (4 changes)
-
-* Enum value answerGenerationEnabled was added to property dimension
-* Enum value hasRetrievedReferences was added to property dimension
-* Enum value knowledgeSettingId was added to property dimension
-* Enum value queryTypeV3 was added to property dimension
-
-**KnowledgeAggregationQuery** (5 changes)
-
-* Enum value answerGenerationEnabled was added to property groupBy
-* Enum value hasRetrievedReferences was added to property groupBy
-* Enum value knowledgeSettingId was added to property groupBy
-* Enum value queryTypeV3 was added to property groupBy
-* Enum value nKnowledgeV3Search was added to property metrics
-
-**KnowledgeAggregationView** (1 change)
-
-* Enum value nKnowledgeV3Search was added to property target
-
-**AssistantCopilotVariation** (1 change)
+**ConversationDataSchema** (1 change)
 
 * Model was added
 
-**AssistantCopilotVariationListing** (1 change)
+**ConversationJsonSchemaDocument** (1 change)
 
 * Model was added
 
-**CallbackMediaSettings** (2 changes)
-
-* Optional property edgeGroup was added
-* Optional property site was added
-
-**BackgroundAssistantUserAuthenticatedInfo** (1 change)
+**CustomAttributes** (1 change)
 
 * Model was added
 
-**SwapRowIndexRequest** (1 change)
+**CustomAttributesListing** (1 change)
 
 * Model was added
 
-**EvaluationForm** (1 change)
-
-* Optional property dialect was added
-
-**Session** (1 change)
-
-* Enum value Takeover was added to property lastUserDisconnectType
-
-**CallMediaParticipant** (1 change)
-
-* Enum value takeover was added to property disconnectType
-
-**CallHistoryParticipant** (1 change)
-
-* Enum value takeover was added to property disconnectType
-
-**CallbackMediaParticipant** (1 change)
-
-* Enum value takeover was added to property disconnectType
-
-**ChatMediaParticipant** (1 change)
-
-* Enum value takeover was added to property disconnectType
-
-**CobrowseMediaParticipant** (1 change)
-
-* Enum value takeover was added to property disconnectType
-
-**EmailMediaParticipant** (1 change)
-
-* Enum value takeover was added to property disconnectType
-
-**InternalMessageMediaParticipant** (1 change)
-
-* Enum value takeover was added to property disconnectType
-
-**MessageMediaParticipant** (1 change)
-
-* Enum value takeover was added to property disconnectType
-
-**ButtonQuickReplyPayload** (1 change)
+**CustomAttributesPatchRequest** (1 change)
 
 * Model was added
 
-**CardParameters** (2 changes)
-
-* Optional property index was added
-* Optional property buttonQuickReplyPayloads was added
-
-**SummarySetting** (3 changes)
-
-* Optional property serviceType was added
-* Optional property integrationId was added
-* Optional property timeoutDuration was added
-
-**ContactListUploadUrlRequest** (1 change)
+**CustomAttributesBulkUpdateResponse** (1 change)
 
 * Model was added
 
-**DNCListUploadUrlRequest** (1 change)
+**CustomAttributesBulkUpdateResponseMap** (1 change)
 
 * Model was added
 
-**Miner** (4 changes)
-
-* Enum value da-dk was added to property language
-* Enum value fi-fi was added to property language
-* Enum value sv-se was added to property language
-* Enum value nb-no was added to property language
-
-**PresenceSettings** (2 changes)
-
-* Optional property requestingOffQueueEnabled was added
-* Optional property defaultPrimaryPresenceRegisteredSourceId was added
-
-**QualityAuditLogMessage** (3 changes)
-
-* Enum value HorusService was added to property serviceName
-* Enum value Start was added to property action
-* Enum value Stop was added to property action
-
-**EvaluationFormResponse** (1 change)
-
-* Optional property dialect was added
-
-**RecordingMessagingMessage** (2 changes)
-
-* Optional property status was added
-* Optional property messageReceipts was added
-
-**OutboundDomainPatchRequest** (1 change)
+**CustomAttributesUpdateRequest** (1 change)
 
 * Model was added
 
-**DictionaryFeedback** (1 change)
-
-* Enum value Saved was added to property status
-
-**ListedDictionaryFeedback** (1 change)
-
-* Enum value Saved was added to property status
-
-**ProgramTopicLinksJob** (1 change)
+**CustomAttributesIdResponse** (1 change)
 
 * Model was added
 
-**IdleTokenTimeout** (3 changes)
-
-* Optional property inactivityTimeoutUnit was added
-* Optional property inactivityTimeoutGroupsEnabled was added
-* Optional property inactivityTimeoutGroupBundles was added
-
-**InactivityTimeoutGroupBundle** (1 change)
+**ConversationCustomAttributesSearchCriteria** (1 change)
 
 * Model was added
 
-**UsersRuleReference** (1 change)
+**ConversationCustomAttributesSearchRequest** (1 change)
 
 * Model was added
 
-**TimeOffRequestQueryBody** (3 changes)
-
-* Enum value APPROVED was added to property statuses
-* Enum value DENIED was added to property statuses
-* Enum value CANCELED was added to property statuses
-
-**ExternalContactReference** (2 changes)
-
-* Optional property firstName was added
-* Optional property lastName was added
-
-**WorkitemCaseReference** (1 change)
+**ConversationJsonSchemaRequest** (1 change)
 
 * Model was added
 
-**WorkitemQueryJobCreate** (2 changes)
+**ConversationSchemaUpdateRequest** (1 change)
 
-* Enum value case was added to property expands
-* Enum value externalContact was added to property expands
+* Model was added
+
+**ConversationDataSchemaListing** (1 change)
+
+* Model was added
+
+**ConversationChannelMetadata** (1 change)
+
+* Optional property subType was added
+
+**MessagingIntegration** (1 change)
+
+* Optional property openExtensionType was added
+
+**ListPicker** (1 change)
+
+* Optional property header was added
+
+**CreateSurveyResponse** (1 change)
+
+* Model was added
+
+**UpdateSkillDivisionRequest** (1 change)
+
+* Model was added
+
+**DynamicUtilization** (1 change)
+
+* Model was added
+
+**DmarcResult** (1 change)
+
+* Model was added
+
+**EscalationRuleResponse** (1 change)
+
+* Optional property googleBusinessProfileEscalation was added
+
+**FollowersFilter** (1 change)
+
+* Model was added
+
+**EscalationRuleRequest** (1 change)
+
+* Optional property googleBusinessProfileEscalation was added
+
+**UsersRulesDependent** (1 change)
+
+* Model was added
+
+**UsersRulesDependentList** (1 change)
+
+* Model was added
+
+**UsersRulesDependentRule** (1 change)
+
+* Model was added
+
+**UsersRulesLastRunMetadata** (1 change)
+
+* Model was added
+
+**UsersRulesCriteria** (1 change)
+
+* Model was added
+
+**UsersRulesGroupItem** (1 change)
+
+* Model was added
+
+**UsersRulesRule** (1 change)
+
+* Model was added
+
+**UsersRulesValue** (1 change)
+
+* Model was added
+
+**UsersRulesCreateRuleRequest** (1 change)
+
+* Model was added
+
+**UsersRulesRuleList** (1 change)
+
+* Model was added
+
+**UsersRulesUpdateRuleRequest** (1 change)
+
+* Model was added
+
+**UsersRulesQueryResponse** (1 change)
+
+* Model was added
+
+**UsersRulesQueryRuleRequest** (1 change)
+
+* Model was added
+
+**UsersRulesLockedCriteriaSettingsCriteria** (1 change)
+
+* Model was added
+
+**UsersRulesLockedCriteriaSettingsGroup** (1 change)
+
+* Model was added
+
+**UsersRulesRuleSettings** (1 change)
+
+* Model was added
 
 
-# Point Changes (6 changes)
+# Point Changes (3 changes)
 
-**PATCH /api/v2/routing/conversations/{conversationId}** (1 change)
+**POST /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/uploads** (1 change)
 
 * Description was changed
 
-**PATCH /api/v2/routing/queues/{queueId}/members** (1 change)
+**GET /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/{mediaId}** (1 change)
 
 * Description was changed
 
-**GET /api/v2/speechandtextanalytics/dictionaryfeedback** (1 change)
-
-* Description was changed for parameter transcriptionEngine
-
-**PATCH /api/v2/users/{userId}/queues** (1 change)
-
-* Description was changed
-
-**GET /api/v2/architect/dependencytracking/consumedresources** (1 change)
-
-* Description was changed for parameter resourceType
-
-**POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/query** (1 change)
+**GET /api/v2/webdeployments/configurations/{configurationId}/versions** (1 change)
 
 * Description was changed

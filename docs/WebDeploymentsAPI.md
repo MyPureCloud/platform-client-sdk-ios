@@ -283,11 +283,9 @@ WebDeploymentsAPI.getWebdeploymentsConfigurationVersion(configurationId: configu
 
 
 
-> [WebDeploymentConfigurationVersionEntityListing](WebDeploymentConfigurationVersionEntityListing) getWebdeploymentsConfigurationVersions(configurationId)
+> [WebDeploymentConfigurationVersionEntityListing](WebDeploymentConfigurationVersionEntityListing) getWebdeploymentsConfigurationVersions(configurationId, pageSize, before, after)
 
 Get the versions of a configuration
-
-This returns the 50 most recent versions for this configuration
 
 
 
@@ -306,9 +304,12 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let configurationId: String = "" // The configuration version ID
+let pageSize: String = "" // Number of entities to return. Defaults to 300.
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
 
 // Code example
-WebDeploymentsAPI.getWebdeploymentsConfigurationVersions(configurationId: configurationId) { (response, error) in
+WebDeploymentsAPI.getWebdeploymentsConfigurationVersions(configurationId: configurationId, pageSize: pageSize, before: before, after: after) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -324,6 +325,9 @@ WebDeploymentsAPI.getWebdeploymentsConfigurationVersions(configurationId: config
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **configurationId** | **String**| The configuration version ID | |
+| **pageSize** | **String**| Number of entities to return. Defaults to 300. | [optional] |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 
 
 ### Return type
@@ -385,7 +389,7 @@ WebDeploymentsAPI.getWebdeploymentsConfigurationVersionsDraft(configurationId: c
 
 
 
-> [WebDeploymentConfigurationVersionEntityListing](WebDeploymentConfigurationVersionEntityListing) getWebdeploymentsConfigurations(showOnlyPublished)
+> [WebDeploymentConfigurationVersionEntityListing](WebDeploymentConfigurationVersionEntityListing) getWebdeploymentsConfigurations(pageSize, before, after, showOnlyPublished)
 
 View configuration drafts
 
@@ -405,10 +409,13 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
+let pageSize: String = "" // Number of entities to return. Defaults to 300.
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
 let showOnlyPublished: Bool = true // Filter by published status.
 
 // Code example
-WebDeploymentsAPI.getWebdeploymentsConfigurations(showOnlyPublished: showOnlyPublished) { (response, error) in
+WebDeploymentsAPI.getWebdeploymentsConfigurations(pageSize: pageSize, before: before, after: after, showOnlyPublished: showOnlyPublished) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -423,6 +430,9 @@ WebDeploymentsAPI.getWebdeploymentsConfigurations(showOnlyPublished: showOnlyPub
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **String**| Number of entities to return. Defaults to 300. | [optional] |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **showOnlyPublished** | **Bool**| Filter by published status. | [optional] |
 
 
@@ -642,7 +652,7 @@ WebDeploymentsAPI.getWebdeploymentsDeploymentIdentityresolution(deploymentId: de
 
 
 
-> [ExpandableWebDeploymentEntityListing](ExpandableWebDeploymentEntityListing) getWebdeploymentsDeployments(expand)
+> [ExpandableWebDeploymentEntityListing](ExpandableWebDeploymentEntityListing) getWebdeploymentsDeployments(pageSize, before, after, expand)
 
 Get deployments
 
@@ -662,10 +672,13 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
+let pageSize: String = "" // Number of entities to return. Defaults to 300.
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
 let expand: [String] = [""] // The specified entity attributes will be filled. Comma separated values expected. 
 
 // Code example
-WebDeploymentsAPI.getWebdeploymentsDeployments(expand: expand) { (response, error) in
+WebDeploymentsAPI.getWebdeploymentsDeployments(pageSize: pageSize, before: before, after: after, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -680,6 +693,9 @@ WebDeploymentsAPI.getWebdeploymentsDeployments(expand: expand) { (response, erro
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **String**| Number of entities to return. Defaults to 300. | [optional] |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **expand** | [**[String]**](String)| The specified entity attributes will be filled. Comma separated values expected.  | [optional]<br />**Values**: configuration ("Configuration"), supportedContent ("SupportedContent"), identityresolution ("identityresolution") |
 
 
@@ -1094,4 +1110,4 @@ WebDeploymentsAPI.putWebdeploymentsDeploymentIdentityresolution(deploymentId: de
 [**DeploymentIdentityResolutionConfig**](DeploymentIdentityResolutionConfig)
 
 
-_PureCloudPlatformClientV2@187.0.0_
+_PureCloudPlatformClientV2@188.0.0_

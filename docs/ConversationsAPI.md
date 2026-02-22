@@ -6,6 +6,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteAnalyticsConversationsDetailsJob**](ConversationsAPI#deleteAnalyticsConversationsDetailsJob) | Delete/cancel an async details job |
 | [**deleteConversation**](ConversationsAPI#deleteConversation) | Update a conversation by disconnecting all of the participants |
+| [**deleteConversationCustomattribute**](ConversationsAPI#deleteConversationCustomattribute) | Delete a custom attributes record. |
 | [**deleteConversationParticipantCode**](ConversationsAPI#deleteConversationParticipantCode) | Delete a code used to add a communication to this participant |
 | [**deleteConversationParticipantFlaggedreason**](ConversationsAPI#deleteConversationParticipantFlaggedreason) | Remove flagged reason from conversation participant. |
 | [**deleteConversationsCallParticipantCommunicationPostflowaction**](ConversationsAPI#deleteConversationsCallParticipantCommunicationPostflowaction) | Remove mandatory post call actions. |
@@ -32,6 +33,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationCommunicationAgentchecklists**](ConversationsAPI#getConversationCommunicationAgentchecklists) | Get information of all checklists associated with a conversation. |
 | [**getConversationCommunicationInternalmessage**](ConversationsAPI#getConversationCommunicationInternalmessage) | Get message |
 | [**getConversationCommunicationInternalmessages**](ConversationsAPI#getConversationCommunicationInternalmessages) | Get messages for communication |
+| [**getConversationCustomattribute**](ConversationsAPI#getConversationCustomattribute) | Get custom attributes by id |
+| [**getConversationCustomattributes**](ConversationsAPI#getConversationCustomattributes) | Get a list of custom attributes for a conversation. |
 | [**getConversationParticipantSecureivrsession**](ConversationsAPI#getConversationParticipantSecureivrsession) | Fetch info on a secure session |
 | [**getConversationParticipantSecureivrsessions**](ConversationsAPI#getConversationParticipantSecureivrsessions) | Get a list of secure sessions for this participant. |
 | [**getConversationParticipantWrapup**](ConversationsAPI#getConversationParticipantWrapup) | Get the wrap-up for this conversation participant.  |
@@ -65,6 +68,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsCobrowsesessionParticipantWrapup**](ConversationsAPI#getConversationsCobrowsesessionParticipantWrapup) | Get the wrap-up for this conversation participant.  |
 | [**getConversationsCobrowsesessionParticipantWrapupcodes**](ConversationsAPI#getConversationsCobrowsesessionParticipantWrapupcodes) | Get list of wrapup codes for this conversation participant |
 | [**getConversationsCobrowsesessions**](ConversationsAPI#getConversationsCobrowsesessions) | Get active cobrowse conversations for the logged in user |
+| [**getConversationsCustomattributesSchema**](ConversationsAPI#getConversationsCustomattributesSchema) | Get a schema |
+| [**getConversationsCustomattributesSchemaVersion**](ConversationsAPI#getConversationsCustomattributesSchemaVersion) | Get a specific version of a schema |
+| [**getConversationsCustomattributesSchemaVersions**](ConversationsAPI#getConversationsCustomattributesSchemaVersions) | Get all versions of a CCA schema |
+| [**getConversationsCustomattributesSchemas**](ConversationsAPI#getConversationsCustomattributesSchemas) | Get a list of schemas. |
+| [**getConversationsCustomattributesSchemasCoretype**](ConversationsAPI#getConversationsCustomattributesSchemasCoretype) | Get the core types from which all schemas are built. |
+| [**getConversationsCustomattributesSchemasCoretypes**](ConversationsAPI#getConversationsCustomattributesSchemasCoretypes) | Get the list of core types enabled for a specific namespace. |
+| [**getConversationsCustomattributesSchemasLimits**](ConversationsAPI#getConversationsCustomattributesSchemasLimits) | Get quantitative limits on schemas |
 | [**getConversationsEmail**](ConversationsAPI#getConversationsEmail) | Get email conversation |
 | [**getConversationsEmailMessage**](ConversationsAPI#getConversationsEmailMessage) | Get conversation message |
 | [**getConversationsEmailMessages**](ConversationsAPI#getConversationsEmailMessages) | Get conversation messages |
@@ -125,6 +135,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsSocialParticipantCommunicationWrapup**](ConversationsAPI#getConversationsSocialParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
 | [**getConversationsVideoParticipantCommunicationWrapup**](ConversationsAPI#getConversationsVideoParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
 | [**getConversationsVideosMeeting**](ConversationsAPI#getConversationsVideosMeeting) | Gets a record for a given meetingId |
+| [**patchConversationCustomattributes**](ConversationsAPI#patchConversationCustomattributes) | Update a single custom attributes record by amending the data with only the provided fields. |
+| [**patchConversationCustomattributesBulk**](ConversationsAPI#patchConversationCustomattributesBulk) | Update a list of custom attributes record by amending the data with only the provided fields. |
 | [**patchConversationParticipant**](ConversationsAPI#patchConversationParticipant) | Update a participant. |
 | [**patchConversationParticipantAttributes**](ConversationsAPI#patchConversationParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationRecordingstate**](ConversationsAPI#patchConversationRecordingstate) | Update a conversation by setting its recording state |
@@ -229,6 +241,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsChats**](ConversationsAPI#postConversationsChats) | Create a web chat conversation |
 | [**postConversationsCobrowsesessionParticipantCommunicationWrapup**](ConversationsAPI#postConversationsCobrowsesessionParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsCobrowsesessionParticipantReplace**](ConversationsAPI#postConversationsCobrowsesessionParticipantReplace) | Replace this participant with the specified user and/or address |
+| [**postConversationsCustomattributesSchemas**](ConversationsAPI#postConversationsCustomattributesSchemas) | Create a schema |
+| [**postConversationsCustomattributesSearch**](ConversationsAPI#postConversationsCustomattributesSearch) | Search resources. |
 | [**postConversationsEmailInboundmessages**](ConversationsAPI#postConversationsEmailInboundmessages) | Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based. This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it. |
 | [**postConversationsEmailMessages**](ConversationsAPI#postConversationsEmailMessages) | Send an email reply |
 | [**postConversationsEmailMessagesDraftAttachmentsCopy**](ConversationsAPI#postConversationsEmailMessagesDraftAttachmentsCopy) | Copy attachments from an email message to the current draft. |
@@ -270,6 +284,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsSocialParticipantCommunicationWrapup**](ConversationsAPI#postConversationsSocialParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsVideoParticipantCommunicationWrapup**](ConversationsAPI#postConversationsVideoParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsVideosMeetings**](ConversationsAPI#postConversationsVideosMeetings) | Generate a meetingId for a given conferenceId |
+| [**putConversationCustomattributes**](ConversationsAPI#putConversationCustomattributes) | Create or update a single custom attributes record. Updating replaces all data with the provided fields. |
+| [**putConversationCustomattributesBulk**](ConversationsAPI#putConversationCustomattributesBulk) | Create or update a list of custom attributes records. Updating replaces all data with the provided fields. |
 | [**putConversationParticipantFlaggedreason**](ConversationsAPI#putConversationParticipantFlaggedreason) | Set flagged reason on conversation participant to indicate bad conversation quality. |
 | [**putConversationSecureattributes**](ConversationsAPI#putConversationSecureattributes) | Set the secure attributes on a conversation. |
 | [**putConversationTags**](ConversationsAPI#putConversationTags) | Update the tags on a conversation. |
@@ -278,6 +294,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putConversationsCallbackRecordingstate**](ConversationsAPI#putConversationsCallbackRecordingstate) | Update a conversation by setting its recording state |
 | [**putConversationsChatRecordingstate**](ConversationsAPI#putConversationsChatRecordingstate) | Update a conversation by setting its recording state |
 | [**putConversationsCobrowsesessionRecordingstate**](ConversationsAPI#putConversationsCobrowsesessionRecordingstate) | Update a conversation by setting its recording state |
+| [**putConversationsCustomattributesSchema**](ConversationsAPI#putConversationsCustomattributesSchema) | Update a schema |
 | [**putConversationsEmailMessagesDraft**](ConversationsAPI#putConversationsEmailMessagesDraft) | Update conversation draft reply |
 | [**putConversationsEmailRecordingstate**](ConversationsAPI#putConversationsEmailRecordingstate) | Update a conversation by setting its recording state |
 | [**putConversationsKeyconfiguration**](ConversationsAPI#putConversationsKeyconfiguration) | Update the encryption key configurations |
@@ -389,6 +406,57 @@ ConversationsAPI.deleteConversation(conversationId: conversationId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversation ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteConversationCustomattribute
+
+
+
+> Void deleteConversationCustomattribute(conversationId, attributesId)
+
+Delete a custom attributes record.
+
+
+
+Wraps DELETE /api/v2/conversations/{conversationId}/customattributes/{attributesId}  
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let attributesId: String = "" // attributesId
+
+// Code example
+ConversationsAPI.deleteConversationCustomattribute(conversationId: conversationId, attributesId: attributesId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.deleteConversationCustomattribute was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **attributesId** | **String**| attributesId | |
 
 
 ### Return type
@@ -1716,6 +1784,108 @@ ConversationsAPI.getConversationCommunicationInternalmessages(conversationId: co
 ### Return type
 
 [**InternalMessageDataEntityListing**](InternalMessageDataEntityListing)
+
+
+## getConversationCustomattribute
+
+
+
+> [CustomAttributes](CustomAttributes) getConversationCustomattribute(conversationId, attributesId)
+
+Get custom attributes by id
+
+
+
+Wraps GET /api/v2/conversations/{conversationId}/customattributes/{attributesId}  
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let attributesId: String = "" // attributesId
+
+// Code example
+ConversationsAPI.getConversationCustomattribute(conversationId: conversationId, attributesId: attributesId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationCustomattribute was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **attributesId** | **String**| attributesId | |
+
+
+### Return type
+
+[**CustomAttributes**](CustomAttributes)
+
+
+## getConversationCustomattributes
+
+
+
+> [CustomAttributesListing](CustomAttributesListing) getConversationCustomattributes(conversationId)
+
+Get a list of custom attributes for a conversation.
+
+
+
+Wraps GET /api/v2/conversations/{conversationId}/customattributes  
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+
+// Code example
+ConversationsAPI.getConversationCustomattributes(conversationId: conversationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationCustomattributes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+
+
+### Return type
+
+[**CustomAttributesListing**](CustomAttributesListing)
 
 
 ## getConversationParticipantSecureivrsession
@@ -3427,6 +3597,346 @@ This endpoint does not require any parameters.
 [**CobrowseConversationEntityListing**](CobrowseConversationEntityListing)
 
 
+## getConversationsCustomattributesSchema
+
+
+
+> [ConversationDataSchema](ConversationDataSchema) getConversationsCustomattributesSchema(schemaId)
+
+Get a schema
+
+
+
+Wraps GET /api/v2/conversations/customattributes/schemas/{schemaId}  
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:schemaView
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+
+// Code example
+ConversationsAPI.getConversationsCustomattributesSchema(schemaId: schemaId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsCustomattributesSchema was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+
+
+### Return type
+
+[**ConversationDataSchema**](ConversationDataSchema)
+
+
+## getConversationsCustomattributesSchemaVersion
+
+
+
+> [ConversationDataSchema](ConversationDataSchema) getConversationsCustomattributesSchemaVersion(schemaId, versionId)
+
+Get a specific version of a schema
+
+
+
+Wraps GET /api/v2/conversations/customattributes/schemas/{schemaId}/versions/{versionId}  
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:schemaView
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+let versionId: String = "" // Schema version
+
+// Code example
+ConversationsAPI.getConversationsCustomattributesSchemaVersion(schemaId: schemaId, versionId: versionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsCustomattributesSchemaVersion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+| **versionId** | **String**| Schema version | |
+
+
+### Return type
+
+[**ConversationDataSchema**](ConversationDataSchema)
+
+
+## getConversationsCustomattributesSchemaVersions
+
+
+
+> [ConversationDataSchemaListing](ConversationDataSchemaListing) getConversationsCustomattributesSchemaVersions(schemaId)
+
+Get all versions of a CCA schema
+
+
+
+Wraps GET /api/v2/conversations/customattributes/schemas/{schemaId}/versions  
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:schemaView
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+
+// Code example
+ConversationsAPI.getConversationsCustomattributesSchemaVersions(schemaId: schemaId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsCustomattributesSchemaVersions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+
+
+### Return type
+
+[**ConversationDataSchemaListing**](ConversationDataSchemaListing)
+
+
+## getConversationsCustomattributesSchemas
+
+
+
+> [ConversationDataSchemaListing](ConversationDataSchemaListing) getConversationsCustomattributesSchemas()
+
+Get a list of schemas.
+
+
+
+Wraps GET /api/v2/conversations/customattributes/schemas  
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:schemaView
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ConversationsAPI.getConversationsCustomattributesSchemas() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsCustomattributesSchemas was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**ConversationDataSchemaListing**](ConversationDataSchemaListing)
+
+
+## getConversationsCustomattributesSchemasCoretype
+
+
+
+> [Coretype](Coretype) getConversationsCustomattributesSchemasCoretype(coreTypeName)
+
+Get the core types from which all schemas are built.
+
+
+
+Wraps GET /api/v2/conversations/customattributes/schemas/coretypes/{coreTypeName}  
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:schemaView
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let coreTypeName: String = "" // Name of the core type
+
+// Code example
+ConversationsAPI.getConversationsCustomattributesSchemasCoretype(coreTypeName: coreTypeName) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsCustomattributesSchemasCoretype was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **coreTypeName** | **String**| Name of the core type | |
+
+
+### Return type
+
+[**Coretype**](Coretype)
+
+
+## getConversationsCustomattributesSchemasCoretypes
+
+
+
+> [CoretypeListing](CoretypeListing) getConversationsCustomattributesSchemasCoretypes()
+
+Get the list of core types enabled for a specific namespace.
+
+
+
+Wraps GET /api/v2/conversations/customattributes/schemas/coretypes  
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:schemaView
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ConversationsAPI.getConversationsCustomattributesSchemasCoretypes() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsCustomattributesSchemasCoretypes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**CoretypeListing**](CoretypeListing)
+
+
+## getConversationsCustomattributesSchemasLimits
+
+
+
+> [SchemaQuantityLimits](SchemaQuantityLimits) getConversationsCustomattributesSchemasLimits()
+
+Get quantitative limits on schemas
+
+
+
+Wraps GET /api/v2/conversations/customattributes/schemas/limits  
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:schemaView
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ConversationsAPI.getConversationsCustomattributesSchemasLimits() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsCustomattributesSchemasLimits was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**SchemaQuantityLimits**](SchemaQuantityLimits)
+
+
 ## getConversationsEmail
 
 
@@ -4185,7 +4695,7 @@ ConversationsAPI.getConversationsMessageCommunicationMessagesMedia(conversationI
 
 Get media
 
-See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
+See https://developer.genesys.cloud/commdigital/digital/messagemediaupload/ for example usage.
 
 
 
@@ -6530,6 +7040,109 @@ ConversationsAPI.getConversationsVideosMeeting(meetingId: meetingId) { (response
 ### Return type
 
 [**MeetingIdRecord**](MeetingIdRecord)
+
+
+## patchConversationCustomattributes
+
+
+
+> Void patchConversationCustomattributes(conversationId, body)
+
+Update a single custom attributes record by amending the data with only the provided fields.
+
+
+
+Wraps PATCH /api/v2/conversations/{conversationId}/customattributes  
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let body: CustomAttributesPatchRequest = new CustomAttributesPatchRequest(...) // 
+
+// Code example
+ConversationsAPI.patchConversationCustomattributes(conversationId: conversationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.patchConversationCustomattributes was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **body** | [**CustomAttributesPatchRequest**](CustomAttributesPatchRequest)|  | [optional] |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## patchConversationCustomattributesBulk
+
+
+
+> [CustomAttributesBulkUpdateResponseMap](CustomAttributesBulkUpdateResponseMap) patchConversationCustomattributesBulk(conversationId, body)
+
+Update a list of custom attributes record by amending the data with only the provided fields.
+
+
+
+Wraps PATCH /api/v2/conversations/{conversationId}/customattributes/bulk  
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let body: [CustomAttributesPatchRequest] = [new CustomAttributesPatchRequest(...)] // 
+
+// Code example
+ConversationsAPI.patchConversationCustomattributesBulk(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.patchConversationCustomattributesBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **body** | [**[CustomAttributesPatchRequest]**](CustomAttributesPatchRequest)|  | [optional] |
+
+
+### Return type
+
+[**CustomAttributesBulkUpdateResponseMap**](CustomAttributesBulkUpdateResponseMap)
 
 
 ## patchConversationParticipant
@@ -12102,6 +12715,106 @@ ConversationsAPI.postConversationsCobrowsesessionParticipantReplace(conversation
 `nil` (empty response body)
 
 
+## postConversationsCustomattributesSchemas
+
+
+
+> [ConversationDataSchema](ConversationDataSchema) postConversationsCustomattributesSchemas(body)
+
+Create a schema
+
+
+
+Wraps POST /api/v2/conversations/customattributes/schemas  
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:schemaAdd
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ConversationJsonSchemaRequest = new ConversationJsonSchemaRequest(...) // Schema create request body
+
+// Code example
+ConversationsAPI.postConversationsCustomattributesSchemas(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsCustomattributesSchemas was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ConversationJsonSchemaRequest**](ConversationJsonSchemaRequest)| Schema create request body | |
+
+
+### Return type
+
+[**ConversationDataSchema**](ConversationDataSchema)
+
+
+## postConversationsCustomattributesSearch
+
+
+
+> [JsonSearchResponse](JsonSearchResponse) postConversationsCustomattributesSearch(body)
+
+Search resources.
+
+
+
+Wraps POST /api/v2/conversations/customattributes/search  
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ConversationCustomAttributesSearchRequest = new ConversationCustomAttributesSearchRequest(...) // Search request options
+
+// Code example
+ConversationsAPI.postConversationsCustomattributesSearch(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsCustomattributesSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ConversationCustomAttributesSearchRequest**](ConversationCustomAttributesSearchRequest)| Search request options | |
+
+
+### Return type
+
+[**JsonSearchResponse**](JsonSearchResponse)
+
+
 ## postConversationsEmailInboundmessages
 
 
@@ -12790,7 +13503,7 @@ ConversationsAPI.postConversationsMessageCommunicationMessagesMedia(conversation
 
 Create a URL to upload a message media file
 
-See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
+See https://developer.genesys.cloud/commdigital/digital/messagemediaupload/ for example usage.
 
 
 
@@ -14267,6 +14980,110 @@ ConversationsAPI.postConversationsVideosMeetings(body: body) { (response, error)
 [**MeetingIdRecord**](MeetingIdRecord)
 
 
+## putConversationCustomattributes
+
+
+
+> [CustomAttributesIdResponse](CustomAttributesIdResponse) putConversationCustomattributes(conversationId, body)
+
+Create or update a single custom attributes record. Updating replaces all data with the provided fields.
+
+
+
+Wraps PUT /api/v2/conversations/{conversationId}/customattributes  
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let body: CustomAttributesUpdateRequest = new CustomAttributesUpdateRequest(...) // 
+
+// Code example
+ConversationsAPI.putConversationCustomattributes(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationCustomattributes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **body** | [**CustomAttributesUpdateRequest**](CustomAttributesUpdateRequest)|  | [optional] |
+
+
+### Return type
+
+[**CustomAttributesIdResponse**](CustomAttributesIdResponse)
+
+
+## putConversationCustomattributesBulk
+
+
+
+> [CustomAttributesBulkUpdateResponseMap](CustomAttributesBulkUpdateResponseMap) putConversationCustomattributesBulk(conversationId, body)
+
+Create or update a list of custom attributes records. Updating replaces all data with the provided fields.
+
+
+
+Wraps PUT /api/v2/conversations/{conversationId}/customattributes/bulk  
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let body: [CustomAttributesUpdateRequest] = [new CustomAttributesUpdateRequest(...)] // 
+
+// Code example
+ConversationsAPI.putConversationCustomattributesBulk(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationCustomattributesBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **body** | [**[CustomAttributesUpdateRequest]**](CustomAttributesUpdateRequest)|  | [optional] |
+
+
+### Return type
+
+[**CustomAttributesBulkUpdateResponseMap**](CustomAttributesBulkUpdateResponseMap)
+
+
 ## putConversationParticipantFlaggedreason
 
 
@@ -14686,6 +15503,58 @@ ConversationsAPI.putConversationsCobrowsesessionRecordingstate(conversationId: c
 ### Return type
 
 **String**
+
+
+## putConversationsCustomattributesSchema
+
+
+
+> [ConversationDataSchema](ConversationDataSchema) putConversationsCustomattributesSchema(schemaId, body)
+
+Update a schema
+
+
+
+Wraps PUT /api/v2/conversations/customattributes/schemas/{schemaId}  
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:schemaEdit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+let body: ConversationSchemaUpdateRequest = new ConversationSchemaUpdateRequest(...) // Schema update request body
+
+// Code example
+ConversationsAPI.putConversationsCustomattributesSchema(schemaId: schemaId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationsCustomattributesSchema was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+| **body** | [**ConversationSchemaUpdateRequest**](ConversationSchemaUpdateRequest)| Schema update request body | |
+
+
+### Return type
+
+[**ConversationDataSchema**](ConversationDataSchema)
 
 
 ## putConversationsEmailMessagesDraft
@@ -15527,4 +16396,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@187.0.0_
+_PureCloudPlatformClientV2@188.0.0_

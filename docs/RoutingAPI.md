@@ -108,6 +108,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchRoutingQueueUsers**](RoutingAPI#patchRoutingQueueUsers) | DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue. |
 | [**patchRoutingSettingsContactcenter**](RoutingAPI#patchRoutingSettingsContactcenter) | Update Contact Center Settings |
 | [**patchRoutingSettingsTranscription**](RoutingAPI#patchRoutingSettingsTranscription) | Patch Transcription Settings |
+| [**patchRoutingSkill**](RoutingAPI#patchRoutingSkill) | Update Routing Skill Division |
 | [**patchRoutingSkillgroup**](RoutingAPI#patchRoutingSkillgroup) | Update skill group definition |
 | [**patchRoutingSmsPhonenumber**](RoutingAPI#patchRoutingSmsPhonenumber) | Update a phone number provisioned for SMS. |
 | [**patchUserQueue**](RoutingAPI#patchUserQueue) | Join or unjoin a queue for a user |
@@ -5651,6 +5652,58 @@ RoutingAPI.patchRoutingSettingsTranscription(body: body) { (response, error) in
 [**TranscriptionSettings**](TranscriptionSettings)
 
 
+## patchRoutingSkill
+
+
+
+> [RoutingSkill](RoutingSkill) patchRoutingSkill(skillId, body)
+
+Update Routing Skill Division
+
+
+
+Wraps PATCH /api/v2/routing/skills/{skillId}  
+
+Requires ANY permissions: 
+
+* routing:skill:update
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let skillId: String = "" // Skill ID
+let body: UpdateSkillDivisionRequest = new UpdateSkillDivisionRequest(...) // updateSkillDivisionRequest
+
+// Code example
+RoutingAPI.patchRoutingSkill(skillId: skillId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.patchRoutingSkill was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **skillId** | **String**| Skill ID | |
+| **body** | [**UpdateSkillDivisionRequest**](UpdateSkillDivisionRequest)| updateSkillDivisionRequest | |
+
+
+### Return type
+
+[**RoutingSkill**](RoutingSkill)
+
+
 ## patchRoutingSkillgroup
 
 
@@ -8395,4 +8448,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@187.0.0_
+_PureCloudPlatformClientV2@188.0.0_

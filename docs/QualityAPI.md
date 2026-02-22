@@ -3002,7 +3002,7 @@ QualityAPI.postQualityPublishedformsSurveys(body: body) { (response, error) in
 
 
 
-> [Survey](Survey) postQualitySurveys(body)
+> [CreateSurveyResponse](CreateSurveyResponse) postQualitySurveys(body)
 
 Create a survey for a conversation
 
@@ -3045,7 +3045,7 @@ QualityAPI.postQualitySurveys(body: body) { (response, error) in
 
 ### Return type
 
-[**Survey**](Survey)
+[**CreateSurveyResponse**](CreateSurveyResponse)
 
 
 ## postQualitySurveysScoring
@@ -3522,4 +3522,4 @@ QualityAPI.putQualitySurveysScorable(customerSurveyUrl: customerSurveyUrl, body:
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatformClientV2@187.0.0_
+_PureCloudPlatformClientV2@188.0.0_
