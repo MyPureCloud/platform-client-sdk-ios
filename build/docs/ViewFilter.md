@@ -240,8 +240,9 @@
 | **sentimentTrendCategories** | **[String]** | A set of Sentiment Trend Categories for filtering | [optional] |
 | **contentModerationFlags** | **[String]** | A set of Content Moderation Flags for filtering | [optional] |
 | **sessionExpired** | **Bool** | Filter to indicate for if session is expired | [optional] |
-| **engagementSource** | **[String]** | The engagement sources used to filter the view | [optional] |
+| **engagementSources** | **[String]** | The engagement sources used to filter the view | [optional] |
+| **isSnippetRecorded** | **Bool** | Indicates filtering for snippet recorded | [optional] |
 
 
 
-_PureCloudPlatformClientV2@187.0.0_
+_PureCloudPlatformClientV2@188.0.0_

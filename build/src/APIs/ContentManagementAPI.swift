@@ -891,8 +891,8 @@ open class ContentManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter workspaceId: (query) Workspace ID 
@@ -1088,8 +1088,8 @@ open class ContentManagementAPI {
     "lastUri" : "https://openapi-generator.tech",
     "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 0,
-    "nextUri" : "https://openapi-generator.tech",
-    "previousUri" : "https://openapi-generator.tech"
+    "previousUri" : "https://openapi-generator.tech",
+    "nextUri" : "https://openapi-generator.tech"
   }
 }, statusCode=200}]
      
@@ -1228,8 +1228,8 @@ open class ContentManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
 
      - returns: RequestBuilder<SecurityProfileEntityListing> 
@@ -3005,8 +3005,8 @@ open class ContentManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter entityId: (query) Filters the shares returned to only the entity specified by the value of this parameter. (optional)
@@ -3338,8 +3338,8 @@ open class ContentManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -3989,8 +3989,8 @@ open class ContentManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter workspaceId: (path) Workspace ID 
@@ -5208,8 +5208,8 @@ open class ContentManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter workspaceId: (path) Workspace ID 
@@ -5385,8 +5385,8 @@ open class ContentManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter workspaceId: (path) Workspace ID 
@@ -5538,8 +5538,8 @@ open class ContentManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -6174,8 +6174,8 @@ open class ContentManagementAPI {
     "lastUri" : "https://openapi-generator.tech",
     "selfUri" : "https://openapi-generator.tech",
     "pageSize" : 0,
-    "nextUri" : "https://openapi-generator.tech",
-    "previousUri" : "https://openapi-generator.tech"
+    "previousUri" : "https://openapi-generator.tech",
+    "nextUri" : "https://openapi-generator.tech"
   }
 }, statusCode=200}]
      
@@ -7835,8 +7835,8 @@ open class ContentManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter workspaceId: (path) Workspace ID 

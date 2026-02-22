@@ -16,4 +16,4 @@ the range of attribute values to filter on. At least one comparator must be defi
 
 
 
-_PureCloudPlatformClientV2@187.0.0_
+_PureCloudPlatformClientV2@188.0.0_

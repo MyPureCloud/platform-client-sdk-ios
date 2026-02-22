@@ -10,6 +10,7 @@ public class TaskManagementAggregateQueryPredicate: Codable {
 
     public enum Dimension: String, Codable { 
         case assigneeid = "assigneeId"
+        case caseid = "caseId"
         case divisionid = "divisionId"
         case externaltag = "externalTag"
         case queueid = "queueId"

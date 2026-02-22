@@ -683,4 +683,4 @@ MessagingAPI.putMessagingSettingsDefault(body: body) { (response, error) in
 [**MessagingSetting**](MessagingSetting)
 
 
-_PureCloudPlatformClientV2@187.0.0_
+_PureCloudPlatformClientV2@188.0.0_

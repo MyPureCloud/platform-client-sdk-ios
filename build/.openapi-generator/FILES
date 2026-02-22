@@ -670,7 +670,6 @@ docs/BusinessUnitResponse.md
 docs/BusinessUnitSettingsResponse.md
 docs/Button.md
 docs/ButtonComponent.md
-docs/ButtonQuickReplyPayload.md
 docs/ButtonResponse.md
 docs/CachedMediaItem.md
 docs/CachedMediaItemEntityListing.md
@@ -1212,6 +1211,10 @@ docs/ConversationContentText.md
 docs/ConversationContentWheelPicker.md
 docs/ConversationContentWheelPickerItem.md
 docs/ConversationContext.md
+docs/ConversationCustomAttributesSearchCriteria.md
+docs/ConversationCustomAttributesSearchRequest.md
+docs/ConversationDataSchema.md
+docs/ConversationDataSchemaListing.md
 docs/ConversationDeletionProtectionQuery.md
 docs/ConversationDetailQueryClause.md
 docs/ConversationDetailQueryFilter.md
@@ -1310,6 +1313,8 @@ docs/ConversationIntentSuggestionsTopicSuggestedIntent.md
 docs/ConversationIntentSuggestionsTopicSuggestedIntentSlot.md
 docs/ConversationIntentSuggestionsTopicSuggestionContext.md
 docs/ConversationIntentSuggestionsTopicSuggestionFeedback.md
+docs/ConversationJsonSchemaDocument.md
+docs/ConversationJsonSchemaRequest.md
 docs/ConversationKnowledgeArticleSuggestionsTopicKnowledgeAnswer.md
 docs/ConversationKnowledgeArticleSuggestionsTopicKnowledgeArticleSuggestionEvent.md
 docs/ConversationKnowledgeArticleSuggestionsTopicSuggestedArticle.md
@@ -1392,6 +1397,7 @@ docs/ConversationRoutingData.md
 docs/ConversationSchemaAttribute.md
 docs/ConversationSchemaData.md
 docs/ConversationSchemaReference.md
+docs/ConversationSchemaUpdateRequest.md
 docs/ConversationScreenShareEventTopicConversationDivisionMembership.md
 docs/ConversationScreenShareEventTopicConversationRoutingData.md
 docs/ConversationScreenShareEventTopicDetail.md
@@ -1568,6 +1574,7 @@ docs/CreateShareResponse.md
 docs/CreateStaffingGroupAllocation.md
 docs/CreateStaffingGroupRequest.md
 docs/CreateSurveyRequest.md
+docs/CreateSurveyResponse.md
 docs/CreateTimeOffLimitRequest.md
 docs/CreateTimeOffPlanBusinessUnitAssociation.md
 docs/CreateTimeOffPlanManagementUnitAssociation.md
@@ -1623,6 +1630,13 @@ docs/CursorNoteListing.md
 docs/CursorOrganizationListing.md
 docs/CursorRelationshipListing.md
 docs/Cursors.md
+docs/CustomAttributes.md
+docs/CustomAttributesBulkUpdateResponse.md
+docs/CustomAttributesBulkUpdateResponseMap.md
+docs/CustomAttributesIdResponse.md
+docs/CustomAttributesListing.md
+docs/CustomAttributesPatchRequest.md
+docs/CustomAttributesUpdateRequest.md
 docs/CustomEventAttribute.md
 docs/CustomEventAttributeList.md
 docs/CustomI18nLabels.md
@@ -1859,6 +1873,7 @@ docs/DivisionEntityRef.md
 docs/DivisionReference.md
 docs/DivisionedDomainEntityRef.md
 docs/DivsPermittedEntityListing.md
+docs/DmarcResult.md
 docs/DncList.md
 docs/DncListCreate.md
 docs/DncListDivisionView.md
@@ -1983,6 +1998,7 @@ docs/DurationCondition.md
 docs/DynamicContactQueueingSettings.md
 docs/DynamicLineBalancingSettings.md
 docs/DynamicLineBalancingSettingsPatchRequest.md
+docs/DynamicUtilization.md
 docs/Edge.md
 docs/EdgeAutoUpdateConfig.md
 docs/EdgeChangeTopicEdge.md
@@ -2420,6 +2436,7 @@ docs/FlowVersionEntityListing.md
 docs/FlowsAPI.json
 docs/FlowsAPI.md
 docs/FlowsQueryCriteriaResponse.md
+docs/FollowersFilter.md
 docs/FooterTemplate.md
 docs/ForecastAbandonRateResponse.md
 docs/ForecastAverageSpeedOfAnswerResponse.md
@@ -2563,6 +2580,7 @@ docs/GuideVersionResources.md
 docs/HeadcountForecast.md
 docs/HeadcountInterval.md
 docs/Header.md
+docs/HeaderEntry.md
 docs/HealthInfo.md
 docs/HelpLink.md
 docs/HelpSettings.md
@@ -5127,6 +5145,7 @@ docs/UpdateScheduleUploadSchema.md
 docs/UpdateSegmentAssignmentRequest.md
 docs/UpdateSegmentAssignmentResponse.md
 docs/UpdateServiceGoalTemplate.md
+docs/UpdateSkillDivisionRequest.md
 docs/UpdateStaffingGroupRequest.md
 docs/UpdateTimeOffLimitRequest.md
 docs/UpdateTimeOffPlanBusinessUnitAssociation.md
@@ -5281,7 +5300,25 @@ docs/UserVideoSettings.md
 docs/UsersAPI.json
 docs/UsersAPI.md
 docs/UsersRuleReference.md
+docs/UsersRulesAPI.json
+docs/UsersRulesAPI.md
+docs/UsersRulesCreateRuleRequest.md
+docs/UsersRulesCriteria.md
+docs/UsersRulesDependent.md
+docs/UsersRulesDependentList.md
+docs/UsersRulesDependentRule.md
+docs/UsersRulesGroupItem.md
+docs/UsersRulesLastRunMetadata.md
+docs/UsersRulesLockedCriteriaSettingsCriteria.md
+docs/UsersRulesLockedCriteriaSettingsGroup.md
+docs/UsersRulesQueryResponse.md
+docs/UsersRulesQueryRuleRequest.md
+docs/UsersRulesRule.md
+docs/UsersRulesRuleList.md
 docs/UsersRulesRuleReference.md
+docs/UsersRulesRuleSettings.md
+docs/UsersRulesUpdateRuleRequest.md
+docs/UsersRulesValue.md
 docs/UsersSearchResponse.md
 docs/UtilitiesAPI.json
 docs/UtilitiesAPI.md
@@ -5954,6 +5991,7 @@ docs/deleteContentmanagementWorkspace-example.txt
 docs/deleteContentmanagementWorkspaceMember-example.txt
 docs/deleteContentmanagementWorkspaceTagvalue-example.txt
 docs/deleteConversation-example.txt
+docs/deleteConversationCustomattribute-example.txt
 docs/deleteConversationParticipantCode-example.txt
 docs/deleteConversationParticipantFlaggedreason-example.txt
 docs/deleteConversationRecordingAnnotation-example.txt
@@ -6190,6 +6228,7 @@ docs/deleteUserVerifier-example.txt
 docs/deleteUserrecording-example.txt
 docs/deleteUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/deleteUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
+docs/deleteUsersRule-example.txt
 docs/deleteVoicemailMessage-example.txt
 docs/deleteVoicemailMessages-example.txt
 docs/deleteWebchatDeployment-example.txt
@@ -6403,6 +6442,8 @@ docs/getConversationCommunicationAgentchecklistJob-example.txt
 docs/getConversationCommunicationAgentchecklists-example.txt
 docs/getConversationCommunicationInternalmessage-example.txt
 docs/getConversationCommunicationInternalmessages-example.txt
+docs/getConversationCustomattribute-example.txt
+docs/getConversationCustomattributes-example.txt
 docs/getConversationParticipantSecureivrsession-example.txt
 docs/getConversationParticipantSecureivrsessions-example.txt
 docs/getConversationParticipantWrapup-example.txt
@@ -6442,6 +6483,13 @@ docs/getConversationsCobrowsesessionParticipantCommunicationWrapup-example.txt
 docs/getConversationsCobrowsesessionParticipantWrapup-example.txt
 docs/getConversationsCobrowsesessionParticipantWrapupcodes-example.txt
 docs/getConversationsCobrowsesessions-example.txt
+docs/getConversationsCustomattributesSchema-example.txt
+docs/getConversationsCustomattributesSchemaVersion-example.txt
+docs/getConversationsCustomattributesSchemaVersions-example.txt
+docs/getConversationsCustomattributesSchemas-example.txt
+docs/getConversationsCustomattributesSchemasCoretype-example.txt
+docs/getConversationsCustomattributesSchemasCoretypes-example.txt
+docs/getConversationsCustomattributesSchemasLimits-example.txt
 docs/getConversationsEmail-example.txt
 docs/getConversationsEmailMessage-example.txt
 docs/getConversationsEmailMessages-example.txt
@@ -7436,6 +7484,11 @@ docs/getUsersExternalidAuthorityNameExternalKey-example.txt
 docs/getUsersMe-example.txt
 docs/getUsersPresenceBulk-example.txt
 docs/getUsersPresencesPurecloudBulk-example.txt
+docs/getUsersRule-example.txt
+docs/getUsersRuleDependentTypeId-example.txt
+docs/getUsersRuleDependents-example.txt
+docs/getUsersRules-example.txt
+docs/getUsersRulesSetting-example.txt
 docs/getUsersSearch-example.txt
 docs/getUsersSearch-example.txt
 docs/getVoicemailGroupMailbox-example.txt
@@ -7615,6 +7668,8 @@ docs/patchCoachingAppointment-example.txt
 docs/patchCoachingAppointmentAnnotation-example.txt
 docs/patchCoachingAppointmentStatus-example.txt
 docs/patchCoachingNotification-example.txt
+docs/patchConversationCustomattributes-example.txt
+docs/patchConversationCustomattributesBulk-example.txt
 docs/patchConversationParticipant-example.txt
 docs/patchConversationParticipantAttributes-example.txt
 docs/patchConversationRecordingstate-example.txt
@@ -7733,6 +7788,7 @@ docs/patchRoutingQueueUser-example.txt
 docs/patchRoutingQueueUsers-example.txt
 docs/patchRoutingSettingsContactcenter-example.txt
 docs/patchRoutingSettingsTranscription-example.txt
+docs/patchRoutingSkill-example.txt
 docs/patchRoutingSkillgroup-example.txt
 docs/patchRoutingSmsPhonenumber-example.txt
 docs/patchScimGroup-example.txt
@@ -7779,6 +7835,7 @@ docs/patchUserRoutingskillsBulk-example.txt
 docs/patchUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/patchUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/patchUsersBulk-example.txt
+docs/patchUsersRule-example.txt
 docs/patchVoicemailGroupPolicy-example.txt
 docs/patchVoicemailMePolicy-example.txt
 docs/patchVoicemailMessage-example.txt
@@ -8003,6 +8060,9 @@ docs/postConversationsChatParticipantReplace-example.txt
 docs/postConversationsChats-example.txt
 docs/postConversationsCobrowsesessionParticipantCommunicationWrapup-example.txt
 docs/postConversationsCobrowsesessionParticipantReplace-example.txt
+docs/postConversationsCustomattributesSchemas-example.txt
+docs/postConversationsCustomattributesSearch-example.txt
+docs/postConversationsCustomattributesSearch-example.txt
 docs/postConversationsEmailInboundmessages-example.txt
 docs/postConversationsEmailMessages-example.txt
 docs/postConversationsEmailMessagesDraftAttachmentsCopy-example.txt
@@ -8490,6 +8550,8 @@ docs/postUserRoutingskills-example.txt
 docs/postUsers-example.txt
 docs/postUsersDevelopmentActivitiesAggregatesQuery-example.txt
 docs/postUsersMePassword-example.txt
+docs/postUsersRules-example.txt
+docs/postUsersRulesQuery-example.txt
 docs/postUsersSearch-example.txt
 docs/postUsersSearch-example.txt
 docs/postUsersSearchTeamsAssign-example.txt
@@ -8640,6 +8702,8 @@ docs/putChatsSettings-example.txt
 docs/putContentmanagementWorkspace-example.txt
 docs/putContentmanagementWorkspaceMember-example.txt
 docs/putContentmanagementWorkspaceTagvalue-example.txt
+docs/putConversationCustomattributes-example.txt
+docs/putConversationCustomattributesBulk-example.txt
 docs/putConversationParticipantFlaggedreason-example.txt
 docs/putConversationRecording-example.txt
 docs/putConversationRecordingAnnotation-example.txt
@@ -8650,6 +8714,7 @@ docs/putConversationsCallRecordingstate-example.txt
 docs/putConversationsCallbackRecordingstate-example.txt
 docs/putConversationsChatRecordingstate-example.txt
 docs/putConversationsCobrowsesessionRecordingstate-example.txt
+docs/putConversationsCustomattributesSchema-example.txt
 docs/putConversationsEmailMessagesDraft-example.txt
 docs/putConversationsEmailRecordingstate-example.txt
 docs/putConversationsKeyconfiguration-example.txt
@@ -8953,6 +9018,7 @@ src/APIs/UploadsAPI.swift
 src/APIs/UsageAPI.swift
 src/APIs/UserRecordingsAPI.swift
 src/APIs/UsersAPI.swift
+src/APIs/UsersRulesAPI.swift
 src/APIs/UtilitiesAPI.swift
 src/APIs/VoicemailAPI.swift
 src/APIs/WebChatAPI.swift
@@ -9604,7 +9670,6 @@ src/Models/BusinessUnitResponse.swift
 src/Models/BusinessUnitSettingsResponse.swift
 src/Models/Button.swift
 src/Models/ButtonComponent.swift
-src/Models/ButtonQuickReplyPayload.swift
 src/Models/ButtonResponse.swift
 src/Models/CachedMediaItem.swift
 src/Models/CachedMediaItemEntityListing.swift
@@ -10138,6 +10203,10 @@ src/Models/ConversationContentText.swift
 src/Models/ConversationContentWheelPicker.swift
 src/Models/ConversationContentWheelPickerItem.swift
 src/Models/ConversationContext.swift
+src/Models/ConversationCustomAttributesSearchCriteria.swift
+src/Models/ConversationCustomAttributesSearchRequest.swift
+src/Models/ConversationDataSchema.swift
+src/Models/ConversationDataSchemaListing.swift
 src/Models/ConversationDeletionProtectionQuery.swift
 src/Models/ConversationDetailQueryClause.swift
 src/Models/ConversationDetailQueryFilter.swift
@@ -10236,6 +10305,8 @@ src/Models/ConversationIntentSuggestionsTopicSuggestedIntent.swift
 src/Models/ConversationIntentSuggestionsTopicSuggestedIntentSlot.swift
 src/Models/ConversationIntentSuggestionsTopicSuggestionContext.swift
 src/Models/ConversationIntentSuggestionsTopicSuggestionFeedback.swift
+src/Models/ConversationJsonSchemaDocument.swift
+src/Models/ConversationJsonSchemaRequest.swift
 src/Models/ConversationKnowledgeArticleSuggestionsTopicKnowledgeAnswer.swift
 src/Models/ConversationKnowledgeArticleSuggestionsTopicKnowledgeArticleSuggestionEvent.swift
 src/Models/ConversationKnowledgeArticleSuggestionsTopicSuggestedArticle.swift
@@ -10318,6 +10389,7 @@ src/Models/ConversationRoutingData.swift
 src/Models/ConversationSchemaAttribute.swift
 src/Models/ConversationSchemaData.swift
 src/Models/ConversationSchemaReference.swift
+src/Models/ConversationSchemaUpdateRequest.swift
 src/Models/ConversationScreenShareEventTopicConversationDivisionMembership.swift
 src/Models/ConversationScreenShareEventTopicConversationRoutingData.swift
 src/Models/ConversationScreenShareEventTopicDetail.swift
@@ -10492,6 +10564,7 @@ src/Models/CreateShareResponse.swift
 src/Models/CreateStaffingGroupAllocation.swift
 src/Models/CreateStaffingGroupRequest.swift
 src/Models/CreateSurveyRequest.swift
+src/Models/CreateSurveyResponse.swift
 src/Models/CreateTimeOffLimitRequest.swift
 src/Models/CreateTimeOffPlanBusinessUnitAssociation.swift
 src/Models/CreateTimeOffPlanManagementUnitAssociation.swift
@@ -10547,6 +10620,13 @@ src/Models/CursorNoteListing.swift
 src/Models/CursorOrganizationListing.swift
 src/Models/CursorRelationshipListing.swift
 src/Models/Cursors.swift
+src/Models/CustomAttributes.swift
+src/Models/CustomAttributesBulkUpdateResponse.swift
+src/Models/CustomAttributesBulkUpdateResponseMap.swift
+src/Models/CustomAttributesIdResponse.swift
+src/Models/CustomAttributesListing.swift
+src/Models/CustomAttributesPatchRequest.swift
+src/Models/CustomAttributesUpdateRequest.swift
 src/Models/CustomEventAttribute.swift
 src/Models/CustomEventAttributeList.swift
 src/Models/CustomI18nLabels.swift
@@ -10779,6 +10859,7 @@ src/Models/DivisionEntityRef.swift
 src/Models/DivisionReference.swift
 src/Models/DivisionedDomainEntityRef.swift
 src/Models/DivsPermittedEntityListing.swift
+src/Models/DmarcResult.swift
 src/Models/DncList.swift
 src/Models/DncListCreate.swift
 src/Models/DncListDivisionView.swift
@@ -10901,6 +10982,7 @@ src/Models/DurationCondition.swift
 src/Models/DynamicContactQueueingSettings.swift
 src/Models/DynamicLineBalancingSettings.swift
 src/Models/DynamicLineBalancingSettingsPatchRequest.swift
+src/Models/DynamicUtilization.swift
 src/Models/Edge.swift
 src/Models/EdgeAutoUpdateConfig.swift
 src/Models/EdgeChangeTopicEdge.swift
@@ -11326,6 +11408,7 @@ src/Models/FlowStartDetailEventTopicFlowStartEvent.swift
 src/Models/FlowVersion.swift
 src/Models/FlowVersionEntityListing.swift
 src/Models/FlowsQueryCriteriaResponse.swift
+src/Models/FollowersFilter.swift
 src/Models/FooterTemplate.swift
 src/Models/ForecastAbandonRateResponse.swift
 src/Models/ForecastAverageSpeedOfAnswerResponse.swift
@@ -11459,6 +11542,7 @@ src/Models/GuideVersionResources.swift
 src/Models/HeadcountForecast.swift
 src/Models/HeadcountInterval.swift
 src/Models/Header.swift
+src/Models/HeaderEntry.swift
 src/Models/HealthInfo.swift
 src/Models/HelpLink.swift
 src/Models/HelpSettings.swift
@@ -13942,6 +14026,7 @@ src/Models/UpdateScheduleUploadSchema.swift
 src/Models/UpdateSegmentAssignmentRequest.swift
 src/Models/UpdateSegmentAssignmentResponse.swift
 src/Models/UpdateServiceGoalTemplate.swift
+src/Models/UpdateSkillDivisionRequest.swift
 src/Models/UpdateStaffingGroupRequest.swift
 src/Models/UpdateTimeOffLimitRequest.swift
 src/Models/UpdateTimeOffPlanBusinessUnitAssociation.swift
@@ -14088,7 +14173,23 @@ src/Models/UserTransferEvent.swift
 src/Models/UserTrendData.swift
 src/Models/UserVideoSettings.swift
 src/Models/UsersRuleReference.swift
+src/Models/UsersRulesCreateRuleRequest.swift
+src/Models/UsersRulesCriteria.swift
+src/Models/UsersRulesDependent.swift
+src/Models/UsersRulesDependentList.swift
+src/Models/UsersRulesDependentRule.swift
+src/Models/UsersRulesGroupItem.swift
+src/Models/UsersRulesLastRunMetadata.swift
+src/Models/UsersRulesLockedCriteriaSettingsCriteria.swift
+src/Models/UsersRulesLockedCriteriaSettingsGroup.swift
+src/Models/UsersRulesQueryResponse.swift
+src/Models/UsersRulesQueryRuleRequest.swift
+src/Models/UsersRulesRule.swift
+src/Models/UsersRulesRuleList.swift
 src/Models/UsersRulesRuleReference.swift
+src/Models/UsersRulesRuleSettings.swift
+src/Models/UsersRulesUpdateRuleRequest.swift
+src/Models/UsersRulesValue.swift
 src/Models/UsersSearchResponse.swift
 src/Models/UtilizationLabel.swift
 src/Models/UtilizationLabelEntityListing.swift

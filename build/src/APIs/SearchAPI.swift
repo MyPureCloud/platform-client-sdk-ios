@@ -3709,6 +3709,64 @@ open class SearchAPI {
     
     
     /**
+     Search resources.
+     
+     - parameter body: (body) Search request options 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postConversationsCustomattributesSearch(body: ConversationCustomAttributesSearchRequest, completion: @escaping ((_ data: JsonSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsCustomattributesSearchWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<JsonSearchResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Search resources.
+     - POST /api/v2/conversations/customattributes/search
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 0,
+  "pageCount" : 6,
+  "types" : [ "types", "types" ],
+  "pageNumber" : 5,
+  "pageSize" : 1,
+  "results" : "{}",
+  "aggregations" : "{}"
+}, statusCode=200}]
+     
+     - parameter body: (body) Search request options 
+
+     - returns: RequestBuilder<JsonSearchResponse> 
+     */
+    open class func postConversationsCustomattributesSearchWithRequestBuilder(body: ConversationCustomAttributesSearchRequest) -> RequestBuilder<JsonSearchResponse> {        
+        let path = "/api/v2/conversations/customattributes/search"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JsonSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Search conversations
      
      - parameter body: (body) Search request options 

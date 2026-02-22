@@ -10,6 +10,7 @@ public class TaskManagementAggregationQuery: Codable {
 
     public enum GroupBy: String, Codable { 
         case assigneeid = "assigneeId"
+        case caseid = "caseId"
         case divisionid = "divisionId"
         case externaltag = "externalTag"
         case queueid = "queueId"

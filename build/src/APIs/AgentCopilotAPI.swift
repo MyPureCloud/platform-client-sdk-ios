@@ -43,17 +43,19 @@ open class AgentCopilotAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "summaryGenerationConfig" : "{}",
-  "defaultLanguage" : "defaultLanguage",
+  "autoSearchConfig" : "{}",
   "selfUri" : "https://openapi-generator.tech",
-  "nluEngineType" : "NluV3",
   "answerGenerationConfig" : "{}",
   "liveOnQueue" : true,
-  "nluConfig" : "{}",
   "enabled" : true,
   "wrapupCodePredictionConfig" : "{}",
-  "ruleEngineConfig" : "{}",
-  "knowledgeAnswerConfig" : "{}"
+  "knowledgeAnswerConfig" : "{}",
+  "manualSearchConfig" : "{}",
+  "summaryGenerationConfig" : "{}",
+  "defaultLanguage" : "defaultLanguage",
+  "nluEngineType" : "NluV3",
+  "nluConfig" : "{}",
+  "ruleEngineConfig" : "{}"
 }, statusCode=200}]
      
      - parameter assistantId: (path) Assistant ID 
@@ -188,17 +190,19 @@ open class AgentCopilotAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "summaryGenerationConfig" : "{}",
-  "defaultLanguage" : "defaultLanguage",
+  "autoSearchConfig" : "{}",
   "selfUri" : "https://openapi-generator.tech",
-  "nluEngineType" : "NluV3",
   "answerGenerationConfig" : "{}",
   "liveOnQueue" : true,
-  "nluConfig" : "{}",
   "enabled" : true,
   "wrapupCodePredictionConfig" : "{}",
-  "ruleEngineConfig" : "{}",
-  "knowledgeAnswerConfig" : "{}"
+  "knowledgeAnswerConfig" : "{}",
+  "manualSearchConfig" : "{}",
+  "summaryGenerationConfig" : "{}",
+  "defaultLanguage" : "defaultLanguage",
+  "nluEngineType" : "NluV3",
+  "nluConfig" : "{}",
+  "ruleEngineConfig" : "{}"
 }, statusCode=200}]
      
      - parameter assistantId: (path) Assistant ID 

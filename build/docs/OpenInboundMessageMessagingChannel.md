@@ -10,8 +10,8 @@ Open Channel-specific information that describes the message and the message cha
 | **from** | [**OpenMessagingFromRecipient**](OpenMessagingFromRecipient) | Information about the recipient the message is received from. | |
 | **time** | [**Date**](Date) | Original time of the event. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **messageId** | **String** | Unique provider ID of the message. | [optional] |
-| **metadata** | [**JSON**](JSON) | Additional Custom Information about the channel. | [optional] |
+| **metadata** | [**ConversationChannelMetadata**](ConversationChannelMetadata) | Additional Custom Information about the channel. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@187.0.0_
+_PureCloudPlatformClientV2@188.0.0_

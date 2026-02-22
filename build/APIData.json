@@ -9751,6 +9751,24 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\n\n// Update a conversation by disconnecting all of the participants\nDeleteConversationRequest.deleteConversation(conversationId: conversationId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteConversationRequest.deleteConversation was successful\")\n    }\n}"
   },
+  "deleteconversationcustomattribute": {
+    "operationId": "deleteconversationcustomattribute",
+    "functionName": "deleteConversationCustomattribute",
+    "signature": "deleteConversationCustomattribute(conversationId, attributesId)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "attributesId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\nlet attributesId: String = \"\" // attributesId\n\n// Delete a custom attributes record.\nDeleteConversationCustomattributeRequest.deleteConversationCustomattribute(conversationId: conversationId, attributesId: attributesId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteConversationCustomattributeRequest.deleteConversationCustomattribute was successful\")\n    }\n}"
+  },
   "deleteconversationparticipantcode": {
     "operationId": "deleteconversationparticipantcode",
     "functionName": "deleteConversationParticipantCode",
@@ -10113,6 +10131,39 @@
     ],
     "return": "InternalMessageDataEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet communicationId: String = \"\" // communicationId\nlet pageSize: Int = 0 // Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 200.\nlet pageNumber: Int = 0 // Page number\n\n// Get messages for communication\nGetConversationCommunicationInternalmessagesRequest.getConversationCommunicationInternalmessages(conversationId: conversationId, communicationId: communicationId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationCommunicationInternalmessagesRequest.getConversationCommunicationInternalmessages was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationcustomattribute": {
+    "operationId": "getconversationcustomattribute",
+    "functionName": "getConversationCustomattribute",
+    "signature": "getConversationCustomattribute(conversationId, attributesId)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "attributesId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "CustomAttributes",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\nlet attributesId: String = \"\" // attributesId\n\n// Get custom attributes by id\nGetConversationCustomattributeRequest.getConversationCustomattribute(conversationId: conversationId, attributesId: attributesId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationCustomattributeRequest.getConversationCustomattribute was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationcustomattributes": {
+    "operationId": "getconversationcustomattributes",
+    "functionName": "getConversationCustomattributes",
+    "signature": "getConversationCustomattributes(conversationId)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "CustomAttributesListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\n\n// Get a list of custom attributes for a conversation.\nGetConversationCustomattributesRequest.getConversationCustomattributes(conversationId: conversationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationCustomattributesRequest.getConversationCustomattributes was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationparticipantsecureivrsession": {
     "operationId": "getconversationparticipantsecureivrsession",
@@ -10760,6 +10811,88 @@
     "signature": "getConversationsCobrowsesessions()",
     "return": "CobrowseConversationEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get active cobrowse conversations for the logged in user\nGetConversationsCobrowsesessionsRequest.getConversationsCobrowsesessions() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsCobrowsesessionsRequest.getConversationsCobrowsesessions was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationscustomattributesschema": {
+    "operationId": "getconversationscustomattributesschema",
+    "functionName": "getConversationsCustomattributesSchema",
+    "signature": "getConversationsCustomattributesSchema(schemaId)",
+    "parameters": [
+      {
+        "name": "schemaId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ConversationDataSchema",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaId: String = \"\" // Schema ID\n\n// Get a schema\nGetConversationsCustomattributesSchemaRequest.getConversationsCustomattributesSchema(schemaId: schemaId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsCustomattributesSchemaRequest.getConversationsCustomattributesSchema was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationscustomattributesschemaversion": {
+    "operationId": "getconversationscustomattributesschemaversion",
+    "functionName": "getConversationsCustomattributesSchemaVersion",
+    "signature": "getConversationsCustomattributesSchemaVersion(schemaId, versionId)",
+    "parameters": [
+      {
+        "name": "schemaId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "versionId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ConversationDataSchema",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaId: String = \"\" // Schema ID\nlet versionId: String = \"\" // Schema version\n\n// Get a specific version of a schema\nGetConversationsCustomattributesSchemaVersionRequest.getConversationsCustomattributesSchemaVersion(schemaId: schemaId, versionId: versionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsCustomattributesSchemaVersionRequest.getConversationsCustomattributesSchemaVersion was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationscustomattributesschemaversions": {
+    "operationId": "getconversationscustomattributesschemaversions",
+    "functionName": "getConversationsCustomattributesSchemaVersions",
+    "signature": "getConversationsCustomattributesSchemaVersions(schemaId)",
+    "parameters": [
+      {
+        "name": "schemaId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ConversationDataSchemaListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaId: String = \"\" // Schema ID\n\n// Get all versions of a CCA schema\nGetConversationsCustomattributesSchemaVersionsRequest.getConversationsCustomattributesSchemaVersions(schemaId: schemaId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsCustomattributesSchemaVersionsRequest.getConversationsCustomattributesSchemaVersions was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationscustomattributesschemas": {
+    "operationId": "getconversationscustomattributesschemas",
+    "functionName": "getConversationsCustomattributesSchemas",
+    "signature": "getConversationsCustomattributesSchemas()",
+    "return": "ConversationDataSchemaListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get a list of schemas.\nGetConversationsCustomattributesSchemasRequest.getConversationsCustomattributesSchemas() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsCustomattributesSchemasRequest.getConversationsCustomattributesSchemas was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationscustomattributesschemascoretype": {
+    "operationId": "getconversationscustomattributesschemascoretype",
+    "functionName": "getConversationsCustomattributesSchemasCoretype",
+    "signature": "getConversationsCustomattributesSchemasCoretype(coreTypeName)",
+    "parameters": [
+      {
+        "name": "coreTypeName",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "Coretype",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet coreTypeName: String = \"\" // Name of the core type\n\n// Get the core types from which all schemas are built.\nGetConversationsCustomattributesSchemasCoretypeRequest.getConversationsCustomattributesSchemasCoretype(coreTypeName: coreTypeName) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsCustomattributesSchemasCoretypeRequest.getConversationsCustomattributesSchemasCoretype was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationscustomattributesschemascoretypes": {
+    "operationId": "getconversationscustomattributesschemascoretypes",
+    "functionName": "getConversationsCustomattributesSchemasCoretypes",
+    "signature": "getConversationsCustomattributesSchemasCoretypes()",
+    "return": "CoretypeListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get the list of core types enabled for a specific namespace.\nGetConversationsCustomattributesSchemasCoretypesRequest.getConversationsCustomattributesSchemasCoretypes() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsCustomattributesSchemasCoretypesRequest.getConversationsCustomattributesSchemasCoretypes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationscustomattributesschemaslimits": {
+    "operationId": "getconversationscustomattributesschemaslimits",
+    "functionName": "getConversationsCustomattributesSchemasLimits",
+    "signature": "getConversationsCustomattributesSchemasLimits()",
+    "return": "SchemaQuantityLimits",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get quantitative limits on schemas\nGetConversationsCustomattributesSchemasLimitsRequest.getConversationsCustomattributesSchemasLimits() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsCustomattributesSchemasLimitsRequest.getConversationsCustomattributesSchemasLimits was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationsemail": {
     "operationId": "getconversationsemail",
@@ -11878,6 +12011,43 @@
     ],
     "return": "MeetingIdRecord",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet meetingId: String = \"\" // meetingId\n\n// Gets a record for a given meetingId\nGetConversationsVideosMeetingRequest.getConversationsVideosMeeting(meetingId: meetingId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsVideosMeetingRequest.getConversationsVideosMeeting was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchconversationcustomattributes": {
+    "operationId": "patchconversationcustomattributes",
+    "functionName": "patchConversationCustomattributes",
+    "signature": "patchConversationCustomattributes(conversationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "CustomAttributesPatchRequest",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\nlet body: CustomAttributesPatchRequest = new CustomAttributesPatchRequest(...) // \n\n// Update a single custom attributes record by amending the data with only the provided fields.\nPatchConversationCustomattributesRequest.patchConversationCustomattributes(conversationId: conversationId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchConversationCustomattributesRequest.patchConversationCustomattributes was successful\")\n    }\n}"
+  },
+  "patchconversationcustomattributesbulk": {
+    "operationId": "patchconversationcustomattributesbulk",
+    "functionName": "patchConversationCustomattributesBulk",
+    "signature": "patchConversationCustomattributesBulk(conversationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "[CustomAttributesPatchRequest]",
+        "required": "false"
+      }
+    ],
+    "return": "CustomAttributesBulkUpdateResponseMap",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\nlet body: [CustomAttributesPatchRequest] = [new CustomAttributesPatchRequest(...)] // \n\n// Update a list of custom attributes record by amending the data with only the provided fields.\nPatchConversationCustomattributesBulkRequest.patchConversationCustomattributesBulk(conversationId: conversationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchConversationCustomattributesBulkRequest.patchConversationCustomattributesBulk was successful\")\n        dump(response)\n    }\n}"
   },
   "patchconversationparticipant": {
     "operationId": "patchconversationparticipant",
@@ -14061,6 +14231,34 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet body: TransferRequest = new TransferRequest(...) // \n\n// Replace this participant with the specified user and/or address\nPostConversationsCobrowsesessionParticipantReplaceRequest.postConversationsCobrowsesessionParticipantReplace(conversationId: conversationId, participantId: participantId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostConversationsCobrowsesessionParticipantReplaceRequest.postConversationsCobrowsesessionParticipantReplace was successful\")\n    }\n}"
   },
+  "postconversationscustomattributesschemas": {
+    "operationId": "postconversationscustomattributesschemas",
+    "functionName": "postConversationsCustomattributesSchemas",
+    "signature": "postConversationsCustomattributesSchemas(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ConversationJsonSchemaRequest",
+        "required": "true"
+      }
+    ],
+    "return": "ConversationDataSchema",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ConversationJsonSchemaRequest = new ConversationJsonSchemaRequest(...) // Schema create request body\n\n// Create a schema\nPostConversationsCustomattributesSchemasRequest.postConversationsCustomattributesSchemas(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsCustomattributesSchemasRequest.postConversationsCustomattributesSchemas was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postconversationscustomattributessearch": {
+    "operationId": "postconversationscustomattributessearch",
+    "functionName": "postConversationsCustomattributesSearch",
+    "signature": "postConversationsCustomattributesSearch(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ConversationCustomAttributesSearchRequest",
+        "required": "true"
+      }
+    ],
+    "return": "JsonSearchResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ConversationCustomAttributesSearchRequest = new ConversationCustomAttributesSearchRequest(...) // Search request options\n\n// Search resources.\nPostConversationsCustomattributesSearchRequest.postConversationsCustomattributesSearch(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsCustomattributesSearchRequest.postConversationsCustomattributesSearch was successful\")\n        dump(response)\n    }\n}"
+  },
   "postconversationsemailinboundmessages": {
     "operationId": "postconversationsemailinboundmessages",
     "functionName": "postConversationsEmailInboundmessages",
@@ -14830,6 +15028,44 @@
     "return": "MeetingIdRecord",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: GenerateMeetingIdRequest = new GenerateMeetingIdRequest(...) // MeetingIdRequest\n\n// Generate a meetingId for a given conferenceId\nPostConversationsVideosMeetingsRequest.postConversationsVideosMeetings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsVideosMeetingsRequest.postConversationsVideosMeetings was successful\")\n        dump(response)\n    }\n}"
   },
+  "putconversationcustomattributes": {
+    "operationId": "putconversationcustomattributes",
+    "functionName": "putConversationCustomattributes",
+    "signature": "putConversationCustomattributes(conversationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "CustomAttributesUpdateRequest",
+        "required": "false"
+      }
+    ],
+    "return": "CustomAttributesIdResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\nlet body: CustomAttributesUpdateRequest = new CustomAttributesUpdateRequest(...) // \n\n// Create or update a single custom attributes record. Updating replaces all data with the provided fields.\nPutConversationCustomattributesRequest.putConversationCustomattributes(conversationId: conversationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationCustomattributesRequest.putConversationCustomattributes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putconversationcustomattributesbulk": {
+    "operationId": "putconversationcustomattributesbulk",
+    "functionName": "putConversationCustomattributesBulk",
+    "signature": "putConversationCustomattributesBulk(conversationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "[CustomAttributesUpdateRequest]",
+        "required": "false"
+      }
+    ],
+    "return": "CustomAttributesBulkUpdateResponseMap",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\nlet body: [CustomAttributesUpdateRequest] = [new CustomAttributesUpdateRequest(...)] // \n\n// Create or update a list of custom attributes records. Updating replaces all data with the provided fields.\nPutConversationCustomattributesBulkRequest.putConversationCustomattributesBulk(conversationId: conversationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationCustomattributesBulkRequest.putConversationCustomattributesBulk was successful\")\n        dump(response)\n    }\n}"
+  },
   "putconversationparticipantflaggedreason": {
     "operationId": "putconversationparticipantflaggedreason",
     "functionName": "putConversationParticipantFlaggedreason",
@@ -14990,6 +15226,25 @@
     ],
     "return": "String",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet body: SetRecordingState = new SetRecordingState(...) // SetRecordingState\n\n// Update a conversation by setting its recording state\nPutConversationsCobrowsesessionRecordingstateRequest.putConversationsCobrowsesessionRecordingstate(conversationId: conversationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsCobrowsesessionRecordingstateRequest.putConversationsCobrowsesessionRecordingstate was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putconversationscustomattributesschema": {
+    "operationId": "putconversationscustomattributesschema",
+    "functionName": "putConversationsCustomattributesSchema",
+    "signature": "putConversationsCustomattributesSchema(schemaId, body)",
+    "parameters": [
+      {
+        "name": "schemaId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ConversationSchemaUpdateRequest",
+        "required": "true"
+      }
+    ],
+    "return": "ConversationDataSchema",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaId: String = \"\" // Schema ID\nlet body: ConversationSchemaUpdateRequest = new ConversationSchemaUpdateRequest(...) // Schema update request body\n\n// Update a schema\nPutConversationsCustomattributesSchemaRequest.putConversationsCustomattributesSchema(schemaId: schemaId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsCustomattributesSchemaRequest.putConversationsCustomattributesSchema was successful\")\n        dump(response)\n    }\n}"
   },
   "putconversationsemailmessagesdraft": {
     "operationId": "putconversationsemailmessagesdraft",
@@ -36342,7 +36597,7 @@
         "required": "true"
       }
     ],
-    "return": "Survey",
+    "return": "CreateSurveyResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: CreateSurveyRequest = new CreateSurveyRequest(...) // Survey creation request\n\n// Create a survey for a conversation\nPostQualitySurveysRequest.postQualitySurveys(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostQualitySurveysRequest.postQualitySurveys was successful\")\n        dump(response)\n    }\n}"
   },
   "postqualitysurveysscoring": {
@@ -40210,6 +40465,25 @@
     ],
     "return": "TranscriptionSettings",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: TranscriptionSettings = new TranscriptionSettings(...) // Organization Settings\n\n// Patch Transcription Settings\nPatchRoutingSettingsTranscriptionRequest.patchRoutingSettingsTranscription(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchRoutingSettingsTranscriptionRequest.patchRoutingSettingsTranscription was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchroutingskill": {
+    "operationId": "patchroutingskill",
+    "functionName": "patchRoutingSkill",
+    "signature": "patchRoutingSkill(skillId, body)",
+    "parameters": [
+      {
+        "name": "skillId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UpdateSkillDivisionRequest",
+        "required": "true"
+      }
+    ],
+    "return": "RoutingSkill",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet skillId: String = \"\" // Skill ID\nlet body: UpdateSkillDivisionRequest = new UpdateSkillDivisionRequest(...) // updateSkillDivisionRequest\n\n// Update Routing Skill Division\nPatchRoutingSkillRequest.patchRoutingSkill(skillId: skillId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchRoutingSkillRequest.patchRoutingSkill was successful\")\n        dump(response)\n    }\n}"
   },
   "patchroutingskillgroup": {
     "operationId": "patchroutingskillgroup",
@@ -50301,6 +50575,201 @@
     "return": "Verifier",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\nlet verifierId: String = \"\" // Verifier ID\nlet body: UpdateVerifierRequest = new UpdateVerifierRequest(...) // Verifier Update\n\n// Update a verifier\nPutUserVerifierRequest.putUserVerifier(userId: userId, verifierId: verifierId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutUserVerifierRequest.putUserVerifier was successful\")\n        dump(response)\n    }\n}"
   },
+  "deleteusersrule": {
+    "operationId": "deleteusersrule",
+    "functionName": "deleteUsersRule",
+    "signature": "deleteUsersRule(ruleId)",
+    "parameters": [
+      {
+        "name": "ruleId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ruleId: String = \"\" // The id of the rule\n\n// Delete an existing users rule\nDeleteUsersRuleRequest.deleteUsersRule(ruleId: ruleId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteUsersRuleRequest.deleteUsersRule was successful\")\n    }\n}"
+  },
+  "getusersrule": {
+    "operationId": "getusersrule",
+    "functionName": "getUsersRule",
+    "signature": "getUsersRule(ruleId)",
+    "parameters": [
+      {
+        "name": "ruleId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "UsersRulesRule",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ruleId: String = \"\" // The ID of the rule to retrieve\n\n// Get a users rule\nGetUsersRuleRequest.getUsersRule(ruleId: ruleId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsersRuleRequest.getUsersRule was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getusersruledependenttypeid": {
+    "operationId": "getusersruledependenttypeid",
+    "functionName": "getUsersRuleDependentTypeId",
+    "signature": "getUsersRuleDependentTypeId(ruleId, ruleType, typeId)",
+    "parameters": [
+      {
+        "name": "ruleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "ruleType",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "typeId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "UsersRulesDependent",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ruleId: String = \"\" // The ID of the rule for which to retrieve dependents\nlet ruleType: GetUsersRuleDependentTypeIdRequest.RuleType_getUsersRuleDependentTypeId = GetUsersRuleDependentTypeIdRequest.RuleType_getUsersRuleDependentTypeId.enummember // The type of the dependent\nlet typeId: String = \"\" // The type ID of the dependent\n\n// Get dependent of a users rule\nGetUsersRuleDependentTypeIdRequest.getUsersRuleDependentTypeId(ruleId: ruleId, ruleType: ruleType, typeId: typeId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsersRuleDependentTypeIdRequest.getUsersRuleDependentTypeId was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getusersruledependents": {
+    "operationId": "getusersruledependents",
+    "functionName": "getUsersRuleDependents",
+    "signature": "getUsersRuleDependents(ruleId, pageSize, pageNumber, sortOrder)",
+    "parameters": [
+      {
+        "name": "ruleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "UsersRulesDependentList",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ruleId: String = \"\" // The ID of the rule for which to retrieve dependents\nlet pageSize: Int = 0 // Number of results per page\nlet pageNumber: Int = 0 // Page number\nlet sortOrder: GetUsersRuleDependentsRequest.SortOrder_getUsersRuleDependents = GetUsersRuleDependentsRequest.SortOrder_getUsersRuleDependents.enummember // Sort order for dependents (by last run date, then created date)\n\n// Get dependents for a users rule\nGetUsersRuleDependentsRequest.getUsersRuleDependents(ruleId: ruleId, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsersRuleDependentsRequest.getUsersRuleDependents was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getusersrules": {
+    "operationId": "getusersrules",
+    "functionName": "getUsersRules",
+    "signature": "getUsersRules(types, pageNumber, pageSize, expand, enabled, searchTerm, sortOrder)",
+    "parameters": [
+      {
+        "name": "types",
+        "type": "[String]",
+        "required": "true"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "enabled",
+        "type": "Bool",
+        "required": "false"
+      },
+      {
+        "name": "searchTerm",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "UsersRulesRuleList",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet types: [String] = [\"\"] // The types of the rule\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Number of results per page\nlet expand: [String] = [\"\"] // Fields to expand in response\nlet enabled: Bool = true // Whether to list enabled or disabled rules\nlet searchTerm: String = \"\" // a search term for finding a rule by name\nlet sortOrder: GetUsersRulesRequest.SortOrder_getUsersRules = GetUsersRulesRequest.SortOrder_getUsersRules.enummember // sort rules by name, ascending, descending\n\n// Get the list of users rules\nGetUsersRulesRequest.getUsersRules(types: types, pageNumber: pageNumber, pageSize: pageSize, expand: expand, enabled: enabled, searchTerm: searchTerm, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsersRulesRequest.getUsersRules was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getusersrulessetting": {
+    "operationId": "getusersrulessetting",
+    "functionName": "getUsersRulesSetting",
+    "signature": "getUsersRulesSetting(ruleType)",
+    "parameters": [
+      {
+        "name": "ruleType",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "UsersRulesRuleSettings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ruleType: GetUsersRulesSettingRequest.RuleType_getUsersRulesSetting = GetUsersRulesSettingRequest.RuleType_getUsersRulesSetting.enummember // The type of the rule\n\n// Get the settings for a specific users rule type\nGetUsersRulesSettingRequest.getUsersRulesSetting(ruleType: ruleType) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsersRulesSettingRequest.getUsersRulesSetting was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchusersrule": {
+    "operationId": "patchusersrule",
+    "functionName": "patchUsersRule",
+    "signature": "patchUsersRule(ruleId, body)",
+    "parameters": [
+      {
+        "name": "ruleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UsersRulesUpdateRuleRequest",
+        "required": "true"
+      }
+    ],
+    "return": "UsersRulesRule",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ruleId: String = \"\" // The ID of the rule to update\nlet body: UsersRulesUpdateRuleRequest = new UsersRulesUpdateRuleRequest(...) // updateRuleRequest\n\n// Update an existing users rule\nPatchUsersRuleRequest.patchUsersRule(ruleId: ruleId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchUsersRuleRequest.patchUsersRule was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postusersrules": {
+    "operationId": "postusersrules",
+    "functionName": "postUsersRules",
+    "signature": "postUsersRules(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "UsersRulesCreateRuleRequest",
+        "required": "true"
+      }
+    ],
+    "return": "UsersRulesRule",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: UsersRulesCreateRuleRequest = new UsersRulesCreateRuleRequest(...) // usersRulesCreateRuleRequest\n\n// Create a new rule\nPostUsersRulesRequest.postUsersRules(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostUsersRulesRequest.postUsersRules was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postusersrulesquery": {
+    "operationId": "postusersrulesquery",
+    "functionName": "postUsersRulesQuery",
+    "signature": "postUsersRulesQuery(body, pageNumber, pageSize)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "UsersRulesQueryRuleRequest",
+        "required": "true"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "UsersRulesQueryResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: UsersRulesQueryRuleRequest = new UsersRulesQueryRuleRequest(...) // usersRulesQueryRuleRequest\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Number of results per page\n\n// Query the result of a users rule\nPostUsersRulesQueryRequest.postUsersRulesQuery(body: body, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostUsersRulesQueryRequest.postUsersRulesQuery was successful\")\n        dump(response)\n    }\n}"
+  },
   "getdate": {
     "operationId": "getdate",
     "functionName": "getDate",
@@ -51148,16 +51617,31 @@
   "getwebdeploymentsconfigurationversions": {
     "operationId": "getwebdeploymentsconfigurationversions",
     "functionName": "getWebdeploymentsConfigurationVersions",
-    "signature": "getWebdeploymentsConfigurationVersions(configurationId)",
+    "signature": "getWebdeploymentsConfigurationVersions(configurationId, pageSize, before, after)",
     "parameters": [
       {
         "name": "configurationId",
         "type": "String",
         "required": "true"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "before",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
       }
     ],
     "return": "WebDeploymentConfigurationVersionEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet configurationId: String = \"\" // The configuration version ID\n\n// Get the versions of a configuration\nGetWebdeploymentsConfigurationVersionsRequest.getWebdeploymentsConfigurationVersions(configurationId: configurationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsConfigurationVersionsRequest.getWebdeploymentsConfigurationVersions was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet configurationId: String = \"\" // The configuration version ID\nlet pageSize: String = \"\" // Number of entities to return. Defaults to 300.\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\n\n// Get the versions of a configuration\nGetWebdeploymentsConfigurationVersionsRequest.getWebdeploymentsConfigurationVersions(configurationId: configurationId, pageSize: pageSize, before: before, after: after) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsConfigurationVersionsRequest.getWebdeploymentsConfigurationVersions was successful\")\n        dump(response)\n    }\n}"
   },
   "getwebdeploymentsconfigurationversionsdraft": {
     "operationId": "getwebdeploymentsconfigurationversionsdraft",
@@ -51176,8 +51660,23 @@
   "getwebdeploymentsconfigurations": {
     "operationId": "getwebdeploymentsconfigurations",
     "functionName": "getWebdeploymentsConfigurations",
-    "signature": "getWebdeploymentsConfigurations(showOnlyPublished)",
+    "signature": "getWebdeploymentsConfigurations(pageSize, before, after, showOnlyPublished)",
     "parameters": [
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "before",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
       {
         "name": "showOnlyPublished",
         "type": "Bool",
@@ -51185,7 +51684,7 @@
       }
     ],
     "return": "WebDeploymentConfigurationVersionEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet showOnlyPublished: Bool = true // Filter by published status.\n\n// View configuration drafts\nGetWebdeploymentsConfigurationsRequest.getWebdeploymentsConfigurations(showOnlyPublished: showOnlyPublished) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsConfigurationsRequest.getWebdeploymentsConfigurations was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: String = \"\" // Number of entities to return. Defaults to 300.\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet showOnlyPublished: Bool = true // Filter by published status.\n\n// View configuration drafts\nGetWebdeploymentsConfigurationsRequest.getWebdeploymentsConfigurations(pageSize: pageSize, before: before, after: after, showOnlyPublished: showOnlyPublished) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsConfigurationsRequest.getWebdeploymentsConfigurations was successful\")\n        dump(response)\n    }\n}"
   },
   "getwebdeploymentsdeployment": {
     "operationId": "getwebdeploymentsdeployment",
@@ -51266,8 +51765,23 @@
   "getwebdeploymentsdeployments": {
     "operationId": "getwebdeploymentsdeployments",
     "functionName": "getWebdeploymentsDeployments",
-    "signature": "getWebdeploymentsDeployments(expand)",
+    "signature": "getWebdeploymentsDeployments(pageSize, before, after, expand)",
     "parameters": [
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "before",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
       {
         "name": "expand",
         "type": "[String]",
@@ -51275,7 +51789,7 @@
       }
     ],
     "return": "ExpandableWebDeploymentEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet expand: [String] = [\"\"] // The specified entity attributes will be filled. Comma separated values expected. \n\n// Get deployments\nGetWebdeploymentsDeploymentsRequest.getWebdeploymentsDeployments(expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsDeploymentsRequest.getWebdeploymentsDeployments was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: String = \"\" // Number of entities to return. Defaults to 300.\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet expand: [String] = [\"\"] // The specified entity attributes will be filled. Comma separated values expected. \n\n// Get deployments\nGetWebdeploymentsDeploymentsRequest.getWebdeploymentsDeployments(pageSize: pageSize, before: before, after: after, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsDeploymentsRequest.getWebdeploymentsDeployments was successful\")\n        dump(response)\n    }\n}"
   },
   "postwebdeploymentsconfigurationversionsdraftpublish": {
     "operationId": "postwebdeploymentsconfigurationversionsdraftpublish",

@@ -25,6 +25,8 @@ public class EscalationRuleRequest: Codable {
 
 
 
+
+
     /** The name of the escalation rule. */
     public var name: String?
     /** The criteria that defines when a social media message should be escalated. */
@@ -45,8 +47,10 @@ public class EscalationRuleRequest: Codable {
     public var instagramEscalation: EscalationTarget?
     /** The target integration configuration used for a X (formerly Twitter) message escalation. */
     public var twitterEscalation: EscalationTarget?
+    /** The target integration configuration used for a Google Business Profile message escalation. */
+    public var googleBusinessProfileEscalation: EscalationTarget?
 
-    public init(name: String?, matchCriteria: String?, priority: Int?, divisionId: String?, _description: String?, status: Status?, openEscalation: EscalationTarget?, facebookEscalation: EscalationTarget?, instagramEscalation: EscalationTarget?, twitterEscalation: EscalationTarget?) {
+    public init(name: String?, matchCriteria: String?, priority: Int?, divisionId: String?, _description: String?, status: Status?, openEscalation: EscalationTarget?, facebookEscalation: EscalationTarget?, instagramEscalation: EscalationTarget?, twitterEscalation: EscalationTarget?, googleBusinessProfileEscalation: EscalationTarget?) {
         self.name = name
         self.matchCriteria = matchCriteria
         self.priority = priority
@@ -57,6 +61,7 @@ public class EscalationRuleRequest: Codable {
         self.facebookEscalation = facebookEscalation
         self.instagramEscalation = instagramEscalation
         self.twitterEscalation = twitterEscalation
+        self.googleBusinessProfileEscalation = googleBusinessProfileEscalation
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -70,6 +75,7 @@ public class EscalationRuleRequest: Codable {
         case facebookEscalation
         case instagramEscalation
         case twitterEscalation
+        case googleBusinessProfileEscalation
     }
 
 

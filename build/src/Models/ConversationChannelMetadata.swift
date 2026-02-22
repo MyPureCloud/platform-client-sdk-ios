@@ -3,8 +3,19 @@
 
 public class ConversationChannelMetadata: Codable {
 
+    public enum SubType: String, Codable { 
+        case _none = "None"
+        case googleBusinessProfile = "GoogleBusinessProfile"
+        case roadsideAssistance = "RoadsideAssistance"
+        case youTube = "YouTube"
+    }
 
-    // TAG-REMOVE-MODEL-FILE
+    /** Channel subtype */
+    public var subType: SubType?
+
+    public init(subType: SubType?) {
+        self.subType = subType
+    }
 
 
 }

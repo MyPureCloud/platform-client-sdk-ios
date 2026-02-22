@@ -32,6 +32,12 @@ public class MessagingIntegration: Codable {
         case apple = "apple"
     }
 
+    public enum OpenExtensionType: String, Codable { 
+        case _none = "None"
+        case googleBusinessProfile = "GoogleBusinessProfile"
+        case youTube = "YouTube"
+    }
+
 
 
 
@@ -57,6 +63,8 @@ public class MessagingIntegration: Codable {
     public var status: Status?
     /** The type of Messaging Integration */
     public var messengerType: MessengerType?
+    /** The type of Open Messaging Integration Extension. Only present when 'messengerType' is 'open' and the Open Integration has an extension */
+    public var openExtensionType: OpenExtensionType?
     /** The recipient associated to the Integration. This recipient is used to associate a flow to an integration */
     public var recipient: DomainEntityRef?
     /** Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -72,13 +80,14 @@ public class MessagingIntegration: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, status: Status?, messengerType: MessengerType?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, status: Status?, messengerType: MessengerType?, openExtensionType: OpenExtensionType?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.supportedContent = supportedContent
         self.messagingSetting = messagingSetting
         self.status = status
         self.messengerType = messengerType
+        self.openExtensionType = openExtensionType
         self.recipient = recipient
         self.dateCreated = dateCreated
         self.dateModified = dateModified
@@ -95,6 +104,7 @@ public class MessagingIntegration: Codable {
         case messagingSetting
         case status
         case messengerType
+        case openExtensionType
         case recipient
         case dateCreated
         case dateModified

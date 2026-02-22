@@ -40,11 +40,11 @@ public class OpenSocialMediaChannel: Codable {
     /** Original time of the event. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var time: Date?
     /** Information about the channel. */
-    public var metadata: JSON?
+    public var metadata: ConversationChannelMetadata?
     /** Meta data of this public post. For example, used to define where in the thread the post exists. */
     public var publicMetadata: OpenSocialMediaPublicMetadata?
 
-    public init(_id: String?, platform: Platform?, type: ModelType?, messageId: String?, to: OpenSocialMediaRecipient?, from: OpenSocialMediaRecipient?, time: Date?, metadata: JSON?, publicMetadata: OpenSocialMediaPublicMetadata?) {
+    public init(_id: String?, platform: Platform?, type: ModelType?, messageId: String?, to: OpenSocialMediaRecipient?, from: OpenSocialMediaRecipient?, time: Date?, metadata: ConversationChannelMetadata?, publicMetadata: OpenSocialMediaPublicMetadata?) {
         self._id = _id
         self.platform = platform
         self.type = type

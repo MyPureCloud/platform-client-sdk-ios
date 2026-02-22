@@ -18,9 +18,9 @@ public class OpenInboundMessageMessagingChannel: Codable {
     /** Unique provider ID of the message. */
     public var messageId: String?
     /** Additional Custom Information about the channel. */
-    public var metadata: JSON?
+    public var metadata: ConversationChannelMetadata?
 
-    public init(from: OpenMessagingFromRecipient?, time: Date?, messageId: String?, metadata: JSON?) {
+    public init(from: OpenMessagingFromRecipient?, time: Date?, messageId: String?, metadata: ConversationChannelMetadata?) {
         self.from = from
         self.time = time
         self.messageId = messageId

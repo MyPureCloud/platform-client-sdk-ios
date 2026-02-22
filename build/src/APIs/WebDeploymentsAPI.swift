@@ -308,14 +308,23 @@ open class WebDeploymentsAPI {
 
     
     
+    
+    
+    
+    
+    
+    
     /**
      Get the versions of a configuration
      
      - parameter configurationId: (path) The configuration version ID 
+     - parameter pageSize: (query) Number of entities to return. Defaults to 300. (optional)
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWebdeploymentsConfigurationVersions(configurationId: String, completion: @escaping ((_ data: WebDeploymentConfigurationVersionEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWebdeploymentsConfigurationVersionsWithRequestBuilder(configurationId: configurationId)
+    open class func getWebdeploymentsConfigurationVersions(configurationId: String, pageSize: String? = nil, before: String? = nil, after: String? = nil, completion: @escaping ((_ data: WebDeploymentConfigurationVersionEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWebdeploymentsConfigurationVersionsWithRequestBuilder(configurationId: configurationId, pageSize: pageSize, before: before, after: after)
         requestBuilder.execute { (response: Response<WebDeploymentConfigurationVersionEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -335,7 +344,6 @@ open class WebDeploymentsAPI {
     /**
      Get the versions of a configuration
      - GET /api/v2/webdeployments/configurations/{configurationId}/versions
-     - This returns the 50 most recent versions for this configuration
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -432,10 +440,13 @@ open class WebDeploymentsAPI {
 }, statusCode=200}]
      
      - parameter configurationId: (path) The configuration version ID 
+     - parameter pageSize: (query) Number of entities to return. Defaults to 300. (optional)
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
 
      - returns: RequestBuilder<WebDeploymentConfigurationVersionEntityListing> 
      */
-    open class func getWebdeploymentsConfigurationVersionsWithRequestBuilder(configurationId: String) -> RequestBuilder<WebDeploymentConfigurationVersionEntityListing> {        
+    open class func getWebdeploymentsConfigurationVersionsWithRequestBuilder(configurationId: String, pageSize: String? = nil, before: String? = nil, after: String? = nil) -> RequestBuilder<WebDeploymentConfigurationVersionEntityListing> {        
         var path = "/api/v2/webdeployments/configurations/{configurationId}/versions"
         let configurationIdPreEscape = "\(configurationId)"
         let configurationIdPostEscape = configurationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -443,7 +454,12 @@ open class WebDeploymentsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize, 
+            "before": before, 
+            "after": after
+        ])
 
         let requestBuilder: RequestBuilder<WebDeploymentConfigurationVersionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -547,14 +563,23 @@ open class WebDeploymentsAPI {
 
     
     
+    
+    
+    
+    
+    
+    
     /**
      View configuration drafts
      
+     - parameter pageSize: (query) Number of entities to return. Defaults to 300. (optional)
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter showOnlyPublished: (query) Filter by published status. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWebdeploymentsConfigurations(showOnlyPublished: Bool? = nil, completion: @escaping ((_ data: WebDeploymentConfigurationVersionEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWebdeploymentsConfigurationsWithRequestBuilder(showOnlyPublished: showOnlyPublished)
+    open class func getWebdeploymentsConfigurations(pageSize: String? = nil, before: String? = nil, after: String? = nil, showOnlyPublished: Bool? = nil, completion: @escaping ((_ data: WebDeploymentConfigurationVersionEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWebdeploymentsConfigurationsWithRequestBuilder(pageSize: pageSize, before: before, after: after, showOnlyPublished: showOnlyPublished)
         requestBuilder.execute { (response: Response<WebDeploymentConfigurationVersionEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -669,17 +694,23 @@ open class WebDeploymentsAPI {
   "previousUri" : "previousUri"
 }, statusCode=200}]
      
+     - parameter pageSize: (query) Number of entities to return. Defaults to 300. (optional)
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter showOnlyPublished: (query) Filter by published status. (optional)
 
      - returns: RequestBuilder<WebDeploymentConfigurationVersionEntityListing> 
      */
-    open class func getWebdeploymentsConfigurationsWithRequestBuilder(showOnlyPublished: Bool? = nil) -> RequestBuilder<WebDeploymentConfigurationVersionEntityListing> {        
+    open class func getWebdeploymentsConfigurationsWithRequestBuilder(pageSize: String? = nil, before: String? = nil, after: String? = nil, showOnlyPublished: Bool? = nil) -> RequestBuilder<WebDeploymentConfigurationVersionEntityListing> {        
         let path = "/api/v2/webdeployments/configurations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize, 
+            "before": before, 
+            "after": after, 
             "showOnlyPublished": showOnlyPublished
         ])
 
@@ -974,6 +1005,12 @@ open class WebDeploymentsAPI {
 
     
     
+    
+    
+    
+    
+    
+    
     public enum Expand_getWebdeploymentsDeployments: String { 
         case configuration = "Configuration"
         case supportedContent = "SupportedContent"
@@ -983,11 +1020,14 @@ open class WebDeploymentsAPI {
     /**
      Get deployments
      
+     - parameter pageSize: (query) Number of entities to return. Defaults to 300. (optional)
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected.  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWebdeploymentsDeployments(expand: [String]? = nil, completion: @escaping ((_ data: ExpandableWebDeploymentEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWebdeploymentsDeploymentsWithRequestBuilder(expand: expand)
+    open class func getWebdeploymentsDeployments(pageSize: String? = nil, before: String? = nil, after: String? = nil, expand: [String]? = nil, completion: @escaping ((_ data: ExpandableWebDeploymentEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWebdeploymentsDeploymentsWithRequestBuilder(pageSize: pageSize, before: before, after: after, expand: expand)
         requestBuilder.execute { (response: Response<ExpandableWebDeploymentEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1062,17 +1102,23 @@ open class WebDeploymentsAPI {
   "previousUri" : "previousUri"
 }, statusCode=200}]
      
+     - parameter pageSize: (query) Number of entities to return. Defaults to 300. (optional)
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected.  (optional)
 
      - returns: RequestBuilder<ExpandableWebDeploymentEntityListing> 
      */
-    open class func getWebdeploymentsDeploymentsWithRequestBuilder(expand: [String]? = nil) -> RequestBuilder<ExpandableWebDeploymentEntityListing> {        
+    open class func getWebdeploymentsDeploymentsWithRequestBuilder(pageSize: String? = nil, before: String? = nil, after: String? = nil, expand: [String]? = nil) -> RequestBuilder<ExpandableWebDeploymentEntityListing> {        
         let path = "/api/v2/webdeployments/deployments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize, 
+            "before": before, 
+            "after": after, 
             "expand": expand
         ])
 

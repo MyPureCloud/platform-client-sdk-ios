@@ -33,6 +33,8 @@ public class EscalationRuleResponse: Codable {
 
 
 
+
+
     /** ID of the escalation rule. */
     public var _id: String?
     /** The name of the escalation rule. */
@@ -59,10 +61,12 @@ public class EscalationRuleResponse: Codable {
     public var instagramEscalation: EscalationTarget?
     /** The target integration configuration used for a X (formerly Twitter) message escalation. */
     public var twitterEscalation: EscalationTarget?
+    /** The target integration configuration used for a Google Business Profile message escalation. */
+    public var googleBusinessProfileEscalation: EscalationTarget?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, matchCriteria: String?, priority: Int?, divisionId: String?, _description: String?, dateCreated: Date?, dateModified: Date?, status: Status?, openEscalation: EscalationTarget?, facebookEscalation: EscalationTarget?, instagramEscalation: EscalationTarget?, twitterEscalation: EscalationTarget?, selfUri: String?) {
+    public init(_id: String?, name: String?, matchCriteria: String?, priority: Int?, divisionId: String?, _description: String?, dateCreated: Date?, dateModified: Date?, status: Status?, openEscalation: EscalationTarget?, facebookEscalation: EscalationTarget?, instagramEscalation: EscalationTarget?, twitterEscalation: EscalationTarget?, googleBusinessProfileEscalation: EscalationTarget?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.matchCriteria = matchCriteria
@@ -76,6 +80,7 @@ public class EscalationRuleResponse: Codable {
         self.facebookEscalation = facebookEscalation
         self.instagramEscalation = instagramEscalation
         self.twitterEscalation = twitterEscalation
+        self.googleBusinessProfileEscalation = googleBusinessProfileEscalation
         self.selfUri = selfUri
     }
 
@@ -93,6 +98,7 @@ public class EscalationRuleResponse: Codable {
         case facebookEscalation
         case instagramEscalation
         case twitterEscalation
+        case googleBusinessProfileEscalation
         case selfUri
     }
 

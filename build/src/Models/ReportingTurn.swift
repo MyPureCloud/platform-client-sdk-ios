@@ -28,6 +28,7 @@ public class ReportingTurn: Codable {
         case successConfirmationNo = "SuccessConfirmationNo"
         case skippedCollection = "SkippedCollection"
         case partialCollection = "PartialCollection"
+        case guardrailsViolation = "GuardrailsViolation"
         case noMatchCollection = "NoMatchCollection"
         case noMatchConfirmation = "NoMatchConfirmation"
         case agentRequestedByUser = "AgentRequestedByUser"

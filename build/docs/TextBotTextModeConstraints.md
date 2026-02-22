@@ -12,4 +12,4 @@ Mode constraints to observe when operating on a bot flow.
 
 
 
-_PureCloudPlatformClientV2@187.0.0_
+_PureCloudPlatformClientV2@188.0.0_
