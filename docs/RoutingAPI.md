@@ -1766,8 +1766,9 @@ Get a route
 
 Wraps GET /api/v2/routing/email/domains/{domainName}/routes/{routeId}  
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
+* routing:email:view
 * routing:email:manage
 
 ### Example
@@ -1873,8 +1874,9 @@ Get routes
 
 Wraps GET /api/v2/routing/email/domains/{domainName}/routes  
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
+* routing:email:view
 * routing:email:manage
 
 ### Example
@@ -8448,4 +8450,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@188.0.0_
+_PureCloudPlatformClientV2@189.0.0_

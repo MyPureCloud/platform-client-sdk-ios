@@ -14,6 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteKnowledgeKnowledgebaseSourcesSalesforceSourceId**](KnowledgeAPI#deleteKnowledgeKnowledgebaseSourcesSalesforceSourceId) | Delete Salesforce Knowledge integration source |
 | [**deleteKnowledgeKnowledgebaseSourcesServicenowSourceId**](KnowledgeAPI#deleteKnowledgeKnowledgebaseSourcesServicenowSourceId) | Delete ServiceNow Knowledge integration source |
 | [**deleteKnowledgeKnowledgebaseSynchronizeJob**](KnowledgeAPI#deleteKnowledgeKnowledgebaseSynchronizeJob) | Delete synchronization job |
+| [**deleteKnowledgeSetting**](KnowledgeAPI#deleteKnowledgeSetting) | Delete Knowledge setting. |
 | [**getKnowledgeGuestSessionCategories**](KnowledgeAPI#getKnowledgeGuestSessionCategories) | Get categories |
 | [**getKnowledgeGuestSessionDocument**](KnowledgeAPI#getKnowledgeGuestSessionDocument) | Get a knowledge document by ID. |
 | [**getKnowledgeGuestSessionDocuments**](KnowledgeAPI#getKnowledgeGuestSessionDocuments) | Get documents. |
@@ -47,6 +48,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getKnowledgeKnowledgebaseUnansweredGroups**](KnowledgeAPI#getKnowledgeKnowledgebaseUnansweredGroups) | Get knowledge base unanswered groups |
 | [**getKnowledgeKnowledgebaseUploadsUrlsJob**](KnowledgeAPI#getKnowledgeKnowledgebaseUploadsUrlsJob) | Get content upload from URL job status |
 | [**getKnowledgeKnowledgebases**](KnowledgeAPI#getKnowledgeKnowledgebases) | Get knowledge bases |
+| [**getKnowledgeSetting**](KnowledgeAPI#getKnowledgeSetting) | Get Knowledge setting. |
+| [**getKnowledgeSettings**](KnowledgeAPI#getKnowledgeSettings) | Get Knowledge settings. |
 | [**patchKnowledgeGuestSessionDocumentsSearchSearchId**](KnowledgeAPI#patchKnowledgeGuestSessionDocumentsSearchSearchId) | Update search result. |
 | [**patchKnowledgeKnowledgebase**](KnowledgeAPI#patchKnowledgeKnowledgebase) | Update knowledge base |
 | [**patchKnowledgeKnowledgebaseCategory**](KnowledgeAPI#patchKnowledgeKnowledgebaseCategory) | Update category |
@@ -60,6 +63,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchKnowledgeKnowledgebaseParseJob**](KnowledgeAPI#patchKnowledgeKnowledgebaseParseJob) | Send update to the parse operation |
 | [**patchKnowledgeKnowledgebaseSynchronizeJob**](KnowledgeAPI#patchKnowledgeKnowledgebaseSynchronizeJob) | Update synchronization job |
 | [**patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup**](KnowledgeAPI#patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup) | Update a Knowledge base unanswered phrase group |
+| [**patchKnowledgeSetting**](KnowledgeAPI#patchKnowledgeSetting) | Update Knowledge setting. |
 | [**postKnowledgeDocumentuploads**](KnowledgeAPI#postKnowledgeDocumentuploads) | Creates a presigned URL for uploading a knowledge import file with a set of documents |
 | [**postKnowledgeGuestSessionDocumentCopies**](KnowledgeAPI#postKnowledgeGuestSessionDocumentCopies) | Indicate that the document was copied by the user. |
 | [**postKnowledgeGuestSessionDocumentFeedback**](KnowledgeAPI#postKnowledgeGuestSessionDocumentFeedback) | Give feedback on a document |
@@ -97,6 +101,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postKnowledgeKnowledgebaseSynchronizeJobs**](KnowledgeAPI#postKnowledgeKnowledgebaseSynchronizeJobs) | Create synchronization job |
 | [**postKnowledgeKnowledgebaseUploadsUrlsJobs**](KnowledgeAPI#postKnowledgeKnowledgebaseUploadsUrlsJobs) | Create content upload from URL job |
 | [**postKnowledgeKnowledgebases**](KnowledgeAPI#postKnowledgeKnowledgebases) | Create new knowledge base |
+| [**postKnowledgeSearchPreview**](KnowledgeAPI#postKnowledgeSearchPreview) | Get Knowledge Search Preview |
+| [**postKnowledgeSettings**](KnowledgeAPI#postKnowledgeSettings) | Create Knowledge setting. |
 | [**putKnowledgeKnowledgebaseSourcesSalesforceSourceId**](KnowledgeAPI#putKnowledgeKnowledgebaseSourcesSalesforceSourceId) | Update Salesforce Knowledge integration source |
 | [**putKnowledgeKnowledgebaseSourcesServicenowSourceId**](KnowledgeAPI#putKnowledgeKnowledgebaseSourcesServicenowSourceId) | Update ServiceNow Knowledge integration source |
 {: class="table-striped"}
@@ -609,6 +615,55 @@ KnowledgeAPI.deleteKnowledgeKnowledgebaseSynchronizeJob(knowledgeBaseId: knowled
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
 | **syncJobId** | **String**| Synchronization job ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteKnowledgeSetting
+
+
+
+> Void deleteKnowledgeSetting(knowledgeSettingId)
+
+Delete Knowledge setting.
+
+
+
+Wraps DELETE /api/v2/knowledge/settings/{knowledgeSettingId}  
+
+Requires ALL permissions: 
+
+* knowledge:knowledgeSetting:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeSettingId: String = "" // Knowledge Setting ID.
+
+// Code example
+KnowledgeAPI.deleteKnowledgeSetting(knowledgeSettingId: knowledgeSettingId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("KnowledgeAPI.deleteKnowledgeSetting was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeSettingId** | **String**| Knowledge Setting ID. | |
 
 
 ### Return type
@@ -2513,6 +2568,118 @@ KnowledgeAPI.getKnowledgeKnowledgebases(before: before, after: after, limit: lim
 [**KnowledgeBaseListing**](KnowledgeBaseListing)
 
 
+## getKnowledgeSetting
+
+
+
+> [KnowledgeSettingsResponse](KnowledgeSettingsResponse) getKnowledgeSetting(knowledgeSettingId)
+
+Get Knowledge setting.
+
+
+
+Wraps GET /api/v2/knowledge/settings/{knowledgeSettingId}  
+
+Requires ALL permissions: 
+
+* knowledge:knowledgeSetting:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeSettingId: String = "" // Knowledge Setting ID.
+
+// Code example
+KnowledgeAPI.getKnowledgeSetting(knowledgeSettingId: knowledgeSettingId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeSetting was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeSettingId** | **String**| Knowledge Setting ID. | |
+
+
+### Return type
+
+[**KnowledgeSettingsResponse**](KnowledgeSettingsResponse)
+
+
+## getKnowledgeSettings
+
+
+
+> [KnowledgeSettingListing](KnowledgeSettingListing) getKnowledgeSettings(before, after, pageSize, name, sourceId, sortBy, sortOrder)
+
+Get Knowledge settings.
+
+
+
+Wraps GET /api/v2/knowledge/settings  
+
+Requires ALL permissions: 
+
+* knowledge:knowledgeSetting:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let name: String = "" // Knowledge setting name to search upon.
+let sourceId: String = "" // Source ID to filter knowledge settings by.
+let sortBy: KnowledgeAPI.SortBy_getKnowledgeSettings = KnowledgeAPI.SortBy_getKnowledgeSettings.enummember // Field to sort the knowledge settings on.
+let sortOrder: KnowledgeAPI.SortOrder_getKnowledgeSettings = KnowledgeAPI.SortOrder_getKnowledgeSettings.enummember // Sorting order for knowledge settings.
+
+// Code example
+KnowledgeAPI.getKnowledgeSettings(before: before, after: after, pageSize: pageSize, name: name, sourceId: sourceId, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **name** | **String**| Knowledge setting name to search upon. | [optional] |
+| **sourceId** | **String**| Source ID to filter knowledge settings by. | [optional] |
+| **sortBy** | **String**| Field to sort the knowledge settings on. | [optional]<br />**Values**: datemodified ("dateModified"), name ("name") |
+| **sortOrder** | **String**| Sorting order for knowledge settings. | [optional]<br />**Values**: asc ("Asc"), desc ("Desc") |
+
+
+### Return type
+
+[**KnowledgeSettingListing**](KnowledgeSettingListing)
+
+
 ## patchKnowledgeGuestSessionDocumentsSearchSearchId
 
 
@@ -3213,6 +3380,58 @@ KnowledgeAPI.patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup(knowledgeBase
 ### Return type
 
 [**UnansweredPhraseGroupUpdateResponse**](UnansweredPhraseGroupUpdateResponse)
+
+
+## patchKnowledgeSetting
+
+
+
+> [KnowledgeSettingsResponse](KnowledgeSettingsResponse) patchKnowledgeSetting(knowledgeSettingId, body)
+
+Update Knowledge setting.
+
+
+
+Wraps PATCH /api/v2/knowledge/settings/{knowledgeSettingId}  
+
+Requires ALL permissions: 
+
+* knowledge:knowledgeSetting:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeSettingId: String = "" // Knowledge Setting ID.
+let body: KnowledgeSettingsRequest = new KnowledgeSettingsRequest(...) // 
+
+// Code example
+KnowledgeAPI.patchKnowledgeSetting(knowledgeSettingId: knowledgeSettingId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.patchKnowledgeSetting was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeSettingId** | **String**| Knowledge Setting ID. | |
+| **body** | [**KnowledgeSettingsRequest**](KnowledgeSettingsRequest)|  | |
+
+
+### Return type
+
+[**KnowledgeSettingsResponse**](KnowledgeSettingsResponse)
 
 
 ## postKnowledgeDocumentuploads
@@ -5148,6 +5367,106 @@ KnowledgeAPI.postKnowledgeKnowledgebases(body: body) { (response, error) in
 [**KnowledgeBase**](KnowledgeBase)
 
 
+## postKnowledgeSearchPreview
+
+
+
+> [KnowledgeSearchPreviewResponse](KnowledgeSearchPreviewResponse) postKnowledgeSearchPreview(body)
+
+Get Knowledge Search Preview
+
+
+
+Wraps POST /api/v2/knowledge/search/preview  
+
+Requires ALL permissions: 
+
+* knowledge:knowledgeSetting:searchPreview
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: KnowledgeSearchPreviewRequest = new KnowledgeSearchPreviewRequest(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeSearchPreview(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeSearchPreview was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**KnowledgeSearchPreviewRequest**](KnowledgeSearchPreviewRequest)|  | [optional] |
+
+
+### Return type
+
+[**KnowledgeSearchPreviewResponse**](KnowledgeSearchPreviewResponse)
+
+
+## postKnowledgeSettings
+
+
+
+> [KnowledgeSettingsResponse](KnowledgeSettingsResponse) postKnowledgeSettings(body)
+
+Create Knowledge setting.
+
+
+
+Wraps POST /api/v2/knowledge/settings  
+
+Requires ALL permissions: 
+
+* knowledge:knowledgeSetting:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: KnowledgeSettingsRequest = new KnowledgeSettingsRequest(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**KnowledgeSettingsRequest**](KnowledgeSettingsRequest)|  | [optional] |
+
+
+### Return type
+
+[**KnowledgeSettingsResponse**](KnowledgeSettingsResponse)
+
+
 ## putKnowledgeKnowledgebaseSourcesSalesforceSourceId
 
 
@@ -5256,4 +5575,4 @@ KnowledgeAPI.putKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId:
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatformClientV2@188.0.0_
+_PureCloudPlatformClientV2@189.0.0_

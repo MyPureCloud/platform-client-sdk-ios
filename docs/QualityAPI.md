@@ -2394,7 +2394,7 @@ QualityAPI.postQualityCalibrations(body: body, expand: expand) { (response, erro
 
 
 
-> [Evaluation](Evaluation) postQualityConversationEvaluations(conversationId, body, expand)
+> [Evaluation](Evaluation) postQualityConversationEvaluations(conversationId, body, idempotencyKey, expand)
 
 Create an evaluation
 
@@ -2416,10 +2416,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
 let body: EvaluationCreateBody = new EvaluationCreateBody(...) // evaluation
+let idempotencyKey: String = "" // Idempotency key for request deduplication
 let expand: String = "" // evaluatorId
 
 // Code example
-QualityAPI.postQualityConversationEvaluations(conversationId: conversationId, body: body, expand: expand) { (response, error) in
+QualityAPI.postQualityConversationEvaluations(conversationId: conversationId, body: body, idempotencyKey: idempotencyKey, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2436,6 +2437,7 @@ QualityAPI.postQualityConversationEvaluations(conversationId: conversationId, bo
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **body** | [**EvaluationCreateBody**](EvaluationCreateBody)| evaluation | |
+| **idempotencyKey** | **String**| Idempotency key for request deduplication | [optional] |
 | **expand** | **String**| evaluatorId | [optional] |
 
 
@@ -3522,4 +3524,4 @@ QualityAPI.putQualitySurveysScorable(customerSurveyUrl: customerSurveyUrl, body:
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatformClientV2@188.0.0_
+_PureCloudPlatformClientV2@189.0.0_

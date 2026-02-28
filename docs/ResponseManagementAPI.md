@@ -552,7 +552,7 @@ Get response libraries.
 
 Wraps POST /api/v2/responsemanagement/libraries/bulk  
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * responses:library:view
 
@@ -956,4 +956,4 @@ ResponseManagementAPI.putResponsemanagementResponseasset(responseAssetId: respon
 [**ResponseAsset**](ResponseAsset)
 
 
-_PureCloudPlatformClientV2@188.0.0_
+_PureCloudPlatformClientV2@189.0.0_

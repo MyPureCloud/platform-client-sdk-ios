@@ -12,10 +12,11 @@
 | **sourceId** | **String** | Represents the ID of a registered source | [optional] |
 | **primary** | **Bool** | A boolean used to tell whether or not to set this presence source as the primary on a PATCH | [optional] |
 | **presenceDefinition** | [**PresenceDefinition**](PresenceDefinition) |  | [optional] |
+| **futurePresenceDefinition** | [**PresenceDefinition**](PresenceDefinition) | The definition of the user&#39;s desired future presence | [optional] |
 | **message** | **String** |  | [optional] |
 | **modifiedDate** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@188.0.0_
+_PureCloudPlatformClientV2@189.0.0_

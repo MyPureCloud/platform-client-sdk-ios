@@ -12,4 +12,4 @@ Request body for generating the content of a guide
 
 
 
-_PureCloudPlatformClientV2@188.0.0_
+_PureCloudPlatformClientV2@189.0.0_

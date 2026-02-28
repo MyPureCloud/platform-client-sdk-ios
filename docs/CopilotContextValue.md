@@ -9,7 +9,8 @@
 | **name** | **String** | Name of the context. | |
 | **type** | **String** | Type of the context. | |
 | **participantDataProperties** | [**ParticipantDataProperties**](ParticipantDataProperties) | Participant data properties. | [optional] |
+| **conversationAttributeProperties** | [**ConversationAttributeProperties**](ConversationAttributeProperties) | Conversation attribute properties. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@188.0.0_
+_PureCloudPlatformClientV2@189.0.0_
