@@ -2635,6 +2635,7 @@ open class PresenceAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "sourceId" : "sourceId",
+  "futurePresenceDefinition" : "{}",
   "presenceDefinition" : {
     "systemPresence" : "systemPresence",
     "selfUri" : "https://openapi-generator.tech",
@@ -2707,6 +2708,7 @@ open class PresenceAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "sourceId" : "sourceId",
+  "futurePresenceDefinition" : "{}",
   "presenceDefinition" : {
     "systemPresence" : "systemPresence",
     "selfUri" : "https://openapi-generator.tech",
@@ -2922,6 +2924,7 @@ open class PresenceAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "sourceId" : "sourceId",
+  "futurePresenceDefinition" : "{}",
   "presenceDefinition" : {
     "systemPresence" : "systemPresence",
     "selfUri" : "https://openapi-generator.tech",
@@ -2998,6 +3001,7 @@ open class PresenceAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "sourceId" : "sourceId",
+  "futurePresenceDefinition" : "{}",
   "presenceDefinition" : {
     "systemPresence" : "systemPresence",
     "selfUri" : "https://openapi-generator.tech",
@@ -4747,6 +4751,7 @@ open class PresenceAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "sourceId" : "sourceId",
+  "futurePresenceDefinition" : "{}",
   "presenceDefinition" : {
     "systemPresence" : "systemPresence",
     "selfUri" : "https://openapi-generator.tech",

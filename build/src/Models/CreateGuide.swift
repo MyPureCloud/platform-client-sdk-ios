@@ -8,6 +8,7 @@ public class CreateGuide: Codable {
         case manual = "Manual"
         case prompt = "Prompt"
         case document = "Document"
+        case transcripts = "Transcripts"
     }
 
     /** The name of the guide. */

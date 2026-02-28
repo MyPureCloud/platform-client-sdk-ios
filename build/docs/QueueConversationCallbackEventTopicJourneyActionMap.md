@@ -12,4 +12,4 @@ Details about the action map from the Journey System which triggered this action
 
 
 
-_PureCloudPlatformClientV2@188.0.0_
+_PureCloudPlatformClientV2@189.0.0_

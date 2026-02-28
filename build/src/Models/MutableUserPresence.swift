@@ -20,6 +20,8 @@ public class MutableUserPresence: Codable {
 
 
 
+
+
     /** The user's id */
     public var _id: String?
     public var name: String?
@@ -30,19 +32,22 @@ public class MutableUserPresence: Codable {
     /** A boolean used to tell whether or not to set this presence source as the primary on a PATCH */
     public var primary: Bool?
     public var presenceDefinition: PresenceDefinition?
+    /** The definition of the user's desired future presence */
+    public var futurePresenceDefinition: PresenceDefinition?
     public var message: String?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, source: String?, sourceId: String?, primary: Bool?, presenceDefinition: PresenceDefinition?, message: String?, modifiedDate: Date?, selfUri: String?) {
+    public init(_id: String?, name: String?, source: String?, sourceId: String?, primary: Bool?, presenceDefinition: PresenceDefinition?, futurePresenceDefinition: PresenceDefinition?, message: String?, modifiedDate: Date?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.source = source
         self.sourceId = sourceId
         self.primary = primary
         self.presenceDefinition = presenceDefinition
+        self.futurePresenceDefinition = futurePresenceDefinition
         self.message = message
         self.modifiedDate = modifiedDate
         self.selfUri = selfUri
@@ -55,6 +60,7 @@ public class MutableUserPresence: Codable {
         case sourceId
         case primary
         case presenceDefinition
+        case futurePresenceDefinition
         case message
         case modifiedDate
         case selfUri

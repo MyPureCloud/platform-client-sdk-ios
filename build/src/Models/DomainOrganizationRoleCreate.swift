@@ -45,9 +45,11 @@ public class DomainOrganizationRoleCreate: Codable {
     public var userCount: Int?
     /** Optional unless patch operation. */
     public var roleNeedsUpdate: Bool?
+    /** Set baseLicense only while updating license using PUT /license endpoint */
     public var baseLicense: String?
+    /** Set addonLicenses only while updating license using PUT /license endpoint */
     public var addonLicenses: [String]?
-    /** The time that this role licenses were most recently updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    /** The time that this role licenses were most recently updated using the PUT /license endpoint. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateLicenseLastUpdated: Date?
     public var base: Bool?
     public var _default: Bool?

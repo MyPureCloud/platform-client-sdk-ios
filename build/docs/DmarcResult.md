@@ -14,4 +14,4 @@ Represents the DMARC verification result for an email domain
 
 
 
-_PureCloudPlatformClientV2@188.0.0_
+_PureCloudPlatformClientV2@189.0.0_

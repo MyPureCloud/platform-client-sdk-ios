@@ -122,6 +122,74 @@ open class TelephonyAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    public enum MetricType_getTelephonyCallsMetrics: String { 
+        case cloud = "cloud"
+        case premises = "premises"
+    }
+    
+    
+    /**
+     Get the concurrent call metrics for a given organization.
+     
+     - parameter metricType: (query) Flag to indicate metric type to fetch. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyCallsMetrics(metricType: MetricType_getTelephonyCallsMetrics? = nil, completion: @escaping ((_ data: OrganizationCallMetrics?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyCallsMetricsWithRequestBuilder(metricType: metricType)
+        requestBuilder.execute { (response: Response<OrganizationCallMetrics>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the concurrent call metrics for a given organization.
+     - GET /api/v2/telephony/calls/metrics
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "autoScalingTriggerPercentage" : 6.027456183070403,
+  "memoryIntensity" : "Low",
+  "maxCallSessionCapacity" : 2,
+  "usage" : 0.8008281904610115,
+  "concurrentCallCount" : 1,
+  "autoScaleInProgress" : "Up",
+  "cpuIntensity" : "Low",
+  "maxCallCapacity" : 5,
+  "concurrentCallSessionCount" : 5
+}, statusCode=200}]
+     
+     - parameter metricType: (query) Flag to indicate metric type to fetch. (optional)
+
+     - returns: RequestBuilder<OrganizationCallMetrics> 
+     */
+    open class func getTelephonyCallsMetricsWithRequestBuilder(metricType: MetricType_getTelephonyCallsMetrics? = nil) -> RequestBuilder<OrganizationCallMetrics> {        
+        let path = "/api/v2/telephony/calls/metrics"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "metricType": metricType?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<OrganizationCallMetrics>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     /**
      Retrieve the list of AWS regions media can stream through.
      

@@ -30575,16 +30575,19 @@ open class QualityAPI {
     
     
     
+    
+    
     /**
      Create an evaluation
      
      - parameter conversationId: (path) conversationId 
      - parameter body: (body) evaluation 
+     - parameter idempotencyKey: (header) Idempotency key for request deduplication (optional)
      - parameter expand: (query) evaluatorId (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postQualityConversationEvaluations(conversationId: String, body: EvaluationCreateBody, expand: String? = nil, completion: @escaping ((_ data: Evaluation?,_ error: Error?) -> Void)) {
-        let requestBuilder = postQualityConversationEvaluationsWithRequestBuilder(conversationId: conversationId, body: body, expand: expand)
+    open class func postQualityConversationEvaluations(conversationId: String, body: EvaluationCreateBody, idempotencyKey: String? = nil, expand: String? = nil, completion: @escaping ((_ data: Evaluation?,_ error: Error?) -> Void)) {
+        let requestBuilder = postQualityConversationEvaluationsWithRequestBuilder(conversationId: conversationId, body: body, idempotencyKey: idempotencyKey, expand: expand)
         requestBuilder.execute { (response: Response<Evaluation>?, error) -> Void in
             do {
                 if let e = error {
@@ -33460,11 +33463,12 @@ open class QualityAPI {
      
      - parameter conversationId: (path) conversationId 
      - parameter body: (body) evaluation 
+     - parameter idempotencyKey: (header) Idempotency key for request deduplication (optional)
      - parameter expand: (query) evaluatorId (optional)
 
      - returns: RequestBuilder<Evaluation> 
      */
-    open class func postQualityConversationEvaluationsWithRequestBuilder(conversationId: String, body: EvaluationCreateBody, expand: String? = nil) -> RequestBuilder<Evaluation> {        
+    open class func postQualityConversationEvaluationsWithRequestBuilder(conversationId: String, body: EvaluationCreateBody, idempotencyKey: String? = nil, expand: String? = nil) -> RequestBuilder<Evaluation> {        
         var path = "/api/v2/quality/conversations/{conversationId}/evaluations"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -33476,10 +33480,14 @@ open class QualityAPI {
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
+        let nillableHeaders: [String: Any?] = [
+            "Idempotency-Key": idempotencyKey
+        ]
+        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
 
         let requestBuilder: RequestBuilder<Evaluation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body, headers: headerParameters)
     }
 
     

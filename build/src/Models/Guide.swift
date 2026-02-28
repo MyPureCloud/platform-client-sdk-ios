@@ -15,6 +15,7 @@ public class Guide: Codable {
         case manual = "Manual"
         case prompt = "Prompt"
         case document = "Document"
+        case transcripts = "Transcripts"
     }
 
 

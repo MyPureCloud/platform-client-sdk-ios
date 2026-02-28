@@ -1,4 +1,640 @@
 {
+  "deletescimuser": {
+    "operationId": "deletescimuser",
+    "functionName": "deleteScimUser",
+    "signature": "deleteScimUser(userId, ifMatch)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "JSON",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/users.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Delete a user\nDeleteScimUserRequest.deleteScimUser(userId: userId, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"DeleteScimUserRequest.deleteScimUser was successful\")\n        dump(response)\n    }\n}"
+  },
+  "deletescimv2user": {
+    "operationId": "deletescimv2user",
+    "functionName": "deleteScimV2User",
+    "signature": "deleteScimV2User(userId, ifMatch)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "JSON",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/v2/users.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Delete a user\nDeleteScimV2UserRequest.deleteScimV2User(userId: userId, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"DeleteScimV2UserRequest.deleteScimV2User was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimgroup": {
+    "operationId": "getscimgroup",
+    "functionName": "getScimGroup",
+    "signature": "getScimGroup(groupId, attributes, excludedAttributes, ifNoneMatch)",
+    "parameters": [
+      {
+        "name": "groupId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "attributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "excludedAttributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "ifNoneMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2Group",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/groups.\nlet attributes: [String] = [\"\"] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [\"\"] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.\n\n// Get a group\nGetScimGroupRequest.getScimGroup(groupId: groupId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimGroupRequest.getScimGroup was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimgroups": {
+    "operationId": "getscimgroups",
+    "functionName": "getScimGroups",
+    "signature": "getScimGroups(startIndex, count, attributes, excludedAttributes, filter)",
+    "parameters": [
+      {
+        "name": "startIndex",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "count",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "attributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "excludedAttributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "filter",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimGroupListResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet startIndex: Int = 0 // The 1-based index of the first query result.\nlet count: Int = 0 // The requested number of items per page. A value of 0 returns \\\"totalResults\\\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \\\"excludedAttributes\\\" or \\\"attributes\\\" query parameters to exclude or only include secondary lookup values such as \\\"externalId\\\",  \\\"roles\\\", \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\\\", or \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\\\".\nlet attributes: [String] = [\"\"] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [\"\"] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet filter: String = displayName eq groupName // Filters results. If nothing is specified, returns all groups. Examples of valid values: \\\"id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\\\", \\\"displayname eq Sales\\\".\n\n// Get a list of groups\nGetScimGroupsRequest.getScimGroups(startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes, filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimGroupsRequest.getScimGroups was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimresourcetype": {
+    "operationId": "getscimresourcetype",
+    "functionName": "getScimResourcetype",
+    "signature": "getScimResourcetype(resourceType)",
+    "parameters": [
+      {
+        "name": "resourceType",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ScimConfigResourceType",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet resourceType: GetScimResourcetypeRequest.ResourceType_getScimResourcetype = GetScimResourcetypeRequest.ResourceType_getScimResourcetype.enummember // The type of resource. Returned with GET /api/v2/scim/resourcetypes.\n\n// Get a resource type\nGetScimResourcetypeRequest.getScimResourcetype(resourceType: resourceType) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimResourcetypeRequest.getScimResourcetype was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimresourcetypes": {
+    "operationId": "getscimresourcetypes",
+    "functionName": "getScimResourcetypes",
+    "signature": "getScimResourcetypes()",
+    "return": "ScimConfigResourceTypesListResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get a list of resource types\nGetScimResourcetypesRequest.getScimResourcetypes() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimResourcetypesRequest.getScimResourcetypes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimschema": {
+    "operationId": "getscimschema",
+    "functionName": "getScimSchema",
+    "signature": "getScimSchema(schemaId)",
+    "parameters": [
+      {
+        "name": "schemaId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ScimV2SchemaDefinition",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaId: GetScimSchemaRequest.SchemaId_getScimSchema = GetScimSchemaRequest.SchemaId_getScimSchema.enummember // The ID of a schema. Returned with GET /api/v2/scim/schemas.\n\n// Get a SCIM schema\nGetScimSchemaRequest.getScimSchema(schemaId: schemaId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimSchemaRequest.getScimSchema was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimschemas": {
+    "operationId": "getscimschemas",
+    "functionName": "getScimSchemas",
+    "signature": "getScimSchemas(filter)",
+    "parameters": [
+      {
+        "name": "filter",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2SchemaListResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filter: String = displayName eq groupName // Filtered results are invalid and return 403 Unauthorized.\n\n// Get a list of SCIM schemas\nGetScimSchemasRequest.getScimSchemas(filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimSchemasRequest.getScimSchemas was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimserviceproviderconfig": {
+    "operationId": "getscimserviceproviderconfig",
+    "functionName": "getScimServiceproviderconfig",
+    "signature": "getScimServiceproviderconfig(ifNoneMatch)",
+    "parameters": [
+      {
+        "name": "ifNoneMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimServiceProviderConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/serviceproviderconfig. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. \n\n// Get a service provider's configuration\nGetScimServiceproviderconfigRequest.getScimServiceproviderconfig(ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimServiceproviderconfigRequest.getScimServiceproviderconfig was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimuser": {
+    "operationId": "getscimuser",
+    "functionName": "getScimUser",
+    "signature": "getScimUser(userId, attributes, excludedAttributes, ifNoneMatch)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "attributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "excludedAttributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "ifNoneMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2User",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/users.\nlet attributes: [String] = [\"\"] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [\"\"] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.\n\n// Get a user\nGetScimUserRequest.getScimUser(userId: userId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimUserRequest.getScimUser was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimusers": {
+    "operationId": "getscimusers",
+    "functionName": "getScimUsers",
+    "signature": "getScimUsers(startIndex, count, attributes, excludedAttributes, filter)",
+    "parameters": [
+      {
+        "name": "startIndex",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "count",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "attributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "excludedAttributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "filter",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimUserListResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet startIndex: Int = 0 // The 1-based index of the first query result.\nlet count: Int = 0 // The requested number of items per page. A value of 0 returns \\\"totalResults\\\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \\\"excludedAttributes\\\" or \\\"attributes\\\" query parameters to exclude or only include secondary lookup values such as \\\"externalId\\\",  \\\"roles\\\", \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\\\", or \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\\\".\nlet attributes: [String] = [\"\"] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [\"\"] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet filter: String = \"\" // Filters results. If nothing is specified, returns all active users. Examples of valid values: \\\"id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\\\", \\\"userName eq search@sample.org\\\", \\\"manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\\\", \\\"email eq search@sample.org\\\", \\\"division eq divisionName\\\", \\\"externalId eq 167844\\\", \\\"active eq false\\\", \\\"employeeNumber eq 9876543210\\\".\n\n// Get a list of users\nGetScimUsersRequest.getScimUsers(startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes, filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimUsersRequest.getScimUsers was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2group": {
+    "operationId": "getscimv2group",
+    "functionName": "getScimV2Group",
+    "signature": "getScimV2Group(groupId, attributes, excludedAttributes, ifNoneMatch)",
+    "parameters": [
+      {
+        "name": "groupId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "attributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "excludedAttributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "ifNoneMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2Group",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/v2/groups.\nlet attributes: [String] = [\"\"] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [\"\"] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.\n\n// Get a group\nGetScimV2GroupRequest.getScimV2Group(groupId: groupId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2GroupRequest.getScimV2Group was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2groups": {
+    "operationId": "getscimv2groups",
+    "functionName": "getScimV2Groups",
+    "signature": "getScimV2Groups(filter, startIndex, count, attributes, excludedAttributes)",
+    "parameters": [
+      {
+        "name": "filter",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "startIndex",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "count",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "attributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "excludedAttributes",
+        "type": "[String]",
+        "required": "false"
+      }
+    ],
+    "return": "ScimGroupListResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filter: String = displayName eq groupName // Filters results. If nothing is specified, returns all groups. Examples of valid values: \\\"id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\\\", \\\"displayname eq Sales\\\".\nlet startIndex: Int = 0 // The 1-based index of the first query result.\nlet count: Int = 0 // The requested number of items per page. A value of 0 returns \\\"totalResults\\\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \\\"excludedAttributes\\\" or \\\"attributes\\\" query parameters to exclude or only include secondary lookup values such as \\\"externalId\\\",  \\\"roles\\\", \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\\\", or \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\\\".\nlet attributes: [String] = [\"\"] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [\"\"] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\n\n// Get a list of groups\nGetScimV2GroupsRequest.getScimV2Groups(filter: filter, startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2GroupsRequest.getScimV2Groups was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2resourcetype": {
+    "operationId": "getscimv2resourcetype",
+    "functionName": "getScimV2Resourcetype",
+    "signature": "getScimV2Resourcetype(resourceType)",
+    "parameters": [
+      {
+        "name": "resourceType",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ScimConfigResourceType",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet resourceType: GetScimV2ResourcetypeRequest.ResourceType_getScimV2Resourcetype = GetScimV2ResourcetypeRequest.ResourceType_getScimV2Resourcetype.enummember // The type of resource. Returned with GET /api/v2/scim/v2/resourcetypes.\n\n// Get a resource type\nGetScimV2ResourcetypeRequest.getScimV2Resourcetype(resourceType: resourceType) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2ResourcetypeRequest.getScimV2Resourcetype was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2resourcetypes": {
+    "operationId": "getscimv2resourcetypes",
+    "functionName": "getScimV2Resourcetypes",
+    "signature": "getScimV2Resourcetypes()",
+    "return": "ScimConfigResourceTypesListResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get a list of resource types\nGetScimV2ResourcetypesRequest.getScimV2Resourcetypes() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2ResourcetypesRequest.getScimV2Resourcetypes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2schema": {
+    "operationId": "getscimv2schema",
+    "functionName": "getScimV2Schema",
+    "signature": "getScimV2Schema(schemaId)",
+    "parameters": [
+      {
+        "name": "schemaId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ScimV2SchemaDefinition",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaId: GetScimV2SchemaRequest.SchemaId_getScimV2Schema = GetScimV2SchemaRequest.SchemaId_getScimV2Schema.enummember // The ID of a schema. Returned with GET /api/v2/scim/v2/schemas.\n\n// Get a SCIM schema\nGetScimV2SchemaRequest.getScimV2Schema(schemaId: schemaId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2SchemaRequest.getScimV2Schema was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2schemas": {
+    "operationId": "getscimv2schemas",
+    "functionName": "getScimV2Schemas",
+    "signature": "getScimV2Schemas(filter)",
+    "parameters": [
+      {
+        "name": "filter",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2SchemaListResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filter: String = displayName eq groupName // Filtered results are invalid and return 403 Unauthorized.\n\n// Get a list of SCIM schemas\nGetScimV2SchemasRequest.getScimV2Schemas(filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2SchemasRequest.getScimV2Schemas was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2serviceproviderconfig": {
+    "operationId": "getscimv2serviceproviderconfig",
+    "functionName": "getScimV2Serviceproviderconfig",
+    "signature": "getScimV2Serviceproviderconfig(ifNoneMatch)",
+    "parameters": [
+      {
+        "name": "ifNoneMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimServiceProviderConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. \n\n// Get a service provider's configuration\nGetScimV2ServiceproviderconfigRequest.getScimV2Serviceproviderconfig(ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2ServiceproviderconfigRequest.getScimV2Serviceproviderconfig was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2user": {
+    "operationId": "getscimv2user",
+    "functionName": "getScimV2User",
+    "signature": "getScimV2User(userId, attributes, excludedAttributes, ifNoneMatch)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "attributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "excludedAttributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "ifNoneMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2User",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/v2/users.\nlet attributes: [String] = [\"\"] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [\"\"] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.\n\n// Get a user\nGetScimV2UserRequest.getScimV2User(userId: userId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2UserRequest.getScimV2User was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2users": {
+    "operationId": "getscimv2users",
+    "functionName": "getScimV2Users",
+    "signature": "getScimV2Users(startIndex, count, attributes, excludedAttributes, filter)",
+    "parameters": [
+      {
+        "name": "startIndex",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "count",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "attributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "excludedAttributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "filter",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimUserListResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet startIndex: Int = 0 // The 1-based index of the first query result.\nlet count: Int = 0 // The requested number of items per page. A value of 0 returns \\\"totalResults\\\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \\\"excludedAttributes\\\" or \\\"attributes\\\" query parameters to exclude or only include secondary lookup values such as \\\"externalId\\\",  \\\"roles\\\", \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\\\", or \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\\\".\nlet attributes: [String] = [\"\"] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [\"\"] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet filter: String = \"\" // Filters results. If nothing is specified, returns all active users. Examples of valid values: \\\"id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\\\", \\\"userName eq search@sample.org\\\", \\\"manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\\\", \\\"email eq search@sample.org\\\", \\\"division eq divisionName\\\", \\\"externalId eq 167844\\\", \\\"active eq false\\\", \\\"employeeNumber eq 9876543210\\\".\n\n// Get a list of users\nGetScimV2UsersRequest.getScimV2Users(startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes, filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2UsersRequest.getScimV2Users was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchscimgroup": {
+    "operationId": "patchscimgroup",
+    "functionName": "patchScimGroup",
+    "signature": "patchScimGroup(groupId, body, ifMatch)",
+    "parameters": [
+      {
+        "name": "groupId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ScimV2PatchRequest",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2Group",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/groups.\nlet body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a group.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Modify a group\nPatchScimGroupRequest.patchScimGroup(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchScimGroupRequest.patchScimGroup was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchscimuser": {
+    "operationId": "patchscimuser",
+    "functionName": "patchScimUser",
+    "signature": "patchScimUser(userId, body, ifMatch)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ScimV2PatchRequest",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2User",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/users.\nlet body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a user.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Modify a user\nPatchScimUserRequest.patchScimUser(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchScimUserRequest.patchScimUser was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchscimv2group": {
+    "operationId": "patchscimv2group",
+    "functionName": "patchScimV2Group",
+    "signature": "patchScimV2Group(groupId, body, ifMatch)",
+    "parameters": [
+      {
+        "name": "groupId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ScimV2PatchRequest",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2Group",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/v2/groups.\nlet body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a group.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Modify a group\nPatchScimV2GroupRequest.patchScimV2Group(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchScimV2GroupRequest.patchScimV2Group was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchscimv2user": {
+    "operationId": "patchscimv2user",
+    "functionName": "patchScimV2User",
+    "signature": "patchScimV2User(userId, body, ifMatch)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ScimV2PatchRequest",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2User",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/v2/users.\nlet body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a user.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Modify a user\nPatchScimV2UserRequest.patchScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchScimV2UserRequest.patchScimV2User was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postscimusers": {
+    "operationId": "postscimusers",
+    "functionName": "postScimUsers",
+    "signature": "postScimUsers(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ScimV2CreateUser",
+        "required": "true"
+      }
+    ],
+    "return": "ScimV2User",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ScimV2CreateUser = new ScimV2CreateUser(...) // The information used to create a user.\n\n// Create a user\nPostScimUsersRequest.postScimUsers(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostScimUsersRequest.postScimUsers was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postscimv2users": {
+    "operationId": "postscimv2users",
+    "functionName": "postScimV2Users",
+    "signature": "postScimV2Users(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ScimV2CreateUser",
+        "required": "true"
+      }
+    ],
+    "return": "ScimV2User",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ScimV2CreateUser = new ScimV2CreateUser(...) // The information used to create a user.\n\n// Create a user\nPostScimV2UsersRequest.postScimV2Users(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostScimV2UsersRequest.postScimV2Users was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putscimgroup": {
+    "operationId": "putscimgroup",
+    "functionName": "putScimGroup",
+    "signature": "putScimGroup(groupId, body, ifMatch)",
+    "parameters": [
+      {
+        "name": "groupId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ScimV2Group",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2Group",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/groups.\nlet body: ScimV2Group = new ScimV2Group(...) // The information used to replace a group.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Replace a group\nPutScimGroupRequest.putScimGroup(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutScimGroupRequest.putScimGroup was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putscimuser": {
+    "operationId": "putscimuser",
+    "functionName": "putScimUser",
+    "signature": "putScimUser(userId, body, ifMatch)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ScimV2User",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2User",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/users.\nlet body: ScimV2User = new ScimV2User(...) // The information used to replace a user.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Replace a user\nPutScimUserRequest.putScimUser(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutScimUserRequest.putScimUser was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putscimv2group": {
+    "operationId": "putscimv2group",
+    "functionName": "putScimV2Group",
+    "signature": "putScimV2Group(groupId, body, ifMatch)",
+    "parameters": [
+      {
+        "name": "groupId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ScimV2Group",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2Group",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/v2/groups.\nlet body: ScimV2Group = new ScimV2Group(...) // The information used to replace a group.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Replace a group\nPutScimV2GroupRequest.putScimV2Group(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutScimV2GroupRequest.putScimV2Group was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putscimv2user": {
+    "operationId": "putscimv2user",
+    "functionName": "putScimV2User",
+    "signature": "putScimV2User(userId, body, ifMatch)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ScimV2User",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2User",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/v2/users.\nlet body: ScimV2User = new ScimV2User(...) // The information used to replace a user.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Replace a user\nPutScimV2UserRequest.putScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutScimV2UserRequest.putScimV2User was successful\")\n        dump(response)\n    }\n}"
+  },
   "deleteconversationssummariessetting": {
     "operationId": "deleteconversationssummariessetting",
     "functionName": "deleteConversationsSummariesSetting",
@@ -25008,6 +25644,19 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet syncJobId: String = \"\" // Synchronization job ID\n\n// Delete synchronization job\nDeleteKnowledgeKnowledgebaseSynchronizeJobRequest.deleteKnowledgeKnowledgebaseSynchronizeJob(knowledgeBaseId: knowledgeBaseId, syncJobId: syncJobId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteKnowledgeKnowledgebaseSynchronizeJobRequest.deleteKnowledgeKnowledgebaseSynchronizeJob was successful\")\n    }\n}"
   },
+  "deleteknowledgesetting": {
+    "operationId": "deleteknowledgesetting",
+    "functionName": "deleteKnowledgeSetting",
+    "signature": "deleteKnowledgeSetting(knowledgeSettingId)",
+    "parameters": [
+      {
+        "name": "knowledgeSettingId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeSettingId: String = \"\" // Knowledge Setting ID.\n\n// Delete Knowledge setting.\nDeleteKnowledgeSettingRequest.deleteKnowledgeSetting(knowledgeSettingId: knowledgeSettingId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteKnowledgeSettingRequest.deleteKnowledgeSetting was successful\")\n    }\n}"
+  },
   "getknowledgeguestsessioncategories": {
     "operationId": "getknowledgeguestsessioncategories",
     "functionName": "getKnowledgeGuestSessionCategories",
@@ -26095,6 +26744,64 @@
     "return": "KnowledgeBaseListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet limit: String = \"\" // Number of entities to return. Maximum of 100. Deprecated in favour of pageSize\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 100.\nlet name: String = \"\" // Filter by Name.\nlet coreLanguage: GetKnowledgeKnowledgebasesRequest.CoreLanguage_getKnowledgeKnowledgebases = GetKnowledgeKnowledgebasesRequest.CoreLanguage_getKnowledgeKnowledgebases.enummember // Filter by core language.\nlet published: Bool = true // Filter by published status.\nlet sortBy: GetKnowledgeKnowledgebasesRequest.SortBy_getKnowledgeKnowledgebases = GetKnowledgeKnowledgebasesRequest.SortBy_getKnowledgeKnowledgebases.enummember // Sort by.\nlet sortOrder: GetKnowledgeKnowledgebasesRequest.SortOrder_getKnowledgeKnowledgebases = GetKnowledgeKnowledgebasesRequest.SortOrder_getKnowledgeKnowledgebases.enummember // Sort Order.\n\n// Get knowledge bases\nGetKnowledgeKnowledgebasesRequest.getKnowledgeKnowledgebases(before: before, after: after, limit: limit, pageSize: pageSize, name: name, coreLanguage: coreLanguage, published: published, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeKnowledgebasesRequest.getKnowledgeKnowledgebases was successful\")\n        dump(response)\n    }\n}"
   },
+  "getknowledgesetting": {
+    "operationId": "getknowledgesetting",
+    "functionName": "getKnowledgeSetting",
+    "signature": "getKnowledgeSetting(knowledgeSettingId)",
+    "parameters": [
+      {
+        "name": "knowledgeSettingId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "KnowledgeSettingsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeSettingId: String = \"\" // Knowledge Setting ID.\n\n// Get Knowledge setting.\nGetKnowledgeSettingRequest.getKnowledgeSetting(knowledgeSettingId: knowledgeSettingId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeSettingRequest.getKnowledgeSetting was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getknowledgesettings": {
+    "operationId": "getknowledgesettings",
+    "functionName": "getKnowledgeSettings",
+    "signature": "getKnowledgeSettings(before, after, pageSize, name, sourceId, sortBy, sortOrder)",
+    "parameters": [
+      {
+        "name": "before",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sourceId",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sortBy",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "KnowledgeSettingListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 200.\nlet name: String = \"\" // Knowledge setting name to search upon.\nlet sourceId: String = \"\" // Source ID to filter knowledge settings by.\nlet sortBy: GetKnowledgeSettingsRequest.SortBy_getKnowledgeSettings = GetKnowledgeSettingsRequest.SortBy_getKnowledgeSettings.enummember // Field to sort the knowledge settings on.\nlet sortOrder: GetKnowledgeSettingsRequest.SortOrder_getKnowledgeSettings = GetKnowledgeSettingsRequest.SortOrder_getKnowledgeSettings.enummember // Sorting order for knowledge settings.\n\n// Get Knowledge settings.\nGetKnowledgeSettingsRequest.getKnowledgeSettings(before: before, after: after, pageSize: pageSize, name: name, sourceId: sourceId, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeSettingsRequest.getKnowledgeSettings was successful\")\n        dump(response)\n    }\n}"
+  },
   "patchknowledgeguestsessiondocumentssearchsearchid": {
     "operationId": "patchknowledgeguestsessiondocumentssearchsearchid",
     "functionName": "patchKnowledgeGuestSessionDocumentsSearchSearchId",
@@ -26412,6 +27119,25 @@
     ],
     "return": "UnansweredPhraseGroupUpdateResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet groupId: String = \"\" // The ID of the group to be updated.\nlet phraseGroupId: String = \"\" // The ID of the phraseGroup to be updated.\nlet body: UnansweredPhraseGroupPatchRequestBody = new UnansweredPhraseGroupPatchRequestBody(...) // Request body of the update unanswered group endpoint.\n\n// Update a Knowledge base unanswered phrase group\nPatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroupRequest.patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup(knowledgeBaseId: knowledgeBaseId, groupId: groupId, phraseGroupId: phraseGroupId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroupRequest.patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchknowledgesetting": {
+    "operationId": "patchknowledgesetting",
+    "functionName": "patchKnowledgeSetting",
+    "signature": "patchKnowledgeSetting(knowledgeSettingId, body)",
+    "parameters": [
+      {
+        "name": "knowledgeSettingId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "KnowledgeSettingsRequest",
+        "required": "true"
+      }
+    ],
+    "return": "KnowledgeSettingsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeSettingId: String = \"\" // Knowledge Setting ID.\nlet body: KnowledgeSettingsRequest = new KnowledgeSettingsRequest(...) // \n\n// Update Knowledge setting.\nPatchKnowledgeSettingRequest.patchKnowledgeSetting(knowledgeSettingId: knowledgeSettingId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchKnowledgeSettingRequest.patchKnowledgeSetting was successful\")\n        dump(response)\n    }\n}"
   },
   "postknowledgedocumentuploads": {
     "operationId": "postknowledgedocumentuploads",
@@ -27163,6 +27889,34 @@
     ],
     "return": "KnowledgeBase",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: KnowledgeBaseCreateRequest = new KnowledgeBaseCreateRequest(...) // \n\n// Create new knowledge base\nPostKnowledgeKnowledgebasesRequest.postKnowledgeKnowledgebases(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebasesRequest.postKnowledgeKnowledgebases was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postknowledgesearchpreview": {
+    "operationId": "postknowledgesearchpreview",
+    "functionName": "postKnowledgeSearchPreview",
+    "signature": "postKnowledgeSearchPreview(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "KnowledgeSearchPreviewRequest",
+        "required": "false"
+      }
+    ],
+    "return": "KnowledgeSearchPreviewResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: KnowledgeSearchPreviewRequest = new KnowledgeSearchPreviewRequest(...) // \n\n// Get Knowledge Search Preview\nPostKnowledgeSearchPreviewRequest.postKnowledgeSearchPreview(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeSearchPreviewRequest.postKnowledgeSearchPreview was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postknowledgesettings": {
+    "operationId": "postknowledgesettings",
+    "functionName": "postKnowledgeSettings",
+    "signature": "postKnowledgeSettings(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "KnowledgeSettingsRequest",
+        "required": "false"
+      }
+    ],
+    "return": "KnowledgeSettingsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: KnowledgeSettingsRequest = new KnowledgeSettingsRequest(...) // \n\n// Create Knowledge setting.\nPostKnowledgeSettingsRequest.postKnowledgeSettings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeSettingsRequest.postKnowledgeSettings was successful\")\n        dump(response)\n    }\n}"
   },
   "putknowledgeknowledgebasesourcessalesforcesourceid": {
     "operationId": "putknowledgeknowledgebasesourcessalesforcesourceid",
@@ -36406,7 +37160,7 @@
   "postqualityconversationevaluations": {
     "operationId": "postqualityconversationevaluations",
     "functionName": "postQualityConversationEvaluations",
-    "signature": "postQualityConversationEvaluations(conversationId, body, expand)",
+    "signature": "postQualityConversationEvaluations(conversationId, body, idempotencyKey, expand)",
     "parameters": [
       {
         "name": "conversationId",
@@ -36419,13 +37173,18 @@
         "required": "true"
       },
       {
+        "name": "idempotencyKey",
+        "type": "String",
+        "required": "false"
+      },
+      {
         "name": "expand",
         "type": "String",
         "required": "false"
       }
     ],
     "return": "Evaluation",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet body: EvaluationCreateBody = new EvaluationCreateBody(...) // evaluation\nlet expand: String = \"\" // evaluatorId\n\n// Create an evaluation\nPostQualityConversationEvaluationsRequest.postQualityConversationEvaluations(conversationId: conversationId, body: body, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostQualityConversationEvaluationsRequest.postQualityConversationEvaluations was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet body: EvaluationCreateBody = new EvaluationCreateBody(...) // evaluation\nlet idempotencyKey: String = \"\" // Idempotency key for request deduplication\nlet expand: String = \"\" // evaluatorId\n\n// Create an evaluation\nPostQualityConversationEvaluationsRequest.postQualityConversationEvaluations(conversationId: conversationId, body: body, idempotencyKey: idempotencyKey, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostQualityConversationEvaluationsRequest.postQualityConversationEvaluations was successful\")\n        dump(response)\n    }\n}"
   },
   "postqualityconversationsauditsquery": {
     "operationId": "postqualityconversationsauditsquery",
@@ -41381,642 +42140,6 @@
     "return": "UserSkillEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\nlet body: [UserRoutingSkillPost] = [new UserRoutingSkillPost(...)] // Skill\n\n// Assign multiple routing skills to a user, replacing any current assignments\nPutUserRoutingskillsBulkRequest.putUserRoutingskillsBulk(userId: userId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutUserRoutingskillsBulkRequest.putUserRoutingskillsBulk was successful\")\n        dump(response)\n    }\n}"
   },
-  "deletescimuser": {
-    "operationId": "deletescimuser",
-    "functionName": "deleteScimUser",
-    "signature": "deleteScimUser(userId, ifMatch)",
-    "parameters": [
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "JSON",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/users.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Delete a user\nDeleteScimUserRequest.deleteScimUser(userId: userId, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"DeleteScimUserRequest.deleteScimUser was successful\")\n        dump(response)\n    }\n}"
-  },
-  "deletescimv2user": {
-    "operationId": "deletescimv2user",
-    "functionName": "deleteScimV2User",
-    "signature": "deleteScimV2User(userId, ifMatch)",
-    "parameters": [
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "JSON",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/v2/users.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Delete a user\nDeleteScimV2UserRequest.deleteScimV2User(userId: userId, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"DeleteScimV2UserRequest.deleteScimV2User was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimgroup": {
-    "operationId": "getscimgroup",
-    "functionName": "getScimGroup",
-    "signature": "getScimGroup(groupId, attributes, excludedAttributes, ifNoneMatch)",
-    "parameters": [
-      {
-        "name": "groupId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "attributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "excludedAttributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "ifNoneMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2Group",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/groups.\nlet attributes: [String] = [\"\"] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [\"\"] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.\n\n// Get a group\nGetScimGroupRequest.getScimGroup(groupId: groupId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimGroupRequest.getScimGroup was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimgroups": {
-    "operationId": "getscimgroups",
-    "functionName": "getScimGroups",
-    "signature": "getScimGroups(startIndex, count, attributes, excludedAttributes, filter)",
-    "parameters": [
-      {
-        "name": "startIndex",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "count",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "attributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "excludedAttributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "filter",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimGroupListResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet startIndex: Int = 0 // The 1-based index of the first query result.\nlet count: Int = 0 // The requested number of items per page. A value of 0 returns \\\"totalResults\\\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \\\"excludedAttributes\\\" or \\\"attributes\\\" query parameters to exclude or only include secondary lookup values such as \\\"externalId\\\",  \\\"roles\\\", \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\\\", or \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\\\".\nlet attributes: [String] = [\"\"] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [\"\"] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet filter: String = displayName eq groupName // Filters results. If nothing is specified, returns all groups. Examples of valid values: \\\"id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\\\", \\\"displayname eq Sales\\\".\n\n// Get a list of groups\nGetScimGroupsRequest.getScimGroups(startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes, filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimGroupsRequest.getScimGroups was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimresourcetype": {
-    "operationId": "getscimresourcetype",
-    "functionName": "getScimResourcetype",
-    "signature": "getScimResourcetype(resourceType)",
-    "parameters": [
-      {
-        "name": "resourceType",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "ScimConfigResourceType",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet resourceType: GetScimResourcetypeRequest.ResourceType_getScimResourcetype = GetScimResourcetypeRequest.ResourceType_getScimResourcetype.enummember // The type of resource. Returned with GET /api/v2/scim/resourcetypes.\n\n// Get a resource type\nGetScimResourcetypeRequest.getScimResourcetype(resourceType: resourceType) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimResourcetypeRequest.getScimResourcetype was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimresourcetypes": {
-    "operationId": "getscimresourcetypes",
-    "functionName": "getScimResourcetypes",
-    "signature": "getScimResourcetypes()",
-    "return": "ScimConfigResourceTypesListResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get a list of resource types\nGetScimResourcetypesRequest.getScimResourcetypes() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimResourcetypesRequest.getScimResourcetypes was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimschema": {
-    "operationId": "getscimschema",
-    "functionName": "getScimSchema",
-    "signature": "getScimSchema(schemaId)",
-    "parameters": [
-      {
-        "name": "schemaId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "ScimV2SchemaDefinition",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaId: GetScimSchemaRequest.SchemaId_getScimSchema = GetScimSchemaRequest.SchemaId_getScimSchema.enummember // The ID of a schema. Returned with GET /api/v2/scim/schemas.\n\n// Get a SCIM schema\nGetScimSchemaRequest.getScimSchema(schemaId: schemaId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimSchemaRequest.getScimSchema was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimschemas": {
-    "operationId": "getscimschemas",
-    "functionName": "getScimSchemas",
-    "signature": "getScimSchemas(filter)",
-    "parameters": [
-      {
-        "name": "filter",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2SchemaListResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filter: String = displayName eq groupName // Filtered results are invalid and return 403 Unauthorized.\n\n// Get a list of SCIM schemas\nGetScimSchemasRequest.getScimSchemas(filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimSchemasRequest.getScimSchemas was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimserviceproviderconfig": {
-    "operationId": "getscimserviceproviderconfig",
-    "functionName": "getScimServiceproviderconfig",
-    "signature": "getScimServiceproviderconfig(ifNoneMatch)",
-    "parameters": [
-      {
-        "name": "ifNoneMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimServiceProviderConfig",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/serviceproviderconfig. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. \n\n// Get a service provider's configuration\nGetScimServiceproviderconfigRequest.getScimServiceproviderconfig(ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimServiceproviderconfigRequest.getScimServiceproviderconfig was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimuser": {
-    "operationId": "getscimuser",
-    "functionName": "getScimUser",
-    "signature": "getScimUser(userId, attributes, excludedAttributes, ifNoneMatch)",
-    "parameters": [
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "attributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "excludedAttributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "ifNoneMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2User",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/users.\nlet attributes: [String] = [\"\"] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [\"\"] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.\n\n// Get a user\nGetScimUserRequest.getScimUser(userId: userId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimUserRequest.getScimUser was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimusers": {
-    "operationId": "getscimusers",
-    "functionName": "getScimUsers",
-    "signature": "getScimUsers(startIndex, count, attributes, excludedAttributes, filter)",
-    "parameters": [
-      {
-        "name": "startIndex",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "count",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "attributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "excludedAttributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "filter",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimUserListResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet startIndex: Int = 0 // The 1-based index of the first query result.\nlet count: Int = 0 // The requested number of items per page. A value of 0 returns \\\"totalResults\\\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \\\"excludedAttributes\\\" or \\\"attributes\\\" query parameters to exclude or only include secondary lookup values such as \\\"externalId\\\",  \\\"roles\\\", \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\\\", or \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\\\".\nlet attributes: [String] = [\"\"] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [\"\"] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet filter: String = \"\" // Filters results. If nothing is specified, returns all active users. Examples of valid values: \\\"id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\\\", \\\"userName eq search@sample.org\\\", \\\"manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\\\", \\\"email eq search@sample.org\\\", \\\"division eq divisionName\\\", \\\"externalId eq 167844\\\", \\\"active eq false\\\", \\\"employeeNumber eq 9876543210\\\".\n\n// Get a list of users\nGetScimUsersRequest.getScimUsers(startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes, filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimUsersRequest.getScimUsers was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2group": {
-    "operationId": "getscimv2group",
-    "functionName": "getScimV2Group",
-    "signature": "getScimV2Group(groupId, attributes, excludedAttributes, ifNoneMatch)",
-    "parameters": [
-      {
-        "name": "groupId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "attributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "excludedAttributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "ifNoneMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2Group",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/v2/groups.\nlet attributes: [String] = [\"\"] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [\"\"] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.\n\n// Get a group\nGetScimV2GroupRequest.getScimV2Group(groupId: groupId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2GroupRequest.getScimV2Group was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2groups": {
-    "operationId": "getscimv2groups",
-    "functionName": "getScimV2Groups",
-    "signature": "getScimV2Groups(filter, startIndex, count, attributes, excludedAttributes)",
-    "parameters": [
-      {
-        "name": "filter",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "startIndex",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "count",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "attributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "excludedAttributes",
-        "type": "[String]",
-        "required": "false"
-      }
-    ],
-    "return": "ScimGroupListResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filter: String = displayName eq groupName // Filters results. If nothing is specified, returns all groups. Examples of valid values: \\\"id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\\\", \\\"displayname eq Sales\\\".\nlet startIndex: Int = 0 // The 1-based index of the first query result.\nlet count: Int = 0 // The requested number of items per page. A value of 0 returns \\\"totalResults\\\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \\\"excludedAttributes\\\" or \\\"attributes\\\" query parameters to exclude or only include secondary lookup values such as \\\"externalId\\\",  \\\"roles\\\", \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\\\", or \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\\\".\nlet attributes: [String] = [\"\"] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [\"\"] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\n\n// Get a list of groups\nGetScimV2GroupsRequest.getScimV2Groups(filter: filter, startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2GroupsRequest.getScimV2Groups was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2resourcetype": {
-    "operationId": "getscimv2resourcetype",
-    "functionName": "getScimV2Resourcetype",
-    "signature": "getScimV2Resourcetype(resourceType)",
-    "parameters": [
-      {
-        "name": "resourceType",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "ScimConfigResourceType",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet resourceType: GetScimV2ResourcetypeRequest.ResourceType_getScimV2Resourcetype = GetScimV2ResourcetypeRequest.ResourceType_getScimV2Resourcetype.enummember // The type of resource. Returned with GET /api/v2/scim/v2/resourcetypes.\n\n// Get a resource type\nGetScimV2ResourcetypeRequest.getScimV2Resourcetype(resourceType: resourceType) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2ResourcetypeRequest.getScimV2Resourcetype was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2resourcetypes": {
-    "operationId": "getscimv2resourcetypes",
-    "functionName": "getScimV2Resourcetypes",
-    "signature": "getScimV2Resourcetypes()",
-    "return": "ScimConfigResourceTypesListResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get a list of resource types\nGetScimV2ResourcetypesRequest.getScimV2Resourcetypes() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2ResourcetypesRequest.getScimV2Resourcetypes was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2schema": {
-    "operationId": "getscimv2schema",
-    "functionName": "getScimV2Schema",
-    "signature": "getScimV2Schema(schemaId)",
-    "parameters": [
-      {
-        "name": "schemaId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "ScimV2SchemaDefinition",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet schemaId: GetScimV2SchemaRequest.SchemaId_getScimV2Schema = GetScimV2SchemaRequest.SchemaId_getScimV2Schema.enummember // The ID of a schema. Returned with GET /api/v2/scim/v2/schemas.\n\n// Get a SCIM schema\nGetScimV2SchemaRequest.getScimV2Schema(schemaId: schemaId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2SchemaRequest.getScimV2Schema was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2schemas": {
-    "operationId": "getscimv2schemas",
-    "functionName": "getScimV2Schemas",
-    "signature": "getScimV2Schemas(filter)",
-    "parameters": [
-      {
-        "name": "filter",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2SchemaListResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filter: String = displayName eq groupName // Filtered results are invalid and return 403 Unauthorized.\n\n// Get a list of SCIM schemas\nGetScimV2SchemasRequest.getScimV2Schemas(filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2SchemasRequest.getScimV2Schemas was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2serviceproviderconfig": {
-    "operationId": "getscimv2serviceproviderconfig",
-    "functionName": "getScimV2Serviceproviderconfig",
-    "signature": "getScimV2Serviceproviderconfig(ifNoneMatch)",
-    "parameters": [
-      {
-        "name": "ifNoneMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimServiceProviderConfig",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. \n\n// Get a service provider's configuration\nGetScimV2ServiceproviderconfigRequest.getScimV2Serviceproviderconfig(ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2ServiceproviderconfigRequest.getScimV2Serviceproviderconfig was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2user": {
-    "operationId": "getscimv2user",
-    "functionName": "getScimV2User",
-    "signature": "getScimV2User(userId, attributes, excludedAttributes, ifNoneMatch)",
-    "parameters": [
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "attributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "excludedAttributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "ifNoneMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2User",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/v2/users.\nlet attributes: [String] = [\"\"] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [\"\"] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.\n\n// Get a user\nGetScimV2UserRequest.getScimV2User(userId: userId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2UserRequest.getScimV2User was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2users": {
-    "operationId": "getscimv2users",
-    "functionName": "getScimV2Users",
-    "signature": "getScimV2Users(startIndex, count, attributes, excludedAttributes, filter)",
-    "parameters": [
-      {
-        "name": "startIndex",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "count",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "attributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "excludedAttributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "filter",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimUserListResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet startIndex: Int = 0 // The 1-based index of the first query result.\nlet count: Int = 0 // The requested number of items per page. A value of 0 returns \\\"totalResults\\\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \\\"excludedAttributes\\\" or \\\"attributes\\\" query parameters to exclude or only include secondary lookup values such as \\\"externalId\\\",  \\\"roles\\\", \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\\\", or \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\\\".\nlet attributes: [String] = [\"\"] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [\"\"] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet filter: String = \"\" // Filters results. If nothing is specified, returns all active users. Examples of valid values: \\\"id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\\\", \\\"userName eq search@sample.org\\\", \\\"manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\\\", \\\"email eq search@sample.org\\\", \\\"division eq divisionName\\\", \\\"externalId eq 167844\\\", \\\"active eq false\\\", \\\"employeeNumber eq 9876543210\\\".\n\n// Get a list of users\nGetScimV2UsersRequest.getScimV2Users(startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes, filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2UsersRequest.getScimV2Users was successful\")\n        dump(response)\n    }\n}"
-  },
-  "patchscimgroup": {
-    "operationId": "patchscimgroup",
-    "functionName": "patchScimGroup",
-    "signature": "patchScimGroup(groupId, body, ifMatch)",
-    "parameters": [
-      {
-        "name": "groupId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ScimV2PatchRequest",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2Group",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/groups.\nlet body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a group.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Modify a group\nPatchScimGroupRequest.patchScimGroup(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchScimGroupRequest.patchScimGroup was successful\")\n        dump(response)\n    }\n}"
-  },
-  "patchscimuser": {
-    "operationId": "patchscimuser",
-    "functionName": "patchScimUser",
-    "signature": "patchScimUser(userId, body, ifMatch)",
-    "parameters": [
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ScimV2PatchRequest",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2User",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/users.\nlet body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a user.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Modify a user\nPatchScimUserRequest.patchScimUser(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchScimUserRequest.patchScimUser was successful\")\n        dump(response)\n    }\n}"
-  },
-  "patchscimv2group": {
-    "operationId": "patchscimv2group",
-    "functionName": "patchScimV2Group",
-    "signature": "patchScimV2Group(groupId, body, ifMatch)",
-    "parameters": [
-      {
-        "name": "groupId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ScimV2PatchRequest",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2Group",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/v2/groups.\nlet body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a group.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Modify a group\nPatchScimV2GroupRequest.patchScimV2Group(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchScimV2GroupRequest.patchScimV2Group was successful\")\n        dump(response)\n    }\n}"
-  },
-  "patchscimv2user": {
-    "operationId": "patchscimv2user",
-    "functionName": "patchScimV2User",
-    "signature": "patchScimV2User(userId, body, ifMatch)",
-    "parameters": [
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ScimV2PatchRequest",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2User",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/v2/users.\nlet body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a user.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Modify a user\nPatchScimV2UserRequest.patchScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchScimV2UserRequest.patchScimV2User was successful\")\n        dump(response)\n    }\n}"
-  },
-  "postscimusers": {
-    "operationId": "postscimusers",
-    "functionName": "postScimUsers",
-    "signature": "postScimUsers(body)",
-    "parameters": [
-      {
-        "name": "body",
-        "type": "ScimV2CreateUser",
-        "required": "true"
-      }
-    ],
-    "return": "ScimV2User",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ScimV2CreateUser = new ScimV2CreateUser(...) // The information used to create a user.\n\n// Create a user\nPostScimUsersRequest.postScimUsers(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostScimUsersRequest.postScimUsers was successful\")\n        dump(response)\n    }\n}"
-  },
-  "postscimv2users": {
-    "operationId": "postscimv2users",
-    "functionName": "postScimV2Users",
-    "signature": "postScimV2Users(body)",
-    "parameters": [
-      {
-        "name": "body",
-        "type": "ScimV2CreateUser",
-        "required": "true"
-      }
-    ],
-    "return": "ScimV2User",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ScimV2CreateUser = new ScimV2CreateUser(...) // The information used to create a user.\n\n// Create a user\nPostScimV2UsersRequest.postScimV2Users(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostScimV2UsersRequest.postScimV2Users was successful\")\n        dump(response)\n    }\n}"
-  },
-  "putscimgroup": {
-    "operationId": "putscimgroup",
-    "functionName": "putScimGroup",
-    "signature": "putScimGroup(groupId, body, ifMatch)",
-    "parameters": [
-      {
-        "name": "groupId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ScimV2Group",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2Group",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/groups.\nlet body: ScimV2Group = new ScimV2Group(...) // The information used to replace a group.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Replace a group\nPutScimGroupRequest.putScimGroup(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutScimGroupRequest.putScimGroup was successful\")\n        dump(response)\n    }\n}"
-  },
-  "putscimuser": {
-    "operationId": "putscimuser",
-    "functionName": "putScimUser",
-    "signature": "putScimUser(userId, body, ifMatch)",
-    "parameters": [
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ScimV2User",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2User",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/users.\nlet body: ScimV2User = new ScimV2User(...) // The information used to replace a user.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Replace a user\nPutScimUserRequest.putScimUser(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutScimUserRequest.putScimUser was successful\")\n        dump(response)\n    }\n}"
-  },
-  "putscimv2group": {
-    "operationId": "putscimv2group",
-    "functionName": "putScimV2Group",
-    "signature": "putScimV2Group(groupId, body, ifMatch)",
-    "parameters": [
-      {
-        "name": "groupId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ScimV2Group",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2Group",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/v2/groups.\nlet body: ScimV2Group = new ScimV2Group(...) // The information used to replace a group.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Replace a group\nPutScimV2GroupRequest.putScimV2Group(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutScimV2GroupRequest.putScimV2Group was successful\")\n        dump(response)\n    }\n}"
-  },
-  "putscimv2user": {
-    "operationId": "putscimv2user",
-    "functionName": "putScimV2User",
-    "signature": "putScimV2User(userId, body, ifMatch)",
-    "parameters": [
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ScimV2User",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2User",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/v2/users.\nlet body: ScimV2User = new ScimV2User(...) // The information used to replace a user.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Replace a user\nPutScimV2UserRequest.putScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutScimV2UserRequest.putScimV2User was successful\")\n        dump(response)\n    }\n}"
-  },
   "getscript": {
     "operationId": "getscript",
     "functionName": "getScript",
@@ -46541,6 +46664,20 @@
     "signature": "getTelephonyAgentsGreetingsMe()",
     "return": "SelfAgentGreeting",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get the agent's own greetings.\nGetTelephonyAgentsGreetingsMeRequest.getTelephonyAgentsGreetingsMe() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyAgentsGreetingsMeRequest.getTelephonyAgentsGreetingsMe was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettelephonycallsmetrics": {
+    "operationId": "gettelephonycallsmetrics",
+    "functionName": "getTelephonyCallsMetrics",
+    "signature": "getTelephonyCallsMetrics(metricType)",
+    "parameters": [
+      {
+        "name": "metricType",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "OrganizationCallMetrics",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet metricType: GetTelephonyCallsMetricsRequest.MetricType_getTelephonyCallsMetrics = GetTelephonyCallsMetricsRequest.MetricType_getTelephonyCallsMetrics.enummember // Flag to indicate metric type to fetch.\n\n// Get the concurrent call metrics for a given organization.\nGetTelephonyCallsMetricsRequest.getTelephonyCallsMetrics(metricType: metricType) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyCallsMetricsRequest.getTelephonyCallsMetrics was successful\")\n        dump(response)\n    }\n}"
   },
   "gettelephonymediaregions": {
     "operationId": "gettelephonymediaregions",

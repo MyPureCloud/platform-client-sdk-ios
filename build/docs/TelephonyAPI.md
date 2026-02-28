@@ -6,6 +6,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**getTelephonyAgentGreetings**](TelephonyAPI#getTelephonyAgentGreetings) | Get an agent&#39;s greetings. |
 | [**getTelephonyAgentsGreetingsMe**](TelephonyAPI#getTelephonyAgentsGreetingsMe) | Get the agent&#39;s own greetings. |
+| [**getTelephonyCallsMetrics**](TelephonyAPI#getTelephonyCallsMetrics) | Get the concurrent call metrics for a given organization. |
 | [**getTelephonyMediaregions**](TelephonyAPI#getTelephonyMediaregions) | Retrieve the list of AWS regions media can stream through. |
 | [**getTelephonySipmessagesConversation**](TelephonyAPI#getTelephonySipmessagesConversation) | Get a SIP message. |
 | [**getTelephonySipmessagesConversationHeaders**](TelephonyAPI#getTelephonySipmessagesConversationHeaders) | Get SIP headers. |
@@ -111,6 +112,56 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**SelfAgentGreeting**](SelfAgentGreeting)
+
+
+## getTelephonyCallsMetrics
+
+
+
+> [OrganizationCallMetrics](OrganizationCallMetrics) getTelephonyCallsMetrics(metricType)
+
+Get the concurrent call metrics for a given organization.
+
+
+
+Wraps GET /api/v2/telephony/calls/metrics  
+
+Requires ANY permissions: 
+
+* telephony:callMetrics:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let metricType: TelephonyAPI.MetricType_getTelephonyCallsMetrics = TelephonyAPI.MetricType_getTelephonyCallsMetrics.enummember // Flag to indicate metric type to fetch.
+
+// Code example
+TelephonyAPI.getTelephonyCallsMetrics(metricType: metricType) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyAPI.getTelephonyCallsMetrics was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **metricType** | **String**| Flag to indicate metric type to fetch. | [optional]<br />**Values**: cloud ("cloud"), premises ("premises") |
+
+
+### Return type
+
+[**OrganizationCallMetrics**](OrganizationCallMetrics)
 
 
 ## getTelephonyMediaregions
@@ -529,4 +580,4 @@ TelephonyAPI.putTelephonyAgentsGreetingsMe(body: body) { (response, error) in
 [**SelfAgentGreeting**](SelfAgentGreeting)
 
 
-_PureCloudPlatformClientV2@188.0.0_
+_PureCloudPlatformClientV2@189.0.0_

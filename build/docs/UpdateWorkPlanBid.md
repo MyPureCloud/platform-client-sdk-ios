@@ -19,4 +19,4 @@ Update work plan bid model
 
 
 
-_PureCloudPlatformClientV2@188.0.0_
+_PureCloudPlatformClientV2@189.0.0_

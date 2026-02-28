@@ -1085,7 +1085,7 @@ docs/ConversationAggregationSort.md
 docs/ConversationAggregationView.md
 docs/ConversationAppSettings.md
 docs/ConversationAssociation.md
-docs/ConversationAttributeFilter.md
+docs/ConversationAttributeProperties.md
 docs/ConversationBasic.md
 docs/ConversationCallEventTopicCallConversation.md
 docs/ConversationCallEventTopicCallMediaParticipant.md
@@ -1394,8 +1394,6 @@ docs/ConversationResponseSuggestionsTopicSuggestedIntentSlot.md
 docs/ConversationResponseSuggestionsTopicSuggestionContext.md
 docs/ConversationResponseSuggestionsTopicSuggestionFeedback.md
 docs/ConversationRoutingData.md
-docs/ConversationSchemaAttribute.md
-docs/ConversationSchemaData.md
 docs/ConversationSchemaReference.md
 docs/ConversationSchemaUpdateRequest.md
 docs/ConversationScreenShareEventTopicConversationDivisionMembership.md
@@ -2935,6 +2933,7 @@ docs/KnowledgeContextReference.md
 docs/KnowledgeContextValueReference.md
 docs/KnowledgeConversationContext.md
 docs/KnowledgeConversationContextResponse.md
+docs/KnowledgeConversationTurn.md
 docs/KnowledgeDocumentAlternative.md
 docs/KnowledgeDocumentBulkRemoveRequest.md
 docs/KnowledgeDocumentBulkUpdateEntity.md
@@ -2981,6 +2980,7 @@ docs/KnowledgeExportJobDocumentsFilter.md
 docs/KnowledgeExportJobFilter.md
 docs/KnowledgeExportJobRequest.md
 docs/KnowledgeExportJobResponse.md
+docs/KnowledgeGenerationSetting.md
 docs/KnowledgeGroupStatistics.md
 docs/KnowledgeGuestAnswerDocumentResponse.md
 docs/KnowledgeGuestAnswerDocumentsResponse.md
@@ -3020,10 +3020,17 @@ docs/KnowledgeParseJobRequestImport.md
 docs/KnowledgeParseJobRequestPatch.md
 docs/KnowledgeParseJobResponse.md
 docs/KnowledgeParseRecord.md
+docs/KnowledgeRetrievedReference.md
 docs/KnowledgeSearchClientApplication.md
 docs/KnowledgeSearchDocumentResponse.md
+docs/KnowledgeSearchPreviewRequest.md
+docs/KnowledgeSearchPreviewResponse.md
+docs/KnowledgeSearchResult.md
 docs/KnowledgeSetting.md
+docs/KnowledgeSettingListing.md
 docs/KnowledgeSettings.md
+docs/KnowledgeSettingsRequest.md
+docs/KnowledgeSettingsResponse.md
 docs/KnowledgeSuggestionConfig.md
 docs/KnowledgeSyncJobReport.md
 docs/KnowledgeSyncJobRequest.md
@@ -3534,6 +3541,7 @@ docs/OrganizationAPI.json
 docs/OrganizationAPI.md
 docs/OrganizationAuthorizationAPI.json
 docs/OrganizationAuthorizationAPI.md
+docs/OrganizationCallMetrics.md
 docs/OrganizationFeatures.md
 docs/OrganizationPresence.md
 docs/OrganizationPresenceDefinition.md
@@ -5406,6 +5414,7 @@ docs/V2WfmMainForecastExportHistoricalEventMainForecastErrorBody.md
 docs/V2WfmMainForecastExportHistoricalEventMainForecastExportNotification.md
 docs/V2WfmMainForecastExportSnapshotEventMainForecastErrorBody.md
 docs/V2WfmMainForecastExportSnapshotEventMainForecastExportNotification.md
+docs/V3SourceRef.md
 docs/ValidateAddressRequest.md
 docs/ValidateAddressResponse.md
 docs/ValidateAgentUnavailableTimesRequest.md
@@ -6074,6 +6083,7 @@ docs/deleteKnowledgeKnowledgebaseLabel-example.txt
 docs/deleteKnowledgeKnowledgebaseSourcesSalesforceSourceId-example.txt
 docs/deleteKnowledgeKnowledgebaseSourcesServicenowSourceId-example.txt
 docs/deleteKnowledgeKnowledgebaseSynchronizeJob-example.txt
+docs/deleteKnowledgeSetting-example.txt
 docs/deleteLanguage-example.txt
 docs/deleteLanguageunderstandingDomain-example.txt
 docs/deleteLanguageunderstandingDomainFeedbackFeedbackId-example.txt
@@ -6905,6 +6915,8 @@ docs/getKnowledgeKnowledgebaseUnansweredGroups-example.txt
 docs/getKnowledgeKnowledgebaseUploadsUrlsJob-example.txt
 docs/getKnowledgeKnowledgebaseUploadsUrlsJob-example.txt
 docs/getKnowledgeKnowledgebases-example.txt
+docs/getKnowledgeSetting-example.txt
+docs/getKnowledgeSettings-example.txt
 docs/getLanguage-example.txt
 docs/getLanguages-example.txt
 docs/getLanguagesTranslations-example.txt
@@ -7352,6 +7364,7 @@ docs/getTeamMembers-example.txt
 docs/getTeams-example.txt
 docs/getTelephonyAgentGreetings-example.txt
 docs/getTelephonyAgentsGreetingsMe-example.txt
+docs/getTelephonyCallsMetrics-example.txt
 docs/getTelephonyMediaregions-example.txt
 docs/getTelephonyProvidersEdge-example.txt
 docs/getTelephonyProvidersEdgeDiagnosticNslookup-example.txt
@@ -7757,6 +7770,7 @@ docs/patchKnowledgeKnowledgebaseLabel-example.txt
 docs/patchKnowledgeKnowledgebaseParseJob-example.txt
 docs/patchKnowledgeKnowledgebaseSynchronizeJob-example.txt
 docs/patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup-example.txt
+docs/patchKnowledgeSetting-example.txt
 docs/patchLanguageunderstandingDomain-example.txt
 docs/patchLanguageunderstandingMinerDraft-example.txt
 docs/patchLearningAssignment-example.txt
@@ -8288,6 +8302,8 @@ docs/postKnowledgeKnowledgebaseSynchronizeJobs-example.txt
 docs/postKnowledgeKnowledgebaseUploadsUrlsJobs-example.txt
 docs/postKnowledgeKnowledgebaseUploadsUrlsJobs-example.txt
 docs/postKnowledgeKnowledgebases-example.txt
+docs/postKnowledgeSearchPreview-example.txt
+docs/postKnowledgeSettings-example.txt
 docs/postLanguages-example.txt
 docs/postLanguageunderstandingDomainFeedback-example.txt
 docs/postLanguageunderstandingDomainVersionDetect-example.txt
@@ -10077,7 +10093,7 @@ src/Models/ConversationAggregationSort.swift
 src/Models/ConversationAggregationView.swift
 src/Models/ConversationAppSettings.swift
 src/Models/ConversationAssociation.swift
-src/Models/ConversationAttributeFilter.swift
+src/Models/ConversationAttributeProperties.swift
 src/Models/ConversationBasic.swift
 src/Models/ConversationCallEventTopicCallConversation.swift
 src/Models/ConversationCallEventTopicCallMediaParticipant.swift
@@ -10386,8 +10402,6 @@ src/Models/ConversationResponseSuggestionsTopicSuggestedIntentSlot.swift
 src/Models/ConversationResponseSuggestionsTopicSuggestionContext.swift
 src/Models/ConversationResponseSuggestionsTopicSuggestionFeedback.swift
 src/Models/ConversationRoutingData.swift
-src/Models/ConversationSchemaAttribute.swift
-src/Models/ConversationSchemaData.swift
 src/Models/ConversationSchemaReference.swift
 src/Models/ConversationSchemaUpdateRequest.swift
 src/Models/ConversationScreenShareEventTopicConversationDivisionMembership.swift
@@ -11885,6 +11899,7 @@ src/Models/KnowledgeContextReference.swift
 src/Models/KnowledgeContextValueReference.swift
 src/Models/KnowledgeConversationContext.swift
 src/Models/KnowledgeConversationContextResponse.swift
+src/Models/KnowledgeConversationTurn.swift
 src/Models/KnowledgeDocumentAlternative.swift
 src/Models/KnowledgeDocumentBulkRemoveRequest.swift
 src/Models/KnowledgeDocumentBulkUpdateEntity.swift
@@ -11931,6 +11946,7 @@ src/Models/KnowledgeExportJobDocumentsFilter.swift
 src/Models/KnowledgeExportJobFilter.swift
 src/Models/KnowledgeExportJobRequest.swift
 src/Models/KnowledgeExportJobResponse.swift
+src/Models/KnowledgeGenerationSetting.swift
 src/Models/KnowledgeGroupStatistics.swift
 src/Models/KnowledgeGuestAnswerDocumentResponse.swift
 src/Models/KnowledgeGuestAnswerDocumentsResponse.swift
@@ -11970,10 +11986,17 @@ src/Models/KnowledgeParseJobRequestImport.swift
 src/Models/KnowledgeParseJobRequestPatch.swift
 src/Models/KnowledgeParseJobResponse.swift
 src/Models/KnowledgeParseRecord.swift
+src/Models/KnowledgeRetrievedReference.swift
 src/Models/KnowledgeSearchClientApplication.swift
 src/Models/KnowledgeSearchDocumentResponse.swift
+src/Models/KnowledgeSearchPreviewRequest.swift
+src/Models/KnowledgeSearchPreviewResponse.swift
+src/Models/KnowledgeSearchResult.swift
 src/Models/KnowledgeSetting.swift
+src/Models/KnowledgeSettingListing.swift
 src/Models/KnowledgeSettings.swift
+src/Models/KnowledgeSettingsRequest.swift
+src/Models/KnowledgeSettingsResponse.swift
 src/Models/KnowledgeSuggestionConfig.swift
 src/Models/KnowledgeSyncJobReport.swift
 src/Models/KnowledgeSyncJobRequest.swift
@@ -12459,6 +12482,7 @@ src/Models/OrgOAuthClient.swift
 src/Models/OrgUser.swift
 src/Models/OrgWhitelistSettings.swift
 src/Models/Organization.swift
+src/Models/OrganizationCallMetrics.swift
 src/Models/OrganizationFeatures.swift
 src/Models/OrganizationPresence.swift
 src/Models/OrganizationPresenceDefinition.swift
@@ -14275,6 +14299,7 @@ src/Models/V2WfmMainForecastExportHistoricalEventMainForecastErrorBody.swift
 src/Models/V2WfmMainForecastExportHistoricalEventMainForecastExportNotification.swift
 src/Models/V2WfmMainForecastExportSnapshotEventMainForecastErrorBody.swift
 src/Models/V2WfmMainForecastExportSnapshotEventMainForecastExportNotification.swift
+src/Models/V3SourceRef.swift
 src/Models/ValidateAddressRequest.swift
 src/Models/ValidateAddressResponse.swift
 src/Models/ValidateAgentUnavailableTimesRequest.swift

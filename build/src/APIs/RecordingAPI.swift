@@ -333,6 +333,7 @@ open class RecordingAPI {
       "buttonResponse" : "{}",
       "datePicker" : "{}",
       "form" : "{}",
+      "richLink" : "{}",
       "to" : "to",
       "queue" : "{}",
       "messageStickerAttachments" : [ {
@@ -477,6 +478,7 @@ open class RecordingAPI {
       "buttonResponse" : "{}",
       "datePicker" : "{}",
       "form" : "{}",
+      "richLink" : "{}",
       "to" : "to",
       "queue" : "{}",
       "messageStickerAttachments" : [ {
@@ -1768,6 +1770,7 @@ open class RecordingAPI {
     "buttonResponse" : "{}",
     "datePicker" : "{}",
     "form" : "{}",
+    "richLink" : "{}",
     "to" : "to",
     "queue" : "{}",
     "messageStickerAttachments" : [ {
@@ -1912,6 +1915,7 @@ open class RecordingAPI {
     "buttonResponse" : "{}",
     "datePicker" : "{}",
     "form" : "{}",
+    "richLink" : "{}",
     "to" : "to",
     "queue" : "{}",
     "messageStickerAttachments" : [ {
@@ -3314,6 +3318,7 @@ open class RecordingAPI {
     "buttonResponse" : "{}",
     "datePicker" : "{}",
     "form" : "{}",
+    "richLink" : "{}",
     "to" : "to",
     "queue" : "{}",
     "messageStickerAttachments" : [ {
@@ -3458,6 +3463,7 @@ open class RecordingAPI {
     "buttonResponse" : "{}",
     "datePicker" : "{}",
     "form" : "{}",
+    "richLink" : "{}",
     "to" : "to",
     "queue" : "{}",
     "messageStickerAttachments" : [ {
@@ -4447,6 +4453,7 @@ open class RecordingAPI {
       "buttonResponse" : "{}",
       "datePicker" : "{}",
       "form" : "{}",
+      "richLink" : "{}",
       "to" : "to",
       "queue" : "{}",
       "messageStickerAttachments" : [ {
@@ -4591,6 +4598,7 @@ open class RecordingAPI {
       "buttonResponse" : "{}",
       "datePicker" : "{}",
       "form" : "{}",
+      "richLink" : "{}",
       "to" : "to",
       "queue" : "{}",
       "messageStickerAttachments" : [ {
@@ -5653,6 +5661,7 @@ open class RecordingAPI {
     "buttonResponse" : "{}",
     "datePicker" : "{}",
     "form" : "{}",
+    "richLink" : "{}",
     "to" : "to",
     "queue" : "{}",
     "messageStickerAttachments" : [ {
@@ -5797,6 +5806,7 @@ open class RecordingAPI {
     "buttonResponse" : "{}",
     "datePicker" : "{}",
     "form" : "{}",
+    "richLink" : "{}",
     "to" : "to",
     "queue" : "{}",
     "messageStickerAttachments" : [ {
@@ -6822,6 +6832,7 @@ open class RecordingAPI {
         "buttonResponse" : "{}",
         "datePicker" : "{}",
         "form" : "{}",
+        "richLink" : "{}",
         "to" : "to",
         "queue" : "{}",
         "messageStickerAttachments" : [ {
@@ -6966,6 +6977,7 @@ open class RecordingAPI {
         "buttonResponse" : "{}",
         "datePicker" : "{}",
         "form" : "{}",
+        "richLink" : "{}",
         "to" : "to",
         "queue" : "{}",
         "messageStickerAttachments" : [ {
@@ -7929,6 +7941,7 @@ open class RecordingAPI {
         "buttonResponse" : "{}",
         "datePicker" : "{}",
         "form" : "{}",
+        "richLink" : "{}",
         "to" : "to",
         "queue" : "{}",
         "messageStickerAttachments" : [ {
@@ -8073,6 +8086,7 @@ open class RecordingAPI {
         "buttonResponse" : "{}",
         "datePicker" : "{}",
         "form" : "{}",
+        "richLink" : "{}",
         "to" : "to",
         "queue" : "{}",
         "messageStickerAttachments" : [ {
@@ -11620,6 +11634,7 @@ open class RecordingAPI {
     "buttonResponse" : "{}",
     "datePicker" : "{}",
     "form" : "{}",
+    "richLink" : "{}",
     "to" : "to",
     "queue" : "{}",
     "messageStickerAttachments" : [ {
@@ -11764,6 +11779,7 @@ open class RecordingAPI {
     "buttonResponse" : "{}",
     "datePicker" : "{}",
     "form" : "{}",
+    "richLink" : "{}",
     "to" : "to",
     "queue" : "{}",
     "messageStickerAttachments" : [ {
@@ -12837,6 +12853,7 @@ open class RecordingAPI {
     "buttonResponse" : "{}",
     "datePicker" : "{}",
     "form" : "{}",
+    "richLink" : "{}",
     "to" : "to",
     "queue" : "{}",
     "messageStickerAttachments" : [ {
@@ -12981,6 +12998,7 @@ open class RecordingAPI {
     "buttonResponse" : "{}",
     "datePicker" : "{}",
     "form" : "{}",
+    "richLink" : "{}",
     "to" : "to",
     "queue" : "{}",
     "messageStickerAttachments" : [ {

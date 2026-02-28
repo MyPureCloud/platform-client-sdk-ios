@@ -1,0 +1,16 @@
+# KnowledgeSearchPreviewResponse
+
+## KnowledgeSearchPreviewResponse
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **query** | **String** | Query to search content in the knowledge base. | [optional] |
+| **searchId** | **String** | The globally unique identifier for the search. | [optional] |
+| **sessionId** | **String** | The sessionId for search request. | [optional] |
+| **result** | [**KnowledgeSearchResult**](KnowledgeSearchResult) | Content matching the search query. | [optional] |
+
+
+
+_PureCloudPlatformClientV2@189.0.0_

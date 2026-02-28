@@ -89,6 +89,8 @@ public class RecordingMessagingMessage: Codable {
 
 
 
+
+
     /** The message sender session id. */
     public var from: String?
     /** The user who sent this message. */
@@ -149,10 +151,12 @@ public class RecordingMessagingMessage: Codable {
     public var form: RecordingForm?
     /** Roadside Assistance content. */
     public var roadsideAssistance: RecordingRoadsideAssistance?
+    /** Rich Link content. */
+    public var richLink: RichLink?
     /** List of message receipts */
     public var messageReceipts: [RecordingMessageReceipt]?
 
-    public init(from: String?, fromUser: User?, fromExternalContact: ExternalContact?, to: String?, timestamp: Date?, _id: String?, status: String?, purpose: String?, participantId: String?, queue: AddressableEntityRef?, workflow: AddressableEntityRef?, messageText: String?, messageMediaAttachments: [MessageMediaAttachment]?, messageStickerAttachments: [MessageStickerAttachment]?, quickReplies: [QuickReply]?, buttonResponse: ButtonResponse?, buttonResponses: [ButtonResponse]?, story: RecordingContentStory?, cards: [Card]?, notificationTemplate: RecordingNotificationTemplate?, datePicker: DatePicker?, listPicker: ListPicker?, contentType: ContentType?, socialVisibility: SocialVisibility?, events: [ConversationMessageEvent]?, interactiveApplication: InteractiveApplication?, paymentRequest: PaymentRequest?, paymentResponse: PaymentResponse?, form: RecordingForm?, roadsideAssistance: RecordingRoadsideAssistance?, messageReceipts: [RecordingMessageReceipt]?) {
+    public init(from: String?, fromUser: User?, fromExternalContact: ExternalContact?, to: String?, timestamp: Date?, _id: String?, status: String?, purpose: String?, participantId: String?, queue: AddressableEntityRef?, workflow: AddressableEntityRef?, messageText: String?, messageMediaAttachments: [MessageMediaAttachment]?, messageStickerAttachments: [MessageStickerAttachment]?, quickReplies: [QuickReply]?, buttonResponse: ButtonResponse?, buttonResponses: [ButtonResponse]?, story: RecordingContentStory?, cards: [Card]?, notificationTemplate: RecordingNotificationTemplate?, datePicker: DatePicker?, listPicker: ListPicker?, contentType: ContentType?, socialVisibility: SocialVisibility?, events: [ConversationMessageEvent]?, interactiveApplication: InteractiveApplication?, paymentRequest: PaymentRequest?, paymentResponse: PaymentResponse?, form: RecordingForm?, roadsideAssistance: RecordingRoadsideAssistance?, richLink: RichLink?, messageReceipts: [RecordingMessageReceipt]?) {
         self.from = from
         self.fromUser = fromUser
         self.fromExternalContact = fromExternalContact
@@ -183,6 +187,7 @@ public class RecordingMessagingMessage: Codable {
         self.paymentResponse = paymentResponse
         self.form = form
         self.roadsideAssistance = roadsideAssistance
+        self.richLink = richLink
         self.messageReceipts = messageReceipts
     }
 
@@ -217,6 +222,7 @@ public class RecordingMessagingMessage: Codable {
         case paymentResponse
         case form
         case roadsideAssistance
+        case richLink
         case messageReceipts
     }
 

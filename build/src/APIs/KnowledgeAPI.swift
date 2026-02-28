@@ -588,6 +588,51 @@ open class KnowledgeAPI {
 
     
     
+    /**
+     Delete Knowledge setting.
+     
+     - parameter knowledgeSettingId: (path) Knowledge Setting ID. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteKnowledgeSetting(knowledgeSettingId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteKnowledgeSettingWithRequestBuilder(knowledgeSettingId: knowledgeSettingId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete Knowledge setting.
+     - DELETE /api/v2/knowledge/settings/{knowledgeSettingId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter knowledgeSettingId: (path) Knowledge Setting ID. 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteKnowledgeSettingWithRequestBuilder(knowledgeSettingId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/settings/{knowledgeSettingId}"
+        let knowledgeSettingIdPreEscape = "\(knowledgeSettingId)"
+        let knowledgeSettingIdPostEscape = knowledgeSettingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeSettingId}", with: knowledgeSettingIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     
@@ -4511,6 +4556,208 @@ open class KnowledgeAPI {
 
     
     
+    /**
+     Get Knowledge setting.
+     
+     - parameter knowledgeSettingId: (path) Knowledge Setting ID. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeSetting(knowledgeSettingId: String, completion: @escaping ((_ data: KnowledgeSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeSettingWithRequestBuilder(knowledgeSettingId: knowledgeSettingId)
+        requestBuilder.execute { (response: Response<KnowledgeSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Knowledge setting.
+     - GET /api/v2/knowledge/settings/{knowledgeSettingId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "generationSetting" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "sources" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "stateful" : true
+}, statusCode=200}]
+     
+     - parameter knowledgeSettingId: (path) Knowledge Setting ID. 
+
+     - returns: RequestBuilder<KnowledgeSettingsResponse> 
+     */
+    open class func getKnowledgeSettingWithRequestBuilder(knowledgeSettingId: String) -> RequestBuilder<KnowledgeSettingsResponse> {        
+        var path = "/api/v2/knowledge/settings/{knowledgeSettingId}"
+        let knowledgeSettingIdPreEscape = "\(knowledgeSettingId)"
+        let knowledgeSettingIdPostEscape = knowledgeSettingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeSettingId}", with: knowledgeSettingIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum SortBy_getKnowledgeSettings: String { 
+        case datemodified = "dateModified"
+        case name = "name"
+    }
+    
+    
+    
+    public enum SortOrder_getKnowledgeSettings: String { 
+        case asc = "Asc"
+        case desc = "Desc"
+    }
+    
+    
+    /**
+     Get Knowledge settings.
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter name: (query) Knowledge setting name to search upon. (optional)
+     - parameter sourceId: (query) Source ID to filter knowledge settings by. (optional)
+     - parameter sortBy: (query) Field to sort the knowledge settings on. (optional)
+     - parameter sortOrder: (query) Sorting order for knowledge settings. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeSettings(before: String? = nil, after: String? = nil, pageSize: String? = nil, name: String? = nil, sourceId: String? = nil, sortBy: SortBy_getKnowledgeSettings? = nil, sortOrder: SortOrder_getKnowledgeSettings? = nil, completion: @escaping ((_ data: KnowledgeSettingListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeSettingsWithRequestBuilder(before: before, after: after, pageSize: pageSize, name: name, sourceId: sourceId, sortBy: sortBy, sortOrder: sortOrder)
+        requestBuilder.execute { (response: Response<KnowledgeSettingListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Knowledge settings.
+     - GET /api/v2/knowledge/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "generationSetting" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "sources" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "stateful" : true
+  }, {
+    "generationSetting" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "sources" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "stateful" : true
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter name: (query) Knowledge setting name to search upon. (optional)
+     - parameter sourceId: (query) Source ID to filter knowledge settings by. (optional)
+     - parameter sortBy: (query) Field to sort the knowledge settings on. (optional)
+     - parameter sortOrder: (query) Sorting order for knowledge settings. (optional)
+
+     - returns: RequestBuilder<KnowledgeSettingListing> 
+     */
+    open class func getKnowledgeSettingsWithRequestBuilder(before: String? = nil, after: String? = nil, pageSize: String? = nil, name: String? = nil, sourceId: String? = nil, sortBy: SortBy_getKnowledgeSettings? = nil, sortOrder: SortOrder_getKnowledgeSettings? = nil) -> RequestBuilder<KnowledgeSettingListing> {        
+        let path = "/api/v2/knowledge/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize, 
+            "name": name, 
+            "sourceId": sourceId, 
+            "sortBy": sortBy?.rawValue, 
+            "sortOrder": sortOrder?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<KnowledgeSettingListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     
@@ -5536,6 +5783,80 @@ open class KnowledgeAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UnansweredPhraseGroupUpdateResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update Knowledge setting.
+     
+     - parameter knowledgeSettingId: (path) Knowledge Setting ID. 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchKnowledgeSetting(knowledgeSettingId: String, body: KnowledgeSettingsRequest, completion: @escaping ((_ data: KnowledgeSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchKnowledgeSettingWithRequestBuilder(knowledgeSettingId: knowledgeSettingId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update Knowledge setting.
+     - PATCH /api/v2/knowledge/settings/{knowledgeSettingId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "generationSetting" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "sources" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "stateful" : true
+}, statusCode=200}]
+     
+     - parameter knowledgeSettingId: (path) Knowledge Setting ID. 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<KnowledgeSettingsResponse> 
+     */
+    open class func patchKnowledgeSettingWithRequestBuilder(knowledgeSettingId: String, body: KnowledgeSettingsRequest) -> RequestBuilder<KnowledgeSettingsResponse> {        
+        var path = "/api/v2/knowledge/settings/{knowledgeSettingId}"
+        let knowledgeSettingIdPreEscape = "\(knowledgeSettingId)"
+        let knowledgeSettingIdPostEscape = knowledgeSettingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeSettingId}", with: knowledgeSettingIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -8386,6 +8707,128 @@ open class KnowledgeAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get Knowledge Search Preview
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeSearchPreview(body: KnowledgeSearchPreviewRequest? = nil, completion: @escaping ((_ data: KnowledgeSearchPreviewResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeSearchPreviewWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<KnowledgeSearchPreviewResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Knowledge Search Preview
+     - POST /api/v2/knowledge/search/preview
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "searchId" : "searchId",
+  "query" : "query",
+  "sessionId" : "sessionId"
+}, statusCode=200}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<KnowledgeSearchPreviewResponse> 
+     */
+    open class func postKnowledgeSearchPreviewWithRequestBuilder(body: KnowledgeSearchPreviewRequest? = nil) -> RequestBuilder<KnowledgeSearchPreviewResponse> {        
+        let path = "/api/v2/knowledge/search/preview"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeSearchPreviewResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create Knowledge setting.
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeSettings(body: KnowledgeSettingsRequest? = nil, completion: @escaping ((_ data: KnowledgeSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<KnowledgeSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create Knowledge setting.
+     - POST /api/v2/knowledge/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "generationSetting" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "sources" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "stateful" : true
+}, statusCode=200}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<KnowledgeSettingsResponse> 
+     */
+    open class func postKnowledgeSettingsWithRequestBuilder(body: KnowledgeSettingsRequest? = nil) -> RequestBuilder<KnowledgeSettingsResponse> {        
+        let path = "/api/v2/knowledge/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

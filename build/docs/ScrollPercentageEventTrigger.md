@@ -12,4 +12,4 @@ Details about a scroll percentage event trigger
 
 
 
-_PureCloudPlatformClientV2@188.0.0_
+_PureCloudPlatformClientV2@189.0.0_
