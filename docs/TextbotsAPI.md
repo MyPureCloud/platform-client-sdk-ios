@@ -229,4 +229,4 @@ TextbotsAPI.postTextbotsBotsExecute(postTextRequest: postTextRequest) { (respons
 [**PostTextResponse**](PostTextResponse)
 
 
-_PureCloudPlatformClientV2@189.0.0_
+_PureCloudPlatformClientV2@190.0.0_

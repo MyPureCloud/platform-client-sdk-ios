@@ -3632,4 +3632,4 @@ JourneyAPI.putJourneyViewVersion(viewId: viewId, versionId: versionId, body: bod
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatformClientV2@189.0.0_
+_PureCloudPlatformClientV2@190.0.0_

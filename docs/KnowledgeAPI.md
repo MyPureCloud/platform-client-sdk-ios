@@ -101,6 +101,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postKnowledgeKnowledgebaseSynchronizeJobs**](KnowledgeAPI#postKnowledgeKnowledgebaseSynchronizeJobs) | Create synchronization job |
 | [**postKnowledgeKnowledgebaseUploadsUrlsJobs**](KnowledgeAPI#postKnowledgeKnowledgebaseUploadsUrlsJobs) | Create content upload from URL job |
 | [**postKnowledgeKnowledgebases**](KnowledgeAPI#postKnowledgeKnowledgebases) | Create new knowledge base |
+| [**postKnowledgeSearch**](KnowledgeAPI#postKnowledgeSearch) | Get Knowledge Search |
 | [**postKnowledgeSearchPreview**](KnowledgeAPI#postKnowledgeSearchPreview) | Get Knowledge Search Preview |
 | [**postKnowledgeSettings**](KnowledgeAPI#postKnowledgeSettings) | Create Knowledge setting. |
 | [**putKnowledgeKnowledgebaseSourcesSalesforceSourceId**](KnowledgeAPI#putKnowledgeKnowledgebaseSourcesSalesforceSourceId) | Update Salesforce Knowledge integration source |
@@ -5367,6 +5368,56 @@ KnowledgeAPI.postKnowledgeKnowledgebases(body: body) { (response, error) in
 [**KnowledgeBase**](KnowledgeBase)
 
 
+## postKnowledgeSearch
+
+
+
+> [KnowledgeSourcesSearchResponse](KnowledgeSourcesSearchResponse) postKnowledgeSearch(body)
+
+Get Knowledge Search
+
+
+
+Wraps POST /api/v2/knowledge/search  
+
+Requires ALL permissions: 
+
+* knowledge:knowledgeSetting:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: KnowledgeSourcesSearchRequest = new KnowledgeSourcesSearchRequest(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeSearch(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**KnowledgeSourcesSearchRequest**](KnowledgeSourcesSearchRequest)|  | [optional] |
+
+
+### Return type
+
+[**KnowledgeSourcesSearchResponse**](KnowledgeSourcesSearchResponse)
+
+
 ## postKnowledgeSearchPreview
 
 
@@ -5575,4 +5626,4 @@ KnowledgeAPI.putKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId:
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatformClientV2@189.0.0_
+_PureCloudPlatformClientV2@190.0.0_

@@ -70,6 +70,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postTaskmanagementWorkitems**](TaskManagementAPI#postTaskmanagementWorkitems) | Create a workitem |
 | [**postTaskmanagementWorkitemsBulkAddJobs**](TaskManagementAPI#postTaskmanagementWorkitemsBulkAddJobs) | Create a workitem bulk add job. |
 | [**postTaskmanagementWorkitemsBulkTerminateJobs**](TaskManagementAPI#postTaskmanagementWorkitemsBulkTerminateJobs) | Create a workitem bulk terminate job. |
+| [**postTaskmanagementWorkitemsQuery**](TaskManagementAPI#postTaskmanagementWorkitemsQuery) | Query for workitems |
 | [**postTaskmanagementWorkitemsQueryJobs**](TaskManagementAPI#postTaskmanagementWorkitemsQueryJobs) | Create a workitem query job |
 | [**postTaskmanagementWorkitemsSchemas**](TaskManagementAPI#postTaskmanagementWorkitemsSchemas) | Create a schema |
 | [**postTaskmanagementWorktypeFlowsDatebasedRules**](TaskManagementAPI#postTaskmanagementWorktypeFlowsDatebasedRules) | Add a date based rule to a worktype |
@@ -3497,6 +3498,58 @@ TaskManagementAPI.postTaskmanagementWorkitemsBulkTerminateJobs(body: body) { (re
 [**BulkJob**](BulkJob)
 
 
+## postTaskmanagementWorkitemsQuery
+
+
+
+> [WorkitemPostQueryEntityListing](WorkitemPostQueryEntityListing) postTaskmanagementWorkitemsQuery(body)
+
+Query for workitems
+
+This query requires at least one EQ filter on the workbinId, assigneeId, queueId or typeId attributes. A maximum of three filters are allowed.
+
+
+
+Wraps POST /api/v2/taskmanagement/workitems/query  
+
+Requires ANY permissions: 
+
+* workitems:workitem:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: WorkitemQueryPostRequest = new WorkitemQueryPostRequest(...) // WorkitemQueryPostRequest
+
+// Code example
+TaskManagementAPI.postTaskmanagementWorkitemsQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.postTaskmanagementWorkitemsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**WorkitemQueryPostRequest**](WorkitemQueryPostRequest)| WorkitemQueryPostRequest | |
+
+
+### Return type
+
+[**WorkitemPostQueryEntityListing**](WorkitemPostQueryEntityListing)
+
+
 ## postTaskmanagementWorkitemsQueryJobs
 
 
@@ -3957,4 +4010,4 @@ TaskManagementAPI.putTaskmanagementWorkitemsSchema(schemaId: schemaId, body: bod
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatformClientV2@189.0.0_
+_PureCloudPlatformClientV2@190.0.0_

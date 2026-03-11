@@ -10,8 +10,10 @@
 | **subDomain** | **Bool** | Indicates if this a PureCloud sub-domain. If true, then the appropriate DNS records are created for sending/receiving email. | [optional] |
 | **mailFromSettings** | [**MailFromResult**](MailFromResult) | The DNS settings if the inbound domain is using a custom Mail From. These settings can only be used on InboundDomains where subDomain is false. | [optional] |
 | **customSMTPServer** | [**DomainEntityRef**](DomainEntityRef) | The custom SMTP server integration to use when sending outbound emails from this domain. | [optional] |
+| **imapSettings** | [**ImapSettings**](ImapSettings) | The IMAP server integration and settings to use for processing inbound emails. | [optional] |
+| **graphApiSettings** | [**GraphApiSettings**](GraphApiSettings) | The GraphAPI server integration and settings to use for processing inbound and outbound emails. | [optional] |
 | **emailSetting** | [**EmailSettingReference**](EmailSettingReference) | The email settings to associate with this domain. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@189.0.0_
+_PureCloudPlatformClientV2@190.0.0_
