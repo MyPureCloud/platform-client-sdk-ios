@@ -21,11 +21,11 @@ public class WhatsAppDefinition: Codable {
     public var namespace: String?
     /** The messaging template language configured for this template. This is a WhatsApp specific value. For example, 'en_US' */
     public var language: String?
-    /** List of buttons to be included in the WhatsApp messages channel */
+    /** List of buttons to be included in the standard WhatsApp messages channel */
     public var buttons: [Button]?
-    /** Footer for the message in the WhatsApp messages channel */
+    /** Footer for the message in the standard WhatsApp messages channel */
     public var messageFooter: MessageFooter?
-    /** Header for the message in the WhatsApp messages channel */
+    /** Header for the message in the standard WhatsApp messages channel */
     public var header: MessageHeader?
 
     public init(name: String?, namespace: String?, language: String?, buttons: [Button]?, messageFooter: MessageFooter?, header: MessageHeader?) {

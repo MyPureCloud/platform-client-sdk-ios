@@ -11,6 +11,7 @@
 | **value** | **Double** | The value of the metric | |
 | **metric** | **String** | The metric which is going to be modified for the selected staffing groups | |
 | **notes** | **String** | Notes about the staffing groups metric changes | [optional] |
+| **transfersFullTimeEquivalent** | [**TransfersFullTimeEquivalent**](TransfersFullTimeEquivalent) | Full time equivalent transfer from one staffing group to another | [optional] |
 | **staffingGroups** | [**[StaffingGroupReference]**]([StaffingGroupReference]) | The staffing groups affected by the metric change | |
 | **createdBy** | [**UserReference**](UserReference) | The user who created the metric change | |
 | **createdDate** | [**Date**](Date) | The date the entity was created, in ISO-8601 format | |
@@ -18,4 +19,4 @@
 
 
 
-_PureCloudPlatformClientV2@189.0.0_
+_PureCloudPlatformClientV2@190.0.0_

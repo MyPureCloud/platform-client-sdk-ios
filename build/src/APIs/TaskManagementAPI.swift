@@ -5481,6 +5481,180 @@ open class TaskManagementAPI {
     
     
     /**
+     Query for workitems
+     
+     - parameter body: (body) WorkitemQueryPostRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTaskmanagementWorkitemsQuery(body: WorkitemQueryPostRequest, completion: @escaping ((_ data: WorkitemPostQueryEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTaskmanagementWorkitemsQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<WorkitemPostQueryEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query for workitems
+     - POST /api/v2/taskmanagement/workitems/query
+     - This query requires at least one EQ filter on the workbinId, assigneeId, queueId or typeId attributes. A maximum of three filters are allowed.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "preferredAgents" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "schema" : "{}",
+    "durationSeconds" : 6,
+    "customFields" : {
+      "key" : "{}"
+    },
+    "description" : "description",
+    "language" : "{}",
+    "externalTag" : "externalTag",
+    "type" : "{}",
+    "statusCategory" : "Open",
+    "dateClosed" : "2000-01-23T04:56:07.000+00:00",
+    "division" : "{}",
+    "skills" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateExpires" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "scoredAgents" : [ {
+      "score" : 5,
+      "agent" : "{}"
+    }, {
+      "score" : 5,
+      "agent" : "{}"
+    } ],
+    "dateDue" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "reporter" : "{}",
+    "externalContact" : "{}",
+    "priority" : 0,
+    "ttl" : 1,
+    "script" : "{}",
+    "autoStatusTransitionDetail" : "{}",
+    "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
+    "alertTimeoutSeconds" : 5,
+    "assignmentState" : "Unknown",
+    "utilizationLabel" : "{}",
+    "dateAssignmentStateChanged" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "autoStatusTransition" : true,
+    "assignee" : "{}",
+    "workbin" : "{}",
+    "queue" : "{}",
+    "status" : "{}"
+  }, {
+    "preferredAgents" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "schema" : "{}",
+    "durationSeconds" : 6,
+    "customFields" : {
+      "key" : "{}"
+    },
+    "description" : "description",
+    "language" : "{}",
+    "externalTag" : "externalTag",
+    "type" : "{}",
+    "statusCategory" : "Open",
+    "dateClosed" : "2000-01-23T04:56:07.000+00:00",
+    "division" : "{}",
+    "skills" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateExpires" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "scoredAgents" : [ {
+      "score" : 5,
+      "agent" : "{}"
+    }, {
+      "score" : 5,
+      "agent" : "{}"
+    } ],
+    "dateDue" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "reporter" : "{}",
+    "externalContact" : "{}",
+    "priority" : 0,
+    "ttl" : 1,
+    "script" : "{}",
+    "autoStatusTransitionDetail" : "{}",
+    "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
+    "alertTimeoutSeconds" : 5,
+    "assignmentState" : "Unknown",
+    "utilizationLabel" : "{}",
+    "dateAssignmentStateChanged" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "autoStatusTransition" : true,
+    "assignee" : "{}",
+    "workbin" : "{}",
+    "queue" : "{}",
+    "status" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "count" : 0,
+  "after" : "after",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter body: (body) WorkitemQueryPostRequest 
+
+     - returns: RequestBuilder<WorkitemPostQueryEntityListing> 
+     */
+    open class func postTaskmanagementWorkitemsQueryWithRequestBuilder(body: WorkitemQueryPostRequest) -> RequestBuilder<WorkitemPostQueryEntityListing> {        
+        let path = "/api/v2/taskmanagement/workitems/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkitemPostQueryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Create a workitem query job
      
      - parameter body: (body) WorkitemQueryJobCreate 

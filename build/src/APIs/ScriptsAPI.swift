@@ -422,8 +422,8 @@ open class ScriptsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "truncatedDivisions" : true,
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -627,8 +627,8 @@ open class ScriptsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "truncatedDivisions" : true,
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -815,8 +815,8 @@ open class ScriptsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "truncatedDivisions" : true,
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -1089,8 +1089,8 @@ open class ScriptsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "truncatedDivisions" : true,
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)

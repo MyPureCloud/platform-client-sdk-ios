@@ -11,12 +11,12 @@
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
 | **firstUri** | **String** |  | [optional] |
-| **previousUri** | **String** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
+| **previousUri** | **String** |  | [optional] |
 | **lastUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@189.0.0_
+_PureCloudPlatformClientV2@190.0.0_

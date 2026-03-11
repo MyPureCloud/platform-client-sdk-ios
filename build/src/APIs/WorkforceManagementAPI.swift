@@ -3232,15 +3232,23 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    public enum Granularity_getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations: String { 
+        case weekly = "weekly"
+        case monthly = "monthly"
+    }
+    
+    
     /**
      Get a capacity plan's staffing group allocations
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter granularity: (query) Granularity to access staffing group data, defaults to weekly (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations(businessUnitId: String, capacityPlanId: String, completion: @escaping ((_ data: CapacityPlanStaffingGroupAllocationsResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationsWithRequestBuilder(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId)
+    open class func getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations(businessUnitId: String, capacityPlanId: String, granularity: Granularity_getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations? = nil, completion: @escaping ((_ data: CapacityPlanStaffingGroupAllocationsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationsWithRequestBuilder(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId, granularity: granularity)
         requestBuilder.execute { (response: Response<CapacityPlanStaffingGroupAllocationsResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -3272,10 +3280,11 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter granularity: (query) Granularity to access staffing group data, defaults to weekly (optional)
 
      - returns: RequestBuilder<CapacityPlanStaffingGroupAllocationsResponse> 
      */
-    open class func getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationsWithRequestBuilder(businessUnitId: String, capacityPlanId: String) -> RequestBuilder<CapacityPlanStaffingGroupAllocationsResponse> {        
+    open class func getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationsWithRequestBuilder(businessUnitId: String, capacityPlanId: String, granularity: Granularity_getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations? = nil) -> RequestBuilder<CapacityPlanStaffingGroupAllocationsResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3286,7 +3295,10 @@ open class WorkforceManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "granularity": granularity?.rawValue
+        ])
 
         let requestBuilder: RequestBuilder<CapacityPlanStaffingGroupAllocationsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -3368,16 +3380,24 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    public enum Granularity_getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast: String { 
+        case weekly = "weekly"
+        case monthly = "monthly"
+    }
+    
+    
     /**
      Get the latest long term staffing requirements for a business unit
      
      - parameter businessUnitId: (path)  
      - parameter weekDateId: (path) weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) forecastId of forecast 
+     - parameter granularity: (query) Granularity to access staffing requirements data, defaults to weekly (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast(businessUnitId: String, weekDateId: Date, forecastId: String, completion: @escaping ((_ data: LongTermRequirementsResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId)
+    open class func getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast(businessUnitId: String, weekDateId: Date, forecastId: String, granularity: Granularity_getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast? = nil, completion: @escaping ((_ data: LongTermRequirementsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, granularity: granularity)
         requestBuilder.execute { (response: Response<LongTermRequirementsResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -3410,10 +3430,11 @@ open class WorkforceManagementAPI {
      - parameter businessUnitId: (path)  
      - parameter weekDateId: (path) weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) forecastId of forecast 
+     - parameter granularity: (query) Granularity to access staffing requirements data, defaults to weekly (optional)
 
      - returns: RequestBuilder<LongTermRequirementsResponse> 
      */
-    open class func getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String) -> RequestBuilder<LongTermRequirementsResponse> {        
+    open class func getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String, granularity: Granularity_getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast? = nil) -> RequestBuilder<LongTermRequirementsResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3427,7 +3448,10 @@ open class WorkforceManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "granularity": granularity?.rawValue
+        ])
 
         let requestBuilder: RequestBuilder<LongTermRequirementsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -3747,8 +3771,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -10109,8 +10133,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Deprecated, paging is not supported (optional)
@@ -10207,8 +10231,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return all divisions (optional)
@@ -16064,6 +16088,7 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "transfersFullTimeEquivalent" : "{}",
   "notes" : "notes",
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "weekStartNumber" : 6,
@@ -16145,6 +16170,7 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "transfersFullTimeEquivalent" : "{}",
     "notes" : "notes",
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "weekStartNumber" : 6,
@@ -16160,6 +16186,7 @@ open class WorkforceManagementAPI {
       "id" : "id"
     } ]
   }, {
+    "transfersFullTimeEquivalent" : "{}",
     "notes" : "notes",
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "weekStartNumber" : 6,

@@ -4299,4 +4299,4 @@ GamificationAPI.putGamificationStatus(status: status) { (response, error) in
 [**GamificationStatus**](GamificationStatus)
 
 
-_PureCloudPlatformClientV2@189.0.0_
+_PureCloudPlatformClientV2@190.0.0_

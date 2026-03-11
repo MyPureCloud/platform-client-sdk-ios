@@ -34,22 +34,22 @@ public class ManagementUnitListing: Codable {
     /** Deprecated, paging is not supported */
     public var pageCount: Int?
     /** Deprecated, paging is not supported */
-    public var previousUri: String?
-    /** Deprecated, paging is not supported */
     public var nextUri: String?
+    /** Deprecated, paging is not supported */
+    public var previousUri: String?
     /** Deprecated, paging is not supported */
     public var lastUri: String?
     public var selfUri: String?
 
-    public init(entities: [ManagementUnit]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, pageCount: Int?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?) {
+    public init(entities: [ManagementUnit]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, pageCount: Int?, nextUri: String?, previousUri: String?, lastUri: String?, selfUri: String?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.firstUri = firstUri
         self.pageCount = pageCount
-        self.previousUri = previousUri
         self.nextUri = nextUri
+        self.previousUri = previousUri
         self.lastUri = lastUri
         self.selfUri = selfUri
     }

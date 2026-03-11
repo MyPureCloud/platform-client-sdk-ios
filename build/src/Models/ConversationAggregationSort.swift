@@ -18,6 +18,7 @@ public class ConversationAggregationSort: Codable {
         case noutboundconnected = "nOutboundConnected"
         case noversla = "nOverSla"
         case nstatetransitionerror = "nStateTransitionError"
+        case ntakeover = "nTakeover"
         case ntransferred = "nTransferred"
         case oaudiomessagecount = "oAudioMessageCount"
         case oexternalaudiomessagecount = "oExternalAudioMessageCount"

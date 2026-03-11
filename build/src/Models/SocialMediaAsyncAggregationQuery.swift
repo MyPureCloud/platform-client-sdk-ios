@@ -19,6 +19,7 @@ public class SocialMediaAsyncAggregationQuery: Codable {
         case dataingestionrule = "dataIngestionRule"
         case text = "text"
         case moderationflag = "moderationFlag"
+        case sourcetype = "sourceType"
     }
 
 

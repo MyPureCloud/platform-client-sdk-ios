@@ -27,6 +27,8 @@ public class CapacityPlanStaffingGroupMetricChangeResponse: Codable {
 
 
 
+
+
     /** The number of weeks to which the metric change applies */
     public var numberOfWeeks: Int?
     /** The start number of the week (starting from 1) to which the metric change applies, related to numberOfWeeks */
@@ -37,6 +39,8 @@ public class CapacityPlanStaffingGroupMetricChangeResponse: Codable {
     public var metric: Metric?
     /** Notes about the staffing groups metric changes */
     public var notes: String?
+    /** Full time equivalent transfer from one staffing group to another */
+    public var transfersFullTimeEquivalent: TransfersFullTimeEquivalent?
     /** The staffing groups affected by the metric change */
     public var staffingGroups: [StaffingGroupReference]?
     /** The user who created the metric change */
@@ -46,12 +50,13 @@ public class CapacityPlanStaffingGroupMetricChangeResponse: Codable {
     /** The version of the capacity plan */
     public var version: Int?
 
-    public init(numberOfWeeks: Int?, weekStartNumber: Int?, value: Double?, metric: Metric?, notes: String?, staffingGroups: [StaffingGroupReference]?, createdBy: UserReference?, createdDate: Date?, version: Int?) {
+    public init(numberOfWeeks: Int?, weekStartNumber: Int?, value: Double?, metric: Metric?, notes: String?, transfersFullTimeEquivalent: TransfersFullTimeEquivalent?, staffingGroups: [StaffingGroupReference]?, createdBy: UserReference?, createdDate: Date?, version: Int?) {
         self.numberOfWeeks = numberOfWeeks
         self.weekStartNumber = weekStartNumber
         self.value = value
         self.metric = metric
         self.notes = notes
+        self.transfersFullTimeEquivalent = transfersFullTimeEquivalent
         self.staffingGroups = staffingGroups
         self.createdBy = createdBy
         self.createdDate = createdDate

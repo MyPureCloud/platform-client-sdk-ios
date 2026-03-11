@@ -40,6 +40,15 @@ public class InboundRoute: Codable {
 
 
 
+    public enum Status: String, Codable { 
+        case pending = "Pending"
+        case active = "Active"
+        case removing = "Removing"
+        case error = "Error"
+    }
+
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -71,10 +80,14 @@ public class InboundRoute: Codable {
     public var historyInclusion: HistoryInclusion?
     /** Control if multiple actions are allowed on this route. When true the disconnect has to be done manually. When false a conversation will be disconnected by the system after every action */
     public var allowMultipleActions: Bool?
+    /** Integration Folder routed to this route */
+    public var mailboxFolders: [String]?
+    /** The status of the route. */
+    public var status: Status?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, pattern: String?, queue: DomainEntityRef?, priority: Int?, skills: [DomainEntityRef]?, language: DomainEntityRef?, fromName: String?, fromEmail: String?, flow: DomainEntityRef?, replyEmailAddress: QueueEmailAddress?, autoBcc: [EmailAddress]?, spamFlow: DomainEntityRef?, signature: Signature?, historyInclusion: HistoryInclusion?, allowMultipleActions: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, pattern: String?, queue: DomainEntityRef?, priority: Int?, skills: [DomainEntityRef]?, language: DomainEntityRef?, fromName: String?, fromEmail: String?, flow: DomainEntityRef?, replyEmailAddress: QueueEmailAddress?, autoBcc: [EmailAddress]?, spamFlow: DomainEntityRef?, signature: Signature?, historyInclusion: HistoryInclusion?, allowMultipleActions: Bool?, mailboxFolders: [String]?, status: Status?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.pattern = pattern
@@ -91,6 +104,8 @@ public class InboundRoute: Codable {
         self.signature = signature
         self.historyInclusion = historyInclusion
         self.allowMultipleActions = allowMultipleActions
+        self.mailboxFolders = mailboxFolders
+        self.status = status
         self.selfUri = selfUri
     }
 
@@ -111,6 +126,8 @@ public class InboundRoute: Codable {
         case signature
         case historyInclusion
         case allowMultipleActions
+        case mailboxFolders
+        case status
         case selfUri
     }
 

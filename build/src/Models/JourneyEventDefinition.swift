@@ -9,7 +9,7 @@ public class JourneyEventDefinition: Codable {
 
     public enum Source: String, Codable { 
         case native = "Native"
-        case custom = "Custom"
+        case external = "External"
     }
 
 

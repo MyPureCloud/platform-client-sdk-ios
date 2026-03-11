@@ -15,6 +15,7 @@ public class Variable: Codable {
         case input = "Input"
         case output = "Output"
         case inputAndOutput = "InputAndOutput"
+        case guideOnly = "GuideOnly"
     }
 
 

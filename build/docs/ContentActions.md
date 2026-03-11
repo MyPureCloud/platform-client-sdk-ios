@@ -13,4 +13,4 @@ User actions available on the content. All actions are optional and all actions 
 
 
 
-_PureCloudPlatformClientV2@189.0.0_
+_PureCloudPlatformClientV2@190.0.0_

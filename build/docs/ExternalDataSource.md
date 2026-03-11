@@ -12,4 +12,4 @@ Describes a link to a record in an external system that contributed data to a Re
 
 
 
-_PureCloudPlatformClientV2@189.0.0_
+_PureCloudPlatformClientV2@190.0.0_

@@ -107,4 +107,4 @@ CarrierServicesAPI.postCarrierservicesIntegrationsEmergencylocationsMe(body: bod
 [**EmergencyLocation**](EmergencyLocation)
 
 
-_PureCloudPlatformClientV2@189.0.0_
+_PureCloudPlatformClientV2@190.0.0_

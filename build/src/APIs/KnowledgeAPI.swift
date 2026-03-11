@@ -8714,6 +8714,67 @@ open class KnowledgeAPI {
     
     
     /**
+     Get Knowledge Search
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeSearch(body: KnowledgeSourcesSearchRequest? = nil, completion: @escaping ((_ data: KnowledgeSourcesSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeSearchWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<KnowledgeSourcesSearchResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Knowledge Search
+     - POST /api/v2/knowledge/search
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "conversationContext" : "{}",
+  "searchId" : "searchId",
+  "application" : "{}",
+  "query" : "query",
+  "generationLanguage" : "ar-AE",
+  "answerGeneration" : true,
+  "sessionId" : "sessionId",
+  "knowledgeSettingId" : "knowledgeSettingId",
+  "queryType" : "AutoSearch"
+}, statusCode=200}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<KnowledgeSourcesSearchResponse> 
+     */
+    open class func postKnowledgeSearchWithRequestBuilder(body: KnowledgeSourcesSearchRequest? = nil) -> RequestBuilder<KnowledgeSourcesSearchResponse> {        
+        let path = "/api/v2/knowledge/search"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeSourcesSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Get Knowledge Search Preview
      
      - parameter body: (body)  (optional)

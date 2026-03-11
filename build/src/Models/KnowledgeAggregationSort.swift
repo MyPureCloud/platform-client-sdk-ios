@@ -14,6 +14,7 @@ public class KnowledgeAggregationSort: Codable {
         case nknowledgesearchfeedback = "nKnowledgeSearchFeedback"
         case nknowledgesearchunanswered = "nKnowledgeSearchUnanswered"
         case nknowledgesessions = "nKnowledgeSessions"
+        case nknowledgev3search = "nKnowledgeV3Search"
         case oknowledgedocumentquery = "oKnowledgeDocumentQuery"
         case oknowledgedocumentqueryselfserved = "oKnowledgeDocumentQuerySelfServed"
         case oknowledgesearch = "oKnowledgeSearch"

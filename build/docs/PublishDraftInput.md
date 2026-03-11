@@ -11,4 +11,4 @@ Draft to be published
 
 
 
-_PureCloudPlatformClientV2@189.0.0_
+_PureCloudPlatformClientV2@190.0.0_

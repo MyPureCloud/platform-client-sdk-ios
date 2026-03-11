@@ -2825,7 +2825,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplan(businessUn
 
 
 
-> [CapacityPlanStaffingGroupAllocationsResponse](CapacityPlanStaffingGroupAllocationsResponse) getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations(businessUnitId, capacityPlanId)
+> [CapacityPlanStaffingGroupAllocationsResponse](CapacityPlanStaffingGroupAllocationsResponse) getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations(businessUnitId, capacityPlanId, granularity)
 
 Get a capacity plan&#39;s staffing group allocations
 
@@ -2847,9 +2847,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The ID of the business unit
 let capacityPlanId: String = "" // The ID of the capacity plan
+let granularity: WorkforceManagementAPI.Granularity_getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations = WorkforceManagementAPI.Granularity_getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations.enummember // Granularity to access staffing group data, defaults to weekly
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId, granularity: granularity) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2866,6 +2867,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplanStaffinggro
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **capacityPlanId** | **String**| The ID of the capacity plan | |
+| **granularity** | **String**| Granularity to access staffing group data, defaults to weekly | [optional]<br />**Values**: weekly ("weekly"), monthly ("monthly") |
 
 
 ### Return type
@@ -2929,7 +2931,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplanStaffingreq
 
 
 
-> [LongTermRequirementsResponse](LongTermRequirementsResponse) getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast(businessUnitId, weekDateId, forecastId)
+> [LongTermRequirementsResponse](LongTermRequirementsResponse) getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast(businessUnitId, weekDateId, forecastId, granularity)
 
 Get the latest long term staffing requirements for a business unit
 
@@ -2952,9 +2954,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let businessUnitId: String = "" // 
 let weekDateId: Date = new Date(...) // weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let forecastId: String = "" // forecastId of forecast
+let granularity: WorkforceManagementAPI.Granularity_getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast = WorkforceManagementAPI.Granularity_getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast.enummember // Granularity to access staffing requirements data, defaults to weekly
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, granularity: granularity) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2972,6 +2975,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplanningLongter
 | **businessUnitId** | **String**|  | |
 | **weekDateId** | **Date**| weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| forecastId of forecast | |
+| **granularity** | **String**| Granularity to access staffing requirements data, defaults to weekly | [optional]<br />**Values**: weekly ("weekly"), monthly ("monthly") |
 
 
 ### Return type
@@ -14700,4 +14704,4 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatformClientV2@189.0.0_
+_PureCloudPlatformClientV2@190.0.0_

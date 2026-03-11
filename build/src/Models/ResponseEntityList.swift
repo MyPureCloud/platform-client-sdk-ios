@@ -30,20 +30,20 @@ public class ResponseEntityList: Codable {
     /** Total number of pages */
     public var pageCount: Int?
     public var firstUri: String?
-    public var previousUri: String?
     public var nextUri: String?
+    public var previousUri: String?
     public var lastUri: String?
     public var selfUri: String?
 
-    public init(entities: [ModelResponse]?, pageSize: Int?, pageNumber: Int?, total: Int64?, pageCount: Int?, firstUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, selfUri: String?) {
+    public init(entities: [ModelResponse]?, pageSize: Int?, pageNumber: Int?, total: Int64?, pageCount: Int?, firstUri: String?, nextUri: String?, previousUri: String?, lastUri: String?, selfUri: String?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.total = total
         self.pageCount = pageCount
         self.firstUri = firstUri
-        self.previousUri = previousUri
         self.nextUri = nextUri
+        self.previousUri = previousUri
         self.lastUri = lastUri
         self.selfUri = selfUri
     }

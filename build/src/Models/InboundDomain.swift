@@ -22,6 +22,10 @@ public class InboundDomain: Codable {
 
 
 
+
+
+
+
     /** Unique Id of the domain such as: example.com */
     public var _id: String?
     public var name: String?
@@ -33,18 +37,24 @@ public class InboundDomain: Codable {
     public var mailFromSettings: MailFromResult?
     /** The custom SMTP server integration to use when sending outbound emails from this domain. */
     public var customSMTPServer: DomainEntityRef?
+    /** The IMAP server integration and settings to use for processing inbound emails. */
+    public var imapSettings: ImapSettings?
+    /** The GraphAPI server integration and settings to use for processing inbound and outbound emails. */
+    public var graphApiSettings: GraphApiSettings?
     /** The email settings associated with this domain. */
     public var emailSetting: EmailSetting?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, mxRecordStatus: MxRecordStatus?, subDomain: Bool?, mailFromSettings: MailFromResult?, customSMTPServer: DomainEntityRef?, emailSetting: EmailSetting?, selfUri: String?) {
+    public init(_id: String?, name: String?, mxRecordStatus: MxRecordStatus?, subDomain: Bool?, mailFromSettings: MailFromResult?, customSMTPServer: DomainEntityRef?, imapSettings: ImapSettings?, graphApiSettings: GraphApiSettings?, emailSetting: EmailSetting?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.mxRecordStatus = mxRecordStatus
         self.subDomain = subDomain
         self.mailFromSettings = mailFromSettings
         self.customSMTPServer = customSMTPServer
+        self.imapSettings = imapSettings
+        self.graphApiSettings = graphApiSettings
         self.emailSetting = emailSetting
         self.selfUri = selfUri
     }
@@ -56,6 +66,8 @@ public class InboundDomain: Codable {
         case subDomain
         case mailFromSettings
         case customSMTPServer
+        case imapSettings
+        case graphApiSettings
         case emailSetting
         case selfUri
     }

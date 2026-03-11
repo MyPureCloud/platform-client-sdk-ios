@@ -12,6 +12,10 @@ public class InboundDomainCreateRequest: Codable {
 
 
 
+
+
+
+
     /** Unique Id of the domain such as: example.com */
     public var _id: String?
     /** Indicates if this a PureCloud sub-domain. If true, then the appropriate DNS records are created for sending/receiving email. */
@@ -20,14 +24,20 @@ public class InboundDomainCreateRequest: Codable {
     public var mailFromSettings: MailFromResult?
     /** The custom SMTP server integration to use when sending outbound emails from this domain. */
     public var customSMTPServer: DomainEntityRef?
+    /** The IMAP server integration and settings to use for processing inbound emails. */
+    public var imapSettings: ImapSettings?
+    /** The GraphAPI server integration and settings to use for processing inbound and outbound emails. */
+    public var graphApiSettings: GraphApiSettings?
     /** The email settings to associate with this domain. */
     public var emailSetting: EmailSettingReference?
 
-    public init(_id: String?, subDomain: Bool?, mailFromSettings: MailFromResult?, customSMTPServer: DomainEntityRef?, emailSetting: EmailSettingReference?) {
+    public init(_id: String?, subDomain: Bool?, mailFromSettings: MailFromResult?, customSMTPServer: DomainEntityRef?, imapSettings: ImapSettings?, graphApiSettings: GraphApiSettings?, emailSetting: EmailSettingReference?) {
         self._id = _id
         self.subDomain = subDomain
         self.mailFromSettings = mailFromSettings
         self.customSMTPServer = customSMTPServer
+        self.imapSettings = imapSettings
+        self.graphApiSettings = graphApiSettings
         self.emailSetting = emailSetting
     }
 
@@ -36,6 +46,8 @@ public class InboundDomainCreateRequest: Codable {
         case subDomain
         case mailFromSettings
         case customSMTPServer
+        case imapSettings
+        case graphApiSettings
         case emailSetting
     }
 
