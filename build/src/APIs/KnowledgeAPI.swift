@@ -13,6 +13,72 @@ open class KnowledgeAPI {
     
     
     /**
+     Delete connection
+     
+     - parameter connectionId: (path) Connection ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteKnowledgeConnection(connectionId: String, completion: @escaping ((_ data: ConnectionResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteKnowledgeConnectionWithRequestBuilder(connectionId: connectionId)
+        requestBuilder.execute { (response: Response<ConnectionResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete connection
+     - DELETE /api/v2/knowledge/connections/{connectionId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "authenticationProperties" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integration" : "{}",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "type" : "Sharepoint",
+  "error" : "{}",
+  "status" : "Created"
+}, statusCode=200}]
+     
+     - parameter connectionId: (path) Connection ID 
+
+     - returns: RequestBuilder<ConnectionResponse> 
+     */
+    open class func deleteKnowledgeConnectionWithRequestBuilder(connectionId: String) -> RequestBuilder<ConnectionResponse> {        
+        var path = "/api/v2/knowledge/connections/{connectionId}"
+        let connectionIdPreEscape = "\(connectionId)"
+        let connectionIdPostEscape = connectionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{connectionId}", with: connectionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ConnectionResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Delete knowledge base
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -629,6 +695,269 @@ open class KnowledgeAPI {
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Delete source
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteKnowledgeSource(sourceId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteKnowledgeSourceWithRequestBuilder(sourceId: sourceId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete source
+     - DELETE /api/v2/knowledge/sources/{sourceId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter sourceId: (path) Source ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteKnowledgeSourceWithRequestBuilder(sourceId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/sources/{sourceId}"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    public enum Expand_getKnowledgeConnection: String { 
+        case authenticationproperties = "authenticationProperties"
+    }
+    
+    /**
+     Get connection
+     
+     - parameter connectionId: (path) Connection ID 
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeConnection(connectionId: String, expand: [String]? = nil, completion: @escaping ((_ data: ConnectionResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeConnectionWithRequestBuilder(connectionId: connectionId, expand: expand)
+        requestBuilder.execute { (response: Response<ConnectionResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get connection
+     - GET /api/v2/knowledge/connections/{connectionId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "authenticationProperties" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integration" : "{}",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "type" : "Sharepoint",
+  "error" : "{}",
+  "status" : "Created"
+}, statusCode=200}]
+     
+     - parameter connectionId: (path) Connection ID 
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
+
+     - returns: RequestBuilder<ConnectionResponse> 
+     */
+    open class func getKnowledgeConnectionWithRequestBuilder(connectionId: String, expand: [String]? = nil) -> RequestBuilder<ConnectionResponse> {        
+        var path = "/api/v2/knowledge/connections/{connectionId}"
+        let connectionIdPreEscape = "\(connectionId)"
+        let connectionIdPostEscape = connectionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{connectionId}", with: connectionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<ConnectionResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get connection options
+     
+     - parameter connectionId: (path) Connection ID 
+     - parameter parentId: (query) The id of the parent option whose children to be listed. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeConnectionOptions(connectionId: String, parentId: String? = nil, completion: @escaping ((_ data: ConnectionOptionListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeConnectionOptionsWithRequestBuilder(connectionId: connectionId, parentId: parentId)
+        requestBuilder.execute { (response: Response<ConnectionOptionListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get connection options
+     - GET /api/v2/knowledge/connections/{connectionId}/options
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "name" : "name",
+    "id" : "id"
+  } ]
+}, statusCode=200}]
+     
+     - parameter connectionId: (path) Connection ID 
+     - parameter parentId: (query) The id of the parent option whose children to be listed. (optional)
+
+     - returns: RequestBuilder<ConnectionOptionListing> 
+     */
+    open class func getKnowledgeConnectionOptionsWithRequestBuilder(connectionId: String, parentId: String? = nil) -> RequestBuilder<ConnectionOptionListing> {        
+        var path = "/api/v2/knowledge/connections/{connectionId}/options"
+        let connectionIdPreEscape = "\(connectionId)"
+        let connectionIdPostEscape = connectionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{connectionId}", with: connectionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "parentId": parentId
+        ])
+
+        let requestBuilder: RequestBuilder<ConnectionOptionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get connections
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeConnections(completion: @escaping ((_ data: ConnectionListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeConnectionsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<ConnectionListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get connections
+     - GET /api/v2/knowledge/connections
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "authenticationProperties" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "integration" : "{}",
+    "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "type" : "Sharepoint",
+    "error" : "{}",
+    "status" : "Created"
+  }, {
+    "authenticationProperties" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "integration" : "{}",
+    "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "type" : "Sharepoint",
+    "error" : "{}",
+    "status" : "Created"
+  } ]
+}, statusCode=200}]
+
+     - returns: RequestBuilder<ConnectionListing> 
+     */
+    open class func getKnowledgeConnectionsWithRequestBuilder() -> RequestBuilder<ConnectionListing> {        
+        let path = "/api/v2/knowledge/connections"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ConnectionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -4760,6 +5089,523 @@ open class KnowledgeAPI {
     
     
     
+    public enum Expand_getKnowledgeSource: String { 
+        case lastsync = "lastSync"
+        case filterdetails = "filterDetails"
+    }
+    
+    /**
+     Get source
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter expand: (query) Optional fields to expand for the Source. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeSource(sourceId: String, expand: [String]? = nil, completion: @escaping ((_ data: V3SourceDetailedWithErrorResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeSourceWithRequestBuilder(sourceId: sourceId, expand: expand)
+        requestBuilder.execute { (response: Response<V3SourceDetailedWithErrorResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get source
+     - GET /api/v2/knowledge/sources/{sourceId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "filterDetails" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "filters" : "{}",
+  "type" : "Sharepoint",
+  "error" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lastSync" : "{}",
+  "createdBy" : "{}",
+  "scheduleSettings" : "{}",
+  "name" : "name",
+  "connectionId" : "connectionId",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "triggerType" : "Scheduled",
+  "status" : "Active"
+}, statusCode=200}]
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter expand: (query) Optional fields to expand for the Source. (optional)
+
+     - returns: RequestBuilder<V3SourceDetailedWithErrorResponse> 
+     */
+    open class func getKnowledgeSourceWithRequestBuilder(sourceId: String, expand: [String]? = nil) -> RequestBuilder<V3SourceDetailedWithErrorResponse> {        
+        var path = "/api/v2/knowledge/sources/{sourceId}"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<V3SourceDetailedWithErrorResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a specific synchronization of a source.
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeSourceSynchronization(sourceId: String, synchronizationId: String, completion: @escaping ((_ data: V3Synchronization?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeSourceSynchronizationWithRequestBuilder(sourceId: sourceId, synchronizationId: synchronizationId)
+        requestBuilder.execute { (response: Response<V3Synchronization>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a specific synchronization of a source.
+     - GET /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "ingestionStatus" : "Unknown",
+  "selfUri" : "https://openapi-generator.tech",
+  "source" : "{}",
+  "dateEnd" : "2000-01-23T04:56:07.000+00:00",
+  "type" : "Incremental",
+  "error" : "{}",
+  "dateSourceIntervalEnd" : "2000-01-23T04:56:07.000+00:00",
+  "dateSourceIntervalStart" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "dateStart" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "triggerType" : "Scheduled",
+  "status" : "InQueue",
+  "statistics" : "{}"
+}, statusCode=200}]
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+
+     - returns: RequestBuilder<V3Synchronization> 
+     */
+    open class func getKnowledgeSourceSynchronizationWithRequestBuilder(sourceId: String, synchronizationId: String) -> RequestBuilder<V3Synchronization> {        
+        var path = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let synchronizationIdPreEscape = "\(synchronizationId)"
+        let synchronizationIdPostEscape = synchronizationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{synchronizationId}", with: synchronizationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<V3Synchronization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get synchronizations of a source.
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeSourceSynchronizations(sourceId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: V3SynchronizationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeSourceSynchronizationsWithRequestBuilder(sourceId: sourceId, before: before, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<V3SynchronizationListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get synchronizations of a source.
+     - GET /api/v2/knowledge/sources/{sourceId}/synchronizations
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "ingestionStatus" : "Unknown",
+    "selfUri" : "https://openapi-generator.tech",
+    "source" : "{}",
+    "dateEnd" : "2000-01-23T04:56:07.000+00:00",
+    "type" : "Incremental",
+    "error" : "{}",
+    "dateSourceIntervalEnd" : "2000-01-23T04:56:07.000+00:00",
+    "dateSourceIntervalStart" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "dateStart" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "triggerType" : "Scheduled",
+    "status" : "InQueue",
+    "statistics" : "{}"
+  }, {
+    "ingestionStatus" : "Unknown",
+    "selfUri" : "https://openapi-generator.tech",
+    "source" : "{}",
+    "dateEnd" : "2000-01-23T04:56:07.000+00:00",
+    "type" : "Incremental",
+    "error" : "{}",
+    "dateSourceIntervalEnd" : "2000-01-23T04:56:07.000+00:00",
+    "dateSourceIntervalStart" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "dateStart" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "triggerType" : "Scheduled",
+    "status" : "InQueue",
+    "statistics" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+
+     - returns: RequestBuilder<V3SynchronizationListing> 
+     */
+    open class func getKnowledgeSourceSynchronizationsWithRequestBuilder(sourceId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil) -> RequestBuilder<V3SynchronizationListing> {        
+        var path = "/api/v2/knowledge/sources/{sourceId}/synchronizations"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize
+        ])
+
+        let requestBuilder: RequestBuilder<V3SynchronizationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    public enum Expand_getKnowledgeSources: String { 
+        case lastsync = "lastSync"
+    }
+    
+    /**
+     List sources
+     
+     - parameter expand: (query) Optional fields to expand for the Source. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeSources(expand: [String]? = nil, completion: @escaping ((_ data: V3SourceWithErrorListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeSourcesWithRequestBuilder(expand: expand)
+        requestBuilder.execute { (response: Response<V3SourceWithErrorListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     List sources
+     - GET /api/v2/knowledge/sources
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "type" : "Sharepoint",
+    "error" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lastSync" : "{}",
+    "createdBy" : "{}",
+    "name" : "name",
+    "connectionId" : "connectionId",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "triggerType" : "Scheduled",
+    "status" : "Active"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "type" : "Sharepoint",
+    "error" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lastSync" : "{}",
+    "createdBy" : "{}",
+    "name" : "name",
+    "connectionId" : "connectionId",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "triggerType" : "Scheduled",
+    "status" : "Active"
+  } ]
+}, statusCode=200}]
+     
+     - parameter expand: (query) Optional fields to expand for the Source. (optional)
+
+     - returns: RequestBuilder<V3SourceWithErrorListing> 
+     */
+    open class func getKnowledgeSourcesWithRequestBuilder(expand: [String]? = nil) -> RequestBuilder<V3SourceWithErrorListing> {        
+        let path = "/api/v2/knowledge/sources"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<V3SourceWithErrorListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get synchronizations of all sources of the organization.
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeSourcesSynchronizations(before: String? = nil, after: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: V3SynchronizationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeSourcesSynchronizationsWithRequestBuilder(before: before, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<V3SynchronizationListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get synchronizations of all sources of the organization.
+     - GET /api/v2/knowledge/sources/synchronizations
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "ingestionStatus" : "Unknown",
+    "selfUri" : "https://openapi-generator.tech",
+    "source" : "{}",
+    "dateEnd" : "2000-01-23T04:56:07.000+00:00",
+    "type" : "Incremental",
+    "error" : "{}",
+    "dateSourceIntervalEnd" : "2000-01-23T04:56:07.000+00:00",
+    "dateSourceIntervalStart" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "dateStart" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "triggerType" : "Scheduled",
+    "status" : "InQueue",
+    "statistics" : "{}"
+  }, {
+    "ingestionStatus" : "Unknown",
+    "selfUri" : "https://openapi-generator.tech",
+    "source" : "{}",
+    "dateEnd" : "2000-01-23T04:56:07.000+00:00",
+    "type" : "Incremental",
+    "error" : "{}",
+    "dateSourceIntervalEnd" : "2000-01-23T04:56:07.000+00:00",
+    "dateSourceIntervalStart" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "dateStart" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "triggerType" : "Scheduled",
+    "status" : "InQueue",
+    "statistics" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+
+     - returns: RequestBuilder<V3SynchronizationListing> 
+     */
+    open class func getKnowledgeSourcesSynchronizationsWithRequestBuilder(before: String? = nil, after: String? = nil, pageSize: String? = nil) -> RequestBuilder<V3SynchronizationListing> {        
+        let path = "/api/v2/knowledge/sources/synchronizations"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize
+        ])
+
+        let requestBuilder: RequestBuilder<V3SynchronizationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update connection
+     
+     - parameter connectionId: (path) Connection ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchKnowledgeConnection(connectionId: String, body: ConnectionUpdateRequest? = nil, completion: @escaping ((_ data: ConnectionResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchKnowledgeConnectionWithRequestBuilder(connectionId: connectionId, body: body)
+        requestBuilder.execute { (response: Response<ConnectionResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update connection
+     - PATCH /api/v2/knowledge/connections/{connectionId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "authenticationProperties" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integration" : "{}",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "type" : "Sharepoint",
+  "error" : "{}",
+  "status" : "Created"
+}, statusCode=200}]
+     
+     - parameter connectionId: (path) Connection ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<ConnectionResponse> 
+     */
+    open class func patchKnowledgeConnectionWithRequestBuilder(connectionId: String, body: ConnectionUpdateRequest? = nil) -> RequestBuilder<ConnectionResponse> {        
+        var path = "/api/v2/knowledge/connections/{connectionId}"
+        let connectionIdPreEscape = "\(connectionId)"
+        let connectionIdPostEscape = connectionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{connectionId}", with: connectionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ConnectionResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     
     
     /**
@@ -5859,6 +6705,147 @@ open class KnowledgeAPI {
         let requestBuilder: RequestBuilder<KnowledgeSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update synchronization.
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchKnowledgeSourceSynchronization(sourceId: String, synchronizationId: String, body: V3SynchronizationUpdateRequest, completion: @escaping ((_ data: V3Synchronization?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchKnowledgeSourceSynchronizationWithRequestBuilder(sourceId: sourceId, synchronizationId: synchronizationId, body: body)
+        requestBuilder.execute { (response: Response<V3Synchronization>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update synchronization.
+     - PATCH /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "ingestionStatus" : "Unknown",
+  "selfUri" : "https://openapi-generator.tech",
+  "source" : "{}",
+  "dateEnd" : "2000-01-23T04:56:07.000+00:00",
+  "type" : "Incremental",
+  "error" : "{}",
+  "dateSourceIntervalEnd" : "2000-01-23T04:56:07.000+00:00",
+  "dateSourceIntervalStart" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "dateStart" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "triggerType" : "Scheduled",
+  "status" : "InQueue",
+  "statistics" : "{}"
+}, statusCode=200}]
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<V3Synchronization> 
+     */
+    open class func patchKnowledgeSourceSynchronizationWithRequestBuilder(sourceId: String, synchronizationId: String, body: V3SynchronizationUpdateRequest) -> RequestBuilder<V3Synchronization> {        
+        var path = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let synchronizationIdPreEscape = "\(synchronizationId)"
+        let synchronizationIdPostEscape = synchronizationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{synchronizationId}", with: synchronizationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<V3Synchronization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create new connection
+     
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeConnections(body: ConnectionCreateRequest, completion: @escaping ((_ data: ConnectionCreateResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeConnectionsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ConnectionCreateResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create new connection
+     - POST /api/v2/knowledge/connections
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "authenticationProperties" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integration" : "{}",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "type" : "Sharepoint",
+  "status" : "Created"
+}, statusCode=200}]
+     
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<ConnectionCreateResponse> 
+     */
+    open class func postKnowledgeConnectionsWithRequestBuilder(body: ConnectionCreateRequest) -> RequestBuilder<ConnectionCreateResponse> {        
+        let path = "/api/v2/knowledge/connections"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ConnectionCreateResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
     
@@ -8901,6 +9888,213 @@ open class KnowledgeAPI {
     
     
     /**
+     Create presigned URL for uploading a file in the synchronization.
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeSourceSynchronizationUploads(sourceId: String, synchronizationId: String, body: V3SynchronizationUploadUrlRequest, completion: @escaping ((_ data: V3SynchronizationUploadUrlResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeSourceSynchronizationUploadsWithRequestBuilder(sourceId: sourceId, synchronizationId: synchronizationId, body: body)
+        requestBuilder.execute { (response: Response<V3SynchronizationUploadUrlResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create presigned URL for uploading a file in the synchronization.
+     - POST /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "headers"
+  },
+  "url" : "url"
+}, statusCode=201}]
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<V3SynchronizationUploadUrlResponse> 
+     */
+    open class func postKnowledgeSourceSynchronizationUploadsWithRequestBuilder(sourceId: String, synchronizationId: String, body: V3SynchronizationUploadUrlRequest) -> RequestBuilder<V3SynchronizationUploadUrlResponse> {        
+        var path = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let synchronizationIdPreEscape = "\(synchronizationId)"
+        let synchronizationIdPostEscape = synchronizationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{synchronizationId}", with: synchronizationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<V3SynchronizationUploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Start a manual synchronization from a source.
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeSourceSynchronizations(sourceId: String, body: V3StartManualSyncRequest? = nil, completion: @escaping ((_ data: V3Synchronization?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeSourceSynchronizationsWithRequestBuilder(sourceId: sourceId, body: body)
+        requestBuilder.execute { (response: Response<V3Synchronization>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Start a manual synchronization from a source.
+     - POST /api/v2/knowledge/sources/{sourceId}/synchronizations
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "ingestionStatus" : "Unknown",
+  "selfUri" : "https://openapi-generator.tech",
+  "source" : "{}",
+  "dateEnd" : "2000-01-23T04:56:07.000+00:00",
+  "type" : "Incremental",
+  "error" : "{}",
+  "dateSourceIntervalEnd" : "2000-01-23T04:56:07.000+00:00",
+  "dateSourceIntervalStart" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "dateStart" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "triggerType" : "Scheduled",
+  "status" : "InQueue",
+  "statistics" : "{}"
+}, statusCode=200}]
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<V3Synchronization> 
+     */
+    open class func postKnowledgeSourceSynchronizationsWithRequestBuilder(sourceId: String, body: V3StartManualSyncRequest? = nil) -> RequestBuilder<V3Synchronization> {        
+        var path = "/api/v2/knowledge/sources/{sourceId}/synchronizations"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<V3Synchronization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create a new source
+     
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeSources(body: V3SourceCreateRequest, completion: @escaping ((_ data: V3SourceDetailedResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeSourcesWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<V3SourceDetailedResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a new source
+     - POST /api/v2/knowledge/sources
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "filterDetails" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "filters" : "{}",
+  "type" : "Sharepoint",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lastSync" : "{}",
+  "createdBy" : "{}",
+  "scheduleSettings" : "{}",
+  "name" : "name",
+  "connectionId" : "connectionId",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "triggerType" : "Scheduled",
+  "status" : "Active"
+}, statusCode=200}]
+     
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<V3SourceDetailedResponse> 
+     */
+    open class func postKnowledgeSourcesWithRequestBuilder(body: V3SourceCreateRequest) -> RequestBuilder<V3SourceDetailedResponse> {        
+        let path = "/api/v2/knowledge/sources"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<V3SourceDetailedResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
      Update Salesforce Knowledge integration source
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -9040,6 +10234,79 @@ open class KnowledgeAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ServiceNowSourceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update the source
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putKnowledgeSource(sourceId: String, body: V3SourceUpdateRequest, completion: @escaping ((_ data: V3SourceDetailedResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = putKnowledgeSourceWithRequestBuilder(sourceId: sourceId, body: body)
+        requestBuilder.execute { (response: Response<V3SourceDetailedResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the source
+     - PUT /api/v2/knowledge/sources/{sourceId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "filterDetails" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "filters" : "{}",
+  "type" : "Sharepoint",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lastSync" : "{}",
+  "createdBy" : "{}",
+  "scheduleSettings" : "{}",
+  "name" : "name",
+  "connectionId" : "connectionId",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "triggerType" : "Scheduled",
+  "status" : "Active"
+}, statusCode=200}]
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<V3SourceDetailedResponse> 
+     */
+    open class func putKnowledgeSourceWithRequestBuilder(sourceId: String, body: V3SourceUpdateRequest) -> RequestBuilder<V3SourceDetailedResponse> {        
+        var path = "/api/v2/knowledge/sources/{sourceId}"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<V3SourceDetailedResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

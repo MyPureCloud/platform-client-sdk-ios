@@ -73,6 +73,8 @@ public class VoicemailEndDetailEventTopicVoicemailEndEvent: Codable {
 
 
 
+
+
     public var eventTime: Int64?
     public var conversationId: String?
     public var participantId: String?
@@ -89,8 +91,9 @@ public class VoicemailEndDetailEventTopicVoicemailEndEvent: Codable {
     public var voicemailDurationMs: Int64?
     public var conversationExternalContactIds: [String]?
     public var conversationExternalOrganizationIds: [String]?
+    public var utilizationLabel: String?
 
-    public init(eventTime: Int64?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, userId: String?, queueId: String?, divisionId: String?, voicemailDurationMs: Int64?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?) {
+    public init(eventTime: Int64?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, userId: String?, queueId: String?, divisionId: String?, voicemailDurationMs: Int64?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?, utilizationLabel: String?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
@@ -107,6 +110,7 @@ public class VoicemailEndDetailEventTopicVoicemailEndEvent: Codable {
         self.voicemailDurationMs = voicemailDurationMs
         self.conversationExternalContactIds = conversationExternalContactIds
         self.conversationExternalOrganizationIds = conversationExternalOrganizationIds
+        self.utilizationLabel = utilizationLabel
     }
 
 

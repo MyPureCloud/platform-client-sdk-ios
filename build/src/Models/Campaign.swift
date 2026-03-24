@@ -99,6 +99,8 @@ public class Campaign: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of the Campaign. */
@@ -169,6 +171,8 @@ public class Campaign: Codable {
     public var dynamicContactQueueingSettings: DynamicContactQueueingSettings?
     /** The skill columns on the ContactList that this Campaign should take into account when dialing */
     public var skillColumns: [String]?
+    /** Option to enable preview auto end */
+    public var previewAutoEnd: Bool?
     /** The maximum number of calls that can be placed per agent on this campaign */
     public var maxCallsPerAgent: Int?
     /** The maximum number of calls that can be placed per agent on this campaign with decimal precision */
@@ -182,7 +186,7 @@ public class Campaign: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, contactList: DomainEntityRef?, queue: DomainEntityRef?, dialingMode: DialingMode?, script: DomainEntityRef?, edgeGroup: DomainEntityRef?, site: DomainEntityRef?, campaignStatus: CampaignStatus?, phoneColumns: [PhoneColumn]?, abandonRate: Double?, dncLists: [DomainEntityRef]?, callableTimeSet: DomainEntityRef?, callAnalysisResponseSet: DomainEntityRef?, errors: [RestErrorDetail]?, callerName: String?, callerAddress: String?, outboundLineCount: Int?, ruleSets: [DomainEntityRef]?, skipPreviewDisabled: Bool?, previewTimeOutSeconds: Int64?, alwaysRunning: Bool?, contactSort: ContactSort?, contactSorts: [ContactSort]?, noAnswerTimeout: Int?, callAnalysisLanguage: String?, priority: Int?, contactListFilters: [DomainEntityRef]?, division: DomainEntityRef?, agentOwnedColumn: String?, dynamicContactQueueingSettings: DynamicContactQueueingSettings?, skillColumns: [String]?, maxCallsPerAgent: Int?, maxCallsPerAgentDecimal: Double?, callbackAutoAnswer: Bool?, dynamicLineBalancingSettings: DynamicLineBalancingSettings?, diagnosticsSettings: DiagnosticsSettings?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, contactList: DomainEntityRef?, queue: DomainEntityRef?, dialingMode: DialingMode?, script: DomainEntityRef?, edgeGroup: DomainEntityRef?, site: DomainEntityRef?, campaignStatus: CampaignStatus?, phoneColumns: [PhoneColumn]?, abandonRate: Double?, dncLists: [DomainEntityRef]?, callableTimeSet: DomainEntityRef?, callAnalysisResponseSet: DomainEntityRef?, errors: [RestErrorDetail]?, callerName: String?, callerAddress: String?, outboundLineCount: Int?, ruleSets: [DomainEntityRef]?, skipPreviewDisabled: Bool?, previewTimeOutSeconds: Int64?, alwaysRunning: Bool?, contactSort: ContactSort?, contactSorts: [ContactSort]?, noAnswerTimeout: Int?, callAnalysisLanguage: String?, priority: Int?, contactListFilters: [DomainEntityRef]?, division: DomainEntityRef?, agentOwnedColumn: String?, dynamicContactQueueingSettings: DynamicContactQueueingSettings?, skillColumns: [String]?, previewAutoEnd: Bool?, maxCallsPerAgent: Int?, maxCallsPerAgentDecimal: Double?, callbackAutoAnswer: Bool?, dynamicLineBalancingSettings: DynamicLineBalancingSettings?, diagnosticsSettings: DiagnosticsSettings?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -218,6 +222,7 @@ public class Campaign: Codable {
         self.agentOwnedColumn = agentOwnedColumn
         self.dynamicContactQueueingSettings = dynamicContactQueueingSettings
         self.skillColumns = skillColumns
+        self.previewAutoEnd = previewAutoEnd
         self.maxCallsPerAgent = maxCallsPerAgent
         self.maxCallsPerAgentDecimal = maxCallsPerAgentDecimal
         self.callbackAutoAnswer = callbackAutoAnswer
@@ -262,6 +267,7 @@ public class Campaign: Codable {
         case agentOwnedColumn
         case dynamicContactQueueingSettings
         case skillColumns
+        case previewAutoEnd
         case maxCallsPerAgent
         case maxCallsPerAgentDecimal
         case callbackAutoAnswer

@@ -25,8 +25,6 @@ public class DialerContactlistfilterConfigChangeContactListFilter: Codable {
 
 
 
-
-
     public var contactList: DialerContactlistfilterConfigChangeUriReference?
     /** The list of contact list columns */
     public var contactListColumns: [String]?
@@ -44,9 +42,8 @@ public class DialerContactlistfilterConfigChangeContactListFilter: Codable {
     public var dateModified: Date?
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int64?
-    public var getAdditionalProperties: [String:JSON]?
 
-    public init(contactList: DialerContactlistfilterConfigChangeUriReference?, contactListColumns: [String]?, clauses: [DialerContactlistfilterConfigChangeFilterClause]?, filterType: FilterType?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?, getAdditionalProperties: [String:JSON]?) {
+    public init(contactList: DialerContactlistfilterConfigChangeUriReference?, contactListColumns: [String]?, clauses: [DialerContactlistfilterConfigChangeFilterClause]?, filterType: FilterType?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?) {
         self.contactList = contactList
         self.contactListColumns = contactListColumns
         self.clauses = clauses
@@ -57,7 +54,6 @@ public class DialerContactlistfilterConfigChangeContactListFilter: Codable {
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.version = version
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -71,7 +67,6 @@ public class DialerContactlistfilterConfigChangeContactListFilter: Codable {
         case dateCreated
         case dateModified
         case version
-        case getAdditionalProperties
     }
 
 

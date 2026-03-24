@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **senderType** | **String** | The direction of the message. | |
+| **senderType** | **String** | The type of email domain used to send the agentless message. | |
 | **conversationId** | **String** | The identifier of the conversation. This must be an email interaction. | [optional] |
 | **fromAddress** | [**EmailAddress**](EmailAddress) | The sender of the message. | |
 | **toAddresses** | [**[EmailAddress]**]([EmailAddress]) | The recipient of the message. We currently support one recipient only. | |
@@ -17,4 +17,4 @@
 
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

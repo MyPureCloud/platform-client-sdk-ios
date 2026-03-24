@@ -3802,6 +3802,83 @@ open class WorkforceManagementAPI {
 
     
     
+    /**
+     Get minimum staffing settings for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitMinimumstaffingSettings(businessUnitId: String, completion: @escaping ((_ data: MinimumStaffingResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitMinimumstaffingSettingsWithRequestBuilder(businessUnitId: businessUnitId)
+        requestBuilder.execute { (response: Response<MinimumStaffingResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get minimum staffing settings for a business unit
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/minimumstaffing/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "minimumValue" : 0.8008281904610115,
+  "metadata" : "{}",
+  "applicableIntervals" : "AllIntervals",
+  "planningGroupOverrides" : [ {
+    "dayOfWeekMinimums" : [ {
+      "minimumValue" : 6.027456183070403,
+      "daysOfWeek" : [ "Sunday", "Sunday" ]
+    }, {
+      "minimumValue" : 6.027456183070403,
+      "daysOfWeek" : [ "Sunday", "Sunday" ]
+    } ],
+    "planningGroup" : "{}"
+  }, {
+    "dayOfWeekMinimums" : [ {
+      "minimumValue" : 6.027456183070403,
+      "daysOfWeek" : [ "Sunday", "Sunday" ]
+    }, {
+      "minimumValue" : 6.027456183070403,
+      "daysOfWeek" : [ "Sunday", "Sunday" ]
+    } ],
+    "planningGroup" : "{}"
+  } ],
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+
+     - returns: RequestBuilder<MinimumStaffingResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitMinimumstaffingSettingsWithRequestBuilder(businessUnitId: String) -> RequestBuilder<MinimumStaffingResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/minimumstaffing/settings"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MinimumStaffingResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**
@@ -3999,6 +4076,62 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PlanningGroupList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get scheduler settings for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulerSettings(businessUnitId: String, completion: @escaping ((_ data: BuSchedulerSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitSchedulerSettingsWithRequestBuilder(businessUnitId: businessUnitId)
+        requestBuilder.execute { (response: Response<BuSchedulerSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get scheduler settings for a business unit
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduler/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "consistentServiceLevelSmoothing" : true
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+
+     - returns: RequestBuilder<BuSchedulerSettingsResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulerSettingsWithRequestBuilder(businessUnitId: String) -> RequestBuilder<BuSchedulerSettingsResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduler/settings"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuSchedulerSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -4969,6 +5102,86 @@ open class WorkforceManagementAPI {
         ])
 
         let requestBuilder: RequestBuilder<BuTimeOffPlanListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get users in the business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter managementUnitIds: (query) The IDs of the management units for which to retrieve users (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitUsers(businessUnitId: String, managementUnitIds: [String]? = nil, completion: @escaping ((_ data: BuUserListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitUsersWithRequestBuilder(businessUnitId: businessUnitId, managementUnitIds: managementUnitIds)
+        requestBuilder.execute { (response: Response<BuUserListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get users in the business unit
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/users
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "managementUnits" : [ {
+    "managementUnit" : "{}",
+    "users" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "managementUnit" : "{}",
+    "users" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter managementUnitIds: (query) The IDs of the management units for which to retrieve users (optional)
+
+     - returns: RequestBuilder<BuUserListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitUsersWithRequestBuilder(businessUnitId: String, managementUnitIds: [String]? = nil) -> RequestBuilder<BuUserListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/users"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "managementUnitIds": managementUnitIds
+        ])
+
+        let requestBuilder: RequestBuilder<BuUserListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -12146,6 +12359,87 @@ open class WorkforceManagementAPI {
     
     
     
+    /**
+     Update minimum staffing settings for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitMinimumstaffingSettings(businessUnitId: String, body: MinimumStaffingRequest, completion: @escaping ((_ data: MinimumStaffingResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitMinimumstaffingSettingsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<MinimumStaffingResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update minimum staffing settings for a business unit
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/minimumstaffing/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "minimumValue" : 0.8008281904610115,
+  "metadata" : "{}",
+  "applicableIntervals" : "AllIntervals",
+  "planningGroupOverrides" : [ {
+    "dayOfWeekMinimums" : [ {
+      "minimumValue" : 6.027456183070403,
+      "daysOfWeek" : [ "Sunday", "Sunday" ]
+    }, {
+      "minimumValue" : 6.027456183070403,
+      "daysOfWeek" : [ "Sunday", "Sunday" ]
+    } ],
+    "planningGroup" : "{}"
+  }, {
+    "dayOfWeekMinimums" : [ {
+      "minimumValue" : 6.027456183070403,
+      "daysOfWeek" : [ "Sunday", "Sunday" ]
+    }, {
+      "minimumValue" : 6.027456183070403,
+      "daysOfWeek" : [ "Sunday", "Sunday" ]
+    } ],
+    "planningGroup" : "{}"
+  } ],
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<MinimumStaffingResponse> 
+     */
+    open class func patchWorkforcemanagementBusinessunitMinimumstaffingSettingsWithRequestBuilder(businessUnitId: String, body: MinimumStaffingRequest) -> RequestBuilder<MinimumStaffingResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/minimumstaffing/settings"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MinimumStaffingResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     
     
     /**
@@ -12231,6 +12525,66 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PlanningGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update scheduler settings for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitSchedulerSettings(businessUnitId: String, body: BuSchedulerSettingsRequest, completion: @escaping ((_ data: BuSchedulerSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitSchedulerSettingsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<BuSchedulerSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update scheduler settings for a business unit
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduler/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "consistentServiceLevelSmoothing" : true
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BuSchedulerSettingsResponse> 
+     */
+    open class func patchWorkforcemanagementBusinessunitSchedulerSettingsWithRequestBuilder(businessUnitId: String, body: BuSchedulerSettingsRequest) -> RequestBuilder<BuSchedulerSettingsResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduler/settings"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuSchedulerSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }

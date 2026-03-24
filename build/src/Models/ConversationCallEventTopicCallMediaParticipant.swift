@@ -76,6 +76,7 @@ public class ConversationCallEventTopicCallMediaParticipant: Codable {
         case uncallable = "uncallable"
         case inactivity = "inactivity"
         case sessionExpired = "session.expired"
+        case takeover = "takeover"
     }
 
 

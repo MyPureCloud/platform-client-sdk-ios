@@ -4,6 +4,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteKnowledgeConnection**](KnowledgeAPI#deleteKnowledgeConnection) | Delete connection |
 | [**deleteKnowledgeKnowledgebase**](KnowledgeAPI#deleteKnowledgeKnowledgebase) | Delete knowledge base |
 | [**deleteKnowledgeKnowledgebaseCategory**](KnowledgeAPI#deleteKnowledgeKnowledgebaseCategory) | Delete category |
 | [**deleteKnowledgeKnowledgebaseDocument**](KnowledgeAPI#deleteKnowledgeKnowledgebaseDocument) | Delete document. |
@@ -15,6 +16,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteKnowledgeKnowledgebaseSourcesServicenowSourceId**](KnowledgeAPI#deleteKnowledgeKnowledgebaseSourcesServicenowSourceId) | Delete ServiceNow Knowledge integration source |
 | [**deleteKnowledgeKnowledgebaseSynchronizeJob**](KnowledgeAPI#deleteKnowledgeKnowledgebaseSynchronizeJob) | Delete synchronization job |
 | [**deleteKnowledgeSetting**](KnowledgeAPI#deleteKnowledgeSetting) | Delete Knowledge setting. |
+| [**deleteKnowledgeSource**](KnowledgeAPI#deleteKnowledgeSource) | Delete source |
+| [**getKnowledgeConnection**](KnowledgeAPI#getKnowledgeConnection) | Get connection |
+| [**getKnowledgeConnectionOptions**](KnowledgeAPI#getKnowledgeConnectionOptions) | Get connection options |
+| [**getKnowledgeConnections**](KnowledgeAPI#getKnowledgeConnections) | Get connections |
 | [**getKnowledgeGuestSessionCategories**](KnowledgeAPI#getKnowledgeGuestSessionCategories) | Get categories |
 | [**getKnowledgeGuestSessionDocument**](KnowledgeAPI#getKnowledgeGuestSessionDocument) | Get a knowledge document by ID. |
 | [**getKnowledgeGuestSessionDocuments**](KnowledgeAPI#getKnowledgeGuestSessionDocuments) | Get documents. |
@@ -50,6 +55,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getKnowledgeKnowledgebases**](KnowledgeAPI#getKnowledgeKnowledgebases) | Get knowledge bases |
 | [**getKnowledgeSetting**](KnowledgeAPI#getKnowledgeSetting) | Get Knowledge setting. |
 | [**getKnowledgeSettings**](KnowledgeAPI#getKnowledgeSettings) | Get Knowledge settings. |
+| [**getKnowledgeSource**](KnowledgeAPI#getKnowledgeSource) | Get source |
+| [**getKnowledgeSourceSynchronization**](KnowledgeAPI#getKnowledgeSourceSynchronization) | Get a specific synchronization of a source. |
+| [**getKnowledgeSourceSynchronizations**](KnowledgeAPI#getKnowledgeSourceSynchronizations) | Get synchronizations of a source. |
+| [**getKnowledgeSources**](KnowledgeAPI#getKnowledgeSources) | List sources |
+| [**getKnowledgeSourcesSynchronizations**](KnowledgeAPI#getKnowledgeSourcesSynchronizations) | Get synchronizations of all sources of the organization. |
+| [**patchKnowledgeConnection**](KnowledgeAPI#patchKnowledgeConnection) | Update connection |
 | [**patchKnowledgeGuestSessionDocumentsSearchSearchId**](KnowledgeAPI#patchKnowledgeGuestSessionDocumentsSearchSearchId) | Update search result. |
 | [**patchKnowledgeKnowledgebase**](KnowledgeAPI#patchKnowledgeKnowledgebase) | Update knowledge base |
 | [**patchKnowledgeKnowledgebaseCategory**](KnowledgeAPI#patchKnowledgeKnowledgebaseCategory) | Update category |
@@ -64,6 +75,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchKnowledgeKnowledgebaseSynchronizeJob**](KnowledgeAPI#patchKnowledgeKnowledgebaseSynchronizeJob) | Update synchronization job |
 | [**patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup**](KnowledgeAPI#patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup) | Update a Knowledge base unanswered phrase group |
 | [**patchKnowledgeSetting**](KnowledgeAPI#patchKnowledgeSetting) | Update Knowledge setting. |
+| [**patchKnowledgeSourceSynchronization**](KnowledgeAPI#patchKnowledgeSourceSynchronization) | Update synchronization. |
+| [**postKnowledgeConnections**](KnowledgeAPI#postKnowledgeConnections) | Create new connection |
 | [**postKnowledgeDocumentuploads**](KnowledgeAPI#postKnowledgeDocumentuploads) | Creates a presigned URL for uploading a knowledge import file with a set of documents |
 | [**postKnowledgeGuestSessionDocumentCopies**](KnowledgeAPI#postKnowledgeGuestSessionDocumentCopies) | Indicate that the document was copied by the user. |
 | [**postKnowledgeGuestSessionDocumentFeedback**](KnowledgeAPI#postKnowledgeGuestSessionDocumentFeedback) | Give feedback on a document |
@@ -104,9 +117,63 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postKnowledgeSearch**](KnowledgeAPI#postKnowledgeSearch) | Get Knowledge Search |
 | [**postKnowledgeSearchPreview**](KnowledgeAPI#postKnowledgeSearchPreview) | Get Knowledge Search Preview |
 | [**postKnowledgeSettings**](KnowledgeAPI#postKnowledgeSettings) | Create Knowledge setting. |
+| [**postKnowledgeSourceSynchronizationUploads**](KnowledgeAPI#postKnowledgeSourceSynchronizationUploads) | Create presigned URL for uploading a file in the synchronization. |
+| [**postKnowledgeSourceSynchronizations**](KnowledgeAPI#postKnowledgeSourceSynchronizations) | Start a manual synchronization from a source. |
+| [**postKnowledgeSources**](KnowledgeAPI#postKnowledgeSources) | Create a new source |
 | [**putKnowledgeKnowledgebaseSourcesSalesforceSourceId**](KnowledgeAPI#putKnowledgeKnowledgebaseSourcesSalesforceSourceId) | Update Salesforce Knowledge integration source |
 | [**putKnowledgeKnowledgebaseSourcesServicenowSourceId**](KnowledgeAPI#putKnowledgeKnowledgebaseSourcesServicenowSourceId) | Update ServiceNow Knowledge integration source |
+| [**putKnowledgeSource**](KnowledgeAPI#putKnowledgeSource) | Update the source |
 {: class="table-striped"}
+
+
+## deleteKnowledgeConnection
+
+
+
+> [ConnectionResponse](ConnectionResponse) deleteKnowledgeConnection(connectionId)
+
+Delete connection
+
+
+
+Wraps DELETE /api/v2/knowledge/connections/{connectionId}  
+
+Requires ALL permissions: 
+
+* knowledge:connection:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let connectionId: String = "" // Connection ID
+
+// Code example
+KnowledgeAPI.deleteKnowledgeConnection(connectionId: connectionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.deleteKnowledgeConnection was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **connectionId** | **String**| Connection ID | |
+
+
+### Return type
+
+[**ConnectionResponse**](ConnectionResponse)
 
 
 ## deleteKnowledgeKnowledgebase
@@ -670,6 +737,205 @@ KnowledgeAPI.deleteKnowledgeSetting(knowledgeSettingId: knowledgeSettingId) { (e
 ### Return type
 
 `nil` (empty response body)
+
+
+## deleteKnowledgeSource
+
+
+
+> Void deleteKnowledgeSource(sourceId)
+
+Delete source
+
+
+
+Wraps DELETE /api/v2/knowledge/sources/{sourceId}  
+
+Requires ALL permissions: 
+
+* knowledge:source:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Source ID
+
+// Code example
+KnowledgeAPI.deleteKnowledgeSource(sourceId: sourceId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("KnowledgeAPI.deleteKnowledgeSource was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Source ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## getKnowledgeConnection
+
+
+
+> [ConnectionResponse](ConnectionResponse) getKnowledgeConnection(connectionId, expand)
+
+Get connection
+
+
+
+Wraps GET /api/v2/knowledge/connections/{connectionId}  
+
+Requires ALL permissions: 
+
+* knowledge:connection:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let connectionId: String = "" // Connection ID
+let expand: [String] = [""] // The specified entity attributes will be filled. Comma separated values expected.
+
+// Code example
+KnowledgeAPI.getKnowledgeConnection(connectionId: connectionId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeConnection was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **connectionId** | **String**| Connection ID | |
+| **expand** | [**[String]**](String)| The specified entity attributes will be filled. Comma separated values expected. | [optional]<br />**Values**: authenticationproperties ("authenticationProperties") |
+
+
+### Return type
+
+[**ConnectionResponse**](ConnectionResponse)
+
+
+## getKnowledgeConnectionOptions
+
+
+
+> [ConnectionOptionListing](ConnectionOptionListing) getKnowledgeConnectionOptions(connectionId, parentId)
+
+Get connection options
+
+
+
+Wraps GET /api/v2/knowledge/connections/{connectionId}/options  
+
+Requires ALL permissions: 
+
+* knowledge:connectionOptions:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let connectionId: String = "" // Connection ID
+let parentId: String = "" // The id of the parent option whose children to be listed.
+
+// Code example
+KnowledgeAPI.getKnowledgeConnectionOptions(connectionId: connectionId, parentId: parentId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeConnectionOptions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **connectionId** | **String**| Connection ID | |
+| **parentId** | **String**| The id of the parent option whose children to be listed. | [optional] |
+
+
+### Return type
+
+[**ConnectionOptionListing**](ConnectionOptionListing)
+
+
+## getKnowledgeConnections
+
+
+
+> [ConnectionListing](ConnectionListing) getKnowledgeConnections()
+
+Get connections
+
+
+
+Wraps GET /api/v2/knowledge/connections  
+
+Requires ALL permissions: 
+
+* knowledge:connection:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+KnowledgeAPI.getKnowledgeConnections() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeConnections was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**ConnectionListing**](ConnectionListing)
 
 
 ## getKnowledgeGuestSessionCategories
@@ -2681,6 +2947,322 @@ KnowledgeAPI.getKnowledgeSettings(before: before, after: after, pageSize: pageSi
 [**KnowledgeSettingListing**](KnowledgeSettingListing)
 
 
+## getKnowledgeSource
+
+
+
+> [V3SourceDetailedWithErrorResponse](V3SourceDetailedWithErrorResponse) getKnowledgeSource(sourceId, expand)
+
+Get source
+
+
+
+Wraps GET /api/v2/knowledge/sources/{sourceId}  
+
+Requires ALL permissions: 
+
+* knowledge:source:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Source ID
+let expand: [String] = [""] // Optional fields to expand for the Source.
+
+// Code example
+KnowledgeAPI.getKnowledgeSource(sourceId: sourceId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeSource was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Source ID | |
+| **expand** | [**[String]**](String)| Optional fields to expand for the Source. | [optional]<br />**Values**: lastsync ("lastSync"), filterdetails ("filterDetails") |
+
+
+### Return type
+
+[**V3SourceDetailedWithErrorResponse**](V3SourceDetailedWithErrorResponse)
+
+
+## getKnowledgeSourceSynchronization
+
+
+
+> [V3Synchronization](V3Synchronization) getKnowledgeSourceSynchronization(sourceId, synchronizationId)
+
+Get a specific synchronization of a source.
+
+
+
+Wraps GET /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}  
+
+Requires ALL permissions: 
+
+* knowledge:synchronization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Source ID
+let synchronizationId: String = "" // Synchronization ID
+
+// Code example
+KnowledgeAPI.getKnowledgeSourceSynchronization(sourceId: sourceId, synchronizationId: synchronizationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeSourceSynchronization was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Source ID | |
+| **synchronizationId** | **String**| Synchronization ID | |
+
+
+### Return type
+
+[**V3Synchronization**](V3Synchronization)
+
+
+## getKnowledgeSourceSynchronizations
+
+
+
+> [V3SynchronizationListing](V3SynchronizationListing) getKnowledgeSourceSynchronizations(sourceId, before, after, pageSize)
+
+Get synchronizations of a source.
+
+
+
+Wraps GET /api/v2/knowledge/sources/{sourceId}/synchronizations  
+
+Requires ALL permissions: 
+
+* knowledge:synchronization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Source ID
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+
+// Code example
+KnowledgeAPI.getKnowledgeSourceSynchronizations(sourceId: sourceId, before: before, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeSourceSynchronizations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Source ID | |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+
+
+### Return type
+
+[**V3SynchronizationListing**](V3SynchronizationListing)
+
+
+## getKnowledgeSources
+
+
+
+> [V3SourceWithErrorListing](V3SourceWithErrorListing) getKnowledgeSources(expand)
+
+List sources
+
+
+
+Wraps GET /api/v2/knowledge/sources  
+
+Requires ALL permissions: 
+
+* knowledge:source:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let expand: [String] = [""] // Optional fields to expand for the Source.
+
+// Code example
+KnowledgeAPI.getKnowledgeSources(expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeSources was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **expand** | [**[String]**](String)| Optional fields to expand for the Source. | [optional]<br />**Values**: lastsync ("lastSync") |
+
+
+### Return type
+
+[**V3SourceWithErrorListing**](V3SourceWithErrorListing)
+
+
+## getKnowledgeSourcesSynchronizations
+
+
+
+> [V3SynchronizationListing](V3SynchronizationListing) getKnowledgeSourcesSynchronizations(before, after, pageSize)
+
+Get synchronizations of all sources of the organization.
+
+
+
+Wraps GET /api/v2/knowledge/sources/synchronizations  
+
+Requires ALL permissions: 
+
+* knowledge:synchronization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+
+// Code example
+KnowledgeAPI.getKnowledgeSourcesSynchronizations(before: before, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeSourcesSynchronizations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+
+
+### Return type
+
+[**V3SynchronizationListing**](V3SynchronizationListing)
+
+
+## patchKnowledgeConnection
+
+
+
+> [ConnectionResponse](ConnectionResponse) patchKnowledgeConnection(connectionId, body)
+
+Update connection
+
+
+
+Wraps PATCH /api/v2/knowledge/connections/{connectionId}  
+
+Requires ALL permissions: 
+
+* knowledge:connection:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let connectionId: String = "" // Connection ID
+let body: ConnectionUpdateRequest = new ConnectionUpdateRequest(...) // 
+
+// Code example
+KnowledgeAPI.patchKnowledgeConnection(connectionId: connectionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.patchKnowledgeConnection was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **connectionId** | **String**| Connection ID | |
+| **body** | [**ConnectionUpdateRequest**](ConnectionUpdateRequest)|  | [optional] |
+
+
+### Return type
+
+[**ConnectionResponse**](ConnectionResponse)
+
+
 ## patchKnowledgeGuestSessionDocumentsSearchSearchId
 
 
@@ -3433,6 +4015,110 @@ KnowledgeAPI.patchKnowledgeSetting(knowledgeSettingId: knowledgeSettingId, body:
 ### Return type
 
 [**KnowledgeSettingsResponse**](KnowledgeSettingsResponse)
+
+
+## patchKnowledgeSourceSynchronization
+
+
+
+> [V3Synchronization](V3Synchronization) patchKnowledgeSourceSynchronization(sourceId, synchronizationId, body)
+
+Update synchronization.
+
+
+
+Wraps PATCH /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}  
+
+Requires ALL permissions: 
+
+* knowledge:synchronization:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Source ID
+let synchronizationId: String = "" // Synchronization ID
+let body: V3SynchronizationUpdateRequest = new V3SynchronizationUpdateRequest(...) // 
+
+// Code example
+KnowledgeAPI.patchKnowledgeSourceSynchronization(sourceId: sourceId, synchronizationId: synchronizationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.patchKnowledgeSourceSynchronization was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Source ID | |
+| **synchronizationId** | **String**| Synchronization ID | |
+| **body** | [**V3SynchronizationUpdateRequest**](V3SynchronizationUpdateRequest)|  | |
+
+
+### Return type
+
+[**V3Synchronization**](V3Synchronization)
+
+
+## postKnowledgeConnections
+
+
+
+> [ConnectionCreateResponse](ConnectionCreateResponse) postKnowledgeConnections(body)
+
+Create new connection
+
+
+
+Wraps POST /api/v2/knowledge/connections  
+
+Requires ALL permissions: 
+
+* knowledge:connection:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ConnectionCreateRequest = new ConnectionCreateRequest(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeConnections(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeConnections was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ConnectionCreateRequest**](ConnectionCreateRequest)|  | |
+
+
+### Return type
+
+[**ConnectionCreateResponse**](ConnectionCreateResponse)
 
 
 ## postKnowledgeDocumentuploads
@@ -5518,6 +6204,162 @@ KnowledgeAPI.postKnowledgeSettings(body: body) { (response, error) in
 [**KnowledgeSettingsResponse**](KnowledgeSettingsResponse)
 
 
+## postKnowledgeSourceSynchronizationUploads
+
+
+
+> [V3SynchronizationUploadUrlResponse](V3SynchronizationUploadUrlResponse) postKnowledgeSourceSynchronizationUploads(sourceId, synchronizationId, body)
+
+Create presigned URL for uploading a file in the synchronization.
+
+
+
+Wraps POST /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads  
+
+Requires ALL permissions: 
+
+* knowledge:synchronization:upload
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Source ID
+let synchronizationId: String = "" // Synchronization ID
+let body: V3SynchronizationUploadUrlRequest = new V3SynchronizationUploadUrlRequest(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeSourceSynchronizationUploads(sourceId: sourceId, synchronizationId: synchronizationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeSourceSynchronizationUploads was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Source ID | |
+| **synchronizationId** | **String**| Synchronization ID | |
+| **body** | [**V3SynchronizationUploadUrlRequest**](V3SynchronizationUploadUrlRequest)|  | |
+
+
+### Return type
+
+[**V3SynchronizationUploadUrlResponse**](V3SynchronizationUploadUrlResponse)
+
+
+## postKnowledgeSourceSynchronizations
+
+
+
+> [V3Synchronization](V3Synchronization) postKnowledgeSourceSynchronizations(sourceId, body)
+
+Start a manual synchronization from a source.
+
+
+
+Wraps POST /api/v2/knowledge/sources/{sourceId}/synchronizations  
+
+Requires ALL permissions: 
+
+* knowledge:synchronization:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Source ID
+let body: V3StartManualSyncRequest = new V3StartManualSyncRequest(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeSourceSynchronizations(sourceId: sourceId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeSourceSynchronizations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Source ID | |
+| **body** | [**V3StartManualSyncRequest**](V3StartManualSyncRequest)|  | [optional] |
+
+
+### Return type
+
+[**V3Synchronization**](V3Synchronization)
+
+
+## postKnowledgeSources
+
+
+
+> [V3SourceDetailedResponse](V3SourceDetailedResponse) postKnowledgeSources(body)
+
+Create a new source
+
+
+
+Wraps POST /api/v2/knowledge/sources  
+
+Requires ALL permissions: 
+
+* knowledge:source:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: V3SourceCreateRequest = new V3SourceCreateRequest(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeSources(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeSources was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**V3SourceCreateRequest**](V3SourceCreateRequest)|  | |
+
+
+### Return type
+
+[**V3SourceDetailedResponse**](V3SourceDetailedResponse)
+
+
 ## putKnowledgeKnowledgebaseSourcesSalesforceSourceId
 
 
@@ -5626,4 +6468,56 @@ KnowledgeAPI.putKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId:
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatformClientV2@190.0.0_
+## putKnowledgeSource
+
+
+
+> [V3SourceDetailedResponse](V3SourceDetailedResponse) putKnowledgeSource(sourceId, body)
+
+Update the source
+
+
+
+Wraps PUT /api/v2/knowledge/sources/{sourceId}  
+
+Requires ALL permissions: 
+
+* knowledge:source:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Source ID
+let body: V3SourceUpdateRequest = new V3SourceUpdateRequest(...) // 
+
+// Code example
+KnowledgeAPI.putKnowledgeSource(sourceId: sourceId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.putKnowledgeSource was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Source ID | |
+| **body** | [**V3SourceUpdateRequest**](V3SourceUpdateRequest)|  | |
+
+
+### Return type
+
+[**V3SourceDetailedResponse**](V3SourceDetailedResponse)
+
+
+_PureCloudPlatformClientV2@191.0.0_

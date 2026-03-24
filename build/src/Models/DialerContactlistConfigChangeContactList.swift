@@ -36,8 +36,6 @@ public class DialerContactlistConfigChangeContactList: Codable {
 
 
 
-
-
     /** the contact column names */
     public var columnNames: [String]?
     /** the columns containing phone numbers */
@@ -69,9 +67,8 @@ public class DialerContactlistConfigChangeContactList: Codable {
     public var dateModified: Date?
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int64?
-    public var getAdditionalProperties: [String:JSON]?
 
-    public init(columnNames: [String]?, phoneColumns: [DialerContactlistConfigChangeContactPhoneNumberColumn]?, emailColumns: [DialerContactlistConfigChangeEmailColumn]?, importStatus: DialerContactlistConfigChangeImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int64?, attemptLimits: DialerContactlistConfigChangeUriReference?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, division: DialerContactlistConfigChangeUriReference?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?, getAdditionalProperties: [String:JSON]?) {
+    public init(columnNames: [String]?, phoneColumns: [DialerContactlistConfigChangeContactPhoneNumberColumn]?, emailColumns: [DialerContactlistConfigChangeEmailColumn]?, importStatus: DialerContactlistConfigChangeImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int64?, attemptLimits: DialerContactlistConfigChangeUriReference?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, division: DialerContactlistConfigChangeUriReference?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?) {
         self.columnNames = columnNames
         self.phoneColumns = phoneColumns
         self.emailColumns = emailColumns
@@ -89,7 +86,6 @@ public class DialerContactlistConfigChangeContactList: Codable {
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.version = version
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -110,7 +106,6 @@ public class DialerContactlistConfigChangeContactList: Codable {
         case dateCreated
         case dateModified
         case version
-        case getAdditionalProperties
     }
 
 

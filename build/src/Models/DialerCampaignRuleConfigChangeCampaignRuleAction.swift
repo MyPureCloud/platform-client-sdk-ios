@@ -19,8 +19,6 @@ public class DialerCampaignRuleConfigChangeCampaignRuleAction: Codable {
 
 
 
-
-
     /** The globally unique identifier for the action */
     public var _id: String?
     /** The parameters to match this action */
@@ -29,15 +27,13 @@ public class DialerCampaignRuleConfigChangeCampaignRuleAction: Codable {
     public var actionType: ActionType?
     public var campaignRuleActionEntities: DialerCampaignRuleConfigChangeCampaignRuleActionEntities?
     public var additionalProperties: [String:JSON]?
-    public var getAdditionalProperties: [String:JSON]?
 
-    public init(_id: String?, parameters: [String:String]?, actionType: ActionType?, campaignRuleActionEntities: DialerCampaignRuleConfigChangeCampaignRuleActionEntities?, additionalProperties: [String:JSON]?, getAdditionalProperties: [String:JSON]?) {
+    public init(_id: String?, parameters: [String:String]?, actionType: ActionType?, campaignRuleActionEntities: DialerCampaignRuleConfigChangeCampaignRuleActionEntities?, additionalProperties: [String:JSON]?) {
         self._id = _id
         self.parameters = parameters
         self.actionType = actionType
         self.campaignRuleActionEntities = campaignRuleActionEntities
         self.additionalProperties = additionalProperties
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -46,7 +42,6 @@ public class DialerCampaignRuleConfigChangeCampaignRuleAction: Codable {
         case actionType
         case campaignRuleActionEntities
         case additionalProperties
-        case getAdditionalProperties
     }
 
 

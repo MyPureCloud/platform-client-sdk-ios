@@ -8,8 +8,7 @@ The error message params, if the action failed
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **additionalProperties** | **[String:String]** |  | [optional] |
-| **getAdditionalProperties** | **[String:String]** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

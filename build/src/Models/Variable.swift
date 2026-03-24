@@ -9,6 +9,7 @@ public class Variable: Codable {
         case integer = "Integer"
         case number = "Number"
         case boolean = "Boolean"
+        case date = "Date"
     }
 
     public enum Scope: String, Codable { 
@@ -20,6 +21,8 @@ public class Variable: Codable {
 
 
 
+
+
     /** The name of the variable. */
     public var name: String?
     /** The data type of the variable. */
@@ -28,12 +31,15 @@ public class Variable: Codable {
     public var scope: Scope?
     /** The description of the variable used by Guides runtime for input/output handling. */
     public var _description: String?
+    /** The validation configuration for the variable. Optional - if not present, no validation is applied. */
+    public var validation: VariableValidation?
 
-    public init(name: String?, type: ModelType?, scope: Scope?, _description: String?) {
+    public init(name: String?, type: ModelType?, scope: Scope?, _description: String?, validation: VariableValidation?) {
         self.name = name
         self.type = type
         self.scope = scope
         self._description = _description
+        self.validation = validation
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -41,6 +47,7 @@ public class Variable: Codable {
         case type
         case scope
         case _description = "description"
+        case validation
     }
 
 

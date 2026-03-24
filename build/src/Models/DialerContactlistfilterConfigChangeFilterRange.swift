@@ -15,8 +15,6 @@ public class DialerContactlistfilterConfigChangeFilterRange: Codable {
 
 
 
-
-
     /** Minimum end of the range */
     public var min: String?
     /** Maximum end of the range */
@@ -28,16 +26,14 @@ public class DialerContactlistfilterConfigChangeFilterRange: Codable {
     /** Elements that apply to the IN operator */
     public var inSet: [String]?
     public var additionalProperties: [String:JSON]?
-    public var getAdditionalProperties: [String:JSON]?
 
-    public init(min: String?, max: String?, minInclusive: Bool?, maxInclusive: Bool?, inSet: [String]?, additionalProperties: [String:JSON]?, getAdditionalProperties: [String:JSON]?) {
+    public init(min: String?, max: String?, minInclusive: Bool?, maxInclusive: Bool?, inSet: [String]?, additionalProperties: [String:JSON]?) {
         self.min = min
         self.max = max
         self.minInclusive = minInclusive
         self.maxInclusive = maxInclusive
         self.inSet = inSet
         self.additionalProperties = additionalProperties
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
 

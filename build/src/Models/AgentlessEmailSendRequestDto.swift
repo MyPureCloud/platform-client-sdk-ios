@@ -4,8 +4,6 @@ public class AgentlessEmailSendRequestDto: Codable {
 
     public enum SenderType: String, Codable { 
         case outbound = "Outbound"
-        case inbound = "Inbound"
-        case integration = "Integration"
     }
 
 
@@ -22,7 +20,7 @@ public class AgentlessEmailSendRequestDto: Codable {
 
 
 
-    /** The direction of the message. */
+    /** The type of email domain used to send the agentless message. */
     public var senderType: SenderType?
     /** The identifier of the conversation. This must be an email interaction. */
     public var conversationId: String?

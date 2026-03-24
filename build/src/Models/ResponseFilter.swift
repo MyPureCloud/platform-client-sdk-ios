@@ -9,6 +9,9 @@ public class ResponseFilter: Codable {
         case _in = "IN"
         case equals = "EQUALS"
         case notequals = "NOTEQUALS"
+        case beginsWith = "BEGINS_WITH"
+        case endsWith = "ENDS_WITH"
+        case contains = "CONTAINS"
     }
 
 

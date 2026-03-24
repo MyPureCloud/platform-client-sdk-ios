@@ -142,6 +142,8 @@ public class FlowEndDetailEventTopicFlowEndEvent: Codable {
         case returnToAgent = "RETURN_TO_AGENT"
     }
 
+
+
     public var eventTime: Int64?
     public var conversationId: String?
     public var participantId: String?
@@ -165,8 +167,9 @@ public class FlowEndDetailEventTopicFlowEndEvent: Codable {
     public var conversationExternalOrganizationIds: [String]?
     public var exitReason: ExitReason?
     public var transferType: TransferType?
+    public var utilizationLabel: String?
 
-    public init(eventTime: Int64?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, subject: String?, messageType: MessageType?, flowType: FlowType?, flowId: String?, divisionId: String?, flowVersion: String?, connectedDurationMs: Int64?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?, exitReason: ExitReason?, transferType: TransferType?) {
+    public init(eventTime: Int64?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, subject: String?, messageType: MessageType?, flowType: FlowType?, flowId: String?, divisionId: String?, flowVersion: String?, connectedDurationMs: Int64?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?, exitReason: ExitReason?, transferType: TransferType?, utilizationLabel: String?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
@@ -190,6 +193,7 @@ public class FlowEndDetailEventTopicFlowEndEvent: Codable {
         self.conversationExternalOrganizationIds = conversationExternalOrganizationIds
         self.exitReason = exitReason
         self.transferType = transferType
+        self.utilizationLabel = utilizationLabel
     }
 
 

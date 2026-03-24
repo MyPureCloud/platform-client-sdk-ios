@@ -1,5 +1,4 @@
 
-/** Reference to supported content profile associated with the integration */
 
 public class SupportedContentReference: Codable {
 
@@ -11,7 +10,7 @@ public class SupportedContentReference: Codable {
 
 
 
-    /** The SupportedContent unique identifier associated with this integration */
+    /** The SupportedContent unique identifier associated with this integration or phone number */
     public var _id: String?
     /** The SupportedContent profile name */
     public var name: String?

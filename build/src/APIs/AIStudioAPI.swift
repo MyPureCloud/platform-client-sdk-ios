@@ -652,12 +652,14 @@ open class AIStudioAPI {
     "scope" : "Input",
     "name" : "name",
     "description" : "description",
-    "type" : "String"
+    "type" : "String",
+    "validation" : "{}"
   }, {
     "scope" : "Input",
     "name" : "name",
     "description" : "description",
-    "type" : "String"
+    "type" : "String",
+    "validation" : "{}"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "knowledgeSettings" : "{}",
@@ -737,12 +739,14 @@ open class AIStudioAPI {
       "scope" : "Input",
       "name" : "name",
       "description" : "description",
-      "type" : "String"
+      "type" : "String",
+      "validation" : "{}"
     }, {
       "scope" : "Input",
       "name" : "name",
       "description" : "description",
-      "type" : "String"
+      "type" : "String",
+      "validation" : "{}"
     } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "knowledgeSettings" : "{}",
@@ -1017,12 +1021,14 @@ open class AIStudioAPI {
       "scope" : "Input",
       "name" : "name",
       "description" : "description",
-      "type" : "String"
+      "type" : "String",
+      "validation" : "{}"
     }, {
       "scope" : "Input",
       "name" : "name",
       "description" : "description",
-      "type" : "String"
+      "type" : "String",
+      "validation" : "{}"
     } ],
     "instruction" : "instruction",
     "resources" : "{}"
@@ -1220,12 +1226,14 @@ open class AIStudioAPI {
     "scope" : "Input",
     "name" : "name",
     "description" : "description",
-    "type" : "String"
+    "type" : "String",
+    "validation" : "{}"
   }, {
     "scope" : "Input",
     "name" : "name",
     "description" : "description",
-    "type" : "String"
+    "type" : "String",
+    "validation" : "{}"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "knowledgeSettings" : "{}",
@@ -1535,12 +1543,14 @@ open class AIStudioAPI {
       "scope" : "Input",
       "name" : "name",
       "description" : "description",
-      "type" : "String"
+      "type" : "String",
+      "validation" : "{}"
     }, {
       "scope" : "Input",
       "name" : "name",
       "description" : "description",
-      "type" : "String"
+      "type" : "String",
+      "validation" : "{}"
     } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "knowledgeSettings" : "{}",
@@ -1682,12 +1692,14 @@ open class AIStudioAPI {
     "scope" : "Input",
     "name" : "name",
     "description" : "description",
-    "type" : "String"
+    "type" : "String",
+    "validation" : "{}"
   }, {
     "scope" : "Input",
     "name" : "name",
     "description" : "description",
-    "type" : "String"
+    "type" : "String",
+    "validation" : "{}"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "knowledgeSettings" : "{}",
@@ -1820,12 +1832,14 @@ open class AIStudioAPI {
       "scope" : "Input",
       "name" : "name",
       "description" : "description",
-      "type" : "String"
+      "type" : "String",
+      "validation" : "{}"
     }, {
       "scope" : "Input",
       "name" : "name",
       "description" : "description",
-      "type" : "String"
+      "type" : "String",
+      "validation" : "{}"
     } ],
     "instruction" : "instruction",
     "resources" : "{}"

@@ -11,6 +11,7 @@ public class FlowSettingsResponse: Codable {
         case bot = "bot"
         case commonmodule = "commonmodule"
         case digitalbot = "digitalbot"
+        case emailsend = "emailsend"
         case inboundcall = "inboundcall"
         case inboundchat = "inboundchat"
         case inboundemail = "inboundemail"

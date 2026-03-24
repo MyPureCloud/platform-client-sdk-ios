@@ -18,8 +18,6 @@ public class WhatsappCampaignScheduleConfigChangeScheduleRecurrence: Codable {
 
 
 
-
-
     /** the recurrence id */
     public var _id: String?
     /** scheduled start time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ */
@@ -33,9 +31,8 @@ public class WhatsappCampaignScheduleConfigChangeScheduleRecurrence: Codable {
     /** modifications to the original recurrence schedule */
     public var alterations: [WhatsappCampaignScheduleConfigChangeAlteration]?
     public var additionalProperties: [String:JSON]?
-    public var getAdditionalProperties: [String:JSON]?
 
-    public init(_id: String?, start: String?, end: String?, timeZone: String?, range: WhatsappCampaignScheduleConfigChangeRecurrenceRange?, pattern: WhatsappCampaignScheduleConfigChangeRecurrencePattern?, alterations: [WhatsappCampaignScheduleConfigChangeAlteration]?, additionalProperties: [String:JSON]?, getAdditionalProperties: [String:JSON]?) {
+    public init(_id: String?, start: String?, end: String?, timeZone: String?, range: WhatsappCampaignScheduleConfigChangeRecurrenceRange?, pattern: WhatsappCampaignScheduleConfigChangeRecurrencePattern?, alterations: [WhatsappCampaignScheduleConfigChangeAlteration]?, additionalProperties: [String:JSON]?) {
         self._id = _id
         self.start = start
         self.end = end
@@ -44,7 +41,6 @@ public class WhatsappCampaignScheduleConfigChangeScheduleRecurrence: Codable {
         self.pattern = pattern
         self.alterations = alterations
         self.additionalProperties = additionalProperties
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -56,7 +52,6 @@ public class WhatsappCampaignScheduleConfigChangeScheduleRecurrence: Codable {
         case pattern
         case alterations
         case additionalProperties
-        case getAdditionalProperties
     }
 
 

@@ -12,7 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteOutboundCampaignrule**](OutboundAPI#deleteOutboundCampaignrule) | Delete Campaign Rule |
 | [**deleteOutboundContactlist**](OutboundAPI#deleteOutboundContactlist) | Delete a contact list. |
 | [**deleteOutboundContactlistContact**](OutboundAPI#deleteOutboundContactlistContact) | Delete a contact. |
-| [**deleteOutboundContactlistContacts**](OutboundAPI#deleteOutboundContactlistContacts) | Delete contacts from a contact list. |
+| [**deleteOutboundContactlistContacts**](OutboundAPI#deleteOutboundContactlistContacts) | Delete contacts from a contact list. Only contacts that are not in use by any campaign will be deleted |
 | [**deleteOutboundContactlistfilter**](OutboundAPI#deleteOutboundContactlistfilter) | Delete Contact List Filter |
 | [**deleteOutboundContactlists**](OutboundAPI#deleteOutboundContactlists) | Delete multiple contact lists. |
 | [**deleteOutboundContactlisttemplate**](OutboundAPI#deleteOutboundContactlisttemplate) | Delete Contact List Template |
@@ -71,6 +71,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOutboundContactlistsDivisionviews**](OutboundAPI#getOutboundContactlistsDivisionviews) | Query a list of simplified contact list objects. |
 | [**getOutboundContactlisttemplate**](OutboundAPI#getOutboundContactlisttemplate) | Get Contact List Template |
 | [**getOutboundContactlisttemplates**](OutboundAPI#getOutboundContactlisttemplates) | Query a list of contact list templates |
+| [**getOutboundDiagnosticsCampaignSummary**](OutboundAPI#getOutboundDiagnosticsCampaignSummary) | Get diagnostic summary for a single campaign |
 | [**getOutboundDigitalruleset**](OutboundAPI#getOutboundDigitalruleset) | Get an Outbound Digital Rule Set |
 | [**getOutboundDigitalrulesets**](OutboundAPI#getOutboundDigitalrulesets) | Query a list of Outbound Digital Rule Sets |
 | [**getOutboundDnclist**](OutboundAPI#getOutboundDnclist) | Get dialer DNC list |
@@ -584,7 +585,7 @@ OutboundAPI.deleteOutboundContactlistContact(contactListId: contactListId, conta
 
 > Void deleteOutboundContactlistContacts(contactListId, contactIds)
 
-Delete contacts from a contact list.
+Delete contacts from a contact list. Only contacts that are not in use by any campaign will be deleted
 
 
 
@@ -3752,6 +3753,60 @@ OutboundAPI.getOutboundContactlisttemplates(pageSize: pageSize, pageNumber: page
 ### Return type
 
 [**ContactListTemplateEntityListing**](ContactListTemplateEntityListing)
+
+
+## getOutboundDiagnosticsCampaignSummary
+
+
+
+> [CampaignDiagnosticSummary](CampaignDiagnosticSummary) getOutboundDiagnosticsCampaignSummary(campaignId, start, end)
+
+Get diagnostic summary for a single campaign
+
+
+
+Wraps GET /api/v2/outbound/diagnostics/campaigns/{campaignId}/summary  
+
+Requires ANY permissions: 
+
+* outbound:campaignDiagnostic:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let campaignId: String = "" // Campaign ID
+let start: String = "" // Start datetime (ISO 8601 or Unix epoch)
+let end: String = "" // End datetime (ISO 8601 or Unix epoch)
+
+// Code example
+OutboundAPI.getOutboundDiagnosticsCampaignSummary(campaignId: campaignId, start: start, end: end) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundDiagnosticsCampaignSummary was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **campaignId** | **String**| Campaign ID | |
+| **start** | **String**| Start datetime (ISO 8601 or Unix epoch) | |
+| **end** | **String**| End datetime (ISO 8601 or Unix epoch) | |
+
+
+### Return type
+
+[**CampaignDiagnosticSummary**](CampaignDiagnosticSummary)
 
 
 ## getOutboundDigitalruleset
@@ -9441,4 +9496,4 @@ OutboundAPI.putOutboundWrapupcodemappings(body: body) { (response, error) in
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

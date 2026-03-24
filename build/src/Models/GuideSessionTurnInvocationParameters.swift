@@ -9,6 +9,7 @@ public class GuideSessionTurnInvocationParameters: Codable {
         case integer = "Integer"
         case number = "Number"
         case boolean = "Boolean"
+        case date = "Date"
     }
 
 

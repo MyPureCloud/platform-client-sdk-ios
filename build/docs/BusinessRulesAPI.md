@@ -146,6 +146,8 @@ BusinessRulesAPI.deleteBusinessrulesDecisiontableVersion(tableId: tableId, table
 
 Delete a decision table row
 
+Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue&#39;s division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+
 
 
 Wraps DELETE /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}  
@@ -825,6 +827,8 @@ This endpoint does not require any parameters.
 
 Update a decision table
 
+Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue&#39;s division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+
 
 
 Wraps PATCH /api/v2/businessrules/decisiontables/{tableId}  
@@ -1093,6 +1097,8 @@ BusinessRulesAPI.postBusinessrulesDecisiontableVersionExecute(tableId: tableId, 
 
 Create a decision table row
 
+Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue&#39;s division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+
 
 
 Wraps POST /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows  
@@ -1308,6 +1314,8 @@ BusinessRulesAPI.postBusinessrulesDecisiontableVersions(tableId: tableId) { (res
 
 Create a decision table
 
+Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue&#39;s division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+
 
 
 Wraps POST /api/v2/businessrules/decisiontables  
@@ -1462,6 +1470,8 @@ BusinessRulesAPI.putBusinessrulesDecisiontableVersionPublish(tableId: tableId, t
 
 Full update a decision table row
 
+Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue&#39;s division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+
 
 
 Wraps PUT /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}  
@@ -1563,4 +1573,4 @@ BusinessRulesAPI.putBusinessrulesSchema(schemaId: schemaId, body: body) { (respo
 [**BusinessRulesDataSchema**](BusinessRulesDataSchema)
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

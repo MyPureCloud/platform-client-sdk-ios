@@ -25,8 +25,6 @@ public class DialerRulesetConfigChangeDataActionConditionPredicate: Codable {
 
 
 
-
-
     /** The name of an output field from the data action's output to use for this condition */
     public var outputField: String?
     /** The operation with which to evaluate this condition */
@@ -38,16 +36,14 @@ public class DialerRulesetConfigChangeDataActionConditionPredicate: Codable {
     /** If true, inverts the result of evaluating this Predicate. Default is false. */
     public var inverted: Bool?
     public var additionalProperties: [String:JSON]?
-    public var getAdditionalProperties: [String:JSON]?
 
-    public init(outputField: String?, outputOperator: OutputOperator?, comparisonValue: String?, outputFieldMissingResolution: Bool?, inverted: Bool?, additionalProperties: [String:JSON]?, getAdditionalProperties: [String:JSON]?) {
+    public init(outputField: String?, outputOperator: OutputOperator?, comparisonValue: String?, outputFieldMissingResolution: Bool?, inverted: Bool?, additionalProperties: [String:JSON]?) {
         self.outputField = outputField
         self.outputOperator = outputOperator
         self.comparisonValue = comparisonValue
         self.outputFieldMissingResolution = outputFieldMissingResolution
         self.inverted = inverted
         self.additionalProperties = additionalProperties
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
 

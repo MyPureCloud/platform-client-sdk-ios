@@ -6,7 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **includeWaitingTime** | **Bool** | When true counts all campaign running time, otherwise only running time that a campaign was not waiting. Default: true | [optional] |
 
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

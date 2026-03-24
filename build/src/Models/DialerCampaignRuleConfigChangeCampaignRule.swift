@@ -24,8 +24,6 @@ public class DialerCampaignRuleConfigChangeCampaignRule: Codable {
 
 
 
-
-
     public var campaignRuleEntities: DialerCampaignRuleConfigChangeCampaignRuleEntities?
     /** The list of conditions that will trigger this Campaign Rule */
     public var campaignRuleConditions: [DialerCampaignRuleConfigChangeCampaignRuleCondition]?
@@ -46,9 +44,8 @@ public class DialerCampaignRuleConfigChangeCampaignRule: Codable {
     public var dateModified: Date?
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int64?
-    public var getAdditionalProperties: [String:JSON]?
 
-    public init(campaignRuleEntities: DialerCampaignRuleConfigChangeCampaignRuleEntities?, campaignRuleConditions: [DialerCampaignRuleConfigChangeCampaignRuleCondition]?, campaignRuleActions: [DialerCampaignRuleConfigChangeCampaignRuleAction]?, matchAnyConditions: Bool?, enabled: Bool?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?, getAdditionalProperties: [String:JSON]?) {
+    public init(campaignRuleEntities: DialerCampaignRuleConfigChangeCampaignRuleEntities?, campaignRuleConditions: [DialerCampaignRuleConfigChangeCampaignRuleCondition]?, campaignRuleActions: [DialerCampaignRuleConfigChangeCampaignRuleAction]?, matchAnyConditions: Bool?, enabled: Bool?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?) {
         self.campaignRuleEntities = campaignRuleEntities
         self.campaignRuleConditions = campaignRuleConditions
         self.campaignRuleActions = campaignRuleActions
@@ -60,7 +57,6 @@ public class DialerCampaignRuleConfigChangeCampaignRule: Codable {
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.version = version
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -75,7 +71,6 @@ public class DialerCampaignRuleConfigChangeCampaignRule: Codable {
         case dateCreated
         case dateModified
         case version
-        case getAdditionalProperties
     }
 
 

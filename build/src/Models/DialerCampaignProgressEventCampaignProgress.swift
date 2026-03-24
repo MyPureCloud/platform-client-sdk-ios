@@ -16,8 +16,6 @@ public class DialerCampaignProgressEventCampaignProgress: Codable {
 
 
 
-
-
     public var campaign: DialerCampaignProgressEventUriReference?
     /** The number of contacts that have been called so far */
     public var numberOfContactsCalled: Double?
@@ -30,9 +28,8 @@ public class DialerCampaignProgressEventCampaignProgress: Codable {
     /** A map of skipped reasons and the number of contacts associated with each. */
     public var numberOfContactsSkipped: [String:Int64]?
     public var additionalProperties: [String:JSON]?
-    public var getAdditionalProperties: [String:JSON]?
 
-    public init(campaign: DialerCampaignProgressEventUriReference?, numberOfContactsCalled: Double?, numberOfContactsMessaged: Double?, totalNumberOfContacts: Double?, percentage: Int64?, numberOfContactsSkipped: [String:Int64]?, additionalProperties: [String:JSON]?, getAdditionalProperties: [String:JSON]?) {
+    public init(campaign: DialerCampaignProgressEventUriReference?, numberOfContactsCalled: Double?, numberOfContactsMessaged: Double?, totalNumberOfContacts: Double?, percentage: Int64?, numberOfContactsSkipped: [String:Int64]?, additionalProperties: [String:JSON]?) {
         self.campaign = campaign
         self.numberOfContactsCalled = numberOfContactsCalled
         self.numberOfContactsMessaged = numberOfContactsMessaged
@@ -40,7 +37,6 @@ public class DialerCampaignProgressEventCampaignProgress: Codable {
         self.percentage = percentage
         self.numberOfContactsSkipped = numberOfContactsSkipped
         self.additionalProperties = additionalProperties
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
 

@@ -30,7 +30,7 @@ public class BuFullDayTimeOffMarker: Codable {
     public var activityCodeId: String?
     /** Whether the time off marker is paid */
     public var paid: Bool?
-    /** Payable minutes for the time off marker */
+    /** Payable minutes for the time off marker. Must not exceed lengthMinutes */
     public var payableMinutes: Int?
     /** The ID of the time off request */
     public var timeOffRequestId: String?

@@ -53,14 +53,14 @@ public class UpdateActivityCodeRequest: Codable {
     public var plannedShrinkage: Bool?
     /** Whether this activity code is considered interruptible */
     public var interruptible: Bool?
-    /** The secondary presences of this activity code */
-    public var secondaryPresences: ListWrapperSecondaryPresence?
     /** The planning group IDs associated with this activity code */
     public var planningGroupIds: ListWrapperString?
     /** Version metadata for the associated business unit's list of activity codes */
     public var metadata: WfmVersionedEntityMetadata?
+    /** The secondary presences of this activity code */
+    public var secondaryPresences: ListWrapperSecondaryPresence?
 
-    public init(name: String?, category: Category?, lengthInMinutes: Int?, countsAsPaidTime: Bool?, countsAsWorkTime: Bool?, agentTimeOffSelectable: Bool?, countsTowardShrinkage: Bool?, plannedShrinkage: Bool?, interruptible: Bool?, secondaryPresences: ListWrapperSecondaryPresence?, planningGroupIds: ListWrapperString?, metadata: WfmVersionedEntityMetadata?) {
+    public init(name: String?, category: Category?, lengthInMinutes: Int?, countsAsPaidTime: Bool?, countsAsWorkTime: Bool?, agentTimeOffSelectable: Bool?, countsTowardShrinkage: Bool?, plannedShrinkage: Bool?, interruptible: Bool?, planningGroupIds: ListWrapperString?, metadata: WfmVersionedEntityMetadata?, secondaryPresences: ListWrapperSecondaryPresence?) {
         self.name = name
         self.category = category
         self.lengthInMinutes = lengthInMinutes
@@ -70,9 +70,9 @@ public class UpdateActivityCodeRequest: Codable {
         self.countsTowardShrinkage = countsTowardShrinkage
         self.plannedShrinkage = plannedShrinkage
         self.interruptible = interruptible
-        self.secondaryPresences = secondaryPresences
         self.planningGroupIds = planningGroupIds
         self.metadata = metadata
+        self.secondaryPresences = secondaryPresences
     }
 
 

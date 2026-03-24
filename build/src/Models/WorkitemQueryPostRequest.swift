@@ -31,7 +31,7 @@ public class WorkitemQueryPostRequest: Codable {
     public var pageSize: Int?
     /** Specify the value 'Count' for this parameter in order to return only the record count. */
     public var select: Select?
-    /** List of filter objects to be used in the search. Valid filter names are: 'id', 'name', 'description', 'languageId', 'priority', 'dateCreated', 'dateModified', 'dateDue', 'dateExpires', 'durationInSeconds', 'ttl', 'statusId', 'statusCategory', 'dateClosed', 'externalContactId', 'reporterId', 'queueId', 'externalTag', 'modifiedBy', 'assignmentState', 'divisionId', 'customFields.<custom field name>' */
+    /** List of filter objects to be used in the search. Valid filter names are: 'workbinId', 'typeId, 'assigneeId', 'id', 'name', 'description', 'languageId', 'priority', 'dateCreated', 'dateModified', 'dateDue', 'dateExpires', 'durationInSeconds', 'ttl', 'statusId', 'statusCategory', 'dateClosed', 'externalContactId', 'reporterId', 'queueId', 'externalTag', 'modifiedBy', 'assignmentState', 'divisionId', 'customFields.<custom field name>' */
     public var filters: [WorkitemFilter]?
     /** List of entity attributes to be retrieved in the result. */
     public var attributes: [String]?

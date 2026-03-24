@@ -6,7 +6,10 @@ public class WebMessagingEvent: Codable {
     public enum EventType: String, Codable { 
         case coBrowse = "CoBrowse"
         case presence = "Presence"
+        case video = "Video"
     }
+
+
 
 
 
@@ -18,11 +21,14 @@ public class WebMessagingEvent: Codable {
     public var coBrowse: WebMessagingEventCoBrowse?
     /** Presence event. */
     public var presence: WebMessagingEventPresence?
+    /** Video event. */
+    public var video: WebMessagingEventVideo?
 
-    public init(eventType: EventType?, coBrowse: WebMessagingEventCoBrowse?, presence: WebMessagingEventPresence?) {
+    public init(eventType: EventType?, coBrowse: WebMessagingEventCoBrowse?, presence: WebMessagingEventPresence?, video: WebMessagingEventVideo?) {
         self.eventType = eventType
         self.coBrowse = coBrowse
         self.presence = presence
+        self.video = video
     }
 
 

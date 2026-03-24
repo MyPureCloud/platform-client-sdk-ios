@@ -135,10 +135,12 @@ open class WebMessagingAPI {
     "events" : [ {
       "coBrowse" : "{}",
       "eventType" : "CoBrowse",
+      "video" : "{}",
       "presence" : "{}"
     }, {
       "coBrowse" : "{}",
       "eventType" : "CoBrowse",
+      "video" : "{}",
       "presence" : "{}"
     } ],
     "status" : "Sent",
@@ -183,10 +185,12 @@ open class WebMessagingAPI {
     "events" : [ {
       "coBrowse" : "{}",
       "eventType" : "CoBrowse",
+      "video" : "{}",
       "presence" : "{}"
     }, {
       "coBrowse" : "{}",
       "eventType" : "CoBrowse",
+      "video" : "{}",
       "presence" : "{}"
     } ],
     "status" : "Sent",

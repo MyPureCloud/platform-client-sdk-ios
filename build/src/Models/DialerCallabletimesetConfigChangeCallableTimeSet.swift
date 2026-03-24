@@ -16,8 +16,6 @@ public class DialerCallabletimesetConfigChangeCallableTimeSet: Codable {
 
 
 
-
-
     /** The list of callable times */
     public var callableTimes: [DialerCallabletimesetConfigChangeCallableTime]?
     public var additionalProperties: [String:JSON]?
@@ -31,9 +29,8 @@ public class DialerCallabletimesetConfigChangeCallableTimeSet: Codable {
     public var dateModified: Date?
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int64?
-    public var getAdditionalProperties: [String:JSON]?
 
-    public init(callableTimes: [DialerCallabletimesetConfigChangeCallableTime]?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?, getAdditionalProperties: [String:JSON]?) {
+    public init(callableTimes: [DialerCallabletimesetConfigChangeCallableTime]?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?) {
         self.callableTimes = callableTimes
         self.additionalProperties = additionalProperties
         self._id = _id
@@ -41,7 +38,6 @@ public class DialerCallabletimesetConfigChangeCallableTimeSet: Codable {
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.version = version
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -52,7 +48,6 @@ public class DialerCallabletimesetConfigChangeCallableTimeSet: Codable {
         case dateCreated
         case dateModified
         case version
-        case getAdditionalProperties
     }
 
 

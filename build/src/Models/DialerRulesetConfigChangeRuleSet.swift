@@ -20,8 +20,6 @@ public class DialerRulesetConfigChangeRuleSet: Codable {
 
 
 
-
-
     public var contactList: DialerRulesetConfigChangeUriReference?
     /** A UriReference for a resource */
     public var queue: DialerRulesetConfigChangeUriReference?
@@ -37,9 +35,8 @@ public class DialerRulesetConfigChangeRuleSet: Codable {
     public var dateModified: Date?
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int64?
-    public var getAdditionalProperties: [String:JSON]?
 
-    public init(contactList: DialerRulesetConfigChangeUriReference?, queue: DialerRulesetConfigChangeUriReference?, rules: [DialerRulesetConfigChangeRule]?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?, getAdditionalProperties: [String:JSON]?) {
+    public init(contactList: DialerRulesetConfigChangeUriReference?, queue: DialerRulesetConfigChangeUriReference?, rules: [DialerRulesetConfigChangeRule]?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?) {
         self.contactList = contactList
         self.queue = queue
         self.rules = rules
@@ -49,7 +46,6 @@ public class DialerRulesetConfigChangeRuleSet: Codable {
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.version = version
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -62,7 +58,6 @@ public class DialerRulesetConfigChangeRuleSet: Codable {
         case dateCreated
         case dateModified
         case version
-        case getAdditionalProperties
     }
 
 

@@ -363,11 +363,15 @@ open class ResponseManagementAPI {
   "responseType" : "MessagingTemplate",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "assets" : [ {
+    "assetUsage" : "FileAttachments",
     "selfUri" : "https://openapi-generator.tech",
-    "id" : "id"
+    "id" : "id",
+    "contentLocation" : "contentLocation"
   }, {
+    "assetUsage" : "FileAttachments",
     "selfUri" : "https://openapi-generator.tech",
-    "id" : "id"
+    "id" : "id",
+    "contentLocation" : "contentLocation"
   } ],
   "texts" : [ {
     "type" : "body",
@@ -615,11 +619,15 @@ open class ResponseManagementAPI {
     "responseType" : "MessagingTemplate",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "assets" : [ {
+      "assetUsage" : "FileAttachments",
       "selfUri" : "https://openapi-generator.tech",
-      "id" : "id"
+      "id" : "id",
+      "contentLocation" : "contentLocation"
     }, {
+      "assetUsage" : "FileAttachments",
       "selfUri" : "https://openapi-generator.tech",
-      "id" : "id"
+      "id" : "id",
+      "contentLocation" : "contentLocation"
     } ],
     "texts" : [ {
       "type" : "body",
@@ -661,11 +669,15 @@ open class ResponseManagementAPI {
     "responseType" : "MessagingTemplate",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "assets" : [ {
+      "assetUsage" : "FileAttachments",
       "selfUri" : "https://openapi-generator.tech",
-      "id" : "id"
+      "id" : "id",
+      "contentLocation" : "contentLocation"
     }, {
+      "assetUsage" : "FileAttachments",
       "selfUri" : "https://openapi-generator.tech",
-      "id" : "id"
+      "id" : "id",
+      "contentLocation" : "contentLocation"
     } ],
     "texts" : [ {
       "type" : "body",
@@ -855,6 +867,101 @@ open class ResponseManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LibraryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get response assets.
+     
+     - parameter body: (body) Asset IDs (max allowed 50) 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postResponsemanagementResponseassetsBulk(body: ResponseAssetBulkRequest, completion: @escaping ((_ data: ResponseAssetEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postResponsemanagementResponseassetsBulkWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ResponseAssetEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get response assets.
+     - POST /api/v2/responsemanagement/responseassets/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "responses" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "contentLength" : 0,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "contentLocation" : "contentLocation",
+    "contentType" : "contentType"
+  }, {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "responses" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "contentLength" : 0,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "contentLocation" : "contentLocation",
+    "contentType" : "contentType"
+  } ],
+  "notFound" : [ "notFound", "notFound" ]
+}, statusCode=200}]
+     
+     - parameter body: (body) Asset IDs (max allowed 50) 
+
+     - returns: RequestBuilder<ResponseAssetEntityListing> 
+     */
+    open class func postResponsemanagementResponseassetsBulkWithRequestBuilder(body: ResponseAssetBulkRequest) -> RequestBuilder<ResponseAssetEntityListing> {        
+        let path = "/api/v2/responsemanagement/responseassets/bulk"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ResponseAssetEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -1081,11 +1188,15 @@ open class ResponseManagementAPI {
   "responseType" : "MessagingTemplate",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "assets" : [ {
+    "assetUsage" : "FileAttachments",
     "selfUri" : "https://openapi-generator.tech",
-    "id" : "id"
+    "id" : "id",
+    "contentLocation" : "contentLocation"
   }, {
+    "assetUsage" : "FileAttachments",
     "selfUri" : "https://openapi-generator.tech",
-    "id" : "id"
+    "id" : "id",
+    "contentLocation" : "contentLocation"
   } ],
   "texts" : [ {
     "type" : "body",
@@ -1310,11 +1421,15 @@ open class ResponseManagementAPI {
   "responseType" : "MessagingTemplate",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "assets" : [ {
+    "assetUsage" : "FileAttachments",
     "selfUri" : "https://openapi-generator.tech",
-    "id" : "id"
+    "id" : "id",
+    "contentLocation" : "contentLocation"
   }, {
+    "assetUsage" : "FileAttachments",
     "selfUri" : "https://openapi-generator.tech",
-    "id" : "id"
+    "id" : "id",
+    "contentLocation" : "contentLocation"
   } ],
   "texts" : [ {
     "type" : "body",

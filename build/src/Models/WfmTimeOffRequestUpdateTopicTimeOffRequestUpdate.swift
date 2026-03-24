@@ -59,6 +59,10 @@ public class WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate: Codable {
 
 
 
+
+
+
+
     public var _id: String?
     public var user: WfmTimeOffRequestUpdateTopicUserReference?
     public var isFullDayRequest: Bool?
@@ -69,6 +73,8 @@ public class WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate: Codable {
     public var substatus: Substatus?
     public var partialDayStartDateTimes: [String]?
     public var fullDayManagementUnitDates: [String]?
+    public var fullDayEarliestStartOffsetMinutes: [Int64]?
+    public var fullDayLatestEndOffsetMinutes: [Int64]?
     public var dailyDurationMinutes: Int64?
     public var durationMinutes: [Int64]?
     public var payableMinutes: [Int64]?
@@ -80,7 +86,7 @@ public class WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate: Codable {
     public var modifiedDate: String?
     public var modifiedBy: String?
 
-    public init(_id: String?, user: WfmTimeOffRequestUpdateTopicUserReference?, isFullDayRequest: Bool?, markedAsRead: Bool?, activityCodeId: String?, paid: Bool?, status: Status?, substatus: Substatus?, partialDayStartDateTimes: [String]?, fullDayManagementUnitDates: [String]?, dailyDurationMinutes: Int64?, durationMinutes: [Int64]?, payableMinutes: [Int64]?, notes: String?, reviewedDate: String?, reviewedBy: String?, submittedDate: String?, submittedBy: String?, modifiedDate: String?, modifiedBy: String?) {
+    public init(_id: String?, user: WfmTimeOffRequestUpdateTopicUserReference?, isFullDayRequest: Bool?, markedAsRead: Bool?, activityCodeId: String?, paid: Bool?, status: Status?, substatus: Substatus?, partialDayStartDateTimes: [String]?, fullDayManagementUnitDates: [String]?, fullDayEarliestStartOffsetMinutes: [Int64]?, fullDayLatestEndOffsetMinutes: [Int64]?, dailyDurationMinutes: Int64?, durationMinutes: [Int64]?, payableMinutes: [Int64]?, notes: String?, reviewedDate: String?, reviewedBy: String?, submittedDate: String?, submittedBy: String?, modifiedDate: String?, modifiedBy: String?) {
         self._id = _id
         self.user = user
         self.isFullDayRequest = isFullDayRequest
@@ -91,6 +97,8 @@ public class WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate: Codable {
         self.substatus = substatus
         self.partialDayStartDateTimes = partialDayStartDateTimes
         self.fullDayManagementUnitDates = fullDayManagementUnitDates
+        self.fullDayEarliestStartOffsetMinutes = fullDayEarliestStartOffsetMinutes
+        self.fullDayLatestEndOffsetMinutes = fullDayLatestEndOffsetMinutes
         self.dailyDurationMinutes = dailyDurationMinutes
         self.durationMinutes = durationMinutes
         self.payableMinutes = payableMinutes
@@ -114,6 +122,8 @@ public class WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate: Codable {
         case substatus
         case partialDayStartDateTimes
         case fullDayManagementUnitDates
+        case fullDayEarliestStartOffsetMinutes
+        case fullDayLatestEndOffsetMinutes
         case dailyDurationMinutes
         case durationMinutes
         case payableMinutes

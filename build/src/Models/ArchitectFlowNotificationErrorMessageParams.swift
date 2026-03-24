@@ -5,14 +5,10 @@ public class ArchitectFlowNotificationErrorMessageParams: Codable {
 
 
 
-
-
     public var additionalProperties: [String:String]?
-    public var getAdditionalProperties: [String:String]?
 
-    public init(additionalProperties: [String:String]?, getAdditionalProperties: [String:String]?) {
+    public init(additionalProperties: [String:String]?) {
         self.additionalProperties = additionalProperties
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
 

@@ -36,6 +36,7 @@ public class DependencyObject: Codable {
         case digitalbotflow = "DIGITALBOTFLOW"
         case division = "DIVISION"
         case emailroute = "EMAILROUTE"
+        case emailsendflow = "EMAILSENDFLOW"
         case emergencygroup = "EMERGENCYGROUP"
         case file = "FILE"
         case flowaction = "FLOWACTION"

@@ -29,6 +29,8 @@ public class MediaParticipantRequest: Codable {
 
 
 
+
+
     /** Wrap-up to assign to this participant. */
     public var wrapup: WrapupInput?
     /** The state to update to set for this participant's communications.  Possible values are: 'connected' and 'disconnected'. */
@@ -43,8 +45,10 @@ public class MediaParticipantRequest: Codable {
     public var held: Bool?
     /** True to skip wrap-up for this participant. */
     public var wrapupSkipped: Bool?
+    /** Time to resume parked communication. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var resumeTime: Date?
 
-    public init(wrapup: WrapupInput?, state: State?, recording: Bool?, muted: Bool?, confined: Bool?, held: Bool?, wrapupSkipped: Bool?) {
+    public init(wrapup: WrapupInput?, state: State?, recording: Bool?, muted: Bool?, confined: Bool?, held: Bool?, wrapupSkipped: Bool?, resumeTime: Date?) {
         self.wrapup = wrapup
         self.state = state
         self.recording = recording
@@ -52,6 +56,7 @@ public class MediaParticipantRequest: Codable {
         self.confined = confined
         self.held = held
         self.wrapupSkipped = wrapupSkipped
+        self.resumeTime = resumeTime
     }
 
 

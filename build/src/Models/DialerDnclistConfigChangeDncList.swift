@@ -37,8 +37,6 @@ public class DialerDnclistConfigChangeDncList: Codable {
 
 
 
-
-
     public var importStatus: DialerDnclistConfigChangeImportStatus?
     /** the number of phone numbers in the do not call list */
     public var size: Int64?
@@ -63,9 +61,8 @@ public class DialerDnclistConfigChangeDncList: Codable {
     public var dateModified: Date?
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int64?
-    public var getAdditionalProperties: [String:JSON]?
 
-    public init(importStatus: DialerDnclistConfigChangeImportStatus?, size: Int64?, dncSourceType: DncSourceType?, loginId: String?, dncCodes: [String]?, licenseId: String?, contactMethod: ContactMethod?, division: DialerDnclistConfigChangeUriReference?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?, getAdditionalProperties: [String:JSON]?) {
+    public init(importStatus: DialerDnclistConfigChangeImportStatus?, size: Int64?, dncSourceType: DncSourceType?, loginId: String?, dncCodes: [String]?, licenseId: String?, contactMethod: ContactMethod?, division: DialerDnclistConfigChangeUriReference?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?) {
         self.importStatus = importStatus
         self.size = size
         self.dncSourceType = dncSourceType
@@ -80,7 +77,6 @@ public class DialerDnclistConfigChangeDncList: Codable {
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.version = version
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -98,7 +94,6 @@ public class DialerDnclistConfigChangeDncList: Codable {
         case dateCreated
         case dateModified
         case version
-        case getAdditionalProperties
     }
 
 

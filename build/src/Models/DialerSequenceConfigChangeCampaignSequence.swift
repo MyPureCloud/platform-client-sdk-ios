@@ -28,8 +28,6 @@ public class DialerSequenceConfigChangeCampaignSequence: Codable {
 
 
 
-
-
     /** the ordered list of campaign identifiers */
     public var campaigns: [DialerSequenceConfigChangeUriReference]?
     /** the zero-based index of the current campaign in the campaigns list */
@@ -50,9 +48,8 @@ public class DialerSequenceConfigChangeCampaignSequence: Codable {
     public var dateModified: Date?
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int64?
-    public var getAdditionalProperties: [String:JSON]?
 
-    public init(campaigns: [DialerSequenceConfigChangeUriReference]?, currentCampaign: Int64?, status: Status?, stopMessage: String?, _repeat: Bool?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?, getAdditionalProperties: [String:JSON]?) {
+    public init(campaigns: [DialerSequenceConfigChangeUriReference]?, currentCampaign: Int64?, status: Status?, stopMessage: String?, _repeat: Bool?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?) {
         self.campaigns = campaigns
         self.currentCampaign = currentCampaign
         self.status = status
@@ -64,7 +61,6 @@ public class DialerSequenceConfigChangeCampaignSequence: Codable {
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.version = version
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -79,7 +75,6 @@ public class DialerSequenceConfigChangeCampaignSequence: Codable {
         case dateCreated
         case dateModified
         case version
-        case getAdditionalProperties
     }
 
 

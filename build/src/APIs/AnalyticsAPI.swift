@@ -719,7 +719,9 @@ open class AnalyticsAPI {
   "mediaStatsMinConversationRFactor" : 6.027456183070403,
   "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
   "customerParticipation" : true,
+  "associatedConversationId" : "associatedConversationId",
   "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
+  "consultationConversationIds" : [ "consultationConversationIds", "consultationConversationIds" ],
   "selfServed" : true,
   "participants" : [ {
     "participantId" : "participantId",
@@ -1739,7 +1741,9 @@ open class AnalyticsAPI {
     "mediaStatsMinConversationRFactor" : 6.027456183070403,
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
+    "associatedConversationId" : "associatedConversationId",
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
+    "consultationConversationIds" : [ "consultationConversationIds", "consultationConversationIds" ],
     "selfServed" : true,
     "participants" : [ {
       "participantId" : "participantId",
@@ -2705,7 +2709,9 @@ open class AnalyticsAPI {
     "mediaStatsMinConversationRFactor" : 6.027456183070403,
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
+    "associatedConversationId" : "associatedConversationId",
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
+    "consultationConversationIds" : [ "consultationConversationIds", "consultationConversationIds" ],
     "selfServed" : true,
     "participants" : [ {
       "participantId" : "participantId",
@@ -3793,7 +3799,9 @@ open class AnalyticsAPI {
     "mediaStatsMinConversationRFactor" : 6.027456183070403,
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
+    "associatedConversationId" : "associatedConversationId",
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
+    "consultationConversationIds" : [ "consultationConversationIds", "consultationConversationIds" ],
     "selfServed" : true,
     "participants" : [ {
       "participantId" : "participantId",
@@ -4765,7 +4773,9 @@ open class AnalyticsAPI {
     "mediaStatsMinConversationRFactor" : 6.027456183070403,
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
+    "associatedConversationId" : "associatedConversationId",
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
+    "consultationConversationIds" : [ "consultationConversationIds", "consultationConversationIds" ],
     "selfServed" : true,
     "participants" : [ {
       "participantId" : "participantId",
@@ -9277,7 +9287,9 @@ open class AnalyticsAPI {
     "mediaStatsMinConversationRFactor" : 6.027456183070403,
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
+    "associatedConversationId" : "associatedConversationId",
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
+    "consultationConversationIds" : [ "consultationConversationIds", "consultationConversationIds" ],
     "selfServed" : true,
     "participants" : [ {
       "participantId" : "participantId",
@@ -10243,7 +10255,9 @@ open class AnalyticsAPI {
     "mediaStatsMinConversationRFactor" : 6.027456183070403,
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
+    "associatedConversationId" : "associatedConversationId",
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
+    "consultationConversationIds" : [ "consultationConversationIds", "consultationConversationIds" ],
     "selfServed" : true,
     "participants" : [ {
       "participantId" : "participantId",

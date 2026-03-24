@@ -67,13 +67,13 @@ public class ModelResponse: Codable {
     /** An optional messaging template definition for responseType.MessagingTemplate. */
     public var messagingTemplate: MessagingTemplate?
     /** Assets used in the response */
-    public var assets: [AddressableEntityRef]?
+    public var assets: [RmsAssetAddressableRef]?
     /** Footer template definition for responseType.Footer. */
     public var footer: FooterTemplate?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, version: Int?, libraries: [DomainEntityRef]?, texts: [ResponseText]?, createdBy: User?, dateCreated: Date?, interactionType: InteractionType?, substitutions: [ResponseSubstitution]?, substitutionsSchema: JsonSchemaDocument?, responseType: ResponseType?, messagingTemplate: MessagingTemplate?, assets: [AddressableEntityRef]?, footer: FooterTemplate?, selfUri: String?) {
+    public init(_id: String?, name: String?, version: Int?, libraries: [DomainEntityRef]?, texts: [ResponseText]?, createdBy: User?, dateCreated: Date?, interactionType: InteractionType?, substitutions: [ResponseSubstitution]?, substitutionsSchema: JsonSchemaDocument?, responseType: ResponseType?, messagingTemplate: MessagingTemplate?, assets: [RmsAssetAddressableRef]?, footer: FooterTemplate?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.version = version

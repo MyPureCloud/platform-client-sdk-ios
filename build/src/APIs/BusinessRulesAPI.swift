@@ -142,6 +142,7 @@ open class BusinessRulesAPI {
     /**
      Delete a decision table row
      - DELETE /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}
+     - Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -1181,6 +1182,7 @@ open class BusinessRulesAPI {
     /**
      Update a decision table
      - PATCH /api/v2/businessrules/decisiontables/{tableId}
+     - Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -1571,6 +1573,7 @@ open class BusinessRulesAPI {
     /**
      Create a decision table row
      - POST /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows
+     - Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -1910,6 +1913,7 @@ open class BusinessRulesAPI {
     /**
      Create a decision table
      - POST /api/v2/businessrules/decisiontables
+     - Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2119,6 +2123,7 @@ open class BusinessRulesAPI {
     /**
      Full update a decision table row
      - PUT /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}
+     - Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

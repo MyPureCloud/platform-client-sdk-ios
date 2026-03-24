@@ -192,20 +192,22 @@ open class DataExtensionsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "minSchemaDescriptionCharacters" : 7,
-  "maxFieldDescriptionCharacters" : 5,
+  "minSchemaDescriptionCharacters" : 3,
+  "maxFieldDescriptionCharacters" : 2,
   "selfUri" : "https://openapi-generator.tech",
-  "minFieldDescriptionCharacters" : 1,
-  "maxNumberOfFieldsPerSchema" : 2,
-  "minSchemaNameCharacters" : 5,
+  "minFieldDescriptionCharacters" : 5,
+  "maxFieldTitleCharacters" : 5,
+  "maxNumberOfFieldsPerSchema" : 7,
+  "minFieldTitleCharacters" : 1,
+  "minSchemaNameCharacters" : 7,
   "minFieldNameCharacters" : 0,
-  "maxNumberOfSchemasPerOrg" : 3,
+  "maxNumberOfSchemasPerOrg" : 4,
   "name" : "name",
   "id" : "id",
   "maxFieldNameCharacters" : 6,
-  "maxSchemaDescriptionCharacters" : 9,
-  "maxSchemaNameCharacters" : 2,
-  "maxNumberOfFieldsPerOrg" : 4
+  "maxSchemaDescriptionCharacters" : 2,
+  "maxSchemaNameCharacters" : 9,
+  "maxNumberOfFieldsPerOrg" : 1
 }, statusCode=200}]
 
      - returns: RequestBuilder<SchemaQuantityLimits> 

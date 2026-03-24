@@ -239,6 +239,54 @@ open class TelephonyAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    /**
+     Get the global telephony configuration.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonySettings(completion: @escaping ((_ data: TelephonySettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonySettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<TelephonySettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the global telephony configuration.
+     - GET /api/v2/telephony/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "persistentConnectionRequired" : true,
+  "blockCallerIdAccessCode" : "blockCallerIdAccessCode"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<TelephonySettings> 
+     */
+    open class func getTelephonySettingsWithRequestBuilder() -> RequestBuilder<TelephonySettings> {        
+        let path = "/api/v2/telephony/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TelephonySettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     
     
     /**
@@ -786,6 +834,59 @@ open class TelephonyAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SelfAgentGreeting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Update the global telephony configuration.
+     
+     - parameter body: (body) Telephony 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putTelephonySettings(body: TelephonySettings, completion: @escaping ((_ data: TelephonySettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = putTelephonySettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<TelephonySettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the global telephony configuration.
+     - PUT /api/v2/telephony/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "persistentConnectionRequired" : true,
+  "blockCallerIdAccessCode" : "blockCallerIdAccessCode"
+}, statusCode=200}]
+     
+     - parameter body: (body) Telephony 
+
+     - returns: RequestBuilder<TelephonySettings> 
+     */
+    open class func putTelephonySettingsWithRequestBuilder(body: TelephonySettings) -> RequestBuilder<TelephonySettings> {        
+        let path = "/api/v2/telephony/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TelephonySettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

@@ -8,8 +8,6 @@ public class AgentlessEmailSendResponseDto: Codable {
 
     public enum SenderType: String, Codable { 
         case outbound = "Outbound"
-        case inbound = "Inbound"
-        case integration = "Integration"
     }
 
 

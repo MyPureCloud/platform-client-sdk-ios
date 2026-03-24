@@ -13,6 +13,7 @@ public class EventMessage: Codable {
         case automaticTimeZoneZipCodeInvalid = "AUTOMATIC_TIME_ZONE_ZIP_CODE_INVALID"
         case campaignBlacklisted = "CAMPAIGN_BLACKLISTED"
         case campaignBuildContactQueueError = "CAMPAIGN_BUILD_CONTACT_QUEUE_ERROR"
+        case campaignCheckJobDuplicate = "CAMPAIGN_CHECK_JOB_DUPLICATE"
         case campaignContentTemplateSubstitutionMismatch = "CAMPAIGN_CONTENT_TEMPLATE_SUBSTITUTION_MISMATCH"
         case campaignCallsPerAgentLow = "CAMPAIGN_CALLS_PER_AGENT_LOW"
         case campaignEmailBodyCharacterLimitExceeded = "CAMPAIGN_EMAIL_BODY_CHARACTER_LIMIT_EXCEEDED"

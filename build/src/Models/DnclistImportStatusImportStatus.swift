@@ -21,8 +21,6 @@ public class DnclistImportStatusImportStatus: Codable {
 
 
 
-
-
     /** current status of the import */
     public var importState: ImportState?
     /** total number of records to be imported */
@@ -38,9 +36,8 @@ public class DnclistImportStatusImportStatus: Codable {
     /** The prefix used for target contact list names */
     public var listNamePrefix: String?
     public var additionalProperties: [String:JSON]?
-    public var getAdditionalProperties: [String:JSON]?
 
-    public init(importState: ImportState?, totalRecords: Int64?, completedRecords: Int64?, percentageComplete: Int64?, failureReason: String?, targetContactListIds: [String]?, listNamePrefix: String?, additionalProperties: [String:JSON]?, getAdditionalProperties: [String:JSON]?) {
+    public init(importState: ImportState?, totalRecords: Int64?, completedRecords: Int64?, percentageComplete: Int64?, failureReason: String?, targetContactListIds: [String]?, listNamePrefix: String?, additionalProperties: [String:JSON]?) {
         self.importState = importState
         self.totalRecords = totalRecords
         self.completedRecords = completedRecords
@@ -49,7 +46,6 @@ public class DnclistImportStatusImportStatus: Codable {
         self.targetContactListIds = targetContactListIds
         self.listNamePrefix = listNamePrefix
         self.additionalProperties = additionalProperties
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
 

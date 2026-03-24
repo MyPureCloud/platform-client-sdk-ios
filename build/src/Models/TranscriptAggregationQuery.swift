@@ -53,6 +53,16 @@ public class TranscriptAggregationQuery: Codable {
         case eventtime = "eventTime"
     }
 
+    public enum QueryType: String, Codable { 
+        case bottomn = "bottomN"
+        case groupby = "groupBy"
+        case topn = "topN"
+    }
+
+
+
+
+
     /** Behaves like one clause in a SQL WHERE. Specifies the date and time range of data being queried. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
     public var interval: String?
     /** Granularity aggregates metrics into subpartitions within the time interval specified. The default granularity is the same duration as the interval. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H */
@@ -71,8 +81,14 @@ public class TranscriptAggregationQuery: Codable {
     public var views: [TranscriptAggregationView]?
     /** Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \"eventTime\" uses the actual time of the data event. */
     public var alternateTimeDimension: AlternateTimeDimension?
+    /** Query type to use. Use groupBy for all matching results, and topN/bottomN for N results ordered by the sortMetric. Default is groupBy. */
+    public var queryType: QueryType?
+    /** Required when requesting multiple metrics. Only applicable for topN/bottomN query type. */
+    public var sortMetric: TranscriptAggregationSort?
+    /** How many results you want in an ordered list. Only applicable for topN/bottomN query type. */
+    public var limit: Int?
 
-    public init(interval: String?, granularity: String?, timeZone: String?, groupBy: [GroupBy]?, filter: TranscriptAggregateQueryFilter?, metrics: [Metrics]?, flattenMultivaluedDimensions: Bool?, views: [TranscriptAggregationView]?, alternateTimeDimension: AlternateTimeDimension?) {
+    public init(interval: String?, granularity: String?, timeZone: String?, groupBy: [GroupBy]?, filter: TranscriptAggregateQueryFilter?, metrics: [Metrics]?, flattenMultivaluedDimensions: Bool?, views: [TranscriptAggregationView]?, alternateTimeDimension: AlternateTimeDimension?, queryType: QueryType?, sortMetric: TranscriptAggregationSort?, limit: Int?) {
         self.interval = interval
         self.granularity = granularity
         self.timeZone = timeZone
@@ -82,6 +98,9 @@ public class TranscriptAggregationQuery: Codable {
         self.flattenMultivaluedDimensions = flattenMultivaluedDimensions
         self.views = views
         self.alternateTimeDimension = alternateTimeDimension
+        self.queryType = queryType
+        self.sortMetric = sortMetric
+        self.limit = limit
     }
 
 

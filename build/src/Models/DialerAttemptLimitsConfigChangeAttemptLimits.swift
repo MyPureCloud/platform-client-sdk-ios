@@ -29,8 +29,6 @@ public class DialerAttemptLimitsConfigChangeAttemptLimits: Codable {
 
 
 
-
-
     public var maxAttemptsPerContact: Int64?
     public var maxAttemptsPerNumber: Int64?
     /** The timezone is necessary to define when \"today\" starts and ends */
@@ -52,9 +50,8 @@ public class DialerAttemptLimitsConfigChangeAttemptLimits: Codable {
     public var dateModified: Date?
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int64?
-    public var getAdditionalProperties: [String:JSON]?
 
-    public init(maxAttemptsPerContact: Int64?, maxAttemptsPerNumber: Int64?, timeZoneId: String?, resetPeriod: ResetPeriod?, recallEntries: [String:DialerAttemptLimitsConfigChangeRecallEntry]?, breadthFirstRecalls: Bool?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?, getAdditionalProperties: [String:JSON]?) {
+    public init(maxAttemptsPerContact: Int64?, maxAttemptsPerNumber: Int64?, timeZoneId: String?, resetPeriod: ResetPeriod?, recallEntries: [String:DialerAttemptLimitsConfigChangeRecallEntry]?, breadthFirstRecalls: Bool?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?) {
         self.maxAttemptsPerContact = maxAttemptsPerContact
         self.maxAttemptsPerNumber = maxAttemptsPerNumber
         self.timeZoneId = timeZoneId
@@ -67,7 +64,6 @@ public class DialerAttemptLimitsConfigChangeAttemptLimits: Codable {
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.version = version
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -83,7 +79,6 @@ public class DialerAttemptLimitsConfigChangeAttemptLimits: Codable {
         case dateCreated
         case dateModified
         case version
-        case getAdditionalProperties
     }
 
 

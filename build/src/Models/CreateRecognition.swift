@@ -28,7 +28,7 @@ public class CreateRecognition: Codable {
     public var recipientId: String?
     /** The type of the recognition */
     public var type: ModelType?
-    /** The title of the recognition. Max length of 100 characters (optional) */
+    /** The title of the recognition. Max length of 100 characters */
     public var title: String?
     /** The note of the recognition. Max length of 800 characters (optional) */
     public var note: String?

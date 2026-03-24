@@ -22,8 +22,6 @@ public class WhatsappCampaignScheduleConfigChangeWhatsAppCampaignSchedule: Codab
 
 
 
-
-
     /** a list of start and end times */
     public var intervals: [WhatsappCampaignScheduleConfigChangeScheduleInterval]?
     /** a list of recurrences for a schedule */
@@ -42,9 +40,8 @@ public class WhatsappCampaignScheduleConfigChangeWhatsAppCampaignSchedule: Codab
     public var dateModified: Date?
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int64?
-    public var getAdditionalProperties: [String:JSON]?
 
-    public init(intervals: [WhatsappCampaignScheduleConfigChangeScheduleInterval]?, recurrences: [WhatsappCampaignScheduleConfigChangeScheduleRecurrence]?, timeZone: String?, whatsAppCampaign: WhatsappCampaignScheduleConfigChangeUriReference?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?, getAdditionalProperties: [String:JSON]?) {
+    public init(intervals: [WhatsappCampaignScheduleConfigChangeScheduleInterval]?, recurrences: [WhatsappCampaignScheduleConfigChangeScheduleRecurrence]?, timeZone: String?, whatsAppCampaign: WhatsappCampaignScheduleConfigChangeUriReference?, additionalProperties: [String:JSON]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int64?) {
         self.intervals = intervals
         self.recurrences = recurrences
         self.timeZone = timeZone
@@ -55,7 +52,6 @@ public class WhatsappCampaignScheduleConfigChangeWhatsAppCampaignSchedule: Codab
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.version = version
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -69,7 +65,6 @@ public class WhatsappCampaignScheduleConfigChangeWhatsAppCampaignSchedule: Codab
         case dateCreated
         case dateModified
         case version
-        case getAdditionalProperties
     }
 
 

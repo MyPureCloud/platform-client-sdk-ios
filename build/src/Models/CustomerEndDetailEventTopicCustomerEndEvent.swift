@@ -98,6 +98,8 @@ public class CustomerEndDetailEventTopicCustomerEndEvent: Codable {
 
 
 
+
+
     public var eventTime: Int64?
     public var conversationId: String?
     public var participantId: String?
@@ -121,8 +123,9 @@ public class CustomerEndDetailEventTopicCustomerEndEvent: Codable {
     public var conversationExternalContactIds: [String]?
     public var conversationExternalOrganizationIds: [String]?
     public var divisionId: String?
+    public var utilizationLabel: String?
 
-    public init(eventTime: Int64?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, externalOrganizationId: String?, externalContactId: String?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int64?, subject: String?, messageType: MessageType?, interactingDurationMs: Int64?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?, divisionId: String?) {
+    public init(eventTime: Int64?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, externalOrganizationId: String?, externalContactId: String?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int64?, subject: String?, messageType: MessageType?, interactingDurationMs: Int64?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?, divisionId: String?, utilizationLabel: String?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
@@ -146,6 +149,7 @@ public class CustomerEndDetailEventTopicCustomerEndEvent: Codable {
         self.conversationExternalContactIds = conversationExternalContactIds
         self.conversationExternalOrganizationIds = conversationExternalOrganizationIds
         self.divisionId = divisionId
+        self.utilizationLabel = utilizationLabel
     }
 
 

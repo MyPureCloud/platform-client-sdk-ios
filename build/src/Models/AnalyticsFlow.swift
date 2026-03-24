@@ -24,6 +24,7 @@ public class AnalyticsFlow: Codable {
         case bot = "BOT"
         case commonmodule = "COMMONMODULE"
         case digitalbot = "DIGITALBOT"
+        case emailsend = "EMAILSEND"
         case inboundcall = "INBOUNDCALL"
         case inboundchat = "INBOUNDCHAT"
         case inboundemail = "INBOUNDEMAIL"

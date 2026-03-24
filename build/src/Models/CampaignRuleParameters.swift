@@ -53,6 +53,8 @@ public class CampaignRuleParameters: Codable {
 
 
 
+
+
     /** The operator for comparison. Required for a CampaignRuleCondition. */
     public var _operator: Operator?
     /** The value for comparison. Required for a CampaignRuleCondition. */
@@ -81,8 +83,10 @@ public class CampaignRuleParameters: Codable {
     public var smsContentTemplate: DomainEntityRef?
     /** The content template to set a Email campaign to. */
     public var emailContentTemplate: DomainEntityRef?
+    /** ISO-8601 Duration for which condition expression must be continuously true before condition is evaluated as true */
+    public var forDuration: Duration?
 
-    public init(_operator: Operator?, value: String?, priority: Priority?, dialingMode: DialingMode?, abandonRate: Double?, outboundLineCount: Int?, relativeWeight: Int?, maxCallsPerAgent: Double?, queue: DomainEntityRef?, messagesPerMinute: Int?, smsMessagesPerMinute: Int?, emailMessagesPerMinute: Int?, smsContentTemplate: DomainEntityRef?, emailContentTemplate: DomainEntityRef?) {
+    public init(_operator: Operator?, value: String?, priority: Priority?, dialingMode: DialingMode?, abandonRate: Double?, outboundLineCount: Int?, relativeWeight: Int?, maxCallsPerAgent: Double?, queue: DomainEntityRef?, messagesPerMinute: Int?, smsMessagesPerMinute: Int?, emailMessagesPerMinute: Int?, smsContentTemplate: DomainEntityRef?, emailContentTemplate: DomainEntityRef?, forDuration: Duration?) {
         self._operator = _operator
         self.value = value
         self.priority = priority
@@ -97,6 +101,7 @@ public class CampaignRuleParameters: Codable {
         self.emailMessagesPerMinute = emailMessagesPerMinute
         self.smsContentTemplate = smsContentTemplate
         self.emailContentTemplate = emailContentTemplate
+        self.forDuration = forDuration
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -114,6 +119,7 @@ public class CampaignRuleParameters: Codable {
         case emailMessagesPerMinute
         case smsContentTemplate
         case emailContentTemplate
+        case forDuration
     }
 
 

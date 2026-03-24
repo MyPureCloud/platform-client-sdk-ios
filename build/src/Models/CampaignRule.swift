@@ -34,6 +34,8 @@ public class CampaignRule: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of the CampaignRule. */
@@ -59,12 +61,14 @@ public class CampaignRule: Codable {
     public var conditionGroups: [CampaignRuleConditionGroup]?
     /** CampaignRule execution settings */
     public var executionSettings: CampaignRuleExecutionSettings?
+    /** The time zone to use for date-time conditions. */
+    public var timeZoneId: String?
     /** A list of current warning conditions associated with the campaign rule. */
     public var warnings: [CampaignRuleWarning]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, campaignRuleEntities: CampaignRuleEntities?, campaignRuleConditions: [CampaignRuleCondition]?, campaignRuleActions: [CampaignRuleAction]?, matchAnyConditions: Bool?, enabled: Bool?, campaignRuleProcessing: CampaignRuleProcessing?, conditionGroups: [CampaignRuleConditionGroup]?, executionSettings: CampaignRuleExecutionSettings?, warnings: [CampaignRuleWarning]?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, campaignRuleEntities: CampaignRuleEntities?, campaignRuleConditions: [CampaignRuleCondition]?, campaignRuleActions: [CampaignRuleAction]?, matchAnyConditions: Bool?, enabled: Bool?, campaignRuleProcessing: CampaignRuleProcessing?, conditionGroups: [CampaignRuleConditionGroup]?, executionSettings: CampaignRuleExecutionSettings?, timeZoneId: String?, warnings: [CampaignRuleWarning]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -78,6 +82,7 @@ public class CampaignRule: Codable {
         self.campaignRuleProcessing = campaignRuleProcessing
         self.conditionGroups = conditionGroups
         self.executionSettings = executionSettings
+        self.timeZoneId = timeZoneId
         self.warnings = warnings
         self.selfUri = selfUri
     }
@@ -96,6 +101,7 @@ public class CampaignRule: Codable {
         case campaignRuleProcessing
         case conditionGroups
         case executionSettings
+        case timeZoneId
         case warnings
         case selfUri
     }

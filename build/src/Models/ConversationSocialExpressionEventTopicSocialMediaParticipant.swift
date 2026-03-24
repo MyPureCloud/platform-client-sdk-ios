@@ -76,6 +76,7 @@ public class ConversationSocialExpressionEventTopicSocialMediaParticipant: Codab
         case uncallable = "uncallable"
         case inactivity = "inactivity"
         case sessionExpired = "session.expired"
+        case takeover = "takeover"
     }
 
 

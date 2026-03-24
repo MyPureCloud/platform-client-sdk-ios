@@ -18,8 +18,6 @@ public class MessagingCampaignScheduleConfigChangeScheduleRecurrence: Codable {
 
 
 
-
-
     /** the recurrence id */
     public var _id: String?
     /** scheduled start time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ */
@@ -33,9 +31,8 @@ public class MessagingCampaignScheduleConfigChangeScheduleRecurrence: Codable {
     /** modifications to the original recurrence schedule */
     public var alterations: [MessagingCampaignScheduleConfigChangeAlteration]?
     public var additionalProperties: [String:JSON]?
-    public var getAdditionalProperties: [String:JSON]?
 
-    public init(_id: String?, start: String?, end: String?, timeZone: String?, range: MessagingCampaignScheduleConfigChangeRecurrenceRange?, pattern: MessagingCampaignScheduleConfigChangeRecurrencePattern?, alterations: [MessagingCampaignScheduleConfigChangeAlteration]?, additionalProperties: [String:JSON]?, getAdditionalProperties: [String:JSON]?) {
+    public init(_id: String?, start: String?, end: String?, timeZone: String?, range: MessagingCampaignScheduleConfigChangeRecurrenceRange?, pattern: MessagingCampaignScheduleConfigChangeRecurrencePattern?, alterations: [MessagingCampaignScheduleConfigChangeAlteration]?, additionalProperties: [String:JSON]?) {
         self._id = _id
         self.start = start
         self.end = end
@@ -44,7 +41,6 @@ public class MessagingCampaignScheduleConfigChangeScheduleRecurrence: Codable {
         self.pattern = pattern
         self.alterations = alterations
         self.additionalProperties = additionalProperties
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -56,7 +52,6 @@ public class MessagingCampaignScheduleConfigChangeScheduleRecurrence: Codable {
         case pattern
         case alterations
         case additionalProperties
-        case getAdditionalProperties
     }
 
 

@@ -30,6 +30,10 @@ public class SchemaQuantityLimits: Codable {
 
 
 
+
+
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -37,6 +41,10 @@ public class SchemaQuantityLimits: Codable {
     public var minFieldNameCharacters: Int?
     /** The maximum number of schema field name characters allowed. */
     public var maxFieldNameCharacters: Int?
+    /** The minimum number of schema field title characters allowed. */
+    public var minFieldTitleCharacters: Int?
+    /** The maximum number of schema field title characters allowed. */
+    public var maxFieldTitleCharacters: Int?
     /** The minimum number of schema field description characters allowed. */
     public var minFieldDescriptionCharacters: Int?
     /** The maximum number of schema field description characters allowed. */
@@ -58,11 +66,13 @@ public class SchemaQuantityLimits: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, minFieldNameCharacters: Int?, maxFieldNameCharacters: Int?, minFieldDescriptionCharacters: Int?, maxFieldDescriptionCharacters: Int?, minSchemaNameCharacters: Int?, maxSchemaNameCharacters: Int?, minSchemaDescriptionCharacters: Int?, maxSchemaDescriptionCharacters: Int?, maxNumberOfSchemasPerOrg: Int?, maxNumberOfFieldsPerSchema: Int?, maxNumberOfFieldsPerOrg: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, minFieldNameCharacters: Int?, maxFieldNameCharacters: Int?, minFieldTitleCharacters: Int?, maxFieldTitleCharacters: Int?, minFieldDescriptionCharacters: Int?, maxFieldDescriptionCharacters: Int?, minSchemaNameCharacters: Int?, maxSchemaNameCharacters: Int?, minSchemaDescriptionCharacters: Int?, maxSchemaDescriptionCharacters: Int?, maxNumberOfSchemasPerOrg: Int?, maxNumberOfFieldsPerSchema: Int?, maxNumberOfFieldsPerOrg: Int?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.minFieldNameCharacters = minFieldNameCharacters
         self.maxFieldNameCharacters = maxFieldNameCharacters
+        self.minFieldTitleCharacters = minFieldTitleCharacters
+        self.maxFieldTitleCharacters = maxFieldTitleCharacters
         self.minFieldDescriptionCharacters = minFieldDescriptionCharacters
         self.maxFieldDescriptionCharacters = maxFieldDescriptionCharacters
         self.minSchemaNameCharacters = minSchemaNameCharacters
@@ -80,6 +90,8 @@ public class SchemaQuantityLimits: Codable {
         case name
         case minFieldNameCharacters
         case maxFieldNameCharacters
+        case minFieldTitleCharacters
+        case maxFieldTitleCharacters
         case minFieldDescriptionCharacters
         case maxFieldDescriptionCharacters
         case minSchemaNameCharacters

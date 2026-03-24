@@ -56,8 +56,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementBusinessunitCapacityplans**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitCapacityplans) | Get list of capacity plans for a business unit |
 | [**getWorkforcemanagementBusinessunitIntradayPlanninggroups**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitIntradayPlanninggroups) | Get intraday planning groups for the given date |
 | [**getWorkforcemanagementBusinessunitManagementunits**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitManagementunits) | Get all authorized management units in the business unit |
+| [**getWorkforcemanagementBusinessunitMinimumstaffingSettings**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitMinimumstaffingSettings) | Get minimum staffing settings for a business unit |
 | [**getWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitPlanninggroup) | Get a planning group |
 | [**getWorkforcemanagementBusinessunitPlanninggroups**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitPlanninggroups) | Gets list of planning groups |
+| [**getWorkforcemanagementBusinessunitSchedulerSettings**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitSchedulerSettings) | Get scheduler settings for a business unit |
 | [**getWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitSchedulingRun) | Get a scheduling run |
 | [**getWorkforcemanagementBusinessunitSchedulingRunResult**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitSchedulingRunResult) | Get the result of a rescheduling operation |
 | [**getWorkforcemanagementBusinessunitSchedulingRuns**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitSchedulingRuns) | Get the list of scheduling runs |
@@ -69,6 +71,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementBusinessunitTimeofflimits**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitTimeofflimits) | Gets a list of time-off limit objects |
 | [**getWorkforcemanagementBusinessunitTimeoffplan**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitTimeoffplan) | Gets a time-off plan |
 | [**getWorkforcemanagementBusinessunitTimeoffplans**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitTimeoffplans) | Gets a list of time-off plans |
+| [**getWorkforcemanagementBusinessunitUsers**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitUsers) | Get users in the business unit |
 | [**getWorkforcemanagementBusinessunitWeekSchedule**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWeekSchedule) | Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route |
 | [**getWorkforcemanagementBusinessunitWeekScheduleGenerationresults**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWeekScheduleGenerationresults) | Get the generation results for a generated schedule |
 | [**getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast) | Get the headcount forecast by planning group for the schedule |
@@ -145,7 +148,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchWorkforcemanagementBusinessunitActivityplan**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitActivityplan) | Update an activity plan |
 | [**patchWorkforcemanagementBusinessunitAlternativeshiftsSettings**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitAlternativeshiftsSettings) | Update alternative shifts settings for a business unit |
 | [**patchWorkforcemanagementBusinessunitCapacityplan**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitCapacityplan) | Update a capacity plan configuration |
+| [**patchWorkforcemanagementBusinessunitMinimumstaffingSettings**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitMinimumstaffingSettings) | Update minimum staffing settings for a business unit |
 | [**patchWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitPlanninggroup) | Updates the planning group |
+| [**patchWorkforcemanagementBusinessunitSchedulerSettings**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitSchedulerSettings) | Update scheduler settings for a business unit |
 | [**patchWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitSchedulingRun) | Mark a schedule run as applied |
 | [**patchWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitServicegoaltemplate) | Updates a service goal template |
 | [**patchWorkforcemanagementBusinessunitStaffinggroup**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitStaffinggroup) | Updates a staffing group |
@@ -3138,6 +3143,56 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitManagementunits(busines
 [**ManagementUnitListing**](ManagementUnitListing)
 
 
+## getWorkforcemanagementBusinessunitMinimumstaffingSettings
+
+
+
+> [MinimumStaffingResponse](MinimumStaffingResponse) getWorkforcemanagementBusinessunitMinimumstaffingSettings(businessUnitId)
+
+Get minimum staffing settings for a business unit
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/minimumstaffing/settings  
+
+Requires ANY permissions: 
+
+* wfm:minimumStaffingSettings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitMinimumstaffingSettings(businessUnitId: businessUnitId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitMinimumstaffingSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+
+
+### Return type
+
+[**MinimumStaffingResponse**](MinimumStaffingResponse)
+
+
 ## getWorkforcemanagementBusinessunitPlanninggroup
 
 
@@ -3243,6 +3298,56 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitPlanninggroups(business
 ### Return type
 
 [**PlanningGroupList**](PlanningGroupList)
+
+
+## getWorkforcemanagementBusinessunitSchedulerSettings
+
+
+
+> [BuSchedulerSettingsResponse](BuSchedulerSettingsResponse) getWorkforcemanagementBusinessunitSchedulerSettings(businessUnitId)
+
+Get scheduler settings for a business unit
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduler/settings  
+
+Requires ANY permissions: 
+
+* wfm:schedulerSettings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitSchedulerSettings(businessUnitId: businessUnitId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitSchedulerSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+
+
+### Return type
+
+[**BuSchedulerSettingsResponse**](BuSchedulerSettingsResponse)
 
 
 ## getWorkforcemanagementBusinessunitSchedulingRun
@@ -3831,6 +3936,58 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeoffplans(businessUn
 ### Return type
 
 [**BuTimeOffPlanListing**](BuTimeOffPlanListing)
+
+
+## getWorkforcemanagementBusinessunitUsers
+
+
+
+> [BuUserListing](BuUserListing) getWorkforcemanagementBusinessunitUsers(businessUnitId, managementUnitIds)
+
+Get users in the business unit
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/users  
+
+Requires ANY permissions: 
+
+* wfm:agent:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let managementUnitIds: [String] = [""] // The IDs of the management units for which to retrieve users
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitUsers(businessUnitId: businessUnitId, managementUnitIds: managementUnitIds) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitUsers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **managementUnitIds** | [**[String]**](String)| The IDs of the management units for which to retrieve users | [optional] |
+
+
+### Return type
+
+[**BuUserListing**](BuUserListing)
 
 
 ## getWorkforcemanagementBusinessunitWeekSchedule
@@ -7934,6 +8091,58 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitCapacityplan(business
 [**CapacityPlanResponse**](CapacityPlanResponse)
 
 
+## patchWorkforcemanagementBusinessunitMinimumstaffingSettings
+
+
+
+> [MinimumStaffingResponse](MinimumStaffingResponse) patchWorkforcemanagementBusinessunitMinimumstaffingSettings(businessUnitId, body)
+
+Update minimum staffing settings for a business unit
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/minimumstaffing/settings  
+
+Requires ANY permissions: 
+
+* wfm:minimumStaffingSettings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: MinimumStaffingRequest = new MinimumStaffingRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementBusinessunitMinimumstaffingSettings(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementBusinessunitMinimumstaffingSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**MinimumStaffingRequest**](MinimumStaffingRequest)| body | |
+
+
+### Return type
+
+[**MinimumStaffingResponse**](MinimumStaffingResponse)
+
+
 ## patchWorkforcemanagementBusinessunitPlanninggroup
 
 
@@ -7986,6 +8195,58 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitPlanninggroup(busines
 ### Return type
 
 [**PlanningGroup**](PlanningGroup)
+
+
+## patchWorkforcemanagementBusinessunitSchedulerSettings
+
+
+
+> [BuSchedulerSettingsResponse](BuSchedulerSettingsResponse) patchWorkforcemanagementBusinessunitSchedulerSettings(businessUnitId, body)
+
+Update scheduler settings for a business unit
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduler/settings  
+
+Requires ANY permissions: 
+
+* wfm:schedulerSettings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: BuSchedulerSettingsRequest = new BuSchedulerSettingsRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementBusinessunitSchedulerSettings(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementBusinessunitSchedulerSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**BuSchedulerSettingsRequest**](BuSchedulerSettingsRequest)| body | |
+
+
+### Return type
+
+[**BuSchedulerSettingsResponse**](BuSchedulerSettingsResponse)
 
 
 ## patchWorkforcemanagementBusinessunitSchedulingRun
@@ -14704,4 +14965,4 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

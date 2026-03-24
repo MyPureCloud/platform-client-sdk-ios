@@ -73,6 +73,8 @@ public class WrapupDetailEventTopicWrapupEvent: Codable {
 
 
 
+
+
     public var eventTime: Int64?
     public var conversationId: String?
     public var participantId: String?
@@ -95,8 +97,9 @@ public class WrapupDetailEventTopicWrapupEvent: Codable {
     public var wrapupDurationMs: Int64?
     public var conversationExternalContactIds: [String]?
     public var conversationExternalOrganizationIds: [String]?
+    public var utilizationLabel: String?
 
-    public init(eventTime: Int64?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int64?, subject: String?, messageType: MessageType?, queueId: String?, wrapupCode: String?, wrapupNotes: String?, wrapupDurationMs: Int64?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?) {
+    public init(eventTime: Int64?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int64?, subject: String?, messageType: MessageType?, queueId: String?, wrapupCode: String?, wrapupNotes: String?, wrapupDurationMs: Int64?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?, utilizationLabel: String?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
@@ -119,6 +122,7 @@ public class WrapupDetailEventTopicWrapupEvent: Codable {
         self.wrapupDurationMs = wrapupDurationMs
         self.conversationExternalContactIds = conversationExternalContactIds
         self.conversationExternalOrganizationIds = conversationExternalOrganizationIds
+        self.utilizationLabel = utilizationLabel
     }
 
 

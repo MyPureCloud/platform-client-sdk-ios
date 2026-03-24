@@ -57,8 +57,6 @@ public class DialerRulesetConfigChangeCondition: Codable {
 
 
 
-
-
     /** A UriReference for a resource */
     public var dataAction: DialerRulesetConfigChangeUriReference?
     public var additionalProperties: [String:JSON]?
@@ -92,9 +90,8 @@ public class DialerRulesetConfigChangeCondition: Codable {
     public var contactColumnToDataActionFieldMappings: [DialerRulesetConfigChangeContactColumnToDataActionFieldMapping]?
     /** A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition. */
     public var predicates: [DialerRulesetConfigChangeDataActionConditionPredicate]?
-    public var getAdditionalProperties: [String:JSON]?
 
-    public init(dataAction: DialerRulesetConfigChangeUriReference?, additionalProperties: [String:JSON]?, type: String?, inverted: Bool?, attributeName: String?, value: String?, valueType: ValueType?, _operator: Operator?, codes: [String]?, propertyType: PropertyType?, property: String?, dataNotFoundResolution: Bool?, contactIdField: String?, callAnalysisResultField: String?, agentWrapupField: String?, contactColumnToDataActionFieldMappings: [DialerRulesetConfigChangeContactColumnToDataActionFieldMapping]?, predicates: [DialerRulesetConfigChangeDataActionConditionPredicate]?, getAdditionalProperties: [String:JSON]?) {
+    public init(dataAction: DialerRulesetConfigChangeUriReference?, additionalProperties: [String:JSON]?, type: String?, inverted: Bool?, attributeName: String?, value: String?, valueType: ValueType?, _operator: Operator?, codes: [String]?, propertyType: PropertyType?, property: String?, dataNotFoundResolution: Bool?, contactIdField: String?, callAnalysisResultField: String?, agentWrapupField: String?, contactColumnToDataActionFieldMappings: [DialerRulesetConfigChangeContactColumnToDataActionFieldMapping]?, predicates: [DialerRulesetConfigChangeDataActionConditionPredicate]?) {
         self.dataAction = dataAction
         self.additionalProperties = additionalProperties
         self.type = type
@@ -112,7 +109,6 @@ public class DialerRulesetConfigChangeCondition: Codable {
         self.agentWrapupField = agentWrapupField
         self.contactColumnToDataActionFieldMappings = contactColumnToDataActionFieldMappings
         self.predicates = predicates
-        self.getAdditionalProperties = getAdditionalProperties
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -133,7 +129,6 @@ public class DialerRulesetConfigChangeCondition: Codable {
         case agentWrapupField
         case contactColumnToDataActionFieldMappings
         case predicates
-        case getAdditionalProperties
     }
 
 

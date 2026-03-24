@@ -65,6 +65,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getExternalcontactsScanOrganizationsDivisionviewsAll**](ExternalContactsAPI#getExternalcontactsScanOrganizationsDivisionviewsAll) | Scan for external organizations using paging |
 | [**getExternalcontactsScanRelationships**](ExternalContactsAPI#getExternalcontactsScanRelationships) | Scan for relationships |
 | [**getExternalcontactsScanRelationshipsDivisionviewsAll**](ExternalContactsAPI#getExternalcontactsScanRelationshipsDivisionviewsAll) | Scan for relationships |
+| [**patchExternalcontactsContact**](ExternalContactsAPI#patchExternalcontactsContact) | Update specific fields of an external contact |
 | [**patchExternalcontactsContactIdentifiers**](ExternalContactsAPI#patchExternalcontactsContactIdentifiers) | Claim or release identifiers for a contact |
 | [**patchExternalcontactsOrganizationIdentifiers**](ExternalContactsAPI#patchExternalcontactsOrganizationIdentifiers) | Claim or release identifiers for an external organization |
 | [**postExternalcontactsBulkContacts**](ExternalContactsAPI#postExternalcontactsBulkContacts) | Bulk fetch contacts |
@@ -3327,6 +3328,58 @@ ExternalContactsAPI.getExternalcontactsScanRelationshipsDivisionviewsAll(limit: 
 [**CursorRelationshipListing**](CursorRelationshipListing)
 
 
+## patchExternalcontactsContact
+
+
+
+> [ExternalContact](ExternalContact) patchExternalcontactsContact(contactId, body)
+
+Update specific fields of an external contact
+
+
+
+Wraps PATCH /api/v2/externalcontacts/contacts/{contactId}  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactId: String = "" // ExternalContact ID
+let body: ExternalContactsPatchRequest = new ExternalContactsPatchRequest(...) // Contact fields to update
+
+// Code example
+ExternalContactsAPI.patchExternalcontactsContact(contactId: contactId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.patchExternalcontactsContact was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactId** | **String**| ExternalContact ID | |
+| **body** | [**ExternalContactsPatchRequest**](ExternalContactsPatchRequest)| Contact fields to update | |
+
+
+### Return type
+
+[**ExternalContact**](ExternalContact)
+
+
 ## patchExternalcontactsContactIdentifiers
 
 
@@ -6372,4 +6425,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

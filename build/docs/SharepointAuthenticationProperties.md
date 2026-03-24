@@ -1,0 +1,16 @@
+# SharepointAuthenticationProperties
+
+## SharepointAuthenticationProperties
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **authenticationUrl** | **String** | The authentication URL for the connection. | [optional] |
+| **tenantId** | **String** | The tenant ID for the connection. | [optional] |
+| **clientId** | **String** | The client ID for the connection. | [optional] |
+| **redirectUrl** | **String** | The redirect URL for the connection. | [optional] |
+
+
+
+_PureCloudPlatformClientV2@191.0.0_

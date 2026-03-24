@@ -131,7 +131,7 @@ public class SmsPhoneNumber: Codable {
     public var integration: DomainEntityRef?
     /** Compliance configuration for short codes, including help, stop and opt in. */
     public var compliance: Compliance?
-    /** Defines the media SupportedContent profile configured for an MMS capable phone number. */
+    /** Defines the media SupportedContent profile configured for an MMS capable phone number. If no custom profile is assigned, the phone number uses the system's \"SMS Default\" profile. The \"SMS Default\" profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. When the \"SMS Default\" profile is in use, this field will contain the profile name and media types, but will not have an 'id' or 'selfUri' field. To customize media filtering, assign a custom supported content profile using the PATCH endpoint. */
     public var supportedContent: SupportedContentReference?
     /** The URI for this object */
     public var selfUri: String?
