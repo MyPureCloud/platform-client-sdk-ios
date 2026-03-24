@@ -11,8 +11,7 @@ the campaign/sequence entities that this action acts on
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 | **campaigns** | [**[DialerCampaignRuleConfigChangeUriReference]**]([DialerCampaignRuleConfigChangeUriReference]) | A list of campaignIds to act on | [optional] |
 | **sequences** | [**[DialerCampaignRuleConfigChangeUriReference]**]([DialerCampaignRuleConfigChangeUriReference]) | A list of sequenceIds to act on | [optional] |
-| **getAdditionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

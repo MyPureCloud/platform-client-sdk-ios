@@ -14,8 +14,7 @@
 | **dateCreated** | [**Date**](Date) | Creation time of the entity | [optional] |
 | **dateModified** | [**Date**](Date) | Last modified time of the entity | [optional] |
 | **version** | **Int64** | Required for updates, must match the version number of the most recent update | [optional] |
-| **getAdditionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

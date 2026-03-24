@@ -1,0 +1,27 @@
+# V3SourceDetailedResponse
+
+## V3SourceDetailedResponse
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **_id** | **String** | The globally unique identifier for the object. | [optional] |
+| **name** | **String** | The name of the source. | [optional] |
+| **connectionId** | **String** | The connectionId of the source. | [optional] |
+| **type** | **String** | The type of the source. | [optional] |
+| **triggerType** | **String** | The trigger type of the source. | [optional] |
+| **status** | **String** | The current status of the source. | [optional] |
+| **createdBy** | [**UserReference**](UserReference) | The user who created the source. | [optional] |
+| **modifiedBy** | [**UserReference**](UserReference) | The user who modified the document. | [optional] |
+| **dateCreated** | [**Date**](Date) | Source creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateModified** | [**Date**](Date) | Source last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **lastSync** | [**V3SourceLastSynchronization**](V3SourceLastSynchronization) | The last synchronization of the source. | [optional] |
+| **scheduleSettings** | [**V3SourceScheduleSettings**](V3SourceScheduleSettings) | Settings that determine when the source starts a sync. | [optional] |
+| **filters** | [**V3SourceFilter**](V3SourceFilter) | Filters that determine what documents are synced. | [optional] |
+| **filterDetails** | [**V3SourceFilterDetails**](V3SourceFilterDetails) | Additional details to the source&#39;s filters. | [optional] |
+| **selfUri** | **String** | The URI for this object | [optional] |
+
+
+
+_PureCloudPlatformClientV2@191.0.0_

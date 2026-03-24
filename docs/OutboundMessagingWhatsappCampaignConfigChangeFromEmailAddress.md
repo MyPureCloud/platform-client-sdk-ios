@@ -13,4 +13,4 @@ An outbound-messaging messaging campaign email address
 
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

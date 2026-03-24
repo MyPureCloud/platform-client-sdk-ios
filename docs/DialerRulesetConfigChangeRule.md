@@ -13,8 +13,7 @@
 | **order** | **Int64** | The ranked order of the rule; rules are processed from lowest number to highest | [optional] |
 | **category** | **String** | The category of the rule | [optional] |
 | **actions** | [**[DialerRulesetConfigChangeAction]**]([DialerRulesetConfigChangeAction]) | The list of rule actions to be taken if the conditions are true | [optional] |
-| **getAdditionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

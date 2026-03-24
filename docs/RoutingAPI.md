@@ -4208,6 +4208,8 @@ RoutingAPI.getRoutingSmsIdentityresolutionPhonenumber(addressId: addressId) { (r
 
 Get a phone number provisioned for SMS.
 
+When no supported content profile is explicitly set on an MMS-capable phone number, the system uses the \&quot;SMS Default\&quot; profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \&quot;SMS Default\&quot; profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile using the PATCH endpoint.
+
 
 
 Wraps GET /api/v2/routing/sms/phonenumbers/{phoneNumberId}  
@@ -4259,6 +4261,8 @@ RoutingAPI.getRoutingSmsPhonenumber(phoneNumberId: phoneNumberId, expand: expand
 > [SmsPhoneNumberEntityListing](SmsPhoneNumberEntityListing) getRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId, supportedContentId, expand)
 
 Get a list of provisioned phone numbers.
+
+When no supported content profile is explicitly set, the system uses the \&quot;SMS Default\&quot; profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \&quot;SMS Default\&quot; profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile.
 
 
 
@@ -5766,6 +5770,8 @@ RoutingAPI.patchRoutingSkillgroup(skillGroupId: skillGroupId, body: body) { (res
 
 Update a phone number provisioned for SMS.
 
+Use this endpoint to assign a custom supported content profile to an MMS-capable phone number. If no supported content profile is set, the phone number uses the \&quot;SMS Default\&quot; profile, which allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To customize media filtering, provide a supported content profile ID in the request body.
+
 
 
 Wraps PATCH /api/v2/routing/sms/phonenumbers/{phoneNumberId}  
@@ -7270,6 +7276,8 @@ RoutingAPI.postRoutingSmsAddresses(body: body) { (response, error) in
 
 Provision a phone number for SMS
 
+When provisioning an MMS-capable phone number, if no supported content profile is specified in the request, the system automatically assigns the \&quot;SMS Default\&quot; profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To use custom media filtering, specify a supported content profile ID in the request body.
+
 
 
 Wraps POST /api/v2/routing/sms/phonenumbers  
@@ -8450,4 +8458,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

@@ -4045,7 +4045,7 @@ ConversationsAPI.getConversationsEmailMessage(conversationId: conversationId, me
 
 
 
-> [EmailMessagePreviewListing](EmailMessagePreviewListing) getConversationsEmailMessages(conversationId)
+> [EmailMessagePreviewListing](EmailMessagePreviewListing) getConversationsEmailMessages(conversationId, includeAgentlessStitchedMessages)
 
 Get conversation messages
 
@@ -4065,9 +4065,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
+let includeAgentlessStitchedMessages: Bool = true // Whether to include Agentless 'api' type of messages, on stitched conversations. If you provide a conversationId in the agentless email request (/api/v2/conversations/emails/agentless) that matches an existing conversation, then that's a stitched agentless message.
 
 // Code example
-ConversationsAPI.getConversationsEmailMessages(conversationId: conversationId) { (response, error) in
+ConversationsAPI.getConversationsEmailMessages(conversationId: conversationId, includeAgentlessStitchedMessages: includeAgentlessStitchedMessages) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4083,6 +4084,7 @@ ConversationsAPI.getConversationsEmailMessages(conversationId: conversationId) {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
+| **includeAgentlessStitchedMessages** | **Bool**| Whether to include Agentless 'api' type of messages, on stitched conversations. If you provide a conversationId in the agentless email request (/api/v2/conversations/emails/agentless) that matches an existing conversation, then that's a stitched agentless message. | [optional] |
 
 
 ### Return type
@@ -16170,7 +16172,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: SupportedContentReference = new SupportedContentReference(...) // SupportedContent
+let body: SupportedContentReference = new SupportedContentReference(...) // Reference to supported content profile
 
 // Code example
 ConversationsAPI.putConversationsMessagingSupportedcontentDefault(body: body) { (response, error) in
@@ -16188,7 +16190,7 @@ ConversationsAPI.putConversationsMessagingSupportedcontentDefault(body: body) { 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**SupportedContentReference**](SupportedContentReference)| SupportedContent | |
+| **body** | [**SupportedContentReference**](SupportedContentReference)| Reference to supported content profile | |
 
 
 ### Return type
@@ -16406,4 +16408,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

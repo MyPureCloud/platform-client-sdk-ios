@@ -15,6 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getResponsemanagementResponses**](ResponseManagementAPI#getResponsemanagementResponses) | Gets a list of existing responses. |
 | [**postResponsemanagementLibraries**](ResponseManagementAPI#postResponsemanagementLibraries) | Create a response library. |
 | [**postResponsemanagementLibrariesBulk**](ResponseManagementAPI#postResponsemanagementLibrariesBulk) | Get response libraries. |
+| [**postResponsemanagementResponseassetsBulk**](ResponseManagementAPI#postResponsemanagementResponseassetsBulk) | Get response assets. |
 | [**postResponsemanagementResponseassetsSearch**](ResponseManagementAPI#postResponsemanagementResponseassetsSearch) | Search response assets |
 | [**postResponsemanagementResponseassetsUploads**](ResponseManagementAPI#postResponsemanagementResponseassetsUploads) | Creates pre-signed url for uploading response asset |
 | [**postResponsemanagementResponses**](ResponseManagementAPI#postResponsemanagementResponses) | Create a response. |
@@ -590,6 +591,56 @@ ResponseManagementAPI.postResponsemanagementLibrariesBulk(body: body) { (respons
 [**LibraryEntityListing**](LibraryEntityListing)
 
 
+## postResponsemanagementResponseassetsBulk
+
+
+
+> [ResponseAssetEntityListing](ResponseAssetEntityListing) postResponsemanagementResponseassetsBulk(body)
+
+Get response assets.
+
+
+
+Wraps POST /api/v2/responsemanagement/responseassets/bulk  
+
+Requires ANY permissions: 
+
+* responseAssets:asset:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ResponseAssetBulkRequest = new ResponseAssetBulkRequest(...) // Asset IDs (max allowed 50)
+
+// Code example
+ResponseManagementAPI.postResponsemanagementResponseassetsBulk(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ResponseManagementAPI.postResponsemanagementResponseassetsBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ResponseAssetBulkRequest**](ResponseAssetBulkRequest)| Asset IDs (max allowed 50) | |
+
+
+### Return type
+
+[**ResponseAssetEntityListing**](ResponseAssetEntityListing)
+
+
 ## postResponsemanagementResponseassetsSearch
 
 
@@ -956,4 +1007,4 @@ ResponseManagementAPI.putResponsemanagementResponseasset(responseAssetId: respon
 [**ResponseAsset**](ResponseAsset)
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

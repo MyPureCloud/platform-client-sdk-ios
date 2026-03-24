@@ -10,6 +10,8 @@
 | **name** | **String** |  | [optional] |
 | **minFieldNameCharacters** | **Int** | The minimum number of schema field name characters allowed. | [optional] |
 | **maxFieldNameCharacters** | **Int** | The maximum number of schema field name characters allowed. | [optional] |
+| **minFieldTitleCharacters** | **Int** | The minimum number of schema field title characters allowed. | [optional] |
+| **maxFieldTitleCharacters** | **Int** | The maximum number of schema field title characters allowed. | [optional] |
 | **minFieldDescriptionCharacters** | **Int** | The minimum number of schema field description characters allowed. | [optional] |
 | **maxFieldDescriptionCharacters** | **Int** | The maximum number of schema field description characters allowed. | [optional] |
 | **minSchemaNameCharacters** | **Int** | The minimum number of schema name characters allowed. | [optional] |
@@ -23,4 +25,4 @@
 
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

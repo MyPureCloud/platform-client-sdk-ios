@@ -22,4 +22,4 @@ A complex type that defines service provider attributes or subattributes and the
 
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

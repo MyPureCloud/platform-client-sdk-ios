@@ -1,0 +1,16 @@
+# V3SynchronizationListing
+
+## V3SynchronizationListing
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **entities** | [**[V3Synchronization]**]([V3Synchronization]) |  | [optional] |
+| **nextUri** | **String** |  | [optional] |
+| **selfUri** | **String** |  | [optional] |
+| **previousUri** | **String** |  | [optional] |
+
+
+
+_PureCloudPlatformClientV2@191.0.0_

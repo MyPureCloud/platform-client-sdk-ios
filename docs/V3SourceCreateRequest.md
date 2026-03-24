@@ -1,0 +1,18 @@
+# V3SourceCreateRequest
+
+## V3SourceCreateRequest
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **name** | **String** | The name of the source. | |
+| **type** | **String** | The type of the source. Required if connectionId is not specified, inherits the connection type otherwise. | [optional] |
+| **connectionId** | **String** | The id of the connection related to the source. Required if type is Sharepoint. | [optional] |
+| **triggerType** | **String** | The trigger type of the source. Default is Manual. | [optional] |
+| **scheduleSettings** | [**V3SourceScheduleSettings**](V3SourceScheduleSettings) | Settings that determine when the source starts a sync. Required if triggerType is Scheduled. | [optional] |
+| **filters** | [**V3SourceFilter**](V3SourceFilter) | Filters that determine what documents are synced. | [optional] |
+
+
+
+_PureCloudPlatformClientV2@191.0.0_

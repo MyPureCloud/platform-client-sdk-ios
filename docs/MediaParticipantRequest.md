@@ -13,7 +13,8 @@
 | **confined** | **Bool** | True to confine this conversation participant.  Should only be used for ad-hoc conferences | [optional] |
 | **held** | **Bool** | True to hold this conversation participant. | [optional] |
 | **wrapupSkipped** | **Bool** | True to skip wrap-up for this participant. | [optional] |
+| **resumeTime** | [**Date**](Date) | Time to resume parked communication. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

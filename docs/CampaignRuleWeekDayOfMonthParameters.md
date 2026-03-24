@@ -6,7 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **thresholdValue** | [**CampaignRuleWeekDayOfMonth**](CampaignRuleWeekDayOfMonth) | The operand for the \&quot;equals\&quot;, \&quot;before\&quot; and \&quot;after\&quot; operators | [optional] |
+| **interval** | [**CampaignRuleWeekDayOfMonthInterval**](CampaignRuleWeekDayOfMonthInterval) | The operand for the \&quot;between\&quot; operator | [optional] |
 
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

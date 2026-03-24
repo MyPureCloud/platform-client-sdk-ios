@@ -6,7 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **min** | [**CampaignRuleWeekDayOfMonth**](CampaignRuleWeekDayOfMonth) | The minimum value of the interval. Required for the \&quot;between\&quot; operator | |
+| **max** | [**CampaignRuleWeekDayOfMonth**](CampaignRuleWeekDayOfMonth) | The maximum value of the interval. Required for the \&quot;between\&quot; operator | |
 
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

@@ -13,8 +13,7 @@
 | **percentage** | **Int64** | numberOfContactsContacted/totalNumberOfContacts*100 | [optional] |
 | **numberOfContactsSkipped** | **[String:Int64]** | A map of skipped reasons and the number of contacts associated with each. | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
-| **getAdditionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

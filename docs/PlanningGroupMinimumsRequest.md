@@ -1,0 +1,14 @@
+# PlanningGroupMinimumsRequest
+
+## PlanningGroupMinimumsRequest
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **planningGroupId** | **String** | The ID of the planning group to which the day of week minimum staff values apply | |
+| **dayOfWeekMinimums** | [**[DayOfWeekMinimums]**]([DayOfWeekMinimums]) | The list of day of week minimum staff values for this planning group | |
+
+
+
+_PureCloudPlatformClientV2@191.0.0_

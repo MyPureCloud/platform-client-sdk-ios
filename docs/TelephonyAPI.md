@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTelephonyAgentsGreetingsMe**](TelephonyAPI#getTelephonyAgentsGreetingsMe) | Get the agent&#39;s own greetings. |
 | [**getTelephonyCallsMetrics**](TelephonyAPI#getTelephonyCallsMetrics) | Get the concurrent call metrics for a given organization. |
 | [**getTelephonyMediaregions**](TelephonyAPI#getTelephonyMediaregions) | Retrieve the list of AWS regions media can stream through. |
+| [**getTelephonySettings**](TelephonyAPI#getTelephonySettings) | Get the global telephony configuration. |
 | [**getTelephonySipmessagesConversation**](TelephonyAPI#getTelephonySipmessagesConversation) | Get a SIP message. |
 | [**getTelephonySipmessagesConversationHeaders**](TelephonyAPI#getTelephonySipmessagesConversationHeaders) | Get SIP headers. |
 | [**getTelephonySiptraces**](TelephonyAPI#getTelephonySiptraces) | Fetch SIP metadata |
@@ -15,6 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postTelephonySiptracesDownload**](TelephonyAPI#postTelephonySiptracesDownload) | Request a download of a pcap file to S3 |
 | [**putTelephonyAgentGreetings**](TelephonyAPI#putTelephonyAgentGreetings) | Updates an agent&#39;s greetings. |
 | [**putTelephonyAgentsGreetingsMe**](TelephonyAPI#putTelephonyAgentsGreetingsMe) | Updates the agent&#39;s own greetings. |
+| [**putTelephonySettings**](TelephonyAPI#putTelephonySettings) | Update the global telephony configuration. |
 {: class="table-striped"}
 
 
@@ -208,6 +210,52 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**MediaRegions**](MediaRegions)
+
+
+## getTelephonySettings
+
+
+
+> [TelephonySettings](TelephonySettings) getTelephonySettings()
+
+Get the global telephony configuration.
+
+
+
+Wraps GET /api/v2/telephony/settings  
+
+Requires ANY permissions: 
+
+* telephony:settings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+TelephonyAPI.getTelephonySettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyAPI.getTelephonySettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**TelephonySettings**](TelephonySettings)
 
 
 ## getTelephonySipmessagesConversation
@@ -580,4 +628,54 @@ TelephonyAPI.putTelephonyAgentsGreetingsMe(body: body) { (response, error) in
 [**SelfAgentGreeting**](SelfAgentGreeting)
 
 
-_PureCloudPlatformClientV2@190.0.0_
+## putTelephonySettings
+
+
+
+> [TelephonySettings](TelephonySettings) putTelephonySettings(body)
+
+Update the global telephony configuration.
+
+
+
+Wraps PUT /api/v2/telephony/settings  
+
+Requires ANY permissions: 
+
+* telephony:settings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: TelephonySettings = new TelephonySettings(...) // Telephony
+
+// Code example
+TelephonyAPI.putTelephonySettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyAPI.putTelephonySettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**TelephonySettings**](TelephonySettings)| Telephony | |
+
+
+### Return type
+
+[**TelephonySettings**](TelephonySettings)
+
+
+_PureCloudPlatformClientV2@191.0.0_

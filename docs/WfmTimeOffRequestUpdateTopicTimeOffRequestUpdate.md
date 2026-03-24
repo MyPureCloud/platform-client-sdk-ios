@@ -16,6 +16,8 @@
 | **substatus** | **String** |  | [optional] |
 | **partialDayStartDateTimes** | **[String]** |  | [optional] |
 | **fullDayManagementUnitDates** | **[String]** |  | [optional] |
+| **fullDayEarliestStartOffsetMinutes** | **[Int64]** |  | [optional] |
+| **fullDayLatestEndOffsetMinutes** | **[Int64]** |  | [optional] |
 | **dailyDurationMinutes** | **Int64** |  | [optional] |
 | **durationMinutes** | **[Int64]** |  | [optional] |
 | **payableMinutes** | **[Int64]** |  | [optional] |
@@ -29,4 +31,4 @@
 
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

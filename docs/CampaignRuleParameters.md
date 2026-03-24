@@ -20,7 +20,8 @@
 | **emailMessagesPerMinute** | **Int** | The number of messages per minute to set a Email messaging campaign to. | [optional] |
 | **smsContentTemplate** | [**DomainEntityRef**](DomainEntityRef) | The content template to set a SMS campaign to. | [optional] |
 | **emailContentTemplate** | [**DomainEntityRef**](DomainEntityRef) | The content template to set a Email campaign to. | [optional] |
+| **forDuration** | [**Duration**](Duration) | ISO-8601 Duration for which condition expression must be continuously true before condition is evaluated as true | [optional] |
 
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_

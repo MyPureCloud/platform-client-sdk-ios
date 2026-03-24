@@ -10,7 +10,8 @@ Message event element.  Examples include: system messages, typing indicators, co
 | **eventType** | **String** | Type of this event element | |
 | **coBrowse** | [**WebMessagingEventCoBrowse**](WebMessagingEventCoBrowse) | Cobrowse event. | [optional] |
 | **presence** | [**WebMessagingEventPresence**](WebMessagingEventPresence) | Presence event. | [optional] |
+| **video** | [**WebMessagingEventVideo**](WebMessagingEventVideo) | Video event. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@190.0.0_
+_PureCloudPlatformClientV2@191.0.0_
