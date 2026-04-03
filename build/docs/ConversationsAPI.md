@@ -224,6 +224,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsCallParticipantConsultQueue**](ConversationsAPI#postConversationsCallParticipantConsultQueue) | Initiate a consult transfer to a queue |
 | [**postConversationsCallParticipantMonitor**](ConversationsAPI#postConversationsCallParticipantMonitor) | Listen in on the conversation from the point of view of a given participant. |
 | [**postConversationsCallParticipantReplace**](ConversationsAPI#postConversationsCallParticipantReplace) | Replace this participant with the specified user and/or address |
+| [**postConversationsCallParticipantSnippetRecord**](ConversationsAPI#postConversationsCallParticipantSnippetRecord) | Start/stop the snippet recording for a participant |
 | [**postConversationsCallParticipantVoiceConsult**](ConversationsAPI#postConversationsCallParticipantVoiceConsult) | Initiate voice consult transfer |
 | [**postConversationsCallParticipants**](ConversationsAPI#postConversationsCallParticipants) | Add participants to a conversation |
 | [**postConversationsCallParticipantsUserUserId**](ConversationsAPI#postConversationsCallParticipantsUserUserId) | Add participants to a conversation on behalf of a user |
@@ -11824,6 +11825,60 @@ ConversationsAPI.postConversationsCallParticipantReplace(conversationId: convers
 `nil` (empty response body)
 
 
+## postConversationsCallParticipantSnippetRecord
+
+
+
+> String postConversationsCallParticipantSnippetRecord(conversationId, participantId, body)
+
+Start/stop the snippet recording for a participant
+
+
+
+Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/snippet/record  
+
+Requires ANY permissions: 
+
+* conversation:recording:snippetRecord
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let body: SnippetRecordingRequest = new SnippetRecordingRequest(...) // snippetRecordingRequest
+
+// Code example
+ConversationsAPI.postConversationsCallParticipantSnippetRecord(conversationId: conversationId, participantId: participantId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsCallParticipantSnippetRecord was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **body** | [**SnippetRecordingRequest**](SnippetRecordingRequest)| snippetRecordingRequest | |
+
+
+### Return type
+
+**String**
+
+
 ## postConversationsCallParticipantVoiceConsult
 
 
@@ -16408,4 +16463,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@191.0.0_
+_PureCloudPlatformClientV2@192.0.0_

@@ -12,4 +12,4 @@ JSON schema that defines the transformed result that will be sent back to the ca
 
 
 
-_PureCloudPlatformClientV2@191.0.0_
+_PureCloudPlatformClientV2@192.0.0_

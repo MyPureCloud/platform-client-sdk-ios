@@ -9,6 +9,7 @@ public class ConversationDetailQueryPredicate: Codable {
     }
 
     public enum Dimension: String, Codable { 
+        case accessattribute = "accessAttribute"
         case conversationend = "conversationEnd"
         case conversationid = "conversationId"
         case conversationinitiator = "conversationInitiator"
@@ -24,6 +25,8 @@ public class ConversationDetailQueryPredicate: Codable {
     public enum Metric: String, Codable { 
         case nblindtransferred = "nBlindTransferred"
         case nbotinteractions = "nBotInteractions"
+        case ncallbackattempts = "nCallbackAttempts"
+        case ncallbackscheduled = "nCallbackScheduled"
         case ncobrowsesessions = "nCobrowseSessions"
         case nconnected = "nConnected"
         case nconsult = "nConsult"

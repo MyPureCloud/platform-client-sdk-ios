@@ -12,12 +12,6 @@ public class ExternalOrganizationTrustorLink: Codable {
 
 
 
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
     /** The division to which this entity belongs. */
     public var division: WritableStarrableDivision?
     /** The id of a PureCloud External Organization entity in the External Contacts system that will be used to represent the trustor org */
@@ -28,27 +22,13 @@ public class ExternalOrganizationTrustorLink: Codable {
     public var dateCreated: Date?
     /** The URI for the External Organization that is linked to the trustor org */
     public var externalOrganizationUri: String?
-    /** The URI for this object */
-    public var selfUri: String?
 
-    public init(_id: String?, division: WritableStarrableDivision?, externalOrganizationId: String?, trustorOrgId: String?, dateCreated: Date?, externalOrganizationUri: String?, selfUri: String?) {
-        self._id = _id
+    public init(division: WritableStarrableDivision?, externalOrganizationId: String?, trustorOrgId: String?, dateCreated: Date?, externalOrganizationUri: String?) {
         self.division = division
         self.externalOrganizationId = externalOrganizationId
         self.trustorOrgId = trustorOrgId
         self.dateCreated = dateCreated
         self.externalOrganizationUri = externalOrganizationUri
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case division
-        case externalOrganizationId
-        case trustorOrgId
-        case dateCreated
-        case externalOrganizationUri
-        case selfUri
     }
 
 

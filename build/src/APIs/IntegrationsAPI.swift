@@ -2738,9 +2738,9 @@ open class IntegrationsAPI {
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIntegrationsCredentialsTypes(completion: @escaping ((_ data: CredentialTypeListing?,_ error: Error?) -> Void)) {
+    open class func getIntegrationsCredentialsTypes(completion: @escaping ((_ data: [CredentialType]?,_ error: Error?) -> Void)) {
         let requestBuilder = getIntegrationsCredentialsTypesWithRequestBuilder()
-        requestBuilder.execute { (response: Response<CredentialTypeListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<[CredentialType]>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -2763,40 +2763,23 @@ open class IntegrationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
-  "entities" : [ {
-    "name" : "name",
-    "displayOrder" : [ "displayOrder", "displayOrder" ],
-    "id" : "id",
-    "properties" : "{}",
-    "required" : [ "required", "required" ]
-  }, {
-    "name" : "name",
-    "displayOrder" : [ "displayOrder", "displayOrder" ],
-    "id" : "id",
-    "properties" : "{}",
-    "required" : [ "required", "required" ]
-  } ],
-  "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "name" : "name",
+  "displayOrder" : [ "displayOrder", "displayOrder" ],
+  "id" : "id",
+  "properties" : "{}",
+  "required" : [ "required", "required" ]
 }, statusCode=200}]
 
-     - returns: RequestBuilder<CredentialTypeListing> 
+     - returns: RequestBuilder<[CredentialType]> 
      */
-    open class func getIntegrationsCredentialsTypesWithRequestBuilder() -> RequestBuilder<CredentialTypeListing> {        
+    open class func getIntegrationsCredentialsTypesWithRequestBuilder() -> RequestBuilder<[CredentialType]> {        
         let path = "/api/v2/integrations/credentials/types"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<CredentialTypeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[CredentialType]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }

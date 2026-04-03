@@ -6,6 +6,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteJourneyActionmap**](JourneyAPI#deleteJourneyActionmap) | Delete single action map. |
 | [**deleteJourneyActiontemplate**](JourneyAPI#deleteJourneyActiontemplate) | Delete a single action template. |
+| [**deleteJourneyExternaleventsConfiguration**](JourneyAPI#deleteJourneyExternaleventsConfiguration) | Delete an external events configuration. |
+| [**deleteJourneyExternaleventsSchema**](JourneyAPI#deleteJourneyExternaleventsSchema) | Delete a schema |
 | [**deleteJourneyOutcome**](JourneyAPI#deleteJourneyOutcome) | Delete an outcome. |
 | [**deleteJourneyOutcomesPredictor**](JourneyAPI#deleteJourneyOutcomesPredictor) | Delete an outcome predictor. |
 | [**deleteJourneySegment**](JourneyAPI#deleteJourneySegment) | Delete a segment. |
@@ -22,6 +24,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getJourneyActiontemplate**](JourneyAPI#getJourneyActiontemplate) | Retrieve a single action template. |
 | [**getJourneyActiontemplates**](JourneyAPI#getJourneyActiontemplates) | Retrieve all action templates. |
 | [**getJourneyDeploymentCustomerPing**](JourneyAPI#getJourneyDeploymentCustomerPing) | Send a ping. |
+| [**getJourneyExternaleventsConfiguration**](JourneyAPI#getJourneyExternaleventsConfiguration) | Get an external events configuration |
+| [**getJourneyExternaleventsConfigurations**](JourneyAPI#getJourneyExternaleventsConfigurations) | Get all external event configurations. |
+| [**getJourneyExternaleventsSchema**](JourneyAPI#getJourneyExternaleventsSchema) | Get a schema |
+| [**getJourneyExternaleventsSchemaVersion**](JourneyAPI#getJourneyExternaleventsSchemaVersion) | Get a specific version of a schema |
+| [**getJourneyExternaleventsSchemaVersions**](JourneyAPI#getJourneyExternaleventsSchemaVersions) | Get all versions of a External Events schema |
+| [**getJourneyExternaleventsSchemas**](JourneyAPI#getJourneyExternaleventsSchemas) | Get a list of schemas. |
+| [**getJourneyExternaleventsSchemasCoretype**](JourneyAPI#getJourneyExternaleventsSchemasCoretype) | Get a core type from which all schemas are built |
+| [**getJourneyExternaleventsSchemasCoretypes**](JourneyAPI#getJourneyExternaleventsSchemasCoretypes) | Get the list of core types enabled for a specific namespace. |
+| [**getJourneyExternaleventsSchemasLimits**](JourneyAPI#getJourneyExternaleventsSchemasLimits) | Get quantitative limits on schemas |
 | [**getJourneyOutcome**](JourneyAPI#getJourneyOutcome) | Retrieve a single outcome. |
 | [**getJourneyOutcomes**](JourneyAPI#getJourneyOutcomes) | Retrieve all outcomes. |
 | [**getJourneyOutcomesPredictor**](JourneyAPI#getJourneyOutcomesPredictor) | Retrieve a single outcome predictor. |
@@ -50,6 +61,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchJourneyActionmap**](JourneyAPI#patchJourneyActionmap) | Update single action map. |
 | [**patchJourneyActiontarget**](JourneyAPI#patchJourneyActiontarget) | Update a single action target. |
 | [**patchJourneyActiontemplate**](JourneyAPI#patchJourneyActiontemplate) | Update a single action template. |
+| [**patchJourneyExternaleventsConfiguration**](JourneyAPI#patchJourneyExternaleventsConfiguration) | Update an external events configuration. |
 | [**patchJourneyOutcome**](JourneyAPI#patchJourneyOutcome) | Update an outcome. |
 | [**patchJourneySegment**](JourneyAPI#patchJourneySegment) | Update a segment. |
 | [**patchJourneyViewVersionJob**](JourneyAPI#patchJourneyViewVersionJob) | Update the job for a journey view version. Only the status can be changed and only to Cancelled |
@@ -61,6 +73,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postJourneyDeploymentActionevent**](JourneyAPI#postJourneyDeploymentActionevent) | Sends an action event, which is used for changing the state of actions that have been offered to the user. |
 | [**postJourneyDeploymentAppevents**](JourneyAPI#postJourneyDeploymentAppevents) | Send a journey app event, used for tracking customer activity on an application. |
 | [**postJourneyDeploymentWebevents**](JourneyAPI#postJourneyDeploymentWebevents) | Send a journey web event, used for tracking customer activity on a website. |
+| [**postJourneyExternaleventsConfigurationEvents**](JourneyAPI#postJourneyExternaleventsConfigurationEvents) | Create external events |
+| [**postJourneyExternaleventsConfigurations**](JourneyAPI#postJourneyExternaleventsConfigurations) | Create an external events configuration. |
+| [**postJourneyExternaleventsSchemas**](JourneyAPI#postJourneyExternaleventsSchemas) | Create a schema |
 | [**postJourneyFlowsPathsQuery**](JourneyAPI#postJourneyFlowsPathsQuery) | Query for flow paths. |
 | [**postJourneyOutcomes**](JourneyAPI#postJourneyOutcomes) | Create an outcome. |
 | [**postJourneyOutcomesPredictors**](JourneyAPI#postJourneyOutcomesPredictors) | Create an outcome predictor. |
@@ -70,6 +85,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postJourneyViewVersions**](JourneyAPI#postJourneyViewVersions) | Update a Journey View by ID |
 | [**postJourneyViews**](JourneyAPI#postJourneyViews) | Create a new Journey View |
 | [**postJourneyViewsEncodingsValidate**](JourneyAPI#postJourneyViewsEncodingsValidate) | Validate whether an encoding exist for a label/value combination. |
+| [**putJourneyExternaleventsSchema**](JourneyAPI#putJourneyExternaleventsSchema) | Update a schema |
 | [**putJourneyViewSchedules**](JourneyAPI#putJourneyViewSchedules) | Update the Schedule for a JourneyView |
 | [**putJourneyViewVersion**](JourneyAPI#putJourneyViewVersion) | Update a Journey View by ID and version |
 {: class="table-striped"}
@@ -168,6 +184,104 @@ JourneyAPI.deleteJourneyActiontemplate(actionTemplateId: actionTemplateId, hardD
 | ------------- | ------------- | ------------- | ------------- |
 | **actionTemplateId** | **String**| ID of the action template. | |
 | **hardDelete** | **Bool**| Determines whether Action Template should be soft-deleted (have it's state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. | [optional] |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteJourneyExternaleventsConfiguration
+
+
+
+> Void deleteJourneyExternaleventsConfiguration(configId)
+
+Delete an external events configuration.
+
+
+
+Wraps DELETE /api/v2/journey/externalevents/configurations/{configId}  
+
+Requires ANY permissions: 
+
+* journey:externalEventsConfiguration:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let configId: String = "" // The ID of the external event configuration.
+
+// Code example
+JourneyAPI.deleteJourneyExternaleventsConfiguration(configId: configId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("JourneyAPI.deleteJourneyExternaleventsConfiguration was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **configId** | **String**| The ID of the external event configuration. | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteJourneyExternaleventsSchema
+
+
+
+> Void deleteJourneyExternaleventsSchema(schemaId)
+
+Delete a schema
+
+
+
+Wraps DELETE /api/v2/journey/externalevents/schemas/{schemaId}  
+
+Requires ANY permissions: 
+
+* journey:externalEventsSchema:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+
+// Code example
+JourneyAPI.deleteJourneyExternaleventsSchema(schemaId: schemaId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("JourneyAPI.deleteJourneyExternaleventsSchema was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
 
 
 ### Return type
@@ -1020,6 +1134,448 @@ JourneyAPI.getJourneyDeploymentCustomerPing(deploymentId: deploymentId, customer
 ### Return type
 
 [**DeploymentPing**](DeploymentPing)
+
+
+## getJourneyExternaleventsConfiguration
+
+
+
+> [ExternalEventsConfiguration](ExternalEventsConfiguration) getJourneyExternaleventsConfiguration(configId)
+
+Get an external events configuration
+
+
+
+Wraps GET /api/v2/journey/externalevents/configurations/{configId}  
+
+Requires ANY permissions: 
+
+* journey:externalEventsConfiguration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let configId: String = "" // The ID of the external event configuration.
+
+// Code example
+JourneyAPI.getJourneyExternaleventsConfiguration(configId: configId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyExternaleventsConfiguration was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **configId** | **String**| The ID of the external event configuration. | |
+
+
+### Return type
+
+[**ExternalEventsConfiguration**](ExternalEventsConfiguration)
+
+
+## getJourneyExternaleventsConfigurations
+
+
+
+> [ExternalEventsConfigurationListing](ExternalEventsConfigurationListing) getJourneyExternaleventsConfigurations(pageSize, pageNumber)
+
+Get all external event configurations.
+
+
+
+Wraps GET /api/v2/journey/externalevents/configurations  
+
+Requires ANY permissions: 
+
+* journey:externalEventsConfiguration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+
+// Code example
+JourneyAPI.getJourneyExternaleventsConfigurations(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyExternaleventsConfigurations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+
+
+### Return type
+
+[**ExternalEventsConfigurationListing**](ExternalEventsConfigurationListing)
+
+
+## getJourneyExternaleventsSchema
+
+
+
+> [JourneyExternalEventsSchema](JourneyExternalEventsSchema) getJourneyExternaleventsSchema(schemaId)
+
+Get a schema
+
+
+
+Wraps GET /api/v2/journey/externalevents/schemas/{schemaId}  
+
+Requires ANY permissions: 
+
+* journey:externalEventsSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+
+// Code example
+JourneyAPI.getJourneyExternaleventsSchema(schemaId: schemaId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyExternaleventsSchema was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+
+
+### Return type
+
+[**JourneyExternalEventsSchema**](JourneyExternalEventsSchema)
+
+
+## getJourneyExternaleventsSchemaVersion
+
+
+
+> [JourneyExternalEventsSchema](JourneyExternalEventsSchema) getJourneyExternaleventsSchemaVersion(schemaId, versionId)
+
+Get a specific version of a schema
+
+
+
+Wraps GET /api/v2/journey/externalevents/schemas/{schemaId}/versions/{versionId}  
+
+Requires ANY permissions: 
+
+* journey:externalEventsSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+let versionId: String = "" // Schema version
+
+// Code example
+JourneyAPI.getJourneyExternaleventsSchemaVersion(schemaId: schemaId, versionId: versionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyExternaleventsSchemaVersion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+| **versionId** | **String**| Schema version | |
+
+
+### Return type
+
+[**JourneyExternalEventsSchema**](JourneyExternalEventsSchema)
+
+
+## getJourneyExternaleventsSchemaVersions
+
+
+
+> [JourneyExternalEventsSchemaListing](JourneyExternalEventsSchemaListing) getJourneyExternaleventsSchemaVersions(schemaId)
+
+Get all versions of a External Events schema
+
+
+
+Wraps GET /api/v2/journey/externalevents/schemas/{schemaId}/versions  
+
+Requires ANY permissions: 
+
+* journey:externalEventsSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+
+// Code example
+JourneyAPI.getJourneyExternaleventsSchemaVersions(schemaId: schemaId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyExternaleventsSchemaVersions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+
+
+### Return type
+
+[**JourneyExternalEventsSchemaListing**](JourneyExternalEventsSchemaListing)
+
+
+## getJourneyExternaleventsSchemas
+
+
+
+> [JourneyExternalEventsSchemaListing](JourneyExternalEventsSchemaListing) getJourneyExternaleventsSchemas()
+
+Get a list of schemas.
+
+
+
+Wraps GET /api/v2/journey/externalevents/schemas  
+
+Requires ANY permissions: 
+
+* journey:externalEventsSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+JourneyAPI.getJourneyExternaleventsSchemas() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyExternaleventsSchemas was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**JourneyExternalEventsSchemaListing**](JourneyExternalEventsSchemaListing)
+
+
+## getJourneyExternaleventsSchemasCoretype
+
+
+
+> [Coretype](Coretype) getJourneyExternaleventsSchemasCoretype(coreTypeName)
+
+Get a core type from which all schemas are built
+
+
+
+Wraps GET /api/v2/journey/externalevents/schemas/coretypes/{coreTypeName}  
+
+Requires ANY permissions: 
+
+* journey:externalEventsSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let coreTypeName: String = "" // Name of core type
+
+// Code example
+JourneyAPI.getJourneyExternaleventsSchemasCoretype(coreTypeName: coreTypeName) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyExternaleventsSchemasCoretype was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **coreTypeName** | **String**| Name of core type | |
+
+
+### Return type
+
+[**Coretype**](Coretype)
+
+
+## getJourneyExternaleventsSchemasCoretypes
+
+
+
+> [CoretypeListing](CoretypeListing) getJourneyExternaleventsSchemasCoretypes()
+
+Get the list of core types enabled for a specific namespace.
+
+
+
+Wraps GET /api/v2/journey/externalevents/schemas/coretypes  
+
+Requires ANY permissions: 
+
+* journey:externalEventsSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+JourneyAPI.getJourneyExternaleventsSchemasCoretypes() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyExternaleventsSchemasCoretypes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**CoretypeListing**](CoretypeListing)
+
+
+## getJourneyExternaleventsSchemasLimits
+
+
+
+> [SchemaQuantityLimits](SchemaQuantityLimits) getJourneyExternaleventsSchemasLimits()
+
+Get quantitative limits on schemas
+
+
+
+Wraps GET /api/v2/journey/externalevents/schemas/limits  
+
+Requires ANY permissions: 
+
+* journey:externalEventsSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+JourneyAPI.getJourneyExternaleventsSchemasLimits() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyExternaleventsSchemasLimits was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**SchemaQuantityLimits**](SchemaQuantityLimits)
 
 
 ## getJourneyOutcome
@@ -2499,6 +3055,58 @@ JourneyAPI.patchJourneyActiontemplate(actionTemplateId: actionTemplateId, body: 
 [**ActionTemplate**](ActionTemplate)
 
 
+## patchJourneyExternaleventsConfiguration
+
+
+
+> [ExternalEventsConfiguration](ExternalEventsConfiguration) patchJourneyExternaleventsConfiguration(configId, body)
+
+Update an external events configuration.
+
+
+
+Wraps PATCH /api/v2/journey/externalevents/configurations/{configId}  
+
+Requires ANY permissions: 
+
+* journey:externalEventsConfiguration:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let configId: String = "" // The ID of the external event configuration.
+let body: UpdateExternalEventsConfigurationRequest = new UpdateExternalEventsConfigurationRequest(...) // 
+
+// Code example
+JourneyAPI.patchJourneyExternaleventsConfiguration(configId: configId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.patchJourneyExternaleventsConfiguration was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **configId** | **String**| The ID of the external event configuration. | |
+| **body** | [**UpdateExternalEventsConfigurationRequest**](UpdateExternalEventsConfigurationRequest)|  | [optional] |
+
+
+### Return type
+
+[**ExternalEventsConfiguration**](ExternalEventsConfiguration)
+
+
 ## patchJourneyOutcome
 
 
@@ -3064,6 +3672,158 @@ JourneyAPI.postJourneyDeploymentWebevents(deploymentId: deploymentId, body: body
 [**WebEventResponse**](WebEventResponse)
 
 
+## postJourneyExternaleventsConfigurationEvents
+
+
+
+> [ExternalEventsResponse](ExternalEventsResponse) postJourneyExternaleventsConfigurationEvents(configurationId, body)
+
+Create external events
+
+
+
+Wraps POST /api/v2/journey/externalevents/configurations/{configurationId}/events  
+
+Requires ANY permissions: 
+
+* journey:externalEventsEvent:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let configurationId: String = "" // The ID of the external event configuration.
+let body: ExternalEventsRequest = new ExternalEventsRequest(...) // 
+
+// Code example
+JourneyAPI.postJourneyExternaleventsConfigurationEvents(configurationId: configurationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.postJourneyExternaleventsConfigurationEvents was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **configurationId** | **String**| The ID of the external event configuration. | |
+| **body** | [**ExternalEventsRequest**](ExternalEventsRequest)|  | [optional] |
+
+
+### Return type
+
+[**ExternalEventsResponse**](ExternalEventsResponse)
+
+
+## postJourneyExternaleventsConfigurations
+
+
+
+> [ExternalEventsConfiguration](ExternalEventsConfiguration) postJourneyExternaleventsConfigurations(body)
+
+Create an external events configuration.
+
+
+
+Wraps POST /api/v2/journey/externalevents/configurations  
+
+Requires ANY permissions: 
+
+* journey:externalEventsConfiguration:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CreateExternalEventsConfigurationRequest = new CreateExternalEventsConfigurationRequest(...) // 
+
+// Code example
+JourneyAPI.postJourneyExternaleventsConfigurations(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.postJourneyExternaleventsConfigurations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CreateExternalEventsConfigurationRequest**](CreateExternalEventsConfigurationRequest)|  | [optional] |
+
+
+### Return type
+
+[**ExternalEventsConfiguration**](ExternalEventsConfiguration)
+
+
+## postJourneyExternaleventsSchemas
+
+
+
+> [JourneyExternalEventsSchema](JourneyExternalEventsSchema) postJourneyExternaleventsSchemas(body)
+
+Create a schema
+
+
+
+Wraps POST /api/v2/journey/externalevents/schemas  
+
+Requires ANY permissions: 
+
+* journey:externalEventsSchema:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: JourneyJsonSchemaRequest = new JourneyJsonSchemaRequest(...) // Schema create request body
+
+// Code example
+JourneyAPI.postJourneyExternaleventsSchemas(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.postJourneyExternaleventsSchemas was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**JourneyJsonSchemaRequest**](JourneyJsonSchemaRequest)| Schema create request body | |
+
+
+### Return type
+
+[**JourneyExternalEventsSchema**](JourneyExternalEventsSchema)
+
+
 ## postJourneyFlowsPathsQuery
 
 
@@ -3524,6 +4284,58 @@ JourneyAPI.postJourneyViewsEncodingsValidate(body: body) { (response, error) in
 [**EntityListing**](EntityListing)
 
 
+## putJourneyExternaleventsSchema
+
+
+
+> [JourneyExternalEventsSchema](JourneyExternalEventsSchema) putJourneyExternaleventsSchema(schemaId, body)
+
+Update a schema
+
+
+
+Wraps PUT /api/v2/journey/externalevents/schemas/{schemaId}  
+
+Requires ANY permissions: 
+
+* journey:externalEventsSchema:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+let body: JourneySchemaUpdateRequest = new JourneySchemaUpdateRequest(...) // Schema update request body
+
+// Code example
+JourneyAPI.putJourneyExternaleventsSchema(schemaId: schemaId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.putJourneyExternaleventsSchema was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+| **body** | [**JourneySchemaUpdateRequest**](JourneySchemaUpdateRequest)| Schema update request body | |
+
+
+### Return type
+
+[**JourneyExternalEventsSchema**](JourneyExternalEventsSchema)
+
+
 ## putJourneyViewSchedules
 
 
@@ -3632,4 +4444,4 @@ JourneyAPI.putJourneyViewVersion(viewId: viewId, versionId: versionId, body: bod
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatformClientV2@191.0.0_
+_PureCloudPlatformClientV2@192.0.0_

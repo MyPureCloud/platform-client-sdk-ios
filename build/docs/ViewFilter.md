@@ -241,10 +241,11 @@
 | **contentModerationFlags** | **[String]** | A set of Content Moderation Flags for filtering | [optional] |
 | **socialSourceTypes** | **[String]** | A set of Source Types for social filtering | [optional] |
 | **sessionExpired** | **Bool** | Filter to indicate for if session is expired | [optional] |
+| **screenMonitored** | **Bool** | Filter to indicate if the interaction was screen monitored | [optional] |
 | **engagementSources** | **[String]** | The engagement sources used to filter the view | [optional] |
 | **isSnippetRecorded** | **Bool** | Indicates filtering for snippet recorded | [optional] |
 | **takeover** | **Bool** | Indicates filtering for takeover | [optional] |
 
 
 
-_PureCloudPlatformClientV2@191.0.0_
+_PureCloudPlatformClientV2@192.0.0_

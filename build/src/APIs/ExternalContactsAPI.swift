@@ -609,16 +609,12 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -667,16 +663,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
@@ -849,16 +841,12 @@ open class ExternalContactsAPI {
   "entities" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -1006,49 +994,37 @@ open class ExternalContactsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "screenviewCount" : 5,
     "shortId" : "shortId",
     "authenticated" : true,
-    "lastPage" : "{}",
-    "durationInSeconds" : 0,
     "searchTerms" : [ "searchTerms", "searchTerms" ],
-    "conversationSubject" : "conversationSubject",
+    "caseReference" : "caseReference",
     "userAgentString" : "userAgentString",
     "eventCount" : 6,
     "type" : "type",
     "lastScreen" : "lastScreen",
     "divisionIds" : [ "divisionIds", "divisionIds" ],
-    "lastConnectedQueue" : "{}",
-    "sdkLibrary" : "{}",
-    "browser" : "{}",
-    "customerId" : "customerId",
     "id" : "id",
-    "customerIdType" : "customerIdType",
     "awayDate" : "2000-01-23T04:56:07.000+00:00",
-    "lastAcdOutcome" : "Unknown",
-    "attributeLists" : {
-      "key" : {
-        "dataType" : "dataType",
-        "values" : [ "values", "values" ]
-      }
-    },
-    "mktCampaign" : "{}",
     "conversation" : "{}",
+    "caseAssociations" : [ {
+      "dateAssociated" : "2000-01-23T04:56:07.000+00:00",
+      "associatedCase" : "{}",
+      "caseReference" : "caseReference",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "dateAssociated" : "2000-01-23T04:56:07.000+00:00",
+      "associatedCase" : "{}",
+      "caseReference" : "caseReference",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "ipOrganization" : "ipOrganization",
     "app" : "{}",
-    "externalUrl" : "externalUrl",
     "networkConnectivity" : "{}",
     "endedDate" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "idleDate" : "2000-01-23T04:56:07.000+00:00",
     "ipAddress" : "ipAddress",
-    "externalId" : "externalId",
     "lastUserDisconnectType" : "Unknown",
-    "externalContact" : "{}",
-    "pageviewCount" : 1,
-    "originatingDirection" : "Unknown",
-    "referrer" : "{}",
-    "lastUserDisposition" : "{}",
     "outcomeAchievements" : [ {
       "achievedDate" : "2000-01-23T04:56:07.000+00:00",
       "outcome" : "{}"
@@ -1056,8 +1032,6 @@ open class ExternalContactsAPI {
       "achievedDate" : "2000-01-23T04:56:07.000+00:00",
       "outcome" : "{}"
     } ],
-    "lastConnectedUser" : "{}",
-    "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "conversationChannels" : [ {
       "messageType" : "Unknown",
       "type" : "Unknown",
@@ -1075,58 +1049,76 @@ open class ExternalContactsAPI {
       "segment" : "{}"
     } ],
     "lastEvent" : "{}",
+    "device" : "{}",
+    "screenviewCount" : 5,
+    "lastPage" : "{}",
+    "durationInSeconds" : 0,
+    "conversationSubject" : "conversationSubject",
+    "caseStatus" : "Unknown",
+    "lastConnectedQueue" : "{}",
+    "sdkLibrary" : "{}",
+    "browser" : "{}",
+    "customerId" : "customerId",
+    "customerIdType" : "customerIdType",
+    "lastAcdOutcome" : "Unknown",
+    "attributeLists" : {
+      "key" : {
+        "dataType" : "dataType",
+        "values" : [ "values", "values" ]
+      }
+    },
+    "mktCampaign" : "{}",
+    "externalUrl" : "externalUrl",
+    "caseEntity" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "idleDate" : "2000-01-23T04:56:07.000+00:00",
+    "externalId" : "externalId",
+    "externalContact" : "{}",
+    "pageviewCount" : 1,
+    "originatingDirection" : "Unknown",
+    "referrer" : "{}",
+    "lastUserDisposition" : "{}",
+    "lastConnectedUser" : "{}",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "attributes" : {
       "key" : {
         "dataType" : "dataType",
         "value" : "value"
       }
     },
-    "device" : "{}",
     "geolocation" : "{}"
   }, {
-    "screenviewCount" : 5,
     "shortId" : "shortId",
     "authenticated" : true,
-    "lastPage" : "{}",
-    "durationInSeconds" : 0,
     "searchTerms" : [ "searchTerms", "searchTerms" ],
-    "conversationSubject" : "conversationSubject",
+    "caseReference" : "caseReference",
     "userAgentString" : "userAgentString",
     "eventCount" : 6,
     "type" : "type",
     "lastScreen" : "lastScreen",
     "divisionIds" : [ "divisionIds", "divisionIds" ],
-    "lastConnectedQueue" : "{}",
-    "sdkLibrary" : "{}",
-    "browser" : "{}",
-    "customerId" : "customerId",
     "id" : "id",
-    "customerIdType" : "customerIdType",
     "awayDate" : "2000-01-23T04:56:07.000+00:00",
-    "lastAcdOutcome" : "Unknown",
-    "attributeLists" : {
-      "key" : {
-        "dataType" : "dataType",
-        "values" : [ "values", "values" ]
-      }
-    },
-    "mktCampaign" : "{}",
     "conversation" : "{}",
+    "caseAssociations" : [ {
+      "dateAssociated" : "2000-01-23T04:56:07.000+00:00",
+      "associatedCase" : "{}",
+      "caseReference" : "caseReference",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "dateAssociated" : "2000-01-23T04:56:07.000+00:00",
+      "associatedCase" : "{}",
+      "caseReference" : "caseReference",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "ipOrganization" : "ipOrganization",
     "app" : "{}",
-    "externalUrl" : "externalUrl",
     "networkConnectivity" : "{}",
     "endedDate" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "idleDate" : "2000-01-23T04:56:07.000+00:00",
     "ipAddress" : "ipAddress",
-    "externalId" : "externalId",
     "lastUserDisconnectType" : "Unknown",
-    "externalContact" : "{}",
-    "pageviewCount" : 1,
-    "originatingDirection" : "Unknown",
-    "referrer" : "{}",
-    "lastUserDisposition" : "{}",
     "outcomeAchievements" : [ {
       "achievedDate" : "2000-01-23T04:56:07.000+00:00",
       "outcome" : "{}"
@@ -1134,8 +1126,6 @@ open class ExternalContactsAPI {
       "achievedDate" : "2000-01-23T04:56:07.000+00:00",
       "outcome" : "{}"
     } ],
-    "lastConnectedUser" : "{}",
-    "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "conversationChannels" : [ {
       "messageType" : "Unknown",
       "type" : "Unknown",
@@ -1153,13 +1143,43 @@ open class ExternalContactsAPI {
       "segment" : "{}"
     } ],
     "lastEvent" : "{}",
+    "device" : "{}",
+    "screenviewCount" : 5,
+    "lastPage" : "{}",
+    "durationInSeconds" : 0,
+    "conversationSubject" : "conversationSubject",
+    "caseStatus" : "Unknown",
+    "lastConnectedQueue" : "{}",
+    "sdkLibrary" : "{}",
+    "browser" : "{}",
+    "customerId" : "customerId",
+    "customerIdType" : "customerIdType",
+    "lastAcdOutcome" : "Unknown",
+    "attributeLists" : {
+      "key" : {
+        "dataType" : "dataType",
+        "values" : [ "values", "values" ]
+      }
+    },
+    "mktCampaign" : "{}",
+    "externalUrl" : "externalUrl",
+    "caseEntity" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "idleDate" : "2000-01-23T04:56:07.000+00:00",
+    "externalId" : "externalId",
+    "externalContact" : "{}",
+    "pageviewCount" : 1,
+    "originatingDirection" : "Unknown",
+    "referrer" : "{}",
+    "lastUserDisposition" : "{}",
+    "lastConnectedUser" : "{}",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "attributes" : {
       "key" : {
         "dataType" : "dataType",
         "value" : "value"
       }
     },
-    "device" : "{}",
     "geolocation" : "{}"
   } ],
   "selfUri" : "selfUri",
@@ -1504,16 +1524,12 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -1562,16 +1578,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
@@ -1817,16 +1829,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -1875,16 +1883,12 @@ open class ExternalContactsAPI {
       "identifiers" : [ {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
       }, {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
@@ -2046,16 +2050,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -2104,16 +2104,12 @@ open class ExternalContactsAPI {
       "identifiers" : [ {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
       }, {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
@@ -3767,16 +3763,12 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "ExternalId",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "ExternalId",
     "value" : "value",
     "externalSource" : "{}"
@@ -3983,16 +3975,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -4041,16 +4029,12 @@ open class ExternalContactsAPI {
       "identifiers" : [ {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
       }, {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
@@ -4212,16 +4196,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -4270,16 +4250,12 @@ open class ExternalContactsAPI {
       "identifiers" : [ {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
       }, {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
@@ -4468,16 +4444,12 @@ open class ExternalContactsAPI {
   "entities" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "ExternalId",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "ExternalId",
     "value" : "value",
     "externalSource" : "{}"
@@ -4922,16 +4894,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
@@ -5020,16 +4988,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
@@ -5796,16 +5760,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -5854,16 +5814,12 @@ open class ExternalContactsAPI {
       "identifiers" : [ {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
       }, {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
@@ -6025,16 +5981,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -6083,16 +6035,12 @@ open class ExternalContactsAPI {
       "identifiers" : [ {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
       }, {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
@@ -6320,16 +6268,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -6378,16 +6322,12 @@ open class ExternalContactsAPI {
       "identifiers" : [ {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
       }, {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
@@ -6549,16 +6489,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -6607,16 +6543,12 @@ open class ExternalContactsAPI {
       "identifiers" : [ {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
       }, {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
@@ -6844,16 +6776,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -6902,16 +6830,12 @@ open class ExternalContactsAPI {
       "identifiers" : [ {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
       }, {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
@@ -7073,16 +6997,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -7131,16 +7051,12 @@ open class ExternalContactsAPI {
       "identifiers" : [ {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
       }, {
         "division" : "{}",
         "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-        "selfUri" : "https://openapi-generator.tech",
-        "id" : "id",
         "type" : "ExternalId",
         "value" : "value",
         "externalSource" : "{}"
@@ -7538,16 +7454,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
@@ -7636,16 +7548,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
@@ -7800,16 +7708,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
@@ -7898,16 +7802,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
@@ -8279,16 +8179,12 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -8337,16 +8233,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
@@ -8518,8 +8410,6 @@ open class ExternalContactsAPI {
      - examples: [{contentType=application/json, example={
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "selfUri" : "https://openapi-generator.tech",
-  "id" : "id",
   "type" : "SocialLine",
   "value" : "value",
   "externalSource" : "{}"
@@ -8583,8 +8473,6 @@ open class ExternalContactsAPI {
      - examples: [{contentType=application/json, example={
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "selfUri" : "https://openapi-generator.tech",
-  "id" : "id",
   "type" : "ExternalId",
   "value" : "value",
   "externalSource" : "{}"
@@ -10227,16 +10115,12 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -10285,16 +10169,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
@@ -10509,16 +10389,12 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -10567,16 +10443,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
@@ -10792,16 +10664,12 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -10850,16 +10718,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
@@ -11135,16 +10999,12 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -11193,16 +11053,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
@@ -11543,16 +11399,12 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -11601,16 +11453,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
@@ -11837,16 +11685,12 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -11895,16 +11739,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
@@ -12098,16 +11938,12 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "ExternalId",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "ExternalId",
     "value" : "value",
     "externalSource" : "{}"
@@ -12590,16 +12426,12 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -12648,16 +12480,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
@@ -12911,16 +12739,12 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "ExternalId",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "ExternalId",
     "value" : "value",
     "externalSource" : "{}"
@@ -13063,16 +12887,12 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "ExternalId",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "ExternalId",
     "value" : "value",
     "externalSource" : "{}"
@@ -13374,16 +13194,12 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -13432,16 +13248,12 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-      "selfUri" : "https://openapi-generator.tech",
-      "id" : "id",
       "type" : "ExternalId",
       "value" : "value",
       "externalSource" : "{}"
@@ -14100,16 +13912,12 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "ExternalId",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "id" : "id",
     "type" : "ExternalId",
     "value" : "value",
     "externalSource" : "{}"
@@ -14321,8 +14129,6 @@ open class ExternalContactsAPI {
      - examples: [{contentType=application/json, example={
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "selfUri" : "https://openapi-generator.tech",
-  "id" : "id",
   "externalOrganizationId" : "externalOrganizationId",
   "trustorOrgId" : "trustorOrgId",
   "externalOrganizationUri" : "https://openapi-generator.tech"

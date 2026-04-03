@@ -10,12 +10,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteRoutingUserDirectroutingbackupSettings**](UsersAPI#deleteRoutingUserDirectroutingbackupSettings) | Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. |
 | [**deleteRoutingUserUtilization**](UsersAPI#deleteRoutingUserUtilization) | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
 | [**deleteUser**](UsersAPI#deleteUser) | Delete user |
+| [**deleteUserCustomattribute**](UsersAPI#deleteUserCustomattribute) | Delete a custom attributes record. |
 | [**deleteUserExternalidAuthorityNameExternalKey**](UsersAPI#deleteUserExternalidAuthorityNameExternalKey) | Delete the external identifier for user. |
 | [**deleteUserRoutinglanguage**](UsersAPI#deleteUserRoutinglanguage) | Remove a routing language from a user |
 | [**deleteUserRoutingskill**](UsersAPI#deleteUserRoutingskill) | Remove a routing skill from a user |
 | [**deleteUserStationAssociatedstation**](UsersAPI#deleteUserStationAssociatedstation) | Clear associated station |
 | [**deleteUserStationDefaultstation**](UsersAPI#deleteUserStationDefaultstation) | Clear default station |
 | [**deleteUserVerifier**](UsersAPI#deleteUserVerifier) | Delete a verifier |
+| [**deleteUsersCustomattributesSchema**](UsersAPI#deleteUsersCustomattributesSchema) | Delete a schema |
 | [**getAnalyticsUsersDetailsJob**](UsersAPI#getAnalyticsUsersDetailsJob) | Get status for async query for user details |
 | [**getAnalyticsUsersDetailsJobResults**](UsersAPI#getAnalyticsUsersDetailsJobResults) | Fetch a page of results for an async query |
 | [**getAnalyticsUsersDetailsJobsAvailability**](UsersAPI#getAnalyticsUsersDetailsJobsAvailability) | Lookup the datalake availability date and time |
@@ -32,6 +34,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUser**](UsersAPI#getUser) | Get user. |
 | [**getUserAdjacents**](UsersAPI#getUserAdjacents) | Get adjacents |
 | [**getUserCallforwarding**](UsersAPI#getUserCallforwarding) | Get a user&#39;s CallForwarding |
+| [**getUserCustomattribute**](UsersAPI#getUserCustomattribute) | Get custom attributes by schema id |
+| [**getUserCustomattributesBulk**](UsersAPI#getUserCustomattributesBulk) | Get multiple custom attributes records by schema ids |
 | [**getUserDirectreports**](UsersAPI#getUserDirectreports) | Get direct reports |
 | [**getUserExternalid**](UsersAPI#getUserExternalid) | Get the external identifiers for a user. |
 | [**getUserExternalidAuthorityName**](UsersAPI#getUserExternalidAuthorityName) | Get the external identifier of user for an authority. |
@@ -53,6 +57,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserVerifiers**](UsersAPI#getUserVerifiers) | Get a list of verifiers |
 | [**getUsers**](UsersAPI#getUsers) | Get the list of available users. |
 | [**getUsersChatsMe**](UsersAPI#getUsersChatsMe) | Get chats for a user |
+| [**getUsersCustomattributesSchema**](UsersAPI#getUsersCustomattributesSchema) | Get a schema |
+| [**getUsersCustomattributesSchemaVersion**](UsersAPI#getUsersCustomattributesSchemaVersion) | Get a specific version of a schema |
+| [**getUsersCustomattributesSchemaVersions**](UsersAPI#getUsersCustomattributesSchemaVersions) | Get all versions of a user schema |
+| [**getUsersCustomattributesSchemas**](UsersAPI#getUsersCustomattributesSchemas) | Get a list of schemas. |
+| [**getUsersCustomattributesSchemasCoretype**](UsersAPI#getUsersCustomattributesSchemasCoretype) | Get the core types from which all schemas are built. |
+| [**getUsersCustomattributesSchemasCoretypes**](UsersAPI#getUsersCustomattributesSchemasCoretypes) | Get the list of core types enabled for a specific namespace. |
+| [**getUsersCustomattributesSchemasLimits**](UsersAPI#getUsersCustomattributesSchemasLimits) | Get quantitative limits on schemas |
 | [**getUsersDevelopmentActivities**](UsersAPI#getUsersDevelopmentActivities) | Get list of Development Activities |
 | [**getUsersDevelopmentActivitiesMe**](UsersAPI#getUsersDevelopmentActivitiesMe) | Get list of Development Activities for current user |
 | [**getUsersDevelopmentActivity**](UsersAPI#getUsersDevelopmentActivity) | Get a Development Activity |
@@ -61,6 +72,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUsersSearch**](UsersAPI#getUsersSearch) | Search users using the q64 value returned from a previous search |
 | [**patchUser**](UsersAPI#patchUser) | Update user |
 | [**patchUserCallforwarding**](UsersAPI#patchUserCallforwarding) | Patch a user&#39;s CallForwarding |
+| [**patchUserCustomattributes**](UsersAPI#patchUserCustomattributes) | Update a single custom attributes record by amending the data with only the provided fields. |
+| [**patchUserCustomattributesBulk**](UsersAPI#patchUserCustomattributesBulk) | Update multiple custom attributes records by amending the data with only the provided fields. |
 | [**patchUserGeolocation**](UsersAPI#patchUserGeolocation) | Patch a user&#39;s Geolocation |
 | [**patchUserQueue**](UsersAPI#patchUserQueue) | Join or unjoin a queue for a user |
 | [**patchUserQueues**](UsersAPI#patchUserQueues) | Join or unjoin a set of queues for a user |
@@ -83,6 +96,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postUserRoutinglanguages**](UsersAPI#postUserRoutinglanguages) | Assign a routing language to a user |
 | [**postUserRoutingskills**](UsersAPI#postUserRoutingskills) | Assign a routing skill to a user |
 | [**postUsers**](UsersAPI#postUsers) | Create user |
+| [**postUsersCustomattributesSchemas**](UsersAPI#postUsersCustomattributesSchemas) | Create a schema |
 | [**postUsersDevelopmentActivitiesAggregatesQuery**](UsersAPI#postUsersDevelopmentActivitiesAggregatesQuery) | Retrieve aggregated development activity data |
 | [**postUsersMePassword**](UsersAPI#postUsersMePassword) | Change your password |
 | [**postUsersSearch**](UsersAPI#postUsersSearch) | Search users |
@@ -91,6 +105,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putRoutingUserDirectroutingbackupSettings**](UsersAPI#putRoutingUserDirectroutingbackupSettings) | Update the user&#39;s Direct Routing Backup settings. |
 | [**putRoutingUserUtilization**](UsersAPI#putRoutingUserUtilization) | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
 | [**putUserCallforwarding**](UsersAPI#putUserCallforwarding) | Update a user&#39;s CallForwarding |
+| [**putUserCustomattributes**](UsersAPI#putUserCustomattributes) | Create or update a single custom attributes record. Updating replaces all data with the provided fields. |
 | [**putUserOutofoffice**](UsersAPI#putUserOutofoffice) | Update an OutOfOffice |
 | [**putUserProfileskills**](UsersAPI#putUserProfileskills) | Update profile skills for a user |
 | [**putUserRoles**](UsersAPI#putUserRoles) | Sets the user&#39;s roles |
@@ -101,6 +116,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putUserStationAssociatedstationStationId**](UsersAPI#putUserStationAssociatedstationStationId) | Set associated station |
 | [**putUserStationDefaultstationStationId**](UsersAPI#putUserStationDefaultstationStationId) | Set default station |
 | [**putUserVerifier**](UsersAPI#putUserVerifier) | Update a verifier |
+| [**putUsersCustomattributesSchema**](UsersAPI#putUsersCustomattributesSchema) | Update a schema |
 {: class="table-striped"}
 
 
@@ -401,6 +417,57 @@ UsersAPI.deleteUser(userId: userId) { (response, error) in
 [**JSON**](JSON)
 
 
+## deleteUserCustomattribute
+
+
+
+> Void deleteUserCustomattribute(userId, schemaId)
+
+Delete a custom attributes record.
+
+
+
+Wraps DELETE /api/v2/users/{userId}/customattributes/{schemaId}  
+
+Requires ANY permissions: 
+
+* directory:user:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // user ID
+let schemaId: String = "" // schemaId
+
+// Code example
+UsersAPI.deleteUserCustomattribute(userId: userId, schemaId: schemaId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("UsersAPI.deleteUserCustomattribute was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| user ID | |
+| **schemaId** | **String**| schemaId | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
 ## deleteUserExternalidAuthorityNameExternalKey
 
 
@@ -699,6 +766,55 @@ UsersAPI.deleteUserVerifier(userId: userId, verifierId: verifierId) { (error) in
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
 | **verifierId** | **String**| Verifier ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteUsersCustomattributesSchema
+
+
+
+> Void deleteUsersCustomattributesSchema(schemaId)
+
+Delete a schema
+
+
+
+Wraps DELETE /api/v2/users/customattributes/schemas/{schemaId}  
+
+Requires ANY permissions: 
+
+* users:customAttributesSchema:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+
+// Code example
+UsersAPI.deleteUsersCustomattributesSchema(schemaId: schemaId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("UsersAPI.deleteUsersCustomattributesSchema was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
 
 
 ### Return type
@@ -1383,7 +1499,7 @@ UsersAPI.getRoutingUserUtilization(userId: userId) { (response, error) in
 
 
 
-> [User](User) getUser(userId, expand, integrationPresenceSource, state)
+> [User](User) getUser(userId, expand, integrationPresenceSource, userCustomAttributeSchemaIds, state)
 
 Get user.
 
@@ -1405,10 +1521,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let userId: String = "" // User ID
 let expand: [String] = [""] // Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it's recommended to use specific API requests instead.
 let integrationPresenceSource: UsersAPI.IntegrationPresenceSource_getUser = UsersAPI.IntegrationPresenceSource_getUser.enummember // Gets an integration presence for a user instead of their default.
+let userCustomAttributeSchemaIds: [String] = [""] // Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \"expand\". The maximum number of schemaIds that can be requested is 100
 let state: UsersAPI.State_getUser = UsersAPI.State_getUser.enummember // Search for a user with this state
 
 // Code example
-UsersAPI.getUser(userId: userId, expand: expand, integrationPresenceSource: integrationPresenceSource, state: state) { (response, error) in
+UsersAPI.getUser(userId: userId, expand: expand, integrationPresenceSource: integrationPresenceSource, userCustomAttributeSchemaIds: userCustomAttributeSchemaIds, state: state) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1426,6 +1543,7 @@ UsersAPI.getUser(userId: userId, expand: expand, integrationPresenceSource: inte
 | **userId** | **String**| User ID | |
 | **expand** | [**[String]**](String)| Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it's recommended to use specific API requests instead. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), externalcontactssettings ("externalContactsSettings"), groups ("groups"), customattributes ("customAttributes"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin"), datewelcomesent ("dateWelcomeSent") |
 | **integrationPresenceSource** | **String**| Gets an integration presence for a user instead of their default. | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone"), eightByEight ("EightByEight") |
+| **userCustomAttributeSchemaIds** | [**[String]**](String)| Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \"expand\". The maximum number of schemaIds that can be requested is 100 | [optional] |
 | **state** | **String**| Search for a user with this state | [optional]<br />**Values**: active ("active"), deleted ("deleted") |
 
 
@@ -1532,6 +1650,110 @@ UsersAPI.getUserCallforwarding(userId: userId) { (response, error) in
 ### Return type
 
 [**CallForwarding**](CallForwarding)
+
+
+## getUserCustomattribute
+
+
+
+> [UserCustomAttributes](UserCustomAttributes) getUserCustomattribute(userId, schemaId)
+
+Get custom attributes by schema id
+
+
+
+Wraps GET /api/v2/users/{userId}/customattributes/{schemaId}  
+
+Requires ANY permissions: 
+
+* directory:user:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // user ID
+let schemaId: String = "" // schemaId
+
+// Code example
+UsersAPI.getUserCustomattribute(userId: userId, schemaId: schemaId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUserCustomattribute was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| user ID | |
+| **schemaId** | **String**| schemaId | |
+
+
+### Return type
+
+[**UserCustomAttributes**](UserCustomAttributes)
+
+
+## getUserCustomattributesBulk
+
+
+
+> [[JSON]](JSON) getUserCustomattributesBulk(userId, schemaIds)
+
+Get multiple custom attributes records by schema ids
+
+
+
+Wraps GET /api/v2/users/{userId}/customattributes/bulk  
+
+Requires ANY permissions: 
+
+* directory:user:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // user ID
+let schemaIds: [String] = [""] // 
+
+// Code example
+UsersAPI.getUserCustomattributesBulk(userId: userId, schemaIds: schemaIds) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUserCustomattributesBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| user ID | |
+| **schemaIds** | [**[String]**](String)|  | |
+
+
+### Return type
+
+[**[JSON]**](JSON)
 
 
 ## getUserDirectreports
@@ -2530,7 +2752,7 @@ UsersAPI.getUserVerifiers(userId: userId) { (response, error) in
 
 
 
-> [UserEntityListing](UserEntityListing) getUsers(pageSize, pageNumber, _id, jabberId, sortOrder, expand, integrationPresenceSource, state)
+> [UserEntityListing](UserEntityListing) getUsers(pageSize, pageNumber, _id, jabberId, sortOrder, expand, integrationPresenceSource, userCustomAttributeSchemaIds, state)
 
 Get the list of available users.
 
@@ -2556,10 +2778,11 @@ let jabberId: [String] = [""] // A list of jabberIds to fetch by bulk (cannot be
 let sortOrder: UsersAPI.SortOrder_getUsers = UsersAPI.SortOrder_getUsers.enummember // Ascending or descending sort order
 let expand: [String] = [""] // Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it's recommended to use specific API requests instead.
 let integrationPresenceSource: UsersAPI.IntegrationPresenceSource_getUsers = UsersAPI.IntegrationPresenceSource_getUsers.enummember // Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 100.
+let userCustomAttributeSchemaIds: [String] = [""] // Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \"expand\". The maximum number of schemaIds that can be requested is 5
 let state: UsersAPI.State_getUsers = UsersAPI.State_getUsers.enummember // Only list users of this state
 
 // Code example
-UsersAPI.getUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId: jabberId, sortOrder: sortOrder, expand: expand, integrationPresenceSource: integrationPresenceSource, state: state) { (response, error) in
+UsersAPI.getUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId: jabberId, sortOrder: sortOrder, expand: expand, integrationPresenceSource: integrationPresenceSource, userCustomAttributeSchemaIds: userCustomAttributeSchemaIds, state: state) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2581,6 +2804,7 @@ UsersAPI.getUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId
 | **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **expand** | [**[String]**](String)| Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it's recommended to use specific API requests instead. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), externalcontactssettings ("externalContactsSettings"), groups ("groups"), customattributes ("customAttributes"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin"), datewelcomesent ("dateWelcomeSent") |
 | **integrationPresenceSource** | **String**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 100. | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone"), eightByEight ("EightByEight") |
+| **userCustomAttributeSchemaIds** | [**[String]**](String)| Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \"expand\". The maximum number of schemaIds that can be requested is 5 | [optional] |
 | **state** | **String**| Only list users of this state | [optional]<br />**Values**: active ("active"), inactive ("inactive"), deleted ("deleted"), any ("any") |
 
 
@@ -2642,6 +2866,346 @@ UsersAPI.getUsersChatsMe(excludeClosed: excludeClosed, includePresence: includeP
 ### Return type
 
 [**ChatItemCursorListing**](ChatItemCursorListing)
+
+
+## getUsersCustomattributesSchema
+
+
+
+> [DataSchema](DataSchema) getUsersCustomattributesSchema(schemaId)
+
+Get a schema
+
+
+
+Wraps GET /api/v2/users/customattributes/schemas/{schemaId}  
+
+Requires ANY permissions: 
+
+* users:customAttributesSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+
+// Code example
+UsersAPI.getUsersCustomattributesSchema(schemaId: schemaId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUsersCustomattributesSchema was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+
+
+### Return type
+
+[**DataSchema**](DataSchema)
+
+
+## getUsersCustomattributesSchemaVersion
+
+
+
+> [DataSchema](DataSchema) getUsersCustomattributesSchemaVersion(schemaId, versionId)
+
+Get a specific version of a schema
+
+
+
+Wraps GET /api/v2/users/customattributes/schemas/{schemaId}/versions/{versionId}  
+
+Requires ANY permissions: 
+
+* users:customAttributesSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+let versionId: String = "" // Schema version
+
+// Code example
+UsersAPI.getUsersCustomattributesSchemaVersion(schemaId: schemaId, versionId: versionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUsersCustomattributesSchemaVersion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+| **versionId** | **String**| Schema version | |
+
+
+### Return type
+
+[**DataSchema**](DataSchema)
+
+
+## getUsersCustomattributesSchemaVersions
+
+
+
+> [DataSchemaListing](DataSchemaListing) getUsersCustomattributesSchemaVersions(schemaId)
+
+Get all versions of a user schema
+
+
+
+Wraps GET /api/v2/users/customattributes/schemas/{schemaId}/versions  
+
+Requires ANY permissions: 
+
+* users:customAttributesSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+
+// Code example
+UsersAPI.getUsersCustomattributesSchemaVersions(schemaId: schemaId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUsersCustomattributesSchemaVersions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+
+
+### Return type
+
+[**DataSchemaListing**](DataSchemaListing)
+
+
+## getUsersCustomattributesSchemas
+
+
+
+> [DataSchemaListing](DataSchemaListing) getUsersCustomattributesSchemas()
+
+Get a list of schemas.
+
+
+
+Wraps GET /api/v2/users/customattributes/schemas  
+
+Requires ANY permissions: 
+
+* users:customAttributesSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+UsersAPI.getUsersCustomattributesSchemas() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUsersCustomattributesSchemas was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**DataSchemaListing**](DataSchemaListing)
+
+
+## getUsersCustomattributesSchemasCoretype
+
+
+
+> [Coretype](Coretype) getUsersCustomattributesSchemasCoretype(coreTypeName)
+
+Get the core types from which all schemas are built.
+
+
+
+Wraps GET /api/v2/users/customattributes/schemas/coretypes/{coreTypeName}  
+
+Requires ANY permissions: 
+
+* users:customAttributesSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let coreTypeName: String = "" // Name of the core type
+
+// Code example
+UsersAPI.getUsersCustomattributesSchemasCoretype(coreTypeName: coreTypeName) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUsersCustomattributesSchemasCoretype was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **coreTypeName** | **String**| Name of the core type | |
+
+
+### Return type
+
+[**Coretype**](Coretype)
+
+
+## getUsersCustomattributesSchemasCoretypes
+
+
+
+> [CoretypeListing](CoretypeListing) getUsersCustomattributesSchemasCoretypes()
+
+Get the list of core types enabled for a specific namespace.
+
+
+
+Wraps GET /api/v2/users/customattributes/schemas/coretypes  
+
+Requires ANY permissions: 
+
+* users:customAttributesSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+UsersAPI.getUsersCustomattributesSchemasCoretypes() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUsersCustomattributesSchemasCoretypes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**CoretypeListing**](CoretypeListing)
+
+
+## getUsersCustomattributesSchemasLimits
+
+
+
+> [SchemaQuantityLimits](SchemaQuantityLimits) getUsersCustomattributesSchemasLimits()
+
+Get quantitative limits on schemas
+
+
+
+Wraps GET /api/v2/users/customattributes/schemas/limits  
+
+Requires ANY permissions: 
+
+* users:customAttributesSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+UsersAPI.getUsersCustomattributesSchemasLimits() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUsersCustomattributesSchemasLimits was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**SchemaQuantityLimits**](SchemaQuantityLimits)
 
 
 ## getUsersDevelopmentActivities
@@ -2904,7 +3468,7 @@ UsersAPI.getUsersExternalidAuthorityNameExternalKey(authorityName: authorityName
 
 
 
-> [UserMe](UserMe) getUsersMe(expand, integrationPresenceSource)
+> [UserMe](UserMe) getUsersMe(expand, integrationPresenceSource, userCustomAttributeSchemaIds)
 
 Get current user details.
 
@@ -2927,9 +3491,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let expand: [String] = [""] // Which fields, if any, to expand.
 let integrationPresenceSource: UsersAPI.IntegrationPresenceSource_getUsersMe = UsersAPI.IntegrationPresenceSource_getUsersMe.enummember // Get your presence for a given integration. This parameter will only be used when presence is provided as an \"expand\".
+let userCustomAttributeSchemaIds: [String] = [""] // Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \"expand\". The maximum number of schemaIds that can be requested is 100
 
 // Code example
-UsersAPI.getUsersMe(expand: expand, integrationPresenceSource: integrationPresenceSource) { (response, error) in
+UsersAPI.getUsersMe(expand: expand, integrationPresenceSource: integrationPresenceSource, userCustomAttributeSchemaIds: userCustomAttributeSchemaIds) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2946,6 +3511,7 @@ UsersAPI.getUsersMe(expand: expand, integrationPresenceSource: integrationPresen
 | ------------- | ------------- | ------------- | ------------- |
 | **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), externalcontactssettings ("externalContactsSettings"), groups ("groups"), customattributes ("customAttributes"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin"), datewelcomesent ("dateWelcomeSent"), date ("date"), geolocationsettings ("geolocationsettings"), organization ("organization"), presencedefinitions ("presencedefinitions"), divisionedpresencedefinitions ("divisionedpresencedefinitions"), locationdefinitions ("locationdefinitions"), orgauthorization ("orgauthorization"), orgproducts ("orgproducts"), favorites ("favorites"), superiors ("superiors"), directreports ("directreports"), adjacents ("adjacents"), routingskills ("routingskills"), routinglanguages ("routinglanguages"), fieldconfigs ("fieldconfigs"), token ("token"), trustors ("trustors"), logcapture ("logCapture"), autoanswersettings ("autoanswersettings") |
 | **integrationPresenceSource** | **String**| Get your presence for a given integration. This parameter will only be used when presence is provided as an \"expand\". | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone"), eightByEight ("EightByEight") |
+| **userCustomAttributeSchemaIds** | [**[String]**](String)| Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \"expand\". The maximum number of schemaIds that can be requested is 100 | [optional] |
 
 
 ### Return type
@@ -3111,6 +3677,110 @@ UsersAPI.patchUserCallforwarding(userId: userId, body: body) { (response, error)
 ### Return type
 
 [**CallForwarding**](CallForwarding)
+
+
+## patchUserCustomattributes
+
+
+
+> [UserCustomAttributes](UserCustomAttributes) patchUserCustomattributes(userId, userCustomAttributes)
+
+Update a single custom attributes record by amending the data with only the provided fields.
+
+
+
+Wraps PATCH /api/v2/users/{userId}/customattributes  
+
+Requires ANY permissions: 
+
+* directory:user:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // user ID
+let userCustomAttributes: UserCustomAttributesUpdateRequest = new UserCustomAttributesUpdateRequest(...) // 
+
+// Code example
+UsersAPI.patchUserCustomattributes(userId: userId, userCustomAttributes: userCustomAttributes) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.patchUserCustomattributes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| user ID | |
+| **userCustomAttributes** | [**UserCustomAttributesUpdateRequest**](UserCustomAttributesUpdateRequest)|  | |
+
+
+### Return type
+
+[**UserCustomAttributes**](UserCustomAttributes)
+
+
+## patchUserCustomattributesBulk
+
+
+
+> [UserCustomAttributes](UserCustomAttributes) patchUserCustomattributesBulk(userId, userCustomAttributesList)
+
+Update multiple custom attributes records by amending the data with only the provided fields.
+
+
+
+Wraps PATCH /api/v2/users/{userId}/customattributes/bulk  
+
+Requires ANY permissions: 
+
+* directory:user:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // user ID
+let userCustomAttributesList: [UserCustomAttributesUpdateRequest] = [new UserCustomAttributesUpdateRequest(...)] // 
+
+// Code example
+UsersAPI.patchUserCustomattributesBulk(userId: userId, userCustomAttributesList: userCustomAttributesList) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.patchUserCustomattributesBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| user ID | |
+| **userCustomAttributesList** | [**[UserCustomAttributesUpdateRequest]**](UserCustomAttributesUpdateRequest)|  | |
+
+
+### Return type
+
+[**UserCustomAttributes**](UserCustomAttributes)
 
 
 ## patchUserGeolocation
@@ -4275,6 +4945,56 @@ UsersAPI.postUsers(body: body) { (response, error) in
 [**User**](User)
 
 
+## postUsersCustomattributesSchemas
+
+
+
+> [DataSchema](DataSchema) postUsersCustomattributesSchemas(body)
+
+Create a schema
+
+
+
+Wraps POST /api/v2/users/customattributes/schemas  
+
+Requires ANY permissions: 
+
+* users:customAttributesSchema:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: DataSchema = new DataSchema(...) // Schema
+
+// Code example
+UsersAPI.postUsersCustomattributesSchemas(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.postUsersCustomattributesSchemas was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**DataSchema**](DataSchema)| Schema | |
+
+
+### Return type
+
+[**DataSchema**](DataSchema)
+
+
 ## postUsersDevelopmentActivitiesAggregatesQuery
 
 
@@ -4680,6 +5400,58 @@ UsersAPI.putUserCallforwarding(userId: userId, body: body) { (response, error) i
 ### Return type
 
 [**CallForwarding**](CallForwarding)
+
+
+## putUserCustomattributes
+
+
+
+> [UserCustomAttributes](UserCustomAttributes) putUserCustomattributes(userId, userCustomAttributes)
+
+Create or update a single custom attributes record. Updating replaces all data with the provided fields.
+
+
+
+Wraps PUT /api/v2/users/{userId}/customattributes  
+
+Requires ANY permissions: 
+
+* directory:user:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // user ID
+let userCustomAttributes: UserCustomAttributesUpdateRequest = new UserCustomAttributesUpdateRequest(...) // 
+
+// Code example
+UsersAPI.putUserCustomattributes(userId: userId, userCustomAttributes: userCustomAttributes) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.putUserCustomattributes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| user ID | |
+| **userCustomAttributes** | [**UserCustomAttributesUpdateRequest**](UserCustomAttributesUpdateRequest)|  | |
+
+
+### Return type
+
+[**UserCustomAttributes**](UserCustomAttributes)
 
 
 ## putUserOutofoffice
@@ -5202,4 +5974,56 @@ UsersAPI.putUserVerifier(userId: userId, verifierId: verifierId, body: body) { (
 [**Verifier**](Verifier)
 
 
-_PureCloudPlatformClientV2@191.0.0_
+## putUsersCustomattributesSchema
+
+
+
+> [DataSchema](DataSchema) putUsersCustomattributesSchema(schemaId, body)
+
+Update a schema
+
+
+
+Wraps PUT /api/v2/users/customattributes/schemas/{schemaId}  
+
+Requires ANY permissions: 
+
+* users:customAttributesSchema:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+let body: DataSchema = new DataSchema(...) // Data Schema
+
+// Code example
+UsersAPI.putUsersCustomattributesSchema(schemaId: schemaId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.putUsersCustomattributesSchema was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+| **body** | [**DataSchema**](DataSchema)| Data Schema | |
+
+
+### Return type
+
+[**DataSchema**](DataSchema)
+
+
+_PureCloudPlatformClientV2@192.0.0_

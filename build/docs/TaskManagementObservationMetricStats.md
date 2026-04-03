@@ -1,0 +1,14 @@
+# TaskManagementObservationMetricStats
+
+## TaskManagementObservationMetricStats
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **count** | **Int** | The observed value for this metric | [optional] |
+| **max** | **Int64** | The maximum observed value for this metric. Used for &#x60;oWorkitemOldestUnassigned&#x60; and  &#x60;oWorkitemOldestAssigned&#x60; | [optional] |
+
+
+
+_PureCloudPlatformClientV2@192.0.0_

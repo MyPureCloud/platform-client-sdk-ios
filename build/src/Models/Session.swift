@@ -123,6 +123,20 @@ public class Session: Codable {
 
 
 
+    public enum CaseStatus: String, Codable { 
+        case unknown = "Unknown"
+        case _open = "Open"
+        case inProgress = "InProgress"
+        case terminated = "Terminated"
+        case closed = "Closed"
+    }
+
+
+
+
+
+
+
 
 
 
@@ -211,6 +225,14 @@ public class Session: Codable {
     public var divisionIds: [String]?
     /** The app screen name where the customer's last app interaction occurred. */
     public var lastScreen: String?
+    /** Cases associated with the session - conversation only. */
+    public var caseAssociations: [JourneyCaseAssociation]?
+    /** The case this session refers to. */
+    public var caseEntity: AddressableEntityRef?
+    /** The reference for this case. */
+    public var caseReference: String?
+    /** The status of this case. */
+    public var caseStatus: CaseStatus?
     /** The URI for this object */
     public var selfUri: String?
     /** Timestamp indicating when the session was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -222,7 +244,7 @@ public class Session: Codable {
     /** Timestamp indicating when the visitor should be considered as idle. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var idleDate: Date?
 
-    public init(_id: String?, externalContact: AddressableEntityRef?, customerId: String?, customerIdType: String?, type: String?, externalId: String?, externalUrl: String?, shortId: String?, outcomeAchievements: [OutcomeAchievement]?, segmentAssignments: [SessionSegmentAssignment]?, attributes: [String:CustomEventAttribute]?, attributeLists: [String:CustomEventAttributeList]?, browser: Browser?, device: Device?, geolocation: JourneyGeolocation?, ipAddress: String?, ipOrganization: String?, lastPage: JourneyPage?, mktCampaign: JourneyCampaign?, referrer: Referrer?, app: JourneyApp?, sdkLibrary: SdkLibrary?, networkConnectivity: NetworkConnectivity?, searchTerms: [String]?, userAgentString: String?, durationInSeconds: Int?, eventCount: Int?, pageviewCount: Int?, screenviewCount: Int?, lastEvent: SessionLastEvent?, conversation: AddressableEntityRef?, lastConnectedQueue: ConnectedQueue?, lastConnectedUser: ConnectedUser?, lastUserDisposition: ConversationUserDisposition?, conversationChannels: [ConversationChannel]?, originatingDirection: OriginatingDirection?, conversationSubject: String?, lastUserDisconnectType: LastUserDisconnectType?, lastAcdOutcome: LastAcdOutcome?, authenticated: Bool?, divisionIds: [String]?, lastScreen: String?, selfUri: String?, createdDate: Date?, endedDate: Date?, awayDate: Date?, idleDate: Date?) {
+    public init(_id: String?, externalContact: AddressableEntityRef?, customerId: String?, customerIdType: String?, type: String?, externalId: String?, externalUrl: String?, shortId: String?, outcomeAchievements: [OutcomeAchievement]?, segmentAssignments: [SessionSegmentAssignment]?, attributes: [String:CustomEventAttribute]?, attributeLists: [String:CustomEventAttributeList]?, browser: Browser?, device: Device?, geolocation: JourneyGeolocation?, ipAddress: String?, ipOrganization: String?, lastPage: JourneyPage?, mktCampaign: JourneyCampaign?, referrer: Referrer?, app: JourneyApp?, sdkLibrary: SdkLibrary?, networkConnectivity: NetworkConnectivity?, searchTerms: [String]?, userAgentString: String?, durationInSeconds: Int?, eventCount: Int?, pageviewCount: Int?, screenviewCount: Int?, lastEvent: SessionLastEvent?, conversation: AddressableEntityRef?, lastConnectedQueue: ConnectedQueue?, lastConnectedUser: ConnectedUser?, lastUserDisposition: ConversationUserDisposition?, conversationChannels: [ConversationChannel]?, originatingDirection: OriginatingDirection?, conversationSubject: String?, lastUserDisconnectType: LastUserDisconnectType?, lastAcdOutcome: LastAcdOutcome?, authenticated: Bool?, divisionIds: [String]?, lastScreen: String?, caseAssociations: [JourneyCaseAssociation]?, caseEntity: AddressableEntityRef?, caseReference: String?, caseStatus: CaseStatus?, selfUri: String?, createdDate: Date?, endedDate: Date?, awayDate: Date?, idleDate: Date?) {
         self._id = _id
         self.externalContact = externalContact
         self.customerId = customerId
@@ -265,6 +287,10 @@ public class Session: Codable {
         self.authenticated = authenticated
         self.divisionIds = divisionIds
         self.lastScreen = lastScreen
+        self.caseAssociations = caseAssociations
+        self.caseEntity = caseEntity
+        self.caseReference = caseReference
+        self.caseStatus = caseStatus
         self.selfUri = selfUri
         self.createdDate = createdDate
         self.endedDate = endedDate
@@ -315,6 +341,10 @@ public class Session: Codable {
         case authenticated
         case divisionIds
         case lastScreen
+        case caseAssociations
+        case caseEntity
+        case caseReference
+        case caseStatus
         case selfUri
         case createdDate
         case endedDate

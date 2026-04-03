@@ -609,4 +609,4 @@ UsageAPI.postUsageSimplesearch(body: body) { (response, error) in
 [**UsageExecutionResult**](UsageExecutionResult)
 
 
-_PureCloudPlatformClientV2@191.0.0_
+_PureCloudPlatformClientV2@192.0.0_

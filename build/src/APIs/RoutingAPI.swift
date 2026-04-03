@@ -1892,8 +1892,7 @@ open class RoutingAPI {
      - examples: [{contentType=application/json, example={
   "division" : "{}",
   "selfUri" : "https://openapi-generator.tech",
-  "resolveIdentities" : true,
-  "id" : "id"
+  "resolveIdentities" : true
 }, statusCode=200}]
      
      - parameter domainName: (path) email domain 
@@ -3996,8 +3995,7 @@ open class RoutingAPI {
   "callOnBehalfOfQueue" : {
     "division" : "{}",
     "selfUri" : "https://openapi-generator.tech",
-    "resolveIdentities" : true,
-    "id" : "id"
+    "resolveIdentities" : true
   }
 }, statusCode=200}]
      
@@ -7979,8 +7977,7 @@ open class RoutingAPI {
      - examples: [{contentType=application/json, example={
   "division" : "{}",
   "selfUri" : "https://openapi-generator.tech",
-  "resolveIdentities" : true,
-  "id" : "id"
+  "resolveIdentities" : true
 }, statusCode=200}]
      
      - parameter addressId: (path) Address ID 
@@ -8408,6 +8405,7 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "maxInboundCalls" : 0,
   "level" : "Agent",
   "labelUtilizations" : {
     "key" : {
@@ -8474,6 +8472,7 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "maxInboundCalls" : 1,
   "labelUtilizations" : {
     "key" : {
       "interruptingLabelIds" : [ "interruptingLabelIds", "interruptingLabelIds" ],
@@ -15322,8 +15321,7 @@ open class RoutingAPI {
      - examples: [{contentType=application/json, example={
   "division" : "{}",
   "selfUri" : "https://openapi-generator.tech",
-  "resolveIdentities" : true,
-  "id" : "id"
+  "resolveIdentities" : true
 }, statusCode=200}]
      
      - parameter domainName: (path) email domain 
@@ -15689,8 +15687,7 @@ open class RoutingAPI {
   "callOnBehalfOfQueue" : {
     "division" : "{}",
     "selfUri" : "https://openapi-generator.tech",
-    "resolveIdentities" : true,
-    "id" : "id"
+    "resolveIdentities" : true
   }
 }, statusCode=200}]
      
@@ -15861,8 +15858,7 @@ open class RoutingAPI {
      - examples: [{contentType=application/json, example={
   "division" : "{}",
   "selfUri" : "https://openapi-generator.tech",
-  "resolveIdentities" : true,
-  "id" : "id"
+  "resolveIdentities" : true
 }, statusCode=200}]
      
      - parameter addressId: (path) Address ID 
@@ -15984,6 +15980,7 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "maxInboundCalls" : 0,
   "level" : "Agent",
   "labelUtilizations" : {
     "key" : {
@@ -16054,6 +16051,7 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "maxInboundCalls" : 1,
   "labelUtilizations" : {
     "key" : {
       "interruptingLabelIds" : [ "interruptingLabelIds", "interruptingLabelIds" ],

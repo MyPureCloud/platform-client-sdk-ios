@@ -27,7 +27,7 @@ public class SocialMediaAsyncDetailQuery: Codable {
     public var topicIds: [String]?
     /** The number of results per page */
     public var pageSize: Int?
-    /** Sorting of results based on time */
+    /** Deprecated: use 'sort' field instead. Sorting of results based on time */
     public var order: Order?
 
     public init(interval: String?, timeZone: String?, filter: SocialMediaQueryFilter?, topicIds: [String]?, pageSize: Int?, order: Order?) {

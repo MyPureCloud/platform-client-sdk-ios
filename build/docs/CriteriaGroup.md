@@ -14,4 +14,4 @@ A group of logical or a singular criteria used to create a query of executionDat
 
 
 
-_PureCloudPlatformClientV2@191.0.0_
+_PureCloudPlatformClientV2@192.0.0_

@@ -110,6 +110,96 @@ open class JourneyAPI {
     
     
     /**
+     Delete an external events configuration.
+     
+     - parameter configId: (path) The ID of the external event configuration. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteJourneyExternaleventsConfiguration(configId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteJourneyExternaleventsConfigurationWithRequestBuilder(configId: configId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete an external events configuration.
+     - DELETE /api/v2/journey/externalevents/configurations/{configId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter configId: (path) The ID of the external event configuration. 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteJourneyExternaleventsConfigurationWithRequestBuilder(configId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/journey/externalevents/configurations/{configId}"
+        let configIdPreEscape = "\(configId)"
+        let configIdPostEscape = configIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{configId}", with: configIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Delete a schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteJourneyExternaleventsSchema(schemaId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteJourneyExternaleventsSchemaWithRequestBuilder(schemaId: schemaId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a schema
+     - DELETE /api/v2/journey/externalevents/schemas/{schemaId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter schemaId: (path) Schema ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteJourneyExternaleventsSchemaWithRequestBuilder(schemaId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/journey/externalevents/schemas/{schemaId}"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Delete an outcome.
      
      - parameter outcomeId: (path) ID of the outcome. 
@@ -469,49 +559,37 @@ open class JourneyAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "screenviewCount" : 5,
     "shortId" : "shortId",
     "authenticated" : true,
-    "lastPage" : "{}",
-    "durationInSeconds" : 0,
     "searchTerms" : [ "searchTerms", "searchTerms" ],
-    "conversationSubject" : "conversationSubject",
+    "caseReference" : "caseReference",
     "userAgentString" : "userAgentString",
     "eventCount" : 6,
     "type" : "type",
     "lastScreen" : "lastScreen",
     "divisionIds" : [ "divisionIds", "divisionIds" ],
-    "lastConnectedQueue" : "{}",
-    "sdkLibrary" : "{}",
-    "browser" : "{}",
-    "customerId" : "customerId",
     "id" : "id",
-    "customerIdType" : "customerIdType",
     "awayDate" : "2000-01-23T04:56:07.000+00:00",
-    "lastAcdOutcome" : "Unknown",
-    "attributeLists" : {
-      "key" : {
-        "dataType" : "dataType",
-        "values" : [ "values", "values" ]
-      }
-    },
-    "mktCampaign" : "{}",
     "conversation" : "{}",
+    "caseAssociations" : [ {
+      "dateAssociated" : "2000-01-23T04:56:07.000+00:00",
+      "associatedCase" : "{}",
+      "caseReference" : "caseReference",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "dateAssociated" : "2000-01-23T04:56:07.000+00:00",
+      "associatedCase" : "{}",
+      "caseReference" : "caseReference",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "ipOrganization" : "ipOrganization",
     "app" : "{}",
-    "externalUrl" : "externalUrl",
     "networkConnectivity" : "{}",
     "endedDate" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "idleDate" : "2000-01-23T04:56:07.000+00:00",
     "ipAddress" : "ipAddress",
-    "externalId" : "externalId",
     "lastUserDisconnectType" : "Unknown",
-    "externalContact" : "{}",
-    "pageviewCount" : 1,
-    "originatingDirection" : "Unknown",
-    "referrer" : "{}",
-    "lastUserDisposition" : "{}",
     "outcomeAchievements" : [ {
       "achievedDate" : "2000-01-23T04:56:07.000+00:00",
       "outcome" : "{}"
@@ -519,8 +597,6 @@ open class JourneyAPI {
       "achievedDate" : "2000-01-23T04:56:07.000+00:00",
       "outcome" : "{}"
     } ],
-    "lastConnectedUser" : "{}",
-    "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "conversationChannels" : [ {
       "messageType" : "Unknown",
       "type" : "Unknown",
@@ -538,58 +614,76 @@ open class JourneyAPI {
       "segment" : "{}"
     } ],
     "lastEvent" : "{}",
+    "device" : "{}",
+    "screenviewCount" : 5,
+    "lastPage" : "{}",
+    "durationInSeconds" : 0,
+    "conversationSubject" : "conversationSubject",
+    "caseStatus" : "Unknown",
+    "lastConnectedQueue" : "{}",
+    "sdkLibrary" : "{}",
+    "browser" : "{}",
+    "customerId" : "customerId",
+    "customerIdType" : "customerIdType",
+    "lastAcdOutcome" : "Unknown",
+    "attributeLists" : {
+      "key" : {
+        "dataType" : "dataType",
+        "values" : [ "values", "values" ]
+      }
+    },
+    "mktCampaign" : "{}",
+    "externalUrl" : "externalUrl",
+    "caseEntity" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "idleDate" : "2000-01-23T04:56:07.000+00:00",
+    "externalId" : "externalId",
+    "externalContact" : "{}",
+    "pageviewCount" : 1,
+    "originatingDirection" : "Unknown",
+    "referrer" : "{}",
+    "lastUserDisposition" : "{}",
+    "lastConnectedUser" : "{}",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "attributes" : {
       "key" : {
         "dataType" : "dataType",
         "value" : "value"
       }
     },
-    "device" : "{}",
     "geolocation" : "{}"
   }, {
-    "screenviewCount" : 5,
     "shortId" : "shortId",
     "authenticated" : true,
-    "lastPage" : "{}",
-    "durationInSeconds" : 0,
     "searchTerms" : [ "searchTerms", "searchTerms" ],
-    "conversationSubject" : "conversationSubject",
+    "caseReference" : "caseReference",
     "userAgentString" : "userAgentString",
     "eventCount" : 6,
     "type" : "type",
     "lastScreen" : "lastScreen",
     "divisionIds" : [ "divisionIds", "divisionIds" ],
-    "lastConnectedQueue" : "{}",
-    "sdkLibrary" : "{}",
-    "browser" : "{}",
-    "customerId" : "customerId",
     "id" : "id",
-    "customerIdType" : "customerIdType",
     "awayDate" : "2000-01-23T04:56:07.000+00:00",
-    "lastAcdOutcome" : "Unknown",
-    "attributeLists" : {
-      "key" : {
-        "dataType" : "dataType",
-        "values" : [ "values", "values" ]
-      }
-    },
-    "mktCampaign" : "{}",
     "conversation" : "{}",
+    "caseAssociations" : [ {
+      "dateAssociated" : "2000-01-23T04:56:07.000+00:00",
+      "associatedCase" : "{}",
+      "caseReference" : "caseReference",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "dateAssociated" : "2000-01-23T04:56:07.000+00:00",
+      "associatedCase" : "{}",
+      "caseReference" : "caseReference",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
     "ipOrganization" : "ipOrganization",
     "app" : "{}",
-    "externalUrl" : "externalUrl",
     "networkConnectivity" : "{}",
     "endedDate" : "2000-01-23T04:56:07.000+00:00",
-    "selfUri" : "https://openapi-generator.tech",
-    "idleDate" : "2000-01-23T04:56:07.000+00:00",
     "ipAddress" : "ipAddress",
-    "externalId" : "externalId",
     "lastUserDisconnectType" : "Unknown",
-    "externalContact" : "{}",
-    "pageviewCount" : 1,
-    "originatingDirection" : "Unknown",
-    "referrer" : "{}",
-    "lastUserDisposition" : "{}",
     "outcomeAchievements" : [ {
       "achievedDate" : "2000-01-23T04:56:07.000+00:00",
       "outcome" : "{}"
@@ -597,8 +691,6 @@ open class JourneyAPI {
       "achievedDate" : "2000-01-23T04:56:07.000+00:00",
       "outcome" : "{}"
     } ],
-    "lastConnectedUser" : "{}",
-    "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "conversationChannels" : [ {
       "messageType" : "Unknown",
       "type" : "Unknown",
@@ -616,13 +708,43 @@ open class JourneyAPI {
       "segment" : "{}"
     } ],
     "lastEvent" : "{}",
+    "device" : "{}",
+    "screenviewCount" : 5,
+    "lastPage" : "{}",
+    "durationInSeconds" : 0,
+    "conversationSubject" : "conversationSubject",
+    "caseStatus" : "Unknown",
+    "lastConnectedQueue" : "{}",
+    "sdkLibrary" : "{}",
+    "browser" : "{}",
+    "customerId" : "customerId",
+    "customerIdType" : "customerIdType",
+    "lastAcdOutcome" : "Unknown",
+    "attributeLists" : {
+      "key" : {
+        "dataType" : "dataType",
+        "values" : [ "values", "values" ]
+      }
+    },
+    "mktCampaign" : "{}",
+    "externalUrl" : "externalUrl",
+    "caseEntity" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "idleDate" : "2000-01-23T04:56:07.000+00:00",
+    "externalId" : "externalId",
+    "externalContact" : "{}",
+    "pageviewCount" : 1,
+    "originatingDirection" : "Unknown",
+    "referrer" : "{}",
+    "lastUserDisposition" : "{}",
+    "lastConnectedUser" : "{}",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "attributes" : {
       "key" : {
         "dataType" : "dataType",
         "value" : "value"
       }
     },
-    "device" : "{}",
     "geolocation" : "{}"
   } ],
   "selfUri" : "selfUri",
@@ -1603,6 +1725,628 @@ open class JourneyAPI {
     
     
     /**
+     Get an external events configuration
+     
+     - parameter configId: (path) The ID of the external event configuration. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyExternaleventsConfiguration(configId: String, completion: @escaping ((_ data: ExternalEventsConfiguration?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyExternaleventsConfigurationWithRequestBuilder(configId: configId)
+        requestBuilder.execute { (response: Response<ExternalEventsConfiguration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an external events configuration
+     - GET /api/v2/journey/externalevents/configurations/{configId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schemaActive" : true,
+  "dateLastModified" : "2000-01-23T04:56:07.000+00:00",
+  "schemaId" : "schemaId",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "id" : "id",
+  "divisionId" : "divisionId",
+  "divisionIdActive" : true,
+  "source" : "source"
+}, statusCode=200}]
+     
+     - parameter configId: (path) The ID of the external event configuration. 
+
+     - returns: RequestBuilder<ExternalEventsConfiguration> 
+     */
+    open class func getJourneyExternaleventsConfigurationWithRequestBuilder(configId: String) -> RequestBuilder<ExternalEventsConfiguration> {        
+        var path = "/api/v2/journey/externalevents/configurations/{configId}"
+        let configIdPreEscape = "\(configId)"
+        let configIdPostEscape = configIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{configId}", with: configIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExternalEventsConfiguration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get all external event configurations.
+     
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyExternaleventsConfigurations(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: ExternalEventsConfigurationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyExternaleventsConfigurationsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<ExternalEventsConfigurationListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get all external event configurations.
+     - GET /api/v2/journey/externalevents/configurations
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "schemaActive" : true,
+    "dateLastModified" : "2000-01-23T04:56:07.000+00:00",
+    "schemaId" : "schemaId",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "divisionId" : "divisionId",
+    "divisionIdActive" : true,
+    "source" : "source"
+  }, {
+    "schemaActive" : true,
+    "dateLastModified" : "2000-01-23T04:56:07.000+00:00",
+    "schemaId" : "schemaId",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "divisionId" : "divisionId",
+    "divisionIdActive" : true,
+    "source" : "source"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+
+     - returns: RequestBuilder<ExternalEventsConfigurationListing> 
+     */
+    open class func getJourneyExternaleventsConfigurationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<ExternalEventsConfigurationListing> {        
+        let path = "/api/v2/journey/externalevents/configurations"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<ExternalEventsConfigurationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get a schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyExternaleventsSchema(schemaId: String, completion: @escaping ((_ data: JourneyExternalEventsSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyExternaleventsSchemaWithRequestBuilder(schemaId: schemaId)
+        requestBuilder.execute { (response: Response<JourneyExternalEventsSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a schema
+     - GET /api/v2/journey/externalevents/schemas/{schemaId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "jsonSchema" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "version" : 0,
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter schemaId: (path) Schema ID 
+
+     - returns: RequestBuilder<JourneyExternalEventsSchema> 
+     */
+    open class func getJourneyExternaleventsSchemaWithRequestBuilder(schemaId: String) -> RequestBuilder<JourneyExternalEventsSchema> {        
+        var path = "/api/v2/journey/externalevents/schemas/{schemaId}"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneyExternalEventsSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a specific version of a schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter versionId: (path) Schema version 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyExternaleventsSchemaVersion(schemaId: String, versionId: String, completion: @escaping ((_ data: JourneyExternalEventsSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyExternaleventsSchemaVersionWithRequestBuilder(schemaId: schemaId, versionId: versionId)
+        requestBuilder.execute { (response: Response<JourneyExternalEventsSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a specific version of a schema
+     - GET /api/v2/journey/externalevents/schemas/{schemaId}/versions/{versionId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "jsonSchema" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "version" : 0,
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter versionId: (path) Schema version 
+
+     - returns: RequestBuilder<JourneyExternalEventsSchema> 
+     */
+    open class func getJourneyExternaleventsSchemaVersionWithRequestBuilder(schemaId: String, versionId: String) -> RequestBuilder<JourneyExternalEventsSchema> {        
+        var path = "/api/v2/journey/externalevents/schemas/{schemaId}/versions/{versionId}"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let versionIdPreEscape = "\(versionId)"
+        let versionIdPostEscape = versionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{versionId}", with: versionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneyExternalEventsSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get all versions of a External Events schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyExternaleventsSchemaVersions(schemaId: String, completion: @escaping ((_ data: JourneyExternalEventsSchemaListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyExternaleventsSchemaVersionsWithRequestBuilder(schemaId: schemaId)
+        requestBuilder.execute { (response: Response<JourneyExternalEventsSchemaListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get all versions of a External Events schema
+     - GET /api/v2/journey/externalevents/schemas/{schemaId}/versions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 0,
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "jsonSchema" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "version" : 0,
+    "enabled" : true
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "jsonSchema" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "version" : 0,
+    "enabled" : true
+  } ],
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter schemaId: (path) Schema ID 
+
+     - returns: RequestBuilder<JourneyExternalEventsSchemaListing> 
+     */
+    open class func getJourneyExternaleventsSchemaVersionsWithRequestBuilder(schemaId: String) -> RequestBuilder<JourneyExternalEventsSchemaListing> {        
+        var path = "/api/v2/journey/externalevents/schemas/{schemaId}/versions"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneyExternalEventsSchemaListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get a list of schemas.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyExternaleventsSchemas(completion: @escaping ((_ data: JourneyExternalEventsSchemaListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyExternaleventsSchemasWithRequestBuilder()
+        requestBuilder.execute { (response: Response<JourneyExternalEventsSchemaListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of schemas.
+     - GET /api/v2/journey/externalevents/schemas
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 0,
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "jsonSchema" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "version" : 0,
+    "enabled" : true
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "jsonSchema" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "version" : 0,
+    "enabled" : true
+  } ],
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<JourneyExternalEventsSchemaListing> 
+     */
+    open class func getJourneyExternaleventsSchemasWithRequestBuilder() -> RequestBuilder<JourneyExternalEventsSchemaListing> {        
+        let path = "/api/v2/journey/externalevents/schemas"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneyExternalEventsSchemaListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get a core type from which all schemas are built
+     
+     - parameter coreTypeName: (path) Name of core type 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyExternaleventsSchemasCoretype(coreTypeName: String, completion: @escaping ((_ data: Coretype?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyExternaleventsSchemasCoretypeWithRequestBuilder(coreTypeName: coreTypeName)
+        requestBuilder.execute { (response: Response<Coretype>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a core type from which all schemas are built
+     - GET /api/v2/journey/externalevents/schemas/coretypes/{coreTypeName}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schema" : "{}",
+  "current" : true,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "version" : 0,
+  "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+  "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+  "validationFields" : [ "validationFields", "validationFields" ],
+  "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+}, statusCode=200}]
+     
+     - parameter coreTypeName: (path) Name of core type 
+
+     - returns: RequestBuilder<Coretype> 
+     */
+    open class func getJourneyExternaleventsSchemasCoretypeWithRequestBuilder(coreTypeName: String) -> RequestBuilder<Coretype> {        
+        var path = "/api/v2/journey/externalevents/schemas/coretypes/{coreTypeName}"
+        let coreTypeNamePreEscape = "\(coreTypeName)"
+        let coreTypeNamePostEscape = coreTypeNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{coreTypeName}", with: coreTypeNamePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Coretype>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get the list of core types enabled for a specific namespace.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyExternaleventsSchemasCoretypes(completion: @escaping ((_ data: CoretypeListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyExternaleventsSchemasCoretypesWithRequestBuilder()
+        requestBuilder.execute { (response: Response<CoretypeListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the list of core types enabled for a specific namespace.
+     - GET /api/v2/journey/externalevents/schemas/coretypes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 0,
+  "entities" : [ {
+    "schema" : "{}",
+    "current" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "version" : 0,
+    "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+    "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+    "validationFields" : [ "validationFields", "validationFields" ],
+    "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+  }, {
+    "schema" : "{}",
+    "current" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "version" : 0,
+    "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+    "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+    "validationFields" : [ "validationFields", "validationFields" ],
+    "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+  } ],
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<CoretypeListing> 
+     */
+    open class func getJourneyExternaleventsSchemasCoretypesWithRequestBuilder() -> RequestBuilder<CoretypeListing> {        
+        let path = "/api/v2/journey/externalevents/schemas/coretypes"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CoretypeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get quantitative limits on schemas
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyExternaleventsSchemasLimits(completion: @escaping ((_ data: SchemaQuantityLimits?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyExternaleventsSchemasLimitsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<SchemaQuantityLimits>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get quantitative limits on schemas
+     - GET /api/v2/journey/externalevents/schemas/limits
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "minSchemaDescriptionCharacters" : 3,
+  "maxFieldDescriptionCharacters" : 2,
+  "selfUri" : "https://openapi-generator.tech",
+  "minFieldDescriptionCharacters" : 5,
+  "maxFieldTitleCharacters" : 5,
+  "maxNumberOfFieldsPerSchema" : 7,
+  "minFieldTitleCharacters" : 1,
+  "minSchemaNameCharacters" : 7,
+  "minFieldNameCharacters" : 0,
+  "maxNumberOfSchemasPerOrg" : 4,
+  "name" : "name",
+  "id" : "id",
+  "maxFieldNameCharacters" : 6,
+  "maxSchemaDescriptionCharacters" : 2,
+  "maxSchemaNameCharacters" : 9,
+  "maxNumberOfFieldsPerOrg" : 1
+}, statusCode=200}]
+
+     - returns: RequestBuilder<SchemaQuantityLimits> 
+     */
+    open class func getJourneyExternaleventsSchemasLimitsWithRequestBuilder() -> RequestBuilder<SchemaQuantityLimits> {        
+        let path = "/api/v2/journey/externalevents/schemas/limits"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SchemaQuantityLimits>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Retrieve a single outcome.
      
      - parameter outcomeId: (path) ID of the outcome. 
@@ -2121,49 +2865,37 @@ open class JourneyAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "screenviewCount" : 5,
   "shortId" : "shortId",
   "authenticated" : true,
-  "lastPage" : "{}",
-  "durationInSeconds" : 0,
   "searchTerms" : [ "searchTerms", "searchTerms" ],
-  "conversationSubject" : "conversationSubject",
+  "caseReference" : "caseReference",
   "userAgentString" : "userAgentString",
   "eventCount" : 6,
   "type" : "type",
   "lastScreen" : "lastScreen",
   "divisionIds" : [ "divisionIds", "divisionIds" ],
-  "lastConnectedQueue" : "{}",
-  "sdkLibrary" : "{}",
-  "browser" : "{}",
-  "customerId" : "customerId",
   "id" : "id",
-  "customerIdType" : "customerIdType",
   "awayDate" : "2000-01-23T04:56:07.000+00:00",
-  "lastAcdOutcome" : "Unknown",
-  "attributeLists" : {
-    "key" : {
-      "dataType" : "dataType",
-      "values" : [ "values", "values" ]
-    }
-  },
-  "mktCampaign" : "{}",
   "conversation" : "{}",
+  "caseAssociations" : [ {
+    "dateAssociated" : "2000-01-23T04:56:07.000+00:00",
+    "associatedCase" : "{}",
+    "caseReference" : "caseReference",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "dateAssociated" : "2000-01-23T04:56:07.000+00:00",
+    "associatedCase" : "{}",
+    "caseReference" : "caseReference",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
   "ipOrganization" : "ipOrganization",
   "app" : "{}",
-  "externalUrl" : "externalUrl",
   "networkConnectivity" : "{}",
   "endedDate" : "2000-01-23T04:56:07.000+00:00",
-  "selfUri" : "https://openapi-generator.tech",
-  "idleDate" : "2000-01-23T04:56:07.000+00:00",
   "ipAddress" : "ipAddress",
-  "externalId" : "externalId",
   "lastUserDisconnectType" : "Unknown",
-  "externalContact" : "{}",
-  "pageviewCount" : 1,
-  "originatingDirection" : "Unknown",
-  "referrer" : "{}",
-  "lastUserDisposition" : "{}",
   "outcomeAchievements" : [ {
     "achievedDate" : "2000-01-23T04:56:07.000+00:00",
     "outcome" : "{}"
@@ -2171,8 +2903,6 @@ open class JourneyAPI {
     "achievedDate" : "2000-01-23T04:56:07.000+00:00",
     "outcome" : "{}"
   } ],
-  "lastConnectedUser" : "{}",
-  "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "conversationChannels" : [ {
     "messageType" : "Unknown",
     "type" : "Unknown",
@@ -2190,13 +2920,43 @@ open class JourneyAPI {
     "segment" : "{}"
   } ],
   "lastEvent" : "{}",
+  "device" : "{}",
+  "screenviewCount" : 5,
+  "lastPage" : "{}",
+  "durationInSeconds" : 0,
+  "conversationSubject" : "conversationSubject",
+  "caseStatus" : "Unknown",
+  "lastConnectedQueue" : "{}",
+  "sdkLibrary" : "{}",
+  "browser" : "{}",
+  "customerId" : "customerId",
+  "customerIdType" : "customerIdType",
+  "lastAcdOutcome" : "Unknown",
+  "attributeLists" : {
+    "key" : {
+      "dataType" : "dataType",
+      "values" : [ "values", "values" ]
+    }
+  },
+  "mktCampaign" : "{}",
+  "externalUrl" : "externalUrl",
+  "caseEntity" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "idleDate" : "2000-01-23T04:56:07.000+00:00",
+  "externalId" : "externalId",
+  "externalContact" : "{}",
+  "pageviewCount" : 1,
+  "originatingDirection" : "Unknown",
+  "referrer" : "{}",
+  "lastUserDisposition" : "{}",
+  "lastConnectedUser" : "{}",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "attributes" : {
     "key" : {
       "dataType" : "dataType",
       "value" : "value"
     }
   },
-  "device" : "{}",
   "geolocation" : "{}"
 }, statusCode=200}]
      
@@ -4455,6 +5215,74 @@ open class JourneyAPI {
     
     
     /**
+     Update an external events configuration.
+     
+     - parameter configId: (path) The ID of the external event configuration. 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchJourneyExternaleventsConfiguration(configId: String, body: UpdateExternalEventsConfigurationRequest? = nil, completion: @escaping ((_ data: ExternalEventsConfiguration?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchJourneyExternaleventsConfigurationWithRequestBuilder(configId: configId, body: body)
+        requestBuilder.execute { (response: Response<ExternalEventsConfiguration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an external events configuration.
+     - PATCH /api/v2/journey/externalevents/configurations/{configId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schemaActive" : true,
+  "dateLastModified" : "2000-01-23T04:56:07.000+00:00",
+  "schemaId" : "schemaId",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "id" : "id",
+  "divisionId" : "divisionId",
+  "divisionIdActive" : true,
+  "source" : "source"
+}, statusCode=200}]
+     
+     - parameter configId: (path) The ID of the external event configuration. 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<ExternalEventsConfiguration> 
+     */
+    open class func patchJourneyExternaleventsConfigurationWithRequestBuilder(configId: String, body: UpdateExternalEventsConfigurationRequest? = nil) -> RequestBuilder<ExternalEventsConfiguration> {        
+        var path = "/api/v2/journey/externalevents/configurations/{configId}"
+        let configIdPreEscape = "\(configId)"
+        let configIdPostEscape = configIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{configId}", with: configIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExternalEventsConfiguration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Update an outcome.
      
      - parameter outcomeId: (path) ID of the outcome. 
@@ -5548,6 +6376,196 @@ open class JourneyAPI {
 
     
     
+    
+    
+    /**
+     Create external events
+     
+     - parameter configurationId: (path) The ID of the external event configuration. 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postJourneyExternaleventsConfigurationEvents(configurationId: String, body: ExternalEventsRequest? = nil, completion: @escaping ((_ data: ExternalEventsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postJourneyExternaleventsConfigurationEventsWithRequestBuilder(configurationId: configurationId, body: body)
+        requestBuilder.execute { (response: Response<ExternalEventsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create external events
+     - POST /api/v2/journey/externalevents/configurations/{configurationId}/events
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "unprocessedEntities" : [ {
+    "originalRequestIndex" : 0,
+    "isRetryable" : true,
+    "errorMessage" : "errorMessage",
+    "event" : "{}",
+    "statusCode" : 6
+  }, {
+    "originalRequestIndex" : 0,
+    "isRetryable" : true,
+    "errorMessage" : "errorMessage",
+    "event" : "{}",
+    "statusCode" : 6
+  } ]
+}, statusCode=200}]
+     
+     - parameter configurationId: (path) The ID of the external event configuration. 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<ExternalEventsResponse> 
+     */
+    open class func postJourneyExternaleventsConfigurationEventsWithRequestBuilder(configurationId: String, body: ExternalEventsRequest? = nil) -> RequestBuilder<ExternalEventsResponse> {        
+        var path = "/api/v2/journey/externalevents/configurations/{configurationId}/events"
+        let configurationIdPreEscape = "\(configurationId)"
+        let configurationIdPostEscape = configurationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{configurationId}", with: configurationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExternalEventsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create an external events configuration.
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postJourneyExternaleventsConfigurations(body: CreateExternalEventsConfigurationRequest? = nil, completion: @escaping ((_ data: ExternalEventsConfiguration?,_ error: Error?) -> Void)) {
+        let requestBuilder = postJourneyExternaleventsConfigurationsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ExternalEventsConfiguration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create an external events configuration.
+     - POST /api/v2/journey/externalevents/configurations
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schemaActive" : true,
+  "dateLastModified" : "2000-01-23T04:56:07.000+00:00",
+  "schemaId" : "schemaId",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "id" : "id",
+  "divisionId" : "divisionId",
+  "divisionIdActive" : true,
+  "source" : "source"
+}, statusCode=200}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<ExternalEventsConfiguration> 
+     */
+    open class func postJourneyExternaleventsConfigurationsWithRequestBuilder(body: CreateExternalEventsConfigurationRequest? = nil) -> RequestBuilder<ExternalEventsConfiguration> {        
+        let path = "/api/v2/journey/externalevents/configurations"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExternalEventsConfiguration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create a schema
+     
+     - parameter body: (body) Schema create request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postJourneyExternaleventsSchemas(body: JourneyJsonSchemaRequest, completion: @escaping ((_ data: JourneyExternalEventsSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = postJourneyExternaleventsSchemasWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<JourneyExternalEventsSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a schema
+     - POST /api/v2/journey/externalevents/schemas
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "jsonSchema" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "version" : 0,
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter body: (body) Schema create request body 
+
+     - returns: RequestBuilder<JourneyExternalEventsSchema> 
+     */
+    open class func postJourneyExternaleventsSchemasWithRequestBuilder(body: JourneyJsonSchemaRequest) -> RequestBuilder<JourneyExternalEventsSchema> {        
+        let path = "/api/v2/journey/externalevents/schemas"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneyExternalEventsSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Query for flow paths.
      
@@ -6304,6 +7322,71 @@ open class JourneyAPI {
         let requestBuilder: RequestBuilder<EntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update a schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter body: (body) Schema update request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putJourneyExternaleventsSchema(schemaId: String, body: JourneySchemaUpdateRequest, completion: @escaping ((_ data: JourneyExternalEventsSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = putJourneyExternaleventsSchemaWithRequestBuilder(schemaId: schemaId, body: body)
+        requestBuilder.execute { (response: Response<JourneyExternalEventsSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a schema
+     - PUT /api/v2/journey/externalevents/schemas/{schemaId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "jsonSchema" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "version" : 0,
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter body: (body) Schema update request body 
+
+     - returns: RequestBuilder<JourneyExternalEventsSchema> 
+     */
+    open class func putJourneyExternaleventsSchemaWithRequestBuilder(schemaId: String, body: JourneySchemaUpdateRequest) -> RequestBuilder<JourneyExternalEventsSchema> {        
+        var path = "/api/v2/journey/externalevents/schemas/{schemaId}"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneyExternalEventsSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
     

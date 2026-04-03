@@ -55,6 +55,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsSummariesAggregatesQuery**](AnalyticsAPI#postAnalyticsSummariesAggregatesQuery) | Query for summary aggregates |
 | [**postAnalyticsSurveysAggregatesQuery**](AnalyticsAPI#postAnalyticsSurveysAggregatesQuery) | Query for survey aggregates |
 | [**postAnalyticsTaskmanagementAggregatesQuery**](AnalyticsAPI#postAnalyticsTaskmanagementAggregatesQuery) | Query for task management aggregates |
+| [**postAnalyticsTaskmanagementMetricsQuery**](AnalyticsAPI#postAnalyticsTaskmanagementMetricsQuery) | Query for task management observations |
 | [**postAnalyticsTeamsActivityQuery**](AnalyticsAPI#postAnalyticsTeamsActivityQuery) | Query for team activity observations |
 | [**postAnalyticsTranscriptsAggregatesQuery**](AnalyticsAPI#postAnalyticsTranscriptsAggregatesQuery) | Query for transcript aggregates |
 | [**postAnalyticsUsersActivityQuery**](AnalyticsAPI#postAnalyticsUsersActivityQuery) | Query for user activity observations |
@@ -2710,6 +2711,60 @@ AnalyticsAPI.postAnalyticsTaskmanagementAggregatesQuery(body: body) { (response,
 [**TaskManagementAggregateQueryResponse**](TaskManagementAggregateQueryResponse)
 
 
+## postAnalyticsTaskmanagementMetricsQuery
+
+
+
+> [TaskManagementObservationQueryResponse](TaskManagementObservationQueryResponse) postAnalyticsTaskmanagementMetricsQuery(body, after, pageSize)
+
+Query for task management observations
+
+
+
+Wraps POST /api/v2/analytics/taskmanagement/metrics/query  
+
+Requires ALL permissions: 
+
+* analytics:taskManagementObservation:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: TaskManagementObservationQuery = new TaskManagementObservationQuery(...) // query
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned. Used for pagination.
+let pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.
+
+// Code example
+AnalyticsAPI.postAnalyticsTaskmanagementMetricsQuery(body: body, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsTaskmanagementMetricsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**TaskManagementObservationQuery**](TaskManagementObservationQuery)| query | |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. Used for pagination. | [optional] |
+| **pageSize** | **Int**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] |
+
+
+### Return type
+
+[**TaskManagementObservationQueryResponse**](TaskManagementObservationQueryResponse)
+
+
 ## postAnalyticsTeamsActivityQuery
 
 
@@ -3118,4 +3173,4 @@ AnalyticsAPI.putAnalyticsDataretentionSettings(body: body) { (response, error) i
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatformClientV2@191.0.0_
+_PureCloudPlatformClientV2@192.0.0_

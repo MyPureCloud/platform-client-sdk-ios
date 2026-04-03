@@ -297,6 +297,58 @@ open class UsersAPI {
     
     
     
+    /**
+     Delete a custom attributes record.
+     
+     - parameter userId: (path) user ID 
+     - parameter schemaId: (path) schemaId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteUserCustomattribute(userId: String, schemaId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteUserCustomattributeWithRequestBuilder(userId: userId, schemaId: schemaId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a custom attributes record.
+     - DELETE /api/v2/users/{userId}/customattributes/{schemaId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter userId: (path) user ID 
+     - parameter schemaId: (path) schemaId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteUserCustomattributeWithRequestBuilder(userId: String, schemaId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/users/{userId}/customattributes/{schemaId}"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     
     
     /**
@@ -588,6 +640,51 @@ open class UsersAPI {
         let verifierIdPreEscape = "\(verifierId)"
         let verifierIdPostEscape = verifierIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{verifierId}", with: verifierIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Delete a schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteUsersCustomattributesSchema(schemaId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteUsersCustomattributesSchemaWithRequestBuilder(schemaId: schemaId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a schema
+     - DELETE /api/v2/users/customattributes/schemas/{schemaId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter schemaId: (path) Schema ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteUsersCustomattributesSchemaWithRequestBuilder(schemaId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/users/customattributes/schemas/{schemaId}"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
@@ -1734,6 +1831,7 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "maxInboundCalls" : 0,
   "level" : "Agent",
   "labelUtilizations" : {
     "key" : {
@@ -1811,6 +1909,8 @@ open class UsersAPI {
     
     
     
+    
+    
     public enum State_getUser: String { 
         case active = "active"
         case deleted = "deleted"
@@ -1823,11 +1923,12 @@ open class UsersAPI {
      - parameter userId: (path) User ID 
      - parameter expand: (query) Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)
      - parameter integrationPresenceSource: (query) Gets an integration presence for a user instead of their default. (optional)
+     - parameter userCustomAttributeSchemaIds: (query) Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)
      - parameter state: (query) Search for a user with this state (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUser(userId: String, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUser? = nil, state: State_getUser? = nil, completion: @escaping ((_ data: User?,_ error: Error?) -> Void)) {
-        let requestBuilder = getUserWithRequestBuilder(userId: userId, expand: expand, integrationPresenceSource: integrationPresenceSource, state: state)
+    open class func getUser(userId: String, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUser? = nil, userCustomAttributeSchemaIds: [String]? = nil, state: State_getUser? = nil, completion: @escaping ((_ data: User?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUserWithRequestBuilder(userId: userId, expand: expand, integrationPresenceSource: integrationPresenceSource, userCustomAttributeSchemaIds: userCustomAttributeSchemaIds, state: state)
         requestBuilder.execute { (response: Response<User>?, error) -> Void in
             do {
                 if let e = error {
@@ -2149,11 +2250,12 @@ open class UsersAPI {
      - parameter userId: (path) User ID 
      - parameter expand: (query) Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)
      - parameter integrationPresenceSource: (query) Gets an integration presence for a user instead of their default. (optional)
+     - parameter userCustomAttributeSchemaIds: (query) Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)
      - parameter state: (query) Search for a user with this state (optional)
 
      - returns: RequestBuilder<User> 
      */
-    open class func getUserWithRequestBuilder(userId: String, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUser? = nil, state: State_getUser? = nil) -> RequestBuilder<User> {        
+    open class func getUserWithRequestBuilder(userId: String, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUser? = nil, userCustomAttributeSchemaIds: [String]? = nil, state: State_getUser? = nil) -> RequestBuilder<User> {        
         var path = "/api/v2/users/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2165,6 +2267,7 @@ open class UsersAPI {
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand, 
             "integrationPresenceSource": integrationPresenceSource?.rawValue, 
+            "userCustomAttributeSchemaIds": userCustomAttributeSchemaIds, 
             "state": state?.rawValue
         ])
 
@@ -4398,6 +4501,135 @@ open class UsersAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CallForwarding>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get custom attributes by schema id
+     
+     - parameter userId: (path) user ID 
+     - parameter schemaId: (path) schemaId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUserCustomattribute(userId: String, schemaId: String, completion: @escaping ((_ data: UserCustomAttributes?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUserCustomattributeWithRequestBuilder(userId: userId, schemaId: schemaId)
+        requestBuilder.execute { (response: Response<UserCustomAttributes>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get custom attributes by schema id
+     - GET /api/v2/users/{userId}/customattributes/{schemaId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schema" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "attributes" : {
+    "key" : "{}"
+  },
+  "id" : "id",
+  "userId" : "userId"
+}, statusCode=200}]
+     
+     - parameter userId: (path) user ID 
+     - parameter schemaId: (path) schemaId 
+
+     - returns: RequestBuilder<UserCustomAttributes> 
+     */
+    open class func getUserCustomattributeWithRequestBuilder(userId: String, schemaId: String) -> RequestBuilder<UserCustomAttributes> {        
+        var path = "/api/v2/users/{userId}/customattributes/{schemaId}"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserCustomAttributes>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get multiple custom attributes records by schema ids
+     
+     - parameter userId: (path) user ID 
+     - parameter schemaIds: (query)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUserCustomattributesBulk(userId: String, schemaIds: [String], completion: @escaping ((_ data: [JSON]?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUserCustomattributesBulkWithRequestBuilder(userId: userId, schemaIds: schemaIds)
+        requestBuilder.execute { (response: Response<[JSON]>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get multiple custom attributes records by schema ids
+     - GET /api/v2/users/{userId}/customattributes/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example="{}", statusCode=200}]
+     
+     - parameter userId: (path) user ID 
+     - parameter schemaIds: (query)  
+
+     - returns: RequestBuilder<[JSON]> 
+     */
+    open class func getUserCustomattributesBulkWithRequestBuilder(userId: String, schemaIds: [String]) -> RequestBuilder<[JSON]> {        
+        var path = "/api/v2/users/{userId}/customattributes/bulk"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "schemaIds": schemaIds
+        ])
+
+        let requestBuilder: RequestBuilder<[JSON]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -7844,6 +8076,8 @@ open class UsersAPI {
     
     
     
+    
+    
     public enum State_getUsers: String { 
         case active = "active"
         case inactive = "inactive"
@@ -7862,11 +8096,12 @@ open class UsersAPI {
      - parameter sortOrder: (query) Ascending or descending sort order (optional)
      - parameter expand: (query) Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)
      - parameter integrationPresenceSource: (query) Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)
+     - parameter userCustomAttributeSchemaIds: (query) Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)
      - parameter state: (query) Only list users of this state (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsers(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, jabberId: [String]? = nil, sortOrder: SortOrder_getUsers? = nil, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUsers? = nil, state: State_getUsers? = nil, completion: @escaping ((_ data: UserEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getUsersWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId: jabberId, sortOrder: sortOrder, expand: expand, integrationPresenceSource: integrationPresenceSource, state: state)
+    open class func getUsers(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, jabberId: [String]? = nil, sortOrder: SortOrder_getUsers? = nil, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUsers? = nil, userCustomAttributeSchemaIds: [String]? = nil, state: State_getUsers? = nil, completion: @escaping ((_ data: UserEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId: jabberId, sortOrder: sortOrder, expand: expand, integrationPresenceSource: integrationPresenceSource, userCustomAttributeSchemaIds: userCustomAttributeSchemaIds, state: state)
         requestBuilder.execute { (response: Response<UserEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -8497,11 +8732,12 @@ open class UsersAPI {
      - parameter sortOrder: (query) Ascending or descending sort order (optional)
      - parameter expand: (query) Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)
      - parameter integrationPresenceSource: (query) Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)
+     - parameter userCustomAttributeSchemaIds: (query) Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)
      - parameter state: (query) Only list users of this state (optional)
 
      - returns: RequestBuilder<UserEntityListing> 
      */
-    open class func getUsersWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, jabberId: [String]? = nil, sortOrder: SortOrder_getUsers? = nil, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUsers? = nil, state: State_getUsers? = nil) -> RequestBuilder<UserEntityListing> {        
+    open class func getUsersWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, jabberId: [String]? = nil, sortOrder: SortOrder_getUsers? = nil, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUsers? = nil, userCustomAttributeSchemaIds: [String]? = nil, state: State_getUsers? = nil) -> RequestBuilder<UserEntityListing> {        
         let path = "/api/v2/users"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -8515,6 +8751,7 @@ open class UsersAPI {
             "sortOrder": sortOrder?.rawValue, 
             "expand": expand, 
             "integrationPresenceSource": integrationPresenceSource?.rawValue, 
+            "userCustomAttributeSchemaIds": userCustomAttributeSchemaIds, 
             "state": state?.rawValue
         ])
 
@@ -8623,6 +8860,485 @@ open class UsersAPI {
         ])
 
         let requestBuilder: RequestBuilder<ChatItemCursorListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get a schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersCustomattributesSchema(schemaId: String, completion: @escaping ((_ data: DataSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersCustomattributesSchemaWithRequestBuilder(schemaId: schemaId)
+        requestBuilder.execute { (response: Response<DataSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a schema
+     - GET /api/v2/users/customattributes/schemas/{schemaId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "jsonSchema" : "{\n    \"appliesTo\": [\n        \"CONTACT\"\n    ],\n    \"jsonSchema\": {\n        \"title\": \"Example schema\",\n        \"description\": \"Uses all of the core types for illustrative purposes\",\n        \"properties\": {\n            \"field1_text\": {\n                \"title\": \"Field 1\",\n                \"description\": \"field1\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/text\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 39\n            },\n            \"field2_longtext\": {\n                \"title\": \"Field 2\",\n                \"description\": \"field2\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/longtext\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 1000\n            },\n            \"field3_enum\": {\n                \"title\": \"Field 3\",\n                \"description\": \"Field 3\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/enum\" } ],\n                \"enum\": [\n                    \"enum1\",\n                    \"enum2\"\n                ]\n            },\n            \"field4_identifier\": {\n                \"title\": \"field4\",\n                \"description\": \"Field 4\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/identifier\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 37\n            },\n            \"field5_integer\": {\n                \"title\": \"field5\",\n                \"description\": \"Field 5\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/integer\" } ],\n                \"minimum\": 1,\n                \"maximum\": 24\n            },\n            \"field6_number\": {\n                \"title\": \"field6\",\n                \"description\": \"Field 6\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/number\" } ],\n                \"minimum\": 2.7,\n                \"maximum\": 31.3\n            },\n            \"field7_date\": {\n                \"title\": \"field7\",\n                \"description\": \"Field 7\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/date\"}]\n            },\n            \"field8_datetime\": {\n                \"title\": \"field8\",\n                \"description\": \"Field 8\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/datetime\"}]\n            },\n            \"field9_checkbox\": {\n                \"title\": \"field9\",\n                \"description\": \"Field 9\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/checkbox\"}]\n            },\n            \"field10_tag\": {\n                \"title\": \"field10\",\n                \"description\": \"Field 10\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/tag\" } ],\n                \"items\": {\n                    \"minLength\": 1,\n                    \"maxLength\": 20\n                },\n                \"minItems\": 0,\n                \"maxItems\": 10,\n                \"uniqueItems\": true\n            }\n        },\n        \"$schema\": \"http://json-schema.org/draft-04/schema#\"\n    }\n}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "appliesTo" : [ "CONTACT", "CONTACT" ],
+  "id" : "id",
+  "version" : 0,
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter schemaId: (path) Schema ID 
+
+     - returns: RequestBuilder<DataSchema> 
+     */
+    open class func getUsersCustomattributesSchemaWithRequestBuilder(schemaId: String) -> RequestBuilder<DataSchema> {        
+        var path = "/api/v2/users/customattributes/schemas/{schemaId}"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a specific version of a schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter versionId: (path) Schema version 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersCustomattributesSchemaVersion(schemaId: String, versionId: String, completion: @escaping ((_ data: DataSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersCustomattributesSchemaVersionWithRequestBuilder(schemaId: schemaId, versionId: versionId)
+        requestBuilder.execute { (response: Response<DataSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a specific version of a schema
+     - GET /api/v2/users/customattributes/schemas/{schemaId}/versions/{versionId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "jsonSchema" : "{\n    \"appliesTo\": [\n        \"CONTACT\"\n    ],\n    \"jsonSchema\": {\n        \"title\": \"Example schema\",\n        \"description\": \"Uses all of the core types for illustrative purposes\",\n        \"properties\": {\n            \"field1_text\": {\n                \"title\": \"Field 1\",\n                \"description\": \"field1\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/text\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 39\n            },\n            \"field2_longtext\": {\n                \"title\": \"Field 2\",\n                \"description\": \"field2\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/longtext\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 1000\n            },\n            \"field3_enum\": {\n                \"title\": \"Field 3\",\n                \"description\": \"Field 3\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/enum\" } ],\n                \"enum\": [\n                    \"enum1\",\n                    \"enum2\"\n                ]\n            },\n            \"field4_identifier\": {\n                \"title\": \"field4\",\n                \"description\": \"Field 4\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/identifier\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 37\n            },\n            \"field5_integer\": {\n                \"title\": \"field5\",\n                \"description\": \"Field 5\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/integer\" } ],\n                \"minimum\": 1,\n                \"maximum\": 24\n            },\n            \"field6_number\": {\n                \"title\": \"field6\",\n                \"description\": \"Field 6\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/number\" } ],\n                \"minimum\": 2.7,\n                \"maximum\": 31.3\n            },\n            \"field7_date\": {\n                \"title\": \"field7\",\n                \"description\": \"Field 7\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/date\"}]\n            },\n            \"field8_datetime\": {\n                \"title\": \"field8\",\n                \"description\": \"Field 8\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/datetime\"}]\n            },\n            \"field9_checkbox\": {\n                \"title\": \"field9\",\n                \"description\": \"Field 9\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/checkbox\"}]\n            },\n            \"field10_tag\": {\n                \"title\": \"field10\",\n                \"description\": \"Field 10\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/tag\" } ],\n                \"items\": {\n                    \"minLength\": 1,\n                    \"maxLength\": 20\n                },\n                \"minItems\": 0,\n                \"maxItems\": 10,\n                \"uniqueItems\": true\n            }\n        },\n        \"$schema\": \"http://json-schema.org/draft-04/schema#\"\n    }\n}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "appliesTo" : [ "CONTACT", "CONTACT" ],
+  "id" : "id",
+  "version" : 0,
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter versionId: (path) Schema version 
+
+     - returns: RequestBuilder<DataSchema> 
+     */
+    open class func getUsersCustomattributesSchemaVersionWithRequestBuilder(schemaId: String, versionId: String) -> RequestBuilder<DataSchema> {        
+        var path = "/api/v2/users/customattributes/schemas/{schemaId}/versions/{versionId}"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let versionIdPreEscape = "\(versionId)"
+        let versionIdPostEscape = versionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{versionId}", with: versionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get all versions of a user schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersCustomattributesSchemaVersions(schemaId: String, completion: @escaping ((_ data: DataSchemaListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersCustomattributesSchemaVersionsWithRequestBuilder(schemaId: schemaId)
+        requestBuilder.execute { (response: Response<DataSchemaListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get all versions of a user schema
+     - GET /api/v2/users/customattributes/schemas/{schemaId}/versions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 0,
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "jsonSchema" : "{\n    \"appliesTo\": [\n        \"CONTACT\"\n    ],\n    \"jsonSchema\": {\n        \"title\": \"Example schema\",\n        \"description\": \"Uses all of the core types for illustrative purposes\",\n        \"properties\": {\n            \"field1_text\": {\n                \"title\": \"Field 1\",\n                \"description\": \"field1\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/text\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 39\n            },\n            \"field2_longtext\": {\n                \"title\": \"Field 2\",\n                \"description\": \"field2\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/longtext\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 1000\n            },\n            \"field3_enum\": {\n                \"title\": \"Field 3\",\n                \"description\": \"Field 3\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/enum\" } ],\n                \"enum\": [\n                    \"enum1\",\n                    \"enum2\"\n                ]\n            },\n            \"field4_identifier\": {\n                \"title\": \"field4\",\n                \"description\": \"Field 4\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/identifier\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 37\n            },\n            \"field5_integer\": {\n                \"title\": \"field5\",\n                \"description\": \"Field 5\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/integer\" } ],\n                \"minimum\": 1,\n                \"maximum\": 24\n            },\n            \"field6_number\": {\n                \"title\": \"field6\",\n                \"description\": \"Field 6\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/number\" } ],\n                \"minimum\": 2.7,\n                \"maximum\": 31.3\n            },\n            \"field7_date\": {\n                \"title\": \"field7\",\n                \"description\": \"Field 7\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/date\"}]\n            },\n            \"field8_datetime\": {\n                \"title\": \"field8\",\n                \"description\": \"Field 8\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/datetime\"}]\n            },\n            \"field9_checkbox\": {\n                \"title\": \"field9\",\n                \"description\": \"Field 9\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/checkbox\"}]\n            },\n            \"field10_tag\": {\n                \"title\": \"field10\",\n                \"description\": \"Field 10\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/tag\" } ],\n                \"items\": {\n                    \"minLength\": 1,\n                    \"maxLength\": 20\n                },\n                \"minItems\": 0,\n                \"maxItems\": 10,\n                \"uniqueItems\": true\n            }\n        },\n        \"$schema\": \"http://json-schema.org/draft-04/schema#\"\n    }\n}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "appliesTo" : [ "CONTACT", "CONTACT" ],
+    "id" : "id",
+    "version" : 0,
+    "enabled" : true
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "jsonSchema" : "{\n    \"appliesTo\": [\n        \"CONTACT\"\n    ],\n    \"jsonSchema\": {\n        \"title\": \"Example schema\",\n        \"description\": \"Uses all of the core types for illustrative purposes\",\n        \"properties\": {\n            \"field1_text\": {\n                \"title\": \"Field 1\",\n                \"description\": \"field1\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/text\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 39\n            },\n            \"field2_longtext\": {\n                \"title\": \"Field 2\",\n                \"description\": \"field2\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/longtext\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 1000\n            },\n            \"field3_enum\": {\n                \"title\": \"Field 3\",\n                \"description\": \"Field 3\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/enum\" } ],\n                \"enum\": [\n                    \"enum1\",\n                    \"enum2\"\n                ]\n            },\n            \"field4_identifier\": {\n                \"title\": \"field4\",\n                \"description\": \"Field 4\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/identifier\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 37\n            },\n            \"field5_integer\": {\n                \"title\": \"field5\",\n                \"description\": \"Field 5\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/integer\" } ],\n                \"minimum\": 1,\n                \"maximum\": 24\n            },\n            \"field6_number\": {\n                \"title\": \"field6\",\n                \"description\": \"Field 6\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/number\" } ],\n                \"minimum\": 2.7,\n                \"maximum\": 31.3\n            },\n            \"field7_date\": {\n                \"title\": \"field7\",\n                \"description\": \"Field 7\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/date\"}]\n            },\n            \"field8_datetime\": {\n                \"title\": \"field8\",\n                \"description\": \"Field 8\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/datetime\"}]\n            },\n            \"field9_checkbox\": {\n                \"title\": \"field9\",\n                \"description\": \"Field 9\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/checkbox\"}]\n            },\n            \"field10_tag\": {\n                \"title\": \"field10\",\n                \"description\": \"Field 10\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/tag\" } ],\n                \"items\": {\n                    \"minLength\": 1,\n                    \"maxLength\": 20\n                },\n                \"minItems\": 0,\n                \"maxItems\": 10,\n                \"uniqueItems\": true\n            }\n        },\n        \"$schema\": \"http://json-schema.org/draft-04/schema#\"\n    }\n}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "appliesTo" : [ "CONTACT", "CONTACT" ],
+    "id" : "id",
+    "version" : 0,
+    "enabled" : true
+  } ],
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter schemaId: (path) Schema ID 
+
+     - returns: RequestBuilder<DataSchemaListing> 
+     */
+    open class func getUsersCustomattributesSchemaVersionsWithRequestBuilder(schemaId: String) -> RequestBuilder<DataSchemaListing> {        
+        var path = "/api/v2/users/customattributes/schemas/{schemaId}/versions"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchemaListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get a list of schemas.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersCustomattributesSchemas(completion: @escaping ((_ data: DataSchemaListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersCustomattributesSchemasWithRequestBuilder()
+        requestBuilder.execute { (response: Response<DataSchemaListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of schemas.
+     - GET /api/v2/users/customattributes/schemas
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 0,
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "jsonSchema" : "{\n    \"appliesTo\": [\n        \"CONTACT\"\n    ],\n    \"jsonSchema\": {\n        \"title\": \"Example schema\",\n        \"description\": \"Uses all of the core types for illustrative purposes\",\n        \"properties\": {\n            \"field1_text\": {\n                \"title\": \"Field 1\",\n                \"description\": \"field1\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/text\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 39\n            },\n            \"field2_longtext\": {\n                \"title\": \"Field 2\",\n                \"description\": \"field2\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/longtext\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 1000\n            },\n            \"field3_enum\": {\n                \"title\": \"Field 3\",\n                \"description\": \"Field 3\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/enum\" } ],\n                \"enum\": [\n                    \"enum1\",\n                    \"enum2\"\n                ]\n            },\n            \"field4_identifier\": {\n                \"title\": \"field4\",\n                \"description\": \"Field 4\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/identifier\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 37\n            },\n            \"field5_integer\": {\n                \"title\": \"field5\",\n                \"description\": \"Field 5\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/integer\" } ],\n                \"minimum\": 1,\n                \"maximum\": 24\n            },\n            \"field6_number\": {\n                \"title\": \"field6\",\n                \"description\": \"Field 6\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/number\" } ],\n                \"minimum\": 2.7,\n                \"maximum\": 31.3\n            },\n            \"field7_date\": {\n                \"title\": \"field7\",\n                \"description\": \"Field 7\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/date\"}]\n            },\n            \"field8_datetime\": {\n                \"title\": \"field8\",\n                \"description\": \"Field 8\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/datetime\"}]\n            },\n            \"field9_checkbox\": {\n                \"title\": \"field9\",\n                \"description\": \"Field 9\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/checkbox\"}]\n            },\n            \"field10_tag\": {\n                \"title\": \"field10\",\n                \"description\": \"Field 10\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/tag\" } ],\n                \"items\": {\n                    \"minLength\": 1,\n                    \"maxLength\": 20\n                },\n                \"minItems\": 0,\n                \"maxItems\": 10,\n                \"uniqueItems\": true\n            }\n        },\n        \"$schema\": \"http://json-schema.org/draft-04/schema#\"\n    }\n}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "appliesTo" : [ "CONTACT", "CONTACT" ],
+    "id" : "id",
+    "version" : 0,
+    "enabled" : true
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "jsonSchema" : "{\n    \"appliesTo\": [\n        \"CONTACT\"\n    ],\n    \"jsonSchema\": {\n        \"title\": \"Example schema\",\n        \"description\": \"Uses all of the core types for illustrative purposes\",\n        \"properties\": {\n            \"field1_text\": {\n                \"title\": \"Field 1\",\n                \"description\": \"field1\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/text\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 39\n            },\n            \"field2_longtext\": {\n                \"title\": \"Field 2\",\n                \"description\": \"field2\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/longtext\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 1000\n            },\n            \"field3_enum\": {\n                \"title\": \"Field 3\",\n                \"description\": \"Field 3\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/enum\" } ],\n                \"enum\": [\n                    \"enum1\",\n                    \"enum2\"\n                ]\n            },\n            \"field4_identifier\": {\n                \"title\": \"field4\",\n                \"description\": \"Field 4\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/identifier\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 37\n            },\n            \"field5_integer\": {\n                \"title\": \"field5\",\n                \"description\": \"Field 5\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/integer\" } ],\n                \"minimum\": 1,\n                \"maximum\": 24\n            },\n            \"field6_number\": {\n                \"title\": \"field6\",\n                \"description\": \"Field 6\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/number\" } ],\n                \"minimum\": 2.7,\n                \"maximum\": 31.3\n            },\n            \"field7_date\": {\n                \"title\": \"field7\",\n                \"description\": \"Field 7\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/date\"}]\n            },\n            \"field8_datetime\": {\n                \"title\": \"field8\",\n                \"description\": \"Field 8\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/datetime\"}]\n            },\n            \"field9_checkbox\": {\n                \"title\": \"field9\",\n                \"description\": \"Field 9\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/checkbox\"}]\n            },\n            \"field10_tag\": {\n                \"title\": \"field10\",\n                \"description\": \"Field 10\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/tag\" } ],\n                \"items\": {\n                    \"minLength\": 1,\n                    \"maxLength\": 20\n                },\n                \"minItems\": 0,\n                \"maxItems\": 10,\n                \"uniqueItems\": true\n            }\n        },\n        \"$schema\": \"http://json-schema.org/draft-04/schema#\"\n    }\n}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "appliesTo" : [ "CONTACT", "CONTACT" ],
+    "id" : "id",
+    "version" : 0,
+    "enabled" : true
+  } ],
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<DataSchemaListing> 
+     */
+    open class func getUsersCustomattributesSchemasWithRequestBuilder() -> RequestBuilder<DataSchemaListing> {        
+        let path = "/api/v2/users/customattributes/schemas"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchemaListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get the core types from which all schemas are built.
+     
+     - parameter coreTypeName: (path) Name of the core type 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersCustomattributesSchemasCoretype(coreTypeName: String, completion: @escaping ((_ data: Coretype?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersCustomattributesSchemasCoretypeWithRequestBuilder(coreTypeName: coreTypeName)
+        requestBuilder.execute { (response: Response<Coretype>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the core types from which all schemas are built.
+     - GET /api/v2/users/customattributes/schemas/coretypes/{coreTypeName}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schema" : "{}",
+  "current" : true,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "version" : 0,
+  "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+  "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+  "validationFields" : [ "validationFields", "validationFields" ],
+  "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+}, statusCode=200}]
+     
+     - parameter coreTypeName: (path) Name of the core type 
+
+     - returns: RequestBuilder<Coretype> 
+     */
+    open class func getUsersCustomattributesSchemasCoretypeWithRequestBuilder(coreTypeName: String) -> RequestBuilder<Coretype> {        
+        var path = "/api/v2/users/customattributes/schemas/coretypes/{coreTypeName}"
+        let coreTypeNamePreEscape = "\(coreTypeName)"
+        let coreTypeNamePostEscape = coreTypeNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{coreTypeName}", with: coreTypeNamePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Coretype>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get the list of core types enabled for a specific namespace.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersCustomattributesSchemasCoretypes(completion: @escaping ((_ data: CoretypeListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersCustomattributesSchemasCoretypesWithRequestBuilder()
+        requestBuilder.execute { (response: Response<CoretypeListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the list of core types enabled for a specific namespace.
+     - GET /api/v2/users/customattributes/schemas/coretypes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 0,
+  "entities" : [ {
+    "schema" : "{}",
+    "current" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "version" : 0,
+    "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+    "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+    "validationFields" : [ "validationFields", "validationFields" ],
+    "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+  }, {
+    "schema" : "{}",
+    "current" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "version" : 0,
+    "itemValidationFields" : [ "itemValidationFields", "itemValidationFields" ],
+    "itemValidationLimits" : "\"validationLimits\": {\n     \"minLength\": {\"min\": 1, \"max\": 100},\n     \"maxLength\": {\"min\": 1, \"max\": 100}\n}",
+    "validationFields" : [ "validationFields", "validationFields" ],
+    "validationLimits" : "\"validationLimits\": {\n\"minLength\": {\"min\": 0, \"max\": 100},\n\"maxLength\": {\"min\": 1, \"max\": 100}\n}"
+  } ],
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<CoretypeListing> 
+     */
+    open class func getUsersCustomattributesSchemasCoretypesWithRequestBuilder() -> RequestBuilder<CoretypeListing> {        
+        let path = "/api/v2/users/customattributes/schemas/coretypes"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CoretypeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get quantitative limits on schemas
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersCustomattributesSchemasLimits(completion: @escaping ((_ data: SchemaQuantityLimits?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersCustomattributesSchemasLimitsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<SchemaQuantityLimits>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get quantitative limits on schemas
+     - GET /api/v2/users/customattributes/schemas/limits
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "minSchemaDescriptionCharacters" : 3,
+  "maxFieldDescriptionCharacters" : 2,
+  "selfUri" : "https://openapi-generator.tech",
+  "minFieldDescriptionCharacters" : 5,
+  "maxFieldTitleCharacters" : 5,
+  "maxNumberOfFieldsPerSchema" : 7,
+  "minFieldTitleCharacters" : 1,
+  "minSchemaNameCharacters" : 7,
+  "minFieldNameCharacters" : 0,
+  "maxNumberOfSchemasPerOrg" : 4,
+  "name" : "name",
+  "id" : "id",
+  "maxFieldNameCharacters" : 6,
+  "maxSchemaDescriptionCharacters" : 2,
+  "maxSchemaNameCharacters" : 9,
+  "maxNumberOfFieldsPerOrg" : 1
+}, statusCode=200}]
+
+     - returns: RequestBuilder<SchemaQuantityLimits> 
+     */
+    open class func getUsersCustomattributesSchemasLimitsWithRequestBuilder() -> RequestBuilder<SchemaQuantityLimits> {        
+        let path = "/api/v2/users/customattributes/schemas/limits"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SchemaQuantityLimits>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -9579,15 +10295,18 @@ open class UsersAPI {
     }
     
     
+    
+    
     /**
      Get current user details.
      
      - parameter expand: (query) Which fields, if any, to expand. (optional)
      - parameter integrationPresenceSource: (query) Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)
+     - parameter userCustomAttributeSchemaIds: (query) Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsersMe(expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUsersMe? = nil, completion: @escaping ((_ data: UserMe?,_ error: Error?) -> Void)) {
-        let requestBuilder = getUsersMeWithRequestBuilder(expand: expand, integrationPresenceSource: integrationPresenceSource)
+    open class func getUsersMe(expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUsersMe? = nil, userCustomAttributeSchemaIds: [String]? = nil, completion: @escaping ((_ data: UserMe?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersMeWithRequestBuilder(expand: expand, integrationPresenceSource: integrationPresenceSource, userCustomAttributeSchemaIds: userCustomAttributeSchemaIds)
         requestBuilder.execute { (response: Response<UserMe>?, error) -> Void in
             do {
                 if let e = error {
@@ -16747,10 +17466,11 @@ open class UsersAPI {
      
      - parameter expand: (query) Which fields, if any, to expand. (optional)
      - parameter integrationPresenceSource: (query) Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)
+     - parameter userCustomAttributeSchemaIds: (query) Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)
 
      - returns: RequestBuilder<UserMe> 
      */
-    open class func getUsersMeWithRequestBuilder(expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUsersMe? = nil) -> RequestBuilder<UserMe> {        
+    open class func getUsersMeWithRequestBuilder(expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUsersMe? = nil, userCustomAttributeSchemaIds: [String]? = nil) -> RequestBuilder<UserMe> {        
         let path = "/api/v2/users/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -16758,7 +17478,8 @@ open class UsersAPI {
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand, 
-            "integrationPresenceSource": integrationPresenceSource?.rawValue
+            "integrationPresenceSource": integrationPresenceSource?.rawValue, 
+            "userCustomAttributeSchemaIds": userCustomAttributeSchemaIds
         ])
 
         let requestBuilder: RequestBuilder<UserMe>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -18157,6 +18878,138 @@ open class UsersAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CallForwarding>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update a single custom attributes record by amending the data with only the provided fields.
+     
+     - parameter userId: (path) user ID 
+     - parameter userCustomAttributes: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchUserCustomattributes(userId: String, userCustomAttributes: UserCustomAttributesUpdateRequest, completion: @escaping ((_ data: UserCustomAttributes?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchUserCustomattributesWithRequestBuilder(userId: userId, userCustomAttributes: userCustomAttributes)
+        requestBuilder.execute { (response: Response<UserCustomAttributes>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a single custom attributes record by amending the data with only the provided fields.
+     - PATCH /api/v2/users/{userId}/customattributes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schema" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "attributes" : {
+    "key" : "{}"
+  },
+  "id" : "id",
+  "userId" : "userId"
+}, statusCode=200}]
+     
+     - parameter userId: (path) user ID 
+     - parameter userCustomAttributes: (body)  
+
+     - returns: RequestBuilder<UserCustomAttributes> 
+     */
+    open class func patchUserCustomattributesWithRequestBuilder(userId: String, userCustomAttributes: UserCustomAttributesUpdateRequest) -> RequestBuilder<UserCustomAttributes> {        
+        var path = "/api/v2/users/{userId}/customattributes"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: userCustomAttributes)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserCustomAttributes>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update multiple custom attributes records by amending the data with only the provided fields.
+     
+     - parameter userId: (path) user ID 
+     - parameter userCustomAttributesList: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchUserCustomattributesBulk(userId: String, userCustomAttributesList: [UserCustomAttributesUpdateRequest], completion: @escaping ((_ data: UserCustomAttributes?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchUserCustomattributesBulkWithRequestBuilder(userId: userId, userCustomAttributesList: userCustomAttributesList)
+        requestBuilder.execute { (response: Response<UserCustomAttributes>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update multiple custom attributes records by amending the data with only the provided fields.
+     - PATCH /api/v2/users/{userId}/customattributes/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schema" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "attributes" : {
+    "key" : "{}"
+  },
+  "id" : "id",
+  "userId" : "userId"
+}, statusCode=200}]
+     
+     - parameter userId: (path) user ID 
+     - parameter userCustomAttributesList: (body)  
+
+     - returns: RequestBuilder<UserCustomAttributes> 
+     */
+    open class func patchUserCustomattributesBulkWithRequestBuilder(userId: String, userCustomAttributesList: [UserCustomAttributesUpdateRequest]) -> RequestBuilder<UserCustomAttributes> {        
+        var path = "/api/v2/users/{userId}/customattributes/bulk"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: userCustomAttributesList)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserCustomAttributes>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -21583,6 +22436,66 @@ open class UsersAPI {
     
     
     /**
+     Create a schema
+     
+     - parameter body: (body) Schema 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsersCustomattributesSchemas(body: DataSchema, completion: @escaping ((_ data: DataSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = postUsersCustomattributesSchemasWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<DataSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a schema
+     - POST /api/v2/users/customattributes/schemas
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "jsonSchema" : "{\n    \"appliesTo\": [\n        \"CONTACT\"\n    ],\n    \"jsonSchema\": {\n        \"title\": \"Example schema\",\n        \"description\": \"Uses all of the core types for illustrative purposes\",\n        \"properties\": {\n            \"field1_text\": {\n                \"title\": \"Field 1\",\n                \"description\": \"field1\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/text\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 39\n            },\n            \"field2_longtext\": {\n                \"title\": \"Field 2\",\n                \"description\": \"field2\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/longtext\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 1000\n            },\n            \"field3_enum\": {\n                \"title\": \"Field 3\",\n                \"description\": \"Field 3\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/enum\" } ],\n                \"enum\": [\n                    \"enum1\",\n                    \"enum2\"\n                ]\n            },\n            \"field4_identifier\": {\n                \"title\": \"field4\",\n                \"description\": \"Field 4\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/identifier\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 37\n            },\n            \"field5_integer\": {\n                \"title\": \"field5\",\n                \"description\": \"Field 5\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/integer\" } ],\n                \"minimum\": 1,\n                \"maximum\": 24\n            },\n            \"field6_number\": {\n                \"title\": \"field6\",\n                \"description\": \"Field 6\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/number\" } ],\n                \"minimum\": 2.7,\n                \"maximum\": 31.3\n            },\n            \"field7_date\": {\n                \"title\": \"field7\",\n                \"description\": \"Field 7\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/date\"}]\n            },\n            \"field8_datetime\": {\n                \"title\": \"field8\",\n                \"description\": \"Field 8\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/datetime\"}]\n            },\n            \"field9_checkbox\": {\n                \"title\": \"field9\",\n                \"description\": \"Field 9\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/checkbox\"}]\n            },\n            \"field10_tag\": {\n                \"title\": \"field10\",\n                \"description\": \"Field 10\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/tag\" } ],\n                \"items\": {\n                    \"minLength\": 1,\n                    \"maxLength\": 20\n                },\n                \"minItems\": 0,\n                \"maxItems\": 10,\n                \"uniqueItems\": true\n            }\n        },\n        \"$schema\": \"http://json-schema.org/draft-04/schema#\"\n    }\n}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "appliesTo" : [ "CONTACT", "CONTACT" ],
+  "id" : "id",
+  "version" : 0,
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter body: (body) Schema 
+
+     - returns: RequestBuilder<DataSchema> 
+     */
+    open class func postUsersCustomattributesSchemasWithRequestBuilder(body: DataSchema) -> RequestBuilder<DataSchema> {        
+        let path = "/api/v2/users/customattributes/schemas"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Retrieve aggregated development activity data
      
      - parameter body: (body) Aggregate Request 
@@ -23172,6 +24085,7 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "maxInboundCalls" : 0,
   "level" : "Agent",
   "labelUtilizations" : {
     "key" : {
@@ -23582,6 +24496,72 @@ open class UsersAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CallForwarding>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create or update a single custom attributes record. Updating replaces all data with the provided fields.
+     
+     - parameter userId: (path) user ID 
+     - parameter userCustomAttributes: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putUserCustomattributes(userId: String, userCustomAttributes: UserCustomAttributesUpdateRequest, completion: @escaping ((_ data: UserCustomAttributes?,_ error: Error?) -> Void)) {
+        let requestBuilder = putUserCustomattributesWithRequestBuilder(userId: userId, userCustomAttributes: userCustomAttributes)
+        requestBuilder.execute { (response: Response<UserCustomAttributes>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create or update a single custom attributes record. Updating replaces all data with the provided fields.
+     - PUT /api/v2/users/{userId}/customattributes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schema" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "attributes" : {
+    "key" : "{}"
+  },
+  "id" : "id",
+  "userId" : "userId"
+}, statusCode=200}]
+     
+     - parameter userId: (path) user ID 
+     - parameter userCustomAttributes: (body)  
+
+     - returns: RequestBuilder<UserCustomAttributes> 
+     */
+    open class func putUserCustomattributesWithRequestBuilder(userId: String, userCustomAttributes: UserCustomAttributesUpdateRequest) -> RequestBuilder<UserCustomAttributes> {        
+        var path = "/api/v2/users/{userId}/customattributes"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: userCustomAttributes)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserCustomAttributes>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
@@ -24571,6 +25551,73 @@ open class UsersAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Verifier>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update a schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter body: (body) Data Schema 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putUsersCustomattributesSchema(schemaId: String, body: DataSchema, completion: @escaping ((_ data: DataSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = putUsersCustomattributesSchemaWithRequestBuilder(schemaId: schemaId, body: body)
+        requestBuilder.execute { (response: Response<DataSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a schema
+     - PUT /api/v2/users/customattributes/schemas/{schemaId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "jsonSchema" : "{\n    \"appliesTo\": [\n        \"CONTACT\"\n    ],\n    \"jsonSchema\": {\n        \"title\": \"Example schema\",\n        \"description\": \"Uses all of the core types for illustrative purposes\",\n        \"properties\": {\n            \"field1_text\": {\n                \"title\": \"Field 1\",\n                \"description\": \"field1\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/text\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 39\n            },\n            \"field2_longtext\": {\n                \"title\": \"Field 2\",\n                \"description\": \"field2\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/longtext\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 1000\n            },\n            \"field3_enum\": {\n                \"title\": \"Field 3\",\n                \"description\": \"Field 3\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/enum\" } ],\n                \"enum\": [\n                    \"enum1\",\n                    \"enum2\"\n                ]\n            },\n            \"field4_identifier\": {\n                \"title\": \"field4\",\n                \"description\": \"Field 4\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/identifier\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 37\n            },\n            \"field5_integer\": {\n                \"title\": \"field5\",\n                \"description\": \"Field 5\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/integer\" } ],\n                \"minimum\": 1,\n                \"maximum\": 24\n            },\n            \"field6_number\": {\n                \"title\": \"field6\",\n                \"description\": \"Field 6\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/number\" } ],\n                \"minimum\": 2.7,\n                \"maximum\": 31.3\n            },\n            \"field7_date\": {\n                \"title\": \"field7\",\n                \"description\": \"Field 7\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/date\"}]\n            },\n            \"field8_datetime\": {\n                \"title\": \"field8\",\n                \"description\": \"Field 8\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/datetime\"}]\n            },\n            \"field9_checkbox\": {\n                \"title\": \"field9\",\n                \"description\": \"Field 9\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/checkbox\"}]\n            },\n            \"field10_tag\": {\n                \"title\": \"field10\",\n                \"description\": \"Field 10\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/tag\" } ],\n                \"items\": {\n                    \"minLength\": 1,\n                    \"maxLength\": 20\n                },\n                \"minItems\": 0,\n                \"maxItems\": 10,\n                \"uniqueItems\": true\n            }\n        },\n        \"$schema\": \"http://json-schema.org/draft-04/schema#\"\n    }\n}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "appliesTo" : [ "CONTACT", "CONTACT" ],
+  "id" : "id",
+  "version" : 0,
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter body: (body) Data Schema 
+
+     - returns: RequestBuilder<DataSchema> 
+     */
+    open class func putUsersCustomattributesSchemaWithRequestBuilder(schemaId: String, body: DataSchema) -> RequestBuilder<DataSchema> {        
+        var path = "/api/v2/users/customattributes/schemas/{schemaId}"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

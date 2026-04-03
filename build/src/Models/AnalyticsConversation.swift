@@ -8,6 +8,12 @@ public class AnalyticsConversation: Codable {
 
 
 
+
+
+
+
+
+
     public enum ConversationInitiator: String, Codable { 
         case acd = "acd"
         case agent = "agent"
@@ -46,10 +52,6 @@ public class AnalyticsConversation: Codable {
 
 
 
-
-
-
-
     public enum OriginatingDirection: String, Codable { 
         case inbound = "inbound"
         case outbound = "outbound"
@@ -67,8 +69,14 @@ public class AnalyticsConversation: Codable {
 
 
 
+    /** Set of attributes that limit which users can access the conversation */
+    public var accessAttributes: [String]?
+    /** ID of the conversation the initiator is signaling this new conversation is associated with */
+    public var associatedConversationId: String?
     /** The start time of a conference call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var conferenceStart: Date?
+    /** Set of conversationIds the initiator has signaled this conversation is associated with */
+    public var consultationConversationIds: [String]?
     /** The end time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var conversationEnd: Date?
     /** Unique identifier for the conversation */
@@ -85,10 +93,6 @@ public class AnalyticsConversation: Codable {
     public var externalTag: String?
     /** The time in the future, after which this conversation would be considered inactive. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var inactivityTimeout: Date?
-    /** ID of the conversation the initiator is signaling this new conversation is associated with */
-    public var associatedConversationId: String?
-    /** Set of conversationIds the initiator has signaled this conversation is associated with */
-    public var consultationConversationIds: [String]?
     /** The unique identifier(s) of the knowledge base(s) used */
     public var knowledgeBaseIds: [String]?
     /** The lowest estimated average MOS among all the audio streams belonging to this conversation */
@@ -110,8 +114,11 @@ public class AnalyticsConversation: Codable {
     /** Participants in the conversation */
     public var participants: [AnalyticsParticipant]?
 
-    public init(conferenceStart: Date?, conversationEnd: Date?, conversationId: String?, conversationInitiator: ConversationInitiator?, conversationStart: Date?, customerParticipation: Bool?, divisionIds: [String]?, externalTag: String?, inactivityTimeout: Date?, associatedConversationId: String?, consultationConversationIds: [String]?, knowledgeBaseIds: [String]?, mediaStatsMinConversationMos: Double?, mediaStatsMinConversationRFactor: Double?, originatingDirection: OriginatingDirection?, originatingSocialMediaPublic: Bool?, selfServed: Bool?, evaluations: [AnalyticsEvaluation]?, surveys: [AnalyticsSurvey]?, resolutions: [AnalyticsResolution]?, participants: [AnalyticsParticipant]?) {
+    public init(accessAttributes: [String]?, associatedConversationId: String?, conferenceStart: Date?, consultationConversationIds: [String]?, conversationEnd: Date?, conversationId: String?, conversationInitiator: ConversationInitiator?, conversationStart: Date?, customerParticipation: Bool?, divisionIds: [String]?, externalTag: String?, inactivityTimeout: Date?, knowledgeBaseIds: [String]?, mediaStatsMinConversationMos: Double?, mediaStatsMinConversationRFactor: Double?, originatingDirection: OriginatingDirection?, originatingSocialMediaPublic: Bool?, selfServed: Bool?, evaluations: [AnalyticsEvaluation]?, surveys: [AnalyticsSurvey]?, resolutions: [AnalyticsResolution]?, participants: [AnalyticsParticipant]?) {
+        self.accessAttributes = accessAttributes
+        self.associatedConversationId = associatedConversationId
         self.conferenceStart = conferenceStart
+        self.consultationConversationIds = consultationConversationIds
         self.conversationEnd = conversationEnd
         self.conversationId = conversationId
         self.conversationInitiator = conversationInitiator
@@ -120,8 +127,6 @@ public class AnalyticsConversation: Codable {
         self.divisionIds = divisionIds
         self.externalTag = externalTag
         self.inactivityTimeout = inactivityTimeout
-        self.associatedConversationId = associatedConversationId
-        self.consultationConversationIds = consultationConversationIds
         self.knowledgeBaseIds = knowledgeBaseIds
         self.mediaStatsMinConversationMos = mediaStatsMinConversationMos
         self.mediaStatsMinConversationRFactor = mediaStatsMinConversationRFactor

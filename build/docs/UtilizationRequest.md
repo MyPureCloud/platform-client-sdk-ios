@@ -8,7 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **utilization** | [**[String:MediaUtilization]**](MediaUtilization) | Map of media type to utilization settings. | [optional] |
 | **labelUtilizations** | [**[String:LabelUtilizationRequest]**](LabelUtilizationRequest) | Map of label ids to utilization settings. | [optional] |
+| **maxInboundCalls** | **Int** | Max number of inbound voice calls. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@191.0.0_
+_PureCloudPlatformClientV2@192.0.0_

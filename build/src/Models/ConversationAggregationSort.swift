@@ -5,6 +5,8 @@ public class ConversationAggregationSort: Codable {
     public enum Name: String, Codable { 
         case nblindtransferred = "nBlindTransferred"
         case nbotinteractions = "nBotInteractions"
+        case ncallbackattempts = "nCallbackAttempts"
+        case ncallbackscheduled = "nCallbackScheduled"
         case ncobrowsesessions = "nCobrowseSessions"
         case nconnected = "nConnected"
         case nconsult = "nConsult"
@@ -40,6 +42,9 @@ public class ConversationAggregationSort: Codable {
         case taverageagentresponsetime = "tAverageAgentResponseTime"
         case taveragecustomerresponsetime = "tAverageCustomerResponseTime"
         case tbarging = "tBarging"
+        case tcallbackabandon = "tCallbackAbandon"
+        case tcallbackconnect = "tCallbackConnect"
+        case tcallbacknotreached = "tCallbackNotReached"
         case tcoaching = "tCoaching"
         case tcoachingcomplete = "tCoachingComplete"
         case tconnected = "tConnected"

@@ -8,10 +8,6 @@ public class AppleIdentityResolutionConfig: Codable {
 
 
 
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
     /** The division to use when performing identity resolution. */
     public var division: WritableStarrableDivision?
     /** Whether the channel should resolve identities */
@@ -19,18 +15,10 @@ public class AppleIdentityResolutionConfig: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, division: WritableStarrableDivision?, resolveIdentities: Bool?, selfUri: String?) {
-        self._id = _id
+    public init(division: WritableStarrableDivision?, resolveIdentities: Bool?, selfUri: String?) {
         self.division = division
         self.resolveIdentities = resolveIdentities
         self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case division
-        case resolveIdentities
-        case selfUri
     }
 
 

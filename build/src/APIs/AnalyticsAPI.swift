@@ -668,6 +668,7 @@ open class AnalyticsAPI {
     "evaluatorId" : "evaluatorId",
     "released" : true
   } ],
+  "accessAttributes" : [ "accessAttributes", "accessAttributes" ],
   "conversationInitiator" : "acd",
   "conversationId" : "conversationId",
   "surveys" : [ {
@@ -717,9 +718,9 @@ open class AnalyticsAPI {
   "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
   "conferenceStart" : "2000-01-23T04:56:07.000+00:00",
   "mediaStatsMinConversationRFactor" : 6.027456183070403,
+  "associatedConversationId" : "associatedConversationId",
   "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
   "customerParticipation" : true,
-  "associatedConversationId" : "associatedConversationId",
   "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
   "consultationConversationIds" : [ "consultationConversationIds", "consultationConversationIds" ],
   "selfServed" : true,
@@ -745,6 +746,7 @@ open class AnalyticsAPI {
       "skipEnabled" : true,
       "journeyActionMapId" : "journeyActionMapId",
       "remote" : "remote",
+      "skillExpressionId" : "skillExpressionId",
       "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
       "roomId" : "roomId",
       "messageType" : "messageType",
@@ -957,6 +959,7 @@ open class AnalyticsAPI {
       "skipEnabled" : true,
       "journeyActionMapId" : "journeyActionMapId",
       "remote" : "remote",
+      "skillExpressionId" : "skillExpressionId",
       "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
       "roomId" : "roomId",
       "messageType" : "messageType",
@@ -1180,6 +1183,7 @@ open class AnalyticsAPI {
       "skipEnabled" : true,
       "journeyActionMapId" : "journeyActionMapId",
       "remote" : "remote",
+      "skillExpressionId" : "skillExpressionId",
       "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
       "roomId" : "roomId",
       "messageType" : "messageType",
@@ -1392,6 +1396,7 @@ open class AnalyticsAPI {
       "skipEnabled" : true,
       "journeyActionMapId" : "journeyActionMapId",
       "remote" : "remote",
+      "skillExpressionId" : "skillExpressionId",
       "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
       "roomId" : "roomId",
       "messageType" : "messageType",
@@ -1690,6 +1695,7 @@ open class AnalyticsAPI {
       "evaluatorId" : "evaluatorId",
       "released" : true
     } ],
+    "accessAttributes" : [ "accessAttributes", "accessAttributes" ],
     "conversationInitiator" : "acd",
     "conversationId" : "conversationId",
     "surveys" : [ {
@@ -1739,9 +1745,9 @@ open class AnalyticsAPI {
     "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
     "conferenceStart" : "2000-01-23T04:56:07.000+00:00",
     "mediaStatsMinConversationRFactor" : 6.027456183070403,
+    "associatedConversationId" : "associatedConversationId",
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
-    "associatedConversationId" : "associatedConversationId",
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
     "consultationConversationIds" : [ "consultationConversationIds", "consultationConversationIds" ],
     "selfServed" : true,
@@ -1767,6 +1773,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -1979,6 +1986,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -2202,6 +2210,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -2414,6 +2423,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -2658,6 +2668,7 @@ open class AnalyticsAPI {
       "evaluatorId" : "evaluatorId",
       "released" : true
     } ],
+    "accessAttributes" : [ "accessAttributes", "accessAttributes" ],
     "conversationInitiator" : "acd",
     "conversationId" : "conversationId",
     "surveys" : [ {
@@ -2707,9 +2718,9 @@ open class AnalyticsAPI {
     "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
     "conferenceStart" : "2000-01-23T04:56:07.000+00:00",
     "mediaStatsMinConversationRFactor" : 6.027456183070403,
+    "associatedConversationId" : "associatedConversationId",
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
-    "associatedConversationId" : "associatedConversationId",
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
     "consultationConversationIds" : [ "consultationConversationIds", "consultationConversationIds" ],
     "selfServed" : true,
@@ -2735,6 +2746,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -2947,6 +2959,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -3170,6 +3183,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -3382,6 +3396,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -3748,6 +3763,7 @@ open class AnalyticsAPI {
       "evaluatorId" : "evaluatorId",
       "released" : true
     } ],
+    "accessAttributes" : [ "accessAttributes", "accessAttributes" ],
     "conversationInitiator" : "acd",
     "conversationId" : "conversationId",
     "surveys" : [ {
@@ -3797,9 +3813,9 @@ open class AnalyticsAPI {
     "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
     "conferenceStart" : "2000-01-23T04:56:07.000+00:00",
     "mediaStatsMinConversationRFactor" : 6.027456183070403,
+    "associatedConversationId" : "associatedConversationId",
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
-    "associatedConversationId" : "associatedConversationId",
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
     "consultationConversationIds" : [ "consultationConversationIds", "consultationConversationIds" ],
     "selfServed" : true,
@@ -3825,6 +3841,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -4037,6 +4054,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -4263,6 +4281,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -4475,6 +4494,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -4722,6 +4742,7 @@ open class AnalyticsAPI {
       "evaluatorId" : "evaluatorId",
       "released" : true
     } ],
+    "accessAttributes" : [ "accessAttributes", "accessAttributes" ],
     "conversationInitiator" : "acd",
     "conversationId" : "conversationId",
     "surveys" : [ {
@@ -4771,9 +4792,9 @@ open class AnalyticsAPI {
     "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
     "conferenceStart" : "2000-01-23T04:56:07.000+00:00",
     "mediaStatsMinConversationRFactor" : 6.027456183070403,
+    "associatedConversationId" : "associatedConversationId",
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
-    "associatedConversationId" : "associatedConversationId",
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
     "consultationConversationIds" : [ "consultationConversationIds", "consultationConversationIds" ],
     "selfServed" : true,
@@ -4799,6 +4820,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -5011,6 +5033,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -5237,6 +5260,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -5449,6 +5473,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -9236,6 +9261,7 @@ open class AnalyticsAPI {
       "evaluatorId" : "evaluatorId",
       "released" : true
     } ],
+    "accessAttributes" : [ "accessAttributes", "accessAttributes" ],
     "conversationInitiator" : "acd",
     "conversationId" : "conversationId",
     "surveys" : [ {
@@ -9285,9 +9311,9 @@ open class AnalyticsAPI {
     "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
     "conferenceStart" : "2000-01-23T04:56:07.000+00:00",
     "mediaStatsMinConversationRFactor" : 6.027456183070403,
+    "associatedConversationId" : "associatedConversationId",
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
-    "associatedConversationId" : "associatedConversationId",
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
     "consultationConversationIds" : [ "consultationConversationIds", "consultationConversationIds" ],
     "selfServed" : true,
@@ -9313,6 +9339,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -9525,6 +9552,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -9748,6 +9776,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -9960,6 +9989,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -10204,6 +10234,7 @@ open class AnalyticsAPI {
       "evaluatorId" : "evaluatorId",
       "released" : true
     } ],
+    "accessAttributes" : [ "accessAttributes", "accessAttributes" ],
     "conversationInitiator" : "acd",
     "conversationId" : "conversationId",
     "surveys" : [ {
@@ -10253,9 +10284,9 @@ open class AnalyticsAPI {
     "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
     "conferenceStart" : "2000-01-23T04:56:07.000+00:00",
     "mediaStatsMinConversationRFactor" : 6.027456183070403,
+    "associatedConversationId" : "associatedConversationId",
     "conversationEnd" : "2000-01-23T04:56:07.000+00:00",
     "customerParticipation" : true,
-    "associatedConversationId" : "associatedConversationId",
     "knowledgeBaseIds" : [ "knowledgeBaseIds", "knowledgeBaseIds" ],
     "consultationConversationIds" : [ "consultationConversationIds", "consultationConversationIds" ],
     "selfServed" : true,
@@ -10281,6 +10312,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -10493,6 +10525,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -10716,6 +10749,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -10928,6 +10962,7 @@ open class AnalyticsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "journeyActionMapId",
         "remote" : "remote",
+        "skillExpressionId" : "skillExpressionId",
         "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+00:00",
         "roomId" : "roomId",
         "messageType" : "messageType",
@@ -16435,6 +16470,95 @@ open class AnalyticsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TaskManagementAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Query for task management observations
+     
+     - parameter body: (body) query 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. Used for pagination. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsTaskmanagementMetricsQuery(body: TaskManagementObservationQuery, after: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: TaskManagementObservationQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsTaskmanagementMetricsQueryWithRequestBuilder(body: body, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<TaskManagementObservationQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query for task management observations
+     - POST /api/v2/analytics/taskmanagement/metrics/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "cursors" : "{}",
+  "details" : "{}",
+  "results" : [ {
+    "data" : [ {
+      "metric" : "oWorkitemsUnassigned",
+      "stats" : "{}",
+      "qualifier" : "Hours24"
+    }, {
+      "metric" : "oWorkitemsUnassigned",
+      "stats" : "{}",
+      "qualifier" : "Hours24"
+    } ],
+    "group" : "{}"
+  }, {
+    "data" : [ {
+      "metric" : "oWorkitemsUnassigned",
+      "stats" : "{}",
+      "qualifier" : "Hours24"
+    }, {
+      "metric" : "oWorkitemsUnassigned",
+      "stats" : "{}",
+      "qualifier" : "Hours24"
+    } ],
+    "group" : "{}"
+  } ],
+  "nextUri" : "nextUri"
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. Used for pagination. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+
+     - returns: RequestBuilder<TaskManagementObservationQueryResponse> 
+     */
+    open class func postAnalyticsTaskmanagementMetricsQueryWithRequestBuilder(body: TaskManagementObservationQuery, after: String? = nil, pageSize: Int? = nil) -> RequestBuilder<TaskManagementObservationQueryResponse> {        
+        let path = "/api/v2/analytics/taskmanagement/metrics/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<TaskManagementObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

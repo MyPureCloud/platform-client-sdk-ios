@@ -4588,6 +4588,351 @@ open class WorkforceManagementAPI {
     
     
     /**
+     View results of the evaluate shift trades in a management unit per week operation. Only the user who started the operation can query the status
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitShifttradingTradesEvaluateJob(businessUnitId: String, jobId: String, completion: @escaping ((_ data: ShiftTradeEvaluateTradesBuJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobWithRequestBuilder(businessUnitId: businessUnitId, jobId: jobId)
+        requestBuilder.execute { (response: Response<ShiftTradeEvaluateTradesBuJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     View results of the evaluate shift trades in a management unit per week operation. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/evaluate/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "evaluateTradesResult" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<ShiftTradeEvaluateTradesBuJobResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobWithRequestBuilder(businessUnitId: String, jobId: String) -> RequestBuilder<ShiftTradeEvaluateTradesBuJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/evaluate/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ShiftTradeEvaluateTradesBuJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     View results of the query shift trades in a management unit per user operation. Only the user who started the operation can query the status
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitShifttradingTradesQueryJob(businessUnitId: String, jobId: String, completion: @escaping ((_ data: ShiftTradeQueryTradesBuJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitShifttradingTradesQueryJobWithRequestBuilder(businessUnitId: businessUnitId, jobId: jobId)
+        requestBuilder.execute { (response: Response<ShiftTradeQueryTradesBuJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     View results of the query shift trades in a management unit per user operation. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/query/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "queryTradesResult" : "{}",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<ShiftTradeQueryTradesBuJobResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitShifttradingTradesQueryJobWithRequestBuilder(businessUnitId: String, jobId: String) -> RequestBuilder<ShiftTradeQueryTradesBuJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/query/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ShiftTradeQueryTradesBuJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     View results of bulk update trades states operation. Only the user who started the operation can query the status.
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitShifttradingTradesStateBulkJob(businessUnitId: String, jobId: String, completion: @escaping ((_ data: ShiftTradeBulkUpdateTradeStateBuJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitShifttradingTradesStateBulkJobWithRequestBuilder(businessUnitId: businessUnitId, jobId: jobId)
+        requestBuilder.execute { (response: Response<ShiftTradeBulkUpdateTradeStateBuJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     View results of bulk update trades states operation. Only the user who started the operation can query the status.
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/state/bulk/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "bulkUpdateTradeStatesResult" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<ShiftTradeBulkUpdateTradeStateBuJobResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitShifttradingTradesStateBulkJobWithRequestBuilder(businessUnitId: String, jobId: String) -> RequestBuilder<ShiftTradeBulkUpdateTradeStateBuJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/state/bulk/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ShiftTradeBulkUpdateTradeStateBuJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     View result of potential shift trade matches for the current user. Only the user who started the operation can query the status
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJob(businessUnitId: String, jobId: String, completion: @escaping ((_ data: ShiftTradeSearchUnmatchedTradesBuJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJobWithRequestBuilder(businessUnitId: businessUnitId, jobId: jobId)
+        requestBuilder.execute { (response: Response<ShiftTradeSearchUnmatchedTradesBuJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     View result of potential shift trade matches for the current user. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/unmatched/search/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "searchUnmatchedTradesResult" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<ShiftTradeSearchUnmatchedTradesBuJobResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJobWithRequestBuilder(businessUnitId: String, jobId: String) -> RequestBuilder<ShiftTradeSearchUnmatchedTradesBuJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/unmatched/search/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ShiftTradeSearchUnmatchedTradesBuJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     View results of the retrieve the summary of shift trades in a matched state per week operation. Only the user who started the operation can query the status
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitShifttradingWeeksSummaryJob(businessUnitId: String, jobId: String, completion: @escaping ((_ data: ShiftTradeQueryWeekSummariesBuJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitShifttradingWeeksSummaryJobWithRequestBuilder(businessUnitId: businessUnitId, jobId: jobId)
+        requestBuilder.execute { (response: Response<ShiftTradeQueryWeekSummariesBuJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     View results of the retrieve the summary of shift trades in a matched state per week operation. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/weeks/summary/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "queryWeekSummariesResult" : "{}",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<ShiftTradeQueryWeekSummariesBuJobResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitShifttradingWeeksSummaryJobWithRequestBuilder(businessUnitId: String, jobId: String) -> RequestBuilder<ShiftTradeQueryWeekSummariesBuJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/weeks/summary/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ShiftTradeQueryWeekSummariesBuJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Gets a staffing group
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -5940,7 +6285,7 @@ open class WorkforceManagementAPI {
     /**
      Get the list of week schedules for the specified week
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules
-     - Use \"recent\" (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+     - Use \"recent\" (without quotes) for the `weekId` path parameter to fetch all schedules for up to +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -6687,7 +7032,7 @@ open class WorkforceManagementAPI {
     /**
      Get short term forecasts
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts
-     - Use \"recent\" (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+     - Use \"recent\" (without quotes) for the `weekDateId` path parameter to fetch all forecasts for up to +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -10687,6 +11032,337 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ShiftTradeListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     View result of update trade operation. Only the user who started the operation can query the status
+     
+     - parameter tradeId: (path) The ID of the shift trade to update 
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementShifttradingTradeJob(tradeId: String, jobId: String, completion: @escaping ((_ data: ShiftTradeUpdateTradeJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementShifttradingTradeJobWithRequestBuilder(tradeId: tradeId, jobId: jobId)
+        requestBuilder.execute { (response: Response<ShiftTradeUpdateTradeJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     View result of update trade operation. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "updateTradeResult" : "{}",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter tradeId: (path) The ID of the shift trade to update 
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<ShiftTradeUpdateTradeJobResponse> 
+     */
+    open class func getWorkforcemanagementShifttradingTradeJobWithRequestBuilder(tradeId: String, jobId: String) -> RequestBuilder<ShiftTradeUpdateTradeJobResponse> {        
+        var path = "/api/v2/workforcemanagement/shifttrading/trades/{tradeId}/jobs/{jobId}"
+        let tradeIdPreEscape = "\(tradeId)"
+        let tradeIdPostEscape = tradeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tradeId}", with: tradeIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ShiftTradeUpdateTradeJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     View result of match shift trade operation. Only the receiving user who started the operation can query the status.
+     
+     - parameter tradeId: (path) The ID of the shift trade to update 
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementShifttradingTradeMatchJob(tradeId: String, jobId: String, completion: @escaping ((_ data: ShiftTradeMatchTradeJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementShifttradingTradeMatchJobWithRequestBuilder(tradeId: tradeId, jobId: jobId)
+        requestBuilder.execute { (response: Response<ShiftTradeMatchTradeJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     View result of match shift trade operation. Only the receiving user who started the operation can query the status.
+     - GET /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/match/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "matchTradeResult" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter tradeId: (path) The ID of the shift trade to update 
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<ShiftTradeMatchTradeJobResponse> 
+     */
+    open class func getWorkforcemanagementShifttradingTradeMatchJobWithRequestBuilder(tradeId: String, jobId: String) -> RequestBuilder<ShiftTradeMatchTradeJobResponse> {        
+        var path = "/api/v2/workforcemanagement/shifttrading/trades/{tradeId}/match/jobs/{jobId}"
+        let tradeIdPreEscape = "\(tradeId)"
+        let tradeIdPostEscape = tradeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tradeId}", with: tradeIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ShiftTradeMatchTradeJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     View result of update trade state operation. Only the user who started the operation can query the status.
+     
+     - parameter tradeId: (path) The ID of the shift trade to update 
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementShifttradingTradeStateJob(tradeId: String, jobId: String, completion: @escaping ((_ data: ShiftTradeUpdateTradeStateJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementShifttradingTradeStateJobWithRequestBuilder(tradeId: tradeId, jobId: jobId)
+        requestBuilder.execute { (response: Response<ShiftTradeUpdateTradeStateJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     View result of update trade state operation. Only the user who started the operation can query the status.
+     - GET /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/state/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "updateTradeStateResult" : "{}",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter tradeId: (path) The ID of the shift trade to update 
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<ShiftTradeUpdateTradeStateJobResponse> 
+     */
+    open class func getWorkforcemanagementShifttradingTradeStateJobWithRequestBuilder(tradeId: String, jobId: String) -> RequestBuilder<ShiftTradeUpdateTradeStateJobResponse> {        
+        var path = "/api/v2/workforcemanagement/shifttrading/trades/{tradeId}/state/jobs/{jobId}"
+        let tradeIdPreEscape = "\(tradeId)"
+        let tradeIdPostEscape = tradeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tradeId}", with: tradeIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ShiftTradeUpdateTradeStateJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     View result of create trade operation. Only the user who started the operation can query the status
+     
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementShifttradingTradesJob(jobId: String, completion: @escaping ((_ data: ShiftTradeAddTradeJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementShifttradingTradesJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<ShiftTradeAddTradeJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     View result of create trade operation. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/shifttrading/trades/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "addTradeResult" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<ShiftTradeAddTradeJobResponse> 
+     */
+    open class func getWorkforcemanagementShifttradingTradesJobWithRequestBuilder(jobId: String) -> RequestBuilder<ShiftTradeAddTradeJobResponse> {        
+        var path = "/api/v2/workforcemanagement/shifttrading/trades/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ShiftTradeAddTradeJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     View results of retrieve all my shift trade operation. Only the user who started the operation can query the status
+     
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementShifttradingTradesMineQueryJob(jobId: String, completion: @escaping ((_ data: ShiftTradeQueryAgentTradesJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementShifttradingTradesMineQueryJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<ShiftTradeQueryAgentTradesJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     View results of retrieve all my shift trade operation. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/shifttrading/trades/mine/query/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "queryAgentTradesResult" : "{}",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<ShiftTradeQueryAgentTradesJobResponse> 
+     */
+    open class func getWorkforcemanagementShifttradingTradesMineQueryJobWithRequestBuilder(jobId: String) -> RequestBuilder<ShiftTradeQueryAgentTradesJobResponse> {        
+        var path = "/api/v2/workforcemanagement/shifttrading/trades/mine/query/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ShiftTradeQueryAgentTradesJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -16994,6 +17670,386 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
+    
+    
+    /**
+     Queries and evaluates against shift trade configuration shift trades in a management unit per week
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobs(businessUnitId: String, body: EvaluateShiftTradeListJobRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: ShiftTradeEvaluateTradesBuJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobsWithRequestBuilder(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<ShiftTradeEvaluateTradesBuJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Queries and evaluates against shift trade configuration shift trades in a management unit per week
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/evaluate/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "evaluateTradesResult" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<ShiftTradeEvaluateTradesBuJobResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobsWithRequestBuilder(businessUnitId: String, body: EvaluateShiftTradeListJobRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<ShiftTradeEvaluateTradesBuJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/evaluate/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceAsync": forceAsync, 
+            "forceDownloadService": forceDownloadService
+        ])
+
+        let requestBuilder: RequestBuilder<ShiftTradeEvaluateTradesBuJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Queries shift trades in a management unit per user
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitShifttradingTradesQueryJobs(businessUnitId: String, body: QueryShiftTradeListJobRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: ShiftTradeQueryTradesBuJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitShifttradingTradesQueryJobsWithRequestBuilder(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<ShiftTradeQueryTradesBuJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Queries shift trades in a management unit per user
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/query/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "queryTradesResult" : "{}",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<ShiftTradeQueryTradesBuJobResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitShifttradingTradesQueryJobsWithRequestBuilder(businessUnitId: String, body: QueryShiftTradeListJobRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<ShiftTradeQueryTradesBuJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/query/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceAsync": forceAsync, 
+            "forceDownloadService": forceDownloadService
+        ])
+
+        let requestBuilder: RequestBuilder<ShiftTradeQueryTradesBuJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Bulk update multiple trade states. Permits a supervisor to approve or deny multiple trades.
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitShifttradingTradesStateBulkJobs(businessUnitId: String, body: BulkUpdateShiftTradeListJobRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: ShiftTradeBulkUpdateTradeStateBuJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitShifttradingTradesStateBulkJobsWithRequestBuilder(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<ShiftTradeBulkUpdateTradeStateBuJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk update multiple trade states. Permits a supervisor to approve or deny multiple trades.
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/state/bulk/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "bulkUpdateTradeStatesResult" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<ShiftTradeBulkUpdateTradeStateBuJobResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitShifttradingTradesStateBulkJobsWithRequestBuilder(businessUnitId: String, body: BulkUpdateShiftTradeListJobRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<ShiftTradeBulkUpdateTradeStateBuJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/state/bulk/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceAsync": forceAsync, 
+            "forceDownloadService": forceDownloadService
+        ])
+
+        let requestBuilder: RequestBuilder<ShiftTradeBulkUpdateTradeStateBuJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Start an async job to find potential shift trade matches for the current receiving user
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJobs(businessUnitId: String, body: SearchUnmatchedShiftTradeListJobRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: ShiftTradeSearchUnmatchedTradesBuJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJobsWithRequestBuilder(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<ShiftTradeSearchUnmatchedTradesBuJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Start an async job to find potential shift trade matches for the current receiving user
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/unmatched/search/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "searchUnmatchedTradesResult" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<ShiftTradeSearchUnmatchedTradesBuJobResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJobsWithRequestBuilder(businessUnitId: String, body: SearchUnmatchedShiftTradeListJobRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<ShiftTradeSearchUnmatchedTradesBuJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/unmatched/search/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceAsync": forceAsync, 
+            "forceDownloadService": forceDownloadService
+        ])
+
+        let requestBuilder: RequestBuilder<ShiftTradeSearchUnmatchedTradesBuJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Retrieves the summary of shift trades in a matched state per week
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitShifttradingWeeksSummaryJobs(businessUnitId: String, body: QueryWeekSummaryListJobRequest, forceAsync: Bool? = nil, completion: @escaping ((_ data: ShiftTradeQueryWeekSummariesBuJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitShifttradingWeeksSummaryJobsWithRequestBuilder(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync)
+        requestBuilder.execute { (response: Response<ShiftTradeQueryWeekSummariesBuJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieves the summary of shift trades in a matched state per week
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/weeks/summary/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "queryWeekSummariesResult" : "{}",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<ShiftTradeQueryWeekSummariesBuJobResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitShifttradingWeeksSummaryJobsWithRequestBuilder(businessUnitId: String, body: QueryWeekSummaryListJobRequest, forceAsync: Bool? = nil) -> RequestBuilder<ShiftTradeQueryWeekSummariesBuJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/weeks/summary/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceAsync": forceAsync
+        ])
+
+        let requestBuilder: RequestBuilder<ShiftTradeQueryWeekSummariesBuJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     /**
      Creates a new staffing group
      
@@ -21841,6 +22897,357 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserScheduleContainer>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Updates a shift trade. This route can only be called by the initiating user
+     
+     - parameter tradeId: (path) The ID of the shift trade to update 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementShifttradingTradeJobs(tradeId: String, body: UpdateShiftTradeJobRequest, forceAsync: Bool? = nil, completion: @escaping ((_ data: ShiftTradeUpdateTradeJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementShifttradingTradeJobsWithRequestBuilder(tradeId: tradeId, body: body, forceAsync: forceAsync)
+        requestBuilder.execute { (response: Response<ShiftTradeUpdateTradeJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Updates a shift trade. This route can only be called by the initiating user
+     - POST /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "updateTradeResult" : "{}",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter tradeId: (path) The ID of the shift trade to update 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<ShiftTradeUpdateTradeJobResponse> 
+     */
+    open class func postWorkforcemanagementShifttradingTradeJobsWithRequestBuilder(tradeId: String, body: UpdateShiftTradeJobRequest, forceAsync: Bool? = nil) -> RequestBuilder<ShiftTradeUpdateTradeJobResponse> {        
+        var path = "/api/v2/workforcemanagement/shifttrading/trades/{tradeId}/jobs"
+        let tradeIdPreEscape = "\(tradeId)"
+        let tradeIdPostEscape = tradeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tradeId}", with: tradeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceAsync": forceAsync
+        ])
+
+        let requestBuilder: RequestBuilder<ShiftTradeUpdateTradeJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Matches a shift trade. This route can only be called by the receiving user
+     
+     - parameter tradeId: (path) The ID of the shift trade to match 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementShifttradingTradeMatchJobs(tradeId: String, body: MatchShiftTradeJobRequest, forceAsync: Bool? = nil, completion: @escaping ((_ data: ShiftTradeMatchTradeJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementShifttradingTradeMatchJobsWithRequestBuilder(tradeId: tradeId, body: body, forceAsync: forceAsync)
+        requestBuilder.execute { (response: Response<ShiftTradeMatchTradeJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Matches a shift trade. This route can only be called by the receiving user
+     - POST /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/match/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "matchTradeResult" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter tradeId: (path) The ID of the shift trade to match 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<ShiftTradeMatchTradeJobResponse> 
+     */
+    open class func postWorkforcemanagementShifttradingTradeMatchJobsWithRequestBuilder(tradeId: String, body: MatchShiftTradeJobRequest, forceAsync: Bool? = nil) -> RequestBuilder<ShiftTradeMatchTradeJobResponse> {        
+        var path = "/api/v2/workforcemanagement/shifttrading/trades/{tradeId}/match/jobs"
+        let tradeIdPreEscape = "\(tradeId)"
+        let tradeIdPostEscape = tradeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tradeId}", with: tradeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceAsync": forceAsync
+        ])
+
+        let requestBuilder: RequestBuilder<ShiftTradeMatchTradeJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update trade state by a user
+     
+     - parameter tradeId: (path) The ID of the shift trade to update state 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementShifttradingTradeStateJobs(tradeId: String, body: UpdateShiftTradeStateJobRequest, forceAsync: Bool? = nil, completion: @escaping ((_ data: ShiftTradeUpdateTradeStateJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementShifttradingTradeStateJobsWithRequestBuilder(tradeId: tradeId, body: body, forceAsync: forceAsync)
+        requestBuilder.execute { (response: Response<ShiftTradeUpdateTradeStateJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update trade state by a user
+     - POST /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/state/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "updateTradeStateResult" : "{}",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter tradeId: (path) The ID of the shift trade to update state 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<ShiftTradeUpdateTradeStateJobResponse> 
+     */
+    open class func postWorkforcemanagementShifttradingTradeStateJobsWithRequestBuilder(tradeId: String, body: UpdateShiftTradeStateJobRequest, forceAsync: Bool? = nil) -> RequestBuilder<ShiftTradeUpdateTradeStateJobResponse> {        
+        var path = "/api/v2/workforcemanagement/shifttrading/trades/{tradeId}/state/jobs"
+        let tradeIdPreEscape = "\(tradeId)"
+        let tradeIdPostEscape = tradeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tradeId}", with: tradeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceAsync": forceAsync
+        ])
+
+        let requestBuilder: RequestBuilder<ShiftTradeUpdateTradeStateJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Add a shift trade job
+     
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementShifttradingTradesJobs(body: AddShiftTradeJobRequest, forceAsync: Bool? = nil, completion: @escaping ((_ data: ShiftTradeAddTradeJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementShifttradingTradesJobsWithRequestBuilder(body: body, forceAsync: forceAsync)
+        requestBuilder.execute { (response: Response<ShiftTradeAddTradeJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add a shift trade job
+     - POST /api/v2/workforcemanagement/shifttrading/trades/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "addTradeResult" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<ShiftTradeAddTradeJobResponse> 
+     */
+    open class func postWorkforcemanagementShifttradingTradesJobsWithRequestBuilder(body: AddShiftTradeJobRequest, forceAsync: Bool? = nil) -> RequestBuilder<ShiftTradeAddTradeJobResponse> {        
+        let path = "/api/v2/workforcemanagement/shifttrading/trades/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceAsync": forceAsync
+        ])
+
+        let requestBuilder: RequestBuilder<ShiftTradeAddTradeJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Retrieve all my shift trades where I am either the initiating or receiving user
+     
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementShifttradingTradesMineQueryJobs(body: QueryAgentShiftTradeListJobRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: ShiftTradeQueryAgentTradesJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementShifttradingTradesMineQueryJobsWithRequestBuilder(body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<ShiftTradeQueryAgentTradesJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve all my shift trades where I am either the initiating or receiving user
+     - POST /api/v2/workforcemanagement/shifttrading/trades/mine/query/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "queryAgentTradesResult" : "{}",
+  "id" : "id",
+  "type" : "AddTrade",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<ShiftTradeQueryAgentTradesJobResponse> 
+     */
+    open class func postWorkforcemanagementShifttradingTradesMineQueryJobsWithRequestBuilder(body: QueryAgentShiftTradeListJobRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<ShiftTradeQueryAgentTradesJobResponse> {        
+        let path = "/api/v2/workforcemanagement/shifttrading/trades/mine/query/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceAsync": forceAsync, 
+            "forceDownloadService": forceDownloadService
+        ])
+
+        let requestBuilder: RequestBuilder<ShiftTradeQueryAgentTradesJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

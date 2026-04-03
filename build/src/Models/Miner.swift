@@ -37,6 +37,8 @@ public class Miner: Codable {
         case svSe = "sv-se"
         case nbNo = "nb-no"
         case trTr = "tr-tr"
+        case heIl = "he-il"
+        case zuZa = "zu-za"
     }
 
     public enum MinerType: String, Codable { 

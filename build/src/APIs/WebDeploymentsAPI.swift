@@ -980,7 +980,6 @@ open class WebDeploymentsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "resolveIdentities" : true,
   "automerge" : "{}",
-  "id" : "id",
   "externalSource" : "{}"
 }, statusCode=200}]
      
@@ -1703,7 +1702,6 @@ open class WebDeploymentsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "resolveIdentities" : true,
   "automerge" : "{}",
-  "id" : "id",
   "externalSource" : "{}"
 }, statusCode=200}]
      

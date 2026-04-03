@@ -85,6 +85,7 @@ public class ConversationAggregateQueryPredicate: Codable {
         case selfserved = "selfServed"
         case sessiondnis = "sessionDnis"
         case sessionid = "sessionId"
+        case skillexpressionid = "skillExpressionId"
         case stationid = "stationId"
         case teamid = "teamId"
         case usedrouting = "usedRouting"

@@ -1539,6 +1539,7 @@ open class RecordingAPI {
     /**
      Gets a specific recording.
      - GET /api/v2/conversations/{conversationId}/recordings/{recordingId}
+     - Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2923,7 +2924,7 @@ open class RecordingAPI {
     
     
     /**
-     Get metadata for a specific recording. Does not return playable media.
+     Get metadata for a specific recording. Does not return playable media. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing.
      
      - parameter conversationId: (path) Conversation ID 
      - parameter recordingId: (path) Recording ID 
@@ -2948,7 +2949,7 @@ open class RecordingAPI {
     }
 
     /**
-     Get metadata for a specific recording. Does not return playable media.
+     Get metadata for a specific recording. Does not return playable media. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing.
      - GET /api/v2/conversations/{conversationId}/recordingmetadata/{recordingId}
      - OAuth:
        - type: oauth2
@@ -3087,6 +3088,7 @@ open class RecordingAPI {
     /**
      Get all of a Conversation's Recordings.
      - GET /api/v2/conversations/{conversationId}/recordings
+     - Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -10588,6 +10590,7 @@ open class RecordingAPI {
     /**
      Create annotation
      - POST /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations
+     - If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -10636,7 +10639,7 @@ open class RecordingAPI {
     
     
     /**
-     Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
+     Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be excluded from the batch download.
      
      - parameter body: (body) Job submission criteria 
      - parameter completion: completion handler to receive the data and the error objects
@@ -10660,7 +10663,7 @@ open class RecordingAPI {
     }
 
     /**
-     Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
+     Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be excluded from the batch download.
      - POST /api/v2/recording/batchrequests
      - OAuth:
        - type: oauth2
@@ -11402,7 +11405,7 @@ open class RecordingAPI {
     /**
      Updates the retention records on a recording.
      - PUT /api/v2/conversations/{conversationId}/recordings/{recordingId}
-     - Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. The recording:recording:view permission is required for the recording, as well as either the recording:recording:editRetention or recording:screenRecording:editRetention permissions depending on the type of recording.
+     - Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Required permissions depend on the operation: view (recording, screenRecording, or snippetRecording) is always required; editRetention is required when updating retention dates except for restoration; restore is required when restoring an archived recording.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -12540,6 +12543,7 @@ open class RecordingAPI {
     /**
      Update annotation
      - PUT /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}
+     - If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

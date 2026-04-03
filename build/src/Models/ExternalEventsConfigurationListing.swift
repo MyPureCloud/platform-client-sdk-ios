@@ -1,6 +1,6 @@
 
 
-public class CredentialTypeListing: Codable {
+public class ExternalEventsConfigurationListing: Codable {
 
 
 
@@ -22,7 +22,7 @@ public class CredentialTypeListing: Codable {
 
 
 
-    public var entities: [CredentialType]?
+    public var entities: [ExternalEventsConfiguration]?
     public var pageSize: Int?
     public var pageNumber: Int?
     public var total: Int64?
@@ -33,7 +33,7 @@ public class CredentialTypeListing: Codable {
     public var selfUri: String?
     public var pageCount: Int?
 
-    public init(entities: [CredentialType]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, nextUri: String?, previousUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
+    public init(entities: [ExternalEventsConfiguration]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, nextUri: String?, previousUri: String?, lastUri: String?, selfUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber

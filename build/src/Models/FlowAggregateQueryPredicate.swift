@@ -98,6 +98,7 @@ public class FlowAggregateQueryPredicate: Codable {
         case selfserved = "selfServed"
         case sessiondnis = "sessionDnis"
         case sessionid = "sessionId"
+        case skillexpressionid = "skillExpressionId"
         case startinglanguage = "startingLanguage"
         case stationid = "stationId"
         case teamid = "teamId"

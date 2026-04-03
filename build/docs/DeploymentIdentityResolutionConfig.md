@@ -6,7 +6,6 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **division** | [**WritableStarrableDivision**](WritableStarrableDivision) | The division to use when performing identity resolution. | [optional] |
 | **resolveIdentities** | **Bool** | Whether the channel should resolve identities | |
 | **externalSource** | [**IdentityResolutionExternalSource**](IdentityResolutionExternalSource) | The external source used for stitching this channel. | [optional] |
@@ -15,4 +14,4 @@
 
 
 
-_PureCloudPlatformClientV2@191.0.0_
+_PureCloudPlatformClientV2@192.0.0_

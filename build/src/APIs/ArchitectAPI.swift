@@ -4624,8 +4624,7 @@ open class ArchitectAPI {
      - examples: [{contentType=application/json, example={
   "division" : "{}",
   "selfUri" : "https://openapi-generator.tech",
-  "resolveIdentities" : true,
-  "id" : "id"
+  "resolveIdentities" : true
 }, statusCode=200}]
      
      - parameter ivrId: (path) IVR id 
@@ -34507,8 +34506,7 @@ open class ArchitectAPI {
      - examples: [{contentType=application/json, example={
   "division" : "{}",
   "selfUri" : "https://openapi-generator.tech",
-  "resolveIdentities" : true,
-  "id" : "id"
+  "resolveIdentities" : true
 }, statusCode=200}]
      
      - parameter ivrId: (path) IVR id 

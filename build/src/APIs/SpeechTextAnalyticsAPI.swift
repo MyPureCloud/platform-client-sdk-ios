@@ -2296,10 +2296,12 @@ open class SpeechTextAnalyticsAPI {
   } ],
   "phrases" : [ {
     "sentiment" : "Unspecified",
+    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   }, {
     "sentiment" : "Unspecified",
+    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   } ],
@@ -3583,10 +3585,12 @@ open class SpeechTextAnalyticsAPI {
   } ],
   "phrases" : [ {
     "sentiment" : "Unspecified",
+    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   }, {
     "sentiment" : "Unspecified",
+    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   } ],
@@ -4373,10 +4377,12 @@ open class SpeechTextAnalyticsAPI {
   } ],
   "phrases" : [ {
     "sentiment" : "Unspecified",
+    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   }, {
     "sentiment" : "Unspecified",
+    "isAIGenerated" : true,
     "strictness" : "1",
     "text" : "text"
   } ],

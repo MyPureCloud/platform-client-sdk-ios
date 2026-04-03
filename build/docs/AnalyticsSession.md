@@ -80,6 +80,7 @@
 | **sessionDnis** | **String** | Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred | [optional] |
 | **sessionId** | **String** | The unique identifier of this session | [optional] |
 | **sharingScreen** | **Bool** | Flag determining if screen share is started or not (true/false) | [optional] |
+| **skillExpressionId** | **String** | Unique identifier for the skill requested for an interaction | [optional] |
 | **skipEnabled** | **Bool** | (Dialer) Whether the agent can skip the dialer contact | [optional] |
 | **snippetRecording** | **Bool** | Whether or not the conversation included a snippet being recorded. | [optional] |
 | **timeoutSeconds** | **Int** | The number of seconds before Genesys Cloud begins the call for a call back (0 disables automatic calling) | [optional] |
@@ -96,4 +97,4 @@
 
 
 
-_PureCloudPlatformClientV2@191.0.0_
+_PureCloudPlatformClientV2@192.0.0_

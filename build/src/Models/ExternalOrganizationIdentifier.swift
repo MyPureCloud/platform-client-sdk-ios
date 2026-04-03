@@ -4,8 +4,6 @@ public class ExternalOrganizationIdentifier: Codable {
 
 
 
-
-
     public enum ModelType: String, Codable { 
         case externalId = "ExternalId"
     }
@@ -16,10 +14,6 @@ public class ExternalOrganizationIdentifier: Codable {
 
 
 
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
     /** The division to which this entity belongs. */
     public var division: WritableStarrableDivision?
     /** The type of this identifier */
@@ -30,27 +24,13 @@ public class ExternalOrganizationIdentifier: Codable {
     public var dateCreated: Date?
     /** The External Source ID of the identifier */
     public var externalSource: ExternalSource?
-    /** The URI for this object */
-    public var selfUri: String?
 
-    public init(_id: String?, division: WritableStarrableDivision?, type: ModelType?, value: String?, dateCreated: Date?, externalSource: ExternalSource?, selfUri: String?) {
-        self._id = _id
+    public init(division: WritableStarrableDivision?, type: ModelType?, value: String?, dateCreated: Date?, externalSource: ExternalSource?) {
         self.division = division
         self.type = type
         self.value = value
         self.dateCreated = dateCreated
         self.externalSource = externalSource
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case division
-        case type
-        case value
-        case dateCreated
-        case externalSource
-        case selfUri
     }
 
 

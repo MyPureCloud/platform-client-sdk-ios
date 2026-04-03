@@ -18,4 +18,4 @@ Defines a SCIM resource.
 
 
 
-_PureCloudPlatformClientV2@191.0.0_
+_PureCloudPlatformClientV2@192.0.0_
