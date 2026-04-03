@@ -65,6 +65,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementBusinessunitSchedulingRuns**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitSchedulingRuns) | Get the list of scheduling runs |
 | [**getWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitServicegoaltemplate) | Get a service goal template |
 | [**getWorkforcemanagementBusinessunitServicegoaltemplates**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitServicegoaltemplates) | Gets list of service goal templates |
+| [**getWorkforcemanagementBusinessunitShifttradingTradesEvaluateJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitShifttradingTradesEvaluateJob) | View results of the evaluate shift trades in a management unit per week operation. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementBusinessunitShifttradingTradesQueryJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitShifttradingTradesQueryJob) | View results of the query shift trades in a management unit per user operation. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementBusinessunitShifttradingTradesStateBulkJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitShifttradingTradesStateBulkJob) | View results of bulk update trades states operation. Only the user who started the operation can query the status. |
+| [**getWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJob) | View result of potential shift trade matches for the current user. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementBusinessunitShifttradingWeeksSummaryJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitShifttradingWeeksSummaryJob) | View results of the retrieve the summary of shift trades in a matched state per week operation. Only the user who started the operation can query the status |
 | [**getWorkforcemanagementBusinessunitStaffinggroup**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitStaffinggroup) | Gets a staffing group |
 | [**getWorkforcemanagementBusinessunitStaffinggroups**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitStaffinggroups) | Gets a list of staffing groups |
 | [**getWorkforcemanagementBusinessunitTimeofflimit**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitTimeofflimit) | Gets a time-off limit object |
@@ -128,6 +133,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementNotifications**](WorkforceManagementAPI#getWorkforcemanagementNotifications) | Get a list of notifications for the current user |
 | [**getWorkforcemanagementSchedulingjob**](WorkforceManagementAPI#getWorkforcemanagementSchedulingjob) | Get status of the scheduling job |
 | [**getWorkforcemanagementShifttrades**](WorkforceManagementAPI#getWorkforcemanagementShifttrades) | Gets all of my shift trades |
+| [**getWorkforcemanagementShifttradingTradeJob**](WorkforceManagementAPI#getWorkforcemanagementShifttradingTradeJob) | View result of update trade operation. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementShifttradingTradeMatchJob**](WorkforceManagementAPI#getWorkforcemanagementShifttradingTradeMatchJob) | View result of match shift trade operation. Only the receiving user who started the operation can query the status. |
+| [**getWorkforcemanagementShifttradingTradeStateJob**](WorkforceManagementAPI#getWorkforcemanagementShifttradingTradeStateJob) | View result of update trade state operation. Only the user who started the operation can query the status. |
+| [**getWorkforcemanagementShifttradingTradesJob**](WorkforceManagementAPI#getWorkforcemanagementShifttradingTradesJob) | View result of create trade operation. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementShifttradingTradesMineQueryJob**](WorkforceManagementAPI#getWorkforcemanagementShifttradingTradesMineQueryJob) | View results of retrieve all my shift trade operation. Only the user who started the operation can query the status |
 | [**getWorkforcemanagementShrinkageJob**](WorkforceManagementAPI#getWorkforcemanagementShrinkageJob) | Request to fetch the status of the historical shrinkage query |
 | [**getWorkforcemanagementTeamAdherence**](WorkforceManagementAPI#getWorkforcemanagementTeamAdherence) | Get a list of user schedule adherence records for the requested team |
 | [**getWorkforcemanagementTimeoffbalanceJob**](WorkforceManagementAPI#getWorkforcemanagementTimeoffbalanceJob) | Query the results of time off types job |
@@ -206,6 +216,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementBusinessunitIntraday**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitIntraday) | Get intraday data for the given date for the requested planningGroupIds |
 | [**postWorkforcemanagementBusinessunitPlanninggroups**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitPlanninggroups) | Adds a new planning group |
 | [**postWorkforcemanagementBusinessunitServicegoaltemplates**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitServicegoaltemplates) | Adds a new service goal template |
+| [**postWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobs**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobs) | Queries and evaluates against shift trade configuration shift trades in a management unit per week |
+| [**postWorkforcemanagementBusinessunitShifttradingTradesQueryJobs**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitShifttradingTradesQueryJobs) | Queries shift trades in a management unit per user |
+| [**postWorkforcemanagementBusinessunitShifttradingTradesStateBulkJobs**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitShifttradingTradesStateBulkJobs) | Bulk update multiple trade states. Permits a supervisor to approve or deny multiple trades. |
+| [**postWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJobs**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJobs) | Start an async job to find potential shift trade matches for the current receiving user |
+| [**postWorkforcemanagementBusinessunitShifttradingWeeksSummaryJobs**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitShifttradingWeeksSummaryJobs) | Retrieves the summary of shift trades in a matched state per week |
 | [**postWorkforcemanagementBusinessunitStaffinggroups**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitStaffinggroups) | Creates a new staffing group |
 | [**postWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery) | Gets a list of planning group to staffing groups list association |
 | [**postWorkforcemanagementBusinessunitStaffinggroupsQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitStaffinggroupsQuery) | Gets staffing group associations for a list of user IDs |
@@ -265,6 +280,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementManagementunits**](WorkforceManagementAPI#postWorkforcemanagementManagementunits) | Add a management unit |
 | [**postWorkforcemanagementNotificationsUpdate**](WorkforceManagementAPI#postWorkforcemanagementNotificationsUpdate) | Mark a list of notifications as read or unread |
 | [**postWorkforcemanagementSchedules**](WorkforceManagementAPI#postWorkforcemanagementSchedules) | Get published schedule for the current user |
+| [**postWorkforcemanagementShifttradingTradeJobs**](WorkforceManagementAPI#postWorkforcemanagementShifttradingTradeJobs) | Updates a shift trade. This route can only be called by the initiating user |
+| [**postWorkforcemanagementShifttradingTradeMatchJobs**](WorkforceManagementAPI#postWorkforcemanagementShifttradingTradeMatchJobs) | Matches a shift trade. This route can only be called by the receiving user |
+| [**postWorkforcemanagementShifttradingTradeStateJobs**](WorkforceManagementAPI#postWorkforcemanagementShifttradingTradeStateJobs) | Update trade state by a user |
+| [**postWorkforcemanagementShifttradingTradesJobs**](WorkforceManagementAPI#postWorkforcemanagementShifttradingTradesJobs) | Add a shift trade job |
+| [**postWorkforcemanagementShifttradingTradesMineQueryJobs**](WorkforceManagementAPI#postWorkforcemanagementShifttradingTradesMineQueryJobs) | Retrieve all my shift trades where I am either the initiating or receiving user |
 | [**postWorkforcemanagementTeamAdherenceHistorical**](WorkforceManagementAPI#postWorkforcemanagementTeamAdherenceHistorical) | Request a teams historical adherence report |
 | [**postWorkforcemanagementTeamShrinkageJobs**](WorkforceManagementAPI#postWorkforcemanagementTeamShrinkageJobs) | Request a historical shrinkage report |
 | [**postWorkforcemanagementTimeoffbalanceJobs**](WorkforceManagementAPI#postWorkforcemanagementTimeoffbalanceJobs) | Query time off balances for the current user for specified activity code and dates |
@@ -3619,6 +3639,279 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitServicegoaltemplates(bu
 [**ServiceGoalTemplateList**](ServiceGoalTemplateList)
 
 
+## getWorkforcemanagementBusinessunitShifttradingTradesEvaluateJob
+
+
+
+> [ShiftTradeEvaluateTradesBuJobResponse](ShiftTradeEvaluateTradesBuJobResponse) getWorkforcemanagementBusinessunitShifttradingTradesEvaluateJob(businessUnitId, jobId)
+
+View results of the evaluate shift trades in a management unit per week operation. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/evaluate/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:shiftTradeRequest:view
+* wfm:shiftTradeRequest:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let jobId: String = "" // The ID of the job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitShifttradingTradesEvaluateJob(businessUnitId: businessUnitId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitShifttradingTradesEvaluateJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **jobId** | **String**| The ID of the job | |
+
+
+### Return type
+
+[**ShiftTradeEvaluateTradesBuJobResponse**](ShiftTradeEvaluateTradesBuJobResponse)
+
+
+## getWorkforcemanagementBusinessunitShifttradingTradesQueryJob
+
+
+
+> [ShiftTradeQueryTradesBuJobResponse](ShiftTradeQueryTradesBuJobResponse) getWorkforcemanagementBusinessunitShifttradingTradesQueryJob(businessUnitId, jobId)
+
+View results of the query shift trades in a management unit per user operation. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/query/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:shiftTradeRequest:view
+* wfm:shiftTradeRequest:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let jobId: String = "" // The ID of the job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitShifttradingTradesQueryJob(businessUnitId: businessUnitId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitShifttradingTradesQueryJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **jobId** | **String**| The ID of the job | |
+
+
+### Return type
+
+[**ShiftTradeQueryTradesBuJobResponse**](ShiftTradeQueryTradesBuJobResponse)
+
+
+## getWorkforcemanagementBusinessunitShifttradingTradesStateBulkJob
+
+
+
+> [ShiftTradeBulkUpdateTradeStateBuJobResponse](ShiftTradeBulkUpdateTradeStateBuJobResponse) getWorkforcemanagementBusinessunitShifttradingTradesStateBulkJob(businessUnitId, jobId)
+
+View results of bulk update trades states operation. Only the user who started the operation can query the status.
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/state/bulk/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:shiftTradeRequest:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let jobId: String = "" // The ID of the job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitShifttradingTradesStateBulkJob(businessUnitId: businessUnitId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitShifttradingTradesStateBulkJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **jobId** | **String**| The ID of the job | |
+
+
+### Return type
+
+[**ShiftTradeBulkUpdateTradeStateBuJobResponse**](ShiftTradeBulkUpdateTradeStateBuJobResponse)
+
+
+## getWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJob
+
+
+
+> [ShiftTradeSearchUnmatchedTradesBuJobResponse](ShiftTradeSearchUnmatchedTradesBuJobResponse) getWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJob(businessUnitId, jobId)
+
+View result of potential shift trade matches for the current user. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/unmatched/search/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let jobId: String = "" // The ID of the job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJob(businessUnitId: businessUnitId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **jobId** | **String**| The ID of the job | |
+
+
+### Return type
+
+[**ShiftTradeSearchUnmatchedTradesBuJobResponse**](ShiftTradeSearchUnmatchedTradesBuJobResponse)
+
+
+## getWorkforcemanagementBusinessunitShifttradingWeeksSummaryJob
+
+
+
+> [ShiftTradeQueryWeekSummariesBuJobResponse](ShiftTradeQueryWeekSummariesBuJobResponse) getWorkforcemanagementBusinessunitShifttradingWeeksSummaryJob(businessUnitId, jobId)
+
+View results of the retrieve the summary of shift trades in a matched state per week operation. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/weeks/summary/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:shiftTradeRequest:view
+* wfm:shiftTradeRequest:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let jobId: String = "" // The ID of the job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitShifttradingWeeksSummaryJob(businessUnitId: businessUnitId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitShifttradingWeeksSummaryJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **jobId** | **String**| The ID of the job | |
+
+
+### Return type
+
+[**ShiftTradeQueryWeekSummariesBuJobResponse**](ShiftTradeQueryWeekSummariesBuJobResponse)
+
+
 ## getWorkforcemanagementBusinessunitStaffinggroup
 
 
@@ -4336,7 +4629,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekSchedulePerformance
 
 Get the list of week schedules for the specified week
 
-Use \&quot;recent\&quot; (without quotes) for the &#x60;weekId&#x60; path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+Use \&quot;recent\&quot; (without quotes) for the &#x60;weekId&#x60; path parameter to fetch all schedules for up to +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
 
 
 
@@ -4737,7 +5030,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastSt
 
 Get short term forecasts
 
-Use \&quot;recent\&quot; (without quotes) for the &#x60;weekDateId&#x60; path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+Use \&quot;recent\&quot; (without quotes) for the &#x60;weekDateId&#x60; path parameter to fetch all forecasts for up to +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
 
 
 
@@ -7075,6 +7368,272 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**ShiftTradeListResponse**](ShiftTradeListResponse)
+
+
+## getWorkforcemanagementShifttradingTradeJob
+
+
+
+> [ShiftTradeUpdateTradeJobResponse](ShiftTradeUpdateTradeJobResponse) getWorkforcemanagementShifttradingTradeJob(tradeId, jobId)
+
+View result of update trade operation. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Wraps GET /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tradeId: String = "" // The ID of the shift trade to update
+let jobId: String = "" // The ID of the job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementShifttradingTradeJob(tradeId: tradeId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementShifttradingTradeJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tradeId** | **String**| The ID of the shift trade to update | |
+| **jobId** | **String**| The ID of the job | |
+
+
+### Return type
+
+[**ShiftTradeUpdateTradeJobResponse**](ShiftTradeUpdateTradeJobResponse)
+
+
+## getWorkforcemanagementShifttradingTradeMatchJob
+
+
+
+> [ShiftTradeMatchTradeJobResponse](ShiftTradeMatchTradeJobResponse) getWorkforcemanagementShifttradingTradeMatchJob(tradeId, jobId)
+
+View result of match shift trade operation. Only the receiving user who started the operation can query the status.
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Wraps GET /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/match/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tradeId: String = "" // The ID of the shift trade to update
+let jobId: String = "" // The ID of the job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementShifttradingTradeMatchJob(tradeId: tradeId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementShifttradingTradeMatchJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tradeId** | **String**| The ID of the shift trade to update | |
+| **jobId** | **String**| The ID of the job | |
+
+
+### Return type
+
+[**ShiftTradeMatchTradeJobResponse**](ShiftTradeMatchTradeJobResponse)
+
+
+## getWorkforcemanagementShifttradingTradeStateJob
+
+
+
+> [ShiftTradeUpdateTradeStateJobResponse](ShiftTradeUpdateTradeStateJobResponse) getWorkforcemanagementShifttradingTradeStateJob(tradeId, jobId)
+
+View result of update trade state operation. Only the user who started the operation can query the status.
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Wraps GET /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/state/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tradeId: String = "" // The ID of the shift trade to update
+let jobId: String = "" // The ID of the job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementShifttradingTradeStateJob(tradeId: tradeId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementShifttradingTradeStateJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tradeId** | **String**| The ID of the shift trade to update | |
+| **jobId** | **String**| The ID of the job | |
+
+
+### Return type
+
+[**ShiftTradeUpdateTradeStateJobResponse**](ShiftTradeUpdateTradeStateJobResponse)
+
+
+## getWorkforcemanagementShifttradingTradesJob
+
+
+
+> [ShiftTradeAddTradeJobResponse](ShiftTradeAddTradeJobResponse) getWorkforcemanagementShifttradingTradesJob(jobId)
+
+View result of create trade operation. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Wraps GET /api/v2/workforcemanagement/shifttrading/trades/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // The ID of the job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementShifttradingTradesJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementShifttradingTradesJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| The ID of the job | |
+
+
+### Return type
+
+[**ShiftTradeAddTradeJobResponse**](ShiftTradeAddTradeJobResponse)
+
+
+## getWorkforcemanagementShifttradingTradesMineQueryJob
+
+
+
+> [ShiftTradeQueryAgentTradesJobResponse](ShiftTradeQueryAgentTradesJobResponse) getWorkforcemanagementShifttradingTradesMineQueryJob(jobId)
+
+View results of retrieve all my shift trade operation. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Wraps GET /api/v2/workforcemanagement/shifttrading/trades/mine/query/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // The ID of the job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementShifttradingTradesMineQueryJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementShifttradingTradesMineQueryJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| The ID of the job | |
+
+
+### Return type
+
+[**ShiftTradeQueryAgentTradesJobResponse**](ShiftTradeQueryAgentTradesJobResponse)
 
 
 ## getWorkforcemanagementShrinkageJob
@@ -11158,6 +11717,287 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitServicegoaltemplates(b
 [**ServiceGoalTemplate**](ServiceGoalTemplate)
 
 
+## postWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobs
+
+
+
+> [ShiftTradeEvaluateTradesBuJobResponse](ShiftTradeEvaluateTradesBuJobResponse) postWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobs(businessUnitId, body, forceAsync, forceDownloadService)
+
+Queries and evaluates against shift trade configuration shift trades in a management unit per week
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/evaluate/jobs  
+
+Requires ANY permissions: 
+
+* wfm:shiftTradeRequest:view
+* wfm:shiftTradeRequest:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: EvaluateShiftTradeListJobRequest = new EvaluateShiftTradeListJobRequest(...) // The request body
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobs(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**EvaluateShiftTradeListJobRequest**](EvaluateShiftTradeListJobRequest)| The request body | |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
+
+
+### Return type
+
+[**ShiftTradeEvaluateTradesBuJobResponse**](ShiftTradeEvaluateTradesBuJobResponse)
+
+
+## postWorkforcemanagementBusinessunitShifttradingTradesQueryJobs
+
+
+
+> [ShiftTradeQueryTradesBuJobResponse](ShiftTradeQueryTradesBuJobResponse) postWorkforcemanagementBusinessunitShifttradingTradesQueryJobs(businessUnitId, body, forceAsync, forceDownloadService)
+
+Queries shift trades in a management unit per user
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/query/jobs  
+
+Requires ANY permissions: 
+
+* wfm:shiftTradeRequest:view
+* wfm:shiftTradeRequest:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: QueryShiftTradeListJobRequest = new QueryShiftTradeListJobRequest(...) // The request body
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitShifttradingTradesQueryJobs(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitShifttradingTradesQueryJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**QueryShiftTradeListJobRequest**](QueryShiftTradeListJobRequest)| The request body | |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
+
+
+### Return type
+
+[**ShiftTradeQueryTradesBuJobResponse**](ShiftTradeQueryTradesBuJobResponse)
+
+
+## postWorkforcemanagementBusinessunitShifttradingTradesStateBulkJobs
+
+
+
+> [ShiftTradeBulkUpdateTradeStateBuJobResponse](ShiftTradeBulkUpdateTradeStateBuJobResponse) postWorkforcemanagementBusinessunitShifttradingTradesStateBulkJobs(businessUnitId, body, forceAsync, forceDownloadService)
+
+Bulk update multiple trade states. Permits a supervisor to approve or deny multiple trades.
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/state/bulk/jobs  
+
+Requires ANY permissions: 
+
+* wfm:shiftTradeRequest:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: BulkUpdateShiftTradeListJobRequest = new BulkUpdateShiftTradeListJobRequest(...) // The request body
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitShifttradingTradesStateBulkJobs(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitShifttradingTradesStateBulkJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**BulkUpdateShiftTradeListJobRequest**](BulkUpdateShiftTradeListJobRequest)| The request body | |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
+
+
+### Return type
+
+[**ShiftTradeBulkUpdateTradeStateBuJobResponse**](ShiftTradeBulkUpdateTradeStateBuJobResponse)
+
+
+## postWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJobs
+
+
+
+> [ShiftTradeSearchUnmatchedTradesBuJobResponse](ShiftTradeSearchUnmatchedTradesBuJobResponse) postWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJobs(businessUnitId, body, forceAsync, forceDownloadService)
+
+Start an async job to find potential shift trade matches for the current receiving user
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/unmatched/search/jobs  
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: SearchUnmatchedShiftTradeListJobRequest = new SearchUnmatchedShiftTradeListJobRequest(...) // The request body
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJobs(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitShifttradingUnmatchedSearchJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**SearchUnmatchedShiftTradeListJobRequest**](SearchUnmatchedShiftTradeListJobRequest)| The request body | |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
+
+
+### Return type
+
+[**ShiftTradeSearchUnmatchedTradesBuJobResponse**](ShiftTradeSearchUnmatchedTradesBuJobResponse)
+
+
+## postWorkforcemanagementBusinessunitShifttradingWeeksSummaryJobs
+
+
+
+> [ShiftTradeQueryWeekSummariesBuJobResponse](ShiftTradeQueryWeekSummariesBuJobResponse) postWorkforcemanagementBusinessunitShifttradingWeeksSummaryJobs(businessUnitId, body, forceAsync)
+
+Retrieves the summary of shift trades in a matched state per week
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/weeks/summary/jobs  
+
+Requires ANY permissions: 
+
+* wfm:shiftTradeRequest:view
+* wfm:shiftTradeRequest:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: QueryWeekSummaryListJobRequest = new QueryWeekSummaryListJobRequest(...) // The request body
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitShifttradingWeeksSummaryJobs(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitShifttradingWeeksSummaryJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**QueryWeekSummaryListJobRequest**](QueryWeekSummaryListJobRequest)| The request body | |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
+
+
+### Return type
+
+[**ShiftTradeQueryWeekSummariesBuJobResponse**](ShiftTradeQueryWeekSummariesBuJobResponse)
+
+
 ## postWorkforcemanagementBusinessunitStaffinggroups
 
 
@@ -14343,6 +15183,274 @@ WorkforceManagementAPI.postWorkforcemanagementSchedules(body: body) { (response,
 [**UserScheduleContainer**](UserScheduleContainer)
 
 
+## postWorkforcemanagementShifttradingTradeJobs
+
+
+
+> [ShiftTradeUpdateTradeJobResponse](ShiftTradeUpdateTradeJobResponse) postWorkforcemanagementShifttradingTradeJobs(tradeId, body, forceAsync)
+
+Updates a shift trade. This route can only be called by the initiating user
+
+
+
+Wraps POST /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/jobs  
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tradeId: String = "" // The ID of the shift trade to update
+let body: UpdateShiftTradeJobRequest = new UpdateShiftTradeJobRequest(...) // The request body
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementShifttradingTradeJobs(tradeId: tradeId, body: body, forceAsync: forceAsync) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementShifttradingTradeJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tradeId** | **String**| The ID of the shift trade to update | |
+| **body** | [**UpdateShiftTradeJobRequest**](UpdateShiftTradeJobRequest)| The request body | |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
+
+
+### Return type
+
+[**ShiftTradeUpdateTradeJobResponse**](ShiftTradeUpdateTradeJobResponse)
+
+
+## postWorkforcemanagementShifttradingTradeMatchJobs
+
+
+
+> [ShiftTradeMatchTradeJobResponse](ShiftTradeMatchTradeJobResponse) postWorkforcemanagementShifttradingTradeMatchJobs(tradeId, body, forceAsync)
+
+Matches a shift trade. This route can only be called by the receiving user
+
+
+
+Wraps POST /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/match/jobs  
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tradeId: String = "" // The ID of the shift trade to match
+let body: MatchShiftTradeJobRequest = new MatchShiftTradeJobRequest(...) // The request body
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementShifttradingTradeMatchJobs(tradeId: tradeId, body: body, forceAsync: forceAsync) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementShifttradingTradeMatchJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tradeId** | **String**| The ID of the shift trade to match | |
+| **body** | [**MatchShiftTradeJobRequest**](MatchShiftTradeJobRequest)| The request body | |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
+
+
+### Return type
+
+[**ShiftTradeMatchTradeJobResponse**](ShiftTradeMatchTradeJobResponse)
+
+
+## postWorkforcemanagementShifttradingTradeStateJobs
+
+
+
+> [ShiftTradeUpdateTradeStateJobResponse](ShiftTradeUpdateTradeStateJobResponse) postWorkforcemanagementShifttradingTradeStateJobs(tradeId, body, forceAsync)
+
+Update trade state by a user
+
+
+
+Wraps POST /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/state/jobs  
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tradeId: String = "" // The ID of the shift trade to update state
+let body: UpdateShiftTradeStateJobRequest = new UpdateShiftTradeStateJobRequest(...) // The request body
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementShifttradingTradeStateJobs(tradeId: tradeId, body: body, forceAsync: forceAsync) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementShifttradingTradeStateJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tradeId** | **String**| The ID of the shift trade to update state | |
+| **body** | [**UpdateShiftTradeStateJobRequest**](UpdateShiftTradeStateJobRequest)| The request body | |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
+
+
+### Return type
+
+[**ShiftTradeUpdateTradeStateJobResponse**](ShiftTradeUpdateTradeStateJobResponse)
+
+
+## postWorkforcemanagementShifttradingTradesJobs
+
+
+
+> [ShiftTradeAddTradeJobResponse](ShiftTradeAddTradeJobResponse) postWorkforcemanagementShifttradingTradesJobs(body, forceAsync)
+
+Add a shift trade job
+
+
+
+Wraps POST /api/v2/workforcemanagement/shifttrading/trades/jobs  
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AddShiftTradeJobRequest = new AddShiftTradeJobRequest(...) // The request body
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementShifttradingTradesJobs(body: body, forceAsync: forceAsync) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementShifttradingTradesJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AddShiftTradeJobRequest**](AddShiftTradeJobRequest)| The request body | |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
+
+
+### Return type
+
+[**ShiftTradeAddTradeJobResponse**](ShiftTradeAddTradeJobResponse)
+
+
+## postWorkforcemanagementShifttradingTradesMineQueryJobs
+
+
+
+> [ShiftTradeQueryAgentTradesJobResponse](ShiftTradeQueryAgentTradesJobResponse) postWorkforcemanagementShifttradingTradesMineQueryJobs(body, forceAsync, forceDownloadService)
+
+Retrieve all my shift trades where I am either the initiating or receiving user
+
+
+
+Wraps POST /api/v2/workforcemanagement/shifttrading/trades/mine/query/jobs  
+
+Requires ANY permissions: 
+
+* wfm:agentShiftTradeRequest:participate
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: QueryAgentShiftTradeListJobRequest = new QueryAgentShiftTradeListJobRequest(...) // The request body
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementShifttradingTradesMineQueryJobs(body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementShifttradingTradesMineQueryJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**QueryAgentShiftTradeListJobRequest**](QueryAgentShiftTradeListJobRequest)| The request body | |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
+
+
+### Return type
+
+[**ShiftTradeQueryAgentTradesJobResponse**](ShiftTradeQueryAgentTradesJobResponse)
+
+
 ## postWorkforcemanagementTeamAdherenceHistorical
 
 
@@ -14965,4 +16073,4 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatformClientV2@191.0.0_
+_PureCloudPlatformClientV2@192.0.0_

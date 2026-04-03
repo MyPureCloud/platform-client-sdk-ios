@@ -11,8 +11,8 @@
 | **filter** | [**SocialMediaQueryFilter**](SocialMediaQueryFilter) | Behaves like a SQL WHERE clause. This is ANDed with the interval parameter. Expresses boolean logical predicates as well as dimensional filters | [optional] |
 | **topicIds** | **[String]** | List of topicIds to query in | [optional] |
 | **pageSize** | **Int** | The number of results per page | [optional] |
-| **order** | **String** | Sorting of results based on time | [optional] |
+| **order** | **String** | Deprecated: use &#39;sort&#39; field instead. Sorting of results based on time | [optional] |
 
 
 
-_PureCloudPlatformClientV2@191.0.0_
+_PureCloudPlatformClientV2@192.0.0_

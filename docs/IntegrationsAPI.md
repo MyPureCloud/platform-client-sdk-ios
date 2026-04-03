@@ -1799,7 +1799,7 @@ IntegrationsAPI.getIntegrationsCredentialsListing(before: before, after: after, 
 
 
 
-> [CredentialTypeListing](CredentialTypeListing) getIntegrationsCredentialsTypes()
+> [[CredentialType]](CredentialType) getIntegrationsCredentialsTypes()
 
 List all credential types
 
@@ -1838,7 +1838,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**CredentialTypeListing**](CredentialTypeListing)
+[**[CredentialType]**](CredentialType)
 
 
 ## getIntegrationsSpeechAudioconnector
@@ -4766,4 +4766,4 @@ IntegrationsAPI.putIntegrationsUnifiedcommunicationThirdpartypresences(ucIntegra
 **String**
 
 
-_PureCloudPlatformClientV2@191.0.0_
+_PureCloudPlatformClientV2@192.0.0_

@@ -8,9 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **pageSize** | **Int** | Number of records according to the page size | [optional] |
 | **pageNumber** | **Int** | Current page number for the returned records | [optional] |
-| **results** | [**[EvaluationResponse]**]([EvaluationResponse]) | Results associated to the search response | [optional] |
+| **results** | [**[EvaluationSearchItemResponse]**]([EvaluationSearchItemResponse]) | Results associated to the search response | [optional] |
 | **aggregations** | [**[String:EvaluationSearchAggregationResponse]**](EvaluationSearchAggregationResponse) | Aggregation results | [optional] |
 
 
 
-_PureCloudPlatformClientV2@191.0.0_
+_PureCloudPlatformClientV2@192.0.0_

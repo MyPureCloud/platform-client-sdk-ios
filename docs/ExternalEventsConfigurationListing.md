@@ -1,12 +1,12 @@
-# CredentialTypeListing
+# ExternalEventsConfigurationListing
 
-## CredentialTypeListing
+## ExternalEventsConfigurationListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[CredentialType]**]([CredentialType]) |  | [optional] |
+| **entities** | [**[ExternalEventsConfiguration]**]([ExternalEventsConfiguration]) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -19,4 +19,4 @@
 
 
 
-_PureCloudPlatformClientV2@191.0.0_
+_PureCloudPlatformClientV2@192.0.0_
