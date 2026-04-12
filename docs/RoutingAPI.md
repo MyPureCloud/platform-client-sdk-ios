@@ -156,8 +156,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putRoutingSettingsTranscription**](RoutingAPI#putRoutingSettingsTranscription) | Update Transcription Settings |
 | [**putRoutingSmsIdentityresolutionPhonenumber**](RoutingAPI#putRoutingSmsIdentityresolutionPhonenumber) | Update an SMS identity resolution settings. |
 | [**putRoutingUserDirectroutingbackupSettings**](RoutingAPI#putRoutingUserDirectroutingbackupSettings) | Update the user&#39;s Direct Routing Backup settings. |
-| [**putRoutingUserUtilization**](RoutingAPI#putRoutingUserUtilization) | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
-| [**putRoutingUtilization**](RoutingAPI#putRoutingUtilization) | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. |
+| [**putRoutingUserUtilization**](RoutingAPI#putRoutingUserUtilization) | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the organization&#39;s default values. |
+| [**putRoutingUtilization**](RoutingAPI#putRoutingUtilization) | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the system default values. |
 | [**putRoutingUtilizationLabel**](RoutingAPI#putRoutingUtilizationLabel) | Update a utilization label |
 | [**putRoutingWrapupcode**](RoutingAPI#putRoutingWrapupcode) | Update wrap-up code |
 | [**putUserRoutingskill**](RoutingAPI#putUserRoutingskill) | Update an assigned routing skill&#39;s proficiency |
@@ -8152,7 +8152,7 @@ RoutingAPI.putRoutingUserDirectroutingbackupSettings(userId: userId, body: body)
 
 > [AgentMaxUtilizationResponse](AgentMaxUtilizationResponse) putRoutingUserUtilization(userId, body)
 
-Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
+Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the organization&#39;s default values.
 
 
 
@@ -8204,7 +8204,7 @@ RoutingAPI.putRoutingUserUtilization(userId: userId, body: body) { (response, er
 
 > [UtilizationResponse](UtilizationResponse) putRoutingUtilization(body)
 
-Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
+Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the system default values.
 
 
 
@@ -8458,4 +8458,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@192.0.0_
+_PureCloudPlatformClientV2@193.0.0_

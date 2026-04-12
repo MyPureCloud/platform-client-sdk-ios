@@ -15,6 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getResponsemanagementResponses**](ResponseManagementAPI#getResponsemanagementResponses) | Gets a list of existing responses. |
 | [**postResponsemanagementLibraries**](ResponseManagementAPI#postResponsemanagementLibraries) | Create a response library. |
 | [**postResponsemanagementLibrariesBulk**](ResponseManagementAPI#postResponsemanagementLibrariesBulk) | Get response libraries. |
+| [**postResponsemanagementLibrariesQuery**](ResponseManagementAPI#postResponsemanagementLibrariesQuery) | Query libraries using criteria. Users can set DivisionId parameter as &#39;*&#39; to fetch libraries that aren&#39;t associated with any divisions. |
 | [**postResponsemanagementResponseassetsBulk**](ResponseManagementAPI#postResponsemanagementResponseassetsBulk) | Get response assets. |
 | [**postResponsemanagementResponseassetsSearch**](ResponseManagementAPI#postResponsemanagementResponseassetsSearch) | Search response assets |
 | [**postResponsemanagementResponseassetsUploads**](ResponseManagementAPI#postResponsemanagementResponseassetsUploads) | Creates pre-signed url for uploading response asset |
@@ -591,6 +592,60 @@ ResponseManagementAPI.postResponsemanagementLibrariesBulk(body: body) { (respons
 [**LibraryEntityListing**](LibraryEntityListing)
 
 
+## postResponsemanagementLibrariesQuery
+
+
+
+> [LibraryEntityListing](LibraryEntityListing) postResponsemanagementLibrariesQuery(body, pageNumber, pageSize)
+
+Query libraries using criteria. Users can set DivisionId parameter as &#39;*&#39; to fetch libraries that aren&#39;t associated with any divisions.
+
+
+
+Wraps POST /api/v2/responsemanagement/libraries/query  
+
+Requires ANY permissions: 
+
+* responses:library:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: QueryCriteriaQuery = new QueryCriteriaQuery(...) // Query criteria
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+
+// Code example
+ResponseManagementAPI.postResponsemanagementLibrariesQuery(body: body, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ResponseManagementAPI.postResponsemanagementLibrariesQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**QueryCriteriaQuery**](QueryCriteriaQuery)| Query criteria | |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+
+
+### Return type
+
+[**LibraryEntityListing**](LibraryEntityListing)
+
+
 ## postResponsemanagementResponseassetsBulk
 
 
@@ -1007,4 +1062,4 @@ ResponseManagementAPI.putResponsemanagementResponseasset(responseAssetId: respon
 [**ResponseAsset**](ResponseAsset)
 
 
-_PureCloudPlatformClientV2@192.0.0_
+_PureCloudPlatformClientV2@193.0.0_

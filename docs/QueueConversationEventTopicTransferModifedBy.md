@@ -12,4 +12,4 @@ Fields identifying the entity that updated the command.
 
 
 
-_PureCloudPlatformClientV2@192.0.0_
+_PureCloudPlatformClientV2@193.0.0_

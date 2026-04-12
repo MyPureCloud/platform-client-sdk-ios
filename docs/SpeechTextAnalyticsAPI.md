@@ -1091,7 +1091,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramTranscriptionengines(prog
 
 
 
-> [ProgramsEntityListing](ProgramsEntityListing) getSpeechandtextanalyticsPrograms(nextPage, pageSize, state, name, sortBy, sortOrder)
+> [ProgramsEntityListing](ProgramsEntityListing) getSpeechandtextanalyticsPrograms(nextPage, pageSize, state, name, ids, sortBy, sortOrder)
 
 Get the list of Speech &amp; Text Analytics programs
 
@@ -1115,11 +1115,12 @@ let nextPage: String = "" // The key for listing the next page
 let pageSize: Int = 0 // The page size for the listing
 let state: SpeechTextAnalyticsAPI.State_getSpeechandtextanalyticsPrograms = SpeechTextAnalyticsAPI.State_getSpeechandtextanalyticsPrograms.enummember // Program state. Defaults to Latest
 let name: String = "" // Case insensitive partial name to filter by
+let ids: [String] = [""] // Comma separated Program IDs to filter by. Cannot be used with pagination params. Maximum of 50 IDs allowed.
 let sortBy: SpeechTextAnalyticsAPI.SortBy_getSpeechandtextanalyticsPrograms = SpeechTextAnalyticsAPI.SortBy_getSpeechandtextanalyticsPrograms.enummember // Sort results by. Defaults to name
 let sortOrder: SpeechTextAnalyticsAPI.SortOrder_getSpeechandtextanalyticsPrograms = SpeechTextAnalyticsAPI.SortOrder_getSpeechandtextanalyticsPrograms.enummember // Sort order. Defaults to asc
 
 // Code example
-SpeechTextAnalyticsAPI.getSpeechandtextanalyticsPrograms(nextPage: nextPage, pageSize: pageSize, state: state, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsPrograms(nextPage: nextPage, pageSize: pageSize, state: state, name: name, ids: ids, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1138,6 +1139,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsPrograms(nextPage: nextPage, pag
 | **pageSize** | **Int**| The page size for the listing | [optional] |
 | **state** | **String**| Program state. Defaults to Latest | [optional]<br />**Values**: latest ("Latest"), published ("Published") |
 | **name** | **String**| Case insensitive partial name to filter by | [optional] |
+| **ids** | [**[String]**](String)| Comma separated Program IDs to filter by. Cannot be used with pagination params. Maximum of 50 IDs allowed. | [optional] |
 | **sortBy** | **String**| Sort results by. Defaults to name | [optional]<br />**Values**: name ("name") |
 | **sortOrder** | **String**| Sort order. Defaults to asc | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
 
@@ -3078,4 +3080,4 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsTopic(topicId: topicId, body: bo
 [**Topic**](Topic)
 
 
-_PureCloudPlatformClientV2@192.0.0_
+_PureCloudPlatformClientV2@193.0.0_

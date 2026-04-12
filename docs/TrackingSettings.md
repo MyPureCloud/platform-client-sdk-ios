@@ -14,4 +14,4 @@ Settings that control how tracking data is collected and filtered.
 
 
 
-_PureCloudPlatformClientV2@192.0.0_
+_PureCloudPlatformClientV2@193.0.0_
