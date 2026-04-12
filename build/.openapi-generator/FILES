@@ -1590,6 +1590,7 @@ docs/CreateResponseAssetResponse.md
 docs/CreateRoomRequest.md
 docs/CreateRoomResponse.md
 docs/CreateRoutingSkill.md
+docs/CreateScheduledTriggerRequest.md
 docs/CreateSecureSession.md
 docs/CreateServiceGoalTemplate.md
 docs/CreateShareRequest.md
@@ -2872,6 +2873,8 @@ docs/JourneySegmentAssignmentEventsNotificationSession.md
 docs/JourneySegmentRequest.md
 docs/JourneySessionEventsNotificationApp.md
 docs/JourneySessionEventsNotificationBrowser.md
+docs/JourneySessionEventsNotificationCase.md
+docs/JourneySessionEventsNotificationCaseAssociation.md
 docs/JourneySessionEventsNotificationConnectedQueue.md
 docs/JourneySessionEventsNotificationConversation.md
 docs/JourneySessionEventsNotificationConversationChannel.md
@@ -3973,6 +3976,9 @@ docs/QueryAvailabilityManagementUnitsSettingsRequest.md
 docs/QueryAvailabilityManagementUnitsSettingsResponse.md
 docs/QueryCapacityPlanStaffingGroupMetricChangeHistory.md
 docs/QueryCriteria.md
+docs/QueryCriteriaGroup.md
+docs/QueryCriteriaItem.md
+docs/QueryCriteriaQuery.md
 docs/QueryDivision.md
 docs/QueryFacetInfo.md
 docs/QueryPlanningGroupToStaffingGroupsRequest.md
@@ -4413,6 +4419,8 @@ docs/ReportingExportMetadataJobResponse.md
 docs/ReportingInterval.md
 docs/ReportingTurn.md
 docs/ReportingTurnAction.md
+docs/ReportingTurnBotFlowInvocationEvent.md
+docs/ReportingTurnFlow.md
 docs/ReportingTurnIntent.md
 docs/ReportingTurnIntentSlot.md
 docs/ReportingTurnKnowledge.md
@@ -4551,6 +4559,8 @@ docs/ScheduleGroupEntityListing.md
 docs/ScheduleInterval.md
 docs/ScheduleReferenceWithBusinessUnit.md
 docs/ScheduleUploadProcessingResponse.md
+docs/ScheduledTrigger.md
+docs/ScheduledTriggerEntityListing.md
 docs/SchedulerMessageArgument.md
 docs/SchedulerMessageSeverityCount.md
 docs/SchedulerMessageTypeSeverity.md
@@ -5151,6 +5161,7 @@ docs/TranslateSupportedLanguageList.md
 docs/TrendData.md
 docs/Trigger.md
 docs/TriggerEntityListing.md
+docs/TriggerSchedule.md
 docs/TriggerTarget.md
 docs/Trunk.md
 docs/TrunkBase.md
@@ -5284,6 +5295,7 @@ docs/UpdatePlanningGroupRequest.md
 docs/UpdateRowIndexRequest.md
 docs/UpdateScheduleUploadResponse.md
 docs/UpdateScheduleUploadSchema.md
+docs/UpdateScheduledTriggerRequest.md
 docs/UpdateSegmentAssignmentRequest.md
 docs/UpdateSegmentAssignmentResponse.md
 docs/UpdateServiceGoalTemplate.md
@@ -5704,6 +5716,10 @@ docs/WeekScheduleResponse.md
 docs/WeekShiftTradeListResponse.md
 docs/WeekShiftTradeMatchesSummaryResponse.md
 docs/WeekShiftTradeResponse.md
+docs/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobComplete.md
+docs/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResults.md
+docs/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResultsSlot.md
+docs/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResultsSlotSchedule.md
 docs/WemCoachingUserNotificationTopicCoachingAppointmentReference.md
 docs/WemCoachingUserNotificationTopicCoachingUserNotification.md
 docs/WfmActivityPlanJobCompleteTopicActivityPlanJobException.md
@@ -5734,6 +5750,8 @@ docs/WfmAgentAdherenceExplanationChangedBusinessUnitTopicUserReference.md
 docs/WfmAgentHistoricalAdherenceJobReference.md
 docs/WfmAgentHistoricalAdherenceResponse.md
 docs/WfmAgentHistoricalAdherenceResult.md
+docs/WfmAgentMuScheduleSearchCompleteTopicAgentMuScheduleSearchCompleteNotification.md
+docs/WfmAgentMuScheduleSearchCompleteTopicErrorBody.md
 docs/WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate.md
 docs/WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification.md
 docs/WfmAgentScheduleUpdateTopicUserReference.md
@@ -5862,6 +5880,15 @@ docs/WfmScheduleReference.md
 docs/WfmScheduleTopicWfmScheduleNotification.md
 docs/WfmServiceGoalImpact.md
 docs/WfmServiceGoalImpactSettings.md
+docs/WfmShiftTradingJobCompleteEventErrorBody.md
+docs/WfmShiftTradingJobCompleteEventShiftTradingJobCompleteNotification.md
+docs/WfmShiftTradingJobCompleteEventTradeEntity.md
+docs/WfmShiftTradingJobCompleteEventTradeShift.md
+docs/WfmShiftTradingJobCompleteEventTradeSide.md
+docs/WfmShiftTradingJobCompleteEventWeekSummary.md
+docs/WfmShiftTradingJobCompleteEventWeekSummaryList.md
+docs/WfmShiftTradingJobCompleteEventWfmDateTimeInterval.md
+docs/WfmShiftTradingJobCompleteEventWfmVersionMetadata.md
 docs/WfmTimeOffBalanceJobTopicErrorBody.md
 docs/WfmTimeOffBalanceJobTopicTimeOffBalance.md
 docs/WfmTimeOffBalanceJobTopicTimeOffBalanceJobNotification.md
@@ -6324,6 +6351,7 @@ docs/deleteOutboundSequence-example.txt
 docs/deletePresenceDefinition0-example.txt
 docs/deletePresenceSource-example.txt
 docs/deletePresencedefinition-example.txt
+docs/deleteProcessautomationScheduledtrigger-example.txt
 docs/deleteProcessautomationTrigger-example.txt
 docs/deleteQualityCalibration-example.txt
 docs/deleteQualityConversationEvaluation-example.txt
@@ -7300,6 +7328,8 @@ docs/getPresenceSources-example.txt
 docs/getPresenceUserPrimarysource-example.txt
 docs/getPresencedefinition-example.txt
 docs/getPresencedefinitions-example.txt
+docs/getProcessautomationScheduledtrigger-example.txt
+docs/getProcessautomationScheduledtriggers-example.txt
 docs/getProcessautomationTrigger-example.txt
 docs/getProcessautomationTriggers-example.txt
 docs/getProcessautomationTriggersTopics-example.txt
@@ -8642,6 +8672,7 @@ docs/postOutboundSequences-example.txt
 docs/postPresenceDefinitions0-example.txt
 docs/postPresenceSources-example.txt
 docs/postPresencedefinitions-example.txt
+docs/postProcessautomationScheduledtriggers-example.txt
 docs/postProcessautomationTriggerTest-example.txt
 docs/postProcessautomationTriggers-example.txt
 docs/postProcessautomationTriggersTopicTest-example.txt
@@ -8674,6 +8705,7 @@ docs/postRecordingsScreensessionsAcknowledge-example.txt
 docs/postRecordingsScreensessionsMetadata-example.txt
 docs/postResponsemanagementLibraries-example.txt
 docs/postResponsemanagementLibrariesBulk-example.txt
+docs/postResponsemanagementLibrariesQuery-example.txt
 docs/postResponsemanagementResponseassetsBulk-example.txt
 docs/postResponsemanagementResponseassetsSearch-example.txt
 docs/postResponsemanagementResponseassetsUploads-example.txt
@@ -9106,6 +9138,7 @@ docs/putPresenceSettings-example.txt
 docs/putPresenceSource-example.txt
 docs/putPresenceUserPrimarysource-example.txt
 docs/putPresencedefinition-example.txt
+docs/putProcessautomationScheduledtrigger-example.txt
 docs/putProcessautomationTrigger-example.txt
 docs/putQualityCalibration-example.txt
 docs/putQualityConversationEvaluation-example.txt
@@ -10854,6 +10887,7 @@ src/Models/CreateResponseAssetResponse.swift
 src/Models/CreateRoomRequest.swift
 src/Models/CreateRoomResponse.swift
 src/Models/CreateRoutingSkill.swift
+src/Models/CreateScheduledTriggerRequest.swift
 src/Models/CreateSecureSession.swift
 src/Models/CreateServiceGoalTemplate.swift
 src/Models/CreateShareRequest.swift
@@ -12098,6 +12132,8 @@ src/Models/JourneySegmentAssignmentEventsNotificationSession.swift
 src/Models/JourneySegmentRequest.swift
 src/Models/JourneySessionEventsNotificationApp.swift
 src/Models/JourneySessionEventsNotificationBrowser.swift
+src/Models/JourneySessionEventsNotificationCase.swift
+src/Models/JourneySessionEventsNotificationCaseAssociation.swift
 src/Models/JourneySessionEventsNotificationConnectedQueue.swift
 src/Models/JourneySessionEventsNotificationConversation.swift
 src/Models/JourneySessionEventsNotificationConversationChannel.swift
@@ -13164,6 +13200,9 @@ src/Models/QueryAvailabilityManagementUnitsSettingsRequest.swift
 src/Models/QueryAvailabilityManagementUnitsSettingsResponse.swift
 src/Models/QueryCapacityPlanStaffingGroupMetricChangeHistory.swift
 src/Models/QueryCriteria.swift
+src/Models/QueryCriteriaGroup.swift
+src/Models/QueryCriteriaItem.swift
+src/Models/QueryCriteriaQuery.swift
 src/Models/QueryDivision.swift
 src/Models/QueryFacetInfo.swift
 src/Models/QueryPlanningGroupToStaffingGroupsRequest.swift
@@ -13601,6 +13640,8 @@ src/Models/ReportingExportMetadataJobResponse.swift
 src/Models/ReportingInterval.swift
 src/Models/ReportingTurn.swift
 src/Models/ReportingTurnAction.swift
+src/Models/ReportingTurnBotFlowInvocationEvent.swift
+src/Models/ReportingTurnFlow.swift
 src/Models/ReportingTurnIntent.swift
 src/Models/ReportingTurnIntentSlot.swift
 src/Models/ReportingTurnKnowledge.swift
@@ -13732,6 +13773,8 @@ src/Models/ScheduleGroupEntityListing.swift
 src/Models/ScheduleInterval.swift
 src/Models/ScheduleReferenceWithBusinessUnit.swift
 src/Models/ScheduleUploadProcessingResponse.swift
+src/Models/ScheduledTrigger.swift
+src/Models/ScheduledTriggerEntityListing.swift
 src/Models/SchedulerMessageArgument.swift
 src/Models/SchedulerMessageSeverityCount.swift
 src/Models/SchedulerMessageTypeSeverity.swift
@@ -14306,6 +14349,7 @@ src/Models/TranslateSupportedLanguageList.swift
 src/Models/TrendData.swift
 src/Models/Trigger.swift
 src/Models/TriggerEntityListing.swift
+src/Models/TriggerSchedule.swift
 src/Models/TriggerTarget.swift
 src/Models/Trunk.swift
 src/Models/TrunkBase.swift
@@ -14439,6 +14483,7 @@ src/Models/UpdatePlanningGroupRequest.swift
 src/Models/UpdateRowIndexRequest.swift
 src/Models/UpdateScheduleUploadResponse.swift
 src/Models/UpdateScheduleUploadSchema.swift
+src/Models/UpdateScheduledTriggerRequest.swift
 src/Models/UpdateSegmentAssignmentRequest.swift
 src/Models/UpdateSegmentAssignmentResponse.swift
 src/Models/UpdateServiceGoalTemplate.swift
@@ -14838,6 +14883,10 @@ src/Models/WeekScheduleResponse.swift
 src/Models/WeekShiftTradeListResponse.swift
 src/Models/WeekShiftTradeMatchesSummaryResponse.swift
 src/Models/WeekShiftTradeResponse.swift
+src/Models/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobComplete.swift
+src/Models/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResults.swift
+src/Models/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResultsSlot.swift
+src/Models/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResultsSlotSchedule.swift
 src/Models/WemCoachingUserNotificationTopicCoachingAppointmentReference.swift
 src/Models/WemCoachingUserNotificationTopicCoachingUserNotification.swift
 src/Models/WfmActivityPlanJobCompleteTopicActivityPlanJobException.swift
@@ -14868,6 +14917,8 @@ src/Models/WfmAgentAdherenceExplanationChangedBusinessUnitTopicUserReference.swi
 src/Models/WfmAgentHistoricalAdherenceJobReference.swift
 src/Models/WfmAgentHistoricalAdherenceResponse.swift
 src/Models/WfmAgentHistoricalAdherenceResult.swift
+src/Models/WfmAgentMuScheduleSearchCompleteTopicAgentMuScheduleSearchCompleteNotification.swift
+src/Models/WfmAgentMuScheduleSearchCompleteTopicErrorBody.swift
 src/Models/WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate.swift
 src/Models/WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification.swift
 src/Models/WfmAgentScheduleUpdateTopicUserReference.swift
@@ -14996,6 +15047,15 @@ src/Models/WfmScheduleReference.swift
 src/Models/WfmScheduleTopicWfmScheduleNotification.swift
 src/Models/WfmServiceGoalImpact.swift
 src/Models/WfmServiceGoalImpactSettings.swift
+src/Models/WfmShiftTradingJobCompleteEventErrorBody.swift
+src/Models/WfmShiftTradingJobCompleteEventShiftTradingJobCompleteNotification.swift
+src/Models/WfmShiftTradingJobCompleteEventTradeEntity.swift
+src/Models/WfmShiftTradingJobCompleteEventTradeShift.swift
+src/Models/WfmShiftTradingJobCompleteEventTradeSide.swift
+src/Models/WfmShiftTradingJobCompleteEventWeekSummary.swift
+src/Models/WfmShiftTradingJobCompleteEventWeekSummaryList.swift
+src/Models/WfmShiftTradingJobCompleteEventWfmDateTimeInterval.swift
+src/Models/WfmShiftTradingJobCompleteEventWfmVersionMetadata.swift
 src/Models/WfmTimeOffBalanceJobTopicErrorBody.swift
 src/Models/WfmTimeOffBalanceJobTopicTimeOffBalance.swift
 src/Models/WfmTimeOffBalanceJobTopicTimeOffBalanceJobNotification.swift

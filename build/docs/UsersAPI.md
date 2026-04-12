@@ -103,7 +103,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postUsersSearchTeamsAssign**](UsersAPI#postUsersSearchTeamsAssign) | Search users assigned to teams |
 | [**putRoutingDirectroutingbackupSettingsMe**](UsersAPI#putRoutingDirectroutingbackupSettingsMe) | Update the user&#39;s Direct Routing Backup settings. |
 | [**putRoutingUserDirectroutingbackupSettings**](UsersAPI#putRoutingUserDirectroutingbackupSettings) | Update the user&#39;s Direct Routing Backup settings. |
-| [**putRoutingUserUtilization**](UsersAPI#putRoutingUserUtilization) | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
+| [**putRoutingUserUtilization**](UsersAPI#putRoutingUserUtilization) | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the organization&#39;s default values. |
 | [**putUserCallforwarding**](UsersAPI#putUserCallforwarding) | Update a user&#39;s CallForwarding |
 | [**putUserCustomattributes**](UsersAPI#putUserCustomattributes) | Create or update a single custom attributes record. Updating replaces all data with the provided fields. |
 | [**putUserOutofoffice**](UsersAPI#putUserOutofoffice) | Update an OutOfOffice |
@@ -5304,7 +5304,7 @@ UsersAPI.putRoutingUserDirectroutingbackupSettings(userId: userId, body: body) {
 
 > [AgentMaxUtilizationResponse](AgentMaxUtilizationResponse) putRoutingUserUtilization(userId, body)
 
-Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
+Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the organization&#39;s default values.
 
 
 
@@ -6026,4 +6026,4 @@ UsersAPI.putUsersCustomattributesSchema(schemaId: schemaId, body: body) { (respo
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatformClientV2@192.0.0_
+_PureCloudPlatformClientV2@193.0.0_

@@ -18,4 +18,4 @@ Defines an external media that has been ingested and cached by Genesys Cloud for
 
 
 
-_PureCloudPlatformClientV2@192.0.0_
+_PureCloudPlatformClientV2@193.0.0_

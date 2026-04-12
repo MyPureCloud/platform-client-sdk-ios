@@ -197,6 +197,7 @@ open class ResponseManagementAPI {
   "pageCount" : 5,
   "pageNumber" : 1,
   "entities" : [ {
+    "division" : "{}",
     "responseType" : "MessagingTemplate",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
@@ -205,6 +206,7 @@ open class ResponseManagementAPI {
     "id" : "id",
     "version" : 0
   }, {
+    "division" : "{}",
     "responseType" : "MessagingTemplate",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
@@ -279,6 +281,7 @@ open class ResponseManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : "{}",
   "responseType" : "MessagingTemplate",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
@@ -769,6 +772,7 @@ open class ResponseManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : "{}",
   "responseType" : "MessagingTemplate",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
@@ -831,6 +835,7 @@ open class ResponseManagementAPI {
   "pageCount" : 5,
   "pageNumber" : 1,
   "entities" : [ {
+    "division" : "{}",
     "responseType" : "MessagingTemplate",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
@@ -839,6 +844,7 @@ open class ResponseManagementAPI {
     "id" : "id",
     "version" : 0
   }, {
+    "division" : "{}",
     "responseType" : "MessagingTemplate",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
@@ -865,6 +871,97 @@ open class ResponseManagementAPI {
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LibraryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Query libraries using criteria. Users can set DivisionId parameter as '*' to fetch libraries that aren't associated with any divisions.
+     
+     - parameter body: (body) Query criteria 
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postResponsemanagementLibrariesQuery(body: QueryCriteriaQuery, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: LibraryEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postResponsemanagementLibrariesQueryWithRequestBuilder(body: body, pageNumber: pageNumber, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<LibraryEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query libraries using criteria. Users can set DivisionId parameter as '*' to fetch libraries that aren't associated with any divisions.
+     - POST /api/v2/responsemanagement/libraries/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 5,
+  "pageCount" : 5,
+  "pageNumber" : 1,
+  "entities" : [ {
+    "division" : "{}",
+    "responseType" : "MessagingTemplate",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "version" : 0
+  }, {
+    "division" : "{}",
+    "responseType" : "MessagingTemplate",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "version" : 0
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter body: (body) Query criteria 
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+
+     - returns: RequestBuilder<LibraryEntityListing> 
+     */
+    open class func postResponsemanagementLibrariesQueryWithRequestBuilder(body: QueryCriteriaQuery, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<LibraryEntityListing> {        
+        let path = "/api/v2/responsemanagement/libraries/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
 
         let requestBuilder: RequestBuilder<LibraryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -1332,6 +1429,7 @@ open class ResponseManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : "{}",
   "responseType" : "MessagingTemplate",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",

@@ -23,6 +23,7 @@ public class DependencyObject: Codable {
         case composerscript = "COMPOSERSCRIPT"
         case contactlist = "CONTACTLIST"
         case conversationcustomattributeschema = "CONVERSATIONCUSTOMATTRIBUTESCHEMA"
+        case conversationsummarysetting = "CONVERSATIONSUMMARYSETTING"
         case dataaction = "DATAACTION"
         case datatable = "DATATABLE"
         case decisiontable = "DECISIONTABLE"

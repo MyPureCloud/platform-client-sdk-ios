@@ -11,4 +11,4 @@ Represents the parsed certificate information.
 
 
 
-_PureCloudPlatformClientV2@192.0.0_
+_PureCloudPlatformClientV2@193.0.0_

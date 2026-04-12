@@ -13,6 +13,51 @@ open class ProcessAutomationAPI {
     
     
     /**
+     Delete a Scheduled Trigger
+     
+     - parameter scheduledTriggerId: (path) scheduledTriggerId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteProcessautomationScheduledtrigger(scheduledTriggerId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteProcessautomationScheduledtriggerWithRequestBuilder(scheduledTriggerId: scheduledTriggerId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a Scheduled Trigger
+     - DELETE /api/v2/processautomation/scheduledtriggers/{scheduledTriggerId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter scheduledTriggerId: (path) scheduledTriggerId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteProcessautomationScheduledtriggerWithRequestBuilder(scheduledTriggerId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/processautomation/scheduledtriggers/{scheduledTriggerId}"
+        let scheduledTriggerIdPreEscape = "\(scheduledTriggerId)"
+        let scheduledTriggerIdPostEscape = scheduledTriggerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scheduledTriggerId}", with: scheduledTriggerIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Delete a Trigger
      
      - parameter triggerId: (path) triggerId 
@@ -53,6 +98,159 @@ open class ProcessAutomationAPI {
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Retrieve a single Scheduled Trigger matching id
+     
+     - parameter scheduledTriggerId: (path) scheduledTriggerId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getProcessautomationScheduledtrigger(scheduledTriggerId: String, completion: @escaping ((_ data: ScheduledTrigger?,_ error: Error?) -> Void)) {
+        let requestBuilder = getProcessautomationScheduledtriggerWithRequestBuilder(scheduledTriggerId: scheduledTriggerId)
+        requestBuilder.execute { (response: Response<ScheduledTrigger>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve a single Scheduled Trigger matching id
+     - GET /api/v2/processautomation/scheduledtriggers/{scheduledTriggerId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schedule" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "id" : "id",
+  "version" : 0,
+  "enabled" : true,
+  "target" : "{}"
+}, statusCode=200}]
+     
+     - parameter scheduledTriggerId: (path) scheduledTriggerId 
+
+     - returns: RequestBuilder<ScheduledTrigger> 
+     */
+    open class func getProcessautomationScheduledtriggerWithRequestBuilder(scheduledTriggerId: String) -> RequestBuilder<ScheduledTrigger> {        
+        var path = "/api/v2/processautomation/scheduledtriggers/{scheduledTriggerId}"
+        let scheduledTriggerIdPreEscape = "\(scheduledTriggerId)"
+        let scheduledTriggerIdPostEscape = scheduledTriggerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scheduledTriggerId}", with: scheduledTriggerIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScheduledTrigger>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Retrieves all scheduled triggers, optionally filtered by query parameters.
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter enabled: (query) Boolean indicating desired enabled state of scheduled triggers (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getProcessautomationScheduledtriggers(before: String? = nil, after: String? = nil, pageSize: String? = nil, enabled: Bool? = nil, completion: @escaping ((_ data: ScheduledTriggerEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getProcessautomationScheduledtriggersWithRequestBuilder(before: before, after: after, pageSize: pageSize, enabled: enabled)
+        requestBuilder.execute { (response: Response<ScheduledTriggerEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieves all scheduled triggers, optionally filtered by query parameters.
+     - GET /api/v2/processautomation/scheduledtriggers
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "schedule" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "version" : 0,
+    "enabled" : true,
+    "target" : "{}"
+  }, {
+    "schedule" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "version" : 0,
+    "enabled" : true,
+    "target" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter enabled: (query) Boolean indicating desired enabled state of scheduled triggers (optional)
+
+     - returns: RequestBuilder<ScheduledTriggerEntityListing> 
+     */
+    open class func getProcessautomationScheduledtriggersWithRequestBuilder(before: String? = nil, after: String? = nil, pageSize: String? = nil, enabled: Bool? = nil) -> RequestBuilder<ScheduledTriggerEntityListing> {        
+        let path = "/api/v2/processautomation/scheduledtriggers"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize, 
+            "enabled": enabled
+        ])
+
+        let requestBuilder: RequestBuilder<ScheduledTriggerEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -327,6 +525,65 @@ open class ProcessAutomationAPI {
 
     
     
+    /**
+     Create a scheduled Trigger
+     
+     - parameter body: (body) Input used to create a Scheduled Trigger 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postProcessautomationScheduledtriggers(body: CreateScheduledTriggerRequest, completion: @escaping ((_ data: ScheduledTrigger?,_ error: Error?) -> Void)) {
+        let requestBuilder = postProcessautomationScheduledtriggersWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ScheduledTrigger>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a scheduled Trigger
+     - POST /api/v2/processautomation/scheduledtriggers
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schedule" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "id" : "id",
+  "version" : 0,
+  "enabled" : true,
+  "target" : "{}"
+}, statusCode=200}]
+     
+     - parameter body: (body) Input used to create a Scheduled Trigger 
+
+     - returns: RequestBuilder<ScheduledTrigger> 
+     */
+    open class func postProcessautomationScheduledtriggersWithRequestBuilder(body: CreateScheduledTriggerRequest) -> RequestBuilder<ScheduledTrigger> {        
+        let path = "/api/v2/processautomation/scheduledtriggers"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScheduledTrigger>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**
@@ -517,6 +774,72 @@ open class ProcessAutomationAPI {
         let requestBuilder: RequestBuilder<TestModeEventResults>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update a Scheduled Trigger
+     
+     - parameter scheduledTriggerId: (path) scheduledTriggerId 
+     - parameter body: (body) Input to update Scheduled Trigger. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putProcessautomationScheduledtrigger(scheduledTriggerId: String, body: UpdateScheduledTriggerRequest, completion: @escaping ((_ data: ScheduledTrigger?,_ error: Error?) -> Void)) {
+        let requestBuilder = putProcessautomationScheduledtriggerWithRequestBuilder(scheduledTriggerId: scheduledTriggerId, body: body)
+        requestBuilder.execute { (response: Response<ScheduledTrigger>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a Scheduled Trigger
+     - PUT /api/v2/processautomation/scheduledtriggers/{scheduledTriggerId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schedule" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "id" : "id",
+  "version" : 0,
+  "enabled" : true,
+  "target" : "{}"
+}, statusCode=200}]
+     
+     - parameter scheduledTriggerId: (path) scheduledTriggerId 
+     - parameter body: (body) Input to update Scheduled Trigger. 
+
+     - returns: RequestBuilder<ScheduledTrigger> 
+     */
+    open class func putProcessautomationScheduledtriggerWithRequestBuilder(scheduledTriggerId: String, body: UpdateScheduledTriggerRequest) -> RequestBuilder<ScheduledTrigger> {        
+        var path = "/api/v2/processautomation/scheduledtriggers/{scheduledTriggerId}"
+        let scheduledTriggerIdPreEscape = "\(scheduledTriggerId)"
+        let scheduledTriggerIdPostEscape = scheduledTriggerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scheduledTriggerId}", with: scheduledTriggerIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScheduledTrigger>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
     

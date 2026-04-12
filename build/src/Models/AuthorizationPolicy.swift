@@ -27,6 +27,8 @@ public class AuthorizationPolicy: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -45,10 +47,12 @@ public class AuthorizationPolicy: Codable {
     public var presetAttributes: [String:TypedAttribute]?
     /** Flag for active enforcement. If this value is false or null, the policy will be saved but will not be checked or enforced on users. */
     public var active: Bool?
+    /** Flag to determine whether policy applies to OAuth Clients */
+    public var applyToClients: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, targetResource: String?, subject: Subject?, effect: Effect?, condition: JSON?, _description: String?, dateModified: Date?, presetAttributes: [String:TypedAttribute]?, active: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, targetResource: String?, subject: Subject?, effect: Effect?, condition: JSON?, _description: String?, dateModified: Date?, presetAttributes: [String:TypedAttribute]?, active: Bool?, applyToClients: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.targetResource = targetResource
@@ -59,6 +63,7 @@ public class AuthorizationPolicy: Codable {
         self.dateModified = dateModified
         self.presetAttributes = presetAttributes
         self.active = active
+        self.applyToClients = applyToClients
         self.selfUri = selfUri
     }
 
@@ -73,6 +78,7 @@ public class AuthorizationPolicy: Codable {
         case dateModified
         case presetAttributes
         case active
+        case applyToClients
         case selfUri
     }
 

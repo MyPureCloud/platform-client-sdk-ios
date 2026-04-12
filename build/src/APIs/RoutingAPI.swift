@@ -15949,7 +15949,7 @@ open class RoutingAPI {
     
     
     /**
-     Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+     Update the user's max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the organization's default values.
      
      - parameter userId: (path) User ID 
      - parameter body: (body) utilization 
@@ -15974,7 +15974,7 @@ open class RoutingAPI {
     }
 
     /**
-     Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+     Update the user's max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the organization's default values.
      - PUT /api/v2/routing/users/{userId}/utilization
      - OAuth:
        - type: oauth2
@@ -16021,7 +16021,7 @@ open class RoutingAPI {
     
     
     /**
-     Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
+     Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the system default values.
      
      - parameter body: (body) utilization 
      - parameter completion: completion handler to receive the data and the error objects
@@ -16045,7 +16045,7 @@ open class RoutingAPI {
     }
 
     /**
-     Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
+     Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the system default values.
      - PUT /api/v2/routing/utilization
      - OAuth:
        - type: oauth2

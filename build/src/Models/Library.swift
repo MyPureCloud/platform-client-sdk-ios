@@ -22,6 +22,8 @@ public class Library: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The library name. */
@@ -34,16 +36,19 @@ public class Library: Codable {
     public var dateCreated: Date?
     /** This value is deprecated. Responses representing message templates may be added to any library. */
     public var responseType: ResponseType?
+    /** The division to which this entity belongs. */
+    public var division: WritableDivision?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, version: Int?, createdBy: User?, dateCreated: Date?, responseType: ResponseType?, selfUri: String?) {
+    public init(_id: String?, name: String?, version: Int?, createdBy: User?, dateCreated: Date?, responseType: ResponseType?, division: WritableDivision?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.version = version
         self.createdBy = createdBy
         self.dateCreated = dateCreated
         self.responseType = responseType
+        self.division = division
         self.selfUri = selfUri
     }
 
@@ -54,6 +59,7 @@ public class Library: Codable {
         case createdBy
         case dateCreated
         case responseType
+        case division
         case selfUri
     }
 

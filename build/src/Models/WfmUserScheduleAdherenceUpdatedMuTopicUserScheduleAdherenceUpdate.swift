@@ -16,6 +16,8 @@ public class WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate: 
 
 
 
+
+
     public enum RoutingStatus: String, Codable { 
         case empty = "__EMPTY__"
         case offQueue = "OFF_QUEUE"
@@ -59,6 +61,7 @@ public class WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate: 
 
     public var user: WfmUserScheduleAdherenceUpdatedMuTopicUserReference?
     public var managementUnitId: String?
+    public var businessUnitId: String?
     public var team: WfmUserScheduleAdherenceUpdatedMuTopicUriReference?
     public var scheduledActivityCategory: String?
     public var scheduledActivityCode: WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference?
@@ -78,9 +81,10 @@ public class WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate: 
     public var suppressOnTimeReminder: Bool?
     public var nextActivityReminders: [WfmUserScheduleAdherenceUpdatedMuTopicUserNextActivityReminder]?
 
-    public init(user: WfmUserScheduleAdherenceUpdatedMuTopicUserReference?, managementUnitId: String?, team: WfmUserScheduleAdherenceUpdatedMuTopicUriReference?, scheduledActivityCategory: String?, scheduledActivityCode: WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference?, systemPresence: String?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: String?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: String?, adherenceExplanation: WfmUserScheduleAdherenceUpdatedMuTopicRealTimeAdherenceExplanation?, adherenceChangeTime: Date?, presenceUpdateTime: Date?, activeQueues: [WfmUserScheduleAdherenceUpdatedMuTopicQueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?, suppressOnTimeReminder: Bool?, nextActivityReminders: [WfmUserScheduleAdherenceUpdatedMuTopicUserNextActivityReminder]?) {
+    public init(user: WfmUserScheduleAdherenceUpdatedMuTopicUserReference?, managementUnitId: String?, businessUnitId: String?, team: WfmUserScheduleAdherenceUpdatedMuTopicUriReference?, scheduledActivityCategory: String?, scheduledActivityCode: WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference?, systemPresence: String?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: String?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: String?, adherenceExplanation: WfmUserScheduleAdherenceUpdatedMuTopicRealTimeAdherenceExplanation?, adherenceChangeTime: Date?, presenceUpdateTime: Date?, activeQueues: [WfmUserScheduleAdherenceUpdatedMuTopicQueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?, suppressOnTimeReminder: Bool?, nextActivityReminders: [WfmUserScheduleAdherenceUpdatedMuTopicUserNextActivityReminder]?) {
         self.user = user
         self.managementUnitId = managementUnitId
+        self.businessUnitId = businessUnitId
         self.team = team
         self.scheduledActivityCategory = scheduledActivityCategory
         self.scheduledActivityCode = scheduledActivityCode

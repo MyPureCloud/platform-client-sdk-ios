@@ -16,8 +16,9 @@
 | **dateModified** | [**Date**](Date) | Date this policy was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **presetAttributes** | [**[String:TypedAttribute]**](TypedAttribute) | Map of names and values of preset attributes to use in policy evaluation | [optional] |
 | **active** | **Bool** | Flag for active enforcement. If this value is false or null, the policy will be saved but will not be checked or enforced on users. | [optional] |
+| **applyToClients** | **Bool** | Flag to determine whether policy applies to OAuth Clients | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@192.0.0_
+_PureCloudPlatformClientV2@193.0.0_

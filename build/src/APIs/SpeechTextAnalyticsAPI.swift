@@ -1379,6 +1379,8 @@ open class SpeechTextAnalyticsAPI {
     
     
     
+    
+    
     public enum SortBy_getSpeechandtextanalyticsPrograms: String { 
         case name = "name"
     }
@@ -1398,12 +1400,13 @@ open class SpeechTextAnalyticsAPI {
      - parameter pageSize: (query) The page size for the listing (optional)
      - parameter state: (query) Program state. Defaults to Latest (optional)
      - parameter name: (query) Case insensitive partial name to filter by (optional)
+     - parameter ids: (query) Comma separated Program IDs to filter by. Cannot be used with pagination params. Maximum of 50 IDs allowed. (optional)
      - parameter sortBy: (query) Sort results by. Defaults to name (optional)
      - parameter sortOrder: (query) Sort order. Defaults to asc (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSpeechandtextanalyticsPrograms(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsPrograms? = nil, name: String? = nil, sortBy: SortBy_getSpeechandtextanalyticsPrograms? = nil, sortOrder: SortOrder_getSpeechandtextanalyticsPrograms? = nil, completion: @escaping ((_ data: ProgramsEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getSpeechandtextanalyticsProgramsWithRequestBuilder(nextPage: nextPage, pageSize: pageSize, state: state, name: name, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getSpeechandtextanalyticsPrograms(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsPrograms? = nil, name: String? = nil, ids: [String]? = nil, sortBy: SortBy_getSpeechandtextanalyticsPrograms? = nil, sortOrder: SortOrder_getSpeechandtextanalyticsPrograms? = nil, completion: @escaping ((_ data: ProgramsEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsProgramsWithRequestBuilder(nextPage: nextPage, pageSize: pageSize, state: state, name: name, ids: ids, sortBy: sortBy, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<ProgramsEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1464,12 +1467,13 @@ open class SpeechTextAnalyticsAPI {
      - parameter pageSize: (query) The page size for the listing (optional)
      - parameter state: (query) Program state. Defaults to Latest (optional)
      - parameter name: (query) Case insensitive partial name to filter by (optional)
+     - parameter ids: (query) Comma separated Program IDs to filter by. Cannot be used with pagination params. Maximum of 50 IDs allowed. (optional)
      - parameter sortBy: (query) Sort results by. Defaults to name (optional)
      - parameter sortOrder: (query) Sort order. Defaults to asc (optional)
 
      - returns: RequestBuilder<ProgramsEntityListing> 
      */
-    open class func getSpeechandtextanalyticsProgramsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsPrograms? = nil, name: String? = nil, sortBy: SortBy_getSpeechandtextanalyticsPrograms? = nil, sortOrder: SortOrder_getSpeechandtextanalyticsPrograms? = nil) -> RequestBuilder<ProgramsEntityListing> {        
+    open class func getSpeechandtextanalyticsProgramsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsPrograms? = nil, name: String? = nil, ids: [String]? = nil, sortBy: SortBy_getSpeechandtextanalyticsPrograms? = nil, sortOrder: SortOrder_getSpeechandtextanalyticsPrograms? = nil) -> RequestBuilder<ProgramsEntityListing> {        
         let path = "/api/v2/speechandtextanalytics/programs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -1480,6 +1484,7 @@ open class SpeechTextAnalyticsAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             "state": state?.rawValue, 
             "name": name, 
+            "ids": ids, 
             "sortBy": sortBy?.rawValue, 
             "sortOrder": sortOrder?.rawValue
         ])
