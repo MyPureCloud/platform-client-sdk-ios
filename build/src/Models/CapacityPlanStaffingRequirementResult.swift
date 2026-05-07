@@ -38,7 +38,7 @@ public class CapacityPlanStaffingRequirementResult: Codable {
     public var capacityPlan: CapacityPlanReference?
     /** The status of the requirement generation of the capacity plan */
     public var status: Status?
-    /** The reference date for interval-based data for the requirements. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    /** The reference date for interval-based data relative to the business unit time zone for the requirements. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
     public var referenceBusinessUnitDate: Date?
     /** Granularity of the intervals */
     public var granularity: Granularity?

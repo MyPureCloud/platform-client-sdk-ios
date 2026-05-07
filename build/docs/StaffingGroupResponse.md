@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** | The globally unique identifier for the object. | [optional] |
+| **_id** | **String** | The globally unique identifier for the object. | |
 | **name** | **String** | The name of the staffing group | |
 | **users** | [**[UserReference]**](UserReference) | The list of users that belong to the staffing group | [optional] |
 | **managementUnit** | [**ManagementUnitReference**](ManagementUnitReference) | The ID of the management unit to which the staffing group users belong. If undefined the staffing group can include users from the entire business unit | [optional] |
@@ -16,4 +16,4 @@
 
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

@@ -14,4 +14,4 @@ List Picker object for presenting multiple sections of selectable items.
 
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

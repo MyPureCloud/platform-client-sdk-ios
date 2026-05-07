@@ -8,8 +8,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteJourneyActiontemplate**](JourneyAPI#deleteJourneyActiontemplate) | Delete a single action template. |
 | [**deleteJourneyExternaleventsConfiguration**](JourneyAPI#deleteJourneyExternaleventsConfiguration) | Delete an external events configuration. |
 | [**deleteJourneyExternaleventsSchema**](JourneyAPI#deleteJourneyExternaleventsSchema) | Delete a schema |
-| [**deleteJourneyOutcome**](JourneyAPI#deleteJourneyOutcome) | Delete an outcome. |
-| [**deleteJourneyOutcomesPredictor**](JourneyAPI#deleteJourneyOutcomesPredictor) | Delete an outcome predictor. |
+| [**deleteJourneyOutcome**](JourneyAPI#deleteJourneyOutcome) | Deprecated. Delete an outcome. |
+| [**deleteJourneyOutcomesPredictor**](JourneyAPI#deleteJourneyOutcomesPredictor) | Deprecated. Delete an outcome predictor. |
 | [**deleteJourneySegment**](JourneyAPI#deleteJourneySegment) | Delete a segment. |
 | [**deleteJourneyView**](JourneyAPI#deleteJourneyView) | Delete a Journey View by ID |
 | [**deleteJourneyViewSchedules**](JourneyAPI#deleteJourneyViewSchedules) | Delete the Schedule of a JourneyView |
@@ -17,8 +17,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getExternalcontactsContactJourneySessions**](JourneyAPI#getExternalcontactsContactJourneySessions) | Retrieve all sessions for a given external contact. |
 | [**getJourneyActionmap**](JourneyAPI#getJourneyActionmap) | Retrieve a single action map. |
 | [**getJourneyActionmaps**](JourneyAPI#getJourneyActionmaps) | Retrieve all action maps. |
-| [**getJourneyActionmapsEstimatesJob**](JourneyAPI#getJourneyActionmapsEstimatesJob) | Get status of job. |
-| [**getJourneyActionmapsEstimatesJobResults**](JourneyAPI#getJourneyActionmapsEstimatesJobResults) | Get estimates from completed job. |
+| [**getJourneyActionmapsEstimatesJob**](JourneyAPI#getJourneyActionmapsEstimatesJob) | Deprecated. Get status of job. |
+| [**getJourneyActionmapsEstimatesJobResults**](JourneyAPI#getJourneyActionmapsEstimatesJobResults) | Deprecated. Get estimates from completed job. |
 | [**getJourneyActiontarget**](JourneyAPI#getJourneyActiontarget) | Retrieve a single action target. |
 | [**getJourneyActiontargets**](JourneyAPI#getJourneyActiontargets) | Retrieve all action targets. |
 | [**getJourneyActiontemplate**](JourneyAPI#getJourneyActiontemplate) | Retrieve a single action template. |
@@ -33,15 +33,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getJourneyExternaleventsSchemasCoretype**](JourneyAPI#getJourneyExternaleventsSchemasCoretype) | Get a core type from which all schemas are built |
 | [**getJourneyExternaleventsSchemasCoretypes**](JourneyAPI#getJourneyExternaleventsSchemasCoretypes) | Get the list of core types enabled for a specific namespace. |
 | [**getJourneyExternaleventsSchemasLimits**](JourneyAPI#getJourneyExternaleventsSchemasLimits) | Get quantitative limits on schemas |
-| [**getJourneyOutcome**](JourneyAPI#getJourneyOutcome) | Retrieve a single outcome. |
-| [**getJourneyOutcomes**](JourneyAPI#getJourneyOutcomes) | Retrieve all outcomes. |
-| [**getJourneyOutcomesPredictor**](JourneyAPI#getJourneyOutcomesPredictor) | Retrieve a single outcome predictor. |
-| [**getJourneyOutcomesPredictors**](JourneyAPI#getJourneyOutcomesPredictors) | Retrieve all outcome predictors. |
+| [**getJourneyOutcome**](JourneyAPI#getJourneyOutcome) | Deprecated. Retrieve a single outcome. |
+| [**getJourneyOutcomes**](JourneyAPI#getJourneyOutcomes) | Deprecated. Retrieve all outcomes. |
+| [**getJourneyOutcomesPredictor**](JourneyAPI#getJourneyOutcomesPredictor) | Deprecated. Retrieve a single outcome predictor. |
+| [**getJourneyOutcomesPredictors**](JourneyAPI#getJourneyOutcomesPredictors) | Deprecated. Retrieve all outcome predictors. |
 | [**getJourneySegment**](JourneyAPI#getJourneySegment) | Retrieve a single segment. |
 | [**getJourneySegments**](JourneyAPI#getJourneySegments) | Retrieve all segments. |
 | [**getJourneySession**](JourneyAPI#getJourneySession) | Retrieve a single session. |
 | [**getJourneySessionEvents**](JourneyAPI#getJourneySessionEvents) | Retrieve all events for a given session. |
-| [**getJourneySessionOutcomescores**](JourneyAPI#getJourneySessionOutcomescores) | Retrieve latest outcome score associated with a session for all outcomes. |
+| [**getJourneySessionOutcomescores**](JourneyAPI#getJourneySessionOutcomescores) | Deprecated. Retrieve latest outcome score associated with a session for all outcomes. |
 | [**getJourneyView**](JourneyAPI#getJourneyView) | Get a Journey View by ID |
 | [**getJourneyViewSchedules**](JourneyAPI#getJourneyViewSchedules) | Get the Schedule for a JourneyView |
 | [**getJourneyViewVersion**](JourneyAPI#getJourneyViewVersion) | Get a Journey View by ID and version |
@@ -62,13 +62,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchJourneyActiontarget**](JourneyAPI#patchJourneyActiontarget) | Update a single action target. |
 | [**patchJourneyActiontemplate**](JourneyAPI#patchJourneyActiontemplate) | Update a single action template. |
 | [**patchJourneyExternaleventsConfiguration**](JourneyAPI#patchJourneyExternaleventsConfiguration) | Update an external events configuration. |
-| [**patchJourneyOutcome**](JourneyAPI#patchJourneyOutcome) | Update an outcome. |
+| [**patchJourneyOutcome**](JourneyAPI#patchJourneyOutcome) | Deprecated. Update an outcome. |
 | [**patchJourneySegment**](JourneyAPI#patchJourneySegment) | Update a segment. |
 | [**patchJourneyViewVersionJob**](JourneyAPI#patchJourneyViewVersionJob) | Update the job for a journey view version. Only the status can be changed and only to Cancelled |
 | [**postAnalyticsJourneysAggregatesQuery**](JourneyAPI#postAnalyticsJourneysAggregatesQuery) | Query for journey aggregates |
 | [**postExternalcontactsContactJourneySegments**](JourneyAPI#postExternalcontactsContactJourneySegments) | Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success. |
 | [**postJourneyActionmaps**](JourneyAPI#postJourneyActionmaps) | Create an action map. |
-| [**postJourneyActionmapsEstimatesJobs**](JourneyAPI#postJourneyActionmapsEstimatesJobs) | Query for estimates |
+| [**postJourneyActionmapsEstimatesJobs**](JourneyAPI#postJourneyActionmapsEstimatesJobs) | Deprecated. Query for estimates |
 | [**postJourneyActiontemplates**](JourneyAPI#postJourneyActiontemplates) | Create a single action template. |
 | [**postJourneyDeploymentActionevent**](JourneyAPI#postJourneyDeploymentActionevent) | Sends an action event, which is used for changing the state of actions that have been offered to the user. |
 | [**postJourneyDeploymentAppevents**](JourneyAPI#postJourneyDeploymentAppevents) | Send a journey app event, used for tracking customer activity on an application. |
@@ -77,8 +77,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postJourneyExternaleventsConfigurations**](JourneyAPI#postJourneyExternaleventsConfigurations) | Create an external events configuration. |
 | [**postJourneyExternaleventsSchemas**](JourneyAPI#postJourneyExternaleventsSchemas) | Create a schema |
 | [**postJourneyFlowsPathsQuery**](JourneyAPI#postJourneyFlowsPathsQuery) | Query for flow paths. |
-| [**postJourneyOutcomes**](JourneyAPI#postJourneyOutcomes) | Create an outcome. |
-| [**postJourneyOutcomesPredictors**](JourneyAPI#postJourneyOutcomesPredictors) | Create an outcome predictor. |
+| [**postJourneyOutcomes**](JourneyAPI#postJourneyOutcomes) | Deprecated. Create an outcome. |
+| [**postJourneyOutcomesPredictors**](JourneyAPI#postJourneyOutcomesPredictors) | Deprecated. Create an outcome predictor. |
 | [**postJourneySegments**](JourneyAPI#postJourneySegments) | Create a segment. |
 | [**postJourneyViewSchedules**](JourneyAPI#postJourneyViewSchedules) | Add a new Schedule to a JourneyView |
 | [**postJourneyViewVersionJobs**](JourneyAPI#postJourneyViewVersionJobs) | Submit a job request for a journey view version. |
@@ -295,7 +295,9 @@ JourneyAPI.deleteJourneyExternaleventsSchema(schemaId: schemaId) { (error) in
 
 > Void deleteJourneyOutcome(outcomeId)
 
-Delete an outcome.
+Deprecated. Delete an outcome.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 
 
@@ -344,7 +346,9 @@ JourneyAPI.deleteJourneyOutcome(outcomeId: outcomeId) { (error) in
 
 > Void deleteJourneyOutcomesPredictor(predictorId)
 
-Delete an outcome predictor.
+Deprecated. Delete an outcome predictor.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 
 
@@ -767,7 +771,9 @@ JourneyAPI.getJourneyActionmaps(pageNumber: pageNumber, pageSize: pageSize, sort
 
 > String getJourneyActionmapsEstimatesJob(jobId)
 
-Get status of job.
+Deprecated. Get status of job.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 
 
@@ -817,7 +823,9 @@ JourneyAPI.getJourneyActionmapsEstimatesJob(jobId: jobId) { (response, error) in
 
 > [ActionMapEstimateResult](ActionMapEstimateResult) getJourneyActionmapsEstimatesJobResults(jobId)
 
-Get estimates from completed job.
+Deprecated. Get estimates from completed job.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 
 
@@ -1584,7 +1592,9 @@ This endpoint does not require any parameters.
 
 > [Outcome](Outcome) getJourneyOutcome(outcomeId)
 
-Retrieve a single outcome.
+Deprecated. Retrieve a single outcome.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 
 
@@ -1634,7 +1644,9 @@ JourneyAPI.getJourneyOutcome(outcomeId: outcomeId) { (response, error) in
 
 > [OutcomeListing](OutcomeListing) getJourneyOutcomes(pageNumber, pageSize, sortBy, outcomeIds, queryFields, queryValue)
 
-Retrieve all outcomes.
+Deprecated. Retrieve all outcomes.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 
 
@@ -1694,7 +1706,9 @@ JourneyAPI.getJourneyOutcomes(pageNumber: pageNumber, pageSize: pageSize, sortBy
 
 > [OutcomePredictor](OutcomePredictor) getJourneyOutcomesPredictor(predictorId)
 
-Retrieve a single outcome predictor.
+Deprecated. Retrieve a single outcome predictor.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 
 
@@ -1744,7 +1758,9 @@ JourneyAPI.getJourneyOutcomesPredictor(predictorId: predictorId) { (response, er
 
 > [OutcomePredictorListing](OutcomePredictorListing) getJourneyOutcomesPredictors()
 
-Retrieve all outcome predictors.
+Deprecated. Retrieve all outcome predictors.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 
 
@@ -2009,7 +2025,9 @@ JourneyAPI.getJourneySessionEvents(sessionId: sessionId, pageSize: pageSize, aft
 
 > [OutcomeScoresResult](OutcomeScoresResult) getJourneySessionOutcomescores(sessionId)
 
-Retrieve latest outcome score associated with a session for all outcomes.
+Deprecated. Retrieve latest outcome score associated with a session for all outcomes.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 
 
@@ -3113,7 +3131,9 @@ JourneyAPI.patchJourneyExternaleventsConfiguration(configId: configId, body: bod
 
 > [Outcome](Outcome) patchJourneyOutcome(outcomeId, body)
 
-Update an outcome.
+Deprecated. Update an outcome.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 
 
@@ -3426,7 +3446,9 @@ JourneyAPI.postJourneyActionmaps(body: body) { (response, error) in
 
 > [EstimateJobAsyncResponse](EstimateJobAsyncResponse) postJourneyActionmapsEstimatesJobs(body)
 
-Query for estimates
+Deprecated. Query for estimates
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 
 
@@ -3880,7 +3902,9 @@ JourneyAPI.postJourneyFlowsPathsQuery(body: body) { (response, error) in
 
 > [Outcome](Outcome) postJourneyOutcomes(body)
 
-Create an outcome.
+Deprecated. Create an outcome.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 
 
@@ -3930,7 +3954,9 @@ JourneyAPI.postJourneyOutcomes(body: body) { (response, error) in
 
 > [OutcomePredictor](OutcomePredictor) postJourneyOutcomesPredictors(body)
 
-Create an outcome predictor.
+Deprecated. Create an outcome predictor.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 
 
@@ -4444,4 +4470,4 @@ JourneyAPI.putJourneyViewVersion(viewId: viewId, versionId: versionId, body: bod
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

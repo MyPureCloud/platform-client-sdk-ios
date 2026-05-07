@@ -145,6 +145,10 @@ public class Message: Codable {
         case openMessaging = "OpenMessaging"
     }
 
+
+
+
+
     /** The connection state of this communication. */
     public var state: State?
     /** The initial connection state of this communication. */
@@ -205,8 +209,12 @@ public class Message: Codable {
     /** Represents the queue settings for this media type. */
     public var queueMediaSettings: ConversationQueueMediaSettings?
     public var engagementSource: EngagementSource?
+    /** Represents the time when a parked message will resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var resumeTime: Date?
+    /** Represents the time when an message was put into parked state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var parkTime: Date?
 
-    public init(state: State?, initialState: InitialState?, _id: String?, held: Bool?, segments: [Segment]?, direction: Direction?, recordingId: String?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, authenticated: Bool?, type: ModelType?, recipientCountry: String?, recipientType: String?, scriptId: String?, peerId: String?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, journeyContext: JourneyContext?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, byoSmsIntegrationId: String?, queueMediaSettings: ConversationQueueMediaSettings?, engagementSource: EngagementSource?) {
+    public init(state: State?, initialState: InitialState?, _id: String?, held: Bool?, segments: [Segment]?, direction: Direction?, recordingId: String?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, authenticated: Bool?, type: ModelType?, recipientCountry: String?, recipientType: String?, scriptId: String?, peerId: String?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, journeyContext: JourneyContext?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, byoSmsIntegrationId: String?, queueMediaSettings: ConversationQueueMediaSettings?, engagementSource: EngagementSource?, resumeTime: Date?, parkTime: Date?) {
         self.state = state
         self.initialState = initialState
         self._id = _id
@@ -238,6 +246,8 @@ public class Message: Codable {
         self.byoSmsIntegrationId = byoSmsIntegrationId
         self.queueMediaSettings = queueMediaSettings
         self.engagementSource = engagementSource
+        self.resumeTime = resumeTime
+        self.parkTime = parkTime
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -272,6 +282,8 @@ public class Message: Codable {
         case byoSmsIntegrationId
         case queueMediaSettings
         case engagementSource
+        case resumeTime
+        case parkTime
     }
 
 

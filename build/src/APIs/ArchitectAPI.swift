@@ -33345,7 +33345,82 @@ open class ArchitectAPI {
     
     
     /**
-     Begin an import process for importing rows into a datatable
+     Begin an import process for importing rows from a CSV file into a datatable. CSV file is uploaded by performing a PUT request against the URL in the returned 'uploadURI' field. Headers for the PUT request must contain all headers contained in the returned 'uploadHeaders' field.
+     
+     - parameter datatableId: (path) id of datatable 
+     - parameter body: (body) import job information 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postFlowsDatatableImportCsvJobs(datatableId: String, body: DataTableImportJob, completion: @escaping ((_ data: DataTableImportJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = postFlowsDatatableImportCsvJobsWithRequestBuilder(datatableId: datatableId, body: body)
+        requestBuilder.execute { (response: Response<DataTableImportJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Begin an import process for importing rows from a CSV file into a datatable. CSV file is uploaded by performing a PUT request against the URL in the returned 'uploadURI' field. Headers for the PUT request must contain all headers contained in the returned 'uploadHeaders' field.
+     - POST /api/v2/flows/datatables/{datatableId}/import/csv/jobs
+     - Create an import job for importing rows from a CSV file. The caller can then poll for status of the import using the token returned in the response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "owner" : "{}",
+  "importMode" : "ReplaceAll",
+  "countRecordsFailed" : 1,
+  "countRecordsUpdated" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "uploadURI" : "https://openapi-generator.tech",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "uploadHeaders" : {
+    "key" : "uploadHeaders"
+  },
+  "errorInformation" : "{}",
+  "countRecordsDeleted" : 6,
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
+  "status" : "WaitingForUpload"
+}, statusCode=200}]
+     
+     - parameter datatableId: (path) id of datatable 
+     - parameter body: (body) import job information 
+
+     - returns: RequestBuilder<DataTableImportJob> 
+     */
+    open class func postFlowsDatatableImportCsvJobsWithRequestBuilder(datatableId: String, body: DataTableImportJob) -> RequestBuilder<DataTableImportJob> {        
+        var path = "/api/v2/flows/datatables/{datatableId}/import/csv/jobs"
+        let datatableIdPreEscape = "\(datatableId)"
+        let datatableIdPostEscape = datatableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{datatableId}", with: datatableIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataTableImportJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Begin an import process for importing rows into a datatable. Apps should migrate to use POST /api/v2/flows/datatables/{datatableId}/import/csv/jobs instead
      
      - parameter datatableId: (path) id of datatable 
      - parameter body: (body) import job information 
@@ -33370,7 +33445,7 @@ open class ArchitectAPI {
     }
 
     /**
-     Begin an import process for importing rows into a datatable
+     Begin an import process for importing rows into a datatable. Apps should migrate to use POST /api/v2/flows/datatables/{datatableId}/import/csv/jobs instead
      - POST /api/v2/flows/datatables/{datatableId}/import/jobs
      - Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
      - OAuth:

@@ -2539,9 +2539,9 @@ open class WorkforceManagementAPI {
      - parameter jobId: (path) The ID of the activity plan run job 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementBusinessunitActivityplanRunsJob(businessUnitId: String, activityPlanId: String, jobId: String, completion: @escaping ((_ data: ActivityPlanRunJobResponse?,_ error: Error?) -> Void)) {
+    open class func getWorkforcemanagementBusinessunitActivityplanRunsJob(businessUnitId: String, activityPlanId: String, jobId: String, completion: @escaping ((_ data: ActivityPlanJobResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = getWorkforcemanagementBusinessunitActivityplanRunsJobWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId, jobId: jobId)
-        requestBuilder.execute { (response: Response<ActivityPlanRunJobResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<ActivityPlanJobResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -2567,7 +2567,9 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id",
   "activityPlan" : "{}",
+  "occurrence" : "{}",
   "error" : "{}",
+  "type" : "RunPlan",
   "exceptions" : [ {
     "exceptionType" : "UnscheduledAttendees",
     "occurrences" : [ {
@@ -2594,9 +2596,9 @@ open class WorkforceManagementAPI {
      - parameter activityPlanId: (path) The ID of the activity plan associated with the run job 
      - parameter jobId: (path) The ID of the activity plan run job 
 
-     - returns: RequestBuilder<ActivityPlanRunJobResponse> 
+     - returns: RequestBuilder<ActivityPlanJobResponse> 
      */
-    open class func getWorkforcemanagementBusinessunitActivityplanRunsJobWithRequestBuilder(businessUnitId: String, activityPlanId: String, jobId: String) -> RequestBuilder<ActivityPlanRunJobResponse> {        
+    open class func getWorkforcemanagementBusinessunitActivityplanRunsJobWithRequestBuilder(businessUnitId: String, activityPlanId: String, jobId: String) -> RequestBuilder<ActivityPlanJobResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs/{jobId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2612,7 +2614,7 @@ open class WorkforceManagementAPI {
         
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<ActivityPlanRunJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ActivityPlanJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -3651,6 +3653,8 @@ open class WorkforceManagementAPI {
         case agentHistoricalAdherence = "AgentHistoricalAdherence"
         case agentHistoricalAdherenceConformance = "AgentHistoricalAdherenceConformance"
         case agentSchedule = "AgentSchedule"
+        case agentAdherenceAdjustments = "AgentAdherenceAdjustments"
+        case agentAdherenceAdjustmentsQuery = "AgentAdherenceAdjustmentsQuery"
         case agentTimeOffRequest = "AgentTimeOffRequest"
         case agentWorkPlanBid = "AgentWorkPlanBid"
         case agentScheduleBid = "AgentScheduleBid"
@@ -3663,11 +3667,15 @@ open class WorkforceManagementAPI {
         case agentOpportunitiesEnrollmentsStatuses = "AgentOpportunitiesEnrollmentsStatuses"
         case activityCodes = "ActivityCodes"
         case activityPlans = "ActivityPlans"
+        case adherenceAdjustmentsSettings = "AdherenceAdjustmentsSettings"
+        case adherenceAdjustmentsReasonCodes = "AdherenceAdjustmentsReasonCodes"
+        case adherenceAdjustments = "AdherenceAdjustments"
         case unavailableTimes = "UnavailableTimes"
         case agents = "Agents"
         case buActivityCodes = "BuActivityCodes"
         case businessUnits = "BusinessUnits"
         case capacityPlan = "CapacityPlan"
+        case capacityPlanForecastInputs = "CapacityPlanForecastInputs"
         case continuousForecast = "ContinuousForecast"
         case historicalAdherence = "HistoricalAdherence"
         case historicalShrinkage = "HistoricalShrinkage"
@@ -7489,6 +7497,8 @@ open class WorkforceManagementAPI {
         case agentHistoricalAdherence = "AgentHistoricalAdherence"
         case agentHistoricalAdherenceConformance = "AgentHistoricalAdherenceConformance"
         case agentSchedule = "AgentSchedule"
+        case agentAdherenceAdjustments = "AgentAdherenceAdjustments"
+        case agentAdherenceAdjustmentsQuery = "AgentAdherenceAdjustmentsQuery"
         case agentTimeOffRequest = "AgentTimeOffRequest"
         case agentWorkPlanBid = "AgentWorkPlanBid"
         case agentScheduleBid = "AgentScheduleBid"
@@ -7501,11 +7511,15 @@ open class WorkforceManagementAPI {
         case agentOpportunitiesEnrollmentsStatuses = "AgentOpportunitiesEnrollmentsStatuses"
         case activityCodes = "ActivityCodes"
         case activityPlans = "ActivityPlans"
+        case adherenceAdjustmentsSettings = "AdherenceAdjustmentsSettings"
+        case adherenceAdjustmentsReasonCodes = "AdherenceAdjustmentsReasonCodes"
+        case adherenceAdjustments = "AdherenceAdjustments"
         case unavailableTimes = "UnavailableTimes"
         case agents = "Agents"
         case buActivityCodes = "BuActivityCodes"
         case businessUnits = "BusinessUnits"
         case capacityPlan = "CapacityPlan"
+        case capacityPlanForecastInputs = "CapacityPlanForecastInputs"
         case continuousForecast = "ContinuousForecast"
         case historicalAdherence = "HistoricalAdherence"
         case historicalShrinkage = "HistoricalShrinkage"
@@ -10569,6 +10583,8 @@ open class WorkforceManagementAPI {
         case agentHistoricalAdherence = "AgentHistoricalAdherence"
         case agentHistoricalAdherenceConformance = "AgentHistoricalAdherenceConformance"
         case agentSchedule = "AgentSchedule"
+        case agentAdherenceAdjustments = "AgentAdherenceAdjustments"
+        case agentAdherenceAdjustmentsQuery = "AgentAdherenceAdjustmentsQuery"
         case agentTimeOffRequest = "AgentTimeOffRequest"
         case agentWorkPlanBid = "AgentWorkPlanBid"
         case agentScheduleBid = "AgentScheduleBid"
@@ -10581,11 +10597,15 @@ open class WorkforceManagementAPI {
         case agentOpportunitiesEnrollmentsStatuses = "AgentOpportunitiesEnrollmentsStatuses"
         case activityCodes = "ActivityCodes"
         case activityPlans = "ActivityPlans"
+        case adherenceAdjustmentsSettings = "AdherenceAdjustmentsSettings"
+        case adherenceAdjustmentsReasonCodes = "AdherenceAdjustmentsReasonCodes"
+        case adherenceAdjustments = "AdherenceAdjustments"
         case unavailableTimes = "UnavailableTimes"
         case agents = "Agents"
         case buActivityCodes = "BuActivityCodes"
         case businessUnits = "BusinessUnits"
         case capacityPlan = "CapacityPlan"
+        case capacityPlanForecastInputs = "CapacityPlanForecastInputs"
         case continuousForecast = "ContinuousForecast"
         case historicalAdherence = "HistoricalAdherence"
         case historicalShrinkage = "HistoricalShrinkage"
@@ -16546,9 +16566,9 @@ open class WorkforceManagementAPI {
      - parameter activityPlanId: (path) The ID of the activity plan to run 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementBusinessunitActivityplanRunsJobs(businessUnitId: String, activityPlanId: String, completion: @escaping ((_ data: ActivityPlanJobResponse?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementBusinessunitActivityplanRunsJobs(businessUnitId: String, activityPlanId: String, completion: @escaping ((_ data: ActivityPlanRunJobResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementBusinessunitActivityplanRunsJobsWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId)
-        requestBuilder.execute { (response: Response<ActivityPlanJobResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<ActivityPlanRunJobResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -16575,9 +16595,7 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id",
   "activityPlan" : "{}",
-  "occurrence" : "{}",
   "error" : "{}",
-  "type" : "RunPlan",
   "exceptions" : [ {
     "exceptionType" : "UnscheduledAttendees",
     "occurrences" : [ {
@@ -16603,9 +16621,9 @@ open class WorkforceManagementAPI {
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter activityPlanId: (path) The ID of the activity plan to run 
 
-     - returns: RequestBuilder<ActivityPlanJobResponse> 
+     - returns: RequestBuilder<ActivityPlanRunJobResponse> 
      */
-    open class func postWorkforcemanagementBusinessunitActivityplanRunsJobsWithRequestBuilder(businessUnitId: String, activityPlanId: String) -> RequestBuilder<ActivityPlanJobResponse> {        
+    open class func postWorkforcemanagementBusinessunitActivityplanRunsJobsWithRequestBuilder(businessUnitId: String, activityPlanId: String) -> RequestBuilder<ActivityPlanRunJobResponse> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -16618,7 +16636,7 @@ open class WorkforceManagementAPI {
         
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<ActivityPlanJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ActivityPlanRunJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

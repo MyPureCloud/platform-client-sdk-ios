@@ -26,6 +26,8 @@ public class WebEventRequest: Codable {
 
 
 
+
+
     /** A UUID representing the customer making the request. */
     public var customerCookieId: String?
     /** Represents the action the customer performed. Event types are created for each unique event name and can be faceted on in segment and outcome conditions. A valid event name must only contain alphanumeric characters and underscores. A good event name is typically an object followed by the action performed in past tense, e.g. page_viewed, order_completed, user_registered. */
@@ -48,10 +50,12 @@ public class WebEventRequest: Codable {
     public var attributes: [String:CustomEventAttribute]?
     /** Traits are attributes intrinsic to the customer that may be sent in selected events, e.g. email, givenName, cellPhone. Traits are used to collect information for identity resolution. For example, the same person might be using an application on different devices which might create two sessions with different customerIds. Additional information can be provided as traits to help link those two sessions and customers to a single external contact through common identifiers that were submitted via a form fill, message, or other input in both sessions. */
     public var traits: [String:CustomEventAttribute]?
+    /** An external identifier for the customer. */
+    public var externalId: String?
     /** UTC timestamp indicating when the event actually took place, events older than an hour will be rejected. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var createdDate: Date?
 
-    public init(customerCookieId: String?, eventName: String?, page: RequestPage?, userAgentString: String?, browser: WebEventBrowser?, device: WebEventDevice?, searchQuery: String?, ipAddress: String?, referrerUrl: String?, attributes: [String:CustomEventAttribute]?, traits: [String:CustomEventAttribute]?, createdDate: Date?) {
+    public init(customerCookieId: String?, eventName: String?, page: RequestPage?, userAgentString: String?, browser: WebEventBrowser?, device: WebEventDevice?, searchQuery: String?, ipAddress: String?, referrerUrl: String?, attributes: [String:CustomEventAttribute]?, traits: [String:CustomEventAttribute]?, externalId: String?, createdDate: Date?) {
         self.customerCookieId = customerCookieId
         self.eventName = eventName
         self.page = page
@@ -63,6 +67,7 @@ public class WebEventRequest: Codable {
         self.referrerUrl = referrerUrl
         self.attributes = attributes
         self.traits = traits
+        self.externalId = externalId
         self.createdDate = createdDate
     }
 

@@ -10,6 +10,7 @@ public class Variable: Codable {
         case number = "Number"
         case boolean = "Boolean"
         case date = "Date"
+        case list = "List"
     }
 
     public enum Scope: String, Codable { 
@@ -18,6 +19,10 @@ public class Variable: Codable {
         case inputAndOutput = "InputAndOutput"
         case guideOnly = "GuideOnly"
     }
+
+
+
+
 
 
 
@@ -32,14 +37,20 @@ public class Variable: Codable {
     /** The description of the variable used by Guides runtime for input/output handling. */
     public var _description: String?
     /** The validation configuration for the variable. Optional - if not present, no validation is applied. */
-    public var validation: VariableValidation?
+    public var validation: JSON?
+    /** The values configuration for List variables. Only applicable when type is 'List'. */
+    public var listValues: JSON?
+    /** The variables that the list result will be stored in. Only applicable when type is 'List'. */
+    public var listVariables: [Variable]?
 
-    public init(name: String?, type: ModelType?, scope: Scope?, _description: String?, validation: VariableValidation?) {
+    public init(name: String?, type: ModelType?, scope: Scope?, _description: String?, validation: JSON?, listValues: JSON?, listVariables: [Variable]?) {
         self.name = name
         self.type = type
         self.scope = scope
         self._description = _description
         self.validation = validation
+        self.listValues = listValues
+        self.listVariables = listVariables
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -48,6 +59,8 @@ public class Variable: Codable {
         case scope
         case _description = "description"
         case validation
+        case listValues
+        case listVariables
     }
 
 

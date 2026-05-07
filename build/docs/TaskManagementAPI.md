@@ -3916,6 +3916,8 @@ TaskManagementAPI.postTaskmanagementWorktypes(body: body) { (response, error) in
 
 Query for worktypes
 
+Optional request field &#39;expands&#39; may include &#39;schema&#39; to populate the name on each worktype&#39;s schema reference.
+
 
 
 Wraps POST /api/v2/taskmanagement/worktypes/query  
@@ -4010,4 +4012,4 @@ TaskManagementAPI.putTaskmanagementWorkitemsSchema(schemaId: schemaId, body: bod
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

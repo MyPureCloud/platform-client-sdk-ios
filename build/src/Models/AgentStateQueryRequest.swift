@@ -15,6 +15,7 @@ public class AgentStateQueryRequest: Codable {
         case systempresence = "systemPresence"
         case routingstatus = "routingStatus"
         case organizationpresenceid = "organizationPresenceId"
+        case adherencedate = "adherenceDate"
     }
 
     public enum UserOrder: String, Codable { 

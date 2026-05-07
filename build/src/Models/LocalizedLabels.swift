@@ -8,6 +8,7 @@ public class LocalizedLabels: Codable {
         case messengerHomeHeaderSubTitle = "MessengerHomeHeaderSubTitle"
         case pushNotificationTitle = "PushNotificationTitle"
         case pushNotificationBody = "PushNotificationBody"
+        case messengerLauncherButtonText = "MessengerLauncherButtonText"
     }
 
 

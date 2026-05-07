@@ -1,12 +1,16 @@
 
 
-public class WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification: Codable {
+public class WfmActivityPlanRunJobCompleteTopicActivityPlanJobCompleteNotification: Codable {
 
 
 
     public enum ModelType: String, Codable { 
         case runPlan = "RunPlan"
         case deleteOccurrence = "DeleteOccurrence"
+        case deleteActivityPlan = "DeleteActivityPlan"
+        case deleteOccurrences = "DeleteOccurrences"
+        case deleteSessions = "DeleteSessions"
+        case deleteSessionUsers = "DeleteSessionUsers"
     }
 
 

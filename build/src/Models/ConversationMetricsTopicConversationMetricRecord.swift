@@ -5,6 +5,9 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     public enum Metric: String, Codable { 
         case nblindtransferred = "nBlindTransferred"
         case nbotinteractions = "nBotInteractions"
+        case ncallbackattempts = "nCallbackAttempts"
+        case ncallbackscheduled = "nCallbackScheduled"
+        case ncfcoffered = "nCfcOffered"
         case ncobrowsesessions = "nCobrowseSessions"
         case nconnected = "nConnected"
         case nconsult = "nConsult"
@@ -17,6 +20,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
         case noutboundattempted = "nOutboundAttempted"
         case noutboundconnected = "nOutboundConnected"
         case noversla = "nOverSla"
+        case ntakeover = "nTakeover"
         case ntransferred = "nTransferred"
         case oaudiomessagecount = "oAudioMessageCount"
         case oexternalaudiomessagecount = "oExternalAudioMessageCount"
@@ -25,6 +29,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
         case omessagecount = "oMessageCount"
         case omessagesegmentcount = "oMessageSegmentCount"
         case omessageturn = "oMessageTurn"
+        case oskillexpressionapplications = "oSkillExpressionApplications"
         case tabandon = "tAbandon"
         case tacd = "tAcd"
         case tactivecallback = "tActiveCallback"
@@ -37,6 +42,10 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
         case taverageagentresponsetime = "tAverageAgentResponseTime"
         case taveragecustomerresponsetime = "tAverageCustomerResponseTime"
         case tbarging = "tBarging"
+        case tcfcabandon = "tCfcAbandon"
+        case tcfcacd = "tCfcAcd"
+        case tcfcanswered = "tCfcAnswered"
+        case tcfcflowout = "tCfcFlowOut"
         case tcoaching = "tCoaching"
         case tcoachingcomplete = "tCoachingComplete"
         case tconnected = "tConnected"
@@ -57,8 +66,10 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
         case tpark = "tPark"
         case tparkcomplete = "tParkComplete"
         case tscreenmonitoring = "tScreenMonitoring"
+        case tsnippetrecord = "tSnippetRecord"
         case ttalk = "tTalk"
         case ttalkcomplete = "tTalkComplete"
+        case ttransmitting = "tTransmitting"
         case tuserresponsetime = "tUserResponseTime"
         case tvoicemail = "tVoicemail"
     }
@@ -332,6 +343,8 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
 
 
 
+
+
     public enum UsedRouting: String, Codable { 
         case bullseye = "Bullseye"
         case conditional = "Conditional"
@@ -506,6 +519,8 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     public var sessionDnis: String?
     /** The unique identifier of this session */
     public var sessionId: String?
+    /** Unique identifier for the skill requested for an interaction */
+    public var skillExpressionId: String?
     /** Unique identifier for a phone */
     public var stationId: String?
     /** The team ID the user is a member of */
@@ -525,7 +540,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     /** Scored agents */
     public var scoredAgents: [ConversationMetricsTopicConversationScoredAgent]?
 
-    public init(metric: Metric?, metricDate: Date?, value: Int64?, recordId: String?, activeRouting: ActiveRouting?, activeSkillIds: [String]?, addressFrom: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int64?, agentOwned: Bool?, ani: String?, assignerId: String?, authenticated: Bool?, conversationId: String?, conversationInitiator: ConversationInitiator?, convertedFrom: String?, convertedTo: String?, customerParticipation: Bool?, deliveryStatus: DeliveryStatus?, destinationAddresses: [String]?, direction: Direction?, disconnectType: DisconnectType?, divisionIds: [String]?, dnis: String?, edgeId: String?, eligibleAgentCounts: [Int64]?, errorCode: String?, extendedDeliveryStatus: String?, externalContactId: String?, externalMediaCount: Int64?, externalOrganizationId: String?, externalTag: String?, firstQueue: Bool?, flaggedReason: FlaggedReason?, flowInType: String?, flowOutType: String?, groupId: String?, interactionType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int64?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, knowledgeBaseIds: [String]?, mediaCount: Int64?, mediaType: MediaType?, messageType: String?, originatingDirection: OriginatingDirection?, originatingSocialMediaPublic: Bool?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, participantName: String?, peerId: String?, provider: String?, purpose: Purpose?, queueId: String?, remote: String?, removedSkillIds: [String]?, requestedLanguageId: String?, requestedRoutingSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingPriority: Int64?, routingRing: Int64?, routingRule: String?, routingRuleType: RoutingRuleType?, selectedAgentId: String?, selectedAgentRank: Int64?, selfServed: Bool?, sessionDnis: String?, sessionId: String?, stationId: String?, teamId: String?, usedRouting: UsedRouting?, userId: String?, videoPresent: Bool?, waitingInteractionCounts: [Int64]?, wrapUpCode: String?, proposedAgents: [ConversationMetricsTopicConversationProposedAgent]?, scoredAgents: [ConversationMetricsTopicConversationScoredAgent]?) {
+    public init(metric: Metric?, metricDate: Date?, value: Int64?, recordId: String?, activeRouting: ActiveRouting?, activeSkillIds: [String]?, addressFrom: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int64?, agentOwned: Bool?, ani: String?, assignerId: String?, authenticated: Bool?, conversationId: String?, conversationInitiator: ConversationInitiator?, convertedFrom: String?, convertedTo: String?, customerParticipation: Bool?, deliveryStatus: DeliveryStatus?, destinationAddresses: [String]?, direction: Direction?, disconnectType: DisconnectType?, divisionIds: [String]?, dnis: String?, edgeId: String?, eligibleAgentCounts: [Int64]?, errorCode: String?, extendedDeliveryStatus: String?, externalContactId: String?, externalMediaCount: Int64?, externalOrganizationId: String?, externalTag: String?, firstQueue: Bool?, flaggedReason: FlaggedReason?, flowInType: String?, flowOutType: String?, groupId: String?, interactionType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int64?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, knowledgeBaseIds: [String]?, mediaCount: Int64?, mediaType: MediaType?, messageType: String?, originatingDirection: OriginatingDirection?, originatingSocialMediaPublic: Bool?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, participantName: String?, peerId: String?, provider: String?, purpose: Purpose?, queueId: String?, remote: String?, removedSkillIds: [String]?, requestedLanguageId: String?, requestedRoutingSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingPriority: Int64?, routingRing: Int64?, routingRule: String?, routingRuleType: RoutingRuleType?, selectedAgentId: String?, selectedAgentRank: Int64?, selfServed: Bool?, sessionDnis: String?, sessionId: String?, skillExpressionId: String?, stationId: String?, teamId: String?, usedRouting: UsedRouting?, userId: String?, videoPresent: Bool?, waitingInteractionCounts: [Int64]?, wrapUpCode: String?, proposedAgents: [ConversationMetricsTopicConversationProposedAgent]?, scoredAgents: [ConversationMetricsTopicConversationScoredAgent]?) {
         self.metric = metric
         self.metricDate = metricDate
         self.value = value
@@ -601,6 +616,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
         self.selfServed = selfServed
         self.sessionDnis = sessionDnis
         self.sessionId = sessionId
+        self.skillExpressionId = skillExpressionId
         self.stationId = stationId
         self.teamId = teamId
         self.usedRouting = usedRouting

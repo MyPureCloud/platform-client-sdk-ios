@@ -18,6 +18,8 @@ public class QueueConversationCallEventTopicCallConversation: Codable {
 
 
 
+
+
     public enum RecordingState: String, Codable { 
         case _none = "none"
         case active = "active"
@@ -34,19 +36,21 @@ public class QueueConversationCallEventTopicCallConversation: Codable {
     public var otherMediaUris: [String]?
     public var address: String?
     public var utilizationLabelId: String?
+    public var accessAttributes: [String]?
     public var inactivityTimeout: Date?
     public var divisions: [QueueConversationCallEventTopicConversationDivisionMembership]?
     public var recordingState: RecordingState?
     public var securePause: Bool?
     public var maxParticipants: Int64?
 
-    public init(_id: String?, name: String?, participants: [QueueConversationCallEventTopicCallMediaParticipant]?, otherMediaUris: [String]?, address: String?, utilizationLabelId: String?, inactivityTimeout: Date?, divisions: [QueueConversationCallEventTopicConversationDivisionMembership]?, recordingState: RecordingState?, securePause: Bool?, maxParticipants: Int64?) {
+    public init(_id: String?, name: String?, participants: [QueueConversationCallEventTopicCallMediaParticipant]?, otherMediaUris: [String]?, address: String?, utilizationLabelId: String?, accessAttributes: [String]?, inactivityTimeout: Date?, divisions: [QueueConversationCallEventTopicConversationDivisionMembership]?, recordingState: RecordingState?, securePause: Bool?, maxParticipants: Int64?) {
         self._id = _id
         self.name = name
         self.participants = participants
         self.otherMediaUris = otherMediaUris
         self.address = address
         self.utilizationLabelId = utilizationLabelId
+        self.accessAttributes = accessAttributes
         self.inactivityTimeout = inactivityTimeout
         self.divisions = divisions
         self.recordingState = recordingState
@@ -61,6 +65,7 @@ public class QueueConversationCallEventTopicCallConversation: Codable {
         case otherMediaUris
         case address
         case utilizationLabelId
+        case accessAttributes
         case inactivityTimeout
         case divisions
         case recordingState

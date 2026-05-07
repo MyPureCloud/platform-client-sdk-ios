@@ -1218,6 +1218,7 @@ docs/ConversationContentListPicker.md
 docs/ConversationContentListPickerItem.md
 docs/ConversationContentListPickerSection.md
 docs/ConversationContentLocation.md
+docs/ConversationContentNotificationResponse.md
 docs/ConversationContentNotificationTemplate.md
 docs/ConversationContentPaymentRequest.md
 docs/ConversationContentPaymentResponse.md
@@ -1812,6 +1813,9 @@ docs/DialerCampaignScheduleConfigChangeRecurrenceRange.md
 docs/DialerCampaignScheduleConfigChangeScheduleInterval.md
 docs/DialerCampaignScheduleConfigChangeScheduleRecurrence.md
 docs/DialerCampaignScheduleConfigChangeUriReference.md
+docs/DialerCampaignSkillCombinationStatsEventCampaignSkillCombinationStats.md
+docs/DialerCampaignSkillCombinationStatsEventSkillCombinationDetailNotification.md
+docs/DialerCampaignSkillCombinationStatsEventUriReference.md
 docs/DialerContact.md
 docs/DialerContactId.md
 docs/DialerContactlistConfigChangeContactList.md
@@ -2671,6 +2675,7 @@ docs/IVRDivisionView.md
 docs/IVRDivisionViewEntityListing.md
 docs/IVREntityListing.md
 docs/IVRIdentityResolutionConfig.md
+docs/Icon.md
 docs/IdentifierClaimRequest.md
 docs/IdentityNow.md
 docs/IdentityProvider.md
@@ -3254,6 +3259,7 @@ docs/ListAlternativeShiftTradesResponse.md
 docs/ListPicker.md
 docs/ListPickerItem.md
 docs/ListPickerSection.md
+docs/ListValues.md
 docs/ListWrapperAgentWorkPlanField.md
 docs/ListWrapperAlternativeShiftBuSettingsActivityCategory.md
 docs/ListWrapperAlternativeShiftBuSettingsGranularity.md
@@ -4799,6 +4805,7 @@ docs/SocialMediaAsyncDetailQuery.md
 docs/SocialMediaAsyncDetailQueryResponse.md
 docs/SocialMediaDetailDataContainer.md
 docs/SocialMediaDetailMessageContainer.md
+docs/SocialMediaEngagement.md
 docs/SocialMediaMessageData.md
 docs/SocialMediaMessageEscalationInfo.md
 docs/SocialMediaQueryClause.md
@@ -5069,6 +5076,7 @@ docs/TextMessageListing.md
 docs/TextStyleProperties.md
 docs/TextbotsAPI.json
 docs/TextbotsAPI.md
+docs/ThirdPartySuggestion.md
 docs/Ticker.md
 docs/TimeAllowed.md
 docs/TimeAndDateSubCondition.md
@@ -5366,6 +5374,7 @@ docs/UserConversationSummary.md
 docs/UserConversationsEventMediaSummary.md
 docs/UserConversationsEventMediaSummaryDetail.md
 docs/UserConversationsEventUserConversationSummary.md
+docs/UserCursorEntityListing.md
 docs/UserCustomAttributes.md
 docs/UserCustomAttributesUpdateRequest.md
 docs/UserDetailQueryClause.md
@@ -5568,7 +5577,9 @@ docs/V2WfmMainForecastExportSnapshotEventMainForecastExportNotification.md
 docs/V3KnowledgeSearchClientApplication.md
 docs/V3SourceCreateRequest.md
 docs/V3SourceDetailedResponse.md
-docs/V3SourceDetailedWithErrorResponse.md
+docs/V3SourceExpandableListResponse.md
+docs/V3SourceExpandableListing.md
+docs/V3SourceExpandableResponse.md
 docs/V3SourceFilter.md
 docs/V3SourceFilterDetails.md
 docs/V3SourceFolderDetails.md
@@ -5577,8 +5588,6 @@ docs/V3SourceRef.md
 docs/V3SourceScheduleSettings.md
 docs/V3SourceSiteDetails.md
 docs/V3SourceUpdateRequest.md
-docs/V3SourceWithErrorListing.md
-docs/V3SourceWithErrorResponse.md
 docs/V3StartManualSyncRequest.md
 docs/V3Synchronization.md
 docs/V3SynchronizationListing.md
@@ -5722,15 +5731,17 @@ docs/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResultsSlot.m
 docs/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResultsSlotSchedule.md
 docs/WemCoachingUserNotificationTopicCoachingAppointmentReference.md
 docs/WemCoachingUserNotificationTopicCoachingUserNotification.md
+docs/WfmActivityPlanJobCompleteTopicActivityPlanJobCompleteNotification.md
 docs/WfmActivityPlanJobCompleteTopicActivityPlanJobException.md
-docs/WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification.md
 docs/WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference.md
 docs/WfmActivityPlanJobCompleteTopicActivityPlanReference.md
+docs/WfmActivityPlanJobCompleteTopicActivityPlanSessionReference.md
 docs/WfmActivityPlanJobCompleteTopicErrorBody.md
+docs/WfmActivityPlanRunJobCompleteTopicActivityPlanJobCompleteNotification.md
 docs/WfmActivityPlanRunJobCompleteTopicActivityPlanJobException.md
 docs/WfmActivityPlanRunJobCompleteTopicActivityPlanOccurrenceReference.md
 docs/WfmActivityPlanRunJobCompleteTopicActivityPlanReference.md
-docs/WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification.md
+docs/WfmActivityPlanRunJobCompleteTopicActivityPlanSessionReference.md
 docs/WfmActivityPlanRunJobCompleteTopicErrorBody.md
 docs/WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification.md
 docs/WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationJobNotification.md
@@ -6448,6 +6459,7 @@ docs/deleteUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/deleteUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/deleteUsersCustomattributesSchema-example.txt
 docs/deleteUsersRule-example.txt
+docs/deleteUsersStationsMeAssociatedstation-example.txt
 docs/deleteVoicemailMessage-example.txt
 docs/deleteVoicemailMessages-example.txt
 docs/deleteWebchatDeployment-example.txt
@@ -7736,6 +7748,7 @@ docs/getUsersExternalidAuthorityNameExternalKey-example.txt
 docs/getUsersMe-example.txt
 docs/getUsersPresenceBulk-example.txt
 docs/getUsersPresencesPurecloudBulk-example.txt
+docs/getUsersQuery-example.txt
 docs/getUsersRule-example.txt
 docs/getUsersRuleDependentTypeId-example.txt
 docs/getUsersRuleDependents-example.txt
@@ -7743,6 +7756,7 @@ docs/getUsersRules-example.txt
 docs/getUsersRulesSetting-example.txt
 docs/getUsersSearch-example.txt
 docs/getUsersSearch-example.txt
+docs/getUsersStationsMe-example.txt
 docs/getVoicemailGroupMailbox-example.txt
 docs/getVoicemailGroupMessages-example.txt
 docs/getVoicemailGroupPolicy-example.txt
@@ -7974,6 +7988,7 @@ docs/patchConversationsMessage-example.txt
 docs/patchConversationsMessageParticipant-example.txt
 docs/patchConversationsMessageParticipantAttributes-example.txt
 docs/patchConversationsMessageParticipantCommunication-example.txt
+docs/patchConversationsMessageParticipantParkingstate-example.txt
 docs/patchConversationsMessagingIntegrationsAppleIntegrationId-example.txt
 docs/patchConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/patchConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
@@ -8452,6 +8467,7 @@ docs/postFlowsActionsPublish-example.txt
 docs/postFlowsActionsRevert-example.txt
 docs/postFlowsActionsUnlock-example.txt
 docs/postFlowsDatatableExportJobs-example.txt
+docs/postFlowsDatatableImportCsvJobs-example.txt
 docs/postFlowsDatatableImportJobs-example.txt
 docs/postFlowsDatatableRows-example.txt
 docs/postFlowsDatatables-example.txt
@@ -9234,6 +9250,7 @@ docs/putUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/putUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/putUsersCustomattributesSchema-example.txt
 docs/putUsersPresencesBulk-example.txt
+docs/putUsersStationsMeAssociatedstationStationId-example.txt
 docs/putVoicemailMessage-example.txt
 docs/putVoicemailPolicy-example.txt
 docs/putVoicemailUserpolicy-example.txt
@@ -10517,6 +10534,7 @@ src/Models/ConversationContentListPicker.swift
 src/Models/ConversationContentListPickerItem.swift
 src/Models/ConversationContentListPickerSection.swift
 src/Models/ConversationContentLocation.swift
+src/Models/ConversationContentNotificationResponse.swift
 src/Models/ConversationContentNotificationTemplate.swift
 src/Models/ConversationContentPaymentRequest.swift
 src/Models/ConversationContentPaymentResponse.swift
@@ -11105,6 +11123,9 @@ src/Models/DialerCampaignScheduleConfigChangeRecurrenceRange.swift
 src/Models/DialerCampaignScheduleConfigChangeScheduleInterval.swift
 src/Models/DialerCampaignScheduleConfigChangeScheduleRecurrence.swift
 src/Models/DialerCampaignScheduleConfigChangeUriReference.swift
+src/Models/DialerCampaignSkillCombinationStatsEventCampaignSkillCombinationStats.swift
+src/Models/DialerCampaignSkillCombinationStatsEventSkillCombinationDetailNotification.swift
+src/Models/DialerCampaignSkillCombinationStatsEventUriReference.swift
 src/Models/DialerContact.swift
 src/Models/DialerContactId.swift
 src/Models/DialerContactlistConfigChangeContactList.swift
@@ -11940,6 +11961,7 @@ src/Models/IVRDivisionView.swift
 src/Models/IVRDivisionViewEntityListing.swift
 src/Models/IVREntityListing.swift
 src/Models/IVRIdentityResolutionConfig.swift
+src/Models/Icon.swift
 src/Models/IdentifierClaimRequest.swift
 src/Models/IdentityNow.swift
 src/Models/IdentityProvider.swift
@@ -12503,6 +12525,7 @@ src/Models/ListAlternativeShiftTradesResponse.swift
 src/Models/ListPicker.swift
 src/Models/ListPickerItem.swift
 src/Models/ListPickerSection.swift
+src/Models/ListValues.swift
 src/Models/ListWrapperAgentWorkPlanField.swift
 src/Models/ListWrapperAlternativeShiftBuSettingsActivityCategory.swift
 src/Models/ListWrapperAlternativeShiftBuSettingsGranularity.swift
@@ -14005,6 +14028,7 @@ src/Models/SocialMediaAsyncDetailQuery.swift
 src/Models/SocialMediaAsyncDetailQueryResponse.swift
 src/Models/SocialMediaDetailDataContainer.swift
 src/Models/SocialMediaDetailMessageContainer.swift
+src/Models/SocialMediaEngagement.swift
 src/Models/SocialMediaMessageData.swift
 src/Models/SocialMediaMessageEscalationInfo.swift
 src/Models/SocialMediaQueryClause.swift
@@ -14259,6 +14283,7 @@ src/Models/TextBotWaitForInputAction.swift
 src/Models/TextBotsRichMediaInputEvent.swift
 src/Models/TextMessageListing.swift
 src/Models/TextStyleProperties.swift
+src/Models/ThirdPartySuggestion.swift
 src/Models/Ticker.swift
 src/Models/TimeAllowed.swift
 src/Models/TimeAndDateSubCondition.swift
@@ -14550,6 +14575,7 @@ src/Models/UserConversationSummary.swift
 src/Models/UserConversationsEventMediaSummary.swift
 src/Models/UserConversationsEventMediaSummaryDetail.swift
 src/Models/UserConversationsEventUserConversationSummary.swift
+src/Models/UserCursorEntityListing.swift
 src/Models/UserCustomAttributes.swift
 src/Models/UserCustomAttributesUpdateRequest.swift
 src/Models/UserDetailQueryClause.swift
@@ -14744,7 +14770,9 @@ src/Models/V2WfmMainForecastExportSnapshotEventMainForecastExportNotification.sw
 src/Models/V3KnowledgeSearchClientApplication.swift
 src/Models/V3SourceCreateRequest.swift
 src/Models/V3SourceDetailedResponse.swift
-src/Models/V3SourceDetailedWithErrorResponse.swift
+src/Models/V3SourceExpandableListResponse.swift
+src/Models/V3SourceExpandableListing.swift
+src/Models/V3SourceExpandableResponse.swift
 src/Models/V3SourceFilter.swift
 src/Models/V3SourceFilterDetails.swift
 src/Models/V3SourceFolderDetails.swift
@@ -14753,8 +14781,6 @@ src/Models/V3SourceRef.swift
 src/Models/V3SourceScheduleSettings.swift
 src/Models/V3SourceSiteDetails.swift
 src/Models/V3SourceUpdateRequest.swift
-src/Models/V3SourceWithErrorListing.swift
-src/Models/V3SourceWithErrorResponse.swift
 src/Models/V3StartManualSyncRequest.swift
 src/Models/V3Synchronization.swift
 src/Models/V3SynchronizationListing.swift
@@ -14889,15 +14915,17 @@ src/Models/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResults
 src/Models/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResultsSlotSchedule.swift
 src/Models/WemCoachingUserNotificationTopicCoachingAppointmentReference.swift
 src/Models/WemCoachingUserNotificationTopicCoachingUserNotification.swift
+src/Models/WfmActivityPlanJobCompleteTopicActivityPlanJobCompleteNotification.swift
 src/Models/WfmActivityPlanJobCompleteTopicActivityPlanJobException.swift
-src/Models/WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification.swift
 src/Models/WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference.swift
 src/Models/WfmActivityPlanJobCompleteTopicActivityPlanReference.swift
+src/Models/WfmActivityPlanJobCompleteTopicActivityPlanSessionReference.swift
 src/Models/WfmActivityPlanJobCompleteTopicErrorBody.swift
+src/Models/WfmActivityPlanRunJobCompleteTopicActivityPlanJobCompleteNotification.swift
 src/Models/WfmActivityPlanRunJobCompleteTopicActivityPlanJobException.swift
 src/Models/WfmActivityPlanRunJobCompleteTopicActivityPlanOccurrenceReference.swift
 src/Models/WfmActivityPlanRunJobCompleteTopicActivityPlanReference.swift
-src/Models/WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification.swift
+src/Models/WfmActivityPlanRunJobCompleteTopicActivityPlanSessionReference.swift
 src/Models/WfmActivityPlanRunJobCompleteTopicErrorBody.swift
 src/Models/WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification.swift
 src/Models/WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationJobNotification.swift

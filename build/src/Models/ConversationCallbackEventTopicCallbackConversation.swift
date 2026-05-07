@@ -18,22 +18,26 @@ public class ConversationCallbackEventTopicCallbackConversation: Codable {
 
 
 
+
+
     public var _id: String?
     public var name: String?
     public var participants: [ConversationCallbackEventTopicCallbackMediaParticipant]?
     public var otherMediaUris: [String]?
     public var address: String?
     public var utilizationLabelId: String?
+    public var accessAttributes: [String]?
     public var inactivityTimeout: Date?
     public var divisions: [ConversationCallbackEventTopicConversationDivisionMembership]?
 
-    public init(_id: String?, name: String?, participants: [ConversationCallbackEventTopicCallbackMediaParticipant]?, otherMediaUris: [String]?, address: String?, utilizationLabelId: String?, inactivityTimeout: Date?, divisions: [ConversationCallbackEventTopicConversationDivisionMembership]?) {
+    public init(_id: String?, name: String?, participants: [ConversationCallbackEventTopicCallbackMediaParticipant]?, otherMediaUris: [String]?, address: String?, utilizationLabelId: String?, accessAttributes: [String]?, inactivityTimeout: Date?, divisions: [ConversationCallbackEventTopicConversationDivisionMembership]?) {
         self._id = _id
         self.name = name
         self.participants = participants
         self.otherMediaUris = otherMediaUris
         self.address = address
         self.utilizationLabelId = utilizationLabelId
+        self.accessAttributes = accessAttributes
         self.inactivityTimeout = inactivityTimeout
         self.divisions = divisions
     }
@@ -45,6 +49,7 @@ public class ConversationCallbackEventTopicCallbackConversation: Codable {
         case otherMediaUris
         case address
         case utilizationLabelId
+        case accessAttributes
         case inactivityTimeout
         case divisions
     }

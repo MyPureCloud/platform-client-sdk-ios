@@ -28,6 +28,10 @@ public class RecordingJobsQuery: Codable {
 
 
 
+
+
+
+
     /** Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. */
     public var action: Action?
     /** The date when the action will be performed. If screenRecordingActionDate is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -44,6 +48,10 @@ public class RecordingJobsQuery: Codable {
     public var includeRecordingsWithSensitiveData: Bool?
     /** Whether to include Screen recordings for the action, default value = true  */
     public var includeScreenRecordings: Bool?
+    /** Whether to include policy-based recordings for the action, default value = true */
+    public var includePolicyBasedRecordings: Bool?
+    /** Whether to include snippet recordings for the action, default value = true */
+    public var includeSnippetRecordings: Bool?
     /** For DELETE action, setting this to true will clear any pending exports for recordings. This field is only used for DELETE action. Default value = false */
     public var clearExport: Bool?
     /** Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability. */
@@ -51,7 +59,7 @@ public class RecordingJobsQuery: Codable {
     /** As an alternative to conversationQuery, specify the date and time range of conversations that are older than 5 years to query.Results will include all conversations that had activity during the interval. This is supported only when querying for conversations older than 5 years;conversationQuery must not be provided when this is provided. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.Interval duration must not exceed 6 months. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
     public var agedConversationInterval: String?
 
-    public init(action: Action?, actionDate: Date?, actionAge: Int?, screenRecordingActionDate: Date?, screenRecordingActionAge: Int?, integrationId: String?, includeRecordingsWithSensitiveData: Bool?, includeScreenRecordings: Bool?, clearExport: Bool?, conversationQuery: AsyncConversationQuery?, agedConversationInterval: String?) {
+    public init(action: Action?, actionDate: Date?, actionAge: Int?, screenRecordingActionDate: Date?, screenRecordingActionAge: Int?, integrationId: String?, includeRecordingsWithSensitiveData: Bool?, includeScreenRecordings: Bool?, includePolicyBasedRecordings: Bool?, includeSnippetRecordings: Bool?, clearExport: Bool?, conversationQuery: AsyncConversationQuery?, agedConversationInterval: String?) {
         self.action = action
         self.actionDate = actionDate
         self.actionAge = actionAge
@@ -60,6 +68,8 @@ public class RecordingJobsQuery: Codable {
         self.integrationId = integrationId
         self.includeRecordingsWithSensitiveData = includeRecordingsWithSensitiveData
         self.includeScreenRecordings = includeScreenRecordings
+        self.includePolicyBasedRecordings = includePolicyBasedRecordings
+        self.includeSnippetRecordings = includeSnippetRecordings
         self.clearExport = clearExport
         self.conversationQuery = conversationQuery
         self.agedConversationInterval = agedConversationInterval

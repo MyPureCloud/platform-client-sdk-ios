@@ -790,6 +790,7 @@ open class SocialMediaAPI {
           "paymentResponse" : "{}",
           "attachment" : "{}",
           "form" : "{}",
+          "notificationResponse" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -816,6 +817,7 @@ open class SocialMediaAPI {
           "paymentResponse" : "{}",
           "attachment" : "{}",
           "form" : "{}",
+          "notificationResponse" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -888,6 +890,7 @@ open class SocialMediaAPI {
           "paymentResponse" : "{}",
           "attachment" : "{}",
           "form" : "{}",
+          "notificationResponse" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -914,6 +917,7 @@ open class SocialMediaAPI {
           "paymentResponse" : "{}",
           "attachment" : "{}",
           "form" : "{}",
+          "notificationResponse" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -989,6 +993,7 @@ open class SocialMediaAPI {
           "paymentResponse" : "{}",
           "attachment" : "{}",
           "form" : "{}",
+          "notificationResponse" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -1015,6 +1020,7 @@ open class SocialMediaAPI {
           "paymentResponse" : "{}",
           "attachment" : "{}",
           "form" : "{}",
+          "notificationResponse" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -1087,6 +1093,7 @@ open class SocialMediaAPI {
           "paymentResponse" : "{}",
           "attachment" : "{}",
           "form" : "{}",
+          "notificationResponse" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",
@@ -1113,6 +1120,7 @@ open class SocialMediaAPI {
           "paymentResponse" : "{}",
           "attachment" : "{}",
           "form" : "{}",
+          "notificationResponse" : "{}",
           "location" : "{}",
           "reactions" : [ {
             "reactionType" : "None",

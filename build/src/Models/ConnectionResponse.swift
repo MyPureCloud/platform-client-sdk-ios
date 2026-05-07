@@ -33,6 +33,8 @@ public class ConnectionResponse: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of the connection. */
@@ -55,10 +57,12 @@ public class ConnectionResponse: Codable {
     public var status: Status?
     /** Optional error message of the connection. */
     public var error: ErrorBody?
+    /** Expiry date of the authentication credentials. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateExpiry: Date?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, type: ModelType?, integration: KnowledgeIntegrationReference?, authenticationProperties: AuthenticationProperties?, createdBy: UserReference?, modifiedBy: UserReference?, dateCreated: Date?, dateModified: Date?, status: Status?, error: ErrorBody?, selfUri: String?) {
+    public init(_id: String?, name: String?, type: ModelType?, integration: KnowledgeIntegrationReference?, authenticationProperties: AuthenticationProperties?, createdBy: UserReference?, modifiedBy: UserReference?, dateCreated: Date?, dateModified: Date?, status: Status?, error: ErrorBody?, dateExpiry: Date?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.type = type
@@ -70,6 +74,7 @@ public class ConnectionResponse: Codable {
         self.dateModified = dateModified
         self.status = status
         self.error = error
+        self.dateExpiry = dateExpiry
         self.selfUri = selfUri
     }
 
@@ -85,6 +90,7 @@ public class ConnectionResponse: Codable {
         case dateModified
         case status
         case error
+        case dateExpiry
         case selfUri
     }
 

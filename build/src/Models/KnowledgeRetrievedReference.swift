@@ -10,6 +10,8 @@ public class KnowledgeRetrievedReference: Codable {
 
 
 
+
+
     /** The confidence associated with retrieved reference respect to a search query. */
     public var confidence: Double?
     /** The matching text for search query. */
@@ -18,12 +20,15 @@ public class KnowledgeRetrievedReference: Codable {
     public var fileName: String?
     /** The url of the file. */
     public var url: String?
+    /** Indicates whether a retrieved reference is used for answer generation */
+    public var usedForGeneration: Bool?
 
-    public init(confidence: Double?, text: String?, fileName: String?, url: String?) {
+    public init(confidence: Double?, text: String?, fileName: String?, url: String?, usedForGeneration: Bool?) {
         self.confidence = confidence
         self.text = text
         self.fileName = fileName
         self.url = url
+        self.usedForGeneration = usedForGeneration
     }
 
 

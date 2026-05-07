@@ -50,6 +50,8 @@ public class ADFS: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -68,10 +70,11 @@ public class ADFS: Codable {
     public var providerName: String?
     public var displayOnLogin: Bool?
     public var metadataURL: String?
+    public var forceAuthn: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, disabled: Bool?, issuerURI: String?, ssoTargetURI: String?, sloURI: String?, sloBinding: String?, relyingPartyIdentifier: String?, certificate: String?, certificates: [String]?, logoImageData: String?, nameIdentifierFormat: NameIdentifierFormat?, ssoBinding: SsoBinding?, signAuthnRequests: Bool?, providerName: String?, displayOnLogin: Bool?, metadataURL: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, disabled: Bool?, issuerURI: String?, ssoTargetURI: String?, sloURI: String?, sloBinding: String?, relyingPartyIdentifier: String?, certificate: String?, certificates: [String]?, logoImageData: String?, nameIdentifierFormat: NameIdentifierFormat?, ssoBinding: SsoBinding?, signAuthnRequests: Bool?, providerName: String?, displayOnLogin: Bool?, metadataURL: String?, forceAuthn: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.disabled = disabled
@@ -89,6 +92,7 @@ public class ADFS: Codable {
         self.providerName = providerName
         self.displayOnLogin = displayOnLogin
         self.metadataURL = metadataURL
+        self.forceAuthn = forceAuthn
         self.selfUri = selfUri
     }
 
@@ -110,6 +114,7 @@ public class ADFS: Codable {
         case providerName
         case displayOnLogin
         case metadataURL
+        case forceAuthn
         case selfUri
     }
 

@@ -16,6 +16,7 @@ public class Suggestion: Codable {
         case cannedResponse = "CannedResponse"
         case script = "Script"
         case suggestedKnowledgeAnswer = "SuggestedKnowledgeAnswer"
+        case thirdPartySuggestion = "ThirdPartySuggestion"
     }
 
 

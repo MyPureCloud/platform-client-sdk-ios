@@ -10,7 +10,8 @@
 | **text** | **String** | The matching text for search query. | [optional] |
 | **fileName** | **String** | The file name from which reference is retrieved | [optional] |
 | **url** | **String** | The url of the file. | [optional] |
+| **usedForGeneration** | **Bool** | Indicates whether a retrieved reference is used for answer generation | [optional] |
 
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

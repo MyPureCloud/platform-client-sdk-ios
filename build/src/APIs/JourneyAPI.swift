@@ -200,7 +200,7 @@ open class JourneyAPI {
     
     
     /**
-     Delete an outcome.
+     Deprecated. Delete an outcome.
      
      - parameter outcomeId: (path) ID of the outcome. 
      - parameter completion: completion handler to receive the data and the error objects
@@ -217,8 +217,9 @@ open class JourneyAPI {
     }
 
     /**
-     Delete an outcome.
+     Deprecated. Delete an outcome.
      - DELETE /api/v2/journey/outcomes/{outcomeId}
+     - Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -245,7 +246,7 @@ open class JourneyAPI {
     
     
     /**
-     Delete an outcome predictor.
+     Deprecated. Delete an outcome predictor.
      
      - parameter predictorId: (path) ID of predictor 
      - parameter completion: completion handler to receive the data and the error objects
@@ -262,8 +263,9 @@ open class JourneyAPI {
     }
 
     /**
-     Delete an outcome predictor.
+     Deprecated. Delete an outcome predictor.
      - DELETE /api/v2/journey/outcomes/predictors/{predictorId}
+     - Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -1129,7 +1131,7 @@ open class JourneyAPI {
     
     
     /**
-     Get status of job.
+     Deprecated. Get status of job.
      
      - parameter jobId: (path) ID of the job. 
      - parameter completion: completion handler to receive the data and the error objects
@@ -1153,8 +1155,9 @@ open class JourneyAPI {
     }
 
     /**
-     Get status of job.
+     Deprecated. Get status of job.
      - GET /api/v2/journey/actionmaps/estimates/jobs/{jobId}
+     - Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -1181,7 +1184,7 @@ open class JourneyAPI {
     
     
     /**
-     Get estimates from completed job.
+     Deprecated. Get estimates from completed job.
      
      - parameter jobId: (path) ID of the job. 
      - parameter completion: completion handler to receive the data and the error objects
@@ -1205,8 +1208,9 @@ open class JourneyAPI {
     }
 
     /**
-     Get estimates from completed job.
+     Deprecated. Get estimates from completed job.
      - GET /api/v2/journey/actionmaps/estimates/jobs/{jobId}/results
+     - Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2347,7 +2351,7 @@ open class JourneyAPI {
     
     
     /**
-     Retrieve a single outcome.
+     Deprecated. Retrieve a single outcome.
      
      - parameter outcomeId: (path) ID of the outcome. 
      - parameter completion: completion handler to receive the data and the error objects
@@ -2371,8 +2375,9 @@ open class JourneyAPI {
     }
 
     /**
-     Retrieve a single outcome.
+     Deprecated. Retrieve a single outcome.
      - GET /api/v2/journey/outcomes/{outcomeId}
+     - Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2423,7 +2428,7 @@ open class JourneyAPI {
     
     
     /**
-     Retrieve all outcomes.
+     Deprecated. Retrieve all outcomes.
      
      - parameter pageNumber: (query) Page number (optional)
      - parameter pageSize: (query) Page size (optional)
@@ -2452,8 +2457,9 @@ open class JourneyAPI {
     }
 
     /**
-     Retrieve all outcomes.
+     Deprecated. Retrieve all outcomes.
      - GET /api/v2/journey/outcomes
+     - Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2528,7 +2534,7 @@ open class JourneyAPI {
     
     
     /**
-     Retrieve a single outcome predictor.
+     Deprecated. Retrieve a single outcome predictor.
      
      - parameter predictorId: (path) ID of predictor 
      - parameter completion: completion handler to receive the data and the error objects
@@ -2552,8 +2558,9 @@ open class JourneyAPI {
     }
 
     /**
-     Retrieve a single outcome predictor.
+     Deprecated. Retrieve a single outcome predictor.
      - GET /api/v2/journey/outcomes/predictors/{predictorId}
+     - Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2583,7 +2590,7 @@ open class JourneyAPI {
     }
 
     /**
-     Retrieve all outcome predictors.
+     Deprecated. Retrieve all outcome predictors.
      
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -2606,8 +2613,9 @@ open class JourneyAPI {
     }
 
     /**
-     Retrieve all outcome predictors.
+     Deprecated. Retrieve all outcome predictors.
      - GET /api/v2/journey/outcomes/predictors
+     - Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -3091,7 +3099,7 @@ open class JourneyAPI {
     
     
     /**
-     Retrieve latest outcome score associated with a session for all outcomes.
+     Deprecated. Retrieve latest outcome score associated with a session for all outcomes.
      
      - parameter sessionId: (path) ID of the session. 
      - parameter completion: completion handler to receive the data and the error objects
@@ -3115,8 +3123,9 @@ open class JourneyAPI {
     }
 
     /**
-     Retrieve latest outcome score associated with a session for all outcomes.
+     Deprecated. Retrieve latest outcome score associated with a session for all outcomes.
      - GET /api/v2/journey/sessions/{sessionId}/outcomescores
+     - Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -5283,7 +5292,7 @@ open class JourneyAPI {
     
     
     /**
-     Update an outcome.
+     Deprecated. Update an outcome.
      
      - parameter outcomeId: (path) ID of the outcome. 
      - parameter body: (body)  (optional)
@@ -5308,8 +5317,9 @@ open class JourneyAPI {
     }
 
     /**
-     Update an outcome.
+     Deprecated. Update an outcome.
      - PATCH /api/v2/journey/outcomes/{outcomeId}
+     - Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -6053,7 +6063,7 @@ open class JourneyAPI {
     
     
     /**
-     Query for estimates
+     Deprecated. Query for estimates
      
      - parameter body: (body) audience estimator request 
      - parameter completion: completion handler to receive the data and the error objects
@@ -6077,8 +6087,9 @@ open class JourneyAPI {
     }
 
     /**
-     Query for estimates
+     Deprecated. Query for estimates
      - POST /api/v2/journey/actionmaps/estimates/jobs
+     - Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -6253,6 +6264,7 @@ open class JourneyAPI {
     }
   },
   "session" : "{}",
+  "externalId" : "externalId",
   "screenName" : "screenName",
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "sdkLibrary" : "{}",
@@ -6335,6 +6347,7 @@ open class JourneyAPI {
   },
   "session" : "{}",
   "userAgentString" : "userAgentString",
+  "externalId" : "externalId",
   "referrer" : "{}",
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "browser" : "{}",
@@ -6642,7 +6655,7 @@ open class JourneyAPI {
     
     
     /**
-     Create an outcome.
+     Deprecated. Create an outcome.
      
      - parameter body: (body)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -6666,8 +6679,9 @@ open class JourneyAPI {
     }
 
     /**
-     Create an outcome.
+     Deprecated. Create an outcome.
      - POST /api/v2/journey/outcomes
+     - Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -6705,7 +6719,7 @@ open class JourneyAPI {
     
     
     /**
-     Create an outcome predictor.
+     Deprecated. Create an outcome predictor.
      
      - parameter body: (body)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -6729,8 +6743,9 @@ open class JourneyAPI {
     }
 
     /**
-     Create an outcome predictor.
+     Deprecated. Create an outcome predictor.
      - POST /api/v2/journey/outcomes/predictors
+     - Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

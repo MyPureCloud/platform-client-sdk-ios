@@ -10,7 +10,7 @@ public class ScheduleReferenceWithBusinessUnit: Codable {
 
 
 
-    /** The unique identifier of the schedule */
+    /** The globally unique identifier for the object. */
     public var _id: String?
     /** The start date for this schedule in the business unit time zone (yyyy-MM-dd format). Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
     public var weekDate: Date?

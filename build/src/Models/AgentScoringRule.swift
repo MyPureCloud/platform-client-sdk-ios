@@ -26,6 +26,12 @@ public class AgentScoringRule: Codable {
 
 
 
+    public enum AgentToScore: String, Codable { 
+        case first = "First"
+        case last = "Last"
+        case each = "Each"
+    }
+
 
 
 
@@ -50,6 +56,8 @@ public class AgentScoringRule: Codable {
     public var published: Bool?
     /** The evaluator for evaluations created by this rule. */
     public var evaluator: AddressableEntityRef?
+    /** Which agent(s) to score. Valid values: First, Last, Each. */
+    public var agentToScore: AgentToScore?
     /** Date when the rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** Date when the rule was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -57,7 +65,7 @@ public class AgentScoringRule: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, programId: String?, samplingType: SamplingType?, samplingPercentage: Double?, submissionType: SubmissionType?, evaluationFormContextId: String?, enabled: Bool?, published: Bool?, evaluator: AddressableEntityRef?, dateCreated: Date?, dateModified: Date?, selfUri: String?) {
+    public init(_id: String?, programId: String?, samplingType: SamplingType?, samplingPercentage: Double?, submissionType: SubmissionType?, evaluationFormContextId: String?, enabled: Bool?, published: Bool?, evaluator: AddressableEntityRef?, agentToScore: AgentToScore?, dateCreated: Date?, dateModified: Date?, selfUri: String?) {
         self._id = _id
         self.programId = programId
         self.samplingType = samplingType
@@ -67,6 +75,7 @@ public class AgentScoringRule: Codable {
         self.enabled = enabled
         self.published = published
         self.evaluator = evaluator
+        self.agentToScore = agentToScore
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.selfUri = selfUri
@@ -82,6 +91,7 @@ public class AgentScoringRule: Codable {
         case enabled
         case published
         case evaluator
+        case agentToScore
         case dateCreated
         case dateModified
         case selfUri

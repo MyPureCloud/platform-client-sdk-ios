@@ -23,7 +23,7 @@ public class QueryCriteriaItem: Codable {
 
     /** The key to filter on */
     public var key: Key?
-    /** The operator for comparison */
+    /** The operator for comparison. For DivisionId, only EQUALS and NOTEQUALS operators are supported. */
     public var _operator: Operator?
     /** The target value to match */
     public var value: String?

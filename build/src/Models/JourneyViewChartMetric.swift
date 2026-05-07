@@ -10,6 +10,10 @@ public class JourneyViewChartMetric: Codable {
     public enum Aggregate: String, Codable { 
         case eventCount = "EventCount"
         case customerCount = "CustomerCount"
+        case minimum = "Minimum"
+        case maximum = "Maximum"
+        case average = "Average"
+        case sum = "Sum"
     }
 
 

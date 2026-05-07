@@ -22,6 +22,10 @@ public class SocialMediaQueryPredicate: Codable {
         case sourcetype = "sourceType"
         case verifieduser = "verifiedUser"
         case followercount = "followerCount"
+        case likes = "likes"
+        case shares = "shares"
+        case comments = "comments"
+        case views = "views"
     }
 
     public enum Operator: String, Codable { 

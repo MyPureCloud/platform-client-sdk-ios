@@ -54,11 +54,11 @@ public class PatchActionMap: Codable {
     public var triggerWithSegments: [String]?
     /** List of event conditions that must be satisfied to trigger the action map. */
     public var triggerWithEventConditions: [EventCondition]?
-    /** (deprecated - use triggerWithOutcomeQuantileConditions instead) Probability conditions for outcomes that must be satisfied to trigger the action map. */
+    /** Deprecated. Probability conditions for outcomes that must be satisfied to trigger the action map. */
     public var triggerWithOutcomeProbabilityConditions: [OutcomeProbabilityCondition]?
-    /** (deprecated - use triggerWithOutcomeQuantileConditions instead) Percentile conditions for outcomes that must be satisfied to trigger the action map. */
+    /** Deprecated. Percentile conditions for outcomes that must be satisfied to trigger the action map. */
     public var triggerWithOutcomePercentileConditions: [OutcomePercentileCondition]?
-    /** Quantile conditions for outcomes that must be satisfied to trigger the action map. */
+    /** Deprecated. Quantile conditions for outcomes that must be satisfied to trigger the action map. Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/ */
     public var triggerWithOutcomeQuantileConditions: [OutcomeQuantileCondition]?
     /** URL conditions that a page must match for web actions to be displayable. */
     public var pageUrlConditions: [UrlCondition]?

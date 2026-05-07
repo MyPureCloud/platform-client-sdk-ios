@@ -38,7 +38,7 @@ public class Event: Codable {
     public var session: EventSession?
     /** The name representing the type of event. */
     public var eventType: String?
-    /** Event where a customer has achieved a specific outcome or goal. */
+    /** Deprecated. Event where a customer has achieved a specific outcome or goal. Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/ */
     public var outcomeAchievedEvent: OutcomeAchievedEvent?
     /** Event that represents a segment being assigned. */
     public var segmentAssignmentEvent: SegmentAssignmentEvent?

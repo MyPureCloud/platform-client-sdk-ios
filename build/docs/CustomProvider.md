@@ -23,9 +23,10 @@
 | **providerName** | **String** |  | [optional] |
 | **displayOnLogin** | **Bool** |  | [optional] |
 | **metadataURL** | **String** |  | [optional] |
+| **forceAuthn** | **Bool** |  | [optional] |
 | **endpointCompression** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

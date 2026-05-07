@@ -4,6 +4,8 @@ public class AgentStateAgentQueryPredicate: Codable {
 
     public enum Dimension: String, Codable { 
         case activequeueid = "activeQueueId"
+        case inactivequeueid = "inactiveQueueId"
+        case queueid = "queueId"
         case assignedskillid = "assignedSkillId"
         case assignedlanguageid = "assignedLanguageId"
         case divisionid = "divisionId"
@@ -14,6 +16,14 @@ public class AgentStateAgentQueryPredicate: Codable {
         case routingstatus = "routingStatus"
         case isoutofoffice = "isOutOfOffice"
         case online = "online"
+        case teamid = "teamId"
+        case managementunitid = "managementUnitId"
+        case businessunitid = "businessUnitId"
+        case adherencestate = "adherenceState"
+        case adherenceimpact = "adherenceImpact"
+        case scheduledactivitycodeid = "scheduledActivityCodeId"
+        case scheduledactivitycategory = "scheduledActivityCategory"
+        case actualactivitycategory = "actualActivityCategory"
     }
 
 

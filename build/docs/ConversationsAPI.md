@@ -176,6 +176,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsMessageParticipant**](ConversationsAPI#patchConversationsMessageParticipant) | Update conversation participant |
 | [**patchConversationsMessageParticipantAttributes**](ConversationsAPI#patchConversationsMessageParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationsMessageParticipantCommunication**](ConversationsAPI#patchConversationsMessageParticipantCommunication) | Update conversation participant&#39;s communication by disconnecting it. This endpoint does not update wrapup. |
+| [**patchConversationsMessageParticipantParkingstate**](ConversationsAPI#patchConversationsMessageParticipantParkingstate) | Update conversation by setting its parking state |
 | [**patchConversationsMessagingIntegrationsAppleIntegrationId**](ConversationsAPI#patchConversationsMessagingIntegrationsAppleIntegrationId) | Update an Apple messaging integration |
 | [**patchConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI#patchConversationsMessagingIntegrationsFacebookIntegrationId) | Update Facebook messaging integration |
 | [**patchConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsAPI#patchConversationsMessagingIntegrationsInstagramIntegrationId) | Update Instagram messaging integration |
@@ -2250,7 +2251,7 @@ ConversationsAPI.getConversationSuggestions(conversationId: conversationId, befo
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
-| **type** | **String**| Suggestion type to filter by. | [optional]<br />**Values**: faq ("Faq"), article ("Article"), knowledgeArticle ("KnowledgeArticle"), knowledgeSearch ("KnowledgeSearch"), cannedResponse ("CannedResponse"), script ("Script"), suggestedKnowledgeAnswer ("SuggestedKnowledgeAnswer") |
+| **type** | **String**| Suggestion type to filter by. | [optional]<br />**Values**: faq ("Faq"), article ("Article"), knowledgeArticle ("KnowledgeArticle"), knowledgeSearch ("KnowledgeSearch"), cannedResponse ("CannedResponse"), script ("Script"), suggestedKnowledgeAnswer ("SuggestedKnowledgeAnswer"), thirdPartySuggestion ("ThirdPartySuggestion") |
 | **state** | **String**| Suggestion state to filter Copilot suggestions. | [optional]<br />**Values**: suggested ("Suggested"), accepted ("Accepted"), dismissed ("Dismissed"), failed ("Failed"), rated ("Rated") |
 
 
@@ -9265,6 +9266,59 @@ ConversationsAPI.patchConversationsMessageParticipantCommunication(conversationI
 ### Return type
 
 [**JSON**](JSON)
+
+
+## patchConversationsMessageParticipantParkingstate
+
+
+
+> Void patchConversationsMessageParticipantParkingstate(conversationId, participantId, body)
+
+Update conversation by setting its parking state
+
+
+
+Wraps PATCH /api/v2/conversations/messages/{conversationId}/participants/{participantId}/parkingstate  
+
+Requires ANY permissions: 
+
+* conversation:message:park
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let body: ParkingStateRequest = new ParkingStateRequest(...) // Parking update request
+
+// Code example
+ConversationsAPI.patchConversationsMessageParticipantParkingstate(conversationId: conversationId, participantId: participantId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.patchConversationsMessageParticipantParkingstate was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **body** | [**ParkingStateRequest**](ParkingStateRequest)| Parking update request | |
+
+
+### Return type
+
+`nil` (empty response body)
 
 
 ## patchConversationsMessagingIntegrationsAppleIntegrationId
@@ -16463,4 +16517,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

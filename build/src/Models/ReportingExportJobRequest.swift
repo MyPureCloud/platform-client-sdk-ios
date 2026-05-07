@@ -149,6 +149,7 @@ public class ReportingExportJobRequest: Codable {
         case digitalPerformanceView = "DIGITAL_PERFORMANCE_VIEW"
         case copilotUsageView = "COPILOT_USAGE_VIEW"
         case predictiveRoutingThroughputView = "PREDICTIVE_ROUTING_THROUGHPUT_VIEW"
+        case queueSkillExpressionPerformanceView = "QUEUE_SKILL_EXPRESSION_PERFORMANCE_VIEW"
     }
 
 

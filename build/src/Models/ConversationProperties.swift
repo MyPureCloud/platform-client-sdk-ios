@@ -44,7 +44,7 @@ public class ConversationProperties: Codable {
     public var isFlagged: Bool?
     /** Indicates filtering for monitored */
     public var isMonitored: Bool?
-    /** Indicates filtering for screenMonitored */
+    /** Deprecated: Use screenMonitored */
     public var isScreenMonitored: Bool?
     /** Indicates filtering for WrapUpNotes */
     public var filterWrapUpNotes: Bool?

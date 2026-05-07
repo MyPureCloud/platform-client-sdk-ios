@@ -1,6 +1,6 @@
 
 
-public class V3SourceDetailedWithErrorResponse: Codable {
+public class V3SourceExpandableResponse: Codable {
 
 
 
@@ -23,6 +23,8 @@ public class V3SourceDetailedWithErrorResponse: Codable {
         case errored = "Errored"
         case deleted = "Deleted"
     }
+
+
 
 
 
@@ -72,12 +74,14 @@ public class V3SourceDetailedWithErrorResponse: Codable {
     public var filters: V3SourceFilter?
     /** Additional details to the source's filters. */
     public var filterDetails: V3SourceFilterDetails?
+    /** The connection associated with the source. Needs to be expanded. */
+    public var connection: ConnectionResponse?
     /** Optional error details of an errored source. */
     public var error: ErrorBody?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, connectionId: String?, type: ModelType?, triggerType: TriggerType?, status: Status?, createdBy: UserReference?, modifiedBy: UserReference?, dateCreated: Date?, dateModified: Date?, lastSync: V3SourceLastSynchronization?, scheduleSettings: V3SourceScheduleSettings?, filters: V3SourceFilter?, filterDetails: V3SourceFilterDetails?, error: ErrorBody?, selfUri: String?) {
+    public init(_id: String?, name: String?, connectionId: String?, type: ModelType?, triggerType: TriggerType?, status: Status?, createdBy: UserReference?, modifiedBy: UserReference?, dateCreated: Date?, dateModified: Date?, lastSync: V3SourceLastSynchronization?, scheduleSettings: V3SourceScheduleSettings?, filters: V3SourceFilter?, filterDetails: V3SourceFilterDetails?, connection: ConnectionResponse?, error: ErrorBody?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.connectionId = connectionId
@@ -92,6 +96,7 @@ public class V3SourceDetailedWithErrorResponse: Codable {
         self.scheduleSettings = scheduleSettings
         self.filters = filters
         self.filterDetails = filterDetails
+        self.connection = connection
         self.error = error
         self.selfUri = selfUri
     }
@@ -111,6 +116,7 @@ public class V3SourceDetailedWithErrorResponse: Codable {
         case scheduleSettings
         case filters
         case filterDetails
+        case connection
         case error
         case selfUri
     }

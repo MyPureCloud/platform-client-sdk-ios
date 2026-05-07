@@ -11,6 +11,7 @@ public class PolicyAttribute: Codable {
         case stringList = "STRING_LIST"
         case time = "TIME"
         case relativeTime = "RELATIVE_TIME"
+        case date = "DATE"
         case timeRange = "TIME_RANGE"
         case dayRange = "DAY_RANGE"
         case ipAddress = "IP_ADDRESS"

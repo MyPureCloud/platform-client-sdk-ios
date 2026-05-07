@@ -78,6 +78,7 @@ public class SegmentDetailQueryPredicate: Codable {
         case segmenttype = "segmentType"
         case sessiondnis = "sessionDnis"
         case sipresponsecode = "sipResponseCode"
+        case skillexpressionid = "skillExpressionId"
         case snippetrecording = "snippetRecording"
         case subject = "subject"
         case teamid = "teamId"

@@ -52,6 +52,8 @@ public class PureEngage: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -70,11 +72,12 @@ public class PureEngage: Codable {
     public var providerName: String?
     public var displayOnLogin: Bool?
     public var metadataURL: String?
+    public var forceAuthn: Bool?
     public var autoProvisionUsers: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, disabled: Bool?, issuerURI: String?, ssoTargetURI: String?, sloURI: String?, sloBinding: String?, relyingPartyIdentifier: String?, certificate: String?, certificates: [String]?, logoImageData: String?, nameIdentifierFormat: NameIdentifierFormat?, ssoBinding: SsoBinding?, signAuthnRequests: Bool?, providerName: String?, displayOnLogin: Bool?, metadataURL: String?, autoProvisionUsers: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, disabled: Bool?, issuerURI: String?, ssoTargetURI: String?, sloURI: String?, sloBinding: String?, relyingPartyIdentifier: String?, certificate: String?, certificates: [String]?, logoImageData: String?, nameIdentifierFormat: NameIdentifierFormat?, ssoBinding: SsoBinding?, signAuthnRequests: Bool?, providerName: String?, displayOnLogin: Bool?, metadataURL: String?, forceAuthn: Bool?, autoProvisionUsers: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.disabled = disabled
@@ -92,6 +95,7 @@ public class PureEngage: Codable {
         self.providerName = providerName
         self.displayOnLogin = displayOnLogin
         self.metadataURL = metadataURL
+        self.forceAuthn = forceAuthn
         self.autoProvisionUsers = autoProvisionUsers
         self.selfUri = selfUri
     }
@@ -114,6 +118,7 @@ public class PureEngage: Codable {
         case providerName
         case displayOnLogin
         case metadataURL
+        case forceAuthn
         case autoProvisionUsers
         case selfUri
     }

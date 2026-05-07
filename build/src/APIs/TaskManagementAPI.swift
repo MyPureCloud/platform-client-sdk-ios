@@ -6194,6 +6194,7 @@ open class TaskManagementAPI {
     /**
      Query for worktypes
      - POST /api/v2/taskmanagement/worktypes/query
+     - Optional request field 'expands' may include 'schema' to populate the name on each worktype's schema reference.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

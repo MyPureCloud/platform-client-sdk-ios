@@ -14,6 +14,10 @@ public class WorktypeQueryRequest: Codable {
 
 
 
+    public enum Expands: String, Codable { 
+        case schema = "schema"
+    }
+
 
 
     /** Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. */
@@ -26,15 +30,18 @@ public class WorktypeQueryRequest: Codable {
     public var attributes: [String]?
     /** The cursor that points to the end of the set of entities that has been returned. */
     public var after: String?
+    /** List of entity attributes to be expanded in the result. */
+    public var expands: Expands?
     /** Sort */
     public var sort: WorktypeQuerySort?
 
-    public init(pageSize: Int?, select: Select?, filters: [WorkitemFilter]?, attributes: [String]?, after: String?, sort: WorktypeQuerySort?) {
+    public init(pageSize: Int?, select: Select?, filters: [WorkitemFilter]?, attributes: [String]?, after: String?, expands: Expands?, sort: WorktypeQuerySort?) {
         self.pageSize = pageSize
         self.select = select
         self.filters = filters
         self.attributes = attributes
         self.after = after
+        self.expands = expands
         self.sort = sort
     }
 

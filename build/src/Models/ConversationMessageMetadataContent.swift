@@ -25,6 +25,7 @@ public class ConversationMessageMetadataContent: Codable {
         case form = "Form"
         case roadsideAssistance = "RoadsideAssistance"
         case richLink = "RichLink"
+        case notificationResponse = "NotificationResponse"
         case unknown = "Unknown"
     }
 

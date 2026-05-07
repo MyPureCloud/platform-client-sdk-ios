@@ -26,6 +26,7 @@ public class ConversationDetailQueryPredicate: Codable {
         case nblindtransferred = "nBlindTransferred"
         case nbotinteractions = "nBotInteractions"
         case ncallbackattempts = "nCallbackAttempts"
+        case ncallbackoversla = "nCallbackOverSla"
         case ncallbackscheduled = "nCallbackScheduled"
         case ncobrowsesessions = "nCobrowseSessions"
         case nconnected = "nConnected"
@@ -54,6 +55,7 @@ public class ConversationDetailQueryPredicate: Codable {
         case omessagecount = "oMessageCount"
         case omessagesegmentcount = "oMessageSegmentCount"
         case omessageturn = "oMessageTurn"
+        case oskillexpressionapplications = "oSkillExpressionApplications"
         case tabandon = "tAbandon"
         case tacd = "tAcd"
         case tactivecallback = "tActiveCallback"
@@ -95,6 +97,7 @@ public class ConversationDetailQueryPredicate: Codable {
         case tsnippetrecord = "tSnippetRecord"
         case ttalk = "tTalk"
         case ttalkcomplete = "tTalkComplete"
+        case ttransmitting = "tTransmitting"
         case tuserresponsetime = "tUserResponseTime"
         case tvoicemail = "tVoicemail"
     }

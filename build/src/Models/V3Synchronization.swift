@@ -34,6 +34,7 @@ public class V3Synchronization: Codable {
         case completed = "Completed"
         case failed = "Failed"
         case unknown = "Unknown"
+        case cancelled = "Cancelled"
     }
 
 

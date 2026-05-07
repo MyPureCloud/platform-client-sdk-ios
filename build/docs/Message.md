@@ -37,7 +37,9 @@
 | **byoSmsIntegrationId** | **String** | The internal id representing the customer supplied sms integration message. | [optional] |
 | **queueMediaSettings** | [**ConversationQueueMediaSettings**](ConversationQueueMediaSettings) | Represents the queue settings for this media type. | [optional] |
 | **engagementSource** | **String** |  | [optional] |
+| **resumeTime** | [**Date**](Date) | Represents the time when a parked message will resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **parkTime** | [**Date**](Date) | Represents the time when an message was put into parked state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

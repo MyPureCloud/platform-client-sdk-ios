@@ -36,6 +36,8 @@ public class WebEventResponse: Codable {
 
 
 
+
+
     /** Identifier of the customer in the source of the event. */
     public var customerId: String?
     /** Represents the action the customer performed. Event types are created for each unique event name and can be faceted on in segment and outcome conditions. A valid event name must only contain alphanumeric characters and underscores. A good event name is typically an object followed by the action performed in past tense, e.g. page_viewed, order_completed, user_registered. */
@@ -68,10 +70,12 @@ public class WebEventResponse: Codable {
     public var traits: [String:CustomEventAttribute]?
     /** Indicates whether the event was produced during an authenticated session. */
     public var authenticated: Bool?
+    /** An external identifier for the customer. */
+    public var externalId: String?
     /** UTC timestamp indicating when the event actually took place, events older than an hour will be rejected. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var createdDate: Date?
 
-    public init(customerId: String?, eventName: String?, customerIdType: String?, page: ResponsePage?, userAgentString: String?, browser: WebEventBrowser?, device: WebEventDevice?, searchQuery: String?, ipOrganization: String?, geolocation: JourneyGeolocation?, mktCampaign: JourneyCampaign?, session: WebEventResponseSession?, referrer: Referrer?, attributes: [String:CustomEventAttribute]?, traits: [String:CustomEventAttribute]?, authenticated: Bool?, createdDate: Date?) {
+    public init(customerId: String?, eventName: String?, customerIdType: String?, page: ResponsePage?, userAgentString: String?, browser: WebEventBrowser?, device: WebEventDevice?, searchQuery: String?, ipOrganization: String?, geolocation: JourneyGeolocation?, mktCampaign: JourneyCampaign?, session: WebEventResponseSession?, referrer: Referrer?, attributes: [String:CustomEventAttribute]?, traits: [String:CustomEventAttribute]?, authenticated: Bool?, externalId: String?, createdDate: Date?) {
         self.customerId = customerId
         self.eventName = eventName
         self.customerIdType = customerIdType
@@ -88,6 +92,7 @@ public class WebEventResponse: Codable {
         self.attributes = attributes
         self.traits = traits
         self.authenticated = authenticated
+        self.externalId = externalId
         self.createdDate = createdDate
     }
 

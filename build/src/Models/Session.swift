@@ -157,7 +157,7 @@ public class Session: Codable {
     public var externalUrl: String?
     /** Shortened numeric identifier of 4-6 digits. */
     public var shortId: String?
-    /** List of the outcome achievements by the customer in this session. */
+    /** Deprecated. List of the outcome achievements by the customer in this session. Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/ */
     public var outcomeAchievements: [OutcomeAchievement]?
     /** List of the segment assignments to the customer in this session. */
     public var segmentAssignments: [SessionSegmentAssignment]?

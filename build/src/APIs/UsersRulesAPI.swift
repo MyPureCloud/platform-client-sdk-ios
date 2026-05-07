@@ -424,9 +424,9 @@ open class UsersRulesAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
+  "total" : 5,
+  "pageCount" : 2,
+  "pageNumber" : 5,
   "entities" : [ {
     "lastRun" : "{}",
     "criteria" : [ {
@@ -563,7 +563,7 @@ open class UsersRulesAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -643,22 +643,22 @@ open class UsersRulesAPI {
     "group" : [ {
       "container" : "AcdSkill",
       "maxIdCount" : 0,
-      "operator" : "And"
+      "operators" : [ "And", "And" ]
     }, {
       "container" : "AcdSkill",
       "maxIdCount" : 0,
-      "operator" : "And"
+      "operators" : [ "And", "And" ]
     } ]
   }, {
     "operator" : "Or",
     "group" : [ {
       "container" : "AcdSkill",
       "maxIdCount" : 0,
-      "operator" : "And"
+      "operators" : [ "And", "And" ]
     }, {
       "container" : "AcdSkill",
       "maxIdCount" : 0,
-      "operator" : "And"
+      "operators" : [ "And", "And" ]
     } ]
   } ]
 }, statusCode=200}]

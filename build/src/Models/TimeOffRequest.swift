@@ -61,7 +61,7 @@ public class TimeOffRequest: Codable {
 
 
 
-    /** The id of the time off request */
+    /** The globally unique identifier for the object. */
     public var _id: String?
     /** The user that the time off request belongs to */
     public var user: UserReference?

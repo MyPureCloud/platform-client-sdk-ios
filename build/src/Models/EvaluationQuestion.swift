@@ -30,6 +30,11 @@ public class EvaluationQuestion: Codable {
 
 
 
+    public enum AutomatedScoringFocus: String, Codable { 
+        case fullInteraction = "FullInteraction"
+        case evaluatedAgent = "EvaluatedAgent"
+    }
+
 
 
 
@@ -49,10 +54,12 @@ public class EvaluationQuestion: Codable {
     public var multipleSelectOptionQuestions: [EvaluationQuestion]?
     /** The default selected answer for the question */
     public var defaultAnswer: DefaultAnswer?
+    /** Focus setting for automated scoring */
+    public var automatedScoringFocus: AutomatedScoringFocus?
     public var isKill: Bool?
     public var isCritical: Bool?
 
-    public init(_id: String?, contextId: String?, text: String?, helpText: String?, type: ModelType?, naEnabled: Bool?, commentsRequired: Bool?, visibilityCondition: VisibilityCondition?, answerOptions: [AnswerOption]?, multipleSelectOptionQuestions: [EvaluationQuestion]?, defaultAnswer: DefaultAnswer?, isKill: Bool?, isCritical: Bool?) {
+    public init(_id: String?, contextId: String?, text: String?, helpText: String?, type: ModelType?, naEnabled: Bool?, commentsRequired: Bool?, visibilityCondition: VisibilityCondition?, answerOptions: [AnswerOption]?, multipleSelectOptionQuestions: [EvaluationQuestion]?, defaultAnswer: DefaultAnswer?, automatedScoringFocus: AutomatedScoringFocus?, isKill: Bool?, isCritical: Bool?) {
         self._id = _id
         self.contextId = contextId
         self.text = text
@@ -64,6 +71,7 @@ public class EvaluationQuestion: Codable {
         self.answerOptions = answerOptions
         self.multipleSelectOptionQuestions = multipleSelectOptionQuestions
         self.defaultAnswer = defaultAnswer
+        self.automatedScoringFocus = automatedScoringFocus
         self.isKill = isKill
         self.isCritical = isCritical
     }
@@ -80,6 +88,7 @@ public class EvaluationQuestion: Codable {
         case answerOptions
         case multipleSelectOptionQuestions
         case defaultAnswer
+        case automatedScoringFocus
         case isKill
         case isCritical
     }

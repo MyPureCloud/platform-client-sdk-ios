@@ -1,12 +1,16 @@
 
 
-public class WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification: Codable {
+public class WfmActivityPlanJobCompleteTopicActivityPlanJobCompleteNotification: Codable {
 
 
 
     public enum ModelType: String, Codable { 
         case runPlan = "RunPlan"
         case deleteOccurrence = "DeleteOccurrence"
+        case deleteActivityPlan = "DeleteActivityPlan"
+        case deleteOccurrences = "DeleteOccurrences"
+        case deleteSessions = "DeleteSessions"
+        case deleteSessionUsers = "DeleteSessionUsers"
     }
 
 
@@ -21,24 +25,20 @@ public class WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCom
 
 
 
-
-
     public var _id: String?
     public var type: ModelType?
     public var activityPlan: WfmActivityPlanJobCompleteTopicActivityPlanReference?
     public var status: Status?
     public var exceptions: [WfmActivityPlanJobCompleteTopicActivityPlanJobException]?
     public var error: WfmActivityPlanJobCompleteTopicErrorBody?
-    public var occurrence: WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference?
 
-    public init(_id: String?, type: ModelType?, activityPlan: WfmActivityPlanJobCompleteTopicActivityPlanReference?, status: Status?, exceptions: [WfmActivityPlanJobCompleteTopicActivityPlanJobException]?, error: WfmActivityPlanJobCompleteTopicErrorBody?, occurrence: WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference?) {
+    public init(_id: String?, type: ModelType?, activityPlan: WfmActivityPlanJobCompleteTopicActivityPlanReference?, status: Status?, exceptions: [WfmActivityPlanJobCompleteTopicActivityPlanJobException]?, error: WfmActivityPlanJobCompleteTopicErrorBody?) {
         self._id = _id
         self.type = type
         self.activityPlan = activityPlan
         self.status = status
         self.exceptions = exceptions
         self.error = error
-        self.occurrence = occurrence
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -48,7 +48,6 @@ public class WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCom
         case status
         case exceptions
         case error
-        case occurrence
     }
 
 

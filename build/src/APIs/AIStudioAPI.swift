@@ -649,13 +649,17 @@ open class AIStudioAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "variables" : [ {
+    "listValues" : "{}",
     "scope" : "Input",
+    "listVariables" : [ null, null ],
     "name" : "name",
     "description" : "description",
     "type" : "String",
     "validation" : "{}"
   }, {
+    "listValues" : "{}",
     "scope" : "Input",
+    "listVariables" : [ null, null ],
     "name" : "name",
     "description" : "description",
     "type" : "String",
@@ -736,13 +740,17 @@ open class AIStudioAPI {
      - examples: [{contentType=application/json, example={
   "guideVersion" : {
     "variables" : [ {
+      "listValues" : "{}",
       "scope" : "Input",
+      "listVariables" : [ null, null ],
       "name" : "name",
       "description" : "description",
       "type" : "String",
       "validation" : "{}"
     }, {
+      "listValues" : "{}",
       "scope" : "Input",
+      "listVariables" : [ null, null ],
       "name" : "name",
       "description" : "description",
       "type" : "String",
@@ -1018,13 +1026,17 @@ open class AIStudioAPI {
   "id" : "id",
   "guideContent" : {
     "variables" : [ {
+      "listValues" : "{}",
       "scope" : "Input",
+      "listVariables" : [ null, null ],
       "name" : "name",
       "description" : "description",
       "type" : "String",
       "validation" : "{}"
     }, {
+      "listValues" : "{}",
       "scope" : "Input",
+      "listVariables" : [ null, null ],
       "name" : "name",
       "description" : "description",
       "type" : "String",
@@ -1223,13 +1235,17 @@ open class AIStudioAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "variables" : [ {
+    "listValues" : "{}",
     "scope" : "Input",
+    "listVariables" : [ null, null ],
     "name" : "name",
     "description" : "description",
     "type" : "String",
     "validation" : "{}"
   }, {
+    "listValues" : "{}",
     "scope" : "Input",
+    "listVariables" : [ null, null ],
     "name" : "name",
     "description" : "description",
     "type" : "String",
@@ -1540,13 +1556,17 @@ open class AIStudioAPI {
      - examples: [{contentType=application/json, example={
   "guideVersion" : {
     "variables" : [ {
+      "listValues" : "{}",
       "scope" : "Input",
+      "listVariables" : [ null, null ],
       "name" : "name",
       "description" : "description",
       "type" : "String",
       "validation" : "{}"
     }, {
+      "listValues" : "{}",
       "scope" : "Input",
+      "listVariables" : [ null, null ],
       "name" : "name",
       "description" : "description",
       "type" : "String",
@@ -1689,13 +1709,17 @@ open class AIStudioAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "variables" : [ {
+    "listValues" : "{}",
     "scope" : "Input",
+    "listVariables" : [ null, null ],
     "name" : "name",
     "description" : "description",
     "type" : "String",
     "validation" : "{}"
   }, {
+    "listValues" : "{}",
     "scope" : "Input",
+    "listVariables" : [ null, null ],
     "name" : "name",
     "description" : "description",
     "type" : "String",
@@ -1829,13 +1853,17 @@ open class AIStudioAPI {
   "id" : "id",
   "guideContent" : {
     "variables" : [ {
+      "listValues" : "{}",
       "scope" : "Input",
+      "listVariables" : [ null, null ],
       "name" : "name",
       "description" : "description",
       "type" : "String",
       "validation" : "{}"
     }, {
+      "listValues" : "{}",
       "scope" : "Input",
+      "listVariables" : [ null, null ],
       "name" : "name",
       "description" : "description",
       "type" : "String",

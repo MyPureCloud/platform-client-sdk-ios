@@ -844,7 +844,7 @@ KnowledgeAPI.getKnowledgeConnection(connectionId: connectionId, expand: expand) 
 
 
 
-> [ConnectionOptionListing](ConnectionOptionListing) getKnowledgeConnectionOptions(connectionId, parentId)
+> [ConnectionOptionListing](ConnectionOptionListing) getKnowledgeConnectionOptions(connectionId, after, pageSize, parentId)
 
 Get connection options
 
@@ -865,10 +865,12 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let connectionId: String = "" // Connection ID
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of results per page. Minimum: 25, Maximum: 500.
 let parentId: String = "" // The id of the parent option whose children to be listed.
 
 // Code example
-KnowledgeAPI.getKnowledgeConnectionOptions(connectionId: connectionId, parentId: parentId) { (response, error) in
+KnowledgeAPI.getKnowledgeConnectionOptions(connectionId: connectionId, after: after, pageSize: pageSize, parentId: parentId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -884,6 +886,8 @@ KnowledgeAPI.getKnowledgeConnectionOptions(connectionId: connectionId, parentId:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **connectionId** | **String**| Connection ID | |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of results per page. Minimum: 25, Maximum: 500. | [optional] |
 | **parentId** | **String**| The id of the parent option whose children to be listed. | [optional] |
 
 
@@ -2951,7 +2955,7 @@ KnowledgeAPI.getKnowledgeSettings(before: before, after: after, pageSize: pageSi
 
 
 
-> [V3SourceDetailedWithErrorResponse](V3SourceDetailedWithErrorResponse) getKnowledgeSource(sourceId, expand)
+> [V3SourceExpandableResponse](V3SourceExpandableResponse) getKnowledgeSource(sourceId, expand)
 
 Get source
 
@@ -2991,12 +2995,12 @@ KnowledgeAPI.getKnowledgeSource(sourceId: sourceId, expand: expand) { (response,
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **sourceId** | **String**| Source ID | |
-| **expand** | [**[String]**](String)| Optional fields to expand for the Source. | [optional]<br />**Values**: lastsync ("lastSync"), filterdetails ("filterDetails") |
+| **expand** | [**[String]**](String)| Optional fields to expand for the Source. | [optional]<br />**Values**: lastsync ("lastSync"), filterdetails ("filterDetails"), connection ("connection") |
 
 
 ### Return type
 
-[**V3SourceDetailedWithErrorResponse**](V3SourceDetailedWithErrorResponse)
+[**V3SourceExpandableResponse**](V3SourceExpandableResponse)
 
 
 ## getKnowledgeSourceSynchronization
@@ -3111,7 +3115,7 @@ KnowledgeAPI.getKnowledgeSourceSynchronizations(sourceId: sourceId, before: befo
 
 
 
-> [V3SourceWithErrorListing](V3SourceWithErrorListing) getKnowledgeSources(expand)
+> [V3SourceExpandableListing](V3SourceExpandableListing) getKnowledgeSources(expand)
 
 List sources
 
@@ -3149,12 +3153,12 @@ KnowledgeAPI.getKnowledgeSources(expand: expand) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **expand** | [**[String]**](String)| Optional fields to expand for the Source. | [optional]<br />**Values**: lastsync ("lastSync") |
+| **expand** | [**[String]**](String)| Optional fields to expand for the Source. | [optional]<br />**Values**: lastsync ("lastSync"), connection ("connection") |
 
 
 ### Return type
 
-[**V3SourceWithErrorListing**](V3SourceWithErrorListing)
+[**V3SourceExpandableListing**](V3SourceExpandableListing)
 
 
 ## getKnowledgeSourcesSynchronizations
@@ -6520,4 +6524,4 @@ KnowledgeAPI.putKnowledgeSource(sourceId: sourceId, body: body) { (response, err
 [**V3SourceDetailedResponse**](V3SourceDetailedResponse)
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

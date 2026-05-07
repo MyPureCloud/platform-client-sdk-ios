@@ -1,6 +1,6 @@
 
 
-public class V3SourceWithErrorResponse: Codable {
+public class V3SourceExpandableListResponse: Codable {
 
 
 
@@ -38,6 +38,8 @@ public class V3SourceWithErrorResponse: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of the source. */
@@ -60,12 +62,14 @@ public class V3SourceWithErrorResponse: Codable {
     public var dateModified: Date?
     /** The last synchronization of the source. */
     public var lastSync: V3SourceLastSynchronization?
+    /** The connection associated with the source. Needs to be expanded. */
+    public var connection: ConnectionResponse?
     /** Optional error details of an errored source. */
     public var error: ErrorBody?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, connectionId: String?, type: ModelType?, triggerType: TriggerType?, status: Status?, createdBy: UserReference?, modifiedBy: UserReference?, dateCreated: Date?, dateModified: Date?, lastSync: V3SourceLastSynchronization?, error: ErrorBody?, selfUri: String?) {
+    public init(_id: String?, name: String?, connectionId: String?, type: ModelType?, triggerType: TriggerType?, status: Status?, createdBy: UserReference?, modifiedBy: UserReference?, dateCreated: Date?, dateModified: Date?, lastSync: V3SourceLastSynchronization?, connection: ConnectionResponse?, error: ErrorBody?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.connectionId = connectionId
@@ -77,6 +81,7 @@ public class V3SourceWithErrorResponse: Codable {
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.lastSync = lastSync
+        self.connection = connection
         self.error = error
         self.selfUri = selfUri
     }
@@ -93,6 +98,7 @@ public class V3SourceWithErrorResponse: Codable {
         case dateCreated
         case dateModified
         case lastSync
+        case connection
         case error
         case selfUri
     }

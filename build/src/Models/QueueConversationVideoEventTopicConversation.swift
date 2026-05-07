@@ -28,6 +28,8 @@ public class QueueConversationVideoEventTopicConversation: Codable {
 
 
 
+
+
     public var _id: String?
     public var maxParticipants: Int64?
     public var participants: [QueueConversationVideoEventTopicParticipant]?
@@ -36,13 +38,14 @@ public class QueueConversationVideoEventTopicConversation: Codable {
     public var address: String?
     public var externalTag: String?
     public var utilizationLabelId: String?
+    public var accessAttributes: [String]?
     public var securePause: Bool?
     public var inactivityTimeout: Date?
     public var associatedConversation: QueueConversationVideoEventTopicDomainEntityRef?
     public var consultationConversations: [QueueConversationVideoEventTopicDomainEntityRef]?
     public var divisions: [QueueConversationVideoEventTopicConversationDivisionMembership]?
 
-    public init(_id: String?, maxParticipants: Int64?, participants: [QueueConversationVideoEventTopicParticipant]?, recentTransfers: [QueueConversationVideoEventTopicTransferResponse]?, recordingState: String?, address: String?, externalTag: String?, utilizationLabelId: String?, securePause: Bool?, inactivityTimeout: Date?, associatedConversation: QueueConversationVideoEventTopicDomainEntityRef?, consultationConversations: [QueueConversationVideoEventTopicDomainEntityRef]?, divisions: [QueueConversationVideoEventTopicConversationDivisionMembership]?) {
+    public init(_id: String?, maxParticipants: Int64?, participants: [QueueConversationVideoEventTopicParticipant]?, recentTransfers: [QueueConversationVideoEventTopicTransferResponse]?, recordingState: String?, address: String?, externalTag: String?, utilizationLabelId: String?, accessAttributes: [String]?, securePause: Bool?, inactivityTimeout: Date?, associatedConversation: QueueConversationVideoEventTopicDomainEntityRef?, consultationConversations: [QueueConversationVideoEventTopicDomainEntityRef]?, divisions: [QueueConversationVideoEventTopicConversationDivisionMembership]?) {
         self._id = _id
         self.maxParticipants = maxParticipants
         self.participants = participants
@@ -51,6 +54,7 @@ public class QueueConversationVideoEventTopicConversation: Codable {
         self.address = address
         self.externalTag = externalTag
         self.utilizationLabelId = utilizationLabelId
+        self.accessAttributes = accessAttributes
         self.securePause = securePause
         self.inactivityTimeout = inactivityTimeout
         self.associatedConversation = associatedConversation
@@ -67,6 +71,7 @@ public class QueueConversationVideoEventTopicConversation: Codable {
         case address
         case externalTag
         case utilizationLabelId
+        case accessAttributes
         case securePause
         case inactivityTimeout
         case associatedConversation

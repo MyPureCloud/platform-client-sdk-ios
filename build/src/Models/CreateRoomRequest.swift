@@ -12,7 +12,7 @@ public class CreateRoomRequest: Codable {
     public var _description: String?
     /** Room's subject */
     public var subject: String?
-    /** Users to add to the room */
+    /** Users to add to the room, limit of 25 */
     public var userIds: [String]?
 
     public init(_description: String?, subject: String?, userIds: [String]?) {

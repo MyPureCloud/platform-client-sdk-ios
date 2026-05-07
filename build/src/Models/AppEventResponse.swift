@@ -36,6 +36,8 @@ public class AppEventResponse: Codable {
 
 
 
+
+
     /** System-generated UUID for the event. */
     public var _id: String?
     /** Identifier of the customer in the source of the event. */
@@ -68,10 +70,12 @@ public class AppEventResponse: Codable {
     public var attributes: [String:CustomEventAttribute]?
     /** Traits are attributes intrinsic to the customer that may be sent in selected events (e.g. email, givenName, cellPhone). */
     public var traits: [String:CustomEventAttribute]?
+    /** An external identifier for the customer. */
+    public var externalId: String?
     /** UTC timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var createdDate: Date?
 
-    public init(_id: String?, customerId: String?, customerIdType: String?, eventName: String?, screenName: String?, app: JourneyApp?, device: Device?, ipOrganization: String?, geolocation: JourneyGeolocation?, sdkLibrary: SdkLibrary?, networkConnectivity: NetworkConnectivity?, mktCampaign: JourneyCampaign?, session: AppEventResponseSession?, searchQuery: String?, attributes: [String:CustomEventAttribute]?, traits: [String:CustomEventAttribute]?, createdDate: Date?) {
+    public init(_id: String?, customerId: String?, customerIdType: String?, eventName: String?, screenName: String?, app: JourneyApp?, device: Device?, ipOrganization: String?, geolocation: JourneyGeolocation?, sdkLibrary: SdkLibrary?, networkConnectivity: NetworkConnectivity?, mktCampaign: JourneyCampaign?, session: AppEventResponseSession?, searchQuery: String?, attributes: [String:CustomEventAttribute]?, traits: [String:CustomEventAttribute]?, externalId: String?, createdDate: Date?) {
         self._id = _id
         self.customerId = customerId
         self.customerIdType = customerIdType
@@ -88,6 +92,7 @@ public class AppEventResponse: Codable {
         self.searchQuery = searchQuery
         self.attributes = attributes
         self.traits = traits
+        self.externalId = externalId
         self.createdDate = createdDate
     }
 
@@ -108,6 +113,7 @@ public class AppEventResponse: Codable {
         case searchQuery
         case attributes
         case traits
+        case externalId
         case createdDate
     }
 

@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** | The globally unique identifier for the object. | [optional] |
+| **_id** | **String** | The globally unique identifier for the object. | |
 | **schedulerRunId** | **String** | The scheduler run ID.  Reference this value for support | [optional] |
 | **intradayRescheduling** | **Bool** | Whether this is an intraday rescheduling run | [optional] |
 | **state** | **String** | The state of the generation run | [optional] |
@@ -27,4 +27,4 @@
 
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

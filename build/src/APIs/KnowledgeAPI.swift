@@ -44,16 +44,17 @@ open class KnowledgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "authenticationProperties" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateExpiry" : "2000-01-23T04:56:07.000+00:00",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "type" : "Sharepoint",
+  "error" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "integration" : "{}",
   "modifiedBy" : "{}",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "type" : "Sharepoint",
-  "error" : "{}",
   "status" : "Created"
 }, statusCode=200}]
      
@@ -783,16 +784,17 @@ open class KnowledgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "authenticationProperties" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateExpiry" : "2000-01-23T04:56:07.000+00:00",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "type" : "Sharepoint",
+  "error" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "integration" : "{}",
   "modifiedBy" : "{}",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "type" : "Sharepoint",
-  "error" : "{}",
   "status" : "Created"
 }, statusCode=200}]
      
@@ -823,15 +825,21 @@ open class KnowledgeAPI {
     
     
     
+    
+    
+    
+    
     /**
      Get connection options
      
      - parameter connectionId: (path) Connection ID 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of results per page. Minimum: 25, Maximum: 500. (optional)
      - parameter parentId: (query) The id of the parent option whose children to be listed. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeConnectionOptions(connectionId: String, parentId: String? = nil, completion: @escaping ((_ data: ConnectionOptionListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeConnectionOptionsWithRequestBuilder(connectionId: connectionId, parentId: parentId)
+    open class func getKnowledgeConnectionOptions(connectionId: String, after: String? = nil, pageSize: String? = nil, parentId: String? = nil, completion: @escaping ((_ data: ConnectionOptionListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeConnectionOptionsWithRequestBuilder(connectionId: connectionId, after: after, pageSize: pageSize, parentId: parentId)
         requestBuilder.execute { (response: Response<ConnectionOptionListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -861,15 +869,20 @@ open class KnowledgeAPI {
   }, {
     "name" : "name",
     "id" : "id"
-  } ]
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
 }, statusCode=200}]
      
      - parameter connectionId: (path) Connection ID 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of results per page. Minimum: 25, Maximum: 500. (optional)
      - parameter parentId: (query) The id of the parent option whose children to be listed. (optional)
 
      - returns: RequestBuilder<ConnectionOptionListing> 
      */
-    open class func getKnowledgeConnectionOptionsWithRequestBuilder(connectionId: String, parentId: String? = nil) -> RequestBuilder<ConnectionOptionListing> {        
+    open class func getKnowledgeConnectionOptionsWithRequestBuilder(connectionId: String, after: String? = nil, pageSize: String? = nil, parentId: String? = nil) -> RequestBuilder<ConnectionOptionListing> {        
         var path = "/api/v2/knowledge/connections/{connectionId}/options"
         let connectionIdPreEscape = "\(connectionId)"
         let connectionIdPostEscape = connectionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -879,6 +892,8 @@ open class KnowledgeAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize, 
             "parentId": parentId
         ])
 
@@ -919,29 +934,31 @@ open class KnowledgeAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "authenticationProperties" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateExpiry" : "2000-01-23T04:56:07.000+00:00",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "type" : "Sharepoint",
+    "error" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "integration" : "{}",
     "modifiedBy" : "{}",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
-    "type" : "Sharepoint",
-    "error" : "{}",
     "status" : "Created"
   }, {
     "authenticationProperties" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateExpiry" : "2000-01-23T04:56:07.000+00:00",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "type" : "Sharepoint",
+    "error" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "integration" : "{}",
     "modifiedBy" : "{}",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
-    "type" : "Sharepoint",
-    "error" : "{}",
     "status" : "Created"
   } ]
 }, statusCode=200}]
@@ -5092,6 +5109,7 @@ open class KnowledgeAPI {
     public enum Expand_getKnowledgeSource: String { 
         case lastsync = "lastSync"
         case filterdetails = "filterDetails"
+        case connection = "connection"
     }
     
     /**
@@ -5101,9 +5119,9 @@ open class KnowledgeAPI {
      - parameter expand: (query) Optional fields to expand for the Source. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeSource(sourceId: String, expand: [String]? = nil, completion: @escaping ((_ data: V3SourceDetailedWithErrorResponse?,_ error: Error?) -> Void)) {
+    open class func getKnowledgeSource(sourceId: String, expand: [String]? = nil, completion: @escaping ((_ data: V3SourceExpandableResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = getKnowledgeSourceWithRequestBuilder(sourceId: sourceId, expand: expand)
-        requestBuilder.execute { (response: Response<V3SourceDetailedWithErrorResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<V3SourceExpandableResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -5139,6 +5157,7 @@ open class KnowledgeAPI {
   "name" : "name",
   "connectionId" : "connectionId",
   "modifiedBy" : "{}",
+  "connection" : "{}",
   "id" : "id",
   "triggerType" : "Scheduled",
   "status" : "Active"
@@ -5147,9 +5166,9 @@ open class KnowledgeAPI {
      - parameter sourceId: (path) Source ID 
      - parameter expand: (query) Optional fields to expand for the Source. (optional)
 
-     - returns: RequestBuilder<V3SourceDetailedWithErrorResponse> 
+     - returns: RequestBuilder<V3SourceExpandableResponse> 
      */
-    open class func getKnowledgeSourceWithRequestBuilder(sourceId: String, expand: [String]? = nil) -> RequestBuilder<V3SourceDetailedWithErrorResponse> {        
+    open class func getKnowledgeSourceWithRequestBuilder(sourceId: String, expand: [String]? = nil) -> RequestBuilder<V3SourceExpandableResponse> {        
         var path = "/api/v2/knowledge/sources/{sourceId}"
         let sourceIdPreEscape = "\(sourceId)"
         let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -5162,7 +5181,7 @@ open class KnowledgeAPI {
             "expand": expand
         ])
 
-        let requestBuilder: RequestBuilder<V3SourceDetailedWithErrorResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<V3SourceExpandableResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -5351,6 +5370,7 @@ open class KnowledgeAPI {
     
     public enum Expand_getKnowledgeSources: String { 
         case lastsync = "lastSync"
+        case connection = "connection"
     }
     
     /**
@@ -5359,9 +5379,9 @@ open class KnowledgeAPI {
      - parameter expand: (query) Optional fields to expand for the Source. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeSources(expand: [String]? = nil, completion: @escaping ((_ data: V3SourceWithErrorListing?,_ error: Error?) -> Void)) {
+    open class func getKnowledgeSources(expand: [String]? = nil, completion: @escaping ((_ data: V3SourceExpandableListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getKnowledgeSourcesWithRequestBuilder(expand: expand)
-        requestBuilder.execute { (response: Response<V3SourceWithErrorListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<V3SourceExpandableListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -5395,6 +5415,7 @@ open class KnowledgeAPI {
     "name" : "name",
     "connectionId" : "connectionId",
     "modifiedBy" : "{}",
+    "connection" : "{}",
     "id" : "id",
     "triggerType" : "Scheduled",
     "status" : "Active"
@@ -5409,6 +5430,7 @@ open class KnowledgeAPI {
     "name" : "name",
     "connectionId" : "connectionId",
     "modifiedBy" : "{}",
+    "connection" : "{}",
     "id" : "id",
     "triggerType" : "Scheduled",
     "status" : "Active"
@@ -5417,9 +5439,9 @@ open class KnowledgeAPI {
      
      - parameter expand: (query) Optional fields to expand for the Source. (optional)
 
-     - returns: RequestBuilder<V3SourceWithErrorListing> 
+     - returns: RequestBuilder<V3SourceExpandableListing> 
      */
-    open class func getKnowledgeSourcesWithRequestBuilder(expand: [String]? = nil) -> RequestBuilder<V3SourceWithErrorListing> {        
+    open class func getKnowledgeSourcesWithRequestBuilder(expand: [String]? = nil) -> RequestBuilder<V3SourceExpandableListing> {        
         let path = "/api/v2/knowledge/sources"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -5429,7 +5451,7 @@ open class KnowledgeAPI {
             "expand": expand
         ])
 
-        let requestBuilder: RequestBuilder<V3SourceWithErrorListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<V3SourceExpandableListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -5569,16 +5591,17 @@ open class KnowledgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "authenticationProperties" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateExpiry" : "2000-01-23T04:56:07.000+00:00",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "type" : "Sharepoint",
+  "error" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
-  "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "integration" : "{}",
   "modifiedBy" : "{}",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "type" : "Sharepoint",
-  "error" : "{}",
   "status" : "Created"
 }, statusCode=200}]
      

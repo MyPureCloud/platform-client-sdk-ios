@@ -25,8 +25,11 @@ public class ConversationMessageContent: Codable {
         case form = "Form"
         case roadsideAssistance = "RoadsideAssistance"
         case richLink = "RichLink"
+        case notificationResponse = "NotificationResponse"
         case unknown = "Unknown"
     }
+
+
 
 
 
@@ -102,8 +105,10 @@ public class ConversationMessageContent: Codable {
     public var push: ConversationContentPush?
     /** Form content. */
     public var form: ConversationContentForm?
+    /** Notification response content, e.g. an Apple Invitation acceptance. */
+    public var notificationResponse: ConversationContentNotificationResponse?
 
-    public init(contentType: ContentType?, location: ConversationContentLocation?, attachment: ConversationContentAttachment?, quickReply: ConversationContentQuickReply?, buttonResponse: ConversationContentButtonResponse?, template: ConversationContentNotificationTemplate?, story: ConversationContentStory?, card: ConversationContentCard?, carousel: ConversationContentCarousel?, text: ConversationContentText?, quickReplyV2: ConversationContentQuickReplyV2?, reactions: [ConversationContentReaction]?, datePicker: ConversationContentDatePicker?, interactiveApplication: ConversationContentInteractiveApplication?, listPicker: ConversationContentListPicker?, paymentRequest: ConversationContentPaymentRequest?, paymentResponse: ConversationContentPaymentResponse?, push: ConversationContentPush?, form: ConversationContentForm?) {
+    public init(contentType: ContentType?, location: ConversationContentLocation?, attachment: ConversationContentAttachment?, quickReply: ConversationContentQuickReply?, buttonResponse: ConversationContentButtonResponse?, template: ConversationContentNotificationTemplate?, story: ConversationContentStory?, card: ConversationContentCard?, carousel: ConversationContentCarousel?, text: ConversationContentText?, quickReplyV2: ConversationContentQuickReplyV2?, reactions: [ConversationContentReaction]?, datePicker: ConversationContentDatePicker?, interactiveApplication: ConversationContentInteractiveApplication?, listPicker: ConversationContentListPicker?, paymentRequest: ConversationContentPaymentRequest?, paymentResponse: ConversationContentPaymentResponse?, push: ConversationContentPush?, form: ConversationContentForm?, notificationResponse: ConversationContentNotificationResponse?) {
         self.contentType = contentType
         self.location = location
         self.attachment = attachment
@@ -123,6 +128,7 @@ public class ConversationMessageContent: Codable {
         self.paymentResponse = paymentResponse
         self.push = push
         self.form = form
+        self.notificationResponse = notificationResponse
     }
 
 

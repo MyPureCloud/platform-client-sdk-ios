@@ -297,6 +297,7 @@ open class TextbotsAPI {
       "paymentResponse" : "{}",
       "attachment" : "{}",
       "form" : "{}",
+      "notificationResponse" : "{}",
       "location" : "{}",
       "reactions" : [ {
         "reactionType" : "None",
@@ -323,6 +324,7 @@ open class TextbotsAPI {
       "paymentResponse" : "{}",
       "attachment" : "{}",
       "form" : "{}",
+      "notificationResponse" : "{}",
       "location" : "{}",
       "reactions" : [ {
         "reactionType" : "None",
@@ -353,6 +355,7 @@ open class TextbotsAPI {
       "paymentResponse" : "{}",
       "attachment" : "{}",
       "form" : "{}",
+      "notificationResponse" : "{}",
       "location" : "{}",
       "reactions" : [ {
         "reactionType" : "None",
@@ -379,6 +382,7 @@ open class TextbotsAPI {
       "paymentResponse" : "{}",
       "attachment" : "{}",
       "form" : "{}",
+      "notificationResponse" : "{}",
       "location" : "{}",
       "reactions" : [ {
         "reactionType" : "None",

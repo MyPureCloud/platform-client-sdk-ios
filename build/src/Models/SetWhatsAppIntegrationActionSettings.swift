@@ -3,7 +3,13 @@
 public class SetWhatsAppIntegrationActionSettings: Codable {
 
 
-    // TAG-REMOVE-MODEL-FILE
+
+    /** The ID of the WhatsApp integration. */
+    public var whatsAppIntegrationId: String?
+
+    public init(whatsAppIntegrationId: String?) {
+        self.whatsAppIntegrationId = whatsAppIntegrationId
+    }
 
 
 }

@@ -26,7 +26,8 @@ Message content element. If contentType &#x3D; \&quot;Attachment\&quot; only one
 | **paymentResponse** | [**ConversationContentPaymentResponse**](ConversationContentPaymentResponse) | Payment response content. | [optional] |
 | **push** | [**ConversationContentPush**](ConversationContentPush) | Push content. | [optional] |
 | **form** | [**ConversationContentForm**](ConversationContentForm) | Form content. | [optional] |
+| **notificationResponse** | [**ConversationContentNotificationResponse**](ConversationContentNotificationResponse) | Notification response content, e.g. an Apple Invitation acceptance. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

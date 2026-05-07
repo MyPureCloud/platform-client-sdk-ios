@@ -30,13 +30,13 @@ public class JourneySegmentRequest: Codable {
     public var version: Int?
     /** A description of the segment. */
     public var _description: String?
-    /** The hexadecimal color value of the segment. */
+    /** The hexadecimal color value of the segment. Defaults if not provided. */
     public var color: String?
     /** Whether or not the segment should be displayed to agent/supervisor users. */
     public var shouldDisplayToAgent: Bool?
-    /** The context of the segment. */
+    /** The context of the segment. Defaults if not provided. */
     public var context: RequestContext?
-    /** The pattern of rules defining the segment. */
+    /** The pattern of rules defining the segment. Defaults if not provided. */
     public var journey: RequestJourney?
     /** Details of an entity corresponding to this segment in an external system. */
     public var externalSegment: RequestExternalSegment?

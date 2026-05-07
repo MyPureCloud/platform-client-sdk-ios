@@ -7,9 +7,10 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the intent detected during this reporting turn. | [optional] |
+| **_id** | **String** | The ID of the intent detected during this reporting turn. | [optional] |
 | **confidence** | **Double** | The confidence score of the intent detected during this reporting turn. | [optional] |
 | **slots** | [**[ReportingTurnIntentSlot]**]([ReportingTurnIntentSlot]) | The slots detected during this reporting turn. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

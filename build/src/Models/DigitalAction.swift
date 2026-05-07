@@ -16,6 +16,8 @@ public class DigitalAction: Codable {
 
 
 
+
+
     /** The settings for an 'update contact column' action. */
     public var updateContactColumnActionSettings: UpdateContactColumnActionSettings?
     /** The settings for a 'do not send' action. */
@@ -30,8 +32,10 @@ public class DigitalAction: Codable {
     public var setContentTemplateActionSettings: SetContentTemplateActionSettings?
     /** The settings for a 'set sms phone number' action. */
     public var setSmsPhoneNumberActionSettings: SetSmsPhoneNumberActionSettings?
+    /** The settings for a 'set WhatsApp integration' action. */
+    public var setWhatsAppIntegrationActionSettings: SetWhatsAppIntegrationActionSettings?
 
-    public init(updateContactColumnActionSettings: UpdateContactColumnActionSettings?, doNotSendActionSettings: JSON?, appendToDncActionSettings: AppendToDncActionSettings?, markContactUncontactableActionSettings: MarkContactUncontactableActionSettings?, markContactAddressUncontactableActionSettings: JSON?, setContentTemplateActionSettings: SetContentTemplateActionSettings?, setSmsPhoneNumberActionSettings: SetSmsPhoneNumberActionSettings?) {
+    public init(updateContactColumnActionSettings: UpdateContactColumnActionSettings?, doNotSendActionSettings: JSON?, appendToDncActionSettings: AppendToDncActionSettings?, markContactUncontactableActionSettings: MarkContactUncontactableActionSettings?, markContactAddressUncontactableActionSettings: JSON?, setContentTemplateActionSettings: SetContentTemplateActionSettings?, setSmsPhoneNumberActionSettings: SetSmsPhoneNumberActionSettings?, setWhatsAppIntegrationActionSettings: SetWhatsAppIntegrationActionSettings?) {
         self.updateContactColumnActionSettings = updateContactColumnActionSettings
         self.doNotSendActionSettings = doNotSendActionSettings
         self.appendToDncActionSettings = appendToDncActionSettings
@@ -39,6 +43,7 @@ public class DigitalAction: Codable {
         self.markContactAddressUncontactableActionSettings = markContactAddressUncontactableActionSettings
         self.setContentTemplateActionSettings = setContentTemplateActionSettings
         self.setSmsPhoneNumberActionSettings = setSmsPhoneNumberActionSettings
+        self.setWhatsAppIntegrationActionSettings = setWhatsAppIntegrationActionSettings
     }
 
 

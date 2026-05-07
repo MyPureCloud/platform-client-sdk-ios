@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** | The globally unique identifier for the object. | [optional] |
+| **_id** | **String** | The globally unique identifier for the object. | |
 | **granularity** | **String** | Granularity choice for the time off limit | [optional] |
 | **defaultLimitMinutes** | **Int** | The default time off limit value in minutes per granularity interval | [optional] |
 | **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for the time off limit | [optional] |
@@ -14,4 +14,4 @@
 
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

@@ -2,7 +2,7 @@
 
 public class UsersRulesLockedCriteriaSettingsGroup: Codable {
 
-    public enum Operator: String, Codable { 
+    public enum Operators: String, Codable { 
         case and = "And"
         case not = "Not"
     }
@@ -23,23 +23,17 @@ public class UsersRulesLockedCriteriaSettingsGroup: Codable {
 
 
 
-    /** The operator for this criteria */
-    public var _operator: Operator?
+    /** The allowed operators for this criteria */
+    public var operators: [Operators]?
     /** The container that the ids belong to */
     public var container: Container?
     /** Maximum number of ids that can be specified in this container */
     public var maxIdCount: Int64?
 
-    public init(_operator: Operator?, container: Container?, maxIdCount: Int64?) {
-        self._operator = _operator
+    public init(operators: [Operators]?, container: Container?, maxIdCount: Int64?) {
+        self.operators = operators
         self.container = container
         self.maxIdCount = maxIdCount
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _operator = "operator"
-        case container
-        case maxIdCount
     }
 
 

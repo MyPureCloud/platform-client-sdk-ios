@@ -28,6 +28,8 @@ public class ConversationEventTopicConversation: Codable {
 
 
 
+
+
     public var _id: String?
     public var maxParticipants: Int64?
     public var participants: [ConversationEventTopicParticipant]?
@@ -36,13 +38,14 @@ public class ConversationEventTopicConversation: Codable {
     public var address: String?
     public var externalTag: String?
     public var utilizationLabelId: String?
+    public var accessAttributes: [String]?
     public var securePause: Bool?
     public var inactivityTimeout: Date?
     public var associatedConversation: ConversationEventTopicDomainEntityRef?
     public var consultationConversations: [ConversationEventTopicDomainEntityRef]?
     public var divisions: [ConversationEventTopicConversationDivisionMembership]?
 
-    public init(_id: String?, maxParticipants: Int64?, participants: [ConversationEventTopicParticipant]?, recentTransfers: [ConversationEventTopicTransferResponse]?, recordingState: String?, address: String?, externalTag: String?, utilizationLabelId: String?, securePause: Bool?, inactivityTimeout: Date?, associatedConversation: ConversationEventTopicDomainEntityRef?, consultationConversations: [ConversationEventTopicDomainEntityRef]?, divisions: [ConversationEventTopicConversationDivisionMembership]?) {
+    public init(_id: String?, maxParticipants: Int64?, participants: [ConversationEventTopicParticipant]?, recentTransfers: [ConversationEventTopicTransferResponse]?, recordingState: String?, address: String?, externalTag: String?, utilizationLabelId: String?, accessAttributes: [String]?, securePause: Bool?, inactivityTimeout: Date?, associatedConversation: ConversationEventTopicDomainEntityRef?, consultationConversations: [ConversationEventTopicDomainEntityRef]?, divisions: [ConversationEventTopicConversationDivisionMembership]?) {
         self._id = _id
         self.maxParticipants = maxParticipants
         self.participants = participants
@@ -51,6 +54,7 @@ public class ConversationEventTopicConversation: Codable {
         self.address = address
         self.externalTag = externalTag
         self.utilizationLabelId = utilizationLabelId
+        self.accessAttributes = accessAttributes
         self.securePause = securePause
         self.inactivityTimeout = inactivityTimeout
         self.associatedConversation = associatedConversation
@@ -67,6 +71,7 @@ public class ConversationEventTopicConversation: Codable {
         case address
         case externalTag
         case utilizationLabelId
+        case accessAttributes
         case securePause
         case inactivityTimeout
         case associatedConversation

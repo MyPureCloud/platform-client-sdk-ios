@@ -6,6 +6,8 @@ public class LastAttemptByColumnConditionSettings: Codable {
 
 
 
+
+
     public enum Operator: String, Codable { 
         case before = "Before"
         case after = "After"
@@ -17,14 +19,17 @@ public class LastAttemptByColumnConditionSettings: Codable {
     public var emailColumnName: String?
     /** The name of the contact column to evaluate for SMS. */
     public var smsColumnName: String?
+    /** The name of the contact column to evaluate for WhatsApp. */
+    public var whatsAppColumnName: String?
     /** The operator to use when comparing values. */
     public var _operator: Operator?
     /** The period value to compare against the contact's data. */
     public var value: String?
 
-    public init(emailColumnName: String?, smsColumnName: String?, _operator: Operator?, value: String?) {
+    public init(emailColumnName: String?, smsColumnName: String?, whatsAppColumnName: String?, _operator: Operator?, value: String?) {
         self.emailColumnName = emailColumnName
         self.smsColumnName = smsColumnName
+        self.whatsAppColumnName = whatsAppColumnName
         self._operator = _operator
         self.value = value
     }
@@ -32,6 +37,7 @@ public class LastAttemptByColumnConditionSettings: Codable {
     public enum CodingKeys: String, CodingKey { 
         case emailColumnName
         case smsColumnName
+        case whatsAppColumnName
         case _operator = "operator"
         case value
     }

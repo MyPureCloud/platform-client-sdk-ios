@@ -6,6 +6,7 @@ public class ConversationAggregationSort: Codable {
         case nblindtransferred = "nBlindTransferred"
         case nbotinteractions = "nBotInteractions"
         case ncallbackattempts = "nCallbackAttempts"
+        case ncallbackoversla = "nCallbackOverSla"
         case ncallbackscheduled = "nCallbackScheduled"
         case ncobrowsesessions = "nCobrowseSessions"
         case nconnected = "nConnected"
@@ -30,6 +31,7 @@ public class ConversationAggregationSort: Codable {
         case omessagesegmentcount = "oMessageSegmentCount"
         case omessageturn = "oMessageTurn"
         case oservicetarget = "oServiceTarget"
+        case oskillexpressionapplications = "oSkillExpressionApplications"
         case tabandon = "tAbandon"
         case tacd = "tAcd"
         case tactivecallback = "tActiveCallback"
@@ -68,6 +70,7 @@ public class ConversationAggregationSort: Codable {
         case tsnippetrecord = "tSnippetRecord"
         case ttalk = "tTalk"
         case ttalkcomplete = "tTalkComplete"
+        case ttransmitting = "tTransmitting"
         case tuserresponsetime = "tUserResponseTime"
         case tvoicemail = "tVoicemail"
     }
