@@ -22,8 +22,9 @@
 | **searchQuery** | **String** | Represents the keywords in a customer search query. | [optional] |
 | **attributes** | [**[String:CustomEventAttribute]**](CustomEventAttribute) | User-defined attributes associated with a particular event. | |
 | **traits** | [**[String:CustomEventAttribute]**](CustomEventAttribute) | Traits are attributes intrinsic to the customer that may be sent in selected events (e.g. email, givenName, cellPhone). | |
+| **externalId** | **String** | An external identifier for the customer. | [optional] |
 | **createdDate** | [**Date**](Date) | UTC timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

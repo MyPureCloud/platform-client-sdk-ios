@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** | The globally unique identifier for the object. | [optional] |
+| **_id** | **String** | The globally unique identifier for the object. | |
 | **user** | [**UserReference**](UserReference) | The user associated with this time off request | [optional] |
 | **isFullDayRequest** | **Bool** | Whether this is a full day request (false means partial day) | [optional] |
 | **markedAsRead** | **Bool** | Whether this request has been marked as read by the agent | [optional] |
@@ -32,4 +32,4 @@
 
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

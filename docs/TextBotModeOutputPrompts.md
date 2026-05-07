@@ -11,4 +11,4 @@ Prompt information related to a bot flow turn.
 
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

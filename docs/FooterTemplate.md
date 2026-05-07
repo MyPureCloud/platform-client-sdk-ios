@@ -12,4 +12,4 @@ The Footer template identifies the Footer type and its footerUsage
 
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

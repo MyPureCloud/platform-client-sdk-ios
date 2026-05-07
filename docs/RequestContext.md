@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **patterns** | [**[RequestContextPattern]**]([RequestContextPattern]) | A list of one or more patterns to match. | [optional] |
+| **patterns** | [**[RequestContextPattern]**]([RequestContextPattern]) | A list of one or more patterns to match. Defaults to an empty list if not provided. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

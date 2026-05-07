@@ -1,6 +1,6 @@
-# V3SourceDetailedWithErrorResponse
+# V3SourceExpandableListResponse
 
-## V3SourceDetailedWithErrorResponse
+## V3SourceExpandableListResponse
 
 ## Properties
 
@@ -17,12 +17,10 @@
 | **dateCreated** | [**Date**](Date) | Source creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **dateModified** | [**Date**](Date) | Source last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **lastSync** | [**V3SourceLastSynchronization**](V3SourceLastSynchronization) | The last synchronization of the source. | [optional] |
-| **scheduleSettings** | [**V3SourceScheduleSettings**](V3SourceScheduleSettings) | Settings that determine when the source starts a sync. | [optional] |
-| **filters** | [**V3SourceFilter**](V3SourceFilter) | Filters that determine what documents are synced. | [optional] |
-| **filterDetails** | [**V3SourceFilterDetails**](V3SourceFilterDetails) | Additional details to the source&#39;s filters. | [optional] |
+| **connection** | [**ConnectionResponse**](ConnectionResponse) | The connection associated with the source. Needs to be expanded. | [optional] |
 | **error** | [**ErrorBody**](ErrorBody) | Optional error details of an errored source. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

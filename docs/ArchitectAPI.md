@@ -124,7 +124,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postFlowsActionsRevert**](ArchitectAPI#postFlowsActionsRevert) | Revert flow |
 | [**postFlowsActionsUnlock**](ArchitectAPI#postFlowsActionsUnlock) | Unlock flow |
 | [**postFlowsDatatableExportJobs**](ArchitectAPI#postFlowsDatatableExportJobs) | Begin an export process for exporting all rows from a datatable |
-| [**postFlowsDatatableImportJobs**](ArchitectAPI#postFlowsDatatableImportJobs) | Begin an import process for importing rows into a datatable |
+| [**postFlowsDatatableImportCsvJobs**](ArchitectAPI#postFlowsDatatableImportCsvJobs) | Begin an import process for importing rows from a CSV file into a datatable. CSV file is uploaded by performing a PUT request against the URL in the returned &#39;uploadURI&#39; field. Headers for the PUT request must contain all headers contained in the returned &#39;uploadHeaders&#39; field. |
+| [**postFlowsDatatableImportJobs**](ArchitectAPI#postFlowsDatatableImportJobs) | Begin an import process for importing rows into a datatable. Apps should migrate to use POST /api/v2/flows/datatables/{datatableId}/import/csv/jobs instead |
 | [**postFlowsDatatableRows**](ArchitectAPI#postFlowsDatatableRows) | Create a new row entry for the datatable. |
 | [**postFlowsDatatables**](ArchitectAPI#postFlowsDatatables) | Create a new datatable with the specified json-schema definition |
 | [**postFlowsExecutions**](ArchitectAPI#postFlowsExecutions) | Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. |
@@ -6763,13 +6764,68 @@ ArchitectAPI.postFlowsDatatableExportJobs(datatableId: datatableId) { (response,
 [**DataTableExportJob**](DataTableExportJob)
 
 
+## postFlowsDatatableImportCsvJobs
+
+
+
+> [DataTableImportJob](DataTableImportJob) postFlowsDatatableImportCsvJobs(datatableId, body)
+
+Begin an import process for importing rows from a CSV file into a datatable. CSV file is uploaded by performing a PUT request against the URL in the returned &#39;uploadURI&#39; field. Headers for the PUT request must contain all headers contained in the returned &#39;uploadHeaders&#39; field.
+
+Create an import job for importing rows from a CSV file. The caller can then poll for status of the import using the token returned in the response
+
+
+
+Wraps POST /api/v2/flows/datatables/{datatableId}/import/csv/jobs  
+
+Requires ANY permissions: 
+
+* architect:datatable:edit
+* architect:datatableRow:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let datatableId: String = "" // id of datatable
+let body: DataTableImportJob = new DataTableImportJob(...) // import job information
+
+// Code example
+ArchitectAPI.postFlowsDatatableImportCsvJobs(datatableId: datatableId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.postFlowsDatatableImportCsvJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datatableId** | **String**| id of datatable | |
+| **body** | [**DataTableImportJob**](DataTableImportJob)| import job information | |
+
+
+### Return type
+
+[**DataTableImportJob**](DataTableImportJob)
+
+
 ## postFlowsDatatableImportJobs
 
 
 
 > [DataTableImportJob](DataTableImportJob) postFlowsDatatableImportJobs(datatableId, body)
 
-Begin an import process for importing rows into a datatable
+Begin an import process for importing rows into a datatable. Apps should migrate to use POST /api/v2/flows/datatables/{datatableId}/import/csv/jobs instead
 
 Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
 
@@ -8087,4 +8143,4 @@ ArchitectAPI.putFlowsOutcome(flowOutcomeId: flowOutcomeId, body: body) { (respon
 [**Operation**](Operation)
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

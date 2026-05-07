@@ -13,7 +13,8 @@
 | **markContactAddressUncontactableActionSettings** | [**JSON**](JSON) | The settings for an &#39;mark contact address uncontactable&#39; action. | [optional] |
 | **setContentTemplateActionSettings** | [**SetContentTemplateActionSettings**](SetContentTemplateActionSettings) | The settings for a &#39;Set content template&#39; action. | [optional] |
 | **setSmsPhoneNumberActionSettings** | [**SetSmsPhoneNumberActionSettings**](SetSmsPhoneNumberActionSettings) | The settings for a &#39;set sms phone number&#39; action. | [optional] |
+| **setWhatsAppIntegrationActionSettings** | [**SetWhatsAppIntegrationActionSettings**](SetWhatsAppIntegrationActionSettings) | The settings for a &#39;set WhatsApp integration&#39; action. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@193.0.0_
+_PureCloudPlatformClientV2@194.0.0_

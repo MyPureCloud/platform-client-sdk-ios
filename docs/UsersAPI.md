@@ -18,6 +18,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteUserStationDefaultstation**](UsersAPI#deleteUserStationDefaultstation) | Clear default station |
 | [**deleteUserVerifier**](UsersAPI#deleteUserVerifier) | Delete a verifier |
 | [**deleteUsersCustomattributesSchema**](UsersAPI#deleteUsersCustomattributesSchema) | Delete a schema |
+| [**deleteUsersStationsMeAssociatedstation**](UsersAPI#deleteUsersStationsMeAssociatedstation) | Clear self associated station |
 | [**getAnalyticsUsersDetailsJob**](UsersAPI#getAnalyticsUsersDetailsJob) | Get status for async query for user details |
 | [**getAnalyticsUsersDetailsJobResults**](UsersAPI#getAnalyticsUsersDetailsJobResults) | Fetch a page of results for an async query |
 | [**getAnalyticsUsersDetailsJobsAvailability**](UsersAPI#getAnalyticsUsersDetailsJobsAvailability) | Lookup the datalake availability date and time |
@@ -69,7 +70,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUsersDevelopmentActivity**](UsersAPI#getUsersDevelopmentActivity) | Get a Development Activity |
 | [**getUsersExternalidAuthorityNameExternalKey**](UsersAPI#getUsersExternalidAuthorityNameExternalKey) | Get the user associated with external identifier. |
 | [**getUsersMe**](UsersAPI#getUsersMe) | Get current user details. |
+| [**getUsersQuery**](UsersAPI#getUsersQuery) | Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required |
 | [**getUsersSearch**](UsersAPI#getUsersSearch) | Search users using the q64 value returned from a previous search |
+| [**getUsersStationsMe**](UsersAPI#getUsersStationsMe) | Get station information for self |
 | [**patchUser**](UsersAPI#patchUser) | Update user |
 | [**patchUserCallforwarding**](UsersAPI#patchUserCallforwarding) | Patch a user&#39;s CallForwarding |
 | [**patchUserCustomattributes**](UsersAPI#patchUserCustomattributes) | Update a single custom attributes record by amending the data with only the provided fields. |
@@ -117,6 +120,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putUserStationDefaultstationStationId**](UsersAPI#putUserStationDefaultstationStationId) | Set default station |
 | [**putUserVerifier**](UsersAPI#putUserVerifier) | Update a verifier |
 | [**putUsersCustomattributesSchema**](UsersAPI#putUsersCustomattributesSchema) | Update a schema |
+| [**putUsersStationsMeAssociatedstationStationId**](UsersAPI#putUsersStationsMeAssociatedstationStationId) | Set self associated station |
 {: class="table-striped"}
 
 
@@ -636,8 +640,9 @@ Clear associated station
 
 Wraps DELETE /api/v2/users/{userId}/station/associatedstation  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* telephony:station:disassociate
 
 ### Example
 
@@ -815,6 +820,51 @@ UsersAPI.deleteUsersCustomattributesSchema(schemaId: schemaId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **schemaId** | **String**| Schema ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteUsersStationsMeAssociatedstation
+
+
+
+> Void deleteUsersStationsMeAssociatedstation()
+
+Clear self associated station
+
+
+
+Wraps DELETE /api/v2/users/stations/me/associatedstation  
+
+Requires ANY permissions: 
+
+* telephony:station:disassociateSelf
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+UsersAPI.deleteUsersStationsMeAssociatedstation() { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("UsersAPI.deleteUsersStationsMeAssociatedstation was successful")
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
 
 
 ### Return type
@@ -1615,8 +1665,9 @@ Get a user&#39;s CallForwarding
 
 Wraps GET /api/v2/users/{userId}/callforwarding  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:callForwarding:view
 
 ### Example
 
@@ -2556,8 +2607,9 @@ Get station information for user
 
 Wraps GET /api/v2/users/{userId}/station  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* telephony:otherStationAssociation:view
 
 ### Example
 
@@ -2817,7 +2869,7 @@ UsersAPI.getUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId
 
 
 
-> [ChatItemCursorListing](ChatItemCursorListing) getUsersChatsMe(excludeClosed, includePresence, after)
+> [ChatItemCursorListing](ChatItemCursorListing) getUsersChatsMe(excludeClosed, includePresence, includeRoomOwners, after)
 
 Get chats for a user
 
@@ -2840,10 +2892,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let excludeClosed: Bool = true // Whether or not to exclude closed chats
 let includePresence: Bool = true // Whether or not to include user presence
+let includeRoomOwners: Bool = true // Whether or not to include room owners
 let after: String = "" // The key to start after
 
 // Code example
-UsersAPI.getUsersChatsMe(excludeClosed: excludeClosed, includePresence: includePresence, after: after) { (response, error) in
+UsersAPI.getUsersChatsMe(excludeClosed: excludeClosed, includePresence: includePresence, includeRoomOwners: includeRoomOwners, after: after) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2860,6 +2913,7 @@ UsersAPI.getUsersChatsMe(excludeClosed: excludeClosed, includePresence: includeP
 | ------------- | ------------- | ------------- | ------------- |
 | **excludeClosed** | **Bool**| Whether or not to exclude closed chats | [optional] |
 | **includePresence** | **Bool**| Whether or not to include user presence | [optional] |
+| **includeRoomOwners** | **Bool**| Whether or not to include room owners | [optional] |
 | **after** | **String**| The key to start after | [optional] |
 
 
@@ -3519,6 +3573,68 @@ UsersAPI.getUsersMe(expand: expand, integrationPresenceSource: integrationPresen
 [**UserMe**](UserMe)
 
 
+## getUsersQuery
+
+
+
+> [UserCursorEntityListing](UserCursorEntityListing) getUsersQuery(cursor, pageSize, sortOrder, expand, integrationPresenceSource, userCustomAttributeSchemaIds, state)
+
+Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required
+
+
+
+Wraps GET /api/v2/users/query  
+
+Requires ANY permissions: 
+
+* directory:user:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let cursor: String = "" // Cursor token to retrieve next page
+let pageSize: Int = 0 // Page size
+let sortOrder: UsersAPI.SortOrder_getUsersQuery = UsersAPI.SortOrder_getUsersQuery.enummember // Ascending or descending sort order
+let expand: [String] = [""] // Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it's recommended to use specific API requests instead.
+let integrationPresenceSource: UsersAPI.IntegrationPresenceSource_getUsersQuery = UsersAPI.IntegrationPresenceSource_getUsersQuery.enummember // Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 100.
+let userCustomAttributeSchemaIds: [String] = [""] // Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \"expand\". The maximum number of schemaIds that can be requested is 5
+let state: UsersAPI.State_getUsersQuery = UsersAPI.State_getUsersQuery.enummember // Only list users of this state
+
+// Code example
+UsersAPI.getUsersQuery(cursor: cursor, pageSize: pageSize, sortOrder: sortOrder, expand: expand, integrationPresenceSource: integrationPresenceSource, userCustomAttributeSchemaIds: userCustomAttributeSchemaIds, state: state) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUsersQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **cursor** | **String**| Cursor token to retrieve next page | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: asc ("ASC"), desc ("DESC") |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it's recommended to use specific API requests instead. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), externalcontactssettings ("externalContactsSettings"), groups ("groups"), customattributes ("customAttributes"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin"), datewelcomesent ("dateWelcomeSent") |
+| **integrationPresenceSource** | **String**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 100. | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone"), eightByEight ("EightByEight") |
+| **userCustomAttributeSchemaIds** | [**[String]**](String)| Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \"expand\". The maximum number of schemaIds that can be requested is 5 | [optional] |
+| **state** | **String**| Only list users of this state | [optional]<br />**Values**: active ("active"), inactive ("inactive"), deleted ("deleted"), any ("any") |
+
+
+### Return type
+
+[**UserCursorEntityListing**](UserCursorEntityListing)
+
+
 ## getUsersSearch
 
 
@@ -3571,6 +3687,52 @@ UsersAPI.getUsersSearch(q64: q64, expand: expand, integrationPresenceSource: int
 ### Return type
 
 [**UsersSearchResponse**](UsersSearchResponse)
+
+
+## getUsersStationsMe
+
+
+
+> [UserStations](UserStations) getUsersStationsMe()
+
+Get station information for self
+
+
+
+Wraps GET /api/v2/users/stations/me  
+
+Requires ANY permissions: 
+
+* telephony:selfStationAssociation:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+UsersAPI.getUsersStationsMe() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUsersStationsMe was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**UserStations**](UserStations)
 
 
 ## patchUser
@@ -5830,8 +5992,9 @@ Set associated station
 
 Wraps PUT /api/v2/users/{userId}/station/associatedstation/{stationId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* telephony:otherStationAssociation:edit
 
 ### Example
 
@@ -6026,4 +6189,53 @@ UsersAPI.putUsersCustomattributesSchema(schemaId: schemaId, body: body) { (respo
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatformClientV2@193.0.0_
+## putUsersStationsMeAssociatedstationStationId
+
+
+
+> Void putUsersStationsMeAssociatedstationStationId(stationId)
+
+Set self associated station
+
+
+
+Wraps PUT /api/v2/users/stations/me/associatedstation/{stationId}  
+
+Requires ANY permissions: 
+
+* telephony:selfStationAssociation:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let stationId: String = "" // stationId
+
+// Code example
+UsersAPI.putUsersStationsMeAssociatedstationStationId(stationId: stationId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("UsersAPI.putUsersStationsMeAssociatedstationStationId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **stationId** | **String**| stationId | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+_PureCloudPlatformClientV2@194.0.0_
