@@ -23,6 +23,8 @@
 | **extractedEntities** | [**[ConversationSummaryTopicSummaryExtractedCustomEntity]**]([ConversationSummaryTopicSummaryExtractedCustomEntity]) |  | [optional] |
 | **wrapUpCodes** | [**[ConversationSummaryTopicConversationWrapUpCode]**]([ConversationSummaryTopicConversationWrapUpCode]) |  | [optional] |
 | **triggerSource** | [**ConversationSummaryTopicTriggerSource**](ConversationSummaryTopicTriggerSource) |  | [optional] |
+| **summarySourceType** | **String** |  | [optional] |
+| **triggerType** | **String** |  | [optional] |
 | **lastEditedBy** | [**ConversationSummaryTopicConversationSummaryParticipant**](ConversationSummaryTopicConversationSummaryParticipant) |  | [optional] |
 | **errorType** | **String** |  | [optional] |
 | **durationMs** | **Int64** |  | [optional] |

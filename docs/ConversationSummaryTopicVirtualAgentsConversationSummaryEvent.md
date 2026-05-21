@@ -23,6 +23,8 @@
 | **extractedEntities** | [**[ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity]**]([ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity]) |  | [optional] |
 | **wrapUpCodes** | [**[ConversationSummaryTopicVirtualAgentsConversationWrapUpCode]**]([ConversationSummaryTopicVirtualAgentsConversationWrapUpCode]) |  | [optional] |
 | **triggerSource** | [**ConversationSummaryTopicVirtualAgentsTriggerSource**](ConversationSummaryTopicVirtualAgentsTriggerSource) |  | [optional] |
+| **summarySourceType** | **String** |  | [optional] |
+| **triggerType** | **String** |  | [optional] |
 | **lastEditedBy** | [**ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant**](ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant) |  | [optional] |
 | **errorType** | **String** |  | [optional] |
 | **durationMs** | **Int64** |  | [optional] |
