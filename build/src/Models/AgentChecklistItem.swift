@@ -14,6 +14,8 @@ public class AgentChecklistItem: Codable {
 
 
 
+
+
     /** ID of the checklist item. */
     public var _id: String?
     /** Name of the checklist item. */
@@ -22,16 +24,19 @@ public class AgentChecklistItem: Codable {
     public var _description: String?
     /** Flag to indicate whether automated check is enabled for this checklist item. */
     public var automatedCheckEnabled: Bool?
+    /** Flag to indicate whether exact phrase matching is applicable for this checklist item. */
+    public var exactPhraseMatch: Bool?
     /** Flag to indicate whether this checklist item is marked as important. */
     public var important: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, automatedCheckEnabled: Bool?, important: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, automatedCheckEnabled: Bool?, exactPhraseMatch: Bool?, important: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
         self.automatedCheckEnabled = automatedCheckEnabled
+        self.exactPhraseMatch = exactPhraseMatch
         self.important = important
         self.selfUri = selfUri
     }
@@ -41,6 +46,7 @@ public class AgentChecklistItem: Codable {
         case name
         case _description = "description"
         case automatedCheckEnabled
+        case exactPhraseMatch
         case important
         case selfUri
     }

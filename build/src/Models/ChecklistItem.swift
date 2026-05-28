@@ -12,6 +12,8 @@ public class ChecklistItem: Codable {
 
 
 
+
+
     public enum StateFromModel: String, Codable { 
         case ticked = "Ticked"
         case unticked = "Unticked"
@@ -38,6 +40,8 @@ public class ChecklistItem: Codable {
     public var _description: String?
     /** Flag to indicate whether automated check is enabled for this checklist item. */
     public var automatedCheckEnabled: Bool?
+    /** Flag to indicate whether exact phrase matching is applicable for this checklist item. */
+    public var exactPhraseMatch: Bool?
     /** Flag to indicate whether this checklist item is marked as important. */
     public var important: Bool?
     /** Checklist state as evaluated by the model. */
@@ -53,11 +57,12 @@ public class ChecklistItem: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, automatedCheckEnabled: Bool?, important: Bool?, stateFromModel: StateFromModel?, stateFromAgent: StateFromAgent?, dateLastModifiedByModel: Date?, dateLastModifiedByAgent: Date?, lastModifiedInAcw: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, automatedCheckEnabled: Bool?, exactPhraseMatch: Bool?, important: Bool?, stateFromModel: StateFromModel?, stateFromAgent: StateFromAgent?, dateLastModifiedByModel: Date?, dateLastModifiedByAgent: Date?, lastModifiedInAcw: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
         self.automatedCheckEnabled = automatedCheckEnabled
+        self.exactPhraseMatch = exactPhraseMatch
         self.important = important
         self.stateFromModel = stateFromModel
         self.stateFromAgent = stateFromAgent
@@ -72,6 +77,7 @@ public class ChecklistItem: Codable {
         case name
         case _description = "description"
         case automatedCheckEnabled
+        case exactPhraseMatch
         case important
         case stateFromModel
         case stateFromAgent

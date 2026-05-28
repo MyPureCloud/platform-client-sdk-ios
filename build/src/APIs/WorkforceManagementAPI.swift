@@ -3654,10 +3654,10 @@ open class WorkforceManagementAPI {
         case agentHistoricalAdherenceConformance = "AgentHistoricalAdherenceConformance"
         case agentSchedule = "AgentSchedule"
         case agentAdherenceAdjustments = "AgentAdherenceAdjustments"
-        case agentAdherenceAdjustmentsQuery = "AgentAdherenceAdjustmentsQuery"
         case agentTimeOffRequest = "AgentTimeOffRequest"
         case agentWorkPlanBid = "AgentWorkPlanBid"
         case agentScheduleBid = "AgentScheduleBid"
+        case agentShiftTrade = "AgentShiftTrade"
         case alternativeShift = "AlternativeShift"
         case coaching = "Coaching"
         case learning = "Learning"
@@ -3665,6 +3665,9 @@ open class WorkforceManagementAPI {
         case agentOpportunitiesQuery = "AgentOpportunitiesQuery"
         case agentOpportunitiesEnrollments = "AgentOpportunitiesEnrollments"
         case agentOpportunitiesEnrollmentsStatuses = "AgentOpportunitiesEnrollmentsStatuses"
+        case agentSchedulingPreferencesQuery = "AgentSchedulingPreferencesQuery"
+        case agentSchedulingPreferences = "AgentSchedulingPreferences"
+        case agentSchedulingPreferencesSettings = "AgentSchedulingPreferencesSettings"
         case activityCodes = "ActivityCodes"
         case activityPlans = "ActivityPlans"
         case adherenceAdjustmentsSettings = "AdherenceAdjustmentsSettings"
@@ -3676,6 +3679,7 @@ open class WorkforceManagementAPI {
         case businessUnits = "BusinessUnits"
         case capacityPlan = "CapacityPlan"
         case capacityPlanForecastInputs = "CapacityPlanForecastInputs"
+        case capacityPlanPerformancePrediction = "CapacityPlanPerformancePrediction"
         case continuousForecast = "ContinuousForecast"
         case historicalAdherence = "HistoricalAdherence"
         case historicalShrinkage = "HistoricalShrinkage"
@@ -3707,6 +3711,9 @@ open class WorkforceManagementAPI {
         case opportunitiesExternalActivitiesQuery = "OpportunitiesExternalActivitiesQuery"
         case opportunitiesStatuses = "OpportunitiesStatuses"
         case opportunitiesEnrollmentsStatuses = "OpportunitiesEnrollmentsStatuses"
+        case schedulingPreferencesQuery = "SchedulingPreferencesQuery"
+        case schedulingPreferencesSettings = "SchedulingPreferencesSettings"
+        case decisionMetrics = "DecisionMetrics"
     }
     
     
@@ -3881,6 +3888,98 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<MinimumStaffingResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    public enum Expand_getWorkforcemanagementBusinessunitOpportunity: String { 
+        case agentids = "agentIds"
+    }
+    
+    
+    /**
+     Get opportunity details
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter opportunityId: (path) The ID of the opportunity 
+     - parameter expand: (query) List of resources to expand (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitOpportunity(businessUnitId: String, opportunityId: String, expand: Expand_getWorkforcemanagementBusinessunitOpportunity? = nil, completion: @escaping ((_ data: OpportunityResultWithAgentIds?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitOpportunityWithRequestBuilder(businessUnitId: businessUnitId, opportunityId: opportunityId, expand: expand)
+        requestBuilder.execute { (response: Response<OpportunityResultWithAgentIds>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get opportunity details
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/{opportunityId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "agentIds" : [ "agentIds", "agentIds" ],
+  "endDate" : "2000-01-23T04:56:07.000+00:00",
+  "deadlineDate" : "2000-01-23T04:56:07.000+00:00",
+  "approvalType" : "Automatic",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "capacity" : 6,
+  "activityCodeId" : "activityCodeId",
+  "enrollmentProcessingCount" : 1,
+  "closedDate" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "systemMessageCode" : "ActivityChanged",
+  "id" : "id",
+  "publishedDate" : "2000-01-23T04:56:07.000+00:00",
+  "openDate" : "2000-01-23T04:56:07.000+00:00",
+  "agentCount" : 0,
+  "enrollmentCounts" : "{}",
+  "startDate" : "2000-01-23T04:56:07.000+00:00",
+  "status" : "Draft"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter opportunityId: (path) The ID of the opportunity 
+     - parameter expand: (query) List of resources to expand (optional)
+
+     - returns: RequestBuilder<OpportunityResultWithAgentIds> 
+     */
+    open class func getWorkforcemanagementBusinessunitOpportunityWithRequestBuilder(businessUnitId: String, opportunityId: String, expand: Expand_getWorkforcemanagementBusinessunitOpportunity? = nil) -> RequestBuilder<OpportunityResultWithAgentIds> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/{opportunityId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let opportunityIdPreEscape = "\(opportunityId)"
+        let opportunityIdPostEscape = opportunityIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{opportunityId}", with: opportunityIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<OpportunityResultWithAgentIds>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -7498,10 +7597,10 @@ open class WorkforceManagementAPI {
         case agentHistoricalAdherenceConformance = "AgentHistoricalAdherenceConformance"
         case agentSchedule = "AgentSchedule"
         case agentAdherenceAdjustments = "AgentAdherenceAdjustments"
-        case agentAdherenceAdjustmentsQuery = "AgentAdherenceAdjustmentsQuery"
         case agentTimeOffRequest = "AgentTimeOffRequest"
         case agentWorkPlanBid = "AgentWorkPlanBid"
         case agentScheduleBid = "AgentScheduleBid"
+        case agentShiftTrade = "AgentShiftTrade"
         case alternativeShift = "AlternativeShift"
         case coaching = "Coaching"
         case learning = "Learning"
@@ -7509,6 +7608,9 @@ open class WorkforceManagementAPI {
         case agentOpportunitiesQuery = "AgentOpportunitiesQuery"
         case agentOpportunitiesEnrollments = "AgentOpportunitiesEnrollments"
         case agentOpportunitiesEnrollmentsStatuses = "AgentOpportunitiesEnrollmentsStatuses"
+        case agentSchedulingPreferencesQuery = "AgentSchedulingPreferencesQuery"
+        case agentSchedulingPreferences = "AgentSchedulingPreferences"
+        case agentSchedulingPreferencesSettings = "AgentSchedulingPreferencesSettings"
         case activityCodes = "ActivityCodes"
         case activityPlans = "ActivityPlans"
         case adherenceAdjustmentsSettings = "AdherenceAdjustmentsSettings"
@@ -7520,6 +7622,7 @@ open class WorkforceManagementAPI {
         case businessUnits = "BusinessUnits"
         case capacityPlan = "CapacityPlan"
         case capacityPlanForecastInputs = "CapacityPlanForecastInputs"
+        case capacityPlanPerformancePrediction = "CapacityPlanPerformancePrediction"
         case continuousForecast = "ContinuousForecast"
         case historicalAdherence = "HistoricalAdherence"
         case historicalShrinkage = "HistoricalShrinkage"
@@ -7551,6 +7654,9 @@ open class WorkforceManagementAPI {
         case opportunitiesExternalActivitiesQuery = "OpportunitiesExternalActivitiesQuery"
         case opportunitiesStatuses = "OpportunitiesStatuses"
         case opportunitiesEnrollmentsStatuses = "OpportunitiesEnrollmentsStatuses"
+        case schedulingPreferencesQuery = "SchedulingPreferencesQuery"
+        case schedulingPreferencesSettings = "SchedulingPreferencesSettings"
+        case decisionMetrics = "DecisionMetrics"
     }
     
     
@@ -8602,6 +8708,7 @@ open class WorkforceManagementAPI {
     /**
      Gets all the shift trades for a given agent
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}/shifttrades
+     - Deprecated. Use new route instead (/businessunits/{businessUnitId}/shifttrading/trades/query/jobs)
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -8701,6 +8808,7 @@ open class WorkforceManagementAPI {
     /**
      Gets a summary of all shift trades in the matched state
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/shifttrades/matched
+     - Deprecated. Use new route instead (/businessunits/{businessUnitId}/shifttrading/weeks/summary/jobs)
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -9674,6 +9782,7 @@ open class WorkforceManagementAPI {
     /**
      Gets all the shift trades for a given week
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades
+     - Deprecated. Use new route instead (/businessunits/{businessUnitId}/shifttrading/trades/evaluate/jobs)
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -10584,10 +10693,10 @@ open class WorkforceManagementAPI {
         case agentHistoricalAdherenceConformance = "AgentHistoricalAdherenceConformance"
         case agentSchedule = "AgentSchedule"
         case agentAdherenceAdjustments = "AgentAdherenceAdjustments"
-        case agentAdherenceAdjustmentsQuery = "AgentAdherenceAdjustmentsQuery"
         case agentTimeOffRequest = "AgentTimeOffRequest"
         case agentWorkPlanBid = "AgentWorkPlanBid"
         case agentScheduleBid = "AgentScheduleBid"
+        case agentShiftTrade = "AgentShiftTrade"
         case alternativeShift = "AlternativeShift"
         case coaching = "Coaching"
         case learning = "Learning"
@@ -10595,6 +10704,9 @@ open class WorkforceManagementAPI {
         case agentOpportunitiesQuery = "AgentOpportunitiesQuery"
         case agentOpportunitiesEnrollments = "AgentOpportunitiesEnrollments"
         case agentOpportunitiesEnrollmentsStatuses = "AgentOpportunitiesEnrollmentsStatuses"
+        case agentSchedulingPreferencesQuery = "AgentSchedulingPreferencesQuery"
+        case agentSchedulingPreferences = "AgentSchedulingPreferences"
+        case agentSchedulingPreferencesSettings = "AgentSchedulingPreferencesSettings"
         case activityCodes = "ActivityCodes"
         case activityPlans = "ActivityPlans"
         case adherenceAdjustmentsSettings = "AdherenceAdjustmentsSettings"
@@ -10606,6 +10718,7 @@ open class WorkforceManagementAPI {
         case businessUnits = "BusinessUnits"
         case capacityPlan = "CapacityPlan"
         case capacityPlanForecastInputs = "CapacityPlanForecastInputs"
+        case capacityPlanPerformancePrediction = "CapacityPlanPerformancePrediction"
         case continuousForecast = "ContinuousForecast"
         case historicalAdherence = "HistoricalAdherence"
         case historicalShrinkage = "HistoricalShrinkage"
@@ -10637,6 +10750,9 @@ open class WorkforceManagementAPI {
         case opportunitiesExternalActivitiesQuery = "OpportunitiesExternalActivitiesQuery"
         case opportunitiesStatuses = "OpportunitiesStatuses"
         case opportunitiesEnrollmentsStatuses = "OpportunitiesEnrollmentsStatuses"
+        case schedulingPreferencesQuery = "SchedulingPreferencesQuery"
+        case schedulingPreferencesSettings = "SchedulingPreferencesSettings"
+        case decisionMetrics = "DecisionMetrics"
     }
     
     
@@ -10995,6 +11111,7 @@ open class WorkforceManagementAPI {
     /**
      Gets all of my shift trades
      - GET /api/v2/workforcemanagement/shifttrades
+     - Deprecated. Use new route instead (/shifttrading/trades/mine/query/jobs)
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -13139,6 +13256,91 @@ open class WorkforceManagementAPI {
     
     
     /**
+     Update the opportunity
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter opportunityId: (path) The ID of the opportunity 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitOpportunity(businessUnitId: String, opportunityId: String, body: PatchOpportunityRequest, completion: @escaping ((_ data: OpportunityResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitOpportunityWithRequestBuilder(businessUnitId: businessUnitId, opportunityId: opportunityId, body: body)
+        requestBuilder.execute { (response: Response<OpportunityResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the opportunity
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/{opportunityId}
+     - Only opportunities with Draft status can be updated.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "endDate" : "2000-01-23T04:56:07.000+00:00",
+  "deadlineDate" : "2000-01-23T04:56:07.000+00:00",
+  "approvalType" : "Automatic",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "capacity" : 6,
+  "activityCodeId" : "activityCodeId",
+  "enrollmentProcessingCount" : 1,
+  "closedDate" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "systemMessageCode" : "ActivityChanged",
+  "id" : "id",
+  "publishedDate" : "2000-01-23T04:56:07.000+00:00",
+  "openDate" : "2000-01-23T04:56:07.000+00:00",
+  "agentCount" : 0,
+  "enrollmentCounts" : "{}",
+  "startDate" : "2000-01-23T04:56:07.000+00:00",
+  "status" : "Draft"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter opportunityId: (path) The ID of the opportunity 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<OpportunityResult> 
+     */
+    open class func patchWorkforcemanagementBusinessunitOpportunityWithRequestBuilder(businessUnitId: String, opportunityId: String, body: PatchOpportunityRequest) -> RequestBuilder<OpportunityResult> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/{opportunityId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let opportunityIdPreEscape = "\(opportunityId)"
+        let opportunityIdPostEscape = opportunityIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{opportunityId}", with: opportunityIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OpportunityResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
      Updates the planning group
      
      - parameter businessUnitId: (path) The ID of the business unit. 
@@ -13167,6 +13369,7 @@ open class WorkforceManagementAPI {
     /**
      Updates the planning group
      - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}
+     - If the request body contains queue references in route paths, routing:queue:view is required in each referenced queue's division.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -14441,6 +14644,7 @@ open class WorkforceManagementAPI {
     /**
      Updates a shift trade. This route can only be called by the initiating agent
      - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}
+     - Deprecated. Use new route instead (/shifttrading/trades/{tradeId}/jobs)
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -15269,62 +15473,6 @@ open class WorkforceManagementAPI {
     
     
     /**
-     Deprecated. Use bulk routes instead (/adherence/historical/bulk)
-     
-     - parameter body: (body) body (optional)
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func postWorkforcemanagementAdherenceHistorical(body: WfmHistoricalAdherenceQueryForUsers? = nil, completion: @escaping ((_ data: WfmHistoricalAdherenceResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementAdherenceHistoricalWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<WfmHistoricalAdherenceResponse>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Deprecated. Use bulk routes instead (/adherence/historical/bulk)
-     - POST /api/v2/workforcemanagement/adherence/historical
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "downloadResult" : "{}",
-  "downloadUrls" : [ "downloadUrls", "downloadUrls" ],
-  "downloadUrl" : "downloadUrl",
-  "queryState" : "Processing",
-  "id" : "id"
-}, statusCode=202}]
-     
-     - parameter body: (body) body (optional)
-
-     - returns: RequestBuilder<WfmHistoricalAdherenceResponse> 
-     */
-    open class func postWorkforcemanagementAdherenceHistoricalWithRequestBuilder(body: WfmHistoricalAdherenceQueryForUsers? = nil) -> RequestBuilder<WfmHistoricalAdherenceResponse> {        
-        let path = "/api/v2/workforcemanagement/adherence/historical"
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<WfmHistoricalAdherenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
-    }
-
-    
-    
-    /**
      Request a historical adherence report in bulk
      
      - parameter body: (body) body 
@@ -15868,6 +16016,200 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AgentPossibleWorkShiftsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Bulk add enrollments to opportunities for the authenticated agent
+     
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkAdd(body: AgentBulkAddOpportunityEnrollmentsRequest, completion: @escaping ((_ data: AgentBulkAddOpportunityEnrollmentsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkAddWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AgentBulkAddOpportunityEnrollmentsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk add enrollments to opportunities for the authenticated agent
+     - POST /api/v2/workforcemanagement/agents/opportunities/enrollments/bulk/add
+     - Allows an agent to enroll in opportunities. This endpoint can return partial success.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "results" : [ {
+    "error" : "{}",
+    "status" : "Complete",
+    "enrollment" : "{}"
+  }, {
+    "error" : "{}",
+    "status" : "Complete",
+    "enrollment" : "{}"
+  } ],
+  "errorCount" : 0
+}, statusCode=200}]
+     
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<AgentBulkAddOpportunityEnrollmentsResponse> 
+     */
+    open class func postWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkAddWithRequestBuilder(body: AgentBulkAddOpportunityEnrollmentsRequest) -> RequestBuilder<AgentBulkAddOpportunityEnrollmentsResponse> {        
+        let path = "/api/v2/workforcemanagement/agents/opportunities/enrollments/bulk/add"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentBulkAddOpportunityEnrollmentsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Bulk update enrollment status for the authenticated agent
+     
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkStatusesUpdate(body: AgentBulkStatusUpdateOpportunityEnrollmentsRequest, completion: @escaping ((_ data: AgentBulkStatusUpdateOpportunityEnrollmentsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkStatusesUpdateWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AgentBulkStatusUpdateOpportunityEnrollmentsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk update enrollment status for the authenticated agent
+     - POST /api/v2/workforcemanagement/agents/opportunities/enrollments/bulk/statuses/update
+     - Allows an agent to update the status of their enrollments (e.g. withdraw). Returns partial success if some enrollments cannot be updated.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "results" : [ {
+    "error" : "{}",
+    "status" : "Complete",
+    "enrollment" : "{}"
+  }, {
+    "error" : "{}",
+    "status" : "Complete",
+    "enrollment" : "{}"
+  } ],
+  "errorCount" : 0
+}, statusCode=200}]
+     
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<AgentBulkStatusUpdateOpportunityEnrollmentsResponse> 
+     */
+    open class func postWorkforcemanagementAgentsOpportunitiesEnrollmentsBulkStatusesUpdateWithRequestBuilder(body: AgentBulkStatusUpdateOpportunityEnrollmentsRequest) -> RequestBuilder<AgentBulkStatusUpdateOpportunityEnrollmentsResponse> {        
+        let path = "/api/v2/workforcemanagement/agents/opportunities/enrollments/bulk/statuses/update"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentBulkStatusUpdateOpportunityEnrollmentsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    public enum Expand_postWorkforcemanagementAgentsOpportunitiesQuery: String { 
+        case enrollment = "enrollment"
+    }
+    
+    
+    
+    
+    /**
+     Query opportunities for the authenticated agent
+     
+     - parameter body: (body) body 
+     - parameter expand: (query) List of resources to expand (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAgentsOpportunitiesQuery(body: QueryOpportunitiesRequest, expand: Expand_postWorkforcemanagementAgentsOpportunitiesQuery? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: AgentQueryOpportunitiesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAgentsOpportunitiesQueryWithRequestBuilder(body: body, expand: expand, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<AgentQueryOpportunitiesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query opportunities for the authenticated agent
+     - POST /api/v2/workforcemanagement/agents/opportunities/query
+     - Queries within the specified date range. Each opportunity includes the agent's enrollment details if they have enrolled.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "downloadUrl" : "downloadUrl"
+}, statusCode=200}]
+     
+     - parameter body: (body) body 
+     - parameter expand: (query) List of resources to expand (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<AgentQueryOpportunitiesResponse> 
+     */
+    open class func postWorkforcemanagementAgentsOpportunitiesQueryWithRequestBuilder(body: QueryOpportunitiesRequest, expand: Expand_postWorkforcemanagementAgentsOpportunitiesQuery? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<AgentQueryOpportunitiesResponse> {        
+        let path = "/api/v2/workforcemanagement/agents/opportunities/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand?.rawValue, 
+            "forceDownloadService": forceDownloadService
+        ])
+
+        let requestBuilder: RequestBuilder<AgentQueryOpportunitiesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -17537,6 +17879,590 @@ open class WorkforceManagementAPI {
     
     
     /**
+     Bulk add opportunities
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitOpportunitiesBulkAdd(businessUnitId: String, body: BulkAddOpportunitiesRequest, completion: @escaping ((_ data: BulkAddOpportunitiesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitOpportunitiesBulkAddWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<BulkAddOpportunitiesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk add opportunities
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/bulk/add
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "opportunities" : [ {
+    "metadata" : "{}",
+    "endDate" : "2000-01-23T04:56:07.000+00:00",
+    "deadlineDate" : "2000-01-23T04:56:07.000+00:00",
+    "approvalType" : "Automatic",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "capacity" : 6,
+    "activityCodeId" : "activityCodeId",
+    "enrollmentProcessingCount" : 1,
+    "closedDate" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "systemMessageCode" : "ActivityChanged",
+    "id" : "id",
+    "publishedDate" : "2000-01-23T04:56:07.000+00:00",
+    "openDate" : "2000-01-23T04:56:07.000+00:00",
+    "agentCount" : 0,
+    "enrollmentCounts" : "{}",
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "Draft"
+  }, {
+    "metadata" : "{}",
+    "endDate" : "2000-01-23T04:56:07.000+00:00",
+    "deadlineDate" : "2000-01-23T04:56:07.000+00:00",
+    "approvalType" : "Automatic",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "capacity" : 6,
+    "activityCodeId" : "activityCodeId",
+    "enrollmentProcessingCount" : 1,
+    "closedDate" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "systemMessageCode" : "ActivityChanged",
+    "id" : "id",
+    "publishedDate" : "2000-01-23T04:56:07.000+00:00",
+    "openDate" : "2000-01-23T04:56:07.000+00:00",
+    "agentCount" : 0,
+    "enrollmentCounts" : "{}",
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "Draft"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BulkAddOpportunitiesResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitOpportunitiesBulkAddWithRequestBuilder(businessUnitId: String, body: BulkAddOpportunitiesRequest) -> RequestBuilder<BulkAddOpportunitiesResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/bulk/add"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkAddOpportunitiesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Bulk publish opportunities
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitOpportunitiesBulkPublish(businessUnitId: String, body: BulkOpportunitiesRequest, completion: @escaping ((_ data: BulkPublishOpportunitiesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitOpportunitiesBulkPublishWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<BulkPublishOpportunitiesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk publish opportunities
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/bulk/publish
+     - Published opportunities become available for agent enrollment when they open. Returns partial success if some opportunities cannot be published.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "results" : [ {
+    "opportunity" : "{}",
+    "error" : "{}",
+    "status" : "Complete"
+  }, {
+    "opportunity" : "{}",
+    "error" : "{}",
+    "status" : "Complete"
+  } ],
+  "errorCount" : 0
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BulkPublishOpportunitiesResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitOpportunitiesBulkPublishWithRequestBuilder(businessUnitId: String, body: BulkOpportunitiesRequest) -> RequestBuilder<BulkPublishOpportunitiesResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/bulk/publish"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkPublishOpportunitiesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Bulk remove opportunities
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitOpportunitiesBulkRemove(businessUnitId: String, body: BulkOpportunitiesRequest, completion: @escaping ((_ data: BulkRemoveOpportunitiesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitOpportunitiesBulkRemoveWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<BulkRemoveOpportunitiesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk remove opportunities
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/bulk/remove
+     - This operation is permanent and cannot be undone. Returns partial success if some opportunities cannot be removed.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "results" : [ {
+    "opportunityId" : "opportunityId",
+    "error" : "{}",
+    "status" : "Complete"
+  }, {
+    "opportunityId" : "opportunityId",
+    "error" : "{}",
+    "status" : "Complete"
+  } ],
+  "errorCount" : 0
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BulkRemoveOpportunitiesResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitOpportunitiesBulkRemoveWithRequestBuilder(businessUnitId: String, body: BulkOpportunitiesRequest) -> RequestBuilder<BulkRemoveOpportunitiesResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/bulk/remove"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkRemoveOpportunitiesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Bulk update opportunities status
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitOpportunitiesBulkStatusesUpdate(businessUnitId: String, body: BulkOpportunitiesStatusUpdateRequest, completion: @escaping ((_ data: BulkOpportunitiesStatusUpdateResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitOpportunitiesBulkStatusesUpdateWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<BulkOpportunitiesStatusUpdateResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk update opportunities status
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/bulk/statuses/update
+     - If status is Closed, pending enrollments are automatically denied; approved enrollments remain in schedules. Returns partial success if some opportunities cannot be updated.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "results" : [ {
+    "opportunity" : "{}",
+    "error" : "{}",
+    "status" : "Complete"
+  }, {
+    "opportunity" : "{}",
+    "error" : "{}",
+    "status" : "Complete"
+  } ],
+  "errorCount" : 0
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BulkOpportunitiesStatusUpdateResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitOpportunitiesBulkStatusesUpdateWithRequestBuilder(businessUnitId: String, body: BulkOpportunitiesStatusUpdateRequest) -> RequestBuilder<BulkOpportunitiesStatusUpdateResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/bulk/statuses/update"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkOpportunitiesStatusUpdateResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Bulk update enrollment status
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitOpportunitiesEnrollmentsBulkStatusesUpdate(businessUnitId: String, body: BulkOpportunityEnrollmentsStatusUpdateRequest, completion: @escaping ((_ data: BulkUpdateOpportunityEnrollmentsStatusResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitOpportunitiesEnrollmentsBulkStatusesUpdateWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<BulkUpdateOpportunityEnrollmentsStatusResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk update enrollment status
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/enrollments/bulk/statuses/update
+     - Updates the status of enrollments (approve/deny). Returns partial success if some enrollments cannot be updated.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "results" : [ {
+    "error" : "{}",
+    "status" : "Complete",
+    "enrollment" : "{}"
+  }, {
+    "error" : "{}",
+    "status" : "Complete",
+    "enrollment" : "{}"
+  } ],
+  "errorCount" : 0
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BulkUpdateOpportunityEnrollmentsStatusResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitOpportunitiesEnrollmentsBulkStatusesUpdateWithRequestBuilder(businessUnitId: String, body: BulkOpportunityEnrollmentsStatusUpdateRequest) -> RequestBuilder<BulkUpdateOpportunityEnrollmentsStatusResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/enrollments/bulk/statuses/update"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkUpdateOpportunityEnrollmentsStatusResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    public enum Expand_postWorkforcemanagementBusinessunitOpportunitiesEnrollmentsQuery: String { 
+        case opportunities = "opportunities"
+    }
+    
+    
+    
+    
+    /**
+     Query enrollments
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter expand: (query) List of resources to expand (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitOpportunitiesEnrollmentsQuery(businessUnitId: String, body: QueryOpportunityEnrollmentsRequest, expand: Expand_postWorkforcemanagementBusinessunitOpportunitiesEnrollmentsQuery? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: QueryOpportunityEnrollmentsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitOpportunitiesEnrollmentsQueryWithRequestBuilder(businessUnitId: businessUnitId, body: body, expand: expand, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<QueryOpportunityEnrollmentsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query enrollments
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/enrollments/query
+     - For more information about opportunities, use the expand parameter.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "downloadUrl" : "downloadUrl"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter expand: (query) List of resources to expand (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<QueryOpportunityEnrollmentsResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitOpportunitiesEnrollmentsQueryWithRequestBuilder(businessUnitId: String, body: QueryOpportunityEnrollmentsRequest, expand: Expand_postWorkforcemanagementBusinessunitOpportunitiesEnrollmentsQuery? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<QueryOpportunityEnrollmentsResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/enrollments/query"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand?.rawValue, 
+            "forceDownloadService": forceDownloadService
+        ])
+
+        let requestBuilder: RequestBuilder<QueryOpportunityEnrollmentsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Query opportunities by external activity IDs
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitOpportunitiesExternalactivitiesQuery(businessUnitId: String, body: BulkOpportunitiesExternalActivitiesRequest, completion: @escaping ((_ data: QueryExternalActivityOpportunitiesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitOpportunitiesExternalactivitiesQueryWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<QueryExternalActivityOpportunitiesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query opportunities by external activity IDs
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/externalactivities/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "externalActivities" : [ {
+    "opportunityName" : "opportunityName",
+    "id" : "id"
+  }, {
+    "opportunityName" : "opportunityName",
+    "id" : "id"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<QueryExternalActivityOpportunitiesResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitOpportunitiesExternalactivitiesQueryWithRequestBuilder(businessUnitId: String, body: BulkOpportunitiesExternalActivitiesRequest) -> RequestBuilder<QueryExternalActivityOpportunitiesResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/externalactivities/query"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<QueryExternalActivityOpportunitiesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Query opportunities within the specified date range
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitOpportunitiesQuery(businessUnitId: String, body: QueryOpportunitiesRequest, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: QueryOpportunitiesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitOpportunitiesQueryWithRequestBuilder(businessUnitId: businessUnitId, body: body, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<QueryOpportunitiesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query opportunities within the specified date range
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "downloadUrl" : "downloadUrl"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<QueryOpportunitiesResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitOpportunitiesQueryWithRequestBuilder(businessUnitId: String, body: QueryOpportunitiesRequest, forceDownloadService: Bool? = nil) -> RequestBuilder<QueryOpportunitiesResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/opportunities/query"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceDownloadService": forceDownloadService
+        ])
+
+        let requestBuilder: RequestBuilder<QueryOpportunitiesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Adds a new planning group
      
      - parameter businessUnitId: (path) The ID of the business unit. 
@@ -17564,6 +18490,7 @@ open class WorkforceManagementAPI {
     /**
      Adds a new planning group
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups
+     - If the request body contains queue references in route paths, routing:queue:view is required in each referenced queue's division.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -21655,6 +22582,7 @@ open class WorkforceManagementAPI {
     /**
      Matches a shift trade. This route can only be called by the receiving agent
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match
+     - Deprecated. Use new route instead (/shifttrading/trades/{tradeId}/match/jobs)
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -21748,6 +22676,7 @@ open class WorkforceManagementAPI {
     /**
      Adds a shift trade
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades
+     - Deprecated. Use new route instead (/shifttrading/trades/jobs)
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -21835,6 +22764,7 @@ open class WorkforceManagementAPI {
     /**
      Searches for potential shift trade matches for the current agent
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/search
+     - Deprecated. Use new route instead (/businessunits/{businessUnitId}/shifttrading/unmatched/search/jobs)
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -21917,7 +22847,7 @@ open class WorkforceManagementAPI {
     /**
      Updates the state of a batch of shift trades
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/state/bulk
-     - Admin functionality is not supported with \"mine\".
+     - Admin functionality is not supported with \"mine\". Deprecated. Use new route instead (/businessunits/{buId}/shifttrading/trades/state/bulk/jobs)
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

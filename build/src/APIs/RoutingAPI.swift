@@ -617,6 +617,96 @@ open class RoutingAPI {
     
     
     /**
+     Archive a skill expression to remove it from the set of active expressions
+     
+     - parameter expressionId: (path) Expression ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteRoutingSkillexpression(expressionId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteRoutingSkillexpressionWithRequestBuilder(expressionId: expressionId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Archive a skill expression to remove it from the set of active expressions
+     - DELETE /api/v2/routing/skillexpressions/{expressionId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter expressionId: (path) Expression ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteRoutingSkillexpressionWithRequestBuilder(expressionId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/routing/skillexpressions/{expressionId}"
+        let expressionIdPreEscape = "\(expressionId)"
+        let expressionIdPostEscape = expressionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{expressionId}", with: expressionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Archive a set of skill expressions to remove them from the set of active expressions
+     
+     - parameter _id: (query) Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteRoutingSkillexpressions(_id: [String]? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteRoutingSkillexpressionsWithRequestBuilder(_id: _id)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Archive a set of skill expressions to remove them from the set of active expressions
+     - DELETE /api/v2/routing/skillexpressions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter _id: (query) Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteRoutingSkillexpressionsWithRequestBuilder(_id: [String]? = nil) -> RequestBuilder<Void> {        
+        let path = "/api/v2/routing/skillexpressions"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "id": _id
+        ])
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Remove skill group definition
      
      - parameter skillGroupId: (path) Skill Group ID 
@@ -1590,6 +1680,7 @@ open class RoutingAPI {
   "mailFromSettings" : "{}",
   "subDomain" : true,
   "emailSetting" : "{}",
+  "dmarcVerificationResult" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "mxRecordStatus" : "VALID",
@@ -2198,6 +2289,7 @@ open class RoutingAPI {
     "mailFromSettings" : "{}",
     "subDomain" : true,
     "emailSetting" : "{}",
+    "dmarcVerificationResult" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "mxRecordStatus" : "VALID",
@@ -2209,6 +2301,7 @@ open class RoutingAPI {
     "mailFromSettings" : "{}",
     "subDomain" : true,
     "emailSetting" : "{}",
+    "dmarcVerificationResult" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "mxRecordStatus" : "VALID",
@@ -2293,6 +2386,7 @@ open class RoutingAPI {
   "cnameVerificationResult" : "{}",
   "emailSetting" : "{}",
   "dkimVerificationResult" : "{}",
+  "dmarcVerificationResult" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "senderType" : "Unknown",
@@ -2358,6 +2452,7 @@ open class RoutingAPI {
   "senderStatus" : "RequestReceived",
   "emailSetting" : "{}",
   "domainName" : "domainName",
+  "dmarcVerificationResult" : "{}",
   "senderType" : "Unknown",
   "dnsTxtSendingRecord" : {
     "recordContents" : "recordContents",
@@ -2443,6 +2538,7 @@ open class RoutingAPI {
     "cnameVerificationResult" : "{}",
     "emailSetting" : "{}",
     "dkimVerificationResult" : "{}",
+    "dmarcVerificationResult" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "senderType" : "Unknown",
@@ -2451,6 +2547,7 @@ open class RoutingAPI {
     "cnameVerificationResult" : "{}",
     "emailSetting" : "{}",
     "dkimVerificationResult" : "{}",
+    "dmarcVerificationResult" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "senderType" : "Unknown",
@@ -7209,6 +7306,266 @@ open class RoutingAPI {
 
     
     
+    
+    
+    
+    public enum Format_getRoutingSkillexpression: String { 
+        case raw = "Raw"
+        case normalized = "Normalized"
+    }
+    
+    
+    /**
+     Get a skill expression by ID
+     
+     - parameter expressionId: (path) Expression ID 
+     - parameter includeArchived: (query) Include archived (optional)
+     - parameter format: (query) Response format: raw expression or normalized (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingSkillexpression(expressionId: String, includeArchived: Bool? = nil, format: Format_getRoutingSkillexpression? = nil, completion: @escaping ((_ data: SkillExpression?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingSkillexpressionWithRequestBuilder(expressionId: expressionId, includeArchived: includeArchived, format: format)
+        requestBuilder.execute { (response: Response<SkillExpression>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a skill expression by ID
+     - GET /api/v2/routing/skillexpressions/{expressionId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "queueId" : "queueId",
+  "expression" : "expression",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter expressionId: (path) Expression ID 
+     - parameter includeArchived: (query) Include archived (optional)
+     - parameter format: (query) Response format: raw expression or normalized (optional)
+
+     - returns: RequestBuilder<SkillExpression> 
+     */
+    open class func getRoutingSkillexpressionWithRequestBuilder(expressionId: String, includeArchived: Bool? = nil, format: Format_getRoutingSkillexpression? = nil) -> RequestBuilder<SkillExpression> {        
+        var path = "/api/v2/routing/skillexpressions/{expressionId}"
+        let expressionIdPreEscape = "\(expressionId)"
+        let expressionIdPostEscape = expressionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{expressionId}", with: expressionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeArchived": includeArchived, 
+            "format": format?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<SkillExpression>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    public enum Format_getRoutingSkillexpressions: String { 
+        case raw = "Raw"
+        case normalized = "Normalized"
+    }
+    
+    
+    
+    
+    
+    
+    /**
+     Get skill expressions
+     
+     - parameter format: (query) Response format: raw expression or normalized (optional)
+     - parameter includeArchived: (query) Include archived (optional)
+     - parameter _id: (query) Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingSkillexpressions(format: Format_getRoutingSkillexpressions? = nil, includeArchived: Bool? = nil, _id: [String]? = nil, completion: @escaping ((_ data: SkillExpressionEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingSkillexpressionsWithRequestBuilder(format: format, includeArchived: includeArchived, _id: _id)
+        requestBuilder.execute { (response: Response<SkillExpressionEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get skill expressions
+     - GET /api/v2/routing/skillexpressions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "queueId" : "queueId",
+    "expression" : "expression",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "queueId" : "queueId",
+    "expression" : "expression",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter format: (query) Response format: raw expression or normalized (optional)
+     - parameter includeArchived: (query) Include archived (optional)
+     - parameter _id: (query) Expression ID(s) to filter. Repeat for multiple or use comma-separated list. (optional)
+
+     - returns: RequestBuilder<SkillExpressionEntityListing> 
+     */
+    open class func getRoutingSkillexpressionsWithRequestBuilder(format: Format_getRoutingSkillexpressions? = nil, includeArchived: Bool? = nil, _id: [String]? = nil) -> RequestBuilder<SkillExpressionEntityListing> {        
+        let path = "/api/v2/routing/skillexpressions"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "format": format?.rawValue, 
+            "includeArchived": includeArchived, 
+            "id": _id
+        ])
+
+        let requestBuilder: RequestBuilder<SkillExpressionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    public enum Format_getRoutingSkillexpressionsQueueQueueId: String { 
+        case raw = "Raw"
+        case normalized = "Normalized"
+    }
+    
+    
+    
+    
+    /**
+     Get skill expressions associated with a queue
+     
+     - parameter queueId: (path) Queue ID 
+     - parameter format: (query) Response format: raw expression or normalized (optional)
+     - parameter includeArchived: (query) Include archived (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingSkillexpressionsQueueQueueId(queueId: String, format: Format_getRoutingSkillexpressionsQueueQueueId? = nil, includeArchived: Bool? = nil, completion: @escaping ((_ data: SkillExpressionEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingSkillexpressionsQueueQueueIdWithRequestBuilder(queueId: queueId, format: format, includeArchived: includeArchived)
+        requestBuilder.execute { (response: Response<SkillExpressionEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get skill expressions associated with a queue
+     - GET /api/v2/routing/skillexpressions/queue/{queueId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "queueId" : "queueId",
+    "expression" : "expression",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "queueId" : "queueId",
+    "expression" : "expression",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter queueId: (path) Queue ID 
+     - parameter format: (query) Response format: raw expression or normalized (optional)
+     - parameter includeArchived: (query) Include archived (optional)
+
+     - returns: RequestBuilder<SkillExpressionEntityListing> 
+     */
+    open class func getRoutingSkillexpressionsQueueQueueIdWithRequestBuilder(queueId: String, format: Format_getRoutingSkillexpressionsQueueQueueId? = nil, includeArchived: Bool? = nil) -> RequestBuilder<SkillExpressionEntityListing> {        
+        var path = "/api/v2/routing/skillexpressions/queue/{queueId}"
+        let queueIdPreEscape = "\(queueId)"
+        let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{queueId}", with: queueIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "format": format?.rawValue, 
+            "includeArchived": includeArchived
+        ])
+
+        let requestBuilder: RequestBuilder<SkillExpressionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Get skill group
      
@@ -9818,6 +10175,7 @@ open class RoutingAPI {
     "state" : "active",
     "version" : "version"
   } ],
+  "skillExpression" : "skillExpression",
   "language" : "{}",
   "label" : "{}",
   "scoredAgents" : [ {
@@ -9827,7 +10185,8 @@ open class RoutingAPI {
     "score" : 6,
     "agent" : "{}"
   } ],
-  "priority" : 0
+  "priority" : 0,
+  "skillExpressionId" : "skillExpressionId"
 }, statusCode=200}]
      
      - parameter conversationId: (path) Conversation ID 
@@ -9891,6 +10250,7 @@ open class RoutingAPI {
   "mailFromSettings" : "{}",
   "subDomain" : true,
   "emailSetting" : "{}",
+  "dmarcVerificationResult" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "mxRecordStatus" : "VALID",
@@ -9959,6 +10319,7 @@ open class RoutingAPI {
   "mailFromSettings" : "{}",
   "subDomain" : true,
   "emailSetting" : "{}",
+  "dmarcVerificationResult" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "mxRecordStatus" : "VALID",
@@ -10025,6 +10386,7 @@ open class RoutingAPI {
   "cnameVerificationResult" : "{}",
   "emailSetting" : "{}",
   "dkimVerificationResult" : "{}",
+  "dmarcVerificationResult" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "senderType" : "Unknown",
@@ -13735,6 +14097,7 @@ open class RoutingAPI {
   "mailFromSettings" : "{}",
   "subDomain" : true,
   "emailSetting" : "{}",
+  "dmarcVerificationResult" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "mxRecordStatus" : "VALID",
@@ -13866,6 +14229,7 @@ open class RoutingAPI {
   "senderStatus" : "RequestReceived",
   "emailSetting" : "{}",
   "domainName" : "domainName",
+  "dmarcVerificationResult" : "{}",
   "senderType" : "Unknown",
   "dnsTxtSendingRecord" : {
     "recordContents" : "recordContents",
@@ -13931,6 +14295,7 @@ open class RoutingAPI {
   "senderStatus" : "RequestReceived",
   "emailSetting" : "{}",
   "domainName" : "domainName",
+  "dmarcVerificationResult" : "{}",
   "senderType" : "Unknown",
   "dnsTxtSendingRecord" : {
     "recordContents" : "recordContents",
@@ -14445,6 +14810,78 @@ open class RoutingAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Queue>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Validate and normalize a skill expression
+     
+     - parameter body: (body) Skill expression data to validate 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRoutingSkillexpressionsValidate(body: SkillExpressionData, completion: @escaping ((_ data: SkillExpressionValidationResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingSkillexpressionsValidateWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<SkillExpressionValidationResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Validate and normalize a skill expression
+     - POST /api/v2/routing/skillexpressions/validate
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "valid" : true,
+  "skills" : [ {
+    "isLanguageSkill" : false,
+    "name" : "Skill-1",
+    "id" : "12345678-1234-1234-1234-123456789012"
+  }, {
+    "isLanguageSkill" : false,
+    "name" : "Skill-1",
+    "id" : "12345678-1234-1234-1234-123456789012"
+  } ],
+  "expression" : "#Skill[\"uuid1\"] > 5 && #Skill[\"uuid2\"] >= 0",
+  "hint" : "hint",
+  "errors" : [ {
+    "code" : "SYNTAX_ERROR",
+    "position" : 15,
+    "message" : "Invalid SpEL expression: unexpected token"
+  }, {
+    "code" : "SYNTAX_ERROR",
+    "position" : 15,
+    "message" : "Invalid SpEL expression: unexpected token"
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) Skill expression data to validate 
+
+     - returns: RequestBuilder<SkillExpressionValidationResult> 
+     */
+    open class func postRoutingSkillexpressionsValidateWithRequestBuilder(body: SkillExpressionData) -> RequestBuilder<SkillExpressionValidationResult> {        
+        let path = "/api/v2/routing/skillexpressions/validate"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SkillExpressionValidationResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -15384,6 +15821,7 @@ open class RoutingAPI {
   "senderStatus" : "RequestReceived",
   "emailSetting" : "{}",
   "domainName" : "domainName",
+  "dmarcVerificationResult" : "{}",
   "senderType" : "Unknown",
   "dnsTxtSendingRecord" : {
     "recordContents" : "recordContents",

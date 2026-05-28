@@ -29,11 +29,11 @@ public class PatchAction: Codable {
     public var mediaType: MediaType?
     /** Action template associated with the action map. */
     public var actionTemplate: ActionMapActionTemplate?
-    /** Action target ID. */
+    /** Deprecated. Action target ID. */
     public var actionTargetId: String?
-    /** Whether this action should be throttled. */
+    /** Deprecated. Whether this action should be throttled. */
     public var isPacingEnabled: Bool?
-    /** Additional properties. */
+    /** Deprecated. Additional properties. */
     public var props: PatchActionProperties?
     /** Architect Flow Id and input contract. */
     public var architectFlowFields: ArchitectFlowFields?

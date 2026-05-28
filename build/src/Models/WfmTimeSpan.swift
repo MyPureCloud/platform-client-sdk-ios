@@ -1,6 +1,6 @@
 
 
-public class UnavailableTimesTimeSpan: Codable {
+public class WfmTimeSpan: Codable {
 
 
 

@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** | The globally unique identifier for the object. | [optional] |
+| **_id** | **String** | The globally unique identifier for the object. | |
 | **name** | **String** | The name of the activity plan | |
 | **managementUnits** | [**[ManagementUnitReference]**]([ManagementUnitReference]) | The management units to which this activity plan applies. Empty list or null means this activity plan applies to the entire business unit | [optional] |
 | **_description** | **String** | The description of this activity plan | |
@@ -35,4 +35,4 @@
 
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_

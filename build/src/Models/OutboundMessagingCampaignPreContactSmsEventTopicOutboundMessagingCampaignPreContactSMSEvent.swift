@@ -35,6 +35,8 @@ public class OutboundMessagingCampaignPreContactSmsEventTopicOutboundMessagingCa
         case ininOutboundNotCallableTime = "ININ_OUTBOUND_NOT_CALLABLE_TIME"
         case outboundMaxMessageLengthExceeded = "OUTBOUND_MAX_MESSAGE_LENGTH_EXCEEDED"
         case outboundStuckContact = "OUTBOUND_STUCK_CONTACT"
+        case outboundInvalidContentTemplate = "OUTBOUND_INVALID_CONTENT_TEMPLATE"
+        case outboundContentTemplateNotAuthorized = "OUTBOUND_CONTENT_TEMPLATE_NOT_AUTHORIZED"
     }
 
 

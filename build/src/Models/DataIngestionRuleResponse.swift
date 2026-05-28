@@ -29,6 +29,8 @@ public class DataIngestionRuleResponse: Codable {
 
 
 
+
+
     /** ID of the data ingestion rule. */
     public var _id: String?
     /** The name of the data ingestion rule. */
@@ -45,12 +47,14 @@ public class DataIngestionRuleResponse: Codable {
     public var dateModified: Date?
     /** The platform of the data ingestion rule. */
     public var platform: String?
+    /** The Info about ingestion rule. */
+    public var ingestionRuleInfo: MessageInfo?
     /** The countries is available only on twitter data ingestion rule. ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide. */
     public var countries: [String]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, countries: [String]?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, countries: [String]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
@@ -59,6 +63,7 @@ public class DataIngestionRuleResponse: Codable {
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.platform = platform
+        self.ingestionRuleInfo = ingestionRuleInfo
         self.countries = countries
         self.selfUri = selfUri
     }
@@ -72,6 +77,7 @@ public class DataIngestionRuleResponse: Codable {
         case dateCreated
         case dateModified
         case platform
+        case ingestionRuleInfo
         case countries
         case selfUri
     }

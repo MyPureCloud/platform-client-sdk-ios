@@ -95,7 +95,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "workforce.management.forecast",
+      "namespace" : "webchat",
       "value" : 7,
       "key" : "key"
     },
@@ -123,7 +123,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "workforce.management.forecast",
+      "namespace" : "webchat",
       "value" : 7,
       "key" : "key"
     },
@@ -211,9 +211,9 @@ open class AIStudioAPI {
   "selfUri" : "https://openapi-generator.tech",
   "format" : "TextBlock",
   "integrationId" : "integrationId",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "language" : "language",
   "timeoutDuration" : 30,
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "customEntities" : [ {
     "description" : "description",
     "label" : "label"
@@ -230,8 +230,9 @@ open class AIStudioAPI {
     "description" : "description",
     "label" : "label"
   } ],
-  "participantLabels" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "participantLabels" : "{}",
+  "interactionType" : "Live",
   "maskPII" : "{}",
   "name" : "name",
   "id" : "id",
@@ -264,11 +265,6 @@ open class AIStudioAPI {
     
     
     
-    public enum SortBy_getConversationsSummariesSettings: String { 
-        case datemodified = "dateModified"
-        case name = "name"
-    }
-    
     
     
     public enum SortOrder_getConversationsSummariesSettings: String { 
@@ -280,20 +276,25 @@ open class AIStudioAPI {
     
     
     
+    public enum SortBy_getConversationsSummariesSettings: String { 
+        case datemodified = "dateModified"
+        case name = "name"
+    }
+    
     
     /**
      Get all summary settings.
      
-     - parameter language: (query) Filter by matching language - case insensitive. (optional)
-     - parameter name: (query) Filter by partially matching name - case insensitive. (optional)
-     - parameter sortBy: (query) Sort by. Default value dateModified. (optional)
-     - parameter sortOrder: (query) Sort Order. Default value desc. (optional)
      - parameter pageNumber: (query) Page number. (optional)
      - parameter pageSize: (query) Page size. The maximum page size is 100. (optional)
+     - parameter name: (query) Filter by partially matching name - case insensitive. (optional)
+     - parameter sortOrder: (query) Sort Order. Default value desc. (optional)
+     - parameter language: (query) Filter by matching language - case insensitive. (optional)
+     - parameter sortBy: (query) Sort by. Default value dateModified. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationsSummariesSettings(language: String? = nil, name: String? = nil, sortBy: SortBy_getConversationsSummariesSettings? = nil, sortOrder: SortOrder_getConversationsSummariesSettings? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: SummarySettingEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getConversationsSummariesSettingsWithRequestBuilder(language: language, name: name, sortBy: sortBy, sortOrder: sortOrder, pageNumber: pageNumber, pageSize: pageSize)
+    open class func getConversationsSummariesSettings(pageNumber: Int? = nil, pageSize: Int? = nil, name: String? = nil, sortOrder: SortOrder_getConversationsSummariesSettings? = nil, language: String? = nil, sortBy: SortBy_getConversationsSummariesSettings? = nil, completion: @escaping ((_ data: SummarySettingEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsSummariesSettingsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, name: name, sortOrder: sortOrder, language: language, sortBy: sortBy)
         requestBuilder.execute { (response: Response<SummarySettingEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -326,9 +327,9 @@ open class AIStudioAPI {
     "selfUri" : "https://openapi-generator.tech",
     "format" : "TextBlock",
     "integrationId" : "integrationId",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "language" : "language",
     "timeoutDuration" : 30,
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "customEntities" : [ {
       "description" : "description",
       "label" : "label"
@@ -345,8 +346,9 @@ open class AIStudioAPI {
       "description" : "description",
       "label" : "label"
     } ],
-    "participantLabels" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "participantLabels" : "{}",
+    "interactionType" : "Live",
     "maskPII" : "{}",
     "name" : "name",
     "id" : "id",
@@ -359,9 +361,9 @@ open class AIStudioAPI {
     "selfUri" : "https://openapi-generator.tech",
     "format" : "TextBlock",
     "integrationId" : "integrationId",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "language" : "language",
     "timeoutDuration" : 30,
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "customEntities" : [ {
       "description" : "description",
       "label" : "label"
@@ -378,8 +380,9 @@ open class AIStudioAPI {
       "description" : "description",
       "label" : "label"
     } ],
-    "participantLabels" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "participantLabels" : "{}",
+    "interactionType" : "Live",
     "maskPII" : "{}",
     "name" : "name",
     "id" : "id",
@@ -395,28 +398,28 @@ open class AIStudioAPI {
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
-     - parameter language: (query) Filter by matching language - case insensitive. (optional)
-     - parameter name: (query) Filter by partially matching name - case insensitive. (optional)
-     - parameter sortBy: (query) Sort by. Default value dateModified. (optional)
-     - parameter sortOrder: (query) Sort Order. Default value desc. (optional)
      - parameter pageNumber: (query) Page number. (optional)
      - parameter pageSize: (query) Page size. The maximum page size is 100. (optional)
+     - parameter name: (query) Filter by partially matching name - case insensitive. (optional)
+     - parameter sortOrder: (query) Sort Order. Default value desc. (optional)
+     - parameter language: (query) Filter by matching language - case insensitive. (optional)
+     - parameter sortBy: (query) Sort by. Default value dateModified. (optional)
 
      - returns: RequestBuilder<SummarySettingEntityListing> 
      */
-    open class func getConversationsSummariesSettingsWithRequestBuilder(language: String? = nil, name: String? = nil, sortBy: SortBy_getConversationsSummariesSettings? = nil, sortOrder: SortOrder_getConversationsSummariesSettings? = nil, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<SummarySettingEntityListing> {        
+    open class func getConversationsSummariesSettingsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, name: String? = nil, sortOrder: SortOrder_getConversationsSummariesSettings? = nil, language: String? = nil, sortBy: SortBy_getConversationsSummariesSettings? = nil) -> RequestBuilder<SummarySettingEntityListing> {        
         let path = "/api/v2/conversations/summaries/settings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "language": language, 
-            "name": name, 
-            "sortBy": sortBy?.rawValue, 
-            "sortOrder": sortOrder?.rawValue, 
             "pageNumber": pageNumber?.encodeToJSON(), 
-            "pageSize": pageSize?.encodeToJSON()
+            "pageSize": pageSize?.encodeToJSON(), 
+            "name": name, 
+            "sortOrder": sortOrder?.rawValue, 
+            "language": language, 
+            "sortBy": sortBy?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<SummarySettingEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -530,7 +533,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "workforce.management.forecast",
+      "namespace" : "webchat",
       "value" : 7,
       "key" : "key"
     },
@@ -558,7 +561,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "workforce.management.forecast",
+      "namespace" : "webchat",
       "value" : 7,
       "key" : "key"
     },
@@ -773,7 +776,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "workforce.management.forecast",
+      "namespace" : "webchat",
       "value" : 7,
       "key" : "key"
     },
@@ -801,7 +804,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "workforce.management.forecast",
+      "namespace" : "webchat",
       "value" : 7,
       "key" : "key"
     },
@@ -1050,7 +1053,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "workforce.management.forecast",
+      "namespace" : "webchat",
       "value" : 7,
       "key" : "key"
     },
@@ -1078,7 +1081,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "workforce.management.forecast",
+      "namespace" : "webchat",
       "value" : 7,
       "key" : "key"
     },
@@ -1366,9 +1369,9 @@ open class AIStudioAPI {
   "selfUri" : "https://openapi-generator.tech",
   "format" : "TextBlock",
   "integrationId" : "integrationId",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "language" : "language",
   "timeoutDuration" : 30,
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "customEntities" : [ {
     "description" : "description",
     "label" : "label"
@@ -1385,8 +1388,9 @@ open class AIStudioAPI {
     "description" : "description",
     "label" : "label"
   } ],
-  "participantLabels" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "participantLabels" : "{}",
+  "interactionType" : "Live",
   "maskPII" : "{}",
   "name" : "name",
   "id" : "id",
@@ -1589,7 +1593,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "workforce.management.forecast",
+      "namespace" : "webchat",
       "value" : 7,
       "key" : "key"
     },
@@ -1617,7 +1621,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "workforce.management.forecast",
+      "namespace" : "webchat",
       "value" : 7,
       "key" : "key"
     },
@@ -1877,7 +1881,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "workforce.management.forecast",
+      "namespace" : "webchat",
       "value" : 7,
       "key" : "key"
     },
@@ -1905,7 +1909,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "workforce.management.forecast",
+      "namespace" : "webchat",
       "value" : 7,
       "key" : "key"
     },
@@ -2049,9 +2053,9 @@ open class AIStudioAPI {
   "selfUri" : "https://openapi-generator.tech",
   "format" : "TextBlock",
   "integrationId" : "integrationId",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "language" : "language",
   "timeoutDuration" : 30,
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "customEntities" : [ {
     "description" : "description",
     "label" : "label"
@@ -2068,8 +2072,9 @@ open class AIStudioAPI {
     "description" : "description",
     "label" : "label"
   } ],
-  "participantLabels" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "participantLabels" : "{}",
+  "interactionType" : "Live",
   "maskPII" : "{}",
   "name" : "name",
   "id" : "id",

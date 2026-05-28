@@ -34,7 +34,7 @@ public class WebActionEvent: Codable {
     public var action: EventAction?
     /** The action map that triggered the action. */
     public var actionMap: ActionEventActionMap?
-    /** The target for engagement actions. */
+    /** Deprecated. The target for engagement actions. */
     public var actionTarget: AddressableEntityRef?
     /** Milliseconds elapsed until the action is disposed. */
     public var timeToDisposition: Int64?

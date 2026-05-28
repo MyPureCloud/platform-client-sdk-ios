@@ -8,6 +8,13 @@ public class SummarySetting: Codable {
 
 
 
+    public enum InteractionType: String, Codable { 
+        case live = "Live"
+        case email = "Email"
+    }
+
+
+
     public enum SummaryType: String, Codable { 
         case concise = "Concise"
         case detailed = "Detailed"
@@ -19,6 +26,8 @@ public class SummarySetting: Codable {
         case groupedTextBlocks = "GroupedTextBlocks"
         case groupedBulletPoints = "GroupedBulletPoints"
     }
+
+
 
 
 
@@ -50,14 +59,14 @@ public class SummarySetting: Codable {
 
 
 
-
-
-
-
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** Name of the summary setting. */
     public var name: String?
+    /** The date and time the setting was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateModified: Date?
+    /** The interaction type the setting can be used for */
+    public var interactionType: InteractionType?
     /** Language of the generated summary, e.g. en-US, it-IT. */
     public var language: String?
     /** Level of detail of the generated summary. */
@@ -66,6 +75,8 @@ public class SummarySetting: Codable {
     public var format: Format?
     /** Displaying PII in the generated summary. */
     public var maskPII: SummarySettingPII?
+    /** The date and time the setting was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
     /** How to refer to interaction participants in the generated summary. */
     public var participantLabels: SummarySettingParticipantLabels?
     /** Set which insights to include in the generated summary by default. */
@@ -82,20 +93,19 @@ public class SummarySetting: Codable {
     public var integrationId: String?
     /** Timeout duration in seconds for the external summarization service request. */
     public var timeoutDuration: Int?
-    /** The date and time the setting was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateCreated: Date?
-    /** The date and time the setting was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateModified: Date?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, language: String?, summaryType: SummaryType?, format: Format?, maskPII: SummarySettingPII?, participantLabels: SummarySettingParticipantLabels?, predefinedInsights: [PredefinedInsights]?, customEntities: [SummarySettingCustomEntity]?, settingType: SettingType?, prompt: String?, serviceType: ServiceType?, integrationId: String?, timeoutDuration: Int?, dateCreated: Date?, dateModified: Date?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateModified: Date?, interactionType: InteractionType?, language: String?, summaryType: SummaryType?, format: Format?, maskPII: SummarySettingPII?, dateCreated: Date?, participantLabels: SummarySettingParticipantLabels?, predefinedInsights: [PredefinedInsights]?, customEntities: [SummarySettingCustomEntity]?, settingType: SettingType?, prompt: String?, serviceType: ServiceType?, integrationId: String?, timeoutDuration: Int?, selfUri: String?) {
         self._id = _id
         self.name = name
+        self.dateModified = dateModified
+        self.interactionType = interactionType
         self.language = language
         self.summaryType = summaryType
         self.format = format
         self.maskPII = maskPII
+        self.dateCreated = dateCreated
         self.participantLabels = participantLabels
         self.predefinedInsights = predefinedInsights
         self.customEntities = customEntities
@@ -104,18 +114,19 @@ public class SummarySetting: Codable {
         self.serviceType = serviceType
         self.integrationId = integrationId
         self.timeoutDuration = timeoutDuration
-        self.dateCreated = dateCreated
-        self.dateModified = dateModified
         self.selfUri = selfUri
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case dateModified
+        case interactionType
         case language
         case summaryType
         case format
         case maskPII
+        case dateCreated
         case participantLabels
         case predefinedInsights
         case customEntities
@@ -124,8 +135,6 @@ public class SummarySetting: Codable {
         case serviceType
         case integrationId
         case timeoutDuration
-        case dateCreated
-        case dateModified
         case selfUri
     }
 

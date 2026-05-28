@@ -76,6 +76,8 @@ public class KnowledgeBase: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -95,10 +97,12 @@ public class KnowledgeBase: Codable {
     public var articleCount: Int?
     /** Flag that indicates the knowledge base is published */
     public var published: Bool?
+    /** Flag that indicates the search on content is enabled for the knowledge base. */
+    public var contentSearchEnabled: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, coreLanguage: CoreLanguage?, dateCreated: Date?, dateModified: Date?, faqCount: Int?, dateDocumentLastModified: Date?, articleCount: Int?, published: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, coreLanguage: CoreLanguage?, dateCreated: Date?, dateModified: Date?, faqCount: Int?, dateDocumentLastModified: Date?, articleCount: Int?, published: Bool?, contentSearchEnabled: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
@@ -109,6 +113,7 @@ public class KnowledgeBase: Codable {
         self.dateDocumentLastModified = dateDocumentLastModified
         self.articleCount = articleCount
         self.published = published
+        self.contentSearchEnabled = contentSearchEnabled
         self.selfUri = selfUri
     }
 
@@ -123,6 +128,7 @@ public class KnowledgeBase: Codable {
         case dateDocumentLastModified
         case articleCount
         case published
+        case contentSearchEnabled
         case selfUri
     }
 

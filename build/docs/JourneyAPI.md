@@ -19,8 +19,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getJourneyActionmaps**](JourneyAPI#getJourneyActionmaps) | Retrieve all action maps. |
 | [**getJourneyActionmapsEstimatesJob**](JourneyAPI#getJourneyActionmapsEstimatesJob) | Deprecated. Get status of job. |
 | [**getJourneyActionmapsEstimatesJobResults**](JourneyAPI#getJourneyActionmapsEstimatesJobResults) | Deprecated. Get estimates from completed job. |
-| [**getJourneyActiontarget**](JourneyAPI#getJourneyActiontarget) | Retrieve a single action target. |
-| [**getJourneyActiontargets**](JourneyAPI#getJourneyActiontargets) | Retrieve all action targets. |
+| [**getJourneyActiontarget**](JourneyAPI#getJourneyActiontarget) | Deprecated. Retrieve a single action target. |
+| [**getJourneyActiontargets**](JourneyAPI#getJourneyActiontargets) | Deprecated. Retrieve all action targets. |
 | [**getJourneyActiontemplate**](JourneyAPI#getJourneyActiontemplate) | Retrieve a single action template. |
 | [**getJourneyActiontemplates**](JourneyAPI#getJourneyActiontemplates) | Retrieve all action templates. |
 | [**getJourneyDeploymentCustomerPing**](JourneyAPI#getJourneyDeploymentCustomerPing) | Send a ping. |
@@ -55,11 +55,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getJourneyViewsDataDetails**](JourneyAPI#getJourneyViewsDataDetails) | Get details about the data available for journey queries including oldest and newest event dates |
 | [**getJourneyViewsEventdefinition**](JourneyAPI#getJourneyViewsEventdefinition) | Get an Event Definition |
 | [**getJourneyViewsEventdefinitions**](JourneyAPI#getJourneyViewsEventdefinitions) | Get a list of Event Definitions |
+| [**getJourneyViewsEventdefinitionsExternal**](JourneyAPI#getJourneyViewsEventdefinitionsExternal) | Get external events for journey views |
+| [**getJourneyViewsEventdefinitionsExternalChanges**](JourneyAPI#getJourneyViewsEventdefinitionsExternalChanges) | Get changes in external event definitions |
 | [**getJourneyViewsJobs**](JourneyAPI#getJourneyViewsJobs) | Get the jobs for an organization. |
 | [**getJourneyViewsJobsMe**](JourneyAPI#getJourneyViewsJobsMe) | Get my jobs |
 | [**getJourneyViewsSchedules**](JourneyAPI#getJourneyViewsSchedules) | Get the journey schedules for an organization. |
 | [**patchJourneyActionmap**](JourneyAPI#patchJourneyActionmap) | Update single action map. |
-| [**patchJourneyActiontarget**](JourneyAPI#patchJourneyActiontarget) | Update a single action target. |
+| [**patchJourneyActiontarget**](JourneyAPI#patchJourneyActiontarget) | Deprecated. Update a single action target. |
 | [**patchJourneyActiontemplate**](JourneyAPI#patchJourneyActiontemplate) | Update a single action template. |
 | [**patchJourneyExternaleventsConfiguration**](JourneyAPI#patchJourneyExternaleventsConfiguration) | Update an external events configuration. |
 | [**patchJourneyOutcome**](JourneyAPI#patchJourneyOutcome) | Deprecated. Update an outcome. |
@@ -88,6 +90,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putJourneyExternaleventsSchema**](JourneyAPI#putJourneyExternaleventsSchema) | Update a schema |
 | [**putJourneyViewSchedules**](JourneyAPI#putJourneyViewSchedules) | Update the Schedule for a JourneyView |
 | [**putJourneyViewVersion**](JourneyAPI#putJourneyViewVersion) | Update a Journey View by ID and version |
+| [**putJourneyViewsEventdefinition**](JourneyAPI#putJourneyViewsEventdefinition) | Update external event for journey views |
+| [**putJourneyViewsEventdefinitionActivate**](JourneyAPI#putJourneyViewsEventdefinitionActivate) | Activate external event for journey views |
 {: class="table-striped"}
 
 
@@ -875,7 +879,9 @@ JourneyAPI.getJourneyActionmapsEstimatesJobResults(jobId: jobId) { (response, er
 
 > [ActionTarget](ActionTarget) getJourneyActiontarget(actionTargetId)
 
-Retrieve a single action target.
+Deprecated. Retrieve a single action target.
+
+ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
 
 
 
@@ -925,7 +931,9 @@ JourneyAPI.getJourneyActiontarget(actionTargetId: actionTargetId) { (response, e
 
 > [ActionTargetListing](ActionTargetListing) getJourneyActiontargets(pageNumber, pageSize)
 
-Retrieve all action targets.
+Deprecated. Retrieve all action targets.
+
+ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
 
 
 
@@ -2753,6 +2761,98 @@ This endpoint does not require any parameters.
 [**JourneyEventDefinitionListing**](JourneyEventDefinitionListing)
 
 
+## getJourneyViewsEventdefinitionsExternal
+
+
+
+> [GetExternalEventsResponse](GetExternalEventsResponse) getJourneyViewsEventdefinitionsExternal()
+
+Get external events for journey views
+
+
+
+Wraps GET /api/v2/journey/views/eventdefinitions/external  
+
+Requires ALL permissions: 
+
+* journey:externalEvents:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+JourneyAPI.getJourneyViewsEventdefinitionsExternal() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyViewsEventdefinitionsExternal was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**GetExternalEventsResponse**](GetExternalEventsResponse)
+
+
+## getJourneyViewsEventdefinitionsExternalChanges
+
+
+
+> [ExternalEventChangesResponse](ExternalEventChangesResponse) getJourneyViewsEventdefinitionsExternalChanges()
+
+Get changes in external event definitions
+
+
+
+Wraps GET /api/v2/journey/views/eventdefinitions/external/changes  
+
+Requires ALL permissions: 
+
+* journey:externalEvents:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+JourneyAPI.getJourneyViewsEventdefinitionsExternalChanges() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyViewsEventdefinitionsExternalChanges was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**ExternalEventChangesResponse**](ExternalEventChangesResponse)
+
+
 ## getJourneyViewsJobs
 
 
@@ -2975,7 +3075,9 @@ JourneyAPI.patchJourneyActionmap(actionMapId: actionMapId, body: body) { (respon
 
 > [ActionTarget](ActionTarget) patchJourneyActiontarget(actionTargetId, body)
 
-Update a single action target.
+Deprecated. Update a single action target.
+
+ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
 
 
 
@@ -4470,4 +4572,108 @@ JourneyAPI.putJourneyViewVersion(viewId: viewId, versionId: versionId, body: bod
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatformClientV2@194.0.0_
+## putJourneyViewsEventdefinition
+
+
+
+> [UpdateExternalEventResponse](UpdateExternalEventResponse) putJourneyViewsEventdefinition(eventDefinitionId, body)
+
+Update external event for journey views
+
+
+
+Wraps PUT /api/v2/journey/views/eventdefinitions/{eventDefinitionId}  
+
+Requires ALL permissions: 
+
+* journey:externalEvents:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let eventDefinitionId: String = "" // Event Definition ID
+let body: UpdateExternalEventRequest = new UpdateExternalEventRequest(...) // 
+
+// Code example
+JourneyAPI.putJourneyViewsEventdefinition(eventDefinitionId: eventDefinitionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.putJourneyViewsEventdefinition was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eventDefinitionId** | **String**| Event Definition ID | |
+| **body** | [**UpdateExternalEventRequest**](UpdateExternalEventRequest)|  | [optional] |
+
+
+### Return type
+
+[**UpdateExternalEventResponse**](UpdateExternalEventResponse)
+
+
+## putJourneyViewsEventdefinitionActivate
+
+
+
+> [ActivateExternalEventResponse](ActivateExternalEventResponse) putJourneyViewsEventdefinitionActivate(eventDefinitionId, body)
+
+Activate external event for journey views
+
+
+
+Wraps PUT /api/v2/journey/views/eventdefinitions/{eventDefinitionId}/activate  
+
+Requires ALL permissions: 
+
+* journey:externalEvents:activate
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let eventDefinitionId: String = "" // Event Definition ID
+let body: ActivateExternalEventRequest = new ActivateExternalEventRequest(...) // 
+
+// Code example
+JourneyAPI.putJourneyViewsEventdefinitionActivate(eventDefinitionId: eventDefinitionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.putJourneyViewsEventdefinitionActivate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eventDefinitionId** | **String**| Event Definition ID | |
+| **body** | [**ActivateExternalEventRequest**](ActivateExternalEventRequest)|  | [optional] |
+
+
+### Return type
+
+[**ActivateExternalEventResponse**](ActivateExternalEventResponse)
+
+
+_PureCloudPlatformClientV2@195.0.0_

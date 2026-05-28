@@ -12,6 +12,10 @@ public class RoutingConversationAttributesResponse: Codable {
 
 
 
+
+
+
+
     /** Current priority value on in-queue conversation. Range:[-25000000, 25000000] */
     public var priority: Int?
     /** Current routing skills on in-queue conversation */
@@ -22,13 +26,19 @@ public class RoutingConversationAttributesResponse: Codable {
     public var label: UtilizationLabel?
     /** Current scored agents on in-queue conversation */
     public var scoredAgents: [ScoredAgent]?
+    /** Current skill expression on in-queue conversation */
+    public var skillExpression: String?
+    /** Current skill expression ID on in-queue conversation */
+    public var skillExpressionId: String?
 
-    public init(priority: Int?, skills: [RoutingSkill]?, language: Language?, label: UtilizationLabel?, scoredAgents: [ScoredAgent]?) {
+    public init(priority: Int?, skills: [RoutingSkill]?, language: Language?, label: UtilizationLabel?, scoredAgents: [ScoredAgent]?, skillExpression: String?, skillExpressionId: String?) {
         self.priority = priority
         self.skills = skills
         self.language = language
         self.label = label
         self.scoredAgents = scoredAgents
+        self.skillExpression = skillExpression
+        self.skillExpressionId = skillExpressionId
     }
 
 

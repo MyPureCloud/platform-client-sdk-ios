@@ -15,4 +15,4 @@ Defines a SCIM enterprise user.
 
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_

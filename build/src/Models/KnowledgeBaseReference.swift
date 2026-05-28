@@ -60,22 +60,28 @@ public class KnowledgeBaseReference: Codable {
 
 
 
+
+
     /** The globally unique identifier for the knowledge base. */
     public var _id: String?
     /** Language of the knowledge base */
     public var languageCode: LanguageCode?
+    /** Flag that indicates the search on content is enabled for the knowledge base. */
+    public var contentSearchEnabled: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, languageCode: LanguageCode?, selfUri: String?) {
+    public init(_id: String?, languageCode: LanguageCode?, contentSearchEnabled: Bool?, selfUri: String?) {
         self._id = _id
         self.languageCode = languageCode
+        self.contentSearchEnabled = contentSearchEnabled
         self.selfUri = selfUri
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case languageCode
+        case contentSearchEnabled
         case selfUri
     }
 

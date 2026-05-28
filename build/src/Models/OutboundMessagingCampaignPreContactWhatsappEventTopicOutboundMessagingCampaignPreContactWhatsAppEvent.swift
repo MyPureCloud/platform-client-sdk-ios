@@ -31,6 +31,10 @@ public class OutboundMessagingCampaignPreContactWhatsappEventTopicOutboundMessag
         case outboundRuleErrorSkipped = "OUTBOUND_RULE_ERROR_SKIPPED"
         case outboundRuleSkipped = "OUTBOUND_RULE_SKIPPED"
         case outboundContactAddressUncontactableSkipped = "OUTBOUND_CONTACT_ADDRESS_UNCONTACTABLE_SKIPPED"
+        case ininOutboundNotCallableTime = "ININ_OUTBOUND_NOT_CALLABLE_TIME"
+        case outboundMessageBodyParameterValueTooLong = "OUTBOUND_MESSAGE_BODY_PARAMETER_VALUE_TOO_LONG"
+        case outboundInvalidContentTemplate = "OUTBOUND_INVALID_CONTENT_TEMPLATE"
+        case outboundContentTemplateNotAuthorized = "OUTBOUND_CONTENT_TEMPLATE_NOT_AUTHORIZED"
     }
 
 

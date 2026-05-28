@@ -29,11 +29,11 @@ public class ActionMapAction: Codable {
     public var actionTemplate: ActionMapActionTemplate?
     /** Media type of action. */
     public var mediaType: MediaType?
-    /** Action target ID. */
+    /** Deprecated. Action target ID. */
     public var actionTargetId: String?
-    /** Whether this action should be throttled. */
+    /** Deprecated. Whether this action should be throttled. */
     public var isPacingEnabled: Bool?
-    /** Additional properties. */
+    /** Deprecated. Additional properties. */
     public var props: ActionProperties?
     /** Architect Flow Id and input contract. */
     public var architectFlowFields: ArchitectFlowFields?

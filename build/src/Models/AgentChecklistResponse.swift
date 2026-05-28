@@ -50,6 +50,12 @@ public class AgentChecklistResponse: Codable {
 
 
 
+
+
+
+
+
+
     /** ID of the checklist. */
     public var _id: String?
     /** Name of the checklist. */
@@ -84,10 +90,16 @@ public class AgentChecklistResponse: Codable {
     public var evaluationFinalizedDate: Date?
     /** Date when the checklist was finalized with ACW. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var evaluationFinalizedWithAcwDate: Date?
+    /** Whether activation succeeded for this checklist (bulk activation). Omitted for non-bulk responses. */
+    public var success: Bool?
+    /** Error code when success is false. */
+    public var errorCode: String?
+    /** Error message when success is false. */
+    public var errorMessage: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, checklistItems: [ChecklistItem]?, activationTriggers: [ActivationTrigger]?, status: Status?, exitReason: String?, language: String?, agentId: String?, participantId: String?, queueId: String?, assistantId: String?, mediaType: MediaType?, direction: Direction?, evaluationStartDate: Date?, evaluationLastModifiedDate: Date?, evaluationFinalizedDate: Date?, evaluationFinalizedWithAcwDate: Date?, selfUri: String?) {
+    public init(_id: String?, name: String?, checklistItems: [ChecklistItem]?, activationTriggers: [ActivationTrigger]?, status: Status?, exitReason: String?, language: String?, agentId: String?, participantId: String?, queueId: String?, assistantId: String?, mediaType: MediaType?, direction: Direction?, evaluationStartDate: Date?, evaluationLastModifiedDate: Date?, evaluationFinalizedDate: Date?, evaluationFinalizedWithAcwDate: Date?, success: Bool?, errorCode: String?, errorMessage: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.checklistItems = checklistItems
@@ -105,6 +117,9 @@ public class AgentChecklistResponse: Codable {
         self.evaluationLastModifiedDate = evaluationLastModifiedDate
         self.evaluationFinalizedDate = evaluationFinalizedDate
         self.evaluationFinalizedWithAcwDate = evaluationFinalizedWithAcwDate
+        self.success = success
+        self.errorCode = errorCode
+        self.errorMessage = errorMessage
         self.selfUri = selfUri
     }
 
@@ -126,6 +141,9 @@ public class AgentChecklistResponse: Codable {
         case evaluationLastModifiedDate
         case evaluationFinalizedDate
         case evaluationFinalizedWithAcwDate
+        case success
+        case errorCode
+        case errorMessage
         case selfUri
     }
 

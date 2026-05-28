@@ -26,6 +26,8 @@ public class CreateEmailRequest: Codable {
 
 
 
+
+
     public enum Direction: String, Codable { 
         case outbound = "OUTBOUND"
         case inbound = "INBOUND"
@@ -47,6 +49,8 @@ public class CreateEmailRequest: Codable {
     public var provider: String?
     /** The list of skill ID's to use for routing. */
     public var skillIds: [String]?
+    /** The skill expression to use for routing the email conversation (when using queueId). */
+    public var skillExpression: String?
     /** The ID of the language to use for routing. */
     public var languageId: String?
     /** The priority to assign to the conversation for routing. */
@@ -74,11 +78,12 @@ public class CreateEmailRequest: Codable {
     /** Optional. The ID of the label to controls the number of agent interactions for INBOUND communications */
     public var utilizationLabel: String?
 
-    public init(queueId: String?, flowId: String?, provider: String?, skillIds: [String]?, languageId: String?, priority: Int64?, attributes: [String:String]?, toAddress: String?, toName: String?, fromAddress: String?, fromName: String?, subject: String?, direction: Direction?, htmlBody: String?, textBody: String?, externalContactId: String?, utilizationLabel: String?) {
+    public init(queueId: String?, flowId: String?, provider: String?, skillIds: [String]?, skillExpression: String?, languageId: String?, priority: Int64?, attributes: [String:String]?, toAddress: String?, toName: String?, fromAddress: String?, fromName: String?, subject: String?, direction: Direction?, htmlBody: String?, textBody: String?, externalContactId: String?, utilizationLabel: String?) {
         self.queueId = queueId
         self.flowId = flowId
         self.provider = provider
         self.skillIds = skillIds
+        self.skillExpression = skillExpression
         self.languageId = languageId
         self.priority = priority
         self.attributes = attributes

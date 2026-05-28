@@ -695,6 +695,7 @@ open class AgentAssistantsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "exactPhraseMatch" : true,
     "id" : "id",
     "automatedCheckEnabled" : true
   }, {
@@ -702,6 +703,7 @@ open class AgentAssistantsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "exactPhraseMatch" : true,
     "id" : "id",
     "automatedCheckEnabled" : true
   }, {
@@ -709,6 +711,7 @@ open class AgentAssistantsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "exactPhraseMatch" : true,
     "id" : "id",
     "automatedCheckEnabled" : true
   }, {
@@ -716,6 +719,7 @@ open class AgentAssistantsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "exactPhraseMatch" : true,
     "id" : "id",
     "automatedCheckEnabled" : true
   }, {
@@ -723,6 +727,7 @@ open class AgentAssistantsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "exactPhraseMatch" : true,
     "id" : "id",
     "automatedCheckEnabled" : true
   } ],
@@ -778,6 +783,8 @@ open class AgentAssistantsAPI {
     }
     
     
+    
+    
     /**
      Get the list of agent checklists
      
@@ -788,10 +795,11 @@ open class AgentAssistantsAPI {
      - parameter language: (query) The agent checklist language filter applied to the listing. (optional)
      - parameter sortOrder: (query) The sort order for the listing (optional)
      - parameter sortBy: (query) The field to sort by for the listing. (optional)
+     - parameter agentChecklistIds: (query) Agent checklist IDs (repeat param or comma-separated). Do not use with other optional filters. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAssistantsAgentchecklists(before: String? = nil, after: String? = nil, pageSize: String? = nil, namePrefix: String? = nil, language: String? = nil, sortOrder: SortOrder_getAssistantsAgentchecklists? = nil, sortBy: SortBy_getAssistantsAgentchecklists? = nil, completion: @escaping ((_ data: AgentChecklistListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAssistantsAgentchecklistsWithRequestBuilder(before: before, after: after, pageSize: pageSize, namePrefix: namePrefix, language: language, sortOrder: sortOrder, sortBy: sortBy)
+    open class func getAssistantsAgentchecklists(before: String? = nil, after: String? = nil, pageSize: String? = nil, namePrefix: String? = nil, language: String? = nil, sortOrder: SortOrder_getAssistantsAgentchecklists? = nil, sortBy: SortBy_getAssistantsAgentchecklists? = nil, agentChecklistIds: [String]? = nil, completion: @escaping ((_ data: AgentChecklistListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAssistantsAgentchecklistsWithRequestBuilder(before: before, after: after, pageSize: pageSize, namePrefix: namePrefix, language: language, sortOrder: sortOrder, sortBy: sortBy, agentChecklistIds: agentChecklistIds)
         requestBuilder.execute { (response: Response<AgentChecklistListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -823,6 +831,7 @@ open class AgentAssistantsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "description" : "description",
+      "exactPhraseMatch" : true,
       "id" : "id",
       "automatedCheckEnabled" : true
     }, {
@@ -830,6 +839,7 @@ open class AgentAssistantsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "description" : "description",
+      "exactPhraseMatch" : true,
       "id" : "id",
       "automatedCheckEnabled" : true
     }, {
@@ -837,6 +847,7 @@ open class AgentAssistantsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "description" : "description",
+      "exactPhraseMatch" : true,
       "id" : "id",
       "automatedCheckEnabled" : true
     }, {
@@ -844,6 +855,7 @@ open class AgentAssistantsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "description" : "description",
+      "exactPhraseMatch" : true,
       "id" : "id",
       "automatedCheckEnabled" : true
     }, {
@@ -851,6 +863,7 @@ open class AgentAssistantsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "description" : "description",
+      "exactPhraseMatch" : true,
       "id" : "id",
       "automatedCheckEnabled" : true
     } ],
@@ -868,6 +881,7 @@ open class AgentAssistantsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "description" : "description",
+      "exactPhraseMatch" : true,
       "id" : "id",
       "automatedCheckEnabled" : true
     }, {
@@ -875,6 +889,7 @@ open class AgentAssistantsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "description" : "description",
+      "exactPhraseMatch" : true,
       "id" : "id",
       "automatedCheckEnabled" : true
     }, {
@@ -882,6 +897,7 @@ open class AgentAssistantsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "description" : "description",
+      "exactPhraseMatch" : true,
       "id" : "id",
       "automatedCheckEnabled" : true
     }, {
@@ -889,6 +905,7 @@ open class AgentAssistantsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "description" : "description",
+      "exactPhraseMatch" : true,
       "id" : "id",
       "automatedCheckEnabled" : true
     }, {
@@ -896,6 +913,7 @@ open class AgentAssistantsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "description" : "description",
+      "exactPhraseMatch" : true,
       "id" : "id",
       "automatedCheckEnabled" : true
     } ],
@@ -918,10 +936,11 @@ open class AgentAssistantsAPI {
      - parameter language: (query) The agent checklist language filter applied to the listing. (optional)
      - parameter sortOrder: (query) The sort order for the listing (optional)
      - parameter sortBy: (query) The field to sort by for the listing. (optional)
+     - parameter agentChecklistIds: (query) Agent checklist IDs (repeat param or comma-separated). Do not use with other optional filters. (optional)
 
      - returns: RequestBuilder<AgentChecklistListing> 
      */
-    open class func getAssistantsAgentchecklistsWithRequestBuilder(before: String? = nil, after: String? = nil, pageSize: String? = nil, namePrefix: String? = nil, language: String? = nil, sortOrder: SortOrder_getAssistantsAgentchecklists? = nil, sortBy: SortBy_getAssistantsAgentchecklists? = nil) -> RequestBuilder<AgentChecklistListing> {        
+    open class func getAssistantsAgentchecklistsWithRequestBuilder(before: String? = nil, after: String? = nil, pageSize: String? = nil, namePrefix: String? = nil, language: String? = nil, sortOrder: SortOrder_getAssistantsAgentchecklists? = nil, sortBy: SortBy_getAssistantsAgentchecklists? = nil, agentChecklistIds: [String]? = nil) -> RequestBuilder<AgentChecklistListing> {        
         let path = "/api/v2/assistants/agentchecklists"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -934,7 +953,8 @@ open class AgentAssistantsAPI {
             "namePrefix": namePrefix, 
             "language": language, 
             "sortOrder": sortOrder?.rawValue, 
-            "sortBy": sortBy?.rawValue
+            "sortBy": sortBy?.rawValue, 
+            "agentChecklistIds": agentChecklistIds
         ])
 
         let requestBuilder: RequestBuilder<AgentChecklistListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1638,6 +1658,7 @@ open class AgentAssistantsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "exactPhraseMatch" : true,
     "id" : "id",
     "automatedCheckEnabled" : true
   }, {
@@ -1645,6 +1666,7 @@ open class AgentAssistantsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "exactPhraseMatch" : true,
     "id" : "id",
     "automatedCheckEnabled" : true
   }, {
@@ -1652,6 +1674,7 @@ open class AgentAssistantsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "exactPhraseMatch" : true,
     "id" : "id",
     "automatedCheckEnabled" : true
   }, {
@@ -1659,6 +1682,7 @@ open class AgentAssistantsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "exactPhraseMatch" : true,
     "id" : "id",
     "automatedCheckEnabled" : true
   }, {
@@ -1666,6 +1690,7 @@ open class AgentAssistantsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "exactPhraseMatch" : true,
     "id" : "id",
     "automatedCheckEnabled" : true
   } ],
@@ -1807,6 +1832,7 @@ open class AgentAssistantsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "exactPhraseMatch" : true,
     "id" : "id",
     "automatedCheckEnabled" : true
   }, {
@@ -1814,6 +1840,7 @@ open class AgentAssistantsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "exactPhraseMatch" : true,
     "id" : "id",
     "automatedCheckEnabled" : true
   }, {
@@ -1821,6 +1848,7 @@ open class AgentAssistantsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "exactPhraseMatch" : true,
     "id" : "id",
     "automatedCheckEnabled" : true
   }, {
@@ -1828,6 +1856,7 @@ open class AgentAssistantsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "exactPhraseMatch" : true,
     "id" : "id",
     "automatedCheckEnabled" : true
   }, {
@@ -1835,6 +1864,7 @@ open class AgentAssistantsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
+    "exactPhraseMatch" : true,
     "id" : "id",
     "automatedCheckEnabled" : true
   } ],

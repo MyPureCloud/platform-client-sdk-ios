@@ -10,6 +10,7 @@ public class WebMessagingButtonResponse: Codable {
         case quickReply = "QuickReply"
         case datePicker = "DatePicker"
         case listPicker = "ListPicker"
+        case form = "Form"
     }
 
 

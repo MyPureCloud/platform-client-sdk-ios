@@ -33897,13 +33897,16 @@ open class ArchitectAPI {
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     /**
      Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
      
+     - parameter body: (body)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postFlowsJobs(completion: @escaping ((_ data: RegisterArchitectJobResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postFlowsJobsWithRequestBuilder()
+    open class func postFlowsJobs(body: JSON? = nil, completion: @escaping ((_ data: RegisterArchitectJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postFlowsJobsWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<RegisterArchitectJobResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -33934,14 +33937,16 @@ open class ArchitectAPI {
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id"
 }, statusCode=200}]
+     
+     - parameter body: (body)  (optional)
 
      - returns: RequestBuilder<RegisterArchitectJobResponse> 
      */
-    open class func postFlowsJobsWithRequestBuilder() -> RequestBuilder<RegisterArchitectJobResponse> {        
+    open class func postFlowsJobsWithRequestBuilder(body: JSON? = nil) -> RequestBuilder<RegisterArchitectJobResponse> {        
         let path = "/api/v2/flows/jobs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RegisterArchitectJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

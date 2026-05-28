@@ -37,6 +37,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getKnowledgeKnowledgebaseDocumentVersionVariations**](KnowledgeAPI#getKnowledgeKnowledgebaseDocumentVersionVariations) | Get variations for the given document version. |
 | [**getKnowledgeKnowledgebaseDocumentVersions**](KnowledgeAPI#getKnowledgeKnowledgebaseDocumentVersions) | Get document versions. |
 | [**getKnowledgeKnowledgebaseDocuments**](KnowledgeAPI#getKnowledgeKnowledgebaseDocuments) | Get documents. |
+| [**getKnowledgeKnowledgebaseDocumentsFeedback**](KnowledgeAPI#getKnowledgeKnowledgebaseDocumentsFeedback) | Get a list of feedback records given on documents in a knowledge base |
 | [**getKnowledgeKnowledgebaseExportJob**](KnowledgeAPI#getKnowledgeKnowledgebaseExportJob) | Get export job report |
 | [**getKnowledgeKnowledgebaseImportJob**](KnowledgeAPI#getKnowledgeKnowledgebaseImportJob) | Get import job report |
 | [**getKnowledgeKnowledgebaseLabel**](KnowledgeAPI#getKnowledgeKnowledgebaseLabel) | Get label |
@@ -1941,6 +1942,78 @@ KnowledgeAPI.getKnowledgeKnowledgebaseDocuments(knowledgeBaseId: knowledgeBaseId
 ### Return type
 
 [**KnowledgeDocumentResponseListing**](KnowledgeDocumentResponseListing)
+
+
+## getKnowledgeKnowledgebaseDocumentsFeedback
+
+
+
+> [KnowledgeDocumentFeedbackResponseListing](KnowledgeDocumentFeedbackResponseListing) getKnowledgeKnowledgebaseDocumentsFeedback(knowledgeBaseId, before, after, pageSize, onlyCommented, documentVersionId, documentVariationId, appType, queryType, userId, queueId, state)
+
+Get a list of feedback records given on documents in a knowledge base
+
+
+
+Wraps GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/feedback  
+
+Requires ANY permissions: 
+
+* knowledge:feedback:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID.
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let onlyCommented: Bool = true // If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false.
+let documentVersionId: String = "" // Document version ID to filter by. Supported only if onlyCommented=true is set.
+let documentVariationId: String = "" // Document variation ID to filter by. Supported only if onlyCommented=true is set.
+let appType: KnowledgeAPI.AppType_getKnowledgeKnowledgebaseDocumentsFeedback = KnowledgeAPI.AppType_getKnowledgeKnowledgebaseDocumentsFeedback.enummember // Application type to filter by. Supported only if onlyCommented=true is set.
+let queryType: KnowledgeAPI.QueryType_getKnowledgeKnowledgebaseDocumentsFeedback = KnowledgeAPI.QueryType_getKnowledgeKnowledgebaseDocumentsFeedback.enummember // Query type to filter by. Supported only if onlyCommented=true is set.
+let userId: String = "" // The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented=true is set.
+let queueId: String = "" // Queue ID to filter by. Supported only if onlyCommented=true is set.
+let state: KnowledgeAPI.State_getKnowledgeKnowledgebaseDocumentsFeedback = KnowledgeAPI.State_getKnowledgeKnowledgebaseDocumentsFeedback.enummember // State to filter by. Supported only if onlyCommented=true is set. Default: Final
+
+// Code example
+KnowledgeAPI.getKnowledgeKnowledgebaseDocumentsFeedback(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, onlyCommented: onlyCommented, documentVersionId: documentVersionId, documentVariationId: documentVariationId, appType: appType, queryType: queryType, userId: userId, queueId: queueId, state: state) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeKnowledgebaseDocumentsFeedback was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID. | |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **onlyCommented** | **Bool**| If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. | [optional] |
+| **documentVersionId** | **String**| Document version ID to filter by. Supported only if onlyCommented=true is set. | [optional] |
+| **documentVariationId** | **String**| Document variation ID to filter by. Supported only if onlyCommented=true is set. | [optional] |
+| **appType** | **String**| Application type to filter by. Supported only if onlyCommented=true is set. | [optional]<br />**Values**: assistant ("Assistant"), botFlow ("BotFlow"), messengerKnowledgeApp ("MessengerKnowledgeApp"), smartAdvisor ("SmartAdvisor"), supportCenter ("SupportCenter") |
+| **queryType** | **String**| Query type to filter by. Supported only if onlyCommented=true is set. | [optional]<br />**Values**: unknown ("Unknown"), article ("Article"), autoSearch ("AutoSearch"), category ("Category"), manualSearch ("ManualSearch"), recommendation ("Recommendation"), suggestion ("Suggestion"), expandedArticle ("ExpandedArticle") |
+| **userId** | **String**| The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented=true is set. | [optional] |
+| **queueId** | **String**| Queue ID to filter by. Supported only if onlyCommented=true is set. | [optional] |
+| **state** | **String**| State to filter by. Supported only if onlyCommented=true is set. Default: Final | [optional]<br />**Values**: all ("All"), draft ("Draft"), _final ("Final") |
+
+
+### Return type
+
+[**KnowledgeDocumentFeedbackResponseListing**](KnowledgeDocumentFeedbackResponseListing)
 
 
 ## getKnowledgeKnowledgebaseExportJob
@@ -6524,4 +6597,4 @@ KnowledgeAPI.putKnowledgeSource(sourceId: sourceId, body: body) { (response, err
 [**V3SourceDetailedResponse**](V3SourceDetailedResponse)
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_

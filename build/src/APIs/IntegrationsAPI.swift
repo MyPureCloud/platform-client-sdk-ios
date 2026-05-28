@@ -931,7 +931,7 @@ open class IntegrationsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "workforce.management.forecast",
+      "namespace" : "webchat",
       "value" : 7,
       "key" : "key"
     },
@@ -959,7 +959,7 @@ open class IntegrationsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "workforce.management.forecast",
+      "namespace" : "webchat",
       "value" : 7,
       "key" : "key"
     },

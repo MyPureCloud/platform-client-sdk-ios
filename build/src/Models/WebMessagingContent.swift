@@ -12,7 +12,10 @@ public class WebMessagingContent: Codable {
         case carousel = "Carousel"
         case datePicker = "DatePicker"
         case listPicker = "ListPicker"
+        case form = "Form"
     }
+
+
 
 
 
@@ -48,8 +51,10 @@ public class WebMessagingContent: Codable {
     public var datePicker: ContentDatePicker?
     /** ListPicker content */
     public var listPicker: ConversationContentListPicker?
+    /** Form content */
+    public var form: ConversationContentForm?
 
-    public init(contentType: ContentType?, attachment: WebMessagingAttachment?, quickReply: WebMessagingQuickReply?, buttonResponse: WebMessagingButtonResponse?, generic: WebMessagingGeneric?, card: ContentCard?, carousel: ContentCarousel?, datePicker: ContentDatePicker?, listPicker: ConversationContentListPicker?) {
+    public init(contentType: ContentType?, attachment: WebMessagingAttachment?, quickReply: WebMessagingQuickReply?, buttonResponse: WebMessagingButtonResponse?, generic: WebMessagingGeneric?, card: ContentCard?, carousel: ContentCarousel?, datePicker: ContentDatePicker?, listPicker: ConversationContentListPicker?, form: ConversationContentForm?) {
         self.contentType = contentType
         self.attachment = attachment
         self.quickReply = quickReply
@@ -59,6 +64,7 @@ public class WebMessagingContent: Codable {
         self.carousel = carousel
         self.datePicker = datePicker
         self.listPicker = listPicker
+        self.form = form
     }
 
 

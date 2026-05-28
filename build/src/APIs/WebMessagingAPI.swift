@@ -114,6 +114,7 @@ open class WebMessagingAPI {
     "content" : [ {
       "quickReply" : "{}",
       "attachment" : "{}",
+      "form" : "{}",
       "buttonResponse" : "{}",
       "datePicker" : "{}",
       "carousel" : "{}",
@@ -124,6 +125,7 @@ open class WebMessagingAPI {
     }, {
       "quickReply" : "{}",
       "attachment" : "{}",
+      "form" : "{}",
       "buttonResponse" : "{}",
       "datePicker" : "{}",
       "carousel" : "{}",
@@ -164,6 +166,7 @@ open class WebMessagingAPI {
     "content" : [ {
       "quickReply" : "{}",
       "attachment" : "{}",
+      "form" : "{}",
       "buttonResponse" : "{}",
       "datePicker" : "{}",
       "carousel" : "{}",
@@ -174,6 +177,7 @@ open class WebMessagingAPI {
     }, {
       "quickReply" : "{}",
       "attachment" : "{}",
+      "form" : "{}",
       "buttonResponse" : "{}",
       "datePicker" : "{}",
       "carousel" : "{}",

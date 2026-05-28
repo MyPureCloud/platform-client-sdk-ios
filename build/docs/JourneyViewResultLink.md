@@ -13,4 +13,4 @@ Represents a link between 2 elements in a journey view result
 
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_

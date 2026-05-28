@@ -32,6 +32,8 @@ public class CreateCallRequest: Codable {
 
 
 
+
+
     /** The phone number to dial. */
     public var phoneNumber: String?
     /** The caller id phone number for this outbound call. */
@@ -52,6 +54,8 @@ public class CreateCallRequest: Codable {
     public var languageId: String?
     /** The skill ID's to use for routing this call (if calling a queue). */
     public var routingSkillsIds: [String]?
+    /** The skill expression to use for routing this call (if calling a queue). */
+    public var routingSkillExpression: String?
     /** The list of existing call conversations to merge into a new ad-hoc conference. */
     public var conversationIds: [String]?
     /** The list of participants to call to create a new ad-hoc conference. */
@@ -63,7 +67,7 @@ public class CreateCallRequest: Codable {
     /** An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level */
     public var label: String?
 
-    public init(phoneNumber: String?, callerId: String?, callerIdName: String?, callFromQueueId: String?, callQueueId: String?, callUserId: String?, priority: Int?, attributes: [String:String]?, languageId: String?, routingSkillsIds: [String]?, conversationIds: [String]?, participants: [Destination]?, uuiData: String?, externalContactId: String?, label: String?) {
+    public init(phoneNumber: String?, callerId: String?, callerIdName: String?, callFromQueueId: String?, callQueueId: String?, callUserId: String?, priority: Int?, attributes: [String:String]?, languageId: String?, routingSkillsIds: [String]?, routingSkillExpression: String?, conversationIds: [String]?, participants: [Destination]?, uuiData: String?, externalContactId: String?, label: String?) {
         self.phoneNumber = phoneNumber
         self.callerId = callerId
         self.callerIdName = callerIdName
@@ -74,6 +78,7 @@ public class CreateCallRequest: Codable {
         self.attributes = attributes
         self.languageId = languageId
         self.routingSkillsIds = routingSkillsIds
+        self.routingSkillExpression = routingSkillExpression
         self.conversationIds = conversationIds
         self.participants = participants
         self.uuiData = uuiData

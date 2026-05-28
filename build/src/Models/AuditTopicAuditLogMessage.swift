@@ -291,6 +291,8 @@ public class AuditTopicAuditLogMessage: Codable {
         case knowledgeLabel = "KnowledgeLabel"
         case knowledgeTraining = "KnowledgeTraining"
         case knowledgeSearchFeedback = "KnowledgeSearchFeedback"
+        case knowledgeBaseSource = "KnowledgeBaseSource"
+        case knowledgeFabricSource = "KnowledgeFabricSource"
         case transcriptionSettings = "TranscriptionSettings"
         case speechTextAnalyticsSettings = "SpeechTextAnalyticsSettings"
         case appointment = "Appointment"

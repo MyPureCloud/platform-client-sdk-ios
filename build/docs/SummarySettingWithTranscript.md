@@ -7,9 +7,9 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **transcript** | **String** | Example transcript to preview with the setting. | |
-| **summarySetting** | [**SummarySetting**](SummarySetting) | Summary setting to preview on the transcript. | |
 | **summaryPreviewSessionId** | **String** | Session identifier of the summary preview. | |
+| **summarySetting** | [**SummarySetting**](SummarySetting) | Summary setting to preview on the transcript. | |
 
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_

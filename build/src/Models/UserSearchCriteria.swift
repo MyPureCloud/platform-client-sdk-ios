@@ -32,6 +32,11 @@ public class UserSearchCriteria: Codable {
         case requiredFields = "REQUIRED_FIELDS"
         case matchAll = "MATCH_ALL"
         case queryString = "QUERY_STRING"
+        case range = "RANGE"
+        case lessThan = "LESS_THAN"
+        case lessThanEqualTo = "LESS_THAN_EQUAL_TO"
+        case greaterThan = "GREATER_THAN"
+        case greaterThanEqualTo = "GREATER_THAN_EQUAL_TO"
     }
 
     /** The end value of the range. This field is used for range search types. */

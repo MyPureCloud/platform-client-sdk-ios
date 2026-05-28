@@ -1249,7 +1249,7 @@ open class JourneyAPI {
     
     
     /**
-     Retrieve a single action target.
+     Deprecated. Retrieve a single action target.
      
      - parameter actionTargetId: (path) ID of the action target. 
      - parameter completion: completion handler to receive the data and the error objects
@@ -1273,8 +1273,9 @@ open class JourneyAPI {
     }
 
     /**
-     Retrieve a single action target.
+     Deprecated. Retrieve a single action target.
      - GET /api/v2/journey/actiontargets/{actionTargetId}
+     - ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -1322,7 +1323,7 @@ open class JourneyAPI {
     
     
     /**
-     Retrieve all action targets.
+     Deprecated. Retrieve all action targets.
      
      - parameter pageNumber: (query) Page number (optional)
      - parameter pageSize: (query) Page size (optional)
@@ -1347,8 +1348,9 @@ open class JourneyAPI {
     }
 
     /**
-     Retrieve all action targets.
+     Deprecated. Retrieve all action targets.
      - GET /api/v2/journey/actiontargets
+     - ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -3872,7 +3874,7 @@ open class JourneyAPI {
           "attribute" : "attribute",
           "value" : "value"
         } ],
-        "value" : 6
+        "value" : "{}"
       }, {
         "groupByAttributes" : [ {
           "attribute" : "attribute",
@@ -3881,7 +3883,7 @@ open class JourneyAPI {
           "attribute" : "attribute",
           "value" : "value"
         } ],
-        "value" : 6
+        "value" : "{}"
       } ],
       "id" : "id"
     }, {
@@ -3893,7 +3895,7 @@ open class JourneyAPI {
           "attribute" : "attribute",
           "value" : "value"
         } ],
-        "value" : 6
+        "value" : "{}"
       }, {
         "groupByAttributes" : [ {
           "attribute" : "attribute",
@@ -3902,7 +3904,7 @@ open class JourneyAPI {
           "attribute" : "attribute",
           "value" : "value"
         } ],
-        "value" : 6
+        "value" : "{}"
       } ],
       "id" : "id"
     } ],
@@ -3919,7 +3921,7 @@ open class JourneyAPI {
           "attribute" : "attribute",
           "value" : "value"
         } ],
-        "value" : 6
+        "value" : "{}"
       }, {
         "groupByAttributes" : [ {
           "attribute" : "attribute",
@@ -3928,7 +3930,7 @@ open class JourneyAPI {
           "attribute" : "attribute",
           "value" : "value"
         } ],
-        "value" : 6
+        "value" : "{}"
       } ],
       "id" : "id"
     }, {
@@ -3940,7 +3942,7 @@ open class JourneyAPI {
           "attribute" : "attribute",
           "value" : "value"
         } ],
-        "value" : 6
+        "value" : "{}"
       }, {
         "groupByAttributes" : [ {
           "attribute" : "attribute",
@@ -3949,7 +3951,7 @@ open class JourneyAPI {
           "attribute" : "attribute",
           "value" : "value"
         } ],
-        "value" : 6
+        "value" : "{}"
       } ],
       "id" : "id"
     } ],
@@ -4064,7 +4066,7 @@ open class JourneyAPI {
         "attribute" : "attribute",
         "value" : "value"
       } ],
-      "value" : 6
+      "value" : "{}"
     }, {
       "groupByAttributes" : [ {
         "attribute" : "attribute",
@@ -4073,7 +4075,7 @@ open class JourneyAPI {
         "attribute" : "attribute",
         "value" : "value"
       } ],
-      "value" : 6
+      "value" : "{}"
     } ],
     "id" : "id"
   }, {
@@ -4085,7 +4087,7 @@ open class JourneyAPI {
         "attribute" : "attribute",
         "value" : "value"
       } ],
-      "value" : 6
+      "value" : "{}"
     }, {
       "groupByAttributes" : [ {
         "attribute" : "attribute",
@@ -4094,7 +4096,7 @@ open class JourneyAPI {
         "attribute" : "attribute",
         "value" : "value"
       } ],
-      "value" : 6
+      "value" : "{}"
     } ],
     "id" : "id"
   } ],
@@ -4675,6 +4677,136 @@ open class JourneyAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    /**
+     Get external events for journey views
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyViewsEventdefinitionsExternal(completion: @escaping ((_ data: GetExternalEventsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyViewsEventdefinitionsExternalWithRequestBuilder()
+        requestBuilder.execute { (response: Response<GetExternalEventsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get external events for journey views
+     - GET /api/v2/journey/views/eventdefinitions/external
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "schemaId" : "schemaId",
+    "displayName" : "displayName",
+    "systemStatus" : "New",
+    "eventName" : "eventName",
+    "rank" : 0,
+    "activationStatus" : "Activated",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "dateFirstActivated" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "schemaId" : "schemaId",
+    "displayName" : "displayName",
+    "systemStatus" : "New",
+    "eventName" : "eventName",
+    "rank" : 0,
+    "activationStatus" : "Activated",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "dateFirstActivated" : "2000-01-23T04:56:07.000+00:00"
+  } ]
+}, statusCode=200}]
+
+     - returns: RequestBuilder<GetExternalEventsResponse> 
+     */
+    open class func getJourneyViewsEventdefinitionsExternalWithRequestBuilder() -> RequestBuilder<GetExternalEventsResponse> {        
+        let path = "/api/v2/journey/views/eventdefinitions/external"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GetExternalEventsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get changes in external event definitions
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyViewsEventdefinitionsExternalChanges(completion: @escaping ((_ data: ExternalEventChangesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyViewsEventdefinitionsExternalChangesWithRequestBuilder()
+        requestBuilder.execute { (response: Response<ExternalEventChangesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get changes in external event definitions
+     - GET /api/v2/journey/views/eventdefinitions/external/changes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "changes" : [ {
+    "changeCategory" : "Error",
+    "errorDescription" : "errorDescription",
+    "schemaId" : "schemaId",
+    "systemStatus" : "New",
+    "dateDetected" : "2000-01-23T04:56:07.000+00:00",
+    "eventName" : "eventName",
+    "errorCode" : "errorCode"
+  }, {
+    "changeCategory" : "Error",
+    "errorDescription" : "errorDescription",
+    "schemaId" : "schemaId",
+    "systemStatus" : "New",
+    "dateDetected" : "2000-01-23T04:56:07.000+00:00",
+    "eventName" : "eventName",
+    "errorCode" : "errorCode"
+  } ]
+}, statusCode=200}]
+
+     - returns: RequestBuilder<ExternalEventChangesResponse> 
+     */
+    open class func getJourneyViewsEventdefinitionsExternalChangesWithRequestBuilder() -> RequestBuilder<ExternalEventChangesResponse> {        
+        let path = "/api/v2/journey/views/eventdefinitions/external/changes"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExternalEventChangesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     
     
     
@@ -5081,7 +5213,7 @@ open class JourneyAPI {
     
     
     /**
-     Update a single action target.
+     Deprecated. Update a single action target.
      
      - parameter actionTargetId: (path) ID of the action target. 
      - parameter body: (body)  (optional)
@@ -5106,8 +5238,9 @@ open class JourneyAPI {
     }
 
     /**
-     Update a single action target.
+     Deprecated. Update a single action target.
      - PATCH /api/v2/journey/actiontargets/{actionTargetId}
+     - ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -7632,6 +7765,132 @@ open class JourneyAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JourneyView>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update external event for journey views
+     
+     - parameter eventDefinitionId: (path) Event Definition ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putJourneyViewsEventdefinition(eventDefinitionId: String, body: UpdateExternalEventRequest? = nil, completion: @escaping ((_ data: UpdateExternalEventResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = putJourneyViewsEventdefinitionWithRequestBuilder(eventDefinitionId: eventDefinitionId, body: body)
+        requestBuilder.execute { (response: Response<UpdateExternalEventResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update external event for journey views
+     - PUT /api/v2/journey/views/eventdefinitions/{eventDefinitionId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schemaId" : "schemaId",
+  "displayName" : "displayName",
+  "eventName" : "eventName",
+  "rank" : 0,
+  "activationStatus" : "Activated"
+}, statusCode=200}]
+     
+     - parameter eventDefinitionId: (path) Event Definition ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<UpdateExternalEventResponse> 
+     */
+    open class func putJourneyViewsEventdefinitionWithRequestBuilder(eventDefinitionId: String, body: UpdateExternalEventRequest? = nil) -> RequestBuilder<UpdateExternalEventResponse> {        
+        var path = "/api/v2/journey/views/eventdefinitions/{eventDefinitionId}"
+        let eventDefinitionIdPreEscape = "\(eventDefinitionId)"
+        let eventDefinitionIdPostEscape = eventDefinitionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{eventDefinitionId}", with: eventDefinitionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UpdateExternalEventResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Activate external event for journey views
+     
+     - parameter eventDefinitionId: (path) Event Definition ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putJourneyViewsEventdefinitionActivate(eventDefinitionId: String, body: ActivateExternalEventRequest? = nil, completion: @escaping ((_ data: ActivateExternalEventResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = putJourneyViewsEventdefinitionActivateWithRequestBuilder(eventDefinitionId: eventDefinitionId, body: body)
+        requestBuilder.execute { (response: Response<ActivateExternalEventResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Activate external event for journey views
+     - PUT /api/v2/journey/views/eventdefinitions/{eventDefinitionId}/activate
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schemaId" : "schemaId",
+  "displayName" : "displayName",
+  "eventName" : "eventName",
+  "rank" : 0,
+  "activationStatus" : "Activated"
+}, statusCode=200}]
+     
+     - parameter eventDefinitionId: (path) Event Definition ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<ActivateExternalEventResponse> 
+     */
+    open class func putJourneyViewsEventdefinitionActivateWithRequestBuilder(eventDefinitionId: String, body: ActivateExternalEventRequest? = nil) -> RequestBuilder<ActivateExternalEventResponse> {        
+        var path = "/api/v2/journey/views/eventdefinitions/{eventDefinitionId}/activate"
+        let eventDefinitionIdPreEscape = "\(eventDefinitionId)"
+        let eventDefinitionIdPostEscape = eventDefinitionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{eventDefinitionId}", with: eventDefinitionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivateExternalEventResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

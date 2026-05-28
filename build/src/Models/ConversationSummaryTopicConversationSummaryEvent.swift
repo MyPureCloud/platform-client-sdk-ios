@@ -52,6 +52,18 @@ public class ConversationSummaryTopicConversationSummaryEvent: Codable {
 
 
 
+    public enum SummarySourceType: String, Codable { 
+        case unknown = "UNKNOWN"
+        case genesysNativeService = "GENESYS_NATIVE_SERVICE"
+        case externalService = "EXTERNAL_SERVICE"
+    }
+
+    public enum TriggerType: String, Codable { 
+        case unknown = "UNKNOWN"
+        case onDemand = "ON_DEMAND"
+        case afterDisconnect = "AFTER_DISCONNECT"
+    }
+
 
 
     public enum ErrorType: String, Codable { 
@@ -80,11 +92,13 @@ public class ConversationSummaryTopicConversationSummaryEvent: Codable {
     public var extractedEntities: [ConversationSummaryTopicSummaryExtractedCustomEntity]?
     public var wrapUpCodes: [ConversationSummaryTopicConversationWrapUpCode]?
     public var triggerSource: ConversationSummaryTopicTriggerSource?
+    public var summarySourceType: SummarySourceType?
+    public var triggerType: TriggerType?
     public var lastEditedBy: ConversationSummaryTopicConversationSummaryParticipant?
     public var errorType: ErrorType?
     public var durationMs: Int64?
 
-    public init(conversationId: UUID?, queueId: UUID?, participants: [ConversationSummaryTopicConversationSummaryParticipant]?, communicationIds: [String]?, createdDate: Date?, messageType: MessageType?, mediaType: MediaType?, summaryId: UUID?, language: String?, summary: ConversationSummaryTopicConversationSummary?, headline: ConversationSummaryTopicConversationHeadline?, reason: ConversationSummaryTopicConversationReason?, resolution: ConversationSummaryTopicConversationResolution?, followupActions: [ConversationSummaryTopicConversationFollowupAction]?, extractedEntities: [ConversationSummaryTopicSummaryExtractedCustomEntity]?, wrapUpCodes: [ConversationSummaryTopicConversationWrapUpCode]?, triggerSource: ConversationSummaryTopicTriggerSource?, lastEditedBy: ConversationSummaryTopicConversationSummaryParticipant?, errorType: ErrorType?, durationMs: Int64?) {
+    public init(conversationId: UUID?, queueId: UUID?, participants: [ConversationSummaryTopicConversationSummaryParticipant]?, communicationIds: [String]?, createdDate: Date?, messageType: MessageType?, mediaType: MediaType?, summaryId: UUID?, language: String?, summary: ConversationSummaryTopicConversationSummary?, headline: ConversationSummaryTopicConversationHeadline?, reason: ConversationSummaryTopicConversationReason?, resolution: ConversationSummaryTopicConversationResolution?, followupActions: [ConversationSummaryTopicConversationFollowupAction]?, extractedEntities: [ConversationSummaryTopicSummaryExtractedCustomEntity]?, wrapUpCodes: [ConversationSummaryTopicConversationWrapUpCode]?, triggerSource: ConversationSummaryTopicTriggerSource?, summarySourceType: SummarySourceType?, triggerType: TriggerType?, lastEditedBy: ConversationSummaryTopicConversationSummaryParticipant?, errorType: ErrorType?, durationMs: Int64?) {
         self.conversationId = conversationId
         self.queueId = queueId
         self.participants = participants
@@ -102,6 +116,8 @@ public class ConversationSummaryTopicConversationSummaryEvent: Codable {
         self.extractedEntities = extractedEntities
         self.wrapUpCodes = wrapUpCodes
         self.triggerSource = triggerSource
+        self.summarySourceType = summarySourceType
+        self.triggerType = triggerType
         self.lastEditedBy = lastEditedBy
         self.errorType = errorType
         self.durationMs = durationMs

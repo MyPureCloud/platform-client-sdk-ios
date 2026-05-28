@@ -8,13 +8,13 @@
 |------------ | ------------- | ------------- | -------------|
 | **actionTemplate** | [**ActionMapActionTemplate**](ActionMapActionTemplate) | Action template associated with the action map. | [optional] |
 | **mediaType** | **String** | Media type of action. | [optional] |
-| **actionTargetId** | **String** | Action target ID. | [optional] |
-| **isPacingEnabled** | **Bool** | Whether this action should be throttled. | [optional] |
-| **props** | [**ActionProperties**](ActionProperties) | Additional properties. | [optional] |
+| **actionTargetId** | **String** | Deprecated. Action target ID. | [optional] |
+| **isPacingEnabled** | **Bool** | Deprecated. Whether this action should be throttled. | [optional] |
+| **props** | [**ActionProperties**](ActionProperties) | Deprecated. Additional properties. | [optional] |
 | **architectFlowFields** | [**ArchitectFlowFields**](ArchitectFlowFields) | Architect Flow Id and input contract. | [optional] |
 | **webMessagingOfferFields** | [**WebMessagingOfferFields**](WebMessagingOfferFields) | Admin-configurable fields of a web messaging offer action. | [optional] |
 | **openActionFields** | [**OpenActionFields**](OpenActionFields) | Admin-configurable fields of an open action. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_

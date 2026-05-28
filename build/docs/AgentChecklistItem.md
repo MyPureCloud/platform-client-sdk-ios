@@ -10,9 +10,10 @@
 | **name** | **String** | Name of the checklist item. | |
 | **_description** | **String** | Description of the checklist item. | [optional] |
 | **automatedCheckEnabled** | **Bool** | Flag to indicate whether automated check is enabled for this checklist item. | [optional] |
+| **exactPhraseMatch** | **Bool** | Flag to indicate whether exact phrase matching is applicable for this checklist item. | [optional] |
 | **important** | **Bool** | Flag to indicate whether this checklist item is marked as important. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_

@@ -23,10 +23,12 @@
 | **extractedEntities** | [**[ConversationSummaryTopicSummaryExtractedCustomEntity]**]([ConversationSummaryTopicSummaryExtractedCustomEntity]) |  | [optional] |
 | **wrapUpCodes** | [**[ConversationSummaryTopicConversationWrapUpCode]**]([ConversationSummaryTopicConversationWrapUpCode]) |  | [optional] |
 | **triggerSource** | [**ConversationSummaryTopicTriggerSource**](ConversationSummaryTopicTriggerSource) |  | [optional] |
+| **summarySourceType** | **String** |  | [optional] |
+| **triggerType** | **String** |  | [optional] |
 | **lastEditedBy** | [**ConversationSummaryTopicConversationSummaryParticipant**](ConversationSummaryTopicConversationSummaryParticipant) |  | [optional] |
 | **errorType** | **String** |  | [optional] |
 | **durationMs** | **Int64** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_

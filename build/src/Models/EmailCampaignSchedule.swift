@@ -35,7 +35,7 @@ public class EmailCampaignSchedule: Codable {
     public var intervals: [ScheduleInterval]?
     /** Recurring schedules of the campaign */
     public var recurrences: [Reoccurrence]?
-    /** The time zone for this email campaign schedule. Defaults to UTC if empty or not provided. See here for a list of valid time zones https://www.iana.org/time-zones */
+    /** The time zone for this email campaign schedule. Defaults to UTC if empty or not provided. See here for a list of valid time zones https://www.iana.org/time-zones. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London */
     public var timeZone: String?
     /** The Campaign that this email campaign schedule is for. */
     public var emailCampaign: DivisionedDomainEntityRef?

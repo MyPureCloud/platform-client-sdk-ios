@@ -52,6 +52,18 @@ public class ConversationSummaryTopicVirtualAgentsConversationSummaryEvent: Coda
 
 
 
+    public enum SummarySourceType: String, Codable { 
+        case unknown = "UNKNOWN"
+        case genesysNativeService = "GENESYS_NATIVE_SERVICE"
+        case externalService = "EXTERNAL_SERVICE"
+    }
+
+    public enum TriggerType: String, Codable { 
+        case unknown = "UNKNOWN"
+        case onDemand = "ON_DEMAND"
+        case afterDisconnect = "AFTER_DISCONNECT"
+    }
+
 
 
     public enum ErrorType: String, Codable { 
@@ -80,11 +92,13 @@ public class ConversationSummaryTopicVirtualAgentsConversationSummaryEvent: Coda
     public var extractedEntities: [ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity]?
     public var wrapUpCodes: [ConversationSummaryTopicVirtualAgentsConversationWrapUpCode]?
     public var triggerSource: ConversationSummaryTopicVirtualAgentsTriggerSource?
+    public var summarySourceType: SummarySourceType?
+    public var triggerType: TriggerType?
     public var lastEditedBy: ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant?
     public var errorType: ErrorType?
     public var durationMs: Int64?
 
-    public init(conversationId: UUID?, queueId: UUID?, participants: [ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant]?, communicationIds: [String]?, createdDate: Date?, messageType: MessageType?, mediaType: MediaType?, summaryId: UUID?, language: String?, summary: ConversationSummaryTopicVirtualAgentsConversationSummary?, headline: ConversationSummaryTopicVirtualAgentsConversationHeadline?, reason: ConversationSummaryTopicVirtualAgentsConversationReason?, resolution: ConversationSummaryTopicVirtualAgentsConversationResolution?, followupActions: [ConversationSummaryTopicVirtualAgentsConversationFollowupAction]?, extractedEntities: [ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity]?, wrapUpCodes: [ConversationSummaryTopicVirtualAgentsConversationWrapUpCode]?, triggerSource: ConversationSummaryTopicVirtualAgentsTriggerSource?, lastEditedBy: ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant?, errorType: ErrorType?, durationMs: Int64?) {
+    public init(conversationId: UUID?, queueId: UUID?, participants: [ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant]?, communicationIds: [String]?, createdDate: Date?, messageType: MessageType?, mediaType: MediaType?, summaryId: UUID?, language: String?, summary: ConversationSummaryTopicVirtualAgentsConversationSummary?, headline: ConversationSummaryTopicVirtualAgentsConversationHeadline?, reason: ConversationSummaryTopicVirtualAgentsConversationReason?, resolution: ConversationSummaryTopicVirtualAgentsConversationResolution?, followupActions: [ConversationSummaryTopicVirtualAgentsConversationFollowupAction]?, extractedEntities: [ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity]?, wrapUpCodes: [ConversationSummaryTopicVirtualAgentsConversationWrapUpCode]?, triggerSource: ConversationSummaryTopicVirtualAgentsTriggerSource?, summarySourceType: SummarySourceType?, triggerType: TriggerType?, lastEditedBy: ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant?, errorType: ErrorType?, durationMs: Int64?) {
         self.conversationId = conversationId
         self.queueId = queueId
         self.participants = participants
@@ -102,6 +116,8 @@ public class ConversationSummaryTopicVirtualAgentsConversationSummaryEvent: Coda
         self.extractedEntities = extractedEntities
         self.wrapUpCodes = wrapUpCodes
         self.triggerSource = triggerSource
+        self.summarySourceType = summarySourceType
+        self.triggerType = triggerType
         self.lastEditedBy = lastEditedBy
         self.errorType = errorType
         self.durationMs = durationMs

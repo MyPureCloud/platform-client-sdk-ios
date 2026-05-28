@@ -9,10 +9,11 @@
 | **dateStart** | **String** |  | [optional] |
 | **dateScheduleStart** | **String** |  | [optional] |
 | **activityCode** | **String** |  | [optional] |
+| **activityCodeId** | **String** |  | [optional] |
 | **activityColor** | **String** |  | [optional] |
 | **activityName** | **String** |  | [optional] |
 | **points** | **Int64** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_

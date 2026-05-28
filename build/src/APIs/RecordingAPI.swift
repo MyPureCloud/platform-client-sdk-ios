@@ -491,6 +491,7 @@ open class RecordingAPI {
       "status" : "status",
       "story" : "{}"
     } ],
+    "associatedConversationIds" : [ "associatedConversationIds", "associatedConversationIds" ],
     "annotations" : [ {
       "reason" : "Hold",
       "recordingLocation" : 5,
@@ -1929,6 +1930,7 @@ open class RecordingAPI {
     "status" : "status",
     "story" : "{}"
   } ],
+  "associatedConversationIds" : [ "associatedConversationIds", "associatedConversationIds" ],
   "annotations" : [ {
     "reason" : "Hold",
     "recordingLocation" : 5,
@@ -3478,6 +3480,7 @@ open class RecordingAPI {
     "status" : "status",
     "story" : "{}"
   } ],
+  "associatedConversationIds" : [ "associatedConversationIds", "associatedConversationIds" ],
   "annotations" : [ {
     "reason" : "Hold",
     "recordingLocation" : 5,
@@ -4613,6 +4616,7 @@ open class RecordingAPI {
       "status" : "status",
       "story" : "{}"
     } ],
+    "associatedConversationIds" : [ "associatedConversationIds", "associatedConversationIds" ],
     "annotations" : [ {
       "reason" : "Hold",
       "recordingLocation" : 5,
@@ -5821,6 +5825,7 @@ open class RecordingAPI {
     "status" : "status",
     "story" : "{}"
   } ],
+  "associatedConversationIds" : [ "associatedConversationIds", "associatedConversationIds" ],
   "annotations" : [ {
     "reason" : "Hold",
     "recordingLocation" : 5,
@@ -6992,6 +6997,7 @@ open class RecordingAPI {
         "status" : "status",
         "story" : "{}"
       } ],
+      "associatedConversationIds" : [ "associatedConversationIds", "associatedConversationIds" ],
       "annotations" : [ {
         "reason" : "Hold",
         "recordingLocation" : 5,
@@ -8101,6 +8107,7 @@ open class RecordingAPI {
         "status" : "status",
         "story" : "{}"
       } ],
+      "associatedConversationIds" : [ "associatedConversationIds", "associatedConversationIds" ],
       "annotations" : [ {
         "reason" : "Hold",
         "recordingLocation" : 5,
@@ -11795,6 +11802,7 @@ open class RecordingAPI {
     "status" : "status",
     "story" : "{}"
   } ],
+  "associatedConversationIds" : [ "associatedConversationIds", "associatedConversationIds" ],
   "annotations" : [ {
     "reason" : "Hold",
     "recordingLocation" : 5,
@@ -13015,6 +13023,7 @@ open class RecordingAPI {
     "status" : "status",
     "story" : "{}"
   } ],
+  "associatedConversationIds" : [ "associatedConversationIds", "associatedConversationIds" ],
   "annotations" : [ {
     "reason" : "Hold",
     "recordingLocation" : 5,

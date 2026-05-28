@@ -21,6 +21,8 @@ public class OutboundDomain: Codable {
 
 
 
+
+
     /** Unique Id of the domain such as: example.com */
     public var _id: String?
     public var name: String?
@@ -32,16 +34,19 @@ public class OutboundDomain: Codable {
     public var senderType: SenderType?
     /** The email settings associated with this domain. */
     public var emailSetting: EmailSetting?
+    /** The DMARC verification status for this domain. */
+    public var dmarcVerificationResult: DmarcResult?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, cnameVerificationResult: VerificationResult?, dkimVerificationResult: VerificationResult?, senderType: SenderType?, emailSetting: EmailSetting?, selfUri: String?) {
+    public init(_id: String?, name: String?, cnameVerificationResult: VerificationResult?, dkimVerificationResult: VerificationResult?, senderType: SenderType?, emailSetting: EmailSetting?, dmarcVerificationResult: DmarcResult?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.cnameVerificationResult = cnameVerificationResult
         self.dkimVerificationResult = dkimVerificationResult
         self.senderType = senderType
         self.emailSetting = emailSetting
+        self.dmarcVerificationResult = dmarcVerificationResult
         self.selfUri = selfUri
     }
 
@@ -52,6 +57,7 @@ public class OutboundDomain: Codable {
         case dkimVerificationResult
         case senderType
         case emailSetting
+        case dmarcVerificationResult
         case selfUri
     }
 

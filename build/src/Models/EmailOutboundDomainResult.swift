@@ -25,6 +25,8 @@ public class EmailOutboundDomainResult: Codable {
 
 
 
+
+
     public var dnsCnameBounceRecord: DnsRecordEntry?
     public var dnsTxtSendingRecord: DnsRecordEntry?
     public var domainName: String?
@@ -32,14 +34,17 @@ public class EmailOutboundDomainResult: Codable {
     public var senderType: SenderType?
     /** The email settings associated with this domain. */
     public var emailSetting: EmailSetting?
+    /** The DMARC verification status for this domain. */
+    public var dmarcVerificationResult: DmarcResult?
 
-    public init(dnsCnameBounceRecord: DnsRecordEntry?, dnsTxtSendingRecord: DnsRecordEntry?, domainName: String?, senderStatus: SenderStatus?, senderType: SenderType?, emailSetting: EmailSetting?) {
+    public init(dnsCnameBounceRecord: DnsRecordEntry?, dnsTxtSendingRecord: DnsRecordEntry?, domainName: String?, senderStatus: SenderStatus?, senderType: SenderType?, emailSetting: EmailSetting?, dmarcVerificationResult: DmarcResult?) {
         self.dnsCnameBounceRecord = dnsCnameBounceRecord
         self.dnsTxtSendingRecord = dnsTxtSendingRecord
         self.domainName = domainName
         self.senderStatus = senderStatus
         self.senderType = senderType
         self.emailSetting = emailSetting
+        self.dmarcVerificationResult = dmarcVerificationResult
     }
 
 

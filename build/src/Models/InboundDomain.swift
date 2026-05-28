@@ -26,6 +26,8 @@ public class InboundDomain: Codable {
 
 
 
+
+
     /** Unique Id of the domain such as: example.com */
     public var _id: String?
     public var name: String?
@@ -43,10 +45,12 @@ public class InboundDomain: Codable {
     public var graphApiSettings: GraphApiSettings?
     /** The email settings associated with this domain. */
     public var emailSetting: EmailSetting?
+    /** The DMARC verification status for this domain. */
+    public var dmarcVerificationResult: DmarcResult?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, mxRecordStatus: MxRecordStatus?, subDomain: Bool?, mailFromSettings: MailFromResult?, customSMTPServer: DomainEntityRef?, imapSettings: ImapSettings?, graphApiSettings: GraphApiSettings?, emailSetting: EmailSetting?, selfUri: String?) {
+    public init(_id: String?, name: String?, mxRecordStatus: MxRecordStatus?, subDomain: Bool?, mailFromSettings: MailFromResult?, customSMTPServer: DomainEntityRef?, imapSettings: ImapSettings?, graphApiSettings: GraphApiSettings?, emailSetting: EmailSetting?, dmarcVerificationResult: DmarcResult?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.mxRecordStatus = mxRecordStatus
@@ -56,6 +60,7 @@ public class InboundDomain: Codable {
         self.imapSettings = imapSettings
         self.graphApiSettings = graphApiSettings
         self.emailSetting = emailSetting
+        self.dmarcVerificationResult = dmarcVerificationResult
         self.selfUri = selfUri
     }
 
@@ -69,6 +74,7 @@ public class InboundDomain: Codable {
         case imapSettings
         case graphApiSettings
         case emailSetting
+        case dmarcVerificationResult
         case selfUri
     }
 

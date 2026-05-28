@@ -529,7 +529,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "workforce.management.forecast",
+            "namespace" : "webchat",
             "value" : 7,
             "key" : "key"
           },
@@ -661,7 +661,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "workforce.management.forecast",
+            "namespace" : "webchat",
             "value" : 7,
             "key" : "key"
           },
@@ -939,7 +939,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "workforce.management.forecast",
+            "namespace" : "webchat",
             "value" : 7,
             "key" : "key"
           },
@@ -1021,7 +1021,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "workforce.management.forecast",
+            "namespace" : "webchat",
             "value" : 7,
             "key" : "key"
           },
@@ -7338,7 +7338,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "workforce.management.forecast",
+            "namespace" : "webchat",
             "value" : 7,
             "key" : "key"
           },
@@ -7470,7 +7470,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "workforce.management.forecast",
+            "namespace" : "webchat",
             "value" : 7,
             "key" : "key"
           },
@@ -7748,7 +7748,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "workforce.management.forecast",
+            "namespace" : "webchat",
             "value" : 7,
             "key" : "key"
           },
@@ -7830,7 +7830,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "workforce.management.forecast",
+            "namespace" : "webchat",
             "value" : 7,
             "key" : "key"
           },
@@ -14397,7 +14397,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "workforce.management.forecast",
+              "namespace" : "webchat",
               "value" : 7,
               "key" : "key"
             },
@@ -14529,7 +14529,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "workforce.management.forecast",
+              "namespace" : "webchat",
               "value" : 7,
               "key" : "key"
             },
@@ -14807,7 +14807,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "workforce.management.forecast",
+              "namespace" : "webchat",
               "value" : 7,
               "key" : "key"
             },
@@ -14889,7 +14889,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "workforce.management.forecast",
+              "namespace" : "webchat",
               "value" : 7,
               "key" : "key"
             },
@@ -21206,7 +21206,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "workforce.management.forecast",
+              "namespace" : "webchat",
               "value" : 7,
               "key" : "key"
             },
@@ -21338,7 +21338,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "workforce.management.forecast",
+              "namespace" : "webchat",
               "value" : 7,
               "key" : "key"
             },
@@ -21616,7 +21616,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "workforce.management.forecast",
+              "namespace" : "webchat",
               "value" : 7,
               "key" : "key"
             },
@@ -21698,7 +21698,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "workforce.management.forecast",
+              "namespace" : "webchat",
               "value" : 7,
               "key" : "key"
             },
@@ -28106,7 +28106,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "workforce.management.forecast",
+              "namespace" : "webchat",
               "value" : 7,
               "key" : "key"
             },
@@ -28238,7 +28238,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "workforce.management.forecast",
+              "namespace" : "webchat",
               "value" : 7,
               "key" : "key"
             },
@@ -28516,7 +28516,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "workforce.management.forecast",
+              "namespace" : "webchat",
               "value" : 7,
               "key" : "key"
             },
@@ -28598,7 +28598,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "workforce.management.forecast",
+              "namespace" : "webchat",
               "value" : 7,
               "key" : "key"
             },
@@ -34915,7 +34915,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "workforce.management.forecast",
+              "namespace" : "webchat",
               "value" : 7,
               "key" : "key"
             },
@@ -35047,7 +35047,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "workforce.management.forecast",
+              "namespace" : "webchat",
               "value" : 7,
               "key" : "key"
             },
@@ -35325,7 +35325,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "workforce.management.forecast",
+              "namespace" : "webchat",
               "value" : 7,
               "key" : "key"
             },
@@ -35407,7 +35407,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "workforce.management.forecast",
+              "namespace" : "webchat",
               "value" : 7,
               "key" : "key"
             },
@@ -41938,7 +41938,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "workforce.management.forecast",
+            "namespace" : "webchat",
             "value" : 7,
             "key" : "key"
           },
@@ -42070,7 +42070,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "workforce.management.forecast",
+            "namespace" : "webchat",
             "value" : 7,
             "key" : "key"
           },
@@ -42348,7 +42348,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "workforce.management.forecast",
+            "namespace" : "webchat",
             "value" : 7,
             "key" : "key"
           },
@@ -42430,7 +42430,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "workforce.management.forecast",
+            "namespace" : "webchat",
             "value" : 7,
             "key" : "key"
           },
@@ -48747,7 +48747,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "workforce.management.forecast",
+            "namespace" : "webchat",
             "value" : 7,
             "key" : "key"
           },
@@ -48879,7 +48879,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "workforce.management.forecast",
+            "namespace" : "webchat",
             "value" : 7,
             "key" : "key"
           },
@@ -49157,7 +49157,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "workforce.management.forecast",
+            "namespace" : "webchat",
             "value" : 7,
             "key" : "key"
           },
@@ -49239,7 +49239,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "workforce.management.forecast",
+            "namespace" : "webchat",
             "value" : 7,
             "key" : "key"
           },

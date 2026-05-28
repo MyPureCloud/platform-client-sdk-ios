@@ -60,23 +60,29 @@ public class KnowledgeBaseCreateRequest: Codable {
         case elGr = "el-GR"
     }
 
+
+
     /** Knowledge base name */
     public var name: String?
     /** Knowledge base description */
     public var _description: String?
     /** Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA] which might have a lower accuracy. */
     public var coreLanguage: CoreLanguage?
+    /** Flag that indicates the search on content is enabled for the knowledge base. */
+    public var contentSearchEnabled: Bool?
 
-    public init(name: String?, _description: String?, coreLanguage: CoreLanguage?) {
+    public init(name: String?, _description: String?, coreLanguage: CoreLanguage?, contentSearchEnabled: Bool?) {
         self.name = name
         self._description = _description
         self.coreLanguage = coreLanguage
+        self.contentSearchEnabled = contentSearchEnabled
     }
 
     public enum CodingKeys: String, CodingKey { 
         case name
         case _description = "description"
         case coreLanguage
+        case contentSearchEnabled
     }
 
 

@@ -115,6 +115,7 @@ open class KnowledgeAPI {
   "faqCount" : 0,
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
+  "contentSearchEnabled" : true,
   "description" : "description",
   "coreLanguage" : "en-US",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -1583,6 +1584,7 @@ open class KnowledgeAPI {
   "faqCount" : 0,
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
+  "contentSearchEnabled" : true,
   "description" : "description",
   "coreLanguage" : "en-US",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -3318,6 +3320,180 @@ open class KnowledgeAPI {
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum AppType_getKnowledgeKnowledgebaseDocumentsFeedback: String { 
+        case assistant = "Assistant"
+        case botFlow = "BotFlow"
+        case messengerKnowledgeApp = "MessengerKnowledgeApp"
+        case smartAdvisor = "SmartAdvisor"
+        case supportCenter = "SupportCenter"
+    }
+    
+    
+    
+    public enum QueryType_getKnowledgeKnowledgebaseDocumentsFeedback: String { 
+        case unknown = "Unknown"
+        case article = "Article"
+        case autoSearch = "AutoSearch"
+        case category = "Category"
+        case manualSearch = "ManualSearch"
+        case recommendation = "Recommendation"
+        case suggestion = "Suggestion"
+        case expandedArticle = "ExpandedArticle"
+    }
+    
+    
+    
+    
+    
+    
+    
+    public enum State_getKnowledgeKnowledgebaseDocumentsFeedback: String { 
+        case all = "All"
+        case draft = "Draft"
+        case _final = "Final"
+    }
+    
+    
+    /**
+     Get a list of feedback records given on documents in a knowledge base
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter onlyCommented: (query) If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. (optional)
+     - parameter documentVersionId: (query) Document version ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter documentVariationId: (query) Document variation ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter appType: (query) Application type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter queryType: (query) Query type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter userId: (query) The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter queueId: (query) Queue ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter state: (query) State to filter by. Supported only if onlyCommented&#x3D;true is set. Default: Final (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseDocumentsFeedback(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, onlyCommented: Bool? = nil, documentVersionId: String? = nil, documentVariationId: String? = nil, appType: AppType_getKnowledgeKnowledgebaseDocumentsFeedback? = nil, queryType: QueryType_getKnowledgeKnowledgebaseDocumentsFeedback? = nil, userId: String? = nil, queueId: String? = nil, state: State_getKnowledgeKnowledgebaseDocumentsFeedback? = nil, completion: @escaping ((_ data: KnowledgeDocumentFeedbackResponseListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseDocumentsFeedbackWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, onlyCommented: onlyCommented, documentVersionId: documentVersionId, documentVariationId: documentVariationId, appType: appType, queryType: queryType, userId: userId, queueId: queueId, state: state)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentFeedbackResponseListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of feedback records given on documents in a knowledge base
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/feedback
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "reason" : "DocumentContent",
+    "document" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "rating" : "Negative",
+    "sessionId" : "sessionId",
+    "queryType" : "Unknown",
+    "conversationContext" : "{}",
+    "search" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "documentVariation" : "{}",
+    "application" : "{}",
+    "surfacingMethod" : "Unknown",
+    "comment" : "comment",
+    "id" : "id",
+    "state" : "Draft",
+    "user" : "{}"
+  }, {
+    "reason" : "DocumentContent",
+    "document" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "rating" : "Negative",
+    "sessionId" : "sessionId",
+    "queryType" : "Unknown",
+    "conversationContext" : "{}",
+    "search" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "documentVariation" : "{}",
+    "application" : "{}",
+    "surfacingMethod" : "Unknown",
+    "comment" : "comment",
+    "id" : "id",
+    "state" : "Draft",
+    "user" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter onlyCommented: (query) If true, only feedback records that have comment are returned. If false, feedback records with and without comment are returned. Default: false. (optional)
+     - parameter documentVersionId: (query) Document version ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter documentVariationId: (query) Document variation ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter appType: (query) Application type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter queryType: (query) Query type to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter userId: (query) The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter queueId: (query) Queue ID to filter by. Supported only if onlyCommented&#x3D;true is set. (optional)
+     - parameter state: (query) State to filter by. Supported only if onlyCommented&#x3D;true is set. Default: Final (optional)
+
+     - returns: RequestBuilder<KnowledgeDocumentFeedbackResponseListing> 
+     */
+    open class func getKnowledgeKnowledgebaseDocumentsFeedbackWithRequestBuilder(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, onlyCommented: Bool? = nil, documentVersionId: String? = nil, documentVariationId: String? = nil, appType: AppType_getKnowledgeKnowledgebaseDocumentsFeedback? = nil, queryType: QueryType_getKnowledgeKnowledgebaseDocumentsFeedback? = nil, userId: String? = nil, queueId: String? = nil, state: State_getKnowledgeKnowledgebaseDocumentsFeedback? = nil) -> RequestBuilder<KnowledgeDocumentFeedbackResponseListing> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/feedback"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize, 
+            "onlyCommented": onlyCommented, 
+            "documentVersionId": documentVersionId, 
+            "documentVariationId": documentVariationId, 
+            "appType": appType?.rawValue, 
+            "queryType": queryType?.rawValue, 
+            "userId": userId, 
+            "queueId": queueId, 
+            "state": state?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentFeedbackResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     /**
      Get export job report
      
@@ -4841,6 +5017,7 @@ open class KnowledgeAPI {
     "faqCount" : 0,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "contentSearchEnabled" : true,
     "description" : "description",
     "coreLanguage" : "en-US",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -4853,6 +5030,7 @@ open class KnowledgeAPI {
     "faqCount" : 0,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "contentSearchEnabled" : true,
     "description" : "description",
     "coreLanguage" : "en-US",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -5719,6 +5897,7 @@ open class KnowledgeAPI {
   "faqCount" : 0,
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
+  "contentSearchEnabled" : true,
   "description" : "description",
   "coreLanguage" : "en-US",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -9697,6 +9876,7 @@ open class KnowledgeAPI {
   "faqCount" : 0,
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
+  "contentSearchEnabled" : true,
   "description" : "description",
   "coreLanguage" : "en-US",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",

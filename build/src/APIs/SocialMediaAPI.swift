@@ -1506,6 +1506,7 @@ open class SocialMediaAPI {
     "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
+    "ingestionRuleInfo" : "{}",
     "status" : "Active"
   }, {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -1517,6 +1518,7 @@ open class SocialMediaAPI {
     "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
+    "ingestionRuleInfo" : "{}",
     "status" : "Active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
@@ -1603,6 +1605,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active"
 }, statusCode=200}]
      
@@ -1685,6 +1688,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active"
 }, statusCode=200}]
      
@@ -1778,6 +1782,7 @@ open class SocialMediaAPI {
     "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
+    "ingestionRuleInfo" : "{}",
     "status" : "Active"
   }, {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -1790,6 +1795,7 @@ open class SocialMediaAPI {
     "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
+    "ingestionRuleInfo" : "{}",
     "status" : "Active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
@@ -1880,6 +1886,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active"
 }, statusCode=200}]
      
@@ -1962,6 +1969,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active"
 }, statusCode=200}]
      
@@ -2055,6 +2063,7 @@ open class SocialMediaAPI {
     "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
+    "ingestionRuleInfo" : "{}",
     "status" : "Active"
   }, {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -2067,6 +2076,7 @@ open class SocialMediaAPI {
     "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
+    "ingestionRuleInfo" : "{}",
     "status" : "Active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
@@ -2156,6 +2166,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active",
   "externalSource" : "{}"
 }, statusCode=200}]
@@ -2238,6 +2249,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active",
   "externalSource" : "{}"
 }, statusCode=200}]
@@ -2331,6 +2343,7 @@ open class SocialMediaAPI {
     "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
+    "ingestionRuleInfo" : "{}",
     "status" : "Active",
     "externalSource" : "{}"
   }, {
@@ -2343,6 +2356,7 @@ open class SocialMediaAPI {
     "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
+    "ingestionRuleInfo" : "{}",
     "status" : "Active",
     "externalSource" : "{}"
   } ],
@@ -2434,6 +2448,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active"
 }, statusCode=200}]
      
@@ -2516,6 +2531,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active"
 }, statusCode=200}]
      
@@ -2609,6 +2625,7 @@ open class SocialMediaAPI {
     "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
+    "ingestionRuleInfo" : "{}",
     "status" : "Active"
   }, {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -2621,6 +2638,7 @@ open class SocialMediaAPI {
     "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
+    "ingestionRuleInfo" : "{}",
     "status" : "Active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
@@ -2910,6 +2928,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active"
 }, statusCode=202}]
      
@@ -2986,6 +3005,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active"
 }, statusCode=202}]
      
@@ -3061,6 +3081,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active",
   "externalSource" : "{}"
 }, statusCode=202}]
@@ -3138,6 +3159,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active"
 }, statusCode=202}]
      
@@ -3443,6 +3465,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active"
 }, statusCode=202}]
      
@@ -3512,6 +3535,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active"
 }, statusCode=202}]
      
@@ -3580,6 +3604,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active",
   "externalSource" : "{}"
 }, statusCode=202}]
@@ -3884,6 +3909,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active"
 }, statusCode=202}]
      
@@ -4142,6 +4168,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active"
 }, statusCode=202}]
      
@@ -4218,6 +4245,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active"
 }, statusCode=202}]
      
@@ -4293,6 +4321,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active",
   "externalSource" : "{}"
 }, statusCode=202}]
@@ -4370,6 +4399,7 @@ open class SocialMediaAPI {
   "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
+  "ingestionRuleInfo" : "{}",
   "status" : "Active"
 }, statusCode=202}]
      

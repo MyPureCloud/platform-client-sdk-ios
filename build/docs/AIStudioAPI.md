@@ -181,7 +181,7 @@ AIStudioAPI.getConversationsSummariesSetting(summarySettingId: summarySettingId)
 
 
 
-> [SummarySettingEntityListing](SummarySettingEntityListing) getConversationsSummariesSettings(language, name, sortBy, sortOrder, pageNumber, pageSize)
+> [SummarySettingEntityListing](SummarySettingEntityListing) getConversationsSummariesSettings(pageNumber, pageSize, name, sortOrder, language, sortBy)
 
 Get all summary settings.
 
@@ -201,15 +201,15 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let language: String = "" // Filter by matching language - case insensitive.
-let name: String = "" // Filter by partially matching name - case insensitive.
-let sortBy: AIStudioAPI.SortBy_getConversationsSummariesSettings = AIStudioAPI.SortBy_getConversationsSummariesSettings.enummember // Sort by. Default value dateModified.
-let sortOrder: AIStudioAPI.SortOrder_getConversationsSummariesSettings = AIStudioAPI.SortOrder_getConversationsSummariesSettings.enummember // Sort Order. Default value desc.
 let pageNumber: Int = 0 // Page number.
 let pageSize: Int = 0 // Page size. The maximum page size is 100.
+let name: String = "" // Filter by partially matching name - case insensitive.
+let sortOrder: AIStudioAPI.SortOrder_getConversationsSummariesSettings = AIStudioAPI.SortOrder_getConversationsSummariesSettings.enummember // Sort Order. Default value desc.
+let language: String = "" // Filter by matching language - case insensitive.
+let sortBy: AIStudioAPI.SortBy_getConversationsSummariesSettings = AIStudioAPI.SortBy_getConversationsSummariesSettings.enummember // Sort by. Default value dateModified.
 
 // Code example
-AIStudioAPI.getConversationsSummariesSettings(language: language, name: name, sortBy: sortBy, sortOrder: sortOrder, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+AIStudioAPI.getConversationsSummariesSettings(pageNumber: pageNumber, pageSize: pageSize, name: name, sortOrder: sortOrder, language: language, sortBy: sortBy) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -224,12 +224,12 @@ AIStudioAPI.getConversationsSummariesSettings(language: language, name: name, so
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **language** | **String**| Filter by matching language - case insensitive. | [optional] |
-| **name** | **String**| Filter by partially matching name - case insensitive. | [optional] |
-| **sortBy** | **String**| Sort by. Default value dateModified. | [optional]<br />**Values**: datemodified ("dateModified"), name ("name") |
-| **sortOrder** | **String**| Sort Order. Default value desc. | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
 | **pageNumber** | **Int**| Page number. | [optional] |
 | **pageSize** | **Int**| Page size. The maximum page size is 100. | [optional] |
+| **name** | **String**| Filter by partially matching name - case insensitive. | [optional] |
+| **sortOrder** | **String**| Sort Order. Default value desc. | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
+| **language** | **String**| Filter by matching language - case insensitive. | [optional] |
+| **sortBy** | **String**| Sort by. Default value dateModified. | [optional]<br />**Values**: datemodified ("dateModified"), name ("name") |
 
 
 ### Return type
@@ -1126,4 +1126,4 @@ AIStudioAPI.putConversationsSummariesSetting(summarySettingId: summarySettingId,
 [**SummarySetting**](SummarySetting)
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_
