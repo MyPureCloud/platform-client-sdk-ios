@@ -566,7 +566,7 @@ AgentAssistantsAPI.getAssistantsAgentchecklist(agentChecklistId: agentChecklistI
 
 
 
-> [AgentChecklistListing](AgentChecklistListing) getAssistantsAgentchecklists(before, after, pageSize, namePrefix, language, sortOrder, sortBy)
+> [AgentChecklistListing](AgentChecklistListing) getAssistantsAgentchecklists(before, after, pageSize, namePrefix, language, sortOrder, sortBy, agentChecklistIds)
 
 Get the list of agent checklists
 
@@ -593,9 +593,10 @@ let namePrefix: String = "" // The agent checklist name prefix filter applied to
 let language: String = "" // The agent checklist language filter applied to the listing.
 let sortOrder: AgentAssistantsAPI.SortOrder_getAssistantsAgentchecklists = AgentAssistantsAPI.SortOrder_getAssistantsAgentchecklists.enummember // The sort order for the listing
 let sortBy: AgentAssistantsAPI.SortBy_getAssistantsAgentchecklists = AgentAssistantsAPI.SortBy_getAssistantsAgentchecklists.enummember // The field to sort by for the listing.
+let agentChecklistIds: [String] = [""] // Agent checklist IDs (repeat param or comma-separated). Do not use with other optional filters.
 
 // Code example
-AgentAssistantsAPI.getAssistantsAgentchecklists(before: before, after: after, pageSize: pageSize, namePrefix: namePrefix, language: language, sortOrder: sortOrder, sortBy: sortBy) { (response, error) in
+AgentAssistantsAPI.getAssistantsAgentchecklists(before: before, after: after, pageSize: pageSize, namePrefix: namePrefix, language: language, sortOrder: sortOrder, sortBy: sortBy, agentChecklistIds: agentChecklistIds) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -617,6 +618,7 @@ AgentAssistantsAPI.getAssistantsAgentchecklists(before: before, after: after, pa
 | **language** | **String**| The agent checklist language filter applied to the listing. | [optional] |
 | **sortOrder** | **String**| The sort order for the listing | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
 | **sortBy** | **String**| The field to sort by for the listing. | [optional]<br />**Values**: datemodified ("dateModified"), language ("language"), name ("name") |
+| **agentChecklistIds** | [**[String]**](String)| Agent checklist IDs (repeat param or comma-separated). Do not use with other optional filters. | [optional] |
 
 
 ### Return type
@@ -1256,4 +1258,4 @@ AgentAssistantsAPI.putAssistantsAgentchecklist(agentChecklistId: agentChecklistI
 [**AgentChecklist**](AgentChecklist)
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_

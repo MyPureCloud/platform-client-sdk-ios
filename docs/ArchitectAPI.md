@@ -7197,7 +7197,7 @@ ArchitectAPI.postFlowsInstancesQuery(body: body, indexOnly: indexOnly, pageSize:
 
 
 
-> [RegisterArchitectJobResponse](RegisterArchitectJobResponse) postFlowsJobs()
+> [RegisterArchitectJobResponse](RegisterArchitectJobResponse) postFlowsJobs(body)
 
 Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
 
@@ -7217,9 +7217,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
+let body: JSON = new JSON(...) // 
 
 // Code example
-ArchitectAPI.postFlowsJobs() { (response, error) in
+ArchitectAPI.postFlowsJobs(body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -7231,7 +7232,10 @@ ArchitectAPI.postFlowsJobs() { (response, error) in
 
 ### Parameters
 
-This endpoint does not require any parameters.
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | **JSON**|  | [optional] |
 
 
 ### Return type
@@ -8143,4 +8147,4 @@ ArchitectAPI.putFlowsOutcome(flowOutcomeId: flowOutcomeId, body: body) { (respon
 [**Operation**](Operation)
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_

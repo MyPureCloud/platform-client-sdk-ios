@@ -39,8 +39,9 @@
 | **recordingErrorStatus** | **String** | Status of a recording that cannot be returned because of an error | [optional] |
 | **originalRecordingStartTime** | [**Date**](Date) | The start time of the full recording, before any segment access restrictions are applied. Null when there is no playable media. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **creationTime** | [**Date**](Date) | The creation time of the recording. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **associatedConversationIds** | **[String]** | List of associated conversation IDs | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_

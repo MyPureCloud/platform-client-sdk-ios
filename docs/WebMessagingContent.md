@@ -16,7 +16,8 @@ Message content element.
 | **carousel** | [**ContentCarousel**](ContentCarousel) | Carousel content | [optional] |
 | **datePicker** | [**ContentDatePicker**](ContentDatePicker) | DatePicker content | [optional] |
 | **listPicker** | [**ConversationContentListPicker**](ConversationContentListPicker) | ListPicker content | [optional] |
+| **form** | [**ConversationContentForm**](ConversationContentForm) | Form content | [optional] |
 
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_

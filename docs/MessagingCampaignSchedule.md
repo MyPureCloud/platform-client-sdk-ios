@@ -13,10 +13,10 @@
 | **version** | **Int** | Required for updates, must match the version number of the most recent update | [optional] |
 | **intervals** | [**[ScheduleInterval]**]([ScheduleInterval]) | A list of intervals during which to run the associated Campaign. | |
 | **recurrences** | [**[Reoccurrence]**]([Reoccurrence]) | Recurring schedules of the campaign | [optional] |
-| **timeZone** | **String** | The time zone for this messaging campaign schedule. Defaults to UTC if empty or not provided. See here for a list of valid time zones https://www.iana.org/time-zones | [optional] |
+| **timeZone** | **String** | The time zone for this messaging campaign schedule. Defaults to UTC if empty or not provided. See here for a list of valid time zones https://www.iana.org/time-zones. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London | [optional] |
 | **messagingCampaign** | [**DivisionedDomainEntityRef**](DivisionedDomainEntityRef) | The Campaign that this messaging campaign schedule is for. | |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_

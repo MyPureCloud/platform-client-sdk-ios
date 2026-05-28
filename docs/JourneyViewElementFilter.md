@@ -13,4 +13,4 @@ A set of filters on an element within a journey view
 
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_

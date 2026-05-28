@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** | The globally unique identifier for the object. | [optional] |
+| **_id** | **String** | The globally unique identifier for the object. | |
 | **name** | **String** |  | [optional] |
 | **enabled** | **Bool** | Whether the work plan is enabled for scheduling | [optional] |
 | **valid** | **Bool** | Whether the work plan is valid or not | [optional] |
@@ -45,4 +45,4 @@
 
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_

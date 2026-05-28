@@ -1,0 +1,13 @@
+# BulkOpportunitiesRequest
+
+## BulkOpportunitiesRequest
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **ids** | **[String]** | The IDs of the opportunities | |
+
+
+
+_PureCloudPlatformClientV2@195.0.0_

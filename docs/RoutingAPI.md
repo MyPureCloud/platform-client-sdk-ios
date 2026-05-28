@@ -17,6 +17,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteRoutingQueueWrapupcode**](RoutingAPI#deleteRoutingQueueWrapupcode) | Delete a wrap-up code from a queue |
 | [**deleteRoutingSettings**](RoutingAPI#deleteRoutingSettings) | Delete an organization&#39;s routing settings |
 | [**deleteRoutingSkill**](RoutingAPI#deleteRoutingSkill) | Delete Routing Skill |
+| [**deleteRoutingSkillexpression**](RoutingAPI#deleteRoutingSkillexpression) | Archive a skill expression to remove it from the set of active expressions |
+| [**deleteRoutingSkillexpressions**](RoutingAPI#deleteRoutingSkillexpressions) | Archive a set of skill expressions to remove them from the set of active expressions |
 | [**deleteRoutingSkillgroup**](RoutingAPI#deleteRoutingSkillgroup) | Remove skill group definition |
 | [**deleteRoutingSmsAddress**](RoutingAPI#deleteRoutingSmsAddress) | Delete an Address by Id for SMS |
 | [**deleteRoutingSmsPhonenumber**](RoutingAPI#deleteRoutingSmsPhonenumber) | Delete a phone number provisioned for SMS. |
@@ -72,6 +74,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingSettingsContactcenter**](RoutingAPI#getRoutingSettingsContactcenter) | Get Contact Center Settings |
 | [**getRoutingSettingsTranscription**](RoutingAPI#getRoutingSettingsTranscription) | Get Transcription Settings |
 | [**getRoutingSkill**](RoutingAPI#getRoutingSkill) | Get Routing Skill |
+| [**getRoutingSkillexpression**](RoutingAPI#getRoutingSkillexpression) | Get a skill expression by ID |
+| [**getRoutingSkillexpressions**](RoutingAPI#getRoutingSkillexpressions) | Get skill expressions |
+| [**getRoutingSkillexpressionsQueueQueueId**](RoutingAPI#getRoutingSkillexpressionsQueueQueueId) | Get skill expressions associated with a queue |
 | [**getRoutingSkillgroup**](RoutingAPI#getRoutingSkillgroup) | Get skill group |
 | [**getRoutingSkillgroupMembers**](RoutingAPI#getRoutingSkillgroupMembers) | Get skill group members |
 | [**getRoutingSkillgroupMembersDivisions**](RoutingAPI#getRoutingSkillgroupMembersDivisions) | Get list of member divisions for this skill group. |
@@ -135,6 +140,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postRoutingQueueUsers**](RoutingAPI#postRoutingQueueUsers) | DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members. |
 | [**postRoutingQueueWrapupcodes**](RoutingAPI#postRoutingQueueWrapupcodes) | Add up to 100 wrap-up codes to a queue |
 | [**postRoutingQueues**](RoutingAPI#postRoutingQueues) | Create a queue |
+| [**postRoutingSkillexpressionsValidate**](RoutingAPI#postRoutingSkillexpressionsValidate) | Validate and normalize a skill expression |
 | [**postRoutingSkillgroupMembersDivisions**](RoutingAPI#postRoutingSkillgroupMembersDivisions) | Add or remove member divisions for this skill group. |
 | [**postRoutingSkillgroups**](RoutingAPI#postRoutingSkillgroups) | Create a skill group |
 | [**postRoutingSkills**](RoutingAPI#postRoutingSkills) | Create Skill |
@@ -801,6 +807,104 @@ RoutingAPI.deleteRoutingSkill(skillId: skillId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **skillId** | **String**| Skill ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteRoutingSkillexpression
+
+
+
+> Void deleteRoutingSkillexpression(expressionId)
+
+Archive a skill expression to remove it from the set of active expressions
+
+
+
+Wraps DELETE /api/v2/routing/skillexpressions/{expressionId}  
+
+Requires ALL permissions: 
+
+* routing:skillExpressions:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let expressionId: String = "" // Expression ID
+
+// Code example
+RoutingAPI.deleteRoutingSkillexpression(expressionId: expressionId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RoutingAPI.deleteRoutingSkillexpression was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **expressionId** | **String**| Expression ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteRoutingSkillexpressions
+
+
+
+> Void deleteRoutingSkillexpressions(_id)
+
+Archive a set of skill expressions to remove them from the set of active expressions
+
+
+
+Wraps DELETE /api/v2/routing/skillexpressions  
+
+Requires ALL permissions: 
+
+* routing:skillExpressions:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let _id: [String] = [""] // Expression ID(s) to filter. Repeat for multiple or use comma-separated list.
+
+// Code example
+RoutingAPI.deleteRoutingSkillexpressions(_id: _id) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RoutingAPI.deleteRoutingSkillexpressions was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **_id** | [**[String]**](String)| Expression ID(s) to filter. Repeat for multiple or use comma-separated list. | [optional] |
 
 
 ### Return type
@@ -3711,6 +3815,168 @@ RoutingAPI.getRoutingSkill(skillId: skillId) { (response, error) in
 ### Return type
 
 [**RoutingSkill**](RoutingSkill)
+
+
+## getRoutingSkillexpression
+
+
+
+> [SkillExpression](SkillExpression) getRoutingSkillexpression(expressionId, includeArchived, format)
+
+Get a skill expression by ID
+
+
+
+Wraps GET /api/v2/routing/skillexpressions/{expressionId}  
+
+Requires ALL permissions: 
+
+* routing:skillExpressions:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let expressionId: String = "" // Expression ID
+let includeArchived: Bool = true // Include archived
+let format: RoutingAPI.Format_getRoutingSkillexpression = RoutingAPI.Format_getRoutingSkillexpression.enummember // Response format: raw expression or normalized
+
+// Code example
+RoutingAPI.getRoutingSkillexpression(expressionId: expressionId, includeArchived: includeArchived, format: format) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingSkillexpression was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **expressionId** | **String**| Expression ID | |
+| **includeArchived** | **Bool**| Include archived | [optional] |
+| **format** | **String**| Response format: raw expression or normalized | [optional]<br />**Values**: raw ("Raw"), normalized ("Normalized") |
+
+
+### Return type
+
+[**SkillExpression**](SkillExpression)
+
+
+## getRoutingSkillexpressions
+
+
+
+> [SkillExpressionEntityListing](SkillExpressionEntityListing) getRoutingSkillexpressions(format, includeArchived, _id)
+
+Get skill expressions
+
+
+
+Wraps GET /api/v2/routing/skillexpressions  
+
+Requires ALL permissions: 
+
+* routing:skillExpressions:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let format: RoutingAPI.Format_getRoutingSkillexpressions = RoutingAPI.Format_getRoutingSkillexpressions.enummember // Response format: raw expression or normalized
+let includeArchived: Bool = true // Include archived
+let _id: [String] = [""] // Expression ID(s) to filter. Repeat for multiple or use comma-separated list.
+
+// Code example
+RoutingAPI.getRoutingSkillexpressions(format: format, includeArchived: includeArchived, _id: _id) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingSkillexpressions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **format** | **String**| Response format: raw expression or normalized | [optional]<br />**Values**: raw ("Raw"), normalized ("Normalized") |
+| **includeArchived** | **Bool**| Include archived | [optional] |
+| **_id** | [**[String]**](String)| Expression ID(s) to filter. Repeat for multiple or use comma-separated list. | [optional] |
+
+
+### Return type
+
+[**SkillExpressionEntityListing**](SkillExpressionEntityListing)
+
+
+## getRoutingSkillexpressionsQueueQueueId
+
+
+
+> [SkillExpressionEntityListing](SkillExpressionEntityListing) getRoutingSkillexpressionsQueueQueueId(queueId, format, includeArchived)
+
+Get skill expressions associated with a queue
+
+
+
+Wraps GET /api/v2/routing/skillexpressions/queue/{queueId}  
+
+Requires ALL permissions: 
+
+* routing:skillExpressions:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let queueId: String = "" // Queue ID
+let format: RoutingAPI.Format_getRoutingSkillexpressionsQueueQueueId = RoutingAPI.Format_getRoutingSkillexpressionsQueueQueueId.enummember // Response format: raw expression or normalized
+let includeArchived: Bool = true // Include archived
+
+// Code example
+RoutingAPI.getRoutingSkillexpressionsQueueQueueId(queueId: queueId, format: format, includeArchived: includeArchived) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingSkillexpressionsQueueQueueId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **queueId** | **String**| Queue ID | |
+| **format** | **String**| Response format: raw expression or normalized | [optional]<br />**Values**: raw ("Raw"), normalized ("Normalized") |
+| **includeArchived** | **Bool**| Include archived | [optional] |
+
+
+### Return type
+
+[**SkillExpressionEntityListing**](SkillExpressionEntityListing)
 
 
 ## getRoutingSkillgroup
@@ -7068,6 +7334,56 @@ RoutingAPI.postRoutingQueues(body: body) { (response, error) in
 [**Queue**](Queue)
 
 
+## postRoutingSkillexpressionsValidate
+
+
+
+> [SkillExpressionValidationResult](SkillExpressionValidationResult) postRoutingSkillexpressionsValidate(body)
+
+Validate and normalize a skill expression
+
+
+
+Wraps POST /api/v2/routing/skillexpressions/validate  
+
+Requires ALL permissions: 
+
+* routing:skillExpressions:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: SkillExpressionData = new SkillExpressionData(...) // Skill expression data to validate
+
+// Code example
+RoutingAPI.postRoutingSkillexpressionsValidate(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postRoutingSkillexpressionsValidate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**SkillExpressionData**](SkillExpressionData)| Skill expression data to validate | |
+
+
+### Return type
+
+[**SkillExpressionValidationResult**](SkillExpressionValidationResult)
+
+
 ## postRoutingSkillgroupMembersDivisions
 
 
@@ -8460,4 +8776,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@194.0.0_
+_PureCloudPlatformClientV2@195.0.0_
