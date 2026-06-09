@@ -1,16 +1,16 @@
-# ExportListing
+# StepplanListing
 
-## ExportListing
+## StepplanListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ContactsExport]**]([ContactsExport]) |  | [optional] |
+| **entities** | [**[Stepplan]**]([Stepplan]) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

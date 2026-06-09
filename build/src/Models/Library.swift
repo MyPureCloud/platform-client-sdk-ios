@@ -18,6 +18,7 @@ public class Library: Codable {
         case campaignEmailTemplate = "CampaignEmailTemplate"
         case footer = "Footer"
         case form = "Form"
+        case appleInvitation = "AppleInvitation"
     }
 
 

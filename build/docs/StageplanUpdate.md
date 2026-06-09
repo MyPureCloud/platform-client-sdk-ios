@@ -1,0 +1,14 @@
+# StageplanUpdate
+
+## StageplanUpdate
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **name** | **String** | The name of the Stageplan. Valid length between 3 and 256 characters. | [optional] |
+| **_description** | **String** | The description of the Stageplan. Maximum length of 512 characters. | [optional] |
+
+
+
+_PureCloudPlatformClientV2@196.0.0_

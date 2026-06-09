@@ -15,6 +15,18 @@ public class WhatsAppDefinition: Codable {
 
 
 
+
+
+    public enum Category: String, Codable { 
+        case marketing = "marketing"
+    }
+
+
+
+
+
+
+
     /** The messaging template name. */
     public var name: String?
     /** The messaging template namespace. */
@@ -27,14 +39,29 @@ public class WhatsAppDefinition: Codable {
     public var messageFooter: MessageFooter?
     /** Header for the message in the standard WhatsApp messages channel */
     public var header: MessageHeader?
+    /** WhatsApp integration ID for whatsApp carousels */
+    public var integrationId: String?
+    /** Category of whatsApp carousels template. */
+    public var category: Category?
+    /** Template status of whatsApp carousels template. */
+    public var templateStatus: String?
+    /** Status information about the template */
+    public var statusInfo: StatusInfo?
+    /** Definition for whatsApp carousels template. */
+    public var carousel: Carousel?
 
-    public init(name: String?, namespace: String?, language: String?, buttons: [Button]?, messageFooter: MessageFooter?, header: MessageHeader?) {
+    public init(name: String?, namespace: String?, language: String?, buttons: [Button]?, messageFooter: MessageFooter?, header: MessageHeader?, integrationId: String?, category: Category?, templateStatus: String?, statusInfo: StatusInfo?, carousel: Carousel?) {
         self.name = name
         self.namespace = namespace
         self.language = language
         self.buttons = buttons
         self.messageFooter = messageFooter
         self.header = header
+        self.integrationId = integrationId
+        self.category = category
+        self.templateStatus = templateStatus
+        self.statusInfo = statusInfo
+        self.carousel = carousel
     }
 
 

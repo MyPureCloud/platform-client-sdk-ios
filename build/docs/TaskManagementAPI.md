@@ -4012,4 +4012,4 @@ TaskManagementAPI.putTaskmanagementWorkitemsSchema(schemaId: schemaId, body: bod
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

@@ -5111,6 +5111,7 @@ open class KnowledgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "filter" : "{}",
   "generationSetting" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "sources" : [ {
@@ -5210,6 +5211,7 @@ open class KnowledgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "filter" : "{}",
     "generationSetting" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "sources" : [ {
@@ -5227,6 +5229,7 @@ open class KnowledgeAPI {
     "id" : "id",
     "stateful" : true
   }, {
+    "filter" : "{}",
     "generationSetting" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "sources" : [ {
@@ -6871,6 +6874,7 @@ open class KnowledgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "filter" : "{}",
   "generationSetting" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "sources" : [ {
@@ -10050,6 +10054,7 @@ open class KnowledgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "filter" : "{}",
   "generationSetting" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "sources" : [ {
@@ -10126,7 +10131,12 @@ open class KnowledgeAPI {
   "headers" : {
     "key" : "headers"
   },
-  "url" : "url"
+  "fileName" : "fileName",
+  "metadata" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "synchronization" : "{}",
+  "url" : "url",
+  "fileId" : "fileId"
 }, statusCode=201}]
      
      - parameter sourceId: (path) Source ID 

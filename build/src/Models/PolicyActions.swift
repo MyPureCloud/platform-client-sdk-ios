@@ -39,6 +39,7 @@ public class PolicyActions: Codable {
     public var assignSurveys: [SurveyAssignment]?
     public var retentionDuration: RetentionDuration?
     public var initiateScreenRecording: InitiateScreenRecording?
+    /** Deprecated. The Voci and Call Journey transcription integrations are no longer supported. */
     public var mediaTranscriptions: [MediaTranscription]?
     /** Policy action for exporting recordings using an integration to 3rd party s3. */
     public var integrationExport: IntegrationExport?

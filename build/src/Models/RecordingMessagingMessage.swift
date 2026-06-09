@@ -68,6 +68,7 @@ public class RecordingMessagingMessage: Codable {
         case form = "Form"
         case richLink = "RichLink"
         case roadsideAssistance = "RoadsideAssistance"
+        case notificationResponse = "NotificationResponse"
     }
 
     public enum SocialVisibility: String, Codable { 

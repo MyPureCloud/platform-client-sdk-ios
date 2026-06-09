@@ -30,6 +30,8 @@ public class BuCreateTimeOffPlanRequest: Codable {
 
 
 
+
+
     /** The name of this time-off plan */
     public var name: String?
     /** The IDs of activity codes to associate with this time-off plan */
@@ -42,6 +44,8 @@ public class BuCreateTimeOffPlanRequest: Codable {
     public var autoPublishApprovedTimeOffRequests: Bool?
     /** The IDs of non time-off activity codes to check for conflicts in case the auto approval rule specifies checking activity codes. If these activity codes are present in schedule and overlap with the time-off request duration, the request will not be auto approved */
     public var restrictedActivityCodeIds: [String]?
+    /** A list of override dates to check for conflicts with time-off request dates. If a conflict is found, the request will not be auto-approved */
+    public var overrideDates: [OverrideDate]?
     /** Time-off type, if this time-off plan is associated with the integration */
     public var hrisTimeOffType: HrisTimeOffType?
     /** Whether this time-off plan should be used by agents. Default is true */
@@ -53,13 +57,14 @@ public class BuCreateTimeOffPlanRequest: Codable {
     /** Management unit association, if the time-off plan belongs to a management unit. businessUnitAssociation must not be set if this is populated */
     public var managementUnitAssociation: CreateTimeOffPlanManagementUnitAssociation?
 
-    public init(name: String?, activityCodeIds: [String]?, autoApprovalRule: AutoApprovalRule?, daysBeforeStartToExpireFromWaitlist: Int?, autoPublishApprovedTimeOffRequests: Bool?, restrictedActivityCodeIds: [String]?, hrisTimeOffType: HrisTimeOffType?, enabled: Bool?, countAgainstTimeOffLimits: Bool?, businessUnitAssociation: CreateTimeOffPlanBusinessUnitAssociation?, managementUnitAssociation: CreateTimeOffPlanManagementUnitAssociation?) {
+    public init(name: String?, activityCodeIds: [String]?, autoApprovalRule: AutoApprovalRule?, daysBeforeStartToExpireFromWaitlist: Int?, autoPublishApprovedTimeOffRequests: Bool?, restrictedActivityCodeIds: [String]?, overrideDates: [OverrideDate]?, hrisTimeOffType: HrisTimeOffType?, enabled: Bool?, countAgainstTimeOffLimits: Bool?, businessUnitAssociation: CreateTimeOffPlanBusinessUnitAssociation?, managementUnitAssociation: CreateTimeOffPlanManagementUnitAssociation?) {
         self.name = name
         self.activityCodeIds = activityCodeIds
         self.autoApprovalRule = autoApprovalRule
         self.daysBeforeStartToExpireFromWaitlist = daysBeforeStartToExpireFromWaitlist
         self.autoPublishApprovedTimeOffRequests = autoPublishApprovedTimeOffRequests
         self.restrictedActivityCodeIds = restrictedActivityCodeIds
+        self.overrideDates = overrideDates
         self.hrisTimeOffType = hrisTimeOffType
         self.enabled = enabled
         self.countAgainstTimeOffLimits = countAgainstTimeOffLimits

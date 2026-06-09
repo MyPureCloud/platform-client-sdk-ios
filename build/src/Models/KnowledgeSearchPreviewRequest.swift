@@ -12,6 +12,8 @@ public class KnowledgeSearchPreviewRequest: Codable {
 
 
 
+
+
     /** Query to search content in the knowledge sources. */
     public var query: String?
     /** Source information to search upon. */
@@ -22,13 +24,16 @@ public class KnowledgeSearchPreviewRequest: Codable {
     public var stateful: Bool?
     /** List of conversation turns to use for stateful search. */
     public var conversationTurns: [KnowledgeConversationTurn]?
+    /** Composite tag filter applied to the search preview. */
+    public var filter: V3SourceTagFilter?
 
-    public init(query: String?, sources: [V3SourceRef]?, generationSetting: KnowledgeGenerationSetting?, stateful: Bool?, conversationTurns: [KnowledgeConversationTurn]?) {
+    public init(query: String?, sources: [V3SourceRef]?, generationSetting: KnowledgeGenerationSetting?, stateful: Bool?, conversationTurns: [KnowledgeConversationTurn]?, filter: V3SourceTagFilter?) {
         self.query = query
         self.sources = sources
         self.generationSetting = generationSetting
         self.stateful = stateful
         self.conversationTurns = conversationTurns
+        self.filter = filter
     }
 
 

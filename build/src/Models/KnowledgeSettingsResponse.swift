@@ -22,6 +22,8 @@ public class KnowledgeSettingsResponse: Codable {
 
 
 
+
+
     /** Knowledge Setting Id. */
     public var _id: String?
     /** Knowledge Setting Name. */
@@ -34,6 +36,8 @@ public class KnowledgeSettingsResponse: Codable {
     public var generationSetting: KnowledgeGenerationSetting?
     /** Indicates if stateful search and generation is enabled for the knowledge setting. */
     public var stateful: Bool?
+    /** Composite tag filter of search results. */
+    public var filter: V3SourceTagFilter?
     /** Knowledge setting created date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** Knowledge setting last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -43,13 +47,14 @@ public class KnowledgeSettingsResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, sources: [V3SourceRef]?, generationSetting: KnowledgeGenerationSetting?, stateful: Bool?, dateCreated: Date?, dateModified: Date?, modifiedBy: UserReference?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, sources: [V3SourceRef]?, generationSetting: KnowledgeGenerationSetting?, stateful: Bool?, filter: V3SourceTagFilter?, dateCreated: Date?, dateModified: Date?, modifiedBy: UserReference?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
         self.sources = sources
         self.generationSetting = generationSetting
         self.stateful = stateful
+        self.filter = filter
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.modifiedBy = modifiedBy
@@ -63,6 +68,7 @@ public class KnowledgeSettingsResponse: Codable {
         case sources
         case generationSetting
         case stateful
+        case filter
         case dateCreated
         case dateModified
         case modifiedBy

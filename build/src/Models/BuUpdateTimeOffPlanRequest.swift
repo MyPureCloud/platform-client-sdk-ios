@@ -32,6 +32,8 @@ public class BuUpdateTimeOffPlanRequest: Codable {
 
 
 
+
+
     /** The name of this time-off plan */
     public var name: String?
     /** The IDs of activity codes to associate with this time-off plan */
@@ -44,6 +46,8 @@ public class BuUpdateTimeOffPlanRequest: Codable {
     public var autoPublishApprovedTimeOffRequests: Bool?
     /** The IDs of non time-off activity codes to check for conflicts in case the auto approval rule specifies checking activity codes. If these activity codes are present in schedule and overlap with the time-off request duration, the request will not be auto approved */
     public var restrictedActivityCodeIds: SetWrapperString?
+    /** A list of override dates to check for conflicts with time-off request dates. If a conflict is found, the request will not be auto-approved */
+    public var overrideDates: ListWrapperOverrideDate?
     /** Time-off type, if this time-off plan is associated with the integration */
     public var hrisTimeOffType: ValueWrapperHrisTimeOffType?
     /** Whether this time-off plan should be used by agents */
@@ -57,13 +61,14 @@ public class BuUpdateTimeOffPlanRequest: Codable {
     /** Version metadata for this time-off plan */
     public var metadata: WfmVersionedEntityMetadata?
 
-    public init(name: String?, activityCodeIds: SetWrapperString?, autoApprovalRule: AutoApprovalRule?, daysBeforeStartToExpireFromWaitlist: Int?, autoPublishApprovedTimeOffRequests: Bool?, restrictedActivityCodeIds: SetWrapperString?, hrisTimeOffType: ValueWrapperHrisTimeOffType?, enabled: Bool?, countAgainstTimeOffLimits: Bool?, businessUnitAssociation: UpdateTimeOffPlanBusinessUnitAssociation?, managementUnitAssociation: UpdateTimeOffPlanManagementUnitAssociation?, metadata: WfmVersionedEntityMetadata?) {
+    public init(name: String?, activityCodeIds: SetWrapperString?, autoApprovalRule: AutoApprovalRule?, daysBeforeStartToExpireFromWaitlist: Int?, autoPublishApprovedTimeOffRequests: Bool?, restrictedActivityCodeIds: SetWrapperString?, overrideDates: ListWrapperOverrideDate?, hrisTimeOffType: ValueWrapperHrisTimeOffType?, enabled: Bool?, countAgainstTimeOffLimits: Bool?, businessUnitAssociation: UpdateTimeOffPlanBusinessUnitAssociation?, managementUnitAssociation: UpdateTimeOffPlanManagementUnitAssociation?, metadata: WfmVersionedEntityMetadata?) {
         self.name = name
         self.activityCodeIds = activityCodeIds
         self.autoApprovalRule = autoApprovalRule
         self.daysBeforeStartToExpireFromWaitlist = daysBeforeStartToExpireFromWaitlist
         self.autoPublishApprovedTimeOffRequests = autoPublishApprovedTimeOffRequests
         self.restrictedActivityCodeIds = restrictedActivityCodeIds
+        self.overrideDates = overrideDates
         self.hrisTimeOffType = hrisTimeOffType
         self.enabled = enabled
         self.countAgainstTimeOffLimits = countAgainstTimeOffLimits

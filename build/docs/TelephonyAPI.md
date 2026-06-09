@@ -4,20 +4,78 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteTelephonyOrganizationLinkTargetOrganizationId**](TelephonyAPI#deleteTelephonyOrganizationLinkTargetOrganizationId) | Delete a link |
 | [**getTelephonyAgentGreetings**](TelephonyAPI#getTelephonyAgentGreetings) | Get an agent&#39;s greetings. |
 | [**getTelephonyAgentsGreetingsMe**](TelephonyAPI#getTelephonyAgentsGreetingsMe) | Get the agent&#39;s own greetings. |
 | [**getTelephonyCallsMetrics**](TelephonyAPI#getTelephonyCallsMetrics) | Get the concurrent call metrics for a given organization. |
 | [**getTelephonyMediaregions**](TelephonyAPI#getTelephonyMediaregions) | Retrieve the list of AWS regions media can stream through. |
+| [**getTelephonyNumbersRouting**](TelephonyAPI#getTelephonyNumbersRouting) | Get Number Routings by organizationId |
+| [**getTelephonyOrganizationLink**](TelephonyAPI#getTelephonyOrganizationLink) | Get organization links |
+| [**getTelephonyOrganizationLinkRegions**](TelephonyAPI#getTelephonyOrganizationLinkRegions) | Get all the replica regions by primary region |
 | [**getTelephonySettings**](TelephonyAPI#getTelephonySettings) | Get the global telephony configuration. |
 | [**getTelephonySipmessagesConversation**](TelephonyAPI#getTelephonySipmessagesConversation) | Get a SIP message. |
 | [**getTelephonySipmessagesConversationHeaders**](TelephonyAPI#getTelephonySipmessagesConversationHeaders) | Get SIP headers. |
 | [**getTelephonySiptraces**](TelephonyAPI#getTelephonySiptraces) | Fetch SIP metadata |
 | [**getTelephonySiptracesDownloadDownloadId**](TelephonyAPI#getTelephonySiptracesDownloadDownloadId) | Get signed S3 URL for a pcap download |
+| [**patchTelephonyOrganizationLinkApproveRequestingOrganizationId**](TelephonyAPI#patchTelephonyOrganizationLinkApproveRequestingOrganizationId) | Approving a requested link |
+| [**postTelephonyNumbersRouting**](TelephonyAPI#postTelephonyNumbersRouting) | Update the routing of numbers for one or multiple organizations |
+| [**postTelephonyNumbersRoutingAll**](TelephonyAPI#postTelephonyNumbersRoutingAll) | Re-route all numbers on an organization |
+| [**postTelephonyNumbersRoutingReset**](TelephonyAPI#postTelephonyNumbersRoutingReset) | Reset routing for organization |
+| [**postTelephonyOrganizationLink**](TelephonyAPI#postTelephonyOrganizationLink) | Create a link with an organization |
 | [**postTelephonySiptracesDownload**](TelephonyAPI#postTelephonySiptracesDownload) | Request a download of a pcap file to S3 |
 | [**putTelephonyAgentGreetings**](TelephonyAPI#putTelephonyAgentGreetings) | Updates an agent&#39;s greetings. |
 | [**putTelephonyAgentsGreetingsMe**](TelephonyAPI#putTelephonyAgentsGreetingsMe) | Updates the agent&#39;s own greetings. |
 | [**putTelephonySettings**](TelephonyAPI#putTelephonySettings) | Update the global telephony configuration. |
 {: class="table-striped"}
+
+
+## deleteTelephonyOrganizationLinkTargetOrganizationId
+
+
+
+> Void deleteTelephonyOrganizationLinkTargetOrganizationId(targetOrganizationId)
+
+Delete a link
+
+
+
+Wraps DELETE /api/v2/telephony/organization/link/{targetOrganizationId}  
+
+Requires ALL permissions: 
+
+* telephony:organizationLink:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let targetOrganizationId: String = "" // targetOrganizationId
+
+// Code example
+TelephonyAPI.deleteTelephonyOrganizationLinkTargetOrganizationId(targetOrganizationId: targetOrganizationId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("TelephonyAPI.deleteTelephonyOrganizationLinkTargetOrganizationId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **targetOrganizationId** | **String**| targetOrganizationId | |
+
+
+### Return type
+
+`nil` (empty response body)
 
 
 ## getTelephonyAgentGreetings
@@ -210,6 +268,160 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**MediaRegions**](MediaRegions)
+
+
+## getTelephonyNumbersRouting
+
+
+
+> [NumberRoutingListing](NumberRoutingListing) getTelephonyNumbersRouting(before, after, pageSize, numberId, activeRoutingOrganizationId, ownerOrganizationId, status)
+
+Get Number Routings by organizationId
+
+
+
+Wraps GET /api/v2/telephony/numbers/routing  
+
+Requires ALL permissions: 
+
+* telephony:numberRouting:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let numberId: String = "" // numberId
+let activeRoutingOrganizationId: String = "" // activeRoutingOrganizationId
+let ownerOrganizationId: String = "" // ownerOrganizationId
+let status: TelephonyAPI.Status_getTelephonyNumbersRouting = TelephonyAPI.Status_getTelephonyNumbersRouting.enummember // status
+
+// Code example
+TelephonyAPI.getTelephonyNumbersRouting(before: before, after: after, pageSize: pageSize, numberId: numberId, activeRoutingOrganizationId: activeRoutingOrganizationId, ownerOrganizationId: ownerOrganizationId, status: status) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyAPI.getTelephonyNumbersRouting was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **numberId** | **String**| numberId | [optional] |
+| **activeRoutingOrganizationId** | **String**| activeRoutingOrganizationId | [optional] |
+| **ownerOrganizationId** | **String**| ownerOrganizationId | [optional] |
+| **status** | **String**| status | [optional]<br />**Values**: normal ("Normal"), redirected ("Redirected"), pending ("Pending") |
+
+
+### Return type
+
+[**NumberRoutingListing**](NumberRoutingListing)
+
+
+## getTelephonyOrganizationLink
+
+
+
+> [[OrganizationLinkResponse]](OrganizationLinkResponse) getTelephonyOrganizationLink()
+
+Get organization links
+
+
+
+Wraps GET /api/v2/telephony/organization/link  
+
+Requires ALL permissions: 
+
+* telephony:organizationLink:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+TelephonyAPI.getTelephonyOrganizationLink() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyAPI.getTelephonyOrganizationLink was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**[OrganizationLinkResponse]**](OrganizationLinkResponse)
+
+
+## getTelephonyOrganizationLinkRegions
+
+
+
+> [[RegionResponse]](RegionResponse) getTelephonyOrganizationLinkRegions()
+
+Get all the replica regions by primary region
+
+
+
+Wraps GET /api/v2/telephony/organization/link/regions  
+
+Requires ALL permissions: 
+
+* telephony:organizationLink:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+TelephonyAPI.getTelephonyOrganizationLinkRegions() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyAPI.getTelephonyOrganizationLinkRegions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**[RegionResponse]**](RegionResponse)
 
 
 ## getTelephonySettings
@@ -476,6 +688,254 @@ TelephonyAPI.getTelephonySiptracesDownloadDownloadId(downloadId: downloadId) { (
 [**SignedUrlResponse**](SignedUrlResponse)
 
 
+## patchTelephonyOrganizationLinkApproveRequestingOrganizationId
+
+
+
+> Void patchTelephonyOrganizationLinkApproveRequestingOrganizationId(requestingOrganizationId, body)
+
+Approving a requested link
+
+
+
+Wraps PATCH /api/v2/telephony/organization/link/approve/{requestingOrganizationId}  
+
+Requires ALL permissions: 
+
+* telephony:organizationLink:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let requestingOrganizationId: String = "" // requestingOrganizationId
+let body: OrganizationLinkApprovalRequest = new OrganizationLinkApprovalRequest(...) // Approval request body
+
+// Code example
+TelephonyAPI.patchTelephonyOrganizationLinkApproveRequestingOrganizationId(requestingOrganizationId: requestingOrganizationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("TelephonyAPI.patchTelephonyOrganizationLinkApproveRequestingOrganizationId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **requestingOrganizationId** | **String**| requestingOrganizationId | |
+| **body** | [**OrganizationLinkApprovalRequest**](OrganizationLinkApprovalRequest)| Approval request body | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## postTelephonyNumbersRouting
+
+
+
+> Void postTelephonyNumbersRouting(body)
+
+Update the routing of numbers for one or multiple organizations
+
+
+
+Wraps POST /api/v2/telephony/numbers/routing  
+
+Requires ALL permissions: 
+
+* telephony:numberRouting:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: [NumberRoutingRequest] = [new NumberRoutingRequest(...)] // drRoutingList
+
+// Code example
+TelephonyAPI.postTelephonyNumbersRouting(body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("TelephonyAPI.postTelephonyNumbersRouting was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**[NumberRoutingRequest]**](NumberRoutingRequest)| drRoutingList | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## postTelephonyNumbersRoutingAll
+
+
+
+> Void postTelephonyNumbersRoutingAll(body)
+
+Re-route all numbers on an organization
+
+
+
+Wraps POST /api/v2/telephony/numbers/routing/all  
+
+Requires ALL permissions: 
+
+* telephony:numberRouting:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: DisasterRecoveryAllRoutingRequest = new DisasterRecoveryAllRoutingRequest(...) // Value for all routing request body
+
+// Code example
+TelephonyAPI.postTelephonyNumbersRoutingAll(body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("TelephonyAPI.postTelephonyNumbersRoutingAll was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**DisasterRecoveryAllRoutingRequest**](DisasterRecoveryAllRoutingRequest)| Value for all routing request body | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## postTelephonyNumbersRoutingReset
+
+
+
+> Void postTelephonyNumbersRoutingReset(body)
+
+Reset routing for organization
+
+
+
+Wraps POST /api/v2/telephony/numbers/routing/reset  
+
+Requires ALL permissions: 
+
+* telephony:numberRouting:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: NumberRoutingResetOrganizationRequest = new NumberRoutingResetOrganizationRequest(...) // Value for bulk routing request body
+
+// Code example
+TelephonyAPI.postTelephonyNumbersRoutingReset(body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("TelephonyAPI.postTelephonyNumbersRoutingReset was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**NumberRoutingResetOrganizationRequest**](NumberRoutingResetOrganizationRequest)| Value for bulk routing request body | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## postTelephonyOrganizationLink
+
+
+
+> [OrganizationLink](OrganizationLink) postTelephonyOrganizationLink(body)
+
+Create a link with an organization
+
+
+
+Wraps POST /api/v2/telephony/organization/link  
+
+Requires ALL permissions: 
+
+* telephony:organizationLink:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CreateOrganizationLink = new CreateOrganizationLink(...) // CreateLinkOrg body
+
+// Code example
+TelephonyAPI.postTelephonyOrganizationLink(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyAPI.postTelephonyOrganizationLink was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CreateOrganizationLink**](CreateOrganizationLink)| CreateLinkOrg body | |
+
+
+### Return type
+
+[**OrganizationLink**](OrganizationLink)
+
+
 ## postTelephonySiptracesDownload
 
 
@@ -678,4 +1138,4 @@ TelephonyAPI.putTelephonySettings(body: body) { (response, error) in
 [**TelephonySettings**](TelephonySettings)
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

@@ -4,12 +4,18 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteAnalyticsEvaluationsAggregatesJob**](QualityAPI#deleteAnalyticsEvaluationsAggregatesJob) | Delete/cancel an async request for evaluation aggregates |
+| [**deleteAnalyticsSurveysAggregatesJob**](QualityAPI#deleteAnalyticsSurveysAggregatesJob) | Delete/cancel an async request for survey aggregates |
 | [**deleteQualityCalibration**](QualityAPI#deleteQualityCalibration) | Delete a calibration by id. |
 | [**deleteQualityConversationEvaluation**](QualityAPI#deleteQualityConversationEvaluation) | Delete an evaluation |
 | [**deleteQualityForm**](QualityAPI#deleteQualityForm) | Delete an evaluation form. |
 | [**deleteQualityFormsEvaluation**](QualityAPI#deleteQualityFormsEvaluation) | Delete an evaluation form. |
 | [**deleteQualityFormsSurvey**](QualityAPI#deleteQualityFormsSurvey) | Delete a survey form. |
 | [**deleteQualityProgramAgentscoringrule**](QualityAPI#deleteQualityProgramAgentscoringrule) | Delete an Agent Scoring Rule |
+| [**getAnalyticsEvaluationsAggregatesJob**](QualityAPI#getAnalyticsEvaluationsAggregatesJob) | Get status for async query for evaluation aggregates |
+| [**getAnalyticsEvaluationsAggregatesJobResults**](QualityAPI#getAnalyticsEvaluationsAggregatesJobResults) | Fetch a page of results for an async aggregates query |
+| [**getAnalyticsSurveysAggregatesJob**](QualityAPI#getAnalyticsSurveysAggregatesJob) | Get status for async query for survey aggregates |
+| [**getAnalyticsSurveysAggregatesJobResults**](QualityAPI#getAnalyticsSurveysAggregatesJobResults) | Fetch a page of results for an async aggregates query |
 | [**getQualityAgentsActivity**](QualityAPI#getQualityAgentsActivity) | Gets a list of Agent Activities |
 | [**getQualityCalibration**](QualityAPI#getQualityCalibration) | Get a calibration by id.  Requires either calibrator id or conversation id |
 | [**getQualityCalibrations**](QualityAPI#getQualityCalibrations) | Get the list of calibrations |
@@ -43,7 +49,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getQualitySurvey**](QualityAPI#getQualitySurvey) | Get a survey for a conversation |
 | [**getQualitySurveysScorable**](QualityAPI#getQualitySurveysScorable) | Get a survey as an end-customer, for the purposes of scoring it. |
 | [**patchQualityFormsSurvey**](QualityAPI#patchQualityFormsSurvey) | Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form. |
+| [**postAnalyticsEvaluationsAggregatesJobs**](QualityAPI#postAnalyticsEvaluationsAggregatesJobs) | Query for evaluation aggregates asynchronously |
 | [**postAnalyticsEvaluationsAggregatesQuery**](QualityAPI#postAnalyticsEvaluationsAggregatesQuery) | Query for evaluation aggregates |
+| [**postAnalyticsSurveysAggregatesJobs**](QualityAPI#postAnalyticsSurveysAggregatesJobs) | Query for survey aggregates asynchronously |
 | [**postAnalyticsSurveysAggregatesQuery**](QualityAPI#postAnalyticsSurveysAggregatesQuery) | Query for survey aggregates |
 | [**postQualityCalibrations**](QualityAPI#postQualityCalibrations) | Create a calibration |
 | [**postQualityConversationEvaluations**](QualityAPI#postQualityConversationEvaluations) | Create an evaluation |
@@ -69,6 +77,104 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putQualityProgramAgentscoringrule**](QualityAPI#putQualityProgramAgentscoringrule) | Update an Agent Scoring Rule |
 | [**putQualitySurveysScorable**](QualityAPI#putQualitySurveysScorable) | Update a survey as an end-customer, for the purposes of scoring it. |
 {: class="table-striped"}
+
+
+## deleteAnalyticsEvaluationsAggregatesJob
+
+
+
+> Void deleteAnalyticsEvaluationsAggregatesJob(jobId)
+
+Delete/cancel an async request for evaluation aggregates
+
+
+
+Wraps DELETE /api/v2/analytics/evaluations/aggregates/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:evaluationAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+QualityAPI.deleteAnalyticsEvaluationsAggregatesJob(jobId: jobId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("QualityAPI.deleteAnalyticsEvaluationsAggregatesJob was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteAnalyticsSurveysAggregatesJob
+
+
+
+> Void deleteAnalyticsSurveysAggregatesJob(jobId)
+
+Delete/cancel an async request for survey aggregates
+
+
+
+Wraps DELETE /api/v2/analytics/surveys/aggregates/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:surveyAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+QualityAPI.deleteAnalyticsSurveysAggregatesJob(jobId: jobId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("QualityAPI.deleteAnalyticsSurveysAggregatesJob was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+`nil` (empty response body)
 
 
 ## deleteQualityCalibration
@@ -373,6 +479,210 @@ QualityAPI.deleteQualityProgramAgentscoringrule(programId: programId, ruleId: ru
 ### Return type
 
 `nil` (empty response body)
+
+
+## getAnalyticsEvaluationsAggregatesJob
+
+
+
+> [AsyncQueryStatus](AsyncQueryStatus) getAnalyticsEvaluationsAggregatesJob(jobId)
+
+Get status for async query for evaluation aggregates
+
+
+
+Wraps GET /api/v2/analytics/evaluations/aggregates/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:evaluationAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+QualityAPI.getAnalyticsEvaluationsAggregatesJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.getAnalyticsEvaluationsAggregatesJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus)
+
+
+## getAnalyticsEvaluationsAggregatesJobResults
+
+
+
+> [EvaluationAsyncAggregateQueryResponse](EvaluationAsyncAggregateQueryResponse) getAnalyticsEvaluationsAggregatesJobResults(jobId, cursor)
+
+Fetch a page of results for an async aggregates query
+
+
+
+Wraps GET /api/v2/analytics/evaluations/aggregates/jobs/{jobId}/results  
+
+Requires ANY permissions: 
+
+* analytics:evaluationAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+let cursor: String = "" // Cursor token to retrieve next page
+
+// Code example
+QualityAPI.getAnalyticsEvaluationsAggregatesJobResults(jobId: jobId, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.getAnalyticsEvaluationsAggregatesJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+| **cursor** | **String**| Cursor token to retrieve next page | [optional] |
+
+
+### Return type
+
+[**EvaluationAsyncAggregateQueryResponse**](EvaluationAsyncAggregateQueryResponse)
+
+
+## getAnalyticsSurveysAggregatesJob
+
+
+
+> [AsyncQueryStatus](AsyncQueryStatus) getAnalyticsSurveysAggregatesJob(jobId)
+
+Get status for async query for survey aggregates
+
+
+
+Wraps GET /api/v2/analytics/surveys/aggregates/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:surveyAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+QualityAPI.getAnalyticsSurveysAggregatesJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.getAnalyticsSurveysAggregatesJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus)
+
+
+## getAnalyticsSurveysAggregatesJobResults
+
+
+
+> [SurveyAsyncAggregateQueryResponse](SurveyAsyncAggregateQueryResponse) getAnalyticsSurveysAggregatesJobResults(jobId, cursor)
+
+Fetch a page of results for an async aggregates query
+
+
+
+Wraps GET /api/v2/analytics/surveys/aggregates/jobs/{jobId}/results  
+
+Requires ANY permissions: 
+
+* analytics:surveyAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+let cursor: String = "" // Cursor token to retrieve next page
+
+// Code example
+QualityAPI.getAnalyticsSurveysAggregatesJobResults(jobId: jobId, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.getAnalyticsSurveysAggregatesJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+| **cursor** | **String**| Cursor token to retrieve next page | [optional] |
+
+
+### Return type
+
+[**SurveyAsyncAggregateQueryResponse**](SurveyAsyncAggregateQueryResponse)
 
 
 ## getQualityAgentsActivity
@@ -2238,6 +2548,56 @@ QualityAPI.patchQualityFormsSurvey(formId: formId, body: body) { (response, erro
 [**SurveyForm**](SurveyForm)
 
 
+## postAnalyticsEvaluationsAggregatesJobs
+
+
+
+> [AsyncQueryResponse](AsyncQueryResponse) postAnalyticsEvaluationsAggregatesJobs(body)
+
+Query for evaluation aggregates asynchronously
+
+
+
+Wraps POST /api/v2/analytics/evaluations/aggregates/jobs  
+
+Requires ANY permissions: 
+
+* analytics:evaluationAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: EvaluationAsyncAggregationQuery = new EvaluationAsyncAggregationQuery(...) // query
+
+// Code example
+QualityAPI.postAnalyticsEvaluationsAggregatesJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.postAnalyticsEvaluationsAggregatesJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**EvaluationAsyncAggregationQuery**](EvaluationAsyncAggregationQuery)| query | |
+
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse)
+
+
 ## postAnalyticsEvaluationsAggregatesQuery
 
 
@@ -2286,6 +2646,56 @@ QualityAPI.postAnalyticsEvaluationsAggregatesQuery(body: body) { (response, erro
 ### Return type
 
 [**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse)
+
+
+## postAnalyticsSurveysAggregatesJobs
+
+
+
+> [AsyncQueryResponse](AsyncQueryResponse) postAnalyticsSurveysAggregatesJobs(body)
+
+Query for survey aggregates asynchronously
+
+
+
+Wraps POST /api/v2/analytics/surveys/aggregates/jobs  
+
+Requires ANY permissions: 
+
+* analytics:surveyAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: SurveyAsyncAggregationQuery = new SurveyAsyncAggregationQuery(...) // query
+
+// Code example
+QualityAPI.postAnalyticsSurveysAggregatesJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.postAnalyticsSurveysAggregatesJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**SurveyAsyncAggregationQuery**](SurveyAsyncAggregationQuery)| query | |
+
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse)
 
 
 ## postAnalyticsSurveysAggregatesQuery
@@ -3524,4 +3934,4 @@ QualityAPI.putQualitySurveysScorable(customerSurveyUrl: customerSurveyUrl, body:
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

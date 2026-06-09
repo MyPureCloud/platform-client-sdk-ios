@@ -3662,6 +3662,12 @@ open class WorkforceManagementAPI {
         case coaching = "Coaching"
         case learning = "Learning"
         case agentUnavailableTimes = "AgentUnavailableTimes"
+        case agentSelfScheduleJob = "AgentSelfScheduleJob"
+        case agentSelfScheduleOffers = "AgentSelfScheduleOffers"
+        case agentSelfScheduleQuery = "AgentSelfScheduleQuery"
+        case agentSelfScheduleActivityMove = "AgentSelfScheduleActivityMove"
+        case selfScheduleSettings = "SelfScheduleSettings"
+        case agentSelfScheduleSettings = "AgentSelfScheduleSettings"
         case agentOpportunitiesQuery = "AgentOpportunitiesQuery"
         case agentOpportunitiesEnrollments = "AgentOpportunitiesEnrollments"
         case agentOpportunitiesEnrollmentsStatuses = "AgentOpportunitiesEnrollmentsStatuses"
@@ -5414,6 +5420,13 @@ open class WorkforceManagementAPI {
   "autoApprovalRule" : "Never",
   "enabled" : true,
   "daysBeforeStartToExpireFromWaitlist" : 0,
+  "overrideDates" : [ {
+    "date" : "2000-01-23",
+    "type" : "Blocked"
+  }, {
+    "date" : "2000-01-23",
+    "type" : "Blocked"
+  } ],
   "managementUnitAssociation" : "{}",
   "name" : "name",
   "countAgainstTimeOffLimits" : true,
@@ -5452,16 +5465,23 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
+    public enum Expand_getWorkforcemanagementBusinessunitTimeoffplans: String { 
+        case overridedates = "overrideDates"
+    }
+    
     /**
      Gets a list of time-off plans
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter managementUnitId: (query) The ID of the management unit to get management unit specific staffing groups (optional)
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter expand: (query) Include to access additional data for the time-off plans (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementBusinessunitTimeoffplans(businessUnitId: String, managementUnitId: String? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: BuTimeOffPlanListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementBusinessunitTimeoffplansWithRequestBuilder(businessUnitId: businessUnitId, managementUnitId: managementUnitId, forceDownloadService: forceDownloadService)
+    open class func getWorkforcemanagementBusinessunitTimeoffplans(businessUnitId: String, managementUnitId: String? = nil, forceDownloadService: Bool? = nil, expand: [String]? = nil, completion: @escaping ((_ data: BuTimeOffPlanListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitTimeoffplansWithRequestBuilder(businessUnitId: businessUnitId, managementUnitId: managementUnitId, forceDownloadService: forceDownloadService, expand: expand)
         requestBuilder.execute { (response: Response<BuTimeOffPlanListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -5500,6 +5520,13 @@ open class WorkforceManagementAPI {
     "autoApprovalRule" : "Never",
     "enabled" : true,
     "daysBeforeStartToExpireFromWaitlist" : 0,
+    "overrideDates" : [ {
+      "date" : "2000-01-23",
+      "type" : "Blocked"
+    }, {
+      "date" : "2000-01-23",
+      "type" : "Blocked"
+    } ],
     "managementUnitAssociation" : "{}",
     "name" : "name",
     "countAgainstTimeOffLimits" : true,
@@ -5522,6 +5549,13 @@ open class WorkforceManagementAPI {
     "autoApprovalRule" : "Never",
     "enabled" : true,
     "daysBeforeStartToExpireFromWaitlist" : 0,
+    "overrideDates" : [ {
+      "date" : "2000-01-23",
+      "type" : "Blocked"
+    }, {
+      "date" : "2000-01-23",
+      "type" : "Blocked"
+    } ],
     "managementUnitAssociation" : "{}",
     "name" : "name",
     "countAgainstTimeOffLimits" : true,
@@ -5536,10 +5570,11 @@ open class WorkforceManagementAPI {
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter managementUnitId: (query) The ID of the management unit to get management unit specific staffing groups (optional)
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter expand: (query) Include to access additional data for the time-off plans (optional)
 
      - returns: RequestBuilder<BuTimeOffPlanListing> 
      */
-    open class func getWorkforcemanagementBusinessunitTimeoffplansWithRequestBuilder(businessUnitId: String, managementUnitId: String? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<BuTimeOffPlanListing> {        
+    open class func getWorkforcemanagementBusinessunitTimeoffplansWithRequestBuilder(businessUnitId: String, managementUnitId: String? = nil, forceDownloadService: Bool? = nil, expand: [String]? = nil) -> RequestBuilder<BuTimeOffPlanListing> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -5550,7 +5585,8 @@ open class WorkforceManagementAPI {
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "managementUnitId": managementUnitId, 
-            "forceDownloadService": forceDownloadService
+            "forceDownloadService": forceDownloadService, 
+            "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<BuTimeOffPlanListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6357,8 +6393,12 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
+    
+    
     public enum Expand_getWorkforcemanagementBusinessunitWeekSchedules: String { 
-        case forecastDescription = "forecast.description"
+        case shorttermforecastDescription = "shortTermForecast.description"
     }
     
     
@@ -6367,12 +6407,14 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; (without quotes) to get recent schedules 
+     - parameter earliestWeekDate: (query) If weekId &#x3D;&#x3D; &#39;recent&#39;, specify the earliest schedule start week date (inclusive) to include in the &#39;recent&#39; range, in yyyy-MM-dd format. Ignored if weekId !&#x3D; &#39;recent&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter latestWeekDate: (query) If weekId &#x3D;&#x3D; &#39;recent&#39;, specify the latest schedule start week date (inclusive) to include in the &#39;recent&#39; range, in yyyy-MM-dd format. Ignored if weekId !&#x3D; &#39;recent&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
      - parameter includeOnlyPublished: (query) includeOnlyPublished (optional)
      - parameter expand: (query) expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementBusinessunitWeekSchedules(businessUnitId: String, weekId: String, includeOnlyPublished: Bool? = nil, expand: Expand_getWorkforcemanagementBusinessunitWeekSchedules? = nil, completion: @escaping ((_ data: BuScheduleListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementBusinessunitWeekSchedulesWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, includeOnlyPublished: includeOnlyPublished, expand: expand)
+    open class func getWorkforcemanagementBusinessunitWeekSchedules(businessUnitId: String, weekId: String, earliestWeekDate: Date? = nil, latestWeekDate: Date? = nil, includeOnlyPublished: Bool? = nil, expand: Expand_getWorkforcemanagementBusinessunitWeekSchedules? = nil, completion: @escaping ((_ data: BuScheduleListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWeekSchedulesWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, earliestWeekDate: earliestWeekDate, latestWeekDate: latestWeekDate, includeOnlyPublished: includeOnlyPublished, expand: expand)
         requestBuilder.execute { (response: Response<BuScheduleListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -6422,12 +6464,14 @@ open class WorkforceManagementAPI {
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; (without quotes) to get recent schedules 
+     - parameter earliestWeekDate: (query) If weekId &#x3D;&#x3D; &#39;recent&#39;, specify the earliest schedule start week date (inclusive) to include in the &#39;recent&#39; range, in yyyy-MM-dd format. Ignored if weekId !&#x3D; &#39;recent&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
+     - parameter latestWeekDate: (query) If weekId &#x3D;&#x3D; &#39;recent&#39;, specify the latest schedule start week date (inclusive) to include in the &#39;recent&#39; range, in yyyy-MM-dd format. Ignored if weekId !&#x3D; &#39;recent&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
      - parameter includeOnlyPublished: (query) includeOnlyPublished (optional)
      - parameter expand: (query) expand (optional)
 
      - returns: RequestBuilder<BuScheduleListing> 
      */
-    open class func getWorkforcemanagementBusinessunitWeekSchedulesWithRequestBuilder(businessUnitId: String, weekId: String, includeOnlyPublished: Bool? = nil, expand: Expand_getWorkforcemanagementBusinessunitWeekSchedules? = nil) -> RequestBuilder<BuScheduleListing> {        
+    open class func getWorkforcemanagementBusinessunitWeekSchedulesWithRequestBuilder(businessUnitId: String, weekId: String, earliestWeekDate: Date? = nil, latestWeekDate: Date? = nil, includeOnlyPublished: Bool? = nil, expand: Expand_getWorkforcemanagementBusinessunitWeekSchedules? = nil) -> RequestBuilder<BuScheduleListing> {        
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -6440,6 +6484,8 @@ open class WorkforceManagementAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "earliestWeekDate": earliestWeekDate?.encodeToJSON(), 
+            "latestWeekDate": latestWeekDate?.encodeToJSON(), 
             "includeOnlyPublished": includeOnlyPublished, 
             "expand": expand?.rawValue
         ])
@@ -7605,6 +7651,12 @@ open class WorkforceManagementAPI {
         case coaching = "Coaching"
         case learning = "Learning"
         case agentUnavailableTimes = "AgentUnavailableTimes"
+        case agentSelfScheduleJob = "AgentSelfScheduleJob"
+        case agentSelfScheduleOffers = "AgentSelfScheduleOffers"
+        case agentSelfScheduleQuery = "AgentSelfScheduleQuery"
+        case agentSelfScheduleActivityMove = "AgentSelfScheduleActivityMove"
+        case selfScheduleSettings = "SelfScheduleSettings"
+        case agentSelfScheduleSettings = "AgentSelfScheduleSettings"
         case agentOpportunitiesQuery = "AgentOpportunitiesQuery"
         case agentOpportunitiesEnrollments = "AgentOpportunitiesEnrollments"
         case agentOpportunitiesEnrollmentsStatuses = "AgentOpportunitiesEnrollmentsStatuses"
@@ -10701,6 +10753,12 @@ open class WorkforceManagementAPI {
         case coaching = "Coaching"
         case learning = "Learning"
         case agentUnavailableTimes = "AgentUnavailableTimes"
+        case agentSelfScheduleJob = "AgentSelfScheduleJob"
+        case agentSelfScheduleOffers = "AgentSelfScheduleOffers"
+        case agentSelfScheduleQuery = "AgentSelfScheduleQuery"
+        case agentSelfScheduleActivityMove = "AgentSelfScheduleActivityMove"
+        case selfScheduleSettings = "SelfScheduleSettings"
+        case agentSelfScheduleSettings = "AgentSelfScheduleSettings"
         case agentOpportunitiesQuery = "AgentOpportunitiesQuery"
         case agentOpportunitiesEnrollments = "AgentOpportunitiesEnrollments"
         case agentOpportunitiesEnrollmentsStatuses = "AgentOpportunitiesEnrollmentsStatuses"
@@ -13754,6 +13812,13 @@ open class WorkforceManagementAPI {
   "autoApprovalRule" : "Never",
   "enabled" : true,
   "daysBeforeStartToExpireFromWaitlist" : 0,
+  "overrideDates" : [ {
+    "date" : "2000-01-23",
+    "type" : "Blocked"
+  }, {
+    "date" : "2000-01-23",
+    "type" : "Blocked"
+  } ],
   "managementUnitAssociation" : "{}",
   "name" : "name",
   "countAgainstTimeOffLimits" : true,
@@ -19412,6 +19477,13 @@ open class WorkforceManagementAPI {
   "autoApprovalRule" : "Never",
   "enabled" : true,
   "daysBeforeStartToExpireFromWaitlist" : 0,
+  "overrideDates" : [ {
+    "date" : "2000-01-23",
+    "type" : "Blocked"
+  }, {
+    "date" : "2000-01-23",
+    "type" : "Blocked"
+  } ],
   "managementUnitAssociation" : "{}",
   "name" : "name",
   "countAgainstTimeOffLimits" : true,
@@ -22460,16 +22532,23 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    public enum IncludeOnly_postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate: String { 
+        case overridedatetype = "overrideDateType"
+    }
+    
+    
     /**
      Estimates available time off for an agent
      
      - parameter managementUnitId: (path) The ID of the management unit 
      - parameter userId: (path) The id of the user for whom the time off request estimate is requested 
      - parameter body: (body) body 
+     - parameter includeOnly: (query) Limit response to the specified field (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate(managementUnitId: String, userId: String, body: EstimateAvailableTimeOffRequest, completion: @escaping ((_ data: EstimateAvailableTimeOffResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementManagementunitUserTimeoffrequestsEstimateWithRequestBuilder(managementUnitId: managementUnitId, userId: userId, body: body)
+    open class func postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate(managementUnitId: String, userId: String, body: EstimateAvailableTimeOffRequest, includeOnly: IncludeOnly_postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate? = nil, completion: @escaping ((_ data: EstimateAvailableTimeOffResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitUserTimeoffrequestsEstimateWithRequestBuilder(managementUnitId: managementUnitId, userId: userId, body: body, includeOnly: includeOnly)
         requestBuilder.execute { (response: Response<EstimateAvailableTimeOffResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -22498,23 +22577,27 @@ open class WorkforceManagementAPI {
     "date" : "2000-01-23",
     "durationMinutes" : 0,
     "flexible" : true,
-    "payableMinutes" : 6
+    "payableMinutes" : 6,
+    "overrideDateType" : "Blocked"
   }, {
     "date" : "2000-01-23",
     "durationMinutes" : 0,
     "flexible" : true,
-    "payableMinutes" : 6
+    "payableMinutes" : 6,
+    "overrideDateType" : "Blocked"
   } ],
   "partialDayDates" : [ {
     "date" : "2000-01-23T04:56:07.000+00:00",
     "durationMinutes" : 1,
     "flexible" : true,
-    "payableMinutes" : 5
+    "payableMinutes" : 5,
+    "overrideDateType" : "Blocked"
   }, {
     "date" : "2000-01-23T04:56:07.000+00:00",
     "durationMinutes" : 1,
     "flexible" : true,
-    "payableMinutes" : 5
+    "payableMinutes" : 5,
+    "overrideDateType" : "Blocked"
   } ],
   "paid" : true,
   "user" : "{}"
@@ -22523,10 +22606,11 @@ open class WorkforceManagementAPI {
      - parameter managementUnitId: (path) The ID of the management unit 
      - parameter userId: (path) The id of the user for whom the time off request estimate is requested 
      - parameter body: (body) body 
+     - parameter includeOnly: (query) Limit response to the specified field (optional)
 
      - returns: RequestBuilder<EstimateAvailableTimeOffResponse> 
      */
-    open class func postWorkforcemanagementManagementunitUserTimeoffrequestsEstimateWithRequestBuilder(managementUnitId: String, userId: String, body: EstimateAvailableTimeOffRequest) -> RequestBuilder<EstimateAvailableTimeOffResponse> {        
+    open class func postWorkforcemanagementManagementunitUserTimeoffrequestsEstimateWithRequestBuilder(managementUnitId: String, userId: String, body: EstimateAvailableTimeOffRequest, includeOnly: IncludeOnly_postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate? = nil) -> RequestBuilder<EstimateAvailableTimeOffResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/estimate"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -22537,7 +22621,10 @@ open class WorkforceManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeOnly": includeOnly?.rawValue
+        ])
 
         let requestBuilder: RequestBuilder<EstimateAvailableTimeOffResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -24534,14 +24621,21 @@ open class WorkforceManagementAPI {
 
     
     
+    
+    public enum IncludeOnly_postWorkforcemanagementTimeoffrequestsEstimate: String { 
+        case overridedatetype = "overrideDateType"
+    }
+    
+    
     /**
      Estimates available time off for current user
      
      - parameter body: (body) body 
+     - parameter includeOnly: (query) Limit response to the specified field (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementTimeoffrequestsEstimate(body: EstimateAvailableTimeOffRequest, completion: @escaping ((_ data: EstimateAvailableTimeOffResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementTimeoffrequestsEstimateWithRequestBuilder(body: body)
+    open class func postWorkforcemanagementTimeoffrequestsEstimate(body: EstimateAvailableTimeOffRequest, includeOnly: IncludeOnly_postWorkforcemanagementTimeoffrequestsEstimate? = nil, completion: @escaping ((_ data: EstimateAvailableTimeOffResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementTimeoffrequestsEstimateWithRequestBuilder(body: body, includeOnly: includeOnly)
         requestBuilder.execute { (response: Response<EstimateAvailableTimeOffResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -24570,38 +24664,46 @@ open class WorkforceManagementAPI {
     "date" : "2000-01-23",
     "durationMinutes" : 0,
     "flexible" : true,
-    "payableMinutes" : 6
+    "payableMinutes" : 6,
+    "overrideDateType" : "Blocked"
   }, {
     "date" : "2000-01-23",
     "durationMinutes" : 0,
     "flexible" : true,
-    "payableMinutes" : 6
+    "payableMinutes" : 6,
+    "overrideDateType" : "Blocked"
   } ],
   "partialDayDates" : [ {
     "date" : "2000-01-23T04:56:07.000+00:00",
     "durationMinutes" : 1,
     "flexible" : true,
-    "payableMinutes" : 5
+    "payableMinutes" : 5,
+    "overrideDateType" : "Blocked"
   }, {
     "date" : "2000-01-23T04:56:07.000+00:00",
     "durationMinutes" : 1,
     "flexible" : true,
-    "payableMinutes" : 5
+    "payableMinutes" : 5,
+    "overrideDateType" : "Blocked"
   } ],
   "paid" : true,
   "user" : "{}"
 }, statusCode=200}]
      
      - parameter body: (body) body 
+     - parameter includeOnly: (query) Limit response to the specified field (optional)
 
      - returns: RequestBuilder<EstimateAvailableTimeOffResponse> 
      */
-    open class func postWorkforcemanagementTimeoffrequestsEstimateWithRequestBuilder(body: EstimateAvailableTimeOffRequest) -> RequestBuilder<EstimateAvailableTimeOffResponse> {        
+    open class func postWorkforcemanagementTimeoffrequestsEstimateWithRequestBuilder(body: EstimateAvailableTimeOffRequest, includeOnly: IncludeOnly_postWorkforcemanagementTimeoffrequestsEstimate? = nil) -> RequestBuilder<EstimateAvailableTimeOffResponse> {        
         let path = "/api/v2/workforcemanagement/timeoffrequests/estimate"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeOnly": includeOnly?.rawValue
+        ])
 
         let requestBuilder: RequestBuilder<EstimateAvailableTimeOffResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

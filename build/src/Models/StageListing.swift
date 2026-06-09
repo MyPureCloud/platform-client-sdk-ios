@@ -1,6 +1,6 @@
 
 
-public class ExportListing: Codable {
+public class StageListing: Codable {
 
 
 
@@ -10,12 +10,12 @@ public class ExportListing: Codable {
 
 
 
-    public var entities: [ContactsExport]?
+    public var entities: [Stage]?
     public var nextUri: String?
     public var selfUri: String?
     public var previousUri: String?
 
-    public init(entities: [ContactsExport]?, nextUri: String?, selfUri: String?, previousUri: String?) {
+    public init(entities: [Stage]?, nextUri: String?, selfUri: String?, previousUri: String?) {
         self.entities = entities
         self.nextUri = nextUri
         self.selfUri = selfUri

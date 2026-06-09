@@ -13,7 +13,12 @@ A WhatsApp messaging template definition as defined in the WhatsApp Business Man
 | **buttons** | [**[Button]**]([Button]) | List of buttons to be included in the standard WhatsApp messages channel | [optional] |
 | **messageFooter** | [**MessageFooter**](MessageFooter) | Footer for the message in the standard WhatsApp messages channel | [optional] |
 | **header** | [**MessageHeader**](MessageHeader) | Header for the message in the standard WhatsApp messages channel | [optional] |
+| **integrationId** | **String** | WhatsApp integration ID for whatsApp carousels | [optional] |
+| **category** | **String** | Category of whatsApp carousels template. | [optional] |
+| **templateStatus** | **String** | Template status of whatsApp carousels template. | [optional] |
+| **statusInfo** | [**StatusInfo**](StatusInfo) | Status information about the template | [optional] |
+| **carousel** | [**Carousel**](Carousel) | Definition for whatsApp carousels template. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

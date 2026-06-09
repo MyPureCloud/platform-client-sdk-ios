@@ -14,6 +14,7 @@ public class SendAgentlessOutboundMessageResponse: Codable {
         case sms = "sms"
         case whatsapp = "whatsapp"
         case _open = "open"
+        case webmessaging = "webmessaging"
     }
 
 

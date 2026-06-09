@@ -13,6 +13,51 @@ open class JourneyAPI {
     
     
     /**
+     Delete/cancel an async request for journey aggregates
+     
+     - parameter jobId: (path) jobId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteAnalyticsJourneysAggregatesJob(jobId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteAnalyticsJourneysAggregatesJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete/cancel an async request for journey aggregates
+     - DELETE /api/v2/analytics/journeys/aggregates/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter jobId: (path) jobId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteAnalyticsJourneysAggregatesJobWithRequestBuilder(jobId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/analytics/journeys/aggregates/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Delete single action map.
      
      - parameter actionMapId: (path) ID of the action map. 
@@ -437,6 +482,450 @@ open class JourneyAPI {
         let requestBuilder: RequestBuilder<JourneyViewSchedule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get status for async query for journey aggregates
+     
+     - parameter jobId: (path) jobId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsJourneysAggregatesJob(jobId: String, completion: @escaping ((_ data: AsyncQueryStatus?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsJourneysAggregatesJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<AsyncQueryStatus>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get status for async query for journey aggregates
+     - GET /api/v2/analytics/journeys/aggregates/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorMessage" : "errorMessage",
+  "submissionDate" : "2000-01-23T04:56:07.000+00:00",
+  "completionDate" : "2000-01-23T04:56:07.000+00:00",
+  "state" : "QUEUED",
+  "expirationDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) jobId 
+
+     - returns: RequestBuilder<AsyncQueryStatus> 
+     */
+    open class func getAnalyticsJourneysAggregatesJobWithRequestBuilder(jobId: String) -> RequestBuilder<AsyncQueryStatus> {        
+        var path = "/api/v2/analytics/journeys/aggregates/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AsyncQueryStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Fetch a page of results for an async aggregates query
+     
+     - parameter jobId: (path) jobId 
+     - parameter cursor: (query) Cursor token to retrieve next page (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsJourneysAggregatesJobResults(jobId: String, cursor: String? = nil, completion: @escaping ((_ data: JourneyAsyncAggregateQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsJourneysAggregatesJobResultsWithRequestBuilder(jobId: jobId, cursor: cursor)
+        requestBuilder.execute { (response: Response<JourneyAsyncAggregateQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Fetch a page of results for an async aggregates query
+     - GET /api/v2/analytics/journeys/aggregates/jobs/{jobId}/results
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "cursor" : "cursor",
+  "results" : [ {
+    "data" : [ {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "calculatedMetricValue" : 1,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "calculatedMetricValue" : 1,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "calculatedMetricValue" : 1,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "calculatedMetricValue" : 1,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "calculatedMetricValue" : 1,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "calculatedMetricValue" : 1,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "calculatedMetricValue" : 1,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "calculatedMetricValue" : 1,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      } ]
+    } ],
+    "group" : {
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "calculatedMetricValue" : 1,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "calculatedMetricValue" : 1,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "calculatedMetricValue" : 1,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "calculatedMetricValue" : 1,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "calculatedMetricValue" : 1,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "calculatedMetricValue" : 1,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "calculatedMetricValue" : 1,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "calculatedMetricValue" : 1,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      } ]
+    } ],
+    "group" : {
+      "key" : "group"
+    }
+  } ]
+}, statusCode=200}]
+     
+     - parameter jobId: (path) jobId 
+     - parameter cursor: (query) Cursor token to retrieve next page (optional)
+
+     - returns: RequestBuilder<JourneyAsyncAggregateQueryResponse> 
+     */
+    open class func getAnalyticsJourneysAggregatesJobResultsWithRequestBuilder(jobId: String, cursor: String? = nil) -> RequestBuilder<JourneyAsyncAggregateQueryResponse> {        
+        var path = "/api/v2/analytics/journeys/aggregates/jobs/{jobId}/results"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "cursor": cursor
+        ])
+
+        let requestBuilder: RequestBuilder<JourneyAsyncAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -5643,6 +6132,58 @@ open class JourneyAPI {
         let requestBuilder: RequestBuilder<JourneyViewJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Query for journey aggregates asynchronously
+     
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsJourneysAggregatesJobs(body: JourneyAsyncAggregationQuery, completion: @escaping ((_ data: AsyncQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsJourneysAggregatesJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AsyncQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query for journey aggregates asynchronously
+     - POST /api/v2/analytics/journeys/aggregates/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "jobId" : "jobId"
+}, statusCode=202}]
+     
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<AsyncQueryResponse> 
+     */
+    open class func postAnalyticsJourneysAggregatesJobsWithRequestBuilder(body: JourneyAsyncAggregationQuery) -> RequestBuilder<AsyncQueryResponse> {        
+        let path = "/api/v2/analytics/journeys/aggregates/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AsyncQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
     

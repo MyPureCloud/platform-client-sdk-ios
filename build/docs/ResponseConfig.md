@@ -14,4 +14,4 @@ Defines response components of the Action Request.
 
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

@@ -237,6 +237,51 @@ open class RoutingAPI {
     
     
     /**
+     Delete an email setting. Removes the email setting and its associated settings
+     
+     - parameter emailSettingId: (path) Email Setting ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteRoutingEmailSettingEmailSettingId(emailSettingId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteRoutingEmailSettingEmailSettingIdWithRequestBuilder(emailSettingId: emailSettingId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete an email setting. Removes the email setting and its associated settings
+     - DELETE /api/v2/routing/email/setting/{emailSettingId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter emailSettingId: (path) Email Setting ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteRoutingEmailSettingEmailSettingIdWithRequestBuilder(emailSettingId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/routing/email/setting/{emailSettingId}"
+        let emailSettingIdPreEscape = "\(emailSettingId)"
+        let emailSettingIdPostEscape = emailSettingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{emailSettingId}", with: emailSettingIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Delete a routing language
      
      - parameter languageId: (path) Language ID 
@@ -2582,6 +2627,143 @@ open class RoutingAPI {
         ])
 
         let requestBuilder: RequestBuilder<OutboundDomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a paged list of email routing settings.
+     
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingEmailSetting(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: EmailSettingEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailSettingWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<EmailSettingEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a paged list of email routing settings.
+     - GET /api/v2/routing/email/setting
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "domains" : "{}",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "domains" : "{}",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+
+     - returns: RequestBuilder<EmailSettingEntityListing> 
+     */
+    open class func getRoutingEmailSettingWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<EmailSettingEntityListing> {        
+        let path = "/api/v2/routing/email/setting"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<EmailSettingEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get email setting. Returns the specified email setting that defines settings for email
+     
+     - parameter emailSettingId: (path) Email Setting ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingEmailSettingEmailSettingId(emailSettingId: String, completion: @escaping ((_ data: EmailSetting?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingEmailSettingEmailSettingIdWithRequestBuilder(emailSettingId: emailSettingId)
+        requestBuilder.execute { (response: Response<EmailSetting>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get email setting. Returns the specified email setting that defines settings for email
+     - GET /api/v2/routing/email/setting/{emailSettingId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "domains" : "{}",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter emailSettingId: (path) Email Setting ID 
+
+     - returns: RequestBuilder<EmailSetting> 
+     */
+    open class func getRoutingEmailSettingEmailSettingIdWithRequestBuilder(emailSettingId: String) -> RequestBuilder<EmailSetting> {        
+        var path = "/api/v2/routing/email/setting/{emailSettingId}"
+        let emailSettingIdPreEscape = "\(emailSettingId)"
+        let emailSettingIdPostEscape = emailSettingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{emailSettingId}", with: emailSettingIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EmailSetting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -6216,7 +6398,7 @@ open class RoutingAPI {
      - parameter sortOrder: (query) Sort order (optional)
      - parameter name: (query) Name (optional)
      - parameter _id: (query) Queue ID(s) (optional)
-     - parameter divisionId: (query) Division ID(s) (optional)
+     - parameter divisionId: (query) Division ID(s). Including &#39;*&#39; will query for all divisions (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getRoutingQueuesDivisionviews(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingQueuesDivisionviews? = nil, sortOrder: SortOrder_getRoutingQueuesDivisionviews? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: QueueEntityListing?,_ error: Error?) -> Void)) {
@@ -6478,7 +6660,7 @@ open class RoutingAPI {
      - parameter sortOrder: (query) Sort order (optional)
      - parameter name: (query) Name (optional)
      - parameter _id: (query) Queue ID(s) (optional)
-     - parameter divisionId: (query) Division ID(s) (optional)
+     - parameter divisionId: (query) Division ID(s). Including &#39;*&#39; will query for all divisions (optional)
 
      - returns: RequestBuilder<QueueEntityListing> 
      */
@@ -7942,7 +8124,7 @@ open class RoutingAPI {
     
     
     /**
-     Get the list of routing skills.
+     Get the list of routing skills. View permission enforcement only applies to skills assigned to a division.
      
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
@@ -7969,7 +8151,7 @@ open class RoutingAPI {
     }
 
     /**
-     Get the list of routing skills.
+     Get the list of routing skills. View permission enforcement only applies to skills assigned to a division.
      - GET /api/v2/routing/skills
      - OAuth:
        - type: oauth2
@@ -10409,6 +10591,68 @@ open class RoutingAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OutboundDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update an email setting. Modifies the settings for email setting
+     
+     - parameter emailSettingId: (path) Email Setting ID 
+     - parameter body: (body) EmailSetting 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchRoutingEmailSettingEmailSettingId(emailSettingId: String, body: EmailSetting, completion: @escaping ((_ data: EmailSetting?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchRoutingEmailSettingEmailSettingIdWithRequestBuilder(emailSettingId: emailSettingId, body: body)
+        requestBuilder.execute { (response: Response<EmailSetting>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an email setting. Modifies the settings for email setting
+     - PATCH /api/v2/routing/email/setting/{emailSettingId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "domains" : "{}",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter emailSettingId: (path) Email Setting ID 
+     - parameter body: (body) EmailSetting 
+
+     - returns: RequestBuilder<EmailSetting> 
+     */
+    open class func patchRoutingEmailSettingEmailSettingIdWithRequestBuilder(emailSettingId: String, body: EmailSetting) -> RequestBuilder<EmailSetting> {        
+        var path = "/api/v2/routing/email/setting/{emailSettingId}"
+        let emailSettingIdPreEscape = "\(emailSettingId)"
+        let emailSettingIdPostEscape = emailSettingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{emailSettingId}", with: emailSettingIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EmailSetting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -14321,6 +14565,61 @@ open class RoutingAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EmailOutboundDomainResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create a new email setting. Used to define various settings, that can then be associated with email domains
+     
+     - parameter body: (body) EmailSetting 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRoutingEmailSetting(body: EmailSetting, completion: @escaping ((_ data: EmailSetting?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingEmailSettingWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<EmailSetting>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a new email setting. Used to define various settings, that can then be associated with email domains
+     - POST /api/v2/routing/email/setting
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "domains" : "{}",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter body: (body) EmailSetting 
+
+     - returns: RequestBuilder<EmailSetting> 
+     */
+    open class func postRoutingEmailSettingWithRequestBuilder(body: EmailSetting) -> RequestBuilder<EmailSetting> {        
+        let path = "/api/v2/routing/email/setting"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EmailSetting>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

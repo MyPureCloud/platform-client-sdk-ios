@@ -15,4 +15,4 @@ A skill expression entity with ID, expression string (raw or normalized), and qu
 
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

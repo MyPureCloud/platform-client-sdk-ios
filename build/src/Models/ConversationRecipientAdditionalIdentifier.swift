@@ -11,6 +11,9 @@ public class ConversationRecipientAdditionalIdentifier: Codable {
         case ingestionRule = "IngestionRule"
         case ingestionRuleVersion = "IngestionRuleVersion"
         case phoneNumber = "PhoneNumber"
+        case bsuid = "Bsuid"
+        case parentBsuid = "ParentBsuid"
+        case username = "Username"
     }
 
 

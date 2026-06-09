@@ -4,7 +4,13 @@
 public class Carousel: Codable {
 
 
-    // TAG-REMOVE-MODEL-FILE
+
+    /** List of cards in a carousels template. */
+    public var cards: [CarouselCard]?
+
+    public init(cards: [CarouselCard]?) {
+        self.cards = cards
+    }
 
 
 }

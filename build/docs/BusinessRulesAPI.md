@@ -5,10 +5,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteBusinessrulesDecisiontable**](BusinessRulesAPI#deleteBusinessrulesDecisiontable) | Delete a decision table |
+| [**deleteBusinessrulesDecisiontableExport**](BusinessRulesAPI#deleteBusinessrulesDecisiontableExport) | Delete an export job for a decision table |
+| [**deleteBusinessrulesDecisiontableImport**](BusinessRulesAPI#deleteBusinessrulesDecisiontableImport) | Delete decision table row import job |
 | [**deleteBusinessrulesDecisiontableVersion**](BusinessRulesAPI#deleteBusinessrulesDecisiontableVersion) | Delete a decision table version |
 | [**deleteBusinessrulesDecisiontableVersionRow**](BusinessRulesAPI#deleteBusinessrulesDecisiontableVersionRow) | Delete a decision table row |
 | [**deleteBusinessrulesSchema**](BusinessRulesAPI#deleteBusinessrulesSchema) | Delete a schema |
 | [**getBusinessrulesDecisiontable**](BusinessRulesAPI#getBusinessrulesDecisiontable) | Get a decision table |
+| [**getBusinessrulesDecisiontableExport**](BusinessRulesAPI#getBusinessrulesDecisiontableExport) | Get an export job for a decision table |
+| [**getBusinessrulesDecisiontableExports**](BusinessRulesAPI#getBusinessrulesDecisiontableExports) | List export jobs for a decision table |
+| [**getBusinessrulesDecisiontableImport**](BusinessRulesAPI#getBusinessrulesDecisiontableImport) | Get decision table row import job |
+| [**getBusinessrulesDecisiontableImports**](BusinessRulesAPI#getBusinessrulesDecisiontableImports) | List decision table row import jobs |
 | [**getBusinessrulesDecisiontableVersion**](BusinessRulesAPI#getBusinessrulesDecisiontableVersion) | Get a decision table version |
 | [**getBusinessrulesDecisiontableVersionRow**](BusinessRulesAPI#getBusinessrulesDecisiontableVersionRow) | Get a decision table row |
 | [**getBusinessrulesDecisiontableVersionRows**](BusinessRulesAPI#getBusinessrulesDecisiontableVersionRows) | Get a list of decision table rows. |
@@ -20,11 +26,17 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getBusinessrulesSchemasCoretype**](BusinessRulesAPI#getBusinessrulesSchemasCoretype) | Get a specific named core type. |
 | [**getBusinessrulesSchemasCoretypes**](BusinessRulesAPI#getBusinessrulesSchemasCoretypes) | Get the core types from which all schemas are built. |
 | [**patchBusinessrulesDecisiontable**](BusinessRulesAPI#patchBusinessrulesDecisiontable) | Update a decision table |
+| [**patchBusinessrulesDecisiontableImport**](BusinessRulesAPI#patchBusinessrulesDecisiontableImport) | Update decision table row import job |
 | [**patchBusinessrulesDecisiontableVersion**](BusinessRulesAPI#patchBusinessrulesDecisiontableVersion) | Update a decision table version |
 | [**postBusinessrulesDecisiontableExecute**](BusinessRulesAPI#postBusinessrulesDecisiontableExecute) | Execute a published decision table |
+| [**postBusinessrulesDecisiontableExports**](BusinessRulesAPI#postBusinessrulesDecisiontableExports) | Create an export job for a decision table version |
+| [**postBusinessrulesDecisiontableImports**](BusinessRulesAPI#postBusinessrulesDecisiontableImports) | Create a decision table row import job |
 | [**postBusinessrulesDecisiontableVersionCopy**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionCopy) | Copy a decision table version |
 | [**postBusinessrulesDecisiontableVersionExecute**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionExecute) | Execute a decision table version |
 | [**postBusinessrulesDecisiontableVersionRows**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionRows) | Create a decision table row |
+| [**postBusinessrulesDecisiontableVersionRowsBulkAdd**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionRowsBulkAdd) | Bulk add decision table rows |
+| [**postBusinessrulesDecisiontableVersionRowsBulkRemove**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionRowsBulkRemove) | Bulk delete decision table rows |
+| [**postBusinessrulesDecisiontableVersionRowsBulkUpdate**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionRowsBulkUpdate) | Bulk update decision table rows |
 | [**postBusinessrulesDecisiontableVersionRowsSearch**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionRowsSearch) | Search for decision table rows |
 | [**postBusinessrulesDecisiontableVersionSync**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionSync) | Update the Business Rules Schema to the latest version for a given decision table version |
 | [**postBusinessrulesDecisiontableVersions**](BusinessRulesAPI#postBusinessrulesDecisiontableVersions) | Create a new decision table version |
@@ -80,6 +92,108 @@ BusinessRulesAPI.deleteBusinessrulesDecisiontable(tableId: tableId, forceDelete:
 | ------------- | ------------- | ------------- | ------------- |
 | **tableId** | **String**| Table ID | |
 | **forceDelete** | **Bool**| Force delete decision table (under certain conditions) | [optional] |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteBusinessrulesDecisiontableExport
+
+
+
+> Void deleteBusinessrulesDecisiontableExport(tableId, exportJobId)
+
+Delete an export job for a decision table
+
+
+
+Wraps DELETE /api/v2/businessrules/decisiontables/{tableId}/exports/{exportJobId}  
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableExportJob:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tableId: String = "" // Table ID
+let exportJobId: String = "" // Export Job ID
+
+// Code example
+BusinessRulesAPI.deleteBusinessrulesDecisiontableExport(tableId: tableId, exportJobId: exportJobId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("BusinessRulesAPI.deleteBusinessrulesDecisiontableExport was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tableId** | **String**| Table ID | |
+| **exportJobId** | **String**| Export Job ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteBusinessrulesDecisiontableImport
+
+
+
+> Void deleteBusinessrulesDecisiontableImport(tableId, importJobId)
+
+Delete decision table row import job
+
+
+
+Wraps DELETE /api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId}  
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableImportJob:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tableId: String = "" // Table ID
+let importJobId: String = "" // Import job ID
+
+// Code example
+BusinessRulesAPI.deleteBusinessrulesDecisiontableImport(tableId: tableId, importJobId: importJobId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("BusinessRulesAPI.deleteBusinessrulesDecisiontableImport was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tableId** | **String**| Table ID | |
+| **importJobId** | **String**| Import job ID | |
 
 
 ### Return type
@@ -291,6 +405,218 @@ BusinessRulesAPI.getBusinessrulesDecisiontable(tableId: tableId) { (response, er
 ### Return type
 
 [**DecisionTable**](DecisionTable)
+
+
+## getBusinessrulesDecisiontableExport
+
+
+
+> [DecisionTableExportJob](DecisionTableExportJob) getBusinessrulesDecisiontableExport(tableId, exportJobId)
+
+Get an export job for a decision table
+
+
+
+Wraps GET /api/v2/businessrules/decisiontables/{tableId}/exports/{exportJobId}  
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableExportJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tableId: String = "" // Table ID
+let exportJobId: String = "" // Export Job ID
+
+// Code example
+BusinessRulesAPI.getBusinessrulesDecisiontableExport(tableId: tableId, exportJobId: exportJobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("BusinessRulesAPI.getBusinessrulesDecisiontableExport was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tableId** | **String**| Table ID | |
+| **exportJobId** | **String**| Export Job ID | |
+
+
+### Return type
+
+[**DecisionTableExportJob**](DecisionTableExportJob)
+
+
+## getBusinessrulesDecisiontableExports
+
+
+
+> [DecisionTableExportJobListing](DecisionTableExportJobListing) getBusinessrulesDecisiontableExports(tableId, after, pageSize)
+
+List export jobs for a decision table
+
+
+
+Wraps GET /api/v2/businessrules/decisiontables/{tableId}/exports  
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableExportJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tableId: String = "" // Table ID
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 100.
+
+// Code example
+BusinessRulesAPI.getBusinessrulesDecisiontableExports(tableId: tableId, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("BusinessRulesAPI.getBusinessrulesDecisiontableExports was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tableId** | **String**| Table ID | |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 100. | [optional] |
+
+
+### Return type
+
+[**DecisionTableExportJobListing**](DecisionTableExportJobListing)
+
+
+## getBusinessrulesDecisiontableImport
+
+
+
+> [DecisionTableImportJob](DecisionTableImportJob) getBusinessrulesDecisiontableImport(tableId, importJobId)
+
+Get decision table row import job
+
+
+
+Wraps GET /api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId}  
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableImportJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tableId: String = "" // Table ID
+let importJobId: String = "" // Import job ID
+
+// Code example
+BusinessRulesAPI.getBusinessrulesDecisiontableImport(tableId: tableId, importJobId: importJobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("BusinessRulesAPI.getBusinessrulesDecisiontableImport was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tableId** | **String**| Table ID | |
+| **importJobId** | **String**| Import job ID | |
+
+
+### Return type
+
+[**DecisionTableImportJob**](DecisionTableImportJob)
+
+
+## getBusinessrulesDecisiontableImports
+
+
+
+> [DecisionTableImportJobListing](DecisionTableImportJobListing) getBusinessrulesDecisiontableImports(tableId, after, pageSize)
+
+List decision table row import jobs
+
+
+
+Wraps GET /api/v2/businessrules/decisiontables/{tableId}/imports  
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableImportJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tableId: String = "" // Table ID
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 100.
+
+// Code example
+BusinessRulesAPI.getBusinessrulesDecisiontableImports(tableId: tableId, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("BusinessRulesAPI.getBusinessrulesDecisiontableImports was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tableId** | **String**| Table ID | |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 100. | [optional] |
+
+
+### Return type
+
+[**DecisionTableImportJobListing**](DecisionTableImportJobListing)
 
 
 ## getBusinessrulesDecisiontableVersion
@@ -875,6 +1201,60 @@ BusinessRulesAPI.patchBusinessrulesDecisiontable(tableId: tableId, body: body) {
 [**DecisionTable**](DecisionTable)
 
 
+## patchBusinessrulesDecisiontableImport
+
+
+
+> [DecisionTableImportJob](DecisionTableImportJob) patchBusinessrulesDecisiontableImport(tableId, importJobId, body)
+
+Update decision table row import job
+
+
+
+Wraps PATCH /api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId}  
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableImportJob:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tableId: String = "" // Table ID
+let importJobId: String = "" // Import job ID
+let body: UpdateDecisionTableImportJobRequest = new UpdateDecisionTableImportJobRequest(...) // Import job update request
+
+// Code example
+BusinessRulesAPI.patchBusinessrulesDecisiontableImport(tableId: tableId, importJobId: importJobId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("BusinessRulesAPI.patchBusinessrulesDecisiontableImport was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tableId** | **String**| Table ID | |
+| **importJobId** | **String**| Import job ID | |
+| **body** | [**UpdateDecisionTableImportJobRequest**](UpdateDecisionTableImportJobRequest)| Import job update request | |
+
+
+### Return type
+
+[**DecisionTableImportJob**](DecisionTableImportJob)
+
+
 ## patchBusinessrulesDecisiontableVersion
 
 
@@ -979,6 +1359,110 @@ BusinessRulesAPI.postBusinessrulesDecisiontableExecute(tableId: tableId, body: b
 ### Return type
 
 [**DecisionTableExecutionResponse**](DecisionTableExecutionResponse)
+
+
+## postBusinessrulesDecisiontableExports
+
+
+
+> [DecisionTableExportJob](DecisionTableExportJob) postBusinessrulesDecisiontableExports(tableId, body)
+
+Create an export job for a decision table version
+
+
+
+Wraps POST /api/v2/businessrules/decisiontables/{tableId}/exports  
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableExportJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tableId: String = "" // Table ID
+let body: DecisionTableExportJobRequest = new DecisionTableExportJobRequest(...) // Export job request
+
+// Code example
+BusinessRulesAPI.postBusinessrulesDecisiontableExports(tableId: tableId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("BusinessRulesAPI.postBusinessrulesDecisiontableExports was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tableId** | **String**| Table ID | |
+| **body** | [**DecisionTableExportJobRequest**](DecisionTableExportJobRequest)| Export job request | |
+
+
+### Return type
+
+[**DecisionTableExportJob**](DecisionTableExportJob)
+
+
+## postBusinessrulesDecisiontableImports
+
+
+
+> [DecisionTableImportJob](DecisionTableImportJob) postBusinessrulesDecisiontableImports(tableId, body)
+
+Create a decision table row import job
+
+
+
+Wraps POST /api/v2/businessrules/decisiontables/{tableId}/imports  
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableImportJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tableId: String = "" // Table ID
+let body: CreateDecisionTableImportJobRequest = new CreateDecisionTableImportJobRequest(...) // Import job create request
+
+// Code example
+BusinessRulesAPI.postBusinessrulesDecisiontableImports(tableId: tableId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("BusinessRulesAPI.postBusinessrulesDecisiontableImports was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tableId** | **String**| Table ID | |
+| **body** | [**CreateDecisionTableImportJobRequest**](CreateDecisionTableImportJobRequest)| Import job create request | |
+
+
+### Return type
+
+[**DecisionTableImportJob**](DecisionTableImportJob)
 
 
 ## postBusinessrulesDecisiontableVersionCopy
@@ -1144,6 +1628,176 @@ BusinessRulesAPI.postBusinessrulesDecisiontableVersionRows(tableId: tableId, tab
 ### Return type
 
 [**DecisionTableRow**](DecisionTableRow)
+
+
+## postBusinessrulesDecisiontableVersionRowsBulkAdd
+
+
+
+> [BulkAddDecisionTableRowsResponse](BulkAddDecisionTableRowsResponse) postBusinessrulesDecisiontableVersionRowsBulkAdd(tableId, tableVersion, body)
+
+Bulk add decision table rows
+
+Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue&#39;s division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+
+
+
+Wraps POST /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/add  
+
+Requires ALL permissions: 
+
+* businessrules:decisionTableRow:add
+* routing:queue:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tableId: String = "" // Table ID
+let tableVersion: Int = 0 // Table Version
+let body: BulkAddDecisionTableRowsRequest = new BulkAddDecisionTableRowsRequest(...) // Bulk add decision table rows request
+
+// Code example
+BusinessRulesAPI.postBusinessrulesDecisiontableVersionRowsBulkAdd(tableId: tableId, tableVersion: tableVersion, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("BusinessRulesAPI.postBusinessrulesDecisiontableVersionRowsBulkAdd was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tableId** | **String**| Table ID | |
+| **tableVersion** | **Int**| Table Version | |
+| **body** | [**BulkAddDecisionTableRowsRequest**](BulkAddDecisionTableRowsRequest)| Bulk add decision table rows request | |
+
+
+### Return type
+
+[**BulkAddDecisionTableRowsResponse**](BulkAddDecisionTableRowsResponse)
+
+
+## postBusinessrulesDecisiontableVersionRowsBulkRemove
+
+
+
+> Void postBusinessrulesDecisiontableVersionRowsBulkRemove(tableId, tableVersion, body)
+
+Bulk delete decision table rows
+
+Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue&#39;s division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+
+
+
+Wraps POST /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/remove  
+
+Requires ALL permissions: 
+
+* businessrules:decisionTableRow:delete
+* routing:queue:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tableId: String = "" // Table ID
+let tableVersion: Int = 0 // Table Version
+let body: BulkDeleteDecisionTableRowsRequest = new BulkDeleteDecisionTableRowsRequest(...) // 
+
+// Code example
+BusinessRulesAPI.postBusinessrulesDecisiontableVersionRowsBulkRemove(tableId: tableId, tableVersion: tableVersion, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("BusinessRulesAPI.postBusinessrulesDecisiontableVersionRowsBulkRemove was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tableId** | **String**| Table ID | |
+| **tableVersion** | **Int**| Table Version | |
+| **body** | [**BulkDeleteDecisionTableRowsRequest**](BulkDeleteDecisionTableRowsRequest)|  | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## postBusinessrulesDecisiontableVersionRowsBulkUpdate
+
+
+
+> [BulkUpdateDecisionTableRowsResponse](BulkUpdateDecisionTableRowsResponse) postBusinessrulesDecisiontableVersionRowsBulkUpdate(tableId, tableVersion, body)
+
+Bulk update decision table rows
+
+Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue&#39;s division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+
+
+
+Wraps POST /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/update  
+
+Requires ALL permissions: 
+
+* businessrules:decisionTableRow:edit
+* routing:queue:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tableId: String = "" // Table ID
+let tableVersion: Int = 0 // Table Version
+let body: BulkUpdateDecisionTableRowsRequest = new BulkUpdateDecisionTableRowsRequest(...) // Bulk update decision table rows request
+
+// Code example
+BusinessRulesAPI.postBusinessrulesDecisiontableVersionRowsBulkUpdate(tableId: tableId, tableVersion: tableVersion, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("BusinessRulesAPI.postBusinessrulesDecisiontableVersionRowsBulkUpdate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tableId** | **String**| Table ID | |
+| **tableVersion** | **Int**| Table Version | |
+| **body** | [**BulkUpdateDecisionTableRowsRequest**](BulkUpdateDecisionTableRowsRequest)| Bulk update decision table rows request | |
+
+
+### Return type
+
+[**BulkUpdateDecisionTableRowsResponse**](BulkUpdateDecisionTableRowsResponse)
 
 
 ## postBusinessrulesDecisiontableVersionRowsSearch
@@ -1573,4 +2227,4 @@ BusinessRulesAPI.putBusinessrulesSchema(schemaId: schemaId, body: body) { (respo
 [**BusinessRulesDataSchema**](BusinessRulesDataSchema)
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

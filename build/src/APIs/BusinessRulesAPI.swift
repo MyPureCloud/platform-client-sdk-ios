@@ -67,6 +67,110 @@ open class BusinessRulesAPI {
     
     
     /**
+     Delete an export job for a decision table
+     
+     - parameter tableId: (path) Table ID 
+     - parameter exportJobId: (path) Export Job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteBusinessrulesDecisiontableExport(tableId: String, exportJobId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteBusinessrulesDecisiontableExportWithRequestBuilder(tableId: tableId, exportJobId: exportJobId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete an export job for a decision table
+     - DELETE /api/v2/businessrules/decisiontables/{tableId}/exports/{exportJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter tableId: (path) Table ID 
+     - parameter exportJobId: (path) Export Job ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteBusinessrulesDecisiontableExportWithRequestBuilder(tableId: String, exportJobId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/businessrules/decisiontables/{tableId}/exports/{exportJobId}"
+        let tableIdPreEscape = "\(tableId)"
+        let tableIdPostEscape = tableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableId}", with: tableIdPostEscape, options: .literal, range: nil)
+        let exportJobIdPreEscape = "\(exportJobId)"
+        let exportJobIdPostEscape = exportJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{exportJobId}", with: exportJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Delete decision table row import job
+     
+     - parameter tableId: (path) Table ID 
+     - parameter importJobId: (path) Import job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteBusinessrulesDecisiontableImport(tableId: String, importJobId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteBusinessrulesDecisiontableImportWithRequestBuilder(tableId: tableId, importJobId: importJobId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete decision table row import job
+     - DELETE /api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter tableId: (path) Table ID 
+     - parameter importJobId: (path) Import job ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteBusinessrulesDecisiontableImportWithRequestBuilder(tableId: String, importJobId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId}"
+        let tableIdPreEscape = "\(tableId)"
+        let tableIdPostEscape = tableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableId}", with: tableIdPostEscape, options: .literal, range: nil)
+        let importJobIdPreEscape = "\(importJobId)"
+        let importJobIdPostEscape = importJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{importJobId}", with: importJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Delete a decision table version
      
      - parameter tableId: (path) Table ID 
@@ -281,6 +385,368 @@ open class BusinessRulesAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DecisionTable>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get an export job for a decision table
+     
+     - parameter tableId: (path) Table ID 
+     - parameter exportJobId: (path) Export Job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getBusinessrulesDecisiontableExport(tableId: String, exportJobId: String, completion: @escaping ((_ data: DecisionTableExportJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getBusinessrulesDecisiontableExportWithRequestBuilder(tableId: tableId, exportJobId: exportJobId)
+        requestBuilder.execute { (response: Response<DecisionTableExportJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an export job for a decision table
+     - GET /api/v2/businessrules/decisiontables/{tableId}/exports/{exportJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "fileName" : "fileName",
+  "selfUri" : "https://openapi-generator.tech",
+  "format" : "Csv",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "totalRows" : 6,
+  "error" : "{}",
+  "tableVersion" : 0,
+  "dateDownloadExpires" : "2000-01-23T04:56:07.000+00:00",
+  "download" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "exportType" : "Template",
+  "rowsExported" : 1,
+  "id" : "id",
+  "status" : "Pending"
+}, statusCode=200}]
+     
+     - parameter tableId: (path) Table ID 
+     - parameter exportJobId: (path) Export Job ID 
+
+     - returns: RequestBuilder<DecisionTableExportJob> 
+     */
+    open class func getBusinessrulesDecisiontableExportWithRequestBuilder(tableId: String, exportJobId: String) -> RequestBuilder<DecisionTableExportJob> {        
+        var path = "/api/v2/businessrules/decisiontables/{tableId}/exports/{exportJobId}"
+        let tableIdPreEscape = "\(tableId)"
+        let tableIdPostEscape = tableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableId}", with: tableIdPostEscape, options: .literal, range: nil)
+        let exportJobIdPreEscape = "\(exportJobId)"
+        let exportJobIdPostEscape = exportJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{exportJobId}", with: exportJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DecisionTableExportJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     List export jobs for a decision table
+     
+     - parameter tableId: (path) Table ID 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 100. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getBusinessrulesDecisiontableExports(tableId: String, after: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: DecisionTableExportJobListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getBusinessrulesDecisiontableExportsWithRequestBuilder(tableId: tableId, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<DecisionTableExportJobListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     List export jobs for a decision table
+     - GET /api/v2/businessrules/decisiontables/{tableId}/exports
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "fileName" : "fileName",
+    "selfUri" : "https://openapi-generator.tech",
+    "format" : "Csv",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "totalRows" : 6,
+    "error" : "{}",
+    "tableVersion" : 0,
+    "dateDownloadExpires" : "2000-01-23T04:56:07.000+00:00",
+    "download" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "exportType" : "Template",
+    "rowsExported" : 1,
+    "id" : "id",
+    "status" : "Pending"
+  }, {
+    "fileName" : "fileName",
+    "selfUri" : "https://openapi-generator.tech",
+    "format" : "Csv",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "totalRows" : 6,
+    "error" : "{}",
+    "tableVersion" : 0,
+    "dateDownloadExpires" : "2000-01-23T04:56:07.000+00:00",
+    "download" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "exportType" : "Template",
+    "rowsExported" : 1,
+    "id" : "id",
+    "status" : "Pending"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter tableId: (path) Table ID 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 100. (optional)
+
+     - returns: RequestBuilder<DecisionTableExportJobListing> 
+     */
+    open class func getBusinessrulesDecisiontableExportsWithRequestBuilder(tableId: String, after: String? = nil, pageSize: String? = nil) -> RequestBuilder<DecisionTableExportJobListing> {        
+        var path = "/api/v2/businessrules/decisiontables/{tableId}/exports"
+        let tableIdPreEscape = "\(tableId)"
+        let tableIdPostEscape = tableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableId}", with: tableIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize
+        ])
+
+        let requestBuilder: RequestBuilder<DecisionTableExportJobListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get decision table row import job
+     
+     - parameter tableId: (path) Table ID 
+     - parameter importJobId: (path) Import job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getBusinessrulesDecisiontableImport(tableId: String, importJobId: String, completion: @escaping ((_ data: DecisionTableImportJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getBusinessrulesDecisiontableImportWithRequestBuilder(tableId: tableId, importJobId: importJobId)
+        requestBuilder.execute { (response: Response<DecisionTableImportJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get decision table row import job
+     - GET /api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "importMode" : "Append",
+  "fileName" : "fileName",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "error" : "{}",
+  "tableVersion" : 0,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "uploadUrl" : "uploadUrl",
+  "uploadHeaders" : {
+    "key" : "uploadHeaders"
+  },
+  "rowMetrics" : "{}",
+  "createdBy" : "{}",
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "dateExpires" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "status" : "Uploading"
+}, statusCode=200}]
+     
+     - parameter tableId: (path) Table ID 
+     - parameter importJobId: (path) Import job ID 
+
+     - returns: RequestBuilder<DecisionTableImportJob> 
+     */
+    open class func getBusinessrulesDecisiontableImportWithRequestBuilder(tableId: String, importJobId: String) -> RequestBuilder<DecisionTableImportJob> {        
+        var path = "/api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId}"
+        let tableIdPreEscape = "\(tableId)"
+        let tableIdPostEscape = tableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableId}", with: tableIdPostEscape, options: .literal, range: nil)
+        let importJobIdPreEscape = "\(importJobId)"
+        let importJobIdPostEscape = importJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{importJobId}", with: importJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DecisionTableImportJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     List decision table row import jobs
+     
+     - parameter tableId: (path) Table ID 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 100. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getBusinessrulesDecisiontableImports(tableId: String, after: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: DecisionTableImportJobListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getBusinessrulesDecisiontableImportsWithRequestBuilder(tableId: tableId, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<DecisionTableImportJobListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     List decision table row import jobs
+     - GET /api/v2/businessrules/decisiontables/{tableId}/imports
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "importMode" : "Append",
+    "fileName" : "fileName",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "error" : "{}",
+    "tableVersion" : 0,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "uploadUrl" : "uploadUrl",
+    "uploadHeaders" : {
+      "key" : "uploadHeaders"
+    },
+    "rowMetrics" : "{}",
+    "createdBy" : "{}",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "dateExpires" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "status" : "Uploading"
+  }, {
+    "importMode" : "Append",
+    "fileName" : "fileName",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "error" : "{}",
+    "tableVersion" : 0,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "uploadUrl" : "uploadUrl",
+    "uploadHeaders" : {
+      "key" : "uploadHeaders"
+    },
+    "rowMetrics" : "{}",
+    "createdBy" : "{}",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "dateExpires" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "status" : "Uploading"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter tableId: (path) Table ID 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 100. (optional)
+
+     - returns: RequestBuilder<DecisionTableImportJobListing> 
+     */
+    open class func getBusinessrulesDecisiontableImportsWithRequestBuilder(tableId: String, after: String? = nil, pageSize: String? = nil) -> RequestBuilder<DecisionTableImportJobListing> {        
+        var path = "/api/v2/businessrules/decisiontables/{tableId}/imports"
+        let tableIdPreEscape = "\(tableId)"
+        let tableIdPostEscape = tableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableId}", with: tableIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize
+        ])
+
+        let requestBuilder: RequestBuilder<DecisionTableImportJobListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1228,6 +1694,88 @@ open class BusinessRulesAPI {
     
     
     /**
+     Update decision table row import job
+     
+     - parameter tableId: (path) Table ID 
+     - parameter importJobId: (path) Import job ID 
+     - parameter body: (body) Import job update request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchBusinessrulesDecisiontableImport(tableId: String, importJobId: String, body: UpdateDecisionTableImportJobRequest, completion: @escaping ((_ data: DecisionTableImportJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchBusinessrulesDecisiontableImportWithRequestBuilder(tableId: tableId, importJobId: importJobId, body: body)
+        requestBuilder.execute { (response: Response<DecisionTableImportJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update decision table row import job
+     - PATCH /api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "importMode" : "Append",
+  "fileName" : "fileName",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "error" : "{}",
+  "tableVersion" : 0,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "uploadUrl" : "uploadUrl",
+  "uploadHeaders" : {
+    "key" : "uploadHeaders"
+  },
+  "rowMetrics" : "{}",
+  "createdBy" : "{}",
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "dateExpires" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "status" : "Uploading"
+}, statusCode=200}]
+     
+     - parameter tableId: (path) Table ID 
+     - parameter importJobId: (path) Import job ID 
+     - parameter body: (body) Import job update request 
+
+     - returns: RequestBuilder<DecisionTableImportJob> 
+     */
+    open class func patchBusinessrulesDecisiontableImportWithRequestBuilder(tableId: String, importJobId: String, body: UpdateDecisionTableImportJobRequest) -> RequestBuilder<DecisionTableImportJob> {        
+        var path = "/api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId}"
+        let tableIdPreEscape = "\(tableId)"
+        let tableIdPostEscape = tableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableId}", with: tableIdPostEscape, options: .literal, range: nil)
+        let importJobIdPreEscape = "\(importJobId)"
+        let importJobIdPostEscape = importJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{importJobId}", with: importJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DecisionTableImportJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
      Update a decision table version
      
      - parameter tableId: (path) Table ID 
@@ -1372,6 +1920,154 @@ open class BusinessRulesAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DecisionTableExecutionResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create an export job for a decision table version
+     
+     - parameter tableId: (path) Table ID 
+     - parameter body: (body) Export job request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postBusinessrulesDecisiontableExports(tableId: String, body: DecisionTableExportJobRequest, completion: @escaping ((_ data: DecisionTableExportJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = postBusinessrulesDecisiontableExportsWithRequestBuilder(tableId: tableId, body: body)
+        requestBuilder.execute { (response: Response<DecisionTableExportJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create an export job for a decision table version
+     - POST /api/v2/businessrules/decisiontables/{tableId}/exports
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "fileName" : "fileName",
+  "selfUri" : "https://openapi-generator.tech",
+  "format" : "Csv",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "totalRows" : 6,
+  "error" : "{}",
+  "tableVersion" : 0,
+  "dateDownloadExpires" : "2000-01-23T04:56:07.000+00:00",
+  "download" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "exportType" : "Template",
+  "rowsExported" : 1,
+  "id" : "id",
+  "status" : "Pending"
+}, statusCode=200}]
+     
+     - parameter tableId: (path) Table ID 
+     - parameter body: (body) Export job request 
+
+     - returns: RequestBuilder<DecisionTableExportJob> 
+     */
+    open class func postBusinessrulesDecisiontableExportsWithRequestBuilder(tableId: String, body: DecisionTableExportJobRequest) -> RequestBuilder<DecisionTableExportJob> {        
+        var path = "/api/v2/businessrules/decisiontables/{tableId}/exports"
+        let tableIdPreEscape = "\(tableId)"
+        let tableIdPostEscape = tableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableId}", with: tableIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DecisionTableExportJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create a decision table row import job
+     
+     - parameter tableId: (path) Table ID 
+     - parameter body: (body) Import job create request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postBusinessrulesDecisiontableImports(tableId: String, body: CreateDecisionTableImportJobRequest, completion: @escaping ((_ data: DecisionTableImportJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = postBusinessrulesDecisiontableImportsWithRequestBuilder(tableId: tableId, body: body)
+        requestBuilder.execute { (response: Response<DecisionTableImportJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a decision table row import job
+     - POST /api/v2/businessrules/decisiontables/{tableId}/imports
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "importMode" : "Append",
+  "fileName" : "fileName",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "error" : "{}",
+  "tableVersion" : 0,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "uploadUrl" : "uploadUrl",
+  "uploadHeaders" : {
+    "key" : "uploadHeaders"
+  },
+  "rowMetrics" : "{}",
+  "createdBy" : "{}",
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "dateExpires" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "status" : "Uploading"
+}, statusCode=200}]
+     
+     - parameter tableId: (path) Table ID 
+     - parameter body: (body) Import job create request 
+
+     - returns: RequestBuilder<DecisionTableImportJob> 
+     */
+    open class func postBusinessrulesDecisiontableImportsWithRequestBuilder(tableId: String, body: CreateDecisionTableImportJobRequest) -> RequestBuilder<DecisionTableImportJob> {        
+        var path = "/api/v2/businessrules/decisiontables/{tableId}/imports"
+        let tableIdPreEscape = "\(tableId)"
+        let tableIdPostEscape = tableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableId}", with: tableIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DecisionTableImportJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -1616,6 +2312,267 @@ open class BusinessRulesAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DecisionTableRow>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Bulk add decision table rows
+     
+     - parameter tableId: (path) Table ID 
+     - parameter tableVersion: (path) Table Version 
+     - parameter body: (body) Bulk add decision table rows request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postBusinessrulesDecisiontableVersionRowsBulkAdd(tableId: String, tableVersion: Int, body: BulkAddDecisionTableRowsRequest, completion: @escaping ((_ data: BulkAddDecisionTableRowsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postBusinessrulesDecisiontableVersionRowsBulkAddWithRequestBuilder(tableId: tableId, tableVersion: tableVersion, body: body)
+        requestBuilder.execute { (response: Response<BulkAddDecisionTableRowsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk add decision table rows
+     - POST /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/add
+     - Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "totalCreated" : 0,
+  "rows" : [ {
+    "outputs" : {
+      "key" : {
+        "literal" : "{}"
+      }
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "inputs" : {
+      "key" : {
+        "literal" : "{}"
+      }
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "rowIndex" : 0,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "table" : "{}"
+  }, {
+    "outputs" : {
+      "key" : {
+        "literal" : "{}"
+      }
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "inputs" : {
+      "key" : {
+        "literal" : "{}"
+      }
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "rowIndex" : 0,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "table" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter tableId: (path) Table ID 
+     - parameter tableVersion: (path) Table Version 
+     - parameter body: (body) Bulk add decision table rows request 
+
+     - returns: RequestBuilder<BulkAddDecisionTableRowsResponse> 
+     */
+    open class func postBusinessrulesDecisiontableVersionRowsBulkAddWithRequestBuilder(tableId: String, tableVersion: Int, body: BulkAddDecisionTableRowsRequest) -> RequestBuilder<BulkAddDecisionTableRowsResponse> {        
+        var path = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/add"
+        let tableIdPreEscape = "\(tableId)"
+        let tableIdPostEscape = tableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableId}", with: tableIdPostEscape, options: .literal, range: nil)
+        let tableVersionPreEscape = "\(tableVersion)"
+        let tableVersionPostEscape = tableVersionPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableVersion}", with: tableVersionPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkAddDecisionTableRowsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Bulk delete decision table rows
+     
+     - parameter tableId: (path) Table ID 
+     - parameter tableVersion: (path) Table Version 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postBusinessrulesDecisiontableVersionRowsBulkRemove(tableId: String, tableVersion: Int, body: BulkDeleteDecisionTableRowsRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postBusinessrulesDecisiontableVersionRowsBulkRemoveWithRequestBuilder(tableId: tableId, tableVersion: tableVersion, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk delete decision table rows
+     - POST /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/remove
+     - Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter tableId: (path) Table ID 
+     - parameter tableVersion: (path) Table Version 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postBusinessrulesDecisiontableVersionRowsBulkRemoveWithRequestBuilder(tableId: String, tableVersion: Int, body: BulkDeleteDecisionTableRowsRequest) -> RequestBuilder<Void> {        
+        var path = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/remove"
+        let tableIdPreEscape = "\(tableId)"
+        let tableIdPostEscape = tableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableId}", with: tableIdPostEscape, options: .literal, range: nil)
+        let tableVersionPreEscape = "\(tableVersion)"
+        let tableVersionPostEscape = tableVersionPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableVersion}", with: tableVersionPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Bulk update decision table rows
+     
+     - parameter tableId: (path) Table ID 
+     - parameter tableVersion: (path) Table Version 
+     - parameter body: (body) Bulk update decision table rows request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postBusinessrulesDecisiontableVersionRowsBulkUpdate(tableId: String, tableVersion: Int, body: BulkUpdateDecisionTableRowsRequest, completion: @escaping ((_ data: BulkUpdateDecisionTableRowsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postBusinessrulesDecisiontableVersionRowsBulkUpdateWithRequestBuilder(tableId: tableId, tableVersion: tableVersion, body: body)
+        requestBuilder.execute { (response: Response<BulkUpdateDecisionTableRowsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk update decision table rows
+     - POST /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/update
+     - Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "totalUpdated" : 0,
+  "rows" : [ {
+    "outputs" : {
+      "key" : {
+        "literal" : "{}"
+      }
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "inputs" : {
+      "key" : {
+        "literal" : "{}"
+      }
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "rowIndex" : 0,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "table" : "{}"
+  }, {
+    "outputs" : {
+      "key" : {
+        "literal" : "{}"
+      }
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "inputs" : {
+      "key" : {
+        "literal" : "{}"
+      }
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "rowIndex" : 0,
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "table" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter tableId: (path) Table ID 
+     - parameter tableVersion: (path) Table Version 
+     - parameter body: (body) Bulk update decision table rows request 
+
+     - returns: RequestBuilder<BulkUpdateDecisionTableRowsResponse> 
+     */
+    open class func postBusinessrulesDecisiontableVersionRowsBulkUpdateWithRequestBuilder(tableId: String, tableVersion: Int, body: BulkUpdateDecisionTableRowsRequest) -> RequestBuilder<BulkUpdateDecisionTableRowsResponse> {        
+        var path = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/bulk/update"
+        let tableIdPreEscape = "\(tableId)"
+        let tableIdPostEscape = tableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableId}", with: tableIdPostEscape, options: .literal, range: nil)
+        let tableVersionPreEscape = "\(tableVersion)"
+        let tableVersionPostEscape = tableVersionPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableVersion}", with: tableVersionPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkUpdateDecisionTableRowsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

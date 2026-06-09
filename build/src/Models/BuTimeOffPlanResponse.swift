@@ -38,6 +38,8 @@ public class BuTimeOffPlanResponse: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of this time-off plan */
@@ -54,6 +56,8 @@ public class BuTimeOffPlanResponse: Codable {
     public var autoPublishApprovedTimeOffRequests: Bool?
     /** The IDs of non time-off activity codes to check for conflicts in case the auto approval rule specifies checking activity codes. If these activity codes are present in schedule and overlap with the time-off request duration, the request will not be auto approved */
     public var restrictedActivityCodes: ActivityCodesReference?
+    /** A list of override dates to check for conflicts with time-off request dates. If a conflict is found, the request will not be auto-approved */
+    public var overrideDates: [OverrideDate]?
     /** Time-off type, if this time-off plan is associated with the integration */
     public var hrisTimeOffType: HrisTimeOffType?
     /** Whether this time-off plan is currently being used by agents */
@@ -69,7 +73,7 @@ public class BuTimeOffPlanResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, activityCodeIds: [String]?, timeOffLimits: [BuTimeOffLimitReference]?, autoApprovalRule: AutoApprovalRule?, daysBeforeStartToExpireFromWaitlist: Int?, autoPublishApprovedTimeOffRequests: Bool?, restrictedActivityCodes: ActivityCodesReference?, hrisTimeOffType: HrisTimeOffType?, enabled: Bool?, countAgainstTimeOffLimits: Bool?, businessUnitAssociation: TimeOffPlanBusinessUnitAssociation?, managementUnitAssociation: TimeOffPlanManagementUnitAssociation?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
+    public init(_id: String?, name: String?, activityCodeIds: [String]?, timeOffLimits: [BuTimeOffLimitReference]?, autoApprovalRule: AutoApprovalRule?, daysBeforeStartToExpireFromWaitlist: Int?, autoPublishApprovedTimeOffRequests: Bool?, restrictedActivityCodes: ActivityCodesReference?, overrideDates: [OverrideDate]?, hrisTimeOffType: HrisTimeOffType?, enabled: Bool?, countAgainstTimeOffLimits: Bool?, businessUnitAssociation: TimeOffPlanBusinessUnitAssociation?, managementUnitAssociation: TimeOffPlanManagementUnitAssociation?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.activityCodeIds = activityCodeIds
@@ -78,6 +82,7 @@ public class BuTimeOffPlanResponse: Codable {
         self.daysBeforeStartToExpireFromWaitlist = daysBeforeStartToExpireFromWaitlist
         self.autoPublishApprovedTimeOffRequests = autoPublishApprovedTimeOffRequests
         self.restrictedActivityCodes = restrictedActivityCodes
+        self.overrideDates = overrideDates
         self.hrisTimeOffType = hrisTimeOffType
         self.enabled = enabled
         self.countAgainstTimeOffLimits = countAgainstTimeOffLimits
@@ -96,6 +101,7 @@ public class BuTimeOffPlanResponse: Codable {
         case daysBeforeStartToExpireFromWaitlist
         case autoPublishApprovedTimeOffRequests
         case restrictedActivityCodes
+        case overrideDates
         case hrisTimeOffType
         case enabled
         case countAgainstTimeOffLimits

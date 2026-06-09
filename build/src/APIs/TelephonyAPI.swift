@@ -13,6 +13,51 @@ open class TelephonyAPI {
     
     
     /**
+     Delete a link
+     
+     - parameter targetOrganizationId: (path) targetOrganizationId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteTelephonyOrganizationLinkTargetOrganizationId(targetOrganizationId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteTelephonyOrganizationLinkTargetOrganizationIdWithRequestBuilder(targetOrganizationId: targetOrganizationId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a link
+     - DELETE /api/v2/telephony/organization/link/{targetOrganizationId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter targetOrganizationId: (path) targetOrganizationId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteTelephonyOrganizationLinkTargetOrganizationIdWithRequestBuilder(targetOrganizationId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/telephony/organization/link/{targetOrganizationId}"
+        let targetOrganizationIdPreEscape = "\(targetOrganizationId)"
+        let targetOrganizationIdPostEscape = targetOrganizationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{targetOrganizationId}", with: targetOrganizationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Get an agent's greetings.
      
      - parameter agentId: (path) User ID 
@@ -235,6 +280,217 @@ open class TelephonyAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<MediaRegions>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum Status_getTelephonyNumbersRouting: String { 
+        case normal = "Normal"
+        case redirected = "Redirected"
+        case pending = "Pending"
+    }
+    
+    
+    /**
+     Get Number Routings by organizationId
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter numberId: (query) numberId (optional)
+     - parameter activeRoutingOrganizationId: (query) activeRoutingOrganizationId (optional)
+     - parameter ownerOrganizationId: (query) ownerOrganizationId (optional)
+     - parameter status: (query) status (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyNumbersRouting(before: String? = nil, after: String? = nil, pageSize: String? = nil, numberId: String? = nil, activeRoutingOrganizationId: String? = nil, ownerOrganizationId: String? = nil, status: Status_getTelephonyNumbersRouting? = nil, completion: @escaping ((_ data: NumberRoutingListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyNumbersRoutingWithRequestBuilder(before: before, after: after, pageSize: pageSize, numberId: numberId, activeRoutingOrganizationId: activeRoutingOrganizationId, ownerOrganizationId: ownerOrganizationId, status: status)
+        requestBuilder.execute { (response: Response<NumberRoutingListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Number Routings by organizationId
+     - GET /api/v2/telephony/numbers/routing
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "ownerOrganizationId" : "ownerOrganizationId",
+    "linkedOrganizationIds" : [ "linkedOrganizationIds", "linkedOrganizationIds" ],
+    "carrierCode" : "carrierCode",
+    "pendingOrganizationId" : "pendingOrganizationId",
+    "activeOrganizationId" : "activeOrganizationId",
+    "numberId" : "numberId",
+    "region" : "region",
+    "status" : "Normal"
+  }, {
+    "ownerOrganizationId" : "ownerOrganizationId",
+    "linkedOrganizationIds" : [ "linkedOrganizationIds", "linkedOrganizationIds" ],
+    "carrierCode" : "carrierCode",
+    "pendingOrganizationId" : "pendingOrganizationId",
+    "activeOrganizationId" : "activeOrganizationId",
+    "numberId" : "numberId",
+    "region" : "region",
+    "status" : "Normal"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter numberId: (query) numberId (optional)
+     - parameter activeRoutingOrganizationId: (query) activeRoutingOrganizationId (optional)
+     - parameter ownerOrganizationId: (query) ownerOrganizationId (optional)
+     - parameter status: (query) status (optional)
+
+     - returns: RequestBuilder<NumberRoutingListing> 
+     */
+    open class func getTelephonyNumbersRoutingWithRequestBuilder(before: String? = nil, after: String? = nil, pageSize: String? = nil, numberId: String? = nil, activeRoutingOrganizationId: String? = nil, ownerOrganizationId: String? = nil, status: Status_getTelephonyNumbersRouting? = nil) -> RequestBuilder<NumberRoutingListing> {        
+        let path = "/api/v2/telephony/numbers/routing"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize, 
+            "numberId": numberId, 
+            "activeRoutingOrganizationId": activeRoutingOrganizationId, 
+            "ownerOrganizationId": ownerOrganizationId, 
+            "status": status?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<NumberRoutingListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get organization links
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyOrganizationLink(completion: @escaping ((_ data: [OrganizationLinkResponse]?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyOrganizationLinkWithRequestBuilder()
+        requestBuilder.execute { (response: Response<[OrganizationLinkResponse]>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get organization links
+     - GET /api/v2/telephony/organization/link
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "targetName" : "targetName",
+  "sourceRegion" : "sourceRegion",
+  "sourceOrganizationId" : "sourceOrganizationId",
+  "targetOrganizationId" : "targetOrganizationId",
+  "targetRegion" : "targetRegion",
+  "status" : "Approved"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<[OrganizationLinkResponse]> 
+     */
+    open class func getTelephonyOrganizationLinkWithRequestBuilder() -> RequestBuilder<[OrganizationLinkResponse]> {        
+        let path = "/api/v2/telephony/organization/link"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<[OrganizationLinkResponse]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get all the replica regions by primary region
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyOrganizationLinkRegions(completion: @escaping ((_ data: [RegionResponse]?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyOrganizationLinkRegionsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<[RegionResponse]>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get all the replica regions by primary region
+     - GET /api/v2/telephony/organization/link/regions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "regionName" : "regionName"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<[RegionResponse]> 
+     */
+    open class func getTelephonyOrganizationLinkRegionsWithRequestBuilder() -> RequestBuilder<[RegionResponse]> {        
+        let path = "/api/v2/telephony/organization/link/regions"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<[RegionResponse]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -662,6 +918,237 @@ open class TelephonyAPI {
         let requestBuilder: RequestBuilder<SignedUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Approving a requested link
+     
+     - parameter requestingOrganizationId: (path) requestingOrganizationId 
+     - parameter body: (body) Approval request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchTelephonyOrganizationLinkApproveRequestingOrganizationId(requestingOrganizationId: String, body: OrganizationLinkApprovalRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchTelephonyOrganizationLinkApproveRequestingOrganizationIdWithRequestBuilder(requestingOrganizationId: requestingOrganizationId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Approving a requested link
+     - PATCH /api/v2/telephony/organization/link/approve/{requestingOrganizationId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter requestingOrganizationId: (path) requestingOrganizationId 
+     - parameter body: (body) Approval request body 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func patchTelephonyOrganizationLinkApproveRequestingOrganizationIdWithRequestBuilder(requestingOrganizationId: String, body: OrganizationLinkApprovalRequest) -> RequestBuilder<Void> {        
+        var path = "/api/v2/telephony/organization/link/approve/{requestingOrganizationId}"
+        let requestingOrganizationIdPreEscape = "\(requestingOrganizationId)"
+        let requestingOrganizationIdPostEscape = requestingOrganizationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{requestingOrganizationId}", with: requestingOrganizationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Update the routing of numbers for one or multiple organizations
+     
+     - parameter body: (body) drRoutingList 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTelephonyNumbersRouting(body: [NumberRoutingRequest], completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTelephonyNumbersRoutingWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the routing of numbers for one or multiple organizations
+     - POST /api/v2/telephony/numbers/routing
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter body: (body) drRoutingList 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postTelephonyNumbersRoutingWithRequestBuilder(body: [NumberRoutingRequest]) -> RequestBuilder<Void> {        
+        let path = "/api/v2/telephony/numbers/routing"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Re-route all numbers on an organization
+     
+     - parameter body: (body) Value for all routing request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTelephonyNumbersRoutingAll(body: DisasterRecoveryAllRoutingRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTelephonyNumbersRoutingAllWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Re-route all numbers on an organization
+     - POST /api/v2/telephony/numbers/routing/all
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter body: (body) Value for all routing request body 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postTelephonyNumbersRoutingAllWithRequestBuilder(body: DisasterRecoveryAllRoutingRequest) -> RequestBuilder<Void> {        
+        let path = "/api/v2/telephony/numbers/routing/all"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Reset routing for organization
+     
+     - parameter body: (body) Value for bulk routing request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTelephonyNumbersRoutingReset(body: NumberRoutingResetOrganizationRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTelephonyNumbersRoutingResetWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Reset routing for organization
+     - POST /api/v2/telephony/numbers/routing/reset
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter body: (body) Value for bulk routing request body 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postTelephonyNumbersRoutingResetWithRequestBuilder(body: NumberRoutingResetOrganizationRequest) -> RequestBuilder<Void> {        
+        let path = "/api/v2/telephony/numbers/routing/reset"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create a link with an organization
+     
+     - parameter body: (body) CreateLinkOrg body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTelephonyOrganizationLink(body: CreateOrganizationLink, completion: @escaping ((_ data: OrganizationLink?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTelephonyOrganizationLinkWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<OrganizationLink>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a link with an organization
+     - POST /api/v2/telephony/organization/link
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "sourceRegion" : "sourceRegion",
+  "sourceOrganizationId" : "sourceOrganizationId",
+  "targetOrganizationId" : "targetOrganizationId",
+  "targetRegion" : "targetRegion",
+  "status" : "Approved"
+}, statusCode=200}]
+     
+     - parameter body: (body) CreateLinkOrg body 
+
+     - returns: RequestBuilder<OrganizationLink> 
+     */
+    open class func postTelephonyOrganizationLinkWithRequestBuilder(body: CreateOrganizationLink) -> RequestBuilder<OrganizationLink> {        
+        let path = "/api/v2/telephony/organization/link"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OrganizationLink>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
     

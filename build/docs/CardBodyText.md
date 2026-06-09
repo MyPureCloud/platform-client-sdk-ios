@@ -6,7 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **content** | **String** | Body content for carousel card. | |
+| **contentType** | **String** | Body content type for carousel card. Allowed value: text/plain | |
 
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

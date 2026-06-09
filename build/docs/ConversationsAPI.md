@@ -4,6 +4,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteAnalyticsConversationsAggregatesJob**](ConversationsAPI#deleteAnalyticsConversationsAggregatesJob) | Delete/cancel an async request for conversation aggregates |
 | [**deleteAnalyticsConversationsDetailsJob**](ConversationsAPI#deleteAnalyticsConversationsDetailsJob) | Delete/cancel an async details job |
 | [**deleteConversation**](ConversationsAPI#deleteConversation) | Update a conversation by disconnecting all of the participants |
 | [**deleteConversationCustomattribute**](ConversationsAPI#deleteConversationCustomattribute) | Delete a custom attributes record. |
@@ -23,6 +24,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteConversationsMessagingSettingsDefault**](ConversationsAPI#deleteConversationsMessagingSettingsDefault) | Delete the organization&#39;s default setting, a global default will be applied to integrations without settings |
 | [**deleteConversationsMessagingSupportedcontentSupportedContentId**](ConversationsAPI#deleteConversationsMessagingSupportedcontentSupportedContentId) | Delete a supported content profile |
 | [**getAnalyticsConversationDetails**](ConversationsAPI#getAnalyticsConversationDetails) | Get a conversation by id |
+| [**getAnalyticsConversationsAggregatesJob**](ConversationsAPI#getAnalyticsConversationsAggregatesJob) | Get status for async query for conversation aggregates |
+| [**getAnalyticsConversationsAggregatesJobResults**](ConversationsAPI#getAnalyticsConversationsAggregatesJobResults) | Fetch a page of results for an async aggregates query |
 | [**getAnalyticsConversationsDetails**](ConversationsAPI#getAnalyticsConversationsDetails) | Gets multiple conversations by id |
 | [**getAnalyticsConversationsDetailsJob**](ConversationsAPI#getAnalyticsConversationsDetailsJob) | Get status for async query for conversation details |
 | [**getAnalyticsConversationsDetailsJobResults**](ConversationsAPI#getAnalyticsConversationsDetailsJobResults) | Fetch a page of results for an async details job |
@@ -189,6 +192,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsSettings**](ConversationsAPI#patchConversationsSettings) | Update Settings |
 | [**postAnalyticsConversationDetailsProperties**](ConversationsAPI#postAnalyticsConversationDetailsProperties) | Index conversation properties |
 | [**postAnalyticsConversationsActivityQuery**](ConversationsAPI#postAnalyticsConversationsActivityQuery) | Query for conversation activity observations |
+| [**postAnalyticsConversationsAggregatesJobs**](ConversationsAPI#postAnalyticsConversationsAggregatesJobs) | Query for conversation aggregates asynchronously |
 | [**postAnalyticsConversationsAggregatesQuery**](ConversationsAPI#postAnalyticsConversationsAggregatesQuery) | Query for conversation aggregates |
 | [**postAnalyticsConversationsDetailsJobs**](ConversationsAPI#postAnalyticsConversationsDetailsJobs) | Query for conversation details asynchronously |
 | [**postAnalyticsConversationsDetailsQuery**](ConversationsAPI#postAnalyticsConversationsDetailsQuery) | Query for conversation details |
@@ -314,6 +318,55 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putConversationsSocialRecordingstate**](ConversationsAPI#putConversationsSocialRecordingstate) | Update a conversation by setting its recording state |
 | [**putConversationsVideoRecordingstate**](ConversationsAPI#putConversationsVideoRecordingstate) | Update a conversation by setting its recording state |
 {: class="table-striped"}
+
+
+## deleteAnalyticsConversationsAggregatesJob
+
+
+
+> Void deleteAnalyticsConversationsAggregatesJob(jobId)
+
+Delete/cancel an async request for conversation aggregates
+
+
+
+Wraps DELETE /api/v2/analytics/conversations/aggregates/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:conversationAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+ConversationsAPI.deleteAnalyticsConversationsAggregatesJob(jobId: jobId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.deleteAnalyticsConversationsAggregatesJob was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+`nil` (empty response body)
 
 
 ## deleteAnalyticsConversationsDetailsJob
@@ -1261,6 +1314,108 @@ ConversationsAPI.getAnalyticsConversationDetails(conversationId: conversationId)
 ### Return type
 
 [**AnalyticsConversationWithoutAttributes**](AnalyticsConversationWithoutAttributes)
+
+
+## getAnalyticsConversationsAggregatesJob
+
+
+
+> [AsyncQueryStatus](AsyncQueryStatus) getAnalyticsConversationsAggregatesJob(jobId)
+
+Get status for async query for conversation aggregates
+
+
+
+Wraps GET /api/v2/analytics/conversations/aggregates/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:conversationAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+ConversationsAPI.getAnalyticsConversationsAggregatesJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getAnalyticsConversationsAggregatesJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus)
+
+
+## getAnalyticsConversationsAggregatesJobResults
+
+
+
+> [ConversationAsyncAggregateQueryResponse](ConversationAsyncAggregateQueryResponse) getAnalyticsConversationsAggregatesJobResults(jobId, cursor)
+
+Fetch a page of results for an async aggregates query
+
+
+
+Wraps GET /api/v2/analytics/conversations/aggregates/jobs/{jobId}/results  
+
+Requires ANY permissions: 
+
+* analytics:conversationAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+let cursor: String = "" // Cursor token to retrieve next page
+
+// Code example
+ConversationsAPI.getAnalyticsConversationsAggregatesJobResults(jobId: jobId, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getAnalyticsConversationsAggregatesJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+| **cursor** | **String**| Cursor token to retrieve next page | [optional] |
+
+
+### Return type
+
+[**ConversationAsyncAggregateQueryResponse**](ConversationAsyncAggregateQueryResponse)
 
 
 ## getAnalyticsConversationsDetails
@@ -9948,6 +10103,56 @@ ConversationsAPI.postAnalyticsConversationsActivityQuery(body: body, pageSize: p
 [**ConversationActivityResponse**](ConversationActivityResponse)
 
 
+## postAnalyticsConversationsAggregatesJobs
+
+
+
+> [AsyncQueryResponse](AsyncQueryResponse) postAnalyticsConversationsAggregatesJobs(body)
+
+Query for conversation aggregates asynchronously
+
+
+
+Wraps POST /api/v2/analytics/conversations/aggregates/jobs  
+
+Requires ANY permissions: 
+
+* analytics:conversationAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ConversationAsyncAggregationQuery = new ConversationAsyncAggregationQuery(...) // query
+
+// Code example
+ConversationsAPI.postAnalyticsConversationsAggregatesJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postAnalyticsConversationsAggregatesJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ConversationAsyncAggregationQuery**](ConversationAsyncAggregationQuery)| query | |
+
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse)
+
+
 ## postAnalyticsConversationsAggregatesQuery
 
 
@@ -14280,7 +14485,7 @@ ConversationsAPI.postConversationsMessages(body: body) { (response, error) in
 
 Send an agentless outbound message
 
-Send an agentless (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. If there is already a connected conversation between the &#39;fromAddress&#39; and &#39;toAddress&#39; specified, the &#39;useExistingActiveConversation&#39; param can be used to barge in to the ongoing conversation.
+Send an agentless (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. If there is already a connected conversation between the &#39;fromAddress&#39; and recipient specified, the &#39;useExistingActiveConversation&#39; param can be used to barge in to the ongoing conversation.
 
 
 
@@ -16517,4 +16722,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

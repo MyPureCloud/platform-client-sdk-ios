@@ -14,6 +14,7 @@ public class AgentCopilotAggregationQuery: Codable {
         case cannedresponselibraryid = "cannedResponseLibraryId"
         case chunkcount = "chunkCount"
         case conversationid = "conversationId"
+        case knowledgesettingid = "knowledgeSettingId"
         case engagementtype = "engagementType"
         case externalcontactid = "externalContactId"
         case feedbackrating = "feedbackRating"

@@ -24,6 +24,7 @@ public class Dependency: Codable {
         case contactlist = "CONTACTLIST"
         case conversationcustomattributeschema = "CONVERSATIONCUSTOMATTRIBUTESCHEMA"
         case conversationsummarysetting = "CONVERSATIONSUMMARYSETTING"
+        case customersegment = "CUSTOMERSEGMENT"
         case dataaction = "DATAACTION"
         case datatable = "DATATABLE"
         case decisiontable = "DECISIONTABLE"

@@ -2336,9 +2336,9 @@ open class ExternalContactsAPI {
      - parameter pageSize: (query) Number of entities to return (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getExternalcontactsContactsExports(divisionIds: [String]? = nil, after: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: ExportListing?,_ error: Error?) -> Void)) {
+    open class func getExternalcontactsContactsExports(divisionIds: [String]? = nil, after: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: ContactsExportListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getExternalcontactsContactsExportsWithRequestBuilder(divisionIds: divisionIds, after: after, pageSize: pageSize)
-        requestBuilder.execute { (response: Response<ExportListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<ContactsExportListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -2389,9 +2389,9 @@ open class ExternalContactsAPI {
      - parameter after: (query) The cursor that points to the end of the set of entities (optional)
      - parameter pageSize: (query) Number of entities to return (optional)
 
-     - returns: RequestBuilder<ExportListing> 
+     - returns: RequestBuilder<ContactsExportListing> 
      */
-    open class func getExternalcontactsContactsExportsWithRequestBuilder(divisionIds: [String]? = nil, after: String? = nil, pageSize: Int? = nil) -> RequestBuilder<ExportListing> {        
+    open class func getExternalcontactsContactsExportsWithRequestBuilder(divisionIds: [String]? = nil, after: String? = nil, pageSize: Int? = nil) -> RequestBuilder<ContactsExportListing> {        
         let path = "/api/v2/externalcontacts/contacts/exports"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -2403,7 +2403,7 @@ open class ExternalContactsAPI {
             "pageSize": pageSize?.encodeToJSON()
         ])
 
-        let requestBuilder: RequestBuilder<ExportListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ContactsExportListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }

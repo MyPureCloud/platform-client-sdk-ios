@@ -5,6 +5,7 @@ public class MessageHeader: Codable {
     public enum ModelType: String, Codable { 
         case text = "Text"
         case image = "Image"
+        case video = "Video"
     }
 
 

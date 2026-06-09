@@ -123,6 +123,7 @@ public class StatusChange: Codable {
         case workforceManagementAgentAvailability = "workforce.management.agent.availability"
         case workforceManagementForecast = "workforce.management.forecast"
         case workforceManagement = "workforce.management"
+        case workforceManagementSchedulingPreferences = "workforce.management.scheduling.preferences"
         case workforceManagementSelfSchedule = "workforce.management.self.schedule"
         case workforceManagementShiftTrading = "workforce.management.shift.trading"
         case system = "system"

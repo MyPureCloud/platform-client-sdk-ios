@@ -10,8 +10,6 @@ public class SocialMediaAsyncDetailQuery: Codable {
 
 
 
-
-
     public enum Order: String, Codable { 
         case asc = "asc"
         case desc = "desc"
@@ -23,18 +21,15 @@ public class SocialMediaAsyncDetailQuery: Codable {
     public var timeZone: String?
     /** Behaves like a SQL WHERE clause. This is ANDed with the interval parameter. Expresses boolean logical predicates as well as dimensional filters */
     public var filter: SocialMediaQueryFilter?
-    /** List of topicIds to query in */
-    public var topicIds: [String]?
     /** The number of results per page */
     public var pageSize: Int?
     /** Deprecated: use 'sort' field instead. Sorting of results based on time */
     public var order: Order?
 
-    public init(interval: String?, timeZone: String?, filter: SocialMediaQueryFilter?, topicIds: [String]?, pageSize: Int?, order: Order?) {
+    public init(interval: String?, timeZone: String?, filter: SocialMediaQueryFilter?, pageSize: Int?, order: Order?) {
         self.interval = interval
         self.timeZone = timeZone
         self.filter = filter
-        self.topicIds = topicIds
         self.pageSize = pageSize
         self.order = order
     }
