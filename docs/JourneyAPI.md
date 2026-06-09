@@ -4,6 +4,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteAnalyticsJourneysAggregatesJob**](JourneyAPI#deleteAnalyticsJourneysAggregatesJob) | Delete/cancel an async request for journey aggregates |
 | [**deleteJourneyActionmap**](JourneyAPI#deleteJourneyActionmap) | Delete single action map. |
 | [**deleteJourneyActiontemplate**](JourneyAPI#deleteJourneyActiontemplate) | Delete a single action template. |
 | [**deleteJourneyExternaleventsConfiguration**](JourneyAPI#deleteJourneyExternaleventsConfiguration) | Delete an external events configuration. |
@@ -13,6 +14,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteJourneySegment**](JourneyAPI#deleteJourneySegment) | Delete a segment. |
 | [**deleteJourneyView**](JourneyAPI#deleteJourneyView) | Delete a Journey View by ID |
 | [**deleteJourneyViewSchedules**](JourneyAPI#deleteJourneyViewSchedules) | Delete the Schedule of a JourneyView |
+| [**getAnalyticsJourneysAggregatesJob**](JourneyAPI#getAnalyticsJourneysAggregatesJob) | Get status for async query for journey aggregates |
+| [**getAnalyticsJourneysAggregatesJobResults**](JourneyAPI#getAnalyticsJourneysAggregatesJobResults) | Fetch a page of results for an async aggregates query |
 | [**getExternalcontactsContactJourneySegments**](JourneyAPI#getExternalcontactsContactJourneySegments) | Retrieve segment assignments by external contact ID. |
 | [**getExternalcontactsContactJourneySessions**](JourneyAPI#getExternalcontactsContactJourneySessions) | Retrieve all sessions for a given external contact. |
 | [**getJourneyActionmap**](JourneyAPI#getJourneyActionmap) | Retrieve a single action map. |
@@ -67,6 +70,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchJourneyOutcome**](JourneyAPI#patchJourneyOutcome) | Deprecated. Update an outcome. |
 | [**patchJourneySegment**](JourneyAPI#patchJourneySegment) | Update a segment. |
 | [**patchJourneyViewVersionJob**](JourneyAPI#patchJourneyViewVersionJob) | Update the job for a journey view version. Only the status can be changed and only to Cancelled |
+| [**postAnalyticsJourneysAggregatesJobs**](JourneyAPI#postAnalyticsJourneysAggregatesJobs) | Query for journey aggregates asynchronously |
 | [**postAnalyticsJourneysAggregatesQuery**](JourneyAPI#postAnalyticsJourneysAggregatesQuery) | Query for journey aggregates |
 | [**postExternalcontactsContactJourneySegments**](JourneyAPI#postExternalcontactsContactJourneySegments) | Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success. |
 | [**postJourneyActionmaps**](JourneyAPI#postJourneyActionmaps) | Create an action map. |
@@ -93,6 +97,55 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putJourneyViewsEventdefinition**](JourneyAPI#putJourneyViewsEventdefinition) | Update external event for journey views |
 | [**putJourneyViewsEventdefinitionActivate**](JourneyAPI#putJourneyViewsEventdefinitionActivate) | Activate external event for journey views |
 {: class="table-striped"}
+
+
+## deleteAnalyticsJourneysAggregatesJob
+
+
+
+> Void deleteAnalyticsJourneysAggregatesJob(jobId)
+
+Delete/cancel an async request for journey aggregates
+
+
+
+Wraps DELETE /api/v2/analytics/journeys/aggregates/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:journeyAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+JourneyAPI.deleteAnalyticsJourneysAggregatesJob(jobId: jobId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("JourneyAPI.deleteAnalyticsJourneysAggregatesJob was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+`nil` (empty response body)
 
 
 ## deleteJourneyActionmap
@@ -543,6 +596,108 @@ JourneyAPI.deleteJourneyViewSchedules(viewId: viewId) { (response, error) in
 ### Return type
 
 [**JourneyViewSchedule**](JourneyViewSchedule)
+
+
+## getAnalyticsJourneysAggregatesJob
+
+
+
+> [AsyncQueryStatus](AsyncQueryStatus) getAnalyticsJourneysAggregatesJob(jobId)
+
+Get status for async query for journey aggregates
+
+
+
+Wraps GET /api/v2/analytics/journeys/aggregates/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:journeyAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+JourneyAPI.getAnalyticsJourneysAggregatesJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getAnalyticsJourneysAggregatesJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus)
+
+
+## getAnalyticsJourneysAggregatesJobResults
+
+
+
+> [JourneyAsyncAggregateQueryResponse](JourneyAsyncAggregateQueryResponse) getAnalyticsJourneysAggregatesJobResults(jobId, cursor)
+
+Fetch a page of results for an async aggregates query
+
+
+
+Wraps GET /api/v2/analytics/journeys/aggregates/jobs/{jobId}/results  
+
+Requires ANY permissions: 
+
+* analytics:journeyAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+let cursor: String = "" // Cursor token to retrieve next page
+
+// Code example
+JourneyAPI.getAnalyticsJourneysAggregatesJobResults(jobId: jobId, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getAnalyticsJourneysAggregatesJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+| **cursor** | **String**| Cursor token to retrieve next page | [optional] |
+
+
+### Return type
+
+[**JourneyAsyncAggregateQueryResponse**](JourneyAsyncAggregateQueryResponse)
 
 
 ## getExternalcontactsContactJourneySegments
@@ -3389,6 +3544,56 @@ JourneyAPI.patchJourneyViewVersionJob(viewId: viewId, journeyVersionId: journeyV
 [**JourneyViewJob**](JourneyViewJob)
 
 
+## postAnalyticsJourneysAggregatesJobs
+
+
+
+> [AsyncQueryResponse](AsyncQueryResponse) postAnalyticsJourneysAggregatesJobs(body)
+
+Query for journey aggregates asynchronously
+
+
+
+Wraps POST /api/v2/analytics/journeys/aggregates/jobs  
+
+Requires ANY permissions: 
+
+* analytics:journeyAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: JourneyAsyncAggregationQuery = new JourneyAsyncAggregationQuery(...) // query
+
+// Code example
+JourneyAPI.postAnalyticsJourneysAggregatesJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.postAnalyticsJourneysAggregatesJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**JourneyAsyncAggregationQuery**](JourneyAsyncAggregationQuery)| query | |
+
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse)
+
+
 ## postAnalyticsJourneysAggregatesQuery
 
 
@@ -4676,4 +4881,4 @@ JourneyAPI.putJourneyViewsEventdefinitionActivate(eventDefinitionId: eventDefini
 [**ActivateExternalEventResponse**](ActivateExternalEventResponse)
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

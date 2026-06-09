@@ -14,4 +14,4 @@ Results from evaluating matching criteria against test input
 
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

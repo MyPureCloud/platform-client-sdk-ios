@@ -240,6 +240,8 @@
 | **sentimentTrendCategories** | **[String]** | A set of Sentiment Trend Categories for filtering | [optional] |
 | **contentModerationFlags** | **[String]** | A set of Content Moderation Flags for filtering | [optional] |
 | **socialSourceTypes** | **[String]** | A set of Source Types for social filtering | [optional] |
+| **socialFollowerRange** | [**SocialNumericRange**](SocialNumericRange) | The follower range used to filter the view | [optional] |
+| **socialVerificationStatus** | **Bool** | Filter to indicate if the posts from verified user | [optional] |
 | **sessionExpired** | **Bool** | Filter to indicate for if session is expired | [optional] |
 | **screenMonitored** | **Bool** | Filter to indicate if the interaction was screen monitored | [optional] |
 | **engagementSources** | **[String]** | The engagement sources used to filter the view | [optional] |
@@ -248,4 +250,4 @@
 
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

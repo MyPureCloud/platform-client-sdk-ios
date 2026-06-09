@@ -1128,7 +1128,7 @@ ExternalContactsAPI.getExternalcontactsContactsExport(exportId: exportId) { (res
 
 
 
-> [ExportListing](ExportListing) getExternalcontactsContactsExports(divisionIds, after, pageSize)
+> [ContactsExportListing](ContactsExportListing) getExternalcontactsContactsExports(divisionIds, after, pageSize)
 
 List exports for organization
 
@@ -1176,7 +1176,7 @@ ExternalContactsAPI.getExternalcontactsContactsExports(divisionIds: divisionIds,
 
 ### Return type
 
-[**ExportListing**](ExportListing)
+[**ContactsExportListing**](ContactsExportListing)
 
 
 ## getExternalcontactsContactsSchema
@@ -6425,4 +6425,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

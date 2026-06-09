@@ -13,4 +13,4 @@ An outbound-messaging messaging campaign WhatsApp Config
 
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

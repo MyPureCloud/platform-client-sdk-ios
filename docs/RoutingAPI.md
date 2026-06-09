@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteRoutingEmailDomain**](RoutingAPI#deleteRoutingEmailDomain) | Delete a domain |
 | [**deleteRoutingEmailDomainRoute**](RoutingAPI#deleteRoutingEmailDomainRoute) | Delete a route |
 | [**deleteRoutingEmailOutboundDomain**](RoutingAPI#deleteRoutingEmailOutboundDomain) | Delete an outbound domain |
+| [**deleteRoutingEmailSettingEmailSettingId**](RoutingAPI#deleteRoutingEmailSettingEmailSettingId) | Delete an email setting. Removes the email setting and its associated settings |
 | [**deleteRoutingLanguage**](RoutingAPI#deleteRoutingLanguage) | Delete a routing language |
 | [**deleteRoutingPredictor**](RoutingAPI#deleteRoutingPredictor) | Delete single predictor. |
 | [**deleteRoutingQueue**](RoutingAPI#deleteRoutingQueue) | Delete a queue |
@@ -46,6 +47,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingEmailOutboundDomain**](RoutingAPI#getRoutingEmailOutboundDomain) | Get domain |
 | [**getRoutingEmailOutboundDomainActivation**](RoutingAPI#getRoutingEmailOutboundDomainActivation) | Get activation status (cname + dkim) of an outbound domain |
 | [**getRoutingEmailOutboundDomains**](RoutingAPI#getRoutingEmailOutboundDomains) | Get outbound domains |
+| [**getRoutingEmailSetting**](RoutingAPI#getRoutingEmailSetting) | Get a paged list of email routing settings. |
+| [**getRoutingEmailSettingEmailSettingId**](RoutingAPI#getRoutingEmailSettingEmailSettingId) | Get email setting. Returns the specified email setting that defines settings for email |
 | [**getRoutingEmailSetup**](RoutingAPI#getRoutingEmailSetup) | Get email setup |
 | [**getRoutingLanguage**](RoutingAPI#getRoutingLanguage) | Get a routing language |
 | [**getRoutingLanguages**](RoutingAPI#getRoutingLanguages) | Get the list of supported languages. |
@@ -81,7 +84,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingSkillgroupMembers**](RoutingAPI#getRoutingSkillgroupMembers) | Get skill group members |
 | [**getRoutingSkillgroupMembersDivisions**](RoutingAPI#getRoutingSkillgroupMembersDivisions) | Get list of member divisions for this skill group. |
 | [**getRoutingSkillgroups**](RoutingAPI#getRoutingSkillgroups) | Get skill group listing |
-| [**getRoutingSkills**](RoutingAPI#getRoutingSkills) | Get the list of routing skills. |
+| [**getRoutingSkills**](RoutingAPI#getRoutingSkills) | Get the list of routing skills. View permission enforcement only applies to skills assigned to a division. |
 | [**getRoutingSmsAddress**](RoutingAPI#getRoutingSmsAddress) | Get an Address by Id for SMS |
 | [**getRoutingSmsAddresses**](RoutingAPI#getRoutingSmsAddresses) | Get a list of Addresses for SMS |
 | [**getRoutingSmsAvailablephonenumbers**](RoutingAPI#getRoutingSmsAvailablephonenumbers) | Get a list of available phone numbers for SMS provisioning. |
@@ -106,6 +109,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchRoutingEmailDomain**](RoutingAPI#patchRoutingEmailDomain) | Update domain settings |
 | [**patchRoutingEmailDomainValidate**](RoutingAPI#patchRoutingEmailDomainValidate) | Validate domain settings |
 | [**patchRoutingEmailOutboundDomain**](RoutingAPI#patchRoutingEmailOutboundDomain) | Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP). |
+| [**patchRoutingEmailSettingEmailSettingId**](RoutingAPI#patchRoutingEmailSettingEmailSettingId) | Update an email setting. Modifies the settings for email setting |
 | [**patchRoutingPredictor**](RoutingAPI#patchRoutingPredictor) | Update single predictor. |
 | [**patchRoutingQueueMember**](RoutingAPI#patchRoutingQueueMember) | Update the ring number OR joined status for a queue member. |
 | [**patchRoutingQueueMembers**](RoutingAPI#patchRoutingQueueMembers) | Join or unjoin a set of up to 100 users for a queue |
@@ -134,6 +138,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postRoutingEmailOutboundDomainTestconnection**](RoutingAPI#postRoutingEmailOutboundDomainTestconnection) | Tests the custom SMTP server integration connection set on this outbound domain |
 | [**postRoutingEmailOutboundDomains**](RoutingAPI#postRoutingEmailOutboundDomains) | Create a domain |
 | [**postRoutingEmailOutboundDomainsSimulated**](RoutingAPI#postRoutingEmailOutboundDomainsSimulated) | Create a simulated domain |
+| [**postRoutingEmailSetting**](RoutingAPI#postRoutingEmailSetting) | Create a new email setting. Used to define various settings, that can then be associated with email domains |
 | [**postRoutingLanguages**](RoutingAPI#postRoutingLanguages) | Create Language |
 | [**postRoutingPredictors**](RoutingAPI#postRoutingPredictors) | Create a predictor. |
 | [**postRoutingQueueMembers**](RoutingAPI#postRoutingQueueMembers) | Bulk add or delete up to 100 queue members |
@@ -407,6 +412,55 @@ RoutingAPI.deleteRoutingEmailOutboundDomain(domainId: domainId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **domainId** | **String**| domain ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteRoutingEmailSettingEmailSettingId
+
+
+
+> Void deleteRoutingEmailSettingEmailSettingId(emailSettingId)
+
+Delete an email setting. Removes the email setting and its associated settings
+
+
+
+Wraps DELETE /api/v2/routing/email/setting/{emailSettingId}  
+
+Requires ALL permissions: 
+
+* email:settings:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let emailSettingId: String = "" // Email Setting ID
+
+// Code example
+RoutingAPI.deleteRoutingEmailSettingEmailSettingId(emailSettingId: emailSettingId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RoutingAPI.deleteRoutingEmailSettingEmailSettingId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **emailSettingId** | **String**| Email Setting ID | |
 
 
 ### Return type
@@ -2292,6 +2346,108 @@ RoutingAPI.getRoutingEmailOutboundDomains(pageSize: pageSize, pageNumber: pageNu
 [**OutboundDomainEntityListing**](OutboundDomainEntityListing)
 
 
+## getRoutingEmailSetting
+
+
+
+> [EmailSettingEntityListing](EmailSettingEntityListing) getRoutingEmailSetting(pageSize, pageNumber)
+
+Get a paged list of email routing settings.
+
+
+
+Wraps GET /api/v2/routing/email/setting  
+
+Requires ALL permissions: 
+
+* email:settings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+
+// Code example
+RoutingAPI.getRoutingEmailSetting(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingEmailSetting was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+
+
+### Return type
+
+[**EmailSettingEntityListing**](EmailSettingEntityListing)
+
+
+## getRoutingEmailSettingEmailSettingId
+
+
+
+> [EmailSetting](EmailSetting) getRoutingEmailSettingEmailSettingId(emailSettingId)
+
+Get email setting. Returns the specified email setting that defines settings for email
+
+
+
+Wraps GET /api/v2/routing/email/setting/{emailSettingId}  
+
+Requires ALL permissions: 
+
+* email:settings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let emailSettingId: String = "" // Email Setting ID
+
+// Code example
+RoutingAPI.getRoutingEmailSettingEmailSettingId(emailSettingId: emailSettingId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingEmailSettingEmailSettingId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **emailSettingId** | **String**| Email Setting ID | |
+
+
+### Return type
+
+[**EmailSetting**](EmailSetting)
+
+
 ## getRoutingEmailSetup
 
 
@@ -3490,7 +3646,7 @@ let sortBy: RoutingAPI.SortBy_getRoutingQueuesDivisionviews = RoutingAPI.SortBy_
 let sortOrder: RoutingAPI.SortOrder_getRoutingQueuesDivisionviews = RoutingAPI.SortOrder_getRoutingQueuesDivisionviews.enummember // Sort order
 let name: String = "" // Name
 let _id: [String] = [""] // Queue ID(s)
-let divisionId: [String] = [""] // Division ID(s)
+let divisionId: [String] = [""] // Division ID(s). Including '*' will query for all divisions
 
 // Code example
 RoutingAPI.getRoutingQueuesDivisionviews(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId) { (response, error) in
@@ -3514,7 +3670,7 @@ RoutingAPI.getRoutingQueuesDivisionviews(pageSize: pageSize, pageNumber: pageNum
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
 | **name** | **String**| Name | [optional] |
 | **_id** | [**[String]**](String)| Queue ID(s) | [optional] |
-| **divisionId** | [**[String]**](String)| Division ID(s) | [optional] |
+| **divisionId** | [**[String]**](String)| Division ID(s). Including '*' will query for all divisions | [optional] |
 
 
 ### Return type
@@ -4201,7 +4357,7 @@ RoutingAPI.getRoutingSkillgroups(pageSize: pageSize, name: name, after: after, b
 
 > [SkillEntityListing](SkillEntityListing) getRoutingSkills(pageSize, pageNumber, name, _id)
 
-Get the list of routing skills.
+Get the list of routing skills. View permission enforcement only applies to skills assigned to a division.
 
 
 
@@ -5556,6 +5712,58 @@ RoutingAPI.patchRoutingEmailOutboundDomain(domainId: domainId, body: body) { (re
 ### Return type
 
 [**OutboundDomain**](OutboundDomain)
+
+
+## patchRoutingEmailSettingEmailSettingId
+
+
+
+> [EmailSetting](EmailSetting) patchRoutingEmailSettingEmailSettingId(emailSettingId, body)
+
+Update an email setting. Modifies the settings for email setting
+
+
+
+Wraps PATCH /api/v2/routing/email/setting/{emailSettingId}  
+
+Requires ALL permissions: 
+
+* email:settings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let emailSettingId: String = "" // Email Setting ID
+let body: EmailSetting = new EmailSetting(...) // EmailSetting
+
+// Code example
+RoutingAPI.patchRoutingEmailSettingEmailSettingId(emailSettingId: emailSettingId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.patchRoutingEmailSettingEmailSettingId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **emailSettingId** | **String**| Email Setting ID | |
+| **body** | [**EmailSetting**](EmailSetting)| EmailSetting | |
+
+
+### Return type
+
+[**EmailSetting**](EmailSetting)
 
 
 ## patchRoutingPredictor
@@ -7021,6 +7229,56 @@ RoutingAPI.postRoutingEmailOutboundDomainsSimulated(body: body) { (response, err
 ### Return type
 
 [**EmailOutboundDomainResult**](EmailOutboundDomainResult)
+
+
+## postRoutingEmailSetting
+
+
+
+> [EmailSetting](EmailSetting) postRoutingEmailSetting(body)
+
+Create a new email setting. Used to define various settings, that can then be associated with email domains
+
+
+
+Wraps POST /api/v2/routing/email/setting  
+
+Requires ANY permissions: 
+
+* email:settings:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: EmailSetting = new EmailSetting(...) // EmailSetting
+
+// Code example
+RoutingAPI.postRoutingEmailSetting(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postRoutingEmailSetting was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**EmailSetting**](EmailSetting)| EmailSetting | |
+
+
+### Return type
+
+[**EmailSetting**](EmailSetting)
 
 
 ## postRoutingLanguages
@@ -8776,4 +9034,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

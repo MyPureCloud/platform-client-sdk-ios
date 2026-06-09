@@ -3184,7 +3184,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitManagementunits(busines
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
-| **feature** | **String**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentHistoricalAdherence ("AgentHistoricalAdherence"), agentHistoricalAdherenceConformance ("AgentHistoricalAdherenceConformance"), agentSchedule ("AgentSchedule"), agentAdherenceAdjustments ("AgentAdherenceAdjustments"), agentTimeOffRequest ("AgentTimeOffRequest"), agentWorkPlanBid ("AgentWorkPlanBid"), agentScheduleBid ("AgentScheduleBid"), agentShiftTrade ("AgentShiftTrade"), alternativeShift ("AlternativeShift"), coaching ("Coaching"), learning ("Learning"), agentUnavailableTimes ("AgentUnavailableTimes"), agentOpportunitiesQuery ("AgentOpportunitiesQuery"), agentOpportunitiesEnrollments ("AgentOpportunitiesEnrollments"), agentOpportunitiesEnrollmentsStatuses ("AgentOpportunitiesEnrollmentsStatuses"), agentSchedulingPreferencesQuery ("AgentSchedulingPreferencesQuery"), agentSchedulingPreferences ("AgentSchedulingPreferences"), agentSchedulingPreferencesSettings ("AgentSchedulingPreferencesSettings"), activityCodes ("ActivityCodes"), activityPlans ("ActivityPlans"), adherenceAdjustmentsSettings ("AdherenceAdjustmentsSettings"), adherenceAdjustmentsReasonCodes ("AdherenceAdjustmentsReasonCodes"), adherenceAdjustments ("AdherenceAdjustments"), unavailableTimes ("UnavailableTimes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), capacityPlan ("CapacityPlan"), capacityPlanForecastInputs ("CapacityPlanForecastInputs"), capacityPlanPerformancePrediction ("CapacityPlanPerformancePrediction"), continuousForecast ("ContinuousForecast"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), longTermStaffing ("LongTermStaffing"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanBids ("WorkPlanBids"), workPlanBidGroups ("WorkPlanBidGroups"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans"), scheduleBid ("ScheduleBid"), scheduleBidGroup ("ScheduleBidGroup"), opportunities ("Opportunities"), opportunitiesQuery ("OpportunitiesQuery"), opportunitiesEnrollmentsQuery ("OpportunitiesEnrollmentsQuery"), opportunitiesExternalActivitiesQuery ("OpportunitiesExternalActivitiesQuery"), opportunitiesStatuses ("OpportunitiesStatuses"), opportunitiesEnrollmentsStatuses ("OpportunitiesEnrollmentsStatuses"), schedulingPreferencesQuery ("SchedulingPreferencesQuery"), schedulingPreferencesSettings ("SchedulingPreferencesSettings"), decisionMetrics ("DecisionMetrics") |
+| **feature** | **String**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentHistoricalAdherence ("AgentHistoricalAdherence"), agentHistoricalAdherenceConformance ("AgentHistoricalAdherenceConformance"), agentSchedule ("AgentSchedule"), agentAdherenceAdjustments ("AgentAdherenceAdjustments"), agentTimeOffRequest ("AgentTimeOffRequest"), agentWorkPlanBid ("AgentWorkPlanBid"), agentScheduleBid ("AgentScheduleBid"), agentShiftTrade ("AgentShiftTrade"), alternativeShift ("AlternativeShift"), coaching ("Coaching"), learning ("Learning"), agentUnavailableTimes ("AgentUnavailableTimes"), agentSelfScheduleJob ("AgentSelfScheduleJob"), agentSelfScheduleOffers ("AgentSelfScheduleOffers"), agentSelfScheduleQuery ("AgentSelfScheduleQuery"), agentSelfScheduleActivityMove ("AgentSelfScheduleActivityMove"), selfScheduleSettings ("SelfScheduleSettings"), agentSelfScheduleSettings ("AgentSelfScheduleSettings"), agentOpportunitiesQuery ("AgentOpportunitiesQuery"), agentOpportunitiesEnrollments ("AgentOpportunitiesEnrollments"), agentOpportunitiesEnrollmentsStatuses ("AgentOpportunitiesEnrollmentsStatuses"), agentSchedulingPreferencesQuery ("AgentSchedulingPreferencesQuery"), agentSchedulingPreferences ("AgentSchedulingPreferences"), agentSchedulingPreferencesSettings ("AgentSchedulingPreferencesSettings"), activityCodes ("ActivityCodes"), activityPlans ("ActivityPlans"), adherenceAdjustmentsSettings ("AdherenceAdjustmentsSettings"), adherenceAdjustmentsReasonCodes ("AdherenceAdjustmentsReasonCodes"), adherenceAdjustments ("AdherenceAdjustments"), unavailableTimes ("UnavailableTimes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), capacityPlan ("CapacityPlan"), capacityPlanForecastInputs ("CapacityPlanForecastInputs"), capacityPlanPerformancePrediction ("CapacityPlanPerformancePrediction"), continuousForecast ("ContinuousForecast"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), longTermStaffing ("LongTermStaffing"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanBids ("WorkPlanBids"), workPlanBidGroups ("WorkPlanBidGroups"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans"), scheduleBid ("ScheduleBid"), scheduleBidGroup ("ScheduleBidGroup"), opportunities ("Opportunities"), opportunitiesQuery ("OpportunitiesQuery"), opportunitiesEnrollmentsQuery ("OpportunitiesEnrollmentsQuery"), opportunitiesExternalActivitiesQuery ("OpportunitiesExternalActivitiesQuery"), opportunitiesStatuses ("OpportunitiesStatuses"), opportunitiesEnrollmentsStatuses ("OpportunitiesEnrollmentsStatuses"), schedulingPreferencesQuery ("SchedulingPreferencesQuery"), schedulingPreferencesSettings ("SchedulingPreferencesSettings"), decisionMetrics ("DecisionMetrics") |
 | **divisionId** | **String**| If specified, the list of management units belonging to the specified division will be returned | [optional] |
 
 
@@ -4265,7 +4265,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeoffplan(businessUni
 
 
 
-> [BuTimeOffPlanListing](BuTimeOffPlanListing) getWorkforcemanagementBusinessunitTimeoffplans(businessUnitId, managementUnitId, forceDownloadService)
+> [BuTimeOffPlanListing](BuTimeOffPlanListing) getWorkforcemanagementBusinessunitTimeoffplans(businessUnitId, managementUnitId, forceDownloadService, expand)
 
 Gets a list of time-off plans
 
@@ -4288,9 +4288,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let businessUnitId: String = "" // The ID of the business unit
 let managementUnitId: String = "" // The ID of the management unit to get management unit specific staffing groups
 let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
+let expand: [String] = [""] // Include to access additional data for the time-off plans
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeoffplans(businessUnitId: businessUnitId, managementUnitId: managementUnitId, forceDownloadService: forceDownloadService) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeoffplans(businessUnitId: businessUnitId, managementUnitId: managementUnitId, forceDownloadService: forceDownloadService, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4308,6 +4309,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeoffplans(businessUn
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **managementUnitId** | **String**| The ID of the management unit to get management unit specific staffing groups | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
+| **expand** | [**[String]**](String)| Include to access additional data for the time-off plans | [optional]<br />**Values**: overridedates ("overrideDates") |
 
 
 ### Return type
@@ -4709,7 +4711,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekSchedulePerformance
 
 
 
-> [BuScheduleListing](BuScheduleListing) getWorkforcemanagementBusinessunitWeekSchedules(businessUnitId, weekId, includeOnlyPublished, expand)
+> [BuScheduleListing](BuScheduleListing) getWorkforcemanagementBusinessunitWeekSchedules(businessUnitId, weekId, earliestWeekDate, latestWeekDate, includeOnlyPublished, expand)
 
 Get the list of week schedules for the specified week
 
@@ -4734,11 +4736,13 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The ID of the business unit
 let weekId: String = "" // First day of schedule week in yyyy-MM-dd format, or 'recent' (without quotes) to get recent schedules
+let earliestWeekDate: Date = new Date(...) // If weekId == 'recent', specify the earliest schedule start week date (inclusive) to include in the 'recent' range, in yyyy-MM-dd format. Ignored if weekId != 'recent'. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let latestWeekDate: Date = new Date(...) // If weekId == 'recent', specify the latest schedule start week date (inclusive) to include in the 'recent' range, in yyyy-MM-dd format. Ignored if weekId != 'recent'. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let includeOnlyPublished: Bool = true // includeOnlyPublished
 let expand: WorkforceManagementAPI.Expand_getWorkforcemanagementBusinessunitWeekSchedules = WorkforceManagementAPI.Expand_getWorkforcemanagementBusinessunitWeekSchedules.enummember // expand
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekSchedules(businessUnitId: businessUnitId, weekId: weekId, includeOnlyPublished: includeOnlyPublished, expand: expand) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekSchedules(businessUnitId: businessUnitId, weekId: weekId, earliestWeekDate: earliestWeekDate, latestWeekDate: latestWeekDate, includeOnlyPublished: includeOnlyPublished, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4755,8 +4759,10 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekSchedules(businessU
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format, or 'recent' (without quotes) to get recent schedules | |
+| **earliestWeekDate** | **Date**| If weekId == 'recent', specify the earliest schedule start week date (inclusive) to include in the 'recent' range, in yyyy-MM-dd format. Ignored if weekId != 'recent'. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **latestWeekDate** | **Date**| If weekId == 'recent', specify the latest schedule start week date (inclusive) to include in the 'recent' range, in yyyy-MM-dd format. Ignored if weekId != 'recent'. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **includeOnlyPublished** | **Bool**| includeOnlyPublished | [optional] |
-| **expand** | **String**| expand | [optional]<br />**Values**: forecastDescription ("forecast.description") |
+| **expand** | **String**| expand | [optional]<br />**Values**: shorttermforecastDescription ("shortTermForecast.description") |
 
 
 ### Return type
@@ -5465,7 +5471,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunits(feature: feature, div
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **feature** | **String**| If specified, the list of business units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentHistoricalAdherence ("AgentHistoricalAdherence"), agentHistoricalAdherenceConformance ("AgentHistoricalAdherenceConformance"), agentSchedule ("AgentSchedule"), agentAdherenceAdjustments ("AgentAdherenceAdjustments"), agentTimeOffRequest ("AgentTimeOffRequest"), agentWorkPlanBid ("AgentWorkPlanBid"), agentScheduleBid ("AgentScheduleBid"), agentShiftTrade ("AgentShiftTrade"), alternativeShift ("AlternativeShift"), coaching ("Coaching"), learning ("Learning"), agentUnavailableTimes ("AgentUnavailableTimes"), agentOpportunitiesQuery ("AgentOpportunitiesQuery"), agentOpportunitiesEnrollments ("AgentOpportunitiesEnrollments"), agentOpportunitiesEnrollmentsStatuses ("AgentOpportunitiesEnrollmentsStatuses"), agentSchedulingPreferencesQuery ("AgentSchedulingPreferencesQuery"), agentSchedulingPreferences ("AgentSchedulingPreferences"), agentSchedulingPreferencesSettings ("AgentSchedulingPreferencesSettings"), activityCodes ("ActivityCodes"), activityPlans ("ActivityPlans"), adherenceAdjustmentsSettings ("AdherenceAdjustmentsSettings"), adherenceAdjustmentsReasonCodes ("AdherenceAdjustmentsReasonCodes"), adherenceAdjustments ("AdherenceAdjustments"), unavailableTimes ("UnavailableTimes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), capacityPlan ("CapacityPlan"), capacityPlanForecastInputs ("CapacityPlanForecastInputs"), capacityPlanPerformancePrediction ("CapacityPlanPerformancePrediction"), continuousForecast ("ContinuousForecast"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), longTermStaffing ("LongTermStaffing"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanBids ("WorkPlanBids"), workPlanBidGroups ("WorkPlanBidGroups"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans"), scheduleBid ("ScheduleBid"), scheduleBidGroup ("ScheduleBidGroup"), opportunities ("Opportunities"), opportunitiesQuery ("OpportunitiesQuery"), opportunitiesEnrollmentsQuery ("OpportunitiesEnrollmentsQuery"), opportunitiesExternalActivitiesQuery ("OpportunitiesExternalActivitiesQuery"), opportunitiesStatuses ("OpportunitiesStatuses"), opportunitiesEnrollmentsStatuses ("OpportunitiesEnrollmentsStatuses"), schedulingPreferencesQuery ("SchedulingPreferencesQuery"), schedulingPreferencesSettings ("SchedulingPreferencesSettings"), decisionMetrics ("DecisionMetrics") |
+| **feature** | **String**| If specified, the list of business units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentHistoricalAdherence ("AgentHistoricalAdherence"), agentHistoricalAdherenceConformance ("AgentHistoricalAdherenceConformance"), agentSchedule ("AgentSchedule"), agentAdherenceAdjustments ("AgentAdherenceAdjustments"), agentTimeOffRequest ("AgentTimeOffRequest"), agentWorkPlanBid ("AgentWorkPlanBid"), agentScheduleBid ("AgentScheduleBid"), agentShiftTrade ("AgentShiftTrade"), alternativeShift ("AlternativeShift"), coaching ("Coaching"), learning ("Learning"), agentUnavailableTimes ("AgentUnavailableTimes"), agentSelfScheduleJob ("AgentSelfScheduleJob"), agentSelfScheduleOffers ("AgentSelfScheduleOffers"), agentSelfScheduleQuery ("AgentSelfScheduleQuery"), agentSelfScheduleActivityMove ("AgentSelfScheduleActivityMove"), selfScheduleSettings ("SelfScheduleSettings"), agentSelfScheduleSettings ("AgentSelfScheduleSettings"), agentOpportunitiesQuery ("AgentOpportunitiesQuery"), agentOpportunitiesEnrollments ("AgentOpportunitiesEnrollments"), agentOpportunitiesEnrollmentsStatuses ("AgentOpportunitiesEnrollmentsStatuses"), agentSchedulingPreferencesQuery ("AgentSchedulingPreferencesQuery"), agentSchedulingPreferences ("AgentSchedulingPreferences"), agentSchedulingPreferencesSettings ("AgentSchedulingPreferencesSettings"), activityCodes ("ActivityCodes"), activityPlans ("ActivityPlans"), adherenceAdjustmentsSettings ("AdherenceAdjustmentsSettings"), adherenceAdjustmentsReasonCodes ("AdherenceAdjustmentsReasonCodes"), adherenceAdjustments ("AdherenceAdjustments"), unavailableTimes ("UnavailableTimes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), capacityPlan ("CapacityPlan"), capacityPlanForecastInputs ("CapacityPlanForecastInputs"), capacityPlanPerformancePrediction ("CapacityPlanPerformancePrediction"), continuousForecast ("ContinuousForecast"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), longTermStaffing ("LongTermStaffing"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanBids ("WorkPlanBids"), workPlanBidGroups ("WorkPlanBidGroups"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans"), scheduleBid ("ScheduleBid"), scheduleBidGroup ("ScheduleBidGroup"), opportunities ("Opportunities"), opportunitiesQuery ("OpportunitiesQuery"), opportunitiesEnrollmentsQuery ("OpportunitiesEnrollmentsQuery"), opportunitiesExternalActivitiesQuery ("OpportunitiesExternalActivitiesQuery"), opportunitiesStatuses ("OpportunitiesStatuses"), opportunitiesEnrollmentsStatuses ("OpportunitiesEnrollmentsStatuses"), schedulingPreferencesQuery ("SchedulingPreferencesQuery"), schedulingPreferencesSettings ("SchedulingPreferencesSettings"), decisionMetrics ("DecisionMetrics") |
 | **divisionId** | **String**| If specified, the list of business units belonging to the specified division will be returned | [optional] |
 
 
@@ -7268,7 +7274,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunits(pageSize: pageSize,
 | **pageSize** | **Int**| Deprecated, paging is not supported | [optional] |
 | **pageNumber** | **Int**| Deprecated, paging is not supported | [optional] |
 | **expand** | **String**| Deprecated, expand settings on the single MU route | [optional]<br />**Values**: details ("details") |
-| **feature** | **String**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentHistoricalAdherence ("AgentHistoricalAdherence"), agentHistoricalAdherenceConformance ("AgentHistoricalAdherenceConformance"), agentSchedule ("AgentSchedule"), agentAdherenceAdjustments ("AgentAdherenceAdjustments"), agentTimeOffRequest ("AgentTimeOffRequest"), agentWorkPlanBid ("AgentWorkPlanBid"), agentScheduleBid ("AgentScheduleBid"), agentShiftTrade ("AgentShiftTrade"), alternativeShift ("AlternativeShift"), coaching ("Coaching"), learning ("Learning"), agentUnavailableTimes ("AgentUnavailableTimes"), agentOpportunitiesQuery ("AgentOpportunitiesQuery"), agentOpportunitiesEnrollments ("AgentOpportunitiesEnrollments"), agentOpportunitiesEnrollmentsStatuses ("AgentOpportunitiesEnrollmentsStatuses"), agentSchedulingPreferencesQuery ("AgentSchedulingPreferencesQuery"), agentSchedulingPreferences ("AgentSchedulingPreferences"), agentSchedulingPreferencesSettings ("AgentSchedulingPreferencesSettings"), activityCodes ("ActivityCodes"), activityPlans ("ActivityPlans"), adherenceAdjustmentsSettings ("AdherenceAdjustmentsSettings"), adherenceAdjustmentsReasonCodes ("AdherenceAdjustmentsReasonCodes"), adherenceAdjustments ("AdherenceAdjustments"), unavailableTimes ("UnavailableTimes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), capacityPlan ("CapacityPlan"), capacityPlanForecastInputs ("CapacityPlanForecastInputs"), capacityPlanPerformancePrediction ("CapacityPlanPerformancePrediction"), continuousForecast ("ContinuousForecast"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), longTermStaffing ("LongTermStaffing"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanBids ("WorkPlanBids"), workPlanBidGroups ("WorkPlanBidGroups"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans"), scheduleBid ("ScheduleBid"), scheduleBidGroup ("ScheduleBidGroup"), opportunities ("Opportunities"), opportunitiesQuery ("OpportunitiesQuery"), opportunitiesEnrollmentsQuery ("OpportunitiesEnrollmentsQuery"), opportunitiesExternalActivitiesQuery ("OpportunitiesExternalActivitiesQuery"), opportunitiesStatuses ("OpportunitiesStatuses"), opportunitiesEnrollmentsStatuses ("OpportunitiesEnrollmentsStatuses"), schedulingPreferencesQuery ("SchedulingPreferencesQuery"), schedulingPreferencesSettings ("SchedulingPreferencesSettings"), decisionMetrics ("DecisionMetrics") |
+| **feature** | **String**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentHistoricalAdherence ("AgentHistoricalAdherence"), agentHistoricalAdherenceConformance ("AgentHistoricalAdherenceConformance"), agentSchedule ("AgentSchedule"), agentAdherenceAdjustments ("AgentAdherenceAdjustments"), agentTimeOffRequest ("AgentTimeOffRequest"), agentWorkPlanBid ("AgentWorkPlanBid"), agentScheduleBid ("AgentScheduleBid"), agentShiftTrade ("AgentShiftTrade"), alternativeShift ("AlternativeShift"), coaching ("Coaching"), learning ("Learning"), agentUnavailableTimes ("AgentUnavailableTimes"), agentSelfScheduleJob ("AgentSelfScheduleJob"), agentSelfScheduleOffers ("AgentSelfScheduleOffers"), agentSelfScheduleQuery ("AgentSelfScheduleQuery"), agentSelfScheduleActivityMove ("AgentSelfScheduleActivityMove"), selfScheduleSettings ("SelfScheduleSettings"), agentSelfScheduleSettings ("AgentSelfScheduleSettings"), agentOpportunitiesQuery ("AgentOpportunitiesQuery"), agentOpportunitiesEnrollments ("AgentOpportunitiesEnrollments"), agentOpportunitiesEnrollmentsStatuses ("AgentOpportunitiesEnrollmentsStatuses"), agentSchedulingPreferencesQuery ("AgentSchedulingPreferencesQuery"), agentSchedulingPreferences ("AgentSchedulingPreferences"), agentSchedulingPreferencesSettings ("AgentSchedulingPreferencesSettings"), activityCodes ("ActivityCodes"), activityPlans ("ActivityPlans"), adherenceAdjustmentsSettings ("AdherenceAdjustmentsSettings"), adherenceAdjustmentsReasonCodes ("AdherenceAdjustmentsReasonCodes"), adherenceAdjustments ("AdherenceAdjustments"), unavailableTimes ("UnavailableTimes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), capacityPlan ("CapacityPlan"), capacityPlanForecastInputs ("CapacityPlanForecastInputs"), capacityPlanPerformancePrediction ("CapacityPlanPerformancePrediction"), continuousForecast ("ContinuousForecast"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), longTermStaffing ("LongTermStaffing"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanBids ("WorkPlanBids"), workPlanBidGroups ("WorkPlanBidGroups"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans"), scheduleBid ("ScheduleBid"), scheduleBidGroup ("ScheduleBidGroup"), opportunities ("Opportunities"), opportunitiesQuery ("OpportunitiesQuery"), opportunitiesEnrollmentsQuery ("OpportunitiesEnrollmentsQuery"), opportunitiesExternalActivitiesQuery ("OpportunitiesExternalActivitiesQuery"), opportunitiesStatuses ("OpportunitiesStatuses"), opportunitiesEnrollmentsStatuses ("OpportunitiesEnrollmentsStatuses"), schedulingPreferencesQuery ("SchedulingPreferencesQuery"), schedulingPreferencesSettings ("SchedulingPreferencesSettings"), decisionMetrics ("DecisionMetrics") |
 | **divisionId** | **String**| If specified, the list of management units belonging to the specified division will be returned | [optional] |
 
 
@@ -15196,7 +15202,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitUserTimeoffrequestTi
 
 
 
-> [EstimateAvailableTimeOffResponse](EstimateAvailableTimeOffResponse) postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate(managementUnitId, userId, body)
+> [EstimateAvailableTimeOffResponse](EstimateAvailableTimeOffResponse) postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate(managementUnitId, userId, body, includeOnly)
 
 Estimates available time off for an agent
 
@@ -15219,9 +15225,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let managementUnitId: String = "" // The ID of the management unit
 let userId: String = "" // The id of the user for whom the time off request estimate is requested
 let body: EstimateAvailableTimeOffRequest = new EstimateAvailableTimeOffRequest(...) // body
+let includeOnly: WorkforceManagementAPI.IncludeOnly_postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate = WorkforceManagementAPI.IncludeOnly_postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate.enummember // Limit response to the specified field
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate(managementUnitId: managementUnitId, userId: userId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate(managementUnitId: managementUnitId, userId: userId, body: body, includeOnly: includeOnly) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -15239,6 +15246,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitUserTimeoffrequestsE
 | **managementUnitId** | **String**| The ID of the management unit | |
 | **userId** | **String**| The id of the user for whom the time off request estimate is requested | |
 | **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest)| body | |
+| **includeOnly** | **String**| Limit response to the specified field | [optional]<br />**Values**: overridedatetype ("overrideDateType") |
 
 
 ### Return type
@@ -16429,7 +16437,7 @@ WorkforceManagementAPI.postWorkforcemanagementTimeoffrequests(body: body) { (res
 
 
 
-> [EstimateAvailableTimeOffResponse](EstimateAvailableTimeOffResponse) postWorkforcemanagementTimeoffrequestsEstimate(body)
+> [EstimateAvailableTimeOffResponse](EstimateAvailableTimeOffResponse) postWorkforcemanagementTimeoffrequestsEstimate(body, includeOnly)
 
 Estimates available time off for current user
 
@@ -16450,9 +16458,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: EstimateAvailableTimeOffRequest = new EstimateAvailableTimeOffRequest(...) // body
+let includeOnly: WorkforceManagementAPI.IncludeOnly_postWorkforcemanagementTimeoffrequestsEstimate = WorkforceManagementAPI.IncludeOnly_postWorkforcemanagementTimeoffrequestsEstimate.enummember // Limit response to the specified field
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementTimeoffrequestsEstimate(body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementTimeoffrequestsEstimate(body: body, includeOnly: includeOnly) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -16468,6 +16477,7 @@ WorkforceManagementAPI.postWorkforcemanagementTimeoffrequestsEstimate(body: body
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest)| body | |
+| **includeOnly** | **String**| Limit response to the specified field | [optional]<br />**Values**: overridedatetype ("overrideDateType") |
 
 
 ### Return type
@@ -16789,4 +16799,4 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

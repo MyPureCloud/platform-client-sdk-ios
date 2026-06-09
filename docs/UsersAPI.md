@@ -4,6 +4,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteAnalyticsUsersAggregatesJob**](UsersAPI#deleteAnalyticsUsersAggregatesJob) | Delete/cancel an async request for user aggregates |
 | [**deleteAnalyticsUsersDetailsJob**](UsersAPI#deleteAnalyticsUsersDetailsJob) | Delete/cancel an async request |
 | [**deleteAuthorizationSubjectDivisionRole**](UsersAPI#deleteAuthorizationSubjectDivisionRole) | Delete a grant of a role in a division |
 | [**deleteRoutingDirectroutingbackupSettingsMe**](UsersAPI#deleteRoutingDirectroutingbackupSettingsMe) | Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. |
@@ -19,6 +20,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteUserVerifier**](UsersAPI#deleteUserVerifier) | Delete a verifier |
 | [**deleteUsersCustomattributesSchema**](UsersAPI#deleteUsersCustomattributesSchema) | Delete a schema |
 | [**deleteUsersStationsMeAssociatedstation**](UsersAPI#deleteUsersStationsMeAssociatedstation) | Clear self associated station |
+| [**getAnalyticsUsersAggregatesJob**](UsersAPI#getAnalyticsUsersAggregatesJob) | Get status for async query for user aggregates |
+| [**getAnalyticsUsersAggregatesJobResults**](UsersAPI#getAnalyticsUsersAggregatesJobResults) | Fetch a page of results for an async aggregates query |
 | [**getAnalyticsUsersDetailsJob**](UsersAPI#getAnalyticsUsersDetailsJob) | Get status for async query for user details |
 | [**getAnalyticsUsersDetailsJobResults**](UsersAPI#getAnalyticsUsersDetailsJobResults) | Fetch a page of results for an async query |
 | [**getAnalyticsUsersDetailsJobsAvailability**](UsersAPI#getAnalyticsUsersDetailsJobsAvailability) | Lookup the datalake availability date and time |
@@ -85,6 +88,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchUserRoutingskillsBulk**](UsersAPI#patchUserRoutingskillsBulk) | Assign multiple routing skills to a user |
 | [**patchUsersBulk**](UsersAPI#patchUsersBulk) | Update bulk acd autoanswer on users. Max 50 users can be updated at a time. |
 | [**postAnalyticsUsersActivityQuery**](UsersAPI#postAnalyticsUsersActivityQuery) | Query for user activity observations |
+| [**postAnalyticsUsersAggregatesJobs**](UsersAPI#postAnalyticsUsersAggregatesJobs) | Query for user aggregates asynchronously |
 | [**postAnalyticsUsersAggregatesQuery**](UsersAPI#postAnalyticsUsersAggregatesQuery) | Query for user aggregates |
 | [**postAnalyticsUsersDetailsJobs**](UsersAPI#postAnalyticsUsersDetailsJobs) | Query for user details asynchronously |
 | [**postAnalyticsUsersDetailsQuery**](UsersAPI#postAnalyticsUsersDetailsQuery) | Query for user details |
@@ -122,6 +126,55 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putUsersCustomattributesSchema**](UsersAPI#putUsersCustomattributesSchema) | Update a schema |
 | [**putUsersStationsMeAssociatedstationStationId**](UsersAPI#putUsersStationsMeAssociatedstationStationId) | Set self associated station |
 {: class="table-striped"}
+
+
+## deleteAnalyticsUsersAggregatesJob
+
+
+
+> Void deleteAnalyticsUsersAggregatesJob(jobId)
+
+Delete/cancel an async request for user aggregates
+
+
+
+Wraps DELETE /api/v2/analytics/users/aggregates/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:userAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+UsersAPI.deleteAnalyticsUsersAggregatesJob(jobId: jobId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("UsersAPI.deleteAnalyticsUsersAggregatesJob was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+`nil` (empty response body)
 
 
 ## deleteAnalyticsUsersDetailsJob
@@ -870,6 +923,108 @@ This endpoint does not require any parameters.
 ### Return type
 
 `nil` (empty response body)
+
+
+## getAnalyticsUsersAggregatesJob
+
+
+
+> [AsyncQueryStatus](AsyncQueryStatus) getAnalyticsUsersAggregatesJob(jobId)
+
+Get status for async query for user aggregates
+
+
+
+Wraps GET /api/v2/analytics/users/aggregates/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:userAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+UsersAPI.getAnalyticsUsersAggregatesJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getAnalyticsUsersAggregatesJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus)
+
+
+## getAnalyticsUsersAggregatesJobResults
+
+
+
+> [UserAsyncAggregateQueryResponse](UserAsyncAggregateQueryResponse) getAnalyticsUsersAggregatesJobResults(jobId, cursor)
+
+Fetch a page of results for an async aggregates query
+
+
+
+Wraps GET /api/v2/analytics/users/aggregates/jobs/{jobId}/results  
+
+Requires ANY permissions: 
+
+* analytics:userAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+let cursor: String = "" // Cursor token to retrieve next page
+
+// Code example
+UsersAPI.getAnalyticsUsersAggregatesJobResults(jobId: jobId, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getAnalyticsUsersAggregatesJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+| **cursor** | **String**| Cursor token to retrieve next page | [optional] |
+
+
+### Return type
+
+[**UserAsyncAggregateQueryResponse**](UserAsyncAggregateQueryResponse)
 
 
 ## getAnalyticsUsersDetailsJob
@@ -4377,6 +4532,56 @@ UsersAPI.postAnalyticsUsersActivityQuery(body: body, pageSize: pageSize, pageNum
 [**UserActivityResponse**](UserActivityResponse)
 
 
+## postAnalyticsUsersAggregatesJobs
+
+
+
+> [AsyncQueryResponse](AsyncQueryResponse) postAnalyticsUsersAggregatesJobs(body)
+
+Query for user aggregates asynchronously
+
+
+
+Wraps POST /api/v2/analytics/users/aggregates/jobs  
+
+Requires ANY permissions: 
+
+* analytics:userAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: UserAsyncAggregationQuery = new UserAsyncAggregationQuery(...) // query
+
+// Code example
+UsersAPI.postAnalyticsUsersAggregatesJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.postAnalyticsUsersAggregatesJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**UserAsyncAggregationQuery**](UserAsyncAggregationQuery)| query | |
+
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse)
+
+
 ## postAnalyticsUsersAggregatesQuery
 
 
@@ -6238,4 +6443,4 @@ UsersAPI.putUsersStationsMeAssociatedstationStationId(stationId: stationId) { (e
 `nil` (empty response body)
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

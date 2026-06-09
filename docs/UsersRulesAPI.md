@@ -499,4 +499,4 @@ UsersRulesAPI.postUsersRulesQuery(body: body, pageNumber: pageNumber, pageSize: 
 [**UsersRulesQueryResponse**](UsersRulesQueryResponse)
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_

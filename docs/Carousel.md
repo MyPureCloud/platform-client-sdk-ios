@@ -7,7 +7,8 @@ A WhatsApp Carousel messaging template definition
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **cards** | [**[CarouselCard]**]([CarouselCard]) | List of cards in a carousels template. | |
 
 
 
-_PureCloudPlatformClientV2@195.0.0_
+_PureCloudPlatformClientV2@196.0.0_
