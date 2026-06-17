@@ -807,7 +807,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let dialect: String = en-US // The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard
 let transcriptionEngine: SpeechTextAnalyticsAPI.TranscriptionEngine_getSpeechandtextanalyticsDictionaryfeedback = SpeechTextAnalyticsAPI.TranscriptionEngine_getSpeechandtextanalyticsDictionaryfeedback.enummember // Filter by transcription engine, If not provided, all transcription engines will be considered
 let nextPage: String = "" // The key for listing the next page
-let pageSize: Int = 0 // The page size for the listing
+let pageSize: Int = 0 // The page size for the listing. Default is 500 per page. Note: organizations may store up to 1000 dictionary terms per dialect; use nextPage to paginate beyond the first page when listing a full dialect vocabulary.
 
 // Code example
 SpeechTextAnalyticsAPI.getSpeechandtextanalyticsDictionaryfeedback(dialect: dialect, transcriptionEngine: transcriptionEngine, nextPage: nextPage, pageSize: pageSize) { (response, error) in
@@ -828,7 +828,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsDictionaryfeedback(dialect: dial
 | **dialect** | **String**| The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional] |
 | **transcriptionEngine** | **String**| Filter by transcription engine, If not provided, all transcription engines will be considered | [optional]<br />**Values**: genesys ("Genesys"), genesysExtended ("GenesysExtended") |
 | **nextPage** | **String**| The key for listing the next page | [optional] |
-| **pageSize** | **Int**| The page size for the listing | [optional] |
+| **pageSize** | **Int**| The page size for the listing. Default is 500 per page. Note: organizations may store up to 1000 dictionary terms per dialect; use nextPage to paginate beyond the first page when listing a full dialect vocabulary. | [optional] |
 
 
 ### Return type
@@ -3080,4 +3080,4 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsTopic(topicId: topicId, body: bo
 [**Topic**](Topic)
 
 
-_PureCloudPlatformClientV2@196.0.0_
+_PureCloudPlatformClientV2@197.0.0_

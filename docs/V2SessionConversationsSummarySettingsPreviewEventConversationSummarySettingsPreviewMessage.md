@@ -18,9 +18,10 @@
 | **resolution** | [**V2SessionConversationsSummarySettingsPreviewEventConversationResolutionMessage**](V2SessionConversationsSummarySettingsPreviewEventConversationResolutionMessage) |  | [optional] |
 | **followupActions** | [**[V2SessionConversationsSummarySettingsPreviewEventConversationFollowupAction]**]([V2SessionConversationsSummarySettingsPreviewEventConversationFollowupAction]) |  | [optional] |
 | **extractedEntities** | [**[V2SessionConversationsSummarySettingsPreviewEventConversationSummaryExtractedEntity]**]([V2SessionConversationsSummarySettingsPreviewEventConversationSummaryExtractedEntity]) |  | [optional] |
+| **labels** | [**[V2SessionConversationsSummarySettingsPreviewEventConversationSummaryLabel]**]([V2SessionConversationsSummarySettingsPreviewEventConversationSummaryLabel]) |  | [optional] |
 | **errorType** | **String** |  | [optional] |
 | **durationMs** | **Int64** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@196.0.0_
+_PureCloudPlatformClientV2@197.0.0_

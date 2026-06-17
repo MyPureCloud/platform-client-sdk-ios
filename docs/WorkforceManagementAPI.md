@@ -8,6 +8,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitActivitycode) | Deletes an activity code |
 | [**deleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory) | Delete staffing group allocations history created for a capacity plan before the given date |
 | [**deleteWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitPlanninggroup) | Deletes the planning group |
+| [**deleteWorkforcemanagementBusinessunitSchedulebid**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitSchedulebid) | Delete a schedule bid |
+| [**deleteWorkforcemanagementBusinessunitSchedulebidGroup**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitSchedulebidGroup) | Delete a schedule bid group by bid group Id |
 | [**deleteWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitSchedulingRun) | Cancel a scheduling run |
 | [**deleteWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitServicegoaltemplate) | Delete a service goal template |
 | [**deleteWorkforcemanagementBusinessunitStaffinggroup**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitStaffinggroup) | Deletes a staffing group |
@@ -60,6 +62,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementBusinessunitOpportunity**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitOpportunity) | Get opportunity details |
 | [**getWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitPlanninggroup) | Get a planning group |
 | [**getWorkforcemanagementBusinessunitPlanninggroups**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitPlanninggroups) | Gets list of planning groups |
+| [**getWorkforcemanagementBusinessunitSchedulebid**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitSchedulebid) | Get a schedule bid |
+| [**getWorkforcemanagementBusinessunitSchedulebidGroup**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitSchedulebidGroup) | Get a schedule bid group |
+| [**getWorkforcemanagementBusinessunitSchedulebidGroupPreferences**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitSchedulebidGroupPreferences) | Get agents schedule bid preferences for a bid group |
+| [**getWorkforcemanagementBusinessunitSchedulebidGroupsSummary**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitSchedulebidGroupsSummary) | Get summary of bid groups that belong to a schedule bid |
+| [**getWorkforcemanagementBusinessunitSchedulebids**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitSchedulebids) | Get list of schedule bids |
 | [**getWorkforcemanagementBusinessunitSchedulerSettings**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitSchedulerSettings) | Get scheduler settings for a business unit |
 | [**getWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitSchedulingRun) | Get a scheduling run |
 | [**getWorkforcemanagementBusinessunitSchedulingRunResult**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitSchedulingRunResult) | Get the result of a rescheduling operation |
@@ -132,6 +139,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementManagementunits**](WorkforceManagementAPI#getWorkforcemanagementManagementunits) | Get management units |
 | [**getWorkforcemanagementManagementunitsDivisionviews**](WorkforceManagementAPI#getWorkforcemanagementManagementunitsDivisionviews) | Get management units across divisions |
 | [**getWorkforcemanagementNotifications**](WorkforceManagementAPI#getWorkforcemanagementNotifications) | Get a list of notifications for the current user |
+| [**getWorkforcemanagementSchedulebidPreference**](WorkforceManagementAPI#getWorkforcemanagementSchedulebidPreference) | Gets an agent&#39;s schedule bidding preference |
+| [**getWorkforcemanagementSchedulebidSchedulesets**](WorkforceManagementAPI#getWorkforcemanagementSchedulebidSchedulesets) | Gets an agent&#39;s schedule sets for a bid |
+| [**getWorkforcemanagementSchedulebids**](WorkforceManagementAPI#getWorkforcemanagementSchedulebids) | Gets the list of schedule bids that belong to an agent. It will fetch an open bid or upcoming bid or a bid that is closed recently |
 | [**getWorkforcemanagementSchedulingjob**](WorkforceManagementAPI#getWorkforcemanagementSchedulingjob) | Get status of the scheduling job |
 | [**getWorkforcemanagementShifttrades**](WorkforceManagementAPI#getWorkforcemanagementShifttrades) | Gets all of my shift trades |
 | [**getWorkforcemanagementShifttradingTradeJob**](WorkforceManagementAPI#getWorkforcemanagementShifttradingTradeJob) | View result of update trade operation. Only the user who started the operation can query the status |
@@ -162,6 +172,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchWorkforcemanagementBusinessunitMinimumstaffingSettings**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitMinimumstaffingSettings) | Update minimum staffing settings for a business unit |
 | [**patchWorkforcemanagementBusinessunitOpportunity**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitOpportunity) | Update the opportunity |
 | [**patchWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitPlanninggroup) | Updates the planning group |
+| [**patchWorkforcemanagementBusinessunitSchedulebid**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitSchedulebid) | Update a schedule bid |
+| [**patchWorkforcemanagementBusinessunitSchedulebidGroup**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitSchedulebidGroup) | Update a schedule bid group by bid group Id |
+| [**patchWorkforcemanagementBusinessunitSchedulebidGroupPreferences**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitSchedulebidGroupPreferences) | Overrides the assigned schedule bid for the specified agents |
 | [**patchWorkforcemanagementBusinessunitSchedulerSettings**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitSchedulerSettings) | Update scheduler settings for a business unit |
 | [**patchWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitSchedulingRun) | Mark a schedule run as applied |
 | [**patchWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitServicegoaltemplate) | Updates a service goal template |
@@ -227,6 +240,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementBusinessunitOpportunitiesExternalactivitiesQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitOpportunitiesExternalactivitiesQuery) | Query opportunities by external activity IDs |
 | [**postWorkforcemanagementBusinessunitOpportunitiesQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitOpportunitiesQuery) | Query opportunities within the specified date range |
 | [**postWorkforcemanagementBusinessunitPlanninggroups**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitPlanninggroups) | Adds a new planning group |
+| [**postWorkforcemanagementBusinessunitSchedulebidCopy**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitSchedulebidCopy) | Copy a schedule bid |
+| [**postWorkforcemanagementBusinessunitSchedulebidGroups**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitSchedulebidGroups) | Add a bid group in a given schedule bid |
+| [**postWorkforcemanagementBusinessunitSchedulebids**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitSchedulebids) | Create a new schedule bid |
+| [**postWorkforcemanagementBusinessunitSchedulebidsEffectiveschedulesets**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitSchedulebidsEffectiveschedulesets) | Fetch all the agents with effective schedule set for the given BU |
 | [**postWorkforcemanagementBusinessunitServicegoaltemplates**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitServicegoaltemplates) | Adds a new service goal template |
 | [**postWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobs**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobs) | Queries and evaluates against shift trade configuration shift trades in a management unit per week |
 | [**postWorkforcemanagementBusinessunitShifttradingTradesQueryJobs**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitShifttradingTradesQueryJobs) | Queries shift trades in a management unit per user |
@@ -309,6 +326,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putWorkforcemanagementAgentIntegrationsHris**](WorkforceManagementAPI#putWorkforcemanagementAgentIntegrationsHris) | Update integrations for agent |
 | [**putWorkforcemanagementBusinessunitTimeofflimitValues**](WorkforceManagementAPI#putWorkforcemanagementBusinessunitTimeofflimitValues) | Sets daily values for a date range of time-off limit object |
 | [**putWorkforcemanagementManagementunitTimeofflimitValues**](WorkforceManagementAPI#putWorkforcemanagementManagementunitTimeofflimitValues) | Sets daily values for a date range of time off limit object |
+| [**putWorkforcemanagementSchedulebidPreference**](WorkforceManagementAPI#putWorkforcemanagementSchedulebidPreference) | Update an agent&#39;s schedule set preference |
 {: class="table-striped"}
 
 
@@ -511,6 +529,110 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitPlanninggroup(busine
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
 | **planningGroupId** | **String**| The ID of a planning group to delete | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteWorkforcemanagementBusinessunitSchedulebid
+
+
+
+> Void deleteWorkforcemanagementBusinessunitSchedulebid(businessUnitId, bidId)
+
+Delete a schedule bid
+
+
+
+Wraps DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}  
+
+Requires ANY permissions: 
+
+* wfm:scheduleBid:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let bidId: String = "" // The ID of the schedule bid
+
+// Code example
+WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitSchedulebid(businessUnitId: businessUnitId, bidId: bidId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitSchedulebid was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **bidId** | **String**| The ID of the schedule bid | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteWorkforcemanagementBusinessunitSchedulebidGroup
+
+
+
+> Void deleteWorkforcemanagementBusinessunitSchedulebidGroup(businessUnitId, bidId, bidGroupId)
+
+Delete a schedule bid group by bid group Id
+
+
+
+Wraps DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}  
+
+Requires ANY permissions: 
+
+* wfm:scheduleBidGroup:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let bidId: String = "" // The ID of the schedule bid associated with the bid groups
+let bidGroupId: String = "" // Schedule Bid Group id
+
+// Code example
+WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitSchedulebidGroup(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitSchedulebidGroup was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **bidId** | **String**| The ID of the schedule bid associated with the bid groups | |
+| **bidGroupId** | **String**| Schedule Bid Group id | |
 
 
 ### Return type
@@ -3402,6 +3524,272 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitPlanninggroups(business
 ### Return type
 
 [**PlanningGroupList**](PlanningGroupList)
+
+
+## getWorkforcemanagementBusinessunitSchedulebid
+
+
+
+> [ScheduleBid](ScheduleBid) getWorkforcemanagementBusinessunitSchedulebid(businessUnitId, bidId)
+
+Get a schedule bid
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}  
+
+Requires ANY permissions: 
+
+* wfm:scheduleBid:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let bidId: String = "" // The ID of the schedule bid
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitSchedulebid(businessUnitId: businessUnitId, bidId: bidId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitSchedulebid was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **bidId** | **String**| The ID of the schedule bid | |
+
+
+### Return type
+
+[**ScheduleBid**](ScheduleBid)
+
+
+## getWorkforcemanagementBusinessunitSchedulebidGroup
+
+
+
+> [ScheduleBidGroupResponse](ScheduleBidGroupResponse) getWorkforcemanagementBusinessunitSchedulebidGroup(businessUnitId, bidId, bidGroupId)
+
+Get a schedule bid group
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}  
+
+Requires ANY permissions: 
+
+* wfm:scheduleBidGroup:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let bidId: String = "" // The ID of the schedule bid associated with the bid groups
+let bidGroupId: String = "" // Schedule Bid Group id
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitSchedulebidGroup(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitSchedulebidGroup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **bidId** | **String**| The ID of the schedule bid associated with the bid groups | |
+| **bidGroupId** | **String**| Schedule Bid Group id | |
+
+
+### Return type
+
+[**ScheduleBidGroupResponse**](ScheduleBidGroupResponse)
+
+
+## getWorkforcemanagementBusinessunitSchedulebidGroupPreferences
+
+
+
+> [AdminAgentScheduleBidPreferenceResponse](AdminAgentScheduleBidPreferenceResponse) getWorkforcemanagementBusinessunitSchedulebidGroupPreferences(businessUnitId, bidId, bidGroupId, forceDownloadService, expand)
+
+Get agents schedule bid preferences for a bid group
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}/preferences  
+
+Requires ANY permissions: 
+
+* wfm:scheduleBidGroup:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let bidId: String = "" // The ID of the schedule bid associated with the bid groups
+let bidGroupId: String = "" // The ID of the schedule bid group
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
+let expand: [String] = [""] // Include to fetch agents' preferences with priorities
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitSchedulebidGroupPreferences(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId, forceDownloadService: forceDownloadService, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitSchedulebidGroupPreferences was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **bidId** | **String**| The ID of the schedule bid associated with the bid groups | |
+| **bidGroupId** | **String**| The ID of the schedule bid group | |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
+| **expand** | [**[String]**](String)| Include to fetch agents' preferences with priorities | [optional]<br />**Values**: agentsschedulebidpreferencesAgentschedulebidpreferencepriorities ("agentsScheduleBidPreferences.agentScheduleBidPreferencePriorities") |
+
+
+### Return type
+
+[**AdminAgentScheduleBidPreferenceResponse**](AdminAgentScheduleBidPreferenceResponse)
+
+
+## getWorkforcemanagementBusinessunitSchedulebidGroupsSummary
+
+
+
+> [ScheduleBidGroupSummaryList](ScheduleBidGroupSummaryList) getWorkforcemanagementBusinessunitSchedulebidGroupsSummary(businessUnitId, bidId)
+
+Get summary of bid groups that belong to a schedule bid
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/summary  
+
+Requires ANY permissions: 
+
+* wfm:scheduleBidGroup:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let bidId: String = "" // The ID of the schedule bid associated with the bid groups
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitSchedulebidGroupsSummary(businessUnitId: businessUnitId, bidId: bidId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitSchedulebidGroupsSummary was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **bidId** | **String**| The ID of the schedule bid associated with the bid groups | |
+
+
+### Return type
+
+[**ScheduleBidGroupSummaryList**](ScheduleBidGroupSummaryList)
+
+
+## getWorkforcemanagementBusinessunitSchedulebids
+
+
+
+> [ScheduleBidListResponse](ScheduleBidListResponse) getWorkforcemanagementBusinessunitSchedulebids(businessUnitId)
+
+Get list of schedule bids
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids  
+
+Requires ANY permissions: 
+
+* wfm:scheduleBid:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitSchedulebids(businessUnitId: businessUnitId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitSchedulebids was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+
+
+### Return type
+
+[**ScheduleBidListResponse**](ScheduleBidListResponse)
 
 
 ## getWorkforcemanagementBusinessunitSchedulerSettings
@@ -7380,6 +7768,152 @@ This endpoint does not require any parameters.
 [**NotificationsResponse**](NotificationsResponse)
 
 
+## getWorkforcemanagementSchedulebidPreference
+
+
+
+> [AgentScheduleBiddingPreferenceResponse](AgentScheduleBiddingPreferenceResponse) getWorkforcemanagementSchedulebidPreference(bidId)
+
+Gets an agent&#39;s schedule bidding preference
+
+
+
+Wraps GET /api/v2/workforcemanagement/schedulebids/{bidId}/preference  
+
+Requires ANY permissions: 
+
+* wfm:agentScheduleBid:submit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let bidId: String = "" // The ID of the schedule bid
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementSchedulebidPreference(bidId: bidId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementSchedulebidPreference was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **bidId** | **String**| The ID of the schedule bid | |
+
+
+### Return type
+
+[**AgentScheduleBiddingPreferenceResponse**](AgentScheduleBiddingPreferenceResponse)
+
+
+## getWorkforcemanagementSchedulebidSchedulesets
+
+
+
+> [AgentScheduleBidScheduleSetResponse](AgentScheduleBidScheduleSetResponse) getWorkforcemanagementSchedulebidSchedulesets(bidId)
+
+Gets an agent&#39;s schedule sets for a bid
+
+
+
+Wraps GET /api/v2/workforcemanagement/schedulebids/{bidId}/schedulesets  
+
+Requires ANY permissions: 
+
+* wfm:agentScheduleBid:submit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let bidId: String = "" // The ID of the schedule bid
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementSchedulebidSchedulesets(bidId: bidId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementSchedulebidSchedulesets was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **bidId** | **String**| The ID of the schedule bid | |
+
+
+### Return type
+
+[**AgentScheduleBidScheduleSetResponse**](AgentScheduleBidScheduleSetResponse)
+
+
+## getWorkforcemanagementSchedulebids
+
+
+
+> [AgentScheduleBids](AgentScheduleBids) getWorkforcemanagementSchedulebids()
+
+Gets the list of schedule bids that belong to an agent. It will fetch an open bid or upcoming bid or a bid that is closed recently
+
+
+
+Wraps GET /api/v2/workforcemanagement/schedulebids  
+
+Requires ANY permissions: 
+
+* wfm:agentScheduleBid:submit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementSchedulebids() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementSchedulebids was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**AgentScheduleBids**](AgentScheduleBids)
+
+
 ## getWorkforcemanagementSchedulingjob
 
 
@@ -8923,6 +9457,172 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitPlanninggroup(busines
 ### Return type
 
 [**PlanningGroup**](PlanningGroup)
+
+
+## patchWorkforcemanagementBusinessunitSchedulebid
+
+
+
+> [ScheduleBid](ScheduleBid) patchWorkforcemanagementBusinessunitSchedulebid(businessUnitId, bidId, body)
+
+Update a schedule bid
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}  
+
+Requires ANY permissions: 
+
+* wfm:scheduleBid:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let bidId: String = "" // The ID of the schedule bid
+let body: UpdateScheduleBid = new UpdateScheduleBid(...) // The schedule bid to be updated
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementBusinessunitSchedulebid(businessUnitId: businessUnitId, bidId: bidId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementBusinessunitSchedulebid was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **bidId** | **String**| The ID of the schedule bid | |
+| **body** | [**UpdateScheduleBid**](UpdateScheduleBid)| The schedule bid to be updated | |
+
+
+### Return type
+
+[**ScheduleBid**](ScheduleBid)
+
+
+## patchWorkforcemanagementBusinessunitSchedulebidGroup
+
+
+
+> [ScheduleBidGroupResponse](ScheduleBidGroupResponse) patchWorkforcemanagementBusinessunitSchedulebidGroup(businessUnitId, bidId, bidGroupId, body)
+
+Update a schedule bid group by bid group Id
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}  
+
+Requires ANY permissions: 
+
+* wfm:scheduleBidGroup:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let bidId: String = "" // The ID of the schedule bid associated with the bid groups
+let bidGroupId: String = "" // Schedule Bid Group id
+let body: ScheduleBidGroupUpdate = new ScheduleBidGroupUpdate(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementBusinessunitSchedulebidGroup(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementBusinessunitSchedulebidGroup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **bidId** | **String**| The ID of the schedule bid associated with the bid groups | |
+| **bidGroupId** | **String**| Schedule Bid Group id | |
+| **body** | [**ScheduleBidGroupUpdate**](ScheduleBidGroupUpdate)| body | |
+
+
+### Return type
+
+[**ScheduleBidGroupResponse**](ScheduleBidGroupResponse)
+
+
+## patchWorkforcemanagementBusinessunitSchedulebidGroupPreferences
+
+
+
+> [AdminAgentScheduleBidPreferenceResponse](AdminAgentScheduleBidPreferenceResponse) patchWorkforcemanagementBusinessunitSchedulebidGroupPreferences(businessUnitId, bidId, bidGroupId, body)
+
+Overrides the assigned schedule bid for the specified agents
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}/preferences  
+
+Requires ANY permissions: 
+
+* wfm:scheduleBidGroup:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let bidId: String = "" // The ID of the schedule bid associated with the bid groups
+let bidGroupId: String = "" // The ID of the schedule bid group
+let body: AgentsBidAssignedScheduleSetOverrideRequest = new AgentsBidAssignedScheduleSetOverrideRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementBusinessunitSchedulebidGroupPreferences(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementBusinessunitSchedulebidGroupPreferences was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **bidId** | **String**| The ID of the schedule bid associated with the bid groups | |
+| **bidGroupId** | **String**| The ID of the schedule bid group | |
+| **body** | [**AgentsBidAssignedScheduleSetOverrideRequest**](AgentsBidAssignedScheduleSetOverrideRequest)| body | |
+
+
+### Return type
+
+[**AdminAgentScheduleBidPreferenceResponse**](AdminAgentScheduleBidPreferenceResponse)
 
 
 ## patchWorkforcemanagementBusinessunitSchedulerSettings
@@ -12379,6 +13079,218 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitPlanninggroups(busines
 ### Return type
 
 [**PlanningGroup**](PlanningGroup)
+
+
+## postWorkforcemanagementBusinessunitSchedulebidCopy
+
+
+
+> [ScheduleBid](ScheduleBid) postWorkforcemanagementBusinessunitSchedulebidCopy(businessUnitId, bidId, body)
+
+Copy a schedule bid
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/copy  
+
+Requires ANY permissions: 
+
+* wfm:scheduleBid:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let bidId: String = "" // The ID of the schedule bid to copy
+let body: CopyScheduleBid = new CopyScheduleBid(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitSchedulebidCopy(businessUnitId: businessUnitId, bidId: bidId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitSchedulebidCopy was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **bidId** | **String**| The ID of the schedule bid to copy | |
+| **body** | [**CopyScheduleBid**](CopyScheduleBid)| body | |
+
+
+### Return type
+
+[**ScheduleBid**](ScheduleBid)
+
+
+## postWorkforcemanagementBusinessunitSchedulebidGroups
+
+
+
+> [ScheduleBidGroupResponse](ScheduleBidGroupResponse) postWorkforcemanagementBusinessunitSchedulebidGroups(businessUnitId, bidId, body)
+
+Add a bid group in a given schedule bid
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups  
+
+Requires ANY permissions: 
+
+* wfm:scheduleBidGroup:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let bidId: String = "" // The ID of the schedule bid associated with the bid groups
+let body: ScheduleBidGroupCreate = new ScheduleBidGroupCreate(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitSchedulebidGroups(businessUnitId: businessUnitId, bidId: bidId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitSchedulebidGroups was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **bidId** | **String**| The ID of the schedule bid associated with the bid groups | |
+| **body** | [**ScheduleBidGroupCreate**](ScheduleBidGroupCreate)| body | |
+
+
+### Return type
+
+[**ScheduleBidGroupResponse**](ScheduleBidGroupResponse)
+
+
+## postWorkforcemanagementBusinessunitSchedulebids
+
+
+
+> [ScheduleBid](ScheduleBid) postWorkforcemanagementBusinessunitSchedulebids(businessUnitId, body)
+
+Create a new schedule bid
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids  
+
+Requires ANY permissions: 
+
+* wfm:scheduleBid:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: CreateScheduleBid = new CreateScheduleBid(...) // The schedule bid to be created
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitSchedulebids(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitSchedulebids was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**CreateScheduleBid**](CreateScheduleBid)| The schedule bid to be created | |
+
+
+### Return type
+
+[**ScheduleBid**](ScheduleBid)
+
+
+## postWorkforcemanagementBusinessunitSchedulebidsEffectiveschedulesets
+
+
+
+> [AgentsEffectiveScheduleSetResponse](AgentsEffectiveScheduleSetResponse) postWorkforcemanagementBusinessunitSchedulebidsEffectiveschedulesets(businessUnitId, body)
+
+Fetch all the agents with effective schedule set for the given BU
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/effectiveschedulesets  
+
+Requires ANY permissions: 
+
+* wfm:scheduleBid:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: QueryEffectiveScheduleSetsRequest = new QueryEffectiveScheduleSetsRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitSchedulebidsEffectiveschedulesets(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitSchedulebidsEffectiveschedulesets was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**QueryEffectiveScheduleSetsRequest**](QueryEffectiveScheduleSetsRequest)| body | |
+
+
+### Return type
+
+[**AgentsEffectiveScheduleSetResponse**](AgentsEffectiveScheduleSetResponse)
 
 
 ## postWorkforcemanagementBusinessunitServicegoaltemplates
@@ -16799,4 +17711,56 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatformClientV2@196.0.0_
+## putWorkforcemanagementSchedulebidPreference
+
+
+
+> [AgentScheduleBiddingPreferenceResponse](AgentScheduleBiddingPreferenceResponse) putWorkforcemanagementSchedulebidPreference(bidId, body)
+
+Update an agent&#39;s schedule set preference
+
+
+
+Wraps PUT /api/v2/workforcemanagement/schedulebids/{bidId}/preference  
+
+Requires ANY permissions: 
+
+* wfm:agentScheduleBid:submit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let bidId: String = "" // The ID of the schedule bid
+let body: UpdateAgentScheduleBiddingPreference = new UpdateAgentScheduleBiddingPreference(...) // body
+
+// Code example
+WorkforceManagementAPI.putWorkforcemanagementSchedulebidPreference(bidId: bidId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.putWorkforcemanagementSchedulebidPreference was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **bidId** | **String**| The ID of the schedule bid | |
+| **body** | [**UpdateAgentScheduleBiddingPreference**](UpdateAgentScheduleBiddingPreference)| body | |
+
+
+### Return type
+
+[**AgentScheduleBiddingPreferenceResponse**](AgentScheduleBiddingPreferenceResponse)
+
+
+_PureCloudPlatformClientV2@197.0.0_

@@ -14,9 +14,10 @@ Update work plan bid model
 | **effectiveDate** | [**Date**](Date) | The date when agents will be assigned to the new work plan in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **agentRankingType** | **String** | The type of agent ranking selected for this bid | [optional] |
 | **rankingTiebreakerType** | **String** | Ranking tiebreaker | [optional] |
+| **endOverridesAndRotations** | **Bool** | If true, all existing overrides, workplan rotations will be ended one day before effective date of this bid | [optional] |
 | **workPlanFieldsVisibleToAgents** | [**ListWrapperAgentWorkPlanField**](ListWrapperAgentWorkPlanField) | The work plan fields visible to agents whenever work plan preferences are made | [optional] |
 | **status** | **String** | The state of the bid | [optional] |
 
 
 
-_PureCloudPlatformClientV2@196.0.0_
+_PureCloudPlatformClientV2@197.0.0_

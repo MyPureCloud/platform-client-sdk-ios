@@ -13,4 +13,4 @@ Must provide a valid value for exactly one of the fields in this class.
 
 
 
-_PureCloudPlatformClientV2@196.0.0_
+_PureCloudPlatformClientV2@197.0.0_

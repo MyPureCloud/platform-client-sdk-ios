@@ -12,4 +12,4 @@ Defines a \&quot;filter\&quot; request in the SCIM service provider&#39;s config
 
 
 
-_PureCloudPlatformClientV2@196.0.0_
+_PureCloudPlatformClientV2@197.0.0_

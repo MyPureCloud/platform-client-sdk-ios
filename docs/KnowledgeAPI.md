@@ -5057,7 +5057,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let knowledgeBaseId: String = "" // Knowledge base ID
-let body: KnowledgeDocumentCreateRequest = new KnowledgeDocumentCreateRequest(...) // 
+let body: KnowledgeDocumentReq = new KnowledgeDocumentReq(...) // 
 
 // Code example
 KnowledgeAPI.postKnowledgeKnowledgebaseDocuments(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
@@ -5076,7 +5076,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseDocuments(knowledgeBaseId: knowledgeBaseI
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **body** | [**KnowledgeDocumentCreateRequest**](KnowledgeDocumentCreateRequest)|  | |
+| **body** | [**KnowledgeDocumentReq**](KnowledgeDocumentReq)|  | |
 
 
 ### Return type
@@ -6597,4 +6597,4 @@ KnowledgeAPI.putKnowledgeSource(sourceId: sourceId, body: body) { (response, err
 [**V3SourceDetailedResponse**](V3SourceDetailedResponse)
 
 
-_PureCloudPlatformClientV2@196.0.0_
+_PureCloudPlatformClientV2@197.0.0_

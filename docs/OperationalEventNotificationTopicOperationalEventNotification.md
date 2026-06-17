@@ -17,8 +17,10 @@
 | **entityType** | **String** |  | [optional] |
 | **conversationId** | [**UUID**](UUID) |  | [optional] |
 | **entityToken** | **String** |  | [optional] |
+| **phoneNumber** | **String** |  | [optional] |
+| **externalContactId** | **String** |  | [optional] |
 | **timestamp** | **Int64** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@196.0.0_
+_PureCloudPlatformClientV2@197.0.0_
