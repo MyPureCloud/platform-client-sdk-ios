@@ -40,6 +40,13 @@ public class WorkPlanBid: Codable {
 
 
 
+    public enum BidType: String, Codable { 
+        case workPlanBid = "WorkPlanBid"
+        case scheduleBid = "ScheduleBid"
+    }
+
+
+
     public enum WorkPlanFieldsVisibleToAgents: String, Codable { 
         case name = "Name"
         case paidHours = "PaidHours"
@@ -69,6 +76,10 @@ public class WorkPlanBid: Codable {
     public var rankingTiebreakerType: RankingTiebreakerType?
     /** The date the work plan bid published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var publishedDate: Date?
+    /** The type of bid created */
+    public var bidType: BidType?
+    /** If true, all existing overrides, workplan rotations will be ended one day before effective date of this bid */
+    public var endOverridesAndRotations: Bool?
     /** The work plan fields visible to agents whenever work plan preferences are made */
     public var workPlanFieldsVisibleToAgents: [WorkPlanFieldsVisibleToAgents]?
     /** The meta data of this bid */
@@ -76,7 +87,7 @@ public class WorkPlanBid: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, forecast: BuShortTermForecastWeekReference?, bidWindowStartDate: Date?, bidWindowEndDate: Date?, effectiveDate: Date?, status: Status?, agentRankingType: AgentRankingType?, rankingTiebreakerType: RankingTiebreakerType?, publishedDate: Date?, workPlanFieldsVisibleToAgents: [WorkPlanFieldsVisibleToAgents]?, metadata: WorkPlanBidMetadata?, selfUri: String?) {
+    public init(_id: String?, name: String?, forecast: BuShortTermForecastWeekReference?, bidWindowStartDate: Date?, bidWindowEndDate: Date?, effectiveDate: Date?, status: Status?, agentRankingType: AgentRankingType?, rankingTiebreakerType: RankingTiebreakerType?, publishedDate: Date?, bidType: BidType?, endOverridesAndRotations: Bool?, workPlanFieldsVisibleToAgents: [WorkPlanFieldsVisibleToAgents]?, metadata: WorkPlanBidMetadata?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.forecast = forecast
@@ -87,6 +98,8 @@ public class WorkPlanBid: Codable {
         self.agentRankingType = agentRankingType
         self.rankingTiebreakerType = rankingTiebreakerType
         self.publishedDate = publishedDate
+        self.bidType = bidType
+        self.endOverridesAndRotations = endOverridesAndRotations
         self.workPlanFieldsVisibleToAgents = workPlanFieldsVisibleToAgents
         self.metadata = metadata
         self.selfUri = selfUri
@@ -103,6 +116,8 @@ public class WorkPlanBid: Codable {
         case agentRankingType
         case rankingTiebreakerType
         case publishedDate
+        case bidType
+        case endOverridesAndRotations
         case workPlanFieldsVisibleToAgents
         case metadata
         case selfUri

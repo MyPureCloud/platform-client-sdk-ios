@@ -24,6 +24,10 @@ public class OperationalEvent: Codable {
 
 
 
+
+
+
+
     /** The event that occurred. */
     public var eventDefinition: AddressableEntityRef?
     /** The unique identifier for the entity */
@@ -46,8 +50,12 @@ public class OperationalEvent: Codable {
     public var dateCreated: Date?
     /** The version of the entity in the providing service */
     public var entityVersion: String?
+    /** The phone number associated with the event */
+    public var phoneNumber: String?
+    /** The external contact ID associated with the event */
+    public var externalContactId: String?
 
-    public init(eventDefinition: AddressableEntityRef?, entityId: String?, entityToken: String?, entityName: String?, previousValue: String?, currentValue: String?, errorCode: String?, parentEntityId: String?, conversation: AddressableEntityRef?, dateCreated: Date?, entityVersion: String?) {
+    public init(eventDefinition: AddressableEntityRef?, entityId: String?, entityToken: String?, entityName: String?, previousValue: String?, currentValue: String?, errorCode: String?, parentEntityId: String?, conversation: AddressableEntityRef?, dateCreated: Date?, entityVersion: String?, phoneNumber: String?, externalContactId: String?) {
         self.eventDefinition = eventDefinition
         self.entityId = entityId
         self.entityToken = entityToken
@@ -59,6 +67,8 @@ public class OperationalEvent: Codable {
         self.conversation = conversation
         self.dateCreated = dateCreated
         self.entityVersion = entityVersion
+        self.phoneNumber = phoneNumber
+        self.externalContactId = externalContactId
     }
 
 

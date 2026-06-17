@@ -9,13 +9,18 @@ public class CaseManagementAggregateQueryPredicate: Codable {
     }
 
     public enum Dimension: String, Codable { 
+        case associationtype = "associationType"
         case caseid = "caseId"
         case caseplanid = "caseplanId"
+        case conversationid = "conversationId"
         case customerintentid = "customerIntentId"
         case divisionid = "divisionId"
         case ownerid = "ownerId"
         case priority = "priority"
+        case stageid = "stageId"
         case status = "status"
+        case stepid = "stepId"
+        case workitemid = "workitemId"
     }
 
     public enum Operator: String, Codable { 

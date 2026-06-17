@@ -10,6 +10,7 @@ public class ContactIdentifier: Codable {
         case socialTwitter = "SocialTwitter"
         case socialWhatsapp = "SocialWhatsapp"
         case socialInstagram = "SocialInstagram"
+        case socialWhatsappBsuid = "SocialWhatsappBsuid"
         case appleOpaqueId = "AppleOpaqueId"
         case email = "Email"
         case phone = "Phone"

@@ -164,6 +164,7 @@ public class ReportingExportJobResponse: Codable {
         case copilotUsageView = "COPILOT_USAGE_VIEW"
         case predictiveRoutingThroughputView = "PREDICTIVE_ROUTING_THROUGHPUT_VIEW"
         case queueSkillExpressionPerformanceView = "QUEUE_SKILL_EXPRESSION_PERFORMANCE_VIEW"
+        case agenticVirtualAgentPerformanceView = "AGENTIC_VIRTUAL_AGENT_PERFORMANCE_VIEW"
     }
 
     public enum ExportErrorMessagesType: String, Codable { 

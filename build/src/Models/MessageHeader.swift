@@ -6,6 +6,7 @@ public class MessageHeader: Codable {
         case text = "Text"
         case image = "Image"
         case video = "Video"
+        case document = "Document"
     }
 
 

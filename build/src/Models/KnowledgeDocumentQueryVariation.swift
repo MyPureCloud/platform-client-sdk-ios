@@ -41,13 +41,13 @@ public class KnowledgeDocumentQueryVariation: Codable {
     /** The name of the variation. */
     public var name: String?
     /** The content for the variation. */
-    public var body: DocumentBodyResponse?
+    public var body: DocumentBody?
     /** The chunk blocks associated with the variation. */
     public var chunks: [DocumentVariationQueryChunkBlock]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, dateCreated: Date?, dateModified: Date?, documentVersion: AddressableEntityRef?, contexts: [DocumentVariationContext]?, document: KnowledgeDocumentReference?, priority: Int?, name: String?, body: DocumentBodyResponse?, chunks: [DocumentVariationQueryChunkBlock]?, selfUri: String?) {
+    public init(_id: String?, dateCreated: Date?, dateModified: Date?, documentVersion: AddressableEntityRef?, contexts: [DocumentVariationContext]?, document: KnowledgeDocumentReference?, priority: Int?, name: String?, body: DocumentBody?, chunks: [DocumentVariationQueryChunkBlock]?, selfUri: String?) {
         self._id = _id
         self.dateCreated = dateCreated
         self.dateModified = dateModified

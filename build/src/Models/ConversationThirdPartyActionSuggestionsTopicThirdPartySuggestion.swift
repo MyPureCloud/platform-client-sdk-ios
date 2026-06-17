@@ -4,10 +4,18 @@ public class ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion: C
 
 
 
-    public var text: String?
 
-    public init(text: String?) {
+
+
+
+    public var text: String?
+    public var title: String?
+    public var sources: [ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestionSource]?
+
+    public init(text: String?, title: String?, sources: [ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestionSource]?) {
         self.text = text
+        self.title = title
+        self.sources = sources
     }
 
 

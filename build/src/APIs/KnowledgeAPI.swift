@@ -8134,7 +8134,7 @@ open class KnowledgeAPI {
      - parameter body: (body)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postKnowledgeKnowledgebaseDocuments(knowledgeBaseId: String, body: KnowledgeDocumentCreateRequest, completion: @escaping ((_ data: KnowledgeDocumentResponse?,_ error: Error?) -> Void)) {
+    open class func postKnowledgeKnowledgebaseDocuments(knowledgeBaseId: String, body: KnowledgeDocumentReq, completion: @escaping ((_ data: KnowledgeDocumentResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postKnowledgeKnowledgebaseDocumentsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
         requestBuilder.execute { (response: Response<KnowledgeDocumentResponse>?, error) -> Void in
             do {
@@ -8270,7 +8270,7 @@ open class KnowledgeAPI {
 
      - returns: RequestBuilder<KnowledgeDocumentResponse> 
      */
-    open class func postKnowledgeKnowledgebaseDocumentsWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeDocumentCreateRequest) -> RequestBuilder<KnowledgeDocumentResponse> {        
+    open class func postKnowledgeKnowledgebaseDocumentsWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeDocumentReq) -> RequestBuilder<KnowledgeDocumentResponse> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

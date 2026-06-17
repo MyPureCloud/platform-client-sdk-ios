@@ -31,11 +31,11 @@ public class KnowledgeGuestDocumentVariation: Codable {
     /** The reference to document to which the variation is associated. */
     public var document: AddressableEntityRef?
     /** The content for the variation. */
-    public var body: DocumentBodyResponse?
+    public var body: DocumentBody?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, dateCreated: Date?, dateModified: Date?, documentVersion: AddressableEntityRef?, contexts: [KnowledgeGuestDocumentVariationContext]?, document: AddressableEntityRef?, body: DocumentBodyResponse?, selfUri: String?) {
+    public init(_id: String?, dateCreated: Date?, dateModified: Date?, documentVersion: AddressableEntityRef?, contexts: [KnowledgeGuestDocumentVariationContext]?, document: AddressableEntityRef?, body: DocumentBody?, selfUri: String?) {
         self._id = _id
         self.dateCreated = dateCreated
         self.dateModified = dateModified

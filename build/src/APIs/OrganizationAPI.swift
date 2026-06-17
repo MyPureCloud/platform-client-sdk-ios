@@ -173,6 +173,7 @@ open class OrganizationAPI {
   "multifactorAuthenticationRequired" : true,
   "ipAddressAllowlist" : [ "ipAddressAllowlist", "ipAddressAllowlist" ],
   "inactivityTimeoutExclusions" : [ "inactivityTimeoutExclusions", "inactivityTimeoutExclusions" ],
+  "universalLogout" : true,
   "domainAllowlist" : [ "domainAllowlist", "domainAllowlist" ],
   "passwordRequirements" : "{}",
   "domainAllowlistEnabled" : true
@@ -1041,6 +1042,7 @@ open class OrganizationAPI {
   "multifactorAuthenticationRequired" : true,
   "ipAddressAllowlist" : [ "ipAddressAllowlist", "ipAddressAllowlist" ],
   "inactivityTimeoutExclusions" : [ "inactivityTimeoutExclusions", "inactivityTimeoutExclusions" ],
+  "universalLogout" : true,
   "domainAllowlist" : [ "domainAllowlist", "domainAllowlist" ],
   "passwordRequirements" : "{}",
   "domainAllowlistEnabled" : true

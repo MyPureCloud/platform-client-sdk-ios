@@ -2299,6 +2299,8 @@ open class ExternalContactsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "downloadUrl" : "downloadUrl",
   "id" : "id",
+  "dateCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "resultRowCount" : 0,
   "divisionIds" : [ "divisionIds", "divisionIds" ],
   "status" : "RUNNING"
 }, statusCode=200}]
@@ -2329,7 +2331,7 @@ open class ExternalContactsAPI {
     
     
     /**
-     List exports for organization
+     List contact exports for organization
      
      - parameter divisionIds: (query) Division IDs of entities (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities (optional)
@@ -2355,7 +2357,7 @@ open class ExternalContactsAPI {
     }
 
     /**
-     List exports for organization
+     List contact exports for organization
      - GET /api/v2/externalcontacts/contacts/exports
      - OAuth:
        - type: oauth2
@@ -2368,6 +2370,8 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "downloadUrl" : "downloadUrl",
     "id" : "id",
+    "dateCompletion" : "2000-01-23T04:56:07.000+00:00",
+    "resultRowCount" : 0,
     "divisionIds" : [ "divisionIds", "divisionIds" ],
     "status" : "RUNNING"
   }, {
@@ -2377,6 +2381,8 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "downloadUrl" : "downloadUrl",
     "id" : "id",
+    "dateCompletion" : "2000-01-23T04:56:07.000+00:00",
+    "resultRowCount" : 0,
     "divisionIds" : [ "divisionIds", "divisionIds" ],
     "status" : "RUNNING"
   } ],
@@ -10896,6 +10902,8 @@ open class ExternalContactsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "downloadUrl" : "downloadUrl",
   "id" : "id",
+  "dateCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "resultRowCount" : 0,
   "divisionIds" : [ "divisionIds", "divisionIds" ],
   "status" : "RUNNING"
 }, statusCode=201}]

@@ -25,6 +25,8 @@ public class ConversationScriptSuggestionsTopicSuggestionContext: Codable {
 
 
 
+
+
     public var queueId: UUID?
     public var mediaType: MediaType?
     public var userId: UUID?
@@ -34,8 +36,9 @@ public class ConversationScriptSuggestionsTopicSuggestionContext: Codable {
     public var messageId: String?
     public var queryStatement: String?
     public var language: String?
+    public var queryReformulationContext: ConversationScriptSuggestionsTopicQueryReformulationContext?
 
-    public init(queueId: UUID?, mediaType: MediaType?, userId: UUID?, externalContactId: UUID?, assistantId: UUID?, utteranceId: UUID?, messageId: String?, queryStatement: String?, language: String?) {
+    public init(queueId: UUID?, mediaType: MediaType?, userId: UUID?, externalContactId: UUID?, assistantId: UUID?, utteranceId: UUID?, messageId: String?, queryStatement: String?, language: String?, queryReformulationContext: ConversationScriptSuggestionsTopicQueryReformulationContext?) {
         self.queueId = queueId
         self.mediaType = mediaType
         self.userId = userId
@@ -45,6 +48,7 @@ public class ConversationScriptSuggestionsTopicSuggestionContext: Codable {
         self.messageId = messageId
         self.queryStatement = queryStatement
         self.language = language
+        self.queryReformulationContext = queryReformulationContext
     }
 
 

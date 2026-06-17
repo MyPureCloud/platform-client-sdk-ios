@@ -14,8 +14,9 @@ Work plan bid reference
 | **effectiveDate** | [**Date**](Date) | The date when agents will be assigned to the new work plan. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **status** | **String** | The state of the bid | |
 | **workPlanFieldsVisibleToAgents** | **[String]** | The work plan fields visible to agents whenever work plan preferences are made | |
+| **bidType** | **String** | The type of the bid | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@196.0.0_
+_PureCloudPlatformClientV2@197.0.0_

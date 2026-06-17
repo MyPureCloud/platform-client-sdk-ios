@@ -32,7 +32,10 @@ public class DictionaryFeedback: Codable {
         case pending = "Pending"
         case failed = "Failed"
         case saved = "Saved"
+        case invalid = "Invalid"
     }
+
+
 
 
 
@@ -62,18 +65,20 @@ public class DictionaryFeedback: Codable {
     public var modifiedBy: UserReference?
     /** The transcription engine for the dictionary feedback. Only returned when GenesysExtended feature is enabled. */
     public var transcriptionEngine: TranscriptionEngine?
-    /** The status of the dictionary feedback. Only returned when GenesysExtended feature is enabled. */
+    /** The status of the dictionary feedback */
     public var status: Status?
-    /** The display name for the dictionary feedback. Only returned when GenesysExtended feature is enabled. This field is only valid for Extended Services transcription engine. */
+    /** The reason the dictionary feedback is invalid */
+    public var invalidReason: String?
+    /** The display name for the dictionary feedback. */
     public var displayAs: String?
-    /** A list of at least 3 and up to 20 unique phrases that are example usage of the term. This field is only valid and required for Genesys transcription engine. */
+    /** A list of at least 3 and up to 20 unique phrases that are example usage of the term. This field is only valid for Genesys transcription engine. Not applicable for English and Spanish dialects */
     public var examplePhrases: [DictionaryFeedbackExamplePhrase]?
     /** A list of up to 10 terms that give examples of how the term sounds. This field is only valid for Genesys transcription engine. */
     public var soundsLike: [String]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, term: String?, dialect: String?, boostValue: Float?, source: Source?, dateCreated: Date?, createdBy: UserReference?, dateModified: Date?, modifiedBy: UserReference?, transcriptionEngine: TranscriptionEngine?, status: Status?, displayAs: String?, examplePhrases: [DictionaryFeedbackExamplePhrase]?, soundsLike: [String]?, selfUri: String?) {
+    public init(_id: String?, term: String?, dialect: String?, boostValue: Float?, source: Source?, dateCreated: Date?, createdBy: UserReference?, dateModified: Date?, modifiedBy: UserReference?, transcriptionEngine: TranscriptionEngine?, status: Status?, invalidReason: String?, displayAs: String?, examplePhrases: [DictionaryFeedbackExamplePhrase]?, soundsLike: [String]?, selfUri: String?) {
         self._id = _id
         self.term = term
         self.dialect = dialect
@@ -85,6 +90,7 @@ public class DictionaryFeedback: Codable {
         self.modifiedBy = modifiedBy
         self.transcriptionEngine = transcriptionEngine
         self.status = status
+        self.invalidReason = invalidReason
         self.displayAs = displayAs
         self.examplePhrases = examplePhrases
         self.soundsLike = soundsLike
@@ -103,6 +109,7 @@ public class DictionaryFeedback: Codable {
         case modifiedBy
         case transcriptionEngine
         case status
+        case invalidReason
         case displayAs
         case examplePhrases
         case soundsLike

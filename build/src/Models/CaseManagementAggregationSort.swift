@@ -3,6 +3,8 @@
 public class CaseManagementAggregationSort: Codable {
 
     public enum Name: String, Codable { 
+        case ncaseassociationscreated = "nCaseAssociationsCreated"
+        case ncasesdeleted = "nCasesDeleted"
         case ncasesopened = "nCasesOpened"
         case ncasesoversla = "nCasesOverSla"
         case ncasespurged = "nCasesPurged"

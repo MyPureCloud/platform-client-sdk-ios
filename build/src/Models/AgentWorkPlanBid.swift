@@ -29,6 +29,11 @@ public class AgentWorkPlanBid: Codable {
         case paidHours = "PaidHours"
     }
 
+    public enum BidType: String, Codable { 
+        case workPlanBid = "WorkPlanBid"
+        case scheduleBid = "ScheduleBid"
+    }
+
 
 
     /** The ID of the work plan bid */
@@ -44,10 +49,12 @@ public class AgentWorkPlanBid: Codable {
     public var status: Status?
     /** The work plan fields visible to agents whenever work plan preferences are made */
     public var workPlanFieldsVisibleToAgents: [WorkPlanFieldsVisibleToAgents]?
+    /** The type of the bid */
+    public var bidType: BidType?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, bidWindowStartDate: Date?, bidWindowEndDate: Date?, effectiveDate: Date?, status: Status?, workPlanFieldsVisibleToAgents: [WorkPlanFieldsVisibleToAgents]?, selfUri: String?) {
+    public init(_id: String?, name: String?, bidWindowStartDate: Date?, bidWindowEndDate: Date?, effectiveDate: Date?, status: Status?, workPlanFieldsVisibleToAgents: [WorkPlanFieldsVisibleToAgents]?, bidType: BidType?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.bidWindowStartDate = bidWindowStartDate
@@ -55,6 +62,7 @@ public class AgentWorkPlanBid: Codable {
         self.effectiveDate = effectiveDate
         self.status = status
         self.workPlanFieldsVisibleToAgents = workPlanFieldsVisibleToAgents
+        self.bidType = bidType
         self.selfUri = selfUri
     }
 
@@ -66,6 +74,7 @@ public class AgentWorkPlanBid: Codable {
         case effectiveDate
         case status
         case workPlanFieldsVisibleToAgents
+        case bidType
         case selfUri
     }
 

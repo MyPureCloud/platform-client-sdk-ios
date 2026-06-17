@@ -17,7 +17,9 @@
 | **conversation** | [**AddressableEntityRef**](AddressableEntityRef) | The link to a conversation | [optional] |
 | **dateCreated** | [**Date**](Date) | The date when the event created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **entityVersion** | **String** | The version of the entity in the providing service | [optional] |
+| **phoneNumber** | **String** | The phone number associated with the event | [optional] |
+| **externalContactId** | **String** | The external contact ID associated with the event | [optional] |
 
 
 
-_PureCloudPlatformClientV2@196.0.0_
+_PureCloudPlatformClientV2@197.0.0_

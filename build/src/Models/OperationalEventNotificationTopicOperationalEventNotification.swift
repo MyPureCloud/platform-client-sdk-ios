@@ -26,6 +26,10 @@ public class OperationalEventNotificationTopicOperationalEventNotification: Coda
 
 
 
+
+
+
+
     public var eventEntity: OperationalEventNotificationTopicEventEntity?
     public var entityId: UUID?
     public var entityName: String?
@@ -37,9 +41,11 @@ public class OperationalEventNotificationTopicOperationalEventNotification: Coda
     public var entityType: String?
     public var conversationId: UUID?
     public var entityToken: String?
+    public var phoneNumber: String?
+    public var externalContactId: String?
     public var timestamp: Int64?
 
-    public init(eventEntity: OperationalEventNotificationTopicEventEntity?, entityId: UUID?, entityName: String?, previousValue: String?, currentValue: String?, errorCode: String?, version: String?, parentEntity: UUID?, entityType: String?, conversationId: UUID?, entityToken: String?, timestamp: Int64?) {
+    public init(eventEntity: OperationalEventNotificationTopicEventEntity?, entityId: UUID?, entityName: String?, previousValue: String?, currentValue: String?, errorCode: String?, version: String?, parentEntity: UUID?, entityType: String?, conversationId: UUID?, entityToken: String?, phoneNumber: String?, externalContactId: String?, timestamp: Int64?) {
         self.eventEntity = eventEntity
         self.entityId = entityId
         self.entityName = entityName
@@ -51,6 +57,8 @@ public class OperationalEventNotificationTopicOperationalEventNotification: Coda
         self.entityType = entityType
         self.conversationId = conversationId
         self.entityToken = entityToken
+        self.phoneNumber = phoneNumber
+        self.externalContactId = externalContactId
         self.timestamp = timestamp
     }
 

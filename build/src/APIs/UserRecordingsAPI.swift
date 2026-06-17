@@ -6851,10 +6851,12 @@ open class UserRecordingsAPI {
         "agentAssistantId" : "agentAssistantId",
         "recordersState" : "{}",
         "disconnectReasons" : [ {
+          "reason" : "reason",
           "code" : 1,
           "phrase" : "phrase",
           "type" : "q850"
         }, {
+          "reason" : "reason",
           "code" : 1,
           "phrase" : "phrase",
           "type" : "q850"
@@ -6910,10 +6912,12 @@ open class UserRecordingsAPI {
         "agentAssistantId" : "agentAssistantId",
         "recordersState" : "{}",
         "disconnectReasons" : [ {
+          "reason" : "reason",
           "code" : 1,
           "phrase" : "phrase",
           "type" : "q850"
         }, {
+          "reason" : "reason",
           "code" : 1,
           "phrase" : "phrase",
           "type" : "q850"
@@ -13660,10 +13664,12 @@ open class UserRecordingsAPI {
         "agentAssistantId" : "agentAssistantId",
         "recordersState" : "{}",
         "disconnectReasons" : [ {
+          "reason" : "reason",
           "code" : 1,
           "phrase" : "phrase",
           "type" : "q850"
         }, {
+          "reason" : "reason",
           "code" : 1,
           "phrase" : "phrase",
           "type" : "q850"
@@ -13719,10 +13725,12 @@ open class UserRecordingsAPI {
         "agentAssistantId" : "agentAssistantId",
         "recordersState" : "{}",
         "disconnectReasons" : [ {
+          "reason" : "reason",
           "code" : 1,
           "phrase" : "phrase",
           "type" : "q850"
         }, {
+          "reason" : "reason",
           "code" : 1,
           "phrase" : "phrase",
           "type" : "q850"
@@ -20719,10 +20727,12 @@ open class UserRecordingsAPI {
           "agentAssistantId" : "agentAssistantId",
           "recordersState" : "{}",
           "disconnectReasons" : [ {
+            "reason" : "reason",
             "code" : 1,
             "phrase" : "phrase",
             "type" : "q850"
           }, {
+            "reason" : "reason",
             "code" : 1,
             "phrase" : "phrase",
             "type" : "q850"
@@ -20778,10 +20788,12 @@ open class UserRecordingsAPI {
           "agentAssistantId" : "agentAssistantId",
           "recordersState" : "{}",
           "disconnectReasons" : [ {
+            "reason" : "reason",
             "code" : 1,
             "phrase" : "phrase",
             "type" : "q850"
           }, {
+            "reason" : "reason",
             "code" : 1,
             "phrase" : "phrase",
             "type" : "q850"
@@ -27528,10 +27540,12 @@ open class UserRecordingsAPI {
           "agentAssistantId" : "agentAssistantId",
           "recordersState" : "{}",
           "disconnectReasons" : [ {
+            "reason" : "reason",
             "code" : 1,
             "phrase" : "phrase",
             "type" : "q850"
           }, {
+            "reason" : "reason",
             "code" : 1,
             "phrase" : "phrase",
             "type" : "q850"
@@ -27587,10 +27601,12 @@ open class UserRecordingsAPI {
           "agentAssistantId" : "agentAssistantId",
           "recordersState" : "{}",
           "disconnectReasons" : [ {
+            "reason" : "reason",
             "code" : 1,
             "phrase" : "phrase",
             "type" : "q850"
           }, {
+            "reason" : "reason",
             "code" : 1,
             "phrase" : "phrase",
             "type" : "q850"
@@ -34428,10 +34444,12 @@ open class UserRecordingsAPI {
           "agentAssistantId" : "agentAssistantId",
           "recordersState" : "{}",
           "disconnectReasons" : [ {
+            "reason" : "reason",
             "code" : 1,
             "phrase" : "phrase",
             "type" : "q850"
           }, {
+            "reason" : "reason",
             "code" : 1,
             "phrase" : "phrase",
             "type" : "q850"
@@ -34487,10 +34505,12 @@ open class UserRecordingsAPI {
           "agentAssistantId" : "agentAssistantId",
           "recordersState" : "{}",
           "disconnectReasons" : [ {
+            "reason" : "reason",
             "code" : 1,
             "phrase" : "phrase",
             "type" : "q850"
           }, {
+            "reason" : "reason",
             "code" : 1,
             "phrase" : "phrase",
             "type" : "q850"
@@ -41237,10 +41257,12 @@ open class UserRecordingsAPI {
           "agentAssistantId" : "agentAssistantId",
           "recordersState" : "{}",
           "disconnectReasons" : [ {
+            "reason" : "reason",
             "code" : 1,
             "phrase" : "phrase",
             "type" : "q850"
           }, {
+            "reason" : "reason",
             "code" : 1,
             "phrase" : "phrase",
             "type" : "q850"
@@ -41296,10 +41318,12 @@ open class UserRecordingsAPI {
           "agentAssistantId" : "agentAssistantId",
           "recordersState" : "{}",
           "disconnectReasons" : [ {
+            "reason" : "reason",
             "code" : 1,
             "phrase" : "phrase",
             "type" : "q850"
           }, {
+            "reason" : "reason",
             "code" : 1,
             "phrase" : "phrase",
             "type" : "q850"
@@ -48260,10 +48284,12 @@ open class UserRecordingsAPI {
         "agentAssistantId" : "agentAssistantId",
         "recordersState" : "{}",
         "disconnectReasons" : [ {
+          "reason" : "reason",
           "code" : 1,
           "phrase" : "phrase",
           "type" : "q850"
         }, {
+          "reason" : "reason",
           "code" : 1,
           "phrase" : "phrase",
           "type" : "q850"
@@ -48319,10 +48345,12 @@ open class UserRecordingsAPI {
         "agentAssistantId" : "agentAssistantId",
         "recordersState" : "{}",
         "disconnectReasons" : [ {
+          "reason" : "reason",
           "code" : 1,
           "phrase" : "phrase",
           "type" : "q850"
         }, {
+          "reason" : "reason",
           "code" : 1,
           "phrase" : "phrase",
           "type" : "q850"
@@ -55069,10 +55097,12 @@ open class UserRecordingsAPI {
         "agentAssistantId" : "agentAssistantId",
         "recordersState" : "{}",
         "disconnectReasons" : [ {
+          "reason" : "reason",
           "code" : 1,
           "phrase" : "phrase",
           "type" : "q850"
         }, {
+          "reason" : "reason",
           "code" : 1,
           "phrase" : "phrase",
           "type" : "q850"
@@ -55128,10 +55158,12 @@ open class UserRecordingsAPI {
         "agentAssistantId" : "agentAssistantId",
         "recordersState" : "{}",
         "disconnectReasons" : [ {
+          "reason" : "reason",
           "code" : 1,
           "phrase" : "phrase",
           "type" : "q850"
         }, {
+          "reason" : "reason",
           "code" : 1,
           "phrase" : "phrase",
           "type" : "q850"

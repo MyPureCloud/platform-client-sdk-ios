@@ -7,9 +7,9 @@ public class WfmActivityPlanRunJobCompleteTopicActivityPlanSessionReference: Cod
 
 
     public var _id: String?
-    public var users: [String]?
+    public var users: [WfmActivityPlanRunJobCompleteTopicUserReference]?
 
-    public init(_id: String?, users: [String]?) {
+    public init(_id: String?, users: [WfmActivityPlanRunJobCompleteTopicUserReference]?) {
         self._id = _id
         self.users = users
     }

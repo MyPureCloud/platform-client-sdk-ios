@@ -31,6 +31,8 @@ public class V2SessionConversationsSummarySettingsPreviewEventConversationSummar
 
 
 
+
+
     public enum ErrorType: String, Codable { 
         case unknown = "UNKNOWN"
         case conversationTooLong = "CONVERSATION_TOO_LONG"
@@ -52,10 +54,11 @@ public class V2SessionConversationsSummarySettingsPreviewEventConversationSummar
     public var resolution: V2SessionConversationsSummarySettingsPreviewEventConversationResolutionMessage?
     public var followupActions: [V2SessionConversationsSummarySettingsPreviewEventConversationFollowupAction]?
     public var extractedEntities: [V2SessionConversationsSummarySettingsPreviewEventConversationSummaryExtractedEntity]?
+    public var labels: [V2SessionConversationsSummarySettingsPreviewEventConversationSummaryLabel]?
     public var errorType: ErrorType?
     public var durationMs: Int64?
 
-    public init(createdDate: Date?, summaryId: UUID?, sessionId: UUID?, userId: UUID?, summarySettingsId: UUID?, language: String?, mediaType: MediaType?, summary: V2SessionConversationsSummarySettingsPreviewEventConversationSummaryMessage?, reason: V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage?, resolution: V2SessionConversationsSummarySettingsPreviewEventConversationResolutionMessage?, followupActions: [V2SessionConversationsSummarySettingsPreviewEventConversationFollowupAction]?, extractedEntities: [V2SessionConversationsSummarySettingsPreviewEventConversationSummaryExtractedEntity]?, errorType: ErrorType?, durationMs: Int64?) {
+    public init(createdDate: Date?, summaryId: UUID?, sessionId: UUID?, userId: UUID?, summarySettingsId: UUID?, language: String?, mediaType: MediaType?, summary: V2SessionConversationsSummarySettingsPreviewEventConversationSummaryMessage?, reason: V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage?, resolution: V2SessionConversationsSummarySettingsPreviewEventConversationResolutionMessage?, followupActions: [V2SessionConversationsSummarySettingsPreviewEventConversationFollowupAction]?, extractedEntities: [V2SessionConversationsSummarySettingsPreviewEventConversationSummaryExtractedEntity]?, labels: [V2SessionConversationsSummarySettingsPreviewEventConversationSummaryLabel]?, errorType: ErrorType?, durationMs: Int64?) {
         self.createdDate = createdDate
         self.summaryId = summaryId
         self.sessionId = sessionId
@@ -68,6 +71,7 @@ public class V2SessionConversationsSummarySettingsPreviewEventConversationSummar
         self.resolution = resolution
         self.followupActions = followupActions
         self.extractedEntities = extractedEntities
+        self.labels = labels
         self.errorType = errorType
         self.durationMs = durationMs
     }

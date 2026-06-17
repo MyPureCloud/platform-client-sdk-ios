@@ -18,6 +18,7 @@ public class ArchitectJobStateResponse: Codable {
         case create = "Create"
         case update = "Update"
         case export = "Export"
+        case validate = "Validate"
     }
 
 

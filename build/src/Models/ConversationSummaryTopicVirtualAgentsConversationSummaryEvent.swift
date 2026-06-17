@@ -75,6 +75,8 @@ public class ConversationSummaryTopicVirtualAgentsConversationSummaryEvent: Coda
 
 
 
+
+
     public var conversationId: UUID?
     public var queueId: UUID?
     public var participants: [ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant]?
@@ -97,8 +99,9 @@ public class ConversationSummaryTopicVirtualAgentsConversationSummaryEvent: Coda
     public var lastEditedBy: ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant?
     public var errorType: ErrorType?
     public var durationMs: Int64?
+    public var labels: [ConversationSummaryTopicVirtualAgentsConversationSummaryLabel]?
 
-    public init(conversationId: UUID?, queueId: UUID?, participants: [ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant]?, communicationIds: [String]?, createdDate: Date?, messageType: MessageType?, mediaType: MediaType?, summaryId: UUID?, language: String?, summary: ConversationSummaryTopicVirtualAgentsConversationSummary?, headline: ConversationSummaryTopicVirtualAgentsConversationHeadline?, reason: ConversationSummaryTopicVirtualAgentsConversationReason?, resolution: ConversationSummaryTopicVirtualAgentsConversationResolution?, followupActions: [ConversationSummaryTopicVirtualAgentsConversationFollowupAction]?, extractedEntities: [ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity]?, wrapUpCodes: [ConversationSummaryTopicVirtualAgentsConversationWrapUpCode]?, triggerSource: ConversationSummaryTopicVirtualAgentsTriggerSource?, summarySourceType: SummarySourceType?, triggerType: TriggerType?, lastEditedBy: ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant?, errorType: ErrorType?, durationMs: Int64?) {
+    public init(conversationId: UUID?, queueId: UUID?, participants: [ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant]?, communicationIds: [String]?, createdDate: Date?, messageType: MessageType?, mediaType: MediaType?, summaryId: UUID?, language: String?, summary: ConversationSummaryTopicVirtualAgentsConversationSummary?, headline: ConversationSummaryTopicVirtualAgentsConversationHeadline?, reason: ConversationSummaryTopicVirtualAgentsConversationReason?, resolution: ConversationSummaryTopicVirtualAgentsConversationResolution?, followupActions: [ConversationSummaryTopicVirtualAgentsConversationFollowupAction]?, extractedEntities: [ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity]?, wrapUpCodes: [ConversationSummaryTopicVirtualAgentsConversationWrapUpCode]?, triggerSource: ConversationSummaryTopicVirtualAgentsTriggerSource?, summarySourceType: SummarySourceType?, triggerType: TriggerType?, lastEditedBy: ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant?, errorType: ErrorType?, durationMs: Int64?, labels: [ConversationSummaryTopicVirtualAgentsConversationSummaryLabel]?) {
         self.conversationId = conversationId
         self.queueId = queueId
         self.participants = participants
@@ -121,6 +124,7 @@ public class ConversationSummaryTopicVirtualAgentsConversationSummaryEvent: Coda
         self.lastEditedBy = lastEditedBy
         self.errorType = errorType
         self.durationMs = durationMs
+        self.labels = labels
     }
 
 

@@ -75,6 +75,8 @@ public class ConversationSummaryTopicConversationSummaryEvent: Codable {
 
 
 
+
+
     public var conversationId: UUID?
     public var queueId: UUID?
     public var participants: [ConversationSummaryTopicConversationSummaryParticipant]?
@@ -97,8 +99,9 @@ public class ConversationSummaryTopicConversationSummaryEvent: Codable {
     public var lastEditedBy: ConversationSummaryTopicConversationSummaryParticipant?
     public var errorType: ErrorType?
     public var durationMs: Int64?
+    public var labels: [ConversationSummaryTopicConversationSummaryLabel]?
 
-    public init(conversationId: UUID?, queueId: UUID?, participants: [ConversationSummaryTopicConversationSummaryParticipant]?, communicationIds: [String]?, createdDate: Date?, messageType: MessageType?, mediaType: MediaType?, summaryId: UUID?, language: String?, summary: ConversationSummaryTopicConversationSummary?, headline: ConversationSummaryTopicConversationHeadline?, reason: ConversationSummaryTopicConversationReason?, resolution: ConversationSummaryTopicConversationResolution?, followupActions: [ConversationSummaryTopicConversationFollowupAction]?, extractedEntities: [ConversationSummaryTopicSummaryExtractedCustomEntity]?, wrapUpCodes: [ConversationSummaryTopicConversationWrapUpCode]?, triggerSource: ConversationSummaryTopicTriggerSource?, summarySourceType: SummarySourceType?, triggerType: TriggerType?, lastEditedBy: ConversationSummaryTopicConversationSummaryParticipant?, errorType: ErrorType?, durationMs: Int64?) {
+    public init(conversationId: UUID?, queueId: UUID?, participants: [ConversationSummaryTopicConversationSummaryParticipant]?, communicationIds: [String]?, createdDate: Date?, messageType: MessageType?, mediaType: MediaType?, summaryId: UUID?, language: String?, summary: ConversationSummaryTopicConversationSummary?, headline: ConversationSummaryTopicConversationHeadline?, reason: ConversationSummaryTopicConversationReason?, resolution: ConversationSummaryTopicConversationResolution?, followupActions: [ConversationSummaryTopicConversationFollowupAction]?, extractedEntities: [ConversationSummaryTopicSummaryExtractedCustomEntity]?, wrapUpCodes: [ConversationSummaryTopicConversationWrapUpCode]?, triggerSource: ConversationSummaryTopicTriggerSource?, summarySourceType: SummarySourceType?, triggerType: TriggerType?, lastEditedBy: ConversationSummaryTopicConversationSummaryParticipant?, errorType: ErrorType?, durationMs: Int64?, labels: [ConversationSummaryTopicConversationSummaryLabel]?) {
         self.conversationId = conversationId
         self.queueId = queueId
         self.participants = participants
@@ -121,6 +124,7 @@ public class ConversationSummaryTopicConversationSummaryEvent: Codable {
         self.lastEditedBy = lastEditedBy
         self.errorType = errorType
         self.durationMs = durationMs
+        self.labels = labels
     }
 
 

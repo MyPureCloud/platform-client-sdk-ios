@@ -114,6 +114,9 @@ docs/AdhocRecordingTopicUserData.md
 docs/AdhocRecordingTopicWorkspaceData.md
 docs/Adjacents.md
 docs/AdjustableLiveSpeakerDetection.md
+docs/AdminAgentScheduleBidBiddingPreference.md
+docs/AdminAgentScheduleBidPreferenceResponse.md
+docs/AdminAgentScheduleSetPreferences.md
 docs/AdminAgentWorkPlanBiddingPreference.md
 docs/AdminAgentWorkPlanPreferenceResponse.md
 docs/AdminBulkUpdateAlternativeShiftTradeState.md
@@ -134,8 +137,11 @@ docs/AgentActivityEntityListing.md
 docs/AgentAddOpportunityEnrollment.md
 docs/AgentAdherenceDayMetrics.md
 docs/AgentAdherenceScheduledActivity.md
+docs/AgentAssignedScheduleSetList.md
+docs/AgentAssignedShiftSet.md
 docs/AgentAssistantsAPI.json
 docs/AgentAssistantsAPI.md
+docs/AgentBidScheduleSetOverrideRequest.md
 docs/AgentBidWorkPlanOverrideRequest.md
 docs/AgentBulkAddOpportunityEnrollment.md
 docs/AgentBulkAddOpportunityEnrollmentResult.md
@@ -162,6 +168,7 @@ docs/AgentCopilotAggregationSort.md
 docs/AgentCopilotAggregationView.md
 docs/AgentCountRange.md
 docs/AgentDirectRoutingBackupSettings.md
+docs/AgentEffectiveBid.md
 docs/AgentEvaluatorActivity.md
 docs/AgentGreeting.md
 docs/AgentIntegrationAssociationRequest.md
@@ -187,6 +194,11 @@ docs/AgentQueryOpportunities.md
 docs/AgentQueryOpportunitiesResponse.md
 docs/AgentQueryOpportunityResult.md
 docs/AgentQueueTimeRequest.md
+docs/AgentScheduleBid.md
+docs/AgentScheduleBidScheduleSetResponse.md
+docs/AgentScheduleBiddingPreferencePriority.md
+docs/AgentScheduleBiddingPreferenceResponse.md
+docs/AgentScheduleBids.md
 docs/AgentScheduleShiftActivity.md
 docs/AgentScheduleUnavailableTime.md
 docs/AgentScoringRule.md
@@ -223,7 +235,9 @@ docs/AgentWorkPlanShift.md
 docs/AgentWorkPlans.md
 docs/AgentlessEmailSendRequestDto.md
 docs/AgentlessEmailSendResponseDto.md
+docs/AgentsBidAssignedScheduleSetOverrideRequest.md
 docs/AgentsBidAssignedWorkPlanOverrideRequest.md
+docs/AgentsEffectiveScheduleSetResponse.md
 docs/AgentsIntegrationsListing.md
 docs/AgentsWorkPlansResponse.md
 docs/AggregateMetricData.md
@@ -370,6 +384,7 @@ docs/AssessmentQuestionGroupScore.md
 docs/AssessmentQuestionScore.md
 docs/AssessmentScoringSet.md
 docs/AssignUsers.md
+docs/AssignedAgentDetails.md
 docs/AssignedLearningModule.md
 docs/AssignedLearningModuleDomainEntityListing.md
 docs/AssignedSegment.md
@@ -491,8 +506,11 @@ docs/BatchUserPresenceEventRequest.md
 docs/BatchUserRoutingStatusEventRequest.md
 docs/BenefitAssessment.md
 docs/BenefitAssessmentJob.md
+docs/BidGroupScheduleSet.md
 docs/BidGroupWorkPlanRequest.md
 docs/BidGroupWorkPlanResponse.md
+docs/BidGroupWorkPlanRotationRequest.md
+docs/BidGroupWorkPlanRotationResponse.md
 docs/BillingAPI.json
 docs/BillingAPI.md
 docs/BillingUsage.md
@@ -1100,6 +1118,7 @@ docs/ContactlistImportStatusObject.md
 docs/ContactsBulkOperationJob.md
 docs/ContactsBulkOperationJobListing.md
 docs/ContactsExport.md
+docs/ContactsExportComparisonFieldFilter.md
 docs/ContactsExportFieldFilter.md
 docs/ContactsExportFieldListFilter.md
 docs/ContactsExportFilter.md
@@ -1114,8 +1133,6 @@ docs/ContentCardAction.md
 docs/ContentCarousel.md
 docs/ContentDatePicker.md
 docs/ContentDatePickerAvailableTime.md
-docs/ContentFileRequest.md
-docs/ContentFileResponse.md
 docs/ContentFilterItem.md
 docs/ContentManagementAPI.json
 docs/ContentManagementAPI.md
@@ -1415,6 +1432,7 @@ docs/ConversationFormResponseComponent.md
 docs/ConversationFormResponseContent.md
 docs/ConversationInsight.md
 docs/ConversationIntentSuggestionsTopicIntentSuggestionEvent.md
+docs/ConversationIntentSuggestionsTopicQueryReformulationContext.md
 docs/ConversationIntentSuggestionsTopicSuggestedIntent.md
 docs/ConversationIntentSuggestionsTopicSuggestedIntentSlot.md
 docs/ConversationIntentSuggestionsTopicSuggestionContext.md
@@ -1423,6 +1441,7 @@ docs/ConversationJsonSchemaDocument.md
 docs/ConversationJsonSchemaRequest.md
 docs/ConversationKnowledgeArticleSuggestionsTopicKnowledgeAnswer.md
 docs/ConversationKnowledgeArticleSuggestionsTopicKnowledgeArticleSuggestionEvent.md
+docs/ConversationKnowledgeArticleSuggestionsTopicQueryReformulationContext.md
 docs/ConversationKnowledgeArticleSuggestionsTopicSuggestedArticle.md
 docs/ConversationKnowledgeArticleSuggestionsTopicSuggestedIntent.md
 docs/ConversationKnowledgeArticleSuggestionsTopicSuggestedIntentSlot.md
@@ -1430,6 +1449,7 @@ docs/ConversationKnowledgeArticleSuggestionsTopicSuggestionContext.md
 docs/ConversationKnowledgeArticleSuggestionsTopicSuggestionFeedback.md
 docs/ConversationKnowledgeSearchSuggestionsTopicKnowledgeAnswer.md
 docs/ConversationKnowledgeSearchSuggestionsTopicKnowledgeSearchSuggestionEvent.md
+docs/ConversationKnowledgeSearchSuggestionsTopicQueryReformulationContext.md
 docs/ConversationKnowledgeSearchSuggestionsTopicSuggestedIntent.md
 docs/ConversationKnowledgeSearchSuggestionsTopicSuggestedIntentSlot.md
 docs/ConversationKnowledgeSearchSuggestionsTopicSuggestedSearchResult.md
@@ -1495,6 +1515,7 @@ docs/ConversationRecipientAdditionalIdentifier.md
 docs/ConversationRecipientAdditionalProviderInfo.md
 docs/ConversationReference.md
 docs/ConversationResponseSuggestionsTopicCannedResponseSuggestionEvent.md
+docs/ConversationResponseSuggestionsTopicQueryReformulationContext.md
 docs/ConversationResponseSuggestionsTopicSuggestedCannedResponse.md
 docs/ConversationResponseSuggestionsTopicSuggestedIntent.md
 docs/ConversationResponseSuggestionsTopicSuggestedIntentSlot.md
@@ -1521,6 +1542,7 @@ docs/ConversationScreenShareEventTopicScreenShareConversation.md
 docs/ConversationScreenShareEventTopicScreenShareMediaParticipant.md
 docs/ConversationScreenShareEventTopicUriReference.md
 docs/ConversationScreenShareEventTopicWrapup.md
+docs/ConversationScriptSuggestionsTopicQueryReformulationContext.md
 docs/ConversationScriptSuggestionsTopicScriptSuggestionEvent.md
 docs/ConversationScriptSuggestionsTopicSuggestedIntent.md
 docs/ConversationScriptSuggestionsTopicSuggestedIntentSlot.md
@@ -1549,6 +1571,7 @@ docs/ConversationSocialExpressionEventTopicUriReference.md
 docs/ConversationSocialExpressionEventTopicWrapup.md
 docs/ConversationSummariesGetResponse.md
 docs/ConversationSummary.md
+docs/ConversationSummaryEditedBy.md
 docs/ConversationSummaryExtractedEntity.md
 docs/ConversationSummaryFollowup.md
 docs/ConversationSummaryLabel.md
@@ -1560,6 +1583,7 @@ docs/ConversationSummaryTopicConversationReason.md
 docs/ConversationSummaryTopicConversationResolution.md
 docs/ConversationSummaryTopicConversationSummary.md
 docs/ConversationSummaryTopicConversationSummaryEvent.md
+docs/ConversationSummaryTopicConversationSummaryLabel.md
 docs/ConversationSummaryTopicConversationSummaryParticipant.md
 docs/ConversationSummaryTopicConversationWrapUpCode.md
 docs/ConversationSummaryTopicSummaryExtractedCustomEntity.md
@@ -1570,18 +1594,22 @@ docs/ConversationSummaryTopicVirtualAgentsConversationReason.md
 docs/ConversationSummaryTopicVirtualAgentsConversationResolution.md
 docs/ConversationSummaryTopicVirtualAgentsConversationSummary.md
 docs/ConversationSummaryTopicVirtualAgentsConversationSummaryEvent.md
+docs/ConversationSummaryTopicVirtualAgentsConversationSummaryLabel.md
 docs/ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant.md
 docs/ConversationSummaryTopicVirtualAgentsConversationWrapUpCode.md
 docs/ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity.md
 docs/ConversationSummaryTopicVirtualAgentsTriggerSource.md
+docs/ConversationSummaryTriggerSource.md
 docs/ConversationSummaryWrapupCode.md
 docs/ConversationTagsUpdate.md
+docs/ConversationThirdPartyActionSuggestionsTopicQueryReformulationContext.md
 docs/ConversationThirdPartyActionSuggestionsTopicSuggestedIntent.md
 docs/ConversationThirdPartyActionSuggestionsTopicSuggestedIntentSlot.md
 docs/ConversationThirdPartyActionSuggestionsTopicSuggestionContext.md
 docs/ConversationThirdPartyActionSuggestionsTopicSuggestionFeedback.md
 docs/ConversationThirdPartyActionSuggestionsTopicThirdPartyActionSuggestionEvent.md
 docs/ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion.md
+docs/ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestionSource.md
 docs/ConversationThreadingWindow.md
 docs/ConversationThreadingWindowSetting.md
 docs/ConversationUser.md
@@ -1622,6 +1650,7 @@ docs/CopyAttachmentsRequest.md
 docs/CopyBuForecastRequest.md
 docs/CopyCapacityPlanRequest.md
 docs/CopyDecisionTableRequest.md
+docs/CopyScheduleBid.md
 docs/CopyVoicemailMessage.md
 docs/CopyWorkPlan.md
 docs/CopyWorkPlanBid.md
@@ -1675,6 +1704,7 @@ docs/CreateResponseAssetResponse.md
 docs/CreateRoomRequest.md
 docs/CreateRoomResponse.md
 docs/CreateRoutingSkill.md
+docs/CreateScheduleBid.md
 docs/CreateScheduledTriggerRequest.md
 docs/CreateSecureSession.md
 docs/CreateServiceGoalTemplate.md
@@ -2030,8 +2060,6 @@ docs/DocumentBodyListWithHighlight.md
 docs/DocumentBodyParagraph.md
 docs/DocumentBodyParagraphProperties.md
 docs/DocumentBodyParagraphWithHighlight.md
-docs/DocumentBodyRequest.md
-docs/DocumentBodyResponse.md
 docs/DocumentBodyTable.md
 docs/DocumentBodyTableCaptionBlock.md
 docs/DocumentBodyTableCaptionItem.md
@@ -3126,8 +3154,6 @@ docs/KnowledgeDocumentBulkVersionAddRequest.md
 docs/KnowledgeDocumentChunkRequest.md
 docs/KnowledgeDocumentChunkResponse.md
 docs/KnowledgeDocumentCopy.md
-docs/KnowledgeDocumentCreateRequest.md
-docs/KnowledgeDocumentDescriptor.md
 docs/KnowledgeDocumentFeedback.md
 docs/KnowledgeDocumentFeedbackResponse.md
 docs/KnowledgeDocumentFeedbackResponseListing.md
@@ -3379,12 +3405,14 @@ docs/ListWrapperAgentWorkPlanField.md
 docs/ListWrapperAlternativeShiftBuSettingsActivityCategory.md
 docs/ListWrapperAlternativeShiftBuSettingsGranularity.md
 docs/ListWrapperBidGroupWorkPlanRequest.md
+docs/ListWrapperBidGroupWorkPlanRotationRequest.md
 docs/ListWrapperFixedAvailability.md
 docs/ListWrapperInteger.md
 docs/ListWrapperInterval.md
 docs/ListWrapperOverrideDate.md
 docs/ListWrapperPlanningGroupMinimumsRequest.md
 docs/ListWrapperRequiredDateRange.md
+docs/ListWrapperScheduleSetRequest.md
 docs/ListWrapperSecondaryPresence.md
 docs/ListWrapperShiftStartVariance.md
 docs/ListWrapperString.md
@@ -3894,7 +3922,6 @@ docs/ParsedCertificate.md
 docs/Participant.md
 docs/ParticipantAttributes.md
 docs/ParticipantBasic.md
-docs/ParticipantDataProperties.md
 docs/ParticipantMetrics.md
 docs/PasswordRequirements.md
 docs/PatchAction.md
@@ -4116,6 +4143,7 @@ docs/QueryCriteriaGroup.md
 docs/QueryCriteriaItem.md
 docs/QueryCriteriaQuery.md
 docs/QueryDivision.md
+docs/QueryEffectiveScheduleSetsRequest.md
 docs/QueryEnrollmentOpportunityResult.md
 docs/QueryExternalActivityOpportunitiesResponse.md
 docs/QueryExternalActivityOpportunityResult.md
@@ -4128,6 +4156,7 @@ docs/QueryOpportunityEnrollmentsRequest.md
 docs/QueryOpportunityEnrollmentsResponse.md
 docs/QueryOpportunityEnrollmentsResult.md
 docs/QueryPlanningGroupToStaffingGroupsRequest.md
+docs/QueryProcessingConfig.md
 docs/QueryRequest.md
 docs/QueryRequestClause.md
 docs/QueryRequestFilter.md
@@ -4473,6 +4502,7 @@ docs/RateLimitAggregateQueryResponse.md
 docs/RateLimitAggregationQuery.md
 docs/RateLimitAggregationSort.md
 docs/RateLimitAggregationView.md
+docs/RatingFilter.md
 docs/Reaction.md
 docs/RealTimeAdherenceExplanation.md
 docs/Reason.md
@@ -4698,6 +4728,19 @@ docs/SalesforceSourceRequest.md
 docs/SalesforceSourceResponse.md
 docs/Schedule.md
 docs/ScheduleActivity.md
+docs/ScheduleBid.md
+docs/ScheduleBidGroup.md
+docs/ScheduleBidGroupCreate.md
+docs/ScheduleBidGroupReference.md
+docs/ScheduleBidGroupResponse.md
+docs/ScheduleBidGroupSummary.md
+docs/ScheduleBidGroupSummaryList.md
+docs/ScheduleBidGroupUpdate.md
+docs/ScheduleBidListResponse.md
+docs/ScheduleBidReference.md
+docs/ScheduleBidScheduledActivity.md
+docs/ScheduleBidScheduledShift.md
+docs/ScheduleBiddingAdminNotificationTopicScheduleBiddingNotification.md
 docs/ScheduleDivisionViewEntityListing.md
 docs/ScheduleEntityListing.md
 docs/ScheduleGenerationMessage.md
@@ -4710,6 +4753,8 @@ docs/ScheduleGroupDivisionViewEntityListing.md
 docs/ScheduleGroupEntityListing.md
 docs/ScheduleInterval.md
 docs/ScheduleReferenceWithBusinessUnit.md
+docs/ScheduleSetError.md
+docs/ScheduleSetRequest.md
 docs/ScheduleUploadProcessingResponse.md
 docs/ScheduleVisibilityRange.md
 docs/ScheduleVisibilitySettingsRequest.md
@@ -4863,6 +4908,8 @@ docs/ShareEntityListing.md
 docs/SharedEntity.md
 docs/SharedResponse.md
 docs/SharepointAuthenticationProperties.md
+docs/ShiftSet.md
+docs/ShiftSetEffectiveWorkPlan.md
 docs/ShiftStartVariance.md
 docs/ShiftTradeActivityPreviewResponse.md
 docs/ShiftTradeActivityRule.md
@@ -5452,6 +5499,7 @@ docs/UpdateActionInput.md
 docs/UpdateActivityCodeRequest.md
 docs/UpdateActivityPlanRequest.md
 docs/UpdateAdherenceExplanationStatusRequest.md
+docs/UpdateAgentScheduleBiddingPreference.md
 docs/UpdateAgentWorkPlanBiddingPreference.md
 docs/UpdateAlternativeShiftBuSettingsRequest.md
 docs/UpdateAnalyticsDataRetentionRequest.md
@@ -5484,6 +5532,7 @@ docs/UpdateNotificationsRequest.md
 docs/UpdateNotificationsResponse.md
 docs/UpdatePlanningGroupRequest.md
 docs/UpdateRowIndexRequest.md
+docs/UpdateScheduleBid.md
 docs/UpdateScheduleUploadResponse.md
 docs/UpdateScheduleUploadSchema.md
 docs/UpdateScheduledTriggerRequest.md
@@ -5733,6 +5782,7 @@ docs/V2SessionConversationsSummarySettingsPreviewEventConversationFollowupAction
 docs/V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage.md
 docs/V2SessionConversationsSummarySettingsPreviewEventConversationResolutionMessage.md
 docs/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryExtractedEntity.md
+docs/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryLabel.md
 docs/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryMessage.md
 docs/V2SessionConversationsSummarySettingsPreviewEventConversationSummarySettingsPreviewMessage.md
 docs/V2StaConversationCategoriesStaConversationCategoriesMessage.md
@@ -5925,12 +5975,14 @@ docs/WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference.md
 docs/WfmActivityPlanJobCompleteTopicActivityPlanReference.md
 docs/WfmActivityPlanJobCompleteTopicActivityPlanSessionReference.md
 docs/WfmActivityPlanJobCompleteTopicErrorBody.md
+docs/WfmActivityPlanJobCompleteTopicUserReference.md
 docs/WfmActivityPlanRunJobCompleteTopicActivityPlanJobCompleteNotification.md
 docs/WfmActivityPlanRunJobCompleteTopicActivityPlanJobException.md
 docs/WfmActivityPlanRunJobCompleteTopicActivityPlanOccurrenceReference.md
 docs/WfmActivityPlanRunJobCompleteTopicActivityPlanReference.md
 docs/WfmActivityPlanRunJobCompleteTopicActivityPlanSessionReference.md
 docs/WfmActivityPlanRunJobCompleteTopicErrorBody.md
+docs/WfmActivityPlanRunJobCompleteTopicUserReference.md
 docs/WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification.md
 docs/WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationJobNotification.md
 docs/WfmAdherenceExplanationJobCompleteTopicBusinessUnit.md
@@ -5949,10 +6001,14 @@ docs/WfmAgentAdherenceExplanationChangedBusinessUnitTopicUserReference.md
 docs/WfmAgentHistoricalAdherenceJobReference.md
 docs/WfmAgentHistoricalAdherenceResponse.md
 docs/WfmAgentHistoricalAdherenceResult.md
+docs/WfmAgentManagementUnitScheduleChangedTopicAgentMuScheduleChangedNotification.md
+docs/WfmAgentManagementUnitScheduleChangedTopicAgentMuScheduleVisibilityRange.md
+docs/WfmAgentManagementUnitScheduleChangedTopicAgentMuUserScheduleChanged.md
 docs/WfmAgentMuScheduleSearchCompleteTopicAgentMuScheduleSearchCompleteNotification.md
 docs/WfmAgentMuScheduleSearchCompleteTopicErrorBody.md
 docs/WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate.md
 docs/WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification.md
+docs/WfmAgentScheduleUpdateTopicAgentScheduleVisibilityRange.md
 docs/WfmAgentScheduleUpdateTopicUserReference.md
 docs/WfmAlternativeShiftJobCompleteEventV3AlternativeShiftJobCompleteNotification.md
 docs/WfmAlternativeShiftJobCompleteEventV3ErrorBody.md
@@ -6131,6 +6187,7 @@ docs/WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate.md
 docs/WfmVersionedEntityMetadata.md
 docs/WhatsAppAvailablePhoneNumberDetails.md
 docs/WhatsAppAvailablePhoneNumberDetailsListing.md
+docs/WhatsAppBusinessScopedId.md
 docs/WhatsAppCallingConfigurationRequest.md
 docs/WhatsAppCallingConfigurationResponse.md
 docs/WhatsAppCampaignSchedule.md
@@ -6695,6 +6752,8 @@ docs/deleteWorkforcemanagementBusinessunit-example.txt
 docs/deleteWorkforcemanagementBusinessunitActivitycode-example.txt
 docs/deleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory-example.txt
 docs/deleteWorkforcemanagementBusinessunitPlanninggroup-example.txt
+docs/deleteWorkforcemanagementBusinessunitSchedulebid-example.txt
+docs/deleteWorkforcemanagementBusinessunitSchedulebidGroup-example.txt
 docs/deleteWorkforcemanagementBusinessunitSchedulingRun-example.txt
 docs/deleteWorkforcemanagementBusinessunitServicegoaltemplate-example.txt
 docs/deleteWorkforcemanagementBusinessunitStaffinggroup-example.txt
@@ -8128,6 +8187,11 @@ docs/getWorkforcemanagementBusinessunitMinimumstaffingSettings-example.txt
 docs/getWorkforcemanagementBusinessunitOpportunity-example.txt
 docs/getWorkforcemanagementBusinessunitPlanninggroup-example.txt
 docs/getWorkforcemanagementBusinessunitPlanninggroups-example.txt
+docs/getWorkforcemanagementBusinessunitSchedulebid-example.txt
+docs/getWorkforcemanagementBusinessunitSchedulebidGroup-example.txt
+docs/getWorkforcemanagementBusinessunitSchedulebidGroupPreferences-example.txt
+docs/getWorkforcemanagementBusinessunitSchedulebidGroupsSummary-example.txt
+docs/getWorkforcemanagementBusinessunitSchedulebids-example.txt
 docs/getWorkforcemanagementBusinessunitSchedulerSettings-example.txt
 docs/getWorkforcemanagementBusinessunitSchedulingRun-example.txt
 docs/getWorkforcemanagementBusinessunitSchedulingRunResult-example.txt
@@ -8200,6 +8264,9 @@ docs/getWorkforcemanagementManagementunitWorkplans-example.txt
 docs/getWorkforcemanagementManagementunits-example.txt
 docs/getWorkforcemanagementManagementunitsDivisionviews-example.txt
 docs/getWorkforcemanagementNotifications-example.txt
+docs/getWorkforcemanagementSchedulebidPreference-example.txt
+docs/getWorkforcemanagementSchedulebidSchedulesets-example.txt
+docs/getWorkforcemanagementSchedulebids-example.txt
 docs/getWorkforcemanagementSchedulingjob-example.txt
 docs/getWorkforcemanagementShifttrades-example.txt
 docs/getWorkforcemanagementShifttradingTradeJob-example.txt
@@ -8446,6 +8513,9 @@ docs/patchWorkforcemanagementBusinessunitCapacityplan-example.txt
 docs/patchWorkforcemanagementBusinessunitMinimumstaffingSettings-example.txt
 docs/patchWorkforcemanagementBusinessunitOpportunity-example.txt
 docs/patchWorkforcemanagementBusinessunitPlanninggroup-example.txt
+docs/patchWorkforcemanagementBusinessunitSchedulebid-example.txt
+docs/patchWorkforcemanagementBusinessunitSchedulebidGroup-example.txt
+docs/patchWorkforcemanagementBusinessunitSchedulebidGroupPreferences-example.txt
 docs/patchWorkforcemanagementBusinessunitSchedulerSettings-example.txt
 docs/patchWorkforcemanagementBusinessunitSchedulingRun-example.txt
 docs/patchWorkforcemanagementBusinessunitServicegoaltemplate-example.txt
@@ -9267,6 +9337,10 @@ docs/postWorkforcemanagementBusinessunitOpportunitiesEnrollmentsQuery-example.tx
 docs/postWorkforcemanagementBusinessunitOpportunitiesExternalactivitiesQuery-example.txt
 docs/postWorkforcemanagementBusinessunitOpportunitiesQuery-example.txt
 docs/postWorkforcemanagementBusinessunitPlanninggroups-example.txt
+docs/postWorkforcemanagementBusinessunitSchedulebidCopy-example.txt
+docs/postWorkforcemanagementBusinessunitSchedulebidGroups-example.txt
+docs/postWorkforcemanagementBusinessunitSchedulebids-example.txt
+docs/postWorkforcemanagementBusinessunitSchedulebidsEffectiveschedulesets-example.txt
 docs/postWorkforcemanagementBusinessunitServicegoaltemplates-example.txt
 docs/postWorkforcemanagementBusinessunitShifttradingTradesEvaluateJobs-example.txt
 docs/postWorkforcemanagementBusinessunitShifttradingTradesQueryJobs-example.txt
@@ -9626,6 +9700,7 @@ docs/putWidgetsDeployment-example.txt
 docs/putWorkforcemanagementAgentIntegrationsHris-example.txt
 docs/putWorkforcemanagementBusinessunitTimeofflimitValues-example.txt
 docs/putWorkforcemanagementManagementunitTimeofflimitValues-example.txt
+docs/putWorkforcemanagementSchedulebidPreference-example.txt
 src/APIHelper.swift
 src/APIs.swift
 src/APIs/AIStudioAPI.swift
@@ -9826,6 +9901,9 @@ src/Models/AdhocRecordingTopicUserData.swift
 src/Models/AdhocRecordingTopicWorkspaceData.swift
 src/Models/Adjacents.swift
 src/Models/AdjustableLiveSpeakerDetection.swift
+src/Models/AdminAgentScheduleBidBiddingPreference.swift
+src/Models/AdminAgentScheduleBidPreferenceResponse.swift
+src/Models/AdminAgentScheduleSetPreferences.swift
 src/Models/AdminAgentWorkPlanBiddingPreference.swift
 src/Models/AdminAgentWorkPlanPreferenceResponse.swift
 src/Models/AdminBulkUpdateAlternativeShiftTradeState.swift
@@ -9846,6 +9924,9 @@ src/Models/AgentActivityEntityListing.swift
 src/Models/AgentAddOpportunityEnrollment.swift
 src/Models/AgentAdherenceDayMetrics.swift
 src/Models/AgentAdherenceScheduledActivity.swift
+src/Models/AgentAssignedScheduleSetList.swift
+src/Models/AgentAssignedShiftSet.swift
+src/Models/AgentBidScheduleSetOverrideRequest.swift
 src/Models/AgentBidWorkPlanOverrideRequest.swift
 src/Models/AgentBulkAddOpportunityEnrollment.swift
 src/Models/AgentBulkAddOpportunityEnrollmentResult.swift
@@ -9870,6 +9951,7 @@ src/Models/AgentCopilotAggregationSort.swift
 src/Models/AgentCopilotAggregationView.swift
 src/Models/AgentCountRange.swift
 src/Models/AgentDirectRoutingBackupSettings.swift
+src/Models/AgentEffectiveBid.swift
 src/Models/AgentEvaluatorActivity.swift
 src/Models/AgentGreeting.swift
 src/Models/AgentIntegrationAssociationRequest.swift
@@ -9895,6 +9977,11 @@ src/Models/AgentQueryOpportunities.swift
 src/Models/AgentQueryOpportunitiesResponse.swift
 src/Models/AgentQueryOpportunityResult.swift
 src/Models/AgentQueueTimeRequest.swift
+src/Models/AgentScheduleBid.swift
+src/Models/AgentScheduleBidScheduleSetResponse.swift
+src/Models/AgentScheduleBiddingPreferencePriority.swift
+src/Models/AgentScheduleBiddingPreferenceResponse.swift
+src/Models/AgentScheduleBids.swift
 src/Models/AgentScheduleShiftActivity.swift
 src/Models/AgentScheduleUnavailableTime.swift
 src/Models/AgentScoringRule.swift
@@ -9929,7 +10016,9 @@ src/Models/AgentWorkPlanShift.swift
 src/Models/AgentWorkPlans.swift
 src/Models/AgentlessEmailSendRequestDto.swift
 src/Models/AgentlessEmailSendResponseDto.swift
+src/Models/AgentsBidAssignedScheduleSetOverrideRequest.swift
 src/Models/AgentsBidAssignedWorkPlanOverrideRequest.swift
+src/Models/AgentsEffectiveScheduleSetResponse.swift
 src/Models/AgentsIntegrationsListing.swift
 src/Models/AgentsWorkPlansResponse.swift
 src/Models/AggregateMetricData.swift
@@ -10070,6 +10159,7 @@ src/Models/AssessmentQuestionGroupScore.swift
 src/Models/AssessmentQuestionScore.swift
 src/Models/AssessmentScoringSet.swift
 src/Models/AssignUsers.swift
+src/Models/AssignedAgentDetails.swift
 src/Models/AssignedLearningModule.swift
 src/Models/AssignedLearningModuleDomainEntityListing.swift
 src/Models/AssignedSegment.swift
@@ -10183,8 +10273,11 @@ src/Models/BatchUserPresenceEventRequest.swift
 src/Models/BatchUserRoutingStatusEventRequest.swift
 src/Models/BenefitAssessment.swift
 src/Models/BenefitAssessmentJob.swift
+src/Models/BidGroupScheduleSet.swift
 src/Models/BidGroupWorkPlanRequest.swift
 src/Models/BidGroupWorkPlanResponse.swift
+src/Models/BidGroupWorkPlanRotationRequest.swift
+src/Models/BidGroupWorkPlanRotationResponse.swift
 src/Models/BillingUsage.swift
 src/Models/BillingUsageReport.swift
 src/Models/BillingUsageResource.swift
@@ -10780,6 +10873,7 @@ src/Models/ContactlistImportStatusObject.swift
 src/Models/ContactsBulkOperationJob.swift
 src/Models/ContactsBulkOperationJobListing.swift
 src/Models/ContactsExport.swift
+src/Models/ContactsExportComparisonFieldFilter.swift
 src/Models/ContactsExportFieldFilter.swift
 src/Models/ContactsExportFieldListFilter.swift
 src/Models/ContactsExportFilter.swift
@@ -10794,8 +10888,6 @@ src/Models/ContentCardAction.swift
 src/Models/ContentCarousel.swift
 src/Models/ContentDatePicker.swift
 src/Models/ContentDatePickerAvailableTime.swift
-src/Models/ContentFileRequest.swift
-src/Models/ContentFileResponse.swift
 src/Models/ContentFilterItem.swift
 src/Models/ContentManagementSingleDocumentTopicDocumentDataV2.swift
 src/Models/ContentManagementSingleDocumentTopicLockData.swift
@@ -11093,6 +11185,7 @@ src/Models/ConversationFormResponseComponent.swift
 src/Models/ConversationFormResponseContent.swift
 src/Models/ConversationInsight.swift
 src/Models/ConversationIntentSuggestionsTopicIntentSuggestionEvent.swift
+src/Models/ConversationIntentSuggestionsTopicQueryReformulationContext.swift
 src/Models/ConversationIntentSuggestionsTopicSuggestedIntent.swift
 src/Models/ConversationIntentSuggestionsTopicSuggestedIntentSlot.swift
 src/Models/ConversationIntentSuggestionsTopicSuggestionContext.swift
@@ -11101,6 +11194,7 @@ src/Models/ConversationJsonSchemaDocument.swift
 src/Models/ConversationJsonSchemaRequest.swift
 src/Models/ConversationKnowledgeArticleSuggestionsTopicKnowledgeAnswer.swift
 src/Models/ConversationKnowledgeArticleSuggestionsTopicKnowledgeArticleSuggestionEvent.swift
+src/Models/ConversationKnowledgeArticleSuggestionsTopicQueryReformulationContext.swift
 src/Models/ConversationKnowledgeArticleSuggestionsTopicSuggestedArticle.swift
 src/Models/ConversationKnowledgeArticleSuggestionsTopicSuggestedIntent.swift
 src/Models/ConversationKnowledgeArticleSuggestionsTopicSuggestedIntentSlot.swift
@@ -11108,6 +11202,7 @@ src/Models/ConversationKnowledgeArticleSuggestionsTopicSuggestionContext.swift
 src/Models/ConversationKnowledgeArticleSuggestionsTopicSuggestionFeedback.swift
 src/Models/ConversationKnowledgeSearchSuggestionsTopicKnowledgeAnswer.swift
 src/Models/ConversationKnowledgeSearchSuggestionsTopicKnowledgeSearchSuggestionEvent.swift
+src/Models/ConversationKnowledgeSearchSuggestionsTopicQueryReformulationContext.swift
 src/Models/ConversationKnowledgeSearchSuggestionsTopicSuggestedIntent.swift
 src/Models/ConversationKnowledgeSearchSuggestionsTopicSuggestedIntentSlot.swift
 src/Models/ConversationKnowledgeSearchSuggestionsTopicSuggestedSearchResult.swift
@@ -11173,6 +11268,7 @@ src/Models/ConversationRecipientAdditionalIdentifier.swift
 src/Models/ConversationRecipientAdditionalProviderInfo.swift
 src/Models/ConversationReference.swift
 src/Models/ConversationResponseSuggestionsTopicCannedResponseSuggestionEvent.swift
+src/Models/ConversationResponseSuggestionsTopicQueryReformulationContext.swift
 src/Models/ConversationResponseSuggestionsTopicSuggestedCannedResponse.swift
 src/Models/ConversationResponseSuggestionsTopicSuggestedIntent.swift
 src/Models/ConversationResponseSuggestionsTopicSuggestedIntentSlot.swift
@@ -11199,6 +11295,7 @@ src/Models/ConversationScreenShareEventTopicScreenShareConversation.swift
 src/Models/ConversationScreenShareEventTopicScreenShareMediaParticipant.swift
 src/Models/ConversationScreenShareEventTopicUriReference.swift
 src/Models/ConversationScreenShareEventTopicWrapup.swift
+src/Models/ConversationScriptSuggestionsTopicQueryReformulationContext.swift
 src/Models/ConversationScriptSuggestionsTopicScriptSuggestionEvent.swift
 src/Models/ConversationScriptSuggestionsTopicSuggestedIntent.swift
 src/Models/ConversationScriptSuggestionsTopicSuggestedIntentSlot.swift
@@ -11227,6 +11324,7 @@ src/Models/ConversationSocialExpressionEventTopicUriReference.swift
 src/Models/ConversationSocialExpressionEventTopicWrapup.swift
 src/Models/ConversationSummariesGetResponse.swift
 src/Models/ConversationSummary.swift
+src/Models/ConversationSummaryEditedBy.swift
 src/Models/ConversationSummaryExtractedEntity.swift
 src/Models/ConversationSummaryFollowup.swift
 src/Models/ConversationSummaryLabel.swift
@@ -11238,6 +11336,7 @@ src/Models/ConversationSummaryTopicConversationReason.swift
 src/Models/ConversationSummaryTopicConversationResolution.swift
 src/Models/ConversationSummaryTopicConversationSummary.swift
 src/Models/ConversationSummaryTopicConversationSummaryEvent.swift
+src/Models/ConversationSummaryTopicConversationSummaryLabel.swift
 src/Models/ConversationSummaryTopicConversationSummaryParticipant.swift
 src/Models/ConversationSummaryTopicConversationWrapUpCode.swift
 src/Models/ConversationSummaryTopicSummaryExtractedCustomEntity.swift
@@ -11248,18 +11347,22 @@ src/Models/ConversationSummaryTopicVirtualAgentsConversationReason.swift
 src/Models/ConversationSummaryTopicVirtualAgentsConversationResolution.swift
 src/Models/ConversationSummaryTopicVirtualAgentsConversationSummary.swift
 src/Models/ConversationSummaryTopicVirtualAgentsConversationSummaryEvent.swift
+src/Models/ConversationSummaryTopicVirtualAgentsConversationSummaryLabel.swift
 src/Models/ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant.swift
 src/Models/ConversationSummaryTopicVirtualAgentsConversationWrapUpCode.swift
 src/Models/ConversationSummaryTopicVirtualAgentsSummaryExtractedCustomEntity.swift
 src/Models/ConversationSummaryTopicVirtualAgentsTriggerSource.swift
+src/Models/ConversationSummaryTriggerSource.swift
 src/Models/ConversationSummaryWrapupCode.swift
 src/Models/ConversationTagsUpdate.swift
+src/Models/ConversationThirdPartyActionSuggestionsTopicQueryReformulationContext.swift
 src/Models/ConversationThirdPartyActionSuggestionsTopicSuggestedIntent.swift
 src/Models/ConversationThirdPartyActionSuggestionsTopicSuggestedIntentSlot.swift
 src/Models/ConversationThirdPartyActionSuggestionsTopicSuggestionContext.swift
 src/Models/ConversationThirdPartyActionSuggestionsTopicSuggestionFeedback.swift
 src/Models/ConversationThirdPartyActionSuggestionsTopicThirdPartyActionSuggestionEvent.swift
 src/Models/ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion.swift
+src/Models/ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestionSource.swift
 src/Models/ConversationThreadingWindow.swift
 src/Models/ConversationThreadingWindowSetting.swift
 src/Models/ConversationUser.swift
@@ -11298,6 +11401,7 @@ src/Models/CopyAttachmentsRequest.swift
 src/Models/CopyBuForecastRequest.swift
 src/Models/CopyCapacityPlanRequest.swift
 src/Models/CopyDecisionTableRequest.swift
+src/Models/CopyScheduleBid.swift
 src/Models/CopyVoicemailMessage.swift
 src/Models/CopyWorkPlan.swift
 src/Models/CopyWorkPlanBid.swift
@@ -11351,6 +11455,7 @@ src/Models/CreateResponseAssetResponse.swift
 src/Models/CreateRoomRequest.swift
 src/Models/CreateRoomResponse.swift
 src/Models/CreateRoutingSkill.swift
+src/Models/CreateScheduleBid.swift
 src/Models/CreateScheduledTriggerRequest.swift
 src/Models/CreateSecureSession.swift
 src/Models/CreateServiceGoalTemplate.swift
@@ -11702,8 +11807,6 @@ src/Models/DocumentBodyListWithHighlight.swift
 src/Models/DocumentBodyParagraph.swift
 src/Models/DocumentBodyParagraphProperties.swift
 src/Models/DocumentBodyParagraphWithHighlight.swift
-src/Models/DocumentBodyRequest.swift
-src/Models/DocumentBodyResponse.swift
 src/Models/DocumentBodyTable.swift
 src/Models/DocumentBodyTableCaptionBlock.swift
 src/Models/DocumentBodyTableCaptionItem.swift
@@ -12762,8 +12865,6 @@ src/Models/KnowledgeDocumentBulkVersionAddRequest.swift
 src/Models/KnowledgeDocumentChunkRequest.swift
 src/Models/KnowledgeDocumentChunkResponse.swift
 src/Models/KnowledgeDocumentCopy.swift
-src/Models/KnowledgeDocumentCreateRequest.swift
-src/Models/KnowledgeDocumentDescriptor.swift
 src/Models/KnowledgeDocumentFeedback.swift
 src/Models/KnowledgeDocumentFeedbackResponse.swift
 src/Models/KnowledgeDocumentFeedbackResponseListing.swift
@@ -13007,12 +13108,14 @@ src/Models/ListWrapperAgentWorkPlanField.swift
 src/Models/ListWrapperAlternativeShiftBuSettingsActivityCategory.swift
 src/Models/ListWrapperAlternativeShiftBuSettingsGranularity.swift
 src/Models/ListWrapperBidGroupWorkPlanRequest.swift
+src/Models/ListWrapperBidGroupWorkPlanRotationRequest.swift
 src/Models/ListWrapperFixedAvailability.swift
 src/Models/ListWrapperInteger.swift
 src/Models/ListWrapperInterval.swift
 src/Models/ListWrapperOverrideDate.swift
 src/Models/ListWrapperPlanningGroupMinimumsRequest.swift
 src/Models/ListWrapperRequiredDateRange.swift
+src/Models/ListWrapperScheduleSetRequest.swift
 src/Models/ListWrapperSecondaryPresence.swift
 src/Models/ListWrapperShiftStartVariance.swift
 src/Models/ListWrapperString.swift
@@ -13503,7 +13606,6 @@ src/Models/ParsedCertificate.swift
 src/Models/Participant.swift
 src/Models/ParticipantAttributes.swift
 src/Models/ParticipantBasic.swift
-src/Models/ParticipantDataProperties.swift
 src/Models/ParticipantMetrics.swift
 src/Models/PasswordRequirements.swift
 src/Models/PatchAction.swift
@@ -13719,6 +13821,7 @@ src/Models/QueryCriteriaGroup.swift
 src/Models/QueryCriteriaItem.swift
 src/Models/QueryCriteriaQuery.swift
 src/Models/QueryDivision.swift
+src/Models/QueryEffectiveScheduleSetsRequest.swift
 src/Models/QueryEnrollmentOpportunityResult.swift
 src/Models/QueryExternalActivityOpportunitiesResponse.swift
 src/Models/QueryExternalActivityOpportunityResult.swift
@@ -13731,6 +13834,7 @@ src/Models/QueryOpportunityEnrollmentsRequest.swift
 src/Models/QueryOpportunityEnrollmentsResponse.swift
 src/Models/QueryOpportunityEnrollmentsResult.swift
 src/Models/QueryPlanningGroupToStaffingGroupsRequest.swift
+src/Models/QueryProcessingConfig.swift
 src/Models/QueryRequest.swift
 src/Models/QueryRequestClause.swift
 src/Models/QueryRequestFilter.swift
@@ -14075,6 +14179,7 @@ src/Models/RateLimitAggregateQueryResponse.swift
 src/Models/RateLimitAggregationQuery.swift
 src/Models/RateLimitAggregationSort.swift
 src/Models/RateLimitAggregationView.swift
+src/Models/RatingFilter.swift
 src/Models/Reaction.swift
 src/Models/RealTimeAdherenceExplanation.swift
 src/Models/Reason.swift
@@ -14291,6 +14396,19 @@ src/Models/SalesforceSourceRequest.swift
 src/Models/SalesforceSourceResponse.swift
 src/Models/Schedule.swift
 src/Models/ScheduleActivity.swift
+src/Models/ScheduleBid.swift
+src/Models/ScheduleBidGroup.swift
+src/Models/ScheduleBidGroupCreate.swift
+src/Models/ScheduleBidGroupReference.swift
+src/Models/ScheduleBidGroupResponse.swift
+src/Models/ScheduleBidGroupSummary.swift
+src/Models/ScheduleBidGroupSummaryList.swift
+src/Models/ScheduleBidGroupUpdate.swift
+src/Models/ScheduleBidListResponse.swift
+src/Models/ScheduleBidReference.swift
+src/Models/ScheduleBidScheduledActivity.swift
+src/Models/ScheduleBidScheduledShift.swift
+src/Models/ScheduleBiddingAdminNotificationTopicScheduleBiddingNotification.swift
 src/Models/ScheduleDivisionViewEntityListing.swift
 src/Models/ScheduleEntityListing.swift
 src/Models/ScheduleGenerationMessage.swift
@@ -14303,6 +14421,8 @@ src/Models/ScheduleGroupDivisionViewEntityListing.swift
 src/Models/ScheduleGroupEntityListing.swift
 src/Models/ScheduleInterval.swift
 src/Models/ScheduleReferenceWithBusinessUnit.swift
+src/Models/ScheduleSetError.swift
+src/Models/ScheduleSetRequest.swift
 src/Models/ScheduleUploadProcessingResponse.swift
 src/Models/ScheduleVisibilityRange.swift
 src/Models/ScheduleVisibilitySettingsRequest.swift
@@ -14450,6 +14570,8 @@ src/Models/ShareEntityListing.swift
 src/Models/SharedEntity.swift
 src/Models/SharedResponse.swift
 src/Models/SharepointAuthenticationProperties.swift
+src/Models/ShiftSet.swift
+src/Models/ShiftSetEffectiveWorkPlan.swift
 src/Models/ShiftStartVariance.swift
 src/Models/ShiftTradeActivityPreviewResponse.swift
 src/Models/ShiftTradeActivityRule.swift
@@ -15019,6 +15141,7 @@ src/Models/UpdateActionInput.swift
 src/Models/UpdateActivityCodeRequest.swift
 src/Models/UpdateActivityPlanRequest.swift
 src/Models/UpdateAdherenceExplanationStatusRequest.swift
+src/Models/UpdateAgentScheduleBiddingPreference.swift
 src/Models/UpdateAgentWorkPlanBiddingPreference.swift
 src/Models/UpdateAlternativeShiftBuSettingsRequest.swift
 src/Models/UpdateAnalyticsDataRetentionRequest.swift
@@ -15051,6 +15174,7 @@ src/Models/UpdateNotificationsRequest.swift
 src/Models/UpdateNotificationsResponse.swift
 src/Models/UpdatePlanningGroupRequest.swift
 src/Models/UpdateRowIndexRequest.swift
+src/Models/UpdateScheduleBid.swift
 src/Models/UpdateScheduleUploadResponse.swift
 src/Models/UpdateScheduleUploadSchema.swift
 src/Models/UpdateScheduledTriggerRequest.swift
@@ -15288,6 +15412,7 @@ src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationFollowup
 src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage.swift
 src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationResolutionMessage.swift
 src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryExtractedEntity.swift
+src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryLabel.swift
 src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryMessage.swift
 src/Models/V2SessionConversationsSummarySettingsPreviewEventConversationSummarySettingsPreviewMessage.swift
 src/Models/V2StaConversationCategoriesStaConversationCategoriesMessage.swift
@@ -15471,12 +15596,14 @@ src/Models/WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference.swift
 src/Models/WfmActivityPlanJobCompleteTopicActivityPlanReference.swift
 src/Models/WfmActivityPlanJobCompleteTopicActivityPlanSessionReference.swift
 src/Models/WfmActivityPlanJobCompleteTopicErrorBody.swift
+src/Models/WfmActivityPlanJobCompleteTopicUserReference.swift
 src/Models/WfmActivityPlanRunJobCompleteTopicActivityPlanJobCompleteNotification.swift
 src/Models/WfmActivityPlanRunJobCompleteTopicActivityPlanJobException.swift
 src/Models/WfmActivityPlanRunJobCompleteTopicActivityPlanOccurrenceReference.swift
 src/Models/WfmActivityPlanRunJobCompleteTopicActivityPlanReference.swift
 src/Models/WfmActivityPlanRunJobCompleteTopicActivityPlanSessionReference.swift
 src/Models/WfmActivityPlanRunJobCompleteTopicErrorBody.swift
+src/Models/WfmActivityPlanRunJobCompleteTopicUserReference.swift
 src/Models/WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification.swift
 src/Models/WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationJobNotification.swift
 src/Models/WfmAdherenceExplanationJobCompleteTopicBusinessUnit.swift
@@ -15495,10 +15622,14 @@ src/Models/WfmAgentAdherenceExplanationChangedBusinessUnitTopicUserReference.swi
 src/Models/WfmAgentHistoricalAdherenceJobReference.swift
 src/Models/WfmAgentHistoricalAdherenceResponse.swift
 src/Models/WfmAgentHistoricalAdherenceResult.swift
+src/Models/WfmAgentManagementUnitScheduleChangedTopicAgentMuScheduleChangedNotification.swift
+src/Models/WfmAgentManagementUnitScheduleChangedTopicAgentMuScheduleVisibilityRange.swift
+src/Models/WfmAgentManagementUnitScheduleChangedTopicAgentMuUserScheduleChanged.swift
 src/Models/WfmAgentMuScheduleSearchCompleteTopicAgentMuScheduleSearchCompleteNotification.swift
 src/Models/WfmAgentMuScheduleSearchCompleteTopicErrorBody.swift
 src/Models/WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate.swift
 src/Models/WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification.swift
+src/Models/WfmAgentScheduleUpdateTopicAgentScheduleVisibilityRange.swift
 src/Models/WfmAgentScheduleUpdateTopicUserReference.swift
 src/Models/WfmAlternativeShiftJobCompleteEventV3AlternativeShiftJobCompleteNotification.swift
 src/Models/WfmAlternativeShiftJobCompleteEventV3ErrorBody.swift
@@ -15677,6 +15808,7 @@ src/Models/WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate.swift
 src/Models/WfmVersionedEntityMetadata.swift
 src/Models/WhatsAppAvailablePhoneNumberDetails.swift
 src/Models/WhatsAppAvailablePhoneNumberDetailsListing.swift
+src/Models/WhatsAppBusinessScopedId.swift
 src/Models/WhatsAppCallingConfigurationRequest.swift
 src/Models/WhatsAppCallingConfigurationResponse.swift
 src/Models/WhatsAppCampaignSchedule.swift

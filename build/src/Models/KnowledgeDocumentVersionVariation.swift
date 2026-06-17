@@ -33,13 +33,13 @@ public class KnowledgeDocumentVersionVariation: Codable {
     /** The name of the variation. */
     public var name: String?
     /** The content for the variation. */
-    public var body: DocumentBodyResponse?
+    public var body: DocumentBody?
     /** The URI for this object */
     public var selfUri: String?
     /** Reference to the document version to which the variation is associated with. */
     public var documentVersion: AddressableEntityRef?
 
-    public init(_id: String?, dateCreated: Date?, dateModified: Date?, contexts: [DocumentVariationContext]?, priority: Int?, name: String?, body: DocumentBodyResponse?, selfUri: String?, documentVersion: AddressableEntityRef?) {
+    public init(_id: String?, dateCreated: Date?, dateModified: Date?, contexts: [DocumentVariationContext]?, priority: Int?, name: String?, body: DocumentBody?, selfUri: String?, documentVersion: AddressableEntityRef?) {
         self._id = _id
         self.dateCreated = dateCreated
         self.dateModified = dateModified

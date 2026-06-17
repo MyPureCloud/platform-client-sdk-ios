@@ -27,6 +27,8 @@ public class UpdateWorkPlanBid: Codable {
 
 
 
+
+
     public enum Status: String, Codable { 
         case draft = "Draft"
         case locked = "Locked"
@@ -52,12 +54,14 @@ public class UpdateWorkPlanBid: Codable {
     public var agentRankingType: AgentRankingType?
     /** Ranking tiebreaker */
     public var rankingTiebreakerType: RankingTiebreakerType?
+    /** If true, all existing overrides, workplan rotations will be ended one day before effective date of this bid */
+    public var endOverridesAndRotations: Bool?
     /** The work plan fields visible to agents whenever work plan preferences are made */
     public var workPlanFieldsVisibleToAgents: ListWrapperAgentWorkPlanField?
     /** The state of the bid */
     public var status: Status?
 
-    public init(name: String?, forecast: BuShortTermForecastWeekReference?, bidWindowStartDate: Date?, bidWindowEndDate: Date?, effectiveDate: Date?, agentRankingType: AgentRankingType?, rankingTiebreakerType: RankingTiebreakerType?, workPlanFieldsVisibleToAgents: ListWrapperAgentWorkPlanField?, status: Status?) {
+    public init(name: String?, forecast: BuShortTermForecastWeekReference?, bidWindowStartDate: Date?, bidWindowEndDate: Date?, effectiveDate: Date?, agentRankingType: AgentRankingType?, rankingTiebreakerType: RankingTiebreakerType?, endOverridesAndRotations: Bool?, workPlanFieldsVisibleToAgents: ListWrapperAgentWorkPlanField?, status: Status?) {
         self.name = name
         self.forecast = forecast
         self.bidWindowStartDate = bidWindowStartDate
@@ -65,6 +69,7 @@ public class UpdateWorkPlanBid: Codable {
         self.effectiveDate = effectiveDate
         self.agentRankingType = agentRankingType
         self.rankingTiebreakerType = rankingTiebreakerType
+        self.endOverridesAndRotations = endOverridesAndRotations
         self.workPlanFieldsVisibleToAgents = workPlanFieldsVisibleToAgents
         self.status = status
     }

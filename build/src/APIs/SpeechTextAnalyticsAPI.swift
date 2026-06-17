@@ -910,7 +910,7 @@ open class SpeechTextAnalyticsAPI {
      - parameter dialect: (query) The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)
      - parameter transcriptionEngine: (query) Filter by transcription engine, If not provided, all transcription engines will be considered (optional)
      - parameter nextPage: (query) The key for listing the next page (optional)
-     - parameter pageSize: (query) The page size for the listing (optional)
+     - parameter pageSize: (query) The page size for the listing. Default is 500 per page. Note: organizations may store up to 1000 dictionary terms per dialect; use nextPage to paginate beyond the first page when listing a full dialect vocabulary. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getSpeechandtextanalyticsDictionaryfeedback(dialect: String? = nil, transcriptionEngine: TranscriptionEngine_getSpeechandtextanalyticsDictionaryfeedback? = nil, nextPage: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: DictionaryFeedbackEntityListing?,_ error: Error?) -> Void)) {
@@ -953,7 +953,8 @@ open class SpeechTextAnalyticsAPI {
     "boostValue" : 0.8008282,
     "modifiedBy" : "{}",
     "id" : "id",
-    "status" : "Active"
+    "status" : "Active",
+    "invalidReason" : "invalidReason"
   }, {
     "transcriptionEngine" : "Genesys",
     "dialect" : "en-US",
@@ -967,7 +968,8 @@ open class SpeechTextAnalyticsAPI {
     "boostValue" : 0.8008282,
     "modifiedBy" : "{}",
     "id" : "id",
-    "status" : "Active"
+    "status" : "Active",
+    "invalidReason" : "invalidReason"
   } ],
   "selfUri" : "selfUri",
   "pageSize" : 6,
@@ -977,7 +979,7 @@ open class SpeechTextAnalyticsAPI {
      - parameter dialect: (query) The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)
      - parameter transcriptionEngine: (query) Filter by transcription engine, If not provided, all transcription engines will be considered (optional)
      - parameter nextPage: (query) The key for listing the next page (optional)
-     - parameter pageSize: (query) The page size for the listing (optional)
+     - parameter pageSize: (query) The page size for the listing. Default is 500 per page. Note: organizations may store up to 1000 dictionary terms per dialect; use nextPage to paginate beyond the first page when listing a full dialect vocabulary. (optional)
 
      - returns: RequestBuilder<DictionaryFeedbackEntityListing> 
      */
@@ -1052,7 +1054,8 @@ open class SpeechTextAnalyticsAPI {
   "boostValue" : 0.8008282,
   "modifiedBy" : "{}",
   "id" : "id",
-  "status" : "Active"
+  "status" : "Active",
+  "invalidReason" : "invalidReason"
 }, statusCode=200}]
      
      - parameter dictionaryFeedbackId: (path) The Id of the Dictionary Feedback 
@@ -3242,7 +3245,8 @@ open class SpeechTextAnalyticsAPI {
   "boostValue" : 0.8008282,
   "modifiedBy" : "{}",
   "id" : "id",
-  "status" : "Active"
+  "status" : "Active",
+  "invalidReason" : "invalidReason"
 }, statusCode=201}]
      
      - parameter body: (body) The DictionaryFeedback to create 
@@ -3931,7 +3935,8 @@ open class SpeechTextAnalyticsAPI {
   "boostValue" : 0.8008282,
   "modifiedBy" : "{}",
   "id" : "id",
-  "status" : "Active"
+  "status" : "Active",
+  "invalidReason" : "invalidReason"
 }, statusCode=200}]
      
      - parameter dictionaryFeedbackId: (path) The Id of the Dictionary Feedback 

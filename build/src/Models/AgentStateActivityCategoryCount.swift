@@ -12,6 +12,7 @@ public class AgentStateActivityCategoryCount: Codable {
         case training = "Training"
         case unavailable = "Unavailable"
         case unscheduled = "Unscheduled"
+        case unknown = "Unknown"
     }
 
 

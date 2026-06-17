@@ -13,4 +13,4 @@ Disaster Recovery all numbers routing request body
 
 
 
-_PureCloudPlatformClientV2@196.0.0_
+_PureCloudPlatformClientV2@197.0.0_

@@ -224,6 +224,117 @@ open class WorkforceManagementAPI {
     
     
     /**
+     Delete a schedule bid
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementBusinessunitSchedulebid(businessUnitId: String, bidId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementBusinessunitSchedulebidWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a schedule bid
+     - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementBusinessunitSchedulebidWithRequestBuilder(businessUnitId: String, bidId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Delete a schedule bid group by bid group Id
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid associated with the bid groups 
+     - parameter bidGroupId: (path) Schedule Bid Group id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementBusinessunitSchedulebidGroup(businessUnitId: String, bidId: String, bidGroupId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementBusinessunitSchedulebidGroupWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a schedule bid group by bid group Id
+     - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid associated with the bid groups 
+     - parameter bidGroupId: (path) Schedule Bid Group id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementBusinessunitSchedulebidGroupWithRequestBuilder(businessUnitId: String, bidId: String, bidGroupId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let bidGroupIdPreEscape = "\(bidGroupId)"
+        let bidGroupIdPostEscape = bidGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidGroupId}", with: bidGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Cancel a scheduling run
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -4195,6 +4306,412 @@ open class WorkforceManagementAPI {
 
     
     
+    
+    
+    /**
+     Get a schedule bid
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulebid(businessUnitId: String, bidId: String, completion: @escaping ((_ data: ScheduleBid?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitSchedulebidWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId)
+        requestBuilder.execute { (response: Response<ScheduleBid>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a schedule bid
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentRankingType" : "HireDate",
+  "weeksToSchedule" : 0,
+  "metadata" : "{}",
+  "rankingTiebreakerType" : "HireDate",
+  "bidWindowStartDate" : "2000-01-23",
+  "endDate" : "2000-01-23",
+  "selfUri" : "https://openapi-generator.tech",
+  "forecast" : "{}",
+  "bidType" : "WorkPlanBid",
+  "bidWindowEndDate" : "2000-01-23",
+  "endOverridesAndRotations" : true,
+  "name" : "name",
+  "id" : "id",
+  "publishedDate" : "2000-01-23T04:56:07.000+00:00",
+  "effectiveDate" : "2000-01-23",
+  "status" : "Draft"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid 
+
+     - returns: RequestBuilder<ScheduleBid> 
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulebidWithRequestBuilder(businessUnitId: String, bidId: String) -> RequestBuilder<ScheduleBid> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScheduleBid>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get a schedule bid group
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid associated with the bid groups 
+     - parameter bidGroupId: (path) Schedule Bid Group id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulebidGroup(businessUnitId: String, bidId: String, bidGroupId: String, completion: @escaping ((_ data: ScheduleBidGroupResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitSchedulebidGroupWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId)
+        requestBuilder.execute { (response: Response<ScheduleBidGroupResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a schedule bid group
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "scheduleBidGroup" : "{}",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid associated with the bid groups 
+     - parameter bidGroupId: (path) Schedule Bid Group id 
+
+     - returns: RequestBuilder<ScheduleBidGroupResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulebidGroupWithRequestBuilder(businessUnitId: String, bidId: String, bidGroupId: String) -> RequestBuilder<ScheduleBidGroupResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let bidGroupIdPreEscape = "\(bidGroupId)"
+        let bidGroupIdPostEscape = bidGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidGroupId}", with: bidGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScheduleBidGroupResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum Expand_getWorkforcemanagementBusinessunitSchedulebidGroupPreferences: String { 
+        case agentsschedulebidpreferencesAgentschedulebidpreferencepriorities = "agentsScheduleBidPreferences.agentScheduleBidPreferencePriorities"
+    }
+    
+    /**
+     Get agents schedule bid preferences for a bid group
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid associated with the bid groups 
+     - parameter bidGroupId: (path) The ID of the schedule bid group 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter expand: (query) Include to fetch agents&#39; preferences with priorities (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulebidGroupPreferences(businessUnitId: String, bidId: String, bidGroupId: String, forceDownloadService: Bool? = nil, expand: [String]? = nil, completion: @escaping ((_ data: AdminAgentScheduleBidPreferenceResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitSchedulebidGroupPreferencesWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId, forceDownloadService: forceDownloadService, expand: expand)
+        requestBuilder.execute { (response: Response<AdminAgentScheduleBidPreferenceResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get agents schedule bid preferences for a bid group
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}/preferences
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "downloadUrl" : "downloadUrl"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid associated with the bid groups 
+     - parameter bidGroupId: (path) The ID of the schedule bid group 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter expand: (query) Include to fetch agents&#39; preferences with priorities (optional)
+
+     - returns: RequestBuilder<AdminAgentScheduleBidPreferenceResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulebidGroupPreferencesWithRequestBuilder(businessUnitId: String, bidId: String, bidGroupId: String, forceDownloadService: Bool? = nil, expand: [String]? = nil) -> RequestBuilder<AdminAgentScheduleBidPreferenceResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}/preferences"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let bidGroupIdPreEscape = "\(bidGroupId)"
+        let bidGroupIdPostEscape = bidGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidGroupId}", with: bidGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceDownloadService": forceDownloadService, 
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<AdminAgentScheduleBidPreferenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get summary of bid groups that belong to a schedule bid
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid associated with the bid groups 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulebidGroupsSummary(businessUnitId: String, bidId: String, completion: @escaping ((_ data: ScheduleBidGroupSummaryList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitSchedulebidGroupsSummaryWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId)
+        requestBuilder.execute { (response: Response<ScheduleBidGroupSummaryList>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get summary of bid groups that belong to a schedule bid
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/summary
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "scheduleBidGroupSummaries" : [ {
+    "scheduleSetError" : "{}",
+    "managementUnit" : "{}",
+    "workPlanCount" : 6,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "workPlanRotationCount" : 1,
+    "agentCount" : 0,
+    "planningGroupCount" : 5
+  }, {
+    "scheduleSetError" : "{}",
+    "managementUnit" : "{}",
+    "workPlanCount" : 6,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "workPlanRotationCount" : 1,
+    "agentCount" : 0,
+    "planningGroupCount" : 5
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid associated with the bid groups 
+
+     - returns: RequestBuilder<ScheduleBidGroupSummaryList> 
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulebidGroupsSummaryWithRequestBuilder(businessUnitId: String, bidId: String) -> RequestBuilder<ScheduleBidGroupSummaryList> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/summary"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScheduleBidGroupSummaryList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get list of schedule bids
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulebids(businessUnitId: String, completion: @escaping ((_ data: ScheduleBidListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitSchedulebidsWithRequestBuilder(businessUnitId: businessUnitId)
+        requestBuilder.execute { (response: Response<ScheduleBidListResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get list of schedule bids
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "agentRankingType" : "HireDate",
+    "weeksToSchedule" : 0,
+    "metadata" : "{}",
+    "rankingTiebreakerType" : "HireDate",
+    "bidWindowStartDate" : "2000-01-23",
+    "endDate" : "2000-01-23",
+    "selfUri" : "https://openapi-generator.tech",
+    "forecast" : "{}",
+    "bidType" : "WorkPlanBid",
+    "bidWindowEndDate" : "2000-01-23",
+    "endOverridesAndRotations" : true,
+    "name" : "name",
+    "id" : "id",
+    "publishedDate" : "2000-01-23T04:56:07.000+00:00",
+    "effectiveDate" : "2000-01-23",
+    "status" : "Draft"
+  }, {
+    "agentRankingType" : "HireDate",
+    "weeksToSchedule" : 0,
+    "metadata" : "{}",
+    "rankingTiebreakerType" : "HireDate",
+    "bidWindowStartDate" : "2000-01-23",
+    "endDate" : "2000-01-23",
+    "selfUri" : "https://openapi-generator.tech",
+    "forecast" : "{}",
+    "bidType" : "WorkPlanBid",
+    "bidWindowEndDate" : "2000-01-23",
+    "endOverridesAndRotations" : true,
+    "name" : "name",
+    "id" : "id",
+    "publishedDate" : "2000-01-23T04:56:07.000+00:00",
+    "effectiveDate" : "2000-01-23",
+    "status" : "Draft"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+
+     - returns: RequestBuilder<ScheduleBidListResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulebidsWithRequestBuilder(businessUnitId: String) -> RequestBuilder<ScheduleBidListResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScheduleBidListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Get scheduler settings for a business unit
      
@@ -7278,7 +7795,9 @@ open class WorkforceManagementAPI {
   "bidWindowStartDate" : "2000-01-23",
   "selfUri" : "https://openapi-generator.tech",
   "forecast" : "{}",
+  "bidType" : "WorkPlanBid",
   "bidWindowEndDate" : "2000-01-23",
+  "endOverridesAndRotations" : true,
   "workPlanFieldsVisibleToAgents" : [ "Name", "Name" ],
   "name" : "name",
   "id" : "id",
@@ -7594,7 +8113,9 @@ open class WorkforceManagementAPI {
     "bidWindowStartDate" : "2000-01-23",
     "selfUri" : "https://openapi-generator.tech",
     "forecast" : "{}",
+    "bidType" : "WorkPlanBid",
     "bidWindowEndDate" : "2000-01-23",
+    "endOverridesAndRotations" : true,
     "workPlanFieldsVisibleToAgents" : [ "Name", "Name" ],
     "name" : "name",
     "id" : "id",
@@ -7608,7 +8129,9 @@ open class WorkforceManagementAPI {
     "bidWindowStartDate" : "2000-01-23",
     "selfUri" : "https://openapi-generator.tech",
     "forecast" : "{}",
+    "bidType" : "WorkPlanBid",
     "bidWindowEndDate" : "2000-01-23",
+    "endOverridesAndRotations" : true,
     "workPlanFieldsVisibleToAgents" : [ "Name", "Name" ],
     "name" : "name",
     "id" : "id",
@@ -11081,6 +11604,197 @@ open class WorkforceManagementAPI {
     
     
     /**
+     Gets an agent's schedule bidding preference
+     
+     - parameter bidId: (path) The ID of the schedule bid 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementSchedulebidPreference(bidId: String, completion: @escaping ((_ data: AgentScheduleBiddingPreferenceResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementSchedulebidPreferenceWithRequestBuilder(bidId: bidId)
+        requestBuilder.execute { (response: Response<AgentScheduleBiddingPreferenceResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets an agent's schedule bidding preference
+     - GET /api/v2/workforcemanagement/schedulebids/{bidId}/preference
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "submitted" : true,
+  "agentScheduleBidPreferences" : [ {
+    "scheduleSetId" : "scheduleSetId",
+    "priority" : 0
+  }, {
+    "scheduleSetId" : "scheduleSetId",
+    "priority" : 0
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "overrideReason" : "UnableToBid",
+  "assignedScheduleSetId" : "assignedScheduleSetId",
+  "overriddenScheduleSetId" : "overriddenScheduleSetId",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter bidId: (path) The ID of the schedule bid 
+
+     - returns: RequestBuilder<AgentScheduleBiddingPreferenceResponse> 
+     */
+    open class func getWorkforcemanagementSchedulebidPreferenceWithRequestBuilder(bidId: String) -> RequestBuilder<AgentScheduleBiddingPreferenceResponse> {        
+        var path = "/api/v2/workforcemanagement/schedulebids/{bidId}/preference"
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentScheduleBiddingPreferenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Gets an agent's schedule sets for a bid
+     
+     - parameter bidId: (path) The ID of the schedule bid 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementSchedulebidSchedulesets(bidId: String, completion: @escaping ((_ data: AgentScheduleBidScheduleSetResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementSchedulebidSchedulesetsWithRequestBuilder(bidId: bidId)
+        requestBuilder.execute { (response: Response<AgentScheduleBidScheduleSetResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets an agent's schedule sets for a bid
+     - GET /api/v2/workforcemanagement/schedulebids/{bidId}/schedulesets
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadTemplate" : "{}",
+  "downloadUrl" : "downloadUrl"
+}, statusCode=200}]
+     
+     - parameter bidId: (path) The ID of the schedule bid 
+
+     - returns: RequestBuilder<AgentScheduleBidScheduleSetResponse> 
+     */
+    open class func getWorkforcemanagementSchedulebidSchedulesetsWithRequestBuilder(bidId: String) -> RequestBuilder<AgentScheduleBidScheduleSetResponse> {        
+        var path = "/api/v2/workforcemanagement/schedulebids/{bidId}/schedulesets"
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentScheduleBidScheduleSetResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Gets the list of schedule bids that belong to an agent. It will fetch an open bid or upcoming bid or a bid that is closed recently
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementSchedulebids(completion: @escaping ((_ data: AgentScheduleBids?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementSchedulebidsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<AgentScheduleBids>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets the list of schedule bids that belong to an agent. It will fetch an open bid or upcoming bid or a bid that is closed recently
+     - GET /api/v2/workforcemanagement/schedulebids
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentScheduleBids" : [ {
+    "bidWindowEndDate" : "2000-01-23",
+    "bidWindowStartDate" : "2000-01-23",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "effectiveDate" : "2000-01-23",
+    "status" : "Draft",
+    "bidType" : "WorkPlanBid"
+  }, {
+    "bidWindowEndDate" : "2000-01-23",
+    "bidWindowStartDate" : "2000-01-23",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "effectiveDate" : "2000-01-23",
+    "status" : "Draft",
+    "bidType" : "WorkPlanBid"
+  } ],
+  "businessUnit" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<AgentScheduleBids> 
+     */
+    open class func getWorkforcemanagementSchedulebidsWithRequestBuilder() -> RequestBuilder<AgentScheduleBids> {        
+        let path = "/api/v2/workforcemanagement/schedulebids"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentScheduleBids>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Get status of the scheduling job
      
      - parameter jobId: (path) The id of the scheduling job 
@@ -12486,7 +13200,8 @@ open class WorkforceManagementAPI {
     "name" : "name",
     "id" : "id",
     "effectiveDate" : "2000-01-23",
-    "status" : "Draft"
+    "status" : "Draft",
+    "bidType" : "WorkPlanBid"
   }, {
     "bidWindowEndDate" : "2000-01-23",
     "workPlanFieldsVisibleToAgents" : [ "Name", "Name" ],
@@ -12495,7 +13210,8 @@ open class WorkforceManagementAPI {
     "name" : "name",
     "id" : "id",
     "effectiveDate" : "2000-01-23",
-    "status" : "Draft"
+    "status" : "Draft",
+    "bidType" : "WorkPlanBid"
   } ],
   "businessUnit" : "{}",
   "selfUri" : "https://openapi-generator.tech",
@@ -13490,6 +14206,237 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
+    /**
+     Update a schedule bid
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid 
+     - parameter body: (body) The schedule bid to be updated 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitSchedulebid(businessUnitId: String, bidId: String, body: UpdateScheduleBid, completion: @escaping ((_ data: ScheduleBid?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitSchedulebidWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, body: body)
+        requestBuilder.execute { (response: Response<ScheduleBid>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a schedule bid
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentRankingType" : "HireDate",
+  "weeksToSchedule" : 0,
+  "metadata" : "{}",
+  "rankingTiebreakerType" : "HireDate",
+  "bidWindowStartDate" : "2000-01-23",
+  "endDate" : "2000-01-23",
+  "selfUri" : "https://openapi-generator.tech",
+  "forecast" : "{}",
+  "bidType" : "WorkPlanBid",
+  "bidWindowEndDate" : "2000-01-23",
+  "endOverridesAndRotations" : true,
+  "name" : "name",
+  "id" : "id",
+  "publishedDate" : "2000-01-23T04:56:07.000+00:00",
+  "effectiveDate" : "2000-01-23",
+  "status" : "Draft"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid 
+     - parameter body: (body) The schedule bid to be updated 
+
+     - returns: RequestBuilder<ScheduleBid> 
+     */
+    open class func patchWorkforcemanagementBusinessunitSchedulebidWithRequestBuilder(businessUnitId: String, bidId: String, body: UpdateScheduleBid) -> RequestBuilder<ScheduleBid> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScheduleBid>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Update a schedule bid group by bid group Id
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid associated with the bid groups 
+     - parameter bidGroupId: (path) Schedule Bid Group id 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitSchedulebidGroup(businessUnitId: String, bidId: String, bidGroupId: String, body: ScheduleBidGroupUpdate, completion: @escaping ((_ data: ScheduleBidGroupResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitSchedulebidGroupWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId, body: body)
+        requestBuilder.execute { (response: Response<ScheduleBidGroupResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a schedule bid group by bid group Id
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "scheduleBidGroup" : "{}",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid associated with the bid groups 
+     - parameter bidGroupId: (path) Schedule Bid Group id 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<ScheduleBidGroupResponse> 
+     */
+    open class func patchWorkforcemanagementBusinessunitSchedulebidGroupWithRequestBuilder(businessUnitId: String, bidId: String, bidGroupId: String, body: ScheduleBidGroupUpdate) -> RequestBuilder<ScheduleBidGroupResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let bidGroupIdPreEscape = "\(bidGroupId)"
+        let bidGroupIdPostEscape = bidGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidGroupId}", with: bidGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScheduleBidGroupResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Overrides the assigned schedule bid for the specified agents
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid associated with the bid groups 
+     - parameter bidGroupId: (path) The ID of the schedule bid group 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitSchedulebidGroupPreferences(businessUnitId: String, bidId: String, bidGroupId: String, body: AgentsBidAssignedScheduleSetOverrideRequest, completion: @escaping ((_ data: AdminAgentScheduleBidPreferenceResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitSchedulebidGroupPreferencesWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId, body: body)
+        requestBuilder.execute { (response: Response<AdminAgentScheduleBidPreferenceResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Overrides the assigned schedule bid for the specified agents
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}/preferences
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "downloadUrl" : "downloadUrl"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid associated with the bid groups 
+     - parameter bidGroupId: (path) The ID of the schedule bid group 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<AdminAgentScheduleBidPreferenceResponse> 
+     */
+    open class func patchWorkforcemanagementBusinessunitSchedulebidGroupPreferencesWithRequestBuilder(businessUnitId: String, bidId: String, bidGroupId: String, body: AgentsBidAssignedScheduleSetOverrideRequest) -> RequestBuilder<AdminAgentScheduleBidPreferenceResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups/{bidGroupId}/preferences"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let bidGroupIdPreEscape = "\(bidGroupId)"
+        let bidGroupIdPostEscape = bidGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidGroupId}", with: bidGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdminAgentScheduleBidPreferenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     /**
      Update scheduler settings for a business unit
      
@@ -13897,7 +14844,9 @@ open class WorkforceManagementAPI {
   "bidWindowStartDate" : "2000-01-23",
   "selfUri" : "https://openapi-generator.tech",
   "forecast" : "{}",
+  "bidType" : "WorkPlanBid",
   "bidWindowEndDate" : "2000-01-23",
+  "endOverridesAndRotations" : true,
   "workPlanFieldsVisibleToAgents" : [ "Name", "Name" ],
   "name" : "name",
   "id" : "id",
@@ -18614,6 +19563,305 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
+    /**
+     Copy a schedule bid
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid to copy 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitSchedulebidCopy(businessUnitId: String, bidId: String, body: CopyScheduleBid, completion: @escaping ((_ data: ScheduleBid?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitSchedulebidCopyWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, body: body)
+        requestBuilder.execute { (response: Response<ScheduleBid>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Copy a schedule bid
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/copy
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentRankingType" : "HireDate",
+  "weeksToSchedule" : 0,
+  "metadata" : "{}",
+  "rankingTiebreakerType" : "HireDate",
+  "bidWindowStartDate" : "2000-01-23",
+  "endDate" : "2000-01-23",
+  "selfUri" : "https://openapi-generator.tech",
+  "forecast" : "{}",
+  "bidType" : "WorkPlanBid",
+  "bidWindowEndDate" : "2000-01-23",
+  "endOverridesAndRotations" : true,
+  "name" : "name",
+  "id" : "id",
+  "publishedDate" : "2000-01-23T04:56:07.000+00:00",
+  "effectiveDate" : "2000-01-23",
+  "status" : "Draft"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid to copy 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<ScheduleBid> 
+     */
+    open class func postWorkforcemanagementBusinessunitSchedulebidCopyWithRequestBuilder(businessUnitId: String, bidId: String, body: CopyScheduleBid) -> RequestBuilder<ScheduleBid> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/copy"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScheduleBid>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Add a bid group in a given schedule bid
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid associated with the bid groups 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitSchedulebidGroups(businessUnitId: String, bidId: String, body: ScheduleBidGroupCreate, completion: @escaping ((_ data: ScheduleBidGroupResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitSchedulebidGroupsWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, body: body)
+        requestBuilder.execute { (response: Response<ScheduleBidGroupResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add a bid group in a given schedule bid
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "scheduleBidGroup" : "{}",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the schedule bid associated with the bid groups 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<ScheduleBidGroupResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitSchedulebidGroupsWithRequestBuilder(businessUnitId: String, bidId: String, body: ScheduleBidGroupCreate) -> RequestBuilder<ScheduleBidGroupResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/{bidId}/groups"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScheduleBidGroupResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create a new schedule bid
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The schedule bid to be created 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitSchedulebids(businessUnitId: String, body: CreateScheduleBid, completion: @escaping ((_ data: ScheduleBid?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitSchedulebidsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<ScheduleBid>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a new schedule bid
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentRankingType" : "HireDate",
+  "weeksToSchedule" : 0,
+  "metadata" : "{}",
+  "rankingTiebreakerType" : "HireDate",
+  "bidWindowStartDate" : "2000-01-23",
+  "endDate" : "2000-01-23",
+  "selfUri" : "https://openapi-generator.tech",
+  "forecast" : "{}",
+  "bidType" : "WorkPlanBid",
+  "bidWindowEndDate" : "2000-01-23",
+  "endOverridesAndRotations" : true,
+  "name" : "name",
+  "id" : "id",
+  "publishedDate" : "2000-01-23T04:56:07.000+00:00",
+  "effectiveDate" : "2000-01-23",
+  "status" : "Draft"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The schedule bid to be created 
+
+     - returns: RequestBuilder<ScheduleBid> 
+     */
+    open class func postWorkforcemanagementBusinessunitSchedulebidsWithRequestBuilder(businessUnitId: String, body: CreateScheduleBid) -> RequestBuilder<ScheduleBid> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScheduleBid>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Fetch all the agents with effective schedule set for the given BU
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitSchedulebidsEffectiveschedulesets(businessUnitId: String, body: QueryEffectiveScheduleSetsRequest, completion: @escaping ((_ data: AgentsEffectiveScheduleSetResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitSchedulebidsEffectiveschedulesetsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<AgentsEffectiveScheduleSetResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Fetch all the agents with effective schedule set for the given BU
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/effectiveschedulesets
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "effectiveBids" : [ {
+    "downloadTemplate" : "{}",
+    "endDate" : "2000-01-23",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "downloadUrl" : "downloadUrl",
+    "id" : "id",
+    "effectiveDate" : "2000-01-23"
+  }, {
+    "downloadTemplate" : "{}",
+    "endDate" : "2000-01-23",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "downloadUrl" : "downloadUrl",
+    "id" : "id",
+    "effectiveDate" : "2000-01-23"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<AgentsEffectiveScheduleSetResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitSchedulebidsEffectiveschedulesetsWithRequestBuilder(businessUnitId: String, body: QueryEffectiveScheduleSetsRequest) -> RequestBuilder<AgentsEffectiveScheduleSetResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/schedulebids/effectiveschedulesets"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentsEffectiveScheduleSetResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     /**
      Adds a new service goal template
      
@@ -20845,7 +22093,9 @@ open class WorkforceManagementAPI {
   "bidWindowStartDate" : "2000-01-23",
   "selfUri" : "https://openapi-generator.tech",
   "forecast" : "{}",
+  "bidType" : "WorkPlanBid",
   "bidWindowEndDate" : "2000-01-23",
+  "endOverridesAndRotations" : true,
   "workPlanFieldsVisibleToAgents" : [ "Name", "Name" ],
   "name" : "name",
   "id" : "id",
@@ -20989,7 +22239,9 @@ open class WorkforceManagementAPI {
   "bidWindowStartDate" : "2000-01-23",
   "selfUri" : "https://openapi-generator.tech",
   "forecast" : "{}",
+  "bidType" : "WorkPlanBid",
   "bidWindowEndDate" : "2000-01-23",
+  "endOverridesAndRotations" : true,
   "workPlanFieldsVisibleToAgents" : [ "Name", "Name" ],
   "name" : "name",
   "id" : "id",
@@ -25090,6 +26342,77 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffLimit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update an agent's schedule set preference
+     
+     - parameter bidId: (path) The ID of the schedule bid 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putWorkforcemanagementSchedulebidPreference(bidId: String, body: UpdateAgentScheduleBiddingPreference, completion: @escaping ((_ data: AgentScheduleBiddingPreferenceResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = putWorkforcemanagementSchedulebidPreferenceWithRequestBuilder(bidId: bidId, body: body)
+        requestBuilder.execute { (response: Response<AgentScheduleBiddingPreferenceResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an agent's schedule set preference
+     - PUT /api/v2/workforcemanagement/schedulebids/{bidId}/preference
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "submitted" : true,
+  "agentScheduleBidPreferences" : [ {
+    "scheduleSetId" : "scheduleSetId",
+    "priority" : 0
+  }, {
+    "scheduleSetId" : "scheduleSetId",
+    "priority" : 0
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "overrideReason" : "UnableToBid",
+  "assignedScheduleSetId" : "assignedScheduleSetId",
+  "overriddenScheduleSetId" : "overriddenScheduleSetId",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter bidId: (path) The ID of the schedule bid 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<AgentScheduleBiddingPreferenceResponse> 
+     */
+    open class func putWorkforcemanagementSchedulebidPreferenceWithRequestBuilder(bidId: String, body: UpdateAgentScheduleBiddingPreference) -> RequestBuilder<AgentScheduleBiddingPreferenceResponse> {        
+        var path = "/api/v2/workforcemanagement/schedulebids/{bidId}/preference"
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentScheduleBiddingPreferenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

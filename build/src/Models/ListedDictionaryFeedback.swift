@@ -32,7 +32,10 @@ public class ListedDictionaryFeedback: Codable {
         case pending = "Pending"
         case failed = "Failed"
         case saved = "Saved"
+        case invalid = "Invalid"
     }
+
+
 
 
 
@@ -58,14 +61,16 @@ public class ListedDictionaryFeedback: Codable {
     public var modifiedBy: UserReference?
     /** The transcription engine for the dictionary feedback. Only returned when GenesysExtended feature is enabled. */
     public var transcriptionEngine: TranscriptionEngine?
-    /** The status of the dictionary feedback. Only returned when GenesysExtended feature is enabled. */
+    /** The status of the dictionary feedback */
     public var status: Status?
-    /** The display name for the dictionary feedback. Only returned when GenesysExtended feature is enabled. This field is only valid for Extended Services transcription engine. */
+    /** The reason the dictionary feedback is invalid */
+    public var invalidReason: String?
+    /** The display name for the dictionary feedback. */
     public var displayAs: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, term: String?, dialect: String?, boostValue: Float?, source: Source?, dateCreated: Date?, createdBy: UserReference?, dateModified: Date?, modifiedBy: UserReference?, transcriptionEngine: TranscriptionEngine?, status: Status?, displayAs: String?, selfUri: String?) {
+    public init(_id: String?, term: String?, dialect: String?, boostValue: Float?, source: Source?, dateCreated: Date?, createdBy: UserReference?, dateModified: Date?, modifiedBy: UserReference?, transcriptionEngine: TranscriptionEngine?, status: Status?, invalidReason: String?, displayAs: String?, selfUri: String?) {
         self._id = _id
         self.term = term
         self.dialect = dialect
@@ -77,6 +82,7 @@ public class ListedDictionaryFeedback: Codable {
         self.modifiedBy = modifiedBy
         self.transcriptionEngine = transcriptionEngine
         self.status = status
+        self.invalidReason = invalidReason
         self.displayAs = displayAs
         self.selfUri = selfUri
     }
@@ -93,6 +99,7 @@ public class ListedDictionaryFeedback: Codable {
         case modifiedBy
         case transcriptionEngine
         case status
+        case invalidReason
         case displayAs
         case selfUri
     }

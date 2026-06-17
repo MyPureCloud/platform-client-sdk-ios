@@ -9,18 +9,25 @@ public class CaseManagementAsyncAggregationQuery: Codable {
 
 
     public enum GroupBy: String, Codable { 
+        case associationtype = "associationType"
         case caseid = "caseId"
         case caseplanid = "caseplanId"
+        case conversationid = "conversationId"
         case customerintentid = "customerIntentId"
         case divisionid = "divisionId"
         case ownerid = "ownerId"
         case priority = "priority"
+        case stageid = "stageId"
         case status = "status"
+        case stepid = "stepId"
+        case workitemid = "workitemId"
     }
 
 
 
     public enum Metrics: String, Codable { 
+        case ncaseassociationscreated = "nCaseAssociationsCreated"
+        case ncasesdeleted = "nCasesDeleted"
         case ncasesopened = "nCasesOpened"
         case ncasesoversla = "nCasesOverSla"
         case ncasespurged = "nCasesPurged"

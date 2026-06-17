@@ -7,9 +7,9 @@ public class WfmActivityPlanJobCompleteTopicActivityPlanSessionReference: Codabl
 
 
     public var _id: String?
-    public var users: [String]?
+    public var users: [WfmActivityPlanJobCompleteTopicUserReference]?
 
-    public init(_id: String?, users: [String]?) {
+    public init(_id: String?, users: [WfmActivityPlanJobCompleteTopicUserReference]?) {
         self._id = _id
         self.users = users
     }

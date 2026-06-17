@@ -14,6 +14,8 @@ public class OrgAuthSettings: Codable {
 
 
 
+
+
     /** Indicates whether multi-factor authentication is required. */
     public var multifactorAuthenticationRequired: Bool?
     /** Indicates whether the domain allowlist is enabled. */
@@ -26,14 +28,17 @@ public class OrgAuthSettings: Codable {
     public var passwordRequirements: PasswordRequirements?
     /** The list of exempt apis from inactivity timeout. */
     public var inactivityTimeoutExclusions: [String]?
+    /** Indicates whether universal logout is enabled for the organization. */
+    public var universalLogout: Bool?
 
-    public init(multifactorAuthenticationRequired: Bool?, domainAllowlistEnabled: Bool?, domainAllowlist: [String]?, ipAddressAllowlist: [String]?, passwordRequirements: PasswordRequirements?, inactivityTimeoutExclusions: [String]?) {
+    public init(multifactorAuthenticationRequired: Bool?, domainAllowlistEnabled: Bool?, domainAllowlist: [String]?, ipAddressAllowlist: [String]?, passwordRequirements: PasswordRequirements?, inactivityTimeoutExclusions: [String]?, universalLogout: Bool?) {
         self.multifactorAuthenticationRequired = multifactorAuthenticationRequired
         self.domainAllowlistEnabled = domainAllowlistEnabled
         self.domainAllowlist = domainAllowlist
         self.ipAddressAllowlist = ipAddressAllowlist
         self.passwordRequirements = passwordRequirements
         self.inactivityTimeoutExclusions = inactivityTimeoutExclusions
+        self.universalLogout = universalLogout
     }
 
 

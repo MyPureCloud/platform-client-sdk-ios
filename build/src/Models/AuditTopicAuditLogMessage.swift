@@ -73,6 +73,9 @@ public class AuditTopicAuditLogMessage: Codable {
         case socialEscalationRules = "SocialEscalationRules"
         case alerting = "Alerting"
         case assistants = "Assistants"
+        case anomalyDetection = "AnomalyDetection"
+        case conversations = "Conversations"
+        case copilot = "Copilot"
     }
 
 
@@ -213,6 +216,10 @@ public class AuditTopicAuditLogMessage: Codable {
         case initiate = "Initiate"
         case reverseManually = "ReverseManually"
         case calculate = "Calculate"
+        case getAllResults = "GetAllResults"
+        case getAllResultsDownload = "GetAllResultsDownload"
+        case getChartResults = "GetChartResults"
+        case getChartResultsDownload = "GetChartResultsDownload"
         case provisioned = "Provisioned"
         case updateAborted = "UpdateAborted"
         case edit = "Edit"
@@ -331,6 +338,7 @@ public class AuditTopicAuditLogMessage: Codable {
         case scheduleSetBid = "ScheduleSetBid"
         case scheduleSetBidGroup = "ScheduleSetBidGroup"
         case opportunity = "Opportunity"
+        case decisionMetrics = "DecisionMetrics"
         case trigger = "Trigger"
         case response = "Response"
         case responseLibrary = "ResponseLibrary"
@@ -398,6 +406,7 @@ public class AuditTopicAuditLogMessage: Codable {
         case analyticsReportingSettings = "AnalyticsReportingSettings"
         case customCalculations = "CustomCalculations"
         case savedViews = "SavedViews"
+        case analyticsLakehouseSettings = "AnalyticsLakehouseSettings"
         case scheduledExports = "ScheduledExports"
         case exports = "Exports"
         case exportPdfTemplates = "ExportPdfTemplates"
@@ -485,6 +494,12 @@ public class AuditTopicAuditLogMessage: Codable {
         case socialMediaMessage = "SocialMediaMessage"
         case assistant = "Assistant"
         case assistantQueue = "AssistantQueue"
+        case queueAnomaly = "QueueAnomaly"
+        case monitoredQueue = "MonitoredQueue"
+        case anomalyDetectionSettings = "AnomalyDetectionSettings"
+        case conversationAccessAttributes = "ConversationAccessAttributes"
+        case settings = "Settings"
+        case agent = "Agent"
     }
 
 
