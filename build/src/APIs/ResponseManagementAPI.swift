@@ -362,6 +362,7 @@ open class ResponseManagementAPI {
     "name" : "name",
     "id" : "id"
   } ],
+  "appleInvitation" : "{}",
   "version" : 0,
   "responseType" : "MessagingTemplate",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -618,6 +619,7 @@ open class ResponseManagementAPI {
       "name" : "name",
       "id" : "id"
     } ],
+    "appleInvitation" : "{}",
     "version" : 0,
     "responseType" : "MessagingTemplate",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -668,6 +670,7 @@ open class ResponseManagementAPI {
       "name" : "name",
       "id" : "id"
     } ],
+    "appleInvitation" : "{}",
     "version" : 0,
     "responseType" : "MessagingTemplate",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -1281,6 +1284,7 @@ open class ResponseManagementAPI {
     "name" : "name",
     "id" : "id"
   } ],
+  "appleInvitation" : "{}",
   "version" : 0,
   "responseType" : "MessagingTemplate",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -1515,6 +1519,7 @@ open class ResponseManagementAPI {
     "name" : "name",
     "id" : "id"
   } ],
+  "appleInvitation" : "{}",
   "version" : 0,
   "responseType" : "MessagingTemplate",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",

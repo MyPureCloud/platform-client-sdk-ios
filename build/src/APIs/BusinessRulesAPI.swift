@@ -356,17 +356,18 @@ open class BusinessRulesAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : "{}",
-  "datePublished" : "2000-01-23T04:56:07.000+00:00",
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "latestVersionStatus" : "Draft",
   "publishedContract" : "{}",
   "columns" : "{}",
   "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "id" : "id",
   "published" : "{}",
+  "division" : "{}",
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
   "latest" : "{}"
 }, statusCode=200}]
      
@@ -1170,30 +1171,32 @@ open class BusinessRulesAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "division" : "{}",
-    "datePublished" : "2000-01-23T04:56:07.000+00:00",
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "latestVersionStatus" : "Draft",
     "publishedContract" : "{}",
     "columns" : "{}",
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "id" : "id",
     "published" : "{}",
+    "division" : "{}",
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "id" : "id",
     "latest" : "{}"
   }, {
-    "division" : "{}",
-    "datePublished" : "2000-01-23T04:56:07.000+00:00",
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "latestVersionStatus" : "Draft",
     "publishedContract" : "{}",
     "columns" : "{}",
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "id" : "id",
     "published" : "{}",
+    "division" : "{}",
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "id" : "id",
     "latest" : "{}"
   } ],
   "selfUri" : "selfUri",
@@ -1283,30 +1286,32 @@ open class BusinessRulesAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "division" : "{}",
-    "datePublished" : "2000-01-23T04:56:07.000+00:00",
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "latestVersionStatus" : "Draft",
     "publishedContract" : "{}",
     "columns" : "{}",
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "id" : "id",
     "published" : "{}",
+    "division" : "{}",
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "id" : "id",
     "latest" : "{}"
   }, {
-    "division" : "{}",
-    "datePublished" : "2000-01-23T04:56:07.000+00:00",
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "latestVersionStatus" : "Draft",
     "publishedContract" : "{}",
     "columns" : "{}",
     "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "id" : "id",
     "published" : "{}",
+    "division" : "{}",
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "id" : "id",
     "latest" : "{}"
   } ],
   "selfUri" : "selfUri",
@@ -1653,17 +1658,18 @@ open class BusinessRulesAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : "{}",
-  "datePublished" : "2000-01-23T04:56:07.000+00:00",
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "latestVersionStatus" : "Draft",
   "publishedContract" : "{}",
   "columns" : "{}",
   "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "id" : "id",
   "published" : "{}",
+  "division" : "{}",
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
   "latest" : "{}"
 }, statusCode=200}]
      

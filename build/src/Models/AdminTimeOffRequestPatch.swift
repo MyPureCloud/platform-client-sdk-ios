@@ -26,6 +26,10 @@ public class AdminTimeOffRequestPatch: Codable {
 
 
 
+
+
+
+
     /** The status of this time off request */
     public var status: Status?
     /** The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category */
@@ -36,6 +40,10 @@ public class AdminTimeOffRequestPatch: Codable {
     public var notes: String?
     /** A set of dates in yyyy-MM-dd format. Should be interpreted in the management unit's configured time zone */
     public var fullDayManagementUnitDates: [String]?
+    /** Earliest start offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available */
+    public var fullDayEarliestStartOffsetMinutes: ListWrapperInteger?
+    /** Latest end offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available */
+    public var fullDayLatestEndOffsetMinutes: ListWrapperInteger?
     /** A set of start date-times in ISO-8601 format for partial day requests */
     public var partialDayStartDateTimes: [Date]?
     /** The daily duration of this time off request in minutes */
@@ -47,12 +55,14 @@ public class AdminTimeOffRequestPatch: Codable {
     /** Version metadata for the time off request */
     public var metadata: WfmVersionedEntityMetadata?
 
-    public init(status: Status?, activityCodeId: String?, paid: Bool?, notes: String?, fullDayManagementUnitDates: [String]?, partialDayStartDateTimes: [Date]?, dailyDurationMinutes: Int?, durationMinutes: [Int]?, payableMinutes: [Int]?, metadata: WfmVersionedEntityMetadata?) {
+    public init(status: Status?, activityCodeId: String?, paid: Bool?, notes: String?, fullDayManagementUnitDates: [String]?, fullDayEarliestStartOffsetMinutes: ListWrapperInteger?, fullDayLatestEndOffsetMinutes: ListWrapperInteger?, partialDayStartDateTimes: [Date]?, dailyDurationMinutes: Int?, durationMinutes: [Int]?, payableMinutes: [Int]?, metadata: WfmVersionedEntityMetadata?) {
         self.status = status
         self.activityCodeId = activityCodeId
         self.paid = paid
         self.notes = notes
         self.fullDayManagementUnitDates = fullDayManagementUnitDates
+        self.fullDayEarliestStartOffsetMinutes = fullDayEarliestStartOffsetMinutes
+        self.fullDayLatestEndOffsetMinutes = fullDayLatestEndOffsetMinutes
         self.partialDayStartDateTimes = partialDayStartDateTimes
         self.dailyDurationMinutes = dailyDurationMinutes
         self.durationMinutes = durationMinutes

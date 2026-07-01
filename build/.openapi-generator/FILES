@@ -333,6 +333,7 @@ docs/AppleIntegrationEntityListing.md
 docs/AppleIntegrationRequest.md
 docs/AppleIntegrationUpdateRequest.md
 docs/AppleInvitation.md
+docs/AppleInvitationNotificationParameters.md
 docs/AppleOpaqueId.md
 docs/ApplePay.md
 docs/ApprovalNamespace.md
@@ -729,6 +730,7 @@ docs/BusinessRulesAPI.json
 docs/BusinessRulesAPI.md
 docs/BusinessRulesDataSchema.md
 docs/BusinessRulesDataSchemaListing.md
+docs/BusinessRulesParentSchemaRef.md
 docs/BusinessRulesSchemaCreateRequest.md
 docs/BusinessRulesSchemaUpdateRequest.md
 docs/BusinessUnitActivityCode.md
@@ -840,6 +842,9 @@ docs/CampaignStats.md
 docs/CampaignTimeSlot.md
 docs/CannedResponseLibraries.md
 docs/CapacityPlanDeleteRequest.md
+docs/CapacityPlanForecastInputsResponse.md
+docs/CapacityPlanForecastInputsTemplate.md
+docs/CapacityPlanForecastMetrics.md
 docs/CapacityPlanListItem.md
 docs/CapacityPlanMetadata.md
 docs/CapacityPlanMetricsSummary.md
@@ -2405,6 +2410,7 @@ docs/ExternalContactsContactChangedTopicObject.md
 docs/ExternalContactsContactChangedTopicPhoneNumber.md
 docs/ExternalContactsContactChangedTopicTicker.md
 docs/ExternalContactsContactChangedTopicTwitterId.md
+docs/ExternalContactsContactChangedTopicWhatsAppBusinessScopedId.md
 docs/ExternalContactsContactChangedTopicWhatsAppId.md
 docs/ExternalContactsContactNoteChangedTopicDivision.md
 docs/ExternalContactsContactNoteChangedTopicNote.md
@@ -2450,6 +2456,7 @@ docs/ExternalContactsUnresolvedContactChangedTopicObject.md
 docs/ExternalContactsUnresolvedContactChangedTopicPhoneNumber.md
 docs/ExternalContactsUnresolvedContactChangedTopicTicker.md
 docs/ExternalContactsUnresolvedContactChangedTopicTwitterId.md
+docs/ExternalContactsUnresolvedContactChangedTopicWhatsAppBusinessScopedId.md
 docs/ExternalContactsUnresolvedContactChangedTopicWhatsAppId.md
 docs/ExternalDataSource.md
 docs/ExternalEstablishedEvent.md
@@ -2627,6 +2634,7 @@ docs/FollowersFilter.md
 docs/FooterTemplate.md
 docs/ForecastAbandonRateResponse.md
 docs/ForecastAverageSpeedOfAnswerResponse.md
+docs/ForecastInputPlanningGroupData.md
 docs/ForecastMetadata.md
 docs/ForecastPlanningGroupData.md
 docs/ForecastPlanningGroupResponse.md
@@ -3250,6 +3258,7 @@ docs/KnowledgeSyncJobStatistics.md
 docs/KnowledgeSyncRequest.md
 docs/KnowledgeV3ConversationContext.md
 docs/KnowledgeV3ConversationContextResponse.md
+docs/KnowledgeV3PreviewConversationContext.md
 docs/KpiResult.md
 docs/Label.md
 docs/LabelCreateRequest.md
@@ -4157,6 +4166,7 @@ docs/QueryOpportunityEnrollmentsResponse.md
 docs/QueryOpportunityEnrollmentsResult.md
 docs/QueryPlanningGroupToStaffingGroupsRequest.md
 docs/QueryProcessingConfig.md
+docs/QueryReformulationContext.md
 docs/QueryRequest.md
 docs/QueryRequestClause.md
 docs/QueryRequestFilter.md
@@ -4475,6 +4485,7 @@ docs/QueueConversationVideoEventTopicWorkflow.md
 docs/QueueConversationVideoEventTopicWrapup.md
 docs/QueueEmailAddress.md
 docs/QueueEntityListing.md
+docs/QueueFullReference.md
 docs/QueueMediaSettings.md
 docs/QueueMember.md
 docs/QueueMemberEntityListing.md
@@ -4808,7 +4819,15 @@ docs/ScimV2SchemaListResponse.md
 docs/ScimV2User.md
 docs/ScorableSurvey.md
 docs/ScoredAgent.md
+docs/ScreenMonitorSettings.md
 docs/ScreenMonitoring.md
+docs/ScreenMonitoringAPI.json
+docs/ScreenMonitoringAPI.md
+docs/ScreenMonitoringDetails.md
+docs/ScreenMonitoringSession.md
+docs/ScreenMonitoringSessionEntityListing.md
+docs/ScreenMonitoringUserDetails.md
+docs/ScreenMonitoringUserDetailsEntityListing.md
 docs/ScreenRecordingActiveSessions.md
 docs/ScreenRecordingMetaData.md
 docs/ScreenRecordingMetaDataRequest.md
@@ -5038,6 +5057,7 @@ docs/SpeechTextAnalyticsConversationSummary.md
 docs/SpeechTextAnalyticsConversationSummaryListing.md
 docs/SpeechTextAnalyticsSettingsRequest.md
 docs/SpeechTextAnalyticsSettingsResponse.md
+docs/SpeechTextAnalyticsSummaryLabel.md
 docs/SplittingInformation.md
 docs/StaCategory.md
 docs/StaffingGroupAllocation.md
@@ -5057,6 +5077,7 @@ docs/StageplanListing.md
 docs/StageplanReference.md
 docs/StageplanUpdate.md
 docs/StarrableDivision.md
+docs/StartScreenMonitorResponseBody.md
 docs/StatEventCampaignTopicIntervalMetrics.md
 docs/StatEventCampaignTopicMetricStats.md
 docs/StatEventCampaignTopicStatsNotification.md
@@ -5233,6 +5254,7 @@ docs/TeamActivityQueryPredicate.md
 docs/TeamActivityResponse.md
 docs/TeamAddMemberFailure.md
 docs/TeamEntityListing.md
+docs/TeamFullReference.md
 docs/TeamMemberAddListingResponse.md
 docs/TeamMemberEntityListing.md
 docs/TeamMembers.md
@@ -5622,6 +5644,7 @@ docs/UserEntityListing.md
 docs/UserEstablishedEvent.md
 docs/UserExpands.md
 docs/UserExternalIdentifier.md
+docs/UserFullReference.md
 docs/UserGreetingEventGreeting.md
 docs/UserGreetingEventGreetingAudioFile.md
 docs/UserGreetingEventGreetingOwner.md
@@ -5810,6 +5833,7 @@ docs/V2WfmMainForecastExportHistoricalEventMainForecastExportNotification.md
 docs/V2WfmMainForecastExportSnapshotEventMainForecastErrorBody.md
 docs/V2WfmMainForecastExportSnapshotEventMainForecastExportNotification.md
 docs/V3KnowledgeSearchClientApplication.md
+docs/V3KnowledgeSearchPreviewClientApplication.md
 docs/V3SourceCreateRequest.md
 docs/V3SourceDetailedResponse.md
 docs/V3SourceExpandableListResponse.md
@@ -6489,6 +6513,7 @@ docs/deleteConversation-example.txt
 docs/deleteConversationCustomattribute-example.txt
 docs/deleteConversationParticipantCode-example.txt
 docs/deleteConversationParticipantFlaggedreason-example.txt
+docs/deleteConversationParticipantScreenmonitorsSession-example.txt
 docs/deleteConversationRecordingAnnotation-example.txt
 docs/deleteConversationsCallParticipantCommunicationPostflowaction-example.txt
 docs/deleteConversationsCallParticipantConsult-example.txt
@@ -6728,6 +6753,7 @@ docs/deleteUserRoutinglanguage-example.txt
 docs/deleteUserRoutinglanguage-example.txt
 docs/deleteUserRoutingskill-example.txt
 docs/deleteUserRoutingskill-example.txt
+docs/deleteUserScreenmonitorsSession-example.txt
 docs/deleteUserStationAssociatedstation-example.txt
 docs/deleteUserStationDefaultstation-example.txt
 docs/deleteUserVerifier-example.txt
@@ -7019,6 +7045,7 @@ docs/getConversationCommunicationInternalmessage-example.txt
 docs/getConversationCommunicationInternalmessages-example.txt
 docs/getConversationCustomattribute-example.txt
 docs/getConversationCustomattributes-example.txt
+docs/getConversationParticipantScreenmonitorsSession-example.txt
 docs/getConversationParticipantSecureivrsession-example.txt
 docs/getConversationParticipantSecureivrsessions-example.txt
 docs/getConversationParticipantWrapup-example.txt
@@ -7241,6 +7268,7 @@ docs/getFlowsInstancesSettingsLoglevels-example.txt
 docs/getFlowsInstancesSettingsLoglevelsCharacteristics-example.txt
 docs/getFlowsInstancesSettingsLoglevelsDefault-example.txt
 docs/getFlowsJob-example.txt
+docs/getFlowsLookup-example.txt
 docs/getFlowsMilestone-example.txt
 docs/getFlowsMilestones-example.txt
 docs/getFlowsMilestonesDivisionviews-example.txt
@@ -7840,6 +7868,9 @@ docs/getScimV2Schemas-example.txt
 docs/getScimV2Serviceproviderconfig-example.txt
 docs/getScimV2User-example.txt
 docs/getScimV2Users-example.txt
+docs/getScreenmonitorsSessionsDetails-example.txt
+docs/getScreenmonitorsSettings-example.txt
+docs/getScreenmonitorsUserSessions-example.txt
 docs/getScript-example.txt
 docs/getScriptPage-example.txt
 docs/getScriptPages-example.txt
@@ -8074,6 +8105,7 @@ docs/getUserRoutinglanguages-example.txt
 docs/getUserRoutingskills-example.txt
 docs/getUserRoutingskills-example.txt
 docs/getUserRoutingstatus-example.txt
+docs/getUserScreenmonitorsSession-example.txt
 docs/getUserSkillgroups-example.txt
 docs/getUserSkillgroups-example.txt
 docs/getUserState-example.txt
@@ -8177,6 +8209,7 @@ docs/getWorkforcemanagementBusinessunitAlternativeshiftsSettings-example.txt
 docs/getWorkforcemanagementBusinessunitAlternativeshiftsTrade-example.txt
 docs/getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob-example.txt
 docs/getWorkforcemanagementBusinessunitCapacityplan-example.txt
+docs/getWorkforcemanagementBusinessunitCapacityplanForecast-example.txt
 docs/getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations-example.txt
 docs/getWorkforcemanagementBusinessunitCapacityplanStaffingrequirements-example.txt
 docs/getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast-example.txt
@@ -8379,7 +8412,11 @@ docs/patchEmployeeengagementCelebration-example.txt
 docs/patchEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/patchExternalcontactsContact-example.txt
 docs/patchExternalcontactsContactIdentifiers-example.txt
+docs/patchExternalcontactsContactNote-example.txt
+docs/patchExternalcontactsOrganization-example.txt
 docs/patchExternalcontactsOrganizationIdentifiers-example.txt
+docs/patchExternalcontactsOrganizationNote-example.txt
+docs/patchExternalcontactsRelationship-example.txt
 docs/patchFlowsInstancesSettingsExecutiondata-example.txt
 docs/patchGamificationContest-example.txt
 docs/patchGeolocationsSettings-example.txt
@@ -8729,6 +8766,7 @@ docs/postConversationParticipantReplaceAgent-example.txt
 docs/postConversationParticipantReplaceContactExternal-example.txt
 docs/postConversationParticipantReplaceExternal-example.txt
 docs/postConversationParticipantReplaceQueue-example.txt
+docs/postConversationParticipantScreenmonitorsSessions-example.txt
 docs/postConversationParticipantSecureivrsessions-example.txt
 docs/postConversationParticipantTransfer-example.txt
 docs/postConversationRecordingAnnotations-example.txt
@@ -9169,6 +9207,7 @@ docs/postRoutingUtilizationLabels-example.txt
 docs/postRoutingWrapupcodes-example.txt
 docs/postScimUsers-example.txt
 docs/postScimV2Users-example.txt
+docs/postScreenmonitorsSessionsUsersDetails-example.txt
 docs/postScreenrecordingToken-example.txt
 docs/postScriptExport-example.txt
 docs/postScriptsPublished-example.txt
@@ -9272,6 +9311,7 @@ docs/postUserRoutinglanguages-example.txt
 docs/postUserRoutinglanguages-example.txt
 docs/postUserRoutingskills-example.txt
 docs/postUserRoutingskills-example.txt
+docs/postUserScreenmonitorsSessions-example.txt
 docs/postUsers-example.txt
 docs/postUsersCustomattributesSchemas-example.txt
 docs/postUsersDevelopmentActivitiesAggregatesQuery-example.txt
@@ -9633,6 +9673,7 @@ docs/putScimGroup-example.txt
 docs/putScimUser-example.txt
 docs/putScimV2Group-example.txt
 docs/putScimV2User-example.txt
+docs/putScreenmonitorsSettings-example.txt
 docs/putSocialmediaEscalationrule-example.txt
 docs/putSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId-example.txt
 docs/putSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId-example.txt
@@ -9764,6 +9805,7 @@ src/APIs/RecordingAPI.swift
 src/APIs/ResponseManagementAPI.swift
 src/APIs/RoutingAPI.swift
 src/APIs/SCIMAPI.swift
+src/APIs/ScreenMonitoringAPI.swift
 src/APIs/ScriptsAPI.swift
 src/APIs/SearchAPI.swift
 src/APIs/SettingsAPI.swift
@@ -10110,6 +10152,7 @@ src/Models/AppleIntegrationEntityListing.swift
 src/Models/AppleIntegrationRequest.swift
 src/Models/AppleIntegrationUpdateRequest.swift
 src/Models/AppleInvitation.swift
+src/Models/AppleInvitationNotificationParameters.swift
 src/Models/AppleOpaqueId.swift
 src/Models/ApplePay.swift
 src/Models/ApprovalNamespace.swift
@@ -10492,6 +10535,7 @@ src/Models/BulkUpdateShiftTradeStateResultItem.swift
 src/Models/Bullseye.swift
 src/Models/BusinessRulesDataSchema.swift
 src/Models/BusinessRulesDataSchemaListing.swift
+src/Models/BusinessRulesParentSchemaRef.swift
 src/Models/BusinessRulesSchemaCreateRequest.swift
 src/Models/BusinessRulesSchemaUpdateRequest.swift
 src/Models/BusinessUnitActivityCode.swift
@@ -10603,6 +10647,9 @@ src/Models/CampaignStats.swift
 src/Models/CampaignTimeSlot.swift
 src/Models/CannedResponseLibraries.swift
 src/Models/CapacityPlanDeleteRequest.swift
+src/Models/CapacityPlanForecastInputsResponse.swift
+src/Models/CapacityPlanForecastInputsTemplate.swift
+src/Models/CapacityPlanForecastMetrics.swift
 src/Models/CapacityPlanListItem.swift
 src/Models/CapacityPlanMetadata.swift
 src/Models/CapacityPlanMetricsSummary.swift
@@ -12142,6 +12189,7 @@ src/Models/ExternalContactsContactChangedTopicObject.swift
 src/Models/ExternalContactsContactChangedTopicPhoneNumber.swift
 src/Models/ExternalContactsContactChangedTopicTicker.swift
 src/Models/ExternalContactsContactChangedTopicTwitterId.swift
+src/Models/ExternalContactsContactChangedTopicWhatsAppBusinessScopedId.swift
 src/Models/ExternalContactsContactChangedTopicWhatsAppId.swift
 src/Models/ExternalContactsContactNoteChangedTopicDivision.swift
 src/Models/ExternalContactsContactNoteChangedTopicNote.swift
@@ -12187,6 +12235,7 @@ src/Models/ExternalContactsUnresolvedContactChangedTopicObject.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicPhoneNumber.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicTicker.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicTwitterId.swift
+src/Models/ExternalContactsUnresolvedContactChangedTopicWhatsAppBusinessScopedId.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicWhatsAppId.swift
 src/Models/ExternalDataSource.swift
 src/Models/ExternalEstablishedEvent.swift
@@ -12360,6 +12409,7 @@ src/Models/FollowersFilter.swift
 src/Models/FooterTemplate.swift
 src/Models/ForecastAbandonRateResponse.swift
 src/Models/ForecastAverageSpeedOfAnswerResponse.swift
+src/Models/ForecastInputPlanningGroupData.swift
 src/Models/ForecastMetadata.swift
 src/Models/ForecastPlanningGroupData.swift
 src/Models/ForecastPlanningGroupResponse.swift
@@ -12961,6 +13011,7 @@ src/Models/KnowledgeSyncJobStatistics.swift
 src/Models/KnowledgeSyncRequest.swift
 src/Models/KnowledgeV3ConversationContext.swift
 src/Models/KnowledgeV3ConversationContextResponse.swift
+src/Models/KnowledgeV3PreviewConversationContext.swift
 src/Models/KpiResult.swift
 src/Models/Label.swift
 src/Models/LabelCreateRequest.swift
@@ -13835,6 +13886,7 @@ src/Models/QueryOpportunityEnrollmentsResponse.swift
 src/Models/QueryOpportunityEnrollmentsResult.swift
 src/Models/QueryPlanningGroupToStaffingGroupsRequest.swift
 src/Models/QueryProcessingConfig.swift
+src/Models/QueryReformulationContext.swift
 src/Models/QueryRequest.swift
 src/Models/QueryRequestClause.swift
 src/Models/QueryRequestFilter.swift
@@ -14153,6 +14205,7 @@ src/Models/QueueConversationVideoEventTopicWorkflow.swift
 src/Models/QueueConversationVideoEventTopicWrapup.swift
 src/Models/QueueEmailAddress.swift
 src/Models/QueueEntityListing.swift
+src/Models/QueueFullReference.swift
 src/Models/QueueMediaSettings.swift
 src/Models/QueueMember.swift
 src/Models/QueueMemberEntityListing.swift
@@ -14476,7 +14529,13 @@ src/Models/ScimV2SchemaListResponse.swift
 src/Models/ScimV2User.swift
 src/Models/ScorableSurvey.swift
 src/Models/ScoredAgent.swift
+src/Models/ScreenMonitorSettings.swift
 src/Models/ScreenMonitoring.swift
+src/Models/ScreenMonitoringDetails.swift
+src/Models/ScreenMonitoringSession.swift
+src/Models/ScreenMonitoringSessionEntityListing.swift
+src/Models/ScreenMonitoringUserDetails.swift
+src/Models/ScreenMonitoringUserDetailsEntityListing.swift
 src/Models/ScreenRecordingActiveSessions.swift
 src/Models/ScreenRecordingMetaData.swift
 src/Models/ScreenRecordingMetaDataRequest.swift
@@ -14696,6 +14755,7 @@ src/Models/SpeechTextAnalyticsConversationSummary.swift
 src/Models/SpeechTextAnalyticsConversationSummaryListing.swift
 src/Models/SpeechTextAnalyticsSettingsRequest.swift
 src/Models/SpeechTextAnalyticsSettingsResponse.swift
+src/Models/SpeechTextAnalyticsSummaryLabel.swift
 src/Models/SplittingInformation.swift
 src/Models/StaCategory.swift
 src/Models/StaffingGroupAllocation.swift
@@ -14715,6 +14775,7 @@ src/Models/StageplanListing.swift
 src/Models/StageplanReference.swift
 src/Models/StageplanUpdate.swift
 src/Models/StarrableDivision.swift
+src/Models/StartScreenMonitorResponseBody.swift
 src/Models/StatEventCampaignTopicIntervalMetrics.swift
 src/Models/StatEventCampaignTopicMetricStats.swift
 src/Models/StatEventCampaignTopicStatsNotification.swift
@@ -14885,6 +14946,7 @@ src/Models/TeamActivityQueryPredicate.swift
 src/Models/TeamActivityResponse.swift
 src/Models/TeamAddMemberFailure.swift
 src/Models/TeamEntityListing.swift
+src/Models/TeamFullReference.swift
 src/Models/TeamMemberAddListingResponse.swift
 src/Models/TeamMemberEntityListing.swift
 src/Models/TeamMembers.swift
@@ -15260,6 +15322,7 @@ src/Models/UserEntityListing.swift
 src/Models/UserEstablishedEvent.swift
 src/Models/UserExpands.swift
 src/Models/UserExternalIdentifier.swift
+src/Models/UserFullReference.swift
 src/Models/UserGreetingEventGreeting.swift
 src/Models/UserGreetingEventGreetingAudioFile.swift
 src/Models/UserGreetingEventGreetingOwner.swift
@@ -15440,6 +15503,7 @@ src/Models/V2WfmMainForecastExportHistoricalEventMainForecastExportNotification.
 src/Models/V2WfmMainForecastExportSnapshotEventMainForecastErrorBody.swift
 src/Models/V2WfmMainForecastExportSnapshotEventMainForecastExportNotification.swift
 src/Models/V3KnowledgeSearchClientApplication.swift
+src/Models/V3KnowledgeSearchPreviewClientApplication.swift
 src/Models/V3SourceCreateRequest.swift
 src/Models/V3SourceDetailedResponse.swift
 src/Models/V3SourceExpandableListResponse.swift

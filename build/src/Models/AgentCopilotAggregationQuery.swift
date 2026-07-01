@@ -45,6 +45,7 @@ public class AgentCopilotAggregationQuery: Codable {
         case nknowledgearticlesuggestions = "nKnowledgeArticleSuggestions"
         case nknowledgesearchsuggestions = "nKnowledgeSearchSuggestions"
         case nscriptsuggestions = "nScriptSuggestions"
+        case ndistinctconversations = "nDistinctConversations"
     }
 
 

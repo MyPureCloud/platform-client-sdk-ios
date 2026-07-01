@@ -2955,12 +2955,12 @@ open class QualityAPI {
     "emailInQueueFlow" : "{}",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
-      "waitSeconds" : 7.386281948385884,
-      "threshold" : 4,
+      "waitSeconds" : 1.2315135367772556,
+      "threshold" : 7,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 7.386281948385884,
-      "threshold" : 4,
+      "waitSeconds" : 1.2315135367772556,
+      "threshold" : 7,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -3014,7 +3014,7 @@ open class QualityAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 3,
+    "userMemberCount" : 4,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
@@ -3033,11 +3033,11 @@ open class QualityAPI {
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 2,
+    "joinedMemberCount" : 8,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 9,
+    "memberCount" : 0,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -13695,12 +13695,12 @@ open class QualityAPI {
     "emailInQueueFlow" : "{}",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
-      "waitSeconds" : 7.386281948385884,
-      "threshold" : 4,
+      "waitSeconds" : 1.2315135367772556,
+      "threshold" : 7,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 7.386281948385884,
-      "threshold" : 4,
+      "waitSeconds" : 1.2315135367772556,
+      "threshold" : 7,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -13754,7 +13754,7 @@ open class QualityAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 3,
+    "userMemberCount" : 4,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
@@ -13773,11 +13773,11 @@ open class QualityAPI {
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 2,
+    "joinedMemberCount" : 8,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 9,
+    "memberCount" : 0,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -17015,12 +17015,12 @@ open class QualityAPI {
       "emailInQueueFlow" : "{}",
       "autoAnswerOnly" : true,
       "routingRules" : [ {
-        "waitSeconds" : 7.386281948385884,
-        "threshold" : 4,
+        "waitSeconds" : 1.2315135367772556,
+        "threshold" : 7,
         "operator" : "MEETS_THRESHOLD"
       }, {
-        "waitSeconds" : 7.386281948385884,
-        "threshold" : 4,
+        "waitSeconds" : 1.2315135367772556,
+        "threshold" : 7,
         "operator" : "MEETS_THRESHOLD"
       } ],
       "skillEvaluationMethod" : "NONE",
@@ -17074,7 +17074,7 @@ open class QualityAPI {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "queueFlow" : "{}",
       "callingPartyNumber" : "callingPartyNumber",
-      "userMemberCount" : 3,
+      "userMemberCount" : 4,
       "modifiedBy" : "modifiedBy",
       "id" : "id",
       "memberGroups" : [ {
@@ -17093,11 +17093,11 @@ open class QualityAPI {
         "type" : "TEAM"
       } ],
       "scoringMethod" : "TimestampAndPriority",
-      "joinedMemberCount" : 2,
+      "joinedMemberCount" : 8,
       "messageInQueueFlow" : "{}",
       "callingPartyName" : "callingPartyName",
       "acwSettings" : "{}",
-      "memberCount" : 9,
+      "memberCount" : 0,
       "selfUri" : "https://openapi-generator.tech",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "whisperPrompt" : "{}",
@@ -19870,12 +19870,12 @@ open class QualityAPI {
       "emailInQueueFlow" : "{}",
       "autoAnswerOnly" : true,
       "routingRules" : [ {
-        "waitSeconds" : 7.386281948385884,
-        "threshold" : 4,
+        "waitSeconds" : 1.2315135367772556,
+        "threshold" : 7,
         "operator" : "MEETS_THRESHOLD"
       }, {
-        "waitSeconds" : 7.386281948385884,
-        "threshold" : 4,
+        "waitSeconds" : 1.2315135367772556,
+        "threshold" : 7,
         "operator" : "MEETS_THRESHOLD"
       } ],
       "skillEvaluationMethod" : "NONE",
@@ -19929,7 +19929,7 @@ open class QualityAPI {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "queueFlow" : "{}",
       "callingPartyNumber" : "callingPartyNumber",
-      "userMemberCount" : 3,
+      "userMemberCount" : 4,
       "modifiedBy" : "modifiedBy",
       "id" : "id",
       "memberGroups" : [ {
@@ -19948,11 +19948,11 @@ open class QualityAPI {
         "type" : "TEAM"
       } ],
       "scoringMethod" : "TimestampAndPriority",
-      "joinedMemberCount" : 2,
+      "joinedMemberCount" : 8,
       "messageInQueueFlow" : "{}",
       "callingPartyName" : "callingPartyName",
       "acwSettings" : "{}",
-      "memberCount" : 9,
+      "memberCount" : 0,
       "selfUri" : "https://openapi-generator.tech",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "whisperPrompt" : "{}",
@@ -34562,12 +34562,12 @@ open class QualityAPI {
     "emailInQueueFlow" : "{}",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
-      "waitSeconds" : 7.386281948385884,
-      "threshold" : 4,
+      "waitSeconds" : 1.2315135367772556,
+      "threshold" : 7,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 7.386281948385884,
-      "threshold" : 4,
+      "waitSeconds" : 1.2315135367772556,
+      "threshold" : 7,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -34621,7 +34621,7 @@ open class QualityAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 3,
+    "userMemberCount" : 4,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
@@ -34640,11 +34640,11 @@ open class QualityAPI {
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 2,
+    "joinedMemberCount" : 8,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 9,
+    "memberCount" : 0,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -36383,12 +36383,12 @@ open class QualityAPI {
       "emailInQueueFlow" : "{}",
       "autoAnswerOnly" : true,
       "routingRules" : [ {
-        "waitSeconds" : 7.386281948385884,
-        "threshold" : 4,
+        "waitSeconds" : 1.2315135367772556,
+        "threshold" : 7,
         "operator" : "MEETS_THRESHOLD"
       }, {
-        "waitSeconds" : 7.386281948385884,
-        "threshold" : 4,
+        "waitSeconds" : 1.2315135367772556,
+        "threshold" : 7,
         "operator" : "MEETS_THRESHOLD"
       } ],
       "skillEvaluationMethod" : "NONE",
@@ -36442,7 +36442,7 @@ open class QualityAPI {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "queueFlow" : "{}",
       "callingPartyNumber" : "callingPartyNumber",
-      "userMemberCount" : 3,
+      "userMemberCount" : 4,
       "modifiedBy" : "modifiedBy",
       "id" : "id",
       "memberGroups" : [ {
@@ -36461,11 +36461,11 @@ open class QualityAPI {
         "type" : "TEAM"
       } ],
       "scoringMethod" : "TimestampAndPriority",
-      "joinedMemberCount" : 2,
+      "joinedMemberCount" : 8,
       "messageInQueueFlow" : "{}",
       "callingPartyName" : "callingPartyName",
       "acwSettings" : "{}",
-      "memberCount" : 9,
+      "memberCount" : 0,
       "selfUri" : "https://openapi-generator.tech",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "whisperPrompt" : "{}",
@@ -37530,12 +37530,12 @@ open class QualityAPI {
       "emailInQueueFlow" : "{}",
       "autoAnswerOnly" : true,
       "routingRules" : [ {
-        "waitSeconds" : 7.386281948385884,
-        "threshold" : 4,
+        "waitSeconds" : 1.2315135367772556,
+        "threshold" : 7,
         "operator" : "MEETS_THRESHOLD"
       }, {
-        "waitSeconds" : 7.386281948385884,
-        "threshold" : 4,
+        "waitSeconds" : 1.2315135367772556,
+        "threshold" : 7,
         "operator" : "MEETS_THRESHOLD"
       } ],
       "skillEvaluationMethod" : "NONE",
@@ -37589,7 +37589,7 @@ open class QualityAPI {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "queueFlow" : "{}",
       "callingPartyNumber" : "callingPartyNumber",
-      "userMemberCount" : 3,
+      "userMemberCount" : 4,
       "modifiedBy" : "modifiedBy",
       "id" : "id",
       "memberGroups" : [ {
@@ -37608,11 +37608,11 @@ open class QualityAPI {
         "type" : "TEAM"
       } ],
       "scoringMethod" : "TimestampAndPriority",
-      "joinedMemberCount" : 2,
+      "joinedMemberCount" : 8,
       "messageInQueueFlow" : "{}",
       "callingPartyName" : "callingPartyName",
       "acwSettings" : "{}",
-      "memberCount" : 9,
+      "memberCount" : 0,
       "selfUri" : "https://openapi-generator.tech",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "whisperPrompt" : "{}",
@@ -42439,12 +42439,12 @@ open class QualityAPI {
     "emailInQueueFlow" : "{}",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
-      "waitSeconds" : 7.386281948385884,
-      "threshold" : 4,
+      "waitSeconds" : 1.2315135367772556,
+      "threshold" : 7,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 7.386281948385884,
-      "threshold" : 4,
+      "waitSeconds" : 1.2315135367772556,
+      "threshold" : 7,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -42498,7 +42498,7 @@ open class QualityAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 3,
+    "userMemberCount" : 4,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
@@ -42517,11 +42517,11 @@ open class QualityAPI {
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 2,
+    "joinedMemberCount" : 8,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 9,
+    "memberCount" : 0,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",

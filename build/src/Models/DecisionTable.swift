@@ -20,6 +20,14 @@ public class DecisionTable: Codable {
 
 
 
+    public enum LatestVersionStatus: String, Codable { 
+        case draft = "Draft"
+        case published = "Published"
+        case error = "Error"
+        case preparing = "Preparing"
+        case superseded = "Superseded"
+    }
+
 
 
 
@@ -43,6 +51,8 @@ public class DecisionTable: Codable {
     public var published: DecisionTableVersionEntity?
     /** The entity reference to the most recently created decision table version. */
     public var latest: DecisionTableVersionEntity?
+    /** The status of the most recently created decision table version. Lets clients distinguish e.g. a Draft latest version from a Superseded one without an extra request. */
+    public var latestVersionStatus: LatestVersionStatus?
     /** The column definitions of this decision table. */
     public var columns: DecisionTableColumns?
     /** The published contract information for this decision table. */
@@ -50,7 +60,7 @@ public class DecisionTable: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, _description: String?, dateCreated: Date?, dateModified: Date?, datePublished: Date?, published: DecisionTableVersionEntity?, latest: DecisionTableVersionEntity?, columns: DecisionTableColumns?, publishedContract: DecisionTableContract?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, _description: String?, dateCreated: Date?, dateModified: Date?, datePublished: Date?, published: DecisionTableVersionEntity?, latest: DecisionTableVersionEntity?, latestVersionStatus: LatestVersionStatus?, columns: DecisionTableColumns?, publishedContract: DecisionTableContract?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -60,6 +70,7 @@ public class DecisionTable: Codable {
         self.datePublished = datePublished
         self.published = published
         self.latest = latest
+        self.latestVersionStatus = latestVersionStatus
         self.columns = columns
         self.publishedContract = publishedContract
         self.selfUri = selfUri
@@ -75,6 +86,7 @@ public class DecisionTable: Codable {
         case datePublished
         case published
         case latest
+        case latestVersionStatus
         case columns
         case publishedContract
         case selfUri

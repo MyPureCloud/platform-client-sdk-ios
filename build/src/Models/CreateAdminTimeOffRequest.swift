@@ -25,6 +25,10 @@ public class CreateAdminTimeOffRequest: Codable {
 
 
 
+
+
+
+
     /** The status of this time off request */
     public var status: Status?
     /** A set of IDs for users to associate with this time off request */
@@ -35,6 +39,10 @@ public class CreateAdminTimeOffRequest: Codable {
     public var notes: String?
     /** A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone */
     public var fullDayManagementUnitDates: [String]?
+    /** Earliest start offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available */
+    public var fullDayEarliestStartOffsetMinutes: [Int]?
+    /** Latest end offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available */
+    public var fullDayLatestEndOffsetMinutes: [Int]?
     /** A set of start date-times in ISO-8601 format for partial day requests */
     public var partialDayStartDateTimes: [Date]?
     /** Daily duration in minutes applied to all days of this time off request. Ignored if durationMinutes is specified. At least one of dailyDurationMinutes or durationMinutes is required */
@@ -46,12 +54,14 @@ public class CreateAdminTimeOffRequest: Codable {
     /** Whether this is a paid time off request. Defaults to the activity code's paid value if not specified */
     public var paid: Bool?
 
-    public init(status: Status?, users: [UserReference]?, activityCodeId: String?, notes: String?, fullDayManagementUnitDates: [String]?, partialDayStartDateTimes: [Date]?, dailyDurationMinutes: Int?, durationMinutes: [Int]?, payableMinutes: [Int]?, paid: Bool?) {
+    public init(status: Status?, users: [UserReference]?, activityCodeId: String?, notes: String?, fullDayManagementUnitDates: [String]?, fullDayEarliestStartOffsetMinutes: [Int]?, fullDayLatestEndOffsetMinutes: [Int]?, partialDayStartDateTimes: [Date]?, dailyDurationMinutes: Int?, durationMinutes: [Int]?, payableMinutes: [Int]?, paid: Bool?) {
         self.status = status
         self.users = users
         self.activityCodeId = activityCodeId
         self.notes = notes
         self.fullDayManagementUnitDates = fullDayManagementUnitDates
+        self.fullDayEarliestStartOffsetMinutes = fullDayEarliestStartOffsetMinutes
+        self.fullDayLatestEndOffsetMinutes = fullDayLatestEndOffsetMinutes
         self.partialDayStartDateTimes = partialDayStartDateTimes
         self.dailyDurationMinutes = dailyDurationMinutes
         self.durationMinutes = durationMinutes

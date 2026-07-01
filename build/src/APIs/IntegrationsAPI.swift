@@ -404,6 +404,8 @@ open class IntegrationsAPI {
     }
     
     
+    
+    
     /**
      List integrations
      
@@ -416,10 +418,11 @@ open class IntegrationsAPI {
      - parameter ids: (query) Comma-separated list of integration IDs to filter by (max 100) (optional)
      - parameter integrationType: (query) Filter integrations by integration type ID (optional)
      - parameter reportedState: (query) Filter integrations by reported state (case-insensitive) (optional)
+     - parameter credentialId: (query) Filter integrations by credential ID (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIntegrations(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, ids: [String]? = nil, integrationType: String? = nil, reportedState: ReportedState_getIntegrations? = nil, completion: @escaping ((_ data: IntegrationEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getIntegrationsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, ids: ids, integrationType: integrationType, reportedState: reportedState)
+    open class func getIntegrations(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, ids: [String]? = nil, integrationType: String? = nil, reportedState: ReportedState_getIntegrations? = nil, credentialId: String? = nil, completion: @escaping ((_ data: IntegrationEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, ids: ids, integrationType: integrationType, reportedState: reportedState, credentialId: credentialId)
         requestBuilder.execute { (response: Response<IntegrationEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -488,10 +491,11 @@ open class IntegrationsAPI {
      - parameter ids: (query) Comma-separated list of integration IDs to filter by (max 100) (optional)
      - parameter integrationType: (query) Filter integrations by integration type ID (optional)
      - parameter reportedState: (query) Filter integrations by reported state (case-insensitive) (optional)
+     - parameter credentialId: (query) Filter integrations by credential ID (optional)
 
      - returns: RequestBuilder<IntegrationEntityListing> 
      */
-    open class func getIntegrationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, ids: [String]? = nil, integrationType: String? = nil, reportedState: ReportedState_getIntegrations? = nil) -> RequestBuilder<IntegrationEntityListing> {        
+    open class func getIntegrationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, ids: [String]? = nil, integrationType: String? = nil, reportedState: ReportedState_getIntegrations? = nil, credentialId: String? = nil) -> RequestBuilder<IntegrationEntityListing> {        
         let path = "/api/v2/integrations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -506,7 +510,8 @@ open class IntegrationsAPI {
             "previousPage": previousPage, 
             "ids": ids, 
             "integrationType": integrationType, 
-            "reportedState": reportedState?.rawValue
+            "reportedState": reportedState?.rawValue, 
+            "credentialId": credentialId
         ])
 
         let requestBuilder: RequestBuilder<IntegrationEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -931,7 +936,7 @@ open class IntegrationsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "webchat",
+      "namespace" : "web.messaging",
       "value" : 7,
       "key" : "key"
     },
@@ -959,7 +964,7 @@ open class IntegrationsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "webchat",
+      "namespace" : "web.messaging",
       "value" : 7,
       "key" : "key"
     },

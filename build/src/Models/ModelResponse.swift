@@ -44,6 +44,8 @@ public class ModelResponse: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -51,7 +53,7 @@ public class ModelResponse: Codable {
     public var version: Int?
     /** One or more libraries response is associated with. */
     public var libraries: [DomainEntityRef]?
-    /** One or more texts associated with the response. */
+    /** One or more texts associated with the response. Required for responseTypes: Standard, Footer, MessagingTemplate and CampaignEmailTemplate */
     public var texts: [ResponseText]?
     /** User that created the response */
     public var createdBy: User?
@@ -71,10 +73,12 @@ public class ModelResponse: Codable {
     public var assets: [RmsAssetAddressableRef]?
     /** Footer template definition for responseType.Footer. */
     public var footer: FooterTemplate?
+    /** Apple Messages for Business invitation template definition for responseType.AppleInvitation. */
+    public var appleInvitation: AppleInvitation?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, version: Int?, libraries: [DomainEntityRef]?, texts: [ResponseText]?, createdBy: User?, dateCreated: Date?, interactionType: InteractionType?, substitutions: [ResponseSubstitution]?, substitutionsSchema: JsonSchemaDocument?, responseType: ResponseType?, messagingTemplate: MessagingTemplate?, assets: [RmsAssetAddressableRef]?, footer: FooterTemplate?, selfUri: String?) {
+    public init(_id: String?, name: String?, version: Int?, libraries: [DomainEntityRef]?, texts: [ResponseText]?, createdBy: User?, dateCreated: Date?, interactionType: InteractionType?, substitutions: [ResponseSubstitution]?, substitutionsSchema: JsonSchemaDocument?, responseType: ResponseType?, messagingTemplate: MessagingTemplate?, assets: [RmsAssetAddressableRef]?, footer: FooterTemplate?, appleInvitation: AppleInvitation?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.version = version
@@ -89,6 +93,7 @@ public class ModelResponse: Codable {
         self.messagingTemplate = messagingTemplate
         self.assets = assets
         self.footer = footer
+        self.appleInvitation = appleInvitation
         self.selfUri = selfUri
     }
 
@@ -107,6 +112,7 @@ public class ModelResponse: Codable {
         case messagingTemplate
         case assets
         case footer
+        case appleInvitation
         case selfUri
     }
 

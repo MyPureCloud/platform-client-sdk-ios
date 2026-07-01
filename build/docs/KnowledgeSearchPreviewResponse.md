@@ -10,7 +10,9 @@
 | **searchId** | **String** | The globally unique identifier for the search. | [optional] |
 | **sessionId** | **String** | The sessionId for search request. | [optional] |
 | **result** | [**KnowledgeSearchResult**](KnowledgeSearchResult) | Content matching the search query. | [optional] |
+| **application** | [**V3KnowledgeSearchPreviewClientApplication**](V3KnowledgeSearchPreviewClientApplication) | The touchpoint application used for the preview. | [optional] |
+| **conversationContext** | [**KnowledgeV3PreviewConversationContext**](KnowledgeV3PreviewConversationContext) | The channel context used for the preview. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@197.0.0_
+_PureCloudPlatformClientV2@198.0.0_

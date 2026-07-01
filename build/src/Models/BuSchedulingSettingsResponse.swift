@@ -14,6 +14,8 @@ public class BuSchedulingSettingsResponse: Codable {
 
 
 
+
+
     public enum ActivitySmoothingType: String, Codable { 
         case reduceConcurrentActivitiesAcrossBu = "ReduceConcurrentActivitiesAcrossBu"
         case reduceConcurrentActivitiesAcrossMu = "ReduceConcurrentActivitiesAcrossMu"
@@ -26,6 +28,8 @@ public class BuSchedulingSettingsResponse: Codable {
     public var messageSeverities: [SchedulerMessageTypeSeverity]?
     /** Synchronize set of time off properties from scheduled activities to time off requests when the schedule is published */
     public var syncTimeOffProperties: [SyncTimeOffProperties]?
+    /** Enables start and end time estimation for full-day time-off requests */
+    public var enableTimeOffFullDayEstimation: Bool?
     /** Configures the max percent increase and decrease of service goals for this business unit */
     public var serviceGoalImpact: WfmServiceGoalImpactSettings?
     /** Indicates whether or not per minute granularity for scheduling will be enabled for this business unit. Defaults to false */
@@ -35,9 +39,10 @@ public class BuSchedulingSettingsResponse: Codable {
     /** Indicates whether to provide variability in schedule generation */
     public var induceScheduleVariability: Bool?
 
-    public init(messageSeverities: [SchedulerMessageTypeSeverity]?, syncTimeOffProperties: [SyncTimeOffProperties]?, serviceGoalImpact: WfmServiceGoalImpactSettings?, allowWorkPlanPerMinuteGranularity: Bool?, activitySmoothingType: ActivitySmoothingType?, induceScheduleVariability: Bool?) {
+    public init(messageSeverities: [SchedulerMessageTypeSeverity]?, syncTimeOffProperties: [SyncTimeOffProperties]?, enableTimeOffFullDayEstimation: Bool?, serviceGoalImpact: WfmServiceGoalImpactSettings?, allowWorkPlanPerMinuteGranularity: Bool?, activitySmoothingType: ActivitySmoothingType?, induceScheduleVariability: Bool?) {
         self.messageSeverities = messageSeverities
         self.syncTimeOffProperties = syncTimeOffProperties
+        self.enableTimeOffFullDayEstimation = enableTimeOffFullDayEstimation
         self.serviceGoalImpact = serviceGoalImpact
         self.allowWorkPlanPerMinuteGranularity = allowWorkPlanPerMinuteGranularity
         self.activitySmoothingType = activitySmoothingType

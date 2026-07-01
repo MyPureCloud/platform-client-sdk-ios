@@ -22,6 +22,10 @@ public class BusinessUnitSettingsResponse: Codable {
 
 
 
+
+
+
+
     /** The start day of week for this business unit */
     public var startDayOfWeek: StartDayOfWeek?
     /** The time zone for this business unit, using the Olsen tz database format */
@@ -32,15 +36,21 @@ public class BusinessUnitSettingsResponse: Codable {
     public var scheduling: BuSchedulingSettingsResponse?
     /** Notification settings */
     public var notifications: BuNotificationSettingsResponse?
+    /** Learning settings */
+    public var learning: BuActivitySettingsResponse?
+    /** Coaching settings */
+    public var coaching: BuActivitySettingsResponse?
     /** Version metadata for this business unit */
     public var metadata: WfmVersionedEntityMetadata?
 
-    public init(startDayOfWeek: StartDayOfWeek?, timeZone: String?, shortTermForecasting: BuShortTermForecastingSettings?, scheduling: BuSchedulingSettingsResponse?, notifications: BuNotificationSettingsResponse?, metadata: WfmVersionedEntityMetadata?) {
+    public init(startDayOfWeek: StartDayOfWeek?, timeZone: String?, shortTermForecasting: BuShortTermForecastingSettings?, scheduling: BuSchedulingSettingsResponse?, notifications: BuNotificationSettingsResponse?, learning: BuActivitySettingsResponse?, coaching: BuActivitySettingsResponse?, metadata: WfmVersionedEntityMetadata?) {
         self.startDayOfWeek = startDayOfWeek
         self.timeZone = timeZone
         self.shortTermForecasting = shortTermForecasting
         self.scheduling = scheduling
         self.notifications = notifications
+        self.learning = learning
+        self.coaching = coaching
         self.metadata = metadata
     }
 

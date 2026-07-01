@@ -856,19 +856,45 @@ open class SpeechTextAnalyticsAPI {
   "entities" : [ {
     "sourceId" : "sourceId",
     "summary" : "summary",
+    "agentId" : "agentId",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "generated" : true,
+    "insights" : [ {
+      "description" : "description",
+      "type" : "Reason",
+      "title" : "title",
+      "outcome" : "outcome"
+    }, {
+      "description" : "description",
+      "type" : "Reason",
+      "title" : "title",
+      "outcome" : "outcome"
+    } ],
     "summaryType" : "Conversation",
     "mediaType" : "Unknown",
-    "language" : "language"
+    "language" : "language",
+    "summaryId" : "summaryId"
   }, {
     "sourceId" : "sourceId",
     "summary" : "summary",
+    "agentId" : "agentId",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "generated" : true,
+    "insights" : [ {
+      "description" : "description",
+      "type" : "Reason",
+      "title" : "title",
+      "outcome" : "outcome"
+    }, {
+      "description" : "description",
+      "type" : "Reason",
+      "title" : "title",
+      "outcome" : "outcome"
+    } ],
     "summaryType" : "Conversation",
     "mediaType" : "Unknown",
-    "language" : "language"
+    "language" : "language",
+    "summaryId" : "summaryId"
   } ]
 }, statusCode=200}]
      

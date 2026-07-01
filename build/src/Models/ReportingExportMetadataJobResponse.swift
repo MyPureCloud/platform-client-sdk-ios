@@ -142,6 +142,8 @@ public class ReportingExportMetadataJobResponse: Codable {
         case predictiveRoutingThroughputView = "PREDICTIVE_ROUTING_THROUGHPUT_VIEW"
         case queueSkillExpressionPerformanceView = "QUEUE_SKILL_EXPRESSION_PERFORMANCE_VIEW"
         case agenticVirtualAgentPerformanceView = "AGENTIC_VIRTUAL_AGENT_PERFORMANCE_VIEW"
+        case callbackQueuePerformanceSummaryView = "CALLBACK_QUEUE_PERFORMANCE_SUMMARY_VIEW"
+        case callbackQueuePerformanceDetailView = "CALLBACK_QUEUE_PERFORMANCE_DETAIL_VIEW"
     }
 
 

@@ -8,6 +8,12 @@ public class CreateCallbackCommand: Codable {
 
 
 
+    public enum CustomerFirstCallbackDeliveryMode: String, Codable { 
+        case useQueueSetting = "UseQueueSetting"
+        case useAgentReservation = "UseAgentReservation"
+        case noAgentReservation = "NoAgentReservation"
+    }
+
 
 
 
@@ -30,6 +36,8 @@ public class CreateCallbackCommand: Codable {
     public var queueId: String?
     /** The routing data to be used for the callback. Either queueId or routingData is required. */
     public var routingData: RoutingData?
+    /** How customer-first callback agent reservation is applied for this callback. useAgentReservation forces reservation on; noAgentReservation forces it off; useQueueSetting uses the queue configuration. */
+    public var customerFirstCallbackDeliveryMode: CustomerFirstCallbackDeliveryMode?
     /** The name of the party to be called back. */
     public var callbackUserName: String?
     /** A list of phone numbers for the callback. */
@@ -47,10 +55,11 @@ public class CreateCallbackCommand: Codable {
     /** The name displayed to recipients when a phone call is placed as part of the callback. May be overridden by other settings in the system such as external trunk settings. Telco support for \"callerIdName\" varies. */
     public var callerIdName: String?
 
-    public init(scriptId: String?, queueId: String?, routingData: RoutingData?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Date?, countryCode: String?, validateCallbackNumbers: Bool?, data: [String:String]?, callerId: String?, callerIdName: String?) {
+    public init(scriptId: String?, queueId: String?, routingData: RoutingData?, customerFirstCallbackDeliveryMode: CustomerFirstCallbackDeliveryMode?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Date?, countryCode: String?, validateCallbackNumbers: Bool?, data: [String:String]?, callerId: String?, callerIdName: String?) {
         self.scriptId = scriptId
         self.queueId = queueId
         self.routingData = routingData
+        self.customerFirstCallbackDeliveryMode = customerFirstCallbackDeliveryMode
         self.callbackUserName = callbackUserName
         self.callbackNumbers = callbackNumbers
         self.callbackScheduledTime = callbackScheduledTime

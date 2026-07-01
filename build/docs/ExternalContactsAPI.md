@@ -67,7 +67,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getExternalcontactsScanRelationshipsDivisionviewsAll**](ExternalContactsAPI#getExternalcontactsScanRelationshipsDivisionviewsAll) | Scan for relationships |
 | [**patchExternalcontactsContact**](ExternalContactsAPI#patchExternalcontactsContact) | Update specific fields of an external contact |
 | [**patchExternalcontactsContactIdentifiers**](ExternalContactsAPI#patchExternalcontactsContactIdentifiers) | Claim or release identifiers for a contact |
+| [**patchExternalcontactsContactNote**](ExternalContactsAPI#patchExternalcontactsContactNote) | Update a Contact Note |
+| [**patchExternalcontactsOrganization**](ExternalContactsAPI#patchExternalcontactsOrganization) | Update specific fields of an external organization |
 | [**patchExternalcontactsOrganizationIdentifiers**](ExternalContactsAPI#patchExternalcontactsOrganizationIdentifiers) | Claim or release identifiers for an external organization |
+| [**patchExternalcontactsOrganizationNote**](ExternalContactsAPI#patchExternalcontactsOrganizationNote) | Update an External Organization Note |
+| [**patchExternalcontactsRelationship**](ExternalContactsAPI#patchExternalcontactsRelationship) | Update specific fields of a relationship |
 | [**postExternalcontactsBulkContacts**](ExternalContactsAPI#postExternalcontactsBulkContacts) | Bulk fetch contacts |
 | [**postExternalcontactsBulkContactsAdd**](ExternalContactsAPI#postExternalcontactsBulkContactsAdd) | Bulk add contacts |
 | [**postExternalcontactsBulkContactsDivisionviews**](ExternalContactsAPI#postExternalcontactsBulkContactsDivisionviews) | Bulk fetch contacts across divisions |
@@ -3432,6 +3436,112 @@ ExternalContactsAPI.patchExternalcontactsContactIdentifiers(contactId: contactId
 [**ContactIdentifier**](ContactIdentifier)
 
 
+## patchExternalcontactsContactNote
+
+
+
+> [Note](Note) patchExternalcontactsContactNote(contactId, noteId, body)
+
+Update a Contact Note
+
+
+
+Wraps PATCH /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactId: String = "" // ExternalContact Id
+let noteId: String = "" // Note Id
+let body: ExternalContactsPatchRequest = new ExternalContactsPatchRequest(...) // Note field to update
+
+// Code example
+ExternalContactsAPI.patchExternalcontactsContactNote(contactId: contactId, noteId: noteId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.patchExternalcontactsContactNote was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactId** | **String**| ExternalContact Id | |
+| **noteId** | **String**| Note Id | |
+| **body** | [**ExternalContactsPatchRequest**](ExternalContactsPatchRequest)| Note field to update | |
+
+
+### Return type
+
+[**Note**](Note)
+
+
+## patchExternalcontactsOrganization
+
+
+
+> [ExternalOrganization](ExternalOrganization) patchExternalcontactsOrganization(externalOrganizationId, body)
+
+Update specific fields of an external organization
+
+
+
+Wraps PATCH /api/v2/externalcontacts/organizations/{externalOrganizationId}  
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let externalOrganizationId: String = "" // External Organization ID
+let body: ExternalContactsPatchRequest = new ExternalContactsPatchRequest(...) // External Organization fields to update
+
+// Code example
+ExternalContactsAPI.patchExternalcontactsOrganization(externalOrganizationId: externalOrganizationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.patchExternalcontactsOrganization was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **externalOrganizationId** | **String**| External Organization ID | |
+| **body** | [**ExternalContactsPatchRequest**](ExternalContactsPatchRequest)| External Organization fields to update | |
+
+
+### Return type
+
+[**ExternalOrganization**](ExternalOrganization)
+
+
 ## patchExternalcontactsOrganizationIdentifiers
 
 
@@ -3482,6 +3592,112 @@ ExternalContactsAPI.patchExternalcontactsOrganizationIdentifiers(externalOrganiz
 ### Return type
 
 [**ExternalOrganizationIdentifier**](ExternalOrganizationIdentifier)
+
+
+## patchExternalcontactsOrganizationNote
+
+
+
+> [Note](Note) patchExternalcontactsOrganizationNote(externalOrganizationId, noteId, body)
+
+Update an External Organization Note
+
+
+
+Wraps PATCH /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}  
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let externalOrganizationId: String = "" // External Organization Id
+let noteId: String = "" // Note Id
+let body: ExternalContactsPatchRequest = new ExternalContactsPatchRequest(...) // Note field to update
+
+// Code example
+ExternalContactsAPI.patchExternalcontactsOrganizationNote(externalOrganizationId: externalOrganizationId, noteId: noteId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.patchExternalcontactsOrganizationNote was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **externalOrganizationId** | **String**| External Organization Id | |
+| **noteId** | **String**| Note Id | |
+| **body** | [**ExternalContactsPatchRequest**](ExternalContactsPatchRequest)| Note field to update | |
+
+
+### Return type
+
+[**Note**](Note)
+
+
+## patchExternalcontactsRelationship
+
+
+
+> [Relationship](Relationship) patchExternalcontactsRelationship(relationshipId, body)
+
+Update specific fields of a relationship
+
+
+
+Wraps PATCH /api/v2/externalcontacts/relationships/{relationshipId}  
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let relationshipId: String = "" // Relationship Id
+let body: ExternalContactsPatchRequest = new ExternalContactsPatchRequest(...) // Relationship fields to update
+
+// Code example
+ExternalContactsAPI.patchExternalcontactsRelationship(relationshipId: relationshipId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.patchExternalcontactsRelationship was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **relationshipId** | **String**| Relationship Id | |
+| **body** | [**ExternalContactsPatchRequest**](ExternalContactsPatchRequest)| Relationship fields to update | |
+
+
+### Return type
+
+[**Relationship**](Relationship)
 
 
 ## postExternalcontactsBulkContacts
@@ -6425,4 +6641,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@197.0.0_
+_PureCloudPlatformClientV2@198.0.0_

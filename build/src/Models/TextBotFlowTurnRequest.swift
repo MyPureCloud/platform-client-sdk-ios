@@ -20,19 +20,24 @@ public class TextBotFlowTurnRequest: Codable {
 
 
 
+
+
     /** The reference to a previous turn if appropriate, used to avoid race conditions. */
     public var previousTurn: TextBotTurnReference?
     /** Indicates the type of input event being requested. If appropriate, fill out the matching user input object details on this request. */
     public var inputEventType: InputEventType?
     /** The data for the input event of this turn if it is a user input event. Only one inputEvent may be set. */
     public var inputEventUserInput: TextBotUserInputEvent?
+    /** The data for the Rich Media input event of this turn if it is a Rich Media input event. Only one inputEvent may be set. Only ButtonResponse, PaymentResponse, Form, Presence are supported. */
+    public var inputEventRichMedia: TextBotsRichMediaInputEvent?
     /** The data for the input event of this turn if it is an error event. Only one inputEvent may be set. */
     public var inputEventError: TextBotErrorInputEvent?
 
-    public init(previousTurn: TextBotTurnReference?, inputEventType: InputEventType?, inputEventUserInput: TextBotUserInputEvent?, inputEventError: TextBotErrorInputEvent?) {
+    public init(previousTurn: TextBotTurnReference?, inputEventType: InputEventType?, inputEventUserInput: TextBotUserInputEvent?, inputEventRichMedia: TextBotsRichMediaInputEvent?, inputEventError: TextBotErrorInputEvent?) {
         self.previousTurn = previousTurn
         self.inputEventType = inputEventType
         self.inputEventUserInput = inputEventUserInput
+        self.inputEventRichMedia = inputEventRichMedia
         self.inputEventError = inputEventError
     }
 

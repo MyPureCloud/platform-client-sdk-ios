@@ -52,6 +52,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementBusinessunitAlternativeshiftsTrade**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAlternativeshiftsTrade) | Get an alternative shifts trade in a business unit for a given trade ID |
 | [**getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob) | Query the status of an alternative shift search trade operation. Only the user who started the operation can query the status |
 | [**getWorkforcemanagementBusinessunitCapacityplan**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitCapacityplan) | Get a capacity plan |
+| [**getWorkforcemanagementBusinessunitCapacityplanForecast**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitCapacityplanForecast) | Get a capacity plan&#39;s forecast inputs |
 | [**getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations) | Get a capacity plan&#39;s staffing group allocations |
 | [**getWorkforcemanagementBusinessunitCapacityplanStaffingrequirements**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitCapacityplanStaffingrequirements) | Get a capacity plan&#39;s staffing requirements |
 | [**getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast) | Get the latest long term staffing requirements for a business unit |
@@ -2996,6 +2997,60 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplan(businessUn
 ### Return type
 
 [**CapacityPlanResponse**](CapacityPlanResponse)
+
+
+## getWorkforcemanagementBusinessunitCapacityplanForecast
+
+
+
+> [CapacityPlanForecastInputsResponse](CapacityPlanForecastInputsResponse) getWorkforcemanagementBusinessunitCapacityplanForecast(businessUnitId, capacityPlanId, granularity)
+
+Get a capacity plan&#39;s forecast inputs
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/forecast  
+
+Requires ANY permissions: 
+
+* wfm:capacityPlanForecastInputs:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let capacityPlanId: String = "" // The ID of the capacity plan
+let granularity: WorkforceManagementAPI.Granularity_getWorkforcemanagementBusinessunitCapacityplanForecast = WorkforceManagementAPI.Granularity_getWorkforcemanagementBusinessunitCapacityplanForecast.enummember // Granularity to access capacity plan forecast data, defaults to weekly
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplanForecast(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId, granularity: granularity) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplanForecast was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **capacityPlanId** | **String**| The ID of the capacity plan | |
+| **granularity** | **String**| Granularity to access capacity plan forecast data, defaults to weekly | [optional]<br />**Values**: weekly ("weekly"), monthly ("monthly") |
+
+
+### Return type
+
+[**CapacityPlanForecastInputsResponse**](CapacityPlanForecastInputsResponse)
 
 
 ## getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations
@@ -17763,4 +17818,4 @@ WorkforceManagementAPI.putWorkforcemanagementSchedulebidPreference(bidId: bidId,
 [**AgentScheduleBiddingPreferenceResponse**](AgentScheduleBiddingPreferenceResponse)
 
 
-_PureCloudPlatformClientV2@197.0.0_
+_PureCloudPlatformClientV2@198.0.0_

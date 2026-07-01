@@ -57,6 +57,12 @@ public class KnowledgeSourcesSearchRequest: Codable {
         case ptPt = "pt-PT"
         case svSe = "sv-SE"
         case trTr = "tr-TR"
+        case elGr = "el-GR"
+        case filPh = "fil-PH"
+        case heIl = "he-IL"
+        case msMy = "ms-MY"
+        case plPl = "pl-PL"
+        case thTh = "th-TH"
     }
 
 

@@ -407,7 +407,7 @@ IntegrationsAPI.getIntegrationConfigCurrent(integrationId: integrationId) { (res
 
 
 
-> [IntegrationEntityListing](IntegrationEntityListing) getIntegrations(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, ids, integrationType, reportedState)
+> [IntegrationEntityListing](IntegrationEntityListing) getIntegrations(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, ids, integrationType, reportedState, credentialId)
 
 List integrations
 
@@ -436,9 +436,10 @@ let previousPage: String = "" // Previous page token
 let ids: [String] = 7c97172d-b029-490b-a975-ded1d17ce8e4,d21e2369-eb5a-4d5d-8798-61d21bc6a376 // Comma-separated list of integration IDs to filter by (max 100)
 let integrationType: String = webhook // Filter integrations by integration type ID
 let reportedState: IntegrationsAPI.ReportedState_getIntegrations = IntegrationsAPI.ReportedState_getIntegrations.enummember // Filter integrations by reported state (case-insensitive)
+let credentialId: String = a1b2c3d4-e5f6-7890-abcd-ef1234567890 // Filter integrations by credential ID
 
 // Code example
-IntegrationsAPI.getIntegrations(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, ids: ids, integrationType: integrationType, reportedState: reportedState) { (response, error) in
+IntegrationsAPI.getIntegrations(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, ids: ids, integrationType: integrationType, reportedState: reportedState, credentialId: credentialId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -462,6 +463,7 @@ IntegrationsAPI.getIntegrations(pageSize: pageSize, pageNumber: pageNumber, sort
 | **ids** | [**[String]**](String)| Comma-separated list of integration IDs to filter by (max 100) | [optional] |
 | **integrationType** | **String**| Filter integrations by integration type ID | [optional] |
 | **reportedState** | **String**| Filter integrations by reported state (case-insensitive) | [optional]<br />**Values**: active ("ACTIVE"), activating ("ACTIVATING"), inactive ("INACTIVE"), deactivating ("DEACTIVATING"), error ("ERROR") |
+| **credentialId** | **String**| Filter integrations by credential ID | [optional] |
 
 
 ### Return type
@@ -4766,4 +4768,4 @@ IntegrationsAPI.putIntegrationsUnifiedcommunicationThirdpartypresences(ucIntegra
 **String**
 
 
-_PureCloudPlatformClientV2@197.0.0_
+_PureCloudPlatformClientV2@198.0.0_

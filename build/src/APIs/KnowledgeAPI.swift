@@ -10000,7 +10000,9 @@ open class KnowledgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "result" : "{}",
+  "conversationContext" : "{}",
   "searchId" : "searchId",
+  "application" : "{}",
   "query" : "query",
   "sessionId" : "sessionId"
 }, statusCode=200}]

@@ -18,13 +18,13 @@ public class DomainResourceConditionValue: Codable {
         case queue = "QUEUE"
     }
 
-    public var user: User?
-    public var queue: Queue?
-    public var team: Team?
+    public var user: UserFullReference?
+    public var queue: QueueFullReference?
+    public var team: TeamFullReference?
     public var value: String?
     public var type: ModelType?
 
-    public init(user: User?, queue: Queue?, team: Team?, value: String?, type: ModelType?) {
+    public init(user: UserFullReference?, queue: QueueFullReference?, team: TeamFullReference?, value: String?, type: ModelType?) {
         self.user = user
         self.queue = queue
         self.team = team

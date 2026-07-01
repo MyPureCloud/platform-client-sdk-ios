@@ -25,12 +25,22 @@ public class SpeechTextAnalyticsConversationSummary: Codable {
 
 
 
+
+
+
+
+
+
     /** The type of summary */
     public var summaryType: SummaryType?
     /** The media type of the associated interaction */
     public var mediaType: MediaType?
     /** Language of the summary */
     public var language: String?
+    /** The id of the summary */
+    public var summaryId: String?
+    /** The id of the agent associated with the summary */
+    public var agentId: String?
     /** The id of the source (program, agent assistant, or flow) from which summarization is triggered */
     public var sourceId: String?
     /** A summarization of the conversation transcription */
@@ -39,15 +49,20 @@ public class SpeechTextAnalyticsConversationSummary: Codable {
     public var generated: Bool?
     /** Timestamp of when the summary was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
+    /** Insights of the conversation */
+    public var insights: [ConversationInsight]?
 
-    public init(summaryType: SummaryType?, mediaType: MediaType?, language: String?, sourceId: String?, summary: String?, generated: Bool?, dateCreated: Date?) {
+    public init(summaryType: SummaryType?, mediaType: MediaType?, language: String?, summaryId: String?, agentId: String?, sourceId: String?, summary: String?, generated: Bool?, dateCreated: Date?, insights: [ConversationInsight]?) {
         self.summaryType = summaryType
         self.mediaType = mediaType
         self.language = language
+        self.summaryId = summaryId
+        self.agentId = agentId
         self.sourceId = sourceId
         self.summary = summary
         self.generated = generated
         self.dateCreated = dateCreated
+        self.insights = insights
     }
 
 

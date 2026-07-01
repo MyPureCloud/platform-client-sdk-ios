@@ -472,9 +472,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 4,
-  "pageCount" : 7,
-  "pageNumber" : 2,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "assessmentCompletionPercentage" : 1.4658129,
@@ -623,7 +623,7 @@ open class LearningAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 3,
+  "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -789,9 +789,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 4,
-  "pageCount" : 7,
-  "pageNumber" : 2,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "assessmentCompletionPercentage" : 1.4658129,
@@ -940,7 +940,7 @@ open class LearningAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 3,
+  "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -1416,8 +1416,6 @@ open class LearningAPI {
 
     
     
-    
-    
     public enum Types_getLearningModules: String { 
         case informational = "Informational"
         case assessedContent = "AssessedContent"
@@ -1456,14 +1454,6 @@ open class LearningAPI {
     }
     
     
-    public enum IsPublished_getLearningModules: String { 
-        case _true = "True"
-        case _false = "False"
-        case any = "Any"
-    }
-    
-    
-    
     
     public enum Statuses_getLearningModules: String { 
         case unpublished = "Unpublished"
@@ -1476,7 +1466,6 @@ open class LearningAPI {
     /**
      Get all learning modules of an organization
      
-     - parameter isArchived: (query) Archive status (optional)
      - parameter types: (query) Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
@@ -1484,13 +1473,12 @@ open class LearningAPI {
      - parameter sortBy: (query) Sort by (optional)
      - parameter searchTerm: (query) Search Term (searchable by name) (optional)
      - parameter expand: (query) Fields to expand in response(case insensitive) (optional)
-     - parameter isPublished: (query) Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional)
      - parameter statuses: (query) Specifies the module statuses to filter by (optional)
      - parameter externalIds: (query) Specifies the module external IDs to filter by. Only one ID is allowed (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLearningModules(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, isPublished: IsPublished_getLearningModules? = nil, statuses: [String]? = nil, externalIds: [String]? = nil, completion: @escaping ((_ data: LearningModuleList?,_ error: Error?) -> Void)) {
-        let requestBuilder = getLearningModulesWithRequestBuilder(isArchived: isArchived, types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand, isPublished: isPublished, statuses: statuses, externalIds: externalIds)
+    open class func getLearningModules(types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, statuses: [String]? = nil, externalIds: [String]? = nil, completion: @escaping ((_ data: LearningModuleList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLearningModulesWithRequestBuilder(types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand, statuses: statuses, externalIds: externalIds)
         requestBuilder.execute { (response: Response<LearningModuleList>?, error) -> Void in
             do {
                 if let e = error {
@@ -1619,7 +1607,6 @@ open class LearningAPI {
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
-     - parameter isArchived: (query) Archive status (optional)
      - parameter types: (query) Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
@@ -1627,20 +1614,18 @@ open class LearningAPI {
      - parameter sortBy: (query) Sort by (optional)
      - parameter searchTerm: (query) Search Term (searchable by name) (optional)
      - parameter expand: (query) Fields to expand in response(case insensitive) (optional)
-     - parameter isPublished: (query) Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional)
      - parameter statuses: (query) Specifies the module statuses to filter by (optional)
      - parameter externalIds: (query) Specifies the module external IDs to filter by. Only one ID is allowed (optional)
 
      - returns: RequestBuilder<LearningModuleList> 
      */
-    open class func getLearningModulesWithRequestBuilder(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, isPublished: IsPublished_getLearningModules? = nil, statuses: [String]? = nil, externalIds: [String]? = nil) -> RequestBuilder<LearningModuleList> {        
+    open class func getLearningModulesWithRequestBuilder(types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, statuses: [String]? = nil, externalIds: [String]? = nil) -> RequestBuilder<LearningModuleList> {        
         let path = "/api/v2/learning/modules"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "isArchived": isArchived, 
             "types": types, 
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
@@ -1648,7 +1633,6 @@ open class LearningAPI {
             "sortBy": sortBy?.rawValue, 
             "searchTerm": searchTerm, 
             "expand": expand, 
-            "isPublished": isPublished?.rawValue, 
             "statuses": statuses, 
             "externalIds": externalIds
         ])

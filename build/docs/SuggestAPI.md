@@ -134,6 +134,7 @@ Wraps POST /api/v2/search
 Requires ANY permissions: 
 
 * directory:user:view
+* routing:skill:view
 
 ### Example
 
@@ -223,4 +224,4 @@ SuggestAPI.postSearchSuggest(body: body, profile: profile) { (response, error) i
 [**JsonNodeSearchResponse**](JsonNodeSearchResponse)
 
 
-_PureCloudPlatformClientV2@197.0.0_
+_PureCloudPlatformClientV2@198.0.0_

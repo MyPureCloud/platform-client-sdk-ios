@@ -44,7 +44,7 @@ public class Caseplan: Codable {
     public var _id: String?
     /** The name of the Caseplan. */
     public var name: String?
-    /** The division to which this entity belongs. */
+    /** The division to which this Caseplan belongs. */
     public var division: StarrableDivision?
     /** The description of the Caseplan. */
     public var _description: String?

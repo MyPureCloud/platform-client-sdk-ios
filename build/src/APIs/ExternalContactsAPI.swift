@@ -8445,6 +8445,238 @@ open class ExternalContactsAPI {
     
     
     
+    
+    
+    /**
+     Update a Contact Note
+     
+     - parameter contactId: (path) ExternalContact Id 
+     - parameter noteId: (path) Note Id 
+     - parameter body: (body) Note field to update 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchExternalcontactsContactNote(contactId: String, noteId: String, body: ExternalContactsPatchRequest, completion: @escaping ((_ data: Note?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchExternalcontactsContactNoteWithRequestBuilder(contactId: contactId, noteId: noteId, body: body)
+        requestBuilder.execute { (response: Response<Note>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a Contact Note
+     - PATCH /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "noteText" : "noteText",
+  "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "entityType" : "contact",
+  "externalDataSources" : [ {
+    "platform" : "SALESFORCE",
+    "url" : "url"
+  }, {
+    "platform" : "SALESFORCE",
+    "url" : "url"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "entityId" : "entityId",
+  "id" : "id",
+  "createDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+     
+     - parameter contactId: (path) ExternalContact Id 
+     - parameter noteId: (path) Note Id 
+     - parameter body: (body) Note field to update 
+
+     - returns: RequestBuilder<Note> 
+     */
+    open class func patchExternalcontactsContactNoteWithRequestBuilder(contactId: String, noteId: String, body: ExternalContactsPatchRequest) -> RequestBuilder<Note> {        
+        var path = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}"
+        let contactIdPreEscape = "\(contactId)"
+        let contactIdPostEscape = contactIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{contactId}", with: contactIdPostEscape, options: .literal, range: nil)
+        let noteIdPreEscape = "\(noteId)"
+        let noteIdPostEscape = noteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{noteId}", with: noteIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Note>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update specific fields of an external organization
+     
+     - parameter externalOrganizationId: (path) External Organization ID 
+     - parameter body: (body) External Organization fields to update 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchExternalcontactsOrganization(externalOrganizationId: String, body: ExternalContactsPatchRequest, completion: @escaping ((_ data: ExternalOrganization?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchExternalcontactsOrganizationWithRequestBuilder(externalOrganizationId: externalOrganizationId, body: body)
+        requestBuilder.execute { (response: Response<ExternalOrganization>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update specific fields of an external organization
+     - PATCH /api/v2/externalcontacts/organizations/{externalOrganizationId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schema" : "{}",
+  "address" : {
+    "address2" : "address2",
+    "city" : "city",
+    "address1" : "address1",
+    "countryCode" : "countryCode",
+    "postalCode" : "postalCode",
+    "state" : "state"
+  },
+  "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+  "companyType" : "companyType",
+  "customFields" : {
+    "key" : "{}"
+  },
+  "identifiers" : [ {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "type" : "ExternalId",
+    "value" : "value",
+    "externalSource" : "{}"
+  }, {
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "type" : "ExternalId",
+    "value" : "value",
+    "externalSource" : "{}"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "externalIds" : [ {
+    "value" : "value",
+    "externalSource" : "{}"
+  }, {
+    "value" : "value",
+    "externalSource" : "{}"
+  } ],
+  "industry" : "industry",
+  "employeeCount" : 6,
+  "tickers" : [ {
+    "symbol" : "symbol",
+    "exchange" : "exchange"
+  }, {
+    "symbol" : "symbol",
+    "exchange" : "exchange"
+  } ],
+  "twitterId" : {
+    "profileUrl" : "profileUrl",
+    "name" : "name",
+    "verified" : true,
+    "id" : "id",
+    "screenName" : "screenName"
+  },
+  "tags" : [ "tags", "tags" ],
+  "division" : "{}",
+  "revenue" : 1,
+  "phoneNumber" : {
+    "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
+    "e164" : "e164",
+    "acceptsSMS" : true,
+    "countryCode" : "countryCode",
+    "display" : "display",
+    "userInput" : "userInput"
+  },
+  "externalSystemUrl" : "externalSystemUrl",
+  "externalDataSources" : [ {
+    "platform" : "SALESFORCE",
+    "url" : "url"
+  }, {
+    "platform" : "SALESFORCE",
+    "url" : "url"
+  } ],
+  "name" : "name",
+  "faxNumber" : {
+    "extension" : 0,
+    "normalizationCountryCode" : "normalizationCountryCode",
+    "e164" : "e164",
+    "acceptsSMS" : true,
+    "countryCode" : "countryCode",
+    "display" : "display",
+    "userInput" : "userInput"
+  },
+  "trustor" : {
+    "authorization" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "organization" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "enabled" : true
+  },
+  "websites" : [ "websites", "websites" ],
+  "id" : "id",
+  "createDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+     
+     - parameter externalOrganizationId: (path) External Organization ID 
+     - parameter body: (body) External Organization fields to update 
+
+     - returns: RequestBuilder<ExternalOrganization> 
+     */
+    open class func patchExternalcontactsOrganizationWithRequestBuilder(externalOrganizationId: String, body: ExternalContactsPatchRequest) -> RequestBuilder<ExternalOrganization> {        
+        var path = "/api/v2/externalcontacts/organizations/{externalOrganizationId}"
+        let externalOrganizationIdPreEscape = "\(externalOrganizationId)"
+        let externalOrganizationIdPostEscape = externalOrganizationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{externalOrganizationId}", with: externalOrganizationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExternalOrganization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     /**
      Claim or release identifiers for an external organization
      
@@ -8500,6 +8732,158 @@ open class ExternalContactsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ExternalOrganizationIdentifier>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update an External Organization Note
+     
+     - parameter externalOrganizationId: (path) External Organization Id 
+     - parameter noteId: (path) Note Id 
+     - parameter body: (body) Note field to update 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchExternalcontactsOrganizationNote(externalOrganizationId: String, noteId: String, body: ExternalContactsPatchRequest, completion: @escaping ((_ data: Note?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchExternalcontactsOrganizationNoteWithRequestBuilder(externalOrganizationId: externalOrganizationId, noteId: noteId, body: body)
+        requestBuilder.execute { (response: Response<Note>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an External Organization Note
+     - PATCH /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "noteText" : "noteText",
+  "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "entityType" : "contact",
+  "externalDataSources" : [ {
+    "platform" : "SALESFORCE",
+    "url" : "url"
+  }, {
+    "platform" : "SALESFORCE",
+    "url" : "url"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "entityId" : "entityId",
+  "id" : "id",
+  "createDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+     
+     - parameter externalOrganizationId: (path) External Organization Id 
+     - parameter noteId: (path) Note Id 
+     - parameter body: (body) Note field to update 
+
+     - returns: RequestBuilder<Note> 
+     */
+    open class func patchExternalcontactsOrganizationNoteWithRequestBuilder(externalOrganizationId: String, noteId: String, body: ExternalContactsPatchRequest) -> RequestBuilder<Note> {        
+        var path = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}"
+        let externalOrganizationIdPreEscape = "\(externalOrganizationId)"
+        let externalOrganizationIdPostEscape = externalOrganizationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{externalOrganizationId}", with: externalOrganizationIdPostEscape, options: .literal, range: nil)
+        let noteIdPreEscape = "\(noteId)"
+        let noteIdPostEscape = noteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{noteId}", with: noteIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Note>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update specific fields of a relationship
+     
+     - parameter relationshipId: (path) Relationship Id 
+     - parameter body: (body) Relationship fields to update 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchExternalcontactsRelationship(relationshipId: String, body: ExternalContactsPatchRequest, completion: @escaping ((_ data: Relationship?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchExternalcontactsRelationshipWithRequestBuilder(relationshipId: relationshipId, body: body)
+        requestBuilder.execute { (response: Response<Relationship>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update specific fields of a relationship
+     - PATCH /api/v2/externalcontacts/relationships/{relationshipId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "externalDataSources" : [ {
+    "platform" : "SALESFORCE",
+    "url" : "url"
+  }, {
+    "platform" : "SALESFORCE",
+    "url" : "url"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "relationship" : "relationship",
+  "user" : "{}",
+  "externalOrganization" : "{}"
+}, statusCode=200}]
+     
+     - parameter relationshipId: (path) Relationship Id 
+     - parameter body: (body) Relationship fields to update 
+
+     - returns: RequestBuilder<Relationship> 
+     */
+    open class func patchExternalcontactsRelationshipWithRequestBuilder(relationshipId: String, body: ExternalContactsPatchRequest) -> RequestBuilder<Relationship> {        
+        var path = "/api/v2/externalcontacts/relationships/{relationshipId}"
+        let relationshipIdPreEscape = "\(relationshipId)"
+        let relationshipIdPostEscape = relationshipIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{relationshipId}", with: relationshipIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Relationship>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }

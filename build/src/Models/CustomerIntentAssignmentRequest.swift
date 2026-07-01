@@ -10,6 +10,7 @@ public class CustomerIntentAssignmentRequest: Codable {
 
     public enum SourceType: String, Codable { 
         case bot = "Bot"
+        case _case = "Case"
         case copilot = "Copilot"
         case digitalbot = "Digitalbot"
         case segment = "Segment"

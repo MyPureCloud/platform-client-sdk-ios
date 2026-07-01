@@ -12,4 +12,4 @@ Model for a Nuance bot organization
 
 
 
-_PureCloudPlatformClientV2@197.0.0_
+_PureCloudPlatformClientV2@198.0.0_

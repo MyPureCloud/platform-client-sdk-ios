@@ -20,8 +20,16 @@ public class BuFullDayTimeOffMarker: Codable {
 
 
 
+
+
+
+
     /** The date of the time off marker, interpreted in the business unit's time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
     public var businessUnitDate: Date?
+    /** The start offset in minutes for the time-off marker */
+    public var startOffsetMinutes: Int?
+    /** The end offset in minutes for the time-off marker */
+    public var endOffsetMinutes: Int?
     /** The length of the time off marker in minutes */
     public var lengthMinutes: Int?
     /** The description of the time off marker */
@@ -39,8 +47,10 @@ public class BuFullDayTimeOffMarker: Codable {
     /** Set to 'true' to delete this time off marker. Will always be null on responses, only has an effect on schedule update */
     public var delete: Bool?
 
-    public init(businessUnitDate: Date?, lengthMinutes: Int?, _description: String?, activityCodeId: String?, paid: Bool?, payableMinutes: Int?, timeOffRequestId: String?, timeOffRequestSyncVersion: Int?, delete: Bool?) {
+    public init(businessUnitDate: Date?, startOffsetMinutes: Int?, endOffsetMinutes: Int?, lengthMinutes: Int?, _description: String?, activityCodeId: String?, paid: Bool?, payableMinutes: Int?, timeOffRequestId: String?, timeOffRequestSyncVersion: Int?, delete: Bool?) {
         self.businessUnitDate = businessUnitDate
+        self.startOffsetMinutes = startOffsetMinutes
+        self.endOffsetMinutes = endOffsetMinutes
         self.lengthMinutes = lengthMinutes
         self._description = _description
         self.activityCodeId = activityCodeId
@@ -53,6 +63,8 @@ public class BuFullDayTimeOffMarker: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case businessUnitDate
+        case startOffsetMinutes
+        case endOffsetMinutes
         case lengthMinutes
         case _description = "description"
         case activityCodeId

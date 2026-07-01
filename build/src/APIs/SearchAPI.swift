@@ -4489,7 +4489,7 @@ open class SearchAPI {
   "results" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "memberCount" : 1,
+    "memberCount" : 0,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
@@ -4498,7 +4498,7 @@ open class SearchAPI {
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "memberCount" : 1,
+    "memberCount" : 0,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",

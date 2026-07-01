@@ -37,7 +37,7 @@ public class StatusChange: Codable {
     }
 
     public enum Namespace: String, Codable { 
-        case webchat = "webchat"
+        case webMessaging = "web.messaging"
         case webhooks = "webhooks"
         case agentAssistant = "agent.assistant"
         case agenticVirtualAgents = "agentic.virtual.agents"
@@ -93,6 +93,7 @@ public class StatusChange: Codable {
         case mediaCommunications = "media.communications"
         case messaging = "messaging"
         case microFrontend = "micro.frontend"
+        case multiOrg = "multi.org"
         case notifications = "notifications"
         case onboarding = "onboarding"
         case outbound = "outbound"
@@ -119,7 +120,7 @@ public class StatusChange: Codable {
         case usersRules = "users.rules"
         case voiceTranscription = "voice.transcription"
         case webDeployments = "web.deployments"
-        case webMessaging = "web.messaging"
+        case webchat = "webchat"
         case workforceManagementAgentAvailability = "workforce.management.agent.availability"
         case workforceManagementForecast = "workforce.management.forecast"
         case workforceManagement = "workforce.management"

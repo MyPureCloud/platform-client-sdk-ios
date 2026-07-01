@@ -675,7 +675,7 @@ LearningAPI.getLearningModuleVersion(moduleId: moduleId, versionId: versionId, e
 
 
 
-> [LearningModuleList](LearningModuleList) getLearningModules(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses, externalIds)
+> [LearningModuleList](LearningModuleList) getLearningModules(types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, statuses, externalIds)
 
 Get all learning modules of an organization
 
@@ -695,7 +695,6 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let isArchived: Bool = true // Archive status
 let types: [String] = [""] // Specifies the module types. Informational, AssessedContent and Assessment are deprecated
 let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
@@ -703,12 +702,11 @@ let sortOrder: LearningAPI.SortOrder_getLearningModules = LearningAPI.SortOrder_
 let sortBy: LearningAPI.SortBy_getLearningModules = LearningAPI.SortBy_getLearningModules.enummember // Sort by
 let searchTerm: String = "" // Search Term (searchable by name)
 let expand: [String] = [""] // Fields to expand in response(case insensitive)
-let isPublished: LearningAPI.IsPublished_getLearningModules = LearningAPI.IsPublished_getLearningModules.enummember // Specifies if only the Unpublished (isPublished is \"False\") or Published (isPublished is \"True\") modules are returned. If isPublished is \"Any\" or omitted, both types are returned
 let statuses: [String] = [""] // Specifies the module statuses to filter by
 let externalIds: [String] = [""] // Specifies the module external IDs to filter by. Only one ID is allowed
 
 // Code example
-LearningAPI.getLearningModules(isArchived: isArchived, types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand, isPublished: isPublished, statuses: statuses, externalIds: externalIds) { (response, error) in
+LearningAPI.getLearningModules(types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand, statuses: statuses, externalIds: externalIds) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -723,7 +721,6 @@ LearningAPI.getLearningModules(isArchived: isArchived, types: types, pageSize: p
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **isArchived** | **Bool**| Archive status | [optional] |
 | **types** | [**[String]**](String)| Specifies the module types. Informational, AssessedContent and Assessment are deprecated | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), assessment ("Assessment"), external ("External"), native ("Native") |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
@@ -731,7 +728,6 @@ LearningAPI.getLearningModules(isArchived: isArchived, types: types, pageSize: p
 | **sortBy** | **String**| Sort by | [optional]<br />**Values**: name ("name"), createddate ("createddate"), percentpassed ("percentpassed"), averagescore ("averagescore") |
 | **searchTerm** | **String**| Search Term (searchable by name) | [optional] |
 | **expand** | [**[String]**](String)| Fields to expand in response(case insensitive) | [optional]<br />**Values**: rule ("rule"), summarydata ("summaryData") |
-| **isPublished** | **String**| Specifies if only the Unpublished (isPublished is \"False\") or Published (isPublished is \"True\") modules are returned. If isPublished is \"Any\" or omitted, both types are returned | [optional]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
 | **statuses** | [**[String]**](String)| Specifies the module statuses to filter by | [optional]<br />**Values**: unpublished ("Unpublished"), published ("Published"), archived ("Archived") |
 | **externalIds** | [**[String]**](String)| Specifies the module external IDs to filter by. Only one ID is allowed | [optional] |
 
@@ -2051,4 +2047,4 @@ LearningAPI.putLearningModuleRule(moduleId: moduleId, body: body, assign: assign
 [**LearningModuleRule**](LearningModuleRule)
 
 
-_PureCloudPlatformClientV2@197.0.0_
+_PureCloudPlatformClientV2@198.0.0_

@@ -3346,6 +3346,83 @@ open class WorkforceManagementAPI {
     
     
     
+    public enum Granularity_getWorkforcemanagementBusinessunitCapacityplanForecast: String { 
+        case weekly = "weekly"
+        case monthly = "monthly"
+    }
+    
+    
+    /**
+     Get a capacity plan's forecast inputs
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter granularity: (query) Granularity to access capacity plan forecast data, defaults to weekly (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitCapacityplanForecast(businessUnitId: String, capacityPlanId: String, granularity: Granularity_getWorkforcemanagementBusinessunitCapacityplanForecast? = nil, completion: @escaping ((_ data: CapacityPlanForecastInputsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitCapacityplanForecastWithRequestBuilder(businessUnitId: businessUnitId, capacityPlanId: capacityPlanId, granularity: granularity)
+        requestBuilder.execute { (response: Response<CapacityPlanForecastInputsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a capacity plan's forecast inputs
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/forecast
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadTemplate" : "{}",
+  "businessUnit" : "{}",
+  "downloadUrl" : "downloadUrl",
+  "capacityPlan" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter capacityPlanId: (path) The ID of the capacity plan 
+     - parameter granularity: (query) Granularity to access capacity plan forecast data, defaults to weekly (optional)
+
+     - returns: RequestBuilder<CapacityPlanForecastInputsResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitCapacityplanForecastWithRequestBuilder(businessUnitId: String, capacityPlanId: String, granularity: Granularity_getWorkforcemanagementBusinessunitCapacityplanForecast? = nil) -> RequestBuilder<CapacityPlanForecastInputsResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/forecast"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let capacityPlanIdPreEscape = "\(capacityPlanId)"
+        let capacityPlanIdPostEscape = capacityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{capacityPlanId}", with: capacityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "granularity": granularity?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<CapacityPlanForecastInputsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
     public enum Granularity_getWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations: String { 
         case weekly = "weekly"
         case monthly = "monthly"
@@ -6544,23 +6621,27 @@ open class WorkforceManagementAPI {
   "changes" : [ {
     "fullDayTimeOffMarkers" : [ {
       "activityCodeId" : "activityCodeId",
+      "startOffsetMinutes" : 6,
       "timeOffRequestId" : "timeOffRequestId",
-      "timeOffRequestSyncVersion" : 5,
-      "lengthMinutes" : 6,
+      "timeOffRequestSyncVersion" : 2,
+      "endOffsetMinutes" : 1,
+      "lengthMinutes" : 5,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 1,
+      "payableMinutes" : 5,
       "delete" : true
     }, {
       "activityCodeId" : "activityCodeId",
+      "startOffsetMinutes" : 6,
       "timeOffRequestId" : "timeOffRequestId",
-      "timeOffRequestSyncVersion" : 5,
-      "lengthMinutes" : 6,
+      "timeOffRequestSyncVersion" : 2,
+      "endOffsetMinutes" : 1,
+      "lengthMinutes" : 5,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 1,
+      "payableMinutes" : 5,
       "delete" : true
     } ],
     "metadata" : "{}",
@@ -6631,23 +6712,27 @@ open class WorkforceManagementAPI {
   }, {
     "fullDayTimeOffMarkers" : [ {
       "activityCodeId" : "activityCodeId",
+      "startOffsetMinutes" : 6,
       "timeOffRequestId" : "timeOffRequestId",
-      "timeOffRequestSyncVersion" : 5,
-      "lengthMinutes" : 6,
+      "timeOffRequestSyncVersion" : 2,
+      "endOffsetMinutes" : 1,
+      "lengthMinutes" : 5,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 1,
+      "payableMinutes" : 5,
       "delete" : true
     }, {
       "activityCodeId" : "activityCodeId",
+      "startOffsetMinutes" : 6,
       "timeOffRequestId" : "timeOffRequestId",
-      "timeOffRequestSyncVersion" : 5,
-      "lengthMinutes" : 6,
+      "timeOffRequestSyncVersion" : 2,
+      "endOffsetMinutes" : 1,
+      "lengthMinutes" : 5,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 1,
+      "payableMinutes" : 5,
       "delete" : true
     } ],
     "metadata" : "{}",
@@ -9819,16 +9904,21 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "submittedBy" : "{}",
-  "syncVersion" : 5,
   "metadata" : "{}",
   "notes" : "notes",
+  "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+  "fullDayLatestEndOffsetMinutes" : [ 5, 5 ],
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "fullDayEarliestStartOffsetMinutes" : [ 5, 5 ],
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "submittedBy" : "{}",
+  "syncVersion" : 2,
   "substatus" : "AdvanceTimeElapsed",
   "selfUri" : "https://openapi-generator.tech",
   "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
   "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
   "payableMinutes" : [ 1, 1 ],
-  "submittedDate" : "2000-01-23T04:56:07.000+00:00",
   "reviewedBy" : "{}",
   "activityCodeId" : "activityCodeId",
   "durationMinutes" : [ 6, 6 ],
@@ -9837,9 +9927,6 @@ open class WorkforceManagementAPI {
   "dailyDurationMinutes" : 0,
   "paid" : true,
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-  "modifiedBy" : "{}",
-  "id" : "id",
-  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
   "user" : "{}",
   "status" : "PENDING"
 }, statusCode=200}]
@@ -9998,16 +10085,21 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "id" : "id",
   "timeOffRequests" : [ {
-    "submittedBy" : "{}",
-    "syncVersion" : 5,
     "metadata" : "{}",
     "notes" : "notes",
+    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+    "fullDayLatestEndOffsetMinutes" : [ 5, 5 ],
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "fullDayEarliestStartOffsetMinutes" : [ 5, 5 ],
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "submittedBy" : "{}",
+    "syncVersion" : 2,
     "substatus" : "AdvanceTimeElapsed",
     "selfUri" : "https://openapi-generator.tech",
     "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
     "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
     "payableMinutes" : [ 1, 1 ],
-    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
     "reviewedBy" : "{}",
     "activityCodeId" : "activityCodeId",
     "durationMinutes" : [ 6, 6 ],
@@ -10016,22 +10108,24 @@ open class WorkforceManagementAPI {
     "dailyDurationMinutes" : 0,
     "paid" : true,
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "modifiedBy" : "{}",
-    "id" : "id",
-    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
     "user" : "{}",
     "status" : "PENDING"
   }, {
-    "submittedBy" : "{}",
-    "syncVersion" : 5,
     "metadata" : "{}",
     "notes" : "notes",
+    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+    "fullDayLatestEndOffsetMinutes" : [ 5, 5 ],
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "fullDayEarliestStartOffsetMinutes" : [ 5, 5 ],
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "submittedBy" : "{}",
+    "syncVersion" : 2,
     "substatus" : "AdvanceTimeElapsed",
     "selfUri" : "https://openapi-generator.tech",
     "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
     "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
     "payableMinutes" : [ 1, 1 ],
-    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
     "reviewedBy" : "{}",
     "activityCodeId" : "activityCodeId",
     "durationMinutes" : [ 6, 6 ],
@@ -10040,9 +10134,6 @@ open class WorkforceManagementAPI {
     "dailyDurationMinutes" : 0,
     "paid" : true,
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "modifiedBy" : "{}",
-    "id" : "id",
-    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
     "user" : "{}",
     "status" : "PENDING"
   } ]
@@ -12565,16 +12656,21 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "submittedBy" : "{}",
-  "syncVersion" : 5,
   "metadata" : "{}",
   "notes" : "notes",
+  "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+  "fullDayLatestEndOffsetMinutes" : [ 5, 5 ],
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "fullDayEarliestStartOffsetMinutes" : [ 5, 5 ],
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "submittedBy" : "{}",
+  "syncVersion" : 2,
   "substatus" : "AdvanceTimeElapsed",
   "selfUri" : "https://openapi-generator.tech",
   "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
   "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
   "payableMinutes" : [ 1, 1 ],
-  "submittedDate" : "2000-01-23T04:56:07.000+00:00",
   "reviewedBy" : "{}",
   "activityCodeId" : "activityCodeId",
   "durationMinutes" : [ 6, 6 ],
@@ -12583,9 +12679,6 @@ open class WorkforceManagementAPI {
   "dailyDurationMinutes" : 0,
   "paid" : true,
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-  "modifiedBy" : "{}",
-  "id" : "id",
-  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
   "user" : "{}",
   "status" : "PENDING"
 }, statusCode=200}]
@@ -12708,16 +12801,21 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "id" : "id",
   "timeOffRequests" : [ {
-    "submittedBy" : "{}",
-    "syncVersion" : 5,
     "metadata" : "{}",
     "notes" : "notes",
+    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+    "fullDayLatestEndOffsetMinutes" : [ 5, 5 ],
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "fullDayEarliestStartOffsetMinutes" : [ 5, 5 ],
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "submittedBy" : "{}",
+    "syncVersion" : 2,
     "substatus" : "AdvanceTimeElapsed",
     "selfUri" : "https://openapi-generator.tech",
     "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
     "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
     "payableMinutes" : [ 1, 1 ],
-    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
     "reviewedBy" : "{}",
     "activityCodeId" : "activityCodeId",
     "durationMinutes" : [ 6, 6 ],
@@ -12726,22 +12824,24 @@ open class WorkforceManagementAPI {
     "dailyDurationMinutes" : 0,
     "paid" : true,
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "modifiedBy" : "{}",
-    "id" : "id",
-    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
     "user" : "{}",
     "status" : "PENDING"
   }, {
-    "submittedBy" : "{}",
-    "syncVersion" : 5,
     "metadata" : "{}",
     "notes" : "notes",
+    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+    "fullDayLatestEndOffsetMinutes" : [ 5, 5 ],
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "fullDayEarliestStartOffsetMinutes" : [ 5, 5 ],
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "submittedBy" : "{}",
+    "syncVersion" : 2,
     "substatus" : "AdvanceTimeElapsed",
     "selfUri" : "https://openapi-generator.tech",
     "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
     "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
     "payableMinutes" : [ 1, 1 ],
-    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
     "reviewedBy" : "{}",
     "activityCodeId" : "activityCodeId",
     "durationMinutes" : [ 6, 6 ],
@@ -12750,9 +12850,6 @@ open class WorkforceManagementAPI {
     "dailyDurationMinutes" : 0,
     "paid" : true,
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "modifiedBy" : "{}",
-    "id" : "id",
-    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
     "user" : "{}",
     "status" : "PENDING"
   } ]
@@ -15567,16 +15664,21 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "submittedBy" : "{}",
-  "syncVersion" : 5,
   "metadata" : "{}",
   "notes" : "notes",
+  "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+  "fullDayLatestEndOffsetMinutes" : [ 5, 5 ],
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "fullDayEarliestStartOffsetMinutes" : [ 5, 5 ],
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "submittedBy" : "{}",
+  "syncVersion" : 2,
   "substatus" : "AdvanceTimeElapsed",
   "selfUri" : "https://openapi-generator.tech",
   "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
   "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
   "payableMinutes" : [ 1, 1 ],
-  "submittedDate" : "2000-01-23T04:56:07.000+00:00",
   "reviewedBy" : "{}",
   "activityCodeId" : "activityCodeId",
   "durationMinutes" : [ 6, 6 ],
@@ -15585,9 +15687,6 @@ open class WorkforceManagementAPI {
   "dailyDurationMinutes" : 0,
   "paid" : true,
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-  "modifiedBy" : "{}",
-  "id" : "id",
-  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
   "user" : "{}",
   "status" : "PENDING"
 }, statusCode=200}]
@@ -16076,16 +16175,21 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "submittedBy" : "{}",
-  "syncVersion" : 5,
   "metadata" : "{}",
   "notes" : "notes",
+  "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+  "fullDayLatestEndOffsetMinutes" : [ 5, 5 ],
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "fullDayEarliestStartOffsetMinutes" : [ 5, 5 ],
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "submittedBy" : "{}",
+  "syncVersion" : 2,
   "substatus" : "AdvanceTimeElapsed",
   "selfUri" : "https://openapi-generator.tech",
   "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
   "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
   "payableMinutes" : [ 1, 1 ],
-  "submittedDate" : "2000-01-23T04:56:07.000+00:00",
   "reviewedBy" : "{}",
   "activityCodeId" : "activityCodeId",
   "durationMinutes" : [ 6, 6 ],
@@ -16094,9 +16198,6 @@ open class WorkforceManagementAPI {
   "dailyDurationMinutes" : 0,
   "paid" : true,
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-  "modifiedBy" : "{}",
-  "id" : "id",
-  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
   "user" : "{}",
   "status" : "PENDING"
 }, statusCode=200}]
@@ -17333,23 +17434,27 @@ open class WorkforceManagementAPI {
   "agentSchedules" : [ {
     "fullDayTimeOffMarkers" : [ {
       "activityCodeId" : "activityCodeId",
+      "startOffsetMinutes" : 6,
       "timeOffRequestId" : "timeOffRequestId",
-      "timeOffRequestSyncVersion" : 5,
-      "lengthMinutes" : 6,
+      "timeOffRequestSyncVersion" : 2,
+      "endOffsetMinutes" : 1,
+      "lengthMinutes" : 5,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 1,
+      "payableMinutes" : 5,
       "delete" : true
     }, {
       "activityCodeId" : "activityCodeId",
+      "startOffsetMinutes" : 6,
       "timeOffRequestId" : "timeOffRequestId",
-      "timeOffRequestSyncVersion" : 5,
-      "lengthMinutes" : 6,
+      "timeOffRequestSyncVersion" : 2,
+      "endOffsetMinutes" : 1,
+      "lengthMinutes" : 5,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 1,
+      "payableMinutes" : 5,
       "delete" : true
     } ],
     "shifts" : [ {
@@ -17419,23 +17524,27 @@ open class WorkforceManagementAPI {
   }, {
     "fullDayTimeOffMarkers" : [ {
       "activityCodeId" : "activityCodeId",
+      "startOffsetMinutes" : 6,
       "timeOffRequestId" : "timeOffRequestId",
-      "timeOffRequestSyncVersion" : 5,
-      "lengthMinutes" : 6,
+      "timeOffRequestSyncVersion" : 2,
+      "endOffsetMinutes" : 1,
+      "lengthMinutes" : 5,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 1,
+      "payableMinutes" : 5,
       "delete" : true
     }, {
       "activityCodeId" : "activityCodeId",
+      "startOffsetMinutes" : 6,
       "timeOffRequestId" : "timeOffRequestId",
-      "timeOffRequestSyncVersion" : 5,
-      "lengthMinutes" : 6,
+      "timeOffRequestSyncVersion" : 2,
+      "endOffsetMinutes" : 1,
+      "lengthMinutes" : 5,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 1,
+      "payableMinutes" : 5,
       "delete" : true
     } ],
     "shifts" : [ {
@@ -17507,12 +17616,12 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "weekDate" : "2000-01-23",
-    "weekCount" : 5
+    "weekCount" : 7
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "weekDate" : "2000-01-23",
-    "weekCount" : 5
+    "weekCount" : 7
   } ],
   "updates" : [ {
     "type" : "Added",
@@ -23299,16 +23408,21 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "id" : "id",
   "timeOffRequests" : [ {
-    "submittedBy" : "{}",
-    "syncVersion" : 5,
     "metadata" : "{}",
     "notes" : "notes",
+    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+    "fullDayLatestEndOffsetMinutes" : [ 5, 5 ],
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "fullDayEarliestStartOffsetMinutes" : [ 5, 5 ],
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "submittedBy" : "{}",
+    "syncVersion" : 2,
     "substatus" : "AdvanceTimeElapsed",
     "selfUri" : "https://openapi-generator.tech",
     "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
     "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
     "payableMinutes" : [ 1, 1 ],
-    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
     "reviewedBy" : "{}",
     "activityCodeId" : "activityCodeId",
     "durationMinutes" : [ 6, 6 ],
@@ -23317,22 +23431,24 @@ open class WorkforceManagementAPI {
     "dailyDurationMinutes" : 0,
     "paid" : true,
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "modifiedBy" : "{}",
-    "id" : "id",
-    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
     "user" : "{}",
     "status" : "PENDING"
   }, {
-    "submittedBy" : "{}",
-    "syncVersion" : 5,
     "metadata" : "{}",
     "notes" : "notes",
+    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+    "fullDayLatestEndOffsetMinutes" : [ 5, 5 ],
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "fullDayEarliestStartOffsetMinutes" : [ 5, 5 ],
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "submittedBy" : "{}",
+    "syncVersion" : 2,
     "substatus" : "AdvanceTimeElapsed",
     "selfUri" : "https://openapi-generator.tech",
     "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
     "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
     "payableMinutes" : [ 1, 1 ],
-    "submittedDate" : "2000-01-23T04:56:07.000+00:00",
     "reviewedBy" : "{}",
     "activityCodeId" : "activityCodeId",
     "durationMinutes" : [ 6, 6 ],
@@ -23341,9 +23457,6 @@ open class WorkforceManagementAPI {
     "dailyDurationMinutes" : 0,
     "paid" : true,
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "modifiedBy" : "{}",
-    "id" : "id",
-    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
     "user" : "{}",
     "status" : "PENDING"
   } ]
@@ -23478,7 +23591,7 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "submittedBy" : "{}",
-    "syncVersion" : 5,
+    "syncVersion" : 2,
     "metadata" : "{}",
     "notes" : "notes",
     "substatus" : "AdvanceTimeElapsed",
@@ -23494,13 +23607,15 @@ open class WorkforceManagementAPI {
     "markedAsRead" : true,
     "dailyDurationMinutes" : 0,
     "paid" : true,
+    "fullDayLatestEndOffsetMinutes" : [ 5, 5 ],
     "id" : "id",
+    "fullDayEarliestStartOffsetMinutes" : [ 5, 5 ],
     "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
     "user" : "{}",
     "status" : "PENDING"
   }, {
     "submittedBy" : "{}",
-    "syncVersion" : 5,
+    "syncVersion" : 2,
     "metadata" : "{}",
     "notes" : "notes",
     "substatus" : "AdvanceTimeElapsed",
@@ -23516,7 +23631,9 @@ open class WorkforceManagementAPI {
     "markedAsRead" : true,
     "dailyDurationMinutes" : 0,
     "paid" : true,
+    "fullDayLatestEndOffsetMinutes" : [ 5, 5 ],
     "id" : "id",
+    "fullDayEarliestStartOffsetMinutes" : [ 5, 5 ],
     "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
     "user" : "{}",
     "status" : "PENDING"
@@ -23828,27 +23945,31 @@ open class WorkforceManagementAPI {
   "fullDayDates" : [ {
     "date" : "2000-01-23",
     "durationMinutes" : 0,
+    "earliestStartOffsetMinutes" : 1,
     "flexible" : true,
     "payableMinutes" : 6,
-    "overrideDateType" : "Blocked"
+    "overrideDateType" : "Blocked",
+    "latestEndOffsetMinutes" : 5
   }, {
     "date" : "2000-01-23",
     "durationMinutes" : 0,
+    "earliestStartOffsetMinutes" : 1,
     "flexible" : true,
     "payableMinutes" : 6,
-    "overrideDateType" : "Blocked"
+    "overrideDateType" : "Blocked",
+    "latestEndOffsetMinutes" : 5
   } ],
   "partialDayDates" : [ {
     "date" : "2000-01-23T04:56:07.000+00:00",
-    "durationMinutes" : 1,
+    "durationMinutes" : 5,
     "flexible" : true,
-    "payableMinutes" : 5,
+    "payableMinutes" : 2,
     "overrideDateType" : "Blocked"
   }, {
     "date" : "2000-01-23T04:56:07.000+00:00",
-    "durationMinutes" : 1,
+    "durationMinutes" : 5,
     "flexible" : true,
-    "payableMinutes" : 5,
+    "payableMinutes" : 2,
     "overrideDateType" : "Blocked"
   } ],
   "paid" : true,
@@ -25830,16 +25951,21 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "submittedBy" : "{}",
-  "syncVersion" : 5,
   "metadata" : "{}",
   "notes" : "notes",
+  "submittedDate" : "2000-01-23T04:56:07.000+00:00",
+  "fullDayLatestEndOffsetMinutes" : [ 5, 5 ],
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "fullDayEarliestStartOffsetMinutes" : [ 5, 5 ],
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "submittedBy" : "{}",
+  "syncVersion" : 2,
   "substatus" : "AdvanceTimeElapsed",
   "selfUri" : "https://openapi-generator.tech",
   "fullDayManagementUnitDates" : [ "fullDayManagementUnitDates", "fullDayManagementUnitDates" ],
   "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+00:00", "2000-01-23T04:56:07.000+00:00" ],
   "payableMinutes" : [ 1, 1 ],
-  "submittedDate" : "2000-01-23T04:56:07.000+00:00",
   "reviewedBy" : "{}",
   "activityCodeId" : "activityCodeId",
   "durationMinutes" : [ 6, 6 ],
@@ -25848,9 +25974,6 @@ open class WorkforceManagementAPI {
   "dailyDurationMinutes" : 0,
   "paid" : true,
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-  "modifiedBy" : "{}",
-  "id" : "id",
-  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
   "user" : "{}",
   "status" : "PENDING"
 }, statusCode=200}]
@@ -25915,27 +26038,31 @@ open class WorkforceManagementAPI {
   "fullDayDates" : [ {
     "date" : "2000-01-23",
     "durationMinutes" : 0,
+    "earliestStartOffsetMinutes" : 1,
     "flexible" : true,
     "payableMinutes" : 6,
-    "overrideDateType" : "Blocked"
+    "overrideDateType" : "Blocked",
+    "latestEndOffsetMinutes" : 5
   }, {
     "date" : "2000-01-23",
     "durationMinutes" : 0,
+    "earliestStartOffsetMinutes" : 1,
     "flexible" : true,
     "payableMinutes" : 6,
-    "overrideDateType" : "Blocked"
+    "overrideDateType" : "Blocked",
+    "latestEndOffsetMinutes" : 5
   } ],
   "partialDayDates" : [ {
     "date" : "2000-01-23T04:56:07.000+00:00",
-    "durationMinutes" : 1,
+    "durationMinutes" : 5,
     "flexible" : true,
-    "payableMinutes" : 5,
+    "payableMinutes" : 2,
     "overrideDateType" : "Blocked"
   }, {
     "date" : "2000-01-23T04:56:07.000+00:00",
-    "durationMinutes" : 1,
+    "durationMinutes" : 5,
     "flexible" : true,
-    "payableMinutes" : 5,
+    "payableMinutes" : 2,
     "overrideDateType" : "Blocked"
   } ],
   "paid" : true,

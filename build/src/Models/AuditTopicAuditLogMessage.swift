@@ -75,7 +75,7 @@ public class AuditTopicAuditLogMessage: Codable {
         case assistants = "Assistants"
         case anomalyDetection = "AnomalyDetection"
         case conversations = "Conversations"
-        case copilot = "Copilot"
+        case genesysCloudCopilot = "GenesysCloudCopilot"
     }
 
 
@@ -482,6 +482,7 @@ public class AuditTopicAuditLogMessage: Codable {
         case ruleCategory = "RuleCategory"
         case decisionTable = "DecisionTable"
         case decisionTableVersion = "DecisionTableVersion"
+        case decisionTableSnapshot = "DecisionTableSnapshot"
         case decisionTableRow = "DecisionTableRow"
         case decisionTableImportJob = "DecisionTableImportJob"
         case decisionTableExportJob = "DecisionTableExportJob"

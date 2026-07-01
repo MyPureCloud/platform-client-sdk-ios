@@ -65,6 +65,10 @@ public class TimeOffRequestResponse: Codable {
 
 
 
+
+
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The user associated with this time off request */
@@ -91,6 +95,10 @@ public class TimeOffRequestResponse: Codable {
     public var durationMinutes: [Int]?
     /** Payable minutes for each day of this time off request */
     public var payableMinutes: [Int]?
+    /** Earliest start offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available */
+    public var fullDayEarliestStartOffsetMinutes: [Int]?
+    /** Latest end offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available */
+    public var fullDayLatestEndOffsetMinutes: [Int]?
     /** Notes about the time off request */
     public var notes: String?
     /** The user who submitted this time off request. The id may be 'System' if it was an automated process */
@@ -112,7 +120,7 @@ public class TimeOffRequestResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, user: UserReference?, isFullDayRequest: Bool?, markedAsRead: Bool?, activityCodeId: String?, paid: Bool?, status: Status?, substatus: Substatus?, partialDayStartDateTimes: [Date]?, fullDayManagementUnitDates: [String]?, dailyDurationMinutes: Int?, durationMinutes: [Int]?, payableMinutes: [Int]?, notes: String?, submittedBy: UserReference?, submittedDate: Date?, reviewedBy: UserReference?, reviewedDate: Date?, modifiedBy: UserReference?, modifiedDate: Date?, syncVersion: Int?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
+    public init(_id: String?, user: UserReference?, isFullDayRequest: Bool?, markedAsRead: Bool?, activityCodeId: String?, paid: Bool?, status: Status?, substatus: Substatus?, partialDayStartDateTimes: [Date]?, fullDayManagementUnitDates: [String]?, dailyDurationMinutes: Int?, durationMinutes: [Int]?, payableMinutes: [Int]?, fullDayEarliestStartOffsetMinutes: [Int]?, fullDayLatestEndOffsetMinutes: [Int]?, notes: String?, submittedBy: UserReference?, submittedDate: Date?, reviewedBy: UserReference?, reviewedDate: Date?, modifiedBy: UserReference?, modifiedDate: Date?, syncVersion: Int?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
         self._id = _id
         self.user = user
         self.isFullDayRequest = isFullDayRequest
@@ -126,6 +134,8 @@ public class TimeOffRequestResponse: Codable {
         self.dailyDurationMinutes = dailyDurationMinutes
         self.durationMinutes = durationMinutes
         self.payableMinutes = payableMinutes
+        self.fullDayEarliestStartOffsetMinutes = fullDayEarliestStartOffsetMinutes
+        self.fullDayLatestEndOffsetMinutes = fullDayLatestEndOffsetMinutes
         self.notes = notes
         self.submittedBy = submittedBy
         self.submittedDate = submittedDate
@@ -152,6 +162,8 @@ public class TimeOffRequestResponse: Codable {
         case dailyDurationMinutes
         case durationMinutes
         case payableMinutes
+        case fullDayEarliestStartOffsetMinutes
+        case fullDayLatestEndOffsetMinutes
         case notes
         case submittedBy
         case submittedDate
