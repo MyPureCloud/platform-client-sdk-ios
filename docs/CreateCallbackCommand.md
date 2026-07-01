@@ -9,6 +9,7 @@
 | **scriptId** | **String** | The identifier of the script to be used for the callback | [optional] |
 | **queueId** | **String** | The identifier of the queue to be used for the callback. Either queueId or routingData is required. | [optional] |
 | **routingData** | [**RoutingData**](RoutingData) | The routing data to be used for the callback. Either queueId or routingData is required. | [optional] |
+| **customerFirstCallbackDeliveryMode** | **String** | How customer-first callback agent reservation is applied for this callback. useAgentReservation forces reservation on; noAgentReservation forces it off; useQueueSetting uses the queue configuration. | [optional] |
 | **callbackUserName** | **String** | The name of the party to be called back. | [optional] |
 | **callbackNumbers** | **[String]** | A list of phone numbers for the callback. | |
 | **callbackScheduledTime** | [**Date**](Date) | The scheduled date-time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
@@ -20,4 +21,4 @@
 
 
 
-_PureCloudPlatformClientV2@197.0.0_
+_PureCloudPlatformClientV2@198.0.0_

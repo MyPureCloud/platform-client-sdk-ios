@@ -3457,6 +3457,8 @@ OutboundAPI.getOutboundContactlistfilters(pageSize: pageSize, pageNumber: pageNu
 
 Query a list of contact lists.
 
+Any ContactList field can be used as a query parameter to filter results. Multiple values can be specified for a field, and filter type prefixes can be used inline. Example: dateCreated&#x3D;greaterthan:2025-01-01T00:00:00.000Z&amp;dateCreated&#x3D;lessthan:2027-01-01T00:00:00.000Z. See https://developer.genesys.cloud/routing/outbound/filter-type for available filter types.
+
 
 
 Wraps GET /api/v2/outbound/contactlists  
@@ -9496,4 +9498,4 @@ OutboundAPI.putOutboundWrapupcodemappings(body: body) { (response, error) in
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatformClientV2@197.0.0_
+_PureCloudPlatformClientV2@198.0.0_

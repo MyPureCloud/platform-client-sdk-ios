@@ -90,6 +90,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getFlowsInstancesSettingsLoglevelsCharacteristics**](ArchitectAPI#getFlowsInstancesSettingsLoglevelsCharacteristics) | Gets the available flow log level characteristics for this organization. |
 | [**getFlowsInstancesSettingsLoglevelsDefault**](ArchitectAPI#getFlowsInstancesSettingsLoglevelsDefault) | Returns the flow default log level. |
 | [**getFlowsJob**](ArchitectAPI#getFlowsJob) | Fetch Architect Job Status |
+| [**getFlowsLookup**](ArchitectAPI#getFlowsLookup) | Look up flows by ID |
 | [**getFlowsMilestone**](ArchitectAPI#getFlowsMilestone) | Get a flow milestone |
 | [**getFlowsMilestones**](ArchitectAPI#getFlowsMilestones) | Get a pageable list of flow milestones, filtered by query parameters |
 | [**getFlowsMilestonesDivisionviews**](ArchitectAPI#getFlowsMilestonesDivisionviews) | Get a pageable list of basic flow milestone information objects filterable by query parameters. |
@@ -4948,6 +4949,66 @@ ArchitectAPI.getFlowsJob(jobId: jobId, expand: expand) { (response, error) in
 [**ArchitectJobStateResponse**](ArchitectJobStateResponse)
 
 
+## getFlowsLookup
+
+
+
+> [FlowEntityListing](FlowEntityListing) getFlowsLookup(_id, pageNumber, pageSize, sortBy, sortOrder)
+
+Look up flows by ID
+
+Returns only flows matching the specified ID(s). Returns an empty listing if no flows match the given IDs.
+
+
+
+Wraps GET /api/v2/flows/lookup  
+
+Requires ANY permissions: 
+
+* architect:flow:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let _id: [String] = [""] // Flow ID(s)
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Sort by
+let sortOrder: String = "" // Sort order
+
+// Code example
+ArchitectAPI.getFlowsLookup(_id: _id, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsLookup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **_id** | [**[String]**](String)| Flow ID(s) | |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
+
+
+### Return type
+
+[**FlowEntityListing**](FlowEntityListing)
+
+
 ## getFlowsMilestone
 
 
@@ -8147,4 +8208,4 @@ ArchitectAPI.putFlowsOutcome(flowOutcomeId: flowOutcomeId, body: body) { (respon
 [**Operation**](Operation)
 
 
-_PureCloudPlatformClientV2@197.0.0_
+_PureCloudPlatformClientV2@198.0.0_

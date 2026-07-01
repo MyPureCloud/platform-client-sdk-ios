@@ -11,7 +11,9 @@
 | **shortTermForecasting** | [**BuShortTermForecastingSettings**](BuShortTermForecastingSettings) | Short term forecasting settings | [optional] |
 | **scheduling** | [**BuSchedulingSettingsRequest**](BuSchedulingSettingsRequest) | Scheduling settings | [optional] |
 | **notifications** | [**BuNotificationSettingsRequest**](BuNotificationSettingsRequest) | Notification settings | [optional] |
+| **learning** | [**BuActivitySettingsRequest**](BuActivitySettingsRequest) | Learning settings | [optional] |
+| **coaching** | [**BuActivitySettingsRequest**](BuActivitySettingsRequest) | Coaching settings | [optional] |
 
 
 
-_PureCloudPlatformClientV2@197.0.0_
+_PureCloudPlatformClientV2@198.0.0_

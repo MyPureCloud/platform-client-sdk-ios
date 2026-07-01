@@ -11,6 +11,8 @@
 | **paid** | **Bool** | Whether this is a paid time off request | [optional] |
 | **notes** | **String** | Notes about the time off request | [optional] |
 | **fullDayManagementUnitDates** | **[String]** | A set of dates in yyyy-MM-dd format. Should be interpreted in the management unit&#39;s configured time zone | [optional] |
+| **fullDayEarliestStartOffsetMinutes** | [**ListWrapperInteger**](ListWrapperInteger) | Earliest start offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available | [optional] |
+| **fullDayLatestEndOffsetMinutes** | [**ListWrapperInteger**](ListWrapperInteger) | Latest end offset in minutes for each full-day request date. Values may be null when time-off estimation is disabled or no estimate is available | [optional] |
 | **partialDayStartDateTimes** | [**[Date]**]([Date]) | A set of start date-times in ISO-8601 format for partial day requests | [optional] |
 | **dailyDurationMinutes** | **Int** | The daily duration of this time off request in minutes | [optional] |
 | **durationMinutes** | **[Int]** | Daily durations for each day of this time off request in minutes | [optional] |
@@ -19,4 +21,4 @@
 
 
 
-_PureCloudPlatformClientV2@197.0.0_
+_PureCloudPlatformClientV2@198.0.0_
