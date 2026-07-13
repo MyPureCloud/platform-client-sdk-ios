@@ -12,4 +12,4 @@ Open Event Messaging rich media message structure
 
 
 
-_PureCloudPlatformClientV2@198.0.0_
+_PureCloudPlatformClientV2@199.0.0_

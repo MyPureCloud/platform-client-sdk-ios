@@ -1,0 +1,16 @@
+# UploadAttachmentRequest
+
+## UploadAttachmentRequest
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **name** | **String** | Name of the attachment file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%&#x60;]\&quot;&gt;[~&lt;#| | |
+| **contentLengthBytes** | **Int** | The length of the file to upload in bytes | |
+| **contentMd5** | **String** | Content MD5 of the file to upload | [optional] |
+| **inlineImage** | **Bool** | Whether or not the attachment should be attached inline | [optional] |
+
+
+
+_PureCloudPlatformClientV2@199.0.0_

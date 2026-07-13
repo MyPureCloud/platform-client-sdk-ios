@@ -12,6 +12,7 @@
 | **language** | **String** | The asset resource language | |
 | **durationSeconds** | **Double** |  | [optional] |
 | **mediaUri** | **String** |  | [optional] |
+| **audioFormat** | [**AudioFormat**](AudioFormat) | Audio format info | [optional] |
 | **ttsString** | **String** |  | [optional] |
 | **text** | **String** |  | [optional] |
 | **uploadUri** | **String** | Deprecated. This was use for uploading the resource audio. | [optional] |
@@ -23,4 +24,4 @@
 
 
 
-_PureCloudPlatformClientV2@198.0.0_
+_PureCloudPlatformClientV2@199.0.0_

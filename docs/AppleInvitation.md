@@ -14,4 +14,4 @@ Apple Messages for Business invitation template configuration
 
 
 
-_PureCloudPlatformClientV2@198.0.0_
+_PureCloudPlatformClientV2@199.0.0_

@@ -252,6 +252,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsEmailInboundmessages**](ConversationsAPI#postConversationsEmailInboundmessages) | Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based. This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it. |
 | [**postConversationsEmailMessages**](ConversationsAPI#postConversationsEmailMessages) | Send an email reply |
 | [**postConversationsEmailMessagesDraftAttachmentsCopy**](ConversationsAPI#postConversationsEmailMessagesDraftAttachmentsCopy) | Copy attachments from an email message to the current draft. |
+| [**postConversationsEmailMessagesDraftAttachmentsUploads**](ConversationsAPI#postConversationsEmailMessagesDraftAttachmentsUploads) | Create a URL to upload a message attachment file |
 | [**postConversationsEmailParticipantCommunicationWrapup**](ConversationsAPI#postConversationsEmailParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsEmailParticipantReplace**](ConversationsAPI#postConversationsEmailParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsEmailReconnect**](ConversationsAPI#postConversationsEmailReconnect) | Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation |
@@ -13295,6 +13296,60 @@ ConversationsAPI.postConversationsEmailMessagesDraftAttachmentsCopy(conversation
 [**EmailMessage**](EmailMessage)
 
 
+## postConversationsEmailMessagesDraftAttachmentsUploads
+
+
+
+> [UploadAttachmentResponse](UploadAttachmentResponse) postConversationsEmailMessagesDraftAttachmentsUploads(conversationId, body)
+
+Create a URL to upload a message attachment file
+
+See https://developer.genesys.cloud/analyticsdatamanagement/uploads/upload-email-attachment-files for example usage.
+
+
+
+Wraps POST /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/uploads  
+
+Requires ANY permissions: 
+
+* conversation:emailAttachment:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let body: UploadAttachmentRequest = new UploadAttachmentRequest(...) // Create attachment pre-signed URL request
+
+// Code example
+ConversationsAPI.postConversationsEmailMessagesDraftAttachmentsUploads(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsEmailMessagesDraftAttachmentsUploads was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **body** | [**UploadAttachmentRequest**](UploadAttachmentRequest)| Create attachment pre-signed URL request | |
+
+
+### Return type
+
+[**UploadAttachmentResponse**](UploadAttachmentResponse)
+
+
 ## postConversationsEmailParticipantCommunicationWrapup
 
 
@@ -16722,4 +16777,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@198.0.0_
+_PureCloudPlatformClientV2@199.0.0_

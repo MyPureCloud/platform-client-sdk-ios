@@ -31,8 +31,9 @@
 | **modifiedBy** | [**UserReference**](UserReference) | The last user to modify this activity plan. The id may be &#39;System&#39; if it was an automated process | |
 | **lastRunDate** | [**Date**](Date) | The date on which the activity plan was last manually run, in ISO-8601 format | [optional] |
 | **lastRunBy** | [**UserReference**](UserReference) | The last user to run this activity plan | [optional] |
+| **startTimeIncrementMinutes** | **Int** | The valid start times available when scheduling sessions | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@198.0.0_
+_PureCloudPlatformClientV2@199.0.0_

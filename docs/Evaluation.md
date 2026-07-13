@@ -41,9 +41,15 @@
 | **authorizedActions** | **[String]** | List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit | [optional] |
 | **hasAssistanceFailed** | **Bool** | Is true when evaluation assistance didn&#39;t execute successfully | [optional] |
 | **evaluationSource** | [**EvaluationSource**](EvaluationSource) | The source that created the evaluation. | [optional] |
+| **disputeCount** | **Int** | The number of times this evaluation has been disputed | [optional] |
+| **version** | **Int** | The evaluation version number | [optional] |
+| **versionHistory** | [**PagelessDomainEntityListingEvaluationVersion**](PagelessDomainEntityListingEvaluationVersion) | List of all versions of the evaluation | [optional] |
+| **declinedReview** | **Bool** | Is true when the evaluation review was declined | [optional] |
+| **evaluationContextId** | **String** | The shared id for different versions of an evaluation | [optional] |
+| **retractedEvaluation** | [**EvaluationReference**](EvaluationReference) | The previous evaluation version | [optional] |
 | **aiScoring** | [**AiScoring**](AiScoring) | AI scoring details for the evaluation. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@198.0.0_
+_PureCloudPlatformClientV2@199.0.0_

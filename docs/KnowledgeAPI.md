@@ -17,6 +17,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteKnowledgeKnowledgebaseSynchronizeJob**](KnowledgeAPI#deleteKnowledgeKnowledgebaseSynchronizeJob) | Delete synchronization job |
 | [**deleteKnowledgeSetting**](KnowledgeAPI#deleteKnowledgeSetting) | Delete Knowledge setting. |
 | [**deleteKnowledgeSource**](KnowledgeAPI#deleteKnowledgeSource) | Delete source |
+| [**deleteKnowledgeSourceSynchronizationDeletion**](KnowledgeAPI#deleteKnowledgeSourceSynchronizationDeletion) | Remove a deletion entry associated with the synchronization |
+| [**deleteKnowledgeSourceSynchronizationUpload**](KnowledgeAPI#deleteKnowledgeSourceSynchronizationUpload) | Remove a file upload entry associated with the synchronization |
 | [**getKnowledgeConnection**](KnowledgeAPI#getKnowledgeConnection) | Get connection |
 | [**getKnowledgeConnectionOptions**](KnowledgeAPI#getKnowledgeConnectionOptions) | Get connection options |
 | [**getKnowledgeConnections**](KnowledgeAPI#getKnowledgeConnections) | Get connections |
@@ -58,6 +60,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getKnowledgeSettings**](KnowledgeAPI#getKnowledgeSettings) | Get Knowledge settings. |
 | [**getKnowledgeSource**](KnowledgeAPI#getKnowledgeSource) | Get source |
 | [**getKnowledgeSourceSynchronization**](KnowledgeAPI#getKnowledgeSourceSynchronization) | Get a specific synchronization of a source. |
+| [**getKnowledgeSourceSynchronizationDeletion**](KnowledgeAPI#getKnowledgeSourceSynchronizationDeletion) | Get a deletion entry associated with the synchronization |
+| [**getKnowledgeSourceSynchronizationDeletions**](KnowledgeAPI#getKnowledgeSourceSynchronizationDeletions) | Get deletion entries associated with the synchronization. |
+| [**getKnowledgeSourceSynchronizationUpload**](KnowledgeAPI#getKnowledgeSourceSynchronizationUpload) | Get a file upload entry associated with the synchronization |
+| [**getKnowledgeSourceSynchronizationUploads**](KnowledgeAPI#getKnowledgeSourceSynchronizationUploads) | Get file upload entries associated with the synchronization |
 | [**getKnowledgeSourceSynchronizations**](KnowledgeAPI#getKnowledgeSourceSynchronizations) | Get synchronizations of a source. |
 | [**getKnowledgeSources**](KnowledgeAPI#getKnowledgeSources) | List sources |
 | [**getKnowledgeSourcesSynchronizations**](KnowledgeAPI#getKnowledgeSourcesSynchronizations) | Get synchronizations of all sources of the organization. |
@@ -118,6 +124,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postKnowledgeSearch**](KnowledgeAPI#postKnowledgeSearch) | Get Knowledge Search |
 | [**postKnowledgeSearchPreview**](KnowledgeAPI#postKnowledgeSearchPreview) | Get Knowledge Search Preview |
 | [**postKnowledgeSettings**](KnowledgeAPI#postKnowledgeSettings) | Create Knowledge setting. |
+| [**postKnowledgeSourceSynchronizationDeletions**](KnowledgeAPI#postKnowledgeSourceSynchronizationDeletions) | Mark a previously synced file for deletion in the synchronization. |
 | [**postKnowledgeSourceSynchronizationUploads**](KnowledgeAPI#postKnowledgeSourceSynchronizationUploads) | Create presigned URL for uploading a file in the synchronization. |
 | [**postKnowledgeSourceSynchronizations**](KnowledgeAPI#postKnowledgeSourceSynchronizations) | Start a manual synchronization from a source. |
 | [**postKnowledgeSources**](KnowledgeAPI#postKnowledgeSources) | Create a new source |
@@ -782,6 +789,112 @@ KnowledgeAPI.deleteKnowledgeSource(sourceId: sourceId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **sourceId** | **String**| Source ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteKnowledgeSourceSynchronizationDeletion
+
+
+
+> Void deleteKnowledgeSourceSynchronizationDeletion(sourceId, synchronizationId, fileId)
+
+Remove a deletion entry associated with the synchronization
+
+
+
+Wraps DELETE /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions/{fileId}  
+
+Requires ALL permissions: 
+
+* knowledge:synchronizationFileDeletion:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Source ID
+let synchronizationId: String = "" // Synchronization ID
+let fileId: String = "" // File ID
+
+// Code example
+KnowledgeAPI.deleteKnowledgeSourceSynchronizationDeletion(sourceId: sourceId, synchronizationId: synchronizationId, fileId: fileId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("KnowledgeAPI.deleteKnowledgeSourceSynchronizationDeletion was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Source ID | |
+| **synchronizationId** | **String**| Synchronization ID | |
+| **fileId** | **String**| File ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteKnowledgeSourceSynchronizationUpload
+
+
+
+> Void deleteKnowledgeSourceSynchronizationUpload(sourceId, synchronizationId, fileId)
+
+Remove a file upload entry associated with the synchronization
+
+
+
+Wraps DELETE /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads/{fileId}  
+
+Requires ALL permissions: 
+
+* knowledge:synchronizationFileUpload:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Source ID
+let synchronizationId: String = "" // Synchronization ID
+let fileId: String = "" // File ID
+
+// Code example
+KnowledgeAPI.deleteKnowledgeSourceSynchronizationUpload(sourceId: sourceId, synchronizationId: synchronizationId, fileId: fileId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("KnowledgeAPI.deleteKnowledgeSourceSynchronizationUpload was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Source ID | |
+| **synchronizationId** | **String**| Synchronization ID | |
+| **fileId** | **String**| File ID | |
 
 
 ### Return type
@@ -3126,6 +3239,230 @@ KnowledgeAPI.getKnowledgeSourceSynchronization(sourceId: sourceId, synchronizati
 ### Return type
 
 [**V3Synchronization**](V3Synchronization)
+
+
+## getKnowledgeSourceSynchronizationDeletion
+
+
+
+> [V3SynchronizationDeletion](V3SynchronizationDeletion) getKnowledgeSourceSynchronizationDeletion(sourceId, synchronizationId, fileId)
+
+Get a deletion entry associated with the synchronization
+
+
+
+Wraps GET /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions/{fileId}  
+
+Requires ALL permissions: 
+
+* knowledge:synchronizationFileDeletion:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Source ID
+let synchronizationId: String = "" // Synchronization ID
+let fileId: String = "" // File ID
+
+// Code example
+KnowledgeAPI.getKnowledgeSourceSynchronizationDeletion(sourceId: sourceId, synchronizationId: synchronizationId, fileId: fileId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeSourceSynchronizationDeletion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Source ID | |
+| **synchronizationId** | **String**| Synchronization ID | |
+| **fileId** | **String**| File ID | |
+
+
+### Return type
+
+[**V3SynchronizationDeletion**](V3SynchronizationDeletion)
+
+
+## getKnowledgeSourceSynchronizationDeletions
+
+
+
+> [V3SynchronizationDeletionListing](V3SynchronizationDeletionListing) getKnowledgeSourceSynchronizationDeletions(sourceId, synchronizationId, before, after, pageSize)
+
+Get deletion entries associated with the synchronization.
+
+
+
+Wraps GET /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions  
+
+Requires ALL permissions: 
+
+* knowledge:synchronizationFileDeletion:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Source ID
+let synchronizationId: String = "" // Synchronization ID
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+
+// Code example
+KnowledgeAPI.getKnowledgeSourceSynchronizationDeletions(sourceId: sourceId, synchronizationId: synchronizationId, before: before, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeSourceSynchronizationDeletions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Source ID | |
+| **synchronizationId** | **String**| Synchronization ID | |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+
+
+### Return type
+
+[**V3SynchronizationDeletionListing**](V3SynchronizationDeletionListing)
+
+
+## getKnowledgeSourceSynchronizationUpload
+
+
+
+> [V3SynchronizationUpload](V3SynchronizationUpload) getKnowledgeSourceSynchronizationUpload(sourceId, synchronizationId, fileId)
+
+Get a file upload entry associated with the synchronization
+
+
+
+Wraps GET /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads/{fileId}  
+
+Requires ALL permissions: 
+
+* knowledge:synchronizationFileUpload:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Source ID
+let synchronizationId: String = "" // Synchronization ID
+let fileId: String = "" // File ID
+
+// Code example
+KnowledgeAPI.getKnowledgeSourceSynchronizationUpload(sourceId: sourceId, synchronizationId: synchronizationId, fileId: fileId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeSourceSynchronizationUpload was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Source ID | |
+| **synchronizationId** | **String**| Synchronization ID | |
+| **fileId** | **String**| File ID | |
+
+
+### Return type
+
+[**V3SynchronizationUpload**](V3SynchronizationUpload)
+
+
+## getKnowledgeSourceSynchronizationUploads
+
+
+
+> [V3SynchronizationUploadListing](V3SynchronizationUploadListing) getKnowledgeSourceSynchronizationUploads(sourceId, synchronizationId, before, after, pageSize)
+
+Get file upload entries associated with the synchronization
+
+
+
+Wraps GET /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads  
+
+Requires ALL permissions: 
+
+* knowledge:synchronizationFileUpload:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Source ID
+let synchronizationId: String = "" // Synchronization ID
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+
+// Code example
+KnowledgeAPI.getKnowledgeSourceSynchronizationUploads(sourceId: sourceId, synchronizationId: synchronizationId, before: before, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeSourceSynchronizationUploads was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Source ID | |
+| **synchronizationId** | **String**| Synchronization ID | |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+
+
+### Return type
+
+[**V3SynchronizationUploadListing**](V3SynchronizationUploadListing)
 
 
 ## getKnowledgeSourceSynchronizations
@@ -6281,6 +6618,60 @@ KnowledgeAPI.postKnowledgeSettings(body: body) { (response, error) in
 [**KnowledgeSettingsResponse**](KnowledgeSettingsResponse)
 
 
+## postKnowledgeSourceSynchronizationDeletions
+
+
+
+> [V3SynchronizationDeletion](V3SynchronizationDeletion) postKnowledgeSourceSynchronizationDeletions(sourceId, synchronizationId, body)
+
+Mark a previously synced file for deletion in the synchronization.
+
+
+
+Wraps POST /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions  
+
+Requires ALL permissions: 
+
+* knowledge:synchronization:deleteFile
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceId: String = "" // Source ID
+let synchronizationId: String = "" // Synchronization ID
+let body: V3SynchronizationFileDeletionRequest = new V3SynchronizationFileDeletionRequest(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeSourceSynchronizationDeletions(sourceId: sourceId, synchronizationId: synchronizationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeSourceSynchronizationDeletions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceId** | **String**| Source ID | |
+| **synchronizationId** | **String**| Synchronization ID | |
+| **body** | [**V3SynchronizationFileDeletionRequest**](V3SynchronizationFileDeletionRequest)|  | |
+
+
+### Return type
+
+[**V3SynchronizationDeletion**](V3SynchronizationDeletion)
+
+
 ## postKnowledgeSourceSynchronizationUploads
 
 
@@ -6597,4 +6988,4 @@ KnowledgeAPI.putKnowledgeSource(sourceId: sourceId, body: body) { (response, err
 [**V3SourceDetailedResponse**](V3SourceDetailedResponse)
 
 
-_PureCloudPlatformClientV2@198.0.0_
+_PureCloudPlatformClientV2@199.0.0_

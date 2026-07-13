@@ -1868,6 +1868,8 @@ CaseManagementAPI.postCasemanagementCaseplans(body: body) { (response, error) in
 
 Query for Caseplans.
 
+This endpoint supports two filtering modes. The recommended approach uses &#39;filters&#39; (generic filter model) and &#39;attributes&#39; (field projection). During the migration period, the legacy fields &#39;name&#39;, &#39;nameSearchType&#39;, and &#39;divisionIds&#39; remain available as an alternative.
+
 
 
 Wraps POST /api/v2/casemanagement/caseplans/query  
@@ -2116,4 +2118,4 @@ CaseManagementAPI.putCasemanagementCaseplanIntakesettings(caseplanId: caseplanId
 [**IntakeSettingsListing**](IntakeSettingsListing)
 
 
-_PureCloudPlatformClientV2@198.0.0_
+_PureCloudPlatformClientV2@199.0.0_
