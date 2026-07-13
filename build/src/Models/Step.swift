@@ -34,6 +34,8 @@ public class Step: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of the Step. */
@@ -56,12 +58,14 @@ public class Step: Codable {
     public var status: Status?
     /** The parent Stage of the Step. */
     public var stage: StageReference?
+    /** The workitem activity linked to this step. Present only for workitem-type steps that have been activated. */
+    public var workitemActivity: WorkitemActivityReference?
     /** The URI for this object */
     public var selfUri: String?
     /** The parent Case of the Step. */
     public var _case: CaseReference?
 
-    public init(_id: String?, name: String?, _description: String?, dateCreated: Date?, dateModified: Date?, dateCompleted: Date?, dateStarted: Date?, modifiedBy: UserReference?, version: Int?, status: Status?, stage: StageReference?, selfUri: String?, _case: CaseReference?) {
+    public init(_id: String?, name: String?, _description: String?, dateCreated: Date?, dateModified: Date?, dateCompleted: Date?, dateStarted: Date?, modifiedBy: UserReference?, version: Int?, status: Status?, stage: StageReference?, workitemActivity: WorkitemActivityReference?, selfUri: String?, _case: CaseReference?) {
         self._id = _id
         self.name = name
         self._description = _description
@@ -73,6 +77,7 @@ public class Step: Codable {
         self.version = version
         self.status = status
         self.stage = stage
+        self.workitemActivity = workitemActivity
         self.selfUri = selfUri
         self._case = _case
     }
@@ -89,6 +94,7 @@ public class Step: Codable {
         case version
         case status
         case stage
+        case workitemActivity
         case selfUri
         case _case = "case"
     }

@@ -21,8 +21,9 @@
 | **createdBy** | [**UserReference**](UserReference) | The user who created this activity plan | |
 | **modifiedDate** | [**Date**](Date) | The date the activity plan was modified, in ISO-8601 format | |
 | **modifiedBy** | [**UserReference**](UserReference) | The last user to modify this activity plan. The id may be &#39;System&#39; if it was an automated process | |
+| **initialSchedulePeriod** | [**SchedulingPeriodBase**](SchedulingPeriodBase) | The initial schedule period of the activity plan | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@198.0.0_
+_PureCloudPlatformClientV2@199.0.0_

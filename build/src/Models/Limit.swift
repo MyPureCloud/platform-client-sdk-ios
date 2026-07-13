@@ -5,8 +5,8 @@ public class Limit: Codable {
 
 
     public enum Namespace: String, Codable { 
+        case webDeployments = "web.deployments"
         case webMessaging = "web.messaging"
-        case webhooks = "webhooks"
         case agentAssistant = "agent.assistant"
         case agenticVirtualAgents = "agentic.virtual.agents"
         case analyticsAgents = "analytics.agents"
@@ -57,6 +57,7 @@ public class Limit: Codable {
         case learning = "learning"
         case limitRegistry = "limit.registry"
         case marketplace = "marketplace"
+        case mcpAnalyticsAggregates = "mcp.analytics.aggregates"
         case mcp = "mcp"
         case mediaCommunications = "media.communications"
         case messaging = "messaging"
@@ -87,8 +88,9 @@ public class Limit: Codable {
         case users = "users"
         case usersRules = "users.rules"
         case voiceTranscription = "voice.transcription"
-        case webDeployments = "web.deployments"
         case webchat = "webchat"
+        case webhooks = "webhooks"
+        case workforceManagementAdherence = "workforce.management.adherence"
         case workforceManagementAgentAvailability = "workforce.management.agent.availability"
         case workforceManagementForecast = "workforce.management.forecast"
         case workforceManagement = "workforce.management"

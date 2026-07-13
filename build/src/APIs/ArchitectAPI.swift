@@ -4969,6 +4969,7 @@ open class ArchitectAPI {
     "selfUri" : "https://openapi-generator.tech",
     "uploadStatus" : "created",
     "language" : "language",
+    "audioFormat" : "{}",
     "languageDefault" : true,
     "tags" : {
       "key" : [ "tags", "tags" ]
@@ -4985,6 +4986,7 @@ open class ArchitectAPI {
     "selfUri" : "https://openapi-generator.tech",
     "uploadStatus" : "created",
     "language" : "language",
+    "audioFormat" : "{}",
     "languageDefault" : true,
     "tags" : {
       "key" : [ "tags", "tags" ]
@@ -5523,6 +5525,7 @@ open class ArchitectAPI {
   "selfUri" : "https://openapi-generator.tech",
   "uploadStatus" : "created",
   "language" : "language",
+  "audioFormat" : "{}",
   "languageDefault" : true,
   "tags" : {
     "key" : [ "tags", "tags" ]
@@ -5607,6 +5610,7 @@ open class ArchitectAPI {
     "selfUri" : "https://openapi-generator.tech",
     "uploadStatus" : "created",
     "language" : "language",
+    "audioFormat" : "{}",
     "languageDefault" : true,
     "tags" : {
       "key" : [ "tags", "tags" ]
@@ -5623,6 +5627,7 @@ open class ArchitectAPI {
     "selfUri" : "https://openapi-generator.tech",
     "uploadStatus" : "created",
     "language" : "language",
+    "audioFormat" : "{}",
     "languageDefault" : true,
     "tags" : {
       "key" : [ "tags", "tags" ]
@@ -5742,6 +5747,7 @@ open class ArchitectAPI {
       "selfUri" : "https://openapi-generator.tech",
       "uploadStatus" : "created",
       "language" : "language",
+      "audioFormat" : "{}",
       "languageDefault" : true,
       "tags" : {
         "key" : [ "tags", "tags" ]
@@ -5758,6 +5764,7 @@ open class ArchitectAPI {
       "selfUri" : "https://openapi-generator.tech",
       "uploadStatus" : "created",
       "language" : "language",
+      "audioFormat" : "{}",
       "languageDefault" : true,
       "tags" : {
         "key" : [ "tags", "tags" ]
@@ -5781,6 +5788,7 @@ open class ArchitectAPI {
       "selfUri" : "https://openapi-generator.tech",
       "uploadStatus" : "created",
       "language" : "language",
+      "audioFormat" : "{}",
       "languageDefault" : true,
       "tags" : {
         "key" : [ "tags", "tags" ]
@@ -5797,6 +5805,7 @@ open class ArchitectAPI {
       "selfUri" : "https://openapi-generator.tech",
       "uploadStatus" : "created",
       "language" : "language",
+      "audioFormat" : "{}",
       "languageDefault" : true,
       "tags" : {
         "key" : [ "tags", "tags" ]
@@ -6584,6 +6593,7 @@ open class ArchitectAPI {
     "selfUri" : "https://openapi-generator.tech",
     "uploadStatus" : "created",
     "language" : "language",
+    "audioFormat" : "{}",
     "languageDefault" : true,
     "tags" : {
       "key" : [ "tags", "tags" ]
@@ -6601,6 +6611,7 @@ open class ArchitectAPI {
     "selfUri" : "https://openapi-generator.tech",
     "uploadStatus" : "created",
     "language" : "language",
+    "audioFormat" : "{}",
     "languageDefault" : true,
     "tags" : {
       "key" : [ "tags", "tags" ]
@@ -7140,6 +7151,7 @@ open class ArchitectAPI {
   "selfUri" : "https://openapi-generator.tech",
   "uploadStatus" : "created",
   "language" : "language",
+  "audioFormat" : "{}",
   "languageDefault" : true,
   "tags" : {
     "key" : [ "tags", "tags" ]
@@ -7230,6 +7242,7 @@ open class ArchitectAPI {
     "selfUri" : "https://openapi-generator.tech",
     "uploadStatus" : "created",
     "language" : "language",
+    "audioFormat" : "{}",
     "languageDefault" : true,
     "tags" : {
       "key" : [ "tags", "tags" ]
@@ -7247,6 +7260,7 @@ open class ArchitectAPI {
     "selfUri" : "https://openapi-generator.tech",
     "uploadStatus" : "created",
     "language" : "language",
+    "audioFormat" : "{}",
     "languageDefault" : true,
     "tags" : {
       "key" : [ "tags", "tags" ]
@@ -7369,6 +7383,7 @@ open class ArchitectAPI {
       "selfUri" : "https://openapi-generator.tech",
       "uploadStatus" : "created",
       "language" : "language",
+      "audioFormat" : "{}",
       "languageDefault" : true,
       "tags" : {
         "key" : [ "tags", "tags" ]
@@ -7386,6 +7401,7 @@ open class ArchitectAPI {
       "selfUri" : "https://openapi-generator.tech",
       "uploadStatus" : "created",
       "language" : "language",
+      "audioFormat" : "{}",
       "languageDefault" : true,
       "tags" : {
         "key" : [ "tags", "tags" ]
@@ -7409,6 +7425,7 @@ open class ArchitectAPI {
       "selfUri" : "https://openapi-generator.tech",
       "uploadStatus" : "created",
       "language" : "language",
+      "audioFormat" : "{}",
       "languageDefault" : true,
       "tags" : {
         "key" : [ "tags", "tags" ]
@@ -7426,6 +7443,7 @@ open class ArchitectAPI {
       "selfUri" : "https://openapi-generator.tech",
       "uploadStatus" : "created",
       "language" : "language",
+      "audioFormat" : "{}",
       "languageDefault" : true,
       "tags" : {
         "key" : [ "tags", "tags" ]
@@ -24605,6 +24623,7 @@ open class ArchitectAPI {
   "selfUri" : "https://openapi-generator.tech",
   "uploadStatus" : "created",
   "language" : "language",
+  "audioFormat" : "{}",
   "languageDefault" : true,
   "tags" : {
     "key" : [ "tags", "tags" ]
@@ -24680,6 +24699,7 @@ open class ArchitectAPI {
     "selfUri" : "https://openapi-generator.tech",
     "uploadStatus" : "created",
     "language" : "language",
+    "audioFormat" : "{}",
     "languageDefault" : true,
     "tags" : {
       "key" : [ "tags", "tags" ]
@@ -24696,6 +24716,7 @@ open class ArchitectAPI {
     "selfUri" : "https://openapi-generator.tech",
     "uploadStatus" : "created",
     "language" : "language",
+    "audioFormat" : "{}",
     "languageDefault" : true,
     "tags" : {
       "key" : [ "tags", "tags" ]
@@ -25301,6 +25322,7 @@ open class ArchitectAPI {
   "selfUri" : "https://openapi-generator.tech",
   "uploadStatus" : "created",
   "language" : "language",
+  "audioFormat" : "{}",
   "languageDefault" : true,
   "tags" : {
     "key" : [ "tags", "tags" ]
@@ -38864,6 +38886,7 @@ open class ArchitectAPI {
     "selfUri" : "https://openapi-generator.tech",
     "uploadStatus" : "created",
     "language" : "language",
+    "audioFormat" : "{}",
     "languageDefault" : true,
     "tags" : {
       "key" : [ "tags", "tags" ]
@@ -38880,6 +38903,7 @@ open class ArchitectAPI {
     "selfUri" : "https://openapi-generator.tech",
     "uploadStatus" : "created",
     "language" : "language",
+    "audioFormat" : "{}",
     "languageDefault" : true,
     "tags" : {
       "key" : [ "tags", "tags" ]
@@ -38958,6 +38982,7 @@ open class ArchitectAPI {
   "selfUri" : "https://openapi-generator.tech",
   "uploadStatus" : "created",
   "language" : "language",
+  "audioFormat" : "{}",
   "languageDefault" : true,
   "tags" : {
     "key" : [ "tags", "tags" ]
@@ -39211,6 +39236,7 @@ open class ArchitectAPI {
   "selfUri" : "https://openapi-generator.tech",
   "uploadStatus" : "created",
   "language" : "language",
+  "audioFormat" : "{}",
   "languageDefault" : true,
   "tags" : {
     "key" : [ "tags", "tags" ]

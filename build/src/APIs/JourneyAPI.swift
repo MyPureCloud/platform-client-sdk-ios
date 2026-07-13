@@ -3695,9 +3695,10 @@ open class JourneyAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "charts" : [ {
-    "groupByMax" : 1,
+    "groupByMax" : 5,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "rank" : 1,
     "groupByAttributes" : [ {
       "elementId" : "elementId",
       "attribute" : "attribute"
@@ -3721,9 +3722,10 @@ open class JourneyAPI {
     "version" : 6,
     "displayAttributes" : "{}"
   }, {
-    "groupByMax" : 1,
+    "groupByMax" : 5,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "rank" : 1,
     "groupByAttributes" : [ {
       "elementId" : "elementId",
       "attribute" : "attribute"
@@ -3914,9 +3916,10 @@ open class JourneyAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "charts" : [ {
-    "groupByMax" : 1,
+    "groupByMax" : 5,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "rank" : 1,
     "groupByAttributes" : [ {
       "elementId" : "elementId",
       "attribute" : "attribute"
@@ -3940,9 +3943,10 @@ open class JourneyAPI {
     "version" : 6,
     "displayAttributes" : "{}"
   }, {
-    "groupByMax" : 1,
+    "groupByMax" : 5,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "rank" : 1,
     "groupByAttributes" : [ {
       "elementId" : "elementId",
       "attribute" : "attribute"
@@ -4081,9 +4085,10 @@ open class JourneyAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "groupByMax" : 1,
+  "groupByMax" : 5,
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
+  "rank" : 1,
   "groupByAttributes" : [ {
     "elementId" : "elementId",
     "attribute" : "attribute"
@@ -4177,9 +4182,10 @@ open class JourneyAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "groupByMax" : 1,
+  "groupByMax" : 5,
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
+  "rank" : 1,
   "groupByAttributes" : [ {
     "elementId" : "elementId",
     "attribute" : "attribute"
@@ -4747,9 +4753,10 @@ open class JourneyAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "charts" : [ {
-      "groupByMax" : 1,
+      "groupByMax" : 5,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
+      "rank" : 1,
       "groupByAttributes" : [ {
         "elementId" : "elementId",
         "attribute" : "attribute"
@@ -4773,9 +4780,10 @@ open class JourneyAPI {
       "version" : 6,
       "displayAttributes" : "{}"
     }, {
-      "groupByMax" : 1,
+      "groupByMax" : 5,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
+      "rank" : 1,
       "groupByAttributes" : [ {
         "elementId" : "elementId",
         "attribute" : "attribute"
@@ -4851,9 +4859,10 @@ open class JourneyAPI {
     "id" : "id"
   }, {
     "charts" : [ {
-      "groupByMax" : 1,
+      "groupByMax" : 5,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
+      "rank" : 1,
       "groupByAttributes" : [ {
         "elementId" : "elementId",
         "attribute" : "attribute"
@@ -4877,9 +4886,10 @@ open class JourneyAPI {
       "version" : 6,
       "displayAttributes" : "{}"
     }, {
-      "groupByMax" : 1,
+      "groupByMax" : 5,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
+      "rank" : 1,
       "groupByAttributes" : [ {
         "elementId" : "elementId",
         "attribute" : "attribute"
@@ -7682,9 +7692,10 @@ open class JourneyAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "charts" : [ {
-    "groupByMax" : 1,
+    "groupByMax" : 5,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "rank" : 1,
     "groupByAttributes" : [ {
       "elementId" : "elementId",
       "attribute" : "attribute"
@@ -7708,9 +7719,10 @@ open class JourneyAPI {
     "version" : 6,
     "displayAttributes" : "{}"
   }, {
-    "groupByMax" : 1,
+    "groupByMax" : 5,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "rank" : 1,
     "groupByAttributes" : [ {
       "elementId" : "elementId",
       "attribute" : "attribute"
@@ -7840,9 +7852,10 @@ open class JourneyAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "charts" : [ {
-    "groupByMax" : 1,
+    "groupByMax" : 5,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "rank" : 1,
     "groupByAttributes" : [ {
       "elementId" : "elementId",
       "attribute" : "attribute"
@@ -7866,9 +7879,10 @@ open class JourneyAPI {
     "version" : 6,
     "displayAttributes" : "{}"
   }, {
-    "groupByMax" : 1,
+    "groupByMax" : 5,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "rank" : 1,
     "groupByAttributes" : [ {
       "elementId" : "elementId",
       "attribute" : "attribute"
@@ -8182,9 +8196,10 @@ open class JourneyAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "charts" : [ {
-    "groupByMax" : 1,
+    "groupByMax" : 5,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "rank" : 1,
     "groupByAttributes" : [ {
       "elementId" : "elementId",
       "attribute" : "attribute"
@@ -8208,9 +8223,10 @@ open class JourneyAPI {
     "version" : 6,
     "displayAttributes" : "{}"
   }, {
-    "groupByMax" : 1,
+    "groupByMax" : 5,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
+    "rank" : 1,
     "groupByAttributes" : [ {
       "elementId" : "elementId",
       "attribute" : "attribute"

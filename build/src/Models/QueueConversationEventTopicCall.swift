@@ -118,6 +118,8 @@ public class QueueConversationEventTopicCall: Codable {
 
 
 
+
+
     /** A globally unique identifier for this communication. */
     public var _id: String?
     public var state: State?
@@ -175,8 +177,10 @@ public class QueueConversationEventTopicCall: Codable {
     public var disposition: QueueConversationEventTopicDisposition?
     /** Indicates how call reaches the agent. */
     public var transferSource: String?
+    /** The reported client IP of the phone for the call. */
+    public var publicIpAddress: String?
 
-    public init(_id: String?, state: State?, initialState: InitialState?, recording: Bool?, recordingState: RecordingState?, recordersState: QueueConversationEventTopicRecordersState?, muted: Bool?, confined: Bool?, held: Bool?, securePause: Bool?, errorInfo: QueueConversationEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: QueueConversationEventTopicAddress?, other: QueueConversationEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [QueueConversationEventTopicDisconnectReason]?, faxStatus: QueueConversationEventTopicFaxStatus?, uuiData: String?, bargedTime: Date?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, queueMediaSettings: QueueConversationEventTopicQueueMediaSettings?, disposition: QueueConversationEventTopicDisposition?, transferSource: String?) {
+    public init(_id: String?, state: State?, initialState: InitialState?, recording: Bool?, recordingState: RecordingState?, recordersState: QueueConversationEventTopicRecordersState?, muted: Bool?, confined: Bool?, held: Bool?, securePause: Bool?, errorInfo: QueueConversationEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: QueueConversationEventTopicAddress?, other: QueueConversationEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [QueueConversationEventTopicDisconnectReason]?, faxStatus: QueueConversationEventTopicFaxStatus?, uuiData: String?, bargedTime: Date?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, queueMediaSettings: QueueConversationEventTopicQueueMediaSettings?, disposition: QueueConversationEventTopicDisposition?, transferSource: String?, publicIpAddress: String?) {
         self._id = _id
         self.state = state
         self.initialState = initialState
@@ -210,6 +214,7 @@ public class QueueConversationEventTopicCall: Codable {
         self.queueMediaSettings = queueMediaSettings
         self.disposition = disposition
         self.transferSource = transferSource
+        self.publicIpAddress = publicIpAddress
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -246,6 +251,7 @@ public class QueueConversationEventTopicCall: Codable {
         case queueMediaSettings
         case disposition
         case transferSource
+        case publicIpAddress
     }
 
 

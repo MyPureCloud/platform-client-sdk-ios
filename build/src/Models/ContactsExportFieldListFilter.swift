@@ -6,6 +6,9 @@ public class ContactsExportFieldListFilter: Codable {
         case divisionId = "DivisionId"
         case contactClassification = "ContactClassification"
         case externalOrganizationId = "ExternalOrganizationId"
+        case externalSourceId = "ExternalSourceId"
+        case schemaId = "SchemaId"
+        case schemaVersion = "SchemaVersion"
     }
 
 

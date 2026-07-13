@@ -95,7 +95,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "value" : 7,
       "key" : "key"
     },
@@ -123,7 +123,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "value" : 7,
       "key" : "key"
     },
@@ -533,7 +533,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "value" : 7,
       "key" : "key"
     },
@@ -561,7 +561,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "value" : 7,
       "key" : "key"
     },
@@ -776,7 +776,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "value" : 7,
       "key" : "key"
     },
@@ -804,7 +804,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "value" : 7,
       "key" : "key"
     },
@@ -1053,7 +1053,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "value" : 7,
       "key" : "key"
     },
@@ -1081,7 +1081,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "value" : 7,
       "key" : "key"
     },
@@ -1593,7 +1593,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "value" : 7,
       "key" : "key"
     },
@@ -1621,7 +1621,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "value" : 7,
       "key" : "key"
     },
@@ -1881,7 +1881,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "value" : 7,
       "key" : "key"
     },
@@ -1909,7 +1909,7 @@ open class AIStudioAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "value" : 7,
       "key" : "key"
     },

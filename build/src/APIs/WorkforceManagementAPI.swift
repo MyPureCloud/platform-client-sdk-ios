@@ -2597,6 +2597,7 @@ open class WorkforceManagementAPI {
   "state" : "Active",
   "transitionTimeMinutes" : 6,
   "serviceGoalImpactOverrides" : "{}",
+  "startTimeIncrementMinutes" : 1,
   "managementUnits" : [ {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -2785,6 +2786,7 @@ open class WorkforceManagementAPI {
     "description" : "description",
     "lastRunDate" : "2000-01-23T04:56:07.000+00:00",
     "type" : "Individual",
+    "initialSchedulePeriod" : "{}",
     "activityCode" : "{}",
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "recurrenceSettings" : "{}",
@@ -2808,6 +2810,7 @@ open class WorkforceManagementAPI {
     "description" : "description",
     "lastRunDate" : "2000-01-23T04:56:07.000+00:00",
     "type" : "Individual",
+    "initialSchedulePeriod" : "{}",
     "activityCode" : "{}",
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "recurrenceSettings" : "{}",
@@ -13863,6 +13866,7 @@ open class WorkforceManagementAPI {
   "state" : "Active",
   "transitionTimeMinutes" : 6,
   "serviceGoalImpactOverrides" : "{}",
+  "startTimeIncrementMinutes" : 1,
   "managementUnits" : [ {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -18168,6 +18172,7 @@ open class WorkforceManagementAPI {
   "state" : "Active",
   "transitionTimeMinutes" : 6,
   "serviceGoalImpactOverrides" : "{}",
+  "startTimeIncrementMinutes" : 1,
   "managementUnits" : [ {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"

@@ -63,6 +63,8 @@ public class ActivityPlanResponse: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of the activity plan */
@@ -113,10 +115,12 @@ public class ActivityPlanResponse: Codable {
     public var lastRunDate: Date?
     /** The last user to run this activity plan */
     public var lastRunBy: UserReference?
+    /** The valid start times available when scheduling sessions */
+    public var startTimeIncrementMinutes: Int?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, managementUnits: [ManagementUnitReference]?, _description: String?, activityCode: ActivityCodeReference?, type: ModelType?, initialSchedulePeriod: SchedulingPeriod?, lengthMinutes: Int?, groupSettings: GroupSettings?, recurrenceSettings: RecurrenceSettings?, attendeesSearchRule: UserSearchRule?, facilitated: Bool?, facilitatorsSearchRule: UserSearchRule?, transitionTimeMinutes: Int?, serviceGoalImpactOverrides: ActivityPlanServiceGoalImpactOverrides?, optimizationObjective: OptimizationObjective?, fixedAvailability: [FixedAvailability]?, state: State?, countsAsPaidTime: Bool?, createdDate: Date?, createdBy: UserReference?, modifiedDate: Date?, modifiedBy: UserReference?, lastRunDate: Date?, lastRunBy: UserReference?, selfUri: String?) {
+    public init(_id: String?, name: String?, managementUnits: [ManagementUnitReference]?, _description: String?, activityCode: ActivityCodeReference?, type: ModelType?, initialSchedulePeriod: SchedulingPeriod?, lengthMinutes: Int?, groupSettings: GroupSettings?, recurrenceSettings: RecurrenceSettings?, attendeesSearchRule: UserSearchRule?, facilitated: Bool?, facilitatorsSearchRule: UserSearchRule?, transitionTimeMinutes: Int?, serviceGoalImpactOverrides: ActivityPlanServiceGoalImpactOverrides?, optimizationObjective: OptimizationObjective?, fixedAvailability: [FixedAvailability]?, state: State?, countsAsPaidTime: Bool?, createdDate: Date?, createdBy: UserReference?, modifiedDate: Date?, modifiedBy: UserReference?, lastRunDate: Date?, lastRunBy: UserReference?, startTimeIncrementMinutes: Int?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.managementUnits = managementUnits
@@ -142,6 +146,7 @@ public class ActivityPlanResponse: Codable {
         self.modifiedBy = modifiedBy
         self.lastRunDate = lastRunDate
         self.lastRunBy = lastRunBy
+        self.startTimeIncrementMinutes = startTimeIncrementMinutes
         self.selfUri = selfUri
     }
 
@@ -171,6 +176,7 @@ public class ActivityPlanResponse: Codable {
         case modifiedBy
         case lastRunDate
         case lastRunBy
+        case startTimeIncrementMinutes
         case selfUri
     }
 

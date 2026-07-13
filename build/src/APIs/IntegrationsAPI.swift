@@ -936,7 +936,7 @@ open class IntegrationsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "value" : 7,
       "key" : "key"
     },
@@ -964,7 +964,7 @@ open class IntegrationsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "value" : 7,
       "key" : "key"
     },
@@ -2377,136 +2377,6 @@ open class IntegrationsAPI {
         ])
 
         let requestBuilder: RequestBuilder<ClientAppEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
-    }
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /**
-     UC integration client application configuration.
-     
-     - parameter pageSize: (query) The total page size requested (optional)
-     - parameter pageNumber: (query) The page number requested (optional)
-     - parameter sortBy: (query) variable name requested to sort by (optional)
-     - parameter expand: (query) variable name requested by expand list (optional)
-     - parameter nextPage: (query) next page token (optional)
-     - parameter previousPage: (query) Previous page token (optional)
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getIntegrationsClientappsUnifiedcommunications(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, completion: @escaping ((_ data: UCIntegrationListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getIntegrationsClientappsUnifiedcommunicationsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage)
-        requestBuilder.execute { (response: Response<UCIntegrationListing>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     UC integration client application configuration.
-     - GET /api/v2/integrations/clientapps/unifiedcommunications
-     - Deprecated: Please use GET /integrations/unifiedcommunications/clientapps instead. This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
-  "entities" : [ {
-    "integrationPresenceSource" : "MicrosoftTeams",
-    "polledPresence" : true,
-    "i10n" : {
-      "key" : {
-        "name" : "name"
-      }
-    },
-    "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
-    "icon" : "{}",
-    "badgeIcons" : {
-      "key" : {
-        "vector" : "vector"
-      }
-    },
-    "ucIntegrationKey" : "ucIntegrationKey",
-    "pbxPermission" : "pbxPermission",
-    "id" : "id",
-    "userPermissions" : [ "userPermissions", "userPermissions" ]
-  }, {
-    "integrationPresenceSource" : "MicrosoftTeams",
-    "polledPresence" : true,
-    "i10n" : {
-      "key" : {
-        "name" : "name"
-      }
-    },
-    "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
-    "icon" : "{}",
-    "badgeIcons" : {
-      "key" : {
-        "vector" : "vector"
-      }
-    },
-    "ucIntegrationKey" : "ucIntegrationKey",
-    "pbxPermission" : "pbxPermission",
-    "id" : "id",
-    "userPermissions" : [ "userPermissions", "userPermissions" ]
-  } ],
-  "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
-}, statusCode=200}]
-     
-     - parameter pageSize: (query) The total page size requested (optional)
-     - parameter pageNumber: (query) The page number requested (optional)
-     - parameter sortBy: (query) variable name requested to sort by (optional)
-     - parameter expand: (query) variable name requested by expand list (optional)
-     - parameter nextPage: (query) next page token (optional)
-     - parameter previousPage: (query) Previous page token (optional)
-
-     - returns: RequestBuilder<UCIntegrationListing> 
-     */
-    open class func getIntegrationsClientappsUnifiedcommunicationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<UCIntegrationListing> {        
-        let path = "/api/v2/integrations/clientapps/unifiedcommunications"
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        var requestUrl = URLComponents(string: URLString)
-        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "pageSize": pageSize?.encodeToJSON(), 
-            "pageNumber": pageNumber?.encodeToJSON(), 
-            "sortBy": sortBy, 
-            "expand": expand, 
-            "nextPage": nextPage, 
-            "previousPage": previousPage
-        ])
-
-        let requestBuilder: RequestBuilder<UCIntegrationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }

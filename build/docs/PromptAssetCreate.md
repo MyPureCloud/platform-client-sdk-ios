@@ -11,6 +11,7 @@
 | **promptId** | **String** | Associated prompt ID | [optional] |
 | **language** | **String** | The prompt language. | |
 | **mediaUri** | **String** | URI of the resource audio | [optional] |
+| **audioFormat** | [**AudioFormat**](AudioFormat) | Audio format info | [optional] |
 | **ttsString** | **String** | Text to speech of the resource | [optional] |
 | **text** | **String** | Text of the resource | [optional] |
 | **uploadStatus** | **String** | Audio upload status | [optional] |
@@ -22,4 +23,4 @@
 
 
 
-_PureCloudPlatformClientV2@198.0.0_
+_PureCloudPlatformClientV2@199.0.0_

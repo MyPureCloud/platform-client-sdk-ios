@@ -4,6 +4,7 @@ public class AgentCopilotAggregationSort: Codable {
 
     public enum Name: String, Codable { 
         case ncannedresponsesuggestions = "nCannedResponseSuggestions"
+        case ndistinctconversations = "nDistinctConversations"
         case ndistinctsuggestions = "nDistinctSuggestions"
         case nknowledgeanswersuggestions = "nKnowledgeAnswerSuggestions"
         case nknowledgearticlesuggestions = "nKnowledgeArticleSuggestions"

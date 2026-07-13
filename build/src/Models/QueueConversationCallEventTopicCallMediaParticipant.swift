@@ -177,6 +177,8 @@ public class QueueConversationCallEventTopicCallMediaParticipant: Codable {
 
 
 
+
+
     public var _id: String?
     public var name: String?
     public var address: String?
@@ -235,8 +237,9 @@ public class QueueConversationCallEventTopicCallMediaParticipant: Codable {
     public var bargedTime: Date?
     public var consultParticipantId: String?
     public var faxStatus: QueueConversationCallEventTopicFaxStatus?
+    public var publicIpAddress: String?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, initialState: InitialState?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationCallEventTopicUriReference?, queue: QueueConversationCallEventTopicUriReference?, team: QueueConversationCallEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationCallEventTopicErrorBody?, script: QueueConversationCallEventTopicUriReference?, wrapupTimeoutMs: Int64?, wrapupSkipped: Bool?, alertingTimeoutMs: Int64?, provider: String?, externalContact: QueueConversationCallEventTopicUriReference?, externalContactInitialDivisionId: String?, externalOrganization: QueueConversationCallEventTopicUriReference?, wrapup: QueueConversationCallEventTopicWrapup?, conversationRoutingData: QueueConversationCallEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationCallEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, resumeTime: Date?, parkTime: Date?, mediaRoles: [String]?, queueMediaSettings: QueueConversationCallEventTopicQueueMediaSettings?, muted: Bool?, confined: Bool?, recording: Bool?, recordingState: RecordingState?, recordersState: QueueConversationCallEventTopicRecordersState?, disposition: QueueConversationCallEventTopicDisposition?, transferSource: String?, securePause: Bool?, group: QueueConversationCallEventTopicUriReference?, ani: String?, dnis: String?, documentId: String?, monitoredParticipantId: String?, coachedParticipantId: String?, bargedParticipantId: String?, bargedTime: Date?, consultParticipantId: String?, faxStatus: QueueConversationCallEventTopicFaxStatus?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, initialState: InitialState?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationCallEventTopicUriReference?, queue: QueueConversationCallEventTopicUriReference?, team: QueueConversationCallEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationCallEventTopicErrorBody?, script: QueueConversationCallEventTopicUriReference?, wrapupTimeoutMs: Int64?, wrapupSkipped: Bool?, alertingTimeoutMs: Int64?, provider: String?, externalContact: QueueConversationCallEventTopicUriReference?, externalContactInitialDivisionId: String?, externalOrganization: QueueConversationCallEventTopicUriReference?, wrapup: QueueConversationCallEventTopicWrapup?, conversationRoutingData: QueueConversationCallEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationCallEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, resumeTime: Date?, parkTime: Date?, mediaRoles: [String]?, queueMediaSettings: QueueConversationCallEventTopicQueueMediaSettings?, muted: Bool?, confined: Bool?, recording: Bool?, recordingState: RecordingState?, recordersState: QueueConversationCallEventTopicRecordersState?, disposition: QueueConversationCallEventTopicDisposition?, transferSource: String?, securePause: Bool?, group: QueueConversationCallEventTopicUriReference?, ani: String?, dnis: String?, documentId: String?, monitoredParticipantId: String?, coachedParticipantId: String?, bargedParticipantId: String?, bargedTime: Date?, consultParticipantId: String?, faxStatus: QueueConversationCallEventTopicFaxStatus?, publicIpAddress: String?) {
         self._id = _id
         self.name = name
         self.address = address
@@ -295,6 +298,7 @@ public class QueueConversationCallEventTopicCallMediaParticipant: Codable {
         self.bargedTime = bargedTime
         self.consultParticipantId = consultParticipantId
         self.faxStatus = faxStatus
+        self.publicIpAddress = publicIpAddress
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -356,6 +360,7 @@ public class QueueConversationCallEventTopicCallMediaParticipant: Codable {
         case bargedTime
         case consultParticipantId
         case faxStatus
+        case publicIpAddress
     }
 
 

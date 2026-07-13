@@ -39,7 +39,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postBusinessrulesDecisiontableVersionRowsBulkUpdate**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionRowsBulkUpdate) | Bulk update decision table rows |
 | [**postBusinessrulesDecisiontableVersionRowsSearch**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionRowsSearch) | Search for decision table rows |
 | [**postBusinessrulesDecisiontableVersionSync**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionSync) | Update the Business Rules Schema to the latest version for a given decision table version |
-| [**postBusinessrulesDecisiontableVersions**](BusinessRulesAPI#postBusinessrulesDecisiontableVersions) | Create a new decision table version |
+| [**postBusinessrulesDecisiontableVersions**](BusinessRulesAPI#postBusinessrulesDecisiontableVersions) | Create a new decision table version. When sourceVersion is not provided, the draft is created from the published version. |
 | [**postBusinessrulesDecisiontables**](BusinessRulesAPI#postBusinessrulesDecisiontables) | Create a decision table |
 | [**postBusinessrulesSchemas**](BusinessRulesAPI#postBusinessrulesSchemas) | Create a schema |
 | [**putBusinessrulesDecisiontableVersionPublish**](BusinessRulesAPI#putBusinessrulesDecisiontableVersionPublish) | Publish a decision table version |
@@ -1914,9 +1914,9 @@ BusinessRulesAPI.postBusinessrulesDecisiontableVersionSync(tableId: tableId, tab
 
 
 
-> [DecisionTableVersion](DecisionTableVersion) postBusinessrulesDecisiontableVersions(tableId)
+> [DecisionTableVersion](DecisionTableVersion) postBusinessrulesDecisiontableVersions(tableId, body)
 
-Create a new decision table version
+Create a new decision table version. When sourceVersion is not provided, the draft is created from the published version.
 
 
 
@@ -1935,9 +1935,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let tableId: String = "" // Table ID
+let body: CreateDecisionTableVersionRequest = new CreateDecisionTableVersionRequest(...) // Decision Table Version
 
 // Code example
-BusinessRulesAPI.postBusinessrulesDecisiontableVersions(tableId: tableId) { (response, error) in
+BusinessRulesAPI.postBusinessrulesDecisiontableVersions(tableId: tableId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1953,6 +1954,7 @@ BusinessRulesAPI.postBusinessrulesDecisiontableVersions(tableId: tableId) { (res
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **tableId** | **String**| Table ID | |
+| **body** | [**CreateDecisionTableVersionRequest**](CreateDecisionTableVersionRequest)| Decision Table Version | [optional] |
 
 
 ### Return type
@@ -2227,4 +2229,4 @@ BusinessRulesAPI.putBusinessrulesSchema(schemaId: schemaId, body: body) { (respo
 [**BusinessRulesDataSchema**](BusinessRulesDataSchema)
 
 
-_PureCloudPlatformClientV2@198.0.0_
+_PureCloudPlatformClientV2@199.0.0_

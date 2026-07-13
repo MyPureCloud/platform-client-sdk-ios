@@ -123,6 +123,8 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         case evaluationPerformanceQuestionGroupDetailView = "EVALUATION_PERFORMANCE_QUESTION_GROUP_DETAIL_VIEW"
         case evaluationPerformanceQuestionDetailView = "EVALUATION_PERFORMANCE_QUESTION_DETAIL_VIEW"
         case contentExplorationView = "CONTENT_EXPLORATION_VIEW"
+        case callbackQueuePerformanceSummaryView = "CALLBACK_QUEUE_PERFORMANCE_SUMMARY_VIEW"
+        case callbackQueuePerformanceDetailView = "CALLBACK_QUEUE_PERFORMANCE_DETAIL_VIEW"
     }
 
     public enum ExportErrorMessagesType: String, Codable { 

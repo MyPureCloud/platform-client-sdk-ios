@@ -28,6 +28,19 @@ public class UpdateActivityPlanRequest: Codable {
 
 
 
+
+
+    public enum ModelType: String, Codable { 
+        case individual = "Individual"
+        case group = "Group"
+    }
+
+
+
+
+
+
+
     /** The name of the activity plan */
     public var name: String?
     /** The description of the activity plan */
@@ -48,8 +61,18 @@ public class UpdateActivityPlanRequest: Codable {
     public var state: State?
     /** Fixed availability configuration for the activity plan */
     public var fixedAvailability: ListWrapperFixedAvailability?
+    /** The activity code associated with the activity plan */
+    public var activityCodeId: String?
+    /** The type of the activity plan */
+    public var type: ModelType?
+    /** The length in minutes of the activity plan */
+    public var lengthMinutes: Int?
+    /** Whether the activity should count as paid time */
+    public var countsAsPaidTime: Bool?
+    /** Settings controlling recurrence for the activity plan. If not set the activity plan will only occur once */
+    public var recurrenceSettings: RecurrenceSettingsBase?
 
-    public init(name: String?, _description: String?, groupSettings: ValueWrapperGroupSettings?, attendeesSearchRule: ValueWrapperUserSearchRule?, facilitatorsSearchRule: ValueWrapperUserSearchRule?, transitionTimeMinutes: Int?, serviceGoalImpactOverrides: ValueWrapperActivityPlanServiceGoalImpactOverrides?, optimizationObjective: OptimizationObjective?, state: State?, fixedAvailability: ListWrapperFixedAvailability?) {
+    public init(name: String?, _description: String?, groupSettings: ValueWrapperGroupSettings?, attendeesSearchRule: ValueWrapperUserSearchRule?, facilitatorsSearchRule: ValueWrapperUserSearchRule?, transitionTimeMinutes: Int?, serviceGoalImpactOverrides: ValueWrapperActivityPlanServiceGoalImpactOverrides?, optimizationObjective: OptimizationObjective?, state: State?, fixedAvailability: ListWrapperFixedAvailability?, activityCodeId: String?, type: ModelType?, lengthMinutes: Int?, countsAsPaidTime: Bool?, recurrenceSettings: RecurrenceSettingsBase?) {
         self.name = name
         self._description = _description
         self.groupSettings = groupSettings
@@ -60,6 +83,11 @@ public class UpdateActivityPlanRequest: Codable {
         self.optimizationObjective = optimizationObjective
         self.state = state
         self.fixedAvailability = fixedAvailability
+        self.activityCodeId = activityCodeId
+        self.type = type
+        self.lengthMinutes = lengthMinutes
+        self.countsAsPaidTime = countsAsPaidTime
+        self.recurrenceSettings = recurrenceSettings
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -73,6 +101,11 @@ public class UpdateActivityPlanRequest: Codable {
         case optimizationObjective
         case state
         case fixedAvailability
+        case activityCodeId
+        case type
+        case lengthMinutes
+        case countsAsPaidTime
+        case recurrenceSettings
     }
 
 

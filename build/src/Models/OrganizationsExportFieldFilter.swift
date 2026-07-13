@@ -1,0 +1,25 @@
+
+
+public class OrganizationsExportFieldFilter: Codable {
+
+    public enum Field: String, Codable { 
+        case divisionId = "DivisionId"
+        case schemaId = "SchemaId"
+        case schemaVersion = "SchemaVersion"
+    }
+
+
+
+    /** Field name to apply the filter */
+    public var field: Field?
+    /** Value to check field's value against */
+    public var value: String?
+
+    public init(field: Field?, value: String?) {
+        self.field = field
+        self.value = value
+    }
+
+
+}
+

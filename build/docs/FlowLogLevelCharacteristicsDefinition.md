@@ -13,4 +13,4 @@ Defines a characteristic that can be captured by data providers
 
 
 
-_PureCloudPlatformClientV2@198.0.0_
+_PureCloudPlatformClientV2@199.0.0_

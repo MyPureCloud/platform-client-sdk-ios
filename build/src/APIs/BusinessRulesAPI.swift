@@ -2781,14 +2781,17 @@ open class BusinessRulesAPI {
 
     
     
+    
+    
     /**
-     Create a new decision table version
+     Create a new decision table version. When sourceVersion is not provided, the draft is created from the published version.
      
      - parameter tableId: (path) Table ID 
+     - parameter body: (body) Decision Table Version (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postBusinessrulesDecisiontableVersions(tableId: String, completion: @escaping ((_ data: DecisionTableVersion?,_ error: Error?) -> Void)) {
-        let requestBuilder = postBusinessrulesDecisiontableVersionsWithRequestBuilder(tableId: tableId)
+    open class func postBusinessrulesDecisiontableVersions(tableId: String, body: CreateDecisionTableVersionRequest? = nil, completion: @escaping ((_ data: DecisionTableVersion?,_ error: Error?) -> Void)) {
+        let requestBuilder = postBusinessrulesDecisiontableVersionsWithRequestBuilder(tableId: tableId, body: body)
         requestBuilder.execute { (response: Response<DecisionTableVersion>?, error) -> Void in
             do {
                 if let e = error {
@@ -2806,7 +2809,7 @@ open class BusinessRulesAPI {
     }
 
     /**
-     Create a new decision table version
+     Create a new decision table version. When sourceVersion is not provided, the draft is created from the published version.
      - POST /api/v2/businessrules/decisiontables/{tableId}/versions
      - OAuth:
        - type: oauth2
@@ -2829,17 +2832,18 @@ open class BusinessRulesAPI {
 }, statusCode=200}]
      
      - parameter tableId: (path) Table ID 
+     - parameter body: (body) Decision Table Version (optional)
 
      - returns: RequestBuilder<DecisionTableVersion> 
      */
-    open class func postBusinessrulesDecisiontableVersionsWithRequestBuilder(tableId: String) -> RequestBuilder<DecisionTableVersion> {        
+    open class func postBusinessrulesDecisiontableVersionsWithRequestBuilder(tableId: String, body: CreateDecisionTableVersionRequest? = nil) -> RequestBuilder<DecisionTableVersion> {        
         var path = "/api/v2/businessrules/decisiontables/{tableId}/versions"
         let tableIdPreEscape = "\(tableId)"
         let tableIdPostEscape = tableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{tableId}", with: tableIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DecisionTableVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

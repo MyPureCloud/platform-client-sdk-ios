@@ -43,6 +43,7 @@ public class AuditTopicAuditLogMessage: Codable {
         case integrations = "Integrations"
         case webhooks = "Webhooks"
         case analyticsReporting = "AnalyticsReporting"
+        case embeddedAnalytics = "EmbeddedAnalytics"
         case limits = "Limits"
         case employeePerformance = "EmployeePerformance"
         case datatables = "Datatables"
@@ -315,7 +316,10 @@ public class AuditTopicAuditLogMessage: Codable {
         case activityPlanOccurrence = "ActivityPlanOccurrence"
         case activityPlanOccurrenceSession = "ActivityPlanOccurrenceSession"
         case activityPlanOccurrenceSessionUser = "ActivityPlanOccurrenceSessionUser"
+        case adherenceAdjustment = "AdherenceAdjustment"
+        case adherenceAdjustmentReasonCode = "AdherenceAdjustmentReasonCode"
         case adherenceExplanation = "AdherenceExplanation"
+        case agentSchedulingPreferences = "AgentSchedulingPreferences"
         case alternativeShift = "AlternativeShift"
         case businessUnit = "BusinessUnit"
         case forecast = "Forecast"
@@ -407,6 +411,9 @@ public class AuditTopicAuditLogMessage: Codable {
         case customCalculations = "CustomCalculations"
         case savedViews = "SavedViews"
         case analyticsLakehouseSettings = "AnalyticsLakehouseSettings"
+        case users = "Users"
+        case analyses = "Analyses"
+        case dashboard = "Dashboard"
         case scheduledExports = "ScheduledExports"
         case exports = "Exports"
         case exportPdfTemplates = "ExportPdfTemplates"
@@ -501,6 +508,7 @@ public class AuditTopicAuditLogMessage: Codable {
         case conversationAccessAttributes = "ConversationAccessAttributes"
         case settings = "Settings"
         case agent = "Agent"
+        case graphSettings = "GraphSettings"
     }
 
 

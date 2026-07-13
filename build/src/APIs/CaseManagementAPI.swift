@@ -542,6 +542,7 @@ open class CaseManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "workitemActivity" : "{}",
   "version" : 0,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "stage" : "{}",
@@ -630,6 +631,7 @@ open class CaseManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "workitemActivity" : "{}",
     "version" : 0,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "stage" : "{}",
@@ -644,6 +646,7 @@ open class CaseManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "workitemActivity" : "{}",
     "version" : 0,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "stage" : "{}",
@@ -2801,6 +2804,7 @@ open class CaseManagementAPI {
     /**
      Query for Caseplans.
      - POST /api/v2/casemanagement/caseplans/query
+     - This endpoint supports two filtering modes. The recommended approach uses 'filters' (generic filter model) and 'attributes' (field projection). During the migration period, the legacy fields 'name', 'nameSearchType', and 'divisionIds' remain available as an alternative.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

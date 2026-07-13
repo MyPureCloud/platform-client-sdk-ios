@@ -326,11 +326,11 @@ open class OrganizationAPI {
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "approvalNamespaces" : [ {
-    "namespace" : "web.messaging",
+    "namespace" : "web.deployments",
     "type" : "Primary",
     "status" : "Approved"
   }, {
-    "namespace" : "web.messaging",
+    "namespace" : "web.deployments",
     "type" : "Primary",
     "status" : "Approved"
   } ],
@@ -338,14 +338,14 @@ open class OrganizationAPI {
   "statusHistory" : [ {
     "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
-    "namespace" : "web.messaging",
+    "namespace" : "web.deployments",
     "message" : "message",
     "status" : "Approved",
     "previousStatus" : "Approved"
   }, {
     "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
-    "namespace" : "web.messaging",
+    "namespace" : "web.deployments",
     "message" : "message",
     "status" : "Approved",
     "previousStatus" : "Approved"
@@ -353,7 +353,7 @@ open class OrganizationAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "rejectReason" : "AlternativeExists",
   "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-  "namespace" : "web.messaging",
+  "namespace" : "web.deployments",
   "id" : "id",
   "key" : "key",
   "currentValue" : 6.027456183070403,
@@ -450,11 +450,11 @@ open class OrganizationAPI {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "approvalNamespaces" : [ {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "type" : "Primary",
       "status" : "Approved"
     }, {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "type" : "Primary",
       "status" : "Approved"
     } ],
@@ -462,14 +462,14 @@ open class OrganizationAPI {
     "statusHistory" : [ {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
     }, {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
@@ -477,7 +477,7 @@ open class OrganizationAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-    "namespace" : "web.messaging",
+    "namespace" : "web.deployments",
     "id" : "id",
     "key" : "key",
     "currentValue" : 6.027456183070403,
@@ -487,11 +487,11 @@ open class OrganizationAPI {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "approvalNamespaces" : [ {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "type" : "Primary",
       "status" : "Approved"
     }, {
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "type" : "Primary",
       "status" : "Approved"
     } ],
@@ -499,14 +499,14 @@ open class OrganizationAPI {
     "statusHistory" : [ {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
     }, {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "web.messaging",
+      "namespace" : "web.deployments",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
@@ -514,7 +514,7 @@ open class OrganizationAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-    "namespace" : "web.messaging",
+    "namespace" : "web.deployments",
     "id" : "id",
     "key" : "key",
     "currentValue" : 6.027456183070403,
@@ -746,11 +746,11 @@ open class OrganizationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "namespace" : "web.messaging",
+    "namespace" : "web.deployments",
     "value" : 7,
     "key" : "key"
   }, {
-    "namespace" : "web.messaging",
+    "namespace" : "web.deployments",
     "value" : 7,
     "key" : "key"
   } ]
@@ -809,11 +809,11 @@ open class OrganizationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "namespace" : "web.messaging",
+    "namespace" : "web.deployments",
     "value" : 7,
     "key" : "key"
   }, {
-    "namespace" : "web.messaging",
+    "namespace" : "web.deployments",
     "value" : 7,
     "key" : "key"
   } ]

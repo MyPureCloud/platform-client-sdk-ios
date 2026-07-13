@@ -28,6 +28,7 @@ public class TranscriptSearchCriteria: Codable {
         case range = "RANGE"
         case greaterThan = "GREATER_THAN"
         case lessThan = "LESS_THAN"
+        case requiredFields = "REQUIRED_FIELDS"
     }
 
 

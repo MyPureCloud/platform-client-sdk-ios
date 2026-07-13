@@ -4,12 +4,12 @@ public class AgentCopilotAggregationView: Codable {
 
     public enum Target: String, Codable { 
         case ncannedresponsesuggestions = "nCannedResponseSuggestions"
+        case ndistinctconversations = "nDistinctConversations"
         case ndistinctsuggestions = "nDistinctSuggestions"
         case nknowledgeanswersuggestions = "nKnowledgeAnswerSuggestions"
         case nknowledgearticlesuggestions = "nKnowledgeArticleSuggestions"
         case nknowledgesearchsuggestions = "nKnowledgeSearchSuggestions"
         case nscriptsuggestions = "nScriptSuggestions"
-        case ndistinctconversations = "nDistinctConversations"
     }
 
 

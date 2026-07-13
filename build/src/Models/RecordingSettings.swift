@@ -12,6 +12,8 @@ public class RecordingSettings: Codable {
 
 
 
+
+
     /** Maximum number of simultaneous screen recording streams */
     public var maxSimultaneousStreams: Int?
     /** Upper limit that maxSimultaneousStreams can be configured */
@@ -22,13 +24,16 @@ public class RecordingSettings: Codable {
     public var recordingPlaybackUrlTtl: Int?
     /** The duration in minutes for which the generated URL for recording batch download remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes. */
     public var recordingBatchDownloadUrlTtl: Int?
+    /** Whether to stop recording in conference when only external participants remain */
+    public var stopRecordingWhenOnlyExternalParticipants: Bool?
 
-    public init(maxSimultaneousStreams: Int?, maxConfigurableScreenRecordingStreams: Int?, regionalRecordingStorageEnabled: Bool?, recordingPlaybackUrlTtl: Int?, recordingBatchDownloadUrlTtl: Int?) {
+    public init(maxSimultaneousStreams: Int?, maxConfigurableScreenRecordingStreams: Int?, regionalRecordingStorageEnabled: Bool?, recordingPlaybackUrlTtl: Int?, recordingBatchDownloadUrlTtl: Int?, stopRecordingWhenOnlyExternalParticipants: Bool?) {
         self.maxSimultaneousStreams = maxSimultaneousStreams
         self.maxConfigurableScreenRecordingStreams = maxConfigurableScreenRecordingStreams
         self.regionalRecordingStorageEnabled = regionalRecordingStorageEnabled
         self.recordingPlaybackUrlTtl = recordingPlaybackUrlTtl
         self.recordingBatchDownloadUrlTtl = recordingBatchDownloadUrlTtl
+        self.stopRecordingWhenOnlyExternalParticipants = stopRecordingWhenOnlyExternalParticipants
     }
 
 

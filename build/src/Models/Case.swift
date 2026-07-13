@@ -78,7 +78,7 @@ public class Case: Codable {
     /** Overview information for the Case. */
     public var summary: String?
     /** The owner of the Case. */
-    public var owner: UserReference?
+    public var owner: CaseUserReference?
     /** The status of the Case. */
     public var status: Status?
     /** The priority of the Case. */
@@ -94,7 +94,7 @@ public class Case: Codable {
     /** The date the Case was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
     /** The ID of the User who modified the Case. */
-    public var modifiedBy: UserReference?
+    public var modifiedBy: CaseUserReference?
     /** The External Contact associated with the Case. */
     public var externalContact: CaseExternalContactReference?
     /** The customer intent for the Case. */
@@ -106,7 +106,7 @@ public class Case: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: StarrableDivision?, version: Int?, reference: String?, caseplan: CaseplanReference?, summary: String?, owner: UserReference?, status: Status?, priority: Priority?, dateDue: Date?, dateStarted: Date?, dateClosed: Date?, dateCreated: Date?, dateModified: Date?, modifiedBy: UserReference?, externalContact: CaseExternalContactReference?, customerIntent: CustomerIntentReference?, creationStatus: CreationStatus?, ttlSeconds: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: StarrableDivision?, version: Int?, reference: String?, caseplan: CaseplanReference?, summary: String?, owner: CaseUserReference?, status: Status?, priority: Priority?, dateDue: Date?, dateStarted: Date?, dateClosed: Date?, dateCreated: Date?, dateModified: Date?, modifiedBy: CaseUserReference?, externalContact: CaseExternalContactReference?, customerIntent: CustomerIntentReference?, creationStatus: CreationStatus?, ttlSeconds: Int?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division

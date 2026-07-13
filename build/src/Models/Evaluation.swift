@@ -96,6 +96,18 @@ public class Evaluation: Codable {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -155,12 +167,24 @@ public class Evaluation: Codable {
     public var hasAssistanceFailed: Bool?
     /** The source that created the evaluation. */
     public var evaluationSource: EvaluationSource?
+    /** The number of times this evaluation has been disputed */
+    public var disputeCount: Int?
+    /** The evaluation version number */
+    public var version: Int?
+    /** List of all versions of the evaluation */
+    public var versionHistory: PagelessDomainEntityListingEvaluationVersion?
+    /** Is true when the evaluation review was declined */
+    public var declinedReview: Bool?
+    /** The shared id for different versions of an evaluation */
+    public var evaluationContextId: String?
+    /** The previous evaluation version */
+    public var retractedEvaluation: EvaluationReference?
     /** AI scoring details for the evaluation. */
     public var aiScoring: AiScoring?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, conversation: ConversationReference?, evaluationForm: EvaluationForm?, evaluator: User?, agent: User?, calibration: Calibration?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, assignee: User?, assigneeApplicable: Bool?, releaseDate: Date?, assignedDate: Date?, createdDate: Date?, changedDate: Date?, submittedDate: Date?, revisionCreatedDate: Date?, queue: Queue?, mediaType: [MediaType]?, divisionIds: [String]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, assigned: Bool?, dateAssigneeChanged: Date?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, agentTeam: Team?, isScoringIndex: Bool?, authorizedActions: [String]?, hasAssistanceFailed: Bool?, evaluationSource: EvaluationSource?, aiScoring: AiScoring?, selfUri: String?) {
+    public init(_id: String?, name: String?, conversation: ConversationReference?, evaluationForm: EvaluationForm?, evaluator: User?, agent: User?, calibration: Calibration?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, assignee: User?, assigneeApplicable: Bool?, releaseDate: Date?, assignedDate: Date?, createdDate: Date?, changedDate: Date?, submittedDate: Date?, revisionCreatedDate: Date?, queue: Queue?, mediaType: [MediaType]?, divisionIds: [String]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, assigned: Bool?, dateAssigneeChanged: Date?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, agentTeam: Team?, isScoringIndex: Bool?, authorizedActions: [String]?, hasAssistanceFailed: Bool?, evaluationSource: EvaluationSource?, disputeCount: Int?, version: Int?, versionHistory: PagelessDomainEntityListingEvaluationVersion?, declinedReview: Bool?, evaluationContextId: String?, retractedEvaluation: EvaluationReference?, aiScoring: AiScoring?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.conversation = conversation
@@ -196,6 +220,12 @@ public class Evaluation: Codable {
         self.authorizedActions = authorizedActions
         self.hasAssistanceFailed = hasAssistanceFailed
         self.evaluationSource = evaluationSource
+        self.disputeCount = disputeCount
+        self.version = version
+        self.versionHistory = versionHistory
+        self.declinedReview = declinedReview
+        self.evaluationContextId = evaluationContextId
+        self.retractedEvaluation = retractedEvaluation
         self.aiScoring = aiScoring
         self.selfUri = selfUri
     }
@@ -236,6 +266,12 @@ public class Evaluation: Codable {
         case authorizedActions
         case hasAssistanceFailed
         case evaluationSource
+        case disputeCount
+        case version
+        case versionHistory
+        case declinedReview
+        case evaluationContextId
+        case retractedEvaluation
         case aiScoring
         case selfUri
     }

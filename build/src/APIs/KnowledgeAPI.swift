@@ -748,6 +748,124 @@ open class KnowledgeAPI {
     
     
     
+    
+    
+    /**
+     Remove a deletion entry associated with the synchronization
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter fileId: (path) File ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteKnowledgeSourceSynchronizationDeletion(sourceId: String, synchronizationId: String, fileId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteKnowledgeSourceSynchronizationDeletionWithRequestBuilder(sourceId: sourceId, synchronizationId: synchronizationId, fileId: fileId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Remove a deletion entry associated with the synchronization
+     - DELETE /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions/{fileId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter fileId: (path) File ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteKnowledgeSourceSynchronizationDeletionWithRequestBuilder(sourceId: String, synchronizationId: String, fileId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions/{fileId}"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let synchronizationIdPreEscape = "\(synchronizationId)"
+        let synchronizationIdPostEscape = synchronizationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{synchronizationId}", with: synchronizationIdPostEscape, options: .literal, range: nil)
+        let fileIdPreEscape = "\(fileId)"
+        let fileIdPostEscape = fileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{fileId}", with: fileIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Remove a file upload entry associated with the synchronization
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter fileId: (path) File ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteKnowledgeSourceSynchronizationUpload(sourceId: String, synchronizationId: String, fileId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteKnowledgeSourceSynchronizationUploadWithRequestBuilder(sourceId: sourceId, synchronizationId: synchronizationId, fileId: fileId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Remove a file upload entry associated with the synchronization
+     - DELETE /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads/{fileId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter fileId: (path) File ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteKnowledgeSourceSynchronizationUploadWithRequestBuilder(sourceId: String, synchronizationId: String, fileId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads/{fileId}"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let synchronizationIdPreEscape = "\(synchronizationId)"
+        let synchronizationIdPostEscape = synchronizationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{synchronizationId}", with: synchronizationIdPostEscape, options: .literal, range: nil)
+        let fileIdPreEscape = "\(fileId)"
+        let fileIdPostEscape = fileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{fileId}", with: fileIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     public enum Expand_getKnowledgeConnection: String { 
         case authenticationproperties = "authenticationProperties"
     }
@@ -5448,6 +5566,337 @@ open class KnowledgeAPI {
     
     
     
+    /**
+     Get a deletion entry associated with the synchronization
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter fileId: (path) File ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeSourceSynchronizationDeletion(sourceId: String, synchronizationId: String, fileId: String, completion: @escaping ((_ data: V3SynchronizationDeletion?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeSourceSynchronizationDeletionWithRequestBuilder(sourceId: sourceId, synchronizationId: synchronizationId, fileId: fileId)
+        requestBuilder.execute { (response: Response<V3SynchronizationDeletion>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a deletion entry associated with the synchronization
+     - GET /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions/{fileId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "fileName" : "fileName",
+  "selfUri" : "https://openapi-generator.tech",
+  "synchronization" : "{}",
+  "fileId" : "fileId"
+}, statusCode=200}]
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter fileId: (path) File ID 
+
+     - returns: RequestBuilder<V3SynchronizationDeletion> 
+     */
+    open class func getKnowledgeSourceSynchronizationDeletionWithRequestBuilder(sourceId: String, synchronizationId: String, fileId: String) -> RequestBuilder<V3SynchronizationDeletion> {        
+        var path = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions/{fileId}"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let synchronizationIdPreEscape = "\(synchronizationId)"
+        let synchronizationIdPostEscape = synchronizationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{synchronizationId}", with: synchronizationIdPostEscape, options: .literal, range: nil)
+        let fileIdPreEscape = "\(fileId)"
+        let fileIdPostEscape = fileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{fileId}", with: fileIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<V3SynchronizationDeletion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get deletion entries associated with the synchronization.
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeSourceSynchronizationDeletions(sourceId: String, synchronizationId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: V3SynchronizationDeletionListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeSourceSynchronizationDeletionsWithRequestBuilder(sourceId: sourceId, synchronizationId: synchronizationId, before: before, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<V3SynchronizationDeletionListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get deletion entries associated with the synchronization.
+     - GET /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "fileName" : "fileName",
+    "selfUri" : "https://openapi-generator.tech",
+    "synchronization" : "{}",
+    "fileId" : "fileId"
+  }, {
+    "fileName" : "fileName",
+    "selfUri" : "https://openapi-generator.tech",
+    "synchronization" : "{}",
+    "fileId" : "fileId"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+
+     - returns: RequestBuilder<V3SynchronizationDeletionListing> 
+     */
+    open class func getKnowledgeSourceSynchronizationDeletionsWithRequestBuilder(sourceId: String, synchronizationId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil) -> RequestBuilder<V3SynchronizationDeletionListing> {        
+        var path = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let synchronizationIdPreEscape = "\(synchronizationId)"
+        let synchronizationIdPostEscape = synchronizationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{synchronizationId}", with: synchronizationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize
+        ])
+
+        let requestBuilder: RequestBuilder<V3SynchronizationDeletionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get a file upload entry associated with the synchronization
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter fileId: (path) File ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeSourceSynchronizationUpload(sourceId: String, synchronizationId: String, fileId: String, completion: @escaping ((_ data: V3SynchronizationUpload?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeSourceSynchronizationUploadWithRequestBuilder(sourceId: sourceId, synchronizationId: synchronizationId, fileId: fileId)
+        requestBuilder.execute { (response: Response<V3SynchronizationUpload>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a file upload entry associated with the synchronization
+     - GET /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads/{fileId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "fileName" : "fileName",
+  "metadata" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "synchronization" : "{}",
+  "fileId" : "fileId"
+}, statusCode=200}]
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter fileId: (path) File ID 
+
+     - returns: RequestBuilder<V3SynchronizationUpload> 
+     */
+    open class func getKnowledgeSourceSynchronizationUploadWithRequestBuilder(sourceId: String, synchronizationId: String, fileId: String) -> RequestBuilder<V3SynchronizationUpload> {        
+        var path = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads/{fileId}"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let synchronizationIdPreEscape = "\(synchronizationId)"
+        let synchronizationIdPostEscape = synchronizationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{synchronizationId}", with: synchronizationIdPostEscape, options: .literal, range: nil)
+        let fileIdPreEscape = "\(fileId)"
+        let fileIdPostEscape = fileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{fileId}", with: fileIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<V3SynchronizationUpload>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get file upload entries associated with the synchronization
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeSourceSynchronizationUploads(sourceId: String, synchronizationId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: V3SynchronizationUploadListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeSourceSynchronizationUploadsWithRequestBuilder(sourceId: sourceId, synchronizationId: synchronizationId, before: before, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<V3SynchronizationUploadListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get file upload entries associated with the synchronization
+     - GET /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "fileName" : "fileName",
+    "metadata" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "synchronization" : "{}",
+    "fileId" : "fileId"
+  }, {
+    "fileName" : "fileName",
+    "metadata" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "synchronization" : "{}",
+    "fileId" : "fileId"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+
+     - returns: RequestBuilder<V3SynchronizationUploadListing> 
+     */
+    open class func getKnowledgeSourceSynchronizationUploadsWithRequestBuilder(sourceId: String, synchronizationId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil) -> RequestBuilder<V3SynchronizationUploadListing> {        
+        var path = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let synchronizationIdPreEscape = "\(synchronizationId)"
+        let synchronizationIdPostEscape = synchronizationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{synchronizationId}", with: synchronizationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize
+        ])
+
+        let requestBuilder: RequestBuilder<V3SynchronizationUploadListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
     
     
     /**
@@ -10087,6 +10536,75 @@ open class KnowledgeAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Mark a previously synced file for deletion in the synchronization.
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeSourceSynchronizationDeletions(sourceId: String, synchronizationId: String, body: V3SynchronizationFileDeletionRequest, completion: @escaping ((_ data: V3SynchronizationDeletion?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeSourceSynchronizationDeletionsWithRequestBuilder(sourceId: sourceId, synchronizationId: synchronizationId, body: body)
+        requestBuilder.execute { (response: Response<V3SynchronizationDeletion>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Mark a previously synced file for deletion in the synchronization.
+     - POST /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "fileName" : "fileName",
+  "selfUri" : "https://openapi-generator.tech",
+  "synchronization" : "{}",
+  "fileId" : "fileId"
+}, statusCode=201}]
+     
+     - parameter sourceId: (path) Source ID 
+     - parameter synchronizationId: (path) Synchronization ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<V3SynchronizationDeletion> 
+     */
+    open class func postKnowledgeSourceSynchronizationDeletionsWithRequestBuilder(sourceId: String, synchronizationId: String, body: V3SynchronizationFileDeletionRequest) -> RequestBuilder<V3SynchronizationDeletion> {        
+        var path = "/api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/deletions"
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let synchronizationIdPreEscape = "\(synchronizationId)"
+        let synchronizationIdPostEscape = synchronizationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{synchronizationId}", with: synchronizationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<V3SynchronizationDeletion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

@@ -48,6 +48,7 @@ public class ConversationAggregationSort: Codable {
         case tcallbackabandon = "tCallbackAbandon"
         case tcallbackconnect = "tCallbackConnect"
         case tcallbacknotreached = "tCallbackNotReached"
+        case tcallbackvirtualwait = "tCallbackVirtualWait"
         case tcfcabandon = "tCfcAbandon"
         case tcfcacd = "tCfcAcd"
         case tcfcanswered = "tCfcAnswered"

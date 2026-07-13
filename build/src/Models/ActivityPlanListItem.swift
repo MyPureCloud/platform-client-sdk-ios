@@ -43,6 +43,8 @@ public class ActivityPlanListItem: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of the activity plan */
@@ -73,10 +75,12 @@ public class ActivityPlanListItem: Codable {
     public var modifiedDate: Date?
     /** The last user to modify this activity plan. The id may be 'System' if it was an automated process */
     public var modifiedBy: UserReference?
+    /** The initial schedule period of the activity plan */
+    public var initialSchedulePeriod: SchedulingPeriodBase?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, managementUnits: [ManagementUnitReference]?, _description: String?, activityCode: ActivityCodeReference?, type: ModelType?, optimizationObjective: OptimizationObjective?, recurrenceSettings: RecurrenceSettings?, state: State?, lastRunDate: Date?, lastRunBy: UserReference?, createdDate: Date?, createdBy: UserReference?, modifiedDate: Date?, modifiedBy: UserReference?, selfUri: String?) {
+    public init(_id: String?, name: String?, managementUnits: [ManagementUnitReference]?, _description: String?, activityCode: ActivityCodeReference?, type: ModelType?, optimizationObjective: OptimizationObjective?, recurrenceSettings: RecurrenceSettings?, state: State?, lastRunDate: Date?, lastRunBy: UserReference?, createdDate: Date?, createdBy: UserReference?, modifiedDate: Date?, modifiedBy: UserReference?, initialSchedulePeriod: SchedulingPeriodBase?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.managementUnits = managementUnits
@@ -92,6 +96,7 @@ public class ActivityPlanListItem: Codable {
         self.createdBy = createdBy
         self.modifiedDate = modifiedDate
         self.modifiedBy = modifiedBy
+        self.initialSchedulePeriod = initialSchedulePeriod
         self.selfUri = selfUri
     }
 
@@ -111,6 +116,7 @@ public class ActivityPlanListItem: Codable {
         case createdBy
         case modifiedDate
         case modifiedBy
+        case initialSchedulePeriod
         case selfUri
     }
 

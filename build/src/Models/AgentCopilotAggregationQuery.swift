@@ -14,7 +14,6 @@ public class AgentCopilotAggregationQuery: Codable {
         case cannedresponselibraryid = "cannedResponseLibraryId"
         case chunkcount = "chunkCount"
         case conversationid = "conversationId"
-        case knowledgesettingid = "knowledgeSettingId"
         case engagementtype = "engagementType"
         case externalcontactid = "externalContactId"
         case feedbackrating = "feedbackRating"
@@ -22,6 +21,7 @@ public class AgentCopilotAggregationQuery: Codable {
         case hasgeneratedanswer = "hasGeneratedAnswer"
         case knowledgebasedocumentid = "knowledgeBaseDocumentId"
         case knowledgebasedocumentversionid = "knowledgeBaseDocumentVersionId"
+        case knowledgesettingid = "knowledgeSettingId"
         case mediatype = "mediaType"
         case messageid = "messageId"
         case queueid = "queueId"
@@ -40,12 +40,12 @@ public class AgentCopilotAggregationQuery: Codable {
 
     public enum Metrics: String, Codable { 
         case ncannedresponsesuggestions = "nCannedResponseSuggestions"
+        case ndistinctconversations = "nDistinctConversations"
         case ndistinctsuggestions = "nDistinctSuggestions"
         case nknowledgeanswersuggestions = "nKnowledgeAnswerSuggestions"
         case nknowledgearticlesuggestions = "nKnowledgeArticleSuggestions"
         case nknowledgesearchsuggestions = "nKnowledgeSearchSuggestions"
         case nscriptsuggestions = "nScriptSuggestions"
-        case ndistinctconversations = "nDistinctConversations"
     }
 
 

@@ -16,6 +16,8 @@ public class PromptAssetCreate: Codable {
 
 
 
+
+
     public enum UploadStatus: String, Codable { 
         case created = "created"
         case uploaded = "uploaded"
@@ -42,6 +44,8 @@ public class PromptAssetCreate: Codable {
     public var language: String?
     /** URI of the resource audio */
     public var mediaUri: String?
+    /** Audio format info */
+    public var audioFormat: AudioFormat?
     /** Text to speech of the resource */
     public var ttsString: String?
     /** Text of the resource */
@@ -57,12 +61,13 @@ public class PromptAssetCreate: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, promptId: String?, language: String?, mediaUri: String?, ttsString: String?, text: String?, uploadStatus: UploadStatus?, uploadUri: String?, languageDefault: Bool?, tags: [String:[String]]?, durationSeconds: Double?, selfUri: String?) {
+    public init(_id: String?, name: String?, promptId: String?, language: String?, mediaUri: String?, audioFormat: AudioFormat?, ttsString: String?, text: String?, uploadStatus: UploadStatus?, uploadUri: String?, languageDefault: Bool?, tags: [String:[String]]?, durationSeconds: Double?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.promptId = promptId
         self.language = language
         self.mediaUri = mediaUri
+        self.audioFormat = audioFormat
         self.ttsString = ttsString
         self.text = text
         self.uploadStatus = uploadStatus
@@ -79,6 +84,7 @@ public class PromptAssetCreate: Codable {
         case promptId
         case language
         case mediaUri
+        case audioFormat
         case ttsString
         case text
         case uploadStatus

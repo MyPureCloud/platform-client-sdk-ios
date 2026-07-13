@@ -38,6 +38,7 @@ public class EventLog: Codable {
         case messagingCampaignSchedule = "MESSAGING_CAMPAIGN_SCHEDULE"
         case emailCampaignSchedule = "EMAIL_CAMPAIGN_SCHEDULE"
         case whatsappCampaignSchedule = "WHATSAPP_CAMPAIGN_SCHEDULE"
+        case retentionPolicy = "RETENTION_POLICY"
     }
 
 

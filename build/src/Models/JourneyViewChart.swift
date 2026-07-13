@@ -9,6 +9,8 @@ public class JourneyViewChart: Codable {
 
 
 
+
+
     public enum GroupByTime: String, Codable { 
         case day = "Day"
         case week = "Week"
@@ -31,6 +33,8 @@ public class JourneyViewChart: Codable {
     public var name: String?
     /** The version of the journey view chart */
     public var version: Int?
+    /** The rank of the journey view chart for ordering display */
+    public var rank: Int?
     /** A time unit to group the metrics by. There is a limit on the number of groupBy properties which can be specified. */
     public var groupByTime: GroupByTime?
     /** A list of attributes to group the metrics by. There is a limit on the number of groupBy properties which can be specified. */
@@ -44,10 +48,11 @@ public class JourneyViewChart: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, version: Int?, groupByTime: GroupByTime?, groupByAttributes: [JourneyViewChartGroupByAttribute]?, metrics: [JourneyViewChartMetric]?, displayAttributes: JourneyViewChartDisplayAttributes?, groupByMax: Int64?, selfUri: String?) {
+    public init(_id: String?, name: String?, version: Int?, rank: Int?, groupByTime: GroupByTime?, groupByAttributes: [JourneyViewChartGroupByAttribute]?, metrics: [JourneyViewChartMetric]?, displayAttributes: JourneyViewChartDisplayAttributes?, groupByMax: Int64?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.version = version
+        self.rank = rank
         self.groupByTime = groupByTime
         self.groupByAttributes = groupByAttributes
         self.metrics = metrics
@@ -60,6 +65,7 @@ public class JourneyViewChart: Codable {
         case _id = "id"
         case name
         case version
+        case rank
         case groupByTime
         case groupByAttributes
         case metrics

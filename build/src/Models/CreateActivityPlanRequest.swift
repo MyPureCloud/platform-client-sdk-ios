@@ -47,6 +47,8 @@ public class CreateActivityPlanRequest: Codable {
 
 
 
+
+
     /** The name of the activity plan */
     public var name: String?
     /** The management units to which this activity plan applies. Empty list or null means this activity plan applies to the entire business unit */
@@ -83,8 +85,10 @@ public class CreateActivityPlanRequest: Codable {
     public var countsAsPaidTime: Bool?
     /** Fixed availability configuration for the activity plan */
     public var fixedAvailability: [FixedAvailability]?
+    /** The valid start times available when scheduling sessions */
+    public var startTimeIncrementMinutes: Int?
 
-    public init(name: String?, managementUnitIds: [String]?, _description: String?, activityCodeId: String?, type: ModelType?, lengthMinutes: Int?, initialSchedulePeriod: SchedulingPeriod?, groupSettings: GroupSettings?, recurrenceSettings: RecurrenceSettings?, attendeesSearchRule: UserSearchRule?, facilitated: Bool?, facilitatorsSearchRule: UserSearchRule?, transitionTimeMinutes: Int?, serviceGoalImpactOverrides: ActivityPlanServiceGoalImpactOverrides?, optimizationObjective: OptimizationObjective?, state: State?, countsAsPaidTime: Bool?, fixedAvailability: [FixedAvailability]?) {
+    public init(name: String?, managementUnitIds: [String]?, _description: String?, activityCodeId: String?, type: ModelType?, lengthMinutes: Int?, initialSchedulePeriod: SchedulingPeriod?, groupSettings: GroupSettings?, recurrenceSettings: RecurrenceSettings?, attendeesSearchRule: UserSearchRule?, facilitated: Bool?, facilitatorsSearchRule: UserSearchRule?, transitionTimeMinutes: Int?, serviceGoalImpactOverrides: ActivityPlanServiceGoalImpactOverrides?, optimizationObjective: OptimizationObjective?, state: State?, countsAsPaidTime: Bool?, fixedAvailability: [FixedAvailability]?, startTimeIncrementMinutes: Int?) {
         self.name = name
         self.managementUnitIds = managementUnitIds
         self._description = _description
@@ -103,6 +107,7 @@ public class CreateActivityPlanRequest: Codable {
         self.state = state
         self.countsAsPaidTime = countsAsPaidTime
         self.fixedAvailability = fixedAvailability
+        self.startTimeIncrementMinutes = startTimeIncrementMinutes
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -124,6 +129,7 @@ public class CreateActivityPlanRequest: Codable {
         case state
         case countsAsPaidTime
         case fixedAvailability
+        case startTimeIncrementMinutes
     }
 
 

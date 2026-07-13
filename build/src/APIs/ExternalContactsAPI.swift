@@ -3708,6 +3708,160 @@ open class ExternalContactsAPI {
 
     
     
+    /**
+     Get notes export for exportId
+     
+     - parameter exportId: (path) Export id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsNotesExport(exportId: String, completion: @escaping ((_ data: NotesExport?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsNotesExportWithRequestBuilder(exportId: exportId)
+        requestBuilder.execute { (response: Response<NotesExport>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get notes export for exportId
+     - GET /api/v2/externalcontacts/notes/exports/{exportId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "queryConditions" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "dateCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "resultRowCount" : 0,
+  "divisionIds" : [ "divisionIds", "divisionIds" ],
+  "status" : "RUNNING"
+}, statusCode=200}]
+     
+     - parameter exportId: (path) Export id 
+
+     - returns: RequestBuilder<NotesExport> 
+     */
+    open class func getExternalcontactsNotesExportWithRequestBuilder(exportId: String) -> RequestBuilder<NotesExport> {        
+        var path = "/api/v2/externalcontacts/notes/exports/{exportId}"
+        let exportIdPreEscape = "\(exportId)"
+        let exportIdPostEscape = exportIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{exportId}", with: exportIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<NotesExport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     List note exports for organization
+     
+     - parameter divisionIds: (query) Division IDs of entities (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities (optional)
+     - parameter pageSize: (query) Number of entities to return (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsNotesExports(divisionIds: [String]? = nil, after: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: NotesExportListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsNotesExportsWithRequestBuilder(divisionIds: divisionIds, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<NotesExportListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     List note exports for organization
+     - GET /api/v2/externalcontacts/notes/exports
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "queryConditions" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "downloadUrl" : "downloadUrl",
+    "id" : "id",
+    "dateCompletion" : "2000-01-23T04:56:07.000+00:00",
+    "resultRowCount" : 0,
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
+    "status" : "RUNNING"
+  }, {
+    "queryConditions" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "downloadUrl" : "downloadUrl",
+    "id" : "id",
+    "dateCompletion" : "2000-01-23T04:56:07.000+00:00",
+    "resultRowCount" : 0,
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
+    "status" : "RUNNING"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter divisionIds: (query) Division IDs of entities (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities (optional)
+     - parameter pageSize: (query) Number of entities to return (optional)
+
+     - returns: RequestBuilder<NotesExportListing> 
+     */
+    open class func getExternalcontactsNotesExportsWithRequestBuilder(divisionIds: [String]? = nil, after: String? = nil, pageSize: Int? = nil) -> RequestBuilder<NotesExportListing> {        
+        let path = "/api/v2/externalcontacts/notes/exports"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "divisionIds": divisionIds, 
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<NotesExportListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     public enum Expand_getExternalcontactsOrganization: String { 
@@ -5116,6 +5270,160 @@ open class ExternalContactsAPI {
     
     
     /**
+     Get organizations export for exportId
+     
+     - parameter exportId: (path) Export id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsOrganizationsExport(exportId: String, completion: @escaping ((_ data: OrganizationsExport?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsOrganizationsExportWithRequestBuilder(exportId: exportId)
+        requestBuilder.execute { (response: Response<OrganizationsExport>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get organizations export for exportId
+     - GET /api/v2/externalcontacts/organizations/exports/{exportId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "queryConditions" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "dateCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "resultRowCount" : 0,
+  "divisionIds" : [ "divisionIds", "divisionIds" ],
+  "status" : "RUNNING"
+}, statusCode=200}]
+     
+     - parameter exportId: (path) Export id 
+
+     - returns: RequestBuilder<OrganizationsExport> 
+     */
+    open class func getExternalcontactsOrganizationsExportWithRequestBuilder(exportId: String) -> RequestBuilder<OrganizationsExport> {        
+        var path = "/api/v2/externalcontacts/organizations/exports/{exportId}"
+        let exportIdPreEscape = "\(exportId)"
+        let exportIdPostEscape = exportIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{exportId}", with: exportIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OrganizationsExport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     List organization exports for organization
+     
+     - parameter divisionIds: (query) Division IDs of entities (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities (optional)
+     - parameter pageSize: (query) Number of entities to return (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsOrganizationsExports(divisionIds: [String]? = nil, after: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: OrganizationsExportListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsOrganizationsExportsWithRequestBuilder(divisionIds: divisionIds, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<OrganizationsExportListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     List organization exports for organization
+     - GET /api/v2/externalcontacts/organizations/exports
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "queryConditions" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "downloadUrl" : "downloadUrl",
+    "id" : "id",
+    "dateCompletion" : "2000-01-23T04:56:07.000+00:00",
+    "resultRowCount" : 0,
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
+    "status" : "RUNNING"
+  }, {
+    "queryConditions" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "downloadUrl" : "downloadUrl",
+    "id" : "id",
+    "dateCompletion" : "2000-01-23T04:56:07.000+00:00",
+    "resultRowCount" : 0,
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
+    "status" : "RUNNING"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter divisionIds: (query) Division IDs of entities (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities (optional)
+     - parameter pageSize: (query) Number of entities to return (optional)
+
+     - returns: RequestBuilder<OrganizationsExportListing> 
+     */
+    open class func getExternalcontactsOrganizationsExportsWithRequestBuilder(divisionIds: [String]? = nil, after: String? = nil, pageSize: Int? = nil) -> RequestBuilder<OrganizationsExportListing> {        
+        let path = "/api/v2/externalcontacts/organizations/exports"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "divisionIds": divisionIds, 
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<OrganizationsExportListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Get a schema
      
      - parameter schemaId: (path) Schema ID 
@@ -5667,6 +5975,160 @@ open class ExternalContactsAPI {
         ])
 
         let requestBuilder: RequestBuilder<Relationship>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get relationships export for exportId
+     
+     - parameter exportId: (path) Export id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsRelationshipsExport(exportId: String, completion: @escaping ((_ data: RelationshipsExport?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsRelationshipsExportWithRequestBuilder(exportId: exportId)
+        requestBuilder.execute { (response: Response<RelationshipsExport>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get relationships export for exportId
+     - GET /api/v2/externalcontacts/relationships/exports/{exportId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "queryConditions" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "dateCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "resultRowCount" : 0,
+  "divisionIds" : [ "divisionIds", "divisionIds" ],
+  "status" : "RUNNING"
+}, statusCode=200}]
+     
+     - parameter exportId: (path) Export id 
+
+     - returns: RequestBuilder<RelationshipsExport> 
+     */
+    open class func getExternalcontactsRelationshipsExportWithRequestBuilder(exportId: String) -> RequestBuilder<RelationshipsExport> {        
+        var path = "/api/v2/externalcontacts/relationships/exports/{exportId}"
+        let exportIdPreEscape = "\(exportId)"
+        let exportIdPostEscape = exportIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{exportId}", with: exportIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<RelationshipsExport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     List relationship exports for organization
+     
+     - parameter divisionIds: (query) Division IDs of entities (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities (optional)
+     - parameter pageSize: (query) Number of entities to return (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsRelationshipsExports(divisionIds: [String]? = nil, after: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: RelationshipsExportListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsRelationshipsExportsWithRequestBuilder(divisionIds: divisionIds, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<RelationshipsExportListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     List relationship exports for organization
+     - GET /api/v2/externalcontacts/relationships/exports
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "queryConditions" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "downloadUrl" : "downloadUrl",
+    "id" : "id",
+    "dateCompletion" : "2000-01-23T04:56:07.000+00:00",
+    "resultRowCount" : 0,
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
+    "status" : "RUNNING"
+  }, {
+    "queryConditions" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "downloadUrl" : "downloadUrl",
+    "id" : "id",
+    "dateCompletion" : "2000-01-23T04:56:07.000+00:00",
+    "resultRowCount" : 0,
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
+    "status" : "RUNNING"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter divisionIds: (query) Division IDs of entities (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities (optional)
+     - parameter pageSize: (query) Number of entities to return (optional)
+
+     - returns: RequestBuilder<RelationshipsExportListing> 
+     */
+    open class func getExternalcontactsRelationshipsExportsWithRequestBuilder(divisionIds: [String]? = nil, after: String? = nil, pageSize: Int? = nil) -> RequestBuilder<RelationshipsExportListing> {        
+        let path = "/api/v2/externalcontacts/relationships/exports"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "divisionIds": divisionIds, 
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<RelationshipsExportListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -13009,6 +13471,67 @@ open class ExternalContactsAPI {
 
     
     
+    /**
+     Create notes export
+     
+     - parameter body: (body) Export 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postExternalcontactsNotesExports(body: NotesExport, completion: @escaping ((_ data: NotesExport?,_ error: Error?) -> Void)) {
+        let requestBuilder = postExternalcontactsNotesExportsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<NotesExport>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create notes export
+     - POST /api/v2/externalcontacts/notes/exports
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "queryConditions" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "dateCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "resultRowCount" : 0,
+  "divisionIds" : [ "divisionIds", "divisionIds" ],
+  "status" : "RUNNING"
+}, statusCode=201}]
+     
+     - parameter body: (body) Export 
+
+     - returns: RequestBuilder<NotesExport> 
+     */
+    open class func postExternalcontactsNotesExportsWithRequestBuilder(body: NotesExport) -> RequestBuilder<NotesExport> {        
+        let path = "/api/v2/externalcontacts/notes/exports"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<NotesExport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**
@@ -13380,6 +13903,67 @@ open class ExternalContactsAPI {
     
     
     /**
+     Create organizations export
+     
+     - parameter body: (body) Export 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postExternalcontactsOrganizationsExports(body: OrganizationsExport, completion: @escaping ((_ data: OrganizationsExport?,_ error: Error?) -> Void)) {
+        let requestBuilder = postExternalcontactsOrganizationsExportsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<OrganizationsExport>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create organizations export
+     - POST /api/v2/externalcontacts/organizations/exports
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "queryConditions" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "dateCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "resultRowCount" : 0,
+  "divisionIds" : [ "divisionIds", "divisionIds" ],
+  "status" : "RUNNING"
+}, statusCode=201}]
+     
+     - parameter body: (body) Export 
+
+     - returns: RequestBuilder<OrganizationsExport> 
+     */
+    open class func postExternalcontactsOrganizationsExportsWithRequestBuilder(body: OrganizationsExport) -> RequestBuilder<OrganizationsExport> {        
+        let path = "/api/v2/externalcontacts/organizations/exports"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OrganizationsExport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Create a schema
      
      - parameter body: (body) Schema 
@@ -13497,6 +14081,67 @@ open class ExternalContactsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Relationship>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create relationships export
+     
+     - parameter body: (body) Export 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postExternalcontactsRelationshipsExports(body: RelationshipsExport, completion: @escaping ((_ data: RelationshipsExport?,_ error: Error?) -> Void)) {
+        let requestBuilder = postExternalcontactsRelationshipsExportsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<RelationshipsExport>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create relationships export
+     - POST /api/v2/externalcontacts/relationships/exports
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "queryConditions" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "dateCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "resultRowCount" : 0,
+  "divisionIds" : [ "divisionIds", "divisionIds" ],
+  "status" : "RUNNING"
+}, statusCode=201}]
+     
+     - parameter body: (body) Export 
+
+     - returns: RequestBuilder<RelationshipsExport> 
+     */
+    open class func postExternalcontactsRelationshipsExportsWithRequestBuilder(body: RelationshipsExport) -> RequestBuilder<RelationshipsExport> {        
+        let path = "/api/v2/externalcontacts/relationships/exports"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<RelationshipsExport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

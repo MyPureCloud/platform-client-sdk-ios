@@ -1,0 +1,24 @@
+
+
+public class NotesExportComparisonFieldFilter: Codable {
+
+    public enum Field: String, Codable { 
+        case createDate = "CreateDate"
+        case modifyDate = "ModifyDate"
+    }
+
+
+
+    /** Field name to apply the filter */
+    public var field: Field?
+    /** Value to compare field's value against */
+    public var value: String?
+
+    public init(field: Field?, value: String?) {
+        self.field = field
+        self.value = value
+    }
+
+
+}
+

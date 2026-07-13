@@ -46,6 +46,10 @@ public class V2FlowExecutionDataFlowidTopicFlowExecutionHistory: Codable {
 
 
 
+
+
+
+
     /** The execution identifier which represents this unique instance of the flow that ran. */
     public var executionId: String?
     /** The Genesys Cloud conversation identifier associated with this flow instance execution data. */
@@ -79,8 +83,12 @@ public class V2FlowExecutionDataFlowidTopicFlowExecutionHistory: Codable {
     public var startDateTime: Date?
     /** If the flow encountered a warning during execution, this is an array of the warnings. */
     public var warnings: [V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo]?
+    /** A signed URI to download the execution history data. */
+    public var executionHistoryUri: String?
+    /** Time to live in seconds for the executionHistoryUri. */
+    public var executionHistoryUriTtl: Int64?
 
-    public init(executionId: String?, conversationId: String?, divisionId: String?, endDateTime: Date?, endpoint: String?, errors: [V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo]?, execution: [V2FlowExecutionDataFlowidTopicFlowExecutionItem]?, flowExitReason: String?, flowId: String?, flowIsDebug: Bool?, executionItemsTruncated: Bool?, flowType: String?, flowVersion: String?, messageType: MessageType?, invokingContext: V2FlowExecutionDataFlowidTopicInvokingContextInfo?, startDateTime: Date?, warnings: [V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo]?) {
+    public init(executionId: String?, conversationId: String?, divisionId: String?, endDateTime: Date?, endpoint: String?, errors: [V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo]?, execution: [V2FlowExecutionDataFlowidTopicFlowExecutionItem]?, flowExitReason: String?, flowId: String?, flowIsDebug: Bool?, executionItemsTruncated: Bool?, flowType: String?, flowVersion: String?, messageType: MessageType?, invokingContext: V2FlowExecutionDataFlowidTopicInvokingContextInfo?, startDateTime: Date?, warnings: [V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo]?, executionHistoryUri: String?, executionHistoryUriTtl: Int64?) {
         self.executionId = executionId
         self.conversationId = conversationId
         self.divisionId = divisionId
@@ -98,6 +106,8 @@ public class V2FlowExecutionDataFlowidTopicFlowExecutionHistory: Codable {
         self.invokingContext = invokingContext
         self.startDateTime = startDateTime
         self.warnings = warnings
+        self.executionHistoryUri = executionHistoryUri
+        self.executionHistoryUriTtl = executionHistoryUriTtl
     }
 
 
