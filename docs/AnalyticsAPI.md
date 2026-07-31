@@ -5,6 +5,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteAnalyticsActionsAggregatesJob**](AnalyticsAPI#deleteAnalyticsActionsAggregatesJob) | Delete/cancel an async request for action aggregates |
+| [**deleteAnalyticsAgentcopilotsAggregatesJob**](AnalyticsAPI#deleteAnalyticsAgentcopilotsAggregatesJob) | Delete/cancel an async request for agent copilot aggregates |
 | [**deleteAnalyticsBotsAggregatesJob**](AnalyticsAPI#deleteAnalyticsBotsAggregatesJob) | Delete/cancel an async request for bot aggregates |
 | [**deleteAnalyticsCasemanagementAggregatesJob**](AnalyticsAPI#deleteAnalyticsCasemanagementAggregatesJob) | Delete/cancel an async request for case management aggregates |
 | [**deleteAnalyticsConversationsAggregatesJob**](AnalyticsAPI#deleteAnalyticsConversationsAggregatesJob) | Delete/cancel an async request for conversation aggregates |
@@ -24,6 +25,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAnalyticsActionsAggregatesJob**](AnalyticsAPI#getAnalyticsActionsAggregatesJob) | Get status for async query for action aggregates |
 | [**getAnalyticsActionsAggregatesJobResults**](AnalyticsAPI#getAnalyticsActionsAggregatesJobResults) | Fetch a page of results for an async aggregates query |
 | [**getAnalyticsAgentStatus**](AnalyticsAPI#getAnalyticsAgentStatus) | Get an agent and their active sessions by user ID |
+| [**getAnalyticsAgentcopilotsAggregatesJob**](AnalyticsAPI#getAnalyticsAgentcopilotsAggregatesJob) | Get status for async query for agent copilot aggregates |
+| [**getAnalyticsAgentcopilotsAggregatesJobResults**](AnalyticsAPI#getAnalyticsAgentcopilotsAggregatesJobResults) | Fetch a page of results for an async aggregates query |
 | [**getAnalyticsBotflowDivisionsReportingturns**](AnalyticsAPI#getAnalyticsBotflowDivisionsReportingturns) | Get Reporting Turns (division aware). |
 | [**getAnalyticsBotflowReportingturns**](AnalyticsAPI#getAnalyticsBotflowReportingturns) | Get Reporting Turns. |
 | [**getAnalyticsBotflowSessions**](AnalyticsAPI#getAnalyticsBotflowSessions) | Get Bot Flow Sessions. |
@@ -74,6 +77,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchAnalyticsReportingSettings**](AnalyticsAPI#patchAnalyticsReportingSettings) | Patch AnalyticsReportingSettings values for an organization |
 | [**postAnalyticsActionsAggregatesJobs**](AnalyticsAPI#postAnalyticsActionsAggregatesJobs) | Query for action aggregates asynchronously |
 | [**postAnalyticsActionsAggregatesQuery**](AnalyticsAPI#postAnalyticsActionsAggregatesQuery) | Query for action aggregates |
+| [**postAnalyticsAgentcopilotsAggregatesJobs**](AnalyticsAPI#postAnalyticsAgentcopilotsAggregatesJobs) | Query for agent copilot aggregates asynchronously |
 | [**postAnalyticsAgentcopilotsAggregatesQuery**](AnalyticsAPI#postAnalyticsAgentcopilotsAggregatesQuery) | Query for agent copilot aggregates |
 | [**postAnalyticsAgentsStatusCounts**](AnalyticsAPI#postAnalyticsAgentsStatusCounts) | Count agents by different groupings |
 | [**postAnalyticsAgentsStatusQuery**](AnalyticsAPI#postAnalyticsAgentsStatusQuery) | Retrieve the top 50 agents matching the query filters |
@@ -161,6 +165,55 @@ AnalyticsAPI.deleteAnalyticsActionsAggregatesJob(jobId: jobId) { (error) in
         dump(error)
     } else {
         print("AnalyticsAPI.deleteAnalyticsActionsAggregatesJob was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteAnalyticsAgentcopilotsAggregatesJob
+
+
+
+> Void deleteAnalyticsAgentcopilotsAggregatesJob(jobId)
+
+Delete/cancel an async request for agent copilot aggregates
+
+
+
+Wraps DELETE /api/v2/analytics/agentcopilots/aggregates/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:agentCopilotAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+AnalyticsAPI.deleteAnalyticsAgentcopilotsAggregatesJob(jobId: jobId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("AnalyticsAPI.deleteAnalyticsAgentcopilotsAggregatesJob was successful")
     }
 }
 ```
@@ -1115,6 +1168,108 @@ AnalyticsAPI.getAnalyticsAgentStatus(userId: userId) { (response, error) in
 ### Return type
 
 [**AnalyticsAgentStateAgentResponse**](AnalyticsAgentStateAgentResponse)
+
+
+## getAnalyticsAgentcopilotsAggregatesJob
+
+
+
+> [AsyncQueryStatus](AsyncQueryStatus) getAnalyticsAgentcopilotsAggregatesJob(jobId)
+
+Get status for async query for agent copilot aggregates
+
+
+
+Wraps GET /api/v2/analytics/agentcopilots/aggregates/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:agentCopilotAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+AnalyticsAPI.getAnalyticsAgentcopilotsAggregatesJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsAgentcopilotsAggregatesJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus)
+
+
+## getAnalyticsAgentcopilotsAggregatesJobResults
+
+
+
+> [AgentCopilotAsyncAggregateQueryResponse](AgentCopilotAsyncAggregateQueryResponse) getAnalyticsAgentcopilotsAggregatesJobResults(jobId, cursor)
+
+Fetch a page of results for an async aggregates query
+
+
+
+Wraps GET /api/v2/analytics/agentcopilots/aggregates/jobs/{jobId}/results  
+
+Requires ANY permissions: 
+
+* analytics:agentCopilotAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+let cursor: String = "" // Cursor token to retrieve next page
+
+// Code example
+AnalyticsAPI.getAnalyticsAgentcopilotsAggregatesJobResults(jobId: jobId, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsAgentcopilotsAggregatesJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+| **cursor** | **String**| Cursor token to retrieve next page | [optional] |
+
+
+### Return type
+
+[**AgentCopilotAsyncAggregateQueryResponse**](AgentCopilotAsyncAggregateQueryResponse)
 
 
 ## getAnalyticsBotflowDivisionsReportingturns
@@ -3720,6 +3875,56 @@ AnalyticsAPI.postAnalyticsActionsAggregatesQuery(body: body) { (response, error)
 [**ActionAggregateQueryResponse**](ActionAggregateQueryResponse)
 
 
+## postAnalyticsAgentcopilotsAggregatesJobs
+
+
+
+> [AsyncQueryResponse](AsyncQueryResponse) postAnalyticsAgentcopilotsAggregatesJobs(body)
+
+Query for agent copilot aggregates asynchronously
+
+
+
+Wraps POST /api/v2/analytics/agentcopilots/aggregates/jobs  
+
+Requires ANY permissions: 
+
+* analytics:agentCopilotAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AgentCopilotAsyncAggregationQuery = new AgentCopilotAsyncAggregationQuery(...) // query
+
+// Code example
+AnalyticsAPI.postAnalyticsAgentcopilotsAggregatesJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsAgentcopilotsAggregatesJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AgentCopilotAsyncAggregationQuery**](AgentCopilotAsyncAggregationQuery)| query | |
+
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse)
+
+
 ## postAnalyticsAgentcopilotsAggregatesQuery
 
 
@@ -6303,4 +6508,4 @@ AnalyticsAPI.putAnalyticsDataretentionSettings(body: body) { (response, error) i
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

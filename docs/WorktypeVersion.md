@@ -19,11 +19,11 @@
 | **defaultExpirationSeconds** | **Int** | The default expiration time in seconds for Workitems created from the Worktype. | [optional] |
 | **defaultDueDurationSeconds** | **Int** | The default due duration in seconds for Workitems created from the Worktype. | [optional] |
 | **defaultPriority** | **Int** | The default priority for Workitems created from the Worktype. The valid range is between -25,000,000 and 25,000,000. | [optional] |
-| **defaultLanguage** | [**LanguageReference**](LanguageReference) | The default language for Workitems created from the Worktype. | [optional] |
+| **defaultLanguage** | [**WorkitemLanguageReference**](WorkitemLanguageReference) | The default language for Workitems created from the Worktype. | [optional] |
 | **defaultTtlSeconds** | **Int** | The default time to time to live in seconds for Workitems created from the Worktype. | [optional] |
 | **modifiedBy** | [**UserReference**](UserReference) | The id of the User who modified the Worktype. | [optional] |
 | **defaultQueue** | [**WorkitemQueueReference**](WorkitemQueueReference) | The default queue for Workitems created from the Worktype. | [optional] |
-| **defaultSkills** | [**[RoutingSkillReference]**]([RoutingSkillReference]) | The default skills for Workitems created from the Worktype. | [optional] |
+| **defaultSkills** | [**[WorkitemRoutingSkillReference]**]([WorkitemRoutingSkillReference]) | The default skills for Workitems created from the Worktype. | [optional] |
 | **assignmentEnabled** | **Bool** | When set to true, Workitems will be sent to the queue of the Worktype as they are created. Default value is false. | [optional] |
 | **schema** | [**WorkitemSchema**](WorkitemSchema) | The schema defining the custom attributes for Workitems created from the Worktype. | [optional] |
 | **serviceLevelTarget** | **Int** | The target service level for Workitems created from the Worktype. The default value is 100. | [optional] |
@@ -36,4 +36,4 @@
 
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

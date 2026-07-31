@@ -57,6 +57,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementBusinessunitCapacityplanStaffingrequirements**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitCapacityplanStaffingrequirements) | Get a capacity plan&#39;s staffing requirements |
 | [**getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast) | Get the latest long term staffing requirements for a business unit |
 | [**getWorkforcemanagementBusinessunitCapacityplans**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitCapacityplans) | Get list of capacity plans for a business unit |
+| [**getWorkforcemanagementBusinessunitDecisionmetricsJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitDecisionmetricsJob) | Gets the status of the given job |
 | [**getWorkforcemanagementBusinessunitIntradayPlanninggroups**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitIntradayPlanninggroups) | Get intraday planning groups for the given date |
 | [**getWorkforcemanagementBusinessunitManagementunits**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitManagementunits) | Get all authorized management units in the business unit |
 | [**getWorkforcemanagementBusinessunitMinimumstaffingSettings**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitMinimumstaffingSettings) | Get minimum staffing settings for a business unit |
@@ -82,6 +83,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementBusinessunitStaffinggroup**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitStaffinggroup) | Gets a staffing group |
 | [**getWorkforcemanagementBusinessunitStaffinggroups**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitStaffinggroups) | Gets a list of staffing groups |
 | [**getWorkforcemanagementBusinessunitTimeofflimit**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitTimeofflimit) | Gets a time-off limit object |
+| [**getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJob) | Query the convert time-off limit granularity job operation. Only the user who started the operation can query the status. |
+| [**getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs) | Query the list of convert time-off limit granularity job operation. |
 | [**getWorkforcemanagementBusinessunitTimeofflimits**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitTimeofflimits) | Gets a list of time-off limit objects |
 | [**getWorkforcemanagementBusinessunitTimeoffplan**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitTimeoffplan) | Gets a time-off plan |
 | [**getWorkforcemanagementBusinessunitTimeoffplans**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitTimeoffplans) | Gets a list of time-off plans |
@@ -120,6 +123,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementManagementunitAdherence**](WorkforceManagementAPI#getWorkforcemanagementManagementunitAdherence) | Get a list of user schedule adherence records for the requested management unit |
 | [**getWorkforcemanagementManagementunitAgent**](WorkforceManagementAPI#getWorkforcemanagementManagementunitAgent) | Get data for agent in the management unit |
 | [**getWorkforcemanagementManagementunitAgentShifttrades**](WorkforceManagementAPI#getWorkforcemanagementManagementunitAgentShifttrades) | Gets all the shift trades for a given agent |
+| [**getWorkforcemanagementManagementunitDecisionmetrics**](WorkforceManagementAPI#getWorkforcemanagementManagementunitDecisionmetrics) | Gets the decision metrics of all user in given management unit |
 | [**getWorkforcemanagementManagementunitShifttradesMatched**](WorkforceManagementAPI#getWorkforcemanagementManagementunitShifttradesMatched) | Gets a summary of all shift trades in the matched state |
 | [**getWorkforcemanagementManagementunitShifttradesUsers**](WorkforceManagementAPI#getWorkforcemanagementManagementunitShifttradesUsers) | Gets list of users available for whom you can send direct shift trade requests |
 | [**getWorkforcemanagementManagementunitTimeofflimit**](WorkforceManagementAPI#getWorkforcemanagementManagementunitTimeofflimit) | Gets a time off limit object |
@@ -167,6 +171,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchWorkforcemanagementAlternativeshiftsTradesStateJobs**](WorkforceManagementAPI#patchWorkforcemanagementAlternativeshiftsTradesStateJobs) | Bulk update alternative shift trade states |
 | [**patchWorkforcemanagementBusinessunit**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunit) | Update business unit |
 | [**patchWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitActivitycode) | Update an activity code |
+| [**patchWorkforcemanagementBusinessunitActivitycodesBulk**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitActivitycodesBulk) | Update multiple activity codes |
 | [**patchWorkforcemanagementBusinessunitActivityplan**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitActivityplan) | Update an activity plan |
 | [**patchWorkforcemanagementBusinessunitAlternativeshiftsSettings**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitAlternativeshiftsSettings) | Update alternative shifts settings for a business unit |
 | [**patchWorkforcemanagementBusinessunitCapacityplan**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitCapacityplan) | Update a capacity plan configuration |
@@ -231,6 +236,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate) | Force regenerate the latest long term staffing requirements for a business unit |
 | [**postWorkforcemanagementBusinessunitCapacityplans**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitCapacityplans) | Create a new capacity plan |
 | [**postWorkforcemanagementBusinessunitCapacityplansBulkRemove**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitCapacityplansBulkRemove) | Delete capacity plans in a business unit |
+| [**postWorkforcemanagementBusinessunitDecisionmetricsUpdate**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitDecisionmetricsUpdate) | Initiates the decision metrics update process |
+| [**postWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurl**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurl) | Creates a signed upload URL for updating decision metrics |
 | [**postWorkforcemanagementBusinessunitIntraday**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitIntraday) | Get intraday data for the given date for the requested planningGroupIds |
 | [**postWorkforcemanagementBusinessunitOpportunitiesBulkAdd**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitOpportunitiesBulkAdd) | Bulk add opportunities |
 | [**postWorkforcemanagementBusinessunitOpportunitiesBulkPublish**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitOpportunitiesBulkPublish) | Bulk publish opportunities |
@@ -254,6 +261,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementBusinessunitStaffinggroups**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitStaffinggroups) | Creates a new staffing group |
 | [**postWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery) | Gets a list of planning group to staffing groups list association |
 | [**postWorkforcemanagementBusinessunitStaffinggroupsQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitStaffinggroupsQuery) | Gets staffing group associations for a list of user IDs |
+| [**postWorkforcemanagementBusinessunitTimeofflimitGranularityconversion**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitTimeofflimitGranularityconversion) | Converts existing time-off limit to another granularity. |
+| [**postWorkforcemanagementBusinessunitTimeofflimitValuesImport**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitTimeofflimitValuesImport) | Starts importing the uploaded time-off limit values |
+| [**postWorkforcemanagementBusinessunitTimeofflimitValuesImportUploadurl**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitTimeofflimitValuesImportUploadurl) | Creates a signed upload URL for importing values into time-off limit |
+| [**postWorkforcemanagementBusinessunitTimeofflimitValuesQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitTimeofflimitValuesQuery) | Retrieves time-off limit related values based on a given set of filters. |
 | [**postWorkforcemanagementBusinessunitTimeofflimits**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitTimeofflimits) | Creates a new time-off limit object |
 | [**postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery) | Retrieves time-off limit related values based on a given set of filters. |
 | [**postWorkforcemanagementBusinessunitTimeoffplans**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitTimeoffplans) | Creates a new time-off plan |
@@ -3265,6 +3276,58 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitCapacityplans(businessU
 [**CapacityPlansListResponse**](CapacityPlansListResponse)
 
 
+## getWorkforcemanagementBusinessunitDecisionmetricsJob
+
+
+
+> [DecisionMetricsUpdateJobResponse](DecisionMetricsUpdateJobResponse) getWorkforcemanagementBusinessunitDecisionmetricsJob(businessUnitId, jobId)
+
+Gets the status of the given job
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/decisionmetrics/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:decisionMetrics:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let jobId: String = "" // The ID of the update job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitDecisionmetricsJob(businessUnitId: businessUnitId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitDecisionmetricsJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **jobId** | **String**| The ID of the update job | |
+
+
+### Return type
+
+[**DecisionMetricsUpdateJobResponse**](DecisionMetricsUpdateJobResponse)
+
+
 ## getWorkforcemanagementBusinessunitIntradayPlanninggroups
 
 
@@ -4597,6 +4660,114 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeofflimit(businessUn
 ### Return type
 
 [**BuTimeOffLimitResponse**](BuTimeOffLimitResponse)
+
+
+## getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJob
+
+
+
+> [BuConvertTimeOffLimitGranularityJobResponse](BuConvertTimeOffLimitGranularityJobResponse) getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJob(businessUnitId, timeOffLimitId, jobId)
+
+Query the convert time-off limit granularity job operation. Only the user who started the operation can query the status.
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/granularityconversion/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:convertGranularity
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let timeOffLimitId: String = "" // The ID of the time-off limit
+let jobId: String = "" // The ID of the convert time off limit granularity job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJob(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **timeOffLimitId** | **String**| The ID of the time-off limit | |
+| **jobId** | **String**| The ID of the convert time off limit granularity job | |
+
+
+### Return type
+
+[**BuConvertTimeOffLimitGranularityJobResponse**](BuConvertTimeOffLimitGranularityJobResponse)
+
+
+## getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs
+
+
+
+> [BuConvertTimeOffGranularityLimitJobListing](BuConvertTimeOffGranularityLimitJobListing) getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs(businessUnitId, timeOffLimitId, statuses)
+
+Query the list of convert time-off limit granularity job operation.
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/granularityconversion/jobs  
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:convertGranularity
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let timeOffLimitId: String = "" // The ID of the time-off limit
+let statuses: WorkforceManagementAPI.Statuses_getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs = WorkforceManagementAPI.Statuses_getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs.enummember // Status to filter the list of jobs
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId, statuses: statuses) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **timeOffLimitId** | **String**| The ID of the time-off limit | |
+| **statuses** | **String**| Status to filter the list of jobs | [optional]<br />**Values**: complete ("Complete"), error ("Error"), processing ("Processing") |
+
+
+### Return type
+
+[**BuConvertTimeOffGranularityLimitJobListing**](BuConvertTimeOffGranularityLimitJobListing)
 
 
 ## getWorkforcemanagementBusinessunitTimeofflimits
@@ -6736,6 +6907,56 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitAgentShifttrades(mana
 ### Return type
 
 [**ShiftTradeListResponse**](ShiftTradeListResponse)
+
+
+## getWorkforcemanagementManagementunitDecisionmetrics
+
+
+
+> [DecisionMetricsResponse](DecisionMetricsResponse) getWorkforcemanagementManagementunitDecisionmetrics(managementUnitId)
+
+Gets the decision metrics of all user in given management unit
+
+
+
+Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/decisionmetrics  
+
+Requires ANY permissions: 
+
+* wfm:decisionMetrics:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The ID of the management unit
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementManagementunitDecisionmetrics(managementUnitId: managementUnitId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementManagementunitDecisionmetrics was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **managementUnitId** | **String**| The ID of the management unit | |
+
+
+### Return type
+
+[**DecisionMetricsResponse**](DecisionMetricsResponse)
 
 
 ## getWorkforcemanagementManagementunitShifttradesMatched
@@ -9185,6 +9406,58 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitActivitycode(business
 ### Return type
 
 [**BusinessUnitActivityCode**](BusinessUnitActivityCode)
+
+
+## patchWorkforcemanagementBusinessunitActivitycodesBulk
+
+
+
+> [BulkUpdateActivityCodeResponse](BulkUpdateActivityCodeResponse) patchWorkforcemanagementBusinessunitActivitycodesBulk(businessUnitId, body)
+
+Update multiple activity codes
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/bulk  
+
+Requires ANY permissions: 
+
+* wfm:activityCodes:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
+let body: BulkUpdateActivityCodeRequest = new BulkUpdateActivityCodeRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementBusinessunitActivitycodesBulk(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementBusinessunitActivitycodesBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
+| **body** | [**BulkUpdateActivityCodeRequest**](BulkUpdateActivityCodeRequest)| body | |
+
+
+### Return type
+
+[**BulkUpdateActivityCodeResponse**](BulkUpdateActivityCodeResponse)
 
 
 ## patchWorkforcemanagementBusinessunitActivityplan
@@ -12595,6 +12868,110 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitCapacityplansBulkRemov
 `nil` (empty response body)
 
 
+## postWorkforcemanagementBusinessunitDecisionmetricsUpdate
+
+
+
+> [DecisionMetricsUpdateJobResponse](DecisionMetricsUpdateJobResponse) postWorkforcemanagementBusinessunitDecisionmetricsUpdate(businessUnitId, body)
+
+Initiates the decision metrics update process
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/decisionmetrics/update  
+
+Requires ANY permissions: 
+
+* wfm:decisionMetrics:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: DecisionMetricsUpdateJobRequest = new DecisionMetricsUpdateJobRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitDecisionmetricsUpdate(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitDecisionmetricsUpdate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**DecisionMetricsUpdateJobRequest**](DecisionMetricsUpdateJobRequest)| body | |
+
+
+### Return type
+
+[**DecisionMetricsUpdateJobResponse**](DecisionMetricsUpdateJobResponse)
+
+
+## postWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurl
+
+
+
+> [DecisionMetricsUploadResponse](DecisionMetricsUploadResponse) postWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurl(businessUnitId, body)
+
+Creates a signed upload URL for updating decision metrics
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/decisionmetrics/update/uploadurl  
+
+Requires ANY permissions: 
+
+* wfm:decisionMetrics:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: UploadUrlRequestBody = new UploadUrlRequestBody(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurl(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurl was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody)| body | |
+
+
+### Return type
+
+[**DecisionMetricsUploadResponse**](DecisionMetricsUploadResponse)
+
+
 ## postWorkforcemanagementBusinessunitIntraday
 
 
@@ -13837,6 +14214,226 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitStaffinggroupsQuery(bu
 ### Return type
 
 [**UserStaffingGroupListing**](UserStaffingGroupListing)
+
+
+## postWorkforcemanagementBusinessunitTimeofflimitGranularityconversion
+
+
+
+> [BuConvertTimeOffLimitGranularityJobResponse](BuConvertTimeOffLimitGranularityJobResponse) postWorkforcemanagementBusinessunitTimeofflimitGranularityconversion(businessUnitId, timeOffLimitId, body)
+
+Converts existing time-off limit to another granularity.
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/granularityconversion  
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:convertGranularity
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let timeOffLimitId: String = "" // The ID of the time-off limit
+let body: BuConvertTimeOffLimitGranularityJobRequest = new BuConvertTimeOffLimitGranularityJobRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeofflimitGranularityconversion(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeofflimitGranularityconversion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **timeOffLimitId** | **String**| The ID of the time-off limit | |
+| **body** | [**BuConvertTimeOffLimitGranularityJobRequest**](BuConvertTimeOffLimitGranularityJobRequest)| body | |
+
+
+### Return type
+
+[**BuConvertTimeOffLimitGranularityJobResponse**](BuConvertTimeOffLimitGranularityJobResponse)
+
+
+## postWorkforcemanagementBusinessunitTimeofflimitValuesImport
+
+
+
+> [BuTimeOffLimitResponse](BuTimeOffLimitResponse) postWorkforcemanagementBusinessunitTimeofflimitValuesImport(businessUnitId, timeOffLimitId, body)
+
+Starts importing the uploaded time-off limit values
+
+Call after uploading the time-off limit values data to the url supplied by the /import/uploadurl route
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values/import  
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let timeOffLimitId: String = "" // The ID of the time-off limit object to set limit values for
+let body: BuImportTimeOffLimitValuesRequest = new BuImportTimeOffLimitValuesRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeofflimitValuesImport(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeofflimitValuesImport was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **timeOffLimitId** | **String**| The ID of the time-off limit object to set limit values for | |
+| **body** | [**BuImportTimeOffLimitValuesRequest**](BuImportTimeOffLimitValuesRequest)| body | |
+
+
+### Return type
+
+[**BuTimeOffLimitResponse**](BuTimeOffLimitResponse)
+
+
+## postWorkforcemanagementBusinessunitTimeofflimitValuesImportUploadurl
+
+
+
+> [BuImportTimeOffLimitValuesUploadResponse](BuImportTimeOffLimitValuesUploadResponse) postWorkforcemanagementBusinessunitTimeofflimitValuesImportUploadurl(businessUnitId, timeOffLimitId, body)
+
+Creates a signed upload URL for importing values into time-off limit
+
+Once the upload is complete, call the /import route to start the import process
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values/import/uploadurl  
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let timeOffLimitId: String = "" // The ID of the time-off limit object to set values for
+let body: BuTimeOffLimitValuesImportUploadUrlRequest = new BuTimeOffLimitValuesImportUploadUrlRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeofflimitValuesImportUploadurl(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeofflimitValuesImportUploadurl was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **timeOffLimitId** | **String**| The ID of the time-off limit object to set values for | |
+| **body** | [**BuTimeOffLimitValuesImportUploadUrlRequest**](BuTimeOffLimitValuesImportUploadUrlRequest)| body | |
+
+
+### Return type
+
+[**BuImportTimeOffLimitValuesUploadResponse**](BuImportTimeOffLimitValuesUploadResponse)
+
+
+## postWorkforcemanagementBusinessunitTimeofflimitValuesQuery
+
+
+
+> [BuTimeOffLimitValuesForGranularityResponse](BuTimeOffLimitValuesForGranularityResponse) postWorkforcemanagementBusinessunitTimeofflimitValuesQuery(businessUnitId, timeOffLimitId, body)
+
+Retrieves time-off limit related values based on a given set of filters.
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values/query  
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let timeOffLimitId: String = "" // The ID of the time-off limit
+let body: QueryTimeOffLimitValuesForGranularityRequest = new QueryTimeOffLimitValuesForGranularityRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeofflimitValuesQuery(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeofflimitValuesQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **timeOffLimitId** | **String**| The ID of the time-off limit | |
+| **body** | [**QueryTimeOffLimitValuesForGranularityRequest**](QueryTimeOffLimitValuesForGranularityRequest)| body | |
+
+
+### Return type
+
+[**BuTimeOffLimitValuesForGranularityResponse**](BuTimeOffLimitValuesForGranularityResponse)
 
 
 ## postWorkforcemanagementBusinessunitTimeofflimits
@@ -17818,4 +18415,4 @@ WorkforceManagementAPI.putWorkforcemanagementSchedulebidPreference(bidId: bidId,
 [**AgentScheduleBiddingPreferenceResponse**](AgentScheduleBiddingPreferenceResponse)
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

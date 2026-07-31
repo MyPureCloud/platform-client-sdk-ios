@@ -19,6 +19,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteUserStationDefaultstation**](UsersAPI#deleteUserStationDefaultstation) | Clear default station |
 | [**deleteUserVerifier**](UsersAPI#deleteUserVerifier) | Delete a verifier |
 | [**deleteUsersCustomattributesSchema**](UsersAPI#deleteUsersCustomattributesSchema) | Delete a schema |
+| [**deleteUsersMeVerifier**](UsersAPI#deleteUsersMeVerifier) | Delete a verifier |
 | [**deleteUsersStationsMeAssociatedstation**](UsersAPI#deleteUsersStationsMeAssociatedstation) | Clear self associated station |
 | [**getAnalyticsUsersAggregatesJob**](UsersAPI#getAnalyticsUsersAggregatesJob) | Get status for async query for user aggregates |
 | [**getAnalyticsUsersAggregatesJobResults**](UsersAPI#getAnalyticsUsersAggregatesJobResults) | Fetch a page of results for an async aggregates query |
@@ -73,6 +74,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUsersDevelopmentActivity**](UsersAPI#getUsersDevelopmentActivity) | Get a Development Activity |
 | [**getUsersExternalidAuthorityNameExternalKey**](UsersAPI#getUsersExternalidAuthorityNameExternalKey) | Get the user associated with external identifier. |
 | [**getUsersMe**](UsersAPI#getUsersMe) | Get current user details. |
+| [**getUsersMeVerifiers**](UsersAPI#getUsersMeVerifiers) | Get a list of my verifiers |
 | [**getUsersQuery**](UsersAPI#getUsersQuery) | Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required |
 | [**getUsersSearch**](UsersAPI#getUsersSearch) | Search users using the q64 value returned from a previous search |
 | [**getUsersStationsMe**](UsersAPI#getUsersStationsMe) | Get station information for self |
@@ -106,6 +108,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postUsersCustomattributesSchemas**](UsersAPI#postUsersCustomattributesSchemas) | Create a schema |
 | [**postUsersDevelopmentActivitiesAggregatesQuery**](UsersAPI#postUsersDevelopmentActivitiesAggregatesQuery) | Retrieve aggregated development activity data |
 | [**postUsersMePassword**](UsersAPI#postUsersMePassword) | Change your password |
+| [**postUsersMeVerifiersTotp**](UsersAPI#postUsersMeVerifiersTotp) | Add a new TOTP verifier |
+| [**postUsersMeVerifiersTotpVerifierId**](UsersAPI#postUsersMeVerifiersTotpVerifierId) | Validate a TOTP verifier |
+| [**postUsersMeVerifiersWebauthnRegister**](UsersAPI#postUsersMeVerifiersWebauthnRegister) | Finish WebAuthn verifier registration |
+| [**postUsersMeVerifiersWebauthnRegisterOptions**](UsersAPI#postUsersMeVerifiersWebauthnRegisterOptions) | Begin WebAuthn verifier registration |
 | [**postUsersSearch**](UsersAPI#postUsersSearch) | Search users |
 | [**postUsersSearchTeamsAssign**](UsersAPI#postUsersSearchTeamsAssign) | Search users assigned to teams |
 | [**putRoutingDirectroutingbackupSettingsMe**](UsersAPI#putRoutingDirectroutingbackupSettingsMe) | Update the user&#39;s Direct Routing Backup settings. |
@@ -124,6 +130,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putUserStationDefaultstationStationId**](UsersAPI#putUserStationDefaultstationStationId) | Set default station |
 | [**putUserVerifier**](UsersAPI#putUserVerifier) | Update a verifier |
 | [**putUsersCustomattributesSchema**](UsersAPI#putUsersCustomattributesSchema) | Update a schema |
+| [**putUsersMeVerifier**](UsersAPI#putUsersMeVerifier) | Update a verifier |
 | [**putUsersStationsMeAssociatedstationStationId**](UsersAPI#putUsersStationsMeAssociatedstationStationId) | Set self associated station |
 {: class="table-striped"}
 
@@ -873,6 +880,54 @@ UsersAPI.deleteUsersCustomattributesSchema(schemaId: schemaId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **schemaId** | **String**| Schema ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteUsersMeVerifier
+
+
+
+> Void deleteUsersMeVerifier(verifierId)
+
+Delete a verifier
+
+
+
+Wraps DELETE /api/v2/users/me/verifiers/{verifierId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let verifierId: String = "" // Verifier ID
+
+// Code example
+UsersAPI.deleteUsersMeVerifier(verifierId: verifierId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("UsersAPI.deleteUsersMeVerifier was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **verifierId** | **String**| Verifier ID | |
 
 
 ### Return type
@@ -3728,6 +3783,51 @@ UsersAPI.getUsersMe(expand: expand, integrationPresenceSource: integrationPresen
 [**UserMe**](UserMe)
 
 
+## getUsersMeVerifiers
+
+
+
+> [VerifierEntityListing](VerifierEntityListing) getUsersMeVerifiers()
+
+Get a list of my verifiers
+
+
+
+Wraps GET /api/v2/users/me/verifiers  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+UsersAPI.getUsersMeVerifiers() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUsersMeVerifiers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**VerifierEntityListing**](VerifierEntityListing)
+
+
 ## getUsersQuery
 
 
@@ -5463,6 +5563,203 @@ UsersAPI.postUsersMePassword(body: body) { (error) in
 `nil` (empty response body)
 
 
+## postUsersMeVerifiersTotp
+
+
+
+> [CreateVerifierResponse](CreateVerifierResponse) postUsersMeVerifiersTotp(body)
+
+Add a new TOTP verifier
+
+
+
+Wraps POST /api/v2/users/me/verifiers/totp  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CreateVerifierRequest = new CreateVerifierRequest(...) // Verifier
+
+// Code example
+UsersAPI.postUsersMeVerifiersTotp(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.postUsersMeVerifiersTotp was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CreateVerifierRequest**](CreateVerifierRequest)| Verifier | |
+
+
+### Return type
+
+[**CreateVerifierResponse**](CreateVerifierResponse)
+
+
+## postUsersMeVerifiersTotpVerifierId
+
+
+
+> Void postUsersMeVerifiersTotpVerifierId(verifierId, body)
+
+Validate a TOTP verifier
+
+
+
+Wraps POST /api/v2/users/me/verifiers/totp/{verifierId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let verifierId: String = "" // Verifier ID
+let body: ValidateVerifierRequest = new ValidateVerifierRequest(...) // Verifier Validate
+
+// Code example
+UsersAPI.postUsersMeVerifiersTotpVerifierId(verifierId: verifierId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("UsersAPI.postUsersMeVerifiersTotpVerifierId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **verifierId** | **String**| Verifier ID | |
+| **body** | [**ValidateVerifierRequest**](ValidateVerifierRequest)| Verifier Validate | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## postUsersMeVerifiersWebauthnRegister
+
+
+
+> [Verifier](Verifier) postUsersMeVerifiersWebauthnRegister(body)
+
+Finish WebAuthn verifier registration
+
+Completes registration of a new WebAuthn authenticator by submitting the credential creation response produced by navigator.credentials.create().
+
+
+
+Wraps POST /api/v2/users/me/verifiers/webauthn/register  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: FinishWebAuthnRegistrationRequest = new FinishWebAuthnRegistrationRequest(...) // WebAuthn registration result
+
+// Code example
+UsersAPI.postUsersMeVerifiersWebauthnRegister(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.postUsersMeVerifiersWebauthnRegister was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**FinishWebAuthnRegistrationRequest**](FinishWebAuthnRegistrationRequest)| WebAuthn registration result | |
+
+
+### Return type
+
+[**Verifier**](Verifier)
+
+
+## postUsersMeVerifiersWebauthnRegisterOptions
+
+
+
+> [BeginWebAuthnRegistrationResponse](BeginWebAuthnRegistrationResponse) postUsersMeVerifiersWebauthnRegisterOptions()
+
+Begin WebAuthn verifier registration
+
+Returns the public key credential creation options the client passes to navigator.credentials.create() to start registering a new WebAuthn authenticator.
+
+
+
+Wraps POST /api/v2/users/me/verifiers/webauthn/register/options  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+UsersAPI.postUsersMeVerifiersWebauthnRegisterOptions() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.postUsersMeVerifiersWebauthnRegisterOptions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**BeginWebAuthnRegistrationResponse**](BeginWebAuthnRegistrationResponse)
+
+
 ## postUsersSearch
 
 
@@ -6394,6 +6691,57 @@ UsersAPI.putUsersCustomattributesSchema(schemaId: schemaId, body: body) { (respo
 [**DataSchema**](DataSchema)
 
 
+## putUsersMeVerifier
+
+
+
+> [Verifier](Verifier) putUsersMeVerifier(verifierId, body)
+
+Update a verifier
+
+
+
+Wraps PUT /api/v2/users/me/verifiers/{verifierId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let verifierId: String = "" // Verifier ID
+let body: UpdateVerifierRequest = new UpdateVerifierRequest(...) // Verifier Update
+
+// Code example
+UsersAPI.putUsersMeVerifier(verifierId: verifierId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.putUsersMeVerifier was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **verifierId** | **String**| Verifier ID | |
+| **body** | [**UpdateVerifierRequest**](UpdateVerifierRequest)| Verifier Update | |
+
+
+### Return type
+
+[**Verifier**](Verifier)
+
+
 ## putUsersStationsMeAssociatedstationStationId
 
 
@@ -6443,4 +6791,4 @@ UsersAPI.putUsersStationsMeAssociatedstationStationId(stationId: stationId) { (e
 `nil` (empty response body)
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

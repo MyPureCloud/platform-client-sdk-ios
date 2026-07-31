@@ -144,6 +144,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationParticipantAttributes**](ConversationsAPI#patchConversationParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationRecordingstate**](ConversationsAPI#patchConversationRecordingstate) | Update a conversation by setting its recording state |
 | [**patchConversationSecureattributes**](ConversationsAPI#patchConversationSecureattributes) | Update the secure attributes on a conversation. |
+| [**patchConversationSuggestion**](ConversationsAPI#patchConversationSuggestion) | Update a suggestion. |
 | [**patchConversationSummaryEngagements**](ConversationsAPI#patchConversationSummaryEngagements) | Update agent&#39;s engagement for the summary. |
 | [**patchConversationSummaryFeedback**](ConversationsAPI#patchConversationSummaryFeedback) | Update the feedback for the summary. |
 | [**patchConversationUtilizationlabel**](ConversationsAPI#patchConversationUtilizationlabel) | Update the utilization label on a conversation. When there is no value provided, the system default label is applied |
@@ -221,6 +222,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsCall**](ConversationsAPI#postConversationsCall) | Place a new call as part of a callback conversation. |
 | [**postConversationsCallParticipantBarge**](ConversationsAPI#postConversationsCallParticipantBarge) | Barge a given participant&#39;s call creating a barged in conference of connected participants. |
 | [**postConversationsCallParticipantCoach**](ConversationsAPI#postConversationsCallParticipantCoach) | Listen in on the conversation from the point of view of a given participant while speaking to just the given participant. |
+| [**postConversationsCallParticipantCommunicationSummaries**](ConversationsAPI#postConversationsCallParticipantCommunicationSummaries) | Request an on-demand summary for a call communication. |
 | [**postConversationsCallParticipantCommunicationWrapup**](ConversationsAPI#postConversationsCallParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsCallParticipantConsult**](ConversationsAPI#postConversationsCallParticipantConsult) | Initiate and update consult transfer (Deprecated) |
 | [**postConversationsCallParticipantConsultAgent**](ConversationsAPI#postConversationsCallParticipantConsultAgent) | Initiate a consult transfer to an agent |
@@ -271,6 +273,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessageInboundOpenReceipt**](ConversationsAPI#postConversationsMessageInboundOpenReceipt) | Send an inbound Open Receipt Message |
 | [**postConversationsMessageInboundOpenStructuredResponse**](ConversationsAPI#postConversationsMessageInboundOpenStructuredResponse) | Send inbound Open Response |
 | [**postConversationsMessageMessagesBulk**](ConversationsAPI#postConversationsMessageMessagesBulk) | Get messages in batch |
+| [**postConversationsMessageParticipantCommunicationSummaries**](ConversationsAPI#postConversationsMessageParticipantCommunicationSummaries) | Request an on-demand summary for a message communication. |
 | [**postConversationsMessageParticipantCommunicationWrapup**](ConversationsAPI#postConversationsMessageParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsMessageParticipantMonitor**](ConversationsAPI#postConversationsMessageParticipantMonitor) | Listen in on the conversation from the point of view of a given participant. |
 | [**postConversationsMessageParticipantReplace**](ConversationsAPI#postConversationsMessageParticipantReplace) | Replace this participant with the specified user and/or address |
@@ -7527,6 +7530,60 @@ ConversationsAPI.patchConversationSecureattributes(conversationId: conversationI
 **String**
 
 
+## patchConversationSuggestion
+
+
+
+> [Suggestion](Suggestion) patchConversationSuggestion(conversationId, suggestionId, body)
+
+Update a suggestion.
+
+
+
+Wraps PATCH /api/v2/conversations/{conversationId}/suggestions/{suggestionId}  
+
+Requires ALL permissions: 
+
+* conversation:suggestion:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // Conversation ID
+let suggestionId: String = "" // Suggestion ID
+let body: SuggestionPatchRequest = new SuggestionPatchRequest(...) // 
+
+// Code example
+ConversationsAPI.patchConversationSuggestion(conversationId: conversationId, suggestionId: suggestionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.patchConversationSuggestion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| Conversation ID | |
+| **suggestionId** | **String**| Suggestion ID | |
+| **body** | [**SuggestionPatchRequest**](SuggestionPatchRequest)|  | |
+
+
+### Return type
+
+[**Suggestion**](Suggestion)
+
+
 ## patchConversationSummaryEngagements
 
 
@@ -11648,6 +11705,62 @@ ConversationsAPI.postConversationsCallParticipantCoach(conversationId: conversat
 `nil` (empty response body)
 
 
+## postConversationsCallParticipantCommunicationSummaries
+
+
+
+> [OnDemandSummaryAcceptedResponse](OnDemandSummaryAcceptedResponse) postConversationsCallParticipantCommunicationSummaries(conversationId, participantId, communicationId, body)
+
+Request an on-demand summary for a call communication.
+
+
+
+Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/summaries  
+
+Requires ALL permissions: 
+
+* conversation:summary:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // Conversation ID
+let participantId: String = "" // Participant ID
+let communicationId: String = "" // Communication ID
+let body: OnDemandConversationSummaryRequest = new OnDemandConversationSummaryRequest(...) // On-demand summary request
+
+// Code example
+ConversationsAPI.postConversationsCallParticipantCommunicationSummaries(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsCallParticipantCommunicationSummaries was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| Conversation ID | |
+| **participantId** | **String**| Participant ID | |
+| **communicationId** | **String**| Communication ID | |
+| **body** | [**OnDemandConversationSummaryRequest**](OnDemandConversationSummaryRequest)| On-demand summary request | [optional] |
+
+
+### Return type
+
+[**OnDemandSummaryAcceptedResponse**](OnDemandSummaryAcceptedResponse)
+
+
 ## postConversationsCallParticipantCommunicationWrapup
 
 
@@ -14321,6 +14434,62 @@ ConversationsAPI.postConversationsMessageMessagesBulk(conversationId: conversati
 [**TextMessageListing**](TextMessageListing)
 
 
+## postConversationsMessageParticipantCommunicationSummaries
+
+
+
+> [OnDemandSummaryAcceptedResponse](OnDemandSummaryAcceptedResponse) postConversationsMessageParticipantCommunicationSummaries(conversationId, participantId, communicationId, body)
+
+Request an on-demand summary for a message communication.
+
+
+
+Wraps POST /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/summaries  
+
+Requires ALL permissions: 
+
+* conversation:summary:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // Conversation ID
+let participantId: String = "" // Participant ID
+let communicationId: String = "" // Communication ID
+let body: OnDemandConversationSummaryRequest = new OnDemandConversationSummaryRequest(...) // On-demand summary request
+
+// Code example
+ConversationsAPI.postConversationsMessageParticipantCommunicationSummaries(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsMessageParticipantCommunicationSummaries was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| Conversation ID | |
+| **participantId** | **String**| Participant ID | |
+| **communicationId** | **String**| Communication ID | |
+| **body** | [**OnDemandConversationSummaryRequest**](OnDemandConversationSummaryRequest)| On-demand summary request | [optional] |
+
+
+### Return type
+
+[**OnDemandSummaryAcceptedResponse**](OnDemandSummaryAcceptedResponse)
+
+
 ## postConversationsMessageParticipantCommunicationWrapup
 
 
@@ -16777,4 +16946,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

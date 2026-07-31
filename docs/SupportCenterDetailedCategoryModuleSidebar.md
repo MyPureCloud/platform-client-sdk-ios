@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **enabled** | **Bool** | Whether sidebar is enabled or not | |
+| **enabled** | **Bool** | Whether sidebar is enabled or not. Required if support center is enabled | [optional] |
 
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

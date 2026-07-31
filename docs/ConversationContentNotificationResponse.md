@@ -14,4 +14,4 @@ Inbound response to a notification, such as an Apple Invitations acceptance.
 
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

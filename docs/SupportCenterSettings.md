@@ -7,16 +7,16 @@ Settings concerning knowledge portal (previously support center)
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **enabled** | **Bool** | Whether or not knowledge portal (previously support center) is enabled | |
-| **knowledgeBase** | [**AddressableEntityRef**](AddressableEntityRef) | The knowledge base for knowledge portal (previously support center) | |
-| **customMessages** | [**[SupportCenterCustomMessage]**]([SupportCenterCustomMessage]) | Customizable display texts for knowledge portal (previously support center) | [optional] |
+| **enabled** | **Bool** | Whether or not knowledge portal (previously support center) is enabled. | [optional] |
+| **knowledgeBase** | [**AddressableEntityRef**](AddressableEntityRef) | The knowledge base for knowledge portal (previously support center). Required if support center is enabled | [optional] |
+| **customMessages** | [**[SupportCenterCustomMessage]**]([SupportCenterCustomMessage]) | Customizable display texts for knowledge portal (previously support center). Required if support center is enabled, must contain both Welcome and Fallback message entries | [optional] |
 | **routerType** | **String** | Router type for knowledge portal (previously support center) | [optional] |
-| **screens** | [**[SupportCenterScreen]**]([SupportCenterScreen]) | Available screens for the knowledge portal (previously support center) with its modules | |
-| **enabledCategories** | [**[SupportCenterCategory]**]([SupportCenterCategory]) | Featured categories for knowledge portal (previously support center) home screen | |
+| **screens** | [**[SupportCenterScreen]**]([SupportCenterScreen]) | Available screens for the knowledge portal (previously support center) with its modules. Required if support center is enabled | [optional] |
+| **enabledCategories** | [**[SupportCenterCategory]**]([SupportCenterCategory]) | Featured categories for knowledge portal (previously support center) home screen. Required if support center is enabled | [optional] |
 | **labelFilter** | [**SupportCenterLabelFilter**](SupportCenterLabelFilter) | Document label filter. If set, only documents having at least one of the specified labels will be returned by knowledge document query operations. | [optional] |
-| **styleSetting** | [**SupportCenterStyleSetting**](SupportCenterStyleSetting) | Style attributes for knowledge portal (previously support center) | |
+| **styleSetting** | [**SupportCenterStyleSetting**](SupportCenterStyleSetting) | Style attributes for knowledge portal (previously support center). Required if support center is enabled | [optional] |
 | **feedback** | [**SupportCenterFeedbackSettings**](SupportCenterFeedbackSettings) | Customer feedback settings | [optional] |
 
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

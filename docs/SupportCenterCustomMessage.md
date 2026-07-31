@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **defaultValue** | **String** | Default value for the message | |
-| **type** | **String** | Type of the message | |
+| **defaultValue** | **String** | Default value for the message. Required for each custom message entry | [optional] |
+| **type** | **String** | Type of the message. Required for each custom message entry | [optional] |
 
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

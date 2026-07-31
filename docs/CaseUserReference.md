@@ -9,8 +9,9 @@
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
 | **presence** | [**UserPresence**](UserPresence) | Active presence | [optional] |
+| **images** | [**[Image]**]([Image]) | Profile images for the user | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_
