@@ -936,8 +936,8 @@ open class IntegrationsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "web.deployments",
-      "value" : 7,
+      "namespace" : "users.rules",
+      "value" : 6,
       "key" : "key"
     },
     "entityId" : "entityId",
@@ -958,14 +958,14 @@ open class IntegrationsAPI {
     },
     "message" : "message",
     "errors" : [ null, null ],
-    "status" : 2
+    "status" : 0
   }, {
     "messageWithParams" : "messageWithParams",
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "web.deployments",
-      "value" : 7,
+      "namespace" : "users.rules",
+      "value" : 6,
       "key" : "key"
     },
     "entityId" : "entityId",
@@ -986,7 +986,7 @@ open class IntegrationsAPI {
     },
     "message" : "message",
     "errors" : [ null, null ],
-    "status" : 2
+    "status" : 0
   } ]
 }, statusCode=200}]
      
@@ -4794,6 +4794,7 @@ open class IntegrationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "grammarBased" : true,
+  "replacedBy" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "id" : "id"
@@ -4862,11 +4863,13 @@ open class IntegrationsAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "grammarBased" : true,
+    "replacedBy" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id"
   }, {
     "grammarBased" : true,
+    "replacedBy" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id"

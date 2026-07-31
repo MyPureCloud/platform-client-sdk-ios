@@ -8,11 +8,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteResponsemanagementResponse**](ResponseManagementAPI#deleteResponsemanagementResponse) | Delete an existing response. |
 | [**deleteResponsemanagementResponseasset**](ResponseManagementAPI#deleteResponsemanagementResponseasset) | Delete response asset |
 | [**getResponsemanagementLibraries**](ResponseManagementAPI#getResponsemanagementLibraries) | Gets a list of existing response libraries. |
+| [**getResponsemanagementLibrariesDivisionview**](ResponseManagementAPI#getResponsemanagementLibrariesDivisionview) | Get details about an existing response library. |
+| [**getResponsemanagementLibrariesDivisionviews**](ResponseManagementAPI#getResponsemanagementLibrariesDivisionviews) | Gets a list of existing response libraries. |
 | [**getResponsemanagementLibrary**](ResponseManagementAPI#getResponsemanagementLibrary) | Get details about an existing response library. |
 | [**getResponsemanagementResponse**](ResponseManagementAPI#getResponsemanagementResponse) | Get details about an existing response. |
 | [**getResponsemanagementResponseasset**](ResponseManagementAPI#getResponsemanagementResponseasset) | Get response asset information |
 | [**getResponsemanagementResponseassetsStatusStatusId**](ResponseManagementAPI#getResponsemanagementResponseassetsStatusStatusId) | Get response asset upload status |
 | [**getResponsemanagementResponses**](ResponseManagementAPI#getResponsemanagementResponses) | Gets a list of existing responses. |
+| [**getResponsemanagementResponsesDivisionview**](ResponseManagementAPI#getResponsemanagementResponsesDivisionview) | Get details about an existing response. |
 | [**postResponsemanagementLibraries**](ResponseManagementAPI#postResponsemanagementLibraries) | Create a response library. |
 | [**postResponsemanagementLibrariesBulk**](ResponseManagementAPI#postResponsemanagementLibrariesBulk) | Get response libraries. |
 | [**postResponsemanagementLibrariesQuery**](ResponseManagementAPI#postResponsemanagementLibrariesQuery) | Query libraries using criteria. Users can set DivisionId parameter as &#39;*&#39; to fetch libraries that aren&#39;t associated with any divisions. |
@@ -20,6 +23,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postResponsemanagementResponseassetsSearch**](ResponseManagementAPI#postResponsemanagementResponseassetsSearch) | Search response assets |
 | [**postResponsemanagementResponseassetsUploads**](ResponseManagementAPI#postResponsemanagementResponseassetsUploads) | Creates pre-signed url for uploading response asset |
 | [**postResponsemanagementResponses**](ResponseManagementAPI#postResponsemanagementResponses) | Create a response. |
+| [**postResponsemanagementResponsesDivisionviewsQuery**](ResponseManagementAPI#postResponsemanagementResponsesDivisionviewsQuery) | Query responses |
 | [**postResponsemanagementResponsesQuery**](ResponseManagementAPI#postResponsemanagementResponsesQuery) | Query responses |
 | [**putResponsemanagementLibrary**](ResponseManagementAPI#putResponsemanagementLibrary) | Update an existing response library. |
 | [**putResponsemanagementResponse**](ResponseManagementAPI#putResponsemanagementResponse) | Update an existing response. |
@@ -232,6 +236,112 @@ ResponseManagementAPI.getResponsemanagementLibraries(pageNumber: pageNumber, pag
 ### Return type
 
 [**LibraryEntityListing**](LibraryEntityListing)
+
+
+## getResponsemanagementLibrariesDivisionview
+
+
+
+> [LibraryDivisionView](LibraryDivisionView) getResponsemanagementLibrariesDivisionview(libraryId)
+
+Get details about an existing response library.
+
+
+
+Wraps GET /api/v2/responsemanagement/libraries/divisionviews/{libraryId}  
+
+Requires ANY permissions: 
+
+* responses:library:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let libraryId: String = "" // Library ID
+
+// Code example
+ResponseManagementAPI.getResponsemanagementLibrariesDivisionview(libraryId: libraryId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ResponseManagementAPI.getResponsemanagementLibrariesDivisionview was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **libraryId** | **String**| Library ID | |
+
+
+### Return type
+
+[**LibraryDivisionView**](LibraryDivisionView)
+
+
+## getResponsemanagementLibrariesDivisionviews
+
+
+
+> [LibraryDivisionViewEntityListing](LibraryDivisionViewEntityListing) getResponsemanagementLibrariesDivisionviews(pageNumber, pageSize, messagingTemplateFilter, libraryPrefix)
+
+Gets a list of existing response libraries.
+
+
+
+Wraps GET /api/v2/responsemanagement/libraries/divisionviews  
+
+Requires ANY permissions: 
+
+* responses:library:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let messagingTemplateFilter: ResponseManagementAPI.MessagingTemplateFilter_getResponsemanagementLibrariesDivisionviews = ResponseManagementAPI.MessagingTemplateFilter_getResponsemanagementLibrariesDivisionviews.enummember // Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel
+let libraryPrefix: String = "" // Returns a list of libraries that contain the prefix provided
+
+// Code example
+ResponseManagementAPI.getResponsemanagementLibrariesDivisionviews(pageNumber: pageNumber, pageSize: pageSize, messagingTemplateFilter: messagingTemplateFilter, libraryPrefix: libraryPrefix) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ResponseManagementAPI.getResponsemanagementLibrariesDivisionviews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **messagingTemplateFilter** | **String**| Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel | [optional]<br />**Values**: whatsapp ("whatsapp") |
+| **libraryPrefix** | **String**| Returns a list of libraries that contain the prefix provided | [optional] |
+
+
+### Return type
+
+[**LibraryDivisionViewEntityListing**](LibraryDivisionViewEntityListing)
 
 
 ## getResponsemanagementLibrary
@@ -490,6 +600,56 @@ ResponseManagementAPI.getResponsemanagementResponses(libraryId: libraryId, pageN
 ### Return type
 
 [**ResponseEntityListing**](ResponseEntityListing)
+
+
+## getResponsemanagementResponsesDivisionview
+
+
+
+> [ResponseDivisionView](ResponseDivisionView) getResponsemanagementResponsesDivisionview(responseId)
+
+Get details about an existing response.
+
+
+
+Wraps GET /api/v2/responsemanagement/responses/divisionviews/{responseId}  
+
+Requires ANY permissions: 
+
+* responses:response:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let responseId: String = "" // Response ID
+
+// Code example
+ResponseManagementAPI.getResponsemanagementResponsesDivisionview(responseId: responseId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ResponseManagementAPI.getResponsemanagementResponsesDivisionview was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **responseId** | **String**| Response ID | |
+
+
+### Return type
+
+[**ResponseDivisionView**](ResponseDivisionView)
 
 
 ## postResponsemanagementLibraries
@@ -850,6 +1010,56 @@ ResponseManagementAPI.postResponsemanagementResponses(body: body, expand: expand
 [**ModelResponse**](Response)
 
 
+## postResponsemanagementResponsesDivisionviewsQuery
+
+
+
+> [ResponseDivisionViewQueryResults](ResponseDivisionViewQueryResults) postResponsemanagementResponsesDivisionviewsQuery(body)
+
+Query responses
+
+
+
+Wraps POST /api/v2/responsemanagement/responses/divisionviews/query  
+
+Requires ANY permissions: 
+
+* responses:response:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ResponseQueryRequest = new ResponseQueryRequest(...) // Response
+
+// Code example
+ResponseManagementAPI.postResponsemanagementResponsesDivisionviewsQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ResponseManagementAPI.postResponsemanagementResponsesDivisionviewsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ResponseQueryRequest**](ResponseQueryRequest)| Response | |
+
+
+### Return type
+
+[**ResponseDivisionViewQueryResults**](ResponseDivisionViewQueryResults)
+
+
 ## postResponsemanagementResponsesQuery
 
 
@@ -1062,4 +1272,4 @@ ResponseManagementAPI.putResponsemanagementResponseasset(responseAssetId: respon
 [**ResponseAsset**](ResponseAsset)
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

@@ -11,7 +11,8 @@ A metric to measure within the chart
 | **elementId** | **String** | The element in the list of elements which the metric is measuring | |
 | **aggregate** | **String** | How to aggregate the given element, defaults to CustomerCount | [optional] |
 | **displayLabel** | **String** | A display label for the metric | [optional] |
+| **attribute** | **String** | Attribute name | [optional] |
 
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

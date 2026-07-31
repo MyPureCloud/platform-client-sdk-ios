@@ -3839,7 +3839,7 @@ open class RoutingAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queueFlow" : "{}",
   "callingPartyNumber" : "callingPartyNumber",
-  "userMemberCount" : 4,
+  "userMemberCount" : 6,
   "modifiedBy" : "modifiedBy",
   "id" : "id",
   "memberGroups" : [ {
@@ -3858,11 +3858,11 @@ open class RoutingAPI {
     "type" : "TEAM"
   } ],
   "scoringMethod" : "TimestampAndPriority",
-  "joinedMemberCount" : 8,
+  "joinedMemberCount" : 0,
   "messageInQueueFlow" : "{}",
   "callingPartyName" : "callingPartyName",
   "acwSettings" : "{}",
-  "memberCount" : 0,
+  "memberCount" : 7,
   "selfUri" : "https://openapi-generator.tech",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "whisperPrompt" : "{}",
@@ -6173,7 +6173,7 @@ open class RoutingAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 4,
+    "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
@@ -6192,11 +6192,11 @@ open class RoutingAPI {
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 8,
+    "joinedMemberCount" : 0,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 0,
+    "memberCount" : 7,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -6281,7 +6281,7 @@ open class RoutingAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 4,
+    "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
@@ -6300,11 +6300,11 @@ open class RoutingAPI {
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 8,
+    "joinedMemberCount" : 0,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 0,
+    "memberCount" : 7,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -6500,7 +6500,7 @@ open class RoutingAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 4,
+    "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
@@ -6519,11 +6519,11 @@ open class RoutingAPI {
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 8,
+    "joinedMemberCount" : 0,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 0,
+    "memberCount" : 7,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -6608,7 +6608,7 @@ open class RoutingAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 4,
+    "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
@@ -6627,11 +6627,11 @@ open class RoutingAPI {
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 8,
+    "joinedMemberCount" : 0,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 0,
+    "memberCount" : 7,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -6803,7 +6803,7 @@ open class RoutingAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 4,
+    "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
@@ -6822,11 +6822,11 @@ open class RoutingAPI {
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 8,
+    "joinedMemberCount" : 0,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 0,
+    "memberCount" : 7,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -6911,7 +6911,7 @@ open class RoutingAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 4,
+    "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
@@ -6930,11 +6930,11 @@ open class RoutingAPI {
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 8,
+    "joinedMemberCount" : 0,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 0,
+    "memberCount" : 7,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -7459,6 +7459,7 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -8161,6 +8162,7 @@ open class RoutingAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "division" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -8168,6 +8170,7 @@ open class RoutingAPI {
     "state" : "active",
     "version" : "version"
   }, {
+    "division" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -10343,6 +10346,7 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "skills" : [ {
+    "division" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -10350,6 +10354,7 @@ open class RoutingAPI {
     "state" : "active",
     "version" : "version"
   }, {
+    "division" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -12368,6 +12373,7 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -15058,7 +15064,7 @@ open class RoutingAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queueFlow" : "{}",
   "callingPartyNumber" : "callingPartyNumber",
-  "userMemberCount" : 4,
+  "userMemberCount" : 6,
   "modifiedBy" : "modifiedBy",
   "id" : "id",
   "memberGroups" : [ {
@@ -15077,11 +15083,11 @@ open class RoutingAPI {
     "type" : "TEAM"
   } ],
   "scoringMethod" : "TimestampAndPriority",
-  "joinedMemberCount" : 8,
+  "joinedMemberCount" : 0,
   "messageInQueueFlow" : "{}",
   "callingPartyName" : "callingPartyName",
   "acwSettings" : "{}",
-  "memberCount" : 0,
+  "memberCount" : 7,
   "selfUri" : "https://openapi-generator.tech",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "whisperPrompt" : "{}",
@@ -15377,6 +15383,7 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -16326,7 +16333,7 @@ open class RoutingAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queueFlow" : "{}",
   "callingPartyNumber" : "callingPartyNumber",
-  "userMemberCount" : 4,
+  "userMemberCount" : 6,
   "modifiedBy" : "modifiedBy",
   "id" : "id",
   "memberGroups" : [ {
@@ -16345,11 +16352,11 @@ open class RoutingAPI {
     "type" : "TEAM"
   } ],
   "scoringMethod" : "TimestampAndPriority",
-  "joinedMemberCount" : 8,
+  "joinedMemberCount" : 0,
   "messageInQueueFlow" : "{}",
   "callingPartyName" : "callingPartyName",
   "acwSettings" : "{}",
-  "memberCount" : 0,
+  "memberCount" : 7,
   "selfUri" : "https://openapi-generator.tech",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "whisperPrompt" : "{}",

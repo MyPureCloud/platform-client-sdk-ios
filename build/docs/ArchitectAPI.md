@@ -3779,7 +3779,7 @@ let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
 let sortBy: String = "" // Sort by
 let sortOrder: String = "" // Sort order
-let _id: [String] = [""] // ID
+let _id: [String] = [""] // ID. Deprecated, use GET /api/v2/flows/lookup with the ids parameter instead
 let name: String = "" // Name
 let _description: String = "" // Description
 let nameOrDescription: String = "" // Name or description
@@ -3816,7 +3816,7 @@ ArchitectAPI.getFlows(type: type, pageNumber: pageNumber, pageSize: pageSize, so
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
-| **_id** | [**[String]**](String)| ID | [optional] |
+| **_id** | [**[String]**](String)| ID. Deprecated, use GET /api/v2/flows/lookup with the ids parameter instead | [optional] |
 | **name** | **String**| Name | [optional] |
 | **_description** | **String**| Description | [optional] |
 | **nameOrDescription** | **String**| Name or description | [optional] |
@@ -8208,4 +8208,4 @@ ArchitectAPI.putFlowsOutcome(flowOutcomeId: flowOutcomeId, body: body) { (respon
 [**Operation**](Operation)
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

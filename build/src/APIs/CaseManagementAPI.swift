@@ -64,6 +64,65 @@ open class CaseManagementAPI {
 
     
     
+    
+    
+    /**
+     Delete my Comment.
+     
+     - parameter caseId: (path) Case identifier. 
+     - parameter commentId: (path) Comment identifier. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteCasemanagementCaseCommentsMeCommentId(caseId: String, commentId: String, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteCasemanagementCaseCommentsMeCommentIdWithRequestBuilder(caseId: caseId, commentId: commentId)
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete my Comment.
+     - DELETE /api/v2/casemanagement/cases/{caseId}/comments/me/{commentId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter caseId: (path) Case identifier. 
+     - parameter commentId: (path) Comment identifier. 
+
+     - returns: RequestBuilder<JSON> 
+     */
+    open class func deleteCasemanagementCaseCommentsMeCommentIdWithRequestBuilder(caseId: String, commentId: String) -> RequestBuilder<JSON> {        
+        var path = "/api/v2/casemanagement/cases/{caseId}/comments/me/{commentId}"
+        let caseIdPreEscape = "\(caseId)"
+        let caseIdPostEscape = caseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{caseId}", with: caseIdPostEscape, options: .literal, range: nil)
+        let commentIdPreEscape = "\(commentId)"
+        let commentIdPostEscape = commentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{commentId}", with: commentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Delete a Caseplan.
      
@@ -176,19 +235,23 @@ open class CaseManagementAPI {
     
     
     
+    
     public enum Expands_getCasemanagementCase: String { 
         case caseplan = "caseplan"
+        case owner = "owner"
+        case modifiedby = "modifiedBy"
+        case externalcontact = "externalContact"
+        case customerintent = "customerIntent"
     }
-    
     
     /**
      Get a Case.
      
      - parameter caseId: (path) Case identifier. 
-     - parameter expands: (query) Fields to expand. (optional)
+     - parameter expands: (query) Attributes to expand. Comma-separated if more than one. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getCasemanagementCase(caseId: String, expands: Expands_getCasemanagementCase? = nil, completion: @escaping ((_ data: Case?,_ error: Error?) -> Void)) {
+    open class func getCasemanagementCase(caseId: String, expands: [String]? = nil, completion: @escaping ((_ data: Case?,_ error: Error?) -> Void)) {
         let requestBuilder = getCasemanagementCaseWithRequestBuilder(caseId: caseId, expands: expands)
         requestBuilder.execute { (response: Response<Case>?, error) -> Void in
             do {
@@ -237,11 +300,11 @@ open class CaseManagementAPI {
 }, statusCode=200}]
      
      - parameter caseId: (path) Case identifier. 
-     - parameter expands: (query) Fields to expand. (optional)
+     - parameter expands: (query) Attributes to expand. Comma-separated if more than one. (optional)
 
      - returns: RequestBuilder<Case> 
      */
-    open class func getCasemanagementCaseWithRequestBuilder(caseId: String, expands: Expands_getCasemanagementCase? = nil) -> RequestBuilder<Case> {        
+    open class func getCasemanagementCaseWithRequestBuilder(caseId: String, expands: [String]? = nil) -> RequestBuilder<Case> {        
         var path = "/api/v2/casemanagement/cases/{caseId}"
         let caseIdPreEscape = "\(caseId)"
         let caseIdPostEscape = caseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -251,7 +314,7 @@ open class CaseManagementAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "expands": expands?.rawValue
+            "expands": expands
         ])
 
         let requestBuilder: RequestBuilder<Case>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -423,6 +486,170 @@ open class CaseManagementAPI {
         ])
 
         let requestBuilder: RequestBuilder<CaseAssociationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a Comment.
+     
+     - parameter caseId: (path) Case identifier. 
+     - parameter commentId: (path) Comment identifier. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getCasemanagementCaseComment(caseId: String, commentId: String, completion: @escaping ((_ data: Comment?,_ error: Error?) -> Void)) {
+        let requestBuilder = getCasemanagementCaseCommentWithRequestBuilder(caseId: caseId, commentId: commentId)
+        requestBuilder.execute { (response: Response<Comment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a Comment.
+     - GET /api/v2/casemanagement/cases/{caseId}/comments/{commentId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "user" : "{}",
+  "content" : "content"
+}, statusCode=200}]
+     
+     - parameter caseId: (path) Case identifier. 
+     - parameter commentId: (path) Comment identifier. 
+
+     - returns: RequestBuilder<Comment> 
+     */
+    open class func getCasemanagementCaseCommentWithRequestBuilder(caseId: String, commentId: String) -> RequestBuilder<Comment> {        
+        var path = "/api/v2/casemanagement/cases/{caseId}/comments/{commentId}"
+        let caseIdPreEscape = "\(caseId)"
+        let caseIdPostEscape = caseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{caseId}", with: caseIdPostEscape, options: .literal, range: nil)
+        let commentIdPreEscape = "\(commentId)"
+        let commentIdPostEscape = commentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{commentId}", with: commentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Comment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    public enum SortOrder_getCasemanagementCaseComments: String { 
+        case asc = "asc"
+        case desc = "desc"
+    }
+    
+    
+    /**
+     Get comments for a Case.
+     
+     - parameter caseId: (path) Case identifier. 
+     - parameter after: (query) Cursor pointing to the end of the previously returned page of comments. (optional)
+     - parameter pageSize: (query) Number of comments to return. Maximum is 100. (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getCasemanagementCaseComments(caseId: String, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getCasemanagementCaseComments? = nil, completion: @escaping ((_ data: CommentListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getCasemanagementCaseCommentsWithRequestBuilder(caseId: caseId, after: after, pageSize: pageSize, sortOrder: sortOrder)
+        requestBuilder.execute { (response: Response<CommentListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get comments for a Case.
+     - GET /api/v2/casemanagement/cases/{caseId}/comments
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "user" : "{}",
+    "content" : "content"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "user" : "{}",
+    "content" : "content"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter caseId: (path) Case identifier. 
+     - parameter after: (query) Cursor pointing to the end of the previously returned page of comments. (optional)
+     - parameter pageSize: (query) Number of comments to return. Maximum is 100. (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order. (optional)
+
+     - returns: RequestBuilder<CommentListing> 
+     */
+    open class func getCasemanagementCaseCommentsWithRequestBuilder(caseId: String, after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getCasemanagementCaseComments? = nil) -> RequestBuilder<CommentListing> {        
+        var path = "/api/v2/casemanagement/cases/{caseId}/comments"
+        let caseIdPreEscape = "\(caseId)"
+        let caseIdPostEscape = caseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{caseId}", with: caseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "sortOrder": sortOrder?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<CommentListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1809,19 +2036,23 @@ open class CaseManagementAPI {
     
     
     
+    
     public enum Expands_getCasemanagementCasesReference: String { 
         case caseplan = "caseplan"
+        case owner = "owner"
+        case modifiedby = "modifiedBy"
+        case externalcontact = "externalContact"
+        case customerintent = "customerIntent"
     }
-    
     
     /**
      Get a Case by reference.
      
      - parameter referenceId: (path) Case reference. 
-     - parameter expands: (query) Fields to expand. (optional)
+     - parameter expands: (query) Attributes to expand. Comma-separated if more than one. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getCasemanagementCasesReference(referenceId: String, expands: Expands_getCasemanagementCasesReference? = nil, completion: @escaping ((_ data: Case?,_ error: Error?) -> Void)) {
+    open class func getCasemanagementCasesReference(referenceId: String, expands: [String]? = nil, completion: @escaping ((_ data: Case?,_ error: Error?) -> Void)) {
         let requestBuilder = getCasemanagementCasesReferenceWithRequestBuilder(referenceId: referenceId, expands: expands)
         requestBuilder.execute { (response: Response<Case>?, error) -> Void in
             do {
@@ -1870,11 +2101,11 @@ open class CaseManagementAPI {
 }, statusCode=200}]
      
      - parameter referenceId: (path) Case reference. 
-     - parameter expands: (query) Fields to expand. (optional)
+     - parameter expands: (query) Attributes to expand. Comma-separated if more than one. (optional)
 
      - returns: RequestBuilder<Case> 
      */
-    open class func getCasemanagementCasesReferenceWithRequestBuilder(referenceId: String, expands: Expands_getCasemanagementCasesReference? = nil) -> RequestBuilder<Case> {        
+    open class func getCasemanagementCasesReferenceWithRequestBuilder(referenceId: String, expands: [String]? = nil) -> RequestBuilder<Case> {        
         var path = "/api/v2/casemanagement/cases/references/{referenceId}"
         let referenceIdPreEscape = "\(referenceId)"
         let referenceIdPostEscape = referenceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1884,7 +2115,7 @@ open class CaseManagementAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "expands": expands?.rawValue
+            "expands": expands
         ])
 
         let requestBuilder: RequestBuilder<Case>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2424,6 +2655,71 @@ open class CaseManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CaseAssociation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Add a comment to a Case.
+     
+     - parameter caseId: (path) Case identifier. 
+     - parameter body: (body) Comment create request. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postCasemanagementCaseComments(caseId: String, body: CommentCreate, completion: @escaping ((_ data: Comment?,_ error: Error?) -> Void)) {
+        let requestBuilder = postCasemanagementCaseCommentsWithRequestBuilder(caseId: caseId, body: body)
+        requestBuilder.execute { (response: Response<Comment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add a comment to a Case.
+     - POST /api/v2/casemanagement/cases/{caseId}/comments
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "user" : "{}",
+  "content" : "content"
+}, statusCode=200}]
+     
+     - parameter caseId: (path) Case identifier. 
+     - parameter body: (body) Comment create request. 
+
+     - returns: RequestBuilder<Comment> 
+     */
+    open class func postCasemanagementCaseCommentsWithRequestBuilder(caseId: String, body: CommentCreate) -> RequestBuilder<Comment> {        
+        var path = "/api/v2/casemanagement/cases/{caseId}/comments"
+        let caseIdPreEscape = "\(caseId)"
+        let caseIdPostEscape = caseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{caseId}", with: caseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Comment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

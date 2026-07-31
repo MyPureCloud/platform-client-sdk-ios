@@ -1209,6 +1209,8 @@ BusinessRulesAPI.patchBusinessrulesDecisiontable(tableId: tableId, body: body) {
 
 Update decision table row import job
 
+Cancels an in-progress import job by supplying a status of Cancelled. Cancellation is idempotent: cancelling a job that is already Cancelled returns 200 with the cancelled job. Cancelling a job that is still Uploading or Processing returns 200. A job that has already finished (Complete or Failed) can no longer be cancelled.
+
 
 
 Wraps PATCH /api/v2/businessrules/decisiontables/{tableId}/imports/{importJobId}  
@@ -1316,6 +1318,8 @@ BusinessRulesAPI.patchBusinessrulesDecisiontableVersion(tableId: tableId, tableV
 > [DecisionTableExecutionResponse](DecisionTableExecutionResponse) postBusinessrulesDecisiontableExecute(tableId, body)
 
 Execute a published decision table
+
+Example request payload: {\&quot;inputs\&quot;:{\&quot;schemaPropertykey1\&quot;:\&quot;inputValue1\&quot;,\&quot;schemaPropertykey2\&quot;:\&quot;inputValue2\&quot;}}
 
 
 
@@ -1526,6 +1530,8 @@ BusinessRulesAPI.postBusinessrulesDecisiontableVersionCopy(tableId: tableId, tab
 > [DecisionTableExecutionResponse](DecisionTableExecutionResponse) postBusinessrulesDecisiontableVersionExecute(tableId, tableVersion, body)
 
 Execute a decision table version
+
+Example request payload: {\&quot;inputs\&quot;:{\&quot;schemaPropertykey1\&quot;:\&quot;inputValue1\&quot;,\&quot;schemaPropertykey2\&quot;:\&quot;inputValue2\&quot;}}
 
 
 
@@ -2229,4 +2235,4 @@ BusinessRulesAPI.putBusinessrulesSchema(schemaId: schemaId, body: body) { (respo
 [**BusinessRulesDataSchema**](BusinessRulesDataSchema)
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

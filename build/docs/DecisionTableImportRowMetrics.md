@@ -19,4 +19,4 @@ Progress metrics for a decision table import job
 
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

@@ -8,10 +8,12 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
+| **type** | **String** | The type of verifier. | [optional] |
 | **enabled** | **Bool** | Indicates whether this verifier is enabled. | [optional] |
+| **credential** | [**Credential**](Credential) | The WebAuthn credential associated with this verifier. | [optional] |
 | **_default** | **Bool** | Indicates whether this is the default verifier. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

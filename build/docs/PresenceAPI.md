@@ -8,7 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deletePresenceSource**](PresenceAPI#deletePresenceSource) | Delete a Presence Source |
 | [**deletePresencedefinition**](PresenceAPI#deletePresencedefinition) | Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead |
 | [**getPresenceDefinition0**](PresenceAPI#getPresenceDefinition0) | Get a Presence Definition |
-| [**getPresenceDefinitions0**](PresenceAPI#getPresenceDefinitions0) | Get a list of Presence Definitions |
+| [**getPresenceDefinitions0**](PresenceAPI#getPresenceDefinitions0) | Get a list of Presence Definitions. View permission enforcement only applies to presence definitions assigned to a division |
 | [**getPresenceSettings**](PresenceAPI#getPresenceSettings) | Get the presence settings |
 | [**getPresenceSource**](PresenceAPI#getPresenceSource) | Get a Presence Source |
 | [**getPresenceSources**](PresenceAPI#getPresenceSources) | Get a list of Presence Sources |
@@ -241,7 +241,7 @@ PresenceAPI.getPresenceDefinition0(definitionId: definitionId, localeCode: local
 
 > [OrganizationPresenceDefinitionEntityListing](OrganizationPresenceDefinitionEntityListing) getPresenceDefinitions0(deactivated, divisionId, localeCode)
 
-Get a list of Presence Definitions
+Get a list of Presence Definitions. View permission enforcement only applies to presence definitions assigned to a division
 
 
 
@@ -1407,4 +1407,4 @@ PresenceAPI.putUsersPresencesBulk(body: body) { (response, error) in
 [**[UserPresence]**](UserPresence)
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

@@ -44,8 +44,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getQualityPublishedforms**](QualityAPI#getQualityPublishedforms) | Get the published evaluation forms. |
 | [**getQualityPublishedformsEvaluation**](QualityAPI#getQualityPublishedformsEvaluation) | Get the most recent published version of an evaluation form. |
 | [**getQualityPublishedformsEvaluations**](QualityAPI#getQualityPublishedformsEvaluations) | Get the published evaluation forms. |
+| [**getQualityPublishedformsEvaluationsDivisionview**](QualityAPI#getQualityPublishedformsEvaluationsDivisionview) | Get the most recent published version of an evaluation form across any division. |
+| [**getQualityPublishedformsEvaluationsDivisionviews**](QualityAPI#getQualityPublishedformsEvaluationsDivisionviews) | Get the published evaluation forms across any division. |
 | [**getQualityPublishedformsSurvey**](QualityAPI#getQualityPublishedformsSurvey) | Get the most recent published version of a survey form. |
 | [**getQualityPublishedformsSurveys**](QualityAPI#getQualityPublishedformsSurveys) | Get the published survey forms. |
+| [**getQualityPublishedformsSurveysDivisionview**](QualityAPI#getQualityPublishedformsSurveysDivisionview) | Get the most recent published version of an enabled survey form across any division. |
+| [**getQualityPublishedformsSurveysDivisionviews**](QualityAPI#getQualityPublishedformsSurveysDivisionviews) | Get the published and enabled survey forms across any division. |
 | [**getQualitySurvey**](QualityAPI#getQualitySurvey) | Get a survey for a conversation |
 | [**getQualitySurveysScorable**](QualityAPI#getQualitySurveysScorable) | Get a survey as an end-customer, for the purposes of scoring it. |
 | [**patchQualityFormsSurvey**](QualityAPI#patchQualityFormsSurvey) | Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form. |
@@ -2291,6 +2295,114 @@ QualityAPI.getQualityPublishedformsEvaluations(pageSize: pageSize, pageNumber: p
 [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing)
 
 
+## getQualityPublishedformsEvaluationsDivisionview
+
+
+
+> [EvaluationFormDivisionView](EvaluationFormDivisionView) getQualityPublishedformsEvaluationsDivisionview(evaluationFormId)
+
+Get the most recent published version of an evaluation form across any division.
+
+
+
+Wraps GET /api/v2/quality/publishedforms/evaluations/divisionviews/{evaluationFormId}  
+
+Requires ALL permissions: 
+
+* quality:evaluationForm:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let evaluationFormId: String = "" // Evaluation Form ID
+
+// Code example
+QualityAPI.getQualityPublishedformsEvaluationsDivisionview(evaluationFormId: evaluationFormId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.getQualityPublishedformsEvaluationsDivisionview was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **evaluationFormId** | **String**| Evaluation Form ID | |
+
+
+### Return type
+
+[**EvaluationFormDivisionView**](EvaluationFormDivisionView)
+
+
+## getQualityPublishedformsEvaluationsDivisionviews
+
+
+
+> [EvaluationFormDivisionViewListing](EvaluationFormDivisionViewListing) getQualityPublishedformsEvaluationsDivisionviews(_id, pageSize, pageNumber, name, divisionId)
+
+Get the published evaluation forms across any division.
+
+
+
+Wraps GET /api/v2/quality/publishedforms/evaluations/divisionviews  
+
+Requires ALL permissions: 
+
+* quality:evaluationForm:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let _id: [String] = [""] // A comma-delimited list of valid, published evaluation form ids
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let name: String = "" // Name
+let divisionId: String = "" // divisionId
+
+// Code example
+QualityAPI.getQualityPublishedformsEvaluationsDivisionviews(_id: _id, pageSize: pageSize, pageNumber: pageNumber, name: name, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.getQualityPublishedformsEvaluationsDivisionviews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **_id** | [**[String]**](String)| A comma-delimited list of valid, published evaluation form ids | |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **name** | **String**| Name | [optional] |
+| **divisionId** | **String**| divisionId | [optional] |
+
+
+### Return type
+
+[**EvaluationFormDivisionViewListing**](EvaluationFormDivisionViewListing)
+
+
 ## getQualityPublishedformsSurvey
 
 
@@ -2395,6 +2507,114 @@ QualityAPI.getQualityPublishedformsSurveys(pageSize: pageSize, pageNumber: pageN
 ### Return type
 
 [**SurveyFormEntityListing**](SurveyFormEntityListing)
+
+
+## getQualityPublishedformsSurveysDivisionview
+
+
+
+> [SurveyFormDivisionView](SurveyFormDivisionView) getQualityPublishedformsSurveysDivisionview(surveyFormId)
+
+Get the most recent published version of an enabled survey form across any division.
+
+
+
+Wraps GET /api/v2/quality/publishedforms/surveys/divisionviews/{surveyFormId}  
+
+Requires ALL permissions: 
+
+* quality:surveyForm:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let surveyFormId: String = "" // Survey Form ID
+
+// Code example
+QualityAPI.getQualityPublishedformsSurveysDivisionview(surveyFormId: surveyFormId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.getQualityPublishedformsSurveysDivisionview was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **surveyFormId** | **String**| Survey Form ID | |
+
+
+### Return type
+
+[**SurveyFormDivisionView**](SurveyFormDivisionView)
+
+
+## getQualityPublishedformsSurveysDivisionviews
+
+
+
+> [SurveyFormDivisionViewListing](SurveyFormDivisionViewListing) getQualityPublishedformsSurveysDivisionviews(_id, pageSize, pageNumber, name, divisionId)
+
+Get the published and enabled survey forms across any division.
+
+
+
+Wraps GET /api/v2/quality/publishedforms/surveys/divisionviews  
+
+Requires ALL permissions: 
+
+* quality:surveyForm:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let _id: [String] = [""] // A comma-delimited list of valid, published evaluation form ids
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let name: String = "" // Name
+let divisionId: String = "" // divisionId
+
+// Code example
+QualityAPI.getQualityPublishedformsSurveysDivisionviews(_id: _id, pageSize: pageSize, pageNumber: pageNumber, name: name, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.getQualityPublishedformsSurveysDivisionviews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **_id** | [**[String]**](String)| A comma-delimited list of valid, published evaluation form ids | |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **name** | **String**| Name | [optional] |
+| **divisionId** | **String**| divisionId | [optional] |
+
+
+### Return type
+
+[**SurveyFormDivisionViewListing**](SurveyFormDivisionViewListing)
 
 
 ## getQualitySurvey
@@ -3934,4 +4154,4 @@ QualityAPI.putQualitySurveysScorable(customerSurveyUrl: customerSurveyUrl, body:
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

@@ -20,9 +20,10 @@
 | **interruptible** | **Bool** | Whether this activity code is considered interruptible | [optional] |
 | **secondaryPresences** | [**[SecondaryPresence]**]([SecondaryPresence]) | The secondary presences of this activity code | [optional] |
 | **planningGroups** | [**[PlanningGroupReference]**]([PlanningGroupReference]) | Planning groups associated with this activity code | [optional] |
+| **style** | [**ActivityCodeStyle**](ActivityCodeStyle) | The style configuration for the activity code | [optional] |
 | **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata of this activity code | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

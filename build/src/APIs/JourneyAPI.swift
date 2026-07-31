@@ -3712,11 +3712,13 @@ open class JourneyAPI {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     }, {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     } ],
     "version" : 6,
@@ -3739,11 +3741,13 @@ open class JourneyAPI {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     }, {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     } ],
     "version" : 6,
@@ -3933,11 +3937,13 @@ open class JourneyAPI {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     }, {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     } ],
     "version" : 6,
@@ -3960,11 +3966,13 @@ open class JourneyAPI {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     }, {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     } ],
     "version" : 6,
@@ -4102,11 +4110,13 @@ open class JourneyAPI {
     "elementId" : "elementId",
     "displayLabel" : "displayLabel",
     "id" : "id",
+    "attribute" : "attribute",
     "aggregate" : "EventCount"
   }, {
     "elementId" : "elementId",
     "displayLabel" : "displayLabel",
     "id" : "id",
+    "attribute" : "attribute",
     "aggregate" : "EventCount"
   } ],
   "version" : 6,
@@ -4199,11 +4209,13 @@ open class JourneyAPI {
     "elementId" : "elementId",
     "displayLabel" : "displayLabel",
     "id" : "id",
+    "attribute" : "attribute",
     "aggregate" : "EventCount"
   }, {
     "elementId" : "elementId",
     "displayLabel" : "displayLabel",
     "id" : "id",
+    "attribute" : "attribute",
     "aggregate" : "EventCount"
   } ],
   "version" : 6,
@@ -4770,11 +4782,13 @@ open class JourneyAPI {
         "elementId" : "elementId",
         "displayLabel" : "displayLabel",
         "id" : "id",
+        "attribute" : "attribute",
         "aggregate" : "EventCount"
       }, {
         "elementId" : "elementId",
         "displayLabel" : "displayLabel",
         "id" : "id",
+        "attribute" : "attribute",
         "aggregate" : "EventCount"
       } ],
       "version" : 6,
@@ -4797,11 +4811,13 @@ open class JourneyAPI {
         "elementId" : "elementId",
         "displayLabel" : "displayLabel",
         "id" : "id",
+        "attribute" : "attribute",
         "aggregate" : "EventCount"
       }, {
         "elementId" : "elementId",
         "displayLabel" : "displayLabel",
         "id" : "id",
+        "attribute" : "attribute",
         "aggregate" : "EventCount"
       } ],
       "version" : 6,
@@ -4876,11 +4892,13 @@ open class JourneyAPI {
         "elementId" : "elementId",
         "displayLabel" : "displayLabel",
         "id" : "id",
+        "attribute" : "attribute",
         "aggregate" : "EventCount"
       }, {
         "elementId" : "elementId",
         "displayLabel" : "displayLabel",
         "id" : "id",
+        "attribute" : "attribute",
         "aggregate" : "EventCount"
       } ],
       "version" : 6,
@@ -4903,11 +4921,13 @@ open class JourneyAPI {
         "elementId" : "elementId",
         "displayLabel" : "displayLabel",
         "id" : "id",
+        "attribute" : "attribute",
         "aggregate" : "EventCount"
       }, {
         "elementId" : "elementId",
         "displayLabel" : "displayLabel",
         "id" : "id",
+        "attribute" : "attribute",
         "aggregate" : "EventCount"
       } ],
       "version" : 6,
@@ -7709,11 +7729,13 @@ open class JourneyAPI {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     }, {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     } ],
     "version" : 6,
@@ -7736,11 +7758,13 @@ open class JourneyAPI {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     }, {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     } ],
     "version" : 6,
@@ -7869,11 +7893,13 @@ open class JourneyAPI {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     }, {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     } ],
     "version" : 6,
@@ -7896,11 +7922,13 @@ open class JourneyAPI {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     }, {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     } ],
     "version" : 6,
@@ -8213,11 +8241,13 @@ open class JourneyAPI {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     }, {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     } ],
     "version" : 6,
@@ -8240,11 +8270,13 @@ open class JourneyAPI {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     }, {
       "elementId" : "elementId",
       "displayLabel" : "displayLabel",
       "id" : "id",
+      "attribute" : "attribute",
       "aggregate" : "EventCount"
     } ],
     "version" : 6,

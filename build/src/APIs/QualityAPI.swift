@@ -1023,7 +1023,7 @@ open class QualityAPI {
     "geolocation" : "{}"
   } ],
   "contextId" : "contextId",
-  "averageScore" : 6,
+  "averageScore" : 1,
   "calibrator" : {
     "workPlanBidRanks" : "{}",
     "addresses" : [ {
@@ -1319,7 +1319,7 @@ open class QualityAPI {
     "username" : "username",
     "geolocation" : "{}"
   },
-  "highScore" : 7,
+  "highScore" : 1,
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "expertEvaluator" : {
     "workPlanBidRanks" : "{}",
@@ -1618,7 +1618,7 @@ open class QualityAPI {
   },
   "name" : "name",
   "id" : "id",
-  "lowScore" : 1,
+  "lowScore" : 6,
   "conversation" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -1627,14 +1627,16 @@ open class QualityAPI {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
     "dialect" : "dialect",
+    "redacted" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -1732,7 +1734,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -1836,7 +1838,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -2210,25 +2212,25 @@ open class QualityAPI {
   "evaluationSource" : "{}",
   "redacted" : true,
   "answers" : {
-    "totalNonCriticalScore" : 6.6835623,
-    "maxTotalRawScore" : 9.36931,
+    "totalNonCriticalScore" : 9.965781,
+    "maxTotalRawScore" : 5.025005,
     "comments" : "comments",
     "privateComments" : "privateComments",
     "agentComments" : "agentComments",
-    "totalCriticalScore" : 5.025005,
-    "maxTotalRawCriticalScore" : 9.965781,
+    "totalCriticalScore" : 1.1730742,
+    "maxTotalRawCriticalScore" : 4.9652185,
     "questionGroupScores" : [ {
-      "totalNonCriticalScore" : 6.965118,
-      "totalCriticalScoreUnweighted" : 6.878052,
-      "totalNonCriticalScoreUnweighted" : 6.704019,
+      "totalNonCriticalScore" : 6.4384236,
+      "totalCriticalScoreUnweighted" : 2.8841622,
+      "totalNonCriticalScoreUnweighted" : 6.878052,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 2.8841622,
-      "maxTotalNonCriticalScore" : 1.284659,
+      "totalScoreUnweighted" : 6.965118,
+      "maxTotalNonCriticalScore" : 3.5571952,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 3,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -2239,7 +2241,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 3,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -2249,25 +2251,25 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 8.762042,
-      "maxTotalScore" : 9.018348,
-      "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-      "totalCriticalScore" : 6.4384236,
-      "maxTotalCriticalScore" : 3.5571952,
-      "maxTotalCriticalScoreUnweighted" : 5.9448957,
-      "maxTotalScoreUnweighted" : 6.778325
+      "totalScore" : 9.36931,
+      "maxTotalScore" : 6.6835623,
+      "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+      "totalCriticalScore" : 8.762042,
+      "maxTotalCriticalScore" : 9.018348,
+      "maxTotalCriticalScoreUnweighted" : 6.778325,
+      "maxTotalScoreUnweighted" : 1.284659
     }, {
-      "totalNonCriticalScore" : 6.965118,
-      "totalCriticalScoreUnweighted" : 6.878052,
-      "totalNonCriticalScoreUnweighted" : 6.704019,
+      "totalNonCriticalScore" : 6.4384236,
+      "totalCriticalScoreUnweighted" : 2.8841622,
+      "totalNonCriticalScoreUnweighted" : 6.878052,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 2.8841622,
-      "maxTotalNonCriticalScore" : 1.284659,
+      "totalScoreUnweighted" : 6.965118,
+      "maxTotalNonCriticalScore" : 3.5571952,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 3,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -2278,7 +2280,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 3,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -2288,22 +2290,22 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 8.762042,
-      "maxTotalScore" : 9.018348,
-      "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-      "totalCriticalScore" : 6.4384236,
-      "maxTotalCriticalScore" : 3.5571952,
-      "maxTotalCriticalScoreUnweighted" : 5.9448957,
-      "maxTotalScoreUnweighted" : 6.778325
+      "totalScore" : 9.36931,
+      "maxTotalScore" : 6.6835623,
+      "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+      "totalCriticalScore" : 8.762042,
+      "maxTotalCriticalScore" : 9.018348,
+      "maxTotalCriticalScoreUnweighted" : 6.778325,
+      "maxTotalScoreUnweighted" : 1.284659
     } ],
     "transcriptTopics" : [ {
       "duration" : {
         "totalMilliseconds" : 7
       },
       "offset" : "{}",
-      "recordingLocation" : 6,
-      "startTimeMilliseconds" : 0,
-      "confidence" : 7,
+      "recordingLocation" : 0,
+      "startTimeMilliseconds" : 3,
+      "confidence" : 3,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
@@ -2313,15 +2315,15 @@ open class QualityAPI {
         "totalMilliseconds" : 7
       },
       "offset" : "{}",
-      "recordingLocation" : 6,
-      "startTimeMilliseconds" : 0,
-      "confidence" : 7,
+      "recordingLocation" : 0,
+      "startTimeMilliseconds" : 3,
+      "confidence" : 3,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     } ],
-    "totalScore" : 4.9652185,
+    "totalScore" : 7.4577446,
     "anyFailedKillQuestions" : true
   },
   "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -3020,7 +3022,7 @@ open class QualityAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 4,
+    "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
@@ -3039,11 +3041,11 @@ open class QualityAPI {
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 8,
+    "joinedMemberCount" : 0,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 0,
+    "memberCount" : 7,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -8237,7 +8239,7 @@ open class QualityAPI {
     "geolocation" : "{}"
   } ],
   "contextId" : "contextId",
-  "averageScore" : 6,
+  "averageScore" : 1,
   "calibrator" : {
     "workPlanBidRanks" : "{}",
     "addresses" : [ {
@@ -8533,7 +8535,7 @@ open class QualityAPI {
     "username" : "username",
     "geolocation" : "{}"
   },
-  "highScore" : 7,
+  "highScore" : 1,
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "expertEvaluator" : {
     "workPlanBidRanks" : "{}",
@@ -8832,7 +8834,7 @@ open class QualityAPI {
   },
   "name" : "name",
   "id" : "id",
-  "lowScore" : 1,
+  "lowScore" : 6,
   "conversation" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -8841,14 +8843,16 @@ open class QualityAPI {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
     "dialect" : "dialect",
+    "redacted" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -8946,7 +8950,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -9050,7 +9054,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -10038,7 +10042,7 @@ open class QualityAPI {
       "geolocation" : "{}"
     } ],
     "contextId" : "contextId",
-    "averageScore" : 6,
+    "averageScore" : 1,
     "calibrator" : {
       "workPlanBidRanks" : "{}",
       "addresses" : [ {
@@ -10334,7 +10338,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     },
-    "highScore" : 7,
+    "highScore" : 1,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
       "workPlanBidRanks" : "{}",
@@ -10633,7 +10637,7 @@ open class QualityAPI {
     },
     "name" : "name",
     "id" : "id",
-    "lowScore" : 1,
+    "lowScore" : 6,
     "conversation" : {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -10642,14 +10646,16 @@ open class QualityAPI {
       "latestVersionFormName" : "latestVersionFormName",
       "evaluationSettings" : "{}",
       "dialect" : "dialect",
+      "redacted" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "contextId" : "contextId",
+      "published" : true,
+      "division" : "{}",
       "publishedVersions" : "{}",
       "aiScoring" : "{}",
-      "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-      "contextId" : "contextId",
       "id" : "id",
-      "published" : true,
       "questionGroups" : [ {
         "defaultAnswersToHighest" : true,
         "manualWeight" : true,
@@ -10747,7 +10753,7 @@ open class QualityAPI {
             } ]
           } ]
         } ],
-        "weight" : 1.0246457,
+        "weight" : 7.386282,
         "defaultAnswersTo" : "{}",
         "contextId" : "contextId",
         "id" : "id",
@@ -10851,7 +10857,7 @@ open class QualityAPI {
             } ]
           } ]
         } ],
-        "weight" : 1.0246457,
+        "weight" : 7.386282,
         "defaultAnswersTo" : "{}",
         "contextId" : "contextId",
         "id" : "id",
@@ -11748,7 +11754,7 @@ open class QualityAPI {
       "geolocation" : "{}"
     } ],
     "contextId" : "contextId",
-    "averageScore" : 6,
+    "averageScore" : 1,
     "calibrator" : {
       "workPlanBidRanks" : "{}",
       "addresses" : [ {
@@ -12044,7 +12050,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     },
-    "highScore" : 7,
+    "highScore" : 1,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
       "workPlanBidRanks" : "{}",
@@ -12343,7 +12349,7 @@ open class QualityAPI {
     },
     "name" : "name",
     "id" : "id",
-    "lowScore" : 1,
+    "lowScore" : 6,
     "conversation" : {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -12352,14 +12358,16 @@ open class QualityAPI {
       "latestVersionFormName" : "latestVersionFormName",
       "evaluationSettings" : "{}",
       "dialect" : "dialect",
+      "redacted" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "contextId" : "contextId",
+      "published" : true,
+      "division" : "{}",
       "publishedVersions" : "{}",
       "aiScoring" : "{}",
-      "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-      "contextId" : "contextId",
       "id" : "id",
-      "published" : true,
       "questionGroups" : [ {
         "defaultAnswersToHighest" : true,
         "manualWeight" : true,
@@ -12457,7 +12465,7 @@ open class QualityAPI {
             } ]
           } ]
         } ],
-        "weight" : 1.0246457,
+        "weight" : 7.386282,
         "defaultAnswersTo" : "{}",
         "contextId" : "contextId",
         "id" : "id",
@@ -12561,7 +12569,7 @@ open class QualityAPI {
             } ]
           } ]
         } ],
-        "weight" : 1.0246457,
+        "weight" : 7.386282,
         "defaultAnswersTo" : "{}",
         "contextId" : "contextId",
         "id" : "id",
@@ -12956,25 +12964,25 @@ open class QualityAPI {
   "evaluationSource" : "{}",
   "redacted" : true,
   "answers" : {
-    "totalNonCriticalScore" : 6.6835623,
-    "maxTotalRawScore" : 9.36931,
+    "totalNonCriticalScore" : 9.965781,
+    "maxTotalRawScore" : 5.025005,
     "comments" : "comments",
     "privateComments" : "privateComments",
     "agentComments" : "agentComments",
-    "totalCriticalScore" : 5.025005,
-    "maxTotalRawCriticalScore" : 9.965781,
+    "totalCriticalScore" : 1.1730742,
+    "maxTotalRawCriticalScore" : 4.9652185,
     "questionGroupScores" : [ {
-      "totalNonCriticalScore" : 6.965118,
-      "totalCriticalScoreUnweighted" : 6.878052,
-      "totalNonCriticalScoreUnweighted" : 6.704019,
+      "totalNonCriticalScore" : 6.4384236,
+      "totalCriticalScoreUnweighted" : 2.8841622,
+      "totalNonCriticalScoreUnweighted" : 6.878052,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 2.8841622,
-      "maxTotalNonCriticalScore" : 1.284659,
+      "totalScoreUnweighted" : 6.965118,
+      "maxTotalNonCriticalScore" : 3.5571952,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 3,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -12985,7 +12993,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 3,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -12995,25 +13003,25 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 8.762042,
-      "maxTotalScore" : 9.018348,
-      "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-      "totalCriticalScore" : 6.4384236,
-      "maxTotalCriticalScore" : 3.5571952,
-      "maxTotalCriticalScoreUnweighted" : 5.9448957,
-      "maxTotalScoreUnweighted" : 6.778325
+      "totalScore" : 9.36931,
+      "maxTotalScore" : 6.6835623,
+      "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+      "totalCriticalScore" : 8.762042,
+      "maxTotalCriticalScore" : 9.018348,
+      "maxTotalCriticalScoreUnweighted" : 6.778325,
+      "maxTotalScoreUnweighted" : 1.284659
     }, {
-      "totalNonCriticalScore" : 6.965118,
-      "totalCriticalScoreUnweighted" : 6.878052,
-      "totalNonCriticalScoreUnweighted" : 6.704019,
+      "totalNonCriticalScore" : 6.4384236,
+      "totalCriticalScoreUnweighted" : 2.8841622,
+      "totalNonCriticalScoreUnweighted" : 6.878052,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 2.8841622,
-      "maxTotalNonCriticalScore" : 1.284659,
+      "totalScoreUnweighted" : 6.965118,
+      "maxTotalNonCriticalScore" : 3.5571952,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 3,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -13024,7 +13032,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 3,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -13034,22 +13042,22 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 8.762042,
-      "maxTotalScore" : 9.018348,
-      "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-      "totalCriticalScore" : 6.4384236,
-      "maxTotalCriticalScore" : 3.5571952,
-      "maxTotalCriticalScoreUnweighted" : 5.9448957,
-      "maxTotalScoreUnweighted" : 6.778325
+      "totalScore" : 9.36931,
+      "maxTotalScore" : 6.6835623,
+      "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+      "totalCriticalScore" : 8.762042,
+      "maxTotalCriticalScore" : 9.018348,
+      "maxTotalCriticalScoreUnweighted" : 6.778325,
+      "maxTotalScoreUnweighted" : 1.284659
     } ],
     "transcriptTopics" : [ {
       "duration" : {
         "totalMilliseconds" : 7
       },
       "offset" : "{}",
-      "recordingLocation" : 6,
-      "startTimeMilliseconds" : 0,
-      "confidence" : 7,
+      "recordingLocation" : 0,
+      "startTimeMilliseconds" : 3,
+      "confidence" : 3,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
@@ -13059,15 +13067,15 @@ open class QualityAPI {
         "totalMilliseconds" : 7
       },
       "offset" : "{}",
-      "recordingLocation" : 6,
-      "startTimeMilliseconds" : 0,
-      "confidence" : 7,
+      "recordingLocation" : 0,
+      "startTimeMilliseconds" : 3,
+      "confidence" : 3,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     } ],
-    "totalScore" : 4.9652185,
+    "totalScore" : 7.4577446,
     "anyFailedKillQuestions" : true
   },
   "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -13766,7 +13774,7 @@ open class QualityAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 4,
+    "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
@@ -13785,11 +13793,11 @@ open class QualityAPI {
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 8,
+    "joinedMemberCount" : 0,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 0,
+    "memberCount" : 7,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -14574,25 +14582,25 @@ open class QualityAPI {
     "evaluationSource" : "{}",
     "redacted" : true,
     "answers" : {
-      "totalNonCriticalScore" : 6.6835623,
-      "maxTotalRawScore" : 9.36931,
+      "totalNonCriticalScore" : 9.965781,
+      "maxTotalRawScore" : 5.025005,
       "comments" : "comments",
       "privateComments" : "privateComments",
       "agentComments" : "agentComments",
-      "totalCriticalScore" : 5.025005,
-      "maxTotalRawCriticalScore" : 9.965781,
+      "totalCriticalScore" : 1.1730742,
+      "maxTotalRawCriticalScore" : 4.9652185,
       "questionGroupScores" : [ {
-        "totalNonCriticalScore" : 6.965118,
-        "totalCriticalScoreUnweighted" : 6.878052,
-        "totalNonCriticalScoreUnweighted" : 6.704019,
+        "totalNonCriticalScore" : 6.4384236,
+        "totalCriticalScoreUnweighted" : 2.8841622,
+        "totalNonCriticalScoreUnweighted" : 6.878052,
         "systemMarkedNA" : true,
         "markedNA" : true,
-        "totalScoreUnweighted" : 2.8841622,
-        "maxTotalNonCriticalScore" : 1.284659,
+        "totalScoreUnweighted" : 6.965118,
+        "maxTotalNonCriticalScore" : 3.5571952,
         "questionScores" : [ {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 3,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -14603,7 +14611,7 @@ open class QualityAPI {
         }, {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 3,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -14613,25 +14621,25 @@ open class QualityAPI {
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
-        "totalScore" : 8.762042,
-        "maxTotalScore" : 9.018348,
-        "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-        "totalCriticalScore" : 6.4384236,
-        "maxTotalCriticalScore" : 3.5571952,
-        "maxTotalCriticalScoreUnweighted" : 5.9448957,
-        "maxTotalScoreUnweighted" : 6.778325
+        "totalScore" : 9.36931,
+        "maxTotalScore" : 6.6835623,
+        "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+        "totalCriticalScore" : 8.762042,
+        "maxTotalCriticalScore" : 9.018348,
+        "maxTotalCriticalScoreUnweighted" : 6.778325,
+        "maxTotalScoreUnweighted" : 1.284659
       }, {
-        "totalNonCriticalScore" : 6.965118,
-        "totalCriticalScoreUnweighted" : 6.878052,
-        "totalNonCriticalScoreUnweighted" : 6.704019,
+        "totalNonCriticalScore" : 6.4384236,
+        "totalCriticalScoreUnweighted" : 2.8841622,
+        "totalNonCriticalScoreUnweighted" : 6.878052,
         "systemMarkedNA" : true,
         "markedNA" : true,
-        "totalScoreUnweighted" : 2.8841622,
-        "maxTotalNonCriticalScore" : 1.284659,
+        "totalScoreUnweighted" : 6.965118,
+        "maxTotalNonCriticalScore" : 3.5571952,
         "questionScores" : [ {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 3,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -14642,7 +14650,7 @@ open class QualityAPI {
         }, {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 3,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -14652,22 +14660,22 @@ open class QualityAPI {
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
-        "totalScore" : 8.762042,
-        "maxTotalScore" : 9.018348,
-        "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-        "totalCriticalScore" : 6.4384236,
-        "maxTotalCriticalScore" : 3.5571952,
-        "maxTotalCriticalScoreUnweighted" : 5.9448957,
-        "maxTotalScoreUnweighted" : 6.778325
+        "totalScore" : 9.36931,
+        "maxTotalScore" : 6.6835623,
+        "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+        "totalCriticalScore" : 8.762042,
+        "maxTotalCriticalScore" : 9.018348,
+        "maxTotalCriticalScoreUnweighted" : 6.778325,
+        "maxTotalScoreUnweighted" : 1.284659
       } ],
       "transcriptTopics" : [ {
         "duration" : {
           "totalMilliseconds" : 7
         },
         "offset" : "{}",
-        "recordingLocation" : 6,
-        "startTimeMilliseconds" : 0,
-        "confidence" : 7,
+        "recordingLocation" : 0,
+        "startTimeMilliseconds" : 3,
+        "confidence" : 3,
         "name" : "name",
         "topicPhrase" : "topicPhrase",
         "id" : "id",
@@ -14677,15 +14685,15 @@ open class QualityAPI {
           "totalMilliseconds" : 7
         },
         "offset" : "{}",
-        "recordingLocation" : 6,
-        "startTimeMilliseconds" : 0,
-        "confidence" : 7,
+        "recordingLocation" : 0,
+        "startTimeMilliseconds" : 3,
+        "confidence" : 3,
         "name" : "name",
         "topicPhrase" : "topicPhrase",
         "id" : "id",
         "transcriptPhrase" : "transcriptPhrase"
       } ],
-      "totalScore" : 4.9652185,
+      "totalScore" : 7.4577446,
       "anyFailedKillQuestions" : true
     },
     "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -15587,7 +15595,7 @@ open class QualityAPI {
         "geolocation" : "{}"
       } ],
       "contextId" : "contextId",
-      "averageScore" : 6,
+      "averageScore" : 1,
       "calibrator" : {
         "workPlanBidRanks" : "{}",
         "addresses" : [ {
@@ -15883,7 +15891,7 @@ open class QualityAPI {
         "username" : "username",
         "geolocation" : "{}"
       },
-      "highScore" : 7,
+      "highScore" : 1,
       "createdDate" : "2000-01-23T04:56:07.000+00:00",
       "expertEvaluator" : {
         "workPlanBidRanks" : "{}",
@@ -16182,7 +16190,7 @@ open class QualityAPI {
       },
       "name" : "name",
       "id" : "id",
-      "lowScore" : 1,
+      "lowScore" : 6,
       "conversation" : {
         "selfUri" : "https://openapi-generator.tech",
         "id" : "id"
@@ -16191,14 +16199,16 @@ open class QualityAPI {
         "latestVersionFormName" : "latestVersionFormName",
         "evaluationSettings" : "{}",
         "dialect" : "dialect",
+        "redacted" : true,
+        "selfUri" : "https://openapi-generator.tech",
+        "contextId" : "contextId",
+        "published" : true,
+        "division" : "{}",
         "publishedVersions" : "{}",
         "aiScoring" : "{}",
-        "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-        "contextId" : "contextId",
         "id" : "id",
-        "published" : true,
         "questionGroups" : [ {
           "defaultAnswersToHighest" : true,
           "manualWeight" : true,
@@ -16296,7 +16306,7 @@ open class QualityAPI {
               } ]
             } ]
           } ],
-          "weight" : 1.0246457,
+          "weight" : 7.386282,
           "defaultAnswersTo" : "{}",
           "contextId" : "contextId",
           "id" : "id",
@@ -16400,7 +16410,7 @@ open class QualityAPI {
               } ]
             } ]
           } ],
-          "weight" : 1.0246457,
+          "weight" : 7.386282,
           "defaultAnswersTo" : "{}",
           "contextId" : "contextId",
           "id" : "id",
@@ -16714,10 +16724,10 @@ open class QualityAPI {
     "declinedReview" : true,
     "selfUri" : "https://openapi-generator.tech",
     "mediaType" : [ "CALL", "CALL" ],
-    "version" : 3,
+    "version" : 8,
     "retractedEvaluation" : "{}",
     "revisionCreatedDate" : "2000-01-23T04:56:07.000+00:00",
-    "disputeCount" : 7,
+    "disputeCount" : 4,
     "assigneeApplicable" : true,
     "neverRelease" : true,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
@@ -17092,7 +17102,7 @@ open class QualityAPI {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "queueFlow" : "{}",
       "callingPartyNumber" : "callingPartyNumber",
-      "userMemberCount" : 4,
+      "userMemberCount" : 6,
       "modifiedBy" : "modifiedBy",
       "id" : "id",
       "memberGroups" : [ {
@@ -17111,11 +17121,11 @@ open class QualityAPI {
         "type" : "TEAM"
       } ],
       "scoringMethod" : "TimestampAndPriority",
-      "joinedMemberCount" : 8,
+      "joinedMemberCount" : 0,
       "messageInQueueFlow" : "{}",
       "callingPartyName" : "callingPartyName",
       "acwSettings" : "{}",
-      "memberCount" : 0,
+      "memberCount" : 7,
       "selfUri" : "https://openapi-generator.tech",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "whisperPrompt" : "{}",
@@ -17435,25 +17445,25 @@ open class QualityAPI {
     "evaluationSource" : "{}",
     "redacted" : true,
     "answers" : {
-      "totalNonCriticalScore" : 6.6835623,
-      "maxTotalRawScore" : 9.36931,
+      "totalNonCriticalScore" : 9.965781,
+      "maxTotalRawScore" : 5.025005,
       "comments" : "comments",
       "privateComments" : "privateComments",
       "agentComments" : "agentComments",
-      "totalCriticalScore" : 5.025005,
-      "maxTotalRawCriticalScore" : 9.965781,
+      "totalCriticalScore" : 1.1730742,
+      "maxTotalRawCriticalScore" : 4.9652185,
       "questionGroupScores" : [ {
-        "totalNonCriticalScore" : 6.965118,
-        "totalCriticalScoreUnweighted" : 6.878052,
-        "totalNonCriticalScoreUnweighted" : 6.704019,
+        "totalNonCriticalScore" : 6.4384236,
+        "totalCriticalScoreUnweighted" : 2.8841622,
+        "totalNonCriticalScoreUnweighted" : 6.878052,
         "systemMarkedNA" : true,
         "markedNA" : true,
-        "totalScoreUnweighted" : 2.8841622,
-        "maxTotalNonCriticalScore" : 1.284659,
+        "totalScoreUnweighted" : 6.965118,
+        "maxTotalNonCriticalScore" : 3.5571952,
         "questionScores" : [ {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 3,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -17464,7 +17474,7 @@ open class QualityAPI {
         }, {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 3,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -17474,25 +17484,25 @@ open class QualityAPI {
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
-        "totalScore" : 8.762042,
-        "maxTotalScore" : 9.018348,
-        "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-        "totalCriticalScore" : 6.4384236,
-        "maxTotalCriticalScore" : 3.5571952,
-        "maxTotalCriticalScoreUnweighted" : 5.9448957,
-        "maxTotalScoreUnweighted" : 6.778325
+        "totalScore" : 9.36931,
+        "maxTotalScore" : 6.6835623,
+        "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+        "totalCriticalScore" : 8.762042,
+        "maxTotalCriticalScore" : 9.018348,
+        "maxTotalCriticalScoreUnweighted" : 6.778325,
+        "maxTotalScoreUnweighted" : 1.284659
       }, {
-        "totalNonCriticalScore" : 6.965118,
-        "totalCriticalScoreUnweighted" : 6.878052,
-        "totalNonCriticalScoreUnweighted" : 6.704019,
+        "totalNonCriticalScore" : 6.4384236,
+        "totalCriticalScoreUnweighted" : 2.8841622,
+        "totalNonCriticalScoreUnweighted" : 6.878052,
         "systemMarkedNA" : true,
         "markedNA" : true,
-        "totalScoreUnweighted" : 2.8841622,
-        "maxTotalNonCriticalScore" : 1.284659,
+        "totalScoreUnweighted" : 6.965118,
+        "maxTotalNonCriticalScore" : 3.5571952,
         "questionScores" : [ {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 3,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -17503,7 +17513,7 @@ open class QualityAPI {
         }, {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 3,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -17513,22 +17523,22 @@ open class QualityAPI {
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
-        "totalScore" : 8.762042,
-        "maxTotalScore" : 9.018348,
-        "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-        "totalCriticalScore" : 6.4384236,
-        "maxTotalCriticalScore" : 3.5571952,
-        "maxTotalCriticalScoreUnweighted" : 5.9448957,
-        "maxTotalScoreUnweighted" : 6.778325
+        "totalScore" : 9.36931,
+        "maxTotalScore" : 6.6835623,
+        "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+        "totalCriticalScore" : 8.762042,
+        "maxTotalCriticalScore" : 9.018348,
+        "maxTotalCriticalScoreUnweighted" : 6.778325,
+        "maxTotalScoreUnweighted" : 1.284659
       } ],
       "transcriptTopics" : [ {
         "duration" : {
           "totalMilliseconds" : 7
         },
         "offset" : "{}",
-        "recordingLocation" : 6,
-        "startTimeMilliseconds" : 0,
-        "confidence" : 7,
+        "recordingLocation" : 0,
+        "startTimeMilliseconds" : 3,
+        "confidence" : 3,
         "name" : "name",
         "topicPhrase" : "topicPhrase",
         "id" : "id",
@@ -17538,15 +17548,15 @@ open class QualityAPI {
           "totalMilliseconds" : 7
         },
         "offset" : "{}",
-        "recordingLocation" : 6,
-        "startTimeMilliseconds" : 0,
-        "confidence" : 7,
+        "recordingLocation" : 0,
+        "startTimeMilliseconds" : 3,
+        "confidence" : 3,
         "name" : "name",
         "topicPhrase" : "topicPhrase",
         "id" : "id",
         "transcriptPhrase" : "transcriptPhrase"
       } ],
-      "totalScore" : 4.9652185,
+      "totalScore" : 7.4577446,
       "anyFailedKillQuestions" : true
     },
     "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -18448,7 +18458,7 @@ open class QualityAPI {
         "geolocation" : "{}"
       } ],
       "contextId" : "contextId",
-      "averageScore" : 6,
+      "averageScore" : 1,
       "calibrator" : {
         "workPlanBidRanks" : "{}",
         "addresses" : [ {
@@ -18744,7 +18754,7 @@ open class QualityAPI {
         "username" : "username",
         "geolocation" : "{}"
       },
-      "highScore" : 7,
+      "highScore" : 1,
       "createdDate" : "2000-01-23T04:56:07.000+00:00",
       "expertEvaluator" : {
         "workPlanBidRanks" : "{}",
@@ -19043,7 +19053,7 @@ open class QualityAPI {
       },
       "name" : "name",
       "id" : "id",
-      "lowScore" : 1,
+      "lowScore" : 6,
       "conversation" : {
         "selfUri" : "https://openapi-generator.tech",
         "id" : "id"
@@ -19052,14 +19062,16 @@ open class QualityAPI {
         "latestVersionFormName" : "latestVersionFormName",
         "evaluationSettings" : "{}",
         "dialect" : "dialect",
+        "redacted" : true,
+        "selfUri" : "https://openapi-generator.tech",
+        "contextId" : "contextId",
+        "published" : true,
+        "division" : "{}",
         "publishedVersions" : "{}",
         "aiScoring" : "{}",
-        "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-        "contextId" : "contextId",
         "id" : "id",
-        "published" : true,
         "questionGroups" : [ {
           "defaultAnswersToHighest" : true,
           "manualWeight" : true,
@@ -19157,7 +19169,7 @@ open class QualityAPI {
               } ]
             } ]
           } ],
-          "weight" : 1.0246457,
+          "weight" : 7.386282,
           "defaultAnswersTo" : "{}",
           "contextId" : "contextId",
           "id" : "id",
@@ -19261,7 +19273,7 @@ open class QualityAPI {
               } ]
             } ]
           } ],
-          "weight" : 1.0246457,
+          "weight" : 7.386282,
           "defaultAnswersTo" : "{}",
           "contextId" : "contextId",
           "id" : "id",
@@ -19575,10 +19587,10 @@ open class QualityAPI {
     "declinedReview" : true,
     "selfUri" : "https://openapi-generator.tech",
     "mediaType" : [ "CALL", "CALL" ],
-    "version" : 3,
+    "version" : 8,
     "retractedEvaluation" : "{}",
     "revisionCreatedDate" : "2000-01-23T04:56:07.000+00:00",
-    "disputeCount" : 7,
+    "disputeCount" : 4,
     "assigneeApplicable" : true,
     "neverRelease" : true,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
@@ -19953,7 +19965,7 @@ open class QualityAPI {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "queueFlow" : "{}",
       "callingPartyNumber" : "callingPartyNumber",
-      "userMemberCount" : 4,
+      "userMemberCount" : 6,
       "modifiedBy" : "modifiedBy",
       "id" : "id",
       "memberGroups" : [ {
@@ -19972,11 +19984,11 @@ open class QualityAPI {
         "type" : "TEAM"
       } ],
       "scoringMethod" : "TimestampAndPriority",
-      "joinedMemberCount" : 8,
+      "joinedMemberCount" : 0,
       "messageInQueueFlow" : "{}",
       "callingPartyName" : "callingPartyName",
       "acwSettings" : "{}",
-      "memberCount" : 0,
+      "memberCount" : 7,
       "selfUri" : "https://openapi-generator.tech",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "whisperPrompt" : "{}",
@@ -20831,6 +20843,7 @@ open class QualityAPI {
   "selfUri" : "https://openapi-generator.tech",
   "contextId" : "contextId",
   "published" : true,
+  "division" : "{}",
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
   "name" : "name",
@@ -20933,7 +20946,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -21037,7 +21050,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -21119,6 +21132,7 @@ open class QualityAPI {
     "selfUri" : "https://openapi-generator.tech",
     "contextId" : "contextId",
     "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "name" : "name",
@@ -21221,7 +21235,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -21325,7 +21339,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -21341,6 +21355,7 @@ open class QualityAPI {
     "selfUri" : "https://openapi-generator.tech",
     "contextId" : "contextId",
     "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "name" : "name",
@@ -21443,7 +21458,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -21547,7 +21562,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -21660,6 +21675,7 @@ open class QualityAPI {
     "selfUri" : "https://openapi-generator.tech",
     "contextId" : "contextId",
     "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "name" : "name",
@@ -21762,7 +21778,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -21866,7 +21882,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -21882,6 +21898,7 @@ open class QualityAPI {
     "selfUri" : "https://openapi-generator.tech",
     "contextId" : "contextId",
     "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "name" : "name",
@@ -21984,7 +22001,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -22088,7 +22105,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -22178,6 +22195,7 @@ open class QualityAPI {
   "selfUri" : "https://openapi-generator.tech",
   "contextId" : "contextId",
   "published" : true,
+  "division" : "{}",
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
   "name" : "name",
@@ -22280,7 +22298,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -22384,7 +22402,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -22466,6 +22484,7 @@ open class QualityAPI {
     "selfUri" : "https://openapi-generator.tech",
     "contextId" : "contextId",
     "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "name" : "name",
@@ -22568,7 +22587,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -22672,7 +22691,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -22688,6 +22707,7 @@ open class QualityAPI {
     "selfUri" : "https://openapi-generator.tech",
     "contextId" : "contextId",
     "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "name" : "name",
@@ -22790,7 +22810,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -22894,7 +22914,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -23008,6 +23028,7 @@ open class QualityAPI {
     "selfUri" : "https://openapi-generator.tech",
     "contextId" : "contextId",
     "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "name" : "name",
@@ -23110,7 +23131,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -23214,7 +23235,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -23230,6 +23251,7 @@ open class QualityAPI {
     "selfUri" : "https://openapi-generator.tech",
     "contextId" : "contextId",
     "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "name" : "name",
@@ -23332,7 +23354,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -23436,7 +23458,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -23533,6 +23555,7 @@ open class QualityAPI {
     "selfUri" : "https://openapi-generator.tech",
     "contextId" : "contextId",
     "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "name" : "name",
@@ -23635,7 +23658,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -23739,7 +23762,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -23755,6 +23778,7 @@ open class QualityAPI {
     "selfUri" : "https://openapi-generator.tech",
     "contextId" : "contextId",
     "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "name" : "name",
@@ -23857,7 +23881,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -23961,7 +23985,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -24039,6 +24063,7 @@ open class QualityAPI {
   "selfUri" : "https://openapi-generator.tech",
   "contextId" : "contextId",
   "published" : true,
+  "division" : "{}",
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
   "name" : "name",
@@ -24141,7 +24166,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -24245,7 +24270,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -24308,16 +24333,18 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "footer" : "footer",
-  "publishedVersions" : "{}",
+  "redacted" : true,
   "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "language" : "language",
+  "published" : true,
+  "division" : "{}",
+  "publishedVersions" : "{}",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "header" : "header",
   "disabled" : true,
-  "contextId" : "contextId",
-  "language" : "language",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "visibilityCondition" : {
       "combiningOperation" : "AND",
@@ -24566,16 +24593,18 @@ open class QualityAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "footer" : "footer",
-    "publishedVersions" : "{}",
+    "redacted" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "language" : "language",
+    "published" : true,
+    "division" : "{}",
+    "publishedVersions" : "{}",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
     "header" : "header",
     "disabled" : true,
-    "contextId" : "contextId",
-    "language" : "language",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "visibilityCondition" : {
         "combiningOperation" : "AND",
@@ -24761,16 +24790,18 @@ open class QualityAPI {
     } ]
   }, {
     "footer" : "footer",
-    "publishedVersions" : "{}",
+    "redacted" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "language" : "language",
+    "published" : true,
+    "division" : "{}",
+    "publishedVersions" : "{}",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
     "header" : "header",
     "disabled" : true,
-    "contextId" : "contextId",
-    "language" : "language",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "visibilityCondition" : {
         "combiningOperation" : "AND",
@@ -25051,16 +25082,18 @@ open class QualityAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "footer" : "footer",
-    "publishedVersions" : "{}",
+    "redacted" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "language" : "language",
+    "published" : true,
+    "division" : "{}",
+    "publishedVersions" : "{}",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
     "header" : "header",
     "disabled" : true,
-    "contextId" : "contextId",
-    "language" : "language",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "visibilityCondition" : {
         "combiningOperation" : "AND",
@@ -25246,16 +25279,18 @@ open class QualityAPI {
     } ]
   }, {
     "footer" : "footer",
-    "publishedVersions" : "{}",
+    "redacted" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "language" : "language",
+    "published" : true,
+    "division" : "{}",
+    "publishedVersions" : "{}",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
     "header" : "header",
     "disabled" : true,
-    "contextId" : "contextId",
-    "language" : "language",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "visibilityCondition" : {
         "combiningOperation" : "AND",
@@ -25519,16 +25554,18 @@ open class QualityAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "footer" : "footer",
-    "publishedVersions" : "{}",
+    "redacted" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "language" : "language",
+    "published" : true,
+    "division" : "{}",
+    "publishedVersions" : "{}",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
     "header" : "header",
     "disabled" : true,
-    "contextId" : "contextId",
-    "language" : "language",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "visibilityCondition" : {
         "combiningOperation" : "AND",
@@ -25714,16 +25751,18 @@ open class QualityAPI {
     } ]
   }, {
     "footer" : "footer",
-    "publishedVersions" : "{}",
+    "redacted" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "language" : "language",
+    "published" : true,
+    "division" : "{}",
+    "publishedVersions" : "{}",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
     "header" : "header",
     "disabled" : true,
-    "contextId" : "contextId",
-    "language" : "language",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "visibilityCondition" : {
         "combiningOperation" : "AND",
@@ -25972,16 +26011,18 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "footer" : "footer",
-  "publishedVersions" : "{}",
+  "redacted" : true,
   "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "language" : "language",
+  "published" : true,
+  "division" : "{}",
+  "publishedVersions" : "{}",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "header" : "header",
   "disabled" : true,
-  "contextId" : "contextId",
-  "language" : "language",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "visibilityCondition" : {
       "combiningOperation" : "AND",
@@ -26394,6 +26435,7 @@ open class QualityAPI {
   "selfUri" : "https://openapi-generator.tech",
   "contextId" : "contextId",
   "published" : true,
+  "division" : "{}",
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
   "name" : "name",
@@ -26496,7 +26538,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -26600,7 +26642,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -26682,6 +26724,7 @@ open class QualityAPI {
     "selfUri" : "https://openapi-generator.tech",
     "contextId" : "contextId",
     "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "name" : "name",
@@ -26784,7 +26827,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -26888,7 +26931,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -26904,6 +26947,7 @@ open class QualityAPI {
     "selfUri" : "https://openapi-generator.tech",
     "contextId" : "contextId",
     "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "name" : "name",
@@ -27006,7 +27050,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -27110,7 +27154,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -27192,6 +27236,7 @@ open class QualityAPI {
   "selfUri" : "https://openapi-generator.tech",
   "contextId" : "contextId",
   "published" : true,
+  "division" : "{}",
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
   "name" : "name",
@@ -27294,7 +27339,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -27398,7 +27443,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -27480,6 +27525,7 @@ open class QualityAPI {
     "selfUri" : "https://openapi-generator.tech",
     "contextId" : "contextId",
     "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "name" : "name",
@@ -27582,7 +27628,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -27686,7 +27732,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -27702,6 +27748,7 @@ open class QualityAPI {
     "selfUri" : "https://openapi-generator.tech",
     "contextId" : "contextId",
     "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
     "name" : "name",
@@ -27804,7 +27851,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -27908,7 +27955,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -27953,6 +28000,167 @@ open class QualityAPI {
     
     
     /**
+     Get the most recent published version of an evaluation form across any division.
+     
+     - parameter evaluationFormId: (path) Evaluation Form ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getQualityPublishedformsEvaluationsDivisionview(evaluationFormId: String, completion: @escaping ((_ data: EvaluationFormDivisionView?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityPublishedformsEvaluationsDivisionviewWithRequestBuilder(evaluationFormId: evaluationFormId)
+        requestBuilder.execute { (response: Response<EvaluationFormDivisionView>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the most recent published version of an evaluation form across any division.
+     - GET /api/v2/quality/publishedforms/evaluations/divisionviews/{evaluationFormId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "dialect" : "dialect",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "contextId" : "contextId",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter evaluationFormId: (path) Evaluation Form ID 
+
+     - returns: RequestBuilder<EvaluationFormDivisionView> 
+     */
+    open class func getQualityPublishedformsEvaluationsDivisionviewWithRequestBuilder(evaluationFormId: String) -> RequestBuilder<EvaluationFormDivisionView> {        
+        var path = "/api/v2/quality/publishedforms/evaluations/divisionviews/{evaluationFormId}"
+        let evaluationFormIdPreEscape = "\(evaluationFormId)"
+        let evaluationFormIdPostEscape = evaluationFormIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{evaluationFormId}", with: evaluationFormIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EvaluationFormDivisionView>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get the published evaluation forms across any division.
+     
+     - parameter _id: (query) A comma-delimited list of valid, published evaluation form ids 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter name: (query) Name (optional)
+     - parameter divisionId: (query) divisionId (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getQualityPublishedformsEvaluationsDivisionviews(_id: [String], pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, divisionId: String? = nil, completion: @escaping ((_ data: EvaluationFormDivisionViewListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityPublishedformsEvaluationsDivisionviewsWithRequestBuilder(_id: _id, pageSize: pageSize, pageNumber: pageNumber, name: name, divisionId: divisionId)
+        requestBuilder.execute { (response: Response<EvaluationFormDivisionViewListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the published evaluation forms across any division.
+     - GET /api/v2/quality/publishedforms/evaluations/divisionviews
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "division" : "{}",
+    "dialect" : "dialect",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "contextId" : "contextId",
+    "id" : "id"
+  }, {
+    "division" : "{}",
+    "dialect" : "dialect",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "contextId" : "contextId",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter _id: (query) A comma-delimited list of valid, published evaluation form ids 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter name: (query) Name (optional)
+     - parameter divisionId: (query) divisionId (optional)
+
+     - returns: RequestBuilder<EvaluationFormDivisionViewListing> 
+     */
+    open class func getQualityPublishedformsEvaluationsDivisionviewsWithRequestBuilder(_id: [String], pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, divisionId: String? = nil) -> RequestBuilder<EvaluationFormDivisionViewListing> {        
+        let path = "/api/v2/quality/publishedforms/evaluations/divisionviews"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "name": name, 
+            "divisionId": divisionId, 
+            "id": _id
+        ])
+
+        let requestBuilder: RequestBuilder<EvaluationFormDivisionViewListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Get the most recent published version of a survey form.
      
      - parameter formId: (path) Form ID 
@@ -27984,16 +28192,18 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "footer" : "footer",
-  "publishedVersions" : "{}",
+  "redacted" : true,
   "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "language" : "language",
+  "published" : true,
+  "division" : "{}",
+  "publishedVersions" : "{}",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "header" : "header",
   "disabled" : true,
-  "contextId" : "contextId",
-  "language" : "language",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "visibilityCondition" : {
       "combiningOperation" : "AND",
@@ -28245,16 +28455,18 @@ open class QualityAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "footer" : "footer",
-    "publishedVersions" : "{}",
+    "redacted" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "language" : "language",
+    "published" : true,
+    "division" : "{}",
+    "publishedVersions" : "{}",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
     "header" : "header",
     "disabled" : true,
-    "contextId" : "contextId",
-    "language" : "language",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "visibilityCondition" : {
         "combiningOperation" : "AND",
@@ -28440,16 +28652,18 @@ open class QualityAPI {
     } ]
   }, {
     "footer" : "footer",
-    "publishedVersions" : "{}",
+    "redacted" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "language" : "language",
+    "published" : true,
+    "division" : "{}",
+    "publishedVersions" : "{}",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
     "header" : "header",
     "disabled" : true,
-    "contextId" : "contextId",
-    "language" : "language",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "visibilityCondition" : {
         "combiningOperation" : "AND",
@@ -28663,6 +28877,167 @@ open class QualityAPI {
         ])
 
         let requestBuilder: RequestBuilder<SurveyFormEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get the most recent published version of an enabled survey form across any division.
+     
+     - parameter surveyFormId: (path) Survey Form ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getQualityPublishedformsSurveysDivisionview(surveyFormId: String, completion: @escaping ((_ data: SurveyFormDivisionView?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityPublishedformsSurveysDivisionviewWithRequestBuilder(surveyFormId: surveyFormId)
+        requestBuilder.execute { (response: Response<SurveyFormDivisionView>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the most recent published version of an enabled survey form across any division.
+     - GET /api/v2/quality/publishedforms/surveys/divisionviews/{surveyFormId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "language" : "language",
+  "contextId" : "contextId",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter surveyFormId: (path) Survey Form ID 
+
+     - returns: RequestBuilder<SurveyFormDivisionView> 
+     */
+    open class func getQualityPublishedformsSurveysDivisionviewWithRequestBuilder(surveyFormId: String) -> RequestBuilder<SurveyFormDivisionView> {        
+        var path = "/api/v2/quality/publishedforms/surveys/divisionviews/{surveyFormId}"
+        let surveyFormIdPreEscape = "\(surveyFormId)"
+        let surveyFormIdPostEscape = surveyFormIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{surveyFormId}", with: surveyFormIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SurveyFormDivisionView>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get the published and enabled survey forms across any division.
+     
+     - parameter _id: (query) A comma-delimited list of valid, published evaluation form ids 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter name: (query) Name (optional)
+     - parameter divisionId: (query) divisionId (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getQualityPublishedformsSurveysDivisionviews(_id: [String], pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, divisionId: String? = nil, completion: @escaping ((_ data: SurveyFormDivisionViewListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityPublishedformsSurveysDivisionviewsWithRequestBuilder(_id: _id, pageSize: pageSize, pageNumber: pageNumber, name: name, divisionId: divisionId)
+        requestBuilder.execute { (response: Response<SurveyFormDivisionViewListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the published and enabled survey forms across any division.
+     - GET /api/v2/quality/publishedforms/surveys/divisionviews
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "division" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "language" : "language",
+    "contextId" : "contextId",
+    "id" : "id"
+  }, {
+    "division" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "language" : "language",
+    "contextId" : "contextId",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter _id: (query) A comma-delimited list of valid, published evaluation form ids 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter name: (query) Name (optional)
+     - parameter divisionId: (query) divisionId (optional)
+
+     - returns: RequestBuilder<SurveyFormDivisionViewListing> 
+     */
+    open class func getQualityPublishedformsSurveysDivisionviewsWithRequestBuilder(_id: [String], pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, divisionId: String? = nil) -> RequestBuilder<SurveyFormDivisionViewListing> {        
+        let path = "/api/v2/quality/publishedforms/surveys/divisionviews"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "name": name, 
+            "divisionId": divisionId, 
+            "id": _id
+        ])
+
+        let requestBuilder: RequestBuilder<SurveyFormDivisionViewListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -28956,16 +29331,18 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "footer" : "footer",
-  "publishedVersions" : "{}",
+  "redacted" : true,
   "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "language" : "language",
+  "published" : true,
+  "division" : "{}",
+  "publishedVersions" : "{}",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "header" : "header",
   "disabled" : true,
-  "contextId" : "contextId",
-  "language" : "language",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "visibilityCondition" : {
       "combiningOperation" : "AND",
@@ -30946,7 +31323,7 @@ open class QualityAPI {
     "geolocation" : "{}"
   } ],
   "contextId" : "contextId",
-  "averageScore" : 6,
+  "averageScore" : 1,
   "calibrator" : {
     "workPlanBidRanks" : "{}",
     "addresses" : [ {
@@ -31242,7 +31619,7 @@ open class QualityAPI {
     "username" : "username",
     "geolocation" : "{}"
   },
-  "highScore" : 7,
+  "highScore" : 1,
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "expertEvaluator" : {
     "workPlanBidRanks" : "{}",
@@ -31541,7 +31918,7 @@ open class QualityAPI {
   },
   "name" : "name",
   "id" : "id",
-  "lowScore" : 1,
+  "lowScore" : 6,
   "conversation" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -31550,14 +31927,16 @@ open class QualityAPI {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
     "dialect" : "dialect",
+    "redacted" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -31655,7 +32034,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -31759,7 +32138,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -32133,25 +32512,25 @@ open class QualityAPI {
   "evaluationSource" : "{}",
   "redacted" : true,
   "answers" : {
-    "totalNonCriticalScore" : 6.6835623,
-    "maxTotalRawScore" : 9.36931,
+    "totalNonCriticalScore" : 9.965781,
+    "maxTotalRawScore" : 5.025005,
     "comments" : "comments",
     "privateComments" : "privateComments",
     "agentComments" : "agentComments",
-    "totalCriticalScore" : 5.025005,
-    "maxTotalRawCriticalScore" : 9.965781,
+    "totalCriticalScore" : 1.1730742,
+    "maxTotalRawCriticalScore" : 4.9652185,
     "questionGroupScores" : [ {
-      "totalNonCriticalScore" : 6.965118,
-      "totalCriticalScoreUnweighted" : 6.878052,
-      "totalNonCriticalScoreUnweighted" : 6.704019,
+      "totalNonCriticalScore" : 6.4384236,
+      "totalCriticalScoreUnweighted" : 2.8841622,
+      "totalNonCriticalScoreUnweighted" : 6.878052,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 2.8841622,
-      "maxTotalNonCriticalScore" : 1.284659,
+      "totalScoreUnweighted" : 6.965118,
+      "maxTotalNonCriticalScore" : 3.5571952,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 3,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -32162,7 +32541,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 3,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -32172,25 +32551,25 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 8.762042,
-      "maxTotalScore" : 9.018348,
-      "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-      "totalCriticalScore" : 6.4384236,
-      "maxTotalCriticalScore" : 3.5571952,
-      "maxTotalCriticalScoreUnweighted" : 5.9448957,
-      "maxTotalScoreUnweighted" : 6.778325
+      "totalScore" : 9.36931,
+      "maxTotalScore" : 6.6835623,
+      "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+      "totalCriticalScore" : 8.762042,
+      "maxTotalCriticalScore" : 9.018348,
+      "maxTotalCriticalScoreUnweighted" : 6.778325,
+      "maxTotalScoreUnweighted" : 1.284659
     }, {
-      "totalNonCriticalScore" : 6.965118,
-      "totalCriticalScoreUnweighted" : 6.878052,
-      "totalNonCriticalScoreUnweighted" : 6.704019,
+      "totalNonCriticalScore" : 6.4384236,
+      "totalCriticalScoreUnweighted" : 2.8841622,
+      "totalNonCriticalScoreUnweighted" : 6.878052,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 2.8841622,
-      "maxTotalNonCriticalScore" : 1.284659,
+      "totalScoreUnweighted" : 6.965118,
+      "maxTotalNonCriticalScore" : 3.5571952,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 3,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -32201,7 +32580,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 3,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -32211,22 +32590,22 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 8.762042,
-      "maxTotalScore" : 9.018348,
-      "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-      "totalCriticalScore" : 6.4384236,
-      "maxTotalCriticalScore" : 3.5571952,
-      "maxTotalCriticalScoreUnweighted" : 5.9448957,
-      "maxTotalScoreUnweighted" : 6.778325
+      "totalScore" : 9.36931,
+      "maxTotalScore" : 6.6835623,
+      "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+      "totalCriticalScore" : 8.762042,
+      "maxTotalCriticalScore" : 9.018348,
+      "maxTotalCriticalScoreUnweighted" : 6.778325,
+      "maxTotalScoreUnweighted" : 1.284659
     } ],
     "transcriptTopics" : [ {
       "duration" : {
         "totalMilliseconds" : 7
       },
       "offset" : "{}",
-      "recordingLocation" : 6,
-      "startTimeMilliseconds" : 0,
-      "confidence" : 7,
+      "recordingLocation" : 0,
+      "startTimeMilliseconds" : 3,
+      "confidence" : 3,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
@@ -32236,15 +32615,15 @@ open class QualityAPI {
         "totalMilliseconds" : 7
       },
       "offset" : "{}",
-      "recordingLocation" : 6,
-      "startTimeMilliseconds" : 0,
-      "confidence" : 7,
+      "recordingLocation" : 0,
+      "startTimeMilliseconds" : 3,
+      "confidence" : 3,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     } ],
-    "totalScore" : 4.9652185,
+    "totalScore" : 7.4577446,
     "anyFailedKillQuestions" : true
   },
   "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -33146,7 +33525,7 @@ open class QualityAPI {
       "geolocation" : "{}"
     } ],
     "contextId" : "contextId",
-    "averageScore" : 6,
+    "averageScore" : 1,
     "calibrator" : {
       "workPlanBidRanks" : "{}",
       "addresses" : [ {
@@ -33442,7 +33821,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     },
-    "highScore" : 7,
+    "highScore" : 1,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
       "workPlanBidRanks" : "{}",
@@ -33741,7 +34120,7 @@ open class QualityAPI {
     },
     "name" : "name",
     "id" : "id",
-    "lowScore" : 1,
+    "lowScore" : 6,
     "conversation" : {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -33750,14 +34129,16 @@ open class QualityAPI {
       "latestVersionFormName" : "latestVersionFormName",
       "evaluationSettings" : "{}",
       "dialect" : "dialect",
+      "redacted" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "contextId" : "contextId",
+      "published" : true,
+      "division" : "{}",
       "publishedVersions" : "{}",
       "aiScoring" : "{}",
-      "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-      "contextId" : "contextId",
       "id" : "id",
-      "published" : true,
       "questionGroups" : [ {
         "defaultAnswersToHighest" : true,
         "manualWeight" : true,
@@ -33855,7 +34236,7 @@ open class QualityAPI {
             } ]
           } ]
         } ],
-        "weight" : 1.0246457,
+        "weight" : 7.386282,
         "defaultAnswersTo" : "{}",
         "contextId" : "contextId",
         "id" : "id",
@@ -33959,7 +34340,7 @@ open class QualityAPI {
             } ]
           } ]
         } ],
-        "weight" : 1.0246457,
+        "weight" : 7.386282,
         "defaultAnswersTo" : "{}",
         "contextId" : "contextId",
         "id" : "id",
@@ -34273,10 +34654,10 @@ open class QualityAPI {
   "declinedReview" : true,
   "selfUri" : "https://openapi-generator.tech",
   "mediaType" : [ "CALL", "CALL" ],
-  "version" : 3,
+  "version" : 8,
   "retractedEvaluation" : "{}",
   "revisionCreatedDate" : "2000-01-23T04:56:07.000+00:00",
-  "disputeCount" : 7,
+  "disputeCount" : 4,
   "assigneeApplicable" : true,
   "neverRelease" : true,
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
@@ -34651,7 +35032,7 @@ open class QualityAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 4,
+    "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
@@ -34670,11 +35051,11 @@ open class QualityAPI {
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 8,
+    "joinedMemberCount" : 0,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 0,
+    "memberCount" : 7,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -35199,25 +35580,25 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalNonCriticalScore" : 6.6835623,
-  "maxTotalRawScore" : 9.36931,
+  "totalNonCriticalScore" : 9.965781,
+  "maxTotalRawScore" : 5.025005,
   "comments" : "comments",
   "privateComments" : "privateComments",
   "agentComments" : "agentComments",
-  "totalCriticalScore" : 5.025005,
-  "maxTotalRawCriticalScore" : 9.965781,
+  "totalCriticalScore" : 1.1730742,
+  "maxTotalRawCriticalScore" : 4.9652185,
   "questionGroupScores" : [ {
-    "totalNonCriticalScore" : 6.965118,
-    "totalCriticalScoreUnweighted" : 6.878052,
-    "totalNonCriticalScoreUnweighted" : 6.704019,
+    "totalNonCriticalScore" : 6.4384236,
+    "totalCriticalScoreUnweighted" : 2.8841622,
+    "totalNonCriticalScoreUnweighted" : 6.878052,
     "systemMarkedNA" : true,
     "markedNA" : true,
-    "totalScoreUnweighted" : 2.8841622,
-    "maxTotalNonCriticalScore" : 1.284659,
+    "totalScoreUnweighted" : 6.965118,
+    "maxTotalNonCriticalScore" : 3.5571952,
     "questionScores" : [ {
       "answerId" : "answerId",
       "failedKillQuestion" : true,
-      "score" : 3,
+      "score" : 6,
       "questionId" : "questionId",
       "systemMarkedNA" : true,
       "comments" : "comments",
@@ -35228,7 +35609,7 @@ open class QualityAPI {
     }, {
       "answerId" : "answerId",
       "failedKillQuestion" : true,
-      "score" : 3,
+      "score" : 6,
       "questionId" : "questionId",
       "systemMarkedNA" : true,
       "comments" : "comments",
@@ -35238,25 +35619,25 @@ open class QualityAPI {
       "assistedAnswerId" : "assistedAnswerId"
     } ],
     "questionGroupId" : "questionGroupId",
-    "totalScore" : 8.762042,
-    "maxTotalScore" : 9.018348,
-    "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-    "totalCriticalScore" : 6.4384236,
-    "maxTotalCriticalScore" : 3.5571952,
-    "maxTotalCriticalScoreUnweighted" : 5.9448957,
-    "maxTotalScoreUnweighted" : 6.778325
+    "totalScore" : 9.36931,
+    "maxTotalScore" : 6.6835623,
+    "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+    "totalCriticalScore" : 8.762042,
+    "maxTotalCriticalScore" : 9.018348,
+    "maxTotalCriticalScoreUnweighted" : 6.778325,
+    "maxTotalScoreUnweighted" : 1.284659
   }, {
-    "totalNonCriticalScore" : 6.965118,
-    "totalCriticalScoreUnweighted" : 6.878052,
-    "totalNonCriticalScoreUnweighted" : 6.704019,
+    "totalNonCriticalScore" : 6.4384236,
+    "totalCriticalScoreUnweighted" : 2.8841622,
+    "totalNonCriticalScoreUnweighted" : 6.878052,
     "systemMarkedNA" : true,
     "markedNA" : true,
-    "totalScoreUnweighted" : 2.8841622,
-    "maxTotalNonCriticalScore" : 1.284659,
+    "totalScoreUnweighted" : 6.965118,
+    "maxTotalNonCriticalScore" : 3.5571952,
     "questionScores" : [ {
       "answerId" : "answerId",
       "failedKillQuestion" : true,
-      "score" : 3,
+      "score" : 6,
       "questionId" : "questionId",
       "systemMarkedNA" : true,
       "comments" : "comments",
@@ -35267,7 +35648,7 @@ open class QualityAPI {
     }, {
       "answerId" : "answerId",
       "failedKillQuestion" : true,
-      "score" : 3,
+      "score" : 6,
       "questionId" : "questionId",
       "systemMarkedNA" : true,
       "comments" : "comments",
@@ -35277,22 +35658,22 @@ open class QualityAPI {
       "assistedAnswerId" : "assistedAnswerId"
     } ],
     "questionGroupId" : "questionGroupId",
-    "totalScore" : 8.762042,
-    "maxTotalScore" : 9.018348,
-    "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-    "totalCriticalScore" : 6.4384236,
-    "maxTotalCriticalScore" : 3.5571952,
-    "maxTotalCriticalScoreUnweighted" : 5.9448957,
-    "maxTotalScoreUnweighted" : 6.778325
+    "totalScore" : 9.36931,
+    "maxTotalScore" : 6.6835623,
+    "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+    "totalCriticalScore" : 8.762042,
+    "maxTotalCriticalScore" : 9.018348,
+    "maxTotalCriticalScoreUnweighted" : 6.778325,
+    "maxTotalScoreUnweighted" : 1.284659
   } ],
   "transcriptTopics" : [ {
     "duration" : {
       "totalMilliseconds" : 7
     },
     "offset" : "{}",
-    "recordingLocation" : 6,
-    "startTimeMilliseconds" : 0,
-    "confidence" : 7,
+    "recordingLocation" : 0,
+    "startTimeMilliseconds" : 3,
+    "confidence" : 3,
     "name" : "name",
     "topicPhrase" : "topicPhrase",
     "id" : "id",
@@ -35302,15 +35683,15 @@ open class QualityAPI {
       "totalMilliseconds" : 7
     },
     "offset" : "{}",
-    "recordingLocation" : 6,
-    "startTimeMilliseconds" : 0,
-    "confidence" : 7,
+    "recordingLocation" : 0,
+    "startTimeMilliseconds" : 3,
+    "confidence" : 3,
     "name" : "name",
     "topicPhrase" : "topicPhrase",
     "id" : "id",
     "transcriptPhrase" : "transcriptPhrase"
   } ],
-  "totalScore" : 4.9652185,
+  "totalScore" : 7.4577446,
   "anyFailedKillQuestions" : true
 }, statusCode=200}]
      
@@ -35668,25 +36049,25 @@ open class QualityAPI {
     "evaluationSource" : "{}",
     "redacted" : true,
     "answers" : {
-      "totalNonCriticalScore" : 6.6835623,
-      "maxTotalRawScore" : 9.36931,
+      "totalNonCriticalScore" : 9.965781,
+      "maxTotalRawScore" : 5.025005,
       "comments" : "comments",
       "privateComments" : "privateComments",
       "agentComments" : "agentComments",
-      "totalCriticalScore" : 5.025005,
-      "maxTotalRawCriticalScore" : 9.965781,
+      "totalCriticalScore" : 1.1730742,
+      "maxTotalRawCriticalScore" : 4.9652185,
       "questionGroupScores" : [ {
-        "totalNonCriticalScore" : 6.965118,
-        "totalCriticalScoreUnweighted" : 6.878052,
-        "totalNonCriticalScoreUnweighted" : 6.704019,
+        "totalNonCriticalScore" : 6.4384236,
+        "totalCriticalScoreUnweighted" : 2.8841622,
+        "totalNonCriticalScoreUnweighted" : 6.878052,
         "systemMarkedNA" : true,
         "markedNA" : true,
-        "totalScoreUnweighted" : 2.8841622,
-        "maxTotalNonCriticalScore" : 1.284659,
+        "totalScoreUnweighted" : 6.965118,
+        "maxTotalNonCriticalScore" : 3.5571952,
         "questionScores" : [ {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 3,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -35697,7 +36078,7 @@ open class QualityAPI {
         }, {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 3,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -35707,25 +36088,25 @@ open class QualityAPI {
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
-        "totalScore" : 8.762042,
-        "maxTotalScore" : 9.018348,
-        "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-        "totalCriticalScore" : 6.4384236,
-        "maxTotalCriticalScore" : 3.5571952,
-        "maxTotalCriticalScoreUnweighted" : 5.9448957,
-        "maxTotalScoreUnweighted" : 6.778325
+        "totalScore" : 9.36931,
+        "maxTotalScore" : 6.6835623,
+        "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+        "totalCriticalScore" : 8.762042,
+        "maxTotalCriticalScore" : 9.018348,
+        "maxTotalCriticalScoreUnweighted" : 6.778325,
+        "maxTotalScoreUnweighted" : 1.284659
       }, {
-        "totalNonCriticalScore" : 6.965118,
-        "totalCriticalScoreUnweighted" : 6.878052,
-        "totalNonCriticalScoreUnweighted" : 6.704019,
+        "totalNonCriticalScore" : 6.4384236,
+        "totalCriticalScoreUnweighted" : 2.8841622,
+        "totalNonCriticalScoreUnweighted" : 6.878052,
         "systemMarkedNA" : true,
         "markedNA" : true,
-        "totalScoreUnweighted" : 2.8841622,
-        "maxTotalNonCriticalScore" : 1.284659,
+        "totalScoreUnweighted" : 6.965118,
+        "maxTotalNonCriticalScore" : 3.5571952,
         "questionScores" : [ {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 3,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -35736,7 +36117,7 @@ open class QualityAPI {
         }, {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 3,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -35746,22 +36127,22 @@ open class QualityAPI {
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
-        "totalScore" : 8.762042,
-        "maxTotalScore" : 9.018348,
-        "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-        "totalCriticalScore" : 6.4384236,
-        "maxTotalCriticalScore" : 3.5571952,
-        "maxTotalCriticalScoreUnweighted" : 5.9448957,
-        "maxTotalScoreUnweighted" : 6.778325
+        "totalScore" : 9.36931,
+        "maxTotalScore" : 6.6835623,
+        "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+        "totalCriticalScore" : 8.762042,
+        "maxTotalCriticalScore" : 9.018348,
+        "maxTotalCriticalScoreUnweighted" : 6.778325,
+        "maxTotalScoreUnweighted" : 1.284659
       } ],
       "transcriptTopics" : [ {
         "duration" : {
           "totalMilliseconds" : 7
         },
         "offset" : "{}",
-        "recordingLocation" : 6,
-        "startTimeMilliseconds" : 0,
-        "confidence" : 7,
+        "recordingLocation" : 0,
+        "startTimeMilliseconds" : 3,
+        "confidence" : 3,
         "name" : "name",
         "topicPhrase" : "topicPhrase",
         "id" : "id",
@@ -35771,15 +36152,15 @@ open class QualityAPI {
           "totalMilliseconds" : 7
         },
         "offset" : "{}",
-        "recordingLocation" : 6,
-        "startTimeMilliseconds" : 0,
-        "confidence" : 7,
+        "recordingLocation" : 0,
+        "startTimeMilliseconds" : 3,
+        "confidence" : 3,
         "name" : "name",
         "topicPhrase" : "topicPhrase",
         "id" : "id",
         "transcriptPhrase" : "transcriptPhrase"
       } ],
-      "totalScore" : 4.9652185,
+      "totalScore" : 7.4577446,
       "anyFailedKillQuestions" : true
     },
     "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -36478,7 +36859,7 @@ open class QualityAPI {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "queueFlow" : "{}",
       "callingPartyNumber" : "callingPartyNumber",
-      "userMemberCount" : 4,
+      "userMemberCount" : 6,
       "modifiedBy" : "modifiedBy",
       "id" : "id",
       "memberGroups" : [ {
@@ -36497,11 +36878,11 @@ open class QualityAPI {
         "type" : "TEAM"
       } ],
       "scoringMethod" : "TimestampAndPriority",
-      "joinedMemberCount" : 8,
+      "joinedMemberCount" : 0,
       "messageInQueueFlow" : "{}",
       "callingPartyName" : "callingPartyName",
       "acwSettings" : "{}",
-      "memberCount" : 0,
+      "memberCount" : 7,
       "selfUri" : "https://openapi-generator.tech",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "whisperPrompt" : "{}",
@@ -36821,25 +37202,25 @@ open class QualityAPI {
     "evaluationSource" : "{}",
     "redacted" : true,
     "answers" : {
-      "totalNonCriticalScore" : 6.6835623,
-      "maxTotalRawScore" : 9.36931,
+      "totalNonCriticalScore" : 9.965781,
+      "maxTotalRawScore" : 5.025005,
       "comments" : "comments",
       "privateComments" : "privateComments",
       "agentComments" : "agentComments",
-      "totalCriticalScore" : 5.025005,
-      "maxTotalRawCriticalScore" : 9.965781,
+      "totalCriticalScore" : 1.1730742,
+      "maxTotalRawCriticalScore" : 4.9652185,
       "questionGroupScores" : [ {
-        "totalNonCriticalScore" : 6.965118,
-        "totalCriticalScoreUnweighted" : 6.878052,
-        "totalNonCriticalScoreUnweighted" : 6.704019,
+        "totalNonCriticalScore" : 6.4384236,
+        "totalCriticalScoreUnweighted" : 2.8841622,
+        "totalNonCriticalScoreUnweighted" : 6.878052,
         "systemMarkedNA" : true,
         "markedNA" : true,
-        "totalScoreUnweighted" : 2.8841622,
-        "maxTotalNonCriticalScore" : 1.284659,
+        "totalScoreUnweighted" : 6.965118,
+        "maxTotalNonCriticalScore" : 3.5571952,
         "questionScores" : [ {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 3,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -36850,7 +37231,7 @@ open class QualityAPI {
         }, {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 3,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -36860,25 +37241,25 @@ open class QualityAPI {
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
-        "totalScore" : 8.762042,
-        "maxTotalScore" : 9.018348,
-        "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-        "totalCriticalScore" : 6.4384236,
-        "maxTotalCriticalScore" : 3.5571952,
-        "maxTotalCriticalScoreUnweighted" : 5.9448957,
-        "maxTotalScoreUnweighted" : 6.778325
+        "totalScore" : 9.36931,
+        "maxTotalScore" : 6.6835623,
+        "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+        "totalCriticalScore" : 8.762042,
+        "maxTotalCriticalScore" : 9.018348,
+        "maxTotalCriticalScoreUnweighted" : 6.778325,
+        "maxTotalScoreUnweighted" : 1.284659
       }, {
-        "totalNonCriticalScore" : 6.965118,
-        "totalCriticalScoreUnweighted" : 6.878052,
-        "totalNonCriticalScoreUnweighted" : 6.704019,
+        "totalNonCriticalScore" : 6.4384236,
+        "totalCriticalScoreUnweighted" : 2.8841622,
+        "totalNonCriticalScoreUnweighted" : 6.878052,
         "systemMarkedNA" : true,
         "markedNA" : true,
-        "totalScoreUnweighted" : 2.8841622,
-        "maxTotalNonCriticalScore" : 1.284659,
+        "totalScoreUnweighted" : 6.965118,
+        "maxTotalNonCriticalScore" : 3.5571952,
         "questionScores" : [ {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 3,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -36889,7 +37270,7 @@ open class QualityAPI {
         }, {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 3,
+          "score" : 6,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -36899,22 +37280,22 @@ open class QualityAPI {
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
-        "totalScore" : 8.762042,
-        "maxTotalScore" : 9.018348,
-        "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-        "totalCriticalScore" : 6.4384236,
-        "maxTotalCriticalScore" : 3.5571952,
-        "maxTotalCriticalScoreUnweighted" : 5.9448957,
-        "maxTotalScoreUnweighted" : 6.778325
+        "totalScore" : 9.36931,
+        "maxTotalScore" : 6.6835623,
+        "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+        "totalCriticalScore" : 8.762042,
+        "maxTotalCriticalScore" : 9.018348,
+        "maxTotalCriticalScoreUnweighted" : 6.778325,
+        "maxTotalScoreUnweighted" : 1.284659
       } ],
       "transcriptTopics" : [ {
         "duration" : {
           "totalMilliseconds" : 7
         },
         "offset" : "{}",
-        "recordingLocation" : 6,
-        "startTimeMilliseconds" : 0,
-        "confidence" : 7,
+        "recordingLocation" : 0,
+        "startTimeMilliseconds" : 3,
+        "confidence" : 3,
         "name" : "name",
         "topicPhrase" : "topicPhrase",
         "id" : "id",
@@ -36924,15 +37305,15 @@ open class QualityAPI {
           "totalMilliseconds" : 7
         },
         "offset" : "{}",
-        "recordingLocation" : 6,
-        "startTimeMilliseconds" : 0,
-        "confidence" : 7,
+        "recordingLocation" : 0,
+        "startTimeMilliseconds" : 3,
+        "confidence" : 3,
         "name" : "name",
         "topicPhrase" : "topicPhrase",
         "id" : "id",
         "transcriptPhrase" : "transcriptPhrase"
       } ],
-      "totalScore" : 4.9652185,
+      "totalScore" : 7.4577446,
       "anyFailedKillQuestions" : true
     },
     "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -37631,7 +38012,7 @@ open class QualityAPI {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "queueFlow" : "{}",
       "callingPartyNumber" : "callingPartyNumber",
-      "userMemberCount" : 4,
+      "userMemberCount" : 6,
       "modifiedBy" : "modifiedBy",
       "id" : "id",
       "memberGroups" : [ {
@@ -37650,11 +38031,11 @@ open class QualityAPI {
         "type" : "TEAM"
       } ],
       "scoringMethod" : "TimestampAndPriority",
-      "joinedMemberCount" : 8,
+      "joinedMemberCount" : 0,
       "messageInQueueFlow" : "{}",
       "callingPartyName" : "callingPartyName",
       "acwSettings" : "{}",
-      "memberCount" : 0,
+      "memberCount" : 7,
       "selfUri" : "https://openapi-generator.tech",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "whisperPrompt" : "{}",
@@ -37772,6 +38153,7 @@ open class QualityAPI {
   "selfUri" : "https://openapi-generator.tech",
   "contextId" : "contextId",
   "published" : true,
+  "division" : "{}",
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
   "name" : "name",
@@ -37874,7 +38256,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -37978,7 +38360,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -38044,6 +38426,7 @@ open class QualityAPI {
   "selfUri" : "https://openapi-generator.tech",
   "contextId" : "contextId",
   "published" : true,
+  "division" : "{}",
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
   "name" : "name",
@@ -38146,7 +38529,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -38250,7 +38633,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -38310,16 +38693,18 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "footer" : "footer",
-  "publishedVersions" : "{}",
+  "redacted" : true,
   "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "language" : "language",
+  "published" : true,
+  "division" : "{}",
+  "publishedVersions" : "{}",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "header" : "header",
   "disabled" : true,
-  "contextId" : "contextId",
-  "language" : "language",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "visibilityCondition" : {
       "combiningOperation" : "AND",
@@ -38633,6 +39018,7 @@ open class QualityAPI {
   "selfUri" : "https://openapi-generator.tech",
   "contextId" : "contextId",
   "published" : true,
+  "division" : "{}",
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
   "name" : "name",
@@ -38735,7 +39121,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -38839,7 +39225,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -38905,6 +39291,7 @@ open class QualityAPI {
   "selfUri" : "https://openapi-generator.tech",
   "contextId" : "contextId",
   "published" : true,
+  "division" : "{}",
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
   "name" : "name",
@@ -39007,7 +39394,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -39111,7 +39498,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -39171,16 +39558,18 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "footer" : "footer",
-  "publishedVersions" : "{}",
+  "redacted" : true,
   "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "language" : "language",
+  "published" : true,
+  "division" : "{}",
+  "publishedVersions" : "{}",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "header" : "header",
   "disabled" : true,
-  "contextId" : "contextId",
-  "language" : "language",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "visibilityCondition" : {
       "combiningOperation" : "AND",
@@ -40548,7 +40937,7 @@ open class QualityAPI {
     "geolocation" : "{}"
   } ],
   "contextId" : "contextId",
-  "averageScore" : 6,
+  "averageScore" : 1,
   "calibrator" : {
     "workPlanBidRanks" : "{}",
     "addresses" : [ {
@@ -40844,7 +41233,7 @@ open class QualityAPI {
     "username" : "username",
     "geolocation" : "{}"
   },
-  "highScore" : 7,
+  "highScore" : 1,
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "expertEvaluator" : {
     "workPlanBidRanks" : "{}",
@@ -41143,7 +41532,7 @@ open class QualityAPI {
   },
   "name" : "name",
   "id" : "id",
-  "lowScore" : 1,
+  "lowScore" : 6,
   "conversation" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -41152,14 +41541,16 @@ open class QualityAPI {
     "latestVersionFormName" : "latestVersionFormName",
     "evaluationSettings" : "{}",
     "dialect" : "dialect",
+    "redacted" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "contextId" : "contextId",
+    "published" : true,
+    "division" : "{}",
     "publishedVersions" : "{}",
     "aiScoring" : "{}",
-    "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-    "contextId" : "contextId",
     "id" : "id",
-    "published" : true,
     "questionGroups" : [ {
       "defaultAnswersToHighest" : true,
       "manualWeight" : true,
@@ -41257,7 +41648,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -41361,7 +41752,7 @@ open class QualityAPI {
           } ]
         } ]
       } ],
-      "weight" : 1.0246457,
+      "weight" : 7.386282,
       "defaultAnswersTo" : "{}",
       "contextId" : "contextId",
       "id" : "id",
@@ -41736,25 +42127,25 @@ open class QualityAPI {
   "evaluationSource" : "{}",
   "redacted" : true,
   "answers" : {
-    "totalNonCriticalScore" : 6.6835623,
-    "maxTotalRawScore" : 9.36931,
+    "totalNonCriticalScore" : 9.965781,
+    "maxTotalRawScore" : 5.025005,
     "comments" : "comments",
     "privateComments" : "privateComments",
     "agentComments" : "agentComments",
-    "totalCriticalScore" : 5.025005,
-    "maxTotalRawCriticalScore" : 9.965781,
+    "totalCriticalScore" : 1.1730742,
+    "maxTotalRawCriticalScore" : 4.9652185,
     "questionGroupScores" : [ {
-      "totalNonCriticalScore" : 6.965118,
-      "totalCriticalScoreUnweighted" : 6.878052,
-      "totalNonCriticalScoreUnweighted" : 6.704019,
+      "totalNonCriticalScore" : 6.4384236,
+      "totalCriticalScoreUnweighted" : 2.8841622,
+      "totalNonCriticalScoreUnweighted" : 6.878052,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 2.8841622,
-      "maxTotalNonCriticalScore" : 1.284659,
+      "totalScoreUnweighted" : 6.965118,
+      "maxTotalNonCriticalScore" : 3.5571952,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 3,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -41765,7 +42156,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 3,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -41775,25 +42166,25 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 8.762042,
-      "maxTotalScore" : 9.018348,
-      "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-      "totalCriticalScore" : 6.4384236,
-      "maxTotalCriticalScore" : 3.5571952,
-      "maxTotalCriticalScoreUnweighted" : 5.9448957,
-      "maxTotalScoreUnweighted" : 6.778325
+      "totalScore" : 9.36931,
+      "maxTotalScore" : 6.6835623,
+      "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+      "totalCriticalScore" : 8.762042,
+      "maxTotalCriticalScore" : 9.018348,
+      "maxTotalCriticalScoreUnweighted" : 6.778325,
+      "maxTotalScoreUnweighted" : 1.284659
     }, {
-      "totalNonCriticalScore" : 6.965118,
-      "totalCriticalScoreUnweighted" : 6.878052,
-      "totalNonCriticalScoreUnweighted" : 6.704019,
+      "totalNonCriticalScore" : 6.4384236,
+      "totalCriticalScoreUnweighted" : 2.8841622,
+      "totalNonCriticalScoreUnweighted" : 6.878052,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 2.8841622,
-      "maxTotalNonCriticalScore" : 1.284659,
+      "totalScoreUnweighted" : 6.965118,
+      "maxTotalNonCriticalScore" : 3.5571952,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 3,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -41804,7 +42195,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 3,
+        "score" : 6,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -41814,22 +42205,22 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 8.762042,
-      "maxTotalScore" : 9.018348,
-      "maxTotalNonCriticalScoreUnweighted" : 3.3531933,
-      "totalCriticalScore" : 6.4384236,
-      "maxTotalCriticalScore" : 3.5571952,
-      "maxTotalCriticalScoreUnweighted" : 5.9448957,
-      "maxTotalScoreUnweighted" : 6.778325
+      "totalScore" : 9.36931,
+      "maxTotalScore" : 6.6835623,
+      "maxTotalNonCriticalScoreUnweighted" : 5.9448957,
+      "totalCriticalScore" : 8.762042,
+      "maxTotalCriticalScore" : 9.018348,
+      "maxTotalCriticalScoreUnweighted" : 6.778325,
+      "maxTotalScoreUnweighted" : 1.284659
     } ],
     "transcriptTopics" : [ {
       "duration" : {
         "totalMilliseconds" : 7
       },
       "offset" : "{}",
-      "recordingLocation" : 6,
-      "startTimeMilliseconds" : 0,
-      "confidence" : 7,
+      "recordingLocation" : 0,
+      "startTimeMilliseconds" : 3,
+      "confidence" : 3,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
@@ -41839,15 +42230,15 @@ open class QualityAPI {
         "totalMilliseconds" : 7
       },
       "offset" : "{}",
-      "recordingLocation" : 6,
-      "startTimeMilliseconds" : 0,
-      "confidence" : 7,
+      "recordingLocation" : 0,
+      "startTimeMilliseconds" : 3,
+      "confidence" : 3,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     } ],
-    "totalScore" : 4.9652185,
+    "totalScore" : 7.4577446,
     "anyFailedKillQuestions" : true
   },
   "submittedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -42546,7 +42937,7 @@ open class QualityAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 4,
+    "userMemberCount" : 6,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
@@ -42565,11 +42956,11 @@ open class QualityAPI {
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 8,
+    "joinedMemberCount" : 0,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 0,
+    "memberCount" : 7,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -42660,6 +43051,7 @@ open class QualityAPI {
   "selfUri" : "https://openapi-generator.tech",
   "contextId" : "contextId",
   "published" : true,
+  "division" : "{}",
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
   "name" : "name",
@@ -42762,7 +43154,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -42866,7 +43258,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -42939,6 +43331,7 @@ open class QualityAPI {
   "selfUri" : "https://openapi-generator.tech",
   "contextId" : "contextId",
   "published" : true,
+  "division" : "{}",
   "publishedVersions" : "{}",
   "aiScoring" : "{}",
   "name" : "name",
@@ -43041,7 +43434,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -43145,7 +43538,7 @@ open class QualityAPI {
         } ]
       } ]
     } ],
-    "weight" : 1.0246457,
+    "weight" : 7.386282,
     "defaultAnswersTo" : "{}",
     "contextId" : "contextId",
     "id" : "id",
@@ -43299,16 +43692,18 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "footer" : "footer",
-  "publishedVersions" : "{}",
+  "redacted" : true,
   "selfUri" : "https://openapi-generator.tech",
+  "contextId" : "contextId",
+  "language" : "language",
+  "published" : true,
+  "division" : "{}",
+  "publishedVersions" : "{}",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "header" : "header",
   "disabled" : true,
-  "contextId" : "contextId",
-  "language" : "language",
   "id" : "id",
-  "published" : true,
   "questionGroups" : [ {
     "visibilityCondition" : {
       "combiningOperation" : "AND",

@@ -174,6 +174,7 @@ open class OrganizationAPI {
   "ipAddressAllowlist" : [ "ipAddressAllowlist", "ipAddressAllowlist" ],
   "inactivityTimeoutExclusions" : [ "inactivityTimeoutExclusions", "inactivityTimeoutExclusions" ],
   "universalLogout" : true,
+  "tokenStorageLocation" : "persistent",
   "domainAllowlist" : [ "domainAllowlist", "domainAllowlist" ],
   "passwordRequirements" : "{}",
   "domainAllowlistEnabled" : true
@@ -326,11 +327,11 @@ open class OrganizationAPI {
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "approvalNamespaces" : [ {
-    "namespace" : "web.deployments",
+    "namespace" : "users.rules",
     "type" : "Primary",
     "status" : "Approved"
   }, {
-    "namespace" : "web.deployments",
+    "namespace" : "users.rules",
     "type" : "Primary",
     "status" : "Approved"
   } ],
@@ -338,14 +339,14 @@ open class OrganizationAPI {
   "statusHistory" : [ {
     "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
-    "namespace" : "web.deployments",
+    "namespace" : "users.rules",
     "message" : "message",
     "status" : "Approved",
     "previousStatus" : "Approved"
   }, {
     "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
-    "namespace" : "web.deployments",
+    "namespace" : "users.rules",
     "message" : "message",
     "status" : "Approved",
     "previousStatus" : "Approved"
@@ -353,7 +354,7 @@ open class OrganizationAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "rejectReason" : "AlternativeExists",
   "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-  "namespace" : "web.deployments",
+  "namespace" : "users.rules",
   "id" : "id",
   "key" : "key",
   "currentValue" : 6.027456183070403,
@@ -450,11 +451,11 @@ open class OrganizationAPI {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "approvalNamespaces" : [ {
-      "namespace" : "web.deployments",
+      "namespace" : "users.rules",
       "type" : "Primary",
       "status" : "Approved"
     }, {
-      "namespace" : "web.deployments",
+      "namespace" : "users.rules",
       "type" : "Primary",
       "status" : "Approved"
     } ],
@@ -462,14 +463,14 @@ open class OrganizationAPI {
     "statusHistory" : [ {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "web.deployments",
+      "namespace" : "users.rules",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
     }, {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "web.deployments",
+      "namespace" : "users.rules",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
@@ -477,7 +478,7 @@ open class OrganizationAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-    "namespace" : "web.deployments",
+    "namespace" : "users.rules",
     "id" : "id",
     "key" : "key",
     "currentValue" : 6.027456183070403,
@@ -487,11 +488,11 @@ open class OrganizationAPI {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "approvalNamespaces" : [ {
-      "namespace" : "web.deployments",
+      "namespace" : "users.rules",
       "type" : "Primary",
       "status" : "Approved"
     }, {
-      "namespace" : "web.deployments",
+      "namespace" : "users.rules",
       "type" : "Primary",
       "status" : "Approved"
     } ],
@@ -499,14 +500,14 @@ open class OrganizationAPI {
     "statusHistory" : [ {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "web.deployments",
+      "namespace" : "users.rules",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
     }, {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "web.deployments",
+      "namespace" : "users.rules",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
@@ -514,7 +515,7 @@ open class OrganizationAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-    "namespace" : "web.deployments",
+    "namespace" : "users.rules",
     "id" : "id",
     "key" : "key",
     "currentValue" : 6.027456183070403,
@@ -746,12 +747,12 @@ open class OrganizationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "namespace" : "web.deployments",
-    "value" : 7,
+    "namespace" : "users.rules",
+    "value" : 6,
     "key" : "key"
   }, {
-    "namespace" : "web.deployments",
-    "value" : 7,
+    "namespace" : "users.rules",
+    "value" : 6,
     "key" : "key"
   } ]
 }, statusCode=200}]
@@ -809,12 +810,12 @@ open class OrganizationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "namespace" : "web.deployments",
-    "value" : 7,
+    "namespace" : "users.rules",
+    "value" : 6,
     "key" : "key"
   }, {
-    "namespace" : "web.deployments",
-    "value" : 7,
+    "namespace" : "users.rules",
+    "value" : 6,
     "key" : "key"
   } ]
 }, statusCode=200}]
@@ -1043,6 +1044,7 @@ open class OrganizationAPI {
   "ipAddressAllowlist" : [ "ipAddressAllowlist", "ipAddressAllowlist" ],
   "inactivityTimeoutExclusions" : [ "inactivityTimeoutExclusions", "inactivityTimeoutExclusions" ],
   "universalLogout" : true,
+  "tokenStorageLocation" : "persistent",
   "domainAllowlist" : [ "domainAllowlist", "domainAllowlist" ],
   "passwordRequirements" : "{}",
   "domainAllowlistEnabled" : true

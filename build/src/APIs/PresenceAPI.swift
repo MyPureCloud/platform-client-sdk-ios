@@ -279,7 +279,7 @@ open class PresenceAPI {
     
     
     /**
-     Get a list of Presence Definitions
+     Get a list of Presence Definitions. View permission enforcement only applies to presence definitions assigned to a division
      
      - parameter deactivated: (query) Deactivated query can be TRUE or FALSE (optional)
      - parameter divisionId: (query) One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. (optional)
@@ -305,7 +305,7 @@ open class PresenceAPI {
     }
 
     /**
-     Get a list of Presence Definitions
+     Get a list of Presence Definitions. View permission enforcement only applies to presence definitions assigned to a division
      - GET /api/v2/presence/definitions
      - OAuth:
        - type: oauth2

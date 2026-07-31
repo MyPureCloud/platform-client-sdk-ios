@@ -2386,6 +2386,7 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   } ],
+  "style" : "{}",
   "id" : "id",
   "category" : "OnQueueWork",
   "countsTowardShrinkage" : true
@@ -2476,6 +2477,7 @@ open class WorkforceManagementAPI {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
     } ],
+    "style" : "{}",
     "id" : "id",
     "category" : "OnQueueWork",
     "countsTowardShrinkage" : true
@@ -2505,6 +2507,7 @@ open class WorkforceManagementAPI {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
     } ],
+    "style" : "{}",
     "id" : "id",
     "category" : "OnQueueWork",
     "countsTowardShrinkage" : true
@@ -3716,6 +3719,78 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CapacityPlansListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Gets the status of the given job
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The ID of the update job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitDecisionmetricsJob(businessUnitId: String, jobId: String, completion: @escaping ((_ data: DecisionMetricsUpdateJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitDecisionmetricsJobWithRequestBuilder(businessUnitId: businessUnitId, jobId: jobId)
+        requestBuilder.execute { (response: Response<DecisionMetricsUpdateJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets the status of the given job
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/decisionmetrics/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "updateErrors" : [ {
+    "user" : "{}",
+    "errors" : [ "InvalidUser", "InvalidUser" ]
+  }, {
+    "user" : "{}",
+    "errors" : [ "InvalidUser", "InvalidUser" ]
+  } ],
+  "metadata" : "{}",
+  "uploadKey" : "uploadKey",
+  "job" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The ID of the update job 
+
+     - returns: RequestBuilder<DecisionMetricsUpdateJobResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitDecisionmetricsJobWithRequestBuilder(businessUnitId: String, jobId: String) -> RequestBuilder<DecisionMetricsUpdateJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/decisionmetrics/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DecisionMetricsUpdateJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -5864,7 +5939,9 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : "{}",
+  "fullDayTimeOffStartTime" : "09:00",
   "managementUnit" : "{}",
+  "granularity" : "Daily",
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id",
   "staffingGroup" : "{}"
@@ -5889,6 +5966,169 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BuTimeOffLimitResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Query the convert time-off limit granularity job operation. Only the user who started the operation can query the status.
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit 
+     - parameter jobId: (path) The ID of the convert time off limit granularity job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJob(businessUnitId: String, timeOffLimitId: String, jobId: String, completion: @escaping ((_ data: BuConvertTimeOffLimitGranularityJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobWithRequestBuilder(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId, jobId: jobId)
+        requestBuilder.execute { (response: Response<BuConvertTimeOffLimitGranularityJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query the convert time-off limit granularity job operation. Only the user who started the operation can query the status.
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/granularityconversion/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "timeOffLimit" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "progress" : "{}",
+  "id" : "id",
+  "error" : "{}",
+  "status" : "Complete"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit 
+     - parameter jobId: (path) The ID of the convert time off limit granularity job 
+
+     - returns: RequestBuilder<BuConvertTimeOffLimitGranularityJobResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobWithRequestBuilder(businessUnitId: String, timeOffLimitId: String, jobId: String) -> RequestBuilder<BuConvertTimeOffLimitGranularityJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/granularityconversion/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let timeOffLimitIdPreEscape = "\(timeOffLimitId)"
+        let timeOffLimitIdPostEscape = timeOffLimitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{timeOffLimitId}", with: timeOffLimitIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuConvertTimeOffLimitGranularityJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    public enum Statuses_getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs: String { 
+        case complete = "Complete"
+        case error = "Error"
+        case processing = "Processing"
+    }
+    
+    
+    /**
+     Query the list of convert time-off limit granularity job operation.
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit 
+     - parameter statuses: (query) Status to filter the list of jobs (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs(businessUnitId: String, timeOffLimitId: String, statuses: Statuses_getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs? = nil, completion: @escaping ((_ data: BuConvertTimeOffGranularityLimitJobListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobsWithRequestBuilder(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId, statuses: statuses)
+        requestBuilder.execute { (response: Response<BuConvertTimeOffGranularityLimitJobListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query the list of convert time-off limit granularity job operation.
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/granularityconversion/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "timeOffLimit" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "progress" : "{}",
+    "id" : "id",
+    "error" : "{}",
+    "status" : "Complete"
+  }, {
+    "timeOffLimit" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "progress" : "{}",
+    "id" : "id",
+    "error" : "{}",
+    "status" : "Complete"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit 
+     - parameter statuses: (query) Status to filter the list of jobs (optional)
+
+     - returns: RequestBuilder<BuConvertTimeOffGranularityLimitJobListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobsWithRequestBuilder(businessUnitId: String, timeOffLimitId: String, statuses: Statuses_getWorkforcemanagementBusinessunitTimeofflimitGranularityconversionJobs? = nil) -> RequestBuilder<BuConvertTimeOffGranularityLimitJobListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/granularityconversion/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let timeOffLimitIdPreEscape = "\(timeOffLimitId)"
+        let timeOffLimitIdPostEscape = timeOffLimitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{timeOffLimitId}", with: timeOffLimitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "statuses": statuses?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<BuConvertTimeOffGranularityLimitJobListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -5931,13 +6171,17 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "metadata" : "{}",
+    "fullDayTimeOffStartTime" : "09:00",
     "managementUnit" : "{}",
+    "granularity" : "Daily",
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "staffingGroup" : "{}"
   }, {
     "metadata" : "{}",
+    "fullDayTimeOffStartTime" : "09:00",
     "managementUnit" : "{}",
+    "granularity" : "Daily",
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "staffingGroup" : "{}"
@@ -9438,6 +9682,71 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ShiftTradeListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Gets the decision metrics of all user in given management unit
+     
+     - parameter managementUnitId: (path) The ID of the management unit 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementManagementunitDecisionmetrics(managementUnitId: String, completion: @escaping ((_ data: DecisionMetricsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementManagementunitDecisionmetricsWithRequestBuilder(managementUnitId: managementUnitId)
+        requestBuilder.execute { (response: Response<DecisionMetricsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets the decision metrics of all user in given management unit
+     - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/decisionmetrics
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "metadata" : "{}",
+    "tieBreakerValue" : 6,
+    "performanceRank" : 0,
+    "user" : "{}"
+  }, {
+    "metadata" : "{}",
+    "tieBreakerValue" : 6,
+    "performanceRank" : 0,
+    "user" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit 
+
+     - returns: RequestBuilder<DecisionMetricsResponse> 
+     */
+    open class func getWorkforcemanagementManagementunitDecisionmetricsWithRequestBuilder(managementUnitId: String) -> RequestBuilder<DecisionMetricsResponse> {        
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/decisionmetrics"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DecisionMetricsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -13771,6 +14080,7 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   } ],
+  "style" : "{}",
   "id" : "id",
   "category" : "OnQueueWork",
   "countsTowardShrinkage" : true
@@ -13796,6 +14106,125 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BusinessUnitActivityCode>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update multiple activity codes
+     
+     - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitActivitycodesBulk(businessUnitId: String, body: BulkUpdateActivityCodeRequest, completion: @escaping ((_ data: BulkUpdateActivityCodeResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitActivitycodesBulkWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<BulkUpdateActivityCodeResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update multiple activity codes
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "defaultCode" : true,
+    "metadata" : "{}",
+    "plannedShrinkage" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "active" : true,
+    "countsAsPaidTime" : true,
+    "agentTimeOffSelectable" : true,
+    "interruptible" : true,
+    "lengthInMinutes" : 0,
+    "secondaryPresences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "countsAsWorkTime" : true,
+    "name" : "name",
+    "planningGroups" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "style" : "{}",
+    "id" : "id",
+    "category" : "OnQueueWork",
+    "countsTowardShrinkage" : true
+  }, {
+    "defaultCode" : true,
+    "metadata" : "{}",
+    "plannedShrinkage" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "active" : true,
+    "countsAsPaidTime" : true,
+    "agentTimeOffSelectable" : true,
+    "interruptible" : true,
+    "lengthInMinutes" : 0,
+    "secondaryPresences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "countsAsWorkTime" : true,
+    "name" : "name",
+    "planningGroups" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "style" : "{}",
+    "id" : "id",
+    "category" : "OnQueueWork",
+    "countsTowardShrinkage" : true
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BulkUpdateActivityCodeResponse> 
+     */
+    open class func patchWorkforcemanagementBusinessunitActivitycodesBulkWithRequestBuilder(businessUnitId: String, body: BulkUpdateActivityCodeRequest) -> RequestBuilder<BulkUpdateActivityCodeResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/bulk"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkUpdateActivityCodeResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -17999,6 +18428,7 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   } ],
+  "style" : "{}",
   "id" : "id",
   "category" : "OnQueueWork",
   "countsTowardShrinkage" : true
@@ -18930,6 +19360,139 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Initiates the decision metrics update process
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitDecisionmetricsUpdate(businessUnitId: String, body: DecisionMetricsUpdateJobRequest, completion: @escaping ((_ data: DecisionMetricsUpdateJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitDecisionmetricsUpdateWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<DecisionMetricsUpdateJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Initiates the decision metrics update process
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/decisionmetrics/update
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "updateErrors" : [ {
+    "user" : "{}",
+    "errors" : [ "InvalidUser", "InvalidUser" ]
+  }, {
+    "user" : "{}",
+    "errors" : [ "InvalidUser", "InvalidUser" ]
+  } ],
+  "metadata" : "{}",
+  "uploadKey" : "uploadKey",
+  "job" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<DecisionMetricsUpdateJobResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitDecisionmetricsUpdateWithRequestBuilder(businessUnitId: String, body: DecisionMetricsUpdateJobRequest) -> RequestBuilder<DecisionMetricsUpdateJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/decisionmetrics/update"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DecisionMetricsUpdateJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Creates a signed upload URL for updating decision metrics
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurl(businessUnitId: String, body: UploadUrlRequestBody, completion: @escaping ((_ data: DecisionMetricsUploadResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurlWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<DecisionMetricsUploadResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Creates a signed upload URL for updating decision metrics
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/decisionmetrics/update/uploadurl
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "headers"
+  },
+  "uploadKey" : "uploadKey",
+  "uploadBodySchema" : "{}",
+  "url" : "url"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<DecisionMetricsUploadResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurlWithRequestBuilder(businessUnitId: String, body: UploadUrlRequestBody) -> RequestBuilder<DecisionMetricsUploadResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/decisionmetrics/update/uploadurl"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DecisionMetricsUploadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -20649,6 +21212,299 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
+    /**
+     Converts existing time-off limit to another granularity.
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitTimeofflimitGranularityconversion(businessUnitId: String, timeOffLimitId: String, body: BuConvertTimeOffLimitGranularityJobRequest, completion: @escaping ((_ data: BuConvertTimeOffLimitGranularityJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitTimeofflimitGranularityconversionWithRequestBuilder(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId, body: body)
+        requestBuilder.execute { (response: Response<BuConvertTimeOffLimitGranularityJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Converts existing time-off limit to another granularity.
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/granularityconversion
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "timeOffLimit" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "progress" : "{}",
+  "id" : "id",
+  "error" : "{}",
+  "status" : "Complete"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BuConvertTimeOffLimitGranularityJobResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitTimeofflimitGranularityconversionWithRequestBuilder(businessUnitId: String, timeOffLimitId: String, body: BuConvertTimeOffLimitGranularityJobRequest) -> RequestBuilder<BuConvertTimeOffLimitGranularityJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/granularityconversion"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let timeOffLimitIdPreEscape = "\(timeOffLimitId)"
+        let timeOffLimitIdPostEscape = timeOffLimitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{timeOffLimitId}", with: timeOffLimitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuConvertTimeOffLimitGranularityJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Starts importing the uploaded time-off limit values
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit object to set limit values for 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitTimeofflimitValuesImport(businessUnitId: String, timeOffLimitId: String, body: BuImportTimeOffLimitValuesRequest, completion: @escaping ((_ data: BuTimeOffLimitResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitTimeofflimitValuesImportWithRequestBuilder(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId, body: body)
+        requestBuilder.execute { (response: Response<BuTimeOffLimitResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Starts importing the uploaded time-off limit values
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values/import
+     - Call after uploading the time-off limit values data to the url supplied by the /import/uploadurl route
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "fullDayTimeOffStartTime" : "09:00",
+  "managementUnit" : "{}",
+  "granularity" : "Daily",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "staffingGroup" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit object to set limit values for 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BuTimeOffLimitResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitTimeofflimitValuesImportWithRequestBuilder(businessUnitId: String, timeOffLimitId: String, body: BuImportTimeOffLimitValuesRequest) -> RequestBuilder<BuTimeOffLimitResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values/import"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let timeOffLimitIdPreEscape = "\(timeOffLimitId)"
+        let timeOffLimitIdPostEscape = timeOffLimitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{timeOffLimitId}", with: timeOffLimitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuTimeOffLimitResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Creates a signed upload URL for importing values into time-off limit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit object to set values for 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitTimeofflimitValuesImportUploadurl(businessUnitId: String, timeOffLimitId: String, body: BuTimeOffLimitValuesImportUploadUrlRequest, completion: @escaping ((_ data: BuImportTimeOffLimitValuesUploadResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitTimeofflimitValuesImportUploadurlWithRequestBuilder(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId, body: body)
+        requestBuilder.execute { (response: Response<BuImportTimeOffLimitValuesUploadResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Creates a signed upload URL for importing values into time-off limit
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values/import/uploadurl
+     - Once the upload is complete, call the /import route to start the import process
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "headers"
+  },
+  "uploadKey" : "uploadKey",
+  "uploadBodySchema" : "{}",
+  "url" : "url"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit object to set values for 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BuImportTimeOffLimitValuesUploadResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitTimeofflimitValuesImportUploadurlWithRequestBuilder(businessUnitId: String, timeOffLimitId: String, body: BuTimeOffLimitValuesImportUploadUrlRequest) -> RequestBuilder<BuImportTimeOffLimitValuesUploadResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values/import/uploadurl"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let timeOffLimitIdPreEscape = "\(timeOffLimitId)"
+        let timeOffLimitIdPostEscape = timeOffLimitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{timeOffLimitId}", with: timeOffLimitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuImportTimeOffLimitValuesUploadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Retrieves time-off limit related values based on a given set of filters.
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitTimeofflimitValuesQuery(businessUnitId: String, timeOffLimitId: String, body: QueryTimeOffLimitValuesForGranularityRequest, completion: @escaping ((_ data: BuTimeOffLimitValuesForGranularityResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitTimeofflimitValuesQueryWithRequestBuilder(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId, body: body)
+        requestBuilder.execute { (response: Response<BuTimeOffLimitValuesForGranularityResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieves time-off limit related values based on a given set of filters.
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "timeOffLimit" : "{}",
+  "metadata" : "{}",
+  "granularity" : "Daily",
+  "limitValues" : [ {
+    "valuesPerDay" : "{}",
+    "valuesPerFifteenMinutes" : "{}",
+    "startDate" : "2000-01-23"
+  }, {
+    "valuesPerDay" : "{}",
+    "valuesPerFifteenMinutes" : "{}",
+    "startDate" : "2000-01-23"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BuTimeOffLimitValuesForGranularityResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitTimeofflimitValuesQueryWithRequestBuilder(businessUnitId: String, timeOffLimitId: String, body: QueryTimeOffLimitValuesForGranularityRequest) -> RequestBuilder<BuTimeOffLimitValuesForGranularityResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values/query"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let timeOffLimitIdPreEscape = "\(timeOffLimitId)"
+        let timeOffLimitIdPostEscape = timeOffLimitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{timeOffLimitId}", with: timeOffLimitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuTimeOffLimitValuesForGranularityResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     /**
      Creates a new time-off limit object
      
@@ -20682,7 +21538,9 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : "{}",
+  "fullDayTimeOffStartTime" : "09:00",
   "managementUnit" : "{}",
+  "granularity" : "Daily",
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id",
   "staffingGroup" : "{}"
@@ -26377,7 +27235,9 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : "{}",
+  "fullDayTimeOffStartTime" : "09:00",
   "managementUnit" : "{}",
+  "granularity" : "Daily",
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id",
   "staffingGroup" : "{}"

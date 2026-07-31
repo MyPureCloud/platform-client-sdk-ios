@@ -875,9 +875,11 @@ open class TaskManagementAPI {
   "division" : "{}",
   "skills" : [ {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   }, {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -1190,9 +1192,11 @@ open class TaskManagementAPI {
   "division" : "{}",
   "skills" : [ {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   }, {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -1321,9 +1325,11 @@ open class TaskManagementAPI {
     "division" : "{}",
     "skills" : [ {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     }, {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -1380,9 +1386,11 @@ open class TaskManagementAPI {
     "division" : "{}",
     "skills" : [ {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     }, {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -2030,9 +2038,11 @@ open class TaskManagementAPI {
     "division" : "{}",
     "skills" : [ {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     }, {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -2088,9 +2098,11 @@ open class TaskManagementAPI {
     "division" : "{}",
     "skills" : [ {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     }, {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -2687,9 +2699,11 @@ open class TaskManagementAPI {
   "serviceLevelTarget" : 2,
   "defaultSkills" : [ {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   }, {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   } ],
   "defaultPriority" : 5,
@@ -3568,9 +3582,11 @@ open class TaskManagementAPI {
   "serviceLevelTarget" : 2,
   "defaultSkills" : [ {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   }, {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   } ],
   "defaultPriority" : 5,
@@ -3714,9 +3730,11 @@ open class TaskManagementAPI {
     "serviceLevelTarget" : 2,
     "defaultSkills" : [ {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     }, {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     } ],
     "defaultPriority" : 5,
@@ -3788,9 +3806,11 @@ open class TaskManagementAPI {
     "serviceLevelTarget" : 2,
     "defaultSkills" : [ {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     }, {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     } ],
     "defaultPriority" : 5,
@@ -4002,9 +4022,11 @@ open class TaskManagementAPI {
   "division" : "{}",
   "skills" : [ {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   }, {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -4402,9 +4424,11 @@ open class TaskManagementAPI {
   "serviceLevelTarget" : 2,
   "defaultSkills" : [ {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   }, {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   } ],
   "defaultPriority" : 5,
@@ -4967,9 +4991,11 @@ open class TaskManagementAPI {
   "division" : "{}",
   "skills" : [ {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   }, {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -5078,9 +5104,11 @@ open class TaskManagementAPI {
   "division" : "{}",
   "skills" : [ {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   }, {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -5192,9 +5220,11 @@ open class TaskManagementAPI {
   "division" : "{}",
   "skills" : [ {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   }, {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -5304,9 +5334,11 @@ open class TaskManagementAPI {
   "division" : "{}",
   "skills" : [ {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   }, {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -5536,9 +5568,11 @@ open class TaskManagementAPI {
     "division" : "{}",
     "skills" : [ {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     }, {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -5594,9 +5628,11 @@ open class TaskManagementAPI {
     "division" : "{}",
     "skills" : [ {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     }, {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     } ],
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -6091,9 +6127,11 @@ open class TaskManagementAPI {
   "serviceLevelTarget" : 2,
   "defaultSkills" : [ {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   }, {
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "id" : "id"
   } ],
   "defaultPriority" : 5,
@@ -6216,9 +6254,11 @@ open class TaskManagementAPI {
     "serviceLevelTarget" : 2,
     "defaultSkills" : [ {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     }, {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     } ],
     "defaultPriority" : 5,
@@ -6289,9 +6329,11 @@ open class TaskManagementAPI {
     "serviceLevelTarget" : 2,
     "defaultSkills" : [ {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     }, {
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "id" : "id"
     } ],
     "defaultPriority" : 5,

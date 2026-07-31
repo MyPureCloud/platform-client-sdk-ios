@@ -701,4 +701,4 @@ ProcessAutomationAPI.putProcessautomationTrigger(triggerId: triggerId, body: bod
 [**Trigger**](Trigger)
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_

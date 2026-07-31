@@ -740,6 +740,51 @@ open class UsersAPI {
         return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
+    /**
+     Delete a verifier
+     
+     - parameter verifierId: (path) Verifier ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteUsersMeVerifier(verifierId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteUsersMeVerifierWithRequestBuilder(verifierId: verifierId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a verifier
+     - DELETE /api/v2/users/me/verifiers/{verifierId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter verifierId: (path) Verifier ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteUsersMeVerifierWithRequestBuilder(verifierId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/users/me/verifiers/{verifierId}"
+        let verifierIdPreEscape = "\(verifierId)"
+        let verifierIdPostEscape = verifierIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{verifierId}", with: verifierIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
     /**
      Clear self associated station
      
@@ -8518,15 +8563,19 @@ open class UsersAPI {
   "total" : 0,
   "entities" : [ {
     "default" : true,
+    "credential" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
+    "type" : "TOTP",
     "enabled" : true
   }, {
     "default" : true,
+    "credential" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
+    "type" : "TOTP",
     "enabled" : true
   } ],
   "selfUri" : "https://openapi-generator.tech"
@@ -9984,9 +10033,9 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 5,
+  "total" : 1,
   "pageCount" : 5,
-  "pageNumber" : 1,
+  "pageNumber" : 6,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
@@ -10039,7 +10088,7 @@ open class UsersAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 6,
+  "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -10189,9 +10238,9 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 5,
+  "total" : 1,
   "pageCount" : 5,
-  "pageNumber" : 1,
+  "pageNumber" : 6,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
@@ -10244,7 +10293,7 @@ open class UsersAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 6,
+  "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -20244,6 +20293,7 @@ open class UsersAPI {
   "token" : "{}",
   "outOfOffice" : "{}",
   "routingSkills" : [ {
+    "division" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -20251,6 +20301,7 @@ open class UsersAPI {
     "state" : "active",
     "version" : "version"
   }, {
+    "division" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -20377,6 +20428,71 @@ open class UsersAPI {
         ])
 
         let requestBuilder: RequestBuilder<UserMe>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get a list of my verifiers
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersMeVerifiers(completion: @escaping ((_ data: VerifierEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersMeVerifiersWithRequestBuilder()
+        requestBuilder.execute { (response: Response<VerifierEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of my verifiers
+     - GET /api/v2/users/me/verifiers
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 0,
+  "entities" : [ {
+    "default" : true,
+    "credential" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "type" : "TOTP",
+    "enabled" : true
+  }, {
+    "default" : true,
+    "credential" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "type" : "TOTP",
+    "enabled" : true
+  } ],
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<VerifierEntityListing> 
+     */
+    open class func getUsersMeVerifiersWithRequestBuilder() -> RequestBuilder<VerifierEntityListing> {        
+        let path = "/api/v2/users/me/verifiers"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<VerifierEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -26356,6 +26472,219 @@ open class UsersAPI {
     
     
     /**
+     Add a new TOTP verifier
+     
+     - parameter body: (body) Verifier 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsersMeVerifiersTotp(body: CreateVerifierRequest, completion: @escaping ((_ data: CreateVerifierResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postUsersMeVerifiersTotpWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<CreateVerifierResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add a new TOTP verifier
+     - POST /api/v2/users/me/verifiers/totp
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "default" : true,
+  "keyUri" : "keyUri",
+  "name" : "name",
+  "id" : "id",
+  "type" : "TOTP",
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter body: (body) Verifier 
+
+     - returns: RequestBuilder<CreateVerifierResponse> 
+     */
+    open class func postUsersMeVerifiersTotpWithRequestBuilder(body: CreateVerifierRequest) -> RequestBuilder<CreateVerifierResponse> {        
+        let path = "/api/v2/users/me/verifiers/totp"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CreateVerifierResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Validate a TOTP verifier
+     
+     - parameter verifierId: (path) Verifier ID 
+     - parameter body: (body) Verifier Validate 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsersMeVerifiersTotpVerifierId(verifierId: String, body: ValidateVerifierRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postUsersMeVerifiersTotpVerifierIdWithRequestBuilder(verifierId: verifierId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Validate a TOTP verifier
+     - POST /api/v2/users/me/verifiers/totp/{verifierId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter verifierId: (path) Verifier ID 
+     - parameter body: (body) Verifier Validate 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postUsersMeVerifiersTotpVerifierIdWithRequestBuilder(verifierId: String, body: ValidateVerifierRequest) -> RequestBuilder<Void> {        
+        var path = "/api/v2/users/me/verifiers/totp/{verifierId}"
+        let verifierIdPreEscape = "\(verifierId)"
+        let verifierIdPostEscape = verifierIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{verifierId}", with: verifierIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Finish WebAuthn verifier registration
+     
+     - parameter body: (body) WebAuthn registration result 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsersMeVerifiersWebauthnRegister(body: FinishWebAuthnRegistrationRequest, completion: @escaping ((_ data: Verifier?,_ error: Error?) -> Void)) {
+        let requestBuilder = postUsersMeVerifiersWebauthnRegisterWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Verifier>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Finish WebAuthn verifier registration
+     - POST /api/v2/users/me/verifiers/webauthn/register
+     - Completes registration of a new WebAuthn authenticator by submitting the credential creation response produced by navigator.credentials.create().
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "default" : true,
+  "credential" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "type" : "TOTP",
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter body: (body) WebAuthn registration result 
+
+     - returns: RequestBuilder<Verifier> 
+     */
+    open class func postUsersMeVerifiersWebauthnRegisterWithRequestBuilder(body: FinishWebAuthnRegistrationRequest) -> RequestBuilder<Verifier> {        
+        let path = "/api/v2/users/me/verifiers/webauthn/register"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Verifier>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    /**
+     Begin WebAuthn verifier registration
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsersMeVerifiersWebauthnRegisterOptions(completion: @escaping ((_ data: BeginWebAuthnRegistrationResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postUsersMeVerifiersWebauthnRegisterOptionsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<BeginWebAuthnRegistrationResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Begin WebAuthn verifier registration
+     - POST /api/v2/users/me/verifiers/webauthn/register/options
+     - Returns the public key credential creation options the client passes to navigator.credentials.create() to start registering a new WebAuthn authenticator.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "publicKey" : "{}"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<BeginWebAuthnRegistrationResponse> 
+     */
+    open class func postUsersMeVerifiersWebauthnRegisterOptionsWithRequestBuilder() -> RequestBuilder<BeginWebAuthnRegistrationResponse> {        
+        let path = "/api/v2/users/me/verifiers/webauthn/register/options"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BeginWebAuthnRegistrationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Search users
      
      - parameter body: (body) Search request options 
@@ -29244,9 +29573,11 @@ open class UsersAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "default" : true,
+  "credential" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "id" : "id",
+  "type" : "TOTP",
   "enabled" : true
 }, statusCode=200}]
      
@@ -29337,6 +29668,71 @@ open class UsersAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update a verifier
+     
+     - parameter verifierId: (path) Verifier ID 
+     - parameter body: (body) Verifier Update 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putUsersMeVerifier(verifierId: String, body: UpdateVerifierRequest, completion: @escaping ((_ data: Verifier?,_ error: Error?) -> Void)) {
+        let requestBuilder = putUsersMeVerifierWithRequestBuilder(verifierId: verifierId, body: body)
+        requestBuilder.execute { (response: Response<Verifier>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a verifier
+     - PUT /api/v2/users/me/verifiers/{verifierId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "default" : true,
+  "credential" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "type" : "TOTP",
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter verifierId: (path) Verifier ID 
+     - parameter body: (body) Verifier Update 
+
+     - returns: RequestBuilder<Verifier> 
+     */
+    open class func putUsersMeVerifierWithRequestBuilder(verifierId: String, body: UpdateVerifierRequest) -> RequestBuilder<Verifier> {        
+        var path = "/api/v2/users/me/verifiers/{verifierId}"
+        let verifierIdPreEscape = "\(verifierId)"
+        let verifierIdPostEscape = verifierIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{verifierId}", with: verifierIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Verifier>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

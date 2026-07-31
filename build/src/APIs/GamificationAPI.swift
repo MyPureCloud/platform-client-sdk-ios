@@ -3674,6 +3674,7 @@ open class GamificationAPI {
     "punctualityEvents" : [ {
       "activityCodeId" : "activityCodeId",
       "activityCode" : "activityCode",
+      "activityColor" : "activityColor",
       "dateStart" : "2000-01-23T04:56:07.000+00:00",
       "lengthMinutes" : 5,
       "activityName" : "activityName",
@@ -3686,6 +3687,7 @@ open class GamificationAPI {
     }, {
       "activityCodeId" : "activityCodeId",
       "activityCode" : "activityCode",
+      "activityColor" : "activityColor",
       "dateStart" : "2000-01-23T04:56:07.000+00:00",
       "lengthMinutes" : 5,
       "activityName" : "activityName",
@@ -3727,6 +3729,7 @@ open class GamificationAPI {
     "punctualityEvents" : [ {
       "activityCodeId" : "activityCodeId",
       "activityCode" : "activityCode",
+      "activityColor" : "activityColor",
       "dateStart" : "2000-01-23T04:56:07.000+00:00",
       "lengthMinutes" : 5,
       "activityName" : "activityName",
@@ -3739,6 +3742,7 @@ open class GamificationAPI {
     }, {
       "activityCodeId" : "activityCodeId",
       "activityCode" : "activityCode",
+      "activityColor" : "activityColor",
       "dateStart" : "2000-01-23T04:56:07.000+00:00",
       "lengthMinutes" : 5,
       "activityName" : "activityName",
@@ -4484,6 +4488,7 @@ open class GamificationAPI {
     "punctualityEvents" : [ {
       "activityCodeId" : "activityCodeId",
       "activityCode" : "activityCode",
+      "activityColor" : "activityColor",
       "dateStart" : "2000-01-23T04:56:07.000+00:00",
       "lengthMinutes" : 5,
       "activityName" : "activityName",
@@ -4496,6 +4501,7 @@ open class GamificationAPI {
     }, {
       "activityCodeId" : "activityCodeId",
       "activityCode" : "activityCode",
+      "activityColor" : "activityColor",
       "dateStart" : "2000-01-23T04:56:07.000+00:00",
       "lengthMinutes" : 5,
       "activityName" : "activityName",
@@ -4537,6 +4543,7 @@ open class GamificationAPI {
     "punctualityEvents" : [ {
       "activityCodeId" : "activityCodeId",
       "activityCode" : "activityCode",
+      "activityColor" : "activityColor",
       "dateStart" : "2000-01-23T04:56:07.000+00:00",
       "lengthMinutes" : 5,
       "activityName" : "activityName",
@@ -4549,6 +4556,7 @@ open class GamificationAPI {
     }, {
       "activityCodeId" : "activityCodeId",
       "activityCode" : "activityCode",
+      "activityColor" : "activityColor",
       "dateStart" : "2000-01-23T04:56:07.000+00:00",
       "lengthMinutes" : 5,
       "activityName" : "activityName",

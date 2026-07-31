@@ -256,6 +256,154 @@ open class ResponseManagementAPI {
      - parameter libraryId: (path) Library ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
+    open class func getResponsemanagementLibrariesDivisionview(libraryId: String, completion: @escaping ((_ data: LibraryDivisionView?,_ error: Error?) -> Void)) {
+        let requestBuilder = getResponsemanagementLibrariesDivisionviewWithRequestBuilder(libraryId: libraryId)
+        requestBuilder.execute { (response: Response<LibraryDivisionView>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get details about an existing response library.
+     - GET /api/v2/responsemanagement/libraries/divisionviews/{libraryId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter libraryId: (path) Library ID 
+
+     - returns: RequestBuilder<LibraryDivisionView> 
+     */
+    open class func getResponsemanagementLibrariesDivisionviewWithRequestBuilder(libraryId: String) -> RequestBuilder<LibraryDivisionView> {        
+        var path = "/api/v2/responsemanagement/libraries/divisionviews/{libraryId}"
+        let libraryIdPreEscape = "\(libraryId)"
+        let libraryIdPostEscape = libraryIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{libraryId}", with: libraryIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LibraryDivisionView>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    public enum MessagingTemplateFilter_getResponsemanagementLibrariesDivisionviews: String { 
+        case whatsapp = "whatsapp"
+    }
+    
+    
+    
+    
+    /**
+     Gets a list of existing response libraries.
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter messagingTemplateFilter: (query) Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)
+     - parameter libraryPrefix: (query) Returns a list of libraries that contain the prefix provided (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getResponsemanagementLibrariesDivisionviews(pageNumber: Int? = nil, pageSize: Int? = nil, messagingTemplateFilter: MessagingTemplateFilter_getResponsemanagementLibrariesDivisionviews? = nil, libraryPrefix: String? = nil, completion: @escaping ((_ data: LibraryDivisionViewEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getResponsemanagementLibrariesDivisionviewsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, messagingTemplateFilter: messagingTemplateFilter, libraryPrefix: libraryPrefix)
+        requestBuilder.execute { (response: Response<LibraryDivisionViewEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets a list of existing response libraries.
+     - GET /api/v2/responsemanagement/libraries/divisionviews
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter messagingTemplateFilter: (query) Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)
+     - parameter libraryPrefix: (query) Returns a list of libraries that contain the prefix provided (optional)
+
+     - returns: RequestBuilder<LibraryDivisionViewEntityListing> 
+     */
+    open class func getResponsemanagementLibrariesDivisionviewsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, messagingTemplateFilter: MessagingTemplateFilter_getResponsemanagementLibrariesDivisionviews? = nil, libraryPrefix: String? = nil) -> RequestBuilder<LibraryDivisionViewEntityListing> {        
+        let path = "/api/v2/responsemanagement/libraries/divisionviews"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "messagingTemplateFilter": messagingTemplateFilter?.rawValue, 
+            "libraryPrefix": libraryPrefix
+        ])
+
+        let requestBuilder: RequestBuilder<LibraryDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get details about an existing response library.
+     
+     - parameter libraryId: (path) Library ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
     open class func getResponsemanagementLibrary(libraryId: String, completion: @escaping ((_ data: Library?,_ error: Error?) -> Void)) {
         let requestBuilder = getResponsemanagementLibraryWithRequestBuilder(libraryId: libraryId)
         requestBuilder.execute { (response: Response<Library>?, error) -> Void in
@@ -738,6 +886,85 @@ open class ResponseManagementAPI {
         ])
 
         let requestBuilder: RequestBuilder<ResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get details about an existing response.
+     
+     - parameter responseId: (path) Response ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getResponsemanagementResponsesDivisionview(responseId: String, completion: @escaping ((_ data: ResponseDivisionView?,_ error: Error?) -> Void)) {
+        let requestBuilder = getResponsemanagementResponsesDivisionviewWithRequestBuilder(responseId: responseId)
+        requestBuilder.execute { (response: Response<ResponseDivisionView>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get details about an existing response.
+     - GET /api/v2/responsemanagement/responses/divisionviews/{responseId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "substitutionsSchema" : "{}",
+  "responseType" : "MessagingTemplate",
+  "substitutions" : [ {
+    "defaultValue" : "defaultValue",
+    "description" : "description",
+    "id" : "id"
+  }, {
+    "defaultValue" : "defaultValue",
+    "description" : "description",
+    "id" : "id"
+  } ],
+  "form" : "{}",
+  "messagingTemplate" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "libraries" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter responseId: (path) Response ID 
+
+     - returns: RequestBuilder<ResponseDivisionView> 
+     */
+    open class func getResponsemanagementResponsesDivisionviewWithRequestBuilder(responseId: String) -> RequestBuilder<ResponseDivisionView> {        
+        var path = "/api/v2/responsemanagement/responses/divisionviews/{responseId}"
+        let responseIdPreEscape = "\(responseId)"
+        let responseIdPostEscape = responseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{responseId}", with: responseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ResponseDivisionView>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1340,6 +1567,58 @@ open class ResponseManagementAPI {
         ])
 
         let requestBuilder: RequestBuilder<ModelResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Query responses
+     
+     - parameter body: (body) Response 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postResponsemanagementResponsesDivisionviewsQuery(body: ResponseQueryRequest, completion: @escaping ((_ data: ResponseDivisionViewQueryResults?,_ error: Error?) -> Void)) {
+        let requestBuilder = postResponsemanagementResponsesDivisionviewsQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ResponseDivisionViewQueryResults>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query responses
+     - POST /api/v2/responsemanagement/responses/divisionviews/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "results" : "{}"
+}, statusCode=200}]
+     
+     - parameter body: (body) Response 
+
+     - returns: RequestBuilder<ResponseDivisionViewQueryResults> 
+     */
+    open class func postResponsemanagementResponsesDivisionviewsQueryWithRequestBuilder(body: ResponseQueryRequest) -> RequestBuilder<ResponseDivisionViewQueryResults> {        
+        let path = "/api/v2/responsemanagement/responses/divisionviews/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ResponseDivisionViewQueryResults>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

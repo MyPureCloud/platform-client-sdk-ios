@@ -5,11 +5,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteCasemanagementCase**](CaseManagementAPI#deleteCasemanagementCase) | Delete a Case. |
+| [**deleteCasemanagementCaseCommentsMeCommentId**](CaseManagementAPI#deleteCasemanagementCaseCommentsMeCommentId) | Delete my Comment. |
 | [**deleteCasemanagementCaseplan**](CaseManagementAPI#deleteCasemanagementCaseplan) | Delete a Caseplan. |
 | [**deleteCasemanagementCaseplanDataschema**](CaseManagementAPI#deleteCasemanagementCaseplanDataschema) | Remove a data schema from a draft Caseplan. |
 | [**getCasemanagementCase**](CaseManagementAPI#getCasemanagementCase) | Get a Case. |
 | [**getCasemanagementCaseAssociation**](CaseManagementAPI#getCasemanagementCaseAssociation) | Get a Case Association. |
 | [**getCasemanagementCaseAssociations**](CaseManagementAPI#getCasemanagementCaseAssociations) | Get a list of Case associations for the Case. |
+| [**getCasemanagementCaseComment**](CaseManagementAPI#getCasemanagementCaseComment) | Get a Comment. |
+| [**getCasemanagementCaseComments**](CaseManagementAPI#getCasemanagementCaseComments) | Get comments for a Case. |
 | [**getCasemanagementCaseStage**](CaseManagementAPI#getCasemanagementCaseStage) | Get a Stage. |
 | [**getCasemanagementCaseStageStep**](CaseManagementAPI#getCasemanagementCaseStageStep) | Get a Step. |
 | [**getCasemanagementCaseStageSteps**](CaseManagementAPI#getCasemanagementCaseStageSteps) | Get a list of Steps. |
@@ -33,6 +36,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchCasemanagementCaseplanStageplan**](CaseManagementAPI#patchCasemanagementCaseplanStageplan) | Update the attributes of a Stageplan. |
 | [**patchCasemanagementCaseplanStageplanStepplan**](CaseManagementAPI#patchCasemanagementCaseplanStageplanStepplan) | Update the attributes of a Stepplan. |
 | [**postCasemanagementCaseAssociations**](CaseManagementAPI#postCasemanagementCaseAssociations) | Create a Case association. |
+| [**postCasemanagementCaseComments**](CaseManagementAPI#postCasemanagementCaseComments) | Add a comment to a Case. |
 | [**postCasemanagementCaseTerminateJobs**](CaseManagementAPI#postCasemanagementCaseTerminateJobs) | Create a Terminate Job for a Case. |
 | [**postCasemanagementCaseplanDataschemas**](CaseManagementAPI#postCasemanagementCaseplanDataschemas) | Add a data schema to a draft Caseplan. |
 | [**postCasemanagementCaseplanPublish**](CaseManagementAPI#postCasemanagementCaseplanPublish) | Publish Caseplan. |
@@ -89,6 +93,58 @@ CaseManagementAPI.deleteCasemanagementCase(caseId: caseId) { (response, error) i
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **caseId** | **String**| Case identifier. | |
+
+
+### Return type
+
+[**JSON**](JSON)
+
+
+## deleteCasemanagementCaseCommentsMeCommentId
+
+
+
+> [JSON](JSON) deleteCasemanagementCaseCommentsMeCommentId(caseId, commentId)
+
+Delete my Comment.
+
+
+
+Wraps DELETE /api/v2/casemanagement/cases/{caseId}/comments/me/{commentId}  
+
+Requires ANY permissions: 
+
+* caseManagement:commentSelf:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let caseId: String = "" // Case identifier.
+let commentId: String = "" // Comment identifier.
+
+// Code example
+CaseManagementAPI.deleteCasemanagementCaseCommentsMeCommentId(caseId: caseId, commentId: commentId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("CaseManagementAPI.deleteCasemanagementCaseCommentsMeCommentId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **caseId** | **String**| Case identifier. | |
+| **commentId** | **String**| Comment identifier. | |
 
 
 ### Return type
@@ -223,7 +279,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let caseId: String = "" // Case identifier.
-let expands: CaseManagementAPI.Expands_getCasemanagementCase = CaseManagementAPI.Expands_getCasemanagementCase.enummember // Fields to expand.
+let expands: [String] = [""] // Attributes to expand. Comma-separated if more than one.
 
 // Code example
 CaseManagementAPI.getCasemanagementCase(caseId: caseId, expands: expands) { (response, error) in
@@ -242,7 +298,7 @@ CaseManagementAPI.getCasemanagementCase(caseId: caseId, expands: expands) { (res
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **caseId** | **String**| Case identifier. | |
-| **expands** | **String**| Fields to expand. | [optional]<br />**Values**: caseplan ("caseplan") |
+| **expands** | [**[String]**](String)| Attributes to expand. Comma-separated if more than one. | [optional]<br />**Values**: caseplan ("caseplan"), owner ("owner"), modifiedby ("modifiedBy"), externalcontact ("externalContact"), customerintent ("customerIntent") |
 
 
 ### Return type
@@ -356,6 +412,114 @@ CaseManagementAPI.getCasemanagementCaseAssociations(caseId: caseId, before: befo
 ### Return type
 
 [**CaseAssociationListing**](CaseAssociationListing)
+
+
+## getCasemanagementCaseComment
+
+
+
+> [Comment](Comment) getCasemanagementCaseComment(caseId, commentId)
+
+Get a Comment.
+
+
+
+Wraps GET /api/v2/casemanagement/cases/{caseId}/comments/{commentId}  
+
+Requires ANY permissions: 
+
+* caseManagement:comment:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let caseId: String = "" // Case identifier.
+let commentId: String = "" // Comment identifier.
+
+// Code example
+CaseManagementAPI.getCasemanagementCaseComment(caseId: caseId, commentId: commentId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("CaseManagementAPI.getCasemanagementCaseComment was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **caseId** | **String**| Case identifier. | |
+| **commentId** | **String**| Comment identifier. | |
+
+
+### Return type
+
+[**Comment**](Comment)
+
+
+## getCasemanagementCaseComments
+
+
+
+> [CommentListing](CommentListing) getCasemanagementCaseComments(caseId, after, pageSize, sortOrder)
+
+Get comments for a Case.
+
+
+
+Wraps GET /api/v2/casemanagement/cases/{caseId}/comments  
+
+Requires ANY permissions: 
+
+* caseManagement:comment:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let caseId: String = "" // Case identifier.
+let after: String = "" // Cursor pointing to the end of the previously returned page of comments.
+let pageSize: Int = 0 // Number of comments to return. Maximum is 100.
+let sortOrder: CaseManagementAPI.SortOrder_getCasemanagementCaseComments = CaseManagementAPI.SortOrder_getCasemanagementCaseComments.enummember // Ascending or descending sort order.
+
+// Code example
+CaseManagementAPI.getCasemanagementCaseComments(caseId: caseId, after: after, pageSize: pageSize, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("CaseManagementAPI.getCasemanagementCaseComments was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **caseId** | **String**| Case identifier. | |
+| **after** | **String**| Cursor pointing to the end of the previously returned page of comments. | [optional] |
+| **pageSize** | **Int**| Number of comments to return. Maximum is 100. | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order. | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
+
+
+### Return type
+
+[**CommentListing**](CommentListing)
 
 
 ## getCasemanagementCaseStage
@@ -1211,7 +1375,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let referenceId: String = "" // Case reference.
-let expands: CaseManagementAPI.Expands_getCasemanagementCasesReference = CaseManagementAPI.Expands_getCasemanagementCasesReference.enummember // Fields to expand.
+let expands: [String] = [""] // Attributes to expand. Comma-separated if more than one.
 
 // Code example
 CaseManagementAPI.getCasemanagementCasesReference(referenceId: referenceId, expands: expands) { (response, error) in
@@ -1230,7 +1394,7 @@ CaseManagementAPI.getCasemanagementCasesReference(referenceId: referenceId, expa
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **referenceId** | **String**| Case reference. | |
-| **expands** | **String**| Fields to expand. | [optional]<br />**Values**: caseplan ("caseplan") |
+| **expands** | [**[String]**](String)| Attributes to expand. Comma-separated if more than one. | [optional]<br />**Values**: caseplan ("caseplan"), owner ("owner"), modifiedby ("modifiedBy"), externalcontact ("externalContact"), customerintent ("customerIntent") |
 
 
 ### Return type
@@ -1606,6 +1770,58 @@ CaseManagementAPI.postCasemanagementCaseAssociations(caseId: caseId, body: body)
 ### Return type
 
 [**CaseAssociation**](CaseAssociation)
+
+
+## postCasemanagementCaseComments
+
+
+
+> [Comment](Comment) postCasemanagementCaseComments(caseId, body)
+
+Add a comment to a Case.
+
+
+
+Wraps POST /api/v2/casemanagement/cases/{caseId}/comments  
+
+Requires ANY permissions: 
+
+* caseManagement:comment:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let caseId: String = "" // Case identifier.
+let body: CommentCreate = new CommentCreate(...) // Comment create request.
+
+// Code example
+CaseManagementAPI.postCasemanagementCaseComments(caseId: caseId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("CaseManagementAPI.postCasemanagementCaseComments was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **caseId** | **String**| Case identifier. | |
+| **body** | [**CommentCreate**](CommentCreate)| Comment create request. | |
+
+
+### Return type
+
+[**Comment**](Comment)
 
 
 ## postCasemanagementCaseTerminateJobs
@@ -2118,4 +2334,4 @@ CaseManagementAPI.putCasemanagementCaseplanIntakesettings(caseplanId: caseplanId
 [**IntakeSettingsListing**](IntakeSettingsListing)
 
 
-_PureCloudPlatformClientV2@199.0.0_
+_PureCloudPlatformClientV2@200.0.0_
