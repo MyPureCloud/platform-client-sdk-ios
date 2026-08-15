@@ -178,6 +178,7 @@ open class GeneralDataProtectionRegulationAPI {
         case instagram = "INSTAGRAM"
         case facebook = "FACEBOOK"
         case appleMessages = "APPLE_MESSAGES"
+        case whatsapp = "WHATSAPP"
         case externalId = "EXTERNAL_ID"
     }
     

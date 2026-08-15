@@ -2920,6 +2920,7 @@ open class SearchAPI {
         case microsoftTeams = "MicrosoftTeams"
         case zoomPhone = "ZoomPhone"
         case eightByEight = "EightByEight"
+        case ringCentral = "RingCentral"
     }
     
     

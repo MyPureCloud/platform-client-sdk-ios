@@ -17177,10 +17177,56 @@ open class ArchitectAPI {
   "downloadUrl" : "downloadUrl",
   "messages" : [ {
     "dateTime" : "2000-01-23T04:56:07.000+00:00",
+    "details" : [ {
+      "responseBody" : "responseBody",
+      "method" : "method",
+      "requestBody" : "requestBody",
+      "errorMessage" : "errorMessage",
+      "errorCode" : "errorCode",
+      "correlationId" : "correlationId",
+      "type" : "NetworkDiagnostic",
+      "url" : "url",
+      "statusMessage" : "statusMessage",
+      "statusCode" : 0
+    }, {
+      "responseBody" : "responseBody",
+      "method" : "method",
+      "requestBody" : "requestBody",
+      "errorMessage" : "errorMessage",
+      "errorCode" : "errorCode",
+      "correlationId" : "correlationId",
+      "type" : "NetworkDiagnostic",
+      "url" : "url",
+      "statusMessage" : "statusMessage",
+      "statusCode" : 0
+    } ],
     "text" : "text",
     "type" : "Error"
   }, {
     "dateTime" : "2000-01-23T04:56:07.000+00:00",
+    "details" : [ {
+      "responseBody" : "responseBody",
+      "method" : "method",
+      "requestBody" : "requestBody",
+      "errorMessage" : "errorMessage",
+      "errorCode" : "errorCode",
+      "correlationId" : "correlationId",
+      "type" : "NetworkDiagnostic",
+      "url" : "url",
+      "statusMessage" : "statusMessage",
+      "statusCode" : 0
+    }, {
+      "responseBody" : "responseBody",
+      "method" : "method",
+      "requestBody" : "requestBody",
+      "errorMessage" : "errorMessage",
+      "errorCode" : "errorCode",
+      "correlationId" : "correlationId",
+      "type" : "NetworkDiagnostic",
+      "url" : "url",
+      "statusMessage" : "statusMessage",
+      "statusCode" : 0
+    } ],
     "text" : "text",
     "type" : "Error"
   } ],
@@ -17768,10 +17814,56 @@ open class ArchitectAPI {
   "selfUri" : "https://openapi-generator.tech",
   "messages" : [ {
     "dateTime" : "2000-01-23T04:56:07.000+00:00",
+    "details" : [ {
+      "responseBody" : "responseBody",
+      "method" : "method",
+      "requestBody" : "requestBody",
+      "errorMessage" : "errorMessage",
+      "errorCode" : "errorCode",
+      "correlationId" : "correlationId",
+      "type" : "NetworkDiagnostic",
+      "url" : "url",
+      "statusMessage" : "statusMessage",
+      "statusCode" : 0
+    }, {
+      "responseBody" : "responseBody",
+      "method" : "method",
+      "requestBody" : "requestBody",
+      "errorMessage" : "errorMessage",
+      "errorCode" : "errorCode",
+      "correlationId" : "correlationId",
+      "type" : "NetworkDiagnostic",
+      "url" : "url",
+      "statusMessage" : "statusMessage",
+      "statusCode" : 0
+    } ],
     "text" : "text",
     "type" : "Error"
   }, {
     "dateTime" : "2000-01-23T04:56:07.000+00:00",
+    "details" : [ {
+      "responseBody" : "responseBody",
+      "method" : "method",
+      "requestBody" : "requestBody",
+      "errorMessage" : "errorMessage",
+      "errorCode" : "errorCode",
+      "correlationId" : "correlationId",
+      "type" : "NetworkDiagnostic",
+      "url" : "url",
+      "statusMessage" : "statusMessage",
+      "statusCode" : 0
+    }, {
+      "responseBody" : "responseBody",
+      "method" : "method",
+      "requestBody" : "requestBody",
+      "errorMessage" : "errorMessage",
+      "errorCode" : "errorCode",
+      "correlationId" : "correlationId",
+      "type" : "NetworkDiagnostic",
+      "url" : "url",
+      "statusMessage" : "statusMessage",
+      "statusCode" : 0
+    } ],
     "text" : "text",
     "type" : "Error"
   } ],

@@ -14190,12 +14190,19 @@ open class RecordingAPI {
      - parameter body: (body)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putRecordingsDeletionprotection(protect: Bool? = nil, body: ConversationDeletionProtectionQuery? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func putRecordingsDeletionprotection(protect: Bool? = nil, body: ConversationDeletionProtectionQuery? = nil, completion: @escaping ((_ data: ManageDeleteProtectionResult?,_ error: Error?) -> Void)) {
         let requestBuilder = putRecordingsDeletionprotectionWithRequestBuilder(protect: protect, body: body)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
+        requestBuilder.execute { (response: Response<ManageDeleteProtectionResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
                 completion(nil, error)
             }
         }
@@ -14207,13 +14214,30 @@ open class RecordingAPI {
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "failedUpdates" : [ {
+    "errorMessage" : "errorMessage",
+    "errorCode" : "errorCode",
+    "conversation" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }
+  }, {
+    "errorMessage" : "errorMessage",
+    "errorCode" : "errorCode",
+    "conversation" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }
+  } ]
+}, statusCode=200}]
      
      - parameter protect: (query) Check for apply, uncheck for revoke (each action requires the respective permission) (optional)
      - parameter body: (body)  (optional)
 
-     - returns: RequestBuilder<Void> 
+     - returns: RequestBuilder<ManageDeleteProtectionResult> 
      */
-    open class func putRecordingsDeletionprotectionWithRequestBuilder(protect: Bool? = nil, body: ConversationDeletionProtectionQuery? = nil) -> RequestBuilder<Void> {        
+    open class func putRecordingsDeletionprotectionWithRequestBuilder(protect: Bool? = nil, body: ConversationDeletionProtectionQuery? = nil) -> RequestBuilder<ManageDeleteProtectionResult> {        
         let path = "/api/v2/recordings/deletionprotection"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -14223,7 +14247,7 @@ open class RecordingAPI {
             "protect": protect
         ])
 
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ManageDeleteProtectionResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

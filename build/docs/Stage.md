@@ -16,9 +16,10 @@
 | **modifiedBy** | [**UserReference**](UserReference) | The ID of the User who modified the Stage. | [optional] |
 | **version** | **Int** | The version of the Stage. | [optional] |
 | **status** | **String** | The Status of the Stage. | [optional] |
+| **failureReason** | [**FailureReason**](FailureReason) | The reason the Stage failed, if applicable. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 | **_case** | [**CaseReference**](CaseReference) | The parent Case of the Stage. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@200.0.0_
+_PureCloudPlatformClientV2@201.0.0_

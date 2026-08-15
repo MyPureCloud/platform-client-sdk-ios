@@ -1110,4 +1110,4 @@ WebDeploymentsAPI.putWebdeploymentsDeploymentIdentityresolution(deploymentId: de
 [**DeploymentIdentityResolutionConfig**](DeploymentIdentityResolutionConfig)
 
 
-_PureCloudPlatformClientV2@200.0.0_
+_PureCloudPlatformClientV2@201.0.0_

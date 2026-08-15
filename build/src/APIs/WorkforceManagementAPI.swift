@@ -919,7 +919,7 @@ open class WorkforceManagementAPI {
     
     
     /**
-     Deletes a time off limit object
+     Deletes a time off limit object. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId} instead
      
      - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffLimitId: (path) The ID of the time off limit object to delete 
@@ -937,7 +937,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     Deletes a time off limit object
+     Deletes a time off limit object. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId} instead
      - DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}
      - OAuth:
        - type: oauth2
@@ -971,7 +971,7 @@ open class WorkforceManagementAPI {
     
     
     /**
-     Deletes a time off plan
+     Deletes a time off plan. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId} instead
      
      - parameter managementUnitId: (path) The ID of the management unit 
      - parameter timeOffPlanId: (path) The ID of the time off plan to delete 
@@ -989,7 +989,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     Deletes a time off plan
+     Deletes a time off plan. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId} instead
      - DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}
      - OAuth:
        - type: oauth2
@@ -3915,6 +3915,204 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    /**
+     Get status of the session export job
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportForecastJob(businessUnitId: String, jobId: String, completion: @escaping ((_ data: AggregatedSessionExportJobStatus?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportForecastJobWithRequestBuilder(businessUnitId: businessUnitId, jobId: jobId)
+        requestBuilder.execute { (response: Response<AggregatedSessionExportJobStatus>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get status of the session export job
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/export/forecast/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The job ID 
+
+     - returns: RequestBuilder<AggregatedSessionExportJobStatus> 
+     */
+    open class func getWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportForecastJobWithRequestBuilder(businessUnitId: String, jobId: String) -> RequestBuilder<AggregatedSessionExportJobStatus> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/export/forecast/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AggregatedSessionExportJobStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get status of the historical export job
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportHistoricalJob(businessUnitId: String, jobId: String, completion: @escaping ((_ data: AggregatedHistoricalExportJobStatus?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportHistoricalJobWithRequestBuilder(businessUnitId: businessUnitId, jobId: jobId)
+        requestBuilder.execute { (response: Response<AggregatedHistoricalExportJobStatus>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get status of the historical export job
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/export/historical/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The job ID 
+
+     - returns: RequestBuilder<AggregatedHistoricalExportJobStatus> 
+     */
+    open class func getWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportHistoricalJobWithRequestBuilder(businessUnitId: String, jobId: String) -> RequestBuilder<AggregatedHistoricalExportJobStatus> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/export/historical/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AggregatedHistoricalExportJobStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get status of the snapshot export job
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportSnapshotJob(businessUnitId: String, jobId: String, completion: @escaping ((_ data: AggregatedSnapshotExportJobStatus?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportSnapshotJobWithRequestBuilder(businessUnitId: businessUnitId, jobId: jobId)
+        requestBuilder.execute { (response: Response<AggregatedSnapshotExportJobStatus>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get status of the snapshot export job
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/export/snapshot/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The job ID 
+
+     - returns: RequestBuilder<AggregatedSnapshotExportJobStatus> 
+     */
+    open class func getWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportSnapshotJobWithRequestBuilder(businessUnitId: String, jobId: String) -> RequestBuilder<AggregatedSnapshotExportJobStatus> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/export/snapshot/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AggregatedSnapshotExportJobStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
     public enum Feature_getWorkforcemanagementBusinessunitManagementunits: String { 
         case agentHistoricalAdherence = "AgentHistoricalAdherence"
         case agentHistoricalAdherenceConformance = "AgentHistoricalAdherenceConformance"
@@ -3953,6 +4151,8 @@ open class WorkforceManagementAPI {
         case capacityPlanForecastInputs = "CapacityPlanForecastInputs"
         case capacityPlanPerformancePrediction = "CapacityPlanPerformancePrediction"
         case continuousForecast = "ContinuousForecast"
+        case predictionsForecastingScenarioJobs = "PredictionsForecastingScenarioJobs"
+        case predictionsForecastingScenarios = "PredictionsForecastingScenarios"
         case historicalAdherence = "HistoricalAdherence"
         case historicalShrinkage = "HistoricalShrinkage"
         case intradayMonitoring = "IntradayMonitoring"
@@ -8531,6 +8731,8 @@ open class WorkforceManagementAPI {
         case capacityPlanForecastInputs = "CapacityPlanForecastInputs"
         case capacityPlanPerformancePrediction = "CapacityPlanPerformancePrediction"
         case continuousForecast = "ContinuousForecast"
+        case predictionsForecastingScenarioJobs = "PredictionsForecastingScenarioJobs"
+        case predictionsForecastingScenarios = "PredictionsForecastingScenarios"
         case historicalAdherence = "HistoricalAdherence"
         case historicalShrinkage = "HistoricalShrinkage"
         case intradayMonitoring = "IntradayMonitoring"
@@ -9908,7 +10110,7 @@ open class WorkforceManagementAPI {
     /**
      Gets a time off limit object
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}
-     - Returns properties of time off limit object, but not daily values.
+     - Returns properties of time off limit object, but not daily values. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId} instead
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -9972,7 +10174,7 @@ open class WorkforceManagementAPI {
     /**
      Gets a list of time off limit objects under management unit.
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits
-     - Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element.
+     - Currently only one time off limit object is allowed under management unit, so the list contains either 0 or 1 element. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits instead
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -10016,7 +10218,7 @@ open class WorkforceManagementAPI {
     
     
     /**
-     Gets a time off plan
+     Gets a time off plan. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId} instead
      
      - parameter managementUnitId: (path) The ID of the management unit 
      - parameter timeOffPlanId: (path) The ID of the time off plan to fetch 
@@ -10041,7 +10243,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     Gets a time off plan
+     Gets a time off plan. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId} instead
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}
      - OAuth:
        - type: oauth2
@@ -10091,7 +10293,7 @@ open class WorkforceManagementAPI {
     
     
     /**
-     Gets a list of time off plans
+     Gets a list of time off plans. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans instead
      
      - parameter managementUnitId: (path) The ID of the management unit 
      - parameter completion: completion handler to receive the data and the error objects
@@ -10115,7 +10317,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     Gets a list of time off plans
+     Gets a list of time off plans. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans instead
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans
      - OAuth:
        - type: oauth2
@@ -11704,6 +11906,8 @@ open class WorkforceManagementAPI {
         case capacityPlanForecastInputs = "CapacityPlanForecastInputs"
         case capacityPlanPerformancePrediction = "CapacityPlanPerformancePrediction"
         case continuousForecast = "ContinuousForecast"
+        case predictionsForecastingScenarioJobs = "PredictionsForecastingScenarioJobs"
+        case predictionsForecastingScenarios = "PredictionsForecastingScenarios"
         case historicalAdherence = "HistoricalAdherence"
         case historicalShrinkage = "HistoricalShrinkage"
         case intradayMonitoring = "IntradayMonitoring"
@@ -15804,7 +16008,7 @@ open class WorkforceManagementAPI {
     /**
      Updates a time off limit object.
      - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}
-     - Updates time off limit object properties, but not daily values.
+     - Updates time off limit object properties, but not daily values. Deprecated: Updating defaultLimitMinutes is no longer supported
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -15847,7 +16051,7 @@ open class WorkforceManagementAPI {
     
     
     /**
-     Updates a time off plan
+     Updates a time off plan. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId} instead
      
      - parameter managementUnitId: (path) The ID of the management unit 
      - parameter timeOffPlanId: (path) The ID of the time off plan to update 
@@ -15873,7 +16077,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     Updates a time off plan
+     Updates a time off plan. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId} instead
      - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}
      - OAuth:
        - type: oauth2
@@ -19570,6 +19774,186 @@ open class WorkforceManagementAPI {
     
     
     /**
+     Create a session export job
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportForecastJobs(businessUnitId: String, body: AggregatedExportJobRequest, completion: @escaping ((_ data: AggregatedSessionExportJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportForecastJobsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<AggregatedSessionExportJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a session export job
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/export/forecast/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+
+     - returns: RequestBuilder<AggregatedSessionExportJobResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportForecastJobsWithRequestBuilder(businessUnitId: String, body: AggregatedExportJobRequest) -> RequestBuilder<AggregatedSessionExportJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/export/forecast/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AggregatedSessionExportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create a historical export job
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportHistoricalJobs(businessUnitId: String, body: AggregatedExportJobRequest, completion: @escaping ((_ data: AggregatedHistoricalExportJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportHistoricalJobsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<AggregatedHistoricalExportJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a historical export job
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/export/historical/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+
+     - returns: RequestBuilder<AggregatedHistoricalExportJobResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportHistoricalJobsWithRequestBuilder(businessUnitId: String, body: AggregatedExportJobRequest) -> RequestBuilder<AggregatedHistoricalExportJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/export/historical/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AggregatedHistoricalExportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create a snapshot export job
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportSnapshotJobs(businessUnitId: String, body: AggregatedExportSnapshotJobRequest, completion: @escaping ((_ data: AggregatedSnapshotExportJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportSnapshotJobsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<AggregatedSnapshotExportJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a snapshot export job
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/export/snapshot/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+
+     - returns: RequestBuilder<AggregatedSnapshotExportJobResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionExportSnapshotJobsWithRequestBuilder(businessUnitId: String, body: AggregatedExportSnapshotJobRequest) -> RequestBuilder<AggregatedSnapshotExportJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/export/snapshot/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AggregatedSnapshotExportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Bulk add opportunities
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -21571,7 +21955,7 @@ open class WorkforceManagementAPI {
     
     
     /**
-     Retrieves time-off limit related values based on a given set of filters.
+     Retrieves time-off limit related values based on a given set of filters. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values/query instead
      
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter body: (body) body 
@@ -21596,7 +21980,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     Retrieves time-off limit related values based on a given set of filters.
+     Retrieves time-off limit related values based on a given set of filters. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values/query instead
      - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/values/query
      - OAuth:
        - type: oauth2
@@ -24048,7 +24432,7 @@ open class WorkforceManagementAPI {
     /**
      Creates a new time off limit object under management unit.
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits
-     - Only one limit object is allowed under management unit, so an attempt to create second object will fail.
+     - Only one limit object is allowed under management unit, so an attempt to create second object will fail. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits instead
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -24085,7 +24469,7 @@ open class WorkforceManagementAPI {
     
     
     /**
-     Retrieves time off limit related values based on a given set of filters.
+     Retrieves time off limit related values based on a given set of filters. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values/query instead
      
      - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter body: (body) body 
@@ -24110,7 +24494,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     Retrieves time off limit related values based on a given set of filters.
+     Retrieves time off limit related values based on a given set of filters. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values/query instead
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/values/query
      - OAuth:
        - type: oauth2
@@ -24162,7 +24546,7 @@ open class WorkforceManagementAPI {
     
     
     /**
-     Creates a new time off plan
+     Creates a new time off plan. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans instead
      
      - parameter managementUnitId: (path) The ID of the management unit 
      - parameter body: (body) body 
@@ -24187,7 +24571,7 @@ open class WorkforceManagementAPI {
     }
 
     /**
-     Creates a new time off plan
+     Creates a new time off plan. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans instead
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans
      - OAuth:
        - type: oauth2
@@ -27302,7 +27686,7 @@ open class WorkforceManagementAPI {
     /**
      Sets daily values for a date range of time off limit object
      - PUT /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values
-     - Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API
+     - Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time off limit API. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values instead
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

@@ -5,6 +5,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**postEventsConversations**](EventsAPI#postEventsConversations) | Publish Conversation Batch Events |
+| [**postEventsRoutingCustomkpiattributions**](EventsAPI#postEventsRoutingCustomkpiattributions) | Publish Predictive Routing Custom Kpi Attribution Batch Events |
 | [**postEventsUsersPresence**](EventsAPI#postEventsUsersPresence) | Publish User Presence Status Batch Events |
 | [**postEventsUsersRoutingstatus**](EventsAPI#postEventsUsersRoutingstatus) | Publish Agent Routing Status Batch Events |
 {: class="table-striped"}
@@ -53,6 +54,56 @@ EventsAPI.postEventsConversations(body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**BatchConversationEventRequest**](BatchConversationEventRequest)| batchRequest | |
+
+
+### Return type
+
+[**BatchEventResponse**](BatchEventResponse)
+
+
+## postEventsRoutingCustomkpiattributions
+
+
+
+> [BatchEventResponse](BatchEventResponse) postEventsRoutingCustomkpiattributions(body)
+
+Publish Predictive Routing Custom Kpi Attribution Batch Events
+
+
+
+Wraps POST /api/v2/events/routing/customkpiattributions  
+
+Requires ANY permissions: 
+
+* routing:customKpiAttribution:inject
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BatchPredictiveRoutingCustomKpiAttributionEventRequest = new BatchPredictiveRoutingCustomKpiAttributionEventRequest(...) // batchRequest
+
+// Code example
+EventsAPI.postEventsRoutingCustomkpiattributions(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("EventsAPI.postEventsRoutingCustomkpiattributions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BatchPredictiveRoutingCustomKpiAttributionEventRequest**](BatchPredictiveRoutingCustomKpiAttributionEventRequest)| batchRequest | |
 
 
 ### Return type
@@ -160,4 +211,4 @@ EventsAPI.postEventsUsersRoutingstatus(body: body) { (response, error) in
 [**BatchEventResponse**](BatchEventResponse)
 
 
-_PureCloudPlatformClientV2@200.0.0_
+_PureCloudPlatformClientV2@201.0.0_

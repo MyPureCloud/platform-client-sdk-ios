@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteRoutingEmailSettingEmailSettingId**](RoutingAPI#deleteRoutingEmailSettingEmailSettingId) | Delete an email setting. Removes the email setting and its associated settings |
 | [**deleteRoutingLanguage**](RoutingAPI#deleteRoutingLanguage) | Delete a routing language |
 | [**deleteRoutingPredictor**](RoutingAPI#deleteRoutingPredictor) | Delete single predictor. |
+| [**deleteRoutingPredictorsKeyperformanceindicator**](RoutingAPI#deleteRoutingPredictorsKeyperformanceindicator) | Delete a custom Key Performance Indicator. |
 | [**deleteRoutingQueue**](RoutingAPI#deleteRoutingQueue) | Delete a queue |
 | [**deleteRoutingQueueMember**](RoutingAPI#deleteRoutingQueueMember) | Delete a queue member. |
 | [**deleteRoutingQueueUser**](RoutingAPI#deleteRoutingQueueUser) | DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member. |
@@ -58,7 +59,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingPredictorModelFeatures**](RoutingAPI#getRoutingPredictorModelFeatures) | Retrieve Predictor Model Features. |
 | [**getRoutingPredictorModels**](RoutingAPI#getRoutingPredictorModels) | Retrieve Predictor Models and Top Features. |
 | [**getRoutingPredictors**](RoutingAPI#getRoutingPredictors) | Retrieve all predictors. |
+| [**getRoutingPredictorsKeyperformanceindicator**](RoutingAPI#getRoutingPredictorsKeyperformanceindicator) | Retrieve a single Key Performance Indicator. |
 | [**getRoutingPredictorsKeyperformanceindicators**](RoutingAPI#getRoutingPredictorsKeyperformanceindicators) | Get a list of Key Performance Indicators |
+| [**getRoutingPredictorsKeyperformanceindicatortypes**](RoutingAPI#getRoutingPredictorsKeyperformanceindicatortypes) | Get a list of Key Performance Indicators Types available. |
 | [**getRoutingQueue**](RoutingAPI#getRoutingQueue) | Get details about this queue. |
 | [**getRoutingQueueAssistant**](RoutingAPI#getRoutingQueueAssistant) | Get an assistant associated with a queue. |
 | [**getRoutingQueueComparisonperiod**](RoutingAPI#getRoutingQueueComparisonperiod) | Get a Comparison Period. |
@@ -111,6 +114,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchRoutingEmailOutboundDomain**](RoutingAPI#patchRoutingEmailOutboundDomain) | Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP). |
 | [**patchRoutingEmailSettingEmailSettingId**](RoutingAPI#patchRoutingEmailSettingEmailSettingId) | Update an email setting. Modifies the settings for email setting |
 | [**patchRoutingPredictor**](RoutingAPI#patchRoutingPredictor) | Update single predictor. |
+| [**patchRoutingPredictorsKeyperformanceindicator**](RoutingAPI#patchRoutingPredictorsKeyperformanceindicator) | Update a custom Key Performance Indicator. |
 | [**patchRoutingQueueMember**](RoutingAPI#patchRoutingQueueMember) | Update the ring number OR joined status for a queue member. |
 | [**patchRoutingQueueMembers**](RoutingAPI#patchRoutingQueueMembers) | Join or unjoin a set of up to 100 users for a queue |
 | [**patchRoutingQueueUser**](RoutingAPI#patchRoutingQueueUser) | DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. |
@@ -141,6 +145,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postRoutingEmailSetting**](RoutingAPI#postRoutingEmailSetting) | Create a new email setting. Used to define various settings, that can then be associated with email domains |
 | [**postRoutingLanguages**](RoutingAPI#postRoutingLanguages) | Create Language |
 | [**postRoutingPredictors**](RoutingAPI#postRoutingPredictors) | Create a predictor. |
+| [**postRoutingPredictorsKeyperformanceindicators**](RoutingAPI#postRoutingPredictorsKeyperformanceindicators) | Create a custom Key Performance Indicator. |
 | [**postRoutingQueueMembers**](RoutingAPI#postRoutingQueueMembers) | Bulk add or delete up to 100 queue members |
 | [**postRoutingQueueUsers**](RoutingAPI#postRoutingQueueUsers) | DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members. |
 | [**postRoutingQueueWrapupcodes**](RoutingAPI#postRoutingQueueWrapupcodes) | Add up to 100 wrap-up codes to a queue |
@@ -560,6 +565,55 @@ RoutingAPI.deleteRoutingPredictor(predictorId: predictorId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **predictorId** | **String**| Predictor ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteRoutingPredictorsKeyperformanceindicator
+
+
+
+> Void deleteRoutingPredictorsKeyperformanceindicator(kpiId)
+
+Delete a custom Key Performance Indicator.
+
+
+
+Wraps DELETE /api/v2/routing/predictors/keyperformanceindicators/{kpiId}  
+
+Requires ANY permissions: 
+
+* routing:keyPerformanceIndicator:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let kpiId: String = "" // Key Performance Indicator ID
+
+// Code example
+RoutingAPI.deleteRoutingPredictorsKeyperformanceindicator(kpiId: kpiId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RoutingAPI.deleteRoutingPredictorsKeyperformanceindicator was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **kpiId** | **String**| Key Performance Indicator ID | |
 
 
 ### Return type
@@ -2921,6 +2975,58 @@ RoutingAPI.getRoutingPredictors(before: before, after: after, limit: limit, page
 [**PredictorListing**](PredictorListing)
 
 
+## getRoutingPredictorsKeyperformanceindicator
+
+
+
+> [KeyPerformanceIndicator](KeyPerformanceIndicator) getRoutingPredictorsKeyperformanceindicator(kpiId, expand)
+
+Retrieve a single Key Performance Indicator.
+
+
+
+Wraps GET /api/v2/routing/predictors/keyperformanceindicators/{kpiId}  
+
+Requires ANY permissions: 
+
+* routing:keyPerformanceIndicator:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let kpiId: String = "" // Key Performance Indicator ID
+let expand: [String] = [""] // Parameter to request additional data to return in KPI payload
+
+// Code example
+RoutingAPI.getRoutingPredictorsKeyperformanceindicator(kpiId: kpiId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingPredictorsKeyperformanceindicator was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **kpiId** | **String**| Key Performance Indicator ID | |
+| **expand** | [**[String]**](String)| Parameter to request additional data to return in KPI payload | [optional]<br />**Values**: queues ("queues") |
+
+
+### Return type
+
+[**KeyPerformanceIndicator**](KeyPerformanceIndicator)
+
+
 ## getRoutingPredictorsKeyperformanceindicators
 
 
@@ -2971,6 +3077,52 @@ RoutingAPI.getRoutingPredictorsKeyperformanceindicators(kpiGroup: kpiGroup, expa
 ### Return type
 
 [**[KeyPerformanceIndicator]**](KeyPerformanceIndicator)
+
+
+## getRoutingPredictorsKeyperformanceindicatortypes
+
+
+
+> [[KeyPerformanceIndicatorType]](KeyPerformanceIndicatorType) getRoutingPredictorsKeyperformanceindicatortypes()
+
+Get a list of Key Performance Indicators Types available.
+
+
+
+Wraps GET /api/v2/routing/predictors/keyperformanceindicatortypes  
+
+Requires ANY permissions: 
+
+* routing:keyPerformanceIndicator:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+RoutingAPI.getRoutingPredictorsKeyperformanceindicatortypes() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingPredictorsKeyperformanceindicatortypes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**[KeyPerformanceIndicatorType]**](KeyPerformanceIndicatorType)
 
 
 ## getRoutingQueue
@@ -5819,6 +5971,58 @@ RoutingAPI.patchRoutingPredictor(predictorId: predictorId, body: body) { (respon
 [**Predictor**](Predictor)
 
 
+## patchRoutingPredictorsKeyperformanceindicator
+
+
+
+> [KeyPerformanceIndicator](KeyPerformanceIndicator) patchRoutingPredictorsKeyperformanceindicator(kpiId, body)
+
+Update a custom Key Performance Indicator.
+
+
+
+Wraps PATCH /api/v2/routing/predictors/keyperformanceindicators/{kpiId}  
+
+Requires ANY permissions: 
+
+* routing:keyPerformanceIndicator:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let kpiId: String = "" // Key Performance Indicator ID
+let body: UpdateKpiRequest = new UpdateKpiRequest(...) // 
+
+// Code example
+RoutingAPI.patchRoutingPredictorsKeyperformanceindicator(kpiId: kpiId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.patchRoutingPredictorsKeyperformanceindicator was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **kpiId** | **String**| Key Performance Indicator ID | |
+| **body** | [**UpdateKpiRequest**](UpdateKpiRequest)|  | [optional] |
+
+
+### Return type
+
+[**KeyPerformanceIndicator**](KeyPerformanceIndicator)
+
+
 ## patchRoutingQueueMember
 
 
@@ -7380,6 +7584,56 @@ RoutingAPI.postRoutingPredictors(body: body) { (response, error) in
 ### Return type
 
 [**Predictor**](Predictor)
+
+
+## postRoutingPredictorsKeyperformanceindicators
+
+
+
+> [KeyPerformanceIndicator](KeyPerformanceIndicator) postRoutingPredictorsKeyperformanceindicators(body)
+
+Create a custom Key Performance Indicator.
+
+
+
+Wraps POST /api/v2/routing/predictors/keyperformanceindicators  
+
+Requires ANY permissions: 
+
+* routing:keyPerformanceIndicator:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CreateKpiRequest = new CreateKpiRequest(...) // request
+
+// Code example
+RoutingAPI.postRoutingPredictorsKeyperformanceindicators(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postRoutingPredictorsKeyperformanceindicators was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CreateKpiRequest**](CreateKpiRequest)| request | |
+
+
+### Return type
+
+[**KeyPerformanceIndicator**](KeyPerformanceIndicator)
 
 
 ## postRoutingQueueMembers
@@ -9034,4 +9288,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@200.0.0_
+_PureCloudPlatformClientV2@201.0.0_

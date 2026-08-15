@@ -3093,7 +3093,7 @@ RecordingAPI.putRecordingSettings(body: body) { (response, error) in
 
 
 
-> Void putRecordingsDeletionprotection(protect, body)
+> [ManageDeleteProtectionResult](ManageDeleteProtectionResult) putRecordingsDeletionprotection(protect, body)
 
 Apply or revoke recording protection for conversations
 
@@ -3118,11 +3118,12 @@ let protect: Bool = true // Check for apply, uncheck for revoke (each action req
 let body: ConversationDeletionProtectionQuery = new ConversationDeletionProtectionQuery(...) // 
 
 // Code example
-RecordingAPI.putRecordingsDeletionprotection(protect: protect, body: body) { (error) in
+RecordingAPI.putRecordingsDeletionprotection(protect: protect, body: body) { (response, error) in
     if let error = error {
         dump(error)
-    } else {
+    } else if let response = response {
         print("RecordingAPI.putRecordingsDeletionprotection was successful")
+        dump(response)
     }
 }
 ```
@@ -3138,7 +3139,7 @@ RecordingAPI.putRecordingsDeletionprotection(protect: protect, body: body) { (er
 
 ### Return type
 
-`nil` (empty response body)
+[**ManageDeleteProtectionResult**](ManageDeleteProtectionResult)
 
 
-_PureCloudPlatformClientV2@200.0.0_
+_PureCloudPlatformClientV2@201.0.0_

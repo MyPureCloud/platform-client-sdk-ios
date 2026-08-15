@@ -73,6 +73,66 @@ open class EventsAPI {
     
     
     /**
+     Publish Predictive Routing Custom Kpi Attribution Batch Events
+     
+     - parameter body: (body) batchRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postEventsRoutingCustomkpiattributions(body: BatchPredictiveRoutingCustomKpiAttributionEventRequest, completion: @escaping ((_ data: BatchEventResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postEventsRoutingCustomkpiattributionsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<BatchEventResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Publish Predictive Routing Custom Kpi Attribution Batch Events
+     - POST /api/v2/events/routing/customkpiattributions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errors" : [ {
+    "retryable" : true,
+    "eventId" : "eventId",
+    "message" : "message"
+  }, {
+    "retryable" : true,
+    "eventId" : "eventId",
+    "message" : "message"
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) batchRequest 
+
+     - returns: RequestBuilder<BatchEventResponse> 
+     */
+    open class func postEventsRoutingCustomkpiattributionsWithRequestBuilder(body: BatchPredictiveRoutingCustomKpiAttributionEventRequest) -> RequestBuilder<BatchEventResponse> {        
+        let path = "/api/v2/events/routing/customkpiattributions"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BatchEventResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Publish User Presence Status Batch Events
      
      - parameter body: (body) batchRequest 

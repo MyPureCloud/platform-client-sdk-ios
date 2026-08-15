@@ -2787,6 +2787,70 @@ open class SpeechTextAnalyticsAPI {
     
     
     /**
+     Get a Speech & Text Analytics GenAI phrases job by id
+     
+     - parameter jobId: (path) the id of the GenAI phrases job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsTopicsGeneratedphrasesJob(jobId: String, completion: @escaping ((_ data: GenAIPhrasesJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsTopicsGeneratedphrasesJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<GenAIPhrasesJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a Speech & Text Analytics GenAI phrases job by id
+     - GET /api/v2/speechandtextanalytics/topics/generatedphrases/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "aiGeneratedPhrases" : [ "aiGeneratedPhrases", "aiGeneratedPhrases" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Running"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) the id of the GenAI phrases job 
+
+     - returns: RequestBuilder<GenAIPhrasesJob> 
+     */
+    open class func getSpeechandtextanalyticsTopicsGeneratedphrasesJobWithRequestBuilder(jobId: String) -> RequestBuilder<GenAIPhrasesJob> {        
+        var path = "/api/v2/speechandtextanalytics/topics/generatedphrases/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GenAIPhrasesJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Get a Speech & Text Analytics publish topics job by id
      
      - parameter jobId: (path) The id of the publish topics job 
@@ -3651,6 +3715,68 @@ open class SpeechTextAnalyticsAPI {
     
     
     /**
+     Create new Speech & Text Analytics GenAI topic phrases generation job
+     
+     - parameter body: (body) The GenAI topic phrases generation job to create 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postSpeechandtextanalyticsTopicsGeneratedphrasesJobs(body: GenAIPhrasesJobRequest, completion: @escaping ((_ data: GenAIPhrasesJobs?,_ error: Error?) -> Void)) {
+        let requestBuilder = postSpeechandtextanalyticsTopicsGeneratedphrasesJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<GenAIPhrasesJobs>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create new Speech & Text Analytics GenAI topic phrases generation job
+     - POST /api/v2/speechandtextanalytics/topics/generatedphrases/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "entityType" : "TOPIC",
+  "selfUri" : "https://openapi-generator.tech",
+  "action" : "action",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Running"
+}, statusCode=200}]
+     
+     - parameter body: (body) The GenAI topic phrases generation job to create 
+
+     - returns: RequestBuilder<GenAIPhrasesJobs> 
+     */
+    open class func postSpeechandtextanalyticsTopicsGeneratedphrasesJobsWithRequestBuilder(body: GenAIPhrasesJobRequest) -> RequestBuilder<GenAIPhrasesJobs> {        
+        let path = "/api/v2/speechandtextanalytics/topics/generatedphrases/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GenAIPhrasesJobs>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Create new Speech & Text Analytics publish topics job
      
      - parameter body: (body) The publish topics job to create 
@@ -3720,7 +3846,7 @@ open class SpeechTextAnalyticsAPI {
     
     
     /**
-     Create new Speech & Text Analytics publish topics job
+     Create new Speech & Text Analytics test topic phrase job
      
      - parameter body: (body) The publish test topic phrase job to create 
      - parameter completion: completion handler to receive the data and the error objects
@@ -3744,7 +3870,7 @@ open class SpeechTextAnalyticsAPI {
     }
 
     /**
-     Create new Speech & Text Analytics publish topics job
+     Create new Speech & Text Analytics test topic phrase job
      - POST /api/v2/speechandtextanalytics/topics/testphrase/jobs
      - OAuth:
        - type: oauth2

@@ -371,6 +371,51 @@ open class RoutingAPI {
 
     
     
+    /**
+     Delete a custom Key Performance Indicator.
+     
+     - parameter kpiId: (path) Key Performance Indicator ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteRoutingPredictorsKeyperformanceindicator(kpiId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteRoutingPredictorsKeyperformanceindicatorWithRequestBuilder(kpiId: kpiId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a custom Key Performance Indicator.
+     - DELETE /api/v2/routing/predictors/keyperformanceindicators/{kpiId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter kpiId: (path) Key Performance Indicator ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteRoutingPredictorsKeyperformanceindicatorWithRequestBuilder(kpiId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/routing/predictors/keyperformanceindicators/{kpiId}"
+        let kpiIdPreEscape = "\(kpiId)"
+        let kpiIdPostEscape = kpiIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{kpiId}", with: kpiIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**
@@ -3647,6 +3692,86 @@ open class RoutingAPI {
     }
 
     
+    
+    
+    
+    public enum Expand_getRoutingPredictorsKeyperformanceindicator: String { 
+        case queues = "queues"
+    }
+    
+    /**
+     Retrieve a single Key Performance Indicator.
+     
+     - parameter kpiId: (path) Key Performance Indicator ID 
+     - parameter expand: (query) Parameter to request additional data to return in KPI payload (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingPredictorsKeyperformanceindicator(kpiId: String, expand: [String]? = nil, completion: @escaping ((_ data: KeyPerformanceIndicator?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingPredictorsKeyperformanceindicatorWithRequestBuilder(kpiId: kpiId, expand: expand)
+        requestBuilder.execute { (response: Response<KeyPerformanceIndicator>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve a single Key Performance Indicator.
+     - GET /api/v2/routing/predictors/keyperformanceindicators/{kpiId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "wrapUpCodeConfig" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "source" : "WrapUpCode",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "queues" : [ "queues", "queues" ],
+  "optimizationType" : "Maximization",
+  "kpiType" : "SalesConversion",
+  "name" : "name",
+  "kpiGroup" : "Standard",
+  "outcomeConfig" : "{}",
+  "id" : "id",
+  "problemType" : "Classification",
+  "status" : "Enabled"
+}, statusCode=200}]
+     
+     - parameter kpiId: (path) Key Performance Indicator ID 
+     - parameter expand: (query) Parameter to request additional data to return in KPI payload (optional)
+
+     - returns: RequestBuilder<KeyPerformanceIndicator> 
+     */
+    open class func getRoutingPredictorsKeyperformanceindicatorWithRequestBuilder(kpiId: String, expand: [String]? = nil) -> RequestBuilder<KeyPerformanceIndicator> {        
+        var path = "/api/v2/routing/predictors/keyperformanceindicators/{kpiId}"
+        let kpiIdPreEscape = "\(kpiId)"
+        let kpiIdPostEscape = kpiIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{kpiId}", with: kpiIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<KeyPerformanceIndicator>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
     public enum KpiGroup_getRoutingPredictorsKeyperformanceindicators: String { 
         case standard = "Standard"
         case custom = "Custom"
@@ -3725,6 +3850,54 @@ open class RoutingAPI {
         ])
 
         let requestBuilder: RequestBuilder<[KeyPerformanceIndicator]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get a list of Key Performance Indicators Types available.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingPredictorsKeyperformanceindicatortypes(completion: @escaping ((_ data: [KeyPerformanceIndicatorType]?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingPredictorsKeyperformanceindicatortypesWithRequestBuilder()
+        requestBuilder.execute { (response: Response<[KeyPerformanceIndicatorType]>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of Key Performance Indicators Types available.
+     - GET /api/v2/routing/predictors/keyperformanceindicatortypes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "sources" : [ "WrapUpCode", "WrapUpCode" ],
+  "id" : "SalesConversion"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<[KeyPerformanceIndicatorType]> 
+     */
+    open class func getRoutingPredictorsKeyperformanceindicatortypesWithRequestBuilder() -> RequestBuilder<[KeyPerformanceIndicatorType]> {        
+        let path = "/api/v2/routing/predictors/keyperformanceindicatortypes"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<[KeyPerformanceIndicatorType]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -10768,6 +10941,79 @@ open class RoutingAPI {
     
     
     
+    /**
+     Update a custom Key Performance Indicator.
+     
+     - parameter kpiId: (path) Key Performance Indicator ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchRoutingPredictorsKeyperformanceindicator(kpiId: String, body: UpdateKpiRequest? = nil, completion: @escaping ((_ data: KeyPerformanceIndicator?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchRoutingPredictorsKeyperformanceindicatorWithRequestBuilder(kpiId: kpiId, body: body)
+        requestBuilder.execute { (response: Response<KeyPerformanceIndicator>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a custom Key Performance Indicator.
+     - PATCH /api/v2/routing/predictors/keyperformanceindicators/{kpiId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "wrapUpCodeConfig" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "source" : "WrapUpCode",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "queues" : [ "queues", "queues" ],
+  "optimizationType" : "Maximization",
+  "kpiType" : "SalesConversion",
+  "name" : "name",
+  "kpiGroup" : "Standard",
+  "outcomeConfig" : "{}",
+  "id" : "id",
+  "problemType" : "Classification",
+  "status" : "Enabled"
+}, statusCode=200}]
+     
+     - parameter kpiId: (path) Key Performance Indicator ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<KeyPerformanceIndicator> 
+     */
+    open class func patchRoutingPredictorsKeyperformanceindicatorWithRequestBuilder(kpiId: String, body: UpdateKpiRequest? = nil) -> RequestBuilder<KeyPerformanceIndicator> {        
+        var path = "/api/v2/routing/predictors/keyperformanceindicators/{kpiId}"
+        let kpiIdPreEscape = "\(kpiId)"
+        let kpiIdPostEscape = kpiIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{kpiId}", with: kpiIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KeyPerformanceIndicator>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     
     
     /**
@@ -14778,6 +15024,72 @@ open class RoutingAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Predictor>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create a custom Key Performance Indicator.
+     
+     - parameter body: (body) request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRoutingPredictorsKeyperformanceindicators(body: CreateKpiRequest, completion: @escaping ((_ data: KeyPerformanceIndicator?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingPredictorsKeyperformanceindicatorsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<KeyPerformanceIndicator>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a custom Key Performance Indicator.
+     - POST /api/v2/routing/predictors/keyperformanceindicators
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "wrapUpCodeConfig" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "source" : "WrapUpCode",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "queues" : [ "queues", "queues" ],
+  "optimizationType" : "Maximization",
+  "kpiType" : "SalesConversion",
+  "name" : "name",
+  "kpiGroup" : "Standard",
+  "outcomeConfig" : "{}",
+  "id" : "id",
+  "problemType" : "Classification",
+  "status" : "Enabled"
+}, statusCode=200}]
+     
+     - parameter body: (body) request 
+
+     - returns: RequestBuilder<KeyPerformanceIndicator> 
+     */
+    open class func postRoutingPredictorsKeyperformanceindicatorsWithRequestBuilder(body: CreateKpiRequest) -> RequestBuilder<KeyPerformanceIndicator> {        
+        let path = "/api/v2/routing/predictors/keyperformanceindicators"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KeyPerformanceIndicator>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
