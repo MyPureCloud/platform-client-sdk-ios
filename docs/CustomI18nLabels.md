@@ -12,4 +12,4 @@ The localization settings for homescreen and push notification
 
 
 
-_PureCloudPlatformClientV2@200.0.0_
+_PureCloudPlatformClientV2@201.0.0_

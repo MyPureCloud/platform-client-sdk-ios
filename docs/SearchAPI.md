@@ -437,7 +437,7 @@ SearchAPI.getUsersSearch(q64: q64, expand: expand, integrationPresenceSource: in
 | ------------- | ------------- | ------------- | ------------- |
 | **q64** | **String**| q64 | |
 | **expand** | [**[String]**](String)| expand | [optional] |
-| **integrationPresenceSource** | **String**| integrationPresenceSource | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone"), eightByEight ("EightByEight") |
+| **integrationPresenceSource** | **String**| integrationPresenceSource | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone"), eightByEight ("EightByEight"), ringCentral ("RingCentral") |
 
 
 ### Return type
@@ -1199,4 +1199,4 @@ SearchAPI.postVoicemailSearch(body: body) { (response, error) in
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse)
 
 
-_PureCloudPlatformClientV2@200.0.0_
+_PureCloudPlatformClientV2@201.0.0_

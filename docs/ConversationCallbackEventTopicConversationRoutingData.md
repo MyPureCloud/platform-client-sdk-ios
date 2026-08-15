@@ -11,7 +11,8 @@
 | **priority** | **Int64** | The priority of the conversation to use for routing decisions | [optional] |
 | **skills** | [**[ConversationCallbackEventTopicUriReference]**]([ConversationCallbackEventTopicUriReference]) | The skills to use for routing decisions | [optional] |
 | **scoredAgents** | [**[ConversationCallbackEventTopicScoredAgent]**]([ConversationCallbackEventTopicScoredAgent]) | A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents | [optional] |
+| **skillExpressionId** | [**ConversationCallbackEventTopicUriReference**](ConversationCallbackEventTopicUriReference) | A UriReference for a resource | [optional] |
 
 
 
-_PureCloudPlatformClientV2@200.0.0_
+_PureCloudPlatformClientV2@201.0.0_

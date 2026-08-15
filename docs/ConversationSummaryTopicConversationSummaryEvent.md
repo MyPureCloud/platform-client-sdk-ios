@@ -10,6 +10,7 @@
 | **queueId** | [**UUID**](UUID) |  | [optional] |
 | **participants** | [**[ConversationSummaryTopicConversationSummaryParticipant]**]([ConversationSummaryTopicConversationSummaryParticipant]) |  | [optional] |
 | **communicationIds** | **[String]** |  | [optional] |
+| **latestCommunicationId** | [**UUID**](UUID) |  | [optional] |
 | **createdDate** | [**Date**](Date) |  | [optional] |
 | **messageType** | **String** |  | [optional] |
 | **mediaType** | **String** |  | [optional] |
@@ -32,4 +33,4 @@
 
 
 
-_PureCloudPlatformClientV2@200.0.0_
+_PureCloudPlatformClientV2@201.0.0_
