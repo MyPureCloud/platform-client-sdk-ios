@@ -4527,7 +4527,7 @@ ConversationsAPI.getConversationsMessageCommunicationMessagesMediaMediaId(conver
 
 
 
-> [MessageData](MessageData) getConversationsMessageDetails(messageId, useNormalizedMessage)
+> [MessageData](MessageData) getConversationsMessageDetails(messageId)
 
 Get message
 
@@ -4549,10 +4549,9 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let messageId: String = "" // messageId
-let useNormalizedMessage: Bool = true // If true, response removes deprecated fields (textBody, media)
 
 // Code example
-ConversationsAPI.getConversationsMessageDetails(messageId: messageId, useNormalizedMessage: useNormalizedMessage) { (response, error) in
+ConversationsAPI.getConversationsMessageDetails(messageId: messageId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4568,7 +4567,6 @@ ConversationsAPI.getConversationsMessageDetails(messageId: messageId, useNormali
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **messageId** | **String**| messageId | |
-| **useNormalizedMessage** | **Bool**| If true, response removes deprecated fields (textBody, media) | [optional] |
 
 
 ### Return type
@@ -4580,7 +4578,7 @@ ConversationsAPI.getConversationsMessageDetails(messageId: messageId, useNormali
 
 
 
-> [MessageData](MessageData) getConversationsMessageMessage(conversationId, messageId, useNormalizedMessage)
+> [MessageData](MessageData) getConversationsMessageMessage(conversationId, messageId)
 
 Get conversation message
 
@@ -4603,10 +4601,9 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
 let messageId: String = "" // messageId
-let useNormalizedMessage: Bool = true // If true, response removes deprecated fields (textBody, media)
 
 // Code example
-ConversationsAPI.getConversationsMessageMessage(conversationId: conversationId, messageId: messageId, useNormalizedMessage: useNormalizedMessage) { (response, error) in
+ConversationsAPI.getConversationsMessageMessage(conversationId: conversationId, messageId: messageId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4623,7 +4620,6 @@ ConversationsAPI.getConversationsMessageMessage(conversationId: conversationId, 
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **messageId** | **String**| messageId | |
-| **useNormalizedMessage** | **Bool**| If true, response removes deprecated fields (textBody, media) | [optional] |
 
 
 ### Return type
@@ -12991,7 +12987,7 @@ ConversationsAPI.postConversationsKeyconfigurationsValidate(body: body) { (respo
 
 
 
-> [MessageData](MessageData) postConversationsMessageCommunicationMessages(conversationId, communicationId, body, useNormalizedMessage)
+> [MessageData](MessageData) postConversationsMessageCommunicationMessages(conversationId, communicationId, body)
 
 Send message
 
@@ -13017,10 +13013,9 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // conversationId
 let communicationId: String = "" // communicationId
 let body: AdditionalMessage = new AdditionalMessage(...) // Message
-let useNormalizedMessage: Bool = true // If true, response removes deprecated fields (textBody, media)
 
 // Code example
-ConversationsAPI.postConversationsMessageCommunicationMessages(conversationId: conversationId, communicationId: communicationId, body: body, useNormalizedMessage: useNormalizedMessage) { (response, error) in
+ConversationsAPI.postConversationsMessageCommunicationMessages(conversationId: conversationId, communicationId: communicationId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -13038,7 +13033,6 @@ ConversationsAPI.postConversationsMessageCommunicationMessages(conversationId: c
 | **conversationId** | **String**| conversationId | |
 | **communicationId** | **String**| communicationId | |
 | **body** | [**AdditionalMessage**](AdditionalMessage)| Message | |
-| **useNormalizedMessage** | **Bool**| If true, response removes deprecated fields (textBody, media) | [optional] |
 
 
 ### Return type
@@ -13494,7 +13488,7 @@ ConversationsAPI.postConversationsMessageInboundOpenStructuredResponse(integrati
 
 
 
-> [TextMessageListing](TextMessageListing) postConversationsMessageMessagesBulk(conversationId, useNormalizedMessage, body)
+> [TextMessageListing](TextMessageListing) postConversationsMessageMessagesBulk(conversationId, body)
 
 Get messages in batch
 
@@ -13518,11 +13512,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // 
-let useNormalizedMessage: Bool = true // If true, response removes deprecated fields (textBody, media)
 let body: [String] = [""] // messageIds
 
 // Code example
-ConversationsAPI.postConversationsMessageMessagesBulk(conversationId: conversationId, useNormalizedMessage: useNormalizedMessage, body: body) { (response, error) in
+ConversationsAPI.postConversationsMessageMessagesBulk(conversationId: conversationId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -13538,7 +13531,6 @@ ConversationsAPI.postConversationsMessageMessagesBulk(conversationId: conversati
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**|  | |
-| **useNormalizedMessage** | **Bool**| If true, response removes deprecated fields (textBody, media) | [optional] |
 | **body** | [**[String]**](String)| messageIds | [optional] |
 
 
@@ -13818,7 +13810,7 @@ ConversationsAPI.postConversationsMessages(body: body) { (response, error) in
 
 
 
-> [SendAgentlessOutboundMessageResponse](SendAgentlessOutboundMessageResponse) postConversationsMessagesAgentless(body, useNormalizedMessage)
+> [SendAgentlessOutboundMessageResponse](SendAgentlessOutboundMessageResponse) postConversationsMessagesAgentless(body)
 
 Send an agentless outbound message
 
@@ -13841,10 +13833,9 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: SendAgentlessOutboundMessageRequest = new SendAgentlessOutboundMessageRequest(...) // Create agentless outbound messaging request
-let useNormalizedMessage: Bool = true // If true, response removes deprecated fields (textBody, messagingTemplate)
 
 // Code example
-ConversationsAPI.postConversationsMessagesAgentless(body: body, useNormalizedMessage: useNormalizedMessage) { (response, error) in
+ConversationsAPI.postConversationsMessagesAgentless(body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -13860,7 +13851,6 @@ ConversationsAPI.postConversationsMessagesAgentless(body: body, useNormalizedMes
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**SendAgentlessOutboundMessageRequest**](SendAgentlessOutboundMessageRequest)| Create agentless outbound messaging request | |
-| **useNormalizedMessage** | **Bool**| If true, response removes deprecated fields (textBody, messagingTemplate) | [optional] |
 
 
 ### Return type
@@ -16005,4 +15995,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@201.0.0_
+_PureCloudPlatformClientV2@202.0.0_

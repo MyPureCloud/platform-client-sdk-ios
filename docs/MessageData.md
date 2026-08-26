@@ -14,9 +14,7 @@
 | **toAddress** | **String** | The recipient of the text message. | [optional] |
 | **direction** | **String** | The direction of the message. | [optional] |
 | **messengerType** | **String** | Type of text messenger. | [optional] |
-| **textBody** | **String** | The body of the text message. (Deprecated - Instead use normalizedMessage.text) | |
 | **status** | **String** | The status of the message. | |
-| **media** | [**[MessageMedia]**]([MessageMedia]) | The media details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment) | [optional] |
 | **normalizedMessage** | [**ConversationNormalizedMessage**](ConversationNormalizedMessage) | The message into normalized format | [optional] |
 | **normalizedReceipts** | [**[ConversationNormalizedMessage]**]([ConversationNormalizedMessage]) | The delivery event associated with this message in normalized format, if the message direction was outbound | [optional] |
 | **createdBy** | [**User**](User) | User who sent this message. | [optional] |
@@ -25,4 +23,4 @@
 
 
 
-_PureCloudPlatformClientV2@201.0.0_
+_PureCloudPlatformClientV2@202.0.0_

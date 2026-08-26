@@ -3142,4 +3142,4 @@ RecordingAPI.putRecordingsDeletionprotection(protect: protect, body: body) { (re
 [**ManageDeleteProtectionResult**](ManageDeleteProtectionResult)
 
 
-_PureCloudPlatformClientV2@201.0.0_
+_PureCloudPlatformClientV2@202.0.0_

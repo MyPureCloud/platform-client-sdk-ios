@@ -18,10 +18,10 @@
 | **baseLicense** | **String** | Set baseLicense only while updating license using PUT /license endpoint | [optional] |
 | **addonLicenses** | **[String]** | Set addonLicenses only while updating license using PUT /license endpoint | [optional] |
 | **dateLicenseLastUpdated** | [**Date**](Date) | The time that this role licenses were most recently updated using the PUT /license endpoint. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **base** | **Bool** |  | [optional] |
 | **_default** | **Bool** |  | [optional] |
+| **base** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@201.0.0_
+_PureCloudPlatformClientV2@202.0.0_

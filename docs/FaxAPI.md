@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getFaxDocument**](FaxAPI#getFaxDocument) | Get a document. |
 | [**getFaxDocumentContent**](FaxAPI#getFaxDocumentContent) | Download a fax document. |
 | [**getFaxDocuments**](FaxAPI#getFaxDocuments) | Get a list of fax documents. |
+| [**getFaxFaxIdStatus**](FaxAPI#getFaxFaxIdStatus) | Get fax status |
 | [**getFaxSettings**](FaxAPI#getFaxSettings) | Get organization config for given organization |
 | [**getFaxSummary**](FaxAPI#getFaxSummary) | Get fax summary |
 | [**putFaxDocument**](FaxAPI#putFaxDocument) | Update a fax document. |
@@ -212,6 +213,58 @@ FaxAPI.getFaxDocuments(pageSize: pageSize, pageNumber: pageNumber) { (response, 
 [**FaxDocumentEntityListing**](FaxDocumentEntityListing)
 
 
+## getFaxFaxIdStatus
+
+
+
+> [OutboundFaxStatus](OutboundFaxStatus) getFaxFaxIdStatus(faxId)
+
+Get fax status
+
+Retrieves status for an outbound (sent) fax. Only the authenticated user who sent the fax can fetch its status; this operation does not expose inbound or other users&#39; faxes. When the &#x60;result&#x60; field is present on the response body, it describes the terminal outcome of **transmitting** the fax to the remote endpoint (e.g. SUCCESS or FAILURE). 
+
+
+
+Wraps GET /api/v2/fax/{faxId}/status  
+
+Requires ANY permissions: 
+
+* conversation:fax:send
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let faxId: String = "" // Fax ID of an outbound fax sent by the authenticated user only.
+
+// Code example
+FaxAPI.getFaxFaxIdStatus(faxId: faxId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("FaxAPI.getFaxFaxIdStatus was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **faxId** | **String**| Fax ID of an outbound fax sent by the authenticated user only. | |
+
+
+### Return type
+
+[**OutboundFaxStatus**](OutboundFaxStatus)
+
+
 ## getFaxSettings
 
 
@@ -403,4 +456,4 @@ FaxAPI.putFaxSettings(body: body) { (response, error) in
 [**FaxConfig**](FaxConfig)
 
 
-_PureCloudPlatformClientV2@201.0.0_
+_PureCloudPlatformClientV2@202.0.0_

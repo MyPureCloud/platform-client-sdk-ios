@@ -21,10 +21,11 @@
 | **rolesEnabled** | **Bool** | Allow roles to be assigned to this group | [optional] |
 | **includeOwners** | **Bool** | Allow owners to be included as members of the group | [optional] |
 | **callsEnabled** | **Bool** | Allow calls to be placed to this group. | [optional] |
+| **email** | **String** | Email address for the group. | [optional] |
 | **owners** | [**[User]**]([User]) | Owners of the group | [optional] |
 | **dateCreated** | [**Date**](Date) | The date on which the trusted group was added. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **createdBy** | [**OrgUser**](OrgUser) | The user that added trusted group. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@201.0.0_
+_PureCloudPlatformClientV2@202.0.0_

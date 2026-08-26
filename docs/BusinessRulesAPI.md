@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteBusinessrulesDecisiontableImport**](BusinessRulesAPI#deleteBusinessrulesDecisiontableImport) | Delete decision table row import job |
 | [**deleteBusinessrulesDecisiontableVersion**](BusinessRulesAPI#deleteBusinessrulesDecisiontableVersion) | Delete a decision table version |
 | [**deleteBusinessrulesDecisiontableVersionRow**](BusinessRulesAPI#deleteBusinessrulesDecisiontableVersionRow) | Delete a decision table row |
+| [**deleteBusinessrulesDecisiontableVersionSnapshot**](BusinessRulesAPI#deleteBusinessrulesDecisiontableVersionSnapshot) | Deletes a decision table version snapshot |
 | [**deleteBusinessrulesSchema**](BusinessRulesAPI#deleteBusinessrulesSchema) | Delete a schema |
 | [**getBusinessrulesDecisiontable**](BusinessRulesAPI#getBusinessrulesDecisiontable) | Get a decision table |
 | [**getBusinessrulesDecisiontableExport**](BusinessRulesAPI#getBusinessrulesDecisiontableExport) | Get an export job for a decision table |
@@ -22,6 +23,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getBusinessrulesDecisiontables**](BusinessRulesAPI#getBusinessrulesDecisiontables) | Get a list of decision tables. |
 | [**getBusinessrulesDecisiontablesSearch**](BusinessRulesAPI#getBusinessrulesDecisiontablesSearch) | Search for decision tables. |
 | [**getBusinessrulesSchema**](BusinessRulesAPI#getBusinessrulesSchema) | Get a schema |
+| [**getBusinessrulesSchemaVersion**](BusinessRulesAPI#getBusinessrulesSchemaVersion) | Get a schema version |
+| [**getBusinessrulesSchemaVersions**](BusinessRulesAPI#getBusinessrulesSchemaVersions) | List schema versions |
 | [**getBusinessrulesSchemas**](BusinessRulesAPI#getBusinessrulesSchemas) | Get a list of schemas. |
 | [**getBusinessrulesSchemasCoretype**](BusinessRulesAPI#getBusinessrulesSchemasCoretype) | Get a specific named core type. |
 | [**getBusinessrulesSchemasCoretypes**](BusinessRulesAPI#getBusinessrulesSchemasCoretypes) | Get the core types from which all schemas are built. |
@@ -33,11 +36,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postBusinessrulesDecisiontableImports**](BusinessRulesAPI#postBusinessrulesDecisiontableImports) | Create a decision table row import job |
 | [**postBusinessrulesDecisiontableVersionCopy**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionCopy) | Copy a decision table version |
 | [**postBusinessrulesDecisiontableVersionExecute**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionExecute) | Execute a decision table version |
+| [**postBusinessrulesDecisiontableVersionRollback**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionRollback) | Re-publish a superseded decision table version as the current published version |
 | [**postBusinessrulesDecisiontableVersionRows**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionRows) | Create a decision table row |
 | [**postBusinessrulesDecisiontableVersionRowsBulkAdd**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionRowsBulkAdd) | Bulk add decision table rows |
 | [**postBusinessrulesDecisiontableVersionRowsBulkRemove**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionRowsBulkRemove) | Bulk delete decision table rows |
 | [**postBusinessrulesDecisiontableVersionRowsBulkUpdate**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionRowsBulkUpdate) | Bulk update decision table rows |
 | [**postBusinessrulesDecisiontableVersionRowsSearch**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionRowsSearch) | Search for decision table rows |
+| [**postBusinessrulesDecisiontableVersionSnapshot**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionSnapshot) | Creates a decision table version snapshot |
 | [**postBusinessrulesDecisiontableVersionSync**](BusinessRulesAPI#postBusinessrulesDecisiontableVersionSync) | Update the Business Rules Schema to the latest version for a given decision table version |
 | [**postBusinessrulesDecisiontableVersions**](BusinessRulesAPI#postBusinessrulesDecisiontableVersions) | Create a new decision table version. When sourceVersion is not provided, the draft is created from the published version. |
 | [**postBusinessrulesDecisiontables**](BusinessRulesAPI#postBusinessrulesDecisiontables) | Create a decision table |
@@ -301,6 +306,57 @@ BusinessRulesAPI.deleteBusinessrulesDecisiontableVersionRow(tableId: tableId, ta
 | **tableId** | **String**| Table ID | |
 | **tableVersion** | **Int**| Table Version | |
 | **rowId** | **String**| Row ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteBusinessrulesDecisiontableVersionSnapshot
+
+
+
+> Void deleteBusinessrulesDecisiontableVersionSnapshot(tableId, tableVersion)
+
+Deletes a decision table version snapshot
+
+
+
+Wraps DELETE /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/snapshot  
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableSnapshot:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tableId: String = "" // Table ID
+let tableVersion: Int = 0 // Table Version
+
+// Code example
+BusinessRulesAPI.deleteBusinessrulesDecisiontableVersionSnapshot(tableId: tableId, tableVersion: tableVersion) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("BusinessRulesAPI.deleteBusinessrulesDecisiontableVersionSnapshot was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tableId** | **String**| Table ID | |
+| **tableVersion** | **Int**| Table Version | |
 
 
 ### Return type
@@ -785,7 +841,7 @@ BusinessRulesAPI.getBusinessrulesDecisiontableVersionRows(tableId: tableId, tabl
 
 
 
-> [DecisionTableVersionListing](DecisionTableVersionListing) getBusinessrulesDecisiontableVersions(tableId, after, pageSize)
+> [DecisionTableVersionListing](DecisionTableVersionListing) getBusinessrulesDecisiontableVersions(tableId, after, pageSize, status, hasSnapshot)
 
 Get a list of decision table versions
 
@@ -808,9 +864,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let tableId: String = "" // Table ID
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
 let pageSize: String = "" // Number of entities to return. Maximum of 100.
+let status: [String] = [""] // Filter by version status. Repeatable.
+let hasSnapshot: Bool = true // When true, returns only versions that have snapshot metadata.
 
 // Code example
-BusinessRulesAPI.getBusinessrulesDecisiontableVersions(tableId: tableId, after: after, pageSize: pageSize) { (response, error) in
+BusinessRulesAPI.getBusinessrulesDecisiontableVersions(tableId: tableId, after: after, pageSize: pageSize, status: status, hasSnapshot: hasSnapshot) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -828,6 +886,8 @@ BusinessRulesAPI.getBusinessrulesDecisiontableVersions(tableId: tableId, after: 
 | **tableId** | **String**| Table ID | |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 100. | [optional] |
+| **status** | [**[String]**](String)| Filter by version status. Repeatable. | [optional]<br />**Values**: draft ("Draft"), published ("Published"), error ("Error"), preparing ("Preparing"), superseded ("Superseded") |
+| **hasSnapshot** | **Bool**| When true, returns only versions that have snapshot metadata. | [optional] |
 
 
 ### Return type
@@ -1001,6 +1061,114 @@ BusinessRulesAPI.getBusinessrulesSchema(schemaId: schemaId) { (response, error) 
 ### Return type
 
 [**BusinessRulesDataSchema**](BusinessRulesDataSchema)
+
+
+## getBusinessrulesSchemaVersion
+
+
+
+> [BusinessRulesDataSchema](BusinessRulesDataSchema) getBusinessrulesSchemaVersion(schemaId, schemaVersion)
+
+Get a schema version
+
+
+
+Wraps GET /api/v2/businessrules/schemas/{schemaId}/versions/{schemaVersion}  
+
+Requires ANY permissions: 
+
+* businessrules:businessRulesSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+let schemaVersion: String = "" // Schema version number
+
+// Code example
+BusinessRulesAPI.getBusinessrulesSchemaVersion(schemaId: schemaId, schemaVersion: schemaVersion) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("BusinessRulesAPI.getBusinessrulesSchemaVersion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+| **schemaVersion** | **String**| Schema version number | |
+
+
+### Return type
+
+[**BusinessRulesDataSchema**](BusinessRulesDataSchema)
+
+
+## getBusinessrulesSchemaVersions
+
+
+
+> [BusinessRulesDataSchemaListing](BusinessRulesDataSchemaListing) getBusinessrulesSchemaVersions(schemaId, before, after, pageSize)
+
+List schema versions
+
+
+
+Wraps GET /api/v2/businessrules/schemas/{schemaId}/versions  
+
+Requires ANY permissions: 
+
+* businessrules:businessRulesSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of items per page (must be between 1 and 100)
+
+// Code example
+BusinessRulesAPI.getBusinessrulesSchemaVersions(schemaId: schemaId, before: before, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("BusinessRulesAPI.getBusinessrulesSchemaVersions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of items per page (must be between 1 and 100) | [optional] |
+
+
+### Return type
+
+[**BusinessRulesDataSchemaListing**](BusinessRulesDataSchemaListing)
 
 
 ## getBusinessrulesSchemas
@@ -1579,6 +1747,60 @@ BusinessRulesAPI.postBusinessrulesDecisiontableVersionExecute(tableId: tableId, 
 [**DecisionTableExecutionResponse**](DecisionTableExecutionResponse)
 
 
+## postBusinessrulesDecisiontableVersionRollback
+
+
+
+> [DecisionTableVersion](DecisionTableVersion) postBusinessrulesDecisiontableVersionRollback(tableId, tableVersion, body)
+
+Re-publish a superseded decision table version as the current published version
+
+
+
+Wraps POST /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rollback  
+
+Requires ANY permissions: 
+
+* businessrules:decisionTable:rollback
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tableId: String = "" // Table ID
+let tableVersion: Int = 0 // Table Version
+let body: RollbackDecisionTableVersionRequest = new RollbackDecisionTableVersionRequest(...) // Rollback request
+
+// Code example
+BusinessRulesAPI.postBusinessrulesDecisiontableVersionRollback(tableId: tableId, tableVersion: tableVersion, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("BusinessRulesAPI.postBusinessrulesDecisiontableVersionRollback was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tableId** | **String**| Table ID | |
+| **tableVersion** | **Int**| Table Version | |
+| **body** | [**RollbackDecisionTableVersionRequest**](RollbackDecisionTableVersionRequest)| Rollback request | [optional] |
+
+
+### Return type
+
+[**DecisionTableVersion**](DecisionTableVersion)
+
+
 ## postBusinessrulesDecisiontableVersionRows
 
 
@@ -1862,6 +2084,60 @@ BusinessRulesAPI.postBusinessrulesDecisiontableVersionRowsSearch(tableId: tableI
 ### Return type
 
 [**DecisionTableRowListing**](DecisionTableRowListing)
+
+
+## postBusinessrulesDecisiontableVersionSnapshot
+
+
+
+> [DecisionTableVersion](DecisionTableVersion) postBusinessrulesDecisiontableVersionSnapshot(tableId, tableVersion, body)
+
+Creates a decision table version snapshot
+
+
+
+Wraps POST /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/snapshot  
+
+Requires ANY permissions: 
+
+* businessrules:decisionTableSnapshot:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tableId: String = "" // Table ID
+let tableVersion: Int = 0 // Table Version
+let body: CreateDecisionTableSnapshotRequest = new CreateDecisionTableSnapshotRequest(...) // Snapshot request
+
+// Code example
+BusinessRulesAPI.postBusinessrulesDecisiontableVersionSnapshot(tableId: tableId, tableVersion: tableVersion, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("BusinessRulesAPI.postBusinessrulesDecisiontableVersionSnapshot was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tableId** | **String**| Table ID | |
+| **tableVersion** | **Int**| Table Version | |
+| **body** | [**CreateDecisionTableSnapshotRequest**](CreateDecisionTableSnapshotRequest)| Snapshot request | |
+
+
+### Return type
+
+[**DecisionTableVersion**](DecisionTableVersion)
 
 
 ## postBusinessrulesDecisiontableVersionSync
@@ -2235,4 +2511,4 @@ BusinessRulesAPI.putBusinessrulesSchema(schemaId: schemaId, body: body) { (respo
 [**BusinessRulesDataSchema**](BusinessRulesDataSchema)
 
 
-_PureCloudPlatformClientV2@201.0.0_
+_PureCloudPlatformClientV2@202.0.0_
