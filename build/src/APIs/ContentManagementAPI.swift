@@ -1427,7 +1427,8 @@ open class ContentManagementAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -1463,7 +1464,8 @@ open class ContentManagementAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -1641,7 +1643,8 @@ open class ContentManagementAPI {
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   }
 }, statusCode=200}]
      
@@ -1986,7 +1989,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -2022,7 +2026,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -2200,7 +2205,8 @@ open class ContentManagementAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }
   },
   "id" : "id",
@@ -2426,7 +2432,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -2462,7 +2469,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -2640,7 +2648,8 @@ open class ContentManagementAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }
   }, {
     "workspace" : {
@@ -2784,7 +2793,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -2820,7 +2830,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -2998,7 +3009,8 @@ open class ContentManagementAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
@@ -4203,7 +4215,8 @@ open class ContentManagementAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -4239,7 +4252,8 @@ open class ContentManagementAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -4417,7 +4431,8 @@ open class ContentManagementAPI {
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   }
 }, statusCode=200}]
      
@@ -4634,7 +4649,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -4670,7 +4686,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -4848,7 +4865,8 @@ open class ContentManagementAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }
   }, {
     "workspace" : {
@@ -4987,7 +5005,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -5023,7 +5042,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -5201,7 +5221,8 @@ open class ContentManagementAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
@@ -6399,7 +6420,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -6435,7 +6457,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -6613,7 +6636,8 @@ open class ContentManagementAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }
   }, {
     "workspace" : {
@@ -6757,7 +6781,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -6793,7 +6818,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -6971,7 +6997,8 @@ open class ContentManagementAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }
   } ],
   "succeeded" : [ {
@@ -7116,7 +7143,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -7152,7 +7180,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -7330,7 +7359,8 @@ open class ContentManagementAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }
   }, {
     "workspace" : {
@@ -7474,7 +7504,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -7510,7 +7541,8 @@ open class ContentManagementAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -7688,7 +7720,8 @@ open class ContentManagementAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }
   } ]
 }, statusCode=200}]
@@ -8185,7 +8218,8 @@ open class ContentManagementAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -8221,7 +8255,8 @@ open class ContentManagementAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -8399,7 +8434,8 @@ open class ContentManagementAPI {
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   }
 }, statusCode=200}]
      

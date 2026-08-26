@@ -695,7 +695,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -731,7 +732,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -989,7 +991,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -1025,7 +1028,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -1176,7 +1180,8 @@ open class OrganizationAuthorizationAPI {
     "createdBy" : "{}",
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   }, {
     "images" : [ {
       "imageUri" : "imageUri",
@@ -1320,7 +1325,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -1356,7 +1362,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -1614,7 +1621,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -1650,7 +1658,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -1801,7 +1810,8 @@ open class OrganizationAuthorizationAPI {
     "createdBy" : "{}",
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   } ],
   "trustee" : "{}",
   "id" : "id",
@@ -1978,7 +1988,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -2014,7 +2025,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -2215,7 +2227,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -2251,7 +2264,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -2585,7 +2599,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -2621,7 +2636,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -2822,7 +2838,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -2858,7 +2875,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -3351,7 +3369,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -3387,7 +3406,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -3645,7 +3665,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -3681,7 +3702,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -3832,7 +3854,8 @@ open class OrganizationAuthorizationAPI {
   "createdBy" : "{}",
   "name" : "name",
   "id" : "id",
-  "state" : "active"
+  "state" : "active",
+  "email" : "email"
 }, statusCode=200}]
      
      - parameter trusteeOrgId: (path) Trustee Organization Id 
@@ -4168,7 +4191,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -4204,7 +4228,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -4462,7 +4487,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -4498,7 +4524,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -4649,7 +4676,8 @@ open class OrganizationAuthorizationAPI {
     "createdBy" : "{}",
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   }, {
     "images" : [ {
       "imageUri" : "imageUri",
@@ -4793,7 +4821,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -4829,7 +4858,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -5087,7 +5117,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -5123,7 +5154,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -5274,7 +5306,8 @@ open class OrganizationAuthorizationAPI {
     "createdBy" : "{}",
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
@@ -5517,7 +5550,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -5553,7 +5587,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -5754,7 +5789,8 @@ open class OrganizationAuthorizationAPI {
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   }, {
     "images" : [ {
       "imageUri" : "imageUri",
@@ -5790,7 +5826,8 @@ open class OrganizationAuthorizationAPI {
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   } ],
   "primaryContactInfo" : [ {
     "extension" : "extension",
@@ -6301,7 +6338,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -6337,7 +6375,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -6538,7 +6577,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -6574,7 +6614,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -6893,7 +6934,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -6929,7 +6971,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -7130,7 +7173,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -7166,7 +7210,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -7917,7 +7962,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -7953,7 +7999,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -8211,7 +8258,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -8247,7 +8295,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -8398,7 +8447,8 @@ open class OrganizationAuthorizationAPI {
   "createdBy" : "{}",
   "name" : "name",
   "id" : "id",
-  "state" : "active"
+  "state" : "active",
+  "email" : "email"
 }, statusCode=200}]
      
      - parameter trustorOrgId: (path) Trustor Organization Id 
@@ -8609,7 +8659,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -8645,7 +8696,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -8903,7 +8955,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -8939,7 +8992,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -9090,7 +9144,8 @@ open class OrganizationAuthorizationAPI {
     "createdBy" : "{}",
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   }, {
     "images" : [ {
       "imageUri" : "imageUri",
@@ -9234,7 +9289,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -9270,7 +9326,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -9528,7 +9585,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -9564,7 +9622,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -9715,7 +9774,8 @@ open class OrganizationAuthorizationAPI {
     "createdBy" : "{}",
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
@@ -9958,7 +10018,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -9994,7 +10055,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -10195,7 +10257,8 @@ open class OrganizationAuthorizationAPI {
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   }, {
     "images" : [ {
       "imageUri" : "imageUri",
@@ -10231,7 +10294,8 @@ open class OrganizationAuthorizationAPI {
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   } ],
   "primaryContactInfo" : [ {
     "extension" : "extension",
@@ -10617,7 +10681,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -10653,7 +10718,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -10854,7 +10920,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -10890,7 +10957,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -11209,7 +11277,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -11245,7 +11314,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -11446,7 +11516,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -11482,7 +11553,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -11926,7 +11998,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -11962,7 +12035,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -12220,7 +12294,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -12256,7 +12331,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -12407,7 +12483,8 @@ open class OrganizationAuthorizationAPI {
     "createdBy" : "{}",
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   }, {
     "images" : [ {
       "imageUri" : "imageUri",
@@ -12551,7 +12628,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -12587,7 +12665,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -12845,7 +12924,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -12881,7 +12961,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -13032,7 +13113,8 @@ open class OrganizationAuthorizationAPI {
     "createdBy" : "{}",
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   } ],
   "trustee" : "{}",
   "id" : "id",
@@ -13209,7 +13291,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -13245,7 +13328,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -13446,7 +13530,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -13482,7 +13567,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -13816,7 +13902,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -13852,7 +13939,8 @@ open class OrganizationAuthorizationAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -14053,7 +14141,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -14089,7 +14178,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -14447,7 +14537,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -14483,7 +14574,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -14741,7 +14833,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -14777,7 +14870,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -14928,7 +15022,8 @@ open class OrganizationAuthorizationAPI {
   "createdBy" : "{}",
   "name" : "name",
   "id" : "id",
-  "state" : "active"
+  "state" : "active",
+  "email" : "email"
 }, statusCode=200}]
      
      - parameter trusteeOrgId: (path) Trustee Organization Id 
@@ -15159,7 +15254,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -15195,7 +15291,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -15396,7 +15493,8 @@ open class OrganizationAuthorizationAPI {
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   }, {
     "images" : [ {
       "imageUri" : "imageUri",
@@ -15432,7 +15530,8 @@ open class OrganizationAuthorizationAPI {
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   } ],
   "primaryContactInfo" : [ {
     "extension" : "extension",
@@ -16800,7 +16899,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -16836,7 +16936,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -17094,7 +17195,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -17130,7 +17232,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -17281,7 +17384,8 @@ open class OrganizationAuthorizationAPI {
   "createdBy" : "{}",
   "name" : "name",
   "id" : "id",
-  "state" : "active"
+  "state" : "active",
+  "email" : "email"
 }, statusCode=200}]
      
      - parameter trustorOrgId: (path) Trustor Organization Id 
@@ -17515,7 +17619,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -17551,7 +17656,8 @@ open class OrganizationAuthorizationAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -17752,7 +17858,8 @@ open class OrganizationAuthorizationAPI {
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   }, {
     "images" : [ {
       "imageUri" : "imageUri",
@@ -17788,7 +17895,8 @@ open class OrganizationAuthorizationAPI {
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   } ],
   "primaryContactInfo" : [ {
     "extension" : "extension",

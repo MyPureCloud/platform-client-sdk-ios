@@ -495,6 +495,154 @@ open class TelephonyAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    public enum ModelType_getTelephonyPrefixes: String { 
+        case allow = "Allow"
+        case block = "Block"
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get prefixes
+     
+     - parameter type: (query) Filter by prefix type 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter _prefix: (query) Filter by phone number prefix (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyPrefixes(type: ModelType_getTelephonyPrefixes, before: String? = nil, after: String? = nil, pageSize: String? = nil, _prefix: String? = nil, completion: @escaping ((_ data: PrefixListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyPrefixesWithRequestBuilder(type: type, before: before, after: after, pageSize: pageSize, _prefix: _prefix)
+        requestBuilder.execute { (response: Response<PrefixListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get prefixes
+     - GET /api/v2/telephony/prefixes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "number" : "number",
+    "countryCode" : "countryCode",
+    "type" : "Allow"
+  }, {
+    "number" : "number",
+    "countryCode" : "countryCode",
+    "type" : "Allow"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter type: (query) Filter by prefix type 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter _prefix: (query) Filter by phone number prefix (optional)
+
+     - returns: RequestBuilder<PrefixListing> 
+     */
+    open class func getTelephonyPrefixesWithRequestBuilder(type: ModelType_getTelephonyPrefixes, before: String? = nil, after: String? = nil, pageSize: String? = nil, _prefix: String? = nil) -> RequestBuilder<PrefixListing> {        
+        let path = "/api/v2/telephony/prefixes"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize, 
+            "prefix": _prefix, 
+            "type": type.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<PrefixListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Simulate call to test fraud prefix functionality
+     
+     - parameter number: (query) Phone number to simulate 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyPrefixesSimulateCall(number: String, completion: @escaping ((_ data: CallSimulationResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyPrefixesSimulateCallWithRequestBuilder(number: number)
+        requestBuilder.execute { (response: Response<CallSimulationResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Simulate call to test fraud prefix functionality
+     - GET /api/v2/telephony/prefixes/simulate/call
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "level" : "NGN",
+  "allowed" : true,
+  "matchedPrefix" : "matchedPrefix"
+}, statusCode=200}]
+     
+     - parameter number: (query) Phone number to simulate 
+
+     - returns: RequestBuilder<CallSimulationResult> 
+     */
+    open class func getTelephonyPrefixesSimulateCallWithRequestBuilder(number: String) -> RequestBuilder<CallSimulationResult> {        
+        let path = "/api/v2/telephony/prefixes/simulate/call"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "number": number
+        ])
+
+        let requestBuilder: RequestBuilder<CallSimulationResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     /**
      Get the global telephony configuration.
      
@@ -1147,6 +1295,72 @@ open class TelephonyAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OrganizationLink>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Bulk save prefixes
+     
+     - parameter body: (body) Bulk save request with list of prefixes 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTelephonyPrefixesBulk(body: BulkPrefixesRequest, completion: @escaping ((_ data: BulkPrefixesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTelephonyPrefixesBulkWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<BulkPrefixesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk save prefixes
+     - POST /api/v2/telephony/prefixes/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorIndexes" : [ 1, 1 ],
+  "results" : [ {
+    "success" : true,
+    "id" : "id",
+    "error" : "{}",
+    "entity" : "{}",
+    "status" : 0
+  }, {
+    "success" : true,
+    "id" : "id",
+    "error" : "{}",
+    "entity" : "{}",
+    "status" : 0
+  } ],
+  "errorCount" : 6
+}, statusCode=200}]
+     
+     - parameter body: (body) Bulk save request with list of prefixes 
+
+     - returns: RequestBuilder<BulkPrefixesResponse> 
+     */
+    open class func postTelephonyPrefixesBulkWithRequestBuilder(body: BulkPrefixesRequest) -> RequestBuilder<BulkPrefixesResponse> {        
+        let path = "/api/v2/telephony/prefixes/bulk"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkPrefixesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

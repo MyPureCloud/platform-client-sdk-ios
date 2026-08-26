@@ -15215,6 +15215,138 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get Trunk Base Settings listing for site
+     
+     - parameter siteId: (path) Site ID for trunk bases 
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Value by which to sort (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId(siteId: String, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: TrunkBaseEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgesTrunkbasesettingsSiteSiteIdWithRequestBuilder(siteId: siteId, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder)
+        requestBuilder.execute { (response: Response<TrunkBaseEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Trunk Base Settings listing for site
+     - GET /api/v2/telephony/providers/edges/trunkbasesettings/site/{siteId}
+     - Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "inboundSite" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "version" : 1,
+    "division" : "{}",
+    "site" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "managed" : true,
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "inboundSite" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "version" : 1,
+    "division" : "{}",
+    "site" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "managed" : true,
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "properties" : {
+      "key" : "{}"
+    }
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
+  "totalNumberOfEntities" : 5
+}, statusCode=200}]
+     
+     - parameter siteId: (path) Site ID for trunk bases 
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Value by which to sort (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+
+     - returns: RequestBuilder<TrunkBaseEntityListing> 
+     */
+    open class func getTelephonyProvidersEdgesTrunkbasesettingsSiteSiteIdWithRequestBuilder(siteId: String, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil) -> RequestBuilder<TrunkBaseEntityListing> {        
+        var path = "/api/v2/telephony/providers/edges/trunkbasesettings/site/{siteId}"
+        let siteIdPreEscape = "\(siteId)"
+        let siteIdPostEscape = siteIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{siteId}", with: siteIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "sortBy": sortBy, 
+            "sortOrder": sortOrder
+        ])
+
+        let requestBuilder: RequestBuilder<TrunkBaseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance
      
@@ -16450,6 +16582,65 @@ open class TelephonyProvidersEdgeAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EdgeLogsJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create a file that can be used to configure a hardware Edge's settings.
+     
+     - parameter edgeId: (path) Edge Id 
+     - parameter body: (body) EdgeOfflineConfiguration 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTelephonyProvidersEdgeOfflineconfiguration(edgeId: String, body: EdgeOfflineConfiguration, completion: @escaping ((_ data: EdgeOfflineConfigurationResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTelephonyProvidersEdgeOfflineconfigurationWithRequestBuilder(edgeId: edgeId, body: body)
+        requestBuilder.execute { (response: Response<EdgeOfflineConfigurationResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a file that can be used to configure a hardware Edge's settings.
+     - POST /api/v2/telephony/providers/edges/{edgeId}/offlineconfiguration
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadUrl" : "http://example.com/aeiou"
+}, statusCode=200}]
+     
+     - parameter edgeId: (path) Edge Id 
+     - parameter body: (body) EdgeOfflineConfiguration 
+
+     - returns: RequestBuilder<EdgeOfflineConfigurationResponse> 
+     */
+    open class func postTelephonyProvidersEdgeOfflineconfigurationWithRequestBuilder(edgeId: String, body: EdgeOfflineConfiguration) -> RequestBuilder<EdgeOfflineConfigurationResponse> {        
+        var path = "/api/v2/telephony/providers/edges/{edgeId}/offlineconfiguration"
+        let edgeIdPreEscape = "\(edgeId)"
+        let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EdgeOfflineConfigurationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -21411,6 +21602,335 @@ open class TelephonyProvidersEdgeAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TrunkBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Search Trunk Base Settings
+     
+     - parameter body: (body) Telephony search request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTelephonyProvidersEdgesTrunkbasesettingsSearch(body: TelephonySearchRequest, completion: @escaping ((_ data: TrunkBasesSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTelephonyProvidersEdgesTrunkbasesettingsSearchWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<TrunkBasesSearchResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Search Trunk Base Settings
+     - POST /api/v2/telephony/providers/edges/trunkbasesettings/search
+     - Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 0,
+  "pageCount" : 6,
+  "types" : [ "types", "types" ],
+  "pageNumber" : 5,
+  "previousPage" : "previousPage",
+  "nextPage" : "nextPage",
+  "pageSize" : 1,
+  "currentPage" : "currentPage",
+  "results" : [ {
+    "inboundSite" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "version" : 1,
+    "division" : "{}",
+    "site" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "managed" : true,
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "properties" : {
+      "key" : "{}"
+    }
+  }, {
+    "inboundSite" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "version" : 1,
+    "division" : "{}",
+    "site" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "createdBy",
+    "managed" : true,
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "properties" : {
+      "key" : "{}"
+    }
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) Telephony search request 
+
+     - returns: RequestBuilder<TrunkBasesSearchResponse> 
+     */
+    open class func postTelephonyProvidersEdgesTrunkbasesettingsSearchWithRequestBuilder(body: TelephonySearchRequest) -> RequestBuilder<TrunkBasesSearchResponse> {        
+        let path = "/api/v2/telephony/providers/edges/trunkbasesettings/search"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TrunkBasesSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Search for trunks
+     
+     - parameter body: (body) Telephony search request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTelephonyProvidersEdgesTrunksSearch(body: TelephonySearchRequest, completion: @escaping ((_ data: TrunkInstanceSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTelephonyProvidersEdgesTrunksSearchWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<TrunkInstanceSearchResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Search for trunks
+     - POST /api/v2/telephony/providers/edges/trunks/search
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 0,
+  "pageCount" : 6,
+  "types" : [ "types", "types" ],
+  "pageNumber" : 5,
+  "previousPage" : "previousPage",
+  "nextPage" : "nextPage",
+  "pageSize" : 1,
+  "currentPage" : "currentPage",
+  "results" : [ {
+    "proxyAddressList" : [ "proxyAddressList", "proxyAddressList" ],
+    "description" : "description",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "edgeGroup" : "{}",
+    "enabled" : true,
+    "registersEnabledStatus" : "ENABLED",
+    "division" : "{}",
+    "edge" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "logicalInterface" : "{}",
+    "connectedStatus" : "{}",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "trunkBase" : "{}",
+    "inService" : true,
+    "optionsStatus" : [ {
+      "optionStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "optionState" : true,
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    }, {
+      "optionStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "optionState" : true,
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "version" : 0,
+    "registersStatus" : [ {
+      "registerState" : true,
+      "registerStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    }, {
+      "registerState" : true,
+      "registerStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    } ],
+    "ipStatus" : "{}",
+    "optionsEnabledStatus" : "ENABLED",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "family" : 6
+  }, {
+    "proxyAddressList" : [ "proxyAddressList", "proxyAddressList" ],
+    "description" : "description",
+    "createdByApp" : "createdByApp",
+    "trunkType" : "EXTERNAL",
+    "edgeGroup" : "{}",
+    "enabled" : true,
+    "registersEnabledStatus" : "ENABLED",
+    "division" : "{}",
+    "edge" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "logicalInterface" : "{}",
+    "connectedStatus" : "{}",
+    "modifiedBy" : "modifiedBy",
+    "trunkMetabase" : "{}",
+    "id" : "id",
+    "state" : "active",
+    "trunkBase" : "{}",
+    "inService" : true,
+    "optionsStatus" : [ {
+      "optionStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "optionState" : true,
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    }, {
+      "optionStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "optionState" : true,
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "version" : 0,
+    "registersStatus" : [ {
+      "registerState" : true,
+      "registerStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    }, {
+      "registerState" : true,
+      "registerStateTime" : "2000-01-23T04:56:07.000+00:00",
+      "errorInfo" : {
+        "code" : "code",
+        "details" : {
+          "hostname" : "hostname",
+          "code" : "code",
+          "message" : "message"
+        },
+        "text" : "text"
+      },
+      "proxyAddress" : "proxyAddress"
+    } ],
+    "ipStatus" : "{}",
+    "optionsEnabledStatus" : "ENABLED",
+    "createdBy" : "createdBy",
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "family" : 6
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) Telephony search request 
+
+     - returns: RequestBuilder<TrunkInstanceSearchResponse> 
+     */
+    open class func postTelephonyProvidersEdgesTrunksSearchWithRequestBuilder(body: TelephonySearchRequest) -> RequestBuilder<TrunkInstanceSearchResponse> {        
+        let path = "/api/v2/telephony/providers/edges/trunks/search"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TrunkInstanceSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

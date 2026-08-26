@@ -311,7 +311,8 @@ open class GroupsAPI {
   "rulesVisible" : true,
   "name" : "name",
   "id" : "id",
-  "state" : "active"
+  "state" : "active",
+  "email" : "email"
 }, statusCode=200}]
      
      - parameter groupId: (path) Group ID 
@@ -485,7 +486,8 @@ open class GroupsAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -521,7 +523,8 @@ open class GroupsAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -779,7 +782,8 @@ open class GroupsAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -815,7 +819,8 @@ open class GroupsAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -1182,7 +1187,8 @@ open class GroupsAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -1218,7 +1224,8 @@ open class GroupsAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -1476,7 +1483,8 @@ open class GroupsAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -1512,7 +1520,8 @@ open class GroupsAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -1848,7 +1857,8 @@ open class GroupsAPI {
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   }, {
     "images" : [ {
       "imageUri" : "imageUri",
@@ -1884,7 +1894,8 @@ open class GroupsAPI {
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
@@ -2000,7 +2011,8 @@ open class GroupsAPI {
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   }, {
     "images" : [ {
       "imageUri" : "imageUri",
@@ -2036,7 +2048,8 @@ open class GroupsAPI {
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   } ]
 }, statusCode=200}]
      
@@ -2288,7 +2301,8 @@ open class GroupsAPI {
   "rulesVisible" : true,
   "name" : "name",
   "id" : "id",
-  "state" : "active"
+  "state" : "active",
+  "email" : "email"
 }, statusCode=200}]
      
      - parameter body: (body) Group 
@@ -2383,7 +2397,8 @@ open class GroupsAPI {
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   }, {
     "images" : [ {
       "imageUri" : "imageUri",
@@ -2419,7 +2434,8 @@ open class GroupsAPI {
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
-    "state" : "active"
+    "state" : "active",
+    "email" : "email"
   } ]
 }, statusCode=200}]
      
@@ -2509,7 +2525,8 @@ open class GroupsAPI {
   "rulesVisible" : true,
   "name" : "name",
   "id" : "id",
-  "state" : "active"
+  "state" : "active",
+  "email" : "email"
 }, statusCode=200}]
      
      - parameter groupId: (path) Group ID 

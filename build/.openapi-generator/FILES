@@ -707,6 +707,7 @@ docs/BulkEntityErrorExternalContact.md
 docs/BulkEntityErrorExternalOrganization.md
 docs/BulkEntityErrorExternalOrganizationEnrichRequest.md
 docs/BulkEntityErrorNote.md
+docs/BulkEntityErrorPrefix.md
 docs/BulkEntityErrorRelationship.md
 docs/BulkError.md
 docs/BulkErrorDetail.md
@@ -742,6 +743,8 @@ docs/BulkOrganizationsEnrichRequest.md
 docs/BulkOrganizationsEnrichResponse.md
 docs/BulkOrganizationsRequest.md
 docs/BulkOrganizationsResponse.md
+docs/BulkPrefixesRequest.md
+docs/BulkPrefixesResponse.md
 docs/BulkPublishOpportunitiesResponse.md
 docs/BulkRelationshipsRequest.md
 docs/BulkRelationshipsResponse.md
@@ -757,6 +760,7 @@ docs/BulkResponseResultExternalOrganizationExternalOrganizationBulkEntityErrorEx
 docs/BulkResponseResultExternalOrganizationExternalOrganizationEnrichRequestBulkEntityErrorExternalOrganizationEnrichRequest.md
 docs/BulkResponseResultNoteEntityBulkEntityErrorEntity.md
 docs/BulkResponseResultNoteNoteBulkEntityErrorNote.md
+docs/BulkResponseResultPrefixPrefixBulkEntityErrorPrefix.md
 docs/BulkResponseResultRelationshipEntityBulkEntityErrorEntity.md
 docs/BulkResponseResultRelationshipRelationshipBulkEntityErrorRelationship.md
 docs/BulkResponseResultVoidEntityBulkEntityErrorEntity.md
@@ -818,6 +822,7 @@ docs/CallMediaPolicy.md
 docs/CallMediaPolicyConditions.md
 docs/CallRecord.md
 docs/CallRoute.md
+docs/CallSimulationResult.md
 docs/CallTarget.md
 docs/CallToAction.md
 docs/CallableContactsDiagnostic.md
@@ -895,6 +900,8 @@ docs/CapacityPlanDeleteRequest.md
 docs/CapacityPlanForecastInputsResponse.md
 docs/CapacityPlanForecastInputsTemplate.md
 docs/CapacityPlanForecastMetrics.md
+docs/CapacityPlanImportedForecast.md
+docs/CapacityPlanImportedForecastRequest.md
 docs/CapacityPlanListItem.md
 docs/CapacityPlanMetadata.md
 docs/CapacityPlanMetricsSummary.md
@@ -1702,6 +1709,7 @@ docs/CopilotFallbackAction.md
 docs/CopilotNluDomain.md
 docs/CopilotNluDomainVersion.md
 docs/CopilotRule.md
+docs/CopilotSentimentSettings.md
 docs/CopilotTranscriptionConfig.md
 docs/CopyAttachmentsRequest.md
 docs/CopyBuForecastRequest.md
@@ -1736,6 +1744,7 @@ docs/CreateDecisionTableColumnsRequest.md
 docs/CreateDecisionTableImportJobRequest.md
 docs/CreateDecisionTableRequest.md
 docs/CreateDecisionTableRowRequest.md
+docs/CreateDecisionTableSnapshotRequest.md
 docs/CreateDecisionTableVersionRequest.md
 docs/CreateEmailRequest.md
 docs/CreateExternalEventsConfigurationRequest.md
@@ -2265,6 +2274,10 @@ docs/EdgeMetricsTopicUriReference.md
 docs/EdgeNetworkDiagnostic.md
 docs/EdgeNetworkDiagnosticRequest.md
 docs/EdgeNetworkDiagnosticResponse.md
+docs/EdgeOfflineConfiguration.md
+docs/EdgeOfflineConfigurationInterface.md
+docs/EdgeOfflineConfigurationNetwork.md
+docs/EdgeOfflineConfigurationResponse.md
 docs/EdgeRebootParameters.md
 docs/EdgeServiceStateRequest.md
 docs/EdgeSoftwareUpdateTopicDomainEdgeSoftwareUpdate.md
@@ -3929,6 +3942,7 @@ docs/OutboundDomain.md
 docs/OutboundDomainCreateRequest.md
 docs/OutboundDomainEntityListing.md
 docs/OutboundDomainPatchRequest.md
+docs/OutboundFaxStatus.md
 docs/OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes.md
 docs/OutboundMessagingCampaignPostContactEmailEventTopicOutboundMessagingCampaignPostContactEmailEvent.md
 docs/OutboundMessagingCampaignPostContactSmsEventTopicOutboundMessagingCampaignPostContactSMSEvent.md
@@ -4175,6 +4189,9 @@ docs/PredictorModelRetrainingError.md
 docs/PredictorModels.md
 docs/PredictorSchedule.md
 docs/PredictorWorkloadBalancing.md
+docs/Prefix.md
+docs/PrefixListing.md
+docs/PrefixListingItem.md
 docs/PreprocessingRule.md
 docs/PresenceAPI.json
 docs/PresenceAPI.md
@@ -4814,6 +4831,7 @@ docs/RoleDivision.md
 docs/RoleDivisionGrants.md
 docs/RoleDivisionPair.md
 docs/RoleSettings.md
+docs/RollbackDecisionTableVersionRequest.md
 docs/Room.md
 docs/RoomParticipant.md
 docs/RoomParticipantResponse.md
@@ -5397,6 +5415,8 @@ docs/TelephonyAPI.json
 docs/TelephonyAPI.md
 docs/TelephonyProvidersEdgeAPI.json
 docs/TelephonyProvidersEdgeAPI.md
+docs/TelephonySearchCriteria.md
+docs/TelephonySearchRequest.md
 docs/TelephonySettings.md
 docs/TemplateParameter.md
 docs/TemporalUnit.md
@@ -5555,10 +5575,12 @@ docs/Trunk.md
 docs/TrunkBase.md
 docs/TrunkBaseAssignment.md
 docs/TrunkBaseEntityListing.md
+docs/TrunkBasesSearchResponse.md
 docs/TrunkConnectedStatus.md
 docs/TrunkEntityListing.md
 docs/TrunkErrorInfo.md
 docs/TrunkErrorInfoDetails.md
+docs/TrunkInstanceSearchResponse.md
 docs/TrunkInstanceTopicTrunk.md
 docs/TrunkInstanceTopicTrunkConnectedStatus.md
 docs/TrunkInstanceTopicTrunkErrorInfo.md
@@ -6015,6 +6037,7 @@ docs/ValidationServiceRequest.md
 docs/ValueWrapperActivityCodeStyle.md
 docs/ValueWrapperActivityPlanServiceGoalImpactOverrides.md
 docs/ValueWrapperBuShortTermForecastReference.md
+docs/ValueWrapperCapacityPlanImportedForecastRequest.md
 docs/ValueWrapperDate.md
 docs/ValueWrapperGroupSettings.md
 docs/ValueWrapperHrisTimeOffType.md
@@ -6618,6 +6641,7 @@ docs/deleteBusinessrulesDecisiontableExport-example.txt
 docs/deleteBusinessrulesDecisiontableImport-example.txt
 docs/deleteBusinessrulesDecisiontableVersion-example.txt
 docs/deleteBusinessrulesDecisiontableVersionRow-example.txt
+docs/deleteBusinessrulesDecisiontableVersionSnapshot-example.txt
 docs/deleteBusinessrulesSchema-example.txt
 docs/deleteCasemanagementCase-example.txt
 docs/deleteCasemanagementCaseCommentsMeCommentId-example.txt
@@ -7109,6 +7133,8 @@ docs/getBusinessrulesDecisiontableVersions-example.txt
 docs/getBusinessrulesDecisiontables-example.txt
 docs/getBusinessrulesDecisiontablesSearch-example.txt
 docs/getBusinessrulesSchema-example.txt
+docs/getBusinessrulesSchemaVersion-example.txt
+docs/getBusinessrulesSchemaVersions-example.txt
 docs/getBusinessrulesSchemas-example.txt
 docs/getBusinessrulesSchemasCoretype-example.txt
 docs/getBusinessrulesSchemasCoretypes-example.txt
@@ -7372,6 +7398,7 @@ docs/getExternalcontactsSettings-example.txt
 docs/getFaxDocument-example.txt
 docs/getFaxDocumentContent-example.txt
 docs/getFaxDocuments-example.txt
+docs/getFaxFaxIdStatus-example.txt
 docs/getFaxSettings-example.txt
 docs/getFaxSummary-example.txt
 docs/getFieldconfig-example.txt
@@ -8146,6 +8173,8 @@ docs/getTelephonyMediaregions-example.txt
 docs/getTelephonyNumbersRouting-example.txt
 docs/getTelephonyOrganizationLink-example.txt
 docs/getTelephonyOrganizationLinkRegions-example.txt
+docs/getTelephonyPrefixes-example.txt
+docs/getTelephonyPrefixesSimulateCall-example.txt
 docs/getTelephonyProvidersEdge-example.txt
 docs/getTelephonyProvidersEdgeDiagnosticNslookup-example.txt
 docs/getTelephonyProvidersEdgeDiagnosticPing-example.txt
@@ -8212,6 +8241,7 @@ docs/getTelephonyProvidersEdgesTrunkMetrics-example.txt
 docs/getTelephonyProvidersEdgesTrunkbasesetting-example.txt
 docs/getTelephonyProvidersEdgesTrunkbasesettings-example.txt
 docs/getTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases-example.txt
+docs/getTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId-example.txt
 docs/getTelephonyProvidersEdgesTrunkbasesettingsTemplate-example.txt
 docs/getTelephonyProvidersEdgesTrunks-example.txt
 docs/getTelephonyProvidersEdgesTrunksMetrics-example.txt
@@ -8863,11 +8893,13 @@ docs/postBusinessrulesDecisiontableExports-example.txt
 docs/postBusinessrulesDecisiontableImports-example.txt
 docs/postBusinessrulesDecisiontableVersionCopy-example.txt
 docs/postBusinessrulesDecisiontableVersionExecute-example.txt
+docs/postBusinessrulesDecisiontableVersionRollback-example.txt
 docs/postBusinessrulesDecisiontableVersionRows-example.txt
 docs/postBusinessrulesDecisiontableVersionRowsBulkAdd-example.txt
 docs/postBusinessrulesDecisiontableVersionRowsBulkRemove-example.txt
 docs/postBusinessrulesDecisiontableVersionRowsBulkUpdate-example.txt
 docs/postBusinessrulesDecisiontableVersionRowsSearch-example.txt
+docs/postBusinessrulesDecisiontableVersionSnapshot-example.txt
 docs/postBusinessrulesDecisiontableVersionSync-example.txt
 docs/postBusinessrulesDecisiontableVersions-example.txt
 docs/postBusinessrulesDecisiontables-example.txt
@@ -9425,6 +9457,7 @@ docs/postTelephonyNumbersRouting-example.txt
 docs/postTelephonyNumbersRoutingAll-example.txt
 docs/postTelephonyNumbersRoutingReset-example.txt
 docs/postTelephonyOrganizationLink-example.txt
+docs/postTelephonyPrefixesBulk-example.txt
 docs/postTelephonyProvidersEdgeDiagnosticNslookup-example.txt
 docs/postTelephonyProvidersEdgeDiagnosticPing-example.txt
 docs/postTelephonyProvidersEdgeDiagnosticRoute-example.txt
@@ -9432,6 +9465,7 @@ docs/postTelephonyProvidersEdgeDiagnosticTracepath-example.txt
 docs/postTelephonyProvidersEdgeLogicalinterfaces-example.txt
 docs/postTelephonyProvidersEdgeLogsJobUpload-example.txt
 docs/postTelephonyProvidersEdgeLogsJobs-example.txt
+docs/postTelephonyProvidersEdgeOfflineconfiguration-example.txt
 docs/postTelephonyProvidersEdgeReboot-example.txt
 docs/postTelephonyProvidersEdgeSoftwareupdate-example.txt
 docs/postTelephonyProvidersEdgeStatuscode-example.txt
@@ -9451,6 +9485,8 @@ docs/postTelephonyProvidersEdgesSites-example.txt
 docs/postTelephonyProvidersEdgesSitesSearch-example.txt
 docs/postTelephonyProvidersEdgesSitesSearch-example.txt
 docs/postTelephonyProvidersEdgesTrunkbasesettings-example.txt
+docs/postTelephonyProvidersEdgesTrunkbasesettingsSearch-example.txt
+docs/postTelephonyProvidersEdgesTrunksSearch-example.txt
 docs/postTelephonySiptracesDownload-example.txt
 docs/postTextbotsBotflowsSessionTurns-example.txt
 docs/postTextbotsBotflowsSessions-example.txt
@@ -10681,6 +10717,7 @@ src/Models/BulkEntityErrorExternalContact.swift
 src/Models/BulkEntityErrorExternalOrganization.swift
 src/Models/BulkEntityErrorExternalOrganizationEnrichRequest.swift
 src/Models/BulkEntityErrorNote.swift
+src/Models/BulkEntityErrorPrefix.swift
 src/Models/BulkEntityErrorRelationship.swift
 src/Models/BulkError.swift
 src/Models/BulkErrorDetail.swift
@@ -10716,6 +10753,8 @@ src/Models/BulkOrganizationsEnrichRequest.swift
 src/Models/BulkOrganizationsEnrichResponse.swift
 src/Models/BulkOrganizationsRequest.swift
 src/Models/BulkOrganizationsResponse.swift
+src/Models/BulkPrefixesRequest.swift
+src/Models/BulkPrefixesResponse.swift
 src/Models/BulkPublishOpportunitiesResponse.swift
 src/Models/BulkRelationshipsRequest.swift
 src/Models/BulkRelationshipsResponse.swift
@@ -10731,6 +10770,7 @@ src/Models/BulkResponseResultExternalOrganizationExternalOrganizationBulkEntityE
 src/Models/BulkResponseResultExternalOrganizationExternalOrganizationEnrichRequestBulkEntityErrorExternalOrganizationEnrichRequest.swift
 src/Models/BulkResponseResultNoteEntityBulkEntityErrorEntity.swift
 src/Models/BulkResponseResultNoteNoteBulkEntityErrorNote.swift
+src/Models/BulkResponseResultPrefixPrefixBulkEntityErrorPrefix.swift
 src/Models/BulkResponseResultRelationshipEntityBulkEntityErrorEntity.swift
 src/Models/BulkResponseResultRelationshipRelationshipBulkEntityErrorRelationship.swift
 src/Models/BulkResponseResultVoidEntityBulkEntityErrorEntity.swift
@@ -10790,6 +10830,7 @@ src/Models/CallMediaPolicy.swift
 src/Models/CallMediaPolicyConditions.swift
 src/Models/CallRecord.swift
 src/Models/CallRoute.swift
+src/Models/CallSimulationResult.swift
 src/Models/CallTarget.swift
 src/Models/CallToAction.swift
 src/Models/CallableContactsDiagnostic.swift
@@ -10867,6 +10908,8 @@ src/Models/CapacityPlanDeleteRequest.swift
 src/Models/CapacityPlanForecastInputsResponse.swift
 src/Models/CapacityPlanForecastInputsTemplate.swift
 src/Models/CapacityPlanForecastMetrics.swift
+src/Models/CapacityPlanImportedForecast.swift
+src/Models/CapacityPlanImportedForecastRequest.swift
 src/Models/CapacityPlanListItem.swift
 src/Models/CapacityPlanMetadata.swift
 src/Models/CapacityPlanMetricsSummary.swift
@@ -11662,6 +11705,7 @@ src/Models/CopilotFallbackAction.swift
 src/Models/CopilotNluDomain.swift
 src/Models/CopilotNluDomainVersion.swift
 src/Models/CopilotRule.swift
+src/Models/CopilotSentimentSettings.swift
 src/Models/CopilotTranscriptionConfig.swift
 src/Models/CopyAttachmentsRequest.swift
 src/Models/CopyBuForecastRequest.swift
@@ -11696,6 +11740,7 @@ src/Models/CreateDecisionTableColumnsRequest.swift
 src/Models/CreateDecisionTableImportJobRequest.swift
 src/Models/CreateDecisionTableRequest.swift
 src/Models/CreateDecisionTableRowRequest.swift
+src/Models/CreateDecisionTableSnapshotRequest.swift
 src/Models/CreateDecisionTableVersionRequest.swift
 src/Models/CreateEmailRequest.swift
 src/Models/CreateExternalEventsConfigurationRequest.swift
@@ -12217,6 +12262,10 @@ src/Models/EdgeMetricsTopicUriReference.swift
 src/Models/EdgeNetworkDiagnostic.swift
 src/Models/EdgeNetworkDiagnosticRequest.swift
 src/Models/EdgeNetworkDiagnosticResponse.swift
+src/Models/EdgeOfflineConfiguration.swift
+src/Models/EdgeOfflineConfigurationInterface.swift
+src/Models/EdgeOfflineConfigurationNetwork.swift
+src/Models/EdgeOfflineConfigurationResponse.swift
 src/Models/EdgeRebootParameters.swift
 src/Models/EdgeServiceStateRequest.swift
 src/Models/EdgeSoftwareUpdateTopicDomainEdgeSoftwareUpdate.swift
@@ -13820,6 +13869,7 @@ src/Models/OutboundDomain.swift
 src/Models/OutboundDomainCreateRequest.swift
 src/Models/OutboundDomainEntityListing.swift
 src/Models/OutboundDomainPatchRequest.swift
+src/Models/OutboundFaxStatus.swift
 src/Models/OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes.swift
 src/Models/OutboundMessagingCampaignPostContactEmailEventTopicOutboundMessagingCampaignPostContactEmailEvent.swift
 src/Models/OutboundMessagingCampaignPostContactSmsEventTopicOutboundMessagingCampaignPostContactSMSEvent.swift
@@ -14066,6 +14116,9 @@ src/Models/PredictorModelRetrainingError.swift
 src/Models/PredictorModels.swift
 src/Models/PredictorSchedule.swift
 src/Models/PredictorWorkloadBalancing.swift
+src/Models/Prefix.swift
+src/Models/PrefixListing.swift
+src/Models/PrefixListingItem.swift
 src/Models/PreprocessingRule.swift
 src/Models/PresenceDefinition.swift
 src/Models/PresenceDetailQueryClause.swift
@@ -14693,6 +14746,7 @@ src/Models/RoleDivision.swift
 src/Models/RoleDivisionGrants.swift
 src/Models/RoleDivisionPair.swift
 src/Models/RoleSettings.swift
+src/Models/RollbackDecisionTableVersionRequest.swift
 src/Models/Room.swift
 src/Models/RoomParticipant.swift
 src/Models/RoomParticipantResponse.swift
@@ -15248,6 +15302,8 @@ src/Models/TeamReference.swift
 src/Models/TeamSearchCriteria.swift
 src/Models/TeamSearchRequest.swift
 src/Models/TeamsSearchResponse.swift
+src/Models/TelephonySearchCriteria.swift
+src/Models/TelephonySearchRequest.swift
 src/Models/TelephonySettings.swift
 src/Models/TemplateParameter.swift
 src/Models/TemporalUnit.swift
@@ -15402,10 +15458,12 @@ src/Models/Trunk.swift
 src/Models/TrunkBase.swift
 src/Models/TrunkBaseAssignment.swift
 src/Models/TrunkBaseEntityListing.swift
+src/Models/TrunkBasesSearchResponse.swift
 src/Models/TrunkConnectedStatus.swift
 src/Models/TrunkEntityListing.swift
 src/Models/TrunkErrorInfo.swift
 src/Models/TrunkErrorInfoDetails.swift
+src/Models/TrunkInstanceSearchResponse.swift
 src/Models/TrunkInstanceTopicTrunk.swift
 src/Models/TrunkInstanceTopicTrunkConnectedStatus.swift
 src/Models/TrunkInstanceTopicTrunkErrorInfo.swift
@@ -15850,6 +15908,7 @@ src/Models/ValidationServiceRequest.swift
 src/Models/ValueWrapperActivityCodeStyle.swift
 src/Models/ValueWrapperActivityPlanServiceGoalImpactOverrides.swift
 src/Models/ValueWrapperBuShortTermForecastReference.swift
+src/Models/ValueWrapperCapacityPlanImportedForecastRequest.swift
 src/Models/ValueWrapperDate.swift
 src/Models/ValueWrapperGroupSettings.swift
 src/Models/ValueWrapperHrisTimeOffType.swift

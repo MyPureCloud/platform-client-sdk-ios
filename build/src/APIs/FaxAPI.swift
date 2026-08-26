@@ -359,6 +359,69 @@ open class FaxAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    /**
+     Get fax status
+     
+     - parameter faxId: (path) Fax ID of an outbound fax sent by the authenticated user only. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFaxFaxIdStatus(faxId: String, completion: @escaping ((_ data: OutboundFaxStatus?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFaxFaxIdStatusWithRequestBuilder(faxId: faxId)
+        requestBuilder.execute { (response: Response<OutboundFaxStatus>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get fax status
+     - GET /api/v2/fax/{faxId}/status
+     - Retrieves status for an outbound (sent) fax. Only the authenticated user who sent the fax can fetch its status; this operation does not expose inbound or other users' faxes. When the `result` field is present on the response body, it describes the terminal outcome of **transmitting** the fax to the remote endpoint (e.g. SUCCESS or FAILURE). 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "result",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "auditTransactionId" : "auditTransactionId",
+  "expirationTime" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "initiatingUser" : "{}",
+  "statusCode" : "statusCode"
+}, statusCode=200}]
+     
+     - parameter faxId: (path) Fax ID of an outbound fax sent by the authenticated user only. 
+
+     - returns: RequestBuilder<OutboundFaxStatus> 
+     */
+    open class func getFaxFaxIdStatusWithRequestBuilder(faxId: String) -> RequestBuilder<OutboundFaxStatus> {        
+        var path = "/api/v2/fax/{faxId}/status"
+        let faxIdPreEscape = "\(faxId)"
+        let faxIdPostEscape = faxIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{faxId}", with: faxIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OutboundFaxStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     /**
      Get organization config for given organization
      

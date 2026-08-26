@@ -14,4 +14,4 @@ A rule that detects repeated user or agent messages and adds a corrective instru
 
 
 
-_PureCloudPlatformClientV2@201.0.0_
+_PureCloudPlatformClientV2@202.0.0_

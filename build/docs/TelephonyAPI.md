@@ -12,6 +12,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTelephonyNumbersRouting**](TelephonyAPI#getTelephonyNumbersRouting) | Get Number Routings by organizationId |
 | [**getTelephonyOrganizationLink**](TelephonyAPI#getTelephonyOrganizationLink) | Get organization links |
 | [**getTelephonyOrganizationLinkRegions**](TelephonyAPI#getTelephonyOrganizationLinkRegions) | Get all the replica regions by primary region |
+| [**getTelephonyPrefixes**](TelephonyAPI#getTelephonyPrefixes) | Get prefixes |
+| [**getTelephonyPrefixesSimulateCall**](TelephonyAPI#getTelephonyPrefixesSimulateCall) | Simulate call to test fraud prefix functionality |
 | [**getTelephonySettings**](TelephonyAPI#getTelephonySettings) | Get the global telephony configuration. |
 | [**getTelephonySipmessagesConversation**](TelephonyAPI#getTelephonySipmessagesConversation) | Get a SIP message. |
 | [**getTelephonySipmessagesConversationHeaders**](TelephonyAPI#getTelephonySipmessagesConversationHeaders) | Get SIP headers. |
@@ -22,6 +24,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postTelephonyNumbersRoutingAll**](TelephonyAPI#postTelephonyNumbersRoutingAll) | Re-route all numbers on an organization |
 | [**postTelephonyNumbersRoutingReset**](TelephonyAPI#postTelephonyNumbersRoutingReset) | Reset routing for organization |
 | [**postTelephonyOrganizationLink**](TelephonyAPI#postTelephonyOrganizationLink) | Create a link with an organization |
+| [**postTelephonyPrefixesBulk**](TelephonyAPI#postTelephonyPrefixesBulk) | Bulk save prefixes |
 | [**postTelephonySiptracesDownload**](TelephonyAPI#postTelephonySiptracesDownload) | Request a download of a pcap file to S3 |
 | [**putTelephonyAgentGreetings**](TelephonyAPI#putTelephonyAgentGreetings) | Updates an agent&#39;s greetings. |
 | [**putTelephonyAgentsGreetingsMe**](TelephonyAPI#putTelephonyAgentsGreetingsMe) | Updates the agent&#39;s own greetings. |
@@ -422,6 +425,114 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**[RegionResponse]**](RegionResponse)
+
+
+## getTelephonyPrefixes
+
+
+
+> [PrefixListing](PrefixListing) getTelephonyPrefixes(type, before, after, pageSize, _prefix)
+
+Get prefixes
+
+
+
+Wraps GET /api/v2/telephony/prefixes  
+
+Requires ALL permissions: 
+
+* telephony:prefix:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let type: TelephonyAPI.ModelType_getTelephonyPrefixes = TelephonyAPI.ModelType_getTelephonyPrefixes.enummember // Filter by prefix type
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let _prefix: String = "" // Filter by phone number prefix
+
+// Code example
+TelephonyAPI.getTelephonyPrefixes(type: type, before: before, after: after, pageSize: pageSize, _prefix: _prefix) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyAPI.getTelephonyPrefixes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **type** | **String**| Filter by prefix type |<br />**Values**: allow ("Allow"), block ("Block") |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **_prefix** | **String**| Filter by phone number prefix | [optional] |
+
+
+### Return type
+
+[**PrefixListing**](PrefixListing)
+
+
+## getTelephonyPrefixesSimulateCall
+
+
+
+> [CallSimulationResult](CallSimulationResult) getTelephonyPrefixesSimulateCall(number)
+
+Simulate call to test fraud prefix functionality
+
+
+
+Wraps GET /api/v2/telephony/prefixes/simulate/call  
+
+Requires ALL permissions: 
+
+* telephony:prefix:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let number: String = "" // Phone number to simulate
+
+// Code example
+TelephonyAPI.getTelephonyPrefixesSimulateCall(number: number) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyAPI.getTelephonyPrefixesSimulateCall was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **number** | **String**| Phone number to simulate | |
+
+
+### Return type
+
+[**CallSimulationResult**](CallSimulationResult)
 
 
 ## getTelephonySettings
@@ -936,6 +1047,56 @@ TelephonyAPI.postTelephonyOrganizationLink(body: body) { (response, error) in
 [**OrganizationLink**](OrganizationLink)
 
 
+## postTelephonyPrefixesBulk
+
+
+
+> [BulkPrefixesResponse](BulkPrefixesResponse) postTelephonyPrefixesBulk(body)
+
+Bulk save prefixes
+
+
+
+Wraps POST /api/v2/telephony/prefixes/bulk  
+
+Requires ALL permissions: 
+
+* telephony:prefix:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkPrefixesRequest = new BulkPrefixesRequest(...) // Bulk save request with list of prefixes
+
+// Code example
+TelephonyAPI.postTelephonyPrefixesBulk(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyAPI.postTelephonyPrefixesBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkPrefixesRequest**](BulkPrefixesRequest)| Bulk save request with list of prefixes | |
+
+
+### Return type
+
+[**BulkPrefixesResponse**](BulkPrefixesResponse)
+
+
 ## postTelephonySiptracesDownload
 
 
@@ -1138,4 +1299,4 @@ TelephonyAPI.putTelephonySettings(body: body) { (response, error) in
 [**TelephonySettings**](TelephonySettings)
 
 
-_PureCloudPlatformClientV2@201.0.0_
+_PureCloudPlatformClientV2@202.0.0_

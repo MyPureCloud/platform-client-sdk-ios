@@ -4148,6 +4148,7 @@ open class WorkforceManagementAPI {
         case buActivityCodes = "BuActivityCodes"
         case businessUnits = "BusinessUnits"
         case capacityPlan = "CapacityPlan"
+        case capacityPlanForecast = "CapacityPlanForecast"
         case capacityPlanForecastInputs = "CapacityPlanForecastInputs"
         case capacityPlanPerformancePrediction = "CapacityPlanPerformancePrediction"
         case continuousForecast = "ContinuousForecast"
@@ -8728,6 +8729,7 @@ open class WorkforceManagementAPI {
         case buActivityCodes = "BuActivityCodes"
         case businessUnits = "BusinessUnits"
         case capacityPlan = "CapacityPlan"
+        case capacityPlanForecast = "CapacityPlanForecast"
         case capacityPlanForecastInputs = "CapacityPlanForecastInputs"
         case capacityPlanPerformancePrediction = "CapacityPlanPerformancePrediction"
         case continuousForecast = "ContinuousForecast"
@@ -11903,6 +11905,7 @@ open class WorkforceManagementAPI {
         case buActivityCodes = "BuActivityCodes"
         case businessUnits = "BusinessUnits"
         case capacityPlan = "CapacityPlan"
+        case capacityPlanForecast = "CapacityPlanForecast"
         case capacityPlanForecastInputs = "CapacityPlanForecastInputs"
         case capacityPlanPerformancePrediction = "CapacityPlanPerformancePrediction"
         case continuousForecast = "ContinuousForecast"
@@ -21559,10 +21562,14 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "endDate" : "2000-01-23",
     "user" : "{}",
+    "startDate" : "2000-01-23",
     "staffingGroup" : "{}"
   }, {
+    "endDate" : "2000-01-23",
     "user" : "{}",
+    "startDate" : "2000-01-23",
     "staffingGroup" : "{}"
   } ],
   "downloadUrl" : "downloadUrl"

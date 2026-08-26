@@ -692,7 +692,8 @@ open class RecordingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -728,7 +729,8 @@ open class RecordingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -986,7 +988,8 @@ open class RecordingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -1022,7 +1025,8 @@ open class RecordingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -2131,7 +2135,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -2167,7 +2172,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -2425,7 +2431,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -2461,7 +2468,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -3681,7 +3689,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -3717,7 +3726,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -3975,7 +3985,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -4011,7 +4022,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -4817,7 +4829,8 @@ open class RecordingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -4853,7 +4866,8 @@ open class RecordingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -5111,7 +5125,8 @@ open class RecordingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -5147,7 +5162,8 @@ open class RecordingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -6026,7 +6042,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -6062,7 +6079,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -6320,7 +6338,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -6356,7 +6375,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -7198,7 +7218,8 @@ open class RecordingAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -7234,7 +7255,8 @@ open class RecordingAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -7492,7 +7514,8 @@ open class RecordingAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -7528,7 +7551,8 @@ open class RecordingAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -8308,7 +8332,8 @@ open class RecordingAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -8344,7 +8369,8 @@ open class RecordingAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -8602,7 +8628,8 @@ open class RecordingAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -8638,7 +8665,8 @@ open class RecordingAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -12004,7 +12032,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -12040,7 +12069,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -12298,7 +12328,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -12334,7 +12365,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -13225,7 +13257,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -13261,7 +13294,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",
@@ -13519,7 +13553,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     }, {
       "images" : [ {
         "imageUri" : "imageUri",
@@ -13555,7 +13590,8 @@ open class RecordingAPI {
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
-      "state" : "active"
+      "state" : "active",
+      "email" : "email"
     } ],
     "primaryContactInfo" : [ {
       "extension" : "extension",

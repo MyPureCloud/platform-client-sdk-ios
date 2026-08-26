@@ -82,6 +82,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTelephonyProvidersEdgesTrunkbasesetting**](TelephonyProvidersEdgeAPI#getTelephonyProvidersEdgesTrunkbasesetting) | Get a Trunk Base Settings object by ID |
 | [**getTelephonyProvidersEdgesTrunkbasesettings**](TelephonyProvidersEdgeAPI#getTelephonyProvidersEdgesTrunkbasesettings) | Get Trunk Base Settings listing |
 | [**getTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases**](TelephonyProvidersEdgeAPI#getTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases) | Get a list of available makes and models to create a new Trunk Base Settings |
+| [**getTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId**](TelephonyProvidersEdgeAPI#getTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId) | Get Trunk Base Settings listing for site |
 | [**getTelephonyProvidersEdgesTrunkbasesettingsTemplate**](TelephonyProvidersEdgeAPI#getTelephonyProvidersEdgesTrunkbasesettingsTemplate) | Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance |
 | [**getTelephonyProvidersEdgesTrunks**](TelephonyProvidersEdgeAPI#getTelephonyProvidersEdgesTrunks) | Get the list of available trunks. |
 | [**getTelephonyProvidersEdgesTrunksMetrics**](TelephonyProvidersEdgeAPI#getTelephonyProvidersEdgesTrunksMetrics) | Get the metrics for a list of trunks. |
@@ -94,6 +95,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postTelephonyProvidersEdgeLogicalinterfaces**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgeLogicalinterfaces) | Create an edge logical interface. |
 | [**postTelephonyProvidersEdgeLogsJobUpload**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgeLogsJobUpload) | Request that the specified fileIds be uploaded from the Edge. |
 | [**postTelephonyProvidersEdgeLogsJobs**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgeLogsJobs) | Create a job to upload a list of Edge logs. |
+| [**postTelephonyProvidersEdgeOfflineconfiguration**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgeOfflineconfiguration) | Create a file that can be used to configure a hardware Edge&#39;s settings. |
 | [**postTelephonyProvidersEdgeReboot**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgeReboot) | Reboot an Edge |
 | [**postTelephonyProvidersEdgeSoftwareupdate**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgeSoftwareupdate) | Starts a software update for this edge. |
 | [**postTelephonyProvidersEdgeStatuscode**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgeStatuscode) | Take an Edge in or out of service |
@@ -112,6 +114,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postTelephonyProvidersEdgesSites**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgesSites) | Create a Site. |
 | [**postTelephonyProvidersEdgesSitesSearch**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgesSitesSearch) | Search sites |
 | [**postTelephonyProvidersEdgesTrunkbasesettings**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgesTrunkbasesettings) | Create a Trunk Base Settings object |
+| [**postTelephonyProvidersEdgesTrunkbasesettingsSearch**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgesTrunkbasesettingsSearch) | Search Trunk Base Settings |
+| [**postTelephonyProvidersEdgesTrunksSearch**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgesTrunksSearch) | Search for trunks |
 | [**putTelephonyProvidersEdge**](TelephonyProvidersEdgeAPI#putTelephonyProvidersEdge) | Update a edge. |
 | [**putTelephonyProvidersEdgeLogicalinterface**](TelephonyProvidersEdgeAPI#putTelephonyProvidersEdgeLogicalinterface) | Update an edge logical interface. |
 | [**putTelephonyProvidersEdgesAlertablepresences**](TelephonyProvidersEdgeAPI#putTelephonyProvidersEdgesAlertablepresences) | Creates or updates alertable presences overrides. |
@@ -4257,6 +4261,66 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesTrunkbasesettingsAvailableme
 [**TrunkMetabaseEntityListing**](TrunkMetabaseEntityListing)
 
 
+## getTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId
+
+
+
+> [TrunkBaseEntityListing](TrunkBaseEntityListing) getTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId(siteId, pageNumber, pageSize, sortBy, sortOrder)
+
+Get Trunk Base Settings listing for site
+
+Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/trunkbasesettings/site/{siteId}  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let siteId: String = "" // Site ID for trunk bases
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: String = "" // Value by which to sort
+let sortOrder: String = "" // Sort order
+
+// Code example
+TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId(siteId: siteId, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesTrunkbasesettingsSiteSiteId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **siteId** | **String**| Site ID for trunk bases | |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Value by which to sort | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] |
+
+
+### Return type
+
+[**TrunkBaseEntityListing**](TrunkBaseEntityListing)
+
+
 ## getTelephonyProvidersEdgesTrunkbasesettingsTemplate
 
 
@@ -4889,6 +4953,58 @@ TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgeLogsJobs(edgeId: edgeId, bod
 ### Return type
 
 [**EdgeLogsJobResponse**](EdgeLogsJobResponse)
+
+
+## postTelephonyProvidersEdgeOfflineconfiguration
+
+
+
+> [EdgeOfflineConfigurationResponse](EdgeOfflineConfigurationResponse) postTelephonyProvidersEdgeOfflineconfiguration(edgeId, body)
+
+Create a file that can be used to configure a hardware Edge&#39;s settings.
+
+
+
+Wraps POST /api/v2/telephony/providers/edges/{edgeId}/offlineconfiguration  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let edgeId: String = "" // Edge Id
+let body: EdgeOfflineConfiguration = new EdgeOfflineConfiguration(...) // EdgeOfflineConfiguration
+
+// Code example
+TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgeOfflineconfiguration(edgeId: edgeId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgeOfflineconfiguration was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **edgeId** | **String**| Edge Id | |
+| **body** | [**EdgeOfflineConfiguration**](EdgeOfflineConfiguration)| EdgeOfflineConfiguration | |
+
+
+### Return type
+
+[**EdgeOfflineConfigurationResponse**](EdgeOfflineConfigurationResponse)
 
 
 ## postTelephonyProvidersEdgeReboot
@@ -5796,6 +5912,108 @@ TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgesTrunkbasesettings(body: bod
 [**TrunkBase**](TrunkBase)
 
 
+## postTelephonyProvidersEdgesTrunkbasesettingsSearch
+
+
+
+> [TrunkBasesSearchResponse](TrunkBasesSearchResponse) postTelephonyProvidersEdgesTrunkbasesettingsSearch(body)
+
+Search Trunk Base Settings
+
+Managed properties will not be returned unless the user is assigned the internal:trunk:edit permission.
+
+
+
+Wraps POST /api/v2/telephony/providers/edges/trunkbasesettings/search  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: TelephonySearchRequest = new TelephonySearchRequest(...) // Telephony search request
+
+// Code example
+TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgesTrunkbasesettingsSearch(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgesTrunkbasesettingsSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**TelephonySearchRequest**](TelephonySearchRequest)| Telephony search request | |
+
+
+### Return type
+
+[**TrunkBasesSearchResponse**](TrunkBasesSearchResponse)
+
+
+## postTelephonyProvidersEdgesTrunksSearch
+
+
+
+> [TrunkInstanceSearchResponse](TrunkInstanceSearchResponse) postTelephonyProvidersEdgesTrunksSearch(body)
+
+Search for trunks
+
+
+
+Wraps POST /api/v2/telephony/providers/edges/trunks/search  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: TelephonySearchRequest = new TelephonySearchRequest(...) // Telephony search request
+
+// Code example
+TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgesTrunksSearch(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgesTrunksSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**TelephonySearchRequest**](TelephonySearchRequest)| Telephony search request | |
+
+
+### Return type
+
+[**TrunkInstanceSearchResponse**](TrunkInstanceSearchResponse)
+
+
 ## putTelephonyProvidersEdge
 
 
@@ -6579,4 +6797,4 @@ TelephonyProvidersEdgeAPI.putTelephonyProvidersEdgesTrunkbasesetting(trunkBaseSe
 [**TrunkBase**](TrunkBase)
 
 
-_PureCloudPlatformClientV2@201.0.0_
+_PureCloudPlatformClientV2@202.0.0_

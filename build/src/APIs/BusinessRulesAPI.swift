@@ -280,6 +280,58 @@ open class BusinessRulesAPI {
 
     
     
+    
+    
+    /**
+     Deletes a decision table version snapshot
+     
+     - parameter tableId: (path) Table ID 
+     - parameter tableVersion: (path) Table Version 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteBusinessrulesDecisiontableVersionSnapshot(tableId: String, tableVersion: Int, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteBusinessrulesDecisiontableVersionSnapshotWithRequestBuilder(tableId: tableId, tableVersion: tableVersion)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Deletes a decision table version snapshot
+     - DELETE /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/snapshot
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter tableId: (path) Table ID 
+     - parameter tableVersion: (path) Table Version 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteBusinessrulesDecisiontableVersionSnapshotWithRequestBuilder(tableId: String, tableVersion: Int) -> RequestBuilder<Void> {        
+        var path = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/snapshot"
+        let tableIdPreEscape = "\(tableId)"
+        let tableIdPostEscape = tableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableId}", with: tableIdPostEscape, options: .literal, range: nil)
+        let tableVersionPreEscape = "\(tableVersion)"
+        let tableVersionPostEscape = tableVersionPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableVersion}", with: tableVersionPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Delete a schema
      
@@ -366,6 +418,7 @@ open class BusinessRulesAPI {
   "division" : "{}",
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "snapshotCount" : 0,
   "name" : "name",
   "id" : "id",
   "latest" : "{}"
@@ -796,6 +849,7 @@ open class BusinessRulesAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "version" : 0,
+  "rollbackReason" : "rollbackReason",
   "division" : "{}",
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -803,6 +857,7 @@ open class BusinessRulesAPI {
   "name" : "name",
   "id" : "id",
   "rowCount" : 6,
+  "snapshot" : "{}",
   "status" : "Draft"
 }, statusCode=200}]
      
@@ -1036,16 +1091,30 @@ open class BusinessRulesAPI {
     
     
     
+    
+    
+    public enum Status_getBusinessrulesDecisiontableVersions: String { 
+        case draft = "Draft"
+        case published = "Published"
+        case error = "Error"
+        case preparing = "Preparing"
+        case superseded = "Superseded"
+    }
+    
+    
+    
     /**
      Get a list of decision table versions
      
      - parameter tableId: (path) Table ID 
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 100. (optional)
+     - parameter status: (query) Filter by version status. Repeatable. (optional)
+     - parameter hasSnapshot: (query) When true, returns only versions that have snapshot metadata. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getBusinessrulesDecisiontableVersions(tableId: String, after: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: DecisionTableVersionListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getBusinessrulesDecisiontableVersionsWithRequestBuilder(tableId: tableId, after: after, pageSize: pageSize)
+    open class func getBusinessrulesDecisiontableVersions(tableId: String, after: String? = nil, pageSize: String? = nil, status: [String]? = nil, hasSnapshot: Bool? = nil, completion: @escaping ((_ data: DecisionTableVersionListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getBusinessrulesDecisiontableVersionsWithRequestBuilder(tableId: tableId, after: after, pageSize: pageSize, status: status, hasSnapshot: hasSnapshot)
         requestBuilder.execute { (response: Response<DecisionTableVersionListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1078,6 +1147,7 @@ open class BusinessRulesAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "version" : 0,
+    "rollbackReason" : "rollbackReason",
     "division" : "{}",
     "datePublished" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -1085,6 +1155,7 @@ open class BusinessRulesAPI {
     "name" : "name",
     "id" : "id",
     "rowCount" : 6,
+    "snapshot" : "{}",
     "status" : "Draft"
   }, {
     "rowsUri" : "rowsUri",
@@ -1095,6 +1166,7 @@ open class BusinessRulesAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "version" : 0,
+    "rollbackReason" : "rollbackReason",
     "division" : "{}",
     "datePublished" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -1102,6 +1174,7 @@ open class BusinessRulesAPI {
     "name" : "name",
     "id" : "id",
     "rowCount" : 6,
+    "snapshot" : "{}",
     "status" : "Draft"
   } ],
   "selfUri" : "selfUri",
@@ -1112,10 +1185,12 @@ open class BusinessRulesAPI {
      - parameter tableId: (path) Table ID 
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 100. (optional)
+     - parameter status: (query) Filter by version status. Repeatable. (optional)
+     - parameter hasSnapshot: (query) When true, returns only versions that have snapshot metadata. (optional)
 
      - returns: RequestBuilder<DecisionTableVersionListing> 
      */
-    open class func getBusinessrulesDecisiontableVersionsWithRequestBuilder(tableId: String, after: String? = nil, pageSize: String? = nil) -> RequestBuilder<DecisionTableVersionListing> {        
+    open class func getBusinessrulesDecisiontableVersionsWithRequestBuilder(tableId: String, after: String? = nil, pageSize: String? = nil, status: [String]? = nil, hasSnapshot: Bool? = nil) -> RequestBuilder<DecisionTableVersionListing> {        
         var path = "/api/v2/businessrules/decisiontables/{tableId}/versions"
         let tableIdPreEscape = "\(tableId)"
         let tableIdPostEscape = tableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1126,7 +1201,9 @@ open class BusinessRulesAPI {
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "after": after, 
-            "pageSize": pageSize
+            "pageSize": pageSize, 
+            "status": status, 
+            "hasSnapshot": hasSnapshot
         ])
 
         let requestBuilder: RequestBuilder<DecisionTableVersionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1187,6 +1264,7 @@ open class BusinessRulesAPI {
     "division" : "{}",
     "datePublished" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "snapshotCount" : 0,
     "name" : "name",
     "id" : "id",
     "latest" : "{}"
@@ -1201,6 +1279,7 @@ open class BusinessRulesAPI {
     "division" : "{}",
     "datePublished" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "snapshotCount" : 0,
     "name" : "name",
     "id" : "id",
     "latest" : "{}"
@@ -1302,6 +1381,7 @@ open class BusinessRulesAPI {
     "division" : "{}",
     "datePublished" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "snapshotCount" : 0,
     "name" : "name",
     "id" : "id",
     "latest" : "{}"
@@ -1316,6 +1396,7 @@ open class BusinessRulesAPI {
     "division" : "{}",
     "datePublished" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "snapshotCount" : 0,
     "name" : "name",
     "id" : "id",
     "latest" : "{}"
@@ -1415,6 +1496,171 @@ open class BusinessRulesAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BusinessRulesDataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a schema version
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter schemaVersion: (path) Schema version number 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getBusinessrulesSchemaVersion(schemaId: String, schemaVersion: String, completion: @escaping ((_ data: BusinessRulesDataSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = getBusinessrulesSchemaVersionWithRequestBuilder(schemaId: schemaId, schemaVersion: schemaVersion)
+        requestBuilder.execute { (response: Response<BusinessRulesDataSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a schema version
+     - GET /api/v2/businessrules/schemas/{schemaId}/versions/{schemaVersion}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "jsonSchema" : "{\n    \"appliesTo\": [\n        \"CONTACT\"\n    ],\n    \"jsonSchema\": {\n        \"title\": \"Example schema\",\n        \"description\": \"Uses all of the core types for illustrative purposes\",\n        \"properties\": {\n            \"field1_text\": {\n                \"title\": \"Field 1\",\n                \"description\": \"field1\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/text\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 39\n            },\n            \"field2_longtext\": {\n                \"title\": \"Field 2\",\n                \"description\": \"field2\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/longtext\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 1000\n            },\n            \"field3_enum\": {\n                \"title\": \"Field 3\",\n                \"description\": \"Field 3\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/enum\" } ],\n                \"enum\": [\n                    \"enum1\",\n                    \"enum2\"\n                ]\n            },\n            \"field4_identifier\": {\n                \"title\": \"field4\",\n                \"description\": \"Field 4\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/identifier\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 37\n            },\n            \"field5_integer\": {\n                \"title\": \"field5\",\n                \"description\": \"Field 5\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/integer\" } ],\n                \"minimum\": 1,\n                \"maximum\": 24\n            },\n            \"field6_number\": {\n                \"title\": \"field6\",\n                \"description\": \"Field 6\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/number\" } ],\n                \"minimum\": 2.7,\n                \"maximum\": 31.3\n            },\n            \"field7_date\": {\n                \"title\": \"field7\",\n                \"description\": \"Field 7\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/date\"}]\n            },\n            \"field8_datetime\": {\n                \"title\": \"field8\",\n                \"description\": \"Field 8\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/datetime\"}]\n            },\n            \"field9_checkbox\": {\n                \"title\": \"field9\",\n                \"description\": \"Field 9\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/checkbox\"}]\n            },\n            \"field10_tag\": {\n                \"title\": \"field10\",\n                \"description\": \"Field 10\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/tag\" } ],\n                \"items\": {\n                    \"minLength\": 1,\n                    \"maxLength\": 20\n                },\n                \"minItems\": 0,\n                \"maxItems\": 10,\n                \"uniqueItems\": true\n            }\n        },\n        \"$schema\": \"http://json-schema.org/draft-04/schema#\"\n    }\n}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "appliesTo" : [ "CONTACT", "CONTACT" ],
+  "id" : "id",
+  "version" : 0,
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter schemaVersion: (path) Schema version number 
+
+     - returns: RequestBuilder<BusinessRulesDataSchema> 
+     */
+    open class func getBusinessrulesSchemaVersionWithRequestBuilder(schemaId: String, schemaVersion: String) -> RequestBuilder<BusinessRulesDataSchema> {        
+        var path = "/api/v2/businessrules/schemas/{schemaId}/versions/{schemaVersion}"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let schemaVersionPreEscape = "\(schemaVersion)"
+        let schemaVersionPostEscape = schemaVersionPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaVersion}", with: schemaVersionPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BusinessRulesDataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     List schema versions
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of items per page (must be between 1 and 100) (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getBusinessrulesSchemaVersions(schemaId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: BusinessRulesDataSchemaListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getBusinessrulesSchemaVersionsWithRequestBuilder(schemaId: schemaId, before: before, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<BusinessRulesDataSchemaListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     List schema versions
+     - GET /api/v2/businessrules/schemas/{schemaId}/versions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "jsonSchema" : "{\n    \"appliesTo\": [\n        \"CONTACT\"\n    ],\n    \"jsonSchema\": {\n        \"title\": \"Example schema\",\n        \"description\": \"Uses all of the core types for illustrative purposes\",\n        \"properties\": {\n            \"field1_text\": {\n                \"title\": \"Field 1\",\n                \"description\": \"field1\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/text\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 39\n            },\n            \"field2_longtext\": {\n                \"title\": \"Field 2\",\n                \"description\": \"field2\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/longtext\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 1000\n            },\n            \"field3_enum\": {\n                \"title\": \"Field 3\",\n                \"description\": \"Field 3\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/enum\" } ],\n                \"enum\": [\n                    \"enum1\",\n                    \"enum2\"\n                ]\n            },\n            \"field4_identifier\": {\n                \"title\": \"field4\",\n                \"description\": \"Field 4\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/identifier\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 37\n            },\n            \"field5_integer\": {\n                \"title\": \"field5\",\n                \"description\": \"Field 5\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/integer\" } ],\n                \"minimum\": 1,\n                \"maximum\": 24\n            },\n            \"field6_number\": {\n                \"title\": \"field6\",\n                \"description\": \"Field 6\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/number\" } ],\n                \"minimum\": 2.7,\n                \"maximum\": 31.3\n            },\n            \"field7_date\": {\n                \"title\": \"field7\",\n                \"description\": \"Field 7\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/date\"}]\n            },\n            \"field8_datetime\": {\n                \"title\": \"field8\",\n                \"description\": \"Field 8\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/datetime\"}]\n            },\n            \"field9_checkbox\": {\n                \"title\": \"field9\",\n                \"description\": \"Field 9\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/checkbox\"}]\n            },\n            \"field10_tag\": {\n                \"title\": \"field10\",\n                \"description\": \"Field 10\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/tag\" } ],\n                \"items\": {\n                    \"minLength\": 1,\n                    \"maxLength\": 20\n                },\n                \"minItems\": 0,\n                \"maxItems\": 10,\n                \"uniqueItems\": true\n            }\n        },\n        \"$schema\": \"http://json-schema.org/draft-04/schema#\"\n    }\n}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "appliesTo" : [ "CONTACT", "CONTACT" ],
+    "id" : "id",
+    "version" : 0,
+    "enabled" : true
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "jsonSchema" : "{\n    \"appliesTo\": [\n        \"CONTACT\"\n    ],\n    \"jsonSchema\": {\n        \"title\": \"Example schema\",\n        \"description\": \"Uses all of the core types for illustrative purposes\",\n        \"properties\": {\n            \"field1_text\": {\n                \"title\": \"Field 1\",\n                \"description\": \"field1\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/text\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 39\n            },\n            \"field2_longtext\": {\n                \"title\": \"Field 2\",\n                \"description\": \"field2\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/longtext\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 1000\n            },\n            \"field3_enum\": {\n                \"title\": \"Field 3\",\n                \"description\": \"Field 3\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/enum\" } ],\n                \"enum\": [\n                    \"enum1\",\n                    \"enum2\"\n                ]\n            },\n            \"field4_identifier\": {\n                \"title\": \"field4\",\n                \"description\": \"Field 4\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/identifier\" } ],\n                \"minLength\": 0,\n                \"maxLength\": 37\n            },\n            \"field5_integer\": {\n                \"title\": \"field5\",\n                \"description\": \"Field 5\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/integer\" } ],\n                \"minimum\": 1,\n                \"maximum\": 24\n            },\n            \"field6_number\": {\n                \"title\": \"field6\",\n                \"description\": \"Field 6\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/number\" } ],\n                \"minimum\": 2.7,\n                \"maximum\": 31.3\n            },\n            \"field7_date\": {\n                \"title\": \"field7\",\n                \"description\": \"Field 7\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/date\"}]\n            },\n            \"field8_datetime\": {\n                \"title\": \"field8\",\n                \"description\": \"Field 8\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/datetime\"}]\n            },\n            \"field9_checkbox\": {\n                \"title\": \"field9\",\n                \"description\": \"Field 9\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/checkbox\"}]\n            },\n            \"field10_tag\": {\n                \"title\": \"field10\",\n                \"description\": \"Field 10\",\n                \"allOf\": [ { \"$ref\": \"#/definitions/tag\" } ],\n                \"items\": {\n                    \"minLength\": 1,\n                    \"maxLength\": 20\n                },\n                \"minItems\": 0,\n                \"maxItems\": 10,\n                \"uniqueItems\": true\n            }\n        },\n        \"$schema\": \"http://json-schema.org/draft-04/schema#\"\n    }\n}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "appliesTo" : [ "CONTACT", "CONTACT" ],
+    "id" : "id",
+    "version" : 0,
+    "enabled" : true
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of items per page (must be between 1 and 100) (optional)
+
+     - returns: RequestBuilder<BusinessRulesDataSchemaListing> 
+     */
+    open class func getBusinessrulesSchemaVersionsWithRequestBuilder(schemaId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil) -> RequestBuilder<BusinessRulesDataSchemaListing> {        
+        var path = "/api/v2/businessrules/schemas/{schemaId}/versions"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize
+        ])
+
+        let requestBuilder: RequestBuilder<BusinessRulesDataSchemaListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1674,6 +1920,7 @@ open class BusinessRulesAPI {
   "division" : "{}",
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "snapshotCount" : 0,
   "name" : "name",
   "id" : "id",
   "latest" : "{}"
@@ -1829,6 +2076,7 @@ open class BusinessRulesAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "version" : 0,
+  "rollbackReason" : "rollbackReason",
   "division" : "{}",
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -1836,6 +2084,7 @@ open class BusinessRulesAPI {
   "name" : "name",
   "id" : "id",
   "rowCount" : 6,
+  "snapshot" : "{}",
   "status" : "Draft"
 }, statusCode=200}]
      
@@ -2135,6 +2384,7 @@ open class BusinessRulesAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "version" : 0,
+  "rollbackReason" : "rollbackReason",
   "division" : "{}",
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -2142,6 +2392,7 @@ open class BusinessRulesAPI {
   "name" : "name",
   "id" : "id",
   "rowCount" : 6,
+  "snapshot" : "{}",
   "status" : "Draft"
 }, statusCode=200}]
      
@@ -2249,6 +2500,89 @@ open class BusinessRulesAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DecisionTableExecutionResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Re-publish a superseded decision table version as the current published version
+     
+     - parameter tableId: (path) Table ID 
+     - parameter tableVersion: (path) Table Version 
+     - parameter body: (body) Rollback request (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postBusinessrulesDecisiontableVersionRollback(tableId: String, tableVersion: Int, body: RollbackDecisionTableVersionRequest? = nil, completion: @escaping ((_ data: DecisionTableVersion?,_ error: Error?) -> Void)) {
+        let requestBuilder = postBusinessrulesDecisiontableVersionRollbackWithRequestBuilder(tableId: tableId, tableVersion: tableVersion, body: body)
+        requestBuilder.execute { (response: Response<DecisionTableVersion>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Re-publish a superseded decision table version as the current published version
+     - POST /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rollback
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "rowsUri" : "rowsUri",
+  "publishedBy" : "{}",
+  "columns" : "{}",
+  "contract" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "version" : 0,
+  "rollbackReason" : "rollbackReason",
+  "division" : "{}",
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "name" : "name",
+  "id" : "id",
+  "rowCount" : 6,
+  "snapshot" : "{}",
+  "status" : "Draft"
+}, statusCode=200}]
+     
+     - parameter tableId: (path) Table ID 
+     - parameter tableVersion: (path) Table Version 
+     - parameter body: (body) Rollback request (optional)
+
+     - returns: RequestBuilder<DecisionTableVersion> 
+     */
+    open class func postBusinessrulesDecisiontableVersionRollbackWithRequestBuilder(tableId: String, tableVersion: Int, body: RollbackDecisionTableVersionRequest? = nil) -> RequestBuilder<DecisionTableVersion> {        
+        var path = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rollback"
+        let tableIdPreEscape = "\(tableId)"
+        let tableIdPostEscape = tableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableId}", with: tableIdPostEscape, options: .literal, range: nil)
+        let tableVersionPreEscape = "\(tableVersion)"
+        let tableVersionPostEscape = tableVersionPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableVersion}", with: tableVersionPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DecisionTableVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -2721,6 +3055,89 @@ open class BusinessRulesAPI {
     
     
     
+    
+    
+    /**
+     Creates a decision table version snapshot
+     
+     - parameter tableId: (path) Table ID 
+     - parameter tableVersion: (path) Table Version 
+     - parameter body: (body) Snapshot request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postBusinessrulesDecisiontableVersionSnapshot(tableId: String, tableVersion: Int, body: CreateDecisionTableSnapshotRequest, completion: @escaping ((_ data: DecisionTableVersion?,_ error: Error?) -> Void)) {
+        let requestBuilder = postBusinessrulesDecisiontableVersionSnapshotWithRequestBuilder(tableId: tableId, tableVersion: tableVersion, body: body)
+        requestBuilder.execute { (response: Response<DecisionTableVersion>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Creates a decision table version snapshot
+     - POST /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/snapshot
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "rowsUri" : "rowsUri",
+  "publishedBy" : "{}",
+  "columns" : "{}",
+  "contract" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "version" : 0,
+  "rollbackReason" : "rollbackReason",
+  "division" : "{}",
+  "datePublished" : "2000-01-23T04:56:07.000+00:00",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "name" : "name",
+  "id" : "id",
+  "rowCount" : 6,
+  "snapshot" : "{}",
+  "status" : "Draft"
+}, statusCode=200}]
+     
+     - parameter tableId: (path) Table ID 
+     - parameter tableVersion: (path) Table Version 
+     - parameter body: (body) Snapshot request 
+
+     - returns: RequestBuilder<DecisionTableVersion> 
+     */
+    open class func postBusinessrulesDecisiontableVersionSnapshotWithRequestBuilder(tableId: String, tableVersion: Int, body: CreateDecisionTableSnapshotRequest) -> RequestBuilder<DecisionTableVersion> {        
+        var path = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/snapshot"
+        let tableIdPreEscape = "\(tableId)"
+        let tableIdPostEscape = tableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableId}", with: tableIdPostEscape, options: .literal, range: nil)
+        let tableVersionPreEscape = "\(tableVersion)"
+        let tableVersionPostEscape = tableVersionPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tableVersion}", with: tableVersionPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DecisionTableVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     /**
      Update the Business Rules Schema to the latest version for a given decision table version
      
@@ -2761,6 +3178,7 @@ open class BusinessRulesAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "version" : 0,
+  "rollbackReason" : "rollbackReason",
   "division" : "{}",
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -2768,6 +3186,7 @@ open class BusinessRulesAPI {
   "name" : "name",
   "id" : "id",
   "rowCount" : 6,
+  "snapshot" : "{}",
   "status" : "Draft"
 }, statusCode=200}]
      
@@ -2838,6 +3257,7 @@ open class BusinessRulesAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "version" : 0,
+  "rollbackReason" : "rollbackReason",
   "division" : "{}",
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -2845,6 +3265,7 @@ open class BusinessRulesAPI {
   "name" : "name",
   "id" : "id",
   "rowCount" : 6,
+  "snapshot" : "{}",
   "status" : "Draft"
 }, statusCode=200}]
      
@@ -2910,6 +3331,7 @@ open class BusinessRulesAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "version" : 0,
+  "rollbackReason" : "rollbackReason",
   "division" : "{}",
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -2917,6 +3339,7 @@ open class BusinessRulesAPI {
   "name" : "name",
   "id" : "id",
   "rowCount" : 6,
+  "snapshot" : "{}",
   "status" : "Draft"
 }, statusCode=200}]
      
@@ -3040,6 +3463,7 @@ open class BusinessRulesAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "version" : 0,
+  "rollbackReason" : "rollbackReason",
   "division" : "{}",
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -3047,6 +3471,7 @@ open class BusinessRulesAPI {
   "name" : "name",
   "id" : "id",
   "rowCount" : 6,
+  "snapshot" : "{}",
   "status" : "Draft"
 }, statusCode=200}]
      

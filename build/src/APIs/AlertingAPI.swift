@@ -307,7 +307,7 @@ open class AlertingAPI {
     
     
     /**
-     Allows an entity to mute/snooze an alert or update the unread status of the alert.
+     Allows an entity to mute/snooze an alert, update the unread status of the alert, or close an alert.
      
      - parameter alertId: (path) Alert ID 
      - parameter body: (body)  (optional)
@@ -332,9 +332,9 @@ open class AlertingAPI {
     }
 
     /**
-     Allows an entity to mute/snooze an alert or update the unread status of the alert.
+     Allows an entity to mute/snooze an alert, update the unread status of the alert, or close an alert.
      - PATCH /api/v2/alerting/alerts/{alertId}
-     - Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals.
+     - Snoozing an alert temporarily stop it from resending notifications to individualsas well as other services within Genesys Cloud for a given period.  Muting an alert will only block the notifications to individuals. Closing an alert will mark it as closed.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

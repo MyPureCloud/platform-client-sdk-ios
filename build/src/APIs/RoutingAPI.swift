@@ -4794,7 +4794,8 @@ open class RoutingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -4830,7 +4831,8 @@ open class RoutingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -5101,7 +5103,8 @@ open class RoutingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -5137,7 +5140,8 @@ open class RoutingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -5563,7 +5567,8 @@ open class RoutingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -5599,7 +5604,8 @@ open class RoutingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -5870,7 +5876,8 @@ open class RoutingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -5906,7 +5913,8 @@ open class RoutingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -11231,7 +11239,8 @@ open class RoutingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -11267,7 +11276,8 @@ open class RoutingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -11538,7 +11548,8 @@ open class RoutingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -11574,7 +11585,8 @@ open class RoutingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -11968,7 +11980,8 @@ open class RoutingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -12004,7 +12017,8 @@ open class RoutingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",
@@ -12275,7 +12289,8 @@ open class RoutingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       }, {
         "images" : [ {
           "imageUri" : "imageUri",
@@ -12311,7 +12326,8 @@ open class RoutingAPI {
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
-        "state" : "active"
+        "state" : "active",
+        "email" : "email"
       } ],
       "primaryContactInfo" : [ {
         "extension" : "extension",

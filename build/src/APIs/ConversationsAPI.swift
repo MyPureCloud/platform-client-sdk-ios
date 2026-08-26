@@ -7688,7 +7688,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -7724,7 +7725,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -8113,7 +8115,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -8149,7 +8152,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -8410,7 +8414,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -8446,7 +8451,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -8704,7 +8710,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -8740,7 +8747,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -9001,7 +9009,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -9037,7 +9046,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -9298,7 +9308,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -9334,7 +9345,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -9830,7 +9842,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -9866,7 +9879,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -10141,7 +10155,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -10177,7 +10192,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -10551,7 +10567,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -10587,7 +10604,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -10976,7 +10994,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -11012,7 +11031,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -11273,7 +11293,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -11309,7 +11330,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -11567,7 +11589,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -11603,7 +11626,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -11864,7 +11888,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -11900,7 +11925,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -12161,7 +12187,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -12197,7 +12224,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -12693,7 +12721,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -12729,7 +12758,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -13004,7 +13034,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -13040,7 +13071,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -14519,7 +14551,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -14555,7 +14588,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -14944,7 +14978,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -14980,7 +15015,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -15241,7 +15277,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -15277,7 +15314,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -15535,7 +15573,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -15571,7 +15610,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -15832,7 +15872,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -15868,7 +15909,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -16129,7 +16171,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -16165,7 +16208,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -16661,7 +16705,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -16697,7 +16742,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -16972,7 +17018,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -17008,7 +17055,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -17382,7 +17430,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -17418,7 +17467,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -17807,7 +17857,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -17843,7 +17894,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -18104,7 +18156,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -18140,7 +18193,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -18398,7 +18452,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -18434,7 +18489,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -18695,7 +18751,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -18731,7 +18788,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -18992,7 +19050,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -19028,7 +19087,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -19524,7 +19584,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -19560,7 +19621,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -19835,7 +19897,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -19871,7 +19934,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -22900,7 +22964,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -22936,7 +23001,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -23325,7 +23391,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -23361,7 +23428,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -23622,7 +23690,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -23658,7 +23727,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -23916,7 +23986,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -23952,7 +24023,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -24213,7 +24285,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -24249,7 +24322,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -24510,7 +24584,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -24546,7 +24621,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -25042,7 +25118,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -25078,7 +25155,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -25353,7 +25431,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -25389,7 +25468,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -25763,7 +25843,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -25799,7 +25880,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -26188,7 +26270,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -26224,7 +26307,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -26485,7 +26569,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -26521,7 +26606,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -26779,7 +26865,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -26815,7 +26902,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -27076,7 +27164,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -27112,7 +27201,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -27373,7 +27463,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -27409,7 +27500,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -27905,7 +27997,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -27941,7 +28034,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -28216,7 +28310,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -28252,7 +28347,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -29731,7 +29827,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -29767,7 +29864,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -30156,7 +30254,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -30192,7 +30291,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -30453,7 +30553,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -30489,7 +30590,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -30747,7 +30849,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -30783,7 +30886,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -31044,7 +31148,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -31080,7 +31185,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -31341,7 +31447,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -31377,7 +31484,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -31873,7 +31981,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -31909,7 +32018,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -32184,7 +32294,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -32220,7 +32331,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -32594,7 +32706,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -32630,7 +32743,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -33019,7 +33133,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -33055,7 +33170,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -33316,7 +33432,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -33352,7 +33469,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -33610,7 +33728,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -33646,7 +33765,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -33907,7 +34027,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -33943,7 +34064,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -34204,7 +34326,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -34240,7 +34363,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -34736,7 +34860,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -34772,7 +34897,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -35047,7 +35173,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -35083,7 +35210,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -36622,7 +36750,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -36658,7 +36787,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -37047,7 +37177,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -37083,7 +37214,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -37344,7 +37476,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -37380,7 +37513,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -37638,7 +37772,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -37674,7 +37809,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -37935,7 +38071,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -37971,7 +38108,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -38232,7 +38370,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -38268,7 +38407,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -38764,7 +38904,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -38800,7 +38941,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -39075,7 +39217,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -39111,7 +39254,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -39485,7 +39629,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -39521,7 +39666,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -39910,7 +40056,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -39946,7 +40093,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -40207,7 +40355,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -40243,7 +40392,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -40501,7 +40651,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -40537,7 +40688,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -40798,7 +40950,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -40834,7 +40987,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -41095,7 +41249,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -41131,7 +41286,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -41627,7 +41783,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -41663,7 +41820,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -41938,7 +42096,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -41974,7 +42133,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -43453,7 +43613,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -43489,7 +43650,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -43878,7 +44040,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -43914,7 +44077,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -44175,7 +44339,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -44211,7 +44376,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -44469,7 +44635,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -44505,7 +44672,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -44766,7 +44934,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -44802,7 +44971,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -45063,7 +45233,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -45099,7 +45270,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -45595,7 +45767,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -45631,7 +45804,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -45906,7 +46080,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -45942,7 +46117,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -46316,7 +46492,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -46352,7 +46529,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -46741,7 +46919,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -46777,7 +46956,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -47038,7 +47218,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -47074,7 +47255,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -47332,7 +47514,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -47368,7 +47551,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -47629,7 +47813,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -47665,7 +47850,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -47926,7 +48112,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             }, {
               "images" : [ {
                 "imageUri" : "imageUri",
@@ -47962,7 +48149,8 @@ open class ConversationsAPI {
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
-              "state" : "active"
+              "state" : "active",
+              "email" : "email"
             } ],
             "primaryContactInfo" : [ {
               "extension" : "extension",
@@ -48458,7 +48646,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -48494,7 +48683,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -48769,7 +48959,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -48805,7 +48996,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -54941,17 +55133,14 @@ open class ConversationsAPI {
 
     
     
-    
-    
     /**
      Get message
      
      - parameter messageId: (path) messageId 
-     - parameter useNormalizedMessage: (query) If true, response removes deprecated fields (textBody, media) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationsMessageDetails(messageId: String, useNormalizedMessage: Bool? = nil, completion: @escaping ((_ data: MessageData?,_ error: Error?) -> Void)) {
-        let requestBuilder = getConversationsMessageDetailsWithRequestBuilder(messageId: messageId, useNormalizedMessage: useNormalizedMessage)
+    open class func getConversationsMessageDetails(messageId: String, completion: @escaping ((_ data: MessageData?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessageDetailsWithRequestBuilder(messageId: messageId)
         requestBuilder.execute { (response: Response<MessageData>?, error) -> Void in
             do {
                 if let e = error {
@@ -54979,20 +55168,6 @@ open class ConversationsAPI {
   "conversationId" : "conversationId",
   "selfUri" : "https://openapi-generator.tech",
   "messengerType" : "sms",
-  "textBody" : "textBody",
-  "media" : [ {
-    "contentLengthBytes" : 9,
-    "name" : "name",
-    "mediaType" : "mediaType",
-    "id" : "id",
-    "url" : "url"
-  }, {
-    "contentLengthBytes" : 9,
-    "name" : "name",
-    "mediaType" : "mediaType",
-    "id" : "id",
-    "url" : "url"
-  } ],
   "toAddress" : "toAddress",
   "normalizedMessage" : "{}",
   "normalizedReceipts" : [ {
@@ -55186,11 +55361,10 @@ open class ConversationsAPI {
 }, statusCode=200}]
      
      - parameter messageId: (path) messageId 
-     - parameter useNormalizedMessage: (query) If true, response removes deprecated fields (textBody, media) (optional)
 
      - returns: RequestBuilder<MessageData> 
      */
-    open class func getConversationsMessageDetailsWithRequestBuilder(messageId: String, useNormalizedMessage: Bool? = nil) -> RequestBuilder<MessageData> {        
+    open class func getConversationsMessageDetailsWithRequestBuilder(messageId: String) -> RequestBuilder<MessageData> {        
         var path = "/api/v2/conversations/messages/{messageId}/details"
         let messageIdPreEscape = "\(messageId)"
         let messageIdPostEscape = messageIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -55198,10 +55372,7 @@ open class ConversationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var requestUrl = URLComponents(string: URLString)
-        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "useNormalizedMessage": useNormalizedMessage
-        ])
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<MessageData>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -55212,18 +55383,15 @@ open class ConversationsAPI {
     
     
     
-    
-    
     /**
      Get conversation message
      
      - parameter conversationId: (path) conversationId 
      - parameter messageId: (path) messageId 
-     - parameter useNormalizedMessage: (query) If true, response removes deprecated fields (textBody, media) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationsMessageMessage(conversationId: String, messageId: String, useNormalizedMessage: Bool? = nil, completion: @escaping ((_ data: MessageData?,_ error: Error?) -> Void)) {
-        let requestBuilder = getConversationsMessageMessageWithRequestBuilder(conversationId: conversationId, messageId: messageId, useNormalizedMessage: useNormalizedMessage)
+    open class func getConversationsMessageMessage(conversationId: String, messageId: String, completion: @escaping ((_ data: MessageData?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessageMessageWithRequestBuilder(conversationId: conversationId, messageId: messageId)
         requestBuilder.execute { (response: Response<MessageData>?, error) -> Void in
             do {
                 if let e = error {
@@ -55251,20 +55419,6 @@ open class ConversationsAPI {
   "conversationId" : "conversationId",
   "selfUri" : "https://openapi-generator.tech",
   "messengerType" : "sms",
-  "textBody" : "textBody",
-  "media" : [ {
-    "contentLengthBytes" : 9,
-    "name" : "name",
-    "mediaType" : "mediaType",
-    "id" : "id",
-    "url" : "url"
-  }, {
-    "contentLengthBytes" : 9,
-    "name" : "name",
-    "mediaType" : "mediaType",
-    "id" : "id",
-    "url" : "url"
-  } ],
   "toAddress" : "toAddress",
   "normalizedMessage" : "{}",
   "normalizedReceipts" : [ {
@@ -55459,11 +55613,10 @@ open class ConversationsAPI {
      
      - parameter conversationId: (path) conversationId 
      - parameter messageId: (path) messageId 
-     - parameter useNormalizedMessage: (query) If true, response removes deprecated fields (textBody, media) (optional)
 
      - returns: RequestBuilder<MessageData> 
      */
-    open class func getConversationsMessageMessageWithRequestBuilder(conversationId: String, messageId: String, useNormalizedMessage: Bool? = nil) -> RequestBuilder<MessageData> {        
+    open class func getConversationsMessageMessageWithRequestBuilder(conversationId: String, messageId: String) -> RequestBuilder<MessageData> {        
         var path = "/api/v2/conversations/messages/{conversationId}/messages/{messageId}"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -55474,10 +55627,7 @@ open class ConversationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var requestUrl = URLComponents(string: URLString)
-        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "useNormalizedMessage": useNormalizedMessage
-        ])
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<MessageData>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -61284,7 +61434,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -61320,7 +61471,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -61709,7 +61861,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -61745,7 +61898,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -62006,7 +62160,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -62042,7 +62197,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -62300,7 +62456,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -62336,7 +62493,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -62597,7 +62755,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -62633,7 +62792,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -62894,7 +63054,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -62930,7 +63091,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -63426,7 +63588,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -63462,7 +63625,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -63737,7 +63901,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -63773,7 +63938,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -64147,7 +64313,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -64183,7 +64350,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -64572,7 +64740,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -64608,7 +64777,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -64869,7 +65039,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -64905,7 +65076,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -65163,7 +65335,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -65199,7 +65372,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -65460,7 +65634,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -65496,7 +65671,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -65757,7 +65933,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -65793,7 +65970,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -66289,7 +66467,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -66325,7 +66504,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -66600,7 +66780,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -66636,7 +66817,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -68115,7 +68297,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -68151,7 +68334,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -68540,7 +68724,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -68576,7 +68761,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -68837,7 +69023,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -68873,7 +69060,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -69131,7 +69319,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -69167,7 +69356,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -69428,7 +69618,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -69464,7 +69655,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -69725,7 +69917,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -69761,7 +69954,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -70257,7 +70451,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -70293,7 +70488,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -70568,7 +70764,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -70604,7 +70801,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -70978,7 +71176,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -71014,7 +71213,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -71403,7 +71603,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -71439,7 +71640,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -71700,7 +71902,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -71736,7 +71939,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -71994,7 +72198,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -72030,7 +72235,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -72291,7 +72497,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -72327,7 +72534,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -72588,7 +72796,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -72624,7 +72833,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -73120,7 +73330,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -73156,7 +73367,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -73431,7 +73643,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -73467,7 +73680,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -75498,7 +75712,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -75534,7 +75749,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -75923,7 +76139,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -75959,7 +76176,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -76220,7 +76438,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -76256,7 +76475,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -76514,7 +76734,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -76550,7 +76771,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -76811,7 +77033,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -76847,7 +77070,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -77108,7 +77332,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -77144,7 +77369,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -77640,7 +77866,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -77676,7 +77903,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -77951,7 +78179,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -77987,7 +78216,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -78361,7 +78591,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -78397,7 +78628,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -78786,7 +79018,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -78822,7 +79055,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -79083,7 +79317,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -79119,7 +79354,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -79377,7 +79613,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -79413,7 +79650,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -79674,7 +79912,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -79710,7 +79949,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -79971,7 +80211,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -80007,7 +80248,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -80503,7 +80745,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -80539,7 +80782,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -80814,7 +81058,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -80850,7 +81095,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -82329,7 +82575,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -82365,7 +82612,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -82754,7 +83002,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -82790,7 +83039,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -83051,7 +83301,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -83087,7 +83338,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -83345,7 +83597,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -83381,7 +83634,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -83642,7 +83896,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -83678,7 +83933,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -83939,7 +84195,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -83975,7 +84232,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -84471,7 +84729,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -84507,7 +84766,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -84782,7 +85042,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -84818,7 +85079,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -85192,7 +85454,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -85228,7 +85491,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -85617,7 +85881,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -85653,7 +85918,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -85914,7 +86180,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -85950,7 +86217,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -86208,7 +86476,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -86244,7 +86513,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -86505,7 +86775,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -86541,7 +86812,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -86802,7 +87074,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -86838,7 +87111,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -87334,7 +87608,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -87370,7 +87645,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -87645,7 +87921,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -87681,7 +87958,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -89531,7 +89809,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -89567,7 +89846,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -89956,7 +90236,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -89992,7 +90273,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -90253,7 +90535,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -90289,7 +90572,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -90547,7 +90831,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -90583,7 +90868,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -90844,7 +91130,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -90880,7 +91167,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -91141,7 +91429,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -91177,7 +91466,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -91673,7 +91963,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -91709,7 +92000,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -91984,7 +92276,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -92020,7 +92313,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -92394,7 +92688,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -92430,7 +92725,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -92819,7 +93115,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -92855,7 +93152,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -93116,7 +93414,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -93152,7 +93451,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -93410,7 +93710,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -93446,7 +93747,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -93707,7 +94009,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -93743,7 +94046,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -94004,7 +94308,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -94040,7 +94345,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -94536,7 +94842,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -94572,7 +94879,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -94847,7 +95155,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -94883,7 +95192,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -96362,7 +96672,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -96398,7 +96709,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -96787,7 +97099,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -96823,7 +97136,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -97084,7 +97398,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -97120,7 +97435,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -97378,7 +97694,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -97414,7 +97731,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -97675,7 +97993,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -97711,7 +98030,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -97972,7 +98292,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -98008,7 +98329,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -98504,7 +98826,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -98540,7 +98863,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -98815,7 +99139,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -98851,7 +99176,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -99225,7 +99551,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -99261,7 +99588,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -99650,7 +99978,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -99686,7 +100015,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -99947,7 +100277,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -99983,7 +100314,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -100241,7 +100573,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -100277,7 +100610,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -100538,7 +100872,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -100574,7 +100909,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -100835,7 +101171,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -100871,7 +101208,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -101367,7 +101705,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -101403,7 +101742,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -101678,7 +102018,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -101714,7 +102055,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -103507,7 +103849,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -103543,7 +103886,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -103932,7 +104276,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -103968,7 +104313,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -104229,7 +104575,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -104265,7 +104612,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -104523,7 +104871,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -104559,7 +104908,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -104820,7 +105170,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -104856,7 +105207,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -105117,7 +105469,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -105153,7 +105506,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -105649,7 +106003,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -105685,7 +106040,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -105960,7 +106316,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -105996,7 +106353,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -106370,7 +106728,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -106406,7 +106765,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -106795,7 +107155,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -106831,7 +107192,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -107092,7 +107454,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -107128,7 +107491,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -107386,7 +107750,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -107422,7 +107787,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -107683,7 +108049,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -107719,7 +108086,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -107980,7 +108348,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -108016,7 +108385,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -108512,7 +108882,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -108548,7 +108919,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -108823,7 +109195,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -108859,7 +109232,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -110338,7 +110712,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -110374,7 +110749,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -110763,7 +111139,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -110799,7 +111176,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -111060,7 +111438,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -111096,7 +111475,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -111354,7 +111734,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -111390,7 +111771,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -111651,7 +112033,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -111687,7 +112070,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -111948,7 +112332,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -111984,7 +112369,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -112480,7 +112866,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -112516,7 +112903,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -112791,7 +113179,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -112827,7 +113216,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -113201,7 +113591,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -113237,7 +113628,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -113626,7 +114018,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -113662,7 +114055,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -113923,7 +114317,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -113959,7 +114354,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -114217,7 +114613,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -114253,7 +114650,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -114514,7 +114912,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -114550,7 +114949,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -114811,7 +115211,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -114847,7 +115248,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -115343,7 +115745,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -115379,7 +115782,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -115654,7 +116058,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -115690,7 +116095,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -117656,7 +118062,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -117692,7 +118099,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -118081,7 +118489,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -118117,7 +118526,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -118378,7 +118788,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -118414,7 +118825,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -118672,7 +119084,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -118708,7 +119121,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -118969,7 +119383,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -119005,7 +119420,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -119266,7 +119682,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -119302,7 +119719,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -119798,7 +120216,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -119834,7 +120253,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -120109,7 +120529,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -120145,7 +120566,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -120519,7 +120941,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -120555,7 +120978,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -120944,7 +121368,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -120980,7 +121405,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -121241,7 +121667,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -121277,7 +121704,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -121535,7 +121963,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -121571,7 +122000,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -121832,7 +122262,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -121868,7 +122299,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -122129,7 +122561,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -122165,7 +122598,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -122661,7 +123095,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -122697,7 +123132,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -122972,7 +123408,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -123008,7 +123445,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -124487,7 +124925,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -124523,7 +124962,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -124912,7 +125352,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -124948,7 +125389,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -125209,7 +125651,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -125245,7 +125688,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -125503,7 +125947,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -125539,7 +125984,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -125800,7 +126246,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -125836,7 +126283,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -126097,7 +126545,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -126133,7 +126582,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -126629,7 +127079,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -126665,7 +127116,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -126940,7 +127392,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -126976,7 +127429,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -127350,7 +127804,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -127386,7 +127841,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -127775,7 +128231,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -127811,7 +128268,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -128072,7 +128530,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -128108,7 +128567,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -128366,7 +128826,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -128402,7 +128863,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -128663,7 +129125,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -128699,7 +129162,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -128960,7 +129424,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -128996,7 +129461,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -129492,7 +129958,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -129528,7 +129995,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -129803,7 +130271,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -129839,7 +130308,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -136856,7 +137326,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -136892,7 +137363,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -137281,7 +137753,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -137317,7 +137790,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -137578,7 +138052,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -137614,7 +138089,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -137872,7 +138348,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -137908,7 +138385,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -138169,7 +138647,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -138205,7 +138684,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -138466,7 +138946,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -138502,7 +138983,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -138998,7 +139480,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -139034,7 +139517,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -139309,7 +139793,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -139345,7 +139830,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -139719,7 +140205,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -139755,7 +140242,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -140144,7 +140632,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -140180,7 +140669,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -140441,7 +140931,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -140477,7 +140968,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -140735,7 +141227,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -140771,7 +141264,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -141032,7 +141526,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -141068,7 +141563,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -141329,7 +141825,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -141365,7 +141862,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -141861,7 +142359,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -141897,7 +142396,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -142172,7 +142672,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -142208,7 +142709,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -143687,7 +144189,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -143723,7 +144226,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -144112,7 +144616,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -144148,7 +144653,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -144409,7 +144915,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -144445,7 +144952,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -144703,7 +145211,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -144739,7 +145248,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -145000,7 +145510,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -145036,7 +145547,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -145297,7 +145809,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -145333,7 +145846,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -145829,7 +146343,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -145865,7 +146380,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -146140,7 +146656,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -146176,7 +146693,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -146550,7 +147068,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -146586,7 +147105,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -146975,7 +147495,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -147011,7 +147532,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -147272,7 +147794,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -147308,7 +147831,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -147566,7 +148090,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -147602,7 +148127,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -147863,7 +148389,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -147899,7 +148426,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -148160,7 +148688,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -148196,7 +148725,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -148692,7 +149222,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -148728,7 +149259,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -149003,7 +149535,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -149039,7 +149572,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -151446,7 +151980,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -151482,7 +152017,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -151871,7 +152407,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -151907,7 +152444,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -152168,7 +152706,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -152204,7 +152743,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -152462,7 +153002,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -152498,7 +153039,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -152759,7 +153301,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -152795,7 +153338,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -153056,7 +153600,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -153092,7 +153637,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -153588,7 +154134,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -153624,7 +154171,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -153899,7 +154447,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -153935,7 +154484,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -154309,7 +154859,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -154345,7 +154896,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -154734,7 +155286,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -154770,7 +155323,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -155031,7 +155585,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -155067,7 +155622,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -155325,7 +155881,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -155361,7 +155918,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -155622,7 +156180,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -155658,7 +156217,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -155919,7 +156479,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -155955,7 +156516,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -156451,7 +157013,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -156487,7 +157050,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -156762,7 +157326,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -156798,7 +157363,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -158277,7 +158843,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -158313,7 +158880,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -158702,7 +159270,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -158738,7 +159307,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -158999,7 +159569,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -159035,7 +159606,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -159293,7 +159865,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -159329,7 +159902,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -159590,7 +160164,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -159626,7 +160201,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -159887,7 +160463,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -159923,7 +160500,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -160419,7 +160997,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -160455,7 +161034,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -160730,7 +161310,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -160766,7 +161347,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -161140,7 +161722,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -161176,7 +161759,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -161565,7 +162149,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -161601,7 +162186,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -161862,7 +162448,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -161898,7 +162485,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -162156,7 +162744,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -162192,7 +162781,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -162453,7 +163043,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -162489,7 +163080,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -162750,7 +163342,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -162786,7 +163379,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -163282,7 +163876,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -163318,7 +163913,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -163593,7 +164189,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -163629,7 +164226,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -165228,7 +165826,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -165264,7 +165863,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -165653,7 +166253,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -165689,7 +166290,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -165950,7 +166552,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -165986,7 +166589,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -166244,7 +166848,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -166280,7 +166885,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -166541,7 +167147,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -166577,7 +167184,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -166838,7 +167446,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -166874,7 +167483,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -167370,7 +167980,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -167406,7 +168017,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -167681,7 +168293,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -167717,7 +168330,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -168091,7 +168705,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -168127,7 +168742,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -168516,7 +169132,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -168552,7 +169169,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -168813,7 +169431,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -168849,7 +169468,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -169107,7 +169727,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -169143,7 +169764,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -169404,7 +170026,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -169440,7 +170063,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -169701,7 +170325,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -169737,7 +170362,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -170233,7 +170859,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -170269,7 +170896,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -170544,7 +171172,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -170580,7 +171209,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -172059,7 +172689,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -172095,7 +172726,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -172484,7 +173116,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -172520,7 +173153,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -172781,7 +173415,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -172817,7 +173452,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -173075,7 +173711,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -173111,7 +173748,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -173372,7 +174010,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -173408,7 +174047,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -173669,7 +174309,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -173705,7 +174346,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -174201,7 +174843,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -174237,7 +174880,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -174512,7 +175156,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -174548,7 +175193,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -174922,7 +175568,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -174958,7 +175605,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -175347,7 +175995,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -175383,7 +176032,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -175644,7 +176294,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -175680,7 +176331,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -175938,7 +176590,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -175974,7 +176627,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -176235,7 +176889,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -176271,7 +176926,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -176532,7 +177188,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           }, {
             "images" : [ {
               "imageUri" : "imageUri",
@@ -176568,7 +177225,8 @@ open class ConversationsAPI {
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
-            "state" : "active"
+            "state" : "active",
+            "email" : "email"
           } ],
           "primaryContactInfo" : [ {
             "extension" : "extension",
@@ -177064,7 +177722,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -177100,7 +177759,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -177375,7 +178035,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         }, {
           "images" : [ {
             "imageUri" : "imageUri",
@@ -177411,7 +178072,8 @@ open class ConversationsAPI {
           "rulesVisible" : true,
           "name" : "name",
           "id" : "id",
-          "state" : "active"
+          "state" : "active",
+          "email" : "email"
         } ],
         "primaryContactInfo" : [ {
           "extension" : "extension",
@@ -179671,19 +180333,16 @@ open class ConversationsAPI {
     
     
     
-    
-    
     /**
      Send message
      
      - parameter conversationId: (path) conversationId 
      - parameter communicationId: (path) communicationId 
      - parameter body: (body) Message 
-     - parameter useNormalizedMessage: (query) If true, response removes deprecated fields (textBody, media) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postConversationsMessageCommunicationMessages(conversationId: String, communicationId: String, body: AdditionalMessage, useNormalizedMessage: Bool? = nil, completion: @escaping ((_ data: MessageData?,_ error: Error?) -> Void)) {
-        let requestBuilder = postConversationsMessageCommunicationMessagesWithRequestBuilder(conversationId: conversationId, communicationId: communicationId, body: body, useNormalizedMessage: useNormalizedMessage)
+    open class func postConversationsMessageCommunicationMessages(conversationId: String, communicationId: String, body: AdditionalMessage, completion: @escaping ((_ data: MessageData?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsMessageCommunicationMessagesWithRequestBuilder(conversationId: conversationId, communicationId: communicationId, body: body)
         requestBuilder.execute { (response: Response<MessageData>?, error) -> Void in
             do {
                 if let e = error {
@@ -179712,20 +180371,6 @@ open class ConversationsAPI {
   "conversationId" : "conversationId",
   "selfUri" : "https://openapi-generator.tech",
   "messengerType" : "sms",
-  "textBody" : "textBody",
-  "media" : [ {
-    "contentLengthBytes" : 9,
-    "name" : "name",
-    "mediaType" : "mediaType",
-    "id" : "id",
-    "url" : "url"
-  }, {
-    "contentLengthBytes" : 9,
-    "name" : "name",
-    "mediaType" : "mediaType",
-    "id" : "id",
-    "url" : "url"
-  } ],
   "toAddress" : "toAddress",
   "normalizedMessage" : "{}",
   "normalizedReceipts" : [ {
@@ -179921,11 +180566,10 @@ open class ConversationsAPI {
      - parameter conversationId: (path) conversationId 
      - parameter communicationId: (path) communicationId 
      - parameter body: (body) Message 
-     - parameter useNormalizedMessage: (query) If true, response removes deprecated fields (textBody, media) (optional)
 
      - returns: RequestBuilder<MessageData> 
      */
-    open class func postConversationsMessageCommunicationMessagesWithRequestBuilder(conversationId: String, communicationId: String, body: AdditionalMessage, useNormalizedMessage: Bool? = nil) -> RequestBuilder<MessageData> {        
+    open class func postConversationsMessageCommunicationMessagesWithRequestBuilder(conversationId: String, communicationId: String, body: AdditionalMessage) -> RequestBuilder<MessageData> {        
         var path = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -179936,10 +180580,7 @@ open class ConversationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var requestUrl = URLComponents(string: URLString)
-        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "useNormalizedMessage": useNormalizedMessage
-        ])
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<MessageData>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -180707,18 +181348,15 @@ open class ConversationsAPI {
     
     
     
-    
-    
     /**
      Get messages in batch
      
      - parameter conversationId: (path)  
-     - parameter useNormalizedMessage: (query) If true, response removes deprecated fields (textBody, media) (optional)
      - parameter body: (body) messageIds (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postConversationsMessageMessagesBulk(conversationId: String, useNormalizedMessage: Bool? = nil, body: [String]? = nil, completion: @escaping ((_ data: TextMessageListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = postConversationsMessageMessagesBulkWithRequestBuilder(conversationId: conversationId, useNormalizedMessage: useNormalizedMessage, body: body)
+    open class func postConversationsMessageMessagesBulk(conversationId: String, body: [String]? = nil, completion: @escaping ((_ data: TextMessageListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsMessageMessagesBulkWithRequestBuilder(conversationId: conversationId, body: body)
         requestBuilder.execute { (response: Response<TextMessageListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -180748,20 +181386,6 @@ open class ConversationsAPI {
     "conversationId" : "conversationId",
     "selfUri" : "https://openapi-generator.tech",
     "messengerType" : "sms",
-    "textBody" : "textBody",
-    "media" : [ {
-      "contentLengthBytes" : 9,
-      "name" : "name",
-      "mediaType" : "mediaType",
-      "id" : "id",
-      "url" : "url"
-    }, {
-      "contentLengthBytes" : 9,
-      "name" : "name",
-      "mediaType" : "mediaType",
-      "id" : "id",
-      "url" : "url"
-    } ],
     "toAddress" : "toAddress",
     "normalizedMessage" : "{}",
     "normalizedReceipts" : [ {
@@ -180957,20 +181581,6 @@ open class ConversationsAPI {
     "conversationId" : "conversationId",
     "selfUri" : "https://openapi-generator.tech",
     "messengerType" : "sms",
-    "textBody" : "textBody",
-    "media" : [ {
-      "contentLengthBytes" : 9,
-      "name" : "name",
-      "mediaType" : "mediaType",
-      "id" : "id",
-      "url" : "url"
-    }, {
-      "contentLengthBytes" : 9,
-      "name" : "name",
-      "mediaType" : "mediaType",
-      "id" : "id",
-      "url" : "url"
-    } ],
     "toAddress" : "toAddress",
     "normalizedMessage" : "{}",
     "normalizedReceipts" : [ {
@@ -181165,12 +181775,11 @@ open class ConversationsAPI {
 }, statusCode=200}]
      
      - parameter conversationId: (path)  
-     - parameter useNormalizedMessage: (query) If true, response removes deprecated fields (textBody, media) (optional)
      - parameter body: (body) messageIds (optional)
 
      - returns: RequestBuilder<TextMessageListing> 
      */
-    open class func postConversationsMessageMessagesBulkWithRequestBuilder(conversationId: String, useNormalizedMessage: Bool? = nil, body: [String]? = nil) -> RequestBuilder<TextMessageListing> {        
+    open class func postConversationsMessageMessagesBulkWithRequestBuilder(conversationId: String, body: [String]? = nil) -> RequestBuilder<TextMessageListing> {        
         var path = "/api/v2/conversations/messages/{conversationId}/messages/bulk"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -181178,10 +181787,7 @@ open class ConversationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var requestUrl = URLComponents(string: URLString)
-        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "useNormalizedMessage": useNormalizedMessage
-        ])
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TextMessageListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -181490,17 +182096,14 @@ open class ConversationsAPI {
 
     
     
-    
-    
     /**
      Send an agentless outbound message
      
      - parameter body: (body) Create agentless outbound messaging request 
-     - parameter useNormalizedMessage: (query) If true, response removes deprecated fields (textBody, messagingTemplate) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postConversationsMessagesAgentless(body: SendAgentlessOutboundMessageRequest, useNormalizedMessage: Bool? = nil, completion: @escaping ((_ data: SendAgentlessOutboundMessageResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postConversationsMessagesAgentlessWithRequestBuilder(body: body, useNormalizedMessage: useNormalizedMessage)
+    open class func postConversationsMessagesAgentless(body: SendAgentlessOutboundMessageRequest, completion: @escaping ((_ data: SendAgentlessOutboundMessageResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsMessagesAgentlessWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<SendAgentlessOutboundMessageResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -181525,13 +182128,11 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "messagingTemplate" : "{}",
   "conversationId" : "conversationId",
   "useExistingActiveConversation" : true,
   "selfUri" : "https://openapi-generator.tech",
   "messengerType" : "sms",
   "fromAddress" : "fromAddress",
-  "textBody" : "textBody",
   "id" : "id",
   "message" : "{}",
   "toAddress" : "toAddress",
@@ -181540,19 +182141,15 @@ open class ConversationsAPI {
 }, statusCode=200}]
      
      - parameter body: (body) Create agentless outbound messaging request 
-     - parameter useNormalizedMessage: (query) If true, response removes deprecated fields (textBody, messagingTemplate) (optional)
 
      - returns: RequestBuilder<SendAgentlessOutboundMessageResponse> 
      */
-    open class func postConversationsMessagesAgentlessWithRequestBuilder(body: SendAgentlessOutboundMessageRequest, useNormalizedMessage: Bool? = nil) -> RequestBuilder<SendAgentlessOutboundMessageResponse> {        
+    open class func postConversationsMessagesAgentlessWithRequestBuilder(body: SendAgentlessOutboundMessageRequest) -> RequestBuilder<SendAgentlessOutboundMessageResponse> {        
         let path = "/api/v2/conversations/messages/agentless"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var requestUrl = URLComponents(string: URLString)
-        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "useNormalizedMessage": useNormalizedMessage
-        ])
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SendAgentlessOutboundMessageResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

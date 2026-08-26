@@ -72,9 +72,10 @@ Get information about the support of features for all the languages or only for 
 
 Wraps GET /api/v2/assistants/copilot/featuresupport  
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * assistants:copilot:view
+* assistants:copilotFeatureSupport:view
 
 ### Example
 
@@ -162,4 +163,4 @@ AgentCopilotAPI.putAssistantCopilot(assistantId: assistantId, body: body) { (res
 [**Copilot**](Copilot)
 
 
-_PureCloudPlatformClientV2@201.0.0_
+_PureCloudPlatformClientV2@202.0.0_
