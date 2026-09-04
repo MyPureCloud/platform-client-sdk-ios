@@ -14206,6 +14206,7 @@ public class ConversationSummaryTopicVirtualAgentsConversationSummaryEvent: Coda
         case webmessaging = "WEBMESSAGING"
         case _open = "OPEN"
         case apple = "APPLE"
+        case linkedin = "LINKEDIN"
     }
 
     public enum MediaType: String, Codable { 
@@ -22289,8 +22290,6 @@ public class FacebookDataIngestionRuleVersionResponse: Codable {
 
 
 
-
-
     /** ID of the Facebook data ingestion rule. */
     public var _id: String?
     /** The name of the data ingestion rule. */
@@ -22309,14 +22308,12 @@ public class FacebookDataIngestionRuleVersionResponse: Codable {
     public var platform: String?
     /** The Info about ingestion rule. */
     public var ingestionRuleInfo: MessageInfo?
-    /** The countries is available only on twitter data ingestion rule. ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide. */
-    public var countries: [String]?
     /** Id of the Integration when source is owned (Authenticated). This entity is created using the /conversations/messaging/integrations/facebook resource. Optional when configuring non-owned pages. */
     public var integrationId: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, countries: [String]?, integrationId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, integrationId: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
@@ -22326,7 +22323,6 @@ public class FacebookDataIngestionRuleVersionResponse: Codable {
         self.dateModified = dateModified
         self.platform = platform
         self.ingestionRuleInfo = ingestionRuleInfo
-        self.countries = countries
         self.integrationId = integrationId
         self.selfUri = selfUri
     }
@@ -22341,7 +22337,6 @@ public class FacebookDataIngestionRuleVersionResponse: Codable {
         case dateModified
         case platform
         case ingestionRuleInfo
-        case countries
         case integrationId
         case selfUri
     }
@@ -23481,6 +23476,7 @@ public class FlowEndDetailEventTopicFlowEndEvent: Codable {
         case _open = "OPEN"
         case instagram = "INSTAGRAM"
         case apple = "APPLE"
+        case linkedin = "LINKEDIN"
     }
 
     public enum FlowType: String, Codable { 
@@ -25751,6 +25747,94 @@ public class GeneralTopic: Codable {
 
 
 
+public class GenericDataIngestionRuleResponse: Codable {
+
+
+
+
+
+
+
+    public enum Status: String, Codable { 
+        case active = "Active"
+        case deleted = "Deleted"
+        case error = "Error"
+        case paused = "Paused"
+        case pending = "Pending"
+        case systemPaused = "SystemPaused"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** ID of the data ingestion rule. */
+    public var _id: String?
+    /** The name of the data ingestion rule. */
+    public var name: String?
+    /** A description of the data ingestion rule. */
+    public var _description: String?
+    /** The status of the data ingestion rule. */
+    public var status: Status?
+    /** The version number of the data ingestion rule. */
+    public var version: Int?
+    /** Timestamp indicating when the data ingestion rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+    /** Timestamp indicating when the data ingestion rule was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateModified: Date?
+    /** The platform of the data ingestion rule. */
+    public var platform: String?
+    /** The Info about ingestion rule. */
+    public var ingestionRuleInfo: MessageInfo?
+    /** ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide. */
+    public var countries: [String]?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, countries: [String]?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self._description = _description
+        self.status = status
+        self.version = version
+        self.dateCreated = dateCreated
+        self.dateModified = dateModified
+        self.platform = platform
+        self.ingestionRuleInfo = ingestionRuleInfo
+        self.countries = countries
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case _description = "description"
+        case status
+        case version
+        case dateCreated
+        case dateModified
+        case platform
+        case ingestionRuleInfo
+        case countries
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class GetTemplatesResponse: Codable {
 
 
@@ -26892,8 +26976,6 @@ public class InstagramDataIngestionRuleVersionResponse: Codable {
 
 
 
-
-
     /** ID of the Instagram data ingestion rule. */
     public var _id: String?
     /** The name of the data ingestion rule. */
@@ -26912,14 +26994,12 @@ public class InstagramDataIngestionRuleVersionResponse: Codable {
     public var platform: String?
     /** The Info about ingestion rule. */
     public var ingestionRuleInfo: MessageInfo?
-    /** The countries is available only on twitter data ingestion rule. ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide. */
-    public var countries: [String]?
     /** The Integration Id from which public social posts are ingested. This entity is created using the /conversations/messaging/integrations/instagram resource */
     public var integrationId: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, countries: [String]?, integrationId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, integrationId: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
@@ -26929,7 +27009,6 @@ public class InstagramDataIngestionRuleVersionResponse: Codable {
         self.dateModified = dateModified
         self.platform = platform
         self.ingestionRuleInfo = ingestionRuleInfo
-        self.countries = countries
         self.integrationId = integrationId
         self.selfUri = selfUri
     }
@@ -26944,7 +27023,6 @@ public class InstagramDataIngestionRuleVersionResponse: Codable {
         case dateModified
         case platform
         case ingestionRuleInfo
-        case countries
         case integrationId
         case selfUri
     }
@@ -28402,7 +28480,6 @@ public class JourneyWebEventsNotificationEventAction: Codable {
     }
 
     public enum MediaType: String, Codable { 
-        case webchat = "webchat"
         case webmessagingoffer = "webMessagingOffer"
         case contentoffer = "contentOffer"
         case architectflow = "architectFlow"
@@ -34994,34 +35071,6 @@ public class QueueConversationChatEventTopicDomainEntityRef: Codable {
 
 
 
-public class QueueConversationCobrowseEventTopicDetail: Codable {
-
-
-
-
-
-
-
-
-
-    public var errorCode: String?
-    public var fieldName: String?
-    public var entityId: String?
-    public var entityName: String?
-
-    public init(errorCode: String?, fieldName: String?, entityId: String?, entityName: String?) {
-        self.errorCode = errorCode
-        self.fieldName = fieldName
-        self.entityId = entityId
-        self.entityName = entityName
-    }
-
-
-}
-
-
-
-
 public class OutboundVoiceCampaignPostContactVoiceAttributes: Codable {
 
 
@@ -35782,6 +35831,8 @@ public class PerformancePredictionCompleteEventTopicPerformancePredictionCalcula
 
 
 
+
+
     public enum State: String, Codable { 
         case processing = "Processing"
         case complete = "Complete"
@@ -35794,13 +35845,15 @@ public class PerformancePredictionCompleteEventTopicPerformancePredictionCalcula
     public var scheduleId: String?
     public var weekDate: String?
     public var downloadUrl: String?
+    public var allocationDownloadUrl: String?
     public var state: State?
     public var error: PerformancePredictionCompleteEventTopicErrorBody?
 
-    public init(scheduleId: String?, weekDate: String?, downloadUrl: String?, state: State?, error: PerformancePredictionCompleteEventTopicErrorBody?) {
+    public init(scheduleId: String?, weekDate: String?, downloadUrl: String?, allocationDownloadUrl: String?, state: State?, error: PerformancePredictionCompleteEventTopicErrorBody?) {
         self.scheduleId = scheduleId
         self.weekDate = weekDate
         self.downloadUrl = downloadUrl
+        self.allocationDownloadUrl = allocationDownloadUrl
         self.state = state
         self.error = error
     }
@@ -35817,6 +35870,8 @@ public class PerformancePredictionRecalculationCompleteEventTopicPerformancePred
 
 
 
+
+
     public enum State: String, Codable { 
         case processing = "Processing"
         case complete = "Complete"
@@ -35828,12 +35883,14 @@ public class PerformancePredictionRecalculationCompleteEventTopicPerformancePred
 
     public var operationId: String?
     public var downloadUrl: String?
+    public var allocationDownloadUrl: String?
     public var state: State?
     public var error: PerformancePredictionRecalculationCompleteEventTopicErrorBody?
 
-    public init(operationId: String?, downloadUrl: String?, state: State?, error: PerformancePredictionRecalculationCompleteEventTopicErrorBody?) {
+    public init(operationId: String?, downloadUrl: String?, allocationDownloadUrl: String?, state: State?, error: PerformancePredictionRecalculationCompleteEventTopicErrorBody?) {
         self.operationId = operationId
         self.downloadUrl = downloadUrl
+        self.allocationDownloadUrl = allocationDownloadUrl
         self.state = state
         self.error = error
     }
@@ -38033,6 +38090,34 @@ public class QueueConversationCallbackEventTopicPhoneNumberColumn: Codable {
     public init(columnName: String?, type: String?) {
         self.columnName = columnName
         self.type = type
+    }
+
+
+}
+
+
+
+
+public class QueueConversationCobrowseEventTopicDetail: Codable {
+
+
+
+
+
+
+
+
+
+    public var errorCode: String?
+    public var fieldName: String?
+    public var entityId: String?
+    public var entityName: String?
+
+    public init(errorCode: String?, fieldName: String?, entityId: String?, entityName: String?) {
+        self.errorCode = errorCode
+        self.fieldName = fieldName
+        self.entityId = entityId
+        self.entityName = entityName
     }
 
 
@@ -54493,6 +54578,12 @@ public class WfmActivityPlanJobCompleteTopicActivityPlanJobException: Codable {
     public enum ExceptionType: String, Codable { 
         case unscheduledAttendees = "UnscheduledAttendees"
         case sessionsNotDeleted = "SessionsNotDeleted"
+        case invalidUserIds = "InvalidUserIds"
+        case invalidFacilitatorId = "InvalidFacilitatorId"
+        case ruleError = "RuleError"
+        case invalidOccurrence = "InvalidOccurrence"
+        case noScheduleFound = "NoScheduleFound"
+        case sessionUsersNotRemoved = "SessionUsersNotRemoved"
     }
 
 

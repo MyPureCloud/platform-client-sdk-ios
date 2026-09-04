@@ -1468,9 +1468,9 @@ open class SocialMediaAPI {
      - parameter includeDeleted: (query) Determines whether to include soft-deleted items in the result. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSocialmediaTopicDataingestionrules(topicId: String, pageNumber: Int? = nil, pageSize: Int? = nil, includeDeleted: Bool? = nil, completion: @escaping ((_ data: DataIngestionRuleResponseEntityListing?,_ error: Error?) -> Void)) {
+    open class func getSocialmediaTopicDataingestionrules(topicId: String, pageNumber: Int? = nil, pageSize: Int? = nil, includeDeleted: Bool? = nil, completion: @escaping ((_ data: GenericDataIngestionRuleResponseEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getSocialmediaTopicDataingestionrulesWithRequestBuilder(topicId: topicId, pageNumber: pageNumber, pageSize: pageSize, includeDeleted: includeDeleted)
-        requestBuilder.execute { (response: Response<DataIngestionRuleResponseEntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<GenericDataIngestionRuleResponseEntityListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1534,9 +1534,9 @@ open class SocialMediaAPI {
      - parameter pageSize: (query) Page size (optional)
      - parameter includeDeleted: (query) Determines whether to include soft-deleted items in the result. (optional)
 
-     - returns: RequestBuilder<DataIngestionRuleResponseEntityListing> 
+     - returns: RequestBuilder<GenericDataIngestionRuleResponseEntityListing> 
      */
-    open class func getSocialmediaTopicDataingestionrulesWithRequestBuilder(topicId: String, pageNumber: Int? = nil, pageSize: Int? = nil, includeDeleted: Bool? = nil) -> RequestBuilder<DataIngestionRuleResponseEntityListing> {        
+    open class func getSocialmediaTopicDataingestionrulesWithRequestBuilder(topicId: String, pageNumber: Int? = nil, pageSize: Int? = nil, includeDeleted: Bool? = nil) -> RequestBuilder<GenericDataIngestionRuleResponseEntityListing> {        
         var path = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules"
         let topicIdPreEscape = "\(topicId)"
         let topicIdPostEscape = topicIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1551,7 +1551,7 @@ open class SocialMediaAPI {
             "includeDeleted": includeDeleted
         ])
 
-        let requestBuilder: RequestBuilder<DataIngestionRuleResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<GenericDataIngestionRuleResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1602,7 +1602,6 @@ open class SocialMediaAPI {
   "integrationId" : "integrationId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "ingestionRuleInfo" : "{}",
@@ -1685,7 +1684,6 @@ open class SocialMediaAPI {
   "integrationId" : "integrationId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "ingestionRuleInfo" : "{}",
@@ -1779,7 +1777,6 @@ open class SocialMediaAPI {
     "integrationId" : "integrationId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
-    "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
     "ingestionRuleInfo" : "{}",
@@ -1792,7 +1789,6 @@ open class SocialMediaAPI {
     "integrationId" : "integrationId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
-    "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
     "ingestionRuleInfo" : "{}",
@@ -1883,7 +1879,6 @@ open class SocialMediaAPI {
   "integrationId" : "integrationId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "ingestionRuleInfo" : "{}",
@@ -1966,7 +1961,6 @@ open class SocialMediaAPI {
   "integrationId" : "integrationId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "ingestionRuleInfo" : "{}",
@@ -2060,7 +2054,6 @@ open class SocialMediaAPI {
     "integrationId" : "integrationId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
-    "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
     "ingestionRuleInfo" : "{}",
@@ -2073,7 +2066,6 @@ open class SocialMediaAPI {
     "integrationId" : "integrationId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
-    "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
     "ingestionRuleInfo" : "{}",
@@ -2163,7 +2155,6 @@ open class SocialMediaAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "ingestionRuleInfo" : "{}",
@@ -2246,7 +2237,6 @@ open class SocialMediaAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "ingestionRuleInfo" : "{}",
@@ -2340,7 +2330,6 @@ open class SocialMediaAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
-    "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
     "ingestionRuleInfo" : "{}",
@@ -2353,7 +2342,6 @@ open class SocialMediaAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
-    "countries" : [ "countries", "countries" ],
     "version" : 0,
     "platform" : "platform",
     "ingestionRuleInfo" : "{}",
@@ -2925,7 +2913,6 @@ open class SocialMediaAPI {
   "integrationId" : "integrationId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "ingestionRuleInfo" : "{}",
@@ -3002,7 +2989,6 @@ open class SocialMediaAPI {
   "integrationId" : "integrationId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "ingestionRuleInfo" : "{}",
@@ -3078,7 +3064,6 @@ open class SocialMediaAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "ingestionRuleInfo" : "{}",
@@ -3462,7 +3447,6 @@ open class SocialMediaAPI {
   "integrationId" : "integrationId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "ingestionRuleInfo" : "{}",
@@ -3532,7 +3516,6 @@ open class SocialMediaAPI {
   "integrationId" : "integrationId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "ingestionRuleInfo" : "{}",
@@ -3601,7 +3584,6 @@ open class SocialMediaAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "ingestionRuleInfo" : "{}",
@@ -4165,7 +4147,6 @@ open class SocialMediaAPI {
   "integrationId" : "integrationId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "ingestionRuleInfo" : "{}",
@@ -4242,7 +4223,6 @@ open class SocialMediaAPI {
   "integrationId" : "integrationId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "ingestionRuleInfo" : "{}",
@@ -4318,7 +4298,6 @@ open class SocialMediaAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
-  "countries" : [ "countries", "countries" ],
   "version" : 0,
   "platform" : "platform",
   "ingestionRuleInfo" : "{}",

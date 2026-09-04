@@ -89,6 +89,7 @@ public class AcdStartDetailEventTopicAcdStartEvent: Codable {
         case _open = "OPEN"
         case instagram = "INSTAGRAM"
         case apple = "APPLE"
+        case linkedin = "LINKEDIN"
     }
 
 
@@ -776,6 +777,7 @@ public class AcwDetailEventTopicAfterCallWorkEvent: Codable {
         case _open = "OPEN"
         case instagram = "INSTAGRAM"
         case apple = "APPLE"
+        case linkedin = "LINKEDIN"
     }
 
 
@@ -8567,6 +8569,60 @@ public class ContactListFilterEntityListing: Codable {
 
 
 
+public class ContactSearchOperation: Codable {
+
+
+
+    /** Simple Search operation to execute */
+    public var simpleSearch: ContactSimpleSearch?
+
+    public init(simpleSearch: ContactSimpleSearch?) {
+        self.simpleSearch = simpleSearch
+    }
+
+
+}
+
+
+
+
+public class ContactSearchRequest: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) */
+    public var pageNumber: Int?
+    /** Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) */
+    public var pageSize: Int?
+    /** Which divisions to search, up to 50 */
+    public var divisionIds: [String]?
+    /** Which fields, if any, to expand */
+    public var expand: [String]?
+    /** Search operation to execute, currently supports {@code simpleSearch} only. */
+    public var operation: ContactSearchOperation?
+
+    public init(pageNumber: Int?, pageSize: Int?, divisionIds: [String]?, expand: [String]?, operation: ContactSearchOperation?) {
+        self.pageNumber = pageNumber
+        self.pageSize = pageSize
+        self.divisionIds = divisionIds
+        self.expand = expand
+        self.operation = operation
+    }
+
+
+}
+
+
+
+
 public class ContactableStatus: Codable {
 
 
@@ -9221,6 +9277,8 @@ public class ConversationAggregateQueryResponse: Codable {
 public class ConversationAggregationView: Codable {
 
     public enum Target: String, Codable { 
+        case nagentdeclined = "nAgentDeclined"
+        case nalertexpired = "nAlertExpired"
         case nblindtransferred = "nBlindTransferred"
         case nbotinteractions = "nBotInteractions"
         case ncallbackattempts = "nCallbackAttempts"
@@ -13325,6 +13383,12 @@ public class ConversationScriptSuggestionsTopicSuggestionContext: Codable {
 
 
 
+    public enum ParticipantType: String, Codable { 
+        case unknown = "UNKNOWN"
+        case agent = "AGENT"
+        case customer = "CUSTOMER"
+    }
+
     public var queueId: UUID?
     public var mediaType: MediaType?
     public var userId: UUID?
@@ -13335,8 +13399,9 @@ public class ConversationScriptSuggestionsTopicSuggestionContext: Codable {
     public var queryStatement: String?
     public var language: String?
     public var queryReformulationContext: ConversationScriptSuggestionsTopicQueryReformulationContext?
+    public var participantType: ParticipantType?
 
-    public init(queueId: UUID?, mediaType: MediaType?, userId: UUID?, externalContactId: UUID?, assistantId: UUID?, utteranceId: UUID?, messageId: String?, queryStatement: String?, language: String?, queryReformulationContext: ConversationScriptSuggestionsTopicQueryReformulationContext?) {
+    public init(queueId: UUID?, mediaType: MediaType?, userId: UUID?, externalContactId: UUID?, assistantId: UUID?, utteranceId: UUID?, messageId: String?, queryStatement: String?, language: String?, queryReformulationContext: ConversationScriptSuggestionsTopicQueryReformulationContext?, participantType: ParticipantType?) {
         self.queueId = queueId
         self.mediaType = mediaType
         self.userId = userId
@@ -13347,6 +13412,7 @@ public class ConversationScriptSuggestionsTopicSuggestionContext: Codable {
         self.queryStatement = queryStatement
         self.language = language
         self.queryReformulationContext = queryReformulationContext
+        self.participantType = participantType
     }
 
 
@@ -15923,58 +15989,6 @@ public class DataIngestionRuleCriteria: Codable {
         case effectivePlatform
         case _id = "id"
         case name
-    }
-
-
-}
-
-
-
-
-public class DataIngestionRuleResponseEntityListing: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public var entities: [DataIngestionRuleResponse]?
-    public var pageSize: Int?
-    public var pageNumber: Int?
-    public var total: Int64?
-    public var lastUri: String?
-    public var firstUri: String?
-    public var selfUri: String?
-    public var nextUri: String?
-    public var previousUri: String?
-    public var pageCount: Int?
-
-    public init(entities: [DataIngestionRuleResponse]?, pageSize: Int?, pageNumber: Int?, total: Int64?, lastUri: String?, firstUri: String?, selfUri: String?, nextUri: String?, previousUri: String?, pageCount: Int?) {
-        self.entities = entities
-        self.pageSize = pageSize
-        self.pageNumber = pageNumber
-        self.total = total
-        self.lastUri = lastUri
-        self.firstUri = firstUri
-        self.selfUri = selfUri
-        self.nextUri = nextUri
-        self.previousUri = previousUri
-        self.pageCount = pageCount
     }
 
 
@@ -23266,6 +23280,7 @@ public class FlowOutcomeDetailEventTopicFlowOutcomeEvent: Codable {
         case _open = "OPEN"
         case instagram = "INSTAGRAM"
         case apple = "APPLE"
+        case linkedin = "LINKEDIN"
     }
 
     public enum FlowType: String, Codable { 
@@ -28858,33 +28873,6 @@ public class KnowledgeSyncJobRequest: Codable {
 
 
 
-public class MoveAgentsResponse: Codable {
-
-
-
-
-
-
-
-    /** The user that made the request */
-    public var requestingUser: UserReference?
-    /** The management unit specified on the request */
-    public var destinationManagementUnit: ManagementUnitReference?
-    /** The list containing the agent and result of the move operation */
-    public var results: [MoveAgentResponse]?
-
-    public init(requestingUser: UserReference?, destinationManagementUnit: ManagementUnitReference?, results: [MoveAgentResponse]?) {
-        self.requestingUser = requestingUser
-        self.destinationManagementUnit = destinationManagementUnit
-        self.results = results
-    }
-
-
-}
-
-
-
-
 public class KnowledgeV3PreviewConversationContext: Codable {
 
     public enum MediaType: String, Codable { 
@@ -31742,6 +31730,33 @@ public class MoveAgentResponse: Codable {
 
 
 
+public class MoveAgentsResponse: Codable {
+
+
+
+
+
+
+
+    /** The user that made the request */
+    public var requestingUser: UserReference?
+    /** The management unit specified on the request */
+    public var destinationManagementUnit: ManagementUnitReference?
+    /** The list containing the agent and result of the move operation */
+    public var results: [MoveAgentResponse]?
+
+    public init(requestingUser: UserReference?, destinationManagementUnit: ManagementUnitReference?, results: [MoveAgentResponse]?) {
+        self.requestingUser = requestingUser
+        self.destinationManagementUnit = destinationManagementUnit
+        self.results = results
+    }
+
+
+}
+
+
+
+
 public class MoveManagementUnitRequest: Codable {
 
 
@@ -32348,8 +32363,6 @@ public class OpenDataIngestionRuleResponse: Codable {
 
 
 
-
-
     /** ID of the open data ingestion rule. */
     public var _id: String?
     /** The name of the data ingestion rule. */
@@ -32368,14 +32381,12 @@ public class OpenDataIngestionRuleResponse: Codable {
     public var platform: String?
     /** The Info about ingestion rule. */
     public var ingestionRuleInfo: MessageInfo?
-    /** The countries is available only on twitter data ingestion rule. ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide. */
-    public var countries: [String]?
     /** The external source associated with this open data ingestion rule, which is used when performing identity resolution */
     public var externalSource: DomainEntityRef?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, countries: [String]?, externalSource: DomainEntityRef?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, externalSource: DomainEntityRef?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
@@ -32385,7 +32396,6 @@ public class OpenDataIngestionRuleResponse: Codable {
         self.dateModified = dateModified
         self.platform = platform
         self.ingestionRuleInfo = ingestionRuleInfo
-        self.countries = countries
         self.externalSource = externalSource
         self.selfUri = selfUri
     }
@@ -32400,7 +32410,6 @@ public class OpenDataIngestionRuleResponse: Codable {
         case dateModified
         case platform
         case ingestionRuleInfo
-        case countries
         case externalSource
         case selfUri
     }
@@ -33357,6 +33366,7 @@ public class OutboundDetailEventTopicOutboundInitEvent: Codable {
         case _open = "OPEN"
         case instagram = "INSTAGRAM"
         case apple = "APPLE"
+        case linkedin = "LINKEDIN"
     }
 
 
@@ -47102,14 +47112,14 @@ public class TwitterDataIngestionRuleVersionResponse: Codable {
     public var platform: String?
     /** The Info about ingestion rule. */
     public var ingestionRuleInfo: MessageInfo?
-    /** ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide. */
-    public var countries: [String]?
     /** Search terms for X (formally Twitter). */
     public var searchTerms: String?
+    /** ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide. */
+    public var countries: [String]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, countries: [String]?, searchTerms: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, searchTerms: String?, countries: [String]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
@@ -47119,8 +47129,8 @@ public class TwitterDataIngestionRuleVersionResponse: Codable {
         self.dateModified = dateModified
         self.platform = platform
         self.ingestionRuleInfo = ingestionRuleInfo
-        self.countries = countries
         self.searchTerms = searchTerms
+        self.countries = countries
         self.selfUri = selfUri
     }
 
@@ -47134,8 +47144,8 @@ public class TwitterDataIngestionRuleVersionResponse: Codable {
         case dateModified
         case platform
         case ingestionRuleInfo
-        case countries
         case searchTerms
+        case countries
         case selfUri
     }
 
@@ -49186,6 +49196,12 @@ public class V2MobiusRulesTopicConditionRulePredicate: Codable {
 
 
 
+    public enum Characteristic: String, Codable { 
+        case unknown = "Unknown"
+        case deviation = "Deviation"
+        case score = "Score"
+    }
+
     public enum ComparisonOperator: String, Codable { 
         case gt = "Gt"
         case gte = "Gte"
@@ -49205,9 +49221,10 @@ public class V2MobiusRulesTopicConditionRulePredicate: Codable {
     public var status: String?
     public var mediaType: MediaType?
     public var topic: String?
+    public var characteristic: Characteristic?
     public var comparisonOperator: ComparisonOperator?
 
-    public init(_id: UUID?, entity: V2MobiusRulesTopicEntityProperties?, metric: String?, metricType: MetricType?, metricValueType: MetricValueType?, value: Double?, status: String?, mediaType: MediaType?, topic: String?, comparisonOperator: ComparisonOperator?) {
+    public init(_id: UUID?, entity: V2MobiusRulesTopicEntityProperties?, metric: String?, metricType: MetricType?, metricValueType: MetricValueType?, value: Double?, status: String?, mediaType: MediaType?, topic: String?, characteristic: Characteristic?, comparisonOperator: ComparisonOperator?) {
         self._id = _id
         self.entity = entity
         self.metric = metric
@@ -49217,6 +49234,7 @@ public class V2MobiusRulesTopicConditionRulePredicate: Codable {
         self.status = status
         self.mediaType = mediaType
         self.topic = topic
+        self.characteristic = characteristic
         self.comparisonOperator = comparisonOperator
     }
 
@@ -49230,6 +49248,7 @@ public class V2MobiusRulesTopicConditionRulePredicate: Codable {
         case status
         case mediaType
         case topic
+        case characteristic
         case comparisonOperator
     }
 
@@ -54162,23 +54181,54 @@ public class WorkitemOnAttributeChangeCondition: Codable {
 
     public enum Attribute: String, Codable { 
         case statusid = "statusId"
+        case priority = "priority"
+        case queueid = "queueId"
+        case assigneeid = "assigneeId"
+        case assignmentstate = "assignmentState"
+        case languageid = "languageId"
+        case externaltag = "externalTag"
+        case wrapup = "wrapup"
     }
 
 
 
 
 
+    public enum Operator: String, Codable { 
+        case eq = "EQ"
+        case gt = "GT"
+        case lt = "LT"
+        case gte = "GTE"
+        case lte = "LTE"
+    }
+
+
+
     /** The name of the workitem attribute whose change will be evaluated as part of the rule. */
     public var attribute: Attribute?
-    /** The new value of the attribute. If the attribute is updated to this value this part of the condition will be met. */
+    /** The new value of the attribute. If the attribute is updated to this value this part of the condition will be met. Required for exact-match conditions (when operator is not set). */
     public var newValue: String?
     /** The old value of the attribute. If the attribute was updated from this value this part of the condition will be met. */
     public var oldValue: String?
+    /** The comparison operator used to evaluate the priority attribute against the value. Only supported for the priority attribute. */
+    public var _operator: Operator?
+    /** The numeric value compared against the priority attribute using the operator. Required when operator is set. Only supported for the priority attribute. */
+    public var value: Int?
 
-    public init(attribute: Attribute?, newValue: String?, oldValue: String?) {
+    public init(attribute: Attribute?, newValue: String?, oldValue: String?, _operator: Operator?, value: Int?) {
         self.attribute = attribute
         self.newValue = newValue
         self.oldValue = oldValue
+        self._operator = _operator
+        self.value = value
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case attribute
+        case newValue
+        case oldValue
+        case _operator = "operator"
+        case value
     }
 
 

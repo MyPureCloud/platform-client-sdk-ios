@@ -1,12 +1,12 @@
-# DataIngestionRuleResponseEntityListing
+# GenericDataIngestionRuleResponseEntityListing
 
-## DataIngestionRuleResponseEntityListing
+## GenericDataIngestionRuleResponseEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[DataIngestionRuleResponse]**]([DataIngestionRuleResponse]) |  | [optional] |
+| **entities** | [**[GenericDataIngestionRuleResponse]**]([GenericDataIngestionRuleResponse]) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -19,4 +19,4 @@
 
 
 
-_PureCloudPlatformClientV2@202.0.0_
+_PureCloudPlatformClientV2@203.0.0_

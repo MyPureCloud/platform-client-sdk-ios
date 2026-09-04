@@ -2249,6 +2249,33 @@ public class AllTimePoints: Codable {
 
 
 
+public class AllocationResultsTemplate: Codable {
+
+
+
+
+
+
+
+    /** The ID of the associated planning group */
+    public var planningGroupId: String?
+    /** Assigned agent allocation per interval used to generate the performance prediction */
+    public var assignedAgentsPerInterval: [Double]?
+    /** Headcount multiplier per interval used to generate the performance prediction */
+    public var headcountMultiplierPerInterval: [Double]?
+
+    public init(planningGroupId: String?, assignedAgentsPerInterval: [Double]?, headcountMultiplierPerInterval: [Double]?) {
+        self.planningGroupId = planningGroupId
+        self.assignedAgentsPerInterval = assignedAgentsPerInterval
+        self.headcountMultiplierPerInterval = headcountMultiplierPerInterval
+    }
+
+
+}
+
+
+
+
 public class AlternativeShiftSearchOffersRequest: Codable {
 
 
@@ -2307,6 +2334,12 @@ public class AnalyticsAgentStateCountsResponse: Codable {
 
 
 
+
+
+
+
+
+
     /** List of count by segment types */
     public var segmentCounts: [AgentStateSegmentTypeCount]?
     /** List of count by presences */
@@ -2315,12 +2348,21 @@ public class AnalyticsAgentStateCountsResponse: Codable {
     public var routingStatusCounts: [AgentStateRoutingStatusCount]?
     /** List of count by out of office states */
     public var isOutOfOfficeCounts: [AgentStateIsOutOfOfficeCount]?
+    /** List of count by adherence state */
+    public var adherenceStateCounts: [AgentStateAdherenceStateCount]?
+    /** List of count by scheduled activity category */
+    public var scheduledActivityCategoryCounts: [AgentStateActivityCategoryCount]?
+    /** List of count by actual activity category */
+    public var actualActivityCategoryCounts: [AgentStateActivityCategoryCount]?
 
-    public init(segmentCounts: [AgentStateSegmentTypeCount]?, presenceCounts: [AgentStatePresenceCount]?, routingStatusCounts: [AgentStateRoutingStatusCount]?, isOutOfOfficeCounts: [AgentStateIsOutOfOfficeCount]?) {
+    public init(segmentCounts: [AgentStateSegmentTypeCount]?, presenceCounts: [AgentStatePresenceCount]?, routingStatusCounts: [AgentStateRoutingStatusCount]?, isOutOfOfficeCounts: [AgentStateIsOutOfOfficeCount]?, adherenceStateCounts: [AgentStateAdherenceStateCount]?, scheduledActivityCategoryCounts: [AgentStateActivityCategoryCount]?, actualActivityCategoryCounts: [AgentStateActivityCategoryCount]?) {
         self.segmentCounts = segmentCounts
         self.presenceCounts = presenceCounts
         self.routingStatusCounts = routingStatusCounts
         self.isOutOfOfficeCounts = isOutOfOfficeCounts
+        self.adherenceStateCounts = adherenceStateCounts
+        self.scheduledActivityCategoryCounts = scheduledActivityCategoryCounts
+        self.actualActivityCategoryCounts = actualActivityCategoryCounts
     }
 
 
@@ -9820,6 +9862,7 @@ public class ContactDetailEventTopicContactUpdateEvent: Codable {
         case _open = "OPEN"
         case instagram = "INSTAGRAM"
         case apple = "APPLE"
+        case linkedin = "LINKEDIN"
     }
 
 
@@ -10083,6 +10126,33 @@ public class ContactListFilterClause: Codable {
     public init(filterType: FilterType?, predicates: [ContactListFilterPredicate]?) {
         self.filterType = filterType
         self.predicates = predicates
+    }
+
+
+}
+
+
+
+
+public class ContactSimpleSearch: Codable {
+
+
+
+
+
+
+
+    /** User supplied search keywords (no special syntax is currently supported) */
+    public var query: String?
+    /** The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \"firstName:asc\", \"title:desc\" */
+    public var sortOrder: [String]?
+    /** List of External Contact ids to exact match in search result. Optional filter, up to 100 */
+    public var ids: [String]?
+
+    public init(query: String?, sortOrder: [String]?, ids: [String]?) {
+        self.query = query
+        self.sortOrder = sortOrder
+        self.ids = ids
     }
 
 
@@ -11176,6 +11246,8 @@ public class ConversationAggregationQuery: Codable {
 
 
     public enum Metrics: String, Codable { 
+        case nagentdeclined = "nAgentDeclined"
+        case nalertexpired = "nAlertExpired"
         case nblindtransferred = "nBlindTransferred"
         case nbotinteractions = "nBotInteractions"
         case ncallbackattempts = "nCallbackAttempts"
@@ -11325,6 +11397,8 @@ public class ConversationAggregationQuery: Codable {
 public class ConversationAggregationSort: Codable {
 
     public enum Name: String, Codable { 
+        case nagentdeclined = "nAgentDeclined"
+        case nalertexpired = "nAlertExpired"
         case nblindtransferred = "nBlindTransferred"
         case nbotinteractions = "nBotInteractions"
         case ncallbackattempts = "nCallbackAttempts"
@@ -11524,6 +11598,8 @@ public class ConversationAsyncAggregationQuery: Codable {
 
 
     public enum Metrics: String, Codable { 
+        case nagentdeclined = "nAgentDeclined"
+        case nalertexpired = "nAlertExpired"
         case nblindtransferred = "nBlindTransferred"
         case nbotinteractions = "nBotInteractions"
         case ncallbackattempts = "nCallbackAttempts"
@@ -12936,6 +13012,8 @@ public class ConversationDetailQueryPredicate: Codable {
     }
 
     public enum Metric: String, Codable { 
+        case nagentdeclined = "nAgentDeclined"
+        case nalertexpired = "nAlertExpired"
         case nblindtransferred = "nBlindTransferred"
         case nbotinteractions = "nBotInteractions"
         case ncallbackattempts = "nCallbackAttempts"
@@ -15079,6 +15157,12 @@ public class ConversationResponseSuggestionsTopicSuggestionContext: Codable {
 
 
 
+    public enum ParticipantType: String, Codable { 
+        case unknown = "UNKNOWN"
+        case agent = "AGENT"
+        case customer = "CUSTOMER"
+    }
+
     public var queueId: UUID?
     public var mediaType: MediaType?
     public var userId: UUID?
@@ -15089,8 +15173,9 @@ public class ConversationResponseSuggestionsTopicSuggestionContext: Codable {
     public var queryStatement: String?
     public var language: String?
     public var queryReformulationContext: ConversationResponseSuggestionsTopicQueryReformulationContext?
+    public var participantType: ParticipantType?
 
-    public init(queueId: UUID?, mediaType: MediaType?, userId: UUID?, externalContactId: UUID?, assistantId: UUID?, utteranceId: UUID?, messageId: String?, queryStatement: String?, language: String?, queryReformulationContext: ConversationResponseSuggestionsTopicQueryReformulationContext?) {
+    public init(queueId: UUID?, mediaType: MediaType?, userId: UUID?, externalContactId: UUID?, assistantId: UUID?, utteranceId: UUID?, messageId: String?, queryStatement: String?, language: String?, queryReformulationContext: ConversationResponseSuggestionsTopicQueryReformulationContext?, participantType: ParticipantType?) {
         self.queueId = queueId
         self.mediaType = mediaType
         self.userId = userId
@@ -15101,6 +15186,7 @@ public class ConversationResponseSuggestionsTopicSuggestionContext: Codable {
         self.queryStatement = queryStatement
         self.language = language
         self.queryReformulationContext = queryReformulationContext
+        self.participantType = participantType
     }
 
 
@@ -16821,6 +16907,7 @@ public class CustomerEndDetailEventTopicCustomerEndEvent: Codable {
         case _open = "OPEN"
         case instagram = "INSTAGRAM"
         case apple = "APPLE"
+        case linkedin = "LINKEDIN"
     }
 
 
@@ -17287,94 +17374,6 @@ public class DataActionContactColumnFieldMapping: Codable {
     public init(contactColumnName: String?, dataActionField: String?) {
         self.contactColumnName = contactColumnName
         self.dataActionField = dataActionField
-    }
-
-
-}
-
-
-
-
-public class DataIngestionRuleResponse: Codable {
-
-
-
-
-
-
-
-    public enum Status: String, Codable { 
-        case active = "Active"
-        case deleted = "Deleted"
-        case error = "Error"
-        case paused = "Paused"
-        case pending = "Pending"
-        case systemPaused = "SystemPaused"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** ID of the data ingestion rule. */
-    public var _id: String?
-    /** The name of the data ingestion rule. */
-    public var name: String?
-    /** A description of the data ingestion rule. */
-    public var _description: String?
-    /** The status of the data ingestion rule. */
-    public var status: Status?
-    /** The version number of the data ingestion rule. */
-    public var version: Int?
-    /** Timestamp indicating when the data ingestion rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateCreated: Date?
-    /** Timestamp indicating when the data ingestion rule was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateModified: Date?
-    /** The platform of the data ingestion rule. */
-    public var platform: String?
-    /** The Info about ingestion rule. */
-    public var ingestionRuleInfo: MessageInfo?
-    /** The countries is available only on twitter data ingestion rule. ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide. */
-    public var countries: [String]?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, countries: [String]?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self._description = _description
-        self.status = status
-        self.version = version
-        self.dateCreated = dateCreated
-        self.dateModified = dateModified
-        self.platform = platform
-        self.ingestionRuleInfo = ingestionRuleInfo
-        self.countries = countries
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case _description = "description"
-        case status
-        case version
-        case dateCreated
-        case dateModified
-        case platform
-        case ingestionRuleInfo
-        case countries
-        case selfUri
     }
 
 
@@ -25952,6 +25951,7 @@ public class FlowStartDetailEventTopicFlowStartEvent: Codable {
         case _open = "OPEN"
         case instagram = "INSTAGRAM"
         case apple = "APPLE"
+        case linkedin = "LINKEDIN"
     }
 
     public enum FlowType: String, Codable { 
@@ -28144,7 +28144,6 @@ public class JourneyOutcomeEventsNotificationOutcomeTouchpointChannel: Codable {
     public enum ModelType: String, Codable { 
         case unknown = "Unknown"
         case contentOffer = "ContentOffer"
-        case webchat = "Webchat"
     }
 
     public var type: ModelType?
@@ -37657,7 +37656,7 @@ public class QueueConversationChatEventTopicQueueMediaSettings: Codable {
 
 
 
-public class QueueConversationCobrowseEventTopicDivisionEntityRef: Codable {
+public class QueueMember: Codable {
 
 
 
@@ -37665,21 +37664,47 @@ public class QueueConversationCobrowseEventTopicDivisionEntityRef: Codable {
 
 
 
+
+
+
+
+
+
+
+
+
+
+    /** The queue member's id. */
     public var _id: String?
+    public var name: String?
+    public var user: User?
+    public var ringNumber: Int?
+    public var joined: Bool?
+    public var memberBy: String?
+    public var routingStatus: RoutingStatus?
+    /** The URI for this object */
     public var selfUri: String?
-    /** The time the entity division was last updated. */
-    public var dateDivisionUpdated: Date?
 
-    public init(_id: String?, selfUri: String?, dateDivisionUpdated: Date?) {
+    public init(_id: String?, name: String?, user: User?, ringNumber: Int?, joined: Bool?, memberBy: String?, routingStatus: RoutingStatus?, selfUri: String?) {
         self._id = _id
+        self.name = name
+        self.user = user
+        self.ringNumber = ringNumber
+        self.joined = joined
+        self.memberBy = memberBy
+        self.routingStatus = routingStatus
         self.selfUri = selfUri
-        self.dateDivisionUpdated = dateDivisionUpdated
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
+        case name
+        case user
+        case ringNumber
+        case joined
+        case memberBy
+        case routingStatus
         case selfUri
-        case dateDivisionUpdated
     }
 
 
@@ -40716,6 +40741,37 @@ public class QueueConversationCallbackEventTopicJourneyContext: Codable {
 
 
 
+
+public class QueueConversationCobrowseEventTopicDivisionEntityRef: Codable {
+
+
+
+
+
+
+
+    public var _id: String?
+    public var selfUri: String?
+    /** The time the entity division was last updated. */
+    public var dateDivisionUpdated: Date?
+
+    public init(_id: String?, selfUri: String?, dateDivisionUpdated: Date?) {
+        self._id = _id
+        self.selfUri = selfUri
+        self.dateDivisionUpdated = dateDivisionUpdated
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case selfUri
+        case dateDivisionUpdated
+    }
+
+
+}
+
+
+
 /** A subset of the Journey System's action data relevant to a part of a conversation (for external linkage and internal usage/context) */
 
 public class QueueConversationCobrowseEventTopicJourneyAction: Codable {
@@ -43441,63 +43497,6 @@ public class QueueConversationVideoEventTopicScreenShare: Codable {
         case afterCallWork
         case afterCallWorkRequired
         case queueMediaSettings
-    }
-
-
-}
-
-
-
-
-public class QueueMember: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The queue member's id. */
-    public var _id: String?
-    public var name: String?
-    public var user: User?
-    public var ringNumber: Int?
-    public var joined: Bool?
-    public var memberBy: String?
-    public var routingStatus: RoutingStatus?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, user: User?, ringNumber: Int?, joined: Bool?, memberBy: String?, routingStatus: RoutingStatus?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.user = user
-        self.ringNumber = ringNumber
-        self.joined = joined
-        self.memberBy = memberBy
-        self.routingStatus = routingStatus
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case user
-        case ringNumber
-        case joined
-        case memberBy
-        case routingStatus
-        case selfUri
     }
 
 
@@ -51346,14 +51345,14 @@ public class TwitterDataIngestionRuleResponse: Codable {
     public var platform: String?
     /** The Info about ingestion rule. */
     public var ingestionRuleInfo: MessageInfo?
-    /** ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide. */
-    public var countries: [String]?
     /** Search terms for X (formally Twitter). */
     public var searchTerms: String?
+    /** ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide. */
+    public var countries: [String]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, countries: [String]?, searchTerms: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, searchTerms: String?, countries: [String]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
@@ -51363,8 +51362,8 @@ public class TwitterDataIngestionRuleResponse: Codable {
         self.dateModified = dateModified
         self.platform = platform
         self.ingestionRuleInfo = ingestionRuleInfo
-        self.countries = countries
         self.searchTerms = searchTerms
+        self.countries = countries
         self.selfUri = selfUri
     }
 
@@ -51378,8 +51377,8 @@ public class TwitterDataIngestionRuleResponse: Codable {
         case dateModified
         case platform
         case ingestionRuleInfo
-        case countries
         case searchTerms
+        case countries
         case selfUri
     }
 
@@ -52454,6 +52453,7 @@ public class UserEndDetailEventTopicUserEndEvent: Codable {
         case _open = "OPEN"
         case instagram = "INSTAGRAM"
         case apple = "APPLE"
+        case linkedin = "LINKEDIN"
     }
 
 
@@ -55421,6 +55421,12 @@ public class WfmActivityPlanRunJobCompleteTopicActivityPlanJobException: Codable
     public enum ExceptionType: String, Codable { 
         case unscheduledAttendees = "UnscheduledAttendees"
         case sessionsNotDeleted = "SessionsNotDeleted"
+        case invalidUserIds = "InvalidUserIds"
+        case invalidFacilitatorId = "InvalidFacilitatorId"
+        case ruleError = "RuleError"
+        case invalidOccurrence = "InvalidOccurrence"
+        case noScheduleFound = "NoScheduleFound"
+        case sessionUsersNotRemoved = "SessionUsersNotRemoved"
     }
 
 
@@ -58741,6 +58747,7 @@ public class WrapupDetailEventTopicWrapupEvent: Codable {
         case _open = "OPEN"
         case instagram = "INSTAGRAM"
         case apple = "APPLE"
+        case linkedin = "LINKEDIN"
     }
 
 

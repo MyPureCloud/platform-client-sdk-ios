@@ -2409,6 +2409,56 @@ public class AnalyticsAgentStateAgentResponse: Codable {
 
 
 
+
+
+
+
+    public enum AdherenceState: String, Codable { 
+        case inAdherence = "InAdherence"
+        case outOfAdherence = "OutOfAdherence"
+        case unscheduled = "Unscheduled"
+        case unknown = "Unknown"
+        case ignored = "Ignored"
+        case explained = "Explained"
+    }
+
+    public enum AdherenceImpact: String, Codable { 
+        case positive = "Positive"
+        case negative = "Negative"
+        case neutral = "Neutral"
+        case unknown = "Unknown"
+    }
+
+
+
+
+
+    public enum ScheduledActivityCategory: String, Codable { 
+        case onQueueWork = "OnQueueWork"
+        case _break = "Break"
+        case meal = "Meal"
+        case meeting = "Meeting"
+        case offQueueWork = "OffQueueWork"
+        case timeOff = "TimeOff"
+        case training = "Training"
+        case unavailable = "Unavailable"
+        case unscheduled = "Unscheduled"
+        case unknown = "Unknown"
+    }
+
+    public enum ActualActivityCategory: String, Codable { 
+        case onQueueWork = "OnQueueWork"
+        case _break = "Break"
+        case meal = "Meal"
+        case meeting = "Meeting"
+        case offQueueWork = "OffQueueWork"
+        case timeOff = "TimeOff"
+        case training = "Training"
+        case unavailable = "Unavailable"
+        case unscheduled = "Unscheduled"
+        case unknown = "Unknown"
+    }
+
     /** User Id - only returned if division is covered by agentStateNames permission */
     public var userId: String?
     /** Division Id */
@@ -2433,8 +2483,24 @@ public class AnalyticsAgentStateAgentResponse: Codable {
     public var routingStatusDate: Date?
     /** Whether the user is out of office */
     public var isOutOfOffice: Bool?
+    /** The id of the user's management unit */
+    public var managementUnitId: String?
+    /** The id of the user's business unit */
+    public var businessUnitId: String?
+    /** The user's adherence state */
+    public var adherenceState: AdherenceState?
+    /** The user's adherence impact */
+    public var adherenceImpact: AdherenceImpact?
+    /** The timestamp for when the user's adherence state began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var adherenceDate: Date?
+    /** The id of the user's scheduled activity code */
+    public var scheduledActivityCodeId: String?
+    /** The user's scheduled activity category */
+    public var scheduledActivityCategory: ScheduledActivityCategory?
+    /** The user's actual activity category */
+    public var actualActivityCategory: ActualActivityCategory?
 
-    public init(userId: String?, divisionId: String?, userName: String?, managerId: String?, sessionCount: Int?, sessions: [AnalyticsAgentStateAgentSessionResult]?, systemPresence: SystemPresence?, organizationPresenceId: String?, presenceDate: Date?, routingStatus: RoutingStatus?, routingStatusDate: Date?, isOutOfOffice: Bool?) {
+    public init(userId: String?, divisionId: String?, userName: String?, managerId: String?, sessionCount: Int?, sessions: [AnalyticsAgentStateAgentSessionResult]?, systemPresence: SystemPresence?, organizationPresenceId: String?, presenceDate: Date?, routingStatus: RoutingStatus?, routingStatusDate: Date?, isOutOfOffice: Bool?, managementUnitId: String?, businessUnitId: String?, adherenceState: AdherenceState?, adherenceImpact: AdherenceImpact?, adherenceDate: Date?, scheduledActivityCodeId: String?, scheduledActivityCategory: ScheduledActivityCategory?, actualActivityCategory: ActualActivityCategory?) {
         self.userId = userId
         self.divisionId = divisionId
         self.userName = userName
@@ -2447,6 +2513,14 @@ public class AnalyticsAgentStateAgentResponse: Codable {
         self.routingStatus = routingStatus
         self.routingStatusDate = routingStatusDate
         self.isOutOfOffice = isOutOfOffice
+        self.managementUnitId = managementUnitId
+        self.businessUnitId = businessUnitId
+        self.adherenceState = adherenceState
+        self.adherenceImpact = adherenceImpact
+        self.adherenceDate = adherenceDate
+        self.scheduledActivityCodeId = scheduledActivityCodeId
+        self.scheduledActivityCategory = scheduledActivityCategory
+        self.actualActivityCategory = actualActivityCategory
     }
 
 
@@ -3611,6 +3685,42 @@ public class ApiUsageQueryResult: Codable {
 
 
 
+public class Button: Codable {
+
+    public enum ModelType: String, Codable { 
+        case quickReply = "QuickReply"
+        case phoneNumber = "PhoneNumber"
+        case url = "Url"
+    }
+
+
+
+
+
+
+
+    /** Type of button to include in whatsApp template */
+    public var type: ModelType?
+    /** Content of the button. Use for 'Url' or 'PhoneNumber' button type */
+    public var content: String?
+    /** The text label that will be displayed on the button */
+    public var contentText: String?
+    /** A payload to uniquely identify a quickReply button in carousel */
+    public var payload: String?
+
+    public init(type: ModelType?, content: String?, contentText: String?, payload: String?) {
+        self.type = type
+        self.content = content
+        self.contentText = contentText
+        self.payload = payload
+    }
+
+
+}
+
+
+
+
 public class AppleIntegrationEntityListing: Codable {
 
 
@@ -3655,42 +3765,6 @@ public class AppleIntegrationEntityListing: Codable {
         self.nextUri = nextUri
         self.previousUri = previousUri
         self.pageCount = pageCount
-    }
-
-
-}
-
-
-
-
-public class Button: Codable {
-
-    public enum ModelType: String, Codable { 
-        case quickReply = "QuickReply"
-        case phoneNumber = "PhoneNumber"
-        case url = "Url"
-    }
-
-
-
-
-
-
-
-    /** Type of button to include in whatsApp template */
-    public var type: ModelType?
-    /** Content of the button. Use for 'Url' or 'PhoneNumber' button type */
-    public var content: String?
-    /** The text label that will be displayed on the button */
-    public var contentText: String?
-    /** A payload to uniquely identify a quickReply button in carousel */
-    public var payload: String?
-
-    public init(type: ModelType?, content: String?, contentText: String?, payload: String?) {
-        self.type = type
-        self.content = content
-        self.contentText = contentText
-        self.payload = payload
     }
 
 
@@ -14817,6 +14891,12 @@ public class ConversationIntentSuggestionsTopicSuggestionContext: Codable {
 
 
 
+    public enum ParticipantType: String, Codable { 
+        case unknown = "UNKNOWN"
+        case agent = "AGENT"
+        case customer = "CUSTOMER"
+    }
+
     public var queueId: UUID?
     public var mediaType: MediaType?
     public var userId: UUID?
@@ -14827,8 +14907,9 @@ public class ConversationIntentSuggestionsTopicSuggestionContext: Codable {
     public var queryStatement: String?
     public var language: String?
     public var queryReformulationContext: ConversationIntentSuggestionsTopicQueryReformulationContext?
+    public var participantType: ParticipantType?
 
-    public init(queueId: UUID?, mediaType: MediaType?, userId: UUID?, externalContactId: UUID?, assistantId: UUID?, utteranceId: UUID?, messageId: String?, queryStatement: String?, language: String?, queryReformulationContext: ConversationIntentSuggestionsTopicQueryReformulationContext?) {
+    public init(queueId: UUID?, mediaType: MediaType?, userId: UUID?, externalContactId: UUID?, assistantId: UUID?, utteranceId: UUID?, messageId: String?, queryStatement: String?, language: String?, queryReformulationContext: ConversationIntentSuggestionsTopicQueryReformulationContext?, participantType: ParticipantType?) {
         self.queueId = queueId
         self.mediaType = mediaType
         self.userId = userId
@@ -14839,6 +14920,7 @@ public class ConversationIntentSuggestionsTopicSuggestionContext: Codable {
         self.queryStatement = queryStatement
         self.language = language
         self.queryReformulationContext = queryReformulationContext
+        self.participantType = participantType
     }
 
 
@@ -14902,6 +14984,12 @@ public class ConversationKnowledgeArticleSuggestionsTopicSuggestionContext: Coda
 
 
 
+    public enum ParticipantType: String, Codable { 
+        case unknown = "UNKNOWN"
+        case agent = "AGENT"
+        case customer = "CUSTOMER"
+    }
+
     public var queueId: UUID?
     public var mediaType: MediaType?
     public var userId: UUID?
@@ -14912,8 +15000,9 @@ public class ConversationKnowledgeArticleSuggestionsTopicSuggestionContext: Coda
     public var queryStatement: String?
     public var language: String?
     public var queryReformulationContext: ConversationKnowledgeArticleSuggestionsTopicQueryReformulationContext?
+    public var participantType: ParticipantType?
 
-    public init(queueId: UUID?, mediaType: MediaType?, userId: UUID?, externalContactId: UUID?, assistantId: UUID?, utteranceId: UUID?, messageId: String?, queryStatement: String?, language: String?, queryReformulationContext: ConversationKnowledgeArticleSuggestionsTopicQueryReformulationContext?) {
+    public init(queueId: UUID?, mediaType: MediaType?, userId: UUID?, externalContactId: UUID?, assistantId: UUID?, utteranceId: UUID?, messageId: String?, queryStatement: String?, language: String?, queryReformulationContext: ConversationKnowledgeArticleSuggestionsTopicQueryReformulationContext?, participantType: ParticipantType?) {
         self.queueId = queueId
         self.mediaType = mediaType
         self.userId = userId
@@ -14924,6 +15013,7 @@ public class ConversationKnowledgeArticleSuggestionsTopicSuggestionContext: Coda
         self.queryStatement = queryStatement
         self.language = language
         self.queryReformulationContext = queryReformulationContext
+        self.participantType = participantType
     }
 
 
@@ -14987,6 +15077,12 @@ public class ConversationKnowledgeSearchSuggestionsTopicSuggestionContext: Codab
 
 
 
+    public enum ParticipantType: String, Codable { 
+        case unknown = "UNKNOWN"
+        case agent = "AGENT"
+        case customer = "CUSTOMER"
+    }
+
     public var queueId: UUID?
     public var mediaType: MediaType?
     public var userId: UUID?
@@ -14997,8 +15093,9 @@ public class ConversationKnowledgeSearchSuggestionsTopicSuggestionContext: Codab
     public var queryStatement: String?
     public var language: String?
     public var queryReformulationContext: ConversationKnowledgeSearchSuggestionsTopicQueryReformulationContext?
+    public var participantType: ParticipantType?
 
-    public init(queueId: UUID?, mediaType: MediaType?, userId: UUID?, externalContactId: UUID?, assistantId: UUID?, utteranceId: UUID?, messageId: String?, queryStatement: String?, language: String?, queryReformulationContext: ConversationKnowledgeSearchSuggestionsTopicQueryReformulationContext?) {
+    public init(queueId: UUID?, mediaType: MediaType?, userId: UUID?, externalContactId: UUID?, assistantId: UUID?, utteranceId: UUID?, messageId: String?, queryStatement: String?, language: String?, queryReformulationContext: ConversationKnowledgeSearchSuggestionsTopicQueryReformulationContext?, participantType: ParticipantType?) {
         self.queueId = queueId
         self.mediaType = mediaType
         self.userId = userId
@@ -15009,6 +15106,7 @@ public class ConversationKnowledgeSearchSuggestionsTopicSuggestionContext: Codab
         self.queryStatement = queryStatement
         self.language = language
         self.queryReformulationContext = queryReformulationContext
+        self.participantType = participantType
     }
 
 
@@ -16064,6 +16162,12 @@ public class ConversationThirdPartyActionSuggestionsTopicSuggestionContext: Coda
 
 
 
+    public enum ParticipantType: String, Codable { 
+        case unknown = "UNKNOWN"
+        case agent = "AGENT"
+        case customer = "CUSTOMER"
+    }
+
     public var queueId: UUID?
     public var mediaType: MediaType?
     public var userId: UUID?
@@ -16074,8 +16178,9 @@ public class ConversationThirdPartyActionSuggestionsTopicSuggestionContext: Coda
     public var queryStatement: String?
     public var language: String?
     public var queryReformulationContext: ConversationThirdPartyActionSuggestionsTopicQueryReformulationContext?
+    public var participantType: ParticipantType?
 
-    public init(queueId: UUID?, mediaType: MediaType?, userId: UUID?, externalContactId: UUID?, assistantId: UUID?, utteranceId: UUID?, messageId: String?, queryStatement: String?, language: String?, queryReformulationContext: ConversationThirdPartyActionSuggestionsTopicQueryReformulationContext?) {
+    public init(queueId: UUID?, mediaType: MediaType?, userId: UUID?, externalContactId: UUID?, assistantId: UUID?, utteranceId: UUID?, messageId: String?, queryStatement: String?, language: String?, queryReformulationContext: ConversationThirdPartyActionSuggestionsTopicQueryReformulationContext?, participantType: ParticipantType?) {
         self.queueId = queueId
         self.mediaType = mediaType
         self.userId = userId
@@ -16086,6 +16191,7 @@ public class ConversationThirdPartyActionSuggestionsTopicSuggestionContext: Coda
         self.queryStatement = queryStatement
         self.language = language
         self.queryReformulationContext = queryReformulationContext
+        self.participantType = participantType
     }
 
 
@@ -17484,6 +17590,7 @@ public class CustomerStartDetailEventTopicCustomerStartEvent: Codable {
         case _open = "OPEN"
         case instagram = "INSTAGRAM"
         case apple = "APPLE"
+        case linkedin = "LINKEDIN"
     }
 
 
@@ -23335,8 +23442,6 @@ public class FacebookDataIngestionRuleResponse: Codable {
 
 
 
-
-
     /** ID of the Facebook data ingestion rule. */
     public var _id: String?
     /** The name of the data ingestion rule. */
@@ -23355,14 +23460,12 @@ public class FacebookDataIngestionRuleResponse: Codable {
     public var platform: String?
     /** The Info about ingestion rule. */
     public var ingestionRuleInfo: MessageInfo?
-    /** The countries is available only on twitter data ingestion rule. ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide. */
-    public var countries: [String]?
     /** Id of the Integration when source is owned (Authenticated). This entity is created using the /conversations/messaging/integrations/facebook resource. Optional when configuring non-owned pages. */
     public var integrationId: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, countries: [String]?, integrationId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, integrationId: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
@@ -23372,7 +23475,6 @@ public class FacebookDataIngestionRuleResponse: Codable {
         self.dateModified = dateModified
         self.platform = platform
         self.ingestionRuleInfo = ingestionRuleInfo
-        self.countries = countries
         self.integrationId = integrationId
         self.selfUri = selfUri
     }
@@ -23387,7 +23489,6 @@ public class FacebookDataIngestionRuleResponse: Codable {
         case dateModified
         case platform
         case ingestionRuleInfo
-        case countries
         case integrationId
         case selfUri
     }
@@ -28031,8 +28132,6 @@ public class InstagramDataIngestionRuleResponse: Codable {
 
 
 
-
-
     /** ID of the Instagram data ingestion rule. */
     public var _id: String?
     /** The name of the data ingestion rule. */
@@ -28051,14 +28150,12 @@ public class InstagramDataIngestionRuleResponse: Codable {
     public var platform: String?
     /** The Info about ingestion rule. */
     public var ingestionRuleInfo: MessageInfo?
-    /** The countries is available only on twitter data ingestion rule. ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide. */
-    public var countries: [String]?
     /** The Integration Id from which public social posts are ingested. This entity is created using the /conversations/messaging/integrations/instagram resource */
     public var integrationId: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, countries: [String]?, integrationId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, integrationId: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
@@ -28068,7 +28165,6 @@ public class InstagramDataIngestionRuleResponse: Codable {
         self.dateModified = dateModified
         self.platform = platform
         self.ingestionRuleInfo = ingestionRuleInfo
-        self.countries = countries
         self.integrationId = integrationId
         self.selfUri = selfUri
     }
@@ -28083,7 +28179,6 @@ public class InstagramDataIngestionRuleResponse: Codable {
         case dateModified
         case platform
         case ingestionRuleInfo
-        case countries
         case integrationId
         case selfUri
     }
@@ -28672,7 +28767,6 @@ public class JourneyAppEventsNotificationEventAction: Codable {
     }
 
     public enum MediaType: String, Codable { 
-        case webchat = "webchat"
         case webmessagingoffer = "webMessagingOffer"
         case contentoffer = "contentOffer"
         case architectflow = "architectFlow"
@@ -34795,8 +34889,6 @@ public class OpenDataIngestionRuleVersionResponse: Codable {
 
 
 
-
-
     /** ID of the open data ingestion rule. */
     public var _id: String?
     /** The name of the data ingestion rule. */
@@ -34815,14 +34907,12 @@ public class OpenDataIngestionRuleVersionResponse: Codable {
     public var platform: String?
     /** The Info about ingestion rule. */
     public var ingestionRuleInfo: MessageInfo?
-    /** The countries is available only on twitter data ingestion rule. ISO 3166-1 alpha-2 country codes where Data Ingestion Rules should apply. Defaults to worldwide. */
-    public var countries: [String]?
     /** The external source associated with this open data ingestion rule, which is used when performing identity resolution */
     public var externalSource: DomainEntityRef?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, countries: [String]?, externalSource: DomainEntityRef?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, status: Status?, version: Int?, dateCreated: Date?, dateModified: Date?, platform: String?, ingestionRuleInfo: MessageInfo?, externalSource: DomainEntityRef?, selfUri: String?) {
         self._id = _id
         self.name = name
         self._description = _description
@@ -34832,7 +34922,6 @@ public class OpenDataIngestionRuleVersionResponse: Codable {
         self.dateModified = dateModified
         self.platform = platform
         self.ingestionRuleInfo = ingestionRuleInfo
-        self.countries = countries
         self.externalSource = externalSource
         self.selfUri = selfUri
     }
@@ -34847,7 +34936,6 @@ public class OpenDataIngestionRuleVersionResponse: Codable {
         case dateModified
         case platform
         case ingestionRuleInfo
-        case countries
         case externalSource
         case selfUri
     }
@@ -36947,18 +37035,35 @@ public class QueueConversationChatEventTopicUriReference: Codable {
 
 
 
-public class QueueConversationCobrowseEventTopicConversationDivisionMembership: Codable {
+public class QueueMediaSettings: Codable {
 
 
 
 
 
-    public var division: QueueConversationCobrowseEventTopicDomainEntityRef?
-    public var entities: [QueueConversationCobrowseEventTopicDivisionEntityRef]?
 
-    public init(division: QueueConversationCobrowseEventTopicDomainEntityRef?, entities: [QueueConversationCobrowseEventTopicDivisionEntityRef]?) {
-        self.division = division
-        self.entities = entities
+
+
+
+
+
+    /** The queue media settings for call interactions. */
+    public var call: MediaSettings?
+    /** The queue media settings for callback interactions. */
+    public var callback: CallbackMediaSettings?
+    /** The queue media settings for chat interactions. */
+    public var chat: MediaSettings?
+    /** The queue media settings for email interactions. */
+    public var email: EmailMediaSettings?
+    /** The queue media settings for message interactions. */
+    public var message: MessageMediaSettings?
+
+    public init(call: MediaSettings?, callback: CallbackMediaSettings?, chat: MediaSettings?, email: EmailMediaSettings?, message: MessageMediaSettings?) {
+        self.call = call
+        self.callback = callback
+        self.chat = chat
+        self.email = email
+        self.message = message
     }
 
 
@@ -37879,7 +37984,7 @@ public class PerformancePredictionOutputs: Codable {
 
 
 
-    /** Date as an ISO-8601 string, corresponding to the beginning of the performance prediction results */
+    /** The beginning of the performance prediction results, in ISO-8601 format */
     public var calculationStartDate: Date?
     /** Interval length of the response metrics */
     public var calculationIntervalLengthMinutes: Int?
@@ -39153,6 +39258,297 @@ public class QueueConversationCallbackEventTopicScoredAgent: Codable {
     public init(agent: QueueConversationCallbackEventTopicUriReference?, score: Int64?) {
         self.agent = agent
         self.score = score
+    }
+
+
+}
+
+
+
+
+public class QueueFullReference: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum ScoringMethod: String, Codable { 
+        case timestampAndPriority = "TimestampAndPriority"
+        case priorityOnly = "PriorityOnly"
+    }
+
+    public enum LastAgentRoutingMode: String, Codable { 
+        case disabled = "Disabled"
+        case queueMembersOnly = "QueueMembersOnly"
+        case anyAgent = "AnyAgent"
+    }
+
+
+
+    public enum SkillEvaluationMethod: String, Codable { 
+        case _none = "NONE"
+        case best = "BEST"
+        case all = "ALL"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    /** The division to which this entity belongs. */
+    public var division: Division?
+    /** The queue description. */
+    public var _description: String?
+    /** The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+    /** The date of the last modification to the queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateModified: Date?
+    /** The ID of the user that last modified the queue. */
+    public var modifiedBy: String?
+    /** The ID of the user that created the queue. */
+    public var createdBy: String?
+    /** The total number of members in the queue. */
+    public var memberCount: Int?
+    /** The number of user members (i.e., non-group members) in the queue. */
+    public var userMemberCount: Int?
+    /** The number of joined members in the queue. */
+    public var joinedMemberCount: Int?
+    /** The media settings for the queue. */
+    public var mediaSettings: QueueMediaSettings?
+    /** The routing rules for the queue, used for Preferred Agent Routing. */
+    public var routingRules: [RoutingRule]?
+    /** The Conditional Group Routing settings for the queue. */
+    public var conditionalGroupRouting: ConditionalGroupRouting?
+    /** The Conditional Group Activation settings for the queue. */
+    public var conditionalGroupActivation: ConditionalGroupActivation?
+    /** The bullseye settings for the queue. */
+    public var bullseye: Bullseye?
+    /** The Scoring Method for the queue. */
+    public var scoringMethod: ScoringMethod?
+    /** The Last Agent Routing Mode for the queue. */
+    public var lastAgentRoutingMode: LastAgentRoutingMode?
+    /** The ACW settings for the queue. */
+    public var acwSettings: AcwSettings?
+    /** The skill evaluation method to use when routing conversations. */
+    public var skillEvaluationMethod: SkillEvaluationMethod?
+    /** The groups of agents associated with the queue, if any.  Queue membership will update to match group membership changes. */
+    public var memberGroups: [MemberGroup]?
+    /** The in-queue flow to use for call conversations waiting in queue. */
+    public var queueFlow: DomainEntityRef?
+    /** The in-queue flow to use for email conversations waiting in queue. */
+    public var emailInQueueFlow: DomainEntityRef?
+    /** The in-queue flow to use for message conversations waiting in queue. */
+    public var messageInQueueFlow: DomainEntityRef?
+    /** The prompt used for whisper on the queue, if configured. */
+    public var whisperPrompt: DomainEntityRef?
+    /** The audio to be played when calls on this queue are on hold. If not configured, the default on-hold music will play. */
+    public var onHoldPrompt: DomainEntityRef?
+    /** Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered. */
+    public var autoAnswerOnly: Bool?
+    /** Canned response library IDs and mode with which they are associated with the queue */
+    public var cannedResponseLibraries: CannedResponseLibraries?
+    /** Indicates whether voice transcription is enabled for this queue. */
+    public var enableTranscription: Bool?
+    /** Indicates whether audio monitoring is enabled for this queue. */
+    public var enableAudioMonitoring: Bool?
+    /** Indicates whether manual assignment is enabled for this queue. */
+    public var enableManualAssignment: Bool?
+    /** The Agent Owned Routing settings for the queue */
+    public var agentOwnedRouting: AgentOwnedRouting?
+    /** The Direct Routing settings for the queue */
+    public var directRouting: DirectRouting?
+    /** The name to use for caller identification for outbound calls from this queue. */
+    public var callingPartyName: String?
+    /** The phone number to use for caller identification for outbound calls from this queue. */
+    public var callingPartyNumber: String?
+    /** The default script Ids for the communication types. */
+    public var defaultScripts: [String:Script]?
+    /** The messaging addresses for the queue. */
+    public var outboundMessagingAddresses: QueueMessagingAddresses?
+    /** The default email address to use for outbound email from this queue. */
+    public var outboundEmailAddress: QueueEmailAddress?
+    /** The ID of an associated external queue. */
+    public var peerId: String?
+    /** Indicates whether recording in-queue calls is suppressed for this queue. */
+    public var suppressInQueueCallRecording: Bool?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, division: Division?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: QueueMediaSettings?, routingRules: [RoutingRule]?, conditionalGroupRouting: ConditionalGroupRouting?, conditionalGroupActivation: ConditionalGroupActivation?, bullseye: Bullseye?, scoringMethod: ScoringMethod?, lastAgentRoutingMode: LastAgentRoutingMode?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, memberGroups: [MemberGroup]?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, cannedResponseLibraries: CannedResponseLibraries?, enableTranscription: Bool?, enableAudioMonitoring: Bool?, enableManualAssignment: Bool?, agentOwnedRouting: AgentOwnedRouting?, directRouting: DirectRouting?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, peerId: String?, suppressInQueueCallRecording: Bool?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.division = division
+        self._description = _description
+        self.dateCreated = dateCreated
+        self.dateModified = dateModified
+        self.modifiedBy = modifiedBy
+        self.createdBy = createdBy
+        self.memberCount = memberCount
+        self.userMemberCount = userMemberCount
+        self.joinedMemberCount = joinedMemberCount
+        self.mediaSettings = mediaSettings
+        self.routingRules = routingRules
+        self.conditionalGroupRouting = conditionalGroupRouting
+        self.conditionalGroupActivation = conditionalGroupActivation
+        self.bullseye = bullseye
+        self.scoringMethod = scoringMethod
+        self.lastAgentRoutingMode = lastAgentRoutingMode
+        self.acwSettings = acwSettings
+        self.skillEvaluationMethod = skillEvaluationMethod
+        self.memberGroups = memberGroups
+        self.queueFlow = queueFlow
+        self.emailInQueueFlow = emailInQueueFlow
+        self.messageInQueueFlow = messageInQueueFlow
+        self.whisperPrompt = whisperPrompt
+        self.onHoldPrompt = onHoldPrompt
+        self.autoAnswerOnly = autoAnswerOnly
+        self.cannedResponseLibraries = cannedResponseLibraries
+        self.enableTranscription = enableTranscription
+        self.enableAudioMonitoring = enableAudioMonitoring
+        self.enableManualAssignment = enableManualAssignment
+        self.agentOwnedRouting = agentOwnedRouting
+        self.directRouting = directRouting
+        self.callingPartyName = callingPartyName
+        self.callingPartyNumber = callingPartyNumber
+        self.defaultScripts = defaultScripts
+        self.outboundMessagingAddresses = outboundMessagingAddresses
+        self.outboundEmailAddress = outboundEmailAddress
+        self.peerId = peerId
+        self.suppressInQueueCallRecording = suppressInQueueCallRecording
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case division
+        case _description = "description"
+        case dateCreated
+        case dateModified
+        case modifiedBy
+        case createdBy
+        case memberCount
+        case userMemberCount
+        case joinedMemberCount
+        case mediaSettings
+        case routingRules
+        case conditionalGroupRouting
+        case conditionalGroupActivation
+        case bullseye
+        case scoringMethod
+        case lastAgentRoutingMode
+        case acwSettings
+        case skillEvaluationMethod
+        case memberGroups
+        case queueFlow
+        case emailInQueueFlow
+        case messageInQueueFlow
+        case whisperPrompt
+        case onHoldPrompt
+        case autoAnswerOnly
+        case cannedResponseLibraries
+        case enableTranscription
+        case enableAudioMonitoring
+        case enableManualAssignment
+        case agentOwnedRouting
+        case directRouting
+        case callingPartyName
+        case callingPartyNumber
+        case defaultScripts
+        case outboundMessagingAddresses
+        case outboundEmailAddress
+        case peerId
+        case suppressInQueueCallRecording
+        case selfUri
+    }
+
+
+}
+
+
+
+
+public class QueueConversationCobrowseEventTopicConversationDivisionMembership: Codable {
+
+
+
+
+
+    public var division: QueueConversationCobrowseEventTopicDomainEntityRef?
+    public var entities: [QueueConversationCobrowseEventTopicDivisionEntityRef]?
+
+    public init(division: QueueConversationCobrowseEventTopicDomainEntityRef?, entities: [QueueConversationCobrowseEventTopicDivisionEntityRef]?) {
+        self.division = division
+        self.entities = entities
     }
 
 
@@ -42455,314 +42851,6 @@ public class QueueConversationVideoEventTopicVoicemail: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case uploadStatus
-    }
-
-
-}
-
-
-
-
-public class QueueFullReference: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum ScoringMethod: String, Codable { 
-        case timestampAndPriority = "TimestampAndPriority"
-        case priorityOnly = "PriorityOnly"
-    }
-
-    public enum LastAgentRoutingMode: String, Codable { 
-        case disabled = "Disabled"
-        case queueMembersOnly = "QueueMembersOnly"
-        case anyAgent = "AnyAgent"
-    }
-
-
-
-    public enum SkillEvaluationMethod: String, Codable { 
-        case _none = "NONE"
-        case best = "BEST"
-        case all = "ALL"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    public var name: String?
-    /** The division to which this entity belongs. */
-    public var division: Division?
-    /** The queue description. */
-    public var _description: String?
-    /** The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateCreated: Date?
-    /** The date of the last modification to the queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateModified: Date?
-    /** The ID of the user that last modified the queue. */
-    public var modifiedBy: String?
-    /** The ID of the user that created the queue. */
-    public var createdBy: String?
-    /** The total number of members in the queue. */
-    public var memberCount: Int?
-    /** The number of user members (i.e., non-group members) in the queue. */
-    public var userMemberCount: Int?
-    /** The number of joined members in the queue. */
-    public var joinedMemberCount: Int?
-    /** The media settings for the queue. */
-    public var mediaSettings: QueueMediaSettings?
-    /** The routing rules for the queue, used for Preferred Agent Routing. */
-    public var routingRules: [RoutingRule]?
-    /** The Conditional Group Routing settings for the queue. */
-    public var conditionalGroupRouting: ConditionalGroupRouting?
-    /** The Conditional Group Activation settings for the queue. */
-    public var conditionalGroupActivation: ConditionalGroupActivation?
-    /** The bullseye settings for the queue. */
-    public var bullseye: Bullseye?
-    /** The Scoring Method for the queue. */
-    public var scoringMethod: ScoringMethod?
-    /** The Last Agent Routing Mode for the queue. */
-    public var lastAgentRoutingMode: LastAgentRoutingMode?
-    /** The ACW settings for the queue. */
-    public var acwSettings: AcwSettings?
-    /** The skill evaluation method to use when routing conversations. */
-    public var skillEvaluationMethod: SkillEvaluationMethod?
-    /** The groups of agents associated with the queue, if any.  Queue membership will update to match group membership changes. */
-    public var memberGroups: [MemberGroup]?
-    /** The in-queue flow to use for call conversations waiting in queue. */
-    public var queueFlow: DomainEntityRef?
-    /** The in-queue flow to use for email conversations waiting in queue. */
-    public var emailInQueueFlow: DomainEntityRef?
-    /** The in-queue flow to use for message conversations waiting in queue. */
-    public var messageInQueueFlow: DomainEntityRef?
-    /** The prompt used for whisper on the queue, if configured. */
-    public var whisperPrompt: DomainEntityRef?
-    /** The audio to be played when calls on this queue are on hold. If not configured, the default on-hold music will play. */
-    public var onHoldPrompt: DomainEntityRef?
-    /** Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered. */
-    public var autoAnswerOnly: Bool?
-    /** Canned response library IDs and mode with which they are associated with the queue */
-    public var cannedResponseLibraries: CannedResponseLibraries?
-    /** Indicates whether voice transcription is enabled for this queue. */
-    public var enableTranscription: Bool?
-    /** Indicates whether audio monitoring is enabled for this queue. */
-    public var enableAudioMonitoring: Bool?
-    /** Indicates whether manual assignment is enabled for this queue. */
-    public var enableManualAssignment: Bool?
-    /** The Agent Owned Routing settings for the queue */
-    public var agentOwnedRouting: AgentOwnedRouting?
-    /** The Direct Routing settings for the queue */
-    public var directRouting: DirectRouting?
-    /** The name to use for caller identification for outbound calls from this queue. */
-    public var callingPartyName: String?
-    /** The phone number to use for caller identification for outbound calls from this queue. */
-    public var callingPartyNumber: String?
-    /** The default script Ids for the communication types. */
-    public var defaultScripts: [String:Script]?
-    /** The messaging addresses for the queue. */
-    public var outboundMessagingAddresses: QueueMessagingAddresses?
-    /** The default email address to use for outbound email from this queue. */
-    public var outboundEmailAddress: QueueEmailAddress?
-    /** The ID of an associated external queue. */
-    public var peerId: String?
-    /** Indicates whether recording in-queue calls is suppressed for this queue. */
-    public var suppressInQueueCallRecording: Bool?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, division: Division?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: QueueMediaSettings?, routingRules: [RoutingRule]?, conditionalGroupRouting: ConditionalGroupRouting?, conditionalGroupActivation: ConditionalGroupActivation?, bullseye: Bullseye?, scoringMethod: ScoringMethod?, lastAgentRoutingMode: LastAgentRoutingMode?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, memberGroups: [MemberGroup]?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, cannedResponseLibraries: CannedResponseLibraries?, enableTranscription: Bool?, enableAudioMonitoring: Bool?, enableManualAssignment: Bool?, agentOwnedRouting: AgentOwnedRouting?, directRouting: DirectRouting?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, peerId: String?, suppressInQueueCallRecording: Bool?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.division = division
-        self._description = _description
-        self.dateCreated = dateCreated
-        self.dateModified = dateModified
-        self.modifiedBy = modifiedBy
-        self.createdBy = createdBy
-        self.memberCount = memberCount
-        self.userMemberCount = userMemberCount
-        self.joinedMemberCount = joinedMemberCount
-        self.mediaSettings = mediaSettings
-        self.routingRules = routingRules
-        self.conditionalGroupRouting = conditionalGroupRouting
-        self.conditionalGroupActivation = conditionalGroupActivation
-        self.bullseye = bullseye
-        self.scoringMethod = scoringMethod
-        self.lastAgentRoutingMode = lastAgentRoutingMode
-        self.acwSettings = acwSettings
-        self.skillEvaluationMethod = skillEvaluationMethod
-        self.memberGroups = memberGroups
-        self.queueFlow = queueFlow
-        self.emailInQueueFlow = emailInQueueFlow
-        self.messageInQueueFlow = messageInQueueFlow
-        self.whisperPrompt = whisperPrompt
-        self.onHoldPrompt = onHoldPrompt
-        self.autoAnswerOnly = autoAnswerOnly
-        self.cannedResponseLibraries = cannedResponseLibraries
-        self.enableTranscription = enableTranscription
-        self.enableAudioMonitoring = enableAudioMonitoring
-        self.enableManualAssignment = enableManualAssignment
-        self.agentOwnedRouting = agentOwnedRouting
-        self.directRouting = directRouting
-        self.callingPartyName = callingPartyName
-        self.callingPartyNumber = callingPartyNumber
-        self.defaultScripts = defaultScripts
-        self.outboundMessagingAddresses = outboundMessagingAddresses
-        self.outboundEmailAddress = outboundEmailAddress
-        self.peerId = peerId
-        self.suppressInQueueCallRecording = suppressInQueueCallRecording
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case division
-        case _description = "description"
-        case dateCreated
-        case dateModified
-        case modifiedBy
-        case createdBy
-        case memberCount
-        case userMemberCount
-        case joinedMemberCount
-        case mediaSettings
-        case routingRules
-        case conditionalGroupRouting
-        case conditionalGroupActivation
-        case bullseye
-        case scoringMethod
-        case lastAgentRoutingMode
-        case acwSettings
-        case skillEvaluationMethod
-        case memberGroups
-        case queueFlow
-        case emailInQueueFlow
-        case messageInQueueFlow
-        case whisperPrompt
-        case onHoldPrompt
-        case autoAnswerOnly
-        case cannedResponseLibraries
-        case enableTranscription
-        case enableAudioMonitoring
-        case enableManualAssignment
-        case agentOwnedRouting
-        case directRouting
-        case callingPartyName
-        case callingPartyNumber
-        case defaultScripts
-        case outboundMessagingAddresses
-        case outboundEmailAddress
-        case peerId
-        case suppressInQueueCallRecording
-        case selfUri
-    }
-
-
-}
-
-
-
-
-public class QueueMediaSettings: Codable {
-
-
-
-
-
-
-
-
-
-
-
-    /** The queue media settings for call interactions. */
-    public var call: MediaSettings?
-    /** The queue media settings for callback interactions. */
-    public var callback: CallbackMediaSettings?
-    /** The queue media settings for chat interactions. */
-    public var chat: MediaSettings?
-    /** The queue media settings for email interactions. */
-    public var email: EmailMediaSettings?
-    /** The queue media settings for message interactions. */
-    public var message: MessageMediaSettings?
-
-    public init(call: MediaSettings?, callback: CallbackMediaSettings?, chat: MediaSettings?, email: EmailMediaSettings?, message: MessageMediaSettings?) {
-        self.call = call
-        self.callback = callback
-        self.chat = chat
-        self.email = email
-        self.message = message
     }
 
 
@@ -53428,6 +53516,7 @@ public class UserStartDetailEventTopicUserStartEvent: Codable {
         case _open = "OPEN"
         case instagram = "INSTAGRAM"
         case apple = "APPLE"
+        case linkedin = "LINKEDIN"
     }
 
 
@@ -53876,6 +53965,7 @@ public class V2MobiusRulesTopicRule: Codable {
         case userPresence = "UserPresence"
         case workforceManagement = "WorkforceManagement"
         case operationalConsole = "OperationalConsole"
+        case anomaly = "Anomaly"
         case unknown = "Unknown"
     }
 

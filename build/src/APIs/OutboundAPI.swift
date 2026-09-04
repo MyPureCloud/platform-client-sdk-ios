@@ -142686,13 +142686,13 @@ open class OutboundAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "completedRecords" : 6,
-  "totalRecords" : 0,
+  "completedRecords" : 1,
+  "totalRecords" : 6,
   "failureReason" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id",
   "state" : "InProgress",
-  "percentComplete" : 1,
+  "percentComplete" : 5,
   "downloadURI" : "downloadURI",
   "type" : "BulkDelete"
 }, statusCode=200}]
@@ -142755,23 +142755,23 @@ open class OutboundAPI {
      - examples: [{contentType=application/json, example={
   "total" : 0,
   "entities" : [ {
-    "completedRecords" : 6,
-    "totalRecords" : 0,
+    "completedRecords" : 1,
+    "totalRecords" : 6,
     "failureReason" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "InProgress",
-    "percentComplete" : 1,
+    "percentComplete" : 5,
     "downloadURI" : "downloadURI",
     "type" : "BulkDelete"
   }, {
-    "completedRecords" : 6,
-    "totalRecords" : 0,
+    "completedRecords" : 1,
+    "totalRecords" : 6,
     "failureReason" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "InProgress",
-    "percentComplete" : 1,
+    "percentComplete" : 5,
     "downloadURI" : "downloadURI",
     "type" : "BulkDelete"
   } ],
@@ -151026,13 +151026,13 @@ open class OutboundAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "completedRecords" : 6,
-  "totalRecords" : 0,
+  "completedRecords" : 1,
+  "totalRecords" : 6,
   "failureReason" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id",
   "state" : "InProgress",
-  "percentComplete" : 1,
+  "percentComplete" : 5,
   "downloadURI" : "downloadURI",
   "type" : "BulkDelete"
 }, statusCode=200}]
@@ -151093,13 +151093,13 @@ open class OutboundAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "completedRecords" : 6,
-  "totalRecords" : 0,
+  "completedRecords" : 1,
+  "totalRecords" : 6,
   "failureReason" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id",
   "state" : "InProgress",
-  "percentComplete" : 1,
+  "percentComplete" : 5,
   "downloadURI" : "downloadURI",
   "type" : "BulkDelete"
 }, statusCode=200}]

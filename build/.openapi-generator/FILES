@@ -288,6 +288,8 @@ docs/AlertingAPI.json
 docs/AlertingAPI.md
 docs/AlertingUnreadStatus.md
 docs/AllTimePoints.md
+docs/AllocationOutputsTemplate.md
+docs/AllocationResultsTemplate.md
 docs/Alteration.md
 docs/AlternativeShiftAgentScheduledShift.md
 docs/AlternativeShiftAsyncResponse.md
@@ -1173,6 +1175,9 @@ docs/ContactListing.md
 docs/ContactListingRequest.md
 docs/ContactListingResponse.md
 docs/ContactPhoneNumberColumn.md
+docs/ContactSearchOperation.md
+docs/ContactSearchRequest.md
+docs/ContactSimpleSearch.md
 docs/ContactSort.md
 docs/ContactableStatus.md
 docs/ContactlistDownloadReadyExportUri.md
@@ -1889,8 +1894,6 @@ docs/DataAvailabilityResponse.md
 docs/DataExtensionsAPI.json
 docs/DataExtensionsAPI.md
 docs/DataIngestionRuleCriteria.md
-docs/DataIngestionRuleResponse.md
-docs/DataIngestionRuleResponseEntityListing.md
 docs/DataIngestionRuleStatusPatchRequest.md
 docs/DataIngestionRulesMetadata.md
 docs/DataPrivacyAPI.json
@@ -2798,6 +2801,8 @@ docs/GenerateBuForecastRequest.md
 docs/GenerateGuideContentRequest.md
 docs/GenerateMeetingIdRequest.md
 docs/GeneratedGuideContent.md
+docs/GenericDataIngestionRuleResponse.md
+docs/GenericDataIngestionRuleResponseEntityListing.md
 docs/GenericSAML.md
 docs/GenericTemplate.md
 docs/GenesysBotConnector.md
@@ -9079,6 +9084,7 @@ docs/postExternalcontactsContactsEnrich-example.txt
 docs/postExternalcontactsContactsExports-example.txt
 docs/postExternalcontactsContactsMerge-example.txt
 docs/postExternalcontactsContactsSchemas-example.txt
+docs/postExternalcontactsContactsSearch-example.txt
 docs/postExternalcontactsExternalsources-example.txt
 docs/postExternalcontactsIdentifierlookup-example.txt
 docs/postExternalcontactsIdentifierlookupContacts-example.txt
@@ -10312,6 +10318,8 @@ src/Models/AlertSummaryEntity.swift
 src/Models/AlertablePresences.swift
 src/Models/AlertingUnreadStatus.swift
 src/Models/AllTimePoints.swift
+src/Models/AllocationOutputsTemplate.swift
+src/Models/AllocationResultsTemplate.swift
 src/Models/Alteration.swift
 src/Models/AlternativeShiftAgentScheduledShift.swift
 src/Models/AlternativeShiftAsyncResponse.swift
@@ -11173,6 +11181,9 @@ src/Models/ContactListing.swift
 src/Models/ContactListingRequest.swift
 src/Models/ContactListingResponse.swift
 src/Models/ContactPhoneNumberColumn.swift
+src/Models/ContactSearchOperation.swift
+src/Models/ContactSearchRequest.swift
+src/Models/ContactSimpleSearch.swift
 src/Models/ContactSort.swift
 src/Models/ContactableStatus.swift
 src/Models/ContactlistDownloadReadyExportUri.swift
@@ -11883,8 +11894,6 @@ src/Models/DataActionConditionSettings.swift
 src/Models/DataActionContactColumnFieldMapping.swift
 src/Models/DataAvailabilityResponse.swift
 src/Models/DataIngestionRuleCriteria.swift
-src/Models/DataIngestionRuleResponse.swift
-src/Models/DataIngestionRuleResponseEntityListing.swift
 src/Models/DataIngestionRuleStatusPatchRequest.swift
 src/Models/DataIngestionRulesMetadata.swift
 src/Models/DataRange.swift
@@ -12770,6 +12779,8 @@ src/Models/GenerateBuForecastRequest.swift
 src/Models/GenerateGuideContentRequest.swift
 src/Models/GenerateMeetingIdRequest.swift
 src/Models/GeneratedGuideContent.swift
+src/Models/GenericDataIngestionRuleResponse.swift
+src/Models/GenericDataIngestionRuleResponseEntityListing.swift
 src/Models/GenericSAML.swift
 src/Models/GenericTemplate.swift
 src/Models/GenesysBotConnector.swift

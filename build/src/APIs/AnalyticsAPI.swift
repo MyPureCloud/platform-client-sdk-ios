@@ -1321,15 +1321,23 @@ open class AnalyticsAPI {
     "segmentType" : "alert"
   } ],
   "presenceDate" : "2000-01-23T04:56:07.000+00:00",
-  "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
-  "isOutOfOffice" : true,
-  "sessionCount" : 0,
-  "systemPresence" : "UNKNOWN",
-  "divisionId" : "divisionId",
+  "adherenceDate" : "2000-01-23T04:56:07.000+00:00",
+  "adherenceState" : "InAdherence",
   "managerId" : "managerId",
   "routingStatus" : "UNKNOWN",
+  "managementUnitId" : "managementUnitId",
   "userName" : "userName",
   "userId" : "userId",
+  "businessUnitId" : "businessUnitId",
+  "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+  "isOutOfOffice" : true,
+  "scheduledActivityCodeId" : "scheduledActivityCodeId",
+  "sessionCount" : 0,
+  "systemPresence" : "UNKNOWN",
+  "actualActivityCategory" : "OnQueueWork",
+  "scheduledActivityCategory" : "OnQueueWork",
+  "divisionId" : "divisionId",
+  "adherenceImpact" : "Positive",
   "organizationPresenceId" : "organizationPresenceId"
 }, statusCode=200}]
      
@@ -15836,6 +15844,9 @@ open class AnalyticsAPI {
         case presence = "presence"
         case routingstatus = "routingStatus"
         case isoutofoffice = "isOutOfOffice"
+        case adherencestate = "adherenceState"
+        case scheduledactivitycategory = "scheduledActivityCategory"
+        case actualactivitycategory = "actualActivityCategory"
     }
     
     /**
@@ -15890,6 +15901,27 @@ open class AnalyticsAPI {
   }, {
     "isOutOfOffice" : true,
     "count" : 5
+  } ],
+  "scheduledActivityCategoryCounts" : [ {
+    "activityCategory" : "OnQueueWork",
+    "count" : 2
+  }, {
+    "activityCategory" : "OnQueueWork",
+    "count" : 2
+  } ],
+  "actualActivityCategoryCounts" : [ {
+    "activityCategory" : "OnQueueWork",
+    "count" : 2
+  }, {
+    "activityCategory" : "OnQueueWork",
+    "count" : 2
+  } ],
+  "adherenceStateCounts" : [ {
+    "count" : 5,
+    "adherenceState" : "InAdherence"
+  }, {
+    "count" : 5,
+    "adherenceState" : "InAdherence"
   } ],
   "presenceCounts" : [ {
     "systemPresence" : "UNKNOWN",
@@ -15980,15 +16012,23 @@ open class AnalyticsAPI {
       "segmentType" : "alert"
     } ],
     "presenceDate" : "2000-01-23T04:56:07.000+00:00",
-    "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
-    "isOutOfOffice" : true,
-    "sessionCount" : 0,
-    "systemPresence" : "UNKNOWN",
-    "divisionId" : "divisionId",
+    "adherenceDate" : "2000-01-23T04:56:07.000+00:00",
+    "adherenceState" : "InAdherence",
     "managerId" : "managerId",
     "routingStatus" : "UNKNOWN",
+    "managementUnitId" : "managementUnitId",
     "userName" : "userName",
     "userId" : "userId",
+    "businessUnitId" : "businessUnitId",
+    "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+    "isOutOfOffice" : true,
+    "scheduledActivityCodeId" : "scheduledActivityCodeId",
+    "sessionCount" : 0,
+    "systemPresence" : "UNKNOWN",
+    "actualActivityCategory" : "OnQueueWork",
+    "scheduledActivityCategory" : "OnQueueWork",
+    "divisionId" : "divisionId",
+    "adherenceImpact" : "Positive",
     "organizationPresenceId" : "organizationPresenceId"
   }, {
     "sessions" : [ {
@@ -16015,15 +16055,23 @@ open class AnalyticsAPI {
       "segmentType" : "alert"
     } ],
     "presenceDate" : "2000-01-23T04:56:07.000+00:00",
-    "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
-    "isOutOfOffice" : true,
-    "sessionCount" : 0,
-    "systemPresence" : "UNKNOWN",
-    "divisionId" : "divisionId",
+    "adherenceDate" : "2000-01-23T04:56:07.000+00:00",
+    "adherenceState" : "InAdherence",
     "managerId" : "managerId",
     "routingStatus" : "UNKNOWN",
+    "managementUnitId" : "managementUnitId",
     "userName" : "userName",
     "userId" : "userId",
+    "businessUnitId" : "businessUnitId",
+    "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+    "isOutOfOffice" : true,
+    "scheduledActivityCodeId" : "scheduledActivityCodeId",
+    "sessionCount" : 0,
+    "systemPresence" : "UNKNOWN",
+    "actualActivityCategory" : "OnQueueWork",
+    "scheduledActivityCategory" : "OnQueueWork",
+    "divisionId" : "divisionId",
+    "adherenceImpact" : "Positive",
     "organizationPresenceId" : "organizationPresenceId"
   } ]
 }, statusCode=200}]

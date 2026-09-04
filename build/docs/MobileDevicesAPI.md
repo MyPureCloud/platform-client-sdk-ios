@@ -4,11 +4,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteMobiledevice**](MobileDevicesAPI#deleteMobiledevice) | Delete device |
-| [**getMobiledevice**](MobileDevicesAPI#getMobiledevice) | Get device |
-| [**getMobiledevices**](MobileDevicesAPI#getMobiledevices) | Get a list of all devices. |
-| [**postMobiledevices**](MobileDevicesAPI#postMobiledevices) | Create User device |
-| [**putMobiledevice**](MobileDevicesAPI#putMobiledevice) | Update device |
+| [**deleteMobiledevice**](MobileDevicesAPI#deleteMobiledevice) | (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Delete device |
+| [**getMobiledevice**](MobileDevicesAPI#getMobiledevice) | (Deprecated) Get device |
+| [**getMobiledevices**](MobileDevicesAPI#getMobiledevices) | (Deprecated) Get a list of all devices. |
+| [**postMobiledevices**](MobileDevicesAPI#postMobiledevices) | (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Create User device |
+| [**putMobiledevice**](MobileDevicesAPI#putMobiledevice) | (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Update device |
 {: class="table-striped"}
 
 
@@ -18,7 +18,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 > Void deleteMobiledevice(deviceId)
 
-Delete device
+(Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Delete device
 
 
 
@@ -66,7 +66,7 @@ MobileDevicesAPI.deleteMobiledevice(deviceId: deviceId) { (error) in
 
 > [UserDevice](UserDevice) getMobiledevice(deviceId)
 
-Get device
+(Deprecated) Get device
 
 
 
@@ -115,7 +115,7 @@ MobileDevicesAPI.getMobiledevice(deviceId: deviceId) { (response, error) in
 
 > [DirectoryUserDevicesListing](DirectoryUserDevicesListing) getMobiledevices(pageSize, pageNumber, sortOrder)
 
-Get a list of all devices.
+(Deprecated) Get a list of all devices.
 
 
 
@@ -168,7 +168,7 @@ MobileDevicesAPI.getMobiledevices(pageSize: pageSize, pageNumber: pageNumber, so
 
 > [UserDevice](UserDevice) postMobiledevices(body)
 
-Create User device
+(Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Create User device
 
 
 
@@ -217,7 +217,7 @@ MobileDevicesAPI.postMobiledevices(body: body) { (response, error) in
 
 > [UserDevice](UserDevice) putMobiledevice(deviceId, body)
 
-Update device
+(Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Update device
 
 
 
@@ -262,4 +262,4 @@ MobileDevicesAPI.putMobiledevice(deviceId: deviceId, body: body) { (response, er
 [**UserDevice**](UserDevice)
 
 
-_PureCloudPlatformClientV2@202.0.0_
+_PureCloudPlatformClientV2@203.0.0_

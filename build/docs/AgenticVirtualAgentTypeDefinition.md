@@ -21,4 +21,4 @@ Type definition used by a virtual agent. The applicable fields depend on the typ
 
 
 
-_PureCloudPlatformClientV2@202.0.0_
+_PureCloudPlatformClientV2@203.0.0_

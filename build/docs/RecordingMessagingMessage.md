@@ -38,7 +38,8 @@
 | **roadsideAssistance** | [**RecordingRoadsideAssistance**](RecordingRoadsideAssistance) | Roadside Assistance content. | [optional] |
 | **richLink** | [**RichLink**](RichLink) | Rich Link content. | [optional] |
 | **messageReceipts** | [**[RecordingMessageReceipt]**]([RecordingMessageReceipt]) | List of message receipts | [optional] |
+| **notificationResponse** | [**RecordingNotificationResponse**](RecordingNotificationResponse) | Notification Response content. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@202.0.0_
+_PureCloudPlatformClientV2@203.0.0_

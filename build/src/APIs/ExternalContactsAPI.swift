@@ -12105,6 +12105,510 @@ open class ExternalContactsAPI {
     
     
     /**
+     Search for external contacts
+     
+     - parameter body: (body) Search request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postExternalcontactsContactsSearch(body: ContactSearchRequest, completion: @escaping ((_ data: ContactListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postExternalcontactsContactsSearchWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ContactListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Search for external contacts
+     - POST /api/v2/externalcontacts/contacts/search
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "schema" : "{}",
+    "lastName" : "lastName",
+    "canonicalContact" : "{}",
+    "workEmail" : "workEmail",
+    "appleOpaqueIds" : [ {
+      "value" : "value"
+    }, {
+      "value" : "value"
+    } ],
+    "customFields" : {
+      "key" : "{}"
+    },
+    "mergeOperation" : "{}",
+    "title" : "title",
+    "type" : "Ephemeral",
+    "twitterId" : "{}",
+    "personalEmail" : "personalEmail",
+    "division" : "{}",
+    "mergeSet" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "externalSystemUrl" : "externalSystemUrl",
+    "id" : "id",
+    "otherEmail" : "otherEmail",
+    "mergedFrom" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "createDate" : "2000-01-23T04:56:07.000+00:00",
+    "mergedTo" : "{}",
+    "address" : {
+      "address2" : "address2",
+      "city" : "city",
+      "address1" : "address1",
+      "countryCode" : "countryCode",
+      "postalCode" : "postalCode",
+      "state" : "state"
+    },
+    "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+    "identifiers" : [ {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    }, {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    } ],
+    "homePhone" : {
+      "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
+      "e164" : "e164",
+      "acceptsSMS" : true,
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "userInput" : "userInput"
+    },
+    "facebookId" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "externalIds" : [ {
+      "value" : "value",
+      "externalSource" : "{}"
+    }, {
+      "value" : "value",
+      "externalSource" : "{}"
+    } ],
+    "lineId" : {
+      "displayName" : "displayName",
+      "ids" : [ {
+        "userId" : "userId"
+      }, {
+        "userId" : "userId"
+      } ]
+    },
+    "externalOrganization" : {
+      "schema" : "{}",
+      "address" : {
+        "address2" : "address2",
+        "city" : "city",
+        "address1" : "address1",
+        "countryCode" : "countryCode",
+        "postalCode" : "postalCode",
+        "state" : "state"
+      },
+      "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+      "companyType" : "companyType",
+      "customFields" : {
+        "key" : "{}"
+      },
+      "identifiers" : [ {
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "type" : "ExternalId",
+        "value" : "value",
+        "externalSource" : "{}"
+      }, {
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "type" : "ExternalId",
+        "value" : "value",
+        "externalSource" : "{}"
+      } ],
+      "selfUri" : "https://openapi-generator.tech",
+      "externalIds" : [ {
+        "value" : "value",
+        "externalSource" : "{}"
+      }, {
+        "value" : "value",
+        "externalSource" : "{}"
+      } ],
+      "industry" : "industry",
+      "employeeCount" : 6,
+      "tickers" : [ {
+        "symbol" : "symbol",
+        "exchange" : "exchange"
+      }, {
+        "symbol" : "symbol",
+        "exchange" : "exchange"
+      } ],
+      "twitterId" : {
+        "profileUrl" : "profileUrl",
+        "name" : "name",
+        "verified" : true,
+        "id" : "id",
+        "screenName" : "screenName"
+      },
+      "tags" : [ "tags", "tags" ],
+      "division" : "{}",
+      "revenue" : 1,
+      "phoneNumber" : {
+        "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
+        "e164" : "e164",
+        "acceptsSMS" : true,
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "userInput" : "userInput"
+      },
+      "externalSystemUrl" : "externalSystemUrl",
+      "externalDataSources" : [ {
+        "platform" : "SALESFORCE",
+        "url" : "url"
+      }, {
+        "platform" : "SALESFORCE",
+        "url" : "url"
+      } ],
+      "name" : "name",
+      "faxNumber" : {
+        "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
+        "e164" : "e164",
+        "acceptsSMS" : true,
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "userInput" : "userInput"
+      },
+      "trustor" : {
+        "authorization" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "{}",
+        "organization" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "enabled" : true
+      },
+      "websites" : [ "websites", "websites" ],
+      "id" : "id",
+      "createDate" : "2000-01-23T04:56:07.000+00:00"
+    },
+    "firstName" : "firstName",
+    "otherPhone" : {
+      "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
+      "e164" : "e164",
+      "acceptsSMS" : true,
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "userInput" : "userInput"
+    },
+    "whatsAppId" : "{}",
+    "externalDataSources" : [ {
+      "platform" : "SALESFORCE",
+      "url" : "url"
+    }, {
+      "platform" : "SALESFORCE",
+      "url" : "url"
+    } ],
+    "instagramId" : "{}",
+    "middleName" : "middleName",
+    "workPhone" : {
+      "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
+      "e164" : "e164",
+      "acceptsSMS" : true,
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "userInput" : "userInput"
+    },
+    "salutation" : "salutation",
+    "cellPhone" : {
+      "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
+      "e164" : "e164",
+      "acceptsSMS" : true,
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "userInput" : "userInput"
+    },
+    "surveyOptOut" : true
+  }, {
+    "schema" : "{}",
+    "lastName" : "lastName",
+    "canonicalContact" : "{}",
+    "workEmail" : "workEmail",
+    "appleOpaqueIds" : [ {
+      "value" : "value"
+    }, {
+      "value" : "value"
+    } ],
+    "customFields" : {
+      "key" : "{}"
+    },
+    "mergeOperation" : "{}",
+    "title" : "title",
+    "type" : "Ephemeral",
+    "twitterId" : "{}",
+    "personalEmail" : "personalEmail",
+    "division" : "{}",
+    "mergeSet" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "externalSystemUrl" : "externalSystemUrl",
+    "id" : "id",
+    "otherEmail" : "otherEmail",
+    "mergedFrom" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "createDate" : "2000-01-23T04:56:07.000+00:00",
+    "mergedTo" : "{}",
+    "address" : {
+      "address2" : "address2",
+      "city" : "city",
+      "address1" : "address1",
+      "countryCode" : "countryCode",
+      "postalCode" : "postalCode",
+      "state" : "state"
+    },
+    "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+    "identifiers" : [ {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    }, {
+      "division" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "type" : "SocialLine",
+      "value" : "value",
+      "externalSource" : "{}"
+    } ],
+    "homePhone" : {
+      "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
+      "e164" : "e164",
+      "acceptsSMS" : true,
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "userInput" : "userInput"
+    },
+    "facebookId" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "externalIds" : [ {
+      "value" : "value",
+      "externalSource" : "{}"
+    }, {
+      "value" : "value",
+      "externalSource" : "{}"
+    } ],
+    "lineId" : {
+      "displayName" : "displayName",
+      "ids" : [ {
+        "userId" : "userId"
+      }, {
+        "userId" : "userId"
+      } ]
+    },
+    "externalOrganization" : {
+      "schema" : "{}",
+      "address" : {
+        "address2" : "address2",
+        "city" : "city",
+        "address1" : "address1",
+        "countryCode" : "countryCode",
+        "postalCode" : "postalCode",
+        "state" : "state"
+      },
+      "modifyDate" : "2000-01-23T04:56:07.000+00:00",
+      "companyType" : "companyType",
+      "customFields" : {
+        "key" : "{}"
+      },
+      "identifiers" : [ {
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "type" : "ExternalId",
+        "value" : "value",
+        "externalSource" : "{}"
+      }, {
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "type" : "ExternalId",
+        "value" : "value",
+        "externalSource" : "{}"
+      } ],
+      "selfUri" : "https://openapi-generator.tech",
+      "externalIds" : [ {
+        "value" : "value",
+        "externalSource" : "{}"
+      }, {
+        "value" : "value",
+        "externalSource" : "{}"
+      } ],
+      "industry" : "industry",
+      "employeeCount" : 6,
+      "tickers" : [ {
+        "symbol" : "symbol",
+        "exchange" : "exchange"
+      }, {
+        "symbol" : "symbol",
+        "exchange" : "exchange"
+      } ],
+      "twitterId" : {
+        "profileUrl" : "profileUrl",
+        "name" : "name",
+        "verified" : true,
+        "id" : "id",
+        "screenName" : "screenName"
+      },
+      "tags" : [ "tags", "tags" ],
+      "division" : "{}",
+      "revenue" : 1,
+      "phoneNumber" : {
+        "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
+        "e164" : "e164",
+        "acceptsSMS" : true,
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "userInput" : "userInput"
+      },
+      "externalSystemUrl" : "externalSystemUrl",
+      "externalDataSources" : [ {
+        "platform" : "SALESFORCE",
+        "url" : "url"
+      }, {
+        "platform" : "SALESFORCE",
+        "url" : "url"
+      } ],
+      "name" : "name",
+      "faxNumber" : {
+        "extension" : 0,
+        "normalizationCountryCode" : "normalizationCountryCode",
+        "e164" : "e164",
+        "acceptsSMS" : true,
+        "countryCode" : "countryCode",
+        "display" : "display",
+        "userInput" : "userInput"
+      },
+      "trustor" : {
+        "authorization" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "createdBy" : "{}",
+        "organization" : "{}",
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id",
+        "enabled" : true
+      },
+      "websites" : [ "websites", "websites" ],
+      "id" : "id",
+      "createDate" : "2000-01-23T04:56:07.000+00:00"
+    },
+    "firstName" : "firstName",
+    "otherPhone" : {
+      "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
+      "e164" : "e164",
+      "acceptsSMS" : true,
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "userInput" : "userInput"
+    },
+    "whatsAppId" : "{}",
+    "externalDataSources" : [ {
+      "platform" : "SALESFORCE",
+      "url" : "url"
+    }, {
+      "platform" : "SALESFORCE",
+      "url" : "url"
+    } ],
+    "instagramId" : "{}",
+    "middleName" : "middleName",
+    "workPhone" : {
+      "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
+      "e164" : "e164",
+      "acceptsSMS" : true,
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "userInput" : "userInput"
+    },
+    "salutation" : "salutation",
+    "cellPhone" : {
+      "extension" : 0,
+      "normalizationCountryCode" : "normalizationCountryCode",
+      "e164" : "e164",
+      "acceptsSMS" : true,
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "userInput" : "userInput"
+    },
+    "surveyOptOut" : true
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
+  "partialResults" : true
+}, statusCode=200}]
+     
+     - parameter body: (body) Search request 
+
+     - returns: RequestBuilder<ContactListing> 
+     */
+    open class func postExternalcontactsContactsSearchWithRequestBuilder(body: ContactSearchRequest) -> RequestBuilder<ContactListing> {        
+        let path = "/api/v2/externalcontacts/contacts/search"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ContactListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Create an External Source
      
      - parameter body: (body) External Source 

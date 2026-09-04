@@ -13,7 +13,7 @@ open class MobileDevicesAPI {
     
     
     /**
-     Delete device
+     (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Delete device
      
      - parameter deviceId: (path) Device ID 
      - parameter completion: completion handler to receive the data and the error objects
@@ -30,7 +30,7 @@ open class MobileDevicesAPI {
     }
 
     /**
-     Delete device
+     (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Delete device
      - DELETE /api/v2/mobiledevices/{deviceId}
      - OAuth:
        - type: oauth2
@@ -58,7 +58,7 @@ open class MobileDevicesAPI {
     
     
     /**
-     Get device
+     (Deprecated) Get device
      
      - parameter deviceId: (path) Device ID 
      - parameter completion: completion handler to receive the data and the error objects
@@ -82,7 +82,7 @@ open class MobileDevicesAPI {
     }
 
     /**
-     Get device
+     (Deprecated) Get device
      - GET /api/v2/mobiledevices/{deviceId}
      - OAuth:
        - type: oauth2
@@ -131,7 +131,7 @@ open class MobileDevicesAPI {
     
     
     /**
-     Get a list of all devices.
+     (Deprecated) Get a list of all devices.
      
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
@@ -157,7 +157,7 @@ open class MobileDevicesAPI {
     }
 
     /**
-     Get a list of all devices.
+     (Deprecated) Get a list of all devices.
      - GET /api/v2/mobiledevices
      - OAuth:
        - type: oauth2
@@ -223,7 +223,7 @@ open class MobileDevicesAPI {
     
     
     /**
-     Create User device
+     (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Create User device
      
      - parameter body: (body) Device 
      - parameter completion: completion handler to receive the data and the error objects
@@ -247,7 +247,7 @@ open class MobileDevicesAPI {
     }
 
     /**
-     Create User device
+     (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Create User device
      - POST /api/v2/mobiledevices
      - OAuth:
        - type: oauth2
@@ -286,7 +286,7 @@ open class MobileDevicesAPI {
     
     
     /**
-     Update device
+     (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Update device
      
      - parameter deviceId: (path) Device ID 
      - parameter body: (body) Device (optional)
@@ -311,7 +311,7 @@ open class MobileDevicesAPI {
     }
 
     /**
-     Update device
+     (Deprecated, see https://apicentral.genesys.cloud/api-explorer#webmessaging for alternative) Update device
      - PUT /api/v2/mobiledevices/{deviceId}
      - OAuth:
        - type: oauth2

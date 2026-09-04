@@ -294,6 +294,7 @@ open class RecordingAPI {
         "id" : "id",
         "status" : "Sent"
       } ],
+      "notificationResponse" : "{}",
       "from" : "from",
       "id" : "id",
       "notificationTemplate" : "{}",
@@ -439,6 +440,7 @@ open class RecordingAPI {
         "id" : "id",
         "status" : "Sent"
       } ],
+      "notificationResponse" : "{}",
       "from" : "from",
       "id" : "id",
       "notificationTemplate" : "{}",
@@ -1737,6 +1739,7 @@ open class RecordingAPI {
       "id" : "id",
       "status" : "Sent"
     } ],
+    "notificationResponse" : "{}",
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -1882,6 +1885,7 @@ open class RecordingAPI {
       "id" : "id",
       "status" : "Sent"
     } ],
+    "notificationResponse" : "{}",
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -3291,6 +3295,7 @@ open class RecordingAPI {
       "id" : "id",
       "status" : "Sent"
     } ],
+    "notificationResponse" : "{}",
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -3436,6 +3441,7 @@ open class RecordingAPI {
       "id" : "id",
       "status" : "Sent"
     } ],
+    "notificationResponse" : "{}",
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -4431,6 +4437,7 @@ open class RecordingAPI {
         "id" : "id",
         "status" : "Sent"
       } ],
+      "notificationResponse" : "{}",
       "from" : "from",
       "id" : "id",
       "notificationTemplate" : "{}",
@@ -4576,6 +4583,7 @@ open class RecordingAPI {
         "id" : "id",
         "status" : "Sent"
       } ],
+      "notificationResponse" : "{}",
       "from" : "from",
       "id" : "id",
       "notificationTemplate" : "{}",
@@ -5644,6 +5652,7 @@ open class RecordingAPI {
       "id" : "id",
       "status" : "Sent"
     } ],
+    "notificationResponse" : "{}",
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -5789,6 +5798,7 @@ open class RecordingAPI {
       "id" : "id",
       "status" : "Sent"
     } ],
+    "notificationResponse" : "{}",
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -6820,6 +6830,7 @@ open class RecordingAPI {
           "id" : "id",
           "status" : "Sent"
         } ],
+        "notificationResponse" : "{}",
         "from" : "from",
         "id" : "id",
         "notificationTemplate" : "{}",
@@ -6965,6 +6976,7 @@ open class RecordingAPI {
           "id" : "id",
           "status" : "Sent"
         } ],
+        "notificationResponse" : "{}",
         "from" : "from",
         "id" : "id",
         "notificationTemplate" : "{}",
@@ -7934,6 +7946,7 @@ open class RecordingAPI {
           "id" : "id",
           "status" : "Sent"
         } ],
+        "notificationResponse" : "{}",
         "from" : "from",
         "id" : "id",
         "notificationTemplate" : "{}",
@@ -8079,6 +8092,7 @@ open class RecordingAPI {
           "id" : "id",
           "status" : "Sent"
         } ],
+        "notificationResponse" : "{}",
         "from" : "from",
         "id" : "id",
         "notificationTemplate" : "{}",
@@ -11634,6 +11648,7 @@ open class RecordingAPI {
       "id" : "id",
       "status" : "Sent"
     } ],
+    "notificationResponse" : "{}",
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -11779,6 +11794,7 @@ open class RecordingAPI {
       "id" : "id",
       "status" : "Sent"
     } ],
+    "notificationResponse" : "{}",
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -12859,6 +12875,7 @@ open class RecordingAPI {
       "id" : "id",
       "status" : "Sent"
     } ],
+    "notificationResponse" : "{}",
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",
@@ -13004,6 +13021,7 @@ open class RecordingAPI {
       "id" : "id",
       "status" : "Sent"
     } ],
+    "notificationResponse" : "{}",
     "from" : "from",
     "id" : "id",
     "notificationTemplate" : "{}",

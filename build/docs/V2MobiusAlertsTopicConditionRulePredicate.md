@@ -15,8 +15,9 @@
 | **status** | **String** |  | [optional] |
 | **mediaType** | **String** |  | [optional] |
 | **topic** | **String** |  | [optional] |
+| **characteristic** | **String** |  | [optional] |
 | **comparisonOperator** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@202.0.0_
+_PureCloudPlatformClientV2@203.0.0_
