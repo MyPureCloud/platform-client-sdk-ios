@@ -107,6 +107,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postExternalcontactsContactsExports**](ExternalContactsAPI#postExternalcontactsContactsExports) | Create bulk export |
 | [**postExternalcontactsContactsMerge**](ExternalContactsAPI#postExternalcontactsContactsMerge) | Merge up to 25 contacts into a new contact record |
 | [**postExternalcontactsContactsSchemas**](ExternalContactsAPI#postExternalcontactsContactsSchemas) | Create a schema |
+| [**postExternalcontactsContactsSearch**](ExternalContactsAPI#postExternalcontactsContactsSearch) | Search for external contacts |
 | [**postExternalcontactsExternalsources**](ExternalContactsAPI#postExternalcontactsExternalsources) | Create an External Source |
 | [**postExternalcontactsIdentifierlookup**](ExternalContactsAPI#postExternalcontactsIdentifierlookup) | Fetch a contact using an identifier type and value. |
 | [**postExternalcontactsIdentifierlookupContacts**](ExternalContactsAPI#postExternalcontactsIdentifierlookupContacts) | Fetch a contact using an identifier type and value. |
@@ -5509,6 +5510,56 @@ ExternalContactsAPI.postExternalcontactsContactsSchemas(body: body) { (response,
 [**DataSchema**](DataSchema)
 
 
+## postExternalcontactsContactsSearch
+
+
+
+> [ContactListing](ContactListing) postExternalcontactsContactsSearch(body)
+
+Search for external contacts
+
+
+
+Wraps POST /api/v2/externalcontacts/contacts/search  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ContactSearchRequest = new ContactSearchRequest(...) // Search request
+
+// Code example
+ExternalContactsAPI.postExternalcontactsContactsSearch(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsContactsSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ContactSearchRequest**](ContactSearchRequest)| Search request | |
+
+
+### Return type
+
+[**ContactListing**](ContactListing)
+
+
 ## postExternalcontactsExternalsources
 
 
@@ -7124,4 +7175,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@202.0.0_
+_PureCloudPlatformClientV2@203.0.0_

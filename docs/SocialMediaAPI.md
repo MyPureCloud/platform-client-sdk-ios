@@ -734,7 +734,7 @@ SocialMediaAPI.getSocialmediaTopic(topicId: topicId, includeDeleted: includeDele
 
 
 
-> [DataIngestionRuleResponseEntityListing](DataIngestionRuleResponseEntityListing) getSocialmediaTopicDataingestionrules(topicId, pageNumber, pageSize, includeDeleted)
+> [GenericDataIngestionRuleResponseEntityListing](GenericDataIngestionRuleResponseEntityListing) getSocialmediaTopicDataingestionrules(topicId, pageNumber, pageSize, includeDeleted)
 
 Retrieve all social topic data ingestion rules with pagination.
 
@@ -783,7 +783,7 @@ SocialMediaAPI.getSocialmediaTopicDataingestionrules(topicId: topicId, pageNumbe
 
 ### Return type
 
-[**DataIngestionRuleResponseEntityListing**](DataIngestionRuleResponseEntityListing)
+[**GenericDataIngestionRuleResponseEntityListing**](GenericDataIngestionRuleResponseEntityListing)
 
 
 ## getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId
@@ -2676,4 +2676,4 @@ SocialMediaAPI.putSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleI
 [**TwitterDataIngestionRuleResponse**](TwitterDataIngestionRuleResponse)
 
 
-_PureCloudPlatformClientV2@202.0.0_
+_PureCloudPlatformClientV2@203.0.0_

@@ -18,7 +18,15 @@
 | **routingStatus** | **String** | The user&#39;s routing status | [optional] |
 | **routingStatusDate** | [**Date**](Date) | The timestamp for when the user&#39;s routing status began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **isOutOfOffice** | **Bool** | Whether the user is out of office | [optional] |
+| **managementUnitId** | **String** | The id of the user&#39;s management unit | [optional] |
+| **businessUnitId** | **String** | The id of the user&#39;s business unit | [optional] |
+| **adherenceState** | **String** | The user&#39;s adherence state | [optional] |
+| **adherenceImpact** | **String** | The user&#39;s adherence impact | [optional] |
+| **adherenceDate** | [**Date**](Date) | The timestamp for when the user&#39;s adherence state began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **scheduledActivityCodeId** | **String** | The id of the user&#39;s scheduled activity code | [optional] |
+| **scheduledActivityCategory** | **String** | The user&#39;s scheduled activity category | [optional] |
+| **actualActivityCategory** | **String** | The user&#39;s actual activity category | [optional] |
 
 
 
-_PureCloudPlatformClientV2@202.0.0_
+_PureCloudPlatformClientV2@203.0.0_

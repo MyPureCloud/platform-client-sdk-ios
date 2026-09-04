@@ -4019,7 +4019,7 @@ AnalyticsAPI.postAnalyticsAgentsStatusCounts(body: body, groupBy: groupBy) { (re
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**AgentStateCountsRequest**](AgentStateCountsRequest)| query | |
-| **groupBy** | [**[String]**](String)| Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType | [optional]<br />**Values**: segmenttype ("segmentType"), presence ("presence"), routingstatus ("routingStatus"), isoutofoffice ("isOutOfOffice") |
+| **groupBy** | [**[String]**](String)| Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType | [optional]<br />**Values**: segmenttype ("segmentType"), presence ("presence"), routingstatus ("routingStatus"), isoutofoffice ("isOutOfOffice"), adherencestate ("adherenceState"), scheduledactivitycategory ("scheduledActivityCategory"), actualactivitycategory ("actualActivityCategory") |
 
 
 ### Return type
@@ -6508,4 +6508,4 @@ AnalyticsAPI.putAnalyticsDataretentionSettings(body: body) { (response, error) i
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatformClientV2@202.0.0_
+_PureCloudPlatformClientV2@203.0.0_
