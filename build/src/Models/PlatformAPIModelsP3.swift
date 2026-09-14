@@ -1460,6 +1460,8 @@ public class AgentChecklistResponse: Codable {
 
 
 
+
+
     /** ID of the checklist. */
     public var _id: String?
     /** Name of the checklist. */
@@ -1486,6 +1488,8 @@ public class AgentChecklistResponse: Codable {
     public var mediaType: MediaType?
     /** Direction of the conversation. */
     public var direction: Direction?
+    /** Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events. */
+    public var preview: Bool?
     /** Date when the checklist evaluation began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var evaluationStartDate: Date?
     /** Date when the checklist was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -1503,7 +1507,7 @@ public class AgentChecklistResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, checklistItems: [ChecklistItem]?, activationTriggers: [ActivationTrigger]?, status: Status?, exitReason: String?, language: String?, agentId: String?, participantId: String?, queueId: String?, assistantId: String?, mediaType: MediaType?, direction: Direction?, evaluationStartDate: Date?, evaluationLastModifiedDate: Date?, evaluationFinalizedDate: Date?, evaluationFinalizedWithAcwDate: Date?, success: Bool?, errorCode: String?, errorMessage: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, checklistItems: [ChecklistItem]?, activationTriggers: [ActivationTrigger]?, status: Status?, exitReason: String?, language: String?, agentId: String?, participantId: String?, queueId: String?, assistantId: String?, mediaType: MediaType?, direction: Direction?, preview: Bool?, evaluationStartDate: Date?, evaluationLastModifiedDate: Date?, evaluationFinalizedDate: Date?, evaluationFinalizedWithAcwDate: Date?, success: Bool?, errorCode: String?, errorMessage: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.checklistItems = checklistItems
@@ -1517,6 +1521,7 @@ public class AgentChecklistResponse: Codable {
         self.assistantId = assistantId
         self.mediaType = mediaType
         self.direction = direction
+        self.preview = preview
         self.evaluationStartDate = evaluationStartDate
         self.evaluationLastModifiedDate = evaluationLastModifiedDate
         self.evaluationFinalizedDate = evaluationFinalizedDate
@@ -1541,6 +1546,7 @@ public class AgentChecklistResponse: Codable {
         case assistantId
         case mediaType
         case direction
+        case preview
         case evaluationStartDate
         case evaluationLastModifiedDate
         case evaluationFinalizedDate
@@ -7539,6 +7545,101 @@ public class CaseDateDueUpdate: Codable {
 
 
 
+public class CaseOwnerUpdate: Codable {
+
+
+
+    /** The ownerId of the Case. */
+    public var ownerId: String?
+
+    public init(ownerId: String?) {
+        self.ownerId = ownerId
+    }
+
+
+}
+
+
+
+
+public class CaseQueryJobError: Codable {
+
+
+
+
+
+    /** System-defined error code for the error. */
+    public var code: String?
+    /** Error message for the failed job. */
+    public var message: String?
+
+    public init(code: String?, message: String?) {
+        self.code = code
+        self.message = message
+    }
+
+
+}
+
+
+
+
+public class CaseQueryJobResponse: Codable {
+
+
+
+    public enum State: String, Codable { 
+        case queued = "Queued"
+        case running = "Running"
+        case succeeded = "Succeeded"
+        case failed = "Failed"
+    }
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The state of the query job. */
+    public var state: State?
+    /** The date the job was started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateStarted: Date?
+    /** The date the job finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateFinished: Date?
+    /** The error associated with the query job when the state is Failed. */
+    public var error: CaseQueryJobError?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, state: State?, dateStarted: Date?, dateFinished: Date?, error: CaseQueryJobError?, selfUri: String?) {
+        self._id = _id
+        self.state = state
+        self.dateStarted = dateStarted
+        self.dateFinished = dateFinished
+        self.error = error
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case state
+        case dateStarted
+        case dateFinished
+        case error
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class CategoriesFilter: Codable {
 
 
@@ -7715,11 +7816,16 @@ public class ChecklistFinalizePayload: Codable {
 
 
 
+
+
     /** Exit reason provided at the time of finalizing the checklist. */
     public var exitReason: String?
+    /** Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events. */
+    public var preview: Bool?
 
-    public init(exitReason: String?) {
+    public init(exitReason: String?, preview: Bool?) {
         self.exitReason = exitReason
+        self.preview = preview
     }
 
 
@@ -17339,6 +17445,17 @@ public class DialerContact: Codable {
 
 
 
+    public enum RetentionType: String, Codable { 
+        case never = "Never"
+        case today = "Today"
+        case retentionDays = "RetentionDays"
+        case dateExpiration = "DateExpiration"
+    }
+
+
+
+
+
 
 
     /** The globally unique identifier for the object. */
@@ -17368,10 +17485,16 @@ public class DialerContact: Codable {
     public var configurationOverrides: ConfigurationOverrides?
     /** Timestamp for when the contact was added. Contacts added prior to 2023 September 1 may be missing this value. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
+    /** The type of retention for this contact. Valid values: Never, Today, RetentionDays, DateExpiration */
+    public var retentionType: RetentionType?
+    /** The number of days to retain this contact. Required when retentionType is RetentionDays. */
+    public var retentionDays: Int?
+    /** The expiration date of the contact. Required when retentionType is DateExpiration. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateExpiration: Date?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, contactListId: String?, data: [String:String]?, callRecords: [String:CallRecord]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, latestWhatsAppEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, dateCreated: Date?, selfUri: String?) {
+    public init(_id: String?, name: String?, contactListId: String?, data: [String:String]?, callRecords: [String:CallRecord]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, latestWhatsAppEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, dateCreated: Date?, retentionType: RetentionType?, retentionDays: Int?, dateExpiration: Date?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.contactListId = contactListId
@@ -17386,6 +17509,9 @@ public class DialerContact: Codable {
         self.contactColumnTimeZones = contactColumnTimeZones
         self.configurationOverrides = configurationOverrides
         self.dateCreated = dateCreated
+        self.retentionType = retentionType
+        self.retentionDays = retentionDays
+        self.dateExpiration = dateExpiration
         self.selfUri = selfUri
     }
 
@@ -17404,6 +17530,9 @@ public class DialerContact: Codable {
         case contactColumnTimeZones
         case configurationOverrides
         case dateCreated
+        case retentionType
+        case retentionDays
+        case dateExpiration
         case selfUri
     }
 
@@ -32715,6 +32844,10 @@ public class OperationalEvent: Codable {
 
 
 
+
+
+
+
     /** The event that occurred. */
     public var eventDefinition: AddressableEntityRef?
     /** The unique identifier for the entity */
@@ -32735,6 +32868,10 @@ public class OperationalEvent: Codable {
     public var conversation: AddressableEntityRef?
     /** The date when the event created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
+    /** The date and time the entity affected by the event was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateModified: Date?
+    /** The unique identifier of the user who last modified the entity affected by the event. */
+    public var entityModifiedBy: String?
     /** The version of the entity in the providing service */
     public var entityVersion: String?
     /** The phone number associated with the event */
@@ -32742,7 +32879,7 @@ public class OperationalEvent: Codable {
     /** The external contact ID associated with the event */
     public var externalContactId: String?
 
-    public init(eventDefinition: AddressableEntityRef?, entityId: String?, entityToken: String?, entityName: String?, previousValue: String?, currentValue: String?, errorCode: String?, parentEntityId: String?, conversation: AddressableEntityRef?, dateCreated: Date?, entityVersion: String?, phoneNumber: String?, externalContactId: String?) {
+    public init(eventDefinition: AddressableEntityRef?, entityId: String?, entityToken: String?, entityName: String?, previousValue: String?, currentValue: String?, errorCode: String?, parentEntityId: String?, conversation: AddressableEntityRef?, dateCreated: Date?, dateModified: Date?, entityModifiedBy: String?, entityVersion: String?, phoneNumber: String?, externalContactId: String?) {
         self.eventDefinition = eventDefinition
         self.entityId = entityId
         self.entityToken = entityToken
@@ -32753,6 +32890,8 @@ public class OperationalEvent: Codable {
         self.parentEntityId = parentEntityId
         self.conversation = conversation
         self.dateCreated = dateCreated
+        self.dateModified = dateModified
+        self.entityModifiedBy = entityModifiedBy
         self.entityVersion = entityVersion
         self.phoneNumber = phoneNumber
         self.externalContactId = externalContactId
@@ -34242,144 +34381,6 @@ public class QueueConversationChatEventTopicConversationDivisionMembership: Coda
     public init(division: QueueConversationChatEventTopicDomainEntityRef?, entities: [QueueConversationChatEventTopicDivisionEntityRef]?) {
         self.division = division
         self.entities = entities
-    }
-
-
-}
-
-
-
-/** A subset of the Journey System's customer data at a point-in-time (for external linkage and internal usage/context) */
-
-public class QueueConversationChatEventTopicJourneyCustomer: Codable {
-
-
-
-
-
-    /** An ID of a customer within the Journey System at a point-in-time.  Note that a customer entity can have multiple customerIds based on the stitching process.  Depending on the context within the PureCloud conversation, this may or may not be mutable. */
-    public var _id: String?
-    /** The type of the customerId within the Journey System (e.g. cookie). */
-    public var idType: String?
-
-    public init(_id: String?, idType: String?) {
-        self._id = _id
-        self.idType = idType
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case idType
-    }
-
-
-}
-
-
-
-/** A subset of the Journey System's tracked customer session data at a point-in-time (for external linkage and internal usage/context) */
-
-public class QueueConversationChatEventTopicJourneyCustomerSession: Codable {
-
-
-
-
-
-    /** An ID of a Customer/User's session within the Journey System at a point-in-time */
-    public var _id: String?
-    /** The type of the Customer/User's session within the Journey System (e.g. web, app) */
-    public var type: String?
-
-    public init(_id: String?, type: String?) {
-        self._id = _id
-        self.type = type
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case type
-    }
-
-
-}
-
-
-
-
-public class QueueConversationChatEventTopicScoredAgent: Codable {
-
-
-
-
-
-    /** A UriReference for a resource */
-    public var agent: QueueConversationChatEventTopicUriReference?
-    /** Agent's score for the current conversation, from 0 - 100, higher being better */
-    public var score: Int64?
-
-    public init(agent: QueueConversationChatEventTopicUriReference?, score: Int64?) {
-        self.agent = agent
-        self.score = score
-    }
-
-
-}
-
-
-
-
-public class QueueConversationCobrowseEventTopicCobrowseConversation: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public var _id: String?
-    public var name: String?
-    public var participants: [QueueConversationCobrowseEventTopicCobrowseMediaParticipant]?
-    public var otherMediaUris: [String]?
-    public var address: String?
-    public var utilizationLabelId: String?
-    public var accessAttributes: [String]?
-    public var inactivityTimeout: Date?
-    public var divisions: [QueueConversationCobrowseEventTopicConversationDivisionMembership]?
-
-    public init(_id: String?, name: String?, participants: [QueueConversationCobrowseEventTopicCobrowseMediaParticipant]?, otherMediaUris: [String]?, address: String?, utilizationLabelId: String?, accessAttributes: [String]?, inactivityTimeout: Date?, divisions: [QueueConversationCobrowseEventTopicConversationDivisionMembership]?) {
-        self._id = _id
-        self.name = name
-        self.participants = participants
-        self.otherMediaUris = otherMediaUris
-        self.address = address
-        self.utilizationLabelId = utilizationLabelId
-        self.accessAttributes = accessAttributes
-        self.inactivityTimeout = inactivityTimeout
-        self.divisions = divisions
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case participants
-        case otherMediaUris
-        case address
-        case utilizationLabelId
-        case accessAttributes
-        case inactivityTimeout
-        case divisions
     }
 
 
@@ -36913,6 +36914,144 @@ public class QueueConversationCallbackEventTopicQueueMediaSettings: Codable {
         self.autoAnswerAlertToneSeconds = autoAnswerAlertToneSeconds
         self.manualAnswerAlertToneSeconds = manualAnswerAlertToneSeconds
         self.enableAutoAnswer = enableAutoAnswer
+    }
+
+
+}
+
+
+
+/** A subset of the Journey System's customer data at a point-in-time (for external linkage and internal usage/context) */
+
+public class QueueConversationChatEventTopicJourneyCustomer: Codable {
+
+
+
+
+
+    /** An ID of a customer within the Journey System at a point-in-time.  Note that a customer entity can have multiple customerIds based on the stitching process.  Depending on the context within the PureCloud conversation, this may or may not be mutable. */
+    public var _id: String?
+    /** The type of the customerId within the Journey System (e.g. cookie). */
+    public var idType: String?
+
+    public init(_id: String?, idType: String?) {
+        self._id = _id
+        self.idType = idType
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case idType
+    }
+
+
+}
+
+
+
+/** A subset of the Journey System's tracked customer session data at a point-in-time (for external linkage and internal usage/context) */
+
+public class QueueConversationChatEventTopicJourneyCustomerSession: Codable {
+
+
+
+
+
+    /** An ID of a Customer/User's session within the Journey System at a point-in-time */
+    public var _id: String?
+    /** The type of the Customer/User's session within the Journey System (e.g. web, app) */
+    public var type: String?
+
+    public init(_id: String?, type: String?) {
+        self._id = _id
+        self.type = type
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case type
+    }
+
+
+}
+
+
+
+
+public class QueueConversationChatEventTopicScoredAgent: Codable {
+
+
+
+
+
+    /** A UriReference for a resource */
+    public var agent: QueueConversationChatEventTopicUriReference?
+    /** Agent's score for the current conversation, from 0 - 100, higher being better */
+    public var score: Int64?
+
+    public init(agent: QueueConversationChatEventTopicUriReference?, score: Int64?) {
+        self.agent = agent
+        self.score = score
+    }
+
+
+}
+
+
+
+
+public class QueueConversationCobrowseEventTopicCobrowseConversation: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public var _id: String?
+    public var name: String?
+    public var participants: [QueueConversationCobrowseEventTopicCobrowseMediaParticipant]?
+    public var otherMediaUris: [String]?
+    public var address: String?
+    public var utilizationLabelId: String?
+    public var accessAttributes: [String]?
+    public var inactivityTimeout: Date?
+    public var divisions: [QueueConversationCobrowseEventTopicConversationDivisionMembership]?
+
+    public init(_id: String?, name: String?, participants: [QueueConversationCobrowseEventTopicCobrowseMediaParticipant]?, otherMediaUris: [String]?, address: String?, utilizationLabelId: String?, accessAttributes: [String]?, inactivityTimeout: Date?, divisions: [QueueConversationCobrowseEventTopicConversationDivisionMembership]?) {
+        self._id = _id
+        self.name = name
+        self.participants = participants
+        self.otherMediaUris = otherMediaUris
+        self.address = address
+        self.utilizationLabelId = utilizationLabelId
+        self.accessAttributes = accessAttributes
+        self.inactivityTimeout = inactivityTimeout
+        self.divisions = divisions
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case participants
+        case otherMediaUris
+        case address
+        case utilizationLabelId
+        case accessAttributes
+        case inactivityTimeout
+        case divisions
     }
 
 
@@ -39956,6 +40095,23 @@ public class RegionResponse: Codable {
 
     public init(regionName: String?) {
         self.regionName = regionName
+    }
+
+
+}
+
+
+
+
+public class RegisterArchitectJobRequest: Codable {
+
+
+
+    /** If true, flow stubs will be created for any dependencies during the job. */
+    public var createStubs: Bool?
+
+    public init(createStubs: Bool?) {
+        self.createStubs = createStubs
     }
 
 
@@ -45962,9 +46118,11 @@ public class TimeOffRequestQueryBody: Codable {
     }
 
 
+
+
     /** The set of ids to filter time off requests */
     public var ids: [String]?
-    /** The set of user ids to filter time off requests */
+    /** The set of user ids to filter time off requests. Omit to query all users in the management unit. Note: If teamIds is also specified, only time off requests for users in the requested teams will be returned */
     public var userIds: [String]?
     /** The set of statuses to filter time off requests */
     public var statuses: [Statuses]?
@@ -45972,13 +46130,16 @@ public class TimeOffRequestQueryBody: Codable {
     public var substatuses: [Substatuses]?
     /** The inclusive range of dates to filter time off requests */
     public var dateRange: DateRange?
+    /** The IDs of work teams to query. If null or not set, results will be queried for requested users if applicable or otherwise all users in the management unit */
+    public var teamIds: [String]?
 
-    public init(ids: [String]?, userIds: [String]?, statuses: [Statuses]?, substatuses: [Substatuses]?, dateRange: DateRange?) {
+    public init(ids: [String]?, userIds: [String]?, statuses: [Statuses]?, substatuses: [Substatuses]?, dateRange: DateRange?, teamIds: [String]?) {
         self.ids = ids
         self.userIds = userIds
         self.statuses = statuses
         self.substatuses = substatuses
         self.dateRange = dateRange
+        self.teamIds = teamIds
     }
 
 
@@ -47627,6 +47788,44 @@ public class UrlResponse: Codable {
 
     public init(url: String?) {
         self.url = url
+    }
+
+
+}
+
+
+
+
+public class UserActivityPresenceDefinition: Codable {
+
+
+
+    public enum SystemPresence: String, Codable { 
+        case available = "AVAILABLE"
+        case away = "AWAY"
+        case busy = "BUSY"
+        case offline = "OFFLINE"
+        case idle = "IDLE"
+        case onQueue = "ON_QUEUE"
+        case meal = "MEAL"
+        case training = "TRAINING"
+        case meeting = "MEETING"
+        case _break = "BREAK"
+    }
+
+    /** The globally unique identifier for the presence definition */
+    public var _id: String?
+    /** The system presence to which this definition maps */
+    public var systemPresence: SystemPresence?
+
+    public init(_id: String?, systemPresence: SystemPresence?) {
+        self._id = _id
+        self.systemPresence = systemPresence
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case systemPresence
     }
 
 
@@ -52398,7 +52597,7 @@ public class WhatsAppEmbeddedSignupIntegrationActivationRequest: Codable {
     public var _id: String?
     /** WhatsApp Integration name */
     public var name: String?
-    /** Phone number to associate with the WhatsApp integration */
+    /** E.164 phone number to associate with the WhatsApp integration. Not required for embedded signup v4 or later. */
     public var phoneNumber: String?
     /** Specify the two-step verification PIN for that phone number */
     public var pin: String?

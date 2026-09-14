@@ -27517,6 +27517,72 @@ open class WorkforceManagementAPI {
 
     
     
+    /**
+     Get a list of UserScheduleAdherence records for the requested users
+     
+     - parameter body: (body) Request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementUsersActivity(body: UsersActivityRequest, completion: @escaping ((_ data: UserActivityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementUsersActivityWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<UserActivityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of UserScheduleAdherence records for the requested users
+     - POST /api/v2/workforcemanagement/users/activity
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "outOfOffice" : "{}",
+    "activeQueueIds" : [ "activeQueueIds", "activeQueueIds" ],
+    "dateActiveQueuesChanged" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "routingStatus" : "{}",
+    "presence" : "{}"
+  }, {
+    "outOfOffice" : "{}",
+    "activeQueueIds" : [ "activeQueueIds", "activeQueueIds" ],
+    "dateActiveQueuesChanged" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "routingStatus" : "{}",
+    "presence" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) Request body 
+
+     - returns: RequestBuilder<UserActivityListing> 
+     */
+    open class func postWorkforcemanagementUsersActivityWithRequestBuilder(body: UsersActivityRequest) -> RequestBuilder<UserActivityListing> {        
+        let path = "/api/v2/workforcemanagement/users/activity"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserActivityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**

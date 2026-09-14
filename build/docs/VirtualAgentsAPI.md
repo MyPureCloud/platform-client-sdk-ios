@@ -384,4 +384,4 @@ VirtualAgentsAPI.postAgenticVirtualagents(body: body) { (response, error) in
 [**AgenticVirtualAgent**](AgenticVirtualAgent)
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_

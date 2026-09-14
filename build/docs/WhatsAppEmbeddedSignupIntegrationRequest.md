@@ -7,12 +7,12 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
-| **name** | **String** | The name of the WhatsApp Integration | |
+| **name** | **String** | The name of the WhatsApp Integration. Required for Embedded Signup v2; optional for v4 (set later via PATCH). | [optional] |
 | **supportedContent** | [**SupportedContentReference**](SupportedContentReference) | Defines the SupportedContent profile configured for an integration | [optional] |
 | **messagingSetting** | [**MessagingSettingRequestReference**](MessagingSettingRequestReference) | Defines the message settings to be applied for this integration | [optional] |
-| **embeddedSignupAccessToken** | **String** | The access token returned from the embedded signup flow | |
+| **embeddedSignupAccessToken** | **String** | The access token returned from the embedded signup flow. Not required for versions v4 or later. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_

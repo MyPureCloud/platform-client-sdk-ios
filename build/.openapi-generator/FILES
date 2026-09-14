@@ -539,6 +539,7 @@ docs/BatchDownloadJobSubmission.md
 docs/BatchDownloadJobSubmissionResult.md
 docs/BatchDownloadRequest.md
 docs/BatchEventResponse.md
+docs/BatchGetCustomerIntentsRequest.md
 docs/BatchPredictiveRoutingCustomKpiAttributionEventRequest.md
 docs/BatchUserPresenceEventRequest.md
 docs/BatchUserRoutingStatusEventRequest.md
@@ -704,6 +705,7 @@ docs/BulkContactsResponse.md
 docs/BulkDeleteDecisionTableRowsRequest.md
 docs/BulkDeleteResponse.md
 docs/BulkEntityErrorContactEnrichRequest.md
+docs/BulkEntityErrorContactList.md
 docs/BulkEntityErrorEntity.md
 docs/BulkEntityErrorExternalContact.md
 docs/BulkEntityErrorExternalOrganization.md
@@ -754,6 +756,7 @@ docs/BulkRemoveOpportunitiesResponse.md
 docs/BulkRemoveOpportunitiesResult.md
 docs/BulkRemoveSourceIntentsRequest.md
 docs/BulkResponse.md
+docs/BulkResponseResultContactListContactListBulkEntityErrorContactList.md
 docs/BulkResponseResultExternalContactContactEnrichRequestBulkEntityErrorContactEnrichRequest.md
 docs/BulkResponseResultExternalContactEntityBulkEntityErrorEntity.md
 docs/BulkResponseResultExternalContactExternalContactBulkEntityErrorExternalContact.md
@@ -950,7 +953,14 @@ docs/CaseManagementAggregationSort.md
 docs/CaseManagementAggregationView.md
 docs/CaseManagementAsyncAggregateQueryResponse.md
 docs/CaseManagementAsyncAggregationQuery.md
+docs/CaseOwnerUpdate.md
 docs/CasePriorityUpdate.md
+docs/CaseQueryJobCreate.md
+docs/CaseQueryJobError.md
+docs/CaseQueryJobFilter.md
+docs/CaseQueryJobResponse.md
+docs/CaseQueryJobResultsResponse.md
+docs/CaseQueryJobSort.md
 docs/CaseReference.md
 docs/CaseSummaryUpdate.md
 docs/CaseUserReference.md
@@ -1174,6 +1184,8 @@ docs/ContactListUploadUrlRequest.md
 docs/ContactListing.md
 docs/ContactListingRequest.md
 docs/ContactListingResponse.md
+docs/ContactListsBulkEditRequest.md
+docs/ContactListsBulkEditResponse.md
 docs/ContactPhoneNumberColumn.md
 docs/ContactSearchOperation.md
 docs/ContactSearchRequest.md
@@ -1276,7 +1288,9 @@ docs/ConversationAppSettings.md
 docs/ConversationAssociation.md
 docs/ConversationAsyncAggregateQueryResponse.md
 docs/ConversationAsyncAggregationQuery.md
+docs/ConversationAttribute.md
 docs/ConversationAttributeProperties.md
+docs/ConversationAttributeSchema.md
 docs/ConversationBasic.md
 docs/ConversationCallEventTopicCallConversation.md
 docs/ConversationCallEventTopicCallMediaParticipant.md
@@ -3349,6 +3363,7 @@ docs/KnowledgeSearchPreviewRequest.md
 docs/KnowledgeSearchPreviewResponse.md
 docs/KnowledgeSearchResult.md
 docs/KnowledgeSetting.md
+docs/KnowledgeSettingDynamicFilter.md
 docs/KnowledgeSettingListing.md
 docs/KnowledgeSettings.md
 docs/KnowledgeSettingsRequest.md
@@ -5756,15 +5771,21 @@ docs/UsageExecutionResult.md
 docs/UsageItem.md
 docs/UsageQuerySortBy.md
 docs/User.md
+docs/UserActivity.md
+docs/UserActivityAdherencePresence.md
 docs/UserActivityData.md
 docs/UserActivityEntityData.md
+docs/UserActivityListing.md
 docs/UserActivityMetricValue.md
+docs/UserActivityOutOfOffice.md
+docs/UserActivityPresenceDefinition.md
 docs/UserActivityQuery.md
 docs/UserActivityQueryClause.md
 docs/UserActivityQueryFilter.md
 docs/UserActivityQueryMetric.md
 docs/UserActivityQueryPredicate.md
 docs/UserActivityResponse.md
+docs/UserActivityRoutingStatus.md
 docs/UserAgentInfo.md
 docs/UserAggregateDataContainer.md
 docs/UserAggregateQueryClause.md
@@ -5884,6 +5905,7 @@ docs/UserTrendData.md
 docs/UserVideoSettings.md
 docs/UsersAPI.json
 docs/UsersAPI.md
+docs/UsersActivityRequest.md
 docs/UsersRuleReference.md
 docs/UsersRulesAPI.json
 docs/UsersRulesAPI.md
@@ -7164,6 +7186,8 @@ docs/getCasemanagementCaseplanVersionStageplanStepplans-example.txt
 docs/getCasemanagementCaseplanVersionStageplans-example.txt
 docs/getCasemanagementCaseplans-example.txt
 docs/getCasemanagementCasesExternalcontact-example.txt
+docs/getCasemanagementCasesQueryJob-example.txt
+docs/getCasemanagementCasesQueryJobResults-example.txt
 docs/getCasemanagementCasesReference-example.txt
 docs/getChatsMessage-example.txt
 docs/getChatsRoom-example.txt
@@ -8523,6 +8547,7 @@ docs/patchBusinessrulesDecisiontable-example.txt
 docs/patchBusinessrulesDecisiontableImport-example.txt
 docs/patchBusinessrulesDecisiontableVersion-example.txt
 docs/patchCasemanagementCaseDatedue-example.txt
+docs/patchCasemanagementCaseOwner-example.txt
 docs/patchCasemanagementCasePriority-example.txt
 docs/patchCasemanagementCaseSummary-example.txt
 docs/patchCasemanagementCaseplan-example.txt
@@ -8920,6 +8945,7 @@ docs/postCasemanagementCaseplans-example.txt
 docs/postCasemanagementCaseplansQuery-example.txt
 docs/postCasemanagementCases-example.txt
 docs/postCasemanagementCasesAssociationsQuery-example.txt
+docs/postCasemanagementCasesQueryJobs-example.txt
 docs/postCertificateDetails-example.txt
 docs/postChatsRoomMessages-example.txt
 docs/postChatsRoomMessagesPins-example.txt
@@ -9173,6 +9199,7 @@ docs/postIntentsCategories-example.txt
 docs/postIntentsCustomerintentSourceintentsBulkAdd-example.txt
 docs/postIntentsCustomerintentSourceintentsBulkRemove-example.txt
 docs/postIntentsCustomerintents-example.txt
+docs/postIntentsCustomerintentsBulkRetrieve-example.txt
 docs/postJourneyActionmaps-example.txt
 docs/postJourneyActionmapsEstimatesJobs-example.txt
 docs/postJourneyActiontemplates-example.txt
@@ -9313,6 +9340,7 @@ docs/postOutboundContactlistfilters-example.txt
 docs/postOutboundContactlistfiltersBulkRetrieve-example.txt
 docs/postOutboundContactlistfiltersPreview-example.txt
 docs/postOutboundContactlists-example.txt
+docs/postOutboundContactlistsBulkUpdate-example.txt
 docs/postOutboundContactlistsUploads-example.txt
 docs/postOutboundContactlisttemplates-example.txt
 docs/postOutboundContactlisttemplatesBulkAdd-example.txt
@@ -9672,6 +9700,7 @@ docs/postWorkforcemanagementTimeoffrequestsEstimate-example.txt
 docs/postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery-example.txt
 docs/postWorkforcemanagementUnavailabletimesQuery-example.txt
 docs/postWorkforcemanagementUnavailabletimesValidationJobs-example.txt
+docs/postWorkforcemanagementUsersActivity-example.txt
 docs/putAlertingAlert-example.txt
 docs/putAlertingRule-example.txt
 docs/putAnalyticsDataretentionSettings-example.txt
@@ -10557,6 +10586,7 @@ src/Models/BatchDownloadJobSubmission.swift
 src/Models/BatchDownloadJobSubmissionResult.swift
 src/Models/BatchDownloadRequest.swift
 src/Models/BatchEventResponse.swift
+src/Models/BatchGetCustomerIntentsRequest.swift
 src/Models/BatchPredictiveRoutingCustomKpiAttributionEventRequest.swift
 src/Models/BatchUserPresenceEventRequest.swift
 src/Models/BatchUserRoutingStatusEventRequest.swift
@@ -10720,6 +10750,7 @@ src/Models/BulkContactsResponse.swift
 src/Models/BulkDeleteDecisionTableRowsRequest.swift
 src/Models/BulkDeleteResponse.swift
 src/Models/BulkEntityErrorContactEnrichRequest.swift
+src/Models/BulkEntityErrorContactList.swift
 src/Models/BulkEntityErrorEntity.swift
 src/Models/BulkEntityErrorExternalContact.swift
 src/Models/BulkEntityErrorExternalOrganization.swift
@@ -10770,6 +10801,7 @@ src/Models/BulkRemoveOpportunitiesResponse.swift
 src/Models/BulkRemoveOpportunitiesResult.swift
 src/Models/BulkRemoveSourceIntentsRequest.swift
 src/Models/BulkResponse.swift
+src/Models/BulkResponseResultContactListContactListBulkEntityErrorContactList.swift
 src/Models/BulkResponseResultExternalContactContactEnrichRequestBulkEntityErrorContactEnrichRequest.swift
 src/Models/BulkResponseResultExternalContactEntityBulkEntityErrorEntity.swift
 src/Models/BulkResponseResultExternalContactExternalContactBulkEntityErrorExternalContact.swift
@@ -10960,7 +10992,14 @@ src/Models/CaseManagementAggregationSort.swift
 src/Models/CaseManagementAggregationView.swift
 src/Models/CaseManagementAsyncAggregateQueryResponse.swift
 src/Models/CaseManagementAsyncAggregationQuery.swift
+src/Models/CaseOwnerUpdate.swift
 src/Models/CasePriorityUpdate.swift
+src/Models/CaseQueryJobCreate.swift
+src/Models/CaseQueryJobError.swift
+src/Models/CaseQueryJobFilter.swift
+src/Models/CaseQueryJobResponse.swift
+src/Models/CaseQueryJobResultsResponse.swift
+src/Models/CaseQueryJobSort.swift
 src/Models/CaseReference.swift
 src/Models/CaseSummaryUpdate.swift
 src/Models/CaseUserReference.swift
@@ -11180,6 +11219,8 @@ src/Models/ContactListUploadUrlRequest.swift
 src/Models/ContactListing.swift
 src/Models/ContactListingRequest.swift
 src/Models/ContactListingResponse.swift
+src/Models/ContactListsBulkEditRequest.swift
+src/Models/ContactListsBulkEditResponse.swift
 src/Models/ContactPhoneNumberColumn.swift
 src/Models/ContactSearchOperation.swift
 src/Models/ContactSearchRequest.swift
@@ -11280,7 +11321,9 @@ src/Models/ConversationAppSettings.swift
 src/Models/ConversationAssociation.swift
 src/Models/ConversationAsyncAggregateQueryResponse.swift
 src/Models/ConversationAsyncAggregationQuery.swift
+src/Models/ConversationAttribute.swift
 src/Models/ConversationAttributeProperties.swift
+src/Models/ConversationAttributeSchema.swift
 src/Models/ConversationBasic.swift
 src/Models/ConversationCallEventTopicCallConversation.swift
 src/Models/ConversationCallEventTopicCallMediaParticipant.swift
@@ -13309,6 +13352,7 @@ src/Models/KnowledgeSearchPreviewRequest.swift
 src/Models/KnowledgeSearchPreviewResponse.swift
 src/Models/KnowledgeSearchResult.swift
 src/Models/KnowledgeSetting.swift
+src/Models/KnowledgeSettingDynamicFilter.swift
 src/Models/KnowledgeSettingListing.swift
 src/Models/KnowledgeSettings.swift
 src/Models/KnowledgeSettingsRequest.swift
@@ -15641,15 +15685,21 @@ src/Models/UsageExecutionResult.swift
 src/Models/UsageItem.swift
 src/Models/UsageQuerySortBy.swift
 src/Models/User.swift
+src/Models/UserActivity.swift
+src/Models/UserActivityAdherencePresence.swift
 src/Models/UserActivityData.swift
 src/Models/UserActivityEntityData.swift
+src/Models/UserActivityListing.swift
 src/Models/UserActivityMetricValue.swift
+src/Models/UserActivityOutOfOffice.swift
+src/Models/UserActivityPresenceDefinition.swift
 src/Models/UserActivityQuery.swift
 src/Models/UserActivityQueryClause.swift
 src/Models/UserActivityQueryFilter.swift
 src/Models/UserActivityQueryMetric.swift
 src/Models/UserActivityQueryPredicate.swift
 src/Models/UserActivityResponse.swift
+src/Models/UserActivityRoutingStatus.swift
 src/Models/UserAgentInfo.swift
 src/Models/UserAggregateDataContainer.swift
 src/Models/UserAggregateQueryClause.swift
@@ -15765,6 +15815,7 @@ src/Models/UserTokensTopicUriReference.swift
 src/Models/UserTransferEvent.swift
 src/Models/UserTrendData.swift
 src/Models/UserVideoSettings.swift
+src/Models/UsersActivityRequest.swift
 src/Models/UsersRuleReference.swift
 src/Models/UsersRulesCreateRuleRequest.swift
 src/Models/UsersRulesCriteria.swift

@@ -2616,7 +2616,7 @@ open class PresenceAPI {
     /**
      Get a user's Presence
      
-     - parameter userId: (path) user Id 
+     - parameter userId: (path) User ID (UUID) 
      - parameter sourceId: (path) Presence source ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -2662,7 +2662,7 @@ open class PresenceAPI {
   "primary" : true
 }, statusCode=200}]
      
-     - parameter userId: (path) user Id 
+     - parameter userId: (path) User ID (UUID) 
      - parameter sourceId: (path) Presence source ID 
 
      - returns: RequestBuilder<UserPresence> 
@@ -2690,7 +2690,7 @@ open class PresenceAPI {
     /**
      Get a user's Genesys Cloud presence.
      
-     - parameter userId: (path) user Id 
+     - parameter userId: (path) User ID (UUID) 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getUserPresencesPurecloud(userId: String, completion: @escaping ((_ data: UserPresence?,_ error: Error?) -> Void)) {
@@ -2735,7 +2735,7 @@ open class PresenceAPI {
   "primary" : true
 }, statusCode=200}]
      
-     - parameter userId: (path) user Id 
+     - parameter userId: (path) User ID (UUID) 
 
      - returns: RequestBuilder<UserPresence> 
      */
@@ -2904,7 +2904,7 @@ open class PresenceAPI {
     /**
      Patch a user's Presence
      
-     - parameter userId: (path) user Id 
+     - parameter userId: (path) User ID (UUID) 
      - parameter sourceId: (path) Presence source ID 
      - parameter body: (body) User presence 
      - parameter completion: completion handler to receive the data and the error objects
@@ -2951,7 +2951,7 @@ open class PresenceAPI {
   "primary" : true
 }, statusCode=200}]
      
-     - parameter userId: (path) user Id 
+     - parameter userId: (path) User ID (UUID) 
      - parameter sourceId: (path) Presence source ID 
      - parameter body: (body) User presence 
 
@@ -2982,7 +2982,7 @@ open class PresenceAPI {
     /**
      Patch a Genesys Cloud user's presence
      
-     - parameter userId: (path) user Id 
+     - parameter userId: (path) User ID (UUID) 
      - parameter body: (body) User presence 
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -3028,7 +3028,7 @@ open class PresenceAPI {
   "primary" : true
 }, statusCode=200}]
      
-     - parameter userId: (path) user Id 
+     - parameter userId: (path) User ID (UUID) 
      - parameter body: (body) User presence 
 
      - returns: RequestBuilder<UserPresence> 

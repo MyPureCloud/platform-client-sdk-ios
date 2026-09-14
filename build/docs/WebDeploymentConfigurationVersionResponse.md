@@ -33,4 +33,4 @@ Details about the configuration version of a Web Deployment
 
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_

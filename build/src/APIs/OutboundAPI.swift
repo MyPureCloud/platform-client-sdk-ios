@@ -6584,6 +6584,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -9463,6 +9464,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -13447,6 +13449,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -16326,6 +16329,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -20398,6 +20402,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -23277,6 +23282,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -27261,6 +27267,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -30140,6 +30147,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -34218,6 +34226,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -37097,6 +37106,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -41081,6 +41091,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -43960,6 +43971,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -48032,6 +48044,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -50911,6 +50924,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -54895,6 +54909,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -57774,6 +57789,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -61847,6 +61863,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -64726,6 +64743,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -68710,6 +68728,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -71589,6 +71608,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -75661,6 +75681,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -78540,6 +78561,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -82524,6 +82546,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -85403,6 +85426,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -89476,6 +89500,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -92355,6 +92380,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -96339,6 +96365,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -99218,6 +99245,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -103290,6 +103318,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -106169,6 +106198,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -110153,6 +110183,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -113032,6 +113063,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -117105,6 +117137,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -119984,6 +120017,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -123968,6 +124002,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -126847,6 +126882,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -130919,6 +130955,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -133798,6 +133835,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -137782,6 +137820,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -140661,6 +140700,7 @@ open class OutboundAPI {
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
+            "defaultMediaLanguage" : "defaultMediaLanguage",
             "enableTranscription" : true,
             "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
@@ -142453,6 +142493,7 @@ open class OutboundAPI {
   "attemptLimits" : "{}",
   "automaticTimeZoneMapping" : true,
   "selfUri" : "https://openapi-generator.tech",
+  "timeZone" : "timeZone",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "whatsAppColumns" : [ {
     "contactableTimeColumnName" : "contactableTimeColumnName",
@@ -142491,10 +142532,13 @@ open class OutboundAPI {
     "columnName" : "columnName"
   } ],
   "division" : "{}",
+  "retentionType" : "Never",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "previewModeColumnName" : "previewModeColumnName",
   "columnNames" : [ "columnNames", "columnNames" ],
   "size" : 6,
+  "retentionDays" : 2,
+  "dateExpiration" : "2000-01-23T04:56:07.000+00:00",
   "previewModeAcceptedValues" : [ "previewModeAcceptedValues", "previewModeAcceptedValues" ],
   "trimWhitespace" : true,
   "name" : "name",
@@ -142601,6 +142645,7 @@ open class OutboundAPI {
       "callable" : true
     }
   },
+  "retentionType" : "Never",
   "contactableStatus" : {
     "key" : {
       "columnStatus" : {
@@ -142622,6 +142667,8 @@ open class OutboundAPI {
       "timestamp" : "2000-01-23T04:56:07.000+00:00"
     }
   },
+  "retentionDays" : 1,
+  "dateExpiration" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
   "contactListId" : "contactListId",
   "id" : "id"
@@ -143330,6 +143377,10 @@ open class OutboundAPI {
     
     
     
+    
+    
+    
+    
     public enum SortOrder_getOutboundContactlists: String { 
         case ascending = "ascending"
         case descending = "descending"
@@ -143348,12 +143399,14 @@ open class OutboundAPI {
      - parameter name: (query) Name (optional)
      - parameter _id: (query) id (optional)
      - parameter divisionId: (query) Division ID(s) (optional)
+     - parameter timeZone: (query) Filter by time zone (optional)
+     - parameter dateExpiration: (query) Filter by expiration date. Supports filter type prefixes, e.g. greaterthan:2025-01-01T00:00:00Z. Multiple values narrow the range. See https://developer.genesys.cloud/routing/outbound/filter-type (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOutboundContactlists(includeImportStatus: Bool? = nil, includeSize: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundContactlists? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundContactlists? = nil, completion: @escaping ((_ data: ContactListEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOutboundContactlistsWithRequestBuilder(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, _id: _id, divisionId: divisionId, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getOutboundContactlists(includeImportStatus: Bool? = nil, includeSize: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundContactlists? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, timeZone: String? = nil, dateExpiration: [String]? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundContactlists? = nil, completion: @escaping ((_ data: ContactListEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundContactlistsWithRequestBuilder(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, _id: _id, divisionId: divisionId, timeZone: timeZone, dateExpiration: dateExpiration, sortBy: sortBy, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<ContactListEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -143397,6 +143450,7 @@ open class OutboundAPI {
     "attemptLimits" : "{}",
     "automaticTimeZoneMapping" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "timeZone" : "timeZone",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whatsAppColumns" : [ {
       "contactableTimeColumnName" : "contactableTimeColumnName",
@@ -143435,10 +143489,13 @@ open class OutboundAPI {
       "columnName" : "columnName"
     } ],
     "division" : "{}",
+    "retentionType" : "Never",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "previewModeColumnName" : "previewModeColumnName",
     "columnNames" : [ "columnNames", "columnNames" ],
     "size" : 6,
+    "retentionDays" : 2,
+    "dateExpiration" : "2000-01-23T04:56:07.000+00:00",
     "previewModeAcceptedValues" : [ "previewModeAcceptedValues", "previewModeAcceptedValues" ],
     "trimWhitespace" : true,
     "name" : "name",
@@ -143460,6 +143517,7 @@ open class OutboundAPI {
     "attemptLimits" : "{}",
     "automaticTimeZoneMapping" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "timeZone" : "timeZone",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whatsAppColumns" : [ {
       "contactableTimeColumnName" : "contactableTimeColumnName",
@@ -143498,10 +143556,13 @@ open class OutboundAPI {
       "columnName" : "columnName"
     } ],
     "division" : "{}",
+    "retentionType" : "Never",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "previewModeColumnName" : "previewModeColumnName",
     "columnNames" : [ "columnNames", "columnNames" ],
     "size" : 6,
+    "retentionDays" : 2,
+    "dateExpiration" : "2000-01-23T04:56:07.000+00:00",
     "previewModeAcceptedValues" : [ "previewModeAcceptedValues", "previewModeAcceptedValues" ],
     "trimWhitespace" : true,
     "name" : "name",
@@ -143525,12 +143586,14 @@ open class OutboundAPI {
      - parameter name: (query) Name (optional)
      - parameter _id: (query) id (optional)
      - parameter divisionId: (query) Division ID(s) (optional)
+     - parameter timeZone: (query) Filter by time zone (optional)
+     - parameter dateExpiration: (query) Filter by expiration date. Supports filter type prefixes, e.g. greaterthan:2025-01-01T00:00:00Z. Multiple values narrow the range. See https://developer.genesys.cloud/routing/outbound/filter-type (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional)
 
      - returns: RequestBuilder<ContactListEntityListing> 
      */
-    open class func getOutboundContactlistsWithRequestBuilder(includeImportStatus: Bool? = nil, includeSize: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundContactlists? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundContactlists? = nil) -> RequestBuilder<ContactListEntityListing> {        
+    open class func getOutboundContactlistsWithRequestBuilder(includeImportStatus: Bool? = nil, includeSize: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundContactlists? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, timeZone: String? = nil, dateExpiration: [String]? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundContactlists? = nil) -> RequestBuilder<ContactListEntityListing> {        
         let path = "/api/v2/outbound/contactlists"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -143546,6 +143609,8 @@ open class OutboundAPI {
             "name": name, 
             "id": _id, 
             "divisionId": divisionId, 
+            "timeZone": timeZone, 
+            "dateExpiration": dateExpiration, 
             "sortBy": sortBy, 
             "sortOrder": sortOrder?.rawValue
         ])
@@ -143914,6 +143979,7 @@ open class OutboundAPI {
   "attemptLimits" : "{}",
   "automaticTimeZoneMapping" : true,
   "selfUri" : "https://openapi-generator.tech",
+  "timeZone" : "timeZone",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "whatsAppColumns" : [ {
     "contactableTimeColumnName" : "contactableTimeColumnName",
@@ -143951,9 +144017,11 @@ open class OutboundAPI {
     "maxLength" : 5,
     "columnName" : "columnName"
   } ],
+  "retentionType" : "Never",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "previewModeColumnName" : "previewModeColumnName",
   "columnNames" : [ "columnNames", "columnNames" ],
+  "retentionDays" : 6,
   "previewModeAcceptedValues" : [ "previewModeAcceptedValues", "previewModeAcceptedValues" ],
   "trimWhitespace" : true,
   "name" : "name",
@@ -144006,6 +144074,8 @@ open class OutboundAPI {
     
     
     
+    
+    
     public enum SortOrder_getOutboundContactlisttemplates: String { 
         case ascending = "ascending"
         case descending = "descending"
@@ -144020,12 +144090,13 @@ open class OutboundAPI {
      - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional)
      - parameter filterType: (query) Filter type (optional)
      - parameter name: (query) Name (optional)
+     - parameter timeZone: (query) Filter by time zone (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOutboundContactlisttemplates(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundContactlisttemplates? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundContactlisttemplates? = nil, completion: @escaping ((_ data: ContactListTemplateEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOutboundContactlisttemplatesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getOutboundContactlisttemplates(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundContactlisttemplates? = nil, name: String? = nil, timeZone: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundContactlisttemplates? = nil, completion: @escaping ((_ data: ContactListTemplateEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundContactlisttemplatesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, timeZone: timeZone, sortBy: sortBy, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<ContactListTemplateEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -144067,6 +144138,7 @@ open class OutboundAPI {
     "attemptLimits" : "{}",
     "automaticTimeZoneMapping" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "timeZone" : "timeZone",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whatsAppColumns" : [ {
       "contactableTimeColumnName" : "contactableTimeColumnName",
@@ -144104,9 +144176,11 @@ open class OutboundAPI {
       "maxLength" : 5,
       "columnName" : "columnName"
     } ],
+    "retentionType" : "Never",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "previewModeColumnName" : "previewModeColumnName",
     "columnNames" : [ "columnNames", "columnNames" ],
+    "retentionDays" : 6,
     "previewModeAcceptedValues" : [ "previewModeAcceptedValues", "previewModeAcceptedValues" ],
     "trimWhitespace" : true,
     "name" : "name",
@@ -144127,6 +144201,7 @@ open class OutboundAPI {
     "attemptLimits" : "{}",
     "automaticTimeZoneMapping" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "timeZone" : "timeZone",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whatsAppColumns" : [ {
       "contactableTimeColumnName" : "contactableTimeColumnName",
@@ -144164,9 +144239,11 @@ open class OutboundAPI {
       "maxLength" : 5,
       "columnName" : "columnName"
     } ],
+    "retentionType" : "Never",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "previewModeColumnName" : "previewModeColumnName",
     "columnNames" : [ "columnNames", "columnNames" ],
+    "retentionDays" : 6,
     "previewModeAcceptedValues" : [ "previewModeAcceptedValues", "previewModeAcceptedValues" ],
     "trimWhitespace" : true,
     "name" : "name",
@@ -144186,12 +144263,13 @@ open class OutboundAPI {
      - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional)
      - parameter filterType: (query) Filter type (optional)
      - parameter name: (query) Name (optional)
+     - parameter timeZone: (query) Filter by time zone (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional)
 
      - returns: RequestBuilder<ContactListTemplateEntityListing> 
      */
-    open class func getOutboundContactlisttemplatesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundContactlisttemplates? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundContactlisttemplates? = nil) -> RequestBuilder<ContactListTemplateEntityListing> {        
+    open class func getOutboundContactlisttemplatesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundContactlisttemplates? = nil, name: String? = nil, timeZone: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundContactlisttemplates? = nil) -> RequestBuilder<ContactListTemplateEntityListing> {        
         let path = "/api/v2/outbound/contactlisttemplates"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -144203,6 +144281,7 @@ open class OutboundAPI {
             "allowEmptyResult": allowEmptyResult, 
             "filterType": filterType?.rawValue, 
             "name": name, 
+            "timeZone": timeZone, 
             "sortBy": sortBy, 
             "sortOrder": sortOrder?.rawValue
         ])
@@ -149449,12 +149528,15 @@ open class OutboundAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "maxLineUtilization" : 5.637376656633329,
+  "contactListDefaultRetentionDays" : 7,
   "maxCallsPerAgentDecimal" : 1.4658129805029452,
   "abandonSeconds" : 2.3021358869347655,
   "maxConfigurableCallsPerAgent" : 5,
   "automaticTimeZoneMapping" : "{}",
   "selfUri" : "https://openapi-generator.tech",
+  "timeZone" : "timeZone",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "contactListDefaultRetentionType" : "Never",
   "version" : 0,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "complianceAbandonRateDenominator" : "ALL_CALLS",
@@ -150816,6 +150898,7 @@ open class OutboundAPI {
       "callable" : true
     }
   },
+  "retentionType" : "Never",
   "contactableStatus" : {
     "key" : {
       "columnStatus" : {
@@ -150837,6 +150920,8 @@ open class OutboundAPI {
       "timestamp" : "2000-01-23T04:56:07.000+00:00"
     }
   },
+  "retentionDays" : 1,
+  "dateExpiration" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
   "contactListId" : "contactListId",
   "id" : "id"
@@ -150944,6 +151029,7 @@ open class OutboundAPI {
       "callable" : true
     }
   },
+  "retentionType" : "Never",
   "contactableStatus" : {
     "key" : {
       "columnStatus" : {
@@ -150965,6 +151051,8 @@ open class OutboundAPI {
       "timestamp" : "2000-01-23T04:56:07.000+00:00"
     }
   },
+  "retentionDays" : 1,
+  "dateExpiration" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
   "contactListId" : "contactListId",
   "id" : "id"
@@ -151202,6 +151290,7 @@ open class OutboundAPI {
         "callable" : true
       }
     },
+    "retentionType" : "Never",
     "contactableStatus" : {
       "key" : {
         "columnStatus" : {
@@ -151223,6 +151312,8 @@ open class OutboundAPI {
         "timestamp" : "2000-01-23T04:56:07.000+00:00"
       }
     },
+    "retentionDays" : 1,
+    "dateExpiration" : "2000-01-23T04:56:07.000+00:00",
     "name" : "name",
     "contactListId" : "contactListId",
     "id" : "id"
@@ -151265,6 +151356,7 @@ open class OutboundAPI {
         "callable" : true
       }
     },
+    "retentionType" : "Never",
     "contactableStatus" : {
       "key" : {
         "columnStatus" : {
@@ -151286,6 +151378,8 @@ open class OutboundAPI {
         "timestamp" : "2000-01-23T04:56:07.000+00:00"
       }
     },
+    "retentionDays" : 1,
+    "dateExpiration" : "2000-01-23T04:56:07.000+00:00",
     "name" : "name",
     "contactListId" : "contactListId",
     "id" : "id"
@@ -151702,6 +151796,7 @@ open class OutboundAPI {
         "callable" : true
       }
     },
+    "retentionType" : "Never",
     "contactableStatus" : {
       "key" : {
         "columnStatus" : {
@@ -151723,6 +151818,8 @@ open class OutboundAPI {
         "timestamp" : "2000-01-23T04:56:07.000+00:00"
       }
     },
+    "retentionDays" : 1,
+    "dateExpiration" : "2000-01-23T04:56:07.000+00:00",
     "name" : "name",
     "contactListId" : "contactListId",
     "id" : "id"
@@ -151765,6 +151862,7 @@ open class OutboundAPI {
         "callable" : true
       }
     },
+    "retentionType" : "Never",
     "contactableStatus" : {
       "key" : {
         "columnStatus" : {
@@ -151786,6 +151884,8 @@ open class OutboundAPI {
         "timestamp" : "2000-01-23T04:56:07.000+00:00"
       }
     },
+    "retentionDays" : 1,
+    "dateExpiration" : "2000-01-23T04:56:07.000+00:00",
     "name" : "name",
     "contactListId" : "contactListId",
     "id" : "id"
@@ -151858,6 +151958,7 @@ open class OutboundAPI {
   "attemptLimits" : "{}",
   "automaticTimeZoneMapping" : true,
   "selfUri" : "https://openapi-generator.tech",
+  "timeZone" : "timeZone",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "whatsAppColumns" : [ {
     "contactableTimeColumnName" : "contactableTimeColumnName",
@@ -151896,10 +151997,13 @@ open class OutboundAPI {
     "columnName" : "columnName"
   } ],
   "division" : "{}",
+  "retentionType" : "Never",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "previewModeColumnName" : "previewModeColumnName",
   "columnNames" : [ "columnNames", "columnNames" ],
   "size" : 6,
+  "retentionDays" : 2,
+  "dateExpiration" : "2000-01-23T04:56:07.000+00:00",
   "previewModeAcceptedValues" : [ "previewModeAcceptedValues", "previewModeAcceptedValues" ],
   "trimWhitespace" : true,
   "name" : "name",
@@ -151919,6 +152023,73 @@ open class OutboundAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ContactList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Bulk update contact lists.
+     
+     - parameter body: (body) Contact lists bulk edit request. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postOutboundContactlistsBulkUpdate(body: ContactListsBulkEditRequest, completion: @escaping ((_ data: ContactListsBulkEditResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postOutboundContactlistsBulkUpdateWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ContactListsBulkEditResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk update contact lists.
+     - POST /api/v2/outbound/contactlists/bulk/update
+     - A maximum of 100 contact lists can be updated per request.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorIndexes" : [ 1, 1 ],
+  "results" : [ {
+    "success" : true,
+    "id" : "id",
+    "error" : "{}",
+    "entity" : "{}",
+    "status" : 0
+  }, {
+    "success" : true,
+    "id" : "id",
+    "error" : "{}",
+    "entity" : "{}",
+    "status" : 0
+  } ],
+  "errorCount" : 6
+}, statusCode=200}]
+     
+     - parameter body: (body) Contact lists bulk edit request. 
+
+     - returns: RequestBuilder<ContactListsBulkEditResponse> 
+     */
+    open class func postOutboundContactlistsBulkUpdateWithRequestBuilder(body: ContactListsBulkEditRequest) -> RequestBuilder<ContactListsBulkEditResponse> {        
+        let path = "/api/v2/outbound/contactlists/bulk/update"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ContactListsBulkEditResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -152026,6 +152197,7 @@ open class OutboundAPI {
   "attemptLimits" : "{}",
   "automaticTimeZoneMapping" : true,
   "selfUri" : "https://openapi-generator.tech",
+  "timeZone" : "timeZone",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "whatsAppColumns" : [ {
     "contactableTimeColumnName" : "contactableTimeColumnName",
@@ -152063,9 +152235,11 @@ open class OutboundAPI {
     "maxLength" : 5,
     "columnName" : "columnName"
   } ],
+  "retentionType" : "Never",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "previewModeColumnName" : "previewModeColumnName",
   "columnNames" : [ "columnNames", "columnNames" ],
+  "retentionDays" : 6,
   "previewModeAcceptedValues" : [ "previewModeAcceptedValues", "previewModeAcceptedValues" ],
   "trimWhitespace" : true,
   "name" : "name",
@@ -152140,6 +152314,7 @@ open class OutboundAPI {
     "attemptLimits" : "{}",
     "automaticTimeZoneMapping" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "timeZone" : "timeZone",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whatsAppColumns" : [ {
       "contactableTimeColumnName" : "contactableTimeColumnName",
@@ -152177,9 +152352,11 @@ open class OutboundAPI {
       "maxLength" : 5,
       "columnName" : "columnName"
     } ],
+    "retentionType" : "Never",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "previewModeColumnName" : "previewModeColumnName",
     "columnNames" : [ "columnNames", "columnNames" ],
+    "retentionDays" : 6,
     "previewModeAcceptedValues" : [ "previewModeAcceptedValues", "previewModeAcceptedValues" ],
     "trimWhitespace" : true,
     "name" : "name",
@@ -152200,6 +152377,7 @@ open class OutboundAPI {
     "attemptLimits" : "{}",
     "automaticTimeZoneMapping" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "timeZone" : "timeZone",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whatsAppColumns" : [ {
       "contactableTimeColumnName" : "contactableTimeColumnName",
@@ -152237,9 +152415,11 @@ open class OutboundAPI {
       "maxLength" : 5,
       "columnName" : "columnName"
     } ],
+    "retentionType" : "Never",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "previewModeColumnName" : "previewModeColumnName",
     "columnNames" : [ "columnNames", "columnNames" ],
+    "retentionDays" : 6,
     "previewModeAcceptedValues" : [ "previewModeAcceptedValues", "previewModeAcceptedValues" ],
     "trimWhitespace" : true,
     "name" : "name",
@@ -152321,6 +152501,7 @@ open class OutboundAPI {
     "attemptLimits" : "{}",
     "automaticTimeZoneMapping" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "timeZone" : "timeZone",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whatsAppColumns" : [ {
       "contactableTimeColumnName" : "contactableTimeColumnName",
@@ -152358,9 +152539,11 @@ open class OutboundAPI {
       "maxLength" : 5,
       "columnName" : "columnName"
     } ],
+    "retentionType" : "Never",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "previewModeColumnName" : "previewModeColumnName",
     "columnNames" : [ "columnNames", "columnNames" ],
+    "retentionDays" : 6,
     "previewModeAcceptedValues" : [ "previewModeAcceptedValues", "previewModeAcceptedValues" ],
     "trimWhitespace" : true,
     "name" : "name",
@@ -152381,6 +152564,7 @@ open class OutboundAPI {
     "attemptLimits" : "{}",
     "automaticTimeZoneMapping" : true,
     "selfUri" : "https://openapi-generator.tech",
+    "timeZone" : "timeZone",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whatsAppColumns" : [ {
       "contactableTimeColumnName" : "contactableTimeColumnName",
@@ -152418,9 +152602,11 @@ open class OutboundAPI {
       "maxLength" : 5,
       "columnName" : "columnName"
     } ],
+    "retentionType" : "Never",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "previewModeColumnName" : "previewModeColumnName",
     "columnNames" : [ "columnNames", "columnNames" ],
+    "retentionDays" : 6,
     "previewModeAcceptedValues" : [ "previewModeAcceptedValues", "previewModeAcceptedValues" ],
     "trimWhitespace" : true,
     "name" : "name",
@@ -154530,6 +154716,7 @@ open class OutboundAPI {
   "attemptLimits" : "{}",
   "automaticTimeZoneMapping" : true,
   "selfUri" : "https://openapi-generator.tech",
+  "timeZone" : "timeZone",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "whatsAppColumns" : [ {
     "contactableTimeColumnName" : "contactableTimeColumnName",
@@ -154568,10 +154755,13 @@ open class OutboundAPI {
     "columnName" : "columnName"
   } ],
   "division" : "{}",
+  "retentionType" : "Never",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "previewModeColumnName" : "previewModeColumnName",
   "columnNames" : [ "columnNames", "columnNames" ],
   "size" : 6,
+  "retentionDays" : 2,
+  "dateExpiration" : "2000-01-23T04:56:07.000+00:00",
   "previewModeAcceptedValues" : [ "previewModeAcceptedValues", "previewModeAcceptedValues" ],
   "trimWhitespace" : true,
   "name" : "name",
@@ -154676,6 +154866,7 @@ open class OutboundAPI {
       "callable" : true
     }
   },
+  "retentionType" : "Never",
   "contactableStatus" : {
     "key" : {
       "columnStatus" : {
@@ -154697,6 +154888,8 @@ open class OutboundAPI {
       "timestamp" : "2000-01-23T04:56:07.000+00:00"
     }
   },
+  "retentionDays" : 1,
+  "dateExpiration" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
   "contactListId" : "contactListId",
   "id" : "id"
@@ -154879,6 +155072,7 @@ open class OutboundAPI {
   "attemptLimits" : "{}",
   "automaticTimeZoneMapping" : true,
   "selfUri" : "https://openapi-generator.tech",
+  "timeZone" : "timeZone",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "whatsAppColumns" : [ {
     "contactableTimeColumnName" : "contactableTimeColumnName",
@@ -154916,9 +155110,11 @@ open class OutboundAPI {
     "maxLength" : 5,
     "columnName" : "columnName"
   } ],
+  "retentionType" : "Never",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "previewModeColumnName" : "previewModeColumnName",
   "columnNames" : [ "columnNames", "columnNames" ],
+  "retentionDays" : 6,
   "previewModeAcceptedValues" : [ "previewModeAcceptedValues", "previewModeAcceptedValues" ],
   "trimWhitespace" : true,
   "name" : "name",

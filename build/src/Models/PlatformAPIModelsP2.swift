@@ -7229,6 +7229,107 @@ public class CaseManagementAsyncAggregationQuery: Codable {
 
 
 
+public class CaseQueryJobCreate: Codable {
+
+
+
+
+
+
+
+
+
+    public enum Attributes: String, Codable { 
+        case _id = "id"
+        case reference = "reference"
+        case caseplanid = "caseplanId"
+        case caseplanversion = "caseplanVersion"
+        case owner = "owner"
+        case status = "status"
+        case priority = "priority"
+        case externalcontactid = "externalContactId"
+        case customerintent = "customerIntent"
+        case division = "division"
+        case datedue = "dateDue"
+        case datestarted = "dateStarted"
+        case dateclosed = "dateClosed"
+        case datecreated = "dateCreated"
+        case datemodified = "dateModified"
+        case modifiedby = "modifiedBy"
+        case summary = "summary"
+        case version = "version"
+        case ttlseconds = "ttlSeconds"
+        case creationstatus = "creationStatus"
+    }
+
+    public enum Expands: String, Codable { 
+        case caseplan = "caseplan"
+        case owner = "owner"
+        case modifiedby = "modifiedBy"
+        case externalcontact = "externalContact"
+        case customerintent = "customerIntent"
+    }
+
+    /** The total page size requested (default 25). */
+    public var pageSize: Int?
+    /** The requested page number. */
+    public var pageNumber: Int?
+    /** List of filter objects to be used in the search. Use an empty list to run the query with no filters. */
+    public var filters: [CaseQueryJobFilter]?
+    /** Sort order for results. */
+    public var sort: CaseQueryJobSort?
+    /** List of entity attributes to be retrieved in the result. */
+    public var attributes: [Attributes]?
+    /** Attributes to expand on each case in the job results. Expands are stored on the job and enriched by PubAPI when results are fetched. */
+    public var expands: [Expands]?
+
+    public init(pageSize: Int?, pageNumber: Int?, filters: [CaseQueryJobFilter]?, sort: CaseQueryJobSort?, attributes: [Attributes]?, expands: [Expands]?) {
+        self.pageSize = pageSize
+        self.pageNumber = pageNumber
+        self.filters = filters
+        self.sort = sort
+        self.attributes = attributes
+        self.expands = expands
+    }
+
+
+}
+
+
+
+
+public class CaseQueryJobResultsResponse: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    public var entities: [Case]?
+    public var pageSize: Int?
+    public var pageNumber: Int?
+    public var total: Int64?
+    public var pageCount: Int?
+
+    public init(entities: [Case]?, pageSize: Int?, pageNumber: Int?, total: Int64?, pageCount: Int?) {
+        self.entities = entities
+        self.pageSize = pageSize
+        self.pageNumber = pageNumber
+        self.total = total
+        self.pageCount = pageCount
+    }
+
+
+}
+
+
+
+
 public class CaseplanCreate: Codable {
 
 
@@ -8139,6 +8240,8 @@ public class ChecklistActivationPayload: Codable {
         case outbound = "Outbound"
     }
 
+
+
     /** Trigger type that activated this checklist. */
     public var activationTriggerType: ActivationTriggerType?
     /** The intent ID if checklist was triggered by an intent. */
@@ -8159,8 +8262,10 @@ public class ChecklistActivationPayload: Codable {
     public var mediaType: MediaType?
     /** Direction of the conversation. */
     public var direction: Direction?
+    /** Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events. */
+    public var preview: Bool?
 
-    public init(activationTriggerType: ActivationTriggerType?, intentId: String?, intentName: String?, language: String?, agentId: String?, participantId: String?, queueId: String?, assistantId: String?, mediaType: MediaType?, direction: Direction?) {
+    public init(activationTriggerType: ActivationTriggerType?, intentId: String?, intentName: String?, language: String?, agentId: String?, participantId: String?, queueId: String?, assistantId: String?, mediaType: MediaType?, direction: Direction?, preview: Bool?) {
         self.activationTriggerType = activationTriggerType
         self.intentId = intentId
         self.intentName = intentName
@@ -8171,6 +8276,7 @@ public class ChecklistActivationPayload: Codable {
         self.assistantId = assistantId
         self.mediaType = mediaType
         self.direction = direction
+        self.preview = preview
     }
 
 
@@ -8220,6 +8326,8 @@ public class ChecklistInferenceJobResponse: Codable {
 
 
 
+
+
     /** ID of the inference job. */
     public var _id: String?
     /** Status of the checklist inference job. */
@@ -8246,10 +8354,12 @@ public class ChecklistInferenceJobResponse: Codable {
     public var mediaType: MediaType?
     /** Direction of the conversation. */
     public var direction: Direction?
+    /** Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events. */
+    public var preview: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, status: Status?, error: ErrorInfo?, agentChecklistInfo: AgentChecklistInfo?, jobStartTime: Date?, jobEndTime: Date?, language: String?, agentId: String?, participantId: String?, queueId: String?, assistantId: String?, mediaType: MediaType?, direction: Direction?, selfUri: String?) {
+    public init(_id: String?, status: Status?, error: ErrorInfo?, agentChecklistInfo: AgentChecklistInfo?, jobStartTime: Date?, jobEndTime: Date?, language: String?, agentId: String?, participantId: String?, queueId: String?, assistantId: String?, mediaType: MediaType?, direction: Direction?, preview: Bool?, selfUri: String?) {
         self._id = _id
         self.status = status
         self.error = error
@@ -8263,6 +8373,7 @@ public class ChecklistInferenceJobResponse: Codable {
         self.assistantId = assistantId
         self.mediaType = mediaType
         self.direction = direction
+        self.preview = preview
         self.selfUri = selfUri
     }
 
@@ -8280,6 +8391,7 @@ public class ChecklistInferenceJobResponse: Codable {
         case assistantId
         case mediaType
         case direction
+        case preview
         case selfUri
     }
 
@@ -9550,6 +9662,18 @@ public class ContactList: Codable {
 
 
 
+    public enum RetentionType: String, Codable { 
+        case never = "Never"
+        case today = "Today"
+        case retentionDays = "RetentionDays"
+    }
+
+
+
+
+
+
+
 
 
     /** The globally unique identifier for the object. */
@@ -9589,10 +9713,18 @@ public class ContactList: Codable {
     public var columnDataTypeSpecifications: [ColumnDataTypeSpecification]?
     /** Whether to trim white space when importing a contactlist csv file, default value = true */
     public var trimWhitespace: Bool?
+    /** The type of retention for this list. Valid values: Never, Today, RetentionDays */
+    public var retentionType: RetentionType?
+    /** The number of days to retain this list. Required when retentionType is RetentionDays. */
+    public var retentionDays: Int?
+    /** The expiration date of the contact list. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateExpiration: Date?
+    /** The time zone for this contact list; for example, Africa/Abidjan. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London */
+    public var timeZone: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, columnNames: [String]?, phoneColumns: [ContactPhoneNumberColumn]?, emailColumns: [EmailColumn]?, whatsAppColumns: [WhatsAppColumn]?, importStatus: ImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int64?, attemptLimits: DomainEntityRef?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, columnDataTypeSpecifications: [ColumnDataTypeSpecification]?, trimWhitespace: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, columnNames: [String]?, phoneColumns: [ContactPhoneNumberColumn]?, emailColumns: [EmailColumn]?, whatsAppColumns: [WhatsAppColumn]?, importStatus: ImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int64?, attemptLimits: DomainEntityRef?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, columnDataTypeSpecifications: [ColumnDataTypeSpecification]?, trimWhitespace: Bool?, retentionType: RetentionType?, retentionDays: Int?, dateExpiration: Date?, timeZone: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.dateCreated = dateCreated
@@ -9612,6 +9744,10 @@ public class ContactList: Codable {
         self.zipCodeColumnName = zipCodeColumnName
         self.columnDataTypeSpecifications = columnDataTypeSpecifications
         self.trimWhitespace = trimWhitespace
+        self.retentionType = retentionType
+        self.retentionDays = retentionDays
+        self.dateExpiration = dateExpiration
+        self.timeZone = timeZone
         self.selfUri = selfUri
     }
 
@@ -9635,6 +9771,10 @@ public class ContactList: Codable {
         case zipCodeColumnName
         case columnDataTypeSpecifications
         case trimWhitespace
+        case retentionType
+        case retentionDays
+        case dateExpiration
+        case timeZone
         case selfUri
     }
 
@@ -9716,6 +9856,12 @@ public class ContactListUploadUrlRequest: Codable {
 
 
 
+
+
+
+
+
+
     /** The number of seconds the presigned URL is valid for (from 1 to 604800 seconds). If none provided, defaults to 600 seconds */
     public var signedUrlTimeoutSeconds: Int?
     /** The content type of the file to upload. Allows MIME types are text/csv, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet */
@@ -9734,8 +9880,14 @@ public class ContactListUploadUrlRequest: Codable {
     public var divisionIdForTargetContactLists: String?
     /** File specification template ID */
     public var fileSpecificationTemplateId: String?
+    /** The column name from your file to get retention type values from. */
+    public var retentionTypeColumn: String?
+    /** The column name from your file to get retention day values from. */
+    public var retentionDaysColumn: String?
+    /** The column name from your file to get date expiration values from. */
+    public var retentionDateExpirationColumn: String?
 
-    public init(signedUrlTimeoutSeconds: Int?, contentType: String?, _id: String?, contactIdName: String?, importTemplateId: String?, listNamePrefix: String?, clearSystemData: Bool?, divisionIdForTargetContactLists: String?, fileSpecificationTemplateId: String?) {
+    public init(signedUrlTimeoutSeconds: Int?, contentType: String?, _id: String?, contactIdName: String?, importTemplateId: String?, listNamePrefix: String?, clearSystemData: Bool?, divisionIdForTargetContactLists: String?, fileSpecificationTemplateId: String?, retentionTypeColumn: String?, retentionDaysColumn: String?, retentionDateExpirationColumn: String?) {
         self.signedUrlTimeoutSeconds = signedUrlTimeoutSeconds
         self.contentType = contentType
         self._id = _id
@@ -9745,6 +9897,9 @@ public class ContactListUploadUrlRequest: Codable {
         self.clearSystemData = clearSystemData
         self.divisionIdForTargetContactLists = divisionIdForTargetContactLists
         self.fileSpecificationTemplateId = fileSpecificationTemplateId
+        self.retentionTypeColumn = retentionTypeColumn
+        self.retentionDaysColumn = retentionDaysColumn
+        self.retentionDateExpirationColumn = retentionDateExpirationColumn
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -9757,6 +9912,9 @@ public class ContactListUploadUrlRequest: Codable {
         case clearSystemData
         case divisionIdForTargetContactLists
         case fileSpecificationTemplateId
+        case retentionTypeColumn
+        case retentionDaysColumn
+        case retentionDateExpirationColumn
     }
 
 
@@ -9813,6 +9971,33 @@ public class ContactListingResponse: Codable {
         self.nextUri = nextUri
         self.previousUri = previousUri
         self.pageCount = pageCount
+    }
+
+
+}
+
+
+
+
+public class ContactListsBulkEditResponse: Codable {
+
+
+
+
+
+
+
+    /** A list of results for all of the Bulk operations specified in the request. Includes both successes and failures. Ordering is NOT guaranteed - may be in a different order from the request. */
+    public var results: [BulkResponseResultContactListContactListBulkEntityErrorContactList]?
+    /** The number of failed operations in the results. */
+    public var errorCount: Int?
+    /** The indexes of all failed operations in the results field. */
+    public var errorIndexes: [Int]?
+
+    public init(results: [BulkResponseResultContactListContactListBulkEntityErrorContactList]?, errorCount: Int?, errorIndexes: [Int]?) {
+        self.results = results
+        self.errorCount = errorCount
+        self.errorIndexes = errorIndexes
     }
 
 
@@ -10769,6 +10954,28 @@ public class ConversationAppSettings: Codable {
         self.humanize = humanize
         self.notifications = notifications
         self.sessionDurationSeconds = sessionDurationSeconds
+    }
+
+
+}
+
+
+
+
+public class ConversationAttribute: Codable {
+
+
+
+
+
+    /** The Conversation Custom Attributes schema that the variable is bound to. */
+    public var schema: ConversationAttributeSchema?
+    /** The name of the attribute within the schema that the variable value is bound to. */
+    public var attributeName: String?
+
+    public init(schema: ConversationAttributeSchema?, attributeName: String?) {
+        self.schema = schema
+        self.attributeName = attributeName
     }
 
 
@@ -15385,6 +15592,8 @@ public class CreateQueueRequest: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The queue name */
@@ -15437,6 +15646,8 @@ public class CreateQueueRequest: Codable {
     public var whisperPrompt: DomainEntityRef?
     /** The audio to be played when calls on this queue are on hold. If not configured, the default on-hold music will play. */
     public var onHoldPrompt: DomainEntityRef?
+    /** The canonical language code (e.g. en-US) used for the default media language on the queue. */
+    public var defaultMediaLanguage: String?
     /** Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered. */
     public var autoAnswerOnly: Bool?
     /** Canned response library IDs and mode with which they are associated with the queue */
@@ -15470,7 +15681,7 @@ public class CreateQueueRequest: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: QueueMediaSettings?, routingRules: [RoutingRule]?, conditionalGroupRouting: ConditionalGroupRouting?, conditionalGroupActivation: ConditionalGroupActivation?, bullseye: Bullseye?, scoringMethod: ScoringMethod?, lastAgentRoutingMode: LastAgentRoutingMode?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, memberGroups: [MemberGroup]?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, cannedResponseLibraries: CannedResponseLibraries?, enableTranscription: Bool?, enableAudioMonitoring: Bool?, enableManualAssignment: Bool?, agentOwnedRouting: AgentOwnedRouting?, directRouting: DirectRouting?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, peerId: String?, suppressInQueueCallRecording: Bool?, sourceQueueId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: QueueMediaSettings?, routingRules: [RoutingRule]?, conditionalGroupRouting: ConditionalGroupRouting?, conditionalGroupActivation: ConditionalGroupActivation?, bullseye: Bullseye?, scoringMethod: ScoringMethod?, lastAgentRoutingMode: LastAgentRoutingMode?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, memberGroups: [MemberGroup]?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, defaultMediaLanguage: String?, autoAnswerOnly: Bool?, cannedResponseLibraries: CannedResponseLibraries?, enableTranscription: Bool?, enableAudioMonitoring: Bool?, enableManualAssignment: Bool?, agentOwnedRouting: AgentOwnedRouting?, directRouting: DirectRouting?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, peerId: String?, suppressInQueueCallRecording: Bool?, sourceQueueId: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -15497,6 +15708,7 @@ public class CreateQueueRequest: Codable {
         self.messageInQueueFlow = messageInQueueFlow
         self.whisperPrompt = whisperPrompt
         self.onHoldPrompt = onHoldPrompt
+        self.defaultMediaLanguage = defaultMediaLanguage
         self.autoAnswerOnly = autoAnswerOnly
         self.cannedResponseLibraries = cannedResponseLibraries
         self.enableTranscription = enableTranscription
@@ -15542,6 +15754,7 @@ public class CreateQueueRequest: Codable {
         case messageInQueueFlow
         case whisperPrompt
         case onHoldPrompt
+        case defaultMediaLanguage
         case autoAnswerOnly
         case cannedResponseLibraries
         case enableTranscription
@@ -21483,6 +21696,8 @@ public class EventMessage: Codable {
         case campaignMessageCharacterLimitExceeded = "CAMPAIGN_MESSAGE_CHARACTER_LIMIT_EXCEEDED"
         case campaignStartError = "CAMPAIGN_START_ERROR"
         case campaignRuleStartError = "CAMPAIGN_RULE_START_ERROR"
+        case campaignRuleQueueActionThrottled = "CAMPAIGN_RULE_QUEUE_ACTION_THROTTLED"
+        case campaignRuleQueueNotFound = "CAMPAIGN_RULE_QUEUE_NOT_FOUND"
         case campaignScriptStageMissing = "CAMPAIGN_SCRIPT_STAGE_MISSING"
         case campaignSetDialingModeError = "CAMPAIGN_SET_DIALING_MODE_ERROR"
         case campaignStopped = "CAMPAIGN_STOPPED"
@@ -29086,6 +29301,7 @@ public class KnowledgeBaseCreateRequest: Codable {
         case msMy = "ms-MY"
         case heIl = "he-IL"
         case elGr = "el-GR"
+        case arSa = "ar-SA"
     }
 
 
@@ -29175,6 +29391,7 @@ public class KnowledgeBaseReference: Codable {
         case msMy = "ms-MY"
         case heIl = "he-IL"
         case elGr = "el-GR"
+        case arSa = "ar-SA"
     }
 
 
@@ -46902,6 +47119,8 @@ public class SurveyAssignment: Codable {
 
 
 
+
+
     /** The survey form used for this survey. */
     public var surveyForm: PublishedSurveyFormReference?
     /** The URI reference to the flow associated with this survey. */
@@ -46912,13 +47131,16 @@ public class SurveyAssignment: Codable {
     public var sendingUser: String?
     /** Validated email domain, required */
     public var sendingDomain: String?
+    /** If true, the survey invitation send time will be calculated using the threading timeline. If false or unspecified, a fixed 72-hour delay will be used. Default is false for new policies. */
+    public var useThreadingTimelineForSendTime: Bool?
 
-    public init(surveyForm: PublishedSurveyFormReference?, flow: DomainEntityRef?, inviteTimeInterval: String?, sendingUser: String?, sendingDomain: String?) {
+    public init(surveyForm: PublishedSurveyFormReference?, flow: DomainEntityRef?, inviteTimeInterval: String?, sendingUser: String?, sendingDomain: String?, useThreadingTimelineForSendTime: Bool?) {
         self.surveyForm = surveyForm
         self.flow = flow
         self.inviteTimeInterval = inviteTimeInterval
         self.sendingUser = sendingUser
         self.sendingDomain = sendingDomain
+        self.useThreadingTimelineForSendTime = useThreadingTimelineForSendTime
     }
 
 
@@ -50537,6 +50759,34 @@ public class UserActivityQueryFilter: Codable {
         self.type = type
         self.clauses = clauses
         self.predicates = predicates
+    }
+
+
+}
+
+
+
+
+public class UserActivityRoutingStatus: Codable {
+
+    public enum Status: String, Codable { 
+        case offQueue = "OFF_QUEUE"
+        case idle = "IDLE"
+        case interacting = "INTERACTING"
+        case notResponding = "NOT_RESPONDING"
+        case communicating = "COMMUNICATING"
+    }
+
+
+
+    /** Indicates the current routing status of the agent */
+    public var status: Status?
+    /** The timestamp when the agent went into this state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var startTime: Date?
+
+    public init(status: Status?, startTime: Date?) {
+        self.status = status
+        self.startTime = startTime
     }
 
 

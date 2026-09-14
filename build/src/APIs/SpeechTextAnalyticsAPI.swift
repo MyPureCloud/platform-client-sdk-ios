@@ -1459,7 +1459,8 @@ open class SpeechTextAnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "pageCount" : 1,
+  "total" : 1,
+  "pageCount" : 5,
   "entities" : [ {
     "topicsCount" : 0,
     "selfUri" : "https://openapi-generator.tech",
@@ -1622,7 +1623,8 @@ open class SpeechTextAnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "pageCount" : 6,
+  "total" : 6,
+  "pageCount" : 1,
   "entities" : [ {
     "flows" : [ {
       "selfUri" : "https://openapi-generator.tech",
@@ -2013,7 +2015,8 @@ open class SpeechTextAnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "pageCount" : 6,
+  "total" : 6,
+  "pageCount" : 1,
   "entities" : [ {
     "datePublished" : "2000-01-23T04:56:07.000+00:00",
     "publishedBy" : {
@@ -2403,6 +2406,7 @@ open class SpeechTextAnalyticsAPI {
     public enum SortBy_getSpeechandtextanalyticsTopics: String { 
         case name = "name"
         case matchingtype = "matchingType"
+        case realtime = "realTime"
     }
     
     

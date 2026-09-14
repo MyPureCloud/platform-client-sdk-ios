@@ -137,6 +137,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postOutboundContactlistfiltersBulkRetrieve**](OutboundAPI#postOutboundContactlistfiltersBulkRetrieve) | Retrieve multiple contact list filters |
 | [**postOutboundContactlistfiltersPreview**](OutboundAPI#postOutboundContactlistfiltersPreview) | Get a preview of the output of a contact list filter |
 | [**postOutboundContactlists**](OutboundAPI#postOutboundContactlists) | Create a contact List. |
+| [**postOutboundContactlistsBulkUpdate**](OutboundAPI#postOutboundContactlistsBulkUpdate) | Bulk update contact lists. |
 | [**postOutboundContactlistsUploads**](OutboundAPI#postOutboundContactlistsUploads) | Generate presigned upload URL for contact list. |
 | [**postOutboundContactlisttemplates**](OutboundAPI#postOutboundContactlisttemplates) | Create Contact List Template |
 | [**postOutboundContactlisttemplatesBulkAdd**](OutboundAPI#postOutboundContactlisttemplatesBulkAdd) | Add multiple contact list templates |
@@ -3453,7 +3454,7 @@ OutboundAPI.getOutboundContactlistfilters(pageSize: pageSize, pageNumber: pageNu
 
 
 
-> [ContactListEntityListing](ContactListEntityListing) getOutboundContactlists(includeImportStatus, includeSize, pageSize, pageNumber, allowEmptyResult, filterType, name, _id, divisionId, sortBy, sortOrder)
+> [ContactListEntityListing](ContactListEntityListing) getOutboundContactlists(includeImportStatus, includeSize, pageSize, pageNumber, allowEmptyResult, filterType, name, _id, divisionId, timeZone, dateExpiration, sortBy, sortOrder)
 
 Query a list of contact lists.
 
@@ -3484,11 +3485,13 @@ let filterType: OutboundAPI.FilterType_getOutboundContactlists = OutboundAPI.Fil
 let name: String = "" // Name
 let _id: [String] = [""] // id
 let divisionId: [String] = [""] // Division ID(s)
+let timeZone: String = "" // Filter by time zone
+let dateExpiration: [String] = [""] // Filter by expiration date. Supports filter type prefixes, e.g. greaterthan:2025-01-01T00:00:00Z. Multiple values narrow the range. See https://developer.genesys.cloud/routing/outbound/filter-type
 let sortBy: String = "" // Sort by
 let sortOrder: OutboundAPI.SortOrder_getOutboundContactlists = OutboundAPI.SortOrder_getOutboundContactlists.enummember // Sort order
 
 // Code example
-OutboundAPI.getOutboundContactlists(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, _id: _id, divisionId: divisionId, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+OutboundAPI.getOutboundContactlists(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, _id: _id, divisionId: divisionId, timeZone: timeZone, dateExpiration: dateExpiration, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3512,6 +3515,8 @@ OutboundAPI.getOutboundContactlists(includeImportStatus: includeImportStatus, in
 | **name** | **String**| Name | [optional] |
 | **_id** | [**[String]**](String)| id | [optional] |
 | **divisionId** | [**[String]**](String)| Division ID(s) | [optional] |
+| **timeZone** | **String**| Filter by time zone | [optional] |
+| **dateExpiration** | [**[String]**](String)| Filter by expiration date. Supports filter type prefixes, e.g. greaterthan:2025-01-01T00:00:00Z. Multiple values narrow the range. See https://developer.genesys.cloud/routing/outbound/filter-type | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 
@@ -3699,7 +3704,7 @@ OutboundAPI.getOutboundContactlisttemplate(contactListTemplateId: contactListTem
 
 
 
-> [ContactListTemplateEntityListing](ContactListTemplateEntityListing) getOutboundContactlisttemplates(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder)
+> [ContactListTemplateEntityListing](ContactListTemplateEntityListing) getOutboundContactlisttemplates(pageSize, pageNumber, allowEmptyResult, filterType, name, timeZone, sortBy, sortOrder)
 
 Query a list of contact list templates
 
@@ -3724,11 +3729,12 @@ let pageNumber: Int = 0 // Page number
 let allowEmptyResult: Bool = true // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundContactlisttemplates = OutboundAPI.FilterType_getOutboundContactlisttemplates.enummember // Filter type
 let name: String = "" // Name
+let timeZone: String = "" // Filter by time zone
 let sortBy: String = "" // Sort by
 let sortOrder: OutboundAPI.SortOrder_getOutboundContactlisttemplates = OutboundAPI.SortOrder_getOutboundContactlisttemplates.enummember // Sort order
 
 // Code example
-OutboundAPI.getOutboundContactlisttemplates(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+OutboundAPI.getOutboundContactlisttemplates(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, timeZone: timeZone, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3748,6 +3754,7 @@ OutboundAPI.getOutboundContactlisttemplates(pageSize: pageSize, pageNumber: page
 | **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] |
 | **filterType** | **String**| Filter type | [optional]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
+| **timeZone** | **String**| Filter by time zone | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 
@@ -7270,6 +7277,58 @@ OutboundAPI.postOutboundContactlists(body: body) { (response, error) in
 [**ContactList**](ContactList)
 
 
+## postOutboundContactlistsBulkUpdate
+
+
+
+> [ContactListsBulkEditResponse](ContactListsBulkEditResponse) postOutboundContactlistsBulkUpdate(body)
+
+Bulk update contact lists.
+
+A maximum of 100 contact lists can be updated per request.
+
+
+
+Wraps POST /api/v2/outbound/contactlists/bulk/update  
+
+Requires ANY permissions: 
+
+* outbound:contactList:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ContactListsBulkEditRequest = new ContactListsBulkEditRequest(...) // Contact lists bulk edit request.
+
+// Code example
+OutboundAPI.postOutboundContactlistsBulkUpdate(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.postOutboundContactlistsBulkUpdate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ContactListsBulkEditRequest**](ContactListsBulkEditRequest)| Contact lists bulk edit request. | |
+
+
+### Return type
+
+[**ContactListsBulkEditResponse**](ContactListsBulkEditResponse)
+
+
 ## postOutboundContactlistsUploads
 
 
@@ -9498,4 +9557,4 @@ OutboundAPI.putOutboundWrapupcodemappings(body: body) { (response, error) in
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_

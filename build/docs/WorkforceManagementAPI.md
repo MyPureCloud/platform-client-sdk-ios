@@ -341,6 +341,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery**](WorkforceManagementAPI#postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery) | Retrieves integration statuses for a list of current user time off requests |
 | [**postWorkforcemanagementUnavailabletimesQuery**](WorkforceManagementAPI#postWorkforcemanagementUnavailabletimesQuery) | Get agent unavailable times |
 | [**postWorkforcemanagementUnavailabletimesValidationJobs**](WorkforceManagementAPI#postWorkforcemanagementUnavailabletimesValidationJobs) | Validates proposed changes to an agent&#39;s unavailable time spans against scheduling rules and constraints for a specific week |
+| [**postWorkforcemanagementUsersActivity**](WorkforceManagementAPI#postWorkforcemanagementUsersActivity) | Get a list of UserScheduleAdherence records for the requested users |
 | [**putWorkforcemanagementAgentIntegrationsHris**](WorkforceManagementAPI#putWorkforcemanagementAgentIntegrationsHris) | Update integrations for agent |
 | [**putWorkforcemanagementBusinessunitTimeofflimitValues**](WorkforceManagementAPI#putWorkforcemanagementBusinessunitTimeofflimitValues) | Sets daily values for a date range of time-off limit object |
 | [**putWorkforcemanagementManagementunitTimeofflimitValues**](WorkforceManagementAPI#putWorkforcemanagementManagementunitTimeofflimitValues) | Sets daily values for a date range of time off limit object |
@@ -18517,6 +18518,56 @@ WorkforceManagementAPI.postWorkforcemanagementUnavailabletimesValidationJobs(bod
 [**ValidateAgentUnavailableTimesResponse**](ValidateAgentUnavailableTimesResponse)
 
 
+## postWorkforcemanagementUsersActivity
+
+
+
+> [UserActivityListing](UserActivityListing) postWorkforcemanagementUsersActivity(body)
+
+Get a list of UserScheduleAdherence records for the requested users
+
+
+
+Wraps POST /api/v2/workforcemanagement/users/activity  
+
+Requires ANY permissions: 
+
+* analytics:userObservation:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: UsersActivityRequest = new UsersActivityRequest(...) // Request body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementUsersActivity(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementUsersActivity was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**UsersActivityRequest**](UsersActivityRequest)| Request body | |
+
+
+### Return type
+
+[**UserActivityListing**](UserActivityListing)
+
+
 ## putWorkforcemanagementAgentIntegrationsHris
 
 
@@ -18733,4 +18784,4 @@ WorkforceManagementAPI.putWorkforcemanagementSchedulebidPreference(bidId: bidId,
 [**AgentScheduleBiddingPreferenceResponse**](AgentScheduleBiddingPreferenceResponse)
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_

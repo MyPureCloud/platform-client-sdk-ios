@@ -13,4 +13,4 @@ Defines a reference to SCIM groups.
 
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_

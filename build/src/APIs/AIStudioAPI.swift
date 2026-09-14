@@ -1075,6 +1075,13 @@ open class AIStudioAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "variables" : [ {
+    "customConversationAttributes" : [ {
+      "schema" : "{}",
+      "attributeName" : "attributeName"
+    }, {
+      "schema" : "{}",
+      "attributeName" : "attributeName"
+    } ],
     "listValues" : "{}",
     "scope" : "Input",
     "listVariables" : [ null, null ],
@@ -1083,6 +1090,13 @@ open class AIStudioAPI {
     "type" : "String",
     "validation" : "{}"
   }, {
+    "customConversationAttributes" : [ {
+      "schema" : "{}",
+      "attributeName" : "attributeName"
+    }, {
+      "schema" : "{}",
+      "attributeName" : "attributeName"
+    } ],
     "listValues" : "{}",
     "scope" : "Input",
     "listVariables" : [ null, null ],
@@ -1166,6 +1180,13 @@ open class AIStudioAPI {
      - examples: [{contentType=application/json, example={
   "guideVersion" : {
     "variables" : [ {
+      "customConversationAttributes" : [ {
+        "schema" : "{}",
+        "attributeName" : "attributeName"
+      }, {
+        "schema" : "{}",
+        "attributeName" : "attributeName"
+      } ],
       "listValues" : "{}",
       "scope" : "Input",
       "listVariables" : [ null, null ],
@@ -1174,6 +1195,13 @@ open class AIStudioAPI {
       "type" : "String",
       "validation" : "{}"
     }, {
+      "customConversationAttributes" : [ {
+        "schema" : "{}",
+        "attributeName" : "attributeName"
+      }, {
+        "schema" : "{}",
+        "attributeName" : "attributeName"
+      } ],
       "listValues" : "{}",
       "scope" : "Input",
       "listVariables" : [ null, null ],
@@ -1452,6 +1480,13 @@ open class AIStudioAPI {
   "id" : "id",
   "guideContent" : {
     "variables" : [ {
+      "customConversationAttributes" : [ {
+        "schema" : "{}",
+        "attributeName" : "attributeName"
+      }, {
+        "schema" : "{}",
+        "attributeName" : "attributeName"
+      } ],
       "listValues" : "{}",
       "scope" : "Input",
       "listVariables" : [ null, null ],
@@ -1460,6 +1495,13 @@ open class AIStudioAPI {
       "type" : "String",
       "validation" : "{}"
     }, {
+      "customConversationAttributes" : [ {
+        "schema" : "{}",
+        "attributeName" : "attributeName"
+      }, {
+        "schema" : "{}",
+        "attributeName" : "attributeName"
+      } ],
       "listValues" : "{}",
       "scope" : "Input",
       "listVariables" : [ null, null ],
@@ -1728,6 +1770,13 @@ open class AIStudioAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "variables" : [ {
+    "customConversationAttributes" : [ {
+      "schema" : "{}",
+      "attributeName" : "attributeName"
+    }, {
+      "schema" : "{}",
+      "attributeName" : "attributeName"
+    } ],
     "listValues" : "{}",
     "scope" : "Input",
     "listVariables" : [ null, null ],
@@ -1736,6 +1785,13 @@ open class AIStudioAPI {
     "type" : "String",
     "validation" : "{}"
   }, {
+    "customConversationAttributes" : [ {
+      "schema" : "{}",
+      "attributeName" : "attributeName"
+    }, {
+      "schema" : "{}",
+      "attributeName" : "attributeName"
+    } ],
     "listValues" : "{}",
     "scope" : "Input",
     "listVariables" : [ null, null ],
@@ -2235,6 +2291,13 @@ open class AIStudioAPI {
      - examples: [{contentType=application/json, example={
   "guideVersion" : {
     "variables" : [ {
+      "customConversationAttributes" : [ {
+        "schema" : "{}",
+        "attributeName" : "attributeName"
+      }, {
+        "schema" : "{}",
+        "attributeName" : "attributeName"
+      } ],
       "listValues" : "{}",
       "scope" : "Input",
       "listVariables" : [ null, null ],
@@ -2243,6 +2306,13 @@ open class AIStudioAPI {
       "type" : "String",
       "validation" : "{}"
     }, {
+      "customConversationAttributes" : [ {
+        "schema" : "{}",
+        "attributeName" : "attributeName"
+      }, {
+        "schema" : "{}",
+        "attributeName" : "attributeName"
+      } ],
       "listValues" : "{}",
       "scope" : "Input",
       "listVariables" : [ null, null ],
@@ -2388,6 +2458,13 @@ open class AIStudioAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "variables" : [ {
+    "customConversationAttributes" : [ {
+      "schema" : "{}",
+      "attributeName" : "attributeName"
+    }, {
+      "schema" : "{}",
+      "attributeName" : "attributeName"
+    } ],
     "listValues" : "{}",
     "scope" : "Input",
     "listVariables" : [ null, null ],
@@ -2396,6 +2473,13 @@ open class AIStudioAPI {
     "type" : "String",
     "validation" : "{}"
   }, {
+    "customConversationAttributes" : [ {
+      "schema" : "{}",
+      "attributeName" : "attributeName"
+    }, {
+      "schema" : "{}",
+      "attributeName" : "attributeName"
+    } ],
     "listValues" : "{}",
     "scope" : "Input",
     "listVariables" : [ null, null ],
@@ -2532,6 +2616,13 @@ open class AIStudioAPI {
   "id" : "id",
   "guideContent" : {
     "variables" : [ {
+      "customConversationAttributes" : [ {
+        "schema" : "{}",
+        "attributeName" : "attributeName"
+      }, {
+        "schema" : "{}",
+        "attributeName" : "attributeName"
+      } ],
       "listValues" : "{}",
       "scope" : "Input",
       "listVariables" : [ null, null ],
@@ -2540,6 +2631,13 @@ open class AIStudioAPI {
       "type" : "String",
       "validation" : "{}"
     }, {
+      "customConversationAttributes" : [ {
+        "schema" : "{}",
+        "attributeName" : "attributeName"
+      }, {
+        "schema" : "{}",
+        "attributeName" : "attributeName"
+      } ],
       "listValues" : "{}",
       "scope" : "Input",
       "listVariables" : [ null, null ],

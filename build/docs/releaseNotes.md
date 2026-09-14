@@ -1,254 +1,340 @@
-Platform API version: 10747
+Platform API version: 10793
 
 
 
 
-# Major Changes (16 changes)
+# Major Changes (4 changes)
 
-**PATCH /api/v2/agentic/virtualagents/{virtualAgentId}/versions/{versionId}** (1 change)
+**GET /api/v2/outbound/contactlisttemplates** (1 change)
 
-* Parameter validateOnly was added
+* Parameter timeZone was added
 
-**POST /api/v2/agentic/virtualagents/{virtualAgentId}/versions** (1 change)
+**GET /api/v2/outbound/contactlists** (2 changes)
 
-* Parameter validateOnly was added
+* Parameter timeZone was added
+* Parameter dateExpiration was added
 
-**GET /api/v2/mobiledevices/{deviceId}** (1 change)
+**GET /api/v2/architect/prompts** (1 change)
 
-* Has been deprecated
-
-**PUT /api/v2/mobiledevices/{deviceId}** (1 change)
-
-* Has been deprecated
-
-**DELETE /api/v2/mobiledevices/{deviceId}** (1 change)
-
-* Has been deprecated
-
-**GET /api/v2/mobiledevices** (1 change)
-
-* Has been deprecated
-
-**POST /api/v2/mobiledevices** (1 change)
-
-* Has been deprecated
-
-**GET /api/v2/socialmedia/topics/{topicId}/dataingestionrules** (1 change)
-
-* Response 200 type was changed from DataIngestionRuleResponseEntityListing to GenericDataIngestionRuleResponseEntityListing
-
-**DataIngestionRuleResponse** (1 change)
-
-* Model DataIngestionRuleResponse was removed
-
-**DataIngestionRuleResponseEntityListing** (1 change)
-
-* Model DataIngestionRuleResponseEntityListing was removed
-
-**FacebookDataIngestionRuleResponse** (1 change)
-
-* Property countries was removed
-
-**FacebookDataIngestionRuleVersionResponse** (1 change)
-
-* Property countries was removed
-
-**InstagramDataIngestionRuleResponse** (1 change)
-
-* Property countries was removed
-
-**InstagramDataIngestionRuleVersionResponse** (1 change)
-
-* Property countries was removed
-
-**OpenDataIngestionRuleResponse** (1 change)
-
-* Property countries was removed
-
-**OpenDataIngestionRuleVersionResponse** (1 change)
-
-* Property countries was removed
+* Parameter divisionId was added
 
 
-# Minor Changes (63 changes)
+# Minor Changes (90 changes)
 
-**/api/v2/externalcontacts/contacts/search** (2 changes)
+**/api/v2/casemanagement/cases/{caseId}/owner** (2 changes)
+
+* Path was added
+* Operation PATCH was added
+
+**/api/v2/casemanagement/cases/query/jobs/{jobId}/results** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/casemanagement/cases/query/jobs/{jobId}** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/casemanagement/cases/query/jobs** (2 changes)
 
 * Path was added
 * Operation POST was added
 
-**POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/query/jobs** (1 change)
+**/api/v2/outbound/contactlists/bulk/update** (2 changes)
 
-* Response 202 was added
+* Path was added
+* Operation POST was added
 
-**POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/evaluate/jobs** (1 change)
+**/api/v2/intents/customerintents/bulk/retrieve** (2 changes)
 
-* Response 202 was added
+* Path was added
+* Operation POST was added
 
-**POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/weeks/summary/jobs** (1 change)
+**/api/v2/workforcemanagement/users/activity** (2 changes)
 
-* Response 202 was added
+* Path was added
+* Operation POST was added
 
-**POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/unmatched/search/jobs** (1 change)
+**CreateVerifierResponse** (1 change)
 
-* Response 202 was added
+* Optional property encodedQuickResponseCode was added
 
-**POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/shifttrading/trades/state/bulk/jobs** (1 change)
+**AgenticVirtualAgentVersionDefinition** (1 change)
 
-* Response 202 was added
+* Optional property model was added
 
-**POST /api/v2/workforcemanagement/shifttrading/trades/mine/query/jobs** (1 change)
+**SummaryAggregateQueryPredicate** (1 change)
 
-* Response 202 was added
+* Enum value triggerType was added to property dimension
 
-**POST /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/jobs** (1 change)
+**SummaryAsyncAggregationQuery** (1 change)
 
-* Response 202 was added
+* Enum value triggerType was added to property groupBy
 
-**POST /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/state/jobs** (1 change)
+**SummaryAggregationQuery** (1 change)
 
-* Response 202 was added
+* Enum value triggerType was added to property groupBy
 
-**POST /api/v2/workforcemanagement/shifttrading/trades/{tradeId}/match/jobs** (1 change)
+**KnowledgeBaseReference** (1 change)
 
-* Response 202 was added
+* Enum value ar-SA was added to property languageCode
 
-**AnalyticsAgentStateAgentResponse** (8 changes)
-
-* Optional property managementUnitId was added
-* Optional property businessUnitId was added
-* Optional property adherenceState was added
-* Optional property adherenceImpact was added
-* Optional property adherenceDate was added
-* Optional property scheduledActivityCodeId was added
-* Optional property scheduledActivityCategory was added
-* Optional property actualActivityCategory was added
-
-**AnalyticsAgentStateCountsResponse** (3 changes)
-
-* Optional property adherenceStateCounts was added
-* Optional property scheduledActivityCategoryCounts was added
-* Optional property actualActivityCategoryCounts was added
-
-**ConversationAggregationQuery** (2 changes)
-
-* Enum value nAgentDeclined was added to property metrics
-* Enum value nAlertExpired was added to property metrics
-
-**ConversationAggregationSort** (2 changes)
-
-* Enum value nAgentDeclined was added to property name
-* Enum value nAlertExpired was added to property name
-
-**ConversationAggregationView** (2 changes)
-
-* Enum value nAgentDeclined was added to property target
-* Enum value nAlertExpired was added to property target
-
-**ConversationAsyncAggregationQuery** (2 changes)
-
-* Enum value nAgentDeclined was added to property metrics
-* Enum value nAlertExpired was added to property metrics
-
-**ConversationDetailQueryPredicate** (2 changes)
-
-* Enum value nAgentDeclined was added to property metric
-* Enum value nAlertExpired was added to property metric
-
-**ViewFilter** (4 changes)
-
-* Optional property socialEngagementLikes was added
-* Optional property socialEngagementShares was added
-* Optional property socialEngagementComments was added
-* Optional property socialEngagementViews was added
-
-**ContactSearchOperation** (1 change)
+**KnowledgeSettingDynamicFilter** (1 change)
 
 * Model was added
 
-**ContactSearchRequest** (1 change)
+**EmailMediaSettings** (1 change)
+
+* Optional property allOutboundEmailAddresses was added
+
+**QueueFullReference** (1 change)
+
+* Optional property defaultMediaLanguage was added
+
+**CaseOwnerUpdate** (1 change)
 
 * Model was added
 
-**ContactSimpleSearch** (1 change)
+**CaseQueryJobResultsResponse** (1 change)
 
 * Model was added
 
-**SendAgentlessOutboundMessageRequest** (1 change)
-
-* Optional property externalContactId was added
-
-**RecordingMessagingMessage** (1 change)
-
-* Optional property notificationResponse was added
-
-**GenericDataIngestionRuleResponse** (1 change)
+**CaseQueryJobError** (1 change)
 
 * Model was added
 
-**GenericDataIngestionRuleResponseEntityListing** (1 change)
+**CaseQueryJobResponse** (1 change)
 
 * Model was added
 
-**AllocationOutputsTemplate** (1 change)
+**CaseQueryJobCreate** (1 change)
 
 * Model was added
 
-**AllocationResultsTemplate** (1 change)
+**CaseQueryJobFilter** (1 change)
 
 * Model was added
 
-**WorkitemOnAttributeChangeCondition** (9 changes)
+**CaseQueryJobSort** (1 change)
 
-* Enum value priority was added to property attribute
-* Enum value queueId was added to property attribute
-* Enum value assigneeId was added to property attribute
-* Enum value assignmentState was added to property attribute
-* Enum value languageId was added to property attribute
-* Enum value externalTag was added to property attribute
-* Enum value wrapup was added to property attribute
-* Optional property operator was added
-* Optional property value was added
+* Model was added
 
-**WorkitemOnAttributeChangeConditionUpdate** (9 changes)
+**Queue** (1 change)
 
-* Enum value priority was added to property attribute
-* Enum value queueId was added to property attribute
-* Enum value assigneeId was added to property attribute
-* Enum value assignmentState was added to property attribute
-* Enum value languageId was added to property attribute
-* Enum value externalTag was added to property attribute
-* Enum value wrapup was added to property attribute
-* Optional property operator was added
-* Optional property value was added
+* Optional property defaultMediaLanguage was added
+
+**SurveyAssignment** (1 change)
+
+* Optional property useThreadingTimelineForSendTime was added
+
+**AgentChecklistResponse** (1 change)
+
+* Optional property preview was added
+
+**ChecklistFinalizePayload** (1 change)
+
+* Optional property preview was added
+
+**ChecklistActivationPayload** (1 change)
+
+* Optional property preview was added
+
+**ChecklistInferenceJobPayload** (1 change)
+
+* Optional property preview was added
+
+**ChecklistInferenceJobResponse** (1 change)
+
+* Optional property preview was added
+
+**DialerContact** (3 changes)
+
+* Optional property retentionType was added
+* Optional property retentionDays was added
+* Optional property dateExpiration was added
+
+**ContactList** (4 changes)
+
+* Optional property retentionType was added
+* Optional property retentionDays was added
+* Optional property dateExpiration was added
+* Optional property timeZone was added
+
+**ContactListTemplate** (3 changes)
+
+* Optional property retentionType was added
+* Optional property retentionDays was added
+* Optional property timeZone was added
+
+**BulkEntityErrorContactList** (1 change)
+
+* Model was added
+
+**BulkResponseResultContactListContactListBulkEntityErrorContactList** (1 change)
+
+* Model was added
+
+**ContactListsBulkEditResponse** (1 change)
+
+* Model was added
+
+**ContactListsBulkEditRequest** (1 change)
+
+* Model was added
+
+**ContactListUploadUrlRequest** (3 changes)
+
+* Optional property retentionTypeColumn was added
+* Optional property retentionDaysColumn was added
+* Optional property retentionDateExpirationColumn was added
+
+**WritableDialerContact** (3 changes)
+
+* Optional property retentionType was added
+* Optional property retentionDays was added
+* Optional property dateExpiration was added
+
+**EventMessage** (2 changes)
+
+* Enum value CAMPAIGN_RULE_QUEUE_ACTION_THROTTLED was added to property code
+* Enum value CAMPAIGN_RULE_QUEUE_NOT_FOUND was added to property code
+
+**OutboundSettings** (3 changes)
+
+* Optional property contactListDefaultRetentionType was added
+* Optional property contactListDefaultRetentionDays was added
+* Optional property timeZone was added
+
+**ConversationAttribute** (1 change)
+
+* Model was added
+
+**ConversationAttributeSchema** (1 change)
+
+* Model was added
+
+**Variable** (1 change)
+
+* Optional property customConversationAttributes was added
+
+**BatchGetCustomerIntentsRequest** (1 change)
+
+* Model was added
+
+**KnowledgeBase** (1 change)
+
+* Enum value ar-SA was added to property coreLanguage
+
+**KnowledgeBaseCreateRequest** (1 change)
+
+* Enum value ar-SA was added to property coreLanguage
+
+**KnowledgeDocumentsAnswerFilter** (1 change)
+
+* Enum value ar-SA was added to property language
+
+**OperationalEvent** (2 changes)
+
+* Optional property dateModified was added
+* Optional property entityModifiedBy was added
+
+**QueueRequest** (1 change)
+
+* Optional property defaultMediaLanguage was added
+
+**UserQueue** (1 change)
+
+* Optional property defaultMediaLanguage was added
+
+**CreateQueueRequest** (1 change)
+
+* Optional property defaultMediaLanguage was added
+
+**CreateRoutingSkill** (1 change)
+
+* Optional property divisionId was added
+
+**TopicsDefinitionsProgramsMappingsEntityListing** (1 change)
+
+* Optional property total was added
+
+**ProgramsEntityListing** (1 change)
+
+* Optional property total was added
+
+**UnpublishedProgramsEntityListing** (1 change)
+
+* Optional property total was added
+
+**Prompt** (1 change)
+
+* Optional property division was added
+
+**RegisterArchitectJobRequest** (1 change)
+
+* Optional property createStubs was added
+
+**UserActivity** (1 change)
+
+* Model was added
+
+**UserActivityAdherencePresence** (1 change)
+
+* Model was added
+
+**UserActivityListing** (1 change)
+
+* Model was added
+
+**UserActivityOutOfOffice** (1 change)
+
+* Model was added
+
+**UserActivityPresenceDefinition** (1 change)
+
+* Model was added
+
+**UserActivityRoutingStatus** (1 change)
+
+* Model was added
+
+**UsersActivityRequest** (1 change)
+
+* Model was added
+
+**TimeOffRequestQueryBody** (1 change)
+
+* Optional property teamIds was added
+
+**WorkitemQueryJobSort** (2 changes)
+
+* Enum value customFields was added to property name
+* Optional property customField was added
 
 
-# Point Changes (7 changes)
+# Point Changes (6 changes)
 
-**PATCH /api/v2/agentic/virtualagents/{virtualAgentId}/versions/{versionId}** (1 change)
+**PATCH /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup/{integrationId}** (1 change)
 
 * Description was changed
 
-**POST /api/v2/agentic/virtualagents/{virtualAgentId}/versions** (1 change)
+**POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup** (1 change)
 
 * Description was changed
 
-**GET /api/v2/mobiledevices/{deviceId}** (1 change)
+**GET /api/v2/users/{userId}/presences/purecloud** (1 change)
 
-* Summary was changed
+* Description was changed for parameter userId
 
-**PUT /api/v2/mobiledevices/{deviceId}** (1 change)
+**PATCH /api/v2/users/{userId}/presences/purecloud** (1 change)
 
-* Summary was changed
+* Description was changed for parameter userId
 
-**DELETE /api/v2/mobiledevices/{deviceId}** (1 change)
+**GET /api/v2/users/{userId}/presences/{sourceId}** (1 change)
 
-* Summary was changed
+* Description was changed for parameter userId
 
-**GET /api/v2/mobiledevices** (1 change)
+**PATCH /api/v2/users/{userId}/presences/{sourceId}** (1 change)
 
-* Summary was changed
-
-**POST /api/v2/mobiledevices** (1 change)
-
-* Summary was changed
+* Description was changed for parameter userId

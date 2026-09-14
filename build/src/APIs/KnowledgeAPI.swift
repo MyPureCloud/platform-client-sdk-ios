@@ -5069,6 +5069,7 @@ open class KnowledgeAPI {
         case msMy = "ms-MY"
         case heIl = "he-IL"
         case elGr = "el-GR"
+        case arSa = "ar-SA"
     }
     
     

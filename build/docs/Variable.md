@@ -13,7 +13,8 @@
 | **validation** | [**JSON**](JSON) | The validation configuration for the variable. Optional - if not present, no validation is applied. | [optional] |
 | **listValues** | [**JSON**](JSON) | The values configuration for List variables. Only applicable when type is &#39;List&#39;. | [optional] |
 | **listVariables** | [**[Variable]**]([Variable]) | The variables that the list result will be stored in. Only applicable when type is &#39;List&#39;. | [optional] |
+| **customConversationAttributes** | [**[ConversationAttribute]**]([ConversationAttribute]) | The Conversation Custom Attributes (CCA) for this variable. When present, the variable value is bound to the specified conversation attributes. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_

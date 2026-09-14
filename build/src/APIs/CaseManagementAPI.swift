@@ -2044,6 +2044,171 @@ open class CaseManagementAPI {
 
     
     
+    /**
+     Get a case query job by id
+     
+     - parameter jobId: (path) Job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getCasemanagementCasesQueryJob(jobId: String, completion: @escaping ((_ data: CaseQueryJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getCasemanagementCasesQueryJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<CaseQueryJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a case query job by id
+     - GET /api/v2/casemanagement/cases/query/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateStarted" : "2000-01-23T04:56:07.000+00:00",
+  "dateFinished" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "state" : "Queued",
+  "error" : "{}"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) Job ID 
+
+     - returns: RequestBuilder<CaseQueryJobResponse> 
+     */
+    open class func getCasemanagementCasesQueryJobWithRequestBuilder(jobId: String) -> RequestBuilder<CaseQueryJobResponse> {        
+        var path = "/api/v2/casemanagement/cases/query/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CaseQueryJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get results for a case query job
+     
+     - parameter jobId: (path) Job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getCasemanagementCasesQueryJobResults(jobId: String, completion: @escaping ((_ data: CaseQueryJobResultsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getCasemanagementCasesQueryJobResultsWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<CaseQueryJobResultsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get results for a case query job
+     - GET /api/v2/casemanagement/cases/query/jobs/{jobId}/results
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "summary" : "summary",
+    "owner" : "{}",
+    "dateDue" : "2000-01-23T04:56:07.000+00:00",
+    "creationStatus" : "Pending",
+    "selfUri" : "https://openapi-generator.tech",
+    "caseplan" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "externalContact" : "{}",
+    "priority" : "Unknown",
+    "dateClosed" : "2000-01-23T04:56:07.000+00:00",
+    "version" : 0,
+    "division" : "{}",
+    "reference" : "reference",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateStarted" : "2000-01-23T04:56:07.000+00:00",
+    "failureReason" : "{}",
+    "name" : "name",
+    "customerIntent" : "{}",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "ttlSeconds" : 6,
+    "status" : "Unknown"
+  }, {
+    "summary" : "summary",
+    "owner" : "{}",
+    "dateDue" : "2000-01-23T04:56:07.000+00:00",
+    "creationStatus" : "Pending",
+    "selfUri" : "https://openapi-generator.tech",
+    "caseplan" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "externalContact" : "{}",
+    "priority" : "Unknown",
+    "dateClosed" : "2000-01-23T04:56:07.000+00:00",
+    "version" : 0,
+    "division" : "{}",
+    "reference" : "reference",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateStarted" : "2000-01-23T04:56:07.000+00:00",
+    "failureReason" : "{}",
+    "name" : "name",
+    "customerIntent" : "{}",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "ttlSeconds" : 6,
+    "status" : "Unknown"
+  } ],
+  "pageSize" : 0
+}, statusCode=200}]
+     
+     - parameter jobId: (path) Job ID 
+
+     - returns: RequestBuilder<CaseQueryJobResultsResponse> 
+     */
+    open class func getCasemanagementCasesQueryJobResultsWithRequestBuilder(jobId: String) -> RequestBuilder<CaseQueryJobResultsResponse> {        
+        var path = "/api/v2/casemanagement/cases/query/jobs/{jobId}/results"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CaseQueryJobResultsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     public enum Expands_getCasemanagementCasesReference: String { 
@@ -2200,6 +2365,86 @@ open class CaseManagementAPI {
      */
     open class func patchCasemanagementCaseDatedueWithRequestBuilder(caseId: String, body: CaseDateDueUpdate) -> RequestBuilder<Case> {        
         var path = "/api/v2/casemanagement/cases/{caseId}/datedue"
+        let caseIdPreEscape = "\(caseId)"
+        let caseIdPostEscape = caseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{caseId}", with: caseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Case>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update the ownerId of a Case
+     
+     - parameter caseId: (path) Case identifier. 
+     - parameter body: (body) OwnerId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchCasemanagementCaseOwner(caseId: String, body: CaseOwnerUpdate, completion: @escaping ((_ data: Case?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchCasemanagementCaseOwnerWithRequestBuilder(caseId: caseId, body: body)
+        requestBuilder.execute { (response: Response<Case>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the ownerId of a Case
+     - PATCH /api/v2/casemanagement/cases/{caseId}/owner
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "summary" : "summary",
+  "owner" : "{}",
+  "dateDue" : "2000-01-23T04:56:07.000+00:00",
+  "creationStatus" : "Pending",
+  "selfUri" : "https://openapi-generator.tech",
+  "caseplan" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "externalContact" : "{}",
+  "priority" : "Unknown",
+  "dateClosed" : "2000-01-23T04:56:07.000+00:00",
+  "version" : 0,
+  "division" : "{}",
+  "reference" : "reference",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "dateStarted" : "2000-01-23T04:56:07.000+00:00",
+  "failureReason" : "{}",
+  "name" : "name",
+  "customerIntent" : "{}",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "ttlSeconds" : 6,
+  "status" : "Unknown"
+}, statusCode=200}]
+     
+     - parameter caseId: (path) Case identifier. 
+     - parameter body: (body) OwnerId 
+
+     - returns: RequestBuilder<Case> 
+     */
+    open class func patchCasemanagementCaseOwnerWithRequestBuilder(caseId: String, body: CaseOwnerUpdate) -> RequestBuilder<Case> {        
+        var path = "/api/v2/casemanagement/cases/{caseId}/owner"
         let caseIdPreEscape = "\(caseId)"
         let caseIdPostEscape = caseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{caseId}", with: caseIdPostEscape, options: .literal, range: nil)
@@ -3324,6 +3569,63 @@ open class CaseManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CaseAssociationQueryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create a Case query job.
+     
+     - parameter body: (body) Case query job create request. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postCasemanagementCasesQueryJobs(body: CaseQueryJobCreate, completion: @escaping ((_ data: CaseQueryJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postCasemanagementCasesQueryJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<CaseQueryJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a Case query job.
+     - POST /api/v2/casemanagement/cases/query/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateStarted" : "2000-01-23T04:56:07.000+00:00",
+  "dateFinished" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "state" : "Queued",
+  "error" : "{}"
+}, statusCode=200}]
+     
+     - parameter body: (body) Case query job create request. 
+
+     - returns: RequestBuilder<CaseQueryJobResponse> 
+     */
+    open class func postCasemanagementCasesQueryJobsWithRequestBuilder(body: CaseQueryJobCreate) -> RequestBuilder<CaseQueryJobResponse> {        
+        let path = "/api/v2/casemanagement/cases/query/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CaseQueryJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

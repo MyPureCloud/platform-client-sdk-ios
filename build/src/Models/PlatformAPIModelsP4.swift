@@ -5048,377 +5048,40 @@ public class BulkDeleteResponse: Codable {
 
 
 
-public class BulkError: Codable {
+public class BulkEntityErrorContactList: Codable {
 
 
 
 
 
-    /** Error message of the bulk operation result. */
-    public var message: String?
-    /** Error code of the bulk operation result. */
+
+
+
+
+
+
+
+
+    /** An error code for the specific error condition. */
     public var code: String?
-
-    public init(message: String?, code: String?) {
-        self.message = message
-        self.code = code
-    }
-
-
-}
-
-
-
-
-public class BulkErrorDetail: Codable {
-
-
-
-
-
-
-
-    /** The name of the field which experienced an error. */
-    public var fieldName: String?
-    /** The field value from the request which caused the error. */
-    public var value: String?
-    /** A field-specific error message describing why this operation was rejected. */
+    /** A short error message. */
     public var message: String?
-
-    public init(fieldName: String?, value: String?, message: String?) {
-        self.fieldName = fieldName
-        self.value = value
-        self.message = message
-    }
-
-
-}
-
-
-
-
-public class BulkJobAddResult: Codable {
-
-
-
-
-
-    /** Error details if the operation failed. */
-    public var error: BulkJobError?
-    /** The result of the operation if it succeeded. For Workitem Bulk Add this is a summary. */
-    public var entity: BulkJobAddWorkitemSummary?
-
-    public init(error: BulkJobError?, entity: BulkJobAddWorkitemSummary?) {
-        self.error = error
-        self.entity = entity
-    }
-
-
-}
-
-
-
-
-public class BulkOrganizationsEnrichResponse: Codable {
-
-
-
-
-
-
-
-    /** A list of results for all of the Bulk operations specified in the request. Includes both successes and failures. Ordering is NOT guaranteed - may be in a different order from the request. */
-    public var results: [BulkResponseResultExternalOrganizationExternalOrganizationEnrichRequestBulkEntityErrorExternalOrganizationEnrichRequest]?
-    /** The number of failed operations in the results. */
-    public var errorCount: Int?
-    /** The indexes of all failed operations in the results field. */
-    public var errorIndexes: [Int]?
-
-    public init(results: [BulkResponseResultExternalOrganizationExternalOrganizationEnrichRequestBulkEntityErrorExternalOrganizationEnrichRequest]?, errorCount: Int?, errorIndexes: [Int]?) {
-        self.results = results
-        self.errorCount = errorCount
-        self.errorIndexes = errorIndexes
-    }
-
-
-}
-
-
-
-
-public class BulkPublishOpportunitiesResponse: Codable {
-
-
-
-
-
-    /** The result for each requested item */
-    public var results: [BulkOpportunitiesReferenceResult]?
-    /** The count of failed operations in the bulk request */
-    public var errorCount: Int?
-
-    public init(results: [BulkOpportunitiesReferenceResult]?, errorCount: Int?) {
-        self.results = results
-        self.errorCount = errorCount
-    }
-
-
-}
-
-
-
-
-public class BulkRemoveOpportunitiesResponse: Codable {
-
-
-
-
-
-    /** The result for each requested item */
-    public var results: [BulkRemoveOpportunitiesResult]?
-    /** The count of failed operations in the bulk request */
-    public var errorCount: Int?
-
-    public init(results: [BulkRemoveOpportunitiesResult]?, errorCount: Int?) {
-        self.results = results
-        self.errorCount = errorCount
-    }
-
-
-}
-
-
-
-
-public class BulkResponse: Codable {
-
-
-
-
-
-
-
-    /** A list of the results from the bulk operation. */
-    public var results: [BulkResult]?
-    /** The number of errors from the bulk operation. */
-    public var errorCount: Int?
-    /** An index of where the errors are in the listing. */
-    public var errorIndexes: [Int]?
-
-    public init(results: [BulkResult]?, errorCount: Int?, errorIndexes: [Int]?) {
-        self.results = results
-        self.errorCount = errorCount
-        self.errorIndexes = errorIndexes
-    }
-
-
-}
-
-
-
-
-public class BulkResponseResultExternalOrganizationExternalOrganizationEnrichRequestBulkEntityErrorExternalOrganizationEnrichRequest: Codable {
-
-
-
-
-
-
-
-
-
-
-
-    /** The id associated with this operation. For Bulk Enrich, this id is specified in the request; for all other Bulk endpoints, this id is the id of the affected entity. */
-    public var _id: String?
-    /** Whether the requested operation completed successfully. */
-    public var success: Bool?
-    /** The entity which was affected by this Bulk operation. Only returned on success. */
-    public var entity: ExternalOrganization?
-    /** An error describing why this Bulk operation failed. Only returned on failure. */
-    public var error: BulkEntityErrorExternalOrganizationEnrichRequest?
-    /** Status Code for the requested operation. */
+    /** The HTTP Status Code for the error. */
     public var status: Int?
+    /** Whether this particular error should be retried. */
+    public var retryable: Bool?
+    /** Additional error details for specific fields. */
+    public var details: [BulkErrorDetail]?
+    /** The entity body specified in the Bulk request operation that caused this error. */
+    public var entity: ContactList?
 
-    public init(_id: String?, success: Bool?, entity: ExternalOrganization?, error: BulkEntityErrorExternalOrganizationEnrichRequest?, status: Int?) {
-        self._id = _id
-        self.success = success
+    public init(code: String?, message: String?, status: Int?, retryable: Bool?, details: [BulkErrorDetail]?, entity: ContactList?) {
+        self.code = code
+        self.message = message
+        self.status = status
+        self.retryable = retryable
+        self.details = details
         self.entity = entity
-        self.error = error
-        self.status = status
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case success
-        case entity
-        case error
-        case status
-    }
-
-
-}
-
-
-
-
-public class BulkUpdateActivityCodeResponse: Codable {
-
-
-
-    public var entities: [BusinessUnitActivityCode]?
-
-    public init(entities: [BusinessUnitActivityCode]?) {
-        self.entities = entities
-    }
-
-
-}
-
-
-
-
-public class BulkUpdateDecisionTableRowsResponse: Codable {
-
-
-
-
-
-    /** The total number of rows successfully updated */
-    public var totalUpdated: Int?
-    /** The list of updated decision table rows */
-    public var rows: [DecisionTableRow]?
-
-    public init(totalUpdated: Int?, rows: [DecisionTableRow]?) {
-        self.totalUpdated = totalUpdated
-        self.rows = rows
-    }
-
-
-}
-
-
-
-
-public class BulkUpdateShiftTradeListJobRequest: Codable {
-
-
-
-
-
-
-
-    /** The IDs of the management units from which to update shift trades */
-    public var managementUnitIds: [String]?
-    /** The start week dates in which the shift trades being updated occur in the business unit time zone (yyyy-MM-dd format) */
-    public var weekDates: [Date]?
-    /** The shift trades that are being updated */
-    public var entities: [BulkUpdateShiftTradeStateRequestItem]?
-
-    public init(managementUnitIds: [String]?, weekDates: [Date]?, entities: [BulkUpdateShiftTradeStateRequestItem]?) {
-        self.managementUnitIds = managementUnitIds
-        self.weekDates = weekDates
-        self.entities = entities
-    }
-
-
-}
-
-
-
-
-public class BulkUpdateShiftTradeStateResponse: Codable {
-
-    public enum Status: String, Codable { 
-        case processing = "Processing"
-        case complete = "Complete"
-        case canceled = "Canceled"
-        case error = "Error"
-    }
-
-
-
-
-
-    /** The status of the operation */
-    public var status: Status?
-    /** The ID for the operation */
-    public var operationId: String?
-    /** The result of the operation.  Null unless status == Complete */
-    public var result: BulkUpdateShiftTradeStateResult?
-
-    public init(status: Status?, operationId: String?, result: BulkUpdateShiftTradeStateResult?) {
-        self.status = status
-        self.operationId = operationId
-        self.result = result
-    }
-
-
-}
-
-
-
-
-public class BusinessUnitListing: Codable {
-
-
-
-    public var entities: [BusinessUnitListItem]?
-
-    public init(entities: [BusinessUnitListItem]?) {
-        self.entities = entities
-    }
-
-
-}
-
-
-
-
-public class CalibrationEntityListing: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public var entities: [Calibration]?
-    public var pageSize: Int?
-    public var pageNumber: Int?
-    public var total: Int64?
-    public var lastUri: String?
-    public var firstUri: String?
-    public var selfUri: String?
-    public var nextUri: String?
-    public var previousUri: String?
-    public var pageCount: Int?
-
-    public init(entities: [Calibration]?, pageSize: Int?, pageNumber: Int?, total: Int64?, lastUri: String?, firstUri: String?, selfUri: String?, nextUri: String?, previousUri: String?, pageCount: Int?) {
-        self.entities = entities
-        self.pageSize = pageSize
-        self.pageNumber = pageNumber
-        self.total = total
-        self.lastUri = lastUri
-        self.firstUri = firstUri
-        self.selfUri = selfUri
-        self.nextUri = nextUri
-        self.previousUri = previousUri
-        self.pageCount = pageCount
     }
 
 
@@ -5699,6 +5362,430 @@ public class Call: Codable {
         case queueMediaSettings
         case clientIpAddress
         case disposition
+    }
+
+
+}
+
+
+
+
+public class BulkError: Codable {
+
+
+
+
+
+    /** Error message of the bulk operation result. */
+    public var message: String?
+    /** Error code of the bulk operation result. */
+    public var code: String?
+
+    public init(message: String?, code: String?) {
+        self.message = message
+        self.code = code
+    }
+
+
+}
+
+
+
+
+public class BulkErrorDetail: Codable {
+
+
+
+
+
+
+
+    /** The name of the field which experienced an error. */
+    public var fieldName: String?
+    /** The field value from the request which caused the error. */
+    public var value: String?
+    /** A field-specific error message describing why this operation was rejected. */
+    public var message: String?
+
+    public init(fieldName: String?, value: String?, message: String?) {
+        self.fieldName = fieldName
+        self.value = value
+        self.message = message
+    }
+
+
+}
+
+
+
+
+public class BulkJobAddResult: Codable {
+
+
+
+
+
+    /** Error details if the operation failed. */
+    public var error: BulkJobError?
+    /** The result of the operation if it succeeded. For Workitem Bulk Add this is a summary. */
+    public var entity: BulkJobAddWorkitemSummary?
+
+    public init(error: BulkJobError?, entity: BulkJobAddWorkitemSummary?) {
+        self.error = error
+        self.entity = entity
+    }
+
+
+}
+
+
+
+
+public class BulkOrganizationsEnrichResponse: Codable {
+
+
+
+
+
+
+
+    /** A list of results for all of the Bulk operations specified in the request. Includes both successes and failures. Ordering is NOT guaranteed - may be in a different order from the request. */
+    public var results: [BulkResponseResultExternalOrganizationExternalOrganizationEnrichRequestBulkEntityErrorExternalOrganizationEnrichRequest]?
+    /** The number of failed operations in the results. */
+    public var errorCount: Int?
+    /** The indexes of all failed operations in the results field. */
+    public var errorIndexes: [Int]?
+
+    public init(results: [BulkResponseResultExternalOrganizationExternalOrganizationEnrichRequestBulkEntityErrorExternalOrganizationEnrichRequest]?, errorCount: Int?, errorIndexes: [Int]?) {
+        self.results = results
+        self.errorCount = errorCount
+        self.errorIndexes = errorIndexes
+    }
+
+
+}
+
+
+
+
+public class BulkPublishOpportunitiesResponse: Codable {
+
+
+
+
+
+    /** The result for each requested item */
+    public var results: [BulkOpportunitiesReferenceResult]?
+    /** The count of failed operations in the bulk request */
+    public var errorCount: Int?
+
+    public init(results: [BulkOpportunitiesReferenceResult]?, errorCount: Int?) {
+        self.results = results
+        self.errorCount = errorCount
+    }
+
+
+}
+
+
+
+
+public class BulkRemoveOpportunitiesResponse: Codable {
+
+
+
+
+
+    /** The result for each requested item */
+    public var results: [BulkRemoveOpportunitiesResult]?
+    /** The count of failed operations in the bulk request */
+    public var errorCount: Int?
+
+    public init(results: [BulkRemoveOpportunitiesResult]?, errorCount: Int?) {
+        self.results = results
+        self.errorCount = errorCount
+    }
+
+
+}
+
+
+
+
+public class BulkResponse: Codable {
+
+
+
+
+
+
+
+    /** A list of the results from the bulk operation. */
+    public var results: [BulkResult]?
+    /** The number of errors from the bulk operation. */
+    public var errorCount: Int?
+    /** An index of where the errors are in the listing. */
+    public var errorIndexes: [Int]?
+
+    public init(results: [BulkResult]?, errorCount: Int?, errorIndexes: [Int]?) {
+        self.results = results
+        self.errorCount = errorCount
+        self.errorIndexes = errorIndexes
+    }
+
+
+}
+
+
+
+
+public class BulkResponseResultContactListContactListBulkEntityErrorContactList: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** The id associated with this operation. For Bulk Enrich, this id is specified in the request; for all other Bulk endpoints, this id is the id of the affected entity. */
+    public var _id: String?
+    /** Whether the requested operation completed successfully. */
+    public var success: Bool?
+    /** The entity which was affected by this Bulk operation. Only returned on success. */
+    public var entity: ContactList?
+    /** An error describing why this Bulk operation failed. Only returned on failure. */
+    public var error: BulkEntityErrorContactList?
+    /** Status Code for the requested operation. */
+    public var status: Int?
+
+    public init(_id: String?, success: Bool?, entity: ContactList?, error: BulkEntityErrorContactList?, status: Int?) {
+        self._id = _id
+        self.success = success
+        self.entity = entity
+        self.error = error
+        self.status = status
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case success
+        case entity
+        case error
+        case status
+    }
+
+
+}
+
+
+
+
+public class BulkResponseResultExternalOrganizationExternalOrganizationEnrichRequestBulkEntityErrorExternalOrganizationEnrichRequest: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** The id associated with this operation. For Bulk Enrich, this id is specified in the request; for all other Bulk endpoints, this id is the id of the affected entity. */
+    public var _id: String?
+    /** Whether the requested operation completed successfully. */
+    public var success: Bool?
+    /** The entity which was affected by this Bulk operation. Only returned on success. */
+    public var entity: ExternalOrganization?
+    /** An error describing why this Bulk operation failed. Only returned on failure. */
+    public var error: BulkEntityErrorExternalOrganizationEnrichRequest?
+    /** Status Code for the requested operation. */
+    public var status: Int?
+
+    public init(_id: String?, success: Bool?, entity: ExternalOrganization?, error: BulkEntityErrorExternalOrganizationEnrichRequest?, status: Int?) {
+        self._id = _id
+        self.success = success
+        self.entity = entity
+        self.error = error
+        self.status = status
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case success
+        case entity
+        case error
+        case status
+    }
+
+
+}
+
+
+
+
+public class BulkUpdateActivityCodeResponse: Codable {
+
+
+
+    public var entities: [BusinessUnitActivityCode]?
+
+    public init(entities: [BusinessUnitActivityCode]?) {
+        self.entities = entities
+    }
+
+
+}
+
+
+
+
+public class BulkUpdateDecisionTableRowsResponse: Codable {
+
+
+
+
+
+    /** The total number of rows successfully updated */
+    public var totalUpdated: Int?
+    /** The list of updated decision table rows */
+    public var rows: [DecisionTableRow]?
+
+    public init(totalUpdated: Int?, rows: [DecisionTableRow]?) {
+        self.totalUpdated = totalUpdated
+        self.rows = rows
+    }
+
+
+}
+
+
+
+
+public class BulkUpdateShiftTradeListJobRequest: Codable {
+
+
+
+
+
+
+
+    /** The IDs of the management units from which to update shift trades */
+    public var managementUnitIds: [String]?
+    /** The start week dates in which the shift trades being updated occur in the business unit time zone (yyyy-MM-dd format) */
+    public var weekDates: [Date]?
+    /** The shift trades that are being updated */
+    public var entities: [BulkUpdateShiftTradeStateRequestItem]?
+
+    public init(managementUnitIds: [String]?, weekDates: [Date]?, entities: [BulkUpdateShiftTradeStateRequestItem]?) {
+        self.managementUnitIds = managementUnitIds
+        self.weekDates = weekDates
+        self.entities = entities
+    }
+
+
+}
+
+
+
+
+public class BulkUpdateShiftTradeStateResponse: Codable {
+
+    public enum Status: String, Codable { 
+        case processing = "Processing"
+        case complete = "Complete"
+        case canceled = "Canceled"
+        case error = "Error"
+    }
+
+
+
+
+
+    /** The status of the operation */
+    public var status: Status?
+    /** The ID for the operation */
+    public var operationId: String?
+    /** The result of the operation.  Null unless status == Complete */
+    public var result: BulkUpdateShiftTradeStateResult?
+
+    public init(status: Status?, operationId: String?, result: BulkUpdateShiftTradeStateResult?) {
+        self.status = status
+        self.operationId = operationId
+        self.result = result
+    }
+
+
+}
+
+
+
+
+public class BusinessUnitListing: Codable {
+
+
+
+    public var entities: [BusinessUnitListItem]?
+
+    public init(entities: [BusinessUnitListItem]?) {
+        self.entities = entities
+    }
+
+
+}
+
+
+
+
+public class CalibrationEntityListing: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public var entities: [Calibration]?
+    public var pageSize: Int?
+    public var pageNumber: Int?
+    public var total: Int64?
+    public var lastUri: String?
+    public var firstUri: String?
+    public var selfUri: String?
+    public var nextUri: String?
+    public var previousUri: String?
+    public var pageCount: Int?
+
+    public init(entities: [Calibration]?, pageSize: Int?, pageNumber: Int?, total: Int64?, lastUri: String?, firstUri: String?, selfUri: String?, nextUri: String?, previousUri: String?, pageCount: Int?) {
+        self.entities = entities
+        self.pageSize = pageSize
+        self.pageNumber = pageNumber
+        self.total = total
+        self.lastUri = lastUri
+        self.firstUri = firstUri
+        self.selfUri = selfUri
+        self.nextUri = nextUri
+        self.previousUri = previousUri
+        self.pageCount = pageCount
     }
 
 
@@ -7917,11 +8004,16 @@ public class ChecklistInferenceJobPayload: Codable {
 
 
 
+
+
     /** List of conversations on which checklist evaluation is to be done. */
     public var conversationContext: [ConversationContext]?
+    /** Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events. */
+    public var preview: Bool?
 
-    public init(conversationContext: [ConversationContext]?) {
+    public init(conversationContext: [ConversationContext]?, preview: Bool?) {
         self.conversationContext = conversationContext
+        self.preview = preview
     }
 
 
@@ -13839,85 +13931,6 @@ public class ConversationSummaryTopicConversationSummaryEvent: Codable {
 
 
 
-public class Copilot: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum NluEngineType: String, Codable { 
-        case nluV3 = "NluV3"
-    }
-
-
-
-
-
-
-
-
-
-
-
-    /** Copilot is enabled. */
-    public var enabled: Bool?
-    /** Copilot is live on selected queue. */
-    public var liveOnQueue: Bool?
-    /** Copilot default language, e.g. [en-US, es-US, es-ES]. Once set, it can not be modified. */
-    public var defaultLanguage: String?
-    /** Deprecated: Please use AutoSearchConfig and ManualSearchConfig fields instead. */
-    public var knowledgeAnswerConfig: KnowledgeAnswerConfig?
-    /** Copilot generated summary configuration. */
-    public var summaryGenerationConfig: SummaryGenerationConfig?
-    /** Copilot generated wrapup code prediction configuration. */
-    public var wrapupCodePredictionConfig: WrapupCodePredictionConfig?
-    /** Deprecated: Please use AutoSearchConfig and ManualSearchConfig fields instead. */
-    public var answerGenerationConfig: AnswerGenerationConfig?
-    /** Language understanding engine type. */
-    public var nluEngineType: NluEngineType?
-    /** NLU configuration. */
-    public var nluConfig: NluConfig?
-    /** Rule engine configuration. */
-    public var ruleEngineConfig: RuleEngineConfig?
-    /** Auto search configuration. */
-    public var autoSearchConfig: AutoSearchConfig?
-    /** Manual Search configuration. */
-    public var manualSearchConfig: ManualSearchConfig?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(enabled: Bool?, liveOnQueue: Bool?, defaultLanguage: String?, knowledgeAnswerConfig: KnowledgeAnswerConfig?, summaryGenerationConfig: SummaryGenerationConfig?, wrapupCodePredictionConfig: WrapupCodePredictionConfig?, answerGenerationConfig: AnswerGenerationConfig?, nluEngineType: NluEngineType?, nluConfig: NluConfig?, ruleEngineConfig: RuleEngineConfig?, autoSearchConfig: AutoSearchConfig?, manualSearchConfig: ManualSearchConfig?, selfUri: String?) {
-        self.enabled = enabled
-        self.liveOnQueue = liveOnQueue
-        self.defaultLanguage = defaultLanguage
-        self.knowledgeAnswerConfig = knowledgeAnswerConfig
-        self.summaryGenerationConfig = summaryGenerationConfig
-        self.wrapupCodePredictionConfig = wrapupCodePredictionConfig
-        self.answerGenerationConfig = answerGenerationConfig
-        self.nluEngineType = nluEngineType
-        self.nluConfig = nluConfig
-        self.ruleEngineConfig = ruleEngineConfig
-        self.autoSearchConfig = autoSearchConfig
-        self.manualSearchConfig = manualSearchConfig
-        self.selfUri = selfUri
-    }
-
-
-}
-
-
-
-
 public class ConversationSummaryTopicSummaryExtractedCustomEntity: Codable {
 
 
@@ -14346,6 +14359,85 @@ public class ConversationVideoEventTopicDomainEntityRef: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case selfUri
+    }
+
+
+}
+
+
+
+
+public class Copilot: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum NluEngineType: String, Codable { 
+        case nluV3 = "NluV3"
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /** Copilot is enabled. */
+    public var enabled: Bool?
+    /** Copilot is live on selected queue. */
+    public var liveOnQueue: Bool?
+    /** Copilot default language, e.g. [en-US, es-US, es-ES]. Once set, it can not be modified. */
+    public var defaultLanguage: String?
+    /** Deprecated: Please use AutoSearchConfig and ManualSearchConfig fields instead. */
+    public var knowledgeAnswerConfig: KnowledgeAnswerConfig?
+    /** Copilot generated summary configuration. */
+    public var summaryGenerationConfig: SummaryGenerationConfig?
+    /** Copilot generated wrapup code prediction configuration. */
+    public var wrapupCodePredictionConfig: WrapupCodePredictionConfig?
+    /** Deprecated: Please use AutoSearchConfig and ManualSearchConfig fields instead. */
+    public var answerGenerationConfig: AnswerGenerationConfig?
+    /** Language understanding engine type. */
+    public var nluEngineType: NluEngineType?
+    /** NLU configuration. */
+    public var nluConfig: NluConfig?
+    /** Rule engine configuration. */
+    public var ruleEngineConfig: RuleEngineConfig?
+    /** Auto search configuration. */
+    public var autoSearchConfig: AutoSearchConfig?
+    /** Manual Search configuration. */
+    public var manualSearchConfig: ManualSearchConfig?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(enabled: Bool?, liveOnQueue: Bool?, defaultLanguage: String?, knowledgeAnswerConfig: KnowledgeAnswerConfig?, summaryGenerationConfig: SummaryGenerationConfig?, wrapupCodePredictionConfig: WrapupCodePredictionConfig?, answerGenerationConfig: AnswerGenerationConfig?, nluEngineType: NluEngineType?, nluConfig: NluConfig?, ruleEngineConfig: RuleEngineConfig?, autoSearchConfig: AutoSearchConfig?, manualSearchConfig: ManualSearchConfig?, selfUri: String?) {
+        self.enabled = enabled
+        self.liveOnQueue = liveOnQueue
+        self.defaultLanguage = defaultLanguage
+        self.knowledgeAnswerConfig = knowledgeAnswerConfig
+        self.summaryGenerationConfig = summaryGenerationConfig
+        self.wrapupCodePredictionConfig = wrapupCodePredictionConfig
+        self.answerGenerationConfig = answerGenerationConfig
+        self.nluEngineType = nluEngineType
+        self.nluConfig = nluConfig
+        self.ruleEngineConfig = ruleEngineConfig
+        self.autoSearchConfig = autoSearchConfig
+        self.manualSearchConfig = manualSearchConfig
+        self.selfUri = selfUri
     }
 
 
@@ -24441,7 +24533,7 @@ public class HeaderEntry: Codable {
 
 
 
-    /** The key of the header (e.g., 'Subject', 'From', 'X-Custom-Header'). */
+    /** The key of the custom header (e.g., 'X-Custom-Header', 'X-Ticket-ID'). Restricted headers such as 'Subject', 'From', and 'Message-ID' are not allowed and will result in a 400 Bad Request. */
     public var key: String?
     /** The value of the header. */
     public var value: String?
@@ -29296,6 +29388,23 @@ public class KnowledgeSearchResult: Codable {
     public init(generatedAnswer: String?, retrievedReferences: [KnowledgeRetrievedReference]?) {
         self.generatedAnswer = generatedAnswer
         self.retrievedReferences = retrievedReferences
+    }
+
+
+}
+
+
+
+
+public class KnowledgeSettingDynamicFilter: Codable {
+
+
+
+    /** Filter based on copilot context values. */
+    public var context: CopilotContextFilter?
+
+    public init(context: CopilotContextFilter?) {
+        self.context = context
     }
 
 
@@ -35334,362 +35443,6 @@ public class QueueConversationChatEventTopicJourneyAction: Codable {
 
 
 
-public class QueueConversationChatEventTopicJourneyContext: Codable {
-
-
-
-
-
-
-
-    public var customer: QueueConversationChatEventTopicJourneyCustomer?
-    public var customerSession: QueueConversationChatEventTopicJourneyCustomerSession?
-    public var triggeringAction: QueueConversationChatEventTopicJourneyAction?
-
-    public init(customer: QueueConversationChatEventTopicJourneyCustomer?, customerSession: QueueConversationChatEventTopicJourneyCustomerSession?, triggeringAction: QueueConversationChatEventTopicJourneyAction?) {
-        self.customer = customer
-        self.customerSession = customerSession
-        self.triggeringAction = triggeringAction
-    }
-
-
-}
-
-
-
-
-public class QueueConversationChatEventTopicWrapup: Codable {
-
-
-
-
-
-
-
-
-
-
-
-    /** The user configured wrap up code name. */
-    public var code: String?
-    /** Text entered by the agent to describe the call or disposition. */
-    public var notes: String?
-    /** List of tags selected by the agent to describe the call or disposition. */
-    public var tags: [String]?
-    /** The length of time in seconds that the agent spent doing after call work., Note, the format of utc-millisec should be ignored, our code generator needs it to generate a Long for us internally */
-    public var durationSeconds: Int64?
-    /** The timestamp when the wrapup was finished. */
-    public var endTime: Date?
-
-    public init(code: String?, notes: String?, tags: [String]?, durationSeconds: Int64?, endTime: Date?) {
-        self.code = code
-        self.notes = notes
-        self.tags = tags
-        self.durationSeconds = durationSeconds
-        self.endTime = endTime
-    }
-
-
-}
-
-
-
-
-public class QueueConversationCobrowseEventTopicCobrowseMediaParticipant: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum State: String, Codable { 
-        case alerting = "alerting"
-        case dialing = "dialing"
-        case contacting = "contacting"
-        case offering = "offering"
-        case connected = "connected"
-        case disconnected = "disconnected"
-        case terminated = "terminated"
-        case converting = "converting"
-        case uploading = "uploading"
-        case transmitting = "transmitting"
-        case scheduled = "scheduled"
-        case parked = "parked"
-        case _none = "none"
-    }
-
-    public enum InitialState: String, Codable { 
-        case alerting = "alerting"
-        case dialing = "dialing"
-        case contacting = "contacting"
-        case offering = "offering"
-        case connected = "connected"
-        case disconnected = "disconnected"
-        case terminated = "terminated"
-        case converting = "converting"
-        case uploading = "uploading"
-        case transmitting = "transmitting"
-        case scheduled = "scheduled"
-        case parked = "parked"
-        case _none = "none"
-    }
-
-    public enum Direction: String, Codable { 
-        case inbound = "inbound"
-        case outbound = "outbound"
-    }
-
-    public enum DisconnectType: String, Codable { 
-        case endpoint = "endpoint"
-        case endpointDnd = "endpoint.dnd"
-        case client = "client"
-        case system = "system"
-        case transfer = "transfer"
-        case timeout = "timeout"
-        case transferConference = "transfer.conference"
-        case transferConsult = "transfer.consult"
-        case transferForward = "transfer.forward"
-        case transferNoanswer = "transfer.noanswer"
-        case transferNotavailable = "transfer.notavailable"
-        case transferDnd = "transfer.dnd"
-        case transportFailure = "transport.failure"
-        case error = "error"
-        case peer = "peer"
-        case other = "other"
-        case spam = "spam"
-        case uncallable = "uncallable"
-        case inactivity = "inactivity"
-        case sessionExpired = "session.expired"
-        case takeover = "takeover"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum FlaggedReason: String, Codable { 
-        case general = "general"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public var _id: String?
-    public var name: String?
-    public var address: String?
-    public var startTime: Date?
-    public var connectedTime: Date?
-    public var endTime: Date?
-    public var startHoldTime: Date?
-    public var purpose: String?
-    public var state: State?
-    public var initialState: InitialState?
-    public var direction: Direction?
-    public var disconnectType: DisconnectType?
-    public var held: Bool?
-    public var wrapupRequired: Bool?
-    public var wrapupPrompt: String?
-    public var user: QueueConversationCobrowseEventTopicUriReference?
-    public var queue: QueueConversationCobrowseEventTopicUriReference?
-    public var team: QueueConversationCobrowseEventTopicUriReference?
-    public var attributes: [String:String]?
-    public var errorInfo: QueueConversationCobrowseEventTopicErrorBody?
-    public var script: QueueConversationCobrowseEventTopicUriReference?
-    public var wrapupTimeoutMs: Int64?
-    public var wrapupSkipped: Bool?
-    public var alertingTimeoutMs: Int64?
-    public var provider: String?
-    public var externalContact: QueueConversationCobrowseEventTopicUriReference?
-    public var externalContactInitialDivisionId: String?
-    public var externalOrganization: QueueConversationCobrowseEventTopicUriReference?
-    public var wrapup: QueueConversationCobrowseEventTopicWrapup?
-    public var conversationRoutingData: QueueConversationCobrowseEventTopicConversationRoutingData?
-    public var peer: String?
-    public var screenRecordingState: String?
-    public var flaggedReason: FlaggedReason?
-    public var journeyContext: QueueConversationCobrowseEventTopicJourneyContext?
-    public var startAcwTime: Date?
-    public var endAcwTime: Date?
-    public var resumeTime: Date?
-    public var parkTime: Date?
-    public var mediaRoles: [String]?
-    public var queueMediaSettings: QueueConversationCobrowseEventTopicQueueMediaSettings?
-    public var cobrowseSessionId: String?
-    public var cobrowseRole: String?
-    public var viewerUrl: String?
-    public var providerEventTime: Date?
-    public var controlling: [String]?
-
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, initialState: InitialState?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationCobrowseEventTopicUriReference?, queue: QueueConversationCobrowseEventTopicUriReference?, team: QueueConversationCobrowseEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationCobrowseEventTopicErrorBody?, script: QueueConversationCobrowseEventTopicUriReference?, wrapupTimeoutMs: Int64?, wrapupSkipped: Bool?, alertingTimeoutMs: Int64?, provider: String?, externalContact: QueueConversationCobrowseEventTopicUriReference?, externalContactInitialDivisionId: String?, externalOrganization: QueueConversationCobrowseEventTopicUriReference?, wrapup: QueueConversationCobrowseEventTopicWrapup?, conversationRoutingData: QueueConversationCobrowseEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationCobrowseEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, resumeTime: Date?, parkTime: Date?, mediaRoles: [String]?, queueMediaSettings: QueueConversationCobrowseEventTopicQueueMediaSettings?, cobrowseSessionId: String?, cobrowseRole: String?, viewerUrl: String?, providerEventTime: Date?, controlling: [String]?) {
-        self._id = _id
-        self.name = name
-        self.address = address
-        self.startTime = startTime
-        self.connectedTime = connectedTime
-        self.endTime = endTime
-        self.startHoldTime = startHoldTime
-        self.purpose = purpose
-        self.state = state
-        self.initialState = initialState
-        self.direction = direction
-        self.disconnectType = disconnectType
-        self.held = held
-        self.wrapupRequired = wrapupRequired
-        self.wrapupPrompt = wrapupPrompt
-        self.user = user
-        self.queue = queue
-        self.team = team
-        self.attributes = attributes
-        self.errorInfo = errorInfo
-        self.script = script
-        self.wrapupTimeoutMs = wrapupTimeoutMs
-        self.wrapupSkipped = wrapupSkipped
-        self.alertingTimeoutMs = alertingTimeoutMs
-        self.provider = provider
-        self.externalContact = externalContact
-        self.externalContactInitialDivisionId = externalContactInitialDivisionId
-        self.externalOrganization = externalOrganization
-        self.wrapup = wrapup
-        self.conversationRoutingData = conversationRoutingData
-        self.peer = peer
-        self.screenRecordingState = screenRecordingState
-        self.flaggedReason = flaggedReason
-        self.journeyContext = journeyContext
-        self.startAcwTime = startAcwTime
-        self.endAcwTime = endAcwTime
-        self.resumeTime = resumeTime
-        self.parkTime = parkTime
-        self.mediaRoles = mediaRoles
-        self.queueMediaSettings = queueMediaSettings
-        self.cobrowseSessionId = cobrowseSessionId
-        self.cobrowseRole = cobrowseRole
-        self.viewerUrl = viewerUrl
-        self.providerEventTime = providerEventTime
-        self.controlling = controlling
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case address
-        case startTime
-        case connectedTime
-        case endTime
-        case startHoldTime
-        case purpose
-        case state
-        case initialState
-        case direction
-        case disconnectType
-        case held
-        case wrapupRequired
-        case wrapupPrompt
-        case user
-        case queue
-        case team
-        case attributes
-        case errorInfo
-        case script
-        case wrapupTimeoutMs
-        case wrapupSkipped
-        case alertingTimeoutMs
-        case provider
-        case externalContact
-        case externalContactInitialDivisionId
-        case externalOrganization
-        case wrapup
-        case conversationRoutingData
-        case peer
-        case screenRecordingState
-        case flaggedReason
-        case journeyContext
-        case startAcwTime
-        case endAcwTime
-        case resumeTime
-        case parkTime
-        case mediaRoles
-        case queueMediaSettings
-        case cobrowseSessionId
-        case cobrowseRole
-        case viewerUrl
-        case providerEventTime
-        case controlling
-    }
-
-
-}
-
-
-
-
 public class OutboundVoiceCampaignPostContactOutboundVoiceCampaignPostContactEvent: Codable {
 
 
@@ -37829,15 +37582,19 @@ public class ProgramsEntityListing: Codable {
 
 
 
+
+
     public var entities: [ListedProgram]?
     public var pageSize: Int?
+    public var total: Int?
     public var selfUri: String?
     public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [ListedProgram]?, pageSize: Int?, selfUri: String?, nextUri: String?, pageCount: Int?) {
+    public init(entities: [ListedProgram]?, pageSize: Int?, total: Int?, selfUri: String?, nextUri: String?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
+        self.total = total
         self.selfUri = selfUri
         self.nextUri = nextUri
         self.pageCount = pageCount
@@ -39253,6 +39010,362 @@ public class QueueConversationCallbackEventTopicDomainEntityRef: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case selfUri
+    }
+
+
+}
+
+
+
+
+public class QueueConversationChatEventTopicJourneyContext: Codable {
+
+
+
+
+
+
+
+    public var customer: QueueConversationChatEventTopicJourneyCustomer?
+    public var customerSession: QueueConversationChatEventTopicJourneyCustomerSession?
+    public var triggeringAction: QueueConversationChatEventTopicJourneyAction?
+
+    public init(customer: QueueConversationChatEventTopicJourneyCustomer?, customerSession: QueueConversationChatEventTopicJourneyCustomerSession?, triggeringAction: QueueConversationChatEventTopicJourneyAction?) {
+        self.customer = customer
+        self.customerSession = customerSession
+        self.triggeringAction = triggeringAction
+    }
+
+
+}
+
+
+
+
+public class QueueConversationChatEventTopicWrapup: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** The user configured wrap up code name. */
+    public var code: String?
+    /** Text entered by the agent to describe the call or disposition. */
+    public var notes: String?
+    /** List of tags selected by the agent to describe the call or disposition. */
+    public var tags: [String]?
+    /** The length of time in seconds that the agent spent doing after call work., Note, the format of utc-millisec should be ignored, our code generator needs it to generate a Long for us internally */
+    public var durationSeconds: Int64?
+    /** The timestamp when the wrapup was finished. */
+    public var endTime: Date?
+
+    public init(code: String?, notes: String?, tags: [String]?, durationSeconds: Int64?, endTime: Date?) {
+        self.code = code
+        self.notes = notes
+        self.tags = tags
+        self.durationSeconds = durationSeconds
+        self.endTime = endTime
+    }
+
+
+}
+
+
+
+
+public class QueueConversationCobrowseEventTopicCobrowseMediaParticipant: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum State: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case converting = "converting"
+        case uploading = "uploading"
+        case transmitting = "transmitting"
+        case scheduled = "scheduled"
+        case parked = "parked"
+        case _none = "none"
+    }
+
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case converting = "converting"
+        case uploading = "uploading"
+        case transmitting = "transmitting"
+        case scheduled = "scheduled"
+        case parked = "parked"
+        case _none = "none"
+    }
+
+    public enum Direction: String, Codable { 
+        case inbound = "inbound"
+        case outbound = "outbound"
+    }
+
+    public enum DisconnectType: String, Codable { 
+        case endpoint = "endpoint"
+        case endpointDnd = "endpoint.dnd"
+        case client = "client"
+        case system = "system"
+        case transfer = "transfer"
+        case timeout = "timeout"
+        case transferConference = "transfer.conference"
+        case transferConsult = "transfer.consult"
+        case transferForward = "transfer.forward"
+        case transferNoanswer = "transfer.noanswer"
+        case transferNotavailable = "transfer.notavailable"
+        case transferDnd = "transfer.dnd"
+        case transportFailure = "transport.failure"
+        case error = "error"
+        case peer = "peer"
+        case other = "other"
+        case spam = "spam"
+        case uncallable = "uncallable"
+        case inactivity = "inactivity"
+        case sessionExpired = "session.expired"
+        case takeover = "takeover"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum FlaggedReason: String, Codable { 
+        case general = "general"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public var _id: String?
+    public var name: String?
+    public var address: String?
+    public var startTime: Date?
+    public var connectedTime: Date?
+    public var endTime: Date?
+    public var startHoldTime: Date?
+    public var purpose: String?
+    public var state: State?
+    public var initialState: InitialState?
+    public var direction: Direction?
+    public var disconnectType: DisconnectType?
+    public var held: Bool?
+    public var wrapupRequired: Bool?
+    public var wrapupPrompt: String?
+    public var user: QueueConversationCobrowseEventTopicUriReference?
+    public var queue: QueueConversationCobrowseEventTopicUriReference?
+    public var team: QueueConversationCobrowseEventTopicUriReference?
+    public var attributes: [String:String]?
+    public var errorInfo: QueueConversationCobrowseEventTopicErrorBody?
+    public var script: QueueConversationCobrowseEventTopicUriReference?
+    public var wrapupTimeoutMs: Int64?
+    public var wrapupSkipped: Bool?
+    public var alertingTimeoutMs: Int64?
+    public var provider: String?
+    public var externalContact: QueueConversationCobrowseEventTopicUriReference?
+    public var externalContactInitialDivisionId: String?
+    public var externalOrganization: QueueConversationCobrowseEventTopicUriReference?
+    public var wrapup: QueueConversationCobrowseEventTopicWrapup?
+    public var conversationRoutingData: QueueConversationCobrowseEventTopicConversationRoutingData?
+    public var peer: String?
+    public var screenRecordingState: String?
+    public var flaggedReason: FlaggedReason?
+    public var journeyContext: QueueConversationCobrowseEventTopicJourneyContext?
+    public var startAcwTime: Date?
+    public var endAcwTime: Date?
+    public var resumeTime: Date?
+    public var parkTime: Date?
+    public var mediaRoles: [String]?
+    public var queueMediaSettings: QueueConversationCobrowseEventTopicQueueMediaSettings?
+    public var cobrowseSessionId: String?
+    public var cobrowseRole: String?
+    public var viewerUrl: String?
+    public var providerEventTime: Date?
+    public var controlling: [String]?
+
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, initialState: InitialState?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationCobrowseEventTopicUriReference?, queue: QueueConversationCobrowseEventTopicUriReference?, team: QueueConversationCobrowseEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationCobrowseEventTopicErrorBody?, script: QueueConversationCobrowseEventTopicUriReference?, wrapupTimeoutMs: Int64?, wrapupSkipped: Bool?, alertingTimeoutMs: Int64?, provider: String?, externalContact: QueueConversationCobrowseEventTopicUriReference?, externalContactInitialDivisionId: String?, externalOrganization: QueueConversationCobrowseEventTopicUriReference?, wrapup: QueueConversationCobrowseEventTopicWrapup?, conversationRoutingData: QueueConversationCobrowseEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationCobrowseEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, resumeTime: Date?, parkTime: Date?, mediaRoles: [String]?, queueMediaSettings: QueueConversationCobrowseEventTopicQueueMediaSettings?, cobrowseSessionId: String?, cobrowseRole: String?, viewerUrl: String?, providerEventTime: Date?, controlling: [String]?) {
+        self._id = _id
+        self.name = name
+        self.address = address
+        self.startTime = startTime
+        self.connectedTime = connectedTime
+        self.endTime = endTime
+        self.startHoldTime = startHoldTime
+        self.purpose = purpose
+        self.state = state
+        self.initialState = initialState
+        self.direction = direction
+        self.disconnectType = disconnectType
+        self.held = held
+        self.wrapupRequired = wrapupRequired
+        self.wrapupPrompt = wrapupPrompt
+        self.user = user
+        self.queue = queue
+        self.team = team
+        self.attributes = attributes
+        self.errorInfo = errorInfo
+        self.script = script
+        self.wrapupTimeoutMs = wrapupTimeoutMs
+        self.wrapupSkipped = wrapupSkipped
+        self.alertingTimeoutMs = alertingTimeoutMs
+        self.provider = provider
+        self.externalContact = externalContact
+        self.externalContactInitialDivisionId = externalContactInitialDivisionId
+        self.externalOrganization = externalOrganization
+        self.wrapup = wrapup
+        self.conversationRoutingData = conversationRoutingData
+        self.peer = peer
+        self.screenRecordingState = screenRecordingState
+        self.flaggedReason = flaggedReason
+        self.journeyContext = journeyContext
+        self.startAcwTime = startAcwTime
+        self.endAcwTime = endAcwTime
+        self.resumeTime = resumeTime
+        self.parkTime = parkTime
+        self.mediaRoles = mediaRoles
+        self.queueMediaSettings = queueMediaSettings
+        self.cobrowseSessionId = cobrowseSessionId
+        self.cobrowseRole = cobrowseRole
+        self.viewerUrl = viewerUrl
+        self.providerEventTime = providerEventTime
+        self.controlling = controlling
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case address
+        case startTime
+        case connectedTime
+        case endTime
+        case startHoldTime
+        case purpose
+        case state
+        case initialState
+        case direction
+        case disconnectType
+        case held
+        case wrapupRequired
+        case wrapupPrompt
+        case user
+        case queue
+        case team
+        case attributes
+        case errorInfo
+        case script
+        case wrapupTimeoutMs
+        case wrapupSkipped
+        case alertingTimeoutMs
+        case provider
+        case externalContact
+        case externalContactInitialDivisionId
+        case externalOrganization
+        case wrapup
+        case conversationRoutingData
+        case peer
+        case screenRecordingState
+        case flaggedReason
+        case journeyContext
+        case startAcwTime
+        case endAcwTime
+        case resumeTime
+        case parkTime
+        case mediaRoles
+        case queueMediaSettings
+        case cobrowseSessionId
+        case cobrowseRole
+        case viewerUrl
+        case providerEventTime
+        case controlling
     }
 
 
@@ -49143,6 +49256,7 @@ public class SummaryAggregateQueryPredicate: Codable {
         case triggersourceid = "triggerSourceId"
         case triggersourceoutcome = "triggerSourceOutcome"
         case triggersourcetype = "triggerSourceType"
+        case triggertype = "triggerType"
         case userid = "userId"
         case wrapupcoderating = "wrapUpCodeRating"
         case wrapupcodesuggestionselected = "wrapUpCodeSuggestionSelected"
@@ -50466,15 +50580,19 @@ public class TopicsDefinitionsProgramsMappingsEntityListing: Codable {
 
 
 
+
+
     public var entities: [TopicsDefinitionsProgramMappings]?
     public var pageSize: Int?
+    public var total: Int?
     public var selfUri: String?
     public var pageCount: Int?
     public var nextUri: String?
 
-    public init(entities: [TopicsDefinitionsProgramMappings]?, pageSize: Int?, selfUri: String?, pageCount: Int?, nextUri: String?) {
+    public init(entities: [TopicsDefinitionsProgramMappings]?, pageSize: Int?, total: Int?, selfUri: String?, pageCount: Int?, nextUri: String?) {
         self.entities = entities
         self.pageSize = pageSize
+        self.total = total
         self.selfUri = selfUri
         self.pageCount = pageCount
         self.nextUri = nextUri
@@ -51391,15 +51509,19 @@ public class UnpublishedProgramsEntityListing: Codable {
 
 
 
+
+
     public var entities: [Program]?
     public var pageSize: Int?
+    public var total: Int?
     public var selfUri: String?
     public var pageCount: Int?
     public var nextUri: String?
 
-    public init(entities: [Program]?, pageSize: Int?, selfUri: String?, pageCount: Int?, nextUri: String?) {
+    public init(entities: [Program]?, pageSize: Int?, total: Int?, selfUri: String?, pageCount: Int?, nextUri: String?) {
         self.entities = entities
         self.pageSize = pageSize
+        self.total = total
         self.selfUri = selfUri
         self.pageCount = pageCount
         self.nextUri = nextUri
@@ -52376,6 +52498,57 @@ public class User: Codable {
 
 
 
+public class UserActivity: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The ID of the user */
+    public var _id: String?
+    /** The current routing status of the user */
+    public var routingStatus: UserActivityRoutingStatus?
+    /** The current system presence of the user */
+    public var presence: UserActivityAdherencePresence?
+    /** The current out of office state of the user */
+    public var outOfOffice: UserActivityOutOfOffice?
+    /** The IDs of the queues for which the user is active */
+    public var activeQueueIds: [String]?
+    /** The date the activeQueueIds list was last modified. For reference only - subject to eventual consistency. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateActiveQueuesChanged: Date?
+
+    public init(_id: String?, routingStatus: UserActivityRoutingStatus?, presence: UserActivityAdherencePresence?, outOfOffice: UserActivityOutOfOffice?, activeQueueIds: [String]?, dateActiveQueuesChanged: Date?) {
+        self._id = _id
+        self.routingStatus = routingStatus
+        self.presence = presence
+        self.outOfOffice = outOfOffice
+        self.activeQueueIds = activeQueueIds
+        self.dateActiveQueuesChanged = dateActiveQueuesChanged
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case routingStatus
+        case presence
+        case outOfOffice
+        case activeQueueIds
+        case dateActiveQueuesChanged
+    }
+
+
+}
+
+
+
+
 public class UserActivityEntityData: Codable {
 
 
@@ -52430,6 +52603,22 @@ public class UserActivityEntityData: Codable {
         self.systemPresence = systemPresence
         self.teamId = teamId
         self.userId = userId
+    }
+
+
+}
+
+
+
+
+public class UserActivityListing: Codable {
+
+
+
+    public var entities: [UserActivity]?
+
+    public init(entities: [UserActivity]?) {
+        self.entities = entities
     }
 
 
@@ -53041,6 +53230,23 @@ public class UserStaffingGroupResponse: Codable {
         self.endDate = endDate
         self.user = user
         self.staffingGroup = staffingGroup
+    }
+
+
+}
+
+
+
+
+public class UsersActivityRequest: Codable {
+
+
+
+    /** The IDs of the users for whom to fetch their current activity state */
+    public var userIds: [String]?
+
+    public init(userIds: [String]?) {
+        self.userIds = userIds
     }
 
 
@@ -60739,6 +60945,17 @@ public class WritableDialerContact: Codable {
 
 
 
+    public enum RetentionType: String, Codable { 
+        case never = "Never"
+        case today = "Today"
+        case retentionDays = "RetentionDays"
+        case dateExpiration = "DateExpiration"
+    }
+
+
+
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The identifier of the contact list containing this contact. */
@@ -60759,8 +60976,14 @@ public class WritableDialerContact: Codable {
     public var contactableStatus: [String:ContactableStatus]?
     /** Timestamp for when the contact was added. Contacts added prior to 2023 September 1 may be missing this value. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
+    /** The type of retention for this contact. Valid values: Never, Today, RetentionDays, DateExpiration */
+    public var retentionType: RetentionType?
+    /** The number of days to retain this contact. Required when retentionType is RetentionDays. */
+    public var retentionDays: Int?
+    /** The expiration date of the contact. Required when retentionType is DateExpiration. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateExpiration: Date?
 
-    public init(_id: String?, contactListId: String?, data: [String:String]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, latestWhatsAppEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?, dateCreated: Date?) {
+    public init(_id: String?, contactListId: String?, data: [String:String]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, latestWhatsAppEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?, dateCreated: Date?, retentionType: RetentionType?, retentionDays: Int?, dateExpiration: Date?) {
         self._id = _id
         self.contactListId = contactListId
         self.data = data
@@ -60771,6 +60994,9 @@ public class WritableDialerContact: Codable {
         self.phoneNumberStatus = phoneNumberStatus
         self.contactableStatus = contactableStatus
         self.dateCreated = dateCreated
+        self.retentionType = retentionType
+        self.retentionDays = retentionDays
+        self.dateExpiration = dateExpiration
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -60784,6 +61010,9 @@ public class WritableDialerContact: Codable {
         case phoneNumberStatus
         case contactableStatus
         case dateCreated
+        case retentionType
+        case retentionDays
+        case dateExpiration
     }
 
 

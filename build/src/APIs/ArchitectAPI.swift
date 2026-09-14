@@ -4963,6 +4963,7 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : "{}",
   "currentOperation" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
@@ -5698,6 +5699,8 @@ open class ArchitectAPI {
     
     
     
+    
+    
     /**
      Get a pageable list of user prompts
      
@@ -5711,10 +5714,11 @@ open class ArchitectAPI {
      - parameter includeMediaUris: (query) Include the media URIs for each resource (optional)
      - parameter includeResources: (query) Include the resources for each system prompt (optional)
      - parameter language: (query) Filter the resources down to the provided languages (optional)
+     - parameter divisionId: (query) division ID(s) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArchitectPrompts(pageNumber: Int? = nil, pageSize: Int? = nil, name: [String]? = nil, _description: String? = nil, nameOrDescription: String? = nil, sortBy: String? = nil, sortOrder: String? = nil, includeMediaUris: Bool? = nil, includeResources: Bool? = nil, language: [String]? = nil, completion: @escaping ((_ data: PromptEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getArchitectPromptsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, name: name, _description: _description, nameOrDescription: nameOrDescription, sortBy: sortBy, sortOrder: sortOrder, includeMediaUris: includeMediaUris, includeResources: includeResources, language: language)
+    open class func getArchitectPrompts(pageNumber: Int? = nil, pageSize: Int? = nil, name: [String]? = nil, _description: String? = nil, nameOrDescription: String? = nil, sortBy: String? = nil, sortOrder: String? = nil, includeMediaUris: Bool? = nil, includeResources: Bool? = nil, language: [String]? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: PromptEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectPromptsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, name: name, _description: _description, nameOrDescription: nameOrDescription, sortBy: sortBy, sortOrder: sortOrder, includeMediaUris: includeMediaUris, includeResources: includeResources, language: language, divisionId: divisionId)
         requestBuilder.execute { (response: Response<PromptEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -5743,6 +5747,7 @@ open class ArchitectAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "division" : "{}",
     "currentOperation" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
@@ -5784,6 +5789,7 @@ open class ArchitectAPI {
     } ],
     "id" : "id"
   }, {
+    "division" : "{}",
     "currentOperation" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
@@ -5843,10 +5849,11 @@ open class ArchitectAPI {
      - parameter includeMediaUris: (query) Include the media URIs for each resource (optional)
      - parameter includeResources: (query) Include the resources for each system prompt (optional)
      - parameter language: (query) Filter the resources down to the provided languages (optional)
+     - parameter divisionId: (query) division ID(s) (optional)
 
      - returns: RequestBuilder<PromptEntityListing> 
      */
-    open class func getArchitectPromptsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, name: [String]? = nil, _description: String? = nil, nameOrDescription: String? = nil, sortBy: String? = nil, sortOrder: String? = nil, includeMediaUris: Bool? = nil, includeResources: Bool? = nil, language: [String]? = nil) -> RequestBuilder<PromptEntityListing> {        
+    open class func getArchitectPromptsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, name: [String]? = nil, _description: String? = nil, nameOrDescription: String? = nil, sortBy: String? = nil, sortOrder: String? = nil, includeMediaUris: Bool? = nil, includeResources: Bool? = nil, language: [String]? = nil, divisionId: [String]? = nil) -> RequestBuilder<PromptEntityListing> {        
         let path = "/api/v2/architect/prompts"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -5862,7 +5869,8 @@ open class ArchitectAPI {
             "sortOrder": sortOrder, 
             "includeMediaUris": includeMediaUris, 
             "includeResources": includeResources, 
-            "language": language
+            "language": language, 
+            "divisionId": divisionId
         ])
 
         let requestBuilder: RequestBuilder<PromptEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -24865,6 +24873,7 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : "{}",
   "currentOperation" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
@@ -38370,7 +38379,7 @@ open class ArchitectAPI {
      - parameter body: (body)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postFlowsJobs(body: JSON? = nil, completion: @escaping ((_ data: RegisterArchitectJobResponse?,_ error: Error?) -> Void)) {
+    open class func postFlowsJobs(body: RegisterArchitectJobRequest? = nil, completion: @escaping ((_ data: RegisterArchitectJobResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postFlowsJobsWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<RegisterArchitectJobResponse>?, error) -> Void in
             do {
@@ -38407,7 +38416,7 @@ open class ArchitectAPI {
 
      - returns: RequestBuilder<RegisterArchitectJobResponse> 
      */
-    open class func postFlowsJobsWithRequestBuilder(body: JSON? = nil) -> RequestBuilder<RegisterArchitectJobResponse> {        
+    open class func postFlowsJobsWithRequestBuilder(body: RegisterArchitectJobRequest? = nil) -> RequestBuilder<RegisterArchitectJobResponse> {        
         let path = "/api/v2/flows/jobs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -39124,6 +39133,7 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : "{}",
   "currentOperation" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",

@@ -1110,4 +1110,62 @@ open class IntentsAPI {
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    /**
+     Get customer intents by IDs
+     
+     - parameter body: (body) Customer intent IDs to retrieve 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postIntentsCustomerintentsBulkRetrieve(body: BatchGetCustomerIntentsRequest, completion: @escaping ((_ data: [CustomerIntentResponse]?,_ error: Error?) -> Void)) {
+        let requestBuilder = postIntentsCustomerintentsBulkRetrieveWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<[CustomerIntentResponse]>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get customer intents by IDs
+     - POST /api/v2/intents/customerintents/bulk/retrieve
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "expiryTime" : 0,
+  "description" : "description",
+  "id" : "id",
+  "category" : "{}"
+}, statusCode=200}]
+     
+     - parameter body: (body) Customer intent IDs to retrieve 
+
+     - returns: RequestBuilder<[CustomerIntentResponse]> 
+     */
+    open class func postIntentsCustomerintentsBulkRetrieveWithRequestBuilder(body: BatchGetCustomerIntentsRequest) -> RequestBuilder<[CustomerIntentResponse]> {        
+        let path = "/api/v2/intents/customerintents/bulk/retrieve"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<[CustomerIntentResponse]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
 }

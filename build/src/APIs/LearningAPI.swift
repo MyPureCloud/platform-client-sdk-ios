@@ -473,9 +473,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 4,
-  "pageCount" : 7,
-  "pageNumber" : 2,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "assessmentCompletionPercentage" : 1.4658129,
@@ -626,7 +626,7 @@ open class LearningAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 3,
+  "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -792,9 +792,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 4,
-  "pageCount" : 7,
-  "pageNumber" : 2,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "entities" : [ {
     "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "assessmentCompletionPercentage" : 1.4658129,
@@ -945,7 +945,7 @@ open class LearningAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 3,
+  "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -1078,7 +1078,7 @@ open class LearningAPI {
     "order" : 1
   } ],
   "assessmentForm" : "{}",
-  "lengthInMinutes" : 1,
+  "lengthInMinutes" : 5,
   "createdBy" : "{}",
   "name" : "name"
 }, statusCode=200}]
@@ -1387,7 +1387,7 @@ open class LearningAPI {
     "order" : 1
   } ],
   "assessmentForm" : "{}",
-  "lengthInMinutes" : 1,
+  "lengthInMinutes" : 5,
   "createdBy" : "{}",
   "name" : "name"
 }, statusCode=200}]
@@ -1554,7 +1554,7 @@ open class LearningAPI {
       "order" : 1
     } ],
     "assessmentForm" : "{}",
-    "lengthInMinutes" : 1,
+    "lengthInMinutes" : 5,
     "createdBy" : "{}",
     "name" : "name"
   }, {
@@ -1600,7 +1600,7 @@ open class LearningAPI {
       "order" : 1
     } ],
     "assessmentForm" : "{}",
-    "lengthInMinutes" : 1,
+    "lengthInMinutes" : 5,
     "createdBy" : "{}",
     "name" : "name"
   } ],
@@ -1716,9 +1716,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 7,
-  "pageCount" : 9,
-  "pageNumber" : 2,
+  "total" : 2,
+  "pageCount" : 7,
+  "pageNumber" : 5,
   "entities" : [ {
     "reassignSummaryData" : "{}",
     "archivalMode" : "Graceful",
@@ -1762,7 +1762,7 @@ open class LearningAPI {
       "order" : 1
     } ],
     "assessmentForm" : "{}",
-    "lengthInMinutes" : 5,
+    "lengthInMinutes" : 1,
     "createdBy" : "{}",
     "name" : "name",
     "currentAssignments" : [ {
@@ -1955,7 +1955,7 @@ open class LearningAPI {
       "order" : 1
     } ],
     "assessmentForm" : "{}",
-    "lengthInMinutes" : 5,
+    "lengthInMinutes" : 1,
     "createdBy" : "{}",
     "name" : "name",
     "currentAssignments" : [ {
@@ -3895,7 +3895,7 @@ open class LearningAPI {
     "order" : 1
   } ],
   "assessmentForm" : "{}",
-  "lengthInMinutes" : 1,
+  "lengthInMinutes" : 5,
   "createdBy" : "{}",
   "name" : "name"
 }, statusCode=200}]
@@ -4338,7 +4338,7 @@ open class LearningAPI {
     "order" : 1
   } ],
   "assessmentForm" : "{}",
-  "lengthInMinutes" : 1,
+  "lengthInMinutes" : 5,
   "createdBy" : "{}",
   "name" : "name"
 }, statusCode=200}]

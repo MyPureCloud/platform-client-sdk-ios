@@ -228,6 +228,7 @@ open class OperationalEventsAPI {
     "externalContactId" : "externalContactId",
     "errorCode" : "errorCode",
     "entityId" : "entityId",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "parentEntityId" : "parentEntityId",
     "previousValue" : "previousValue",
     "entityVersion" : "entityVersion",
@@ -235,6 +236,7 @@ open class OperationalEventsAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "phoneNumber" : "phoneNumber",
     "entityName" : "entityName",
+    "entityModifiedBy" : "entityModifiedBy",
     "currentValue" : "currentValue",
     "conversation" : "{}"
   }, {
@@ -242,6 +244,7 @@ open class OperationalEventsAPI {
     "externalContactId" : "externalContactId",
     "errorCode" : "errorCode",
     "entityId" : "entityId",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "parentEntityId" : "parentEntityId",
     "previousValue" : "previousValue",
     "entityVersion" : "entityVersion",
@@ -249,6 +252,7 @@ open class OperationalEventsAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "phoneNumber" : "phoneNumber",
     "entityName" : "entityName",
+    "entityModifiedBy" : "entityModifiedBy",
     "currentValue" : "currentValue",
     "conversation" : "{}"
   } ],

@@ -2488,7 +2488,7 @@ ArchitectAPI.getArchitectPromptResources(promptId: promptId, pageNumber: pageNum
 
 
 
-> [PromptEntityListing](PromptEntityListing) getArchitectPrompts(pageNumber, pageSize, name, _description, nameOrDescription, sortBy, sortOrder, includeMediaUris, includeResources, language)
+> [PromptEntityListing](PromptEntityListing) getArchitectPrompts(pageNumber, pageSize, name, _description, nameOrDescription, sortBy, sortOrder, includeMediaUris, includeResources, language, divisionId)
 
 Get a pageable list of user prompts
 
@@ -2520,9 +2520,10 @@ let sortOrder: String = "" // Sort order
 let includeMediaUris: Bool = true // Include the media URIs for each resource
 let includeResources: Bool = true // Include the resources for each system prompt
 let language: [String] = [""] // Filter the resources down to the provided languages
+let divisionId: [String] = [""] // division ID(s)
 
 // Code example
-ArchitectAPI.getArchitectPrompts(pageNumber: pageNumber, pageSize: pageSize, name: name, _description: _description, nameOrDescription: nameOrDescription, sortBy: sortBy, sortOrder: sortOrder, includeMediaUris: includeMediaUris, includeResources: includeResources, language: language) { (response, error) in
+ArchitectAPI.getArchitectPrompts(pageNumber: pageNumber, pageSize: pageSize, name: name, _description: _description, nameOrDescription: nameOrDescription, sortBy: sortBy, sortOrder: sortOrder, includeMediaUris: includeMediaUris, includeResources: includeResources, language: language, divisionId: divisionId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2547,6 +2548,7 @@ ArchitectAPI.getArchitectPrompts(pageNumber: pageNumber, pageSize: pageSize, nam
 | **includeMediaUris** | **Bool**| Include the media URIs for each resource | [optional] |
 | **includeResources** | **Bool**| Include the resources for each system prompt | [optional] |
 | **language** | [**[String]**](String)| Filter the resources down to the provided languages | [optional] |
+| **divisionId** | [**[String]**](String)| division ID(s) | [optional] |
 
 
 ### Return type
@@ -7278,7 +7280,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: JSON = new JSON(...) // 
+let body: RegisterArchitectJobRequest = new RegisterArchitectJobRequest(...) // 
 
 // Code example
 ArchitectAPI.postFlowsJobs(body: body) { (response, error) in
@@ -7296,7 +7298,7 @@ ArchitectAPI.postFlowsJobs(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | **JSON**|  | [optional] |
+| **body** | [**RegisterArchitectJobRequest**](RegisterArchitectJobRequest)|  | [optional] |
 
 
 ### Return type
@@ -8208,4 +8210,4 @@ ArchitectAPI.putFlowsOutcome(flowOutcomeId: flowOutcomeId, body: body) { (respon
 [**Operation**](Operation)
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_
