@@ -42,4 +42,4 @@ A maximum of 100 events are allowed per request
 
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_

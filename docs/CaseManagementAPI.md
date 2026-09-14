@@ -28,8 +28,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getCasemanagementCaseplanVersionStageplans**](CaseManagementAPI#getCasemanagementCaseplanVersionStageplans) | Get a list of Stageplans. |
 | [**getCasemanagementCaseplans**](CaseManagementAPI#getCasemanagementCaseplans) | Get a list of Caseplans. |
 | [**getCasemanagementCasesExternalcontact**](CaseManagementAPI#getCasemanagementCasesExternalcontact) | Get a list of Cases for an External Contact. |
+| [**getCasemanagementCasesQueryJob**](CaseManagementAPI#getCasemanagementCasesQueryJob) | Get a case query job by id |
+| [**getCasemanagementCasesQueryJobResults**](CaseManagementAPI#getCasemanagementCasesQueryJobResults) | Get results for a case query job |
 | [**getCasemanagementCasesReference**](CaseManagementAPI#getCasemanagementCasesReference) | Get a Case by reference. |
 | [**patchCasemanagementCaseDatedue**](CaseManagementAPI#patchCasemanagementCaseDatedue) | Update the due date of a Case. |
+| [**patchCasemanagementCaseOwner**](CaseManagementAPI#patchCasemanagementCaseOwner) | Update the ownerId of a Case |
 | [**patchCasemanagementCasePriority**](CaseManagementAPI#patchCasemanagementCasePriority) | Update priority of a Case. |
 | [**patchCasemanagementCaseSummary**](CaseManagementAPI#patchCasemanagementCaseSummary) | Update summary of a Case. |
 | [**patchCasemanagementCaseplan**](CaseManagementAPI#patchCasemanagementCaseplan) | Update the attributes of a Caseplan. |
@@ -45,6 +48,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postCasemanagementCaseplansQuery**](CaseManagementAPI#postCasemanagementCaseplansQuery) | Query for Caseplans. |
 | [**postCasemanagementCases**](CaseManagementAPI#postCasemanagementCases) | Create a Case. |
 | [**postCasemanagementCasesAssociationsQuery**](CaseManagementAPI#postCasemanagementCasesAssociationsQuery) | Query for Case associations by interaction. |
+| [**postCasemanagementCasesQueryJobs**](CaseManagementAPI#postCasemanagementCasesQueryJobs) | Create a Case query job. |
 | [**putCasemanagementCaseplanDataschema**](CaseManagementAPI#putCasemanagementCaseplanDataschema) | Update a data schema on a draft Caseplan. |
 | [**putCasemanagementCaseplanIntakesettings**](CaseManagementAPI#putCasemanagementCaseplanIntakesettings) | Update the intake settings for a Caseplan. |
 {: class="table-striped"}
@@ -1350,6 +1354,106 @@ CaseManagementAPI.getCasemanagementCasesExternalcontact(externalContactId: exter
 [**CaseListing**](CaseListing)
 
 
+## getCasemanagementCasesQueryJob
+
+
+
+> [CaseQueryJobResponse](CaseQueryJobResponse) getCasemanagementCasesQueryJob(jobId)
+
+Get a case query job by id
+
+
+
+Wraps GET /api/v2/casemanagement/cases/query/jobs/{jobId}  
+
+Requires ALL permissions: 
+
+* caseManagement:queryJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // Job ID
+
+// Code example
+CaseManagementAPI.getCasemanagementCasesQueryJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("CaseManagementAPI.getCasemanagementCasesQueryJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| Job ID | |
+
+
+### Return type
+
+[**CaseQueryJobResponse**](CaseQueryJobResponse)
+
+
+## getCasemanagementCasesQueryJobResults
+
+
+
+> [CaseQueryJobResultsResponse](CaseQueryJobResultsResponse) getCasemanagementCasesQueryJobResults(jobId)
+
+Get results for a case query job
+
+
+
+Wraps GET /api/v2/casemanagement/cases/query/jobs/{jobId}/results  
+
+Requires ALL permissions: 
+
+* caseManagement:queryJobResults:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // Job ID
+
+// Code example
+CaseManagementAPI.getCasemanagementCasesQueryJobResults(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("CaseManagementAPI.getCasemanagementCasesQueryJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| Job ID | |
+
+
+### Return type
+
+[**CaseQueryJobResultsResponse**](CaseQueryJobResultsResponse)
+
+
 ## getCasemanagementCasesReference
 
 
@@ -1447,6 +1551,58 @@ CaseManagementAPI.patchCasemanagementCaseDatedue(caseId: caseId, body: body) { (
 | ------------- | ------------- | ------------- | ------------- |
 | **caseId** | **String**| Case identifier. | |
 | **body** | [**CaseDateDueUpdate**](CaseDateDueUpdate)| Due date update. | |
+
+
+### Return type
+
+[**Case**](Case)
+
+
+## patchCasemanagementCaseOwner
+
+
+
+> [Case](Case) patchCasemanagementCaseOwner(caseId, body)
+
+Update the ownerId of a Case
+
+
+
+Wraps PATCH /api/v2/casemanagement/cases/{caseId}/owner  
+
+Requires ANY permissions: 
+
+* caseManagement:caseOwner:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let caseId: String = "" // Case identifier.
+let body: CaseOwnerUpdate = new CaseOwnerUpdate(...) // OwnerId
+
+// Code example
+CaseManagementAPI.patchCasemanagementCaseOwner(caseId: caseId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("CaseManagementAPI.patchCasemanagementCaseOwner was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **caseId** | **String**| Case identifier. | |
+| **body** | [**CaseOwnerUpdate**](CaseOwnerUpdate)| OwnerId | |
 
 
 ### Return type
@@ -2228,6 +2384,56 @@ CaseManagementAPI.postCasemanagementCasesAssociationsQuery(body: body) { (respon
 [**CaseAssociationQueryEntityListing**](CaseAssociationQueryEntityListing)
 
 
+## postCasemanagementCasesQueryJobs
+
+
+
+> [CaseQueryJobResponse](CaseQueryJobResponse) postCasemanagementCasesQueryJobs(body)
+
+Create a Case query job.
+
+
+
+Wraps POST /api/v2/casemanagement/cases/query/jobs  
+
+Requires ANY permissions: 
+
+* caseManagement:queryJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CaseQueryJobCreate = new CaseQueryJobCreate(...) // Case query job create request.
+
+// Code example
+CaseManagementAPI.postCasemanagementCasesQueryJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("CaseManagementAPI.postCasemanagementCasesQueryJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CaseQueryJobCreate**](CaseQueryJobCreate)| Case query job create request. | |
+
+
+### Return type
+
+[**CaseQueryJobResponse**](CaseQueryJobResponse)
+
+
 ## putCasemanagementCaseplanDataschema
 
 
@@ -2334,4 +2540,4 @@ CaseManagementAPI.putCasemanagementCaseplanIntakesettings(caseplanId: caseplanId
 [**IntakeSettingsListing**](IntakeSettingsListing)
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_

@@ -662,7 +662,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let userId: String = "" // user Id
+let userId: String = "" // User ID (UUID)
 let sourceId: String = "" // Presence source ID
 
 // Code example
@@ -681,7 +681,7 @@ PresenceAPI.getUserPresence(userId: userId, sourceId: sourceId) { (response, err
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **userId** | **String**| user Id | |
+| **userId** | **String**| User ID (UUID) | |
 | **sourceId** | **String**| Presence source ID | |
 
 
@@ -715,7 +715,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let userId: String = "" // user Id
+let userId: String = "" // User ID (UUID)
 
 // Code example
 PresenceAPI.getUserPresencesPurecloud(userId: userId) { (response, error) in
@@ -733,7 +733,7 @@ PresenceAPI.getUserPresencesPurecloud(userId: userId) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **userId** | **String**| user Id | |
+| **userId** | **String**| User ID (UUID) | |
 
 
 ### Return type
@@ -866,7 +866,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let userId: String = "" // user Id
+let userId: String = "" // User ID (UUID)
 let sourceId: String = "" // Presence source ID
 let body: UserPresence = new UserPresence(...) // User presence
 
@@ -886,7 +886,7 @@ PresenceAPI.patchUserPresence(userId: userId, sourceId: sourceId, body: body) { 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **userId** | **String**| user Id | |
+| **userId** | **String**| User ID (UUID) | |
 | **sourceId** | **String**| Presence source ID | |
 | **body** | [**UserPresence**](UserPresence)| User presence | |
 
@@ -921,7 +921,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let userId: String = "" // user Id
+let userId: String = "" // User ID (UUID)
 let body: UserPresence = new UserPresence(...) // User presence
 
 // Code example
@@ -940,7 +940,7 @@ PresenceAPI.patchUserPresencesPurecloud(userId: userId, body: body) { (response,
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **userId** | **String**| user Id | |
+| **userId** | **String**| User ID (UUID) | |
 | **body** | [**UserPresence**](UserPresence)| User presence | |
 
 
@@ -1407,4 +1407,4 @@ PresenceAPI.putUsersPresencesBulk(body: body) { (response, error) in
 [**[UserPresence]**](UserPresence)
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_

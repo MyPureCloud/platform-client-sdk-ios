@@ -19,8 +19,9 @@
 | **assistantId** | **String** | Assistant ID. | [optional] |
 | **mediaType** | **String** | Media type. | [optional] |
 | **direction** | **String** | Direction of the conversation. | [optional] |
+| **preview** | **Bool** | Whether this checklist session is a preview. Preview sessions use shorter TTL and do not publish runtime events. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_

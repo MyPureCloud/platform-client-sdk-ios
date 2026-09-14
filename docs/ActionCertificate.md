@@ -14,4 +14,4 @@ Details for an mTLS certificate
 
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_

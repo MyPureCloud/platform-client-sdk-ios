@@ -20,6 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postIntentsCustomerintentSourceintentsBulkAdd**](IntentsAPI#postIntentsCustomerintentSourceintentsBulkAdd) | Bulk add source intents to a customer intent |
 | [**postIntentsCustomerintentSourceintentsBulkRemove**](IntentsAPI#postIntentsCustomerintentSourceintentsBulkRemove) | Bulk remove source intents mapped to a customer intent |
 | [**postIntentsCustomerintents**](IntentsAPI#postIntentsCustomerintents) | Create customer intents |
+| [**postIntentsCustomerintentsBulkRetrieve**](IntentsAPI#postIntentsCustomerintentsBulkRetrieve) | Get customer intents by IDs |
 {: class="table-striped"}
 
 
@@ -859,4 +860,54 @@ IntentsAPI.postIntentsCustomerintents(body: body) { (response, error) in
 [**CustomerIntentResponse**](CustomerIntentResponse)
 
 
-_PureCloudPlatformClientV2@203.0.0_
+## postIntentsCustomerintentsBulkRetrieve
+
+
+
+> [[CustomerIntentResponse]](CustomerIntentResponse) postIntentsCustomerintentsBulkRetrieve(body)
+
+Get customer intents by IDs
+
+
+
+Wraps POST /api/v2/intents/customerintents/bulk/retrieve  
+
+Requires ANY permissions: 
+
+* externalContacts:customerIntentTaxonomy:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BatchGetCustomerIntentsRequest = new BatchGetCustomerIntentsRequest(...) // Customer intent IDs to retrieve
+
+// Code example
+IntentsAPI.postIntentsCustomerintentsBulkRetrieve(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntentsAPI.postIntentsCustomerintentsBulkRetrieve was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BatchGetCustomerIntentsRequest**](BatchGetCustomerIntentsRequest)| Customer intent IDs to retrieve | |
+
+
+### Return type
+
+[**[CustomerIntentResponse]**](CustomerIntentResponse)
+
+
+_PureCloudPlatformClientV2@204.0.0_

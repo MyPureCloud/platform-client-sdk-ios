@@ -13,4 +13,4 @@ A Genesys Cloud resource created or modified as a result of running an accelerat
 
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_

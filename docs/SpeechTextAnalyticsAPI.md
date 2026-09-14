@@ -1756,7 +1756,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopics(nextPage: nextPage, pageS
 | **name** | **String**| Case insensitive partial name to filter by | [optional] |
 | **ids** | [**[String]**](String)| Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. | [optional] |
 | **dialects** | [**[String]**](String)| Comma separated dialect strings to filter by. Maximum of 15 dialects allowed. | [optional]<br />**Values**: enUs ("en-US"), esUs ("es-US"), enAu ("en-AU"), enGb ("en-GB"), enZa ("en-ZA"), esEs ("es-ES"), enIn ("en-IN"), frFr ("fr-FR"), frCa ("fr-CA"), itIt ("it-IT"), deDe ("de-DE"), ptBr ("pt-BR"), plPl ("pl-PL"), ptPt ("pt-PT"), nlNl ("nl-NL"), koKr ("ko-KR") |
-| **sortBy** | **String**| Sort results by. Defaults to name | [optional]<br />**Values**: name ("name"), matchingtype ("matchingType") |
+| **sortBy** | **String**| Sort results by. Defaults to name | [optional]<br />**Values**: name ("name"), matchingtype ("matchingType"), realtime ("realTime") |
 | **sortOrder** | **String**| Sort order. Defaults to asc | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
 
 
@@ -3182,4 +3182,4 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsTopic(topicId: topicId, body: bo
 [**Topic**](Topic)
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_

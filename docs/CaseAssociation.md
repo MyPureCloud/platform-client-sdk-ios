@@ -20,4 +20,4 @@ Represents an association between a Case and an interaction.
 
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_

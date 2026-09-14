@@ -572,4 +572,4 @@ ScreenMonitoringAPI.putScreenmonitorsSettings(body: body) { (error) in
 `nil` (empty response body)
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_

@@ -445,6 +445,7 @@ Requires ANY permissions:
 
 * admin
 * directory:user:delete
+* directory:user:hardDelete
 * directory:organization:admin
 
 ### Example
@@ -6793,4 +6794,4 @@ UsersAPI.putUsersStationsMeAssociatedstationStationId(stationId: stationId) { (e
 `nil` (empty response body)
 
 
-_PureCloudPlatformClientV2@203.0.0_
+_PureCloudPlatformClientV2@204.0.0_
