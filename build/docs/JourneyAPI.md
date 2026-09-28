@@ -64,7 +64,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getJourneyViewsJobsMe**](JourneyAPI#getJourneyViewsJobsMe) | Get my jobs |
 | [**getJourneyViewsSchedules**](JourneyAPI#getJourneyViewsSchedules) | Get the journey schedules for an organization. |
 | [**patchJourneyActionmap**](JourneyAPI#patchJourneyActionmap) | Update single action map. |
-| [**patchJourneyActiontarget**](JourneyAPI#patchJourneyActiontarget) | Deprecated. Update a single action target. |
 | [**patchJourneyActiontemplate**](JourneyAPI#patchJourneyActiontemplate) | Update a single action template. |
 | [**patchJourneyExternaleventsConfiguration**](JourneyAPI#patchJourneyExternaleventsConfiguration) | Update an external events configuration. |
 | [**patchJourneyOutcome**](JourneyAPI#patchJourneyOutcome) | Deprecated. Update an outcome. |
@@ -1235,7 +1234,7 @@ JourneyAPI.getJourneyActiontemplates(pageNumber: pageNumber, pageSize: pageSize,
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortBy** | **String**| Field(s) to sort by. Prefix with '-' for descending (e.g. sortBy=name,-createdDate). | [optional] |
-| **mediaType** | **String**| Media type | [optional]<br />**Values**: webchat ("webchat"), webmessagingoffer ("webMessagingOffer"), contentoffer ("contentOffer"), integrationaction ("integrationAction"), architectflow ("architectFlow"), openaction ("openAction") |
+| **mediaType** | **String**| Media type | [optional]<br />**Values**: webmessagingoffer ("webMessagingOffer"), contentoffer ("contentOffer"), integrationaction ("integrationAction"), architectflow ("architectFlow"), openaction ("openAction") |
 | **state** | **String**| Action template state. | [optional]<br />**Values**: active ("Active"), inactive ("Inactive"), deleted ("Deleted") |
 | **queryFields** | [**[String]**](String)| ActionTemplate field(s) to query on. Requires 'queryValue' to also be set. | [optional] |
 | **queryValue** | **String**| Value to query on using fuzzy matching. Requires 'queryFields' to also be set. | [optional] |
@@ -3224,60 +3223,6 @@ JourneyAPI.patchJourneyActionmap(actionMapId: actionMapId, body: body) { (respon
 [**ActionMap**](ActionMap)
 
 
-## patchJourneyActiontarget
-
-
-
-> [ActionTarget](ActionTarget) patchJourneyActiontarget(actionTargetId, body)
-
-Deprecated. Update a single action target.
-
-ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
-
-
-
-Wraps PATCH /api/v2/journey/actiontargets/{actionTargetId}  
-
-Requires ANY permissions: 
-
-* journey:actiontarget:edit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let actionTargetId: String = "" // ID of the action target.
-let body: PatchActionTarget = new PatchActionTarget(...) // 
-
-// Code example
-JourneyAPI.patchJourneyActiontarget(actionTargetId: actionTargetId, body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("JourneyAPI.patchJourneyActiontarget was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **actionTargetId** | **String**| ID of the action target. | |
-| **body** | [**PatchActionTarget**](PatchActionTarget)|  | [optional] |
-
-
-### Return type
-
-[**ActionTarget**](ActionTarget)
-
-
 ## patchJourneyActiontemplate
 
 
@@ -4881,4 +4826,4 @@ JourneyAPI.putJourneyViewsEventdefinitionActivate(eventDefinitionId: eventDefini
 [**ActivateExternalEventResponse**](ActivateExternalEventResponse)
 
 
-_PureCloudPlatformClientV2@204.0.0_
+_PureCloudPlatformClientV2@205.0.0_

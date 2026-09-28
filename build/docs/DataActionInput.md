@@ -1,0 +1,14 @@
+# DataActionInput
+
+## DataActionInput
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **parameterName** | **String** | The name of the data action input parameter to map a guide variable to. | |
+| **variableName** | **String** | The guide variable whose value will be passed as the input to the paired data action parameter. | |
+
+
+
+_PureCloudPlatformClientV2@205.0.0_

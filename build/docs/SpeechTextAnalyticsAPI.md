@@ -23,12 +23,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSpeechandtextanalyticsProgram**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgram) | Get a Speech &amp; Text Analytics program by id |
 | [**getSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramMappings) | Get Speech &amp; Text Analytics program mappings to queues and flows by id |
 | [**getSpeechandtextanalyticsProgramSettingsInsights**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramSettingsInsights) | Get AI Insights settings of a program |
+| [**getSpeechandtextanalyticsProgramSettingsProcessing**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramSettingsProcessing) | Get program processing settings |
 | [**getSpeechandtextanalyticsProgramTranscriptionengines**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramTranscriptionengines) | Get transcription engine settings of a program |
 | [**getSpeechandtextanalyticsPrograms**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsPrograms) | Get the list of Speech &amp; Text Analytics programs |
 | [**getSpeechandtextanalyticsProgramsGeneralJob**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsGeneralJob) | Get a Speech &amp; Text Analytics general program job by id |
 | [**getSpeechandtextanalyticsProgramsMappings**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsMappings) | Get the list of Speech &amp; Text Analytics programs mappings to queues and flows |
 | [**getSpeechandtextanalyticsProgramsPublishjob**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsPublishjob) | Get a Speech &amp; Text Analytics publish programs job by id |
 | [**getSpeechandtextanalyticsProgramsSettingsInsights**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsSettingsInsights) | Get the list of program AI Insights settings for the organization |
+| [**getSpeechandtextanalyticsProgramsSettingsProcessing**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsSettingsProcessing) | Get the list of program processing settings for the organization |
 | [**getSpeechandtextanalyticsProgramsTopiclinksJob**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsTopiclinksJob) | Get a Speech &amp; Text Analytics program-topic links job by id |
 | [**getSpeechandtextanalyticsProgramsTranscriptionenginesDialects**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsTranscriptionenginesDialects) | Get supported dialects for each transcription engine |
 | [**getSpeechandtextanalyticsProgramsUnpublished**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsUnpublished) | Get the list of Speech &amp; Text Analytics unpublished programs |
@@ -45,6 +47,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSpeechandtextanalyticsTopicsTestphraseJob**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsTopicsTestphraseJob) | Get a Speech &amp; Text Analytics test topics phrase job by id |
 | [**getSpeechandtextanalyticsTranslationsLanguageConversation**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsTranslationsLanguageConversation) | Translate a single interaction recording (or an email conversation) |
 | [**getSpeechandtextanalyticsTranslationsLanguages**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsTranslationsLanguages) | Get supported translation languages |
+| [**patchSpeechandtextanalyticsProgramSettingsProcessing**](SpeechTextAnalyticsAPI#patchSpeechandtextanalyticsProgramSettingsProcessing) | Update program processing settings |
 | [**patchSpeechandtextanalyticsSettings**](SpeechTextAnalyticsAPI#patchSpeechandtextanalyticsSettings) | Patch Speech And Text Analytics Settings |
 | [**postSpeechandtextanalyticsCategories**](SpeechTextAnalyticsAPI#postSpeechandtextanalyticsCategories) | Create new Speech &amp; Text Analytics category |
 | [**postSpeechandtextanalyticsDictionaryfeedback**](SpeechTextAnalyticsAPI#postSpeechandtextanalyticsDictionaryfeedback) | Create a Speech &amp; Text Analytics DictionaryFeedback |
@@ -1039,6 +1042,57 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramSettingsInsights(programI
 [**ProgramInsightsSettings**](ProgramInsightsSettings)
 
 
+## getSpeechandtextanalyticsProgramSettingsProcessing
+
+
+
+> [ProgramProcessingSettings](ProgramProcessingSettings) getSpeechandtextanalyticsProgramSettingsProcessing(programId)
+
+Get program processing settings
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/programs/{programId}/settings/processing  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:view
+* speechAndTextAnalytics:processingSettings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let programId: String = "" // The id of the program
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramSettingsProcessing(programId: programId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramSettingsProcessing was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **programId** | **String**| The id of the program | |
+
+
+### Return type
+
+[**ProgramProcessingSettings**](ProgramProcessingSettings)
+
+
 ## getSpeechandtextanalyticsProgramTranscriptionengines
 
 
@@ -1359,6 +1413,61 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsSettingsInsights(pageSiz
 ### Return type
 
 [**ProgramInsightsSettingsEntityListing**](ProgramInsightsSettingsEntityListing)
+
+
+## getSpeechandtextanalyticsProgramsSettingsProcessing
+
+
+
+> [ProgramProcessingSettingsEntityListing](ProgramProcessingSettingsEntityListing) getSpeechandtextanalyticsProgramsSettingsProcessing(pageSize, pageNumber, programIds)
+
+Get the list of program processing settings for the organization
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/programs/settings/processing  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:view
+* speechAndTextAnalytics:processingSettings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // The page size for the listing. The max that will be returned is 100.
+let pageNumber: Int = 0 // The page number for the listing
+let programIds: [String] = [""] // Comma separated Program IDs to filter by. Maximum of 50 IDs allowed.
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsSettingsProcessing(pageSize: pageSize, pageNumber: pageNumber, programIds: programIds) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsSettingsProcessing was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| The page size for the listing. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| The page number for the listing | [optional] |
+| **programIds** | [**[String]**](String)| Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. | [optional] |
+
+
+### Return type
+
+[**ProgramProcessingSettingsEntityListing**](ProgramProcessingSettingsEntityListing)
 
 
 ## getSpeechandtextanalyticsProgramsTopiclinksJob
@@ -2160,6 +2269,59 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**TranslateSupportedLanguageList**](TranslateSupportedLanguageList)
+
+
+## patchSpeechandtextanalyticsProgramSettingsProcessing
+
+
+
+> [ProgramProcessingSettingsPatchResponse](ProgramProcessingSettingsPatchResponse) patchSpeechandtextanalyticsProgramSettingsProcessing(programId, body)
+
+Update program processing settings
+
+
+
+Wraps PATCH /api/v2/speechandtextanalytics/programs/{programId}/settings/processing  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:edit
+* speechAndTextAnalytics:processingSettings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let programId: String = "" // The id of the program
+let body: ProcessingSettingsRequest = new ProcessingSettingsRequest(...) // Program processing settings
+
+// Code example
+SpeechTextAnalyticsAPI.patchSpeechandtextanalyticsProgramSettingsProcessing(programId: programId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.patchSpeechandtextanalyticsProgramSettingsProcessing was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **programId** | **String**| The id of the program | |
+| **body** | [**ProcessingSettingsRequest**](ProcessingSettingsRequest)| Program processing settings | |
+
+
+### Return type
+
+[**ProgramProcessingSettingsPatchResponse**](ProgramProcessingSettingsPatchResponse)
 
 
 ## patchSpeechandtextanalyticsSettings
@@ -3182,4 +3344,4 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsTopic(topicId: topicId, body: bo
 [**Topic**](Topic)
 
 
-_PureCloudPlatformClientV2@204.0.0_
+_PureCloudPlatformClientV2@205.0.0_

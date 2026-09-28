@@ -230,8 +230,8 @@ open class GamificationAPI {
     "enabled" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1018,8 +1018,8 @@ open class GamificationAPI {
     "status" : "Upcoming"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1200,8 +1200,8 @@ open class GamificationAPI {
     "status" : "Upcoming"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1331,9 +1331,9 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "division" : "{}",
-  "total" : 2,
-  "pageCount" : 7,
-  "pageNumber" : 5,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "performanceProfile" : "{}",
   "entities" : [ {
     "overallData" : "{}",
@@ -1372,7 +1372,7 @@ open class GamificationAPI {
   } ],
   "granularity" : "Daily",
   "comparativePeriod" : "{}",
-  "pageSize" : 5,
+  "pageSize" : 0,
   "primaryPeriod" : "{}"
 }, statusCode=200}]
      

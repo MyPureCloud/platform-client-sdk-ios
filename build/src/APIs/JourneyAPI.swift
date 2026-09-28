@@ -1577,8 +1577,8 @@ open class JourneyAPI {
     "startDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1885,8 +1885,8 @@ open class JourneyAPI {
     "serviceLevel" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1951,7 +1951,7 @@ open class JourneyAPI {
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "description" : "description",
-  "mediaType" : "webchat",
+  "mediaType" : "webMessagingOffer",
   "id" : "id",
   "state" : "Active",
   "version" : 0,
@@ -1985,7 +1985,6 @@ open class JourneyAPI {
     
     
     public enum MediaType_getJourneyActiontemplates: String { 
-        case webchat = "webchat"
         case webmessagingoffer = "webMessagingOffer"
         case contentoffer = "contentOffer"
         case integrationaction = "integrationAction"
@@ -2052,7 +2051,7 @@ open class JourneyAPI {
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
     "description" : "description",
-    "mediaType" : "webchat",
+    "mediaType" : "webMessagingOffer",
     "id" : "id",
     "state" : "Active",
     "version" : 0,
@@ -2063,15 +2062,15 @@ open class JourneyAPI {
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
     "description" : "description",
-    "mediaType" : "webchat",
+    "mediaType" : "webMessagingOffer",
     "id" : "id",
     "state" : "Active",
     "version" : 0,
     "contentOffer" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2160,7 +2159,7 @@ open class JourneyAPI {
   "actions" : [ {
     "contentOfferProperties" : "{}",
     "customerId" : "customerId",
-    "mediaType" : "webchat",
+    "mediaType" : "webMessagingOffer",
     "webMessagingOfferProperties" : "{}",
     "id" : "id",
     "customerIdType" : "customerIdType",
@@ -2171,7 +2170,7 @@ open class JourneyAPI {
   }, {
     "contentOfferProperties" : "{}",
     "customerId" : "customerId",
-    "mediaType" : "webchat",
+    "mediaType" : "webMessagingOffer",
     "webMessagingOfferProperties" : "{}",
     "id" : "id",
     "customerIdType" : "customerIdType",
@@ -2344,8 +2343,8 @@ open class JourneyAPI {
     "source" : "source"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2986,8 +2985,8 @@ open class JourneyAPI {
     "version" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3293,8 +3292,8 @@ open class JourneyAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4985,8 +4984,8 @@ open class JourneyAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5393,8 +5392,8 @@ open class JourneyAPI {
     "dateCompletionEstimated" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5492,8 +5491,8 @@ open class JourneyAPI {
     "dateCompletionEstimated" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5577,8 +5576,8 @@ open class JourneyAPI {
     "frequency" : "Daily"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5732,82 +5731,6 @@ open class JourneyAPI {
     
     
     /**
-     Deprecated. Update a single action target.
-     
-     - parameter actionTargetId: (path) ID of the action target. 
-     - parameter body: (body)  (optional)
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func patchJourneyActiontarget(actionTargetId: String, body: PatchActionTarget? = nil, completion: @escaping ((_ data: ActionTarget?,_ error: Error?) -> Void)) {
-        let requestBuilder = patchJourneyActiontargetWithRequestBuilder(actionTargetId: actionTargetId, body: body)
-        requestBuilder.execute { (response: Response<ActionTarget>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Deprecated. Update a single action target.
-     - PATCH /api/v2/journey/actiontargets/{actionTargetId}
-     - ACD Chat v2.0 in Genesys Predictive Engagement is deprecated and being removed. See https://community.genesys.com/discussion/deprecation-acd-chat-v20-support-in-genesys-predictive-engagement
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "supportedMediaTypes" : [ "callback", "callback" ],
-  "shortAbandonThreshold" : 0,
-  "userData" : [ {
-    "value" : "value",
-    "key" : "key"
-  }, {
-    "value" : "value",
-    "key" : "key"
-  } ],
-  "createdDate" : "2000-01-23T04:56:07.000+00:00",
-  "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
-  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
-  "description" : "description",
-  "id" : "id",
-  "state" : "active",
-  "serviceLevel" : "{}"
-}, statusCode=200}]
-     
-     - parameter actionTargetId: (path) ID of the action target. 
-     - parameter body: (body)  (optional)
-
-     - returns: RequestBuilder<ActionTarget> 
-     */
-    open class func patchJourneyActiontargetWithRequestBuilder(actionTargetId: String, body: PatchActionTarget? = nil) -> RequestBuilder<ActionTarget> {        
-        var path = "/api/v2/journey/actiontargets/{actionTargetId}"
-        let actionTargetIdPreEscape = "\(actionTargetId)"
-        let actionTargetIdPostEscape = actionTargetIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{actionTargetId}", with: actionTargetIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<ActionTarget>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
-    }
-
-    
-    
-    
-    
-    /**
      Update a single action template.
      
      - parameter actionTemplateId: (path) ID of the action template. 
@@ -5844,7 +5767,7 @@ open class JourneyAPI {
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "description" : "description",
-  "mediaType" : "webchat",
+  "mediaType" : "webMessagingOffer",
   "id" : "id",
   "state" : "Active",
   "version" : 0,
@@ -6856,7 +6779,7 @@ open class JourneyAPI {
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "description" : "description",
-  "mediaType" : "webchat",
+  "mediaType" : "webMessagingOffer",
   "id" : "id",
   "state" : "Active",
   "version" : 0,

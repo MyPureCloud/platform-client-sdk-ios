@@ -13,6 +13,51 @@ open class WorkforceManagementAPI {
     
     
     /**
+     Delete an adherence adjustment for the current user
+     
+     - parameter adjustmentId: (path) The ID of the adherence adjustment to delete 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementAdherenceAdjustment(adjustmentId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementAdherenceAdjustmentWithRequestBuilder(adjustmentId: adjustmentId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete an adherence adjustment for the current user
+     - DELETE /api/v2/workforcemanagement/adherence/adjustments/{adjustmentId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter adjustmentId: (path) The ID of the adherence adjustment to delete 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementAdherenceAdjustmentWithRequestBuilder(adjustmentId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/workforcemanagement/adherence/adjustments/{adjustmentId}"
+        let adjustmentIdPreEscape = "\(adjustmentId)"
+        let adjustmentIdPostEscape = adjustmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{adjustmentId}", with: adjustmentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Delete business unit
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -102,6 +147,110 @@ open class WorkforceManagementAPI {
         let body: Data? = nil
         
         let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Delete an adherence adjustment reason code for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter reasonCodeId: (path) The ID of the reason code to delete 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode(businessUnitId: String, reasonCodeId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeWithRequestBuilder(businessUnitId: businessUnitId, reasonCodeId: reasonCodeId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete an adherence adjustment reason code for a business unit
+     - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter reasonCodeId: (path) The ID of the reason code to delete 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeWithRequestBuilder(businessUnitId: String, reasonCodeId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let reasonCodeIdPreEscape = "\(reasonCodeId)"
+        let reasonCodeIdPostEscape = reasonCodeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{reasonCodeId}", with: reasonCodeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Delete adherence adjustment reason codes in bulk for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter ids: (query) The IDs of the reason codes to delete 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk(businessUnitId: String, ids: [String], completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithRequestBuilder(businessUnitId: businessUnitId, ids: ids)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete adherence adjustment reason codes in bulk for a business unit
+     - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter ids: (query) The IDs of the reason codes to delete 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithRequestBuilder(businessUnitId: String, ids: [String]) -> RequestBuilder<Void> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "ids": ids
+        ])
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -1215,6 +1364,75 @@ open class WorkforceManagementAPI {
     
     
     /**
+     Get an adherence adjustment for the current user
+     
+     - parameter adjustmentId: (path) The ID of the adherence adjustment 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementAdherenceAdjustment(adjustmentId: String, completion: @escaping ((_ data: CurrentAgentAdherenceAdjustment?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementAdherenceAdjustmentWithRequestBuilder(adjustmentId: adjustmentId)
+        requestBuilder.execute { (response: Response<CurrentAgentAdherenceAdjustment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an adherence adjustment for the current user
+     - GET /api/v2/workforcemanagement/adherence/adjustments/{adjustmentId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agent" : "{}",
+  "metadata" : "{}",
+  "businessUnit" : "{}",
+  "lengthMinutes" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "reviewedBy" : "{}",
+  "expired" : true,
+  "submitterNotes" : "submitterNotes",
+  "managementUnit" : "{}",
+  "id" : "id",
+  "reasonCode" : "{}",
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "reviewerNotes" : "reviewerNotes",
+  "startDate" : "2000-01-23T04:56:07.000+00:00",
+  "status" : "Approved"
+}, statusCode=200}]
+     
+     - parameter adjustmentId: (path) The ID of the adherence adjustment 
+
+     - returns: RequestBuilder<CurrentAgentAdherenceAdjustment> 
+     */
+    open class func getWorkforcemanagementAdherenceAdjustmentWithRequestBuilder(adjustmentId: String) -> RequestBuilder<CurrentAgentAdherenceAdjustment> {        
+        var path = "/api/v2/workforcemanagement/adherence/adjustments/{adjustmentId}"
+        let adjustmentIdPreEscape = "\(adjustmentId)"
+        let adjustmentIdPostEscape = adjustmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{adjustmentId}", with: adjustmentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CurrentAgentAdherenceAdjustment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Get an adherence explanation for the current user
      
      - parameter explanationId: (path) The ID of the explanation to update 
@@ -1456,6 +1674,82 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WfmHistoricalAdherenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get an adherence adjustment for the requested agent
+     
+     - parameter agentId: (path) The ID of the agent 
+     - parameter adjustmentId: (path) The ID of the adherence adjustment 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementAgentAdherenceAdjustment(agentId: String, adjustmentId: String, completion: @escaping ((_ data: AdherenceAdjustment?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementAgentAdherenceAdjustmentWithRequestBuilder(agentId: agentId, adjustmentId: adjustmentId)
+        requestBuilder.execute { (response: Response<AdherenceAdjustment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an adherence adjustment for the requested agent
+     - GET /api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/{adjustmentId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agent" : "{}",
+  "metadata" : "{}",
+  "businessUnit" : "{}",
+  "lengthMinutes" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "reviewedBy" : "{}",
+  "expired" : true,
+  "submitterNotes" : "submitterNotes",
+  "managementUnit" : "{}",
+  "id" : "id",
+  "reasonCode" : "{}",
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "reviewerNotes" : "reviewerNotes",
+  "startDate" : "2000-01-23T04:56:07.000+00:00",
+  "status" : "Approved"
+}, statusCode=200}]
+     
+     - parameter agentId: (path) The ID of the agent 
+     - parameter adjustmentId: (path) The ID of the adherence adjustment 
+
+     - returns: RequestBuilder<AdherenceAdjustment> 
+     */
+    open class func getWorkforcemanagementAgentAdherenceAdjustmentWithRequestBuilder(agentId: String, adjustmentId: String) -> RequestBuilder<AdherenceAdjustment> {        
+        var path = "/api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/{adjustmentId}"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let adjustmentIdPreEscape = "\(adjustmentId)"
+        let adjustmentIdPostEscape = adjustmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{adjustmentId}", with: adjustmentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdherenceAdjustment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -2647,6 +2941,490 @@ open class WorkforceManagementAPI {
     
     
     /**
+     Gets an activity plan deletion job
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan associated with the deletion job 
+     - parameter jobId: (path) The ID of the activity plan deletion job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanDeletionsJob(businessUnitId: String, activityPlanId: String, jobId: String, completion: @escaping ((_ data: ActivityPlanJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitActivityplanDeletionsJobWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId, jobId: jobId)
+        requestBuilder.execute { (response: Response<ActivityPlanJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets an activity plan deletion job
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/deletions/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "activityPlan" : "{}",
+  "occurrence" : "{}",
+  "error" : "{}",
+  "type" : "RunPlan",
+  "exceptions" : [ {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan associated with the deletion job 
+     - parameter jobId: (path) The ID of the activity plan deletion job 
+
+     - returns: RequestBuilder<ActivityPlanJobResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanDeletionsJobWithRequestBuilder(businessUnitId: String, activityPlanId: String, jobId: String) -> RequestBuilder<ActivityPlanJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/deletions/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let activityPlanIdPreEscape = "\(activityPlanId)"
+        let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Gets the latest job for an activity plan in the business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan associated with the run job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanJobs(businessUnitId: String, activityPlanId: String, completion: @escaping ((_ data: ActivityPlanJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitActivityplanJobsWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId)
+        requestBuilder.execute { (response: Response<ActivityPlanJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets the latest job for an activity plan in the business unit
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "activityPlan" : "{}",
+  "occurrence" : "{}",
+  "error" : "{}",
+  "type" : "RunPlan",
+  "exceptions" : [ {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan associated with the run job 
+
+     - returns: RequestBuilder<ActivityPlanJobResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanJobsWithRequestBuilder(businessUnitId: String, activityPlanId: String) -> RequestBuilder<ActivityPlanJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let activityPlanIdPreEscape = "\(activityPlanId)"
+        let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Gets a session users deletion job
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter occurrenceId: (path) The ID of the activity plan occurrence 
+     - parameter sessionId: (path) The ID of the activity plan occurrence session 
+     - parameter jobId: (path) The ID of the activity plan occurrence session users deletion job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob(businessUnitId: String, activityPlanId: String, occurrenceId: String, sessionId: String, jobId: String, completion: @escaping ((_ data: ActivityPlanJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId, occurrenceId: occurrenceId, sessionId: sessionId, jobId: jobId)
+        requestBuilder.execute { (response: Response<ActivityPlanJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets a session users deletion job
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/{sessionId}/users/deletions/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "activityPlan" : "{}",
+  "occurrence" : "{}",
+  "error" : "{}",
+  "type" : "RunPlan",
+  "exceptions" : [ {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter occurrenceId: (path) The ID of the activity plan occurrence 
+     - parameter sessionId: (path) The ID of the activity plan occurrence session 
+     - parameter jobId: (path) The ID of the activity plan occurrence session users deletion job 
+
+     - returns: RequestBuilder<ActivityPlanJobResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobWithRequestBuilder(businessUnitId: String, activityPlanId: String, occurrenceId: String, sessionId: String, jobId: String) -> RequestBuilder<ActivityPlanJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/{sessionId}/users/deletions/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let activityPlanIdPreEscape = "\(activityPlanId)"
+        let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let occurrenceIdPreEscape = "\(occurrenceId)"
+        let occurrenceIdPostEscape = occurrenceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{occurrenceId}", with: occurrenceIdPostEscape, options: .literal, range: nil)
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Gets an activity plan sessions deletion job
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter occurrenceId: (path) The ID of the activity plan occurrence 
+     - parameter jobId: (path) The ID of the activity plan sessions deletion job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob(businessUnitId: String, activityPlanId: String, occurrenceId: String, jobId: String, completion: @escaping ((_ data: ActivityPlanJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId, occurrenceId: occurrenceId, jobId: jobId)
+        requestBuilder.execute { (response: Response<ActivityPlanJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets an activity plan sessions deletion job
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/deletions/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "activityPlan" : "{}",
+  "occurrence" : "{}",
+  "error" : "{}",
+  "type" : "RunPlan",
+  "exceptions" : [ {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter occurrenceId: (path) The ID of the activity plan occurrence 
+     - parameter jobId: (path) The ID of the activity plan sessions deletion job 
+
+     - returns: RequestBuilder<ActivityPlanJobResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobWithRequestBuilder(businessUnitId: String, activityPlanId: String, occurrenceId: String, jobId: String) -> RequestBuilder<ActivityPlanJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/deletions/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let activityPlanIdPreEscape = "\(activityPlanId)"
+        let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let occurrenceIdPreEscape = "\(occurrenceId)"
+        let occurrenceIdPostEscape = occurrenceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{occurrenceId}", with: occurrenceIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Gets an occurrences deletion job
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter jobId: (path) The ID of the activity plan occurrences deletion job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob(businessUnitId: String, activityPlanId: String, jobId: String, completion: @escaping ((_ data: ActivityPlanJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId, jobId: jobId)
+        requestBuilder.execute { (response: Response<ActivityPlanJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets an occurrences deletion job
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/deletions/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "activityPlan" : "{}",
+  "occurrence" : "{}",
+  "error" : "{}",
+  "type" : "RunPlan",
+  "exceptions" : [ {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter jobId: (path) The ID of the activity plan occurrences deletion job 
+
+     - returns: RequestBuilder<ActivityPlanJobResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobWithRequestBuilder(businessUnitId: String, activityPlanId: String, jobId: String) -> RequestBuilder<ActivityPlanJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/deletions/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let activityPlanIdPreEscape = "\(activityPlanId)"
+        let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
      Gets an activity plan run job
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -2954,6 +3732,496 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ActivityPlanJobListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get adherence adjustments in bulk by ID for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter adjustmentIds: (query) The IDs of the adherence adjustments to fetch 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk(businessUnitId: String, adjustmentIds: [String], completion: @escaping ((_ data: AdherenceAdjustmentsListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkWithRequestBuilder(businessUnitId: businessUnitId, adjustmentIds: adjustmentIds)
+        requestBuilder.execute { (response: Response<AdherenceAdjustmentsListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get adherence adjustments in bulk by ID for a business unit
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "agent" : "{}",
+    "metadata" : "{}",
+    "businessUnit" : "{}",
+    "lengthMinutes" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "reviewedBy" : "{}",
+    "expired" : true,
+    "submitterNotes" : "submitterNotes",
+    "managementUnit" : "{}",
+    "id" : "id",
+    "reasonCode" : "{}",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewerNotes" : "reviewerNotes",
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "Approved"
+  }, {
+    "agent" : "{}",
+    "metadata" : "{}",
+    "businessUnit" : "{}",
+    "lengthMinutes" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "reviewedBy" : "{}",
+    "expired" : true,
+    "submitterNotes" : "submitterNotes",
+    "managementUnit" : "{}",
+    "id" : "id",
+    "reasonCode" : "{}",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewerNotes" : "reviewerNotes",
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "Approved"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter adjustmentIds: (query) The IDs of the adherence adjustments to fetch 
+
+     - returns: RequestBuilder<AdherenceAdjustmentsListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkWithRequestBuilder(businessUnitId: String, adjustmentIds: [String]) -> RequestBuilder<AdherenceAdjustmentsListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/bulk"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "adjustmentIds": adjustmentIds
+        ])
+
+        let requestBuilder: RequestBuilder<AdherenceAdjustmentsListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Query the status of an async adherence adjustments query job. Only the user who started the operation can query the status
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The ID of the query job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob(businessUnitId: String, jobId: String, completion: @escaping ((_ data: BuAdherenceAdjustmentsQueryJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobWithRequestBuilder(businessUnitId: businessUnitId, jobId: jobId)
+        requestBuilder.execute { (response: Response<BuAdherenceAdjustmentsQueryJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query the status of an async adherence adjustments query job. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The ID of the query job 
+
+     - returns: RequestBuilder<BuAdherenceAdjustmentsQueryJob> 
+     */
+    open class func getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobWithRequestBuilder(businessUnitId: String, jobId: String) -> RequestBuilder<BuAdherenceAdjustmentsQueryJob> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuAdherenceAdjustmentsQueryJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get query job history for the logged in user.
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs(businessUnitId: String, completion: @escaping ((_ data: BuAdherenceAdjustmentsQueryJobsReferenceListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsWithRequestBuilder(businessUnitId: businessUnitId)
+        requestBuilder.execute { (response: Response<BuAdherenceAdjustmentsQueryJobsReferenceListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get query job history for the logged in user.
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "status" : "Processing"
+  }, {
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "status" : "Processing"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+
+     - returns: RequestBuilder<BuAdherenceAdjustmentsQueryJobsReferenceListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsWithRequestBuilder(businessUnitId: String) -> RequestBuilder<BuAdherenceAdjustmentsQueryJobsReferenceListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuAdherenceAdjustmentsQueryJobsReferenceListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get an adherence adjustment reason code for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter reasonCodeId: (path) The ID of the reason code to fetch 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode(businessUnitId: String, reasonCodeId: String, completion: @escaping ((_ data: AdherenceAdjustmentsReasonCode?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeWithRequestBuilder(businessUnitId: businessUnitId, reasonCodeId: reasonCodeId)
+        requestBuilder.execute { (response: Response<AdherenceAdjustmentsReasonCode>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an adherence adjustment reason code for a business unit
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "state" : "Active"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter reasonCodeId: (path) The ID of the reason code to fetch 
+
+     - returns: RequestBuilder<AdherenceAdjustmentsReasonCode> 
+     */
+    open class func getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeWithRequestBuilder(businessUnitId: String, reasonCodeId: String) -> RequestBuilder<AdherenceAdjustmentsReasonCode> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let reasonCodeIdPreEscape = "\(reasonCodeId)"
+        let reasonCodeIdPostEscape = reasonCodeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{reasonCodeId}", with: reasonCodeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdherenceAdjustmentsReasonCode>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get adherence adjustment reason codes for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes(businessUnitId: String, completion: @escaping ((_ data: AdherenceAdjustmentsReasonCodesListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesWithRequestBuilder(businessUnitId: businessUnitId)
+        requestBuilder.execute { (response: Response<AdherenceAdjustmentsReasonCodesListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get adherence adjustment reason codes for a business unit
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "metadata" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "state" : "Active"
+  }, {
+    "metadata" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "state" : "Active"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+
+     - returns: RequestBuilder<AdherenceAdjustmentsReasonCodesListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesWithRequestBuilder(businessUnitId: String) -> RequestBuilder<AdherenceAdjustmentsReasonCodesListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdherenceAdjustmentsReasonCodesListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get adherence adjustment reason codes in bulk by ID for a business unit. This API can return deleted reason codes.
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter ids: (query) The IDs of the reason codes to fetch 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk(businessUnitId: String, ids: [String], completion: @escaping ((_ data: AdherenceAdjustmentsReasonCodesListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithRequestBuilder(businessUnitId: businessUnitId, ids: ids)
+        requestBuilder.execute { (response: Response<AdherenceAdjustmentsReasonCodesListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get adherence adjustment reason codes in bulk by ID for a business unit. This API can return deleted reason codes.
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "metadata" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "state" : "Active"
+  }, {
+    "metadata" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "state" : "Active"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter ids: (query) The IDs of the reason codes to fetch 
+
+     - returns: RequestBuilder<AdherenceAdjustmentsReasonCodesListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithRequestBuilder(businessUnitId: String, ids: [String]) -> RequestBuilder<AdherenceAdjustmentsReasonCodesListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "ids": ids
+        ])
+
+        let requestBuilder: RequestBuilder<AdherenceAdjustmentsReasonCodesListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get adherence adjustments settings for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings(businessUnitId: String, completion: @escaping ((_ data: BuAdherenceAdjustmentsSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsWithRequestBuilder(businessUnitId: businessUnitId)
+        requestBuilder.execute { (response: Response<BuAdherenceAdjustmentsSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get adherence adjustments settings for a business unit
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "submissionRangeConstraintDays" : 0
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+
+     - returns: RequestBuilder<BuAdherenceAdjustmentsSettings> 
+     */
+    open class func getWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsWithRequestBuilder(businessUnitId: String) -> RequestBuilder<BuAdherenceAdjustmentsSettings> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/settings"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuAdherenceAdjustmentsSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -13852,6 +15120,159 @@ open class WorkforceManagementAPI {
     
     
     
+    /**
+     Update an adherence adjustment for the current user
+     
+     - parameter adjustmentId: (path) The ID of the adherence adjustment to update 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementAdherenceAdjustment(adjustmentId: String, body: UpdateAdherenceAdjustmentAgentRequest, completion: @escaping ((_ data: CurrentAgentAdherenceAdjustment?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementAdherenceAdjustmentWithRequestBuilder(adjustmentId: adjustmentId, body: body)
+        requestBuilder.execute { (response: Response<CurrentAgentAdherenceAdjustment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an adherence adjustment for the current user
+     - PATCH /api/v2/workforcemanagement/adherence/adjustments/{adjustmentId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agent" : "{}",
+  "metadata" : "{}",
+  "businessUnit" : "{}",
+  "lengthMinutes" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "reviewedBy" : "{}",
+  "expired" : true,
+  "submitterNotes" : "submitterNotes",
+  "managementUnit" : "{}",
+  "id" : "id",
+  "reasonCode" : "{}",
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "reviewerNotes" : "reviewerNotes",
+  "startDate" : "2000-01-23T04:56:07.000+00:00",
+  "status" : "Approved"
+}, statusCode=200}]
+     
+     - parameter adjustmentId: (path) The ID of the adherence adjustment to update 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<CurrentAgentAdherenceAdjustment> 
+     */
+    open class func patchWorkforcemanagementAdherenceAdjustmentWithRequestBuilder(adjustmentId: String, body: UpdateAdherenceAdjustmentAgentRequest) -> RequestBuilder<CurrentAgentAdherenceAdjustment> {        
+        var path = "/api/v2/workforcemanagement/adherence/adjustments/{adjustmentId}"
+        let adjustmentIdPreEscape = "\(adjustmentId)"
+        let adjustmentIdPostEscape = adjustmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{adjustmentId}", with: adjustmentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CurrentAgentAdherenceAdjustment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update an adherence adjustment for the requested agent
+     
+     - parameter agentId: (path) The ID of the agent 
+     - parameter adjustmentId: (path) The ID of the adherence adjustment 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementAgentAdherenceAdjustment(agentId: String, adjustmentId: String, body: UpdateAdherenceAdjustmentAdminRequest, completion: @escaping ((_ data: AdherenceAdjustment?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementAgentAdherenceAdjustmentWithRequestBuilder(agentId: agentId, adjustmentId: adjustmentId, body: body)
+        requestBuilder.execute { (response: Response<AdherenceAdjustment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an adherence adjustment for the requested agent
+     - PATCH /api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/{adjustmentId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agent" : "{}",
+  "metadata" : "{}",
+  "businessUnit" : "{}",
+  "lengthMinutes" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "reviewedBy" : "{}",
+  "expired" : true,
+  "submitterNotes" : "submitterNotes",
+  "managementUnit" : "{}",
+  "id" : "id",
+  "reasonCode" : "{}",
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "reviewerNotes" : "reviewerNotes",
+  "startDate" : "2000-01-23T04:56:07.000+00:00",
+  "status" : "Approved"
+}, statusCode=200}]
+     
+     - parameter agentId: (path) The ID of the agent 
+     - parameter adjustmentId: (path) The ID of the adherence adjustment 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<AdherenceAdjustment> 
+     */
+    open class func patchWorkforcemanagementAgentAdherenceAdjustmentWithRequestBuilder(agentId: String, adjustmentId: String, body: UpdateAdherenceAdjustmentAdminRequest) -> RequestBuilder<AdherenceAdjustment> {        
+        var path = "/api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/{adjustmentId}"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let adjustmentIdPreEscape = "\(adjustmentId)"
+        let adjustmentIdPostEscape = adjustmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{adjustmentId}", with: adjustmentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdherenceAdjustment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     
     
     /**
@@ -13910,6 +15331,73 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AdherenceExplanationAsyncResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update unavailable times for the requested agent
+     
+     - parameter agentId: (path) The ID of the agent 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementAgentUnavailabletimes(agentId: String, body: UpdateUnavailableTimesRequest, completion: @escaping ((_ data: BulkUpdateAgentUnavailableTimesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementAgentUnavailabletimesWithRequestBuilder(agentId: agentId, body: body)
+        requestBuilder.execute { (response: Response<BulkUpdateAgentUnavailableTimesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update unavailable times for the requested agent
+     - PATCH /api/v2/workforcemanagement/agents/{agentId}/unavailabletimes
+     - Large requests will be partitioned into multiple internal processing batches. Validation will occur against each internal batch independently rather than against the final combined state represented by the entire request
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "error" : "{}",
+  "results" : [ {
+    "unavailableTime" : "{}",
+    "status" : "Complete"
+  }, {
+    "unavailableTime" : "{}",
+    "status" : "Complete"
+  } ]
+}, statusCode=200}]
+     
+     - parameter agentId: (path) The ID of the agent 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BulkUpdateAgentUnavailableTimesResponse> 
+     */
+    open class func patchWorkforcemanagementAgentUnavailabletimesWithRequestBuilder(agentId: String, body: UpdateUnavailableTimesRequest) -> RequestBuilder<BulkUpdateAgentUnavailableTimesResponse> {        
+        var path = "/api/v2/workforcemanagement/agents/{agentId}/unavailabletimes"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkUpdateAgentUnavailableTimesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -14539,6 +16027,298 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ActivityPlanResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update adherence adjustments in bulk for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk(businessUnitId: String, body: UpdateAdherenceAdjustmentsBulkRequest, completion: @escaping ((_ data: AdherenceAdjustmentsListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<AdherenceAdjustmentsListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update adherence adjustments in bulk for a business unit
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "agent" : "{}",
+    "metadata" : "{}",
+    "businessUnit" : "{}",
+    "lengthMinutes" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "reviewedBy" : "{}",
+    "expired" : true,
+    "submitterNotes" : "submitterNotes",
+    "managementUnit" : "{}",
+    "id" : "id",
+    "reasonCode" : "{}",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewerNotes" : "reviewerNotes",
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "Approved"
+  }, {
+    "agent" : "{}",
+    "metadata" : "{}",
+    "businessUnit" : "{}",
+    "lengthMinutes" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "reviewedBy" : "{}",
+    "expired" : true,
+    "submitterNotes" : "submitterNotes",
+    "managementUnit" : "{}",
+    "id" : "id",
+    "reasonCode" : "{}",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewerNotes" : "reviewerNotes",
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "Approved"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<AdherenceAdjustmentsListing> 
+     */
+    open class func patchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulkWithRequestBuilder(businessUnitId: String, body: UpdateAdherenceAdjustmentsBulkRequest) -> RequestBuilder<AdherenceAdjustmentsListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/bulk"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdherenceAdjustmentsListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update an adherence adjustment reason code for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter reasonCodeId: (path) The ID of the reason code to update 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode(businessUnitId: String, reasonCodeId: String, body: UpdateAdherenceAdjustmentsReasonCodeRequest, completion: @escaping ((_ data: AdherenceAdjustmentsReasonCode?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeWithRequestBuilder(businessUnitId: businessUnitId, reasonCodeId: reasonCodeId, body: body)
+        requestBuilder.execute { (response: Response<AdherenceAdjustmentsReasonCode>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an adherence adjustment reason code for a business unit
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "state" : "Active"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter reasonCodeId: (path) The ID of the reason code to update 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<AdherenceAdjustmentsReasonCode> 
+     */
+    open class func patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodeWithRequestBuilder(businessUnitId: String, reasonCodeId: String, body: UpdateAdherenceAdjustmentsReasonCodeRequest) -> RequestBuilder<AdherenceAdjustmentsReasonCode> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let reasonCodeIdPreEscape = "\(reasonCodeId)"
+        let reasonCodeIdPostEscape = reasonCodeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{reasonCodeId}", with: reasonCodeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdherenceAdjustmentsReasonCode>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update adherence adjustment reason codes in bulk for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk(businessUnitId: String, body: UpdateAdherenceAdjustmentsReasonCodesBulkRequest, completion: @escaping ((_ data: AdherenceAdjustmentsReasonCodesListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<AdherenceAdjustmentsReasonCodesListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update adherence adjustment reason codes in bulk for a business unit
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "metadata" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "state" : "Active"
+  }, {
+    "metadata" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "state" : "Active"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<AdherenceAdjustmentsReasonCodesListing> 
+     */
+    open class func patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithRequestBuilder(businessUnitId: String, body: UpdateAdherenceAdjustmentsReasonCodesBulkRequest) -> RequestBuilder<AdherenceAdjustmentsReasonCodesListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdherenceAdjustmentsReasonCodesListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update adherence adjustments settings for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings(businessUnitId: String, body: UpdateBuAdherenceAdjustmentsSettingsRequest, completion: @escaping ((_ data: BuAdherenceAdjustmentsSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<BuAdherenceAdjustmentsSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update adherence adjustments settings for a business unit
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "submissionRangeConstraintDays" : 0
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BuAdherenceAdjustmentsSettings> 
+     */
+    open class func patchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettingsWithRequestBuilder(businessUnitId: String, body: UpdateBuAdherenceAdjustmentsSettingsRequest) -> RequestBuilder<BuAdherenceAdjustmentsSettings> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/settings"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuAdherenceAdjustmentsSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -17110,6 +18890,176 @@ open class WorkforceManagementAPI {
     
     
     /**
+     Submit an adherence adjustment for the current user
+     
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAdherenceAdjustments(body: AddAdherenceAdjustmentAgentRequest, completion: @escaping ((_ data: CurrentAgentAdherenceAdjustment?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAdherenceAdjustmentsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<CurrentAgentAdherenceAdjustment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Submit an adherence adjustment for the current user
+     - POST /api/v2/workforcemanagement/adherence/adjustments
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agent" : "{}",
+  "metadata" : "{}",
+  "businessUnit" : "{}",
+  "lengthMinutes" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "reviewedBy" : "{}",
+  "expired" : true,
+  "submitterNotes" : "submitterNotes",
+  "managementUnit" : "{}",
+  "id" : "id",
+  "reasonCode" : "{}",
+  "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+  "reviewerNotes" : "reviewerNotes",
+  "startDate" : "2000-01-23T04:56:07.000+00:00",
+  "status" : "Approved"
+}, statusCode=200}]
+     
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<CurrentAgentAdherenceAdjustment> 
+     */
+    open class func postWorkforcemanagementAdherenceAdjustmentsWithRequestBuilder(body: AddAdherenceAdjustmentAgentRequest) -> RequestBuilder<CurrentAgentAdherenceAdjustment> {        
+        let path = "/api/v2/workforcemanagement/adherence/adjustments"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CurrentAgentAdherenceAdjustment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Query adherence adjustments for the current user
+     
+     - parameter body: (body) body 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) The page size for the listing. The maximum page size is 500. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAdherenceAdjustmentsQuery(body: AgentQueryAdherenceAdjustmentsRequest, before: String? = nil, after: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: CurrentAgentCursorAdherenceAdjustmentsListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAdherenceAdjustmentsQueryWithRequestBuilder(body: body, before: before, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<CurrentAgentCursorAdherenceAdjustmentsListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query adherence adjustments for the current user
+     - POST /api/v2/workforcemanagement/adherence/adjustments/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "agent" : "{}",
+    "metadata" : "{}",
+    "businessUnit" : "{}",
+    "lengthMinutes" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "reviewedBy" : "{}",
+    "expired" : true,
+    "submitterNotes" : "submitterNotes",
+    "managementUnit" : "{}",
+    "id" : "id",
+    "reasonCode" : "{}",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewerNotes" : "reviewerNotes",
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "Approved"
+  }, {
+    "agent" : "{}",
+    "metadata" : "{}",
+    "businessUnit" : "{}",
+    "lengthMinutes" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "reviewedBy" : "{}",
+    "expired" : true,
+    "submitterNotes" : "submitterNotes",
+    "managementUnit" : "{}",
+    "id" : "id",
+    "reasonCode" : "{}",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewerNotes" : "reviewerNotes",
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "Approved"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter body: (body) body 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) The page size for the listing. The maximum page size is 500. (optional)
+
+     - returns: RequestBuilder<CurrentAgentCursorAdherenceAdjustmentsListing> 
+     */
+    open class func postWorkforcemanagementAdherenceAdjustmentsQueryWithRequestBuilder(body: AgentQueryAdherenceAdjustmentsRequest, before: String? = nil, after: String? = nil, pageSize: String? = nil) -> RequestBuilder<CurrentAgentCursorAdherenceAdjustmentsListing> {        
+        let path = "/api/v2/workforcemanagement/adherence/adjustments/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize
+        ])
+
+        let requestBuilder: RequestBuilder<CurrentAgentCursorAdherenceAdjustmentsListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Submit an adherence explanation for the current user
      
      - parameter body: (body) The request body 
@@ -17275,6 +19225,117 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WfmHistoricalAdherenceBulkResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Query adherence adjustments for the requested agent
+     
+     - parameter agentId: (path) The ID of the agent 
+     - parameter body: (body) body 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) The page size for the listing. The maximum page size is 500. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAgentAdherenceAdjustmentsQuery(agentId: String, body: AgentQueryAdherenceAdjustmentsRequest, before: String? = nil, after: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: CursorAdherenceAdjustmentsListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAgentAdherenceAdjustmentsQueryWithRequestBuilder(agentId: agentId, body: body, before: before, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<CursorAdherenceAdjustmentsListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query adherence adjustments for the requested agent
+     - POST /api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "agent" : "{}",
+    "metadata" : "{}",
+    "businessUnit" : "{}",
+    "lengthMinutes" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "reviewedBy" : "{}",
+    "expired" : true,
+    "submitterNotes" : "submitterNotes",
+    "managementUnit" : "{}",
+    "id" : "id",
+    "reasonCode" : "{}",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewerNotes" : "reviewerNotes",
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "Approved"
+  }, {
+    "agent" : "{}",
+    "metadata" : "{}",
+    "businessUnit" : "{}",
+    "lengthMinutes" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "reviewedBy" : "{}",
+    "expired" : true,
+    "submitterNotes" : "submitterNotes",
+    "managementUnit" : "{}",
+    "id" : "id",
+    "reasonCode" : "{}",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewerNotes" : "reviewerNotes",
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "Approved"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter agentId: (path) The ID of the agent 
+     - parameter body: (body) body 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) The page size for the listing. The maximum page size is 500. (optional)
+
+     - returns: RequestBuilder<CursorAdherenceAdjustmentsListing> 
+     */
+    open class func postWorkforcemanagementAgentAdherenceAdjustmentsQueryWithRequestBuilder(agentId: String, body: AgentQueryAdherenceAdjustmentsRequest, before: String? = nil, after: String? = nil, pageSize: String? = nil) -> RequestBuilder<CursorAdherenceAdjustmentsListing> {        
+        var path = "/api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/query"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize
+        ])
+
+        let requestBuilder: RequestBuilder<CursorAdherenceAdjustmentsListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -18666,6 +20727,387 @@ open class WorkforceManagementAPI {
     
     
     /**
+     Delete an activity plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan to delete 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitActivityplanDeletionsJobs(businessUnitId: String, activityPlanId: String, completion: @escaping ((_ data: ActivityPlanJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitActivityplanDeletionsJobsWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId)
+        requestBuilder.execute { (response: Response<ActivityPlanJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete an activity plan
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/deletions/jobs
+     - Triggers a job to delete the activity plan. No further changes to the activity plan can be made
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "activityPlan" : "{}",
+  "occurrence" : "{}",
+  "error" : "{}",
+  "type" : "RunPlan",
+  "exceptions" : [ {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan to delete 
+
+     - returns: RequestBuilder<ActivityPlanJobResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitActivityplanDeletionsJobsWithRequestBuilder(businessUnitId: String, activityPlanId: String) -> RequestBuilder<ActivityPlanJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/deletions/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let activityPlanIdPreEscape = "\(activityPlanId)"
+        let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Triggers a job to delete users from a session in the activity plan occurrence
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter occurrenceId: (path) The ID of the activity plan occurrence 
+     - parameter sessionId: (path) The ID of the activity plan occurrence session 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs(businessUnitId: String, activityPlanId: String, occurrenceId: String, sessionId: String, body: ActivityPlanDeletionSessionUserIds, completion: @escaping ((_ data: ActivityPlanJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobsWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId, occurrenceId: occurrenceId, sessionId: sessionId, body: body)
+        requestBuilder.execute { (response: Response<ActivityPlanJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Triggers a job to delete users from a session in the activity plan occurrence
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/{sessionId}/users/deletions/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "activityPlan" : "{}",
+  "occurrence" : "{}",
+  "error" : "{}",
+  "type" : "RunPlan",
+  "exceptions" : [ {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter occurrenceId: (path) The ID of the activity plan occurrence 
+     - parameter sessionId: (path) The ID of the activity plan occurrence session 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<ActivityPlanJobResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobsWithRequestBuilder(businessUnitId: String, activityPlanId: String, occurrenceId: String, sessionId: String, body: ActivityPlanDeletionSessionUserIds) -> RequestBuilder<ActivityPlanJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/{sessionId}/users/deletions/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let activityPlanIdPreEscape = "\(activityPlanId)"
+        let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let occurrenceIdPreEscape = "\(occurrenceId)"
+        let occurrenceIdPostEscape = occurrenceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{occurrenceId}", with: occurrenceIdPostEscape, options: .literal, range: nil)
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Triggers a job to delete sessions for the activity plan occurrence
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter occurrenceId: (path) The ID of the activity plan occurrence 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs(businessUnitId: String, activityPlanId: String, occurrenceId: String, body: ActivityPlanDeletionSessionIds, completion: @escaping ((_ data: ActivityPlanJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobsWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId, occurrenceId: occurrenceId, body: body)
+        requestBuilder.execute { (response: Response<ActivityPlanJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Triggers a job to delete sessions for the activity plan occurrence
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/deletions/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "activityPlan" : "{}",
+  "occurrence" : "{}",
+  "error" : "{}",
+  "type" : "RunPlan",
+  "exceptions" : [ {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter occurrenceId: (path) The ID of the activity plan occurrence 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<ActivityPlanJobResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobsWithRequestBuilder(businessUnitId: String, activityPlanId: String, occurrenceId: String, body: ActivityPlanDeletionSessionIds) -> RequestBuilder<ActivityPlanJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/deletions/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let activityPlanIdPreEscape = "\(activityPlanId)"
+        let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let occurrenceIdPreEscape = "\(occurrenceId)"
+        let occurrenceIdPostEscape = occurrenceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{occurrenceId}", with: occurrenceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Delete occurrences for the activity plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs(businessUnitId: String, activityPlanId: String, body: ActivityPlanDeletionOccurrenceIds, completion: @escaping ((_ data: ActivityPlanOccurrencesDeletionJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobsWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId, body: body)
+        requestBuilder.execute { (response: Response<ActivityPlanOccurrencesDeletionJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete occurrences for the activity plan
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/deletions/jobs
+     - Triggers a job to delete occurrences of the activity plan. The activity plan cannot be updated until the job completes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "activityPlan" : "{}",
+  "error" : "{}",
+  "exceptions" : [ {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<ActivityPlanOccurrencesDeletionJobResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobsWithRequestBuilder(businessUnitId: String, activityPlanId: String, body: ActivityPlanDeletionOccurrenceIds) -> RequestBuilder<ActivityPlanOccurrencesDeletionJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/deletions/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let activityPlanIdPreEscape = "\(activityPlanId)"
+        let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanOccurrencesDeletionJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Run an activity plan manually
      
      - parameter businessUnitId: (path) The ID of the business unit 
@@ -18842,6 +21284,315 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ActivityPlanResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Query adherence adjustments for a business unit. Results will be returned using cursor pagination
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) The page size for the listing. The maximum page size is 500. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery(businessUnitId: String, body: BuQueryAdherenceAdjustmentsRequest, before: String? = nil, after: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: CursorAdherenceAdjustmentsListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryWithRequestBuilder(businessUnitId: businessUnitId, body: body, before: before, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<CursorAdherenceAdjustmentsListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query adherence adjustments for a business unit. Results will be returned using cursor pagination
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "agent" : "{}",
+    "metadata" : "{}",
+    "businessUnit" : "{}",
+    "lengthMinutes" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "reviewedBy" : "{}",
+    "expired" : true,
+    "submitterNotes" : "submitterNotes",
+    "managementUnit" : "{}",
+    "id" : "id",
+    "reasonCode" : "{}",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewerNotes" : "reviewerNotes",
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "Approved"
+  }, {
+    "agent" : "{}",
+    "metadata" : "{}",
+    "businessUnit" : "{}",
+    "lengthMinutes" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "reviewedBy" : "{}",
+    "expired" : true,
+    "submitterNotes" : "submitterNotes",
+    "managementUnit" : "{}",
+    "id" : "id",
+    "reasonCode" : "{}",
+    "reviewedDate" : "2000-01-23T04:56:07.000+00:00",
+    "reviewerNotes" : "reviewerNotes",
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "Approved"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) The page size for the listing. The maximum page size is 500. (optional)
+
+     - returns: RequestBuilder<CursorAdherenceAdjustmentsListing> 
+     */
+    open class func postWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryWithRequestBuilder(businessUnitId: String, body: BuQueryAdherenceAdjustmentsRequest, before: String? = nil, after: String? = nil, pageSize: String? = nil) -> RequestBuilder<CursorAdherenceAdjustmentsListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize
+        ])
+
+        let requestBuilder: RequestBuilder<CursorAdherenceAdjustmentsListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Creates an async query job for adherence adjustments in a business unit.
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs(businessUnitId: String, body: BuQueryAdherenceAdjustmentsRequest, completion: @escaping ((_ data: BuAdherenceAdjustmentsQueryJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<BuAdherenceAdjustmentsQueryJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Creates an async query job for adherence adjustments in a business unit.
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BuAdherenceAdjustmentsQueryJob> 
+     */
+    open class func postWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobsWithRequestBuilder(businessUnitId: String, body: BuQueryAdherenceAdjustmentsRequest) -> RequestBuilder<BuAdherenceAdjustmentsQueryJob> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuAdherenceAdjustmentsQueryJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create an adherence adjustment reason code for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes(businessUnitId: String, body: CreateAdherenceAdjustmentsReasonCodeRequest, completion: @escaping ((_ data: AdherenceAdjustmentsReasonCode?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<AdherenceAdjustmentsReasonCode>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create an adherence adjustment reason code for a business unit
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "state" : "Active"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<AdherenceAdjustmentsReasonCode> 
+     */
+    open class func postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesWithRequestBuilder(businessUnitId: String, body: CreateAdherenceAdjustmentsReasonCodeRequest) -> RequestBuilder<AdherenceAdjustmentsReasonCode> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdherenceAdjustmentsReasonCode>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create adherence adjustment reason codes in bulk for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk(businessUnitId: String, body: CreateAdherenceAdjustmentsReasonCodesBulkRequest, completion: @escaping ((_ data: AdherenceAdjustmentsReasonCodesListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<AdherenceAdjustmentsReasonCodesListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create adherence adjustment reason codes in bulk for a business unit
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "metadata" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "state" : "Active"
+  }, {
+    "metadata" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "state" : "Active"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<AdherenceAdjustmentsReasonCodesListing> 
+     */
+    open class func postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulkWithRequestBuilder(businessUnitId: String, body: CreateAdherenceAdjustmentsReasonCodesBulkRequest) -> RequestBuilder<AdherenceAdjustmentsReasonCodesListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdherenceAdjustmentsReasonCodesListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

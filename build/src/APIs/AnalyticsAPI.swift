@@ -8722,6 +8722,174 @@ open class AnalyticsAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    /**
+     Get analytics data warehouse file download
+     
+     - parameter downloadId: (path) Unique file Id to download 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsDataextractionDownload(downloadId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsDataextractionDownloadWithRequestBuilder(downloadId: downloadId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get analytics data warehouse file download
+     - GET /api/v2/analytics/dataextraction/downloads/{downloadId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter downloadId: (path) Unique file Id to download 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func getAnalyticsDataextractionDownloadWithRequestBuilder(downloadId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/analytics/dataextraction/downloads/{downloadId}"
+        let downloadIdPreEscape = "\(downloadId)"
+        let downloadIdPostEscape = downloadIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{downloadId}", with: downloadIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get metadata on files available for extraction
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter dataSchema: (query) Data schema like conversations (optional)
+     - parameter dateStart: (query) Start DateTime filter. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+     - parameter dateEnd: (query) End DateTime filter. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsDataextractionDownloadsMetadata(before: String? = nil, after: String? = nil, pageSize: String? = nil, dataSchema: String? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, completion: @escaping ((_ data: DataExtractionFileSchemaListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsDataextractionDownloadsMetadataWithRequestBuilder(before: before, after: after, pageSize: pageSize, dataSchema: dataSchema, dateStart: dateStart, dateEnd: dateEnd)
+        requestBuilder.execute { (response: Response<DataExtractionFileSchemaListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get metadata on files available for extraction
+     - GET /api/v2/analytics/dataextraction/downloads/metadata
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "dataSchema" : "dataSchema",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateExpires" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  }, {
+    "dataSchema" : "dataSchema",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateExpires" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  } ],
+  "selfUri" : "selfUri",
+  "enabledDataSchemas" : [ "enabledDataSchemas", "enabledDataSchemas" ],
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri",
+  "errors" : {
+    "messageWithParams" : "messageWithParams",
+    "code" : "code",
+    "entityName" : "entityName",
+    "limit" : {
+      "namespace" : "users.rules",
+      "value" : 6,
+      "key" : "key"
+    },
+    "entityId" : "entityId",
+    "contextId" : "contextId",
+    "details" : [ {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    }, {
+      "fieldName" : "fieldName",
+      "entityName" : "entityName",
+      "errorCode" : "errorCode",
+      "entityId" : "entityId"
+    } ],
+    "messageParams" : {
+      "key" : "messageParams"
+    },
+    "message" : "message",
+    "errors" : [ null, null ],
+    "status" : 0
+  }
+}, statusCode=200}]
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter dataSchema: (query) Data schema like conversations (optional)
+     - parameter dateStart: (query) Start DateTime filter. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+     - parameter dateEnd: (query) End DateTime filter. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+
+     - returns: RequestBuilder<DataExtractionFileSchemaListing> 
+     */
+    open class func getAnalyticsDataextractionDownloadsMetadataWithRequestBuilder(before: String? = nil, after: String? = nil, pageSize: String? = nil, dataSchema: String? = nil, dateStart: Date? = nil, dateEnd: Date? = nil) -> RequestBuilder<DataExtractionFileSchemaListing> {        
+        let path = "/api/v2/analytics/dataextraction/downloads/metadata"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize, 
+            "dataSchema": dataSchema, 
+            "dateStart": dateStart?.encodeToJSON(), 
+            "dateEnd": dateEnd?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<DataExtractionFileSchemaListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     /**
      Get analytics data retention setting
      
@@ -11123,8 +11291,8 @@ open class AnalyticsAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -11298,8 +11466,8 @@ open class AnalyticsAPI {
     "status" : "SUBMITTED"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -11387,8 +11555,8 @@ open class AnalyticsAPI {
     "dateLimitations" : "dateLimitations"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -11718,8 +11886,8 @@ open class AnalyticsAPI {
     "favorite" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 7,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -12001,8 +12169,8 @@ open class AnalyticsAPI {
     "favorite" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 7,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -19757,6 +19925,64 @@ open class AnalyticsAPI {
     
     
     /**
+     Get download URLs for analytics data warehouse files
+     
+     - parameter body: (body) request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsDataextractionDownloadsBulk(body: DownloadServiceRequest, completion: @escaping ((_ data: DataExtractionFileUrlListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsDataextractionDownloadsBulkWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<DataExtractionFileUrlListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get download URLs for analytics data warehouse files
+     - POST /api/v2/analytics/dataextraction/downloads/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "id" : "id",
+    "signedUrl" : "signedUrl"
+  }, {
+    "id" : "id",
+    "signedUrl" : "signedUrl"
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) request 
+
+     - returns: RequestBuilder<DataExtractionFileUrlListing> 
+     */
+    open class func postAnalyticsDataextractionDownloadsBulkWithRequestBuilder(body: DownloadServiceRequest) -> RequestBuilder<DataExtractionFileUrlListing> {        
+        let path = "/api/v2/analytics/dataextraction/downloads/bulk"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataExtractionFileUrlListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Query for evaluation aggregates asynchronously
      
      - parameter body: (body) query 
@@ -23605,8 +23831,8 @@ open class AnalyticsAPI {
     "favorite" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 7,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

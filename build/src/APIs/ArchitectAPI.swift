@@ -1666,6 +1666,7 @@ open class ArchitectAPI {
         case botconnectorintegration = "BOTCONNECTORINTEGRATION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
+        case businessprocessflow = "BUSINESSPROCESSFLOW"
         case commonmoduleflow = "COMMONMODULEFLOW"
         case composerscript = "COMPOSERSCRIPT"
         case contactlist = "CONTACTLIST"
@@ -1763,6 +1764,7 @@ open class ArchitectAPI {
         case botconnectorintegration = "BOTCONNECTORINTEGRATION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
+        case businessprocessflow = "BUSINESSPROCESSFLOW"
         case commonmoduleflow = "COMMONMODULEFLOW"
         case composerscript = "COMPOSERSCRIPT"
         case contactlist = "CONTACTLIST"
@@ -1856,6 +1858,7 @@ open class ArchitectAPI {
         case botconnectorintegration = "BOTCONNECTORINTEGRATION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
+        case businessprocessflow = "BUSINESSPROCESSFLOW"
         case commonmoduleflow = "COMMONMODULEFLOW"
         case composerscript = "COMPOSERSCRIPT"
         case contactlist = "CONTACTLIST"
@@ -2073,8 +2076,8 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2195,6 +2198,7 @@ open class ArchitectAPI {
         case botconnectorintegration = "BOTCONNECTORINTEGRATION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
+        case businessprocessflow = "BUSINESSPROCESSFLOW"
         case commonmoduleflow = "COMMONMODULEFLOW"
         case composerscript = "COMPOSERSCRIPT"
         case contactlist = "CONTACTLIST"
@@ -2341,8 +2345,8 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2391,6 +2395,7 @@ open class ArchitectAPI {
         case botconnectorintegration = "BOTCONNECTORINTEGRATION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
+        case businessprocessflow = "BUSINESSPROCESSFLOW"
         case commonmoduleflow = "COMMONMODULEFLOW"
         case composerscript = "COMPOSERSCRIPT"
         case contactlist = "CONTACTLIST"
@@ -2547,8 +2552,8 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2600,6 +2605,7 @@ open class ArchitectAPI {
         case botconnectorintegration = "BOTCONNECTORINTEGRATION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
+        case businessprocessflow = "BUSINESSPROCESSFLOW"
         case commonmoduleflow = "COMMONMODULEFLOW"
         case composerscript = "COMPOSERSCRIPT"
         case contactlist = "CONTACTLIST"
@@ -2702,6 +2708,7 @@ open class ArchitectAPI {
         case botconnectorintegration = "BOTCONNECTORINTEGRATION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
+        case businessprocessflow = "BUSINESSPROCESSFLOW"
         case commonmoduleflow = "COMMONMODULEFLOW"
         case composerscript = "COMPOSERSCRIPT"
         case contactlist = "CONTACTLIST"
@@ -2922,8 +2929,8 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2976,6 +2983,7 @@ open class ArchitectAPI {
         case botconnectorintegration = "BOTCONNECTORINTEGRATION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
+        case businessprocessflow = "BUSINESSPROCESSFLOW"
         case commonmoduleflow = "COMMONMODULEFLOW"
         case composerscript = "COMPOSERSCRIPT"
         case contactlist = "CONTACTLIST"
@@ -3074,6 +3082,7 @@ open class ArchitectAPI {
         case botconnectorintegration = "BOTCONNECTORINTEGRATION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
+        case businessprocessflow = "BUSINESSPROCESSFLOW"
         case commonmoduleflow = "COMMONMODULEFLOW"
         case composerscript = "COMPOSERSCRIPT"
         case contactlist = "CONTACTLIST"
@@ -3167,6 +3176,7 @@ open class ArchitectAPI {
         case botconnectorintegration = "BOTCONNECTORINTEGRATION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
+        case businessprocessflow = "BUSINESSPROCESSFLOW"
         case commonmoduleflow = "COMMONMODULEFLOW"
         case composerscript = "COMPOSERSCRIPT"
         case contactlist = "CONTACTLIST"
@@ -3477,8 +3487,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3520,6 +3530,7 @@ open class ArchitectAPI {
         case botconnectorintegration = "BOTCONNECTORINTEGRATION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
+        case businessprocessflow = "BUSINESSPROCESSFLOW"
         case commonmoduleflow = "COMMONMODULEFLOW"
         case composerscript = "COMPOSERSCRIPT"
         case contactlist = "CONTACTLIST"
@@ -3615,6 +3626,7 @@ open class ArchitectAPI {
         case botconnectorintegration = "BOTCONNECTORINTEGRATION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
+        case businessprocessflow = "BUSINESSPROCESSFLOW"
         case commonmoduleflow = "COMMONMODULEFLOW"
         case composerscript = "COMPOSERSCRIPT"
         case contactlist = "CONTACTLIST"
@@ -3834,8 +3846,8 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4087,8 +4099,8 @@ open class ArchitectAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4188,8 +4200,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -4503,8 +4515,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -4775,8 +4787,8 @@ open class ArchitectAPI {
     "closedHoursFlow" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -4882,8 +4894,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -5647,8 +5659,8 @@ open class ArchitectAPI {
     "text" : "text"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5832,8 +5844,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6183,8 +6195,8 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -6288,8 +6300,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -6414,8 +6426,8 @@ open class ArchitectAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -6517,8 +6529,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -7290,8 +7302,8 @@ open class ArchitectAPI {
     "text" : "text"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7475,8 +7487,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -11801,8 +11813,8 @@ open class ArchitectAPI {
     "commitVersion" : "commitVersion"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -11839,6 +11851,7 @@ open class ArchitectAPI {
     
     public enum ModelType_getFlows: String { 
         case bot = "bot"
+        case businessprocess = "businessprocess"
         case commonmodule = "commonmodule"
         case digitalbot = "digitalbot"
         case emailsend = "emailsend"
@@ -16084,8 +16097,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -16603,8 +16616,8 @@ open class ArchitectAPI {
     "key" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -16719,8 +16732,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -16909,8 +16922,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -16951,6 +16964,7 @@ open class ArchitectAPI {
     
     public enum ModelType_getFlowsDivisionviews: String { 
         case bot = "bot"
+        case businessprocess = "businessprocess"
         case commonmodule = "commonmodule"
         case digitalbot = "digitalbot"
         case emailsend = "emailsend"
@@ -17078,8 +17092,8 @@ open class ArchitectAPI {
     "debugVersion" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -17671,8 +17685,8 @@ open class ArchitectAPI {
     "type" : "bot"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -22131,8 +22145,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -22300,8 +22314,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -22409,8 +22423,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -23554,8 +23568,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -23663,8 +23677,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -38342,8 +38356,8 @@ open class ArchitectAPI {
     "flowType" : "bot"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

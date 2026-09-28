@@ -12,4 +12,4 @@ Users rule type-specific settings response
 
 
 
-_PureCloudPlatformClientV2@204.0.0_
+_PureCloudPlatformClientV2@205.0.0_

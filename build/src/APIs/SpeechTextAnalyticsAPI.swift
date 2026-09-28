@@ -379,8 +379,8 @@ open class SpeechTextAnalyticsAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -601,8 +601,8 @@ open class SpeechTextAnalyticsAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1323,6 +1323,63 @@ open class SpeechTextAnalyticsAPI {
     
     
     /**
+     Get program processing settings
+     
+     - parameter programId: (path) The id of the program 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsProgramSettingsProcessing(programId: String, completion: @escaping ((_ data: ProgramProcessingSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsProgramSettingsProcessingWithRequestBuilder(programId: programId)
+        requestBuilder.execute { (response: Response<ProgramProcessingSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get program processing settings
+     - GET /api/v2/speechandtextanalytics/programs/{programId}/settings/processing
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "program" : "{}",
+  "sentimentAnalysisEnabled" : true,
+  "agentEmpathyAnalysisEnabled" : true
+}, statusCode=200}]
+     
+     - parameter programId: (path) The id of the program 
+
+     - returns: RequestBuilder<ProgramProcessingSettings> 
+     */
+    open class func getSpeechandtextanalyticsProgramSettingsProcessingWithRequestBuilder(programId: String) -> RequestBuilder<ProgramProcessingSettings> {        
+        var path = "/api/v2/speechandtextanalytics/programs/{programId}/settings/processing"
+        let programIdPreEscape = "\(programId)"
+        let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{programId}", with: programIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ProgramProcessingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Get transcription engine settings of a program
      
      - parameter programId: (path) The id of the program 
@@ -1824,8 +1881,8 @@ open class SpeechTextAnalyticsAPI {
     "enabled" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1850,6 +1907,88 @@ open class SpeechTextAnalyticsAPI {
         ])
 
         let requestBuilder: RequestBuilder<ProgramInsightsSettingsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get the list of program processing settings for the organization
+     
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 100. (optional)
+     - parameter pageNumber: (query) The page number for the listing (optional)
+     - parameter programIds: (query) Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsProgramsSettingsProcessing(pageSize: Int? = nil, pageNumber: Int? = nil, programIds: [String]? = nil, completion: @escaping ((_ data: ProgramProcessingSettingsEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsProgramsSettingsProcessingWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, programIds: programIds)
+        requestBuilder.execute { (response: Response<ProgramProcessingSettingsEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the list of program processing settings for the organization
+     - GET /api/v2/speechandtextanalytics/programs/settings/processing
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "program" : "{}",
+    "sentimentAnalysisEnabled" : true,
+    "agentEmpathyAnalysisEnabled" : true
+  }, {
+    "program" : "{}",
+    "sentimentAnalysisEnabled" : true,
+    "agentEmpathyAnalysisEnabled" : true
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 100. (optional)
+     - parameter pageNumber: (query) The page number for the listing (optional)
+     - parameter programIds: (query) Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. (optional)
+
+     - returns: RequestBuilder<ProgramProcessingSettingsEntityListing> 
+     */
+    open class func getSpeechandtextanalyticsProgramsSettingsProcessingWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, programIds: [String]? = nil) -> RequestBuilder<ProgramProcessingSettingsEntityListing> {        
+        let path = "/api/v2/speechandtextanalytics/programs/settings/processing"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "programIds": programIds
+        ])
+
+        let requestBuilder: RequestBuilder<ProgramProcessingSettingsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -3168,6 +3307,67 @@ open class SpeechTextAnalyticsAPI {
         let requestBuilder: RequestBuilder<TranslateSupportedLanguageList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update program processing settings
+     
+     - parameter programId: (path) The id of the program 
+     - parameter body: (body) Program processing settings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchSpeechandtextanalyticsProgramSettingsProcessing(programId: String, body: ProcessingSettingsRequest, completion: @escaping ((_ data: ProgramProcessingSettingsPatchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchSpeechandtextanalyticsProgramSettingsProcessingWithRequestBuilder(programId: programId, body: body)
+        requestBuilder.execute { (response: Response<ProgramProcessingSettingsPatchResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update program processing settings
+     - PATCH /api/v2/speechandtextanalytics/programs/{programId}/settings/processing
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "program" : "{}",
+  "sentimentAnalysisEnabled" : true,
+  "agentEmpathyAnalysisEnabled" : true
+}, statusCode=200}]
+     
+     - parameter programId: (path) The id of the program 
+     - parameter body: (body) Program processing settings 
+
+     - returns: RequestBuilder<ProgramProcessingSettingsPatchResponse> 
+     */
+    open class func patchSpeechandtextanalyticsProgramSettingsProcessingWithRequestBuilder(programId: String, body: ProcessingSettingsRequest) -> RequestBuilder<ProgramProcessingSettingsPatchResponse> {        
+        var path = "/api/v2/speechandtextanalytics/programs/{programId}/settings/processing"
+        let programIdPreEscape = "\(programId)"
+        let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{programId}", with: programIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ProgramProcessingSettingsPatchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
     

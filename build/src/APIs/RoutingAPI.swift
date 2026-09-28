@@ -2221,8 +2221,8 @@ open class RoutingAPI {
     "status" : "Pending"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2399,8 +2399,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2644,8 +2644,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2727,8 +2727,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2989,8 +2989,8 @@ open class RoutingAPI {
     "version" : "version"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3163,8 +3163,8 @@ open class RoutingAPI {
     "flow" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3791,9 +3791,9 @@ open class RoutingAPI {
      - parameter expand: (query) Parameter to request additional data to return in KPI payload (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingPredictorsKeyperformanceindicators(kpiGroup: KpiGroup_getRoutingPredictorsKeyperformanceindicators? = nil, expand: [String]? = nil, completion: @escaping ((_ data: [KeyPerformanceIndicator]?,_ error: Error?) -> Void)) {
+    open class func getRoutingPredictorsKeyperformanceindicators(kpiGroup: KpiGroup_getRoutingPredictorsKeyperformanceindicators? = nil, expand: [String]? = nil, completion: @escaping ((_ data: KeyPerformanceIndicatorEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getRoutingPredictorsKeyperformanceindicatorsWithRequestBuilder(kpiGroup: kpiGroup, expand: expand)
-        requestBuilder.execute { (response: Response<[KeyPerformanceIndicator]>?, error) -> Void in
+        requestBuilder.execute { (response: Response<KeyPerformanceIndicatorEntityListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -3816,29 +3816,47 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "selfUri" : "https://openapi-generator.tech",
-  "description" : "description",
-  "wrapUpCodeConfig" : "{}",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "source" : "WrapUpCode",
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "queues" : [ "queues", "queues" ],
-  "optimizationType" : "Maximization",
-  "kpiType" : "SalesConversion",
-  "name" : "name",
-  "kpiGroup" : "Standard",
-  "outcomeConfig" : "{}",
-  "id" : "id",
-  "problemType" : "Classification",
-  "status" : "Enabled"
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "wrapUpCodeConfig" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "source" : "WrapUpCode",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "queues" : [ "queues", "queues" ],
+    "optimizationType" : "Maximization",
+    "kpiType" : "SalesConversion",
+    "name" : "name",
+    "kpiGroup" : "Standard",
+    "outcomeConfig" : "{}",
+    "id" : "id",
+    "problemType" : "Classification",
+    "status" : "Enabled"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "wrapUpCodeConfig" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "source" : "WrapUpCode",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "queues" : [ "queues", "queues" ],
+    "optimizationType" : "Maximization",
+    "kpiType" : "SalesConversion",
+    "name" : "name",
+    "kpiGroup" : "Standard",
+    "outcomeConfig" : "{}",
+    "id" : "id",
+    "problemType" : "Classification",
+    "status" : "Enabled"
+  } ]
 }, statusCode=200}]
      
      - parameter kpiGroup: (query) The Group of Key Performance Indicators to return (optional)
      - parameter expand: (query) Parameter to request additional data to return in KPI payload (optional)
 
-     - returns: RequestBuilder<[KeyPerformanceIndicator]> 
+     - returns: RequestBuilder<KeyPerformanceIndicatorEntityListing> 
      */
-    open class func getRoutingPredictorsKeyperformanceindicatorsWithRequestBuilder(kpiGroup: KpiGroup_getRoutingPredictorsKeyperformanceindicators? = nil, expand: [String]? = nil) -> RequestBuilder<[KeyPerformanceIndicator]> {        
+    open class func getRoutingPredictorsKeyperformanceindicatorsWithRequestBuilder(kpiGroup: KpiGroup_getRoutingPredictorsKeyperformanceindicators? = nil, expand: [String]? = nil) -> RequestBuilder<KeyPerformanceIndicatorEntityListing> {        
         let path = "/api/v2/routing/predictors/keyperformanceindicators"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -3849,7 +3867,7 @@ open class RoutingAPI {
             "expand": expand
         ])
 
-        let requestBuilder: RequestBuilder<[KeyPerformanceIndicator]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<KeyPerformanceIndicatorEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -6061,8 +6079,8 @@ open class RoutingAPI {
     "ringNumber" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6178,8 +6196,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6504,8 +6522,8 @@ open class RoutingAPI {
     "conditionalGroupActivation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6833,8 +6851,8 @@ open class RoutingAPI {
     "conditionalGroupActivation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7138,8 +7156,8 @@ open class RoutingAPI {
     "conditionalGroupActivation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7438,8 +7456,8 @@ open class RoutingAPI {
     "conditionalGroupActivation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7814,8 +7832,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7905,8 +7923,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8369,8 +8387,8 @@ open class RoutingAPI {
     "version" : "version"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8525,8 +8543,8 @@ open class RoutingAPI {
     "region" : "region"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8997,8 +9015,8 @@ open class RoutingAPI {
     "integration" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9405,8 +9423,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9586,8 +9604,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9767,8 +9785,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -10071,8 +10089,8 @@ open class RoutingAPI {
     "conditionalGroupActivation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -10173,8 +10191,8 @@ open class RoutingAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -10273,8 +10291,8 @@ open class RoutingAPI {
     "proficiency" : 2.3021358869347655
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -12484,8 +12502,8 @@ open class RoutingAPI {
     "ringNumber" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -13314,8 +13332,8 @@ open class RoutingAPI {
     "conditionalGroupActivation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -13471,8 +13489,8 @@ open class RoutingAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -13553,8 +13571,8 @@ open class RoutingAPI {
     "proficiency" : 2.3021358869347655
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -14198,6 +14216,7 @@ open class RoutingAPI {
     /**
      Create a benefit assessment job.
      - POST /api/v2/routing/assessments/jobs
+     - Queues with Benefit Assessment results less than 7 days old are skipped. If every queue in the requested divisions has recent results, the request is rejected.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -17426,8 +17445,8 @@ open class RoutingAPI {
     "proficiency" : 2.3021358869347655
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

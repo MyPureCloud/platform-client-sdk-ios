@@ -12,12 +12,12 @@ Query result list
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
 | **pageCount** | **Int** | Total number of pages | [optional] |
-| **lastUri** | **String** |  | [optional] |
 | **firstUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
+| **lastUri** | **String** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@204.0.0_
+_PureCloudPlatformClientV2@205.0.0_
