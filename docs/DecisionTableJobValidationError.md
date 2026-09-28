@@ -22,4 +22,4 @@ Validation error for a decision table import or export job (e.g. import file row
 
 
 
-_PureCloudPlatformClientV2@204.0.0_
+_PureCloudPlatformClientV2@205.0.0_

@@ -13,4 +13,4 @@ Target reference definition for input or output data type properties
 
 
 
-_PureCloudPlatformClientV2@204.0.0_
+_PureCloudPlatformClientV2@205.0.0_

@@ -4,8 +4,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteWorkforcemanagementAdherenceAdjustment**](WorkforceManagementAPI#deleteWorkforcemanagementAdherenceAdjustment) | Delete an adherence adjustment for the current user |
 | [**deleteWorkforcemanagementBusinessunit**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunit) | Delete business unit |
 | [**deleteWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitActivitycode) | Deletes an activity code |
+| [**deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode) | Delete an adherence adjustment reason code for a business unit |
+| [**deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk) | Delete adherence adjustment reason codes in bulk for a business unit |
 | [**deleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory) | Delete staffing group allocations history created for a capacity plan before the given date |
 | [**deleteWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitPlanninggroup) | Deletes the planning group |
 | [**deleteWorkforcemanagementBusinessunitSchedulebid**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitSchedulebid) | Delete a schedule bid |
@@ -26,10 +29,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteWorkforcemanagementManagementunitWorkplan**](WorkforceManagementAPI#deleteWorkforcemanagementManagementunitWorkplan) | Delete a work plan |
 | [**deleteWorkforcemanagementManagementunitWorkplanrotation**](WorkforceManagementAPI#deleteWorkforcemanagementManagementunitWorkplanrotation) | Delete a work plan rotation |
 | [**getWorkforcemanagementAdherence**](WorkforceManagementAPI#getWorkforcemanagementAdherence) | Get a list of UserScheduleAdherence records for the requested users |
+| [**getWorkforcemanagementAdherenceAdjustment**](WorkforceManagementAPI#getWorkforcemanagementAdherenceAdjustment) | Get an adherence adjustment for the current user |
 | [**getWorkforcemanagementAdherenceExplanation**](WorkforceManagementAPI#getWorkforcemanagementAdherenceExplanation) | Get an adherence explanation for the current user |
 | [**getWorkforcemanagementAdherenceExplanationsJob**](WorkforceManagementAPI#getWorkforcemanagementAdherenceExplanationsJob) | Query the status of an adherence explanation operation. Only the user who started the operation can query the status |
 | [**getWorkforcemanagementAdherenceHistoricalBulkJob**](WorkforceManagementAPI#getWorkforcemanagementAdherenceHistoricalBulkJob) | Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status |
 | [**getWorkforcemanagementAdherenceHistoricalJob**](WorkforceManagementAPI#getWorkforcemanagementAdherenceHistoricalJob) | Query the status of a historical adherence request operation. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementAgentAdherenceAdjustment**](WorkforceManagementAPI#getWorkforcemanagementAgentAdherenceAdjustment) | Get an adherence adjustment for the requested agent |
 | [**getWorkforcemanagementAgentAdherenceExplanation**](WorkforceManagementAPI#getWorkforcemanagementAgentAdherenceExplanation) | Get an adherence explanation |
 | [**getWorkforcemanagementAgentManagementunit**](WorkforceManagementAPI#getWorkforcemanagementAgentManagementunit) | Get the management unit to which the agent belongs |
 | [**getWorkforcemanagementAgentsMeAdherenceHistoricalJob**](WorkforceManagementAPI#getWorkforcemanagementAgentsMeAdherenceHistoricalJob) | Request to fetch the status of the agent adherence job. Only the user who started the operation can query the status |
@@ -45,9 +50,21 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitActivitycode) | Get an activity code |
 | [**getWorkforcemanagementBusinessunitActivitycodes**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitActivitycodes) | Get activity codes |
 | [**getWorkforcemanagementBusinessunitActivityplan**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitActivityplan) | Get an activity plan |
+| [**getWorkforcemanagementBusinessunitActivityplanDeletionsJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitActivityplanDeletionsJob) | Gets an activity plan deletion job |
+| [**getWorkforcemanagementBusinessunitActivityplanJobs**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitActivityplanJobs) | Gets the latest job for an activity plan in the business unit |
+| [**getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob) | Gets a session users deletion job |
+| [**getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob) | Gets an activity plan sessions deletion job |
+| [**getWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob) | Gets an occurrences deletion job |
 | [**getWorkforcemanagementBusinessunitActivityplanRunsJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitActivityplanRunsJob) | Gets an activity plan run job |
 | [**getWorkforcemanagementBusinessunitActivityplans**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitActivityplans) | Get activity plans |
 | [**getWorkforcemanagementBusinessunitActivityplansJobs**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitActivityplansJobs) | Gets the latest job for all activity plans in the business unit |
+| [**getWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk) | Get adherence adjustments in bulk by ID for a business unit |
+| [**getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob) | Query the status of an async adherence adjustments query job. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs) | Get query job history for the logged in user. |
+| [**getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode) | Get an adherence adjustment reason code for a business unit |
+| [**getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes) | Get adherence adjustment reason codes for a business unit |
+| [**getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk) | Get adherence adjustment reason codes in bulk by ID for a business unit. This API can return deleted reason codes. |
+| [**getWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings) | Get adherence adjustments settings for a business unit |
 | [**getWorkforcemanagementBusinessunitAlternativeshiftsSettings**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAlternativeshiftsSettings) | Get alternative shifts settings for a business unit |
 | [**getWorkforcemanagementBusinessunitAlternativeshiftsTrade**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAlternativeshiftsTrade) | Get an alternative shifts trade in a business unit for a given trade ID |
 | [**getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob) | Query the status of an alternative shift search trade operation. Only the user who started the operation can query the status |
@@ -169,13 +186,20 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementWorkplanbidPreferences**](WorkforceManagementAPI#getWorkforcemanagementWorkplanbidPreferences) | Gets an agent&#39;s work plan bidding preference |
 | [**getWorkforcemanagementWorkplanbidWorkplans**](WorkforceManagementAPI#getWorkforcemanagementWorkplanbidWorkplans) | Gets an agent&#39;s work plans for a bid |
 | [**getWorkforcemanagementWorkplanbids**](WorkforceManagementAPI#getWorkforcemanagementWorkplanbids) | Gets the list of work plan bids that belong to an agent |
+| [**patchWorkforcemanagementAdherenceAdjustment**](WorkforceManagementAPI#patchWorkforcemanagementAdherenceAdjustment) | Update an adherence adjustment for the current user |
+| [**patchWorkforcemanagementAgentAdherenceAdjustment**](WorkforceManagementAPI#patchWorkforcemanagementAgentAdherenceAdjustment) | Update an adherence adjustment for the requested agent |
 | [**patchWorkforcemanagementAgentAdherenceExplanation**](WorkforceManagementAPI#patchWorkforcemanagementAgentAdherenceExplanation) | Update an adherence explanation |
+| [**patchWorkforcemanagementAgentUnavailabletimes**](WorkforceManagementAPI#patchWorkforcemanagementAgentUnavailabletimes) | Update unavailable times for the requested agent |
 | [**patchWorkforcemanagementAlternativeshiftsTrade**](WorkforceManagementAPI#patchWorkforcemanagementAlternativeshiftsTrade) | Update my alternative shifts trade by trade ID |
 | [**patchWorkforcemanagementAlternativeshiftsTradesStateJobs**](WorkforceManagementAPI#patchWorkforcemanagementAlternativeshiftsTradesStateJobs) | Bulk update alternative shift trade states |
 | [**patchWorkforcemanagementBusinessunit**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunit) | Update business unit |
 | [**patchWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitActivitycode) | Update an activity code |
 | [**patchWorkforcemanagementBusinessunitActivitycodesBulk**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitActivitycodesBulk) | Update multiple activity codes |
 | [**patchWorkforcemanagementBusinessunitActivityplan**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitActivityplan) | Update an activity plan |
+| [**patchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk) | Update adherence adjustments in bulk for a business unit |
+| [**patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode) | Update an adherence adjustment reason code for a business unit |
+| [**patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk) | Update adherence adjustment reason codes in bulk for a business unit |
+| [**patchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings) | Update adherence adjustments settings for a business unit |
 | [**patchWorkforcemanagementBusinessunitAlternativeshiftsSettings**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitAlternativeshiftsSettings) | Update alternative shifts settings for a business unit |
 | [**patchWorkforcemanagementBusinessunitCapacityplan**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitCapacityplan) | Update a capacity plan configuration |
 | [**patchWorkforcemanagementBusinessunitMinimumstaffingSettings**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitMinimumstaffingSettings) | Update minimum staffing settings for a business unit |
@@ -208,9 +232,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchWorkforcemanagementUserWorkplanbidranks**](WorkforceManagementAPI#patchWorkforcemanagementUserWorkplanbidranks) | Update work plan bid ranks for a user |
 | [**patchWorkforcemanagementUsersWorkplanbidranksBulk**](WorkforceManagementAPI#patchWorkforcemanagementUsersWorkplanbidranksBulk) | Update bulk work plan bid ranks on users. Max 50 users can be updated at a time. |
 | [**patchWorkforcemanagementWorkplanbidPreferences**](WorkforceManagementAPI#patchWorkforcemanagementWorkplanbidPreferences) | Update an agent&#39;s work plan bidding preference |
+| [**postWorkforcemanagementAdherenceAdjustments**](WorkforceManagementAPI#postWorkforcemanagementAdherenceAdjustments) | Submit an adherence adjustment for the current user |
+| [**postWorkforcemanagementAdherenceAdjustmentsQuery**](WorkforceManagementAPI#postWorkforcemanagementAdherenceAdjustmentsQuery) | Query adherence adjustments for the current user |
 | [**postWorkforcemanagementAdherenceExplanations**](WorkforceManagementAPI#postWorkforcemanagementAdherenceExplanations) | Submit an adherence explanation for the current user |
 | [**postWorkforcemanagementAdherenceExplanationsQuery**](WorkforceManagementAPI#postWorkforcemanagementAdherenceExplanationsQuery) | Query adherence explanations for the current user |
 | [**postWorkforcemanagementAdherenceHistoricalBulk**](WorkforceManagementAPI#postWorkforcemanagementAdherenceHistoricalBulk) | Request a historical adherence report in bulk |
+| [**postWorkforcemanagementAgentAdherenceAdjustmentsQuery**](WorkforceManagementAPI#postWorkforcemanagementAgentAdherenceAdjustmentsQuery) | Query adherence adjustments for the requested agent |
 | [**postWorkforcemanagementAgentAdherenceExplanations**](WorkforceManagementAPI#postWorkforcemanagementAgentAdherenceExplanations) | Add an adherence explanation for the requested user |
 | [**postWorkforcemanagementAgentAdherenceExplanationsQuery**](WorkforceManagementAPI#postWorkforcemanagementAgentAdherenceExplanationsQuery) | Query adherence explanations for the given agent across a specified range |
 | [**postWorkforcemanagementAgentUnavailabletimesQuery**](WorkforceManagementAPI#postWorkforcemanagementAgentUnavailabletimesQuery) | Get agent unavailable times |
@@ -227,8 +254,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementAlternativeshiftsOffersSearchJobs**](WorkforceManagementAPI#postWorkforcemanagementAlternativeshiftsOffersSearchJobs) | Request a search of alternative shift offers for a given shift |
 | [**postWorkforcemanagementAlternativeshiftsTrades**](WorkforceManagementAPI#postWorkforcemanagementAlternativeshiftsTrades) | Create my alternative shift trade using an existing offer&#39;s jobId |
 | [**postWorkforcemanagementBusinessunitActivitycodes**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitActivitycodes) | Create a new activity code |
+| [**postWorkforcemanagementBusinessunitActivityplanDeletionsJobs**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitActivityplanDeletionsJobs) | Delete an activity plan |
+| [**postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs) | Triggers a job to delete users from a session in the activity plan occurrence |
+| [**postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs) | Triggers a job to delete sessions for the activity plan occurrence |
+| [**postWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs) | Delete occurrences for the activity plan |
 | [**postWorkforcemanagementBusinessunitActivityplanRunsJobs**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitActivityplanRunsJobs) | Run an activity plan manually |
 | [**postWorkforcemanagementBusinessunitActivityplans**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitActivityplans) | Create an activity plan |
+| [**postWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery) | Query adherence adjustments for a business unit. Results will be returned using cursor pagination |
+| [**postWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs) | Creates an async query job for adherence adjustments in a business unit. |
+| [**postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes) | Create an adherence adjustment reason code for a business unit |
+| [**postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk) | Create adherence adjustment reason codes in bulk for a business unit |
 | [**postWorkforcemanagementBusinessunitAdherenceExplanationsQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitAdherenceExplanationsQuery) | Query adherence explanations across an entire business unit for the requested period |
 | [**postWorkforcemanagementBusinessunitAgentschedulesSearch**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitAgentschedulesSearch) | Search published schedules |
 | [**postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch) | List alternative shifts trades for a given management unit or agent |
@@ -349,6 +384,55 @@ All URIs are relative to *https://api.mypurecloud.com*
 {: class="table-striped"}
 
 
+## deleteWorkforcemanagementAdherenceAdjustment
+
+
+
+> Void deleteWorkforcemanagementAdherenceAdjustment(adjustmentId)
+
+Delete an adherence adjustment for the current user
+
+
+
+Wraps DELETE /api/v2/workforcemanagement/adherence/adjustments/{adjustmentId}  
+
+Requires ANY permissions: 
+
+* wfm:agentAdherenceAdjustments:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let adjustmentId: String = "" // The ID of the adherence adjustment to delete
+
+// Code example
+WorkforceManagementAPI.deleteWorkforcemanagementAdherenceAdjustment(adjustmentId: adjustmentId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("WorkforceManagementAPI.deleteWorkforcemanagementAdherenceAdjustment was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **adjustmentId** | **String**| The ID of the adherence adjustment to delete | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
 ## deleteWorkforcemanagementBusinessunit
 
 
@@ -444,6 +528,108 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitActivitycode(busines
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 | **activityCodeId** | **String**| The ID of the activity code to delete | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode
+
+
+
+> Void deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode(businessUnitId, reasonCodeId)
+
+Delete an adherence adjustment reason code for a business unit
+
+
+
+Wraps DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId}  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let reasonCodeId: String = "" // The ID of the reason code to delete
+
+// Code example
+WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode(businessUnitId: businessUnitId, reasonCodeId: reasonCodeId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **reasonCodeId** | **String**| The ID of the reason code to delete | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk
+
+
+
+> Void deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk(businessUnitId, ids)
+
+Delete adherence adjustment reason codes in bulk for a business unit
+
+
+
+Wraps DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let ids: [String] = [""] // The IDs of the reason codes to delete
+
+// Code example
+WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk(businessUnitId: businessUnitId, ids: ids) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **ids** | [**[String]**](String)| The IDs of the reason codes to delete | |
 
 
 ### Return type
@@ -1475,6 +1661,56 @@ WorkforceManagementAPI.getWorkforcemanagementAdherence(userId: userId) { (respon
 [**[UserScheduleAdherence]**](UserScheduleAdherence)
 
 
+## getWorkforcemanagementAdherenceAdjustment
+
+
+
+> [CurrentAgentAdherenceAdjustment](CurrentAgentAdherenceAdjustment) getWorkforcemanagementAdherenceAdjustment(adjustmentId)
+
+Get an adherence adjustment for the current user
+
+
+
+Wraps GET /api/v2/workforcemanagement/adherence/adjustments/{adjustmentId}  
+
+Requires ANY permissions: 
+
+* wfm:agentAdherenceAdjustments:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let adjustmentId: String = "" // The ID of the adherence adjustment
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementAdherenceAdjustment(adjustmentId: adjustmentId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementAdherenceAdjustment was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **adjustmentId** | **String**| The ID of the adherence adjustment | |
+
+
+### Return type
+
+[**CurrentAgentAdherenceAdjustment**](CurrentAgentAdherenceAdjustment)
+
+
 ## getWorkforcemanagementAdherenceExplanation
 
 
@@ -1677,6 +1913,58 @@ WorkforceManagementAPI.getWorkforcemanagementAdherenceHistoricalJob(jobId: jobId
 ### Return type
 
 [**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse)
+
+
+## getWorkforcemanagementAgentAdherenceAdjustment
+
+
+
+> [AdherenceAdjustment](AdherenceAdjustment) getWorkforcemanagementAgentAdherenceAdjustment(agentId, adjustmentId)
+
+Get an adherence adjustment for the requested agent
+
+
+
+Wraps GET /api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/{adjustmentId}  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let agentId: String = "" // The ID of the agent
+let adjustmentId: String = "" // The ID of the adherence adjustment
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementAgentAdherenceAdjustment(agentId: agentId, adjustmentId: adjustmentId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementAgentAdherenceAdjustment was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **agentId** | **String**| The ID of the agent | |
+| **adjustmentId** | **String**| The ID of the adherence adjustment | |
+
+
+### Return type
+
+[**AdherenceAdjustment**](AdherenceAdjustment)
 
 
 ## getWorkforcemanagementAgentAdherenceExplanation
@@ -2653,6 +2941,280 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplan(businessUn
 [**ActivityPlanResponse**](ActivityPlanResponse)
 
 
+## getWorkforcemanagementBusinessunitActivityplanDeletionsJob
+
+
+
+> [ActivityPlanJobResponse](ActivityPlanJobResponse) getWorkforcemanagementBusinessunitActivityplanDeletionsJob(businessUnitId, activityPlanId, jobId)
+
+Gets an activity plan deletion job
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/deletions/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:activityPlanDeletionJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let activityPlanId: String = "" // The ID of the activity plan associated with the deletion job
+let jobId: String = "" // The ID of the activity plan deletion job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplanDeletionsJob(businessUnitId: businessUnitId, activityPlanId: activityPlanId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplanDeletionsJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **activityPlanId** | **String**| The ID of the activity plan associated with the deletion job | |
+| **jobId** | **String**| The ID of the activity plan deletion job | |
+
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
+## getWorkforcemanagementBusinessunitActivityplanJobs
+
+
+
+> [ActivityPlanJobResponse](ActivityPlanJobResponse) getWorkforcemanagementBusinessunitActivityplanJobs(businessUnitId, activityPlanId)
+
+Gets the latest job for an activity plan in the business unit
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/jobs  
+
+Requires ANY permissions: 
+
+* wfm:activityPlan:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let activityPlanId: String = "" // The ID of the activity plan associated with the run job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplanJobs(businessUnitId: businessUnitId, activityPlanId: activityPlanId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplanJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **activityPlanId** | **String**| The ID of the activity plan associated with the run job | |
+
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
+## getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob
+
+
+
+> [ActivityPlanJobResponse](ActivityPlanJobResponse) getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob(businessUnitId, activityPlanId, occurrenceId, sessionId, jobId)
+
+Gets a session users deletion job
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/{sessionId}/users/deletions/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:activityPlanOccurrenceSessionUserDeletionJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let activityPlanId: String = "" // The ID of the activity plan
+let occurrenceId: String = "" // The ID of the activity plan occurrence
+let sessionId: String = "" // The ID of the activity plan occurrence session
+let jobId: String = "" // The ID of the activity plan occurrence session users deletion job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob(businessUnitId: businessUnitId, activityPlanId: activityPlanId, occurrenceId: occurrenceId, sessionId: sessionId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **activityPlanId** | **String**| The ID of the activity plan | |
+| **occurrenceId** | **String**| The ID of the activity plan occurrence | |
+| **sessionId** | **String**| The ID of the activity plan occurrence session | |
+| **jobId** | **String**| The ID of the activity plan occurrence session users deletion job | |
+
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
+## getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob
+
+
+
+> [ActivityPlanJobResponse](ActivityPlanJobResponse) getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob(businessUnitId, activityPlanId, occurrenceId, jobId)
+
+Gets an activity plan sessions deletion job
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/deletions/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:activityPlanOccurrenceSessionDeletionJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let activityPlanId: String = "" // The ID of the activity plan
+let occurrenceId: String = "" // The ID of the activity plan occurrence
+let jobId: String = "" // The ID of the activity plan sessions deletion job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob(businessUnitId: businessUnitId, activityPlanId: activityPlanId, occurrenceId: occurrenceId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **activityPlanId** | **String**| The ID of the activity plan | |
+| **occurrenceId** | **String**| The ID of the activity plan occurrence | |
+| **jobId** | **String**| The ID of the activity plan sessions deletion job | |
+
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
+## getWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob
+
+
+
+> [ActivityPlanJobResponse](ActivityPlanJobResponse) getWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob(businessUnitId, activityPlanId, jobId)
+
+Gets an occurrences deletion job
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/deletions/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:activityPlanOccurrenceDeletionJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let activityPlanId: String = "" // The ID of the activity plan
+let jobId: String = "" // The ID of the activity plan occurrences deletion job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob(businessUnitId: businessUnitId, activityPlanId: activityPlanId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **activityPlanId** | **String**| The ID of the activity plan | |
+| **jobId** | **String**| The ID of the activity plan occurrences deletion job | |
+
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
 ## getWorkforcemanagementBusinessunitActivityplanRunsJob
 
 
@@ -2807,6 +3369,366 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplansJobs(busin
 ### Return type
 
 [**ActivityPlanJobListing**](ActivityPlanJobListing)
+
+
+## getWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk
+
+
+
+> [AdherenceAdjustmentsListing](AdherenceAdjustmentsListing) getWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk(businessUnitId, adjustmentIds)
+
+Get adherence adjustments in bulk by ID for a business unit
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/bulk  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let adjustmentIds: [String] = [""] // The IDs of the adherence adjustments to fetch
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk(businessUnitId: businessUnitId, adjustmentIds: adjustmentIds) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **adjustmentIds** | [**[String]**](String)| The IDs of the adherence adjustments to fetch | |
+
+
+### Return type
+
+[**AdherenceAdjustmentsListing**](AdherenceAdjustmentsListing)
+
+
+## getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob
+
+
+
+> [BuAdherenceAdjustmentsQueryJob](BuAdherenceAdjustmentsQueryJob) getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob(businessUnitId, jobId)
+
+Query the status of an async adherence adjustments query job. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let jobId: String = "" // The ID of the query job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob(businessUnitId: businessUnitId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **jobId** | **String**| The ID of the query job | |
+
+
+### Return type
+
+[**BuAdherenceAdjustmentsQueryJob**](BuAdherenceAdjustmentsQueryJob)
+
+
+## getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs
+
+
+
+> [BuAdherenceAdjustmentsQueryJobsReferenceListing](BuAdherenceAdjustmentsQueryJobsReferenceListing) getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs(businessUnitId)
+
+Get query job history for the logged in user.
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs(businessUnitId: businessUnitId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+
+
+### Return type
+
+[**BuAdherenceAdjustmentsQueryJobsReferenceListing**](BuAdherenceAdjustmentsQueryJobsReferenceListing)
+
+
+## getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode
+
+
+
+> [AdherenceAdjustmentsReasonCode](AdherenceAdjustmentsReasonCode) getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode(businessUnitId, reasonCodeId)
+
+Get an adherence adjustment reason code for a business unit
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId}  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let reasonCodeId: String = "" // The ID of the reason code to fetch
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode(businessUnitId: businessUnitId, reasonCodeId: reasonCodeId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **reasonCodeId** | **String**| The ID of the reason code to fetch | |
+
+
+### Return type
+
+[**AdherenceAdjustmentsReasonCode**](AdherenceAdjustmentsReasonCode)
+
+
+## getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes
+
+
+
+> [AdherenceAdjustmentsReasonCodesListing](AdherenceAdjustmentsReasonCodesListing) getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes(businessUnitId)
+
+Get adherence adjustment reason codes for a business unit
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes(businessUnitId: businessUnitId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+
+
+### Return type
+
+[**AdherenceAdjustmentsReasonCodesListing**](AdherenceAdjustmentsReasonCodesListing)
+
+
+## getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk
+
+
+
+> [AdherenceAdjustmentsReasonCodesListing](AdherenceAdjustmentsReasonCodesListing) getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk(businessUnitId, ids)
+
+Get adherence adjustment reason codes in bulk by ID for a business unit. This API can return deleted reason codes.
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let ids: [String] = [""] // The IDs of the reason codes to fetch
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk(businessUnitId: businessUnitId, ids: ids) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **ids** | [**[String]**](String)| The IDs of the reason codes to fetch | |
+
+
+### Return type
+
+[**AdherenceAdjustmentsReasonCodesListing**](AdherenceAdjustmentsReasonCodesListing)
+
+
+## getWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings
+
+
+
+> [BuAdherenceAdjustmentsSettings](BuAdherenceAdjustmentsSettings) getWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings(businessUnitId)
+
+Get adherence adjustments settings for a business unit
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/settings  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsSettings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings(businessUnitId: businessUnitId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+
+
+### Return type
+
+[**BuAdherenceAdjustmentsSettings**](BuAdherenceAdjustmentsSettings)
 
 
 ## getWorkforcemanagementBusinessunitAlternativeshiftsSettings
@@ -9307,6 +10229,112 @@ This endpoint does not require any parameters.
 [**AgentWorkPlanBids**](AgentWorkPlanBids)
 
 
+## patchWorkforcemanagementAdherenceAdjustment
+
+
+
+> [CurrentAgentAdherenceAdjustment](CurrentAgentAdherenceAdjustment) patchWorkforcemanagementAdherenceAdjustment(adjustmentId, body)
+
+Update an adherence adjustment for the current user
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/adherence/adjustments/{adjustmentId}  
+
+Requires ANY permissions: 
+
+* wfm:agentAdherenceAdjustments:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let adjustmentId: String = "" // The ID of the adherence adjustment to update
+let body: UpdateAdherenceAdjustmentAgentRequest = new UpdateAdherenceAdjustmentAgentRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementAdherenceAdjustment(adjustmentId: adjustmentId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementAdherenceAdjustment was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **adjustmentId** | **String**| The ID of the adherence adjustment to update | |
+| **body** | [**UpdateAdherenceAdjustmentAgentRequest**](UpdateAdherenceAdjustmentAgentRequest)| body | |
+
+
+### Return type
+
+[**CurrentAgentAdherenceAdjustment**](CurrentAgentAdherenceAdjustment)
+
+
+## patchWorkforcemanagementAgentAdherenceAdjustment
+
+
+
+> [AdherenceAdjustment](AdherenceAdjustment) patchWorkforcemanagementAgentAdherenceAdjustment(agentId, adjustmentId, body)
+
+Update an adherence adjustment for the requested agent
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/{adjustmentId}  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let agentId: String = "" // The ID of the agent
+let adjustmentId: String = "" // The ID of the adherence adjustment
+let body: UpdateAdherenceAdjustmentAdminRequest = new UpdateAdherenceAdjustmentAdminRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementAgentAdherenceAdjustment(agentId: agentId, adjustmentId: adjustmentId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementAgentAdherenceAdjustment was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **agentId** | **String**| The ID of the agent | |
+| **adjustmentId** | **String**| The ID of the adherence adjustment | |
+| **body** | [**UpdateAdherenceAdjustmentAdminRequest**](UpdateAdherenceAdjustmentAdminRequest)| body | |
+
+
+### Return type
+
+[**AdherenceAdjustment**](AdherenceAdjustment)
+
+
 ## patchWorkforcemanagementAgentAdherenceExplanation
 
 
@@ -9359,6 +10387,60 @@ WorkforceManagementAPI.patchWorkforcemanagementAgentAdherenceExplanation(agentId
 ### Return type
 
 [**AdherenceExplanationAsyncResponse**](AdherenceExplanationAsyncResponse)
+
+
+## patchWorkforcemanagementAgentUnavailabletimes
+
+
+
+> [BulkUpdateAgentUnavailableTimesResponse](BulkUpdateAgentUnavailableTimesResponse) patchWorkforcemanagementAgentUnavailabletimes(agentId, body)
+
+Update unavailable times for the requested agent
+
+Large requests will be partitioned into multiple internal processing batches. Validation will occur against each internal batch independently rather than against the final combined state represented by the entire request
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/agents/{agentId}/unavailabletimes  
+
+Requires ANY permissions: 
+
+* wfm:unavailableTimes:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let agentId: String = "" // The ID of the agent
+let body: UpdateUnavailableTimesRequest = new UpdateUnavailableTimesRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementAgentUnavailabletimes(agentId: agentId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementAgentUnavailabletimes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **agentId** | **String**| The ID of the agent | |
+| **body** | [**UpdateUnavailableTimesRequest**](UpdateUnavailableTimesRequest)| body | |
+
+
+### Return type
+
+[**BulkUpdateAgentUnavailableTimesResponse**](BulkUpdateAgentUnavailableTimesResponse)
 
 
 ## patchWorkforcemanagementAlternativeshiftsTrade
@@ -9677,6 +10759,216 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitActivityplan(business
 ### Return type
 
 [**ActivityPlanResponse**](ActivityPlanResponse)
+
+
+## patchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk
+
+
+
+> [AdherenceAdjustmentsListing](AdherenceAdjustmentsListing) patchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk(businessUnitId, body)
+
+Update adherence adjustments in bulk for a business unit
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/bulk  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: UpdateAdherenceAdjustmentsBulkRequest = new UpdateAdherenceAdjustmentsBulkRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementBusinessunitAdherenceAdjustmentsBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**UpdateAdherenceAdjustmentsBulkRequest**](UpdateAdherenceAdjustmentsBulkRequest)| body | |
+
+
+### Return type
+
+[**AdherenceAdjustmentsListing**](AdherenceAdjustmentsListing)
+
+
+## patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode
+
+
+
+> [AdherenceAdjustmentsReasonCode](AdherenceAdjustmentsReasonCode) patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode(businessUnitId, reasonCodeId, body)
+
+Update an adherence adjustment reason code for a business unit
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/{reasonCodeId}  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let reasonCodeId: String = "" // The ID of the reason code to update
+let body: UpdateAdherenceAdjustmentsReasonCodeRequest = new UpdateAdherenceAdjustmentsReasonCodeRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode(businessUnitId: businessUnitId, reasonCodeId: reasonCodeId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncode was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **reasonCodeId** | **String**| The ID of the reason code to update | |
+| **body** | [**UpdateAdherenceAdjustmentsReasonCodeRequest**](UpdateAdherenceAdjustmentsReasonCodeRequest)| body | |
+
+
+### Return type
+
+[**AdherenceAdjustmentsReasonCode**](AdherenceAdjustmentsReasonCode)
+
+
+## patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk
+
+
+
+> [AdherenceAdjustmentsReasonCodesListing](AdherenceAdjustmentsReasonCodesListing) patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk(businessUnitId, body)
+
+Update adherence adjustment reason codes in bulk for a business unit
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: UpdateAdherenceAdjustmentsReasonCodesBulkRequest = new UpdateAdherenceAdjustmentsReasonCodesBulkRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**UpdateAdherenceAdjustmentsReasonCodesBulkRequest**](UpdateAdherenceAdjustmentsReasonCodesBulkRequest)| body | |
+
+
+### Return type
+
+[**AdherenceAdjustmentsReasonCodesListing**](AdherenceAdjustmentsReasonCodesListing)
+
+
+## patchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings
+
+
+
+> [BuAdherenceAdjustmentsSettings](BuAdherenceAdjustmentsSettings) patchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings(businessUnitId, body)
+
+Update adherence adjustments settings for a business unit
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/settings  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsSettings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: UpdateBuAdherenceAdjustmentsSettingsRequest = new UpdateBuAdherenceAdjustmentsSettingsRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementBusinessunitAdherenceAdjustmentsSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**UpdateBuAdherenceAdjustmentsSettingsRequest**](UpdateBuAdherenceAdjustmentsSettingsRequest)| body | |
+
+
+### Return type
+
+[**BuAdherenceAdjustmentsSettings**](BuAdherenceAdjustmentsSettings)
 
 
 ## patchWorkforcemanagementBusinessunitAlternativeshiftsSettings
@@ -11402,6 +12694,112 @@ WorkforceManagementAPI.patchWorkforcemanagementWorkplanbidPreferences(bidId: bid
 [**AgentWorkPlanBiddingPreferenceResponse**](AgentWorkPlanBiddingPreferenceResponse)
 
 
+## postWorkforcemanagementAdherenceAdjustments
+
+
+
+> [CurrentAgentAdherenceAdjustment](CurrentAgentAdherenceAdjustment) postWorkforcemanagementAdherenceAdjustments(body)
+
+Submit an adherence adjustment for the current user
+
+
+
+Wraps POST /api/v2/workforcemanagement/adherence/adjustments  
+
+Requires ANY permissions: 
+
+* wfm:agentAdherenceAdjustments:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AddAdherenceAdjustmentAgentRequest = new AddAdherenceAdjustmentAgentRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementAdherenceAdjustments(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementAdherenceAdjustments was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AddAdherenceAdjustmentAgentRequest**](AddAdherenceAdjustmentAgentRequest)| body | |
+
+
+### Return type
+
+[**CurrentAgentAdherenceAdjustment**](CurrentAgentAdherenceAdjustment)
+
+
+## postWorkforcemanagementAdherenceAdjustmentsQuery
+
+
+
+> [CurrentAgentCursorAdherenceAdjustmentsListing](CurrentAgentCursorAdherenceAdjustmentsListing) postWorkforcemanagementAdherenceAdjustmentsQuery(body, before, after, pageSize)
+
+Query adherence adjustments for the current user
+
+
+
+Wraps POST /api/v2/workforcemanagement/adherence/adjustments/query  
+
+Requires ANY permissions: 
+
+* wfm:agentAdherenceAdjustments:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AgentQueryAdherenceAdjustmentsRequest = new AgentQueryAdherenceAdjustmentsRequest(...) // body
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // The page size for the listing. The maximum page size is 500.
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementAdherenceAdjustmentsQuery(body: body, before: before, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementAdherenceAdjustmentsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AgentQueryAdherenceAdjustmentsRequest**](AgentQueryAdherenceAdjustmentsRequest)| body | |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| The page size for the listing. The maximum page size is 500. | [optional] |
+
+
+### Return type
+
+[**CurrentAgentCursorAdherenceAdjustmentsListing**](CurrentAgentCursorAdherenceAdjustmentsListing)
+
+
 ## postWorkforcemanagementAdherenceExplanations
 
 
@@ -11554,6 +12952,64 @@ WorkforceManagementAPI.postWorkforcemanagementAdherenceHistoricalBulk(body: body
 ### Return type
 
 [**WfmHistoricalAdherenceBulkResponse**](WfmHistoricalAdherenceBulkResponse)
+
+
+## postWorkforcemanagementAgentAdherenceAdjustmentsQuery
+
+
+
+> [CursorAdherenceAdjustmentsListing](CursorAdherenceAdjustmentsListing) postWorkforcemanagementAgentAdherenceAdjustmentsQuery(agentId, body, before, after, pageSize)
+
+Query adherence adjustments for the requested agent
+
+
+
+Wraps POST /api/v2/workforcemanagement/agents/{agentId}/adherence/adjustments/query  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let agentId: String = "" // The ID of the agent
+let body: AgentQueryAdherenceAdjustmentsRequest = new AgentQueryAdherenceAdjustmentsRequest(...) // body
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // The page size for the listing. The maximum page size is 500.
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementAgentAdherenceAdjustmentsQuery(agentId: agentId, body: body, before: before, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementAgentAdherenceAdjustmentsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **agentId** | **String**| The ID of the agent | |
+| **body** | [**AgentQueryAdherenceAdjustmentsRequest**](AgentQueryAdherenceAdjustmentsRequest)| body | |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| The page size for the listing. The maximum page size is 500. | [optional] |
+
+
+### Return type
+
+[**CursorAdherenceAdjustmentsListing**](CursorAdherenceAdjustmentsListing)
 
 
 ## postWorkforcemanagementAgentAdherenceExplanations
@@ -12387,6 +13843,230 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivitycodes(business
 [**BusinessUnitActivityCode**](BusinessUnitActivityCode)
 
 
+## postWorkforcemanagementBusinessunitActivityplanDeletionsJobs
+
+
+
+> [ActivityPlanJobResponse](ActivityPlanJobResponse) postWorkforcemanagementBusinessunitActivityplanDeletionsJobs(businessUnitId, activityPlanId)
+
+Delete an activity plan
+
+Triggers a job to delete the activity plan. No further changes to the activity plan can be made
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/deletions/jobs  
+
+Requires ANY permissions: 
+
+* wfm:activityPlanDeletionJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let activityPlanId: String = "" // The ID of the activity plan to delete
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivityplanDeletionsJobs(businessUnitId: businessUnitId, activityPlanId: activityPlanId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivityplanDeletionsJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **activityPlanId** | **String**| The ID of the activity plan to delete | |
+
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
+## postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs
+
+
+
+> [ActivityPlanJobResponse](ActivityPlanJobResponse) postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs(businessUnitId, activityPlanId, occurrenceId, sessionId, body)
+
+Triggers a job to delete users from a session in the activity plan occurrence
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/{sessionId}/users/deletions/jobs  
+
+Requires ANY permissions: 
+
+* wfm:activityPlanOccurrenceSessionUserDeletionJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let activityPlanId: String = "" // The ID of the activity plan
+let occurrenceId: String = "" // The ID of the activity plan occurrence
+let sessionId: String = "" // The ID of the activity plan occurrence session
+let body: ActivityPlanDeletionSessionUserIds = new ActivityPlanDeletionSessionUserIds(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs(businessUnitId: businessUnitId, activityPlanId: activityPlanId, occurrenceId: occurrenceId, sessionId: sessionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **activityPlanId** | **String**| The ID of the activity plan | |
+| **occurrenceId** | **String**| The ID of the activity plan occurrence | |
+| **sessionId** | **String**| The ID of the activity plan occurrence session | |
+| **body** | [**ActivityPlanDeletionSessionUserIds**](ActivityPlanDeletionSessionUserIds)| body | |
+
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
+## postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs
+
+
+
+> [ActivityPlanJobResponse](ActivityPlanJobResponse) postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs(businessUnitId, activityPlanId, occurrenceId, body)
+
+Triggers a job to delete sessions for the activity plan occurrence
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/sessions/deletions/jobs  
+
+Requires ANY permissions: 
+
+* wfm:activityPlanOccurrenceSessionDeletionJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let activityPlanId: String = "" // The ID of the activity plan
+let occurrenceId: String = "" // The ID of the activity plan occurrence
+let body: ActivityPlanDeletionSessionIds = new ActivityPlanDeletionSessionIds(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs(businessUnitId: businessUnitId, activityPlanId: activityPlanId, occurrenceId: occurrenceId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **activityPlanId** | **String**| The ID of the activity plan | |
+| **occurrenceId** | **String**| The ID of the activity plan occurrence | |
+| **body** | [**ActivityPlanDeletionSessionIds**](ActivityPlanDeletionSessionIds)| body | |
+
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
+
+
+## postWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs
+
+
+
+> [ActivityPlanOccurrencesDeletionJobResponse](ActivityPlanOccurrencesDeletionJobResponse) postWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs(businessUnitId, activityPlanId, body)
+
+Delete occurrences for the activity plan
+
+Triggers a job to delete occurrences of the activity plan. The activity plan cannot be updated until the job completes
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/deletions/jobs  
+
+Requires ANY permissions: 
+
+* wfm:activityPlanOccurrenceDeletionJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let activityPlanId: String = "" // The ID of the activity plan
+let body: ActivityPlanDeletionOccurrenceIds = new ActivityPlanDeletionOccurrenceIds(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs(businessUnitId: businessUnitId, activityPlanId: activityPlanId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **activityPlanId** | **String**| The ID of the activity plan | |
+| **body** | [**ActivityPlanDeletionOccurrenceIds**](ActivityPlanDeletionOccurrenceIds)| body | |
+
+
+### Return type
+
+[**ActivityPlanOccurrencesDeletionJobResponse**](ActivityPlanOccurrencesDeletionJobResponse)
+
+
 ## postWorkforcemanagementBusinessunitActivityplanRunsJobs
 
 
@@ -12491,6 +14171,220 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivityplans(business
 ### Return type
 
 [**ActivityPlanResponse**](ActivityPlanResponse)
+
+
+## postWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery
+
+
+
+> [CursorAdherenceAdjustmentsListing](CursorAdherenceAdjustmentsListing) postWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery(businessUnitId, body, before, after, pageSize)
+
+Query adherence adjustments for a business unit. Results will be returned using cursor pagination
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: BuQueryAdherenceAdjustmentsRequest = new BuQueryAdherenceAdjustmentsRequest(...) // body
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // The page size for the listing. The maximum page size is 500.
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery(businessUnitId: businessUnitId, body: body, before: before, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitAdherenceAdjustmentsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**BuQueryAdherenceAdjustmentsRequest**](BuQueryAdherenceAdjustmentsRequest)| body | |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| The page size for the listing. The maximum page size is 500. | [optional] |
+
+
+### Return type
+
+[**CursorAdherenceAdjustmentsListing**](CursorAdherenceAdjustmentsListing)
+
+
+## postWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs
+
+
+
+> [BuAdherenceAdjustmentsQueryJob](BuAdherenceAdjustmentsQueryJob) postWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs(businessUnitId, body)
+
+Creates an async query job for adherence adjustments in a business unit.
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/query/jobs  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustments:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: BuQueryAdherenceAdjustmentsRequest = new BuQueryAdherenceAdjustmentsRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitAdherenceAdjustmentsQueryJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**BuQueryAdherenceAdjustmentsRequest**](BuQueryAdherenceAdjustmentsRequest)| body | |
+
+
+### Return type
+
+[**BuAdherenceAdjustmentsQueryJob**](BuAdherenceAdjustmentsQueryJob)
+
+
+## postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes
+
+
+
+> [AdherenceAdjustmentsReasonCode](AdherenceAdjustmentsReasonCode) postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes(businessUnitId, body)
+
+Create an adherence adjustment reason code for a business unit
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: CreateAdherenceAdjustmentsReasonCodeRequest = new CreateAdherenceAdjustmentsReasonCodeRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**CreateAdherenceAdjustmentsReasonCodeRequest**](CreateAdherenceAdjustmentsReasonCodeRequest)| body | |
+
+
+### Return type
+
+[**AdherenceAdjustmentsReasonCode**](AdherenceAdjustmentsReasonCode)
+
+
+## postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk
+
+
+
+> [AdherenceAdjustmentsReasonCodesListing](AdherenceAdjustmentsReasonCodesListing) postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk(businessUnitId, body)
+
+Create adherence adjustment reason codes in bulk for a business unit
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/adjustments/reasoncodes/bulk  
+
+Requires ANY permissions: 
+
+* wfm:adherenceAdjustmentsReasonCodes:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: CreateAdherenceAdjustmentsReasonCodesBulkRequest = new CreateAdherenceAdjustmentsReasonCodesBulkRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitAdherenceAdjustmentsReasoncodesBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**CreateAdherenceAdjustmentsReasonCodesBulkRequest**](CreateAdherenceAdjustmentsReasonCodesBulkRequest)| body | |
+
+
+### Return type
+
+[**AdherenceAdjustmentsReasonCodesListing**](AdherenceAdjustmentsReasonCodesListing)
 
 
 ## postWorkforcemanagementBusinessunitAdherenceExplanationsQuery
@@ -18784,4 +20678,4 @@ WorkforceManagementAPI.putWorkforcemanagementSchedulebidPreference(bidId: bidId,
 [**AgentScheduleBiddingPreferenceResponse**](AgentScheduleBiddingPreferenceResponse)
 
 
-_PureCloudPlatformClientV2@204.0.0_
+_PureCloudPlatformClientV2@205.0.0_

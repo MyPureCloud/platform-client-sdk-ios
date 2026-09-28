@@ -11,4 +11,4 @@ Used to return response division view query results.
 
 
 
-_PureCloudPlatformClientV2@204.0.0_
+_PureCloudPlatformClientV2@205.0.0_

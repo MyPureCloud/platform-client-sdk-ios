@@ -12,4 +12,4 @@ A reference to a Conversation Custom Attributes schema.
 
 
 
-_PureCloudPlatformClientV2@204.0.0_
+_PureCloudPlatformClientV2@205.0.0_

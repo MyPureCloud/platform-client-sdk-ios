@@ -41,6 +41,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAnalyticsConversationsDetailsJob**](AnalyticsAPI#getAnalyticsConversationsDetailsJob) | Get status for async query for conversation details |
 | [**getAnalyticsConversationsDetailsJobResults**](AnalyticsAPI#getAnalyticsConversationsDetailsJobResults) | Fetch a page of results for an async details job |
 | [**getAnalyticsConversationsDetailsJobsAvailability**](AnalyticsAPI#getAnalyticsConversationsDetailsJobsAvailability) | Lookup the datalake availability date and time |
+| [**getAnalyticsDataextractionDownload**](AnalyticsAPI#getAnalyticsDataextractionDownload) | Get analytics data warehouse file download |
+| [**getAnalyticsDataextractionDownloadsMetadata**](AnalyticsAPI#getAnalyticsDataextractionDownloadsMetadata) | Get metadata on files available for extraction |
 | [**getAnalyticsDataretentionSettings**](AnalyticsAPI#getAnalyticsDataretentionSettings) | Get analytics data retention setting |
 | [**getAnalyticsEvaluationsAggregatesJob**](AnalyticsAPI#getAnalyticsEvaluationsAggregatesJob) | Get status for async query for evaluation aggregates |
 | [**getAnalyticsEvaluationsAggregatesJobResults**](AnalyticsAPI#getAnalyticsEvaluationsAggregatesJobResults) | Fetch a page of results for an async aggregates query |
@@ -91,6 +93,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsConversationsAggregatesQuery**](AnalyticsAPI#postAnalyticsConversationsAggregatesQuery) | Query for conversation aggregates |
 | [**postAnalyticsConversationsDetailsJobs**](AnalyticsAPI#postAnalyticsConversationsDetailsJobs) | Query for conversation details asynchronously |
 | [**postAnalyticsConversationsDetailsQuery**](AnalyticsAPI#postAnalyticsConversationsDetailsQuery) | Query for conversation details |
+| [**postAnalyticsDataextractionDownloadsBulk**](AnalyticsAPI#postAnalyticsDataextractionDownloadsBulk) | Get download URLs for analytics data warehouse files |
 | [**postAnalyticsEvaluationsAggregatesJobs**](AnalyticsAPI#postAnalyticsEvaluationsAggregatesJobs) | Query for evaluation aggregates asynchronously |
 | [**postAnalyticsEvaluationsAggregatesQuery**](AnalyticsAPI#postAnalyticsEvaluationsAggregatesQuery) | Query for evaluation aggregates |
 | [**postAnalyticsFlowexecutionsAggregatesJobs**](AnalyticsAPI#postAnalyticsFlowexecutionsAggregatesJobs) | Query for flow execution aggregates asynchronously |
@@ -2024,6 +2027,115 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**DataAvailabilityResponse**](DataAvailabilityResponse)
+
+
+## getAnalyticsDataextractionDownload
+
+
+
+> Void getAnalyticsDataextractionDownload(downloadId)
+
+Get analytics data warehouse file download
+
+
+
+Wraps GET /api/v2/analytics/dataextraction/downloads/{downloadId}  
+
+Requires ANY permissions: 
+
+* analytics:datawarehouse:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let downloadId: String = "" // Unique file Id to download
+
+// Code example
+AnalyticsAPI.getAnalyticsDataextractionDownload(downloadId: downloadId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("AnalyticsAPI.getAnalyticsDataextractionDownload was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **downloadId** | **String**| Unique file Id to download | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## getAnalyticsDataextractionDownloadsMetadata
+
+
+
+> [DataExtractionFileSchemaListing](DataExtractionFileSchemaListing) getAnalyticsDataextractionDownloadsMetadata(before, after, pageSize, dataSchema, dateStart, dateEnd)
+
+Get metadata on files available for extraction
+
+
+
+Wraps GET /api/v2/analytics/dataextraction/downloads/metadata  
+
+Requires ANY permissions: 
+
+* analytics:datawarehouse:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let dataSchema: String = "" // Data schema like conversations
+let dateStart: Date = new Date(...) // Start DateTime filter. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+let dateEnd: Date = new Date(...) // End DateTime filter. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+
+// Code example
+AnalyticsAPI.getAnalyticsDataextractionDownloadsMetadata(before: before, after: after, pageSize: pageSize, dataSchema: dataSchema, dateStart: dateStart, dateEnd: dateEnd) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsDataextractionDownloadsMetadata was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **dataSchema** | **String**| Data schema like conversations | [optional] |
+| **dateStart** | **Date**| Start DateTime filter. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateEnd** | **Date**| End DateTime filter. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+
+
+### Return type
+
+[**DataExtractionFileSchemaListing**](DataExtractionFileSchemaListing)
 
 
 ## getAnalyticsDataretentionSettings
@@ -4585,6 +4697,56 @@ AnalyticsAPI.postAnalyticsConversationsDetailsQuery(body: body) { (response, err
 [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse)
 
 
+## postAnalyticsDataextractionDownloadsBulk
+
+
+
+> [DataExtractionFileUrlListing](DataExtractionFileUrlListing) postAnalyticsDataextractionDownloadsBulk(body)
+
+Get download URLs for analytics data warehouse files
+
+
+
+Wraps POST /api/v2/analytics/dataextraction/downloads/bulk  
+
+Requires ANY permissions: 
+
+* analytics:datawarehouse:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: DownloadServiceRequest = new DownloadServiceRequest(...) // request
+
+// Code example
+AnalyticsAPI.postAnalyticsDataextractionDownloadsBulk(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsDataextractionDownloadsBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**DownloadServiceRequest**](DownloadServiceRequest)| request | |
+
+
+### Return type
+
+[**DataExtractionFileUrlListing**](DataExtractionFileUrlListing)
+
+
 ## postAnalyticsEvaluationsAggregatesJobs
 
 
@@ -6508,4 +6670,4 @@ AnalyticsAPI.putAnalyticsDataretentionSettings(body: body) { (response, error) i
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatformClientV2@204.0.0_
+_PureCloudPlatformClientV2@205.0.0_

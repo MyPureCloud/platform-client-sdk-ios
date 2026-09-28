@@ -261,6 +261,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessageParticipantCommunicationWrapup**](ConversationsAPI#postConversationsMessageParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsMessageParticipantMonitor**](ConversationsAPI#postConversationsMessageParticipantMonitor) | Listen in on the conversation from the point of view of a given participant. |
 | [**postConversationsMessageParticipantReplace**](ConversationsAPI#postConversationsMessageParticipantReplace) | Replace this participant with the specified user and/or address |
+| [**postConversationsMessageParticipantTakeover**](ConversationsAPI#postConversationsMessageParticipantTakeover) | The User performing this action will takeover the conversation from the participant specified. |
 | [**postConversationsMessages**](ConversationsAPI#postConversationsMessages) | Create an outbound messaging conversation. |
 | [**postConversationsMessagesAgentless**](ConversationsAPI#postConversationsMessagesAgentless) | Send an agentless outbound message |
 | [**postConversationsMessagesInboundOpen**](ConversationsAPI#postConversationsMessagesInboundOpen) | Send an inbound Open Message |
@@ -13754,6 +13755,59 @@ ConversationsAPI.postConversationsMessageParticipantReplace(conversationId: conv
 `nil` (empty response body)
 
 
+## postConversationsMessageParticipantTakeover
+
+
+
+> Void postConversationsMessageParticipantTakeover(conversationId, participantId)
+
+The User performing this action will takeover the conversation from the participant specified.
+
+This operation allows a user performing the action to take over a conversation from the participant specified. The user must be monitoring the participant and must have the necessary permissions to perform the takeover action.
+
+
+
+Wraps POST /api/v2/conversations/messages/{conversationId}/participants/{participantId}/takeover  
+
+Requires ANY permissions: 
+
+* conversation:message:takeover
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // The id of the conversation being taken over
+let participantId: String = "" // The id of the participant being taken over.
+
+// Code example
+ConversationsAPI.postConversationsMessageParticipantTakeover(conversationId: conversationId, participantId: participantId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationsMessageParticipantTakeover was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| The id of the conversation being taken over | |
+| **participantId** | **String**| The id of the participant being taken over. | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
 ## postConversationsMessages
 
 
@@ -15995,4 +16049,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@204.0.0_
+_PureCloudPlatformClientV2@205.0.0_

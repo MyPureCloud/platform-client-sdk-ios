@@ -246,6 +246,8 @@
 | **socialEngagementShares** | [**NumericRange**](NumericRange) | The shares range used to filter the view | [optional] |
 | **socialEngagementComments** | [**NumericRange**](NumericRange) | The comments range used to filter the view | [optional] |
 | **socialEngagementViews** | [**NumericRange**](NumericRange) | The views range used to filter the view | [optional] |
+| **socialEngagementSaves** | [**NumericRange**](NumericRange) | The saves range used to filter the view | [optional] |
+| **socialEngagementReposts** | [**NumericRange**](NumericRange) | The reposts range used to filter the view | [optional] |
 | **sessionExpired** | **Bool** | Filter to indicate for if session is expired | [optional] |
 | **screenMonitored** | **Bool** | Filter to indicate if the interaction was screen monitored | [optional] |
 | **engagementSources** | **[String]** | The engagement sources used to filter the view | [optional] |
@@ -255,4 +257,4 @@
 
 
 
-_PureCloudPlatformClientV2@204.0.0_
+_PureCloudPlatformClientV2@205.0.0_

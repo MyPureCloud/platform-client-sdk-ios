@@ -14,4 +14,4 @@ Message event element.  Examples include: system messages, typing indicators, co
 
 
 
-_PureCloudPlatformClientV2@204.0.0_
+_PureCloudPlatformClientV2@205.0.0_

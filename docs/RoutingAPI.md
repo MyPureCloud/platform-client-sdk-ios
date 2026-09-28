@@ -3031,7 +3031,7 @@ RoutingAPI.getRoutingPredictorsKeyperformanceindicator(kpiId: kpiId, expand: exp
 
 
 
-> [[KeyPerformanceIndicator]](KeyPerformanceIndicator) getRoutingPredictorsKeyperformanceindicators(kpiGroup, expand)
+> [KeyPerformanceIndicatorEntityListing](KeyPerformanceIndicatorEntityListing) getRoutingPredictorsKeyperformanceindicators(kpiGroup, expand)
 
 Get a list of Key Performance Indicators
 
@@ -3076,7 +3076,7 @@ RoutingAPI.getRoutingPredictorsKeyperformanceindicators(kpiGroup: kpiGroup, expa
 
 ### Return type
 
-[**[KeyPerformanceIndicator]**](KeyPerformanceIndicator)
+[**KeyPerformanceIndicatorEntityListing**](KeyPerformanceIndicatorEntityListing)
 
 
 ## getRoutingPredictorsKeyperformanceindicatortypes
@@ -6931,6 +6931,8 @@ RoutingAPI.postRoutingAssessments(body: body) { (response, error) in
 
 Create a benefit assessment job.
 
+Queues with Benefit Assessment results less than 7 days old are skipped. If every queue in the requested divisions has recent results, the request is rejected.
+
 
 
 Wraps POST /api/v2/routing/assessments/jobs  
@@ -9288,4 +9290,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@204.0.0_
+_PureCloudPlatformClientV2@205.0.0_
