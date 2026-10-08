@@ -2324,6 +2324,7 @@ open class WorkforceManagementAPI {
   } ],
   "schedule" : "{}",
   "processingStatus" : "Error",
+  "reviewNote" : "reviewNote",
   "managementUnit" : "{}",
   "id" : "id",
   "state" : "Canceled",
@@ -4442,6 +4443,7 @@ open class WorkforceManagementAPI {
   } ],
   "schedule" : "{}",
   "processingStatus" : "Error",
+  "reviewNote" : "reviewNote",
   "managementUnit" : "{}",
   "id" : "id",
   "state" : "Canceled",
@@ -5420,6 +5422,7 @@ open class WorkforceManagementAPI {
         case capacityPlanForecastInputs = "CapacityPlanForecastInputs"
         case capacityPlanPerformancePrediction = "CapacityPlanPerformancePrediction"
         case continuousForecast = "ContinuousForecast"
+        case mainForecastDiagnostics = "MainForecastDiagnostics"
         case predictionsForecastingScenarioJobs = "PredictionsForecastingScenarioJobs"
         case predictionsForecastingScenarios = "PredictionsForecastingScenarios"
         case historicalAdherence = "HistoricalAdherence"
@@ -10001,6 +10004,7 @@ open class WorkforceManagementAPI {
         case capacityPlanForecastInputs = "CapacityPlanForecastInputs"
         case capacityPlanPerformancePrediction = "CapacityPlanPerformancePrediction"
         case continuousForecast = "ContinuousForecast"
+        case mainForecastDiagnostics = "MainForecastDiagnostics"
         case predictionsForecastingScenarioJobs = "PredictionsForecastingScenarioJobs"
         case predictionsForecastingScenarios = "PredictionsForecastingScenarios"
         case historicalAdherence = "HistoricalAdherence"
@@ -13177,6 +13181,7 @@ open class WorkforceManagementAPI {
         case capacityPlanForecastInputs = "CapacityPlanForecastInputs"
         case capacityPlanPerformancePrediction = "CapacityPlanPerformancePrediction"
         case continuousForecast = "ContinuousForecast"
+        case mainForecastDiagnostics = "MainForecastDiagnostics"
         case predictionsForecastingScenarioJobs = "PredictionsForecastingScenarioJobs"
         case predictionsForecastingScenarios = "PredictionsForecastingScenarios"
         case historicalAdherence = "HistoricalAdherence"
@@ -15560,6 +15565,7 @@ open class WorkforceManagementAPI {
   } ],
   "schedule" : "{}",
   "processingStatus" : "Error",
+  "reviewNote" : "reviewNote",
   "managementUnit" : "{}",
   "id" : "id",
   "state" : "Canceled",
@@ -20610,6 +20616,7 @@ open class WorkforceManagementAPI {
   } ],
   "schedule" : "{}",
   "processingStatus" : "Error",
+  "reviewNote" : "reviewNote",
   "managementUnit" : "{}",
   "id" : "id",
   "state" : "Canceled",

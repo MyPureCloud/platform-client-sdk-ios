@@ -19,7 +19,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationRecordings**](RecordingAPI#getConversationRecordings) | Get all of a Conversation&#39;s Recordings. |
 | [**getOrphanrecording**](RecordingAPI#getOrphanrecording) | Gets a single orphan recording |
 | [**getOrphanrecordingMedia**](RecordingAPI#getOrphanrecordingMedia) | Gets the media of a single orphan recording |
-| [**getOrphanrecordings**](RecordingAPI#getOrphanrecordings) | Gets all orphan recordings |
+| [**getOrphanrecordings**](RecordingAPI#getOrphanrecordings) | Gets all orphan recordings. When querying without &#39;hasConversation &#x3D; true&#39;, the results are capped at 500 orphan recordings |
 | [**getRecordingBatchrequest**](RecordingAPI#getRecordingBatchrequest) | Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results. |
 | [**getRecordingCrossplatformMediaretentionpolicies**](RecordingAPI#getRecordingCrossplatformMediaretentionpolicies) | Gets media retention policy list with query options to filter on name and enabled. |
 | [**getRecordingCrossplatformMediaretentionpolicy**](RecordingAPI#getRecordingCrossplatformMediaretentionpolicy) | Get a media retention policy |
@@ -904,7 +904,7 @@ RecordingAPI.getOrphanrecordingMedia(orphanId: orphanId, formatId: formatId, ema
 
 > [OrphanRecordingListing](OrphanRecordingListing) getOrphanrecordings(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, hasConversation, media)
 
-Gets all orphan recordings
+Gets all orphan recordings. When querying without &#39;hasConversation &#x3D; true&#39;, the results are capped at 500 orphan recordings
 
 
 
@@ -928,7 +928,7 @@ let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
-let hasConversation: Bool = true // Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization.
+let hasConversation: Bool = true // Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization, capped at 500 results.
 let media: RecordingAPI.Media_getOrphanrecordings = RecordingAPI.Media_getOrphanrecordings.enummember // Filter resulting orphans based on their media type
 
 // Code example
@@ -953,7 +953,7 @@ RecordingAPI.getOrphanrecordings(pageSize: pageSize, pageNumber: pageNumber, sor
 | **expand** | [**[String]**](String)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
-| **hasConversation** | **Bool**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. | [optional] |
+| **hasConversation** | **Bool**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization, capped at 500 results. | [optional] |
 | **media** | **String**| Filter resulting orphans based on their media type | [optional]<br />**Values**: call ("Call"), screen ("Screen") |
 
 
@@ -3142,4 +3142,4 @@ RecordingAPI.putRecordingsDeletionprotection(protect: protect, body: body) { (re
 [**ManageDeleteProtectionResult**](ManageDeleteProtectionResult)
 
 
-_PureCloudPlatformClientV2@205.0.0_
+_PureCloudPlatformClientV2@206.0.0_

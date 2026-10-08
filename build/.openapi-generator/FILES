@@ -1058,6 +1058,7 @@ docs/ChecklistInferenceJobCreationResponse.md
 docs/ChecklistInferenceJobPayload.md
 docs/ChecklistInferenceJobResponse.md
 docs/ChecklistItem.md
+docs/ChecklistTransferConfig.md
 docs/ChunkSearchRegisterRequest.md
 docs/ClientApp.md
 docs/ClientAppConfigurationInfo.md
@@ -1445,6 +1446,7 @@ docs/ConversationContentRichLinkHeader.md
 docs/ConversationContentRoadsideAssistance.md
 docs/ConversationContentStory.md
 docs/ConversationContentText.md
+docs/ConversationContentThumbnail.md
 docs/ConversationContentWheelPicker.md
 docs/ConversationContentWheelPickerItem.md
 docs/ConversationContext.md
@@ -1751,6 +1753,16 @@ docs/ConversationsAPI.json
 docs/ConversationsAPI.md
 docs/Copilot.md
 docs/CopilotAction.md
+docs/CopilotAggregateDataContainer.md
+docs/CopilotAggregateQueryClause.md
+docs/CopilotAggregateQueryFilter.md
+docs/CopilotAggregateQueryPredicate.md
+docs/CopilotAggregateQueryResponse.md
+docs/CopilotAggregationQuery.md
+docs/CopilotAggregationSort.md
+docs/CopilotAggregationView.md
+docs/CopilotAsyncAggregateQueryResponse.md
+docs/CopilotAsyncAggregationQuery.md
 docs/CopilotCondition.md
 docs/CopilotContext.md
 docs/CopilotContextFilter.md
@@ -1902,6 +1914,9 @@ docs/CustomAttributesIdResponse.md
 docs/CustomAttributesListing.md
 docs/CustomAttributesPatchRequest.md
 docs/CustomAttributesUpdateRequest.md
+docs/CustomConversationAttributeInput.md
+docs/CustomConversationAttributeOutput.md
+docs/CustomConversationAttributeUpdate.md
 docs/CustomEventAttribute.md
 docs/CustomEventAttributeList.md
 docs/CustomI18nLabels.md
@@ -2926,11 +2941,14 @@ docs/GuideContentGenerationJob.md
 docs/GuideEntityListing.md
 docs/GuideJob.md
 docs/GuideSessionInputEvent.md
+docs/GuideSessionMessage.md
 docs/GuideSessionTurnInvocationData.md
 docs/GuideSessionTurnInvocationParameters.md
 docs/GuideSessionTurnInvocationResponse.md
 docs/GuideSessionTurnRequest.md
+docs/GuideSessionTurnRequestContext.md
 docs/GuideSessionTurnResponse.md
+docs/GuideSessionTurnResponseContext.md
 docs/GuideSessionTurnResponseData.md
 docs/GuideSessionVariable.md
 docs/GuideVersion.md
@@ -3132,7 +3150,6 @@ docs/JourneyAppEventsNotificationActionTarget.md
 docs/JourneyAppEventsNotificationApp.md
 docs/JourneyAppEventsNotificationAppEventsNotification.md
 docs/JourneyAppEventsNotificationAppMessage.md
-docs/JourneyAppEventsNotificationAssociatedValue.md
 docs/JourneyAppEventsNotificationBrowser.md
 docs/JourneyAppEventsNotificationCustomEventAttribute.md
 docs/JourneyAppEventsNotificationDevice.md
@@ -3141,8 +3158,6 @@ docs/JourneyAppEventsNotificationExternalContact.md
 docs/JourneyAppEventsNotificationGeoLocation.md
 docs/JourneyAppEventsNotificationMktCampaign.md
 docs/JourneyAppEventsNotificationNetworkConnectivity.md
-docs/JourneyAppEventsNotificationOutcome.md
-docs/JourneyAppEventsNotificationOutcomeAchievedMessage.md
 docs/JourneyAppEventsNotificationReferrer.md
 docs/JourneyAppEventsNotificationSdkLibrary.md
 docs/JourneyAppEventsNotificationSegment.md
@@ -3166,18 +3181,12 @@ docs/JourneyJsonSchemaDocument.md
 docs/JourneyJsonSchemaRequest.md
 docs/JourneyOutcomeEventsNotificationActionMap.md
 docs/JourneyOutcomeEventsNotificationAssociatedValue.md
-docs/JourneyOutcomeEventsNotificationBrowser.md
-docs/JourneyOutcomeEventsNotificationDevice.md
 docs/JourneyOutcomeEventsNotificationExternalContact.md
-docs/JourneyOutcomeEventsNotificationGeoLocation.md
-docs/JourneyOutcomeEventsNotificationMktCampaign.md
 docs/JourneyOutcomeEventsNotificationOutcome.md
-docs/JourneyOutcomeEventsNotificationOutcomeAchievedMessage.md
 docs/JourneyOutcomeEventsNotificationOutcomeAttributionMessage.md
 docs/JourneyOutcomeEventsNotificationOutcomeEventsNotification.md
 docs/JourneyOutcomeEventsNotificationOutcomeTouchpoint.md
 docs/JourneyOutcomeEventsNotificationOutcomeTouchpointChannel.md
-docs/JourneyOutcomeEventsNotificationReferrer.md
 docs/JourneyOutcomeEventsNotificationSegment.md
 docs/JourneyOutcomeEventsNotificationSession.md
 docs/JourneyPage.md
@@ -3261,7 +3270,6 @@ docs/JourneyWebActionEventsNotificationWebActionEventsNotification.md
 docs/JourneyWebActionEventsNotificationWebActionMessage.md
 docs/JourneyWebEventsNotificationActionMap.md
 docs/JourneyWebEventsNotificationActionTarget.md
-docs/JourneyWebEventsNotificationAssociatedValue.md
 docs/JourneyWebEventsNotificationBrowser.md
 docs/JourneyWebEventsNotificationCustomEventAttribute.md
 docs/JourneyWebEventsNotificationDevice.md
@@ -3269,8 +3277,6 @@ docs/JourneyWebEventsNotificationEventAction.md
 docs/JourneyWebEventsNotificationExternalContact.md
 docs/JourneyWebEventsNotificationGeoLocation.md
 docs/JourneyWebEventsNotificationMktCampaign.md
-docs/JourneyWebEventsNotificationOutcome.md
-docs/JourneyWebEventsNotificationOutcomeAchievedMessage.md
 docs/JourneyWebEventsNotificationPage.md
 docs/JourneyWebEventsNotificationReferrer.md
 docs/JourneyWebEventsNotificationSegment.md
@@ -3903,6 +3909,7 @@ docs/OneOnOne.md
 docs/OpenActionFields.md
 docs/OpenActionProperties.md
 docs/OpenContentAttachment.md
+docs/OpenContentThumbnail.md
 docs/OpenDataIngestionRuleRequest.md
 docs/OpenDataIngestionRuleResponse.md
 docs/OpenDataIngestionRuleVersionResponse.md
@@ -5372,6 +5379,7 @@ docs/SummarySettingEntityListing.md
 docs/SummarySettingPII.md
 docs/SummarySettingParticipantLabels.md
 docs/SummarySettingWithTranscript.md
+docs/SummaryTransferConfig.md
 docs/SupportCenterCategory.md
 docs/SupportCenterCompactCategoryModuleTemplate.md
 docs/SupportCenterCustomMessage.md
@@ -6068,6 +6076,7 @@ docs/V2WemEngagementCelebrationUpdatesTopicEngagementCelebration.md
 docs/V2WemEngagementCelebrationUpdatesTopicSourceEntity.md
 docs/V2WemEngagementCelebrationUpdatesTopicUserId.md
 docs/V2WfmAgentOpportunityTopicAgentOpportunityNotification.md
+docs/V2WfmContinuousForecastSessionEventContinuousForecastSessionNotification.md
 docs/V2WfmMainForecastExportForecastEventMainForecastErrorBody.md
 docs/V2WfmMainForecastExportForecastEventMainForecastExportNotification.md
 docs/V2WfmMainForecastExportHistoricalEventMainForecastErrorBody.md
@@ -6680,6 +6689,7 @@ docs/deleteAnalyticsConversationsAggregatesJob-example.txt
 docs/deleteAnalyticsConversationsAggregatesJob-example.txt
 docs/deleteAnalyticsConversationsDetailsJob-example.txt
 docs/deleteAnalyticsConversationsDetailsJob-example.txt
+docs/deleteAnalyticsCopilotsAggregatesJob-example.txt
 docs/deleteAnalyticsEvaluationsAggregatesJob-example.txt
 docs/deleteAnalyticsEvaluationsAggregatesJob-example.txt
 docs/deleteAnalyticsFlowexecutionsAggregatesJob-example.txt
@@ -7070,6 +7080,8 @@ docs/getAnalyticsConversationsDetailsJobResults-example.txt
 docs/getAnalyticsConversationsDetailsJobResults-example.txt
 docs/getAnalyticsConversationsDetailsJobsAvailability-example.txt
 docs/getAnalyticsConversationsDetailsJobsAvailability-example.txt
+docs/getAnalyticsCopilotsAggregatesJob-example.txt
+docs/getAnalyticsCopilotsAggregatesJobResults-example.txt
 docs/getAnalyticsDataextractionDownload-example.txt
 docs/getAnalyticsDataextractionDownloadsMetadata-example.txt
 docs/getAnalyticsDataretentionSettings-example.txt
@@ -8904,6 +8916,8 @@ docs/postAnalyticsConversationsDetailsJobs-example.txt
 docs/postAnalyticsConversationsDetailsJobs-example.txt
 docs/postAnalyticsConversationsDetailsQuery-example.txt
 docs/postAnalyticsConversationsDetailsQuery-example.txt
+docs/postAnalyticsCopilotsAggregatesJobs-example.txt
+docs/postAnalyticsCopilotsAggregatesQuery-example.txt
 docs/postAnalyticsDataextractionDownloadsBulk-example.txt
 docs/postAnalyticsEvaluationsAggregatesJobs-example.txt
 docs/postAnalyticsEvaluationsAggregatesJobs-example.txt
@@ -11195,6 +11209,7 @@ src/Models/ChecklistInferenceJobCreationResponse.swift
 src/Models/ChecklistInferenceJobPayload.swift
 src/Models/ChecklistInferenceJobResponse.swift
 src/Models/ChecklistItem.swift
+src/Models/ChecklistTransferConfig.swift
 src/Models/ChunkSearchRegisterRequest.swift
 src/Models/ClientApp.swift
 src/Models/ClientAppConfigurationInfo.swift
@@ -11578,6 +11593,7 @@ src/Models/ConversationContentRichLinkHeader.swift
 src/Models/ConversationContentRoadsideAssistance.swift
 src/Models/ConversationContentStory.swift
 src/Models/ConversationContentText.swift
+src/Models/ConversationContentThumbnail.swift
 src/Models/ConversationContentWheelPicker.swift
 src/Models/ConversationContentWheelPickerItem.swift
 src/Models/ConversationContext.swift
@@ -11882,6 +11898,16 @@ src/Models/ConversationVideoEventTopicVideoMediaParticipant.swift
 src/Models/ConversationVideoEventTopicWrapup.swift
 src/Models/Copilot.swift
 src/Models/CopilotAction.swift
+src/Models/CopilotAggregateDataContainer.swift
+src/Models/CopilotAggregateQueryClause.swift
+src/Models/CopilotAggregateQueryFilter.swift
+src/Models/CopilotAggregateQueryPredicate.swift
+src/Models/CopilotAggregateQueryResponse.swift
+src/Models/CopilotAggregationQuery.swift
+src/Models/CopilotAggregationSort.swift
+src/Models/CopilotAggregationView.swift
+src/Models/CopilotAsyncAggregateQueryResponse.swift
+src/Models/CopilotAsyncAggregationQuery.swift
 src/Models/CopilotCondition.swift
 src/Models/CopilotContext.swift
 src/Models/CopilotContextFilter.swift
@@ -12033,6 +12059,9 @@ src/Models/CustomAttributesIdResponse.swift
 src/Models/CustomAttributesListing.swift
 src/Models/CustomAttributesPatchRequest.swift
 src/Models/CustomAttributesUpdateRequest.swift
+src/Models/CustomConversationAttributeInput.swift
+src/Models/CustomConversationAttributeOutput.swift
+src/Models/CustomConversationAttributeUpdate.swift
 src/Models/CustomEventAttribute.swift
 src/Models/CustomEventAttributeList.swift
 src/Models/CustomI18nLabels.swift
@@ -13027,11 +13056,14 @@ src/Models/GuideContentGenerationJob.swift
 src/Models/GuideEntityListing.swift
 src/Models/GuideJob.swift
 src/Models/GuideSessionInputEvent.swift
+src/Models/GuideSessionMessage.swift
 src/Models/GuideSessionTurnInvocationData.swift
 src/Models/GuideSessionTurnInvocationParameters.swift
 src/Models/GuideSessionTurnInvocationResponse.swift
 src/Models/GuideSessionTurnRequest.swift
+src/Models/GuideSessionTurnRequestContext.swift
 src/Models/GuideSessionTurnResponse.swift
+src/Models/GuideSessionTurnResponseContext.swift
 src/Models/GuideSessionTurnResponseData.swift
 src/Models/GuideSessionVariable.swift
 src/Models/GuideVersion.swift
@@ -13223,7 +13255,6 @@ src/Models/JourneyAppEventsNotificationActionTarget.swift
 src/Models/JourneyAppEventsNotificationApp.swift
 src/Models/JourneyAppEventsNotificationAppEventsNotification.swift
 src/Models/JourneyAppEventsNotificationAppMessage.swift
-src/Models/JourneyAppEventsNotificationAssociatedValue.swift
 src/Models/JourneyAppEventsNotificationBrowser.swift
 src/Models/JourneyAppEventsNotificationCustomEventAttribute.swift
 src/Models/JourneyAppEventsNotificationDevice.swift
@@ -13232,8 +13263,6 @@ src/Models/JourneyAppEventsNotificationExternalContact.swift
 src/Models/JourneyAppEventsNotificationGeoLocation.swift
 src/Models/JourneyAppEventsNotificationMktCampaign.swift
 src/Models/JourneyAppEventsNotificationNetworkConnectivity.swift
-src/Models/JourneyAppEventsNotificationOutcome.swift
-src/Models/JourneyAppEventsNotificationOutcomeAchievedMessage.swift
 src/Models/JourneyAppEventsNotificationReferrer.swift
 src/Models/JourneyAppEventsNotificationSdkLibrary.swift
 src/Models/JourneyAppEventsNotificationSegment.swift
@@ -13257,18 +13286,12 @@ src/Models/JourneyJsonSchemaDocument.swift
 src/Models/JourneyJsonSchemaRequest.swift
 src/Models/JourneyOutcomeEventsNotificationActionMap.swift
 src/Models/JourneyOutcomeEventsNotificationAssociatedValue.swift
-src/Models/JourneyOutcomeEventsNotificationBrowser.swift
-src/Models/JourneyOutcomeEventsNotificationDevice.swift
 src/Models/JourneyOutcomeEventsNotificationExternalContact.swift
-src/Models/JourneyOutcomeEventsNotificationGeoLocation.swift
-src/Models/JourneyOutcomeEventsNotificationMktCampaign.swift
 src/Models/JourneyOutcomeEventsNotificationOutcome.swift
-src/Models/JourneyOutcomeEventsNotificationOutcomeAchievedMessage.swift
 src/Models/JourneyOutcomeEventsNotificationOutcomeAttributionMessage.swift
 src/Models/JourneyOutcomeEventsNotificationOutcomeEventsNotification.swift
 src/Models/JourneyOutcomeEventsNotificationOutcomeTouchpoint.swift
 src/Models/JourneyOutcomeEventsNotificationOutcomeTouchpointChannel.swift
-src/Models/JourneyOutcomeEventsNotificationReferrer.swift
 src/Models/JourneyOutcomeEventsNotificationSegment.swift
 src/Models/JourneyOutcomeEventsNotificationSession.swift
 src/Models/JourneyPage.swift
@@ -13352,7 +13375,6 @@ src/Models/JourneyWebActionEventsNotificationWebActionEventsNotification.swift
 src/Models/JourneyWebActionEventsNotificationWebActionMessage.swift
 src/Models/JourneyWebEventsNotificationActionMap.swift
 src/Models/JourneyWebEventsNotificationActionTarget.swift
-src/Models/JourneyWebEventsNotificationAssociatedValue.swift
 src/Models/JourneyWebEventsNotificationBrowser.swift
 src/Models/JourneyWebEventsNotificationCustomEventAttribute.swift
 src/Models/JourneyWebEventsNotificationDevice.swift
@@ -13360,8 +13382,6 @@ src/Models/JourneyWebEventsNotificationEventAction.swift
 src/Models/JourneyWebEventsNotificationExternalContact.swift
 src/Models/JourneyWebEventsNotificationGeoLocation.swift
 src/Models/JourneyWebEventsNotificationMktCampaign.swift
-src/Models/JourneyWebEventsNotificationOutcome.swift
-src/Models/JourneyWebEventsNotificationOutcomeAchievedMessage.swift
 src/Models/JourneyWebEventsNotificationPage.swift
 src/Models/JourneyWebEventsNotificationReferrer.swift
 src/Models/JourneyWebEventsNotificationSegment.swift
@@ -13973,6 +13993,7 @@ src/Models/OneOnOne.swift
 src/Models/OpenActionFields.swift
 src/Models/OpenActionProperties.swift
 src/Models/OpenContentAttachment.swift
+src/Models/OpenContentThumbnail.swift
 src/Models/OpenDataIngestionRuleRequest.swift
 src/Models/OpenDataIngestionRuleResponse.swift
 src/Models/OpenDataIngestionRuleVersionResponse.swift
@@ -15402,6 +15423,7 @@ src/Models/SummarySettingEntityListing.swift
 src/Models/SummarySettingPII.swift
 src/Models/SummarySettingParticipantLabels.swift
 src/Models/SummarySettingWithTranscript.swift
+src/Models/SummaryTransferConfig.swift
 src/Models/SupportCenterCategory.swift
 src/Models/SupportCenterCompactCategoryModuleTemplate.swift
 src/Models/SupportCenterCustomMessage.swift
@@ -16074,6 +16096,7 @@ src/Models/V2WemEngagementCelebrationUpdatesTopicEngagementCelebration.swift
 src/Models/V2WemEngagementCelebrationUpdatesTopicSourceEntity.swift
 src/Models/V2WemEngagementCelebrationUpdatesTopicUserId.swift
 src/Models/V2WfmAgentOpportunityTopicAgentOpportunityNotification.swift
+src/Models/V2WfmContinuousForecastSessionEventContinuousForecastSessionNotification.swift
 src/Models/V2WfmMainForecastExportForecastEventMainForecastErrorBody.swift
 src/Models/V2WfmMainForecastExportForecastEventMainForecastExportNotification.swift
 src/Models/V2WfmMainForecastExportHistoricalEventMainForecastErrorBody.swift

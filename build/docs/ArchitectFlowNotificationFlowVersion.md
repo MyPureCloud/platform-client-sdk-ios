@@ -11,4 +11,4 @@ A bare-bones flow version object
 
 
 
-_PureCloudPlatformClientV2@205.0.0_
+_PureCloudPlatformClientV2@206.0.0_

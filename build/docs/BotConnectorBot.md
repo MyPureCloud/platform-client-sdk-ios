@@ -16,4 +16,4 @@ A botConnector Bot Instance
 
 
 
-_PureCloudPlatformClientV2@205.0.0_
+_PureCloudPlatformClientV2@206.0.0_

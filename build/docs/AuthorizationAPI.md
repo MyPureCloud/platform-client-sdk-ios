@@ -1669,7 +1669,7 @@ This endpoint does not require any parameters.
 
 
 
-> [AuthzSubject](AuthzSubject) getAuthorizationSubject(subjectId, includeDuplicates)
+> [AuthzSubject](AuthzSubject) getAuthorizationSubject(subjectId, includeDuplicates, includeFullRoles)
 
 Returns a listing of roles and permissions for a user.
 
@@ -1691,9 +1691,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let subjectId: String = "" // Subject ID (user or group)
 let includeDuplicates: AuthorizationAPI.IncludeDuplicates_getAuthorizationSubject = AuthorizationAPI.IncludeDuplicates_getAuthorizationSubject.enummember // Include multiple entries with the same role and division but different subjects
+let includeFullRoles: AuthorizationAPI.IncludeFullRoles_getAuthorizationSubject = AuthorizationAPI.IncludeFullRoles_getAuthorizationSubject.enummember // Include full role data with permission policies for each grant
 
 // Code example
-AuthorizationAPI.getAuthorizationSubject(subjectId: subjectId, includeDuplicates: includeDuplicates) { (response, error) in
+AuthorizationAPI.getAuthorizationSubject(subjectId: subjectId, includeDuplicates: includeDuplicates, includeFullRoles: includeFullRoles) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1710,6 +1711,7 @@ AuthorizationAPI.getAuthorizationSubject(subjectId: subjectId, includeDuplicates
 | ------------- | ------------- | ------------- | ------------- |
 | **subjectId** | **String**| Subject ID (user or group) | |
 | **includeDuplicates** | **Bool**| Include multiple entries with the same role and division but different subjects | [optional]<br />**Values**: _true ("true"), _false ("false") |
+| **includeFullRoles** | **Bool**| Include full role data with permission policies for each grant | [optional]<br />**Values**: _true ("true"), _false ("false") |
 
 
 ### Return type
@@ -1721,7 +1723,7 @@ AuthorizationAPI.getAuthorizationSubject(subjectId: subjectId, includeDuplicates
 
 
 
-> [AuthzSubject](AuthzSubject) getAuthorizationSubjectsMe(includeDuplicates)
+> [AuthzSubject](AuthzSubject) getAuthorizationSubjectsMe(includeDuplicates, includeFullRoles)
 
 Returns a listing of roles and permissions for the currently authenticated user.
 
@@ -1741,9 +1743,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let includeDuplicates: AuthorizationAPI.IncludeDuplicates_getAuthorizationSubjectsMe = AuthorizationAPI.IncludeDuplicates_getAuthorizationSubjectsMe.enummember // Include multiple entries with the same role and division but different subjects
+let includeFullRoles: AuthorizationAPI.IncludeFullRoles_getAuthorizationSubjectsMe = AuthorizationAPI.IncludeFullRoles_getAuthorizationSubjectsMe.enummember // Include full role data with permission policies for each grant
 
 // Code example
-AuthorizationAPI.getAuthorizationSubjectsMe(includeDuplicates: includeDuplicates) { (response, error) in
+AuthorizationAPI.getAuthorizationSubjectsMe(includeDuplicates: includeDuplicates, includeFullRoles: includeFullRoles) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1759,6 +1762,7 @@ AuthorizationAPI.getAuthorizationSubjectsMe(includeDuplicates: includeDuplicates
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **includeDuplicates** | **Bool**| Include multiple entries with the same role and division but different subjects | [optional]<br />**Values**: _true ("true"), _false ("false") |
+| **includeFullRoles** | **Bool**| Include full role data with permission policies for each grant | [optional]<br />**Values**: _true ("true"), _false ("false") |
 
 
 ### Return type
@@ -3188,4 +3192,4 @@ AuthorizationAPI.putUserRoles(subjectId: subjectId, body: body) { (response, err
 [**UserAuthorization**](UserAuthorization)
 
 
-_PureCloudPlatformClientV2@205.0.0_
+_PureCloudPlatformClientV2@206.0.0_

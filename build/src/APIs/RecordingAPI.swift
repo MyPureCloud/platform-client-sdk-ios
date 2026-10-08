@@ -6597,7 +6597,7 @@ open class RecordingAPI {
     
     
     /**
-     Gets all orphan recordings
+     Gets all orphan recordings. When querying without 'hasConversation = true', the results are capped at 500 orphan recordings
      
      - parameter pageSize: (query) The total page size requested (optional)
      - parameter pageNumber: (query) The page number requested (optional)
@@ -6605,7 +6605,7 @@ open class RecordingAPI {
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
-     - parameter hasConversation: (query) Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional)
+     - parameter hasConversation: (query) Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization, capped at 500 results. (optional)
      - parameter media: (query) Filter resulting orphans based on their media type (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -6628,7 +6628,7 @@ open class RecordingAPI {
     }
 
     /**
-     Gets all orphan recordings
+     Gets all orphan recordings. When querying without 'hasConversation = true', the results are capped at 500 orphan recordings
      - GET /api/v2/orphanrecordings
      - OAuth:
        - type: oauth2
@@ -8871,8 +8871,8 @@ open class RecordingAPI {
     "region" : "af-south-1"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8884,7 +8884,7 @@ open class RecordingAPI {
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
-     - parameter hasConversation: (query) Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional)
+     - parameter hasConversation: (query) Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization, capped at 500 results. (optional)
      - parameter media: (query) Filter resulting orphans based on their media type (optional)
 
      - returns: RequestBuilder<OrphanRecordingListing> 
@@ -9140,8 +9140,8 @@ open class RecordingAPI {
     "order" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9406,8 +9406,8 @@ open class RecordingAPI {
     "conversation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9551,8 +9551,8 @@ open class RecordingAPI {
     "totalProcessedRecordings" : 5
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9872,8 +9872,8 @@ open class RecordingAPI {
     "order" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -10075,8 +10075,8 @@ open class RecordingAPI {
     "createDate" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

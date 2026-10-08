@@ -502,8 +502,8 @@ open class AuthorizationAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -603,8 +603,8 @@ open class AuthorizationAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -958,8 +958,8 @@ open class AuthorizationAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1055,8 +1055,8 @@ open class AuthorizationAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1186,8 +1186,8 @@ open class AuthorizationAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -19539,8 +19539,8 @@ open class AuthorizationAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -25553,8 +25553,8 @@ open class AuthorizationAPI {
     "base" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -25629,6 +25629,7 @@ open class AuthorizationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "genesysOrgPolicyBypass" : true,
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id",
   "authorizationGrantDivisionAware" : true,
@@ -25705,15 +25706,18 @@ open class AuthorizationAPI {
     
     
     
+    
+    
     /**
      Returns a listing of roles and permissions for a user.
      
      - parameter subjectId: (path) Subject ID (user or group) 
      - parameter includeDuplicates: (query) Include multiple entries with the same role and division but different subjects (optional)
+     - parameter includeFullRoles: (query) Include full role data with permission policies for each grant (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAuthorizationSubject(subjectId: String, includeDuplicates: Bool? = nil, completion: @escaping ((_ data: AuthzSubject?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAuthorizationSubjectWithRequestBuilder(subjectId: subjectId, includeDuplicates: includeDuplicates)
+    open class func getAuthorizationSubject(subjectId: String, includeDuplicates: Bool? = nil, includeFullRoles: Bool? = nil, completion: @escaping ((_ data: AuthzSubject?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationSubjectWithRequestBuilder(subjectId: subjectId, includeDuplicates: includeDuplicates, includeFullRoles: includeFullRoles)
         requestBuilder.execute { (response: Response<AuthzSubject>?, error) -> Void in
             do {
                 if let e = error {
@@ -25808,10 +25812,11 @@ open class AuthorizationAPI {
      
      - parameter subjectId: (path) Subject ID (user or group) 
      - parameter includeDuplicates: (query) Include multiple entries with the same role and division but different subjects (optional)
+     - parameter includeFullRoles: (query) Include full role data with permission policies for each grant (optional)
 
      - returns: RequestBuilder<AuthzSubject> 
      */
-    open class func getAuthorizationSubjectWithRequestBuilder(subjectId: String, includeDuplicates: Bool? = nil) -> RequestBuilder<AuthzSubject> {        
+    open class func getAuthorizationSubjectWithRequestBuilder(subjectId: String, includeDuplicates: Bool? = nil, includeFullRoles: Bool? = nil) -> RequestBuilder<AuthzSubject> {        
         var path = "/api/v2/authorization/subjects/{subjectId}"
         let subjectIdPreEscape = "\(subjectId)"
         let subjectIdPostEscape = subjectIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -25821,7 +25826,8 @@ open class AuthorizationAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "includeDuplicates": includeDuplicates
+            "includeDuplicates": includeDuplicates, 
+            "includeFullRoles": includeFullRoles
         ])
 
         let requestBuilder: RequestBuilder<AuthzSubject>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -25831,14 +25837,17 @@ open class AuthorizationAPI {
 
     
     
+    
+    
     /**
      Returns a listing of roles and permissions for the currently authenticated user.
      
      - parameter includeDuplicates: (query) Include multiple entries with the same role and division but different subjects (optional)
+     - parameter includeFullRoles: (query) Include full role data with permission policies for each grant (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAuthorizationSubjectsMe(includeDuplicates: Bool? = nil, completion: @escaping ((_ data: AuthzSubject?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAuthorizationSubjectsMeWithRequestBuilder(includeDuplicates: includeDuplicates)
+    open class func getAuthorizationSubjectsMe(includeDuplicates: Bool? = nil, includeFullRoles: Bool? = nil, completion: @escaping ((_ data: AuthzSubject?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationSubjectsMeWithRequestBuilder(includeDuplicates: includeDuplicates, includeFullRoles: includeFullRoles)
         requestBuilder.execute { (response: Response<AuthzSubject>?, error) -> Void in
             do {
                 if let e = error {
@@ -25932,17 +25941,19 @@ open class AuthorizationAPI {
 }, statusCode=200}]
      
      - parameter includeDuplicates: (query) Include multiple entries with the same role and division but different subjects (optional)
+     - parameter includeFullRoles: (query) Include full role data with permission policies for each grant (optional)
 
      - returns: RequestBuilder<AuthzSubject> 
      */
-    open class func getAuthorizationSubjectsMeWithRequestBuilder(includeDuplicates: Bool? = nil) -> RequestBuilder<AuthzSubject> {        
+    open class func getAuthorizationSubjectsMeWithRequestBuilder(includeDuplicates: Bool? = nil, includeFullRoles: Bool? = nil) -> RequestBuilder<AuthzSubject> {        
         let path = "/api/v2/authorization/subjects/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "includeDuplicates": includeDuplicates
+            "includeDuplicates": includeDuplicates, 
+            "includeFullRoles": includeFullRoles
         ])
 
         let requestBuilder: RequestBuilder<AuthzSubject>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -53060,8 +53071,8 @@ open class AuthorizationAPI {
     "base" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -62496,8 +62507,8 @@ open class AuthorizationAPI {
     "base" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -62553,6 +62564,7 @@ open class AuthorizationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "genesysOrgPolicyBypass" : true,
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id",
   "authorizationGrantDivisionAware" : true,
