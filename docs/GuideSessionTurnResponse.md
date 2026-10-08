@@ -13,7 +13,8 @@ Response for a guide session turn
 | **outputVariables** | [**[GuideSessionVariable]**]([GuideSessionVariable]) | The output variables for this turn. | [optional] |
 | **invocationId** | **String** | Invocation ID for this turn. | [optional] |
 | **invocations** | [**[GuideSessionTurnInvocationResponse]**]([GuideSessionTurnInvocationResponse]) | The invocations for this turn. | [optional] |
+| **context** | [**GuideSessionTurnResponseContext**](GuideSessionTurnResponseContext) | The context for this turn, including conversation custom attribute updates. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@205.0.0_
+_PureCloudPlatformClientV2@206.0.0_

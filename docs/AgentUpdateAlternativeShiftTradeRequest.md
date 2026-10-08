@@ -7,8 +7,9 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **state** | **String** | The new state of this alternative shift trade | [optional] |
+| **reviewNote** | **String** | Optional note for supervisors to review during alternative shift trade approval | [optional] |
 | **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for this alternative shift trade | |
 
 
 
-_PureCloudPlatformClientV2@205.0.0_
+_PureCloudPlatformClientV2@206.0.0_

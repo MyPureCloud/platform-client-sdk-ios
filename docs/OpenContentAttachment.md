@@ -14,7 +14,8 @@ Attachment object.
 | **text** | **String** | Text associated with attachment such as an image caption. | [optional] |
 | **sha256** | **String** | Secure hash of the attachment content. | [optional] |
 | **filename** | **String** | Suggested file name for attachment. | [optional] |
+| **thumbnail** | [**OpenContentThumbnail**](OpenContentThumbnail) | Thumbnail image for the attachment content. Not always available. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@205.0.0_
+_PureCloudPlatformClientV2@206.0.0_

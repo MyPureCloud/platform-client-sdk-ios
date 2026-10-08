@@ -19,8 +19,10 @@
 | **entityToken** | **String** |  | [optional] |
 | **phoneNumber** | **String** |  | [optional] |
 | **externalContactId** | **String** |  | [optional] |
+| **entityModifiedDate** | [**Date**](Date) |  | [optional] |
+| **entityModifiedBy** | [**UUID**](UUID) |  | [optional] |
 | **timestamp** | **Int64** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@205.0.0_
+_PureCloudPlatformClientV2@206.0.0_

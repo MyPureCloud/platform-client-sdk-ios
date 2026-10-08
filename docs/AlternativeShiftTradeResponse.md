@@ -15,6 +15,7 @@
 | **user** | [**UserReference**](UserReference) | The user who submitted the trade request | |
 | **weekDate** | [**Date**](Date) | The start week date of the associated schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **expirationDate** | [**Date**](Date) | The date when the trade will expire in ISO-8601 format. The trade cannot be approved after expiration | [optional] |
+| **reviewNote** | **String** | Optional note from the initiating user for shift trade review | [optional] |
 | **state** | **String** | The state of this alternative shift trade | |
 | **processingStatus** | **String** | The processing status of this alternative shift trade | [optional] |
 | **systemDateReviewed** | [**Date**](Date) | The timestamp of when the trade request was reviewed by the system in ISO-8601 format | [optional] |
@@ -26,4 +27,4 @@
 
 
 
-_PureCloudPlatformClientV2@205.0.0_
+_PureCloudPlatformClientV2@206.0.0_
