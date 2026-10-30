@@ -14,4 +14,4 @@ Expanded audio format metadata for Architect prompt resources.
 
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

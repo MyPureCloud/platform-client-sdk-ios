@@ -33,6 +33,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getExternalcontactsContactsSchemasLimits**](ExternalContactsAPI#getExternalcontactsContactsSchemasLimits) | Get quantitative limits on schemas |
 | [**getExternalcontactsExternalsource**](ExternalContactsAPI#getExternalcontactsExternalsource) | Fetch an External Source |
 | [**getExternalcontactsExternalsources**](ExternalContactsAPI#getExternalcontactsExternalsources) | Fetch a list of External Sources |
+| [**getExternalcontactsGraphsClusterscan**](ExternalContactsAPI#getExternalcontactsGraphsClusterscan) | Returns a single cluster scan |
+| [**getExternalcontactsGraphsClusterscanCluster**](ExternalContactsAPI#getExternalcontactsGraphsClusterscanCluster) | Returns a single cluster found by a scan |
+| [**getExternalcontactsGraphsClusterscanClusters**](ExternalContactsAPI#getExternalcontactsGraphsClusterscanClusters) | Returns a list of clusters found by a scan |
+| [**getExternalcontactsGraphsClusterscanStatistics**](ExternalContactsAPI#getExternalcontactsGraphsClusterscanStatistics) | Returns the statistics about a single cluster scan |
+| [**getExternalcontactsGraphsClusterscans**](ExternalContactsAPI#getExternalcontactsGraphsClusterscans) | Returns a list of cluster scans |
+| [**getExternalcontactsGraphsClusterscansLatest**](ExternalContactsAPI#getExternalcontactsGraphsClusterscansLatest) | Returns the latest cluster scan |
+| [**getExternalcontactsGraphsClusterscansLatestStatistics**](ExternalContactsAPI#getExternalcontactsGraphsClusterscansLatestStatistics) | Returns the statistics about the latest cluster scan |
+| [**getExternalcontactsGraphsSettings**](ExternalContactsAPI#getExternalcontactsGraphsSettings) | Returns the org-wide settings for ExternalContact graph operations |
 | [**getExternalcontactsImportCsvSetting**](ExternalContactsAPI#getExternalcontactsImportCsvSetting) | Get settings for CSV import |
 | [**getExternalcontactsImportCsvSettings**](ExternalContactsAPI#getExternalcontactsImportCsvSettings) | Retrieve all settings for organization filtered by externalSettingsId if provided |
 | [**getExternalcontactsImportCsvUploadDetails**](ExternalContactsAPI#getExternalcontactsImportCsvUploadDetails) | Get details for CSV upload |
@@ -131,6 +139,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putExternalcontactsContactsSchema**](ExternalContactsAPI#putExternalcontactsContactsSchema) | Update a schema |
 | [**putExternalcontactsConversation**](ExternalContactsAPI#putExternalcontactsConversation) | Associate/disassociate an external contact with a conversation |
 | [**putExternalcontactsExternalsource**](ExternalContactsAPI#putExternalcontactsExternalsource) | Update an External Source |
+| [**putExternalcontactsGraphsClusterscanClusterMerge**](ExternalContactsAPI#putExternalcontactsGraphsClusterscanClusterMerge) | Merge a single cluster found by a scan |
+| [**putExternalcontactsGraphsSettings**](ExternalContactsAPI#putExternalcontactsGraphsSettings) | Updates the org-wide settings for ExternalContact graph operations |
 | [**putExternalcontactsImportCsvSetting**](ExternalContactsAPI#putExternalcontactsImportCsvSetting) | Update settings for CSV import |
 | [**putExternalcontactsImportJob**](ExternalContactsAPI#putExternalcontactsImportJob) | Update Job&#39;s workflow status |
 | [**putExternalcontactsImportSetting**](ExternalContactsAPI#putExternalcontactsImportSetting) | Update settings |
@@ -165,7 +175,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contactId: String = "" // ExternalContact ID
 
@@ -216,7 +226,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contactId: String = "" // ExternalContact Id
 let noteId: String = "" // Note Id
@@ -268,7 +278,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let schemaId: String = "" // Schema ID
 
@@ -317,7 +327,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalSourceId: String = "" // External Source ID
 
@@ -367,7 +377,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let settingsId: String = "" // Settings id
 
@@ -416,7 +426,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let settingsId: String = "" // Settings id
 
@@ -466,7 +476,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalOrganizationId: String = "" // External Organization ID
 
@@ -517,7 +527,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalOrganizationId: String = "" // External Organization Id
 let noteId: String = "" // Note Id
@@ -569,7 +579,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalOrganizationId: String = "" // External Organization ID
 
@@ -619,7 +629,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let relationshipId: String = "" // Relationship Id
 
@@ -670,7 +680,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contactId: String = "" // ExternalContact ID
 let expand: [String] = [""] // which fields, if any, to expand
@@ -722,7 +732,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contactId: String = "" // ExternalContact ID
 
@@ -772,7 +782,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contactId: String = "" // ExternalContact ID
 let includeMerged: Bool = true // Indicates whether to return segment assignments from all external contacts in the merge-set of the given one.
@@ -826,7 +836,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contactId: String = "" // ExternalContact ID
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
@@ -883,7 +893,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contactId: String = "" // ExternalContact Id
 let noteId: String = "" // Note Id
@@ -938,7 +948,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contactId: String = "" // ExternalContact Id
 let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageSize <= 100; pageNumber * pageSize must be <= 1,000)
@@ -996,7 +1006,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contactId: String = "" // ExternalContact ID
 let expand: [String] = [""] // which fields, if any, to expand
@@ -1049,7 +1059,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
@@ -1110,7 +1120,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let exportId: String = "" // Export id
 
@@ -1161,7 +1171,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let divisionIds: [String] = [""] // Division IDs of entities
 let after: String = "" // The cursor that points to the end of the set of entities
@@ -1215,7 +1225,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let schemaId: String = "" // Schema ID
 
@@ -1265,7 +1275,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let schemaId: String = "" // Schema ID
 let versionId: String = "" // Schema version
@@ -1317,7 +1327,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let schemaId: String = "" // Schema ID
 
@@ -1367,7 +1377,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -1413,7 +1423,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let coreTypeName: String = "" // Name of the core type
 
@@ -1463,7 +1473,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -1509,7 +1519,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -1557,7 +1567,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalSourceId: String = "" // External Source ID
 
@@ -1609,7 +1619,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
 let limit: Int = 0 // The number of ExternalSources per page; must be between 10 and 200, default is 100
@@ -1643,6 +1653,414 @@ ExternalContactsAPI.getExternalcontactsExternalsources(cursor: cursor, limit: li
 [**CursorExternalSourceListing**](CursorExternalSourceListing)
 
 
+## getExternalcontactsGraphsClusterscan
+
+
+
+> [ClusterScan](ClusterScan) getExternalcontactsGraphsClusterscan(scanId, expand)
+
+Returns a single cluster scan
+
+
+
+Wraps GET /api/v2/externalcontacts/graphs/clusterscans/{scanId}  
+
+Requires ANY permissions: 
+
+* externalContacts:graphClusterScan:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let scanId: String = "" // Cluster scan ID
+let expand: [String] = [""] // which fields, if any, to expand
+
+// Code example
+ExternalContactsAPI.getExternalcontactsGraphsClusterscan(scanId: scanId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsGraphsClusterscan was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **scanId** | **String**| Cluster scan ID | |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: statisticsAggregated ("statistics.aggregated") |
+
+
+### Return type
+
+[**ClusterScan**](ClusterScan)
+
+
+## getExternalcontactsGraphsClusterscanCluster
+
+
+
+> [Cluster](Cluster) getExternalcontactsGraphsClusterscanCluster(scanId, clusterId)
+
+Returns a single cluster found by a scan
+
+
+
+Wraps GET /api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters/{clusterId}  
+
+Requires ANY permissions: 
+
+* externalContacts:graphCluster:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let scanId: String = "" // Cluster scan ID
+let clusterId: String = "" // Cluster ID
+
+// Code example
+ExternalContactsAPI.getExternalcontactsGraphsClusterscanCluster(scanId: scanId, clusterId: clusterId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsGraphsClusterscanCluster was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **scanId** | **String**| Cluster scan ID | |
+| **clusterId** | **String**| Cluster ID | |
+
+
+### Return type
+
+[**Cluster**](Cluster)
+
+
+## getExternalcontactsGraphsClusterscanClusters
+
+
+
+> [ClusterList](ClusterList) getExternalcontactsGraphsClusterscanClusters(scanId, limit, cursor, divisionIds, mergeInfoStatus)
+
+Returns a list of clusters found by a scan
+
+
+
+Wraps GET /api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters  
+
+Requires ANY permissions: 
+
+* externalContacts:graphCluster:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let scanId: String = "" // Cluster scan ID
+let limit: Int = 0 // Max number of records to return (must be between 1 and 100)
+let cursor: String = "" // Cursor to continue scanning
+let divisionIds: [String] = [""] // which divisions to filter results to, up to 50 (defaults to all divisions use has access to)
+let mergeInfoStatus: ExternalContactsAPI.MergeInfoStatus_getExternalcontactsGraphsClusterscanClusters = ExternalContactsAPI.MergeInfoStatus_getExternalcontactsGraphsClusterscanClusters.enummember // which merge statuses to filter results to
+
+// Code example
+ExternalContactsAPI.getExternalcontactsGraphsClusterscanClusters(scanId: scanId, limit: limit, cursor: cursor, divisionIds: divisionIds, mergeInfoStatus: mergeInfoStatus) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsGraphsClusterscanClusters was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **scanId** | **String**| Cluster scan ID | |
+| **limit** | **Int**| Max number of records to return (must be between 1 and 100) | [optional] |
+| **cursor** | **String**| Cursor to continue scanning | [optional] |
+| **divisionIds** | [**[String]**](String)| which divisions to filter results to, up to 50 (defaults to all divisions use has access to) | [optional] |
+| **mergeInfoStatus** | **String**| which merge statuses to filter results to | [optional]<br />**Values**: autoQueued ("AutoQueued"), autoSucceeded ("AutoSucceeded"), autoFailed ("AutoFailed"), manualQueued ("ManualQueued"), manualSucceeded ("ManualSucceeded"), manualFailed ("ManualFailed"), notMerged ("NotMerged") |
+
+
+### Return type
+
+[**ClusterList**](ClusterList)
+
+
+## getExternalcontactsGraphsClusterscanStatistics
+
+
+
+> [ClusterScanStatistics](ClusterScanStatistics) getExternalcontactsGraphsClusterscanStatistics(scanId)
+
+Returns the statistics about a single cluster scan
+
+
+
+Wraps GET /api/v2/externalcontacts/graphs/clusterscans/{scanId}/statistics  
+
+Requires ANY permissions: 
+
+* externalContacts:graphClusterScan:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let scanId: String = "" // Cluster scan ID
+
+// Code example
+ExternalContactsAPI.getExternalcontactsGraphsClusterscanStatistics(scanId: scanId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsGraphsClusterscanStatistics was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **scanId** | **String**| Cluster scan ID | |
+
+
+### Return type
+
+[**ClusterScanStatistics**](ClusterScanStatistics)
+
+
+## getExternalcontactsGraphsClusterscans
+
+
+
+> [ClusterScanList](ClusterScanList) getExternalcontactsGraphsClusterscans(limit, cursor, expand)
+
+Returns a list of cluster scans
+
+
+
+Wraps GET /api/v2/externalcontacts/graphs/clusterscans  
+
+Requires ANY permissions: 
+
+* externalContacts:graphClusterScan:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let limit: Int = 0 // Max number of records to return (must be between 1 and 100)
+let cursor: String = "" // Cursor to continue scanning
+let expand: [String] = [""] // which fields, if any, to expand
+
+// Code example
+ExternalContactsAPI.getExternalcontactsGraphsClusterscans(limit: limit, cursor: cursor, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsGraphsClusterscans was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **limit** | **Int**| Max number of records to return (must be between 1 and 100) | [optional] |
+| **cursor** | **String**| Cursor to continue scanning | [optional] |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: statisticsAggregated ("statistics.aggregated") |
+
+
+### Return type
+
+[**ClusterScanList**](ClusterScanList)
+
+
+## getExternalcontactsGraphsClusterscansLatest
+
+
+
+> [LatestClusterScan](LatestClusterScan) getExternalcontactsGraphsClusterscansLatest(expand)
+
+Returns the latest cluster scan
+
+
+
+Wraps GET /api/v2/externalcontacts/graphs/clusterscans/latest  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let expand: [String] = [""] // which fields, if any, to expand
+
+// Code example
+ExternalContactsAPI.getExternalcontactsGraphsClusterscansLatest(expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsGraphsClusterscansLatest was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: statisticsAggregated ("statistics.aggregated"), settings ("settings") |
+
+
+### Return type
+
+[**LatestClusterScan**](LatestClusterScan)
+
+
+## getExternalcontactsGraphsClusterscansLatestStatistics
+
+
+
+> [ClusterScanStatistics](ClusterScanStatistics) getExternalcontactsGraphsClusterscansLatestStatistics()
+
+Returns the statistics about the latest cluster scan
+
+
+
+Wraps GET /api/v2/externalcontacts/graphs/clusterscans/latest/statistics  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+
+// Code example
+ExternalContactsAPI.getExternalcontactsGraphsClusterscansLatestStatistics() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsGraphsClusterscansLatestStatistics was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**ClusterScanStatistics**](ClusterScanStatistics)
+
+
+## getExternalcontactsGraphsSettings
+
+
+
+> [GraphSettings](GraphSettings) getExternalcontactsGraphsSettings()
+
+Returns the org-wide settings for ExternalContact graph operations
+
+
+
+Wraps GET /api/v2/externalcontacts/graphs/settings  
+
+Requires ANY permissions: 
+
+* externalContacts:graphSettingsGlobal:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+
+// Code example
+ExternalContactsAPI.getExternalcontactsGraphsSettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsGraphsSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**GraphSettings**](GraphSettings)
+
+
 ## getExternalcontactsImportCsvSetting
 
 
@@ -1665,7 +2083,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let settingsId: String = "" // Settings id
 
@@ -1715,7 +2133,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
@@ -1769,7 +2187,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let uploadId: String = "" // Upload id
 
@@ -1819,7 +2237,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let uploadId: String = "" // Upload id
 
@@ -1869,7 +2287,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // Job id
 let expand: [String] = [""] // which fields, if any, to expand
@@ -1921,7 +2339,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let expand: [String] = [""] // which fields, if any, to expand
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
@@ -1979,7 +2397,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let settingsId: String = "" // Settings id
 
@@ -2029,7 +2447,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
 let pageSize: String = "" // Number of entities to return. Maximum of 100.
@@ -2087,7 +2505,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let exportId: String = "" // Export id
 
@@ -2139,7 +2557,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let divisionIds: [String] = [""] // Division IDs of entities
 let after: String = "" // The cursor that points to the end of the set of entities
@@ -2194,7 +2612,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalOrganizationId: String = "" // External Organization ID
 let expand: [String] = [""] // which fields, if any, to expand
@@ -2249,7 +2667,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalOrganizationId: String = "" // External Organization ID
 let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
@@ -2309,7 +2727,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalOrganizationId: String = "" // External Organization ID
 
@@ -2360,7 +2778,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalOrganizationId: String = "" // External Organization Id
 let noteId: String = "" // Note Id
@@ -2415,7 +2833,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalOrganizationId: String = "" // External Organization Id
 let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
@@ -2474,7 +2892,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalOrganizationId: String = "" // External Organization ID
 let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
@@ -2533,7 +2951,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
@@ -2598,7 +3016,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let exportId: String = "" // Export id
 
@@ -2649,7 +3067,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let divisionIds: [String] = [""] // Division IDs of entities
 let after: String = "" // The cursor that points to the end of the set of entities
@@ -2703,7 +3121,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let schemaId: String = "" // Schema ID
 
@@ -2753,7 +3171,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let schemaId: String = "" // Schema ID
 let versionId: String = "" // Schema version
@@ -2805,7 +3223,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let schemaId: String = "" // Schema ID
 
@@ -2855,7 +3273,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -2901,7 +3319,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let coreTypeName: String = "" // Name of the core type
 
@@ -2951,7 +3369,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -2997,7 +3415,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -3044,7 +3462,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let relationshipId: String = "" // Relationship Id
 let expand: [String] = [""] // which fields, if any, to expand
@@ -3097,7 +3515,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let exportId: String = "" // Export id
 
@@ -3148,7 +3566,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let divisionIds: [String] = [""] // Division IDs of entities
 let after: String = "" // The cursor that points to the end of the set of entities
@@ -3202,7 +3620,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let lookupVal: String = "" // User supplied value to lookup contacts (supports email addresses, e164 phone numbers, Twitter screen names)
 let expand: [String] = [""] // which field, if any, to expand
@@ -3257,7 +3675,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let limit: Int = 0 // The number of contacts per page; must be between 10 and 200, default is 100
 let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
@@ -3311,7 +3729,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let limit: Int = 0 // The number of contacts per page; must be between 10 and 200, default is 100
 let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
@@ -3364,7 +3782,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let limit: Int = 0 // The number of notes per page; must be between 10 and 200, default is 100
 let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
@@ -3418,7 +3836,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let limit: Int = 0 // The number of notes per page; must be between 10 and 200, default is 100
 let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
@@ -3471,7 +3889,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let limit: Int = 0 // The number of organizations per page; must be between 10 and 200, default is 100
 let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
@@ -3525,7 +3943,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let limit: Int = 0 // The number of organizations per page; must be between 10 and 200, default is 100
 let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
@@ -3578,7 +3996,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let limit: Int = 0 // The number of relationships per page; must be between 10 and 200, default is 100
 let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
@@ -3632,7 +4050,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let limit: Int = 0 // The number of relationships per page; must be between 10 and 200, default is 100
 let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
@@ -3684,7 +4102,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contactId: String = "" // ExternalContact ID
 let body: ExternalContactsPatchRequest = new ExternalContactsPatchRequest(...) // Contact fields to update
@@ -3736,7 +4154,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contactId: String = "" // ExternalContact ID
 let body: IdentifierClaimRequest = new IdentifierClaimRequest(...) // ClaimRequest
@@ -3788,7 +4206,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contactId: String = "" // ExternalContact Id
 let noteId: String = "" // Note Id
@@ -3842,7 +4260,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalOrganizationId: String = "" // External Organization ID
 let body: ExternalContactsPatchRequest = new ExternalContactsPatchRequest(...) // External Organization fields to update
@@ -3894,7 +4312,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalOrganizationId: String = "" // External Organization ID
 let body: ExternalOrganizationIdentifierClaimRequest = new ExternalOrganizationIdentifierClaimRequest(...) // ClaimRequest
@@ -3946,7 +4364,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalOrganizationId: String = "" // External Organization Id
 let noteId: String = "" // Note Id
@@ -4000,7 +4418,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let relationshipId: String = "" // Relationship Id
 let body: ExternalContactsPatchRequest = new ExternalContactsPatchRequest(...) // Relationship fields to update
@@ -4052,7 +4470,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkIdsRequest = new BulkIdsRequest(...) // Contact ids
 
@@ -4102,7 +4520,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkContactsRequest = new BulkContactsRequest(...) // Contacts
 
@@ -4152,7 +4570,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkIdsRequest = new BulkIdsRequest(...) // Contact ids
 
@@ -4204,7 +4622,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkContactsEnrichRequest = new BulkContactsEnrichRequest(...) // Contact Enrich Requests
 let dryRun: Bool = true // If true, the request will not make any modifications, but will show you what the end result *would* be.
@@ -4256,7 +4674,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkIdsRequest = new BulkIdsRequest(...) // Contact ids
 
@@ -4306,7 +4724,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkIdsRequest = new BulkIdsRequest(...) // Contact ids
 
@@ -4356,7 +4774,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkContactsRequest = new BulkContactsRequest(...) // Contacts
 
@@ -4407,7 +4825,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkIdsRequest = new BulkIdsRequest(...) // Note ids
 
@@ -4458,7 +4876,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkNotesRequest = new BulkNotesRequest(...) // Notes
 
@@ -4509,7 +4927,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkIdsRequest = new BulkIdsRequest(...) // Note ids
 
@@ -4560,7 +4978,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkNotesRequest = new BulkNotesRequest(...) // Notes
 
@@ -4610,7 +5028,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkIdsRequest = new BulkIdsRequest(...) // Organizations ids
 
@@ -4660,7 +5078,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkOrganizationsRequest = new BulkOrganizationsRequest(...) // Organizations
 
@@ -4710,7 +5128,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkIdsRequest = new BulkIdsRequest(...) // Organizations ids
 
@@ -4762,7 +5180,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkOrganizationsEnrichRequest = new BulkOrganizationsEnrichRequest(...) // External Organization Enrich Requests
 let dryRun: Bool = true // If true, the request will not make any modifications, but will show you what the end result *would* be.
@@ -4814,7 +5232,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkIdsRequest = new BulkIdsRequest(...) // Organization ids
 
@@ -4864,7 +5282,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkOrganizationsRequest = new BulkOrganizationsRequest(...) // Organizations
 
@@ -4915,7 +5333,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkIdsRequest = new BulkIdsRequest(...) // Relationships ids
 
@@ -4966,7 +5384,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkRelationshipsRequest = new BulkRelationshipsRequest(...) // Relationships
 
@@ -5017,7 +5435,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkIdsRequest = new BulkIdsRequest(...) // Relationships ids
 
@@ -5068,7 +5486,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkRelationshipsRequest = new BulkRelationshipsRequest(...) // Relationships
 
@@ -5119,7 +5537,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contactId: String = "" // ExternalContact ID
 let body: UpdateSegmentAssignmentRequest = new UpdateSegmentAssignmentRequest(...) // 
@@ -5172,7 +5590,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contactId: String = "" // ExternalContact Id
 let body: Note = new Note(...) // ExternalContact
@@ -5224,7 +5642,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contactId: String = "" // ExternalContact ID
 
@@ -5275,7 +5693,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ExternalContact = new ExternalContact(...) // ExternalContact
 
@@ -5327,7 +5745,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ContactEnrichRequest = new ContactEnrichRequest(...) // ContactEnrichRequest
 let dryRun: Bool = true // If true, the request will not make any modifications, but will show you what the end result *would* be.
@@ -5380,7 +5798,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ContactsExport = new ContactsExport(...) // Export
 
@@ -5432,7 +5850,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: MergeContactsRequest = new MergeContactsRequest(...) // MergeRequest
 
@@ -5482,7 +5900,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: DataSchema = new DataSchema(...) // Schema
 
@@ -5532,7 +5950,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ContactSearchRequest = new ContactSearchRequest(...) // Search request
 
@@ -5582,7 +6000,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ExternalSource = new ExternalSource(...) // External Source
 
@@ -5635,7 +6053,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let identifier: ContactIdentifier = new ContactIdentifier(...) // 
 let expand: [String] = [""] // which field, if any, to expand
@@ -5689,7 +6107,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let identifier: ContactIdentifier = new ContactIdentifier(...) // 
 let expand: [String] = [""] // which field, if any, to expand
@@ -5743,7 +6161,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let identifier: ExternalOrganizationIdentifier = new ExternalOrganizationIdentifier(...) // 
 let expand: [String] = [""] // which field, if any, to expand
@@ -5795,7 +6213,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CsvJobRequest = new CsvJobRequest(...) // ImportRequest
 
@@ -5845,7 +6263,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CsvSettings = new CsvSettings(...) // Settings
 
@@ -5895,7 +6313,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CsvUploadRequest = new CsvUploadRequest(...) // UploadRequest
 
@@ -5945,7 +6363,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ContactImportJobRequest = new ContactImportJobRequest(...) // Job
 
@@ -5995,7 +6413,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ContactImportSettings = new ContactImportSettings(...) // Setting
 
@@ -6047,7 +6465,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: MergeRequest = new MergeRequest(...) // MergeRequest
 
@@ -6099,7 +6517,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: NotesExport = new NotesExport(...) // Export
 
@@ -6150,7 +6568,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalOrganizationId: String = "" // External Organization Id
 let body: Note = new Note(...) // ExternalContact
@@ -6203,7 +6621,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ExternalOrganization = new ExternalOrganization(...) // ExternalOrganization
 
@@ -6255,7 +6673,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ExternalOrganizationEnrichRequest = new ExternalOrganizationEnrichRequest(...) // ExternalOrgEnrichRequest
 let dryRun: Bool = true // If true, the request will not make any modifications, but will show you what the end result *would* be.
@@ -6308,7 +6726,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: OrganizationsExport = new OrganizationsExport(...) // Export
 
@@ -6358,7 +6776,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: DataSchema = new DataSchema(...) // Schema
 
@@ -6409,7 +6827,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: Relationship = new Relationship(...) // Relationship
 
@@ -6460,7 +6878,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: RelationshipsExport = new RelationshipsExport(...) // Export
 
@@ -6511,7 +6929,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contactId: String = "" // ExternalContact ID
 let body: ExternalContact = new ExternalContact(...) // ExternalContact
@@ -6564,7 +6982,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contactId: String = "" // ExternalContact Id
 let noteId: String = "" // Note Id
@@ -6618,7 +7036,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let schemaId: String = "" // Schema ID
 let body: DataSchema = new DataSchema(...) // Data Schema
@@ -6673,7 +7091,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let conversationId: String = "" // Conversation ID
 let body: ConversationAssociation = new ConversationAssociation(...) // ConversationAssociation
@@ -6724,7 +7142,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalSourceId: String = "" // External Source ID
 let body: ExternalSource = new ExternalSource(...) // External Source
@@ -6754,6 +7172,108 @@ ExternalContactsAPI.putExternalcontactsExternalsource(externalSourceId: external
 [**ExternalSource**](ExternalSource)
 
 
+## putExternalcontactsGraphsClusterscanClusterMerge
+
+
+
+> [Cluster](Cluster) putExternalcontactsGraphsClusterscanClusterMerge(scanId, clusterId)
+
+Merge a single cluster found by a scan
+
+
+
+Wraps PUT /api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters/{clusterId}/merge  
+
+Requires ANY permissions: 
+
+* externalContacts:graphCluster:merge
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let scanId: String = "" // Cluster scan ID
+let clusterId: String = "" // Cluster ID
+
+// Code example
+ExternalContactsAPI.putExternalcontactsGraphsClusterscanClusterMerge(scanId: scanId, clusterId: clusterId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.putExternalcontactsGraphsClusterscanClusterMerge was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **scanId** | **String**| Cluster scan ID | |
+| **clusterId** | **String**| Cluster ID | |
+
+
+### Return type
+
+[**Cluster**](Cluster)
+
+
+## putExternalcontactsGraphsSettings
+
+
+
+> [GraphSettings](GraphSettings) putExternalcontactsGraphsSettings(body)
+
+Updates the org-wide settings for ExternalContact graph operations
+
+
+
+Wraps PUT /api/v2/externalcontacts/graphs/settings  
+
+Requires ANY permissions: 
+
+* externalContacts:graphSettingsGlobal:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let body: GraphSettings = new GraphSettings(...) // OrgConfiguration
+
+// Code example
+ExternalContactsAPI.putExternalcontactsGraphsSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.putExternalcontactsGraphsSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**GraphSettings**](GraphSettings)| OrgConfiguration | |
+
+
+### Return type
+
+[**GraphSettings**](GraphSettings)
+
+
 ## putExternalcontactsImportCsvSetting
 
 
@@ -6776,7 +7296,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let settingsId: String = "" // Settings id
 let body: CsvSettings = new CsvSettings(...) // Settings
@@ -6828,7 +7348,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // Job id
 let body: ContactImportJobStatusUpdateRequest = new ContactImportJobStatusUpdateRequest(...) // Status of the Job's workflow
@@ -6880,7 +7400,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let settingsId: String = "" // Settings id
 let body: ContactImportSettings = new ContactImportSettings(...) // Setting
@@ -6933,7 +7453,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalOrganizationId: String = "" // External Organization ID
 let body: ExternalOrganization = new ExternalOrganization(...) // ExternalOrganization
@@ -6986,7 +7506,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalOrganizationId: String = "" // External Organization Id
 let noteId: String = "" // Note Id
@@ -7040,7 +7560,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalOrganizationId: String = "" // External Organization ID
 let trustorId: String = "" // Trustor ID
@@ -7092,7 +7612,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let schemaId: String = "" // Schema ID
 let body: DataSchema = new DataSchema(...) // Data Schema
@@ -7145,7 +7665,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let relationshipId: String = "" // Relationship Id
 let body: Relationship = new Relationship(...) // Relationship
@@ -7175,4 +7695,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

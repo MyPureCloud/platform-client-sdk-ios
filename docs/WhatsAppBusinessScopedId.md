@@ -10,4 +10,4 @@ A WhatsAppBusinessScopedId record
 
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

@@ -176,7 +176,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let emergencyGroupId: String = "" // Emergency group ID
 
@@ -225,7 +225,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let grammarId: String = "" // grammar ID
 
@@ -275,7 +275,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let grammarId: String = "" // Grammar ID
 let languageCode: String = "" // Language
@@ -326,7 +326,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let grammarId: String = "" // Grammar ID
 let languageCode: String = "" // Language
@@ -377,7 +377,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let grammarId: String = "" // Grammar ID
 let languageCode: String = "" // Language
@@ -428,7 +428,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let ivrId: String = "" // IVR id
 
@@ -477,7 +477,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // Prompt ID
 let allResources: Bool = true // Whether or not to delete all the prompt resources
@@ -528,7 +528,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // Prompt ID
 let languageCode: String = "" // Language
@@ -579,7 +579,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // Prompt ID
 let languageCode: String = "" // Language
@@ -632,7 +632,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let _id: [String] = [""] // List of Prompt IDs
 
@@ -682,7 +682,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let scheduleId: String = "" // Schedule ID
 
@@ -731,7 +731,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let scheduleGroupId: String = "" // Schedule group ID
 
@@ -780,7 +780,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // Prompt ID
 let languageCode: String = "" // Language
@@ -831,7 +831,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowId: String = "" // Flow ID
 
@@ -882,7 +882,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowId: String = "" // The flow id to delete the loglevel for
 
@@ -933,7 +933,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let _id: [String] = [""] // List of Flow IDs
 
@@ -985,7 +985,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let datatableId: String = "" // id of datatable
 let force: Bool = true // force delete, even if in use
@@ -1039,7 +1039,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let datatableId: String = "" // id of datatable
 let rowId: String = "" // the key for the row
@@ -1092,7 +1092,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -1137,7 +1137,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let milestoneId: String = "" // flow milestone ID
 
@@ -1187,7 +1187,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let name: String = "" // Object name to search for
 let pageNumber: Int = 0 // Page number
@@ -1217,11 +1217,11 @@ ArchitectAPI.getArchitectDependencytracking(name: name, pageNumber: pageNumber, 
 | **name** | **String**| Object name to search for | |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
-| **objectType** | [**[String]**](String)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **objectType** | [**[String]**](String)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), externalmcpserverintegration ("EXTERNALMCPSERVERINTEGRATION"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **consumedResources** | **Bool**| Include resources each result item consumes | [optional] |
 | **consumingResources** | **Bool**| Include resources that consume each result item | [optional] |
-| **consumedResourceType** | [**[String]**](String)| Types of consumed resources to return, if consumed resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
-| **consumingResourceType** | [**[String]**](String)| Types of consuming resources to return, if consuming resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **consumedResourceType** | [**[String]**](String)| Types of consumed resources to return, if consumed resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), externalmcpserverintegration ("EXTERNALMCPSERVERINTEGRATION"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **consumingResourceType** | [**[String]**](String)| Types of consuming resources to return, if consuming resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), externalmcpserverintegration ("EXTERNALMCPSERVERINTEGRATION"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 
 
 ### Return type
@@ -1251,7 +1251,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -1297,7 +1297,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let _id: String = "" // Consuming object ID
 let version: String = "" // Consuming object version
@@ -1324,7 +1324,7 @@ ArchitectAPI.getArchitectDependencytrackingConsumedresources(_id: _id, version: 
 | ------------- | ------------- | ------------- | ------------- |
 | **_id** | **String**| Consuming object ID | |
 | **version** | **String**| Consuming object version | |
-| **objectType** | **String**| Consuming object type.  Only versioned types are allowed here. |<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **objectType** | **String**| Consuming object type.  Only versioned types are allowed here. |<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), externalmcpserverintegration ("EXTERNALMCPSERVERINTEGRATION"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **resourceType** | [**[String]**](String)| Types of consumed resources to show. | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
@@ -1357,7 +1357,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let _id: String = "" // Consumed object ID
 let objectType: ArchitectAPI.ObjectType_getArchitectDependencytrackingConsumingresources = ArchitectAPI.ObjectType_getArchitectDependencytrackingConsumingresources.enummember // Consumed object type
@@ -1384,7 +1384,7 @@ ArchitectAPI.getArchitectDependencytrackingConsumingresources(_id: _id, objectTy
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **_id** | **String**| Consumed object ID | |
-| **objectType** | **String**| Consumed object type |<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **objectType** | **String**| Consumed object type |<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), externalmcpserverintegration ("EXTERNALMCPSERVERINTEGRATION"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **resourceType** | [**[String]**](String)| Types of consuming resources to show.  Only versioned types are allowed here. | [optional] |
 | **version** | **String**| Object version | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
@@ -1419,7 +1419,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let name: String = "" // Name to search for
 let objectType: [String] = [""] // Object type(s) to search for
@@ -1446,10 +1446,10 @@ ArchitectAPI.getArchitectDependencytrackingDeletedresourceconsumers(name: name, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **name** | **String**| Name to search for | [optional] |
-| **objectType** | [**[String]**](String)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **objectType** | [**[String]**](String)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), externalmcpserverintegration ("EXTERNALMCPSERVERINTEGRATION"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **flowFilter** | **String**| Show only checkedIn or published flows | [optional]<br />**Values**: checkedin ("checkedIn"), published ("published") |
 | **consumedResources** | **Bool**| Return consumed resources? | [optional] |
-| **consumedResourceType** | [**[String]**](String)| Resource type(s) to return | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **consumedResourceType** | [**[String]**](String)| Resource type(s) to return | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), externalmcpserverintegration ("EXTERNALMCPSERVERINTEGRATION"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 
@@ -1481,7 +1481,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let _id: String = "" // Object ID
 let version: String = "" // Object version
@@ -1510,11 +1510,11 @@ ArchitectAPI.getArchitectDependencytrackingObject(_id: _id, version: version, ob
 | ------------- | ------------- | ------------- | ------------- |
 | **_id** | **String**| Object ID | |
 | **version** | **String**| Object version | [optional] |
-| **objectType** | **String**| Object type | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **objectType** | **String**| Object type | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), externalmcpserverintegration ("EXTERNALMCPSERVERINTEGRATION"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **consumedResources** | **Bool**| Include resources this item consumes | [optional] |
 | **consumingResources** | **Bool**| Include resources that consume this item | [optional] |
-| **consumedResourceType** | [**[String]**](String)| Types of consumed resources to return, if consumed resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
-| **consumingResourceType** | [**[String]**](String)| Types of consuming resources to return, if consuming resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **consumedResourceType** | [**[String]**](String)| Types of consumed resources to return, if consumed resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), externalmcpserverintegration ("EXTERNALMCPSERVERINTEGRATION"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **consumingResourceType** | [**[String]**](String)| Types of consuming resources to return, if consuming resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), externalmcpserverintegration ("EXTERNALMCPSERVERINTEGRATION"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **consumedResourceRequest** | **Bool**| Indicate that this is going to look up a consumed resource object | [optional] |
 
 
@@ -1545,7 +1545,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let typeId: String = "" // Type ID
 
@@ -1595,7 +1595,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
@@ -1647,7 +1647,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let name: String = "" // Name to search for
 let objectType: [String] = [""] // Object type(s) to search for
@@ -1673,9 +1673,9 @@ ArchitectAPI.getArchitectDependencytrackingUpdatedresourceconsumers(name: name, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **name** | **String**| Name to search for | [optional] |
-| **objectType** | [**[String]**](String)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **objectType** | [**[String]**](String)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), externalmcpserverintegration ("EXTERNALMCPSERVERINTEGRATION"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **consumedResources** | **Bool**| Return consumed resources? | [optional] |
-| **consumedResourceType** | [**[String]**](String)| Resource type(s) to return | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **consumedResourceType** | [**[String]**](String)| Resource type(s) to return | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), agenticvirtualagent ("AGENTICVIRTUALAGENT"), agenticvirtualagentversion ("AGENTICVIRTUALAGENTVERSION"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), businessprocessflow ("BUSINESSPROCESSFLOW"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), conversationcustomattributeschema ("CONVERSATIONCUSTOMATTRIBUTESCHEMA"), conversationsummarysetting ("CONVERSATIONSUMMARYSETTING"), customersegment ("CUSTOMERSEGMENT"), dataaction ("DATAACTION"), datatable ("DATATABLE"), decisiontable ("DECISIONTABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalaudio ("DIGITALAUDIO"), digitalbotconnector ("DIGITALBOTCONNECTOR"), digitalbotconnectorintegration ("DIGITALBOTCONNECTORINTEGRATION"), digitalbotflow ("DIGITALBOTFLOW"), division ("DIVISION"), emailroute ("EMAILROUTE"), emailsendflow ("EMAILSENDFLOW"), emergencygroup ("EMERGENCYGROUP"), externalmcpserverintegration ("EXTERNALMCPSERVERINTEGRATION"), file ("FILE"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), guide ("GUIDE"), guideversion ("GUIDEVERSION"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), knowledgesetting ("KNOWLEDGESETTING"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), responseasset ("RESPONSEASSET"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), smsphonenumber ("SMSPHONENUMBER"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), video ("VIDEO"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 
@@ -1707,7 +1707,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let emergencyGroupId: String = "" // Emergency group ID
 
@@ -1757,7 +1757,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
@@ -1817,7 +1817,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
@@ -1881,7 +1881,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let grammarId: String = "" // grammar ID
 let includeFileUrls: Bool = true // Include grammar language file URLs
@@ -1933,7 +1933,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let grammarId: String = "" // Grammar ID
 let languageCode: String = "" // Language
@@ -1987,7 +1987,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
@@ -2053,7 +2053,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let ivrId: String = "" // IVR id
 
@@ -2104,7 +2104,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let ivrId: String = "" // IVR id
 
@@ -2154,7 +2154,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
@@ -2218,7 +2218,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
@@ -2280,7 +2280,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // Prompt ID
 let includeMediaUris: Bool = true // Include the media URIs for each resource
@@ -2336,7 +2336,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // Prompt ID
 let historyId: String = "" // History request ID
@@ -2398,7 +2398,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // Prompt ID
 let languageCode: String = "" // Language
@@ -2452,7 +2452,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // Prompt ID
 let pageNumber: Int = 0 // Page number
@@ -2508,7 +2508,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
@@ -2578,7 +2578,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let scheduleId: String = "" // Schedule ID
 
@@ -2628,7 +2628,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let scheduleGroupId: String = "" // Schedule group ID
 
@@ -2678,7 +2678,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
@@ -2740,7 +2740,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
@@ -2802,7 +2802,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
@@ -2862,7 +2862,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
@@ -2924,7 +2924,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // promptId
 let includeMediaUris: Bool = true // Include the media URIs for each resource
@@ -2980,7 +2980,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // promptId
 let historyId: String = "" // History request ID
@@ -3042,7 +3042,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // Prompt ID
 let languageCode: String = "" // Language
@@ -3094,7 +3094,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // Prompt ID
 let pageNumber: Int = 0 // Page number
@@ -3152,7 +3152,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
@@ -3220,7 +3220,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowId: String = "" // Flow ID
 let deleted: Bool = true // Deleted flows
@@ -3272,7 +3272,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowId: String = "" // Flow ID
 let historyId: String = "" // History request ID
@@ -3336,7 +3336,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowId: String = "" // The flow id to get the loglevel for
 let expand: [String] = [""] // Expand instructions for the result
@@ -3388,7 +3388,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowId: String = "" // Flow ID
 let deleted: Bool = true // Deleted flows
@@ -3440,7 +3440,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowId: String = "" // Flow ID
 let versionId: String = "" // Version ID
@@ -3494,7 +3494,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowId: String = "" // Flow ID
 let versionId: String = "" // Version ID
@@ -3548,7 +3548,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowId: String = "" // Flow ID.
 let versionId: String = "" // Version ID.
@@ -3602,7 +3602,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowId: String = "" // Flow ID.
 let versionId: String = "" // Version ID.
@@ -3658,7 +3658,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowId: String = "" // Flow ID.
 let versionId: String = "" // Version ID.
@@ -3716,7 +3716,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowId: String = "" // Flow ID
 let pageNumber: Int = 0 // Page number
@@ -3774,7 +3774,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let type: [String] = [""] // Type
 let pageNumber: Int = 0 // Page number
@@ -3864,7 +3864,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let datatableId: String = "" // id of datatable
 let expand: ArchitectAPI.Expand_getFlowsDatatable = ArchitectAPI.Expand_getFlowsDatatable.enummember // Expand instructions for the result
@@ -3919,7 +3919,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let datatableId: String = "" // id of datatable
 let exportJobId: String = "" // id of export job
@@ -3974,7 +3974,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let datatableId: String = "" // id of datatable
 let importJobId: String = "" // id of import job
@@ -4029,7 +4029,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let datatableId: String = "" // id of datatable
 let pageNumber: Int = 0 // Page number
@@ -4086,7 +4086,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let datatableId: String = "" // id of datatable
 let rowId: String = "" // The key for the row
@@ -4143,7 +4143,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let datatableId: String = "" // id of datatable
 let pageNumber: Int = 0 // Page number
@@ -4203,7 +4203,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let expand: ArchitectAPI.Expand_getFlowsDatatables = ArchitectAPI.Expand_getFlowsDatatables.enummember // Expand instructions for the result
 let pageNumber: Int = 0 // Page number
@@ -4267,7 +4267,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let datatableId: String = "" // id of datatable
 let expand: ArchitectAPI.Expand_getFlowsDatatablesDivisionview = ArchitectAPI.Expand_getFlowsDatatablesDivisionview.enummember // Expand instructions for the result
@@ -4321,7 +4321,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let expand: ArchitectAPI.Expand_getFlowsDatatablesDivisionviews = ArchitectAPI.Expand_getFlowsDatatablesDivisionviews.enummember // Expand instructions for the result
 let pageNumber: Int = 0 // Page number
@@ -4385,7 +4385,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let type: [String] = [""] // Type
 let pageNumber: Int = 0 // Page number
@@ -4457,7 +4457,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowExecutionId: String = "" // flow execution ID
 
@@ -4507,7 +4507,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // Job ID
 let expand: [String] = [""] // Which fields, if any, to expand.
@@ -4561,7 +4561,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let instanceId: String = "" // Instance ID
 let expand: ArchitectAPI.Expand_getFlowsInstance = ArchitectAPI.Expand_getFlowsInstance.enummember // Expand various details.
@@ -4613,7 +4613,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // The asynchronous job ID
 
@@ -4665,7 +4665,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let expand: ArchitectAPI.Expand_getFlowsInstancesQuerycapabilities = ArchitectAPI.Expand_getFlowsInstancesQuerycapabilities.enummember // Expand various query types.
 
@@ -4717,7 +4717,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -4766,7 +4766,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let expand: [String] = [""] // Expand instructions for the result
 let pageNumber: Int = 0 // Page number
@@ -4823,7 +4823,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -4871,7 +4871,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let expand: [String] = [""] // Expand instructions for the result
 
@@ -4921,7 +4921,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // Job ID
 let expand: [String] = [""] // Which fields, if any, to expand.
@@ -4975,7 +4975,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let _id: [String] = [""] // Flow ID(s)
 let pageNumber: Int = 0 // Page number
@@ -5035,7 +5035,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let milestoneId: String = "" // flow milestone ID
 
@@ -5087,7 +5087,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
@@ -5155,7 +5155,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
@@ -5219,7 +5219,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowOutcomeId: String = "" // flow outcome ID
 
@@ -5271,7 +5271,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
@@ -5339,7 +5339,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
@@ -5401,7 +5401,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let grammarId: String = "" // grammar ID
 let body: Grammar = new Grammar(...) // 
@@ -5453,7 +5453,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let grammarId: String = "" // Grammar ID
 let languageCode: String = "" // Language
@@ -5509,7 +5509,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ExecutionDataSettingsRequest = new ExecutionDataSettingsRequest(...) // New Execution Data Setting
 
@@ -5561,7 +5561,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -5606,7 +5606,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: EmergencyGroup = new EmergencyGroup(...) // 
 
@@ -5656,7 +5656,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let grammarId: String = "" // Grammar ID
 let languageCode: String = "" // Language
@@ -5710,7 +5710,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let grammarId: String = "" // Grammar ID
 let languageCode: String = "" // Language
@@ -5764,7 +5764,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let grammarId: String = "" // Grammar ID
 let body: GrammarLanguage = new GrammarLanguage(...) // 
@@ -5816,7 +5816,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: Grammar = new Grammar(...) // 
 
@@ -5866,7 +5866,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: IVR = new IVR(...) // 
 
@@ -5918,7 +5918,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // Prompt ID
 
@@ -5968,7 +5968,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // Prompt ID
 let body: PromptAssetCreate = new PromptAssetCreate(...) // 
@@ -6020,7 +6020,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: Prompt = new Prompt(...) // 
 
@@ -6070,7 +6070,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ScheduleGroup = new ScheduleGroup(...) // 
 
@@ -6120,7 +6120,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: Schedule = new Schedule(...) // 
 
@@ -6172,7 +6172,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // promptId
 
@@ -6222,7 +6222,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // Prompt ID
 let body: SystemPromptAsset = new SystemPromptAsset(...) // 
@@ -6276,7 +6276,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowId: String = "" // Flow ID
 
@@ -6328,7 +6328,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowId: String = "" // The flow id to set the loglevel for
 let body: FlowLogLevelRequest = new FlowLogLevelRequest(...) // New LogLevel settings
@@ -6382,7 +6382,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowId: String = "" // Flow ID
 let body: [String:JSON] = new JSON(...) // 
@@ -6434,7 +6434,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: Flow = new Flow(...) // 
 let language: String = "" // Language
@@ -6489,7 +6489,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flow: String = "" // Flow ID
 
@@ -6539,7 +6539,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flow: String = "" // Flow ID
 
@@ -6589,7 +6589,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flow: String = "" // Flow ID
 
@@ -6642,7 +6642,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flow: String = "" // Flow ID
 let version: String = "" // version
@@ -6694,7 +6694,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flow: String = "" // Flow ID
 
@@ -6746,7 +6746,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flow: String = "" // Flow ID
 
@@ -6799,7 +6799,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let datatableId: String = "" // id of datatable
 
@@ -6852,7 +6852,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let datatableId: String = "" // id of datatable
 let body: DataTableImportJob = new DataTableImportJob(...) // import job information
@@ -6907,7 +6907,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let datatableId: String = "" // id of datatable
 let body: DataTableImportJob = new DataTableImportJob(...) // import job information
@@ -6962,7 +6962,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let datatableId: String = "" // id of datatable
 let dataTableRow: [String:JSON] = new JSON(...) // 
@@ -7016,7 +7016,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: DataTable = new DataTable(...) // datatable json-schema
 
@@ -7068,7 +7068,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowLaunchRequest: FlowExecutionLaunchRequest = new FlowExecutionLaunchRequest(...) // 
 
@@ -7118,7 +7118,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: RegisterArchitectExportJob = new RegisterArchitectExportJob(...) // 
 
@@ -7170,7 +7170,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ExecutionDataRequest = new ExecutionDataRequest(...) // Requested Flow Ids
 let expand: ArchitectAPI.Expand_postFlowsInstancesJobs = ArchitectAPI.Expand_postFlowsInstancesJobs.enummember // Expand various query types.
@@ -7224,7 +7224,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CriteriaQuery = new CriteriaQuery(...) // query
 let indexOnly: Bool = true // indexes only
@@ -7278,7 +7278,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: RegisterArchitectJobRequest = new RegisterArchitectJobRequest(...) // 
 
@@ -7328,7 +7328,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: FlowMilestone = new FlowMilestone(...) // 
 
@@ -7380,7 +7380,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: FlowOutcome = new FlowOutcome(...) // 
 
@@ -7430,7 +7430,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let emergencyGroupId: String = "" // Emergency group ID
 let body: EmergencyGroup = new EmergencyGroup(...) // 
@@ -7482,7 +7482,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let ivrId: String = "" // IVR id
 let body: IVR = new IVR(...) // 
@@ -7535,7 +7535,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let ivrId: String = "" // IVR id
 let body: IVRIdentityResolutionConfig = new IVRIdentityResolutionConfig(...) // 
@@ -7587,7 +7587,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // Prompt ID
 let body: Prompt = new Prompt(...) // 
@@ -7639,7 +7639,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // Prompt ID
 let languageCode: String = "" // Language
@@ -7693,7 +7693,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let scheduleId: String = "" // Schedule ID
 let body: Schedule = new Schedule(...) // 
@@ -7745,7 +7745,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let scheduleGroupId: String = "" // Schedule group ID
 let body: ScheduleGroup = new ScheduleGroup(...) // 
@@ -7797,7 +7797,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let promptId: String = "" // Prompt ID
 let languageCode: String = "" // Language
@@ -7851,7 +7851,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowId: String = "" // Flow ID
 let body: Flow = new Flow(...) // 
@@ -7905,7 +7905,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowId: String = "" // The flow id to edit the loglevel for
 let body: FlowLogLevelRequest = new FlowLogLevelRequest(...) // New LogLevel settings
@@ -7961,7 +7961,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let datatableId: String = "" // id of datatable
 let body: DataTable = new DataTable(...) // datatable json-schema
@@ -8018,7 +8018,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let datatableId: String = "" // id of datatable
 let rowId: String = "" // the key for the row
@@ -8074,7 +8074,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: FlowLogLevelRequest = new FlowLogLevelRequest(...) // New LogLevel settings
 let expand: [String] = [""] // Expand instructions for the result
@@ -8126,7 +8126,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let milestoneId: String = "" // flow milestone ID
 let body: FlowMilestone = new FlowMilestone(...) // 
@@ -8180,7 +8180,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let flowOutcomeId: String = "" // flow outcome ID
 let body: FlowOutcome = new FlowOutcome(...) // 
@@ -8210,4 +8210,4 @@ ArchitectAPI.putFlowsOutcome(flowOutcomeId: flowOutcomeId, body: body) { (respon
 [**Operation**](Operation)
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

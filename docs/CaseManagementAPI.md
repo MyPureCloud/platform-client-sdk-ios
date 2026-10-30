@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteCasemanagementCaseCommentsMeCommentId**](CaseManagementAPI#deleteCasemanagementCaseCommentsMeCommentId) | Delete my Comment. |
 | [**deleteCasemanagementCaseplan**](CaseManagementAPI#deleteCasemanagementCaseplan) | Delete a Caseplan. |
 | [**deleteCasemanagementCaseplanDataschema**](CaseManagementAPI#deleteCasemanagementCaseplanDataschema) | Remove a data schema from a draft Caseplan. |
+| [**deleteCasemanagementCaseplanStageplan**](CaseManagementAPI#deleteCasemanagementCaseplanStageplan) | Delete a Stageplan from a draft Caseplan. |
 | [**getCasemanagementCase**](CaseManagementAPI#getCasemanagementCase) | Get a Case. |
 | [**getCasemanagementCaseAssociation**](CaseManagementAPI#getCasemanagementCaseAssociation) | Get a Case Association. |
 | [**getCasemanagementCaseAssociations**](CaseManagementAPI#getCasemanagementCaseAssociations) | Get a list of Case associations for the Case. |
@@ -43,6 +44,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postCasemanagementCaseTerminateJobs**](CaseManagementAPI#postCasemanagementCaseTerminateJobs) | Create a Terminate Job for a Case. |
 | [**postCasemanagementCaseplanDataschemas**](CaseManagementAPI#postCasemanagementCaseplanDataschemas) | Add a data schema to a draft Caseplan. |
 | [**postCasemanagementCaseplanPublish**](CaseManagementAPI#postCasemanagementCaseplanPublish) | Publish Caseplan. |
+| [**postCasemanagementCaseplanStageplanReposition**](CaseManagementAPI#postCasemanagementCaseplanStageplanReposition) | Reposition a Stageplan within a draft Caseplan. |
+| [**postCasemanagementCaseplanStageplans**](CaseManagementAPI#postCasemanagementCaseplanStageplans) | Create a Stageplan on a draft Caseplan. |
 | [**postCasemanagementCaseplanVersions**](CaseManagementAPI#postCasemanagementCaseplanVersions) | Create Caseplan version. |
 | [**postCasemanagementCaseplans**](CaseManagementAPI#postCasemanagementCaseplans) | Create a Caseplan. |
 | [**postCasemanagementCaseplansQuery**](CaseManagementAPI#postCasemanagementCaseplansQuery) | Query for Caseplans. |
@@ -76,7 +79,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 
@@ -126,7 +129,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let commentId: String = "" // Comment identifier.
@@ -178,7 +181,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 
@@ -228,7 +231,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 let schemaKeyName: String = "" // Schema key (for example \"default\").
@@ -258,6 +261,58 @@ CaseManagementAPI.deleteCasemanagementCaseplanDataschema(caseplanId: caseplanId,
 [**JSON**](JSON)
 
 
+## deleteCasemanagementCaseplanStageplan
+
+
+
+> [JSON](JSON) deleteCasemanagementCaseplanStageplan(caseplanId, stageplanId)
+
+Delete a Stageplan from a draft Caseplan.
+
+
+
+Wraps DELETE /api/v2/casemanagement/caseplans/{caseplanId}/stageplans/{stageplanId}  
+
+Requires ANY permissions: 
+
+* caseManagement:stageplan:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let caseplanId: String = "" // Caseplan identifier.
+let stageplanId: String = "" // Stageplan identifier.
+
+// Code example
+CaseManagementAPI.deleteCasemanagementCaseplanStageplan(caseplanId: caseplanId, stageplanId: stageplanId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("CaseManagementAPI.deleteCasemanagementCaseplanStageplan was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **caseplanId** | **String**| Caseplan identifier. | |
+| **stageplanId** | **String**| Stageplan identifier. | |
+
+
+### Return type
+
+[**JSON**](JSON)
+
+
 ## getCasemanagementCase
 
 
@@ -280,7 +335,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let expands: [String] = [""] // Attributes to expand. Comma-separated if more than one.
@@ -332,7 +387,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let associationId: String = "" // Case association identifier.
@@ -384,7 +439,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
@@ -440,7 +495,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let commentId: String = "" // Comment identifier.
@@ -492,7 +547,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let after: String = "" // Cursor pointing to the end of the previously returned page of comments.
@@ -548,7 +603,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let stageId: String = "" // Stage identifier.
@@ -600,7 +655,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let stageId: String = "" // Stage identifier.
@@ -654,7 +709,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let stageId: String = "" // Stage identifier.
@@ -712,7 +767,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
@@ -768,7 +823,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let jobId: String = "" // Terminate Job identifier.
@@ -820,7 +875,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 
@@ -870,7 +925,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 let versionId: String = "" // Caseplan version identifier.
@@ -922,7 +977,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 let versionId: String = "" // Caseplan version identifier.
@@ -974,7 +1029,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 let versionId: String = "" // Caseplan version identifier.
@@ -1026,7 +1081,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 let versionId: String = "" // Caseplan version identifier.
@@ -1082,7 +1137,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 let versionId: String = "" // Caseplan version identifier.
@@ -1140,7 +1195,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 let versionId: String = "" // Caseplan version identifier.
@@ -1202,7 +1257,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 let versionId: String = "" // Caseplan version identifier.
@@ -1262,7 +1317,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let after: String = "" // Cursor that points to the end of the previously returned set of Caseplans.
 let pageSize: Int = 0 // Number of Caseplans to return. Maximum is 200.
@@ -1318,7 +1373,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let externalContactId: String = "" // External contact identifier.
 let after: String = "" // Cursor pointing to the end of the previously returned page of Cases.
@@ -1376,7 +1431,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // Job ID
 
@@ -1426,7 +1481,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // Job ID
 
@@ -1476,7 +1531,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let referenceId: String = "" // Case reference.
 let expands: [String] = [""] // Attributes to expand. Comma-separated if more than one.
@@ -1528,7 +1583,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let body: CaseDateDueUpdate = new CaseDateDueUpdate(...) // Due date update.
@@ -1580,7 +1635,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let body: CaseOwnerUpdate = new CaseOwnerUpdate(...) // OwnerId
@@ -1632,7 +1687,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let body: CasePriorityUpdate = new CasePriorityUpdate(...) // Priority update.
@@ -1684,7 +1739,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let body: CaseSummaryUpdate = new CaseSummaryUpdate(...) // Summary update.
@@ -1736,7 +1791,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 let body: CaseplanUpdate = new CaseplanUpdate(...) // Caseplan update.
@@ -1788,7 +1843,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 let stageplanId: String = "" // Stageplan identifier.
@@ -1842,7 +1897,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 let stageplanId: String = "" // Stageplan identifier.
@@ -1898,7 +1953,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let body: CaseAssociationCreate = new CaseAssociationCreate(...) // Case association create request.
@@ -1950,7 +2005,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let body: CommentCreate = new CommentCreate(...) // Comment create request.
@@ -2002,7 +2057,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 
@@ -2052,7 +2107,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 let body: CaseplanDataSchemaRequest = new CaseplanDataSchemaRequest(...) // Data schema reference.
@@ -2104,7 +2159,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 
@@ -2132,6 +2187,112 @@ CaseManagementAPI.postCasemanagementCaseplanPublish(caseplanId: caseplanId) { (r
 [**Caseplan**](Caseplan)
 
 
+## postCasemanagementCaseplanStageplanReposition
+
+
+
+> [JSON](JSON) postCasemanagementCaseplanStageplanReposition(caseplanId, stageplanId, body)
+
+Reposition a Stageplan within a draft Caseplan.
+
+
+
+Wraps POST /api/v2/casemanagement/caseplans/{caseplanId}/stageplans/{stageplanId}/reposition  
+
+Requires ANY permissions: 
+
+* caseManagement:stageplan:reposition
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let caseplanId: String = "" // Caseplan identifier.
+let stageplanId: String = "" // Stageplan identifier.
+let body: StageplanReposition = new StageplanReposition(...) // Stageplan reposition request.
+
+// Code example
+CaseManagementAPI.postCasemanagementCaseplanStageplanReposition(caseplanId: caseplanId, stageplanId: stageplanId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("CaseManagementAPI.postCasemanagementCaseplanStageplanReposition was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **caseplanId** | **String**| Caseplan identifier. | |
+| **stageplanId** | **String**| Stageplan identifier. | |
+| **body** | [**StageplanReposition**](StageplanReposition)| Stageplan reposition request. | |
+
+
+### Return type
+
+[**JSON**](JSON)
+
+
+## postCasemanagementCaseplanStageplans
+
+
+
+> [Stageplan](Stageplan) postCasemanagementCaseplanStageplans(caseplanId, body)
+
+Create a Stageplan on a draft Caseplan.
+
+
+
+Wraps POST /api/v2/casemanagement/caseplans/{caseplanId}/stageplans  
+
+Requires ANY permissions: 
+
+* caseManagement:stageplan:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let caseplanId: String = "" // Caseplan identifier.
+let body: StageplanCreate = new StageplanCreate(...) // Stageplan create request.
+
+// Code example
+CaseManagementAPI.postCasemanagementCaseplanStageplans(caseplanId: caseplanId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("CaseManagementAPI.postCasemanagementCaseplanStageplans was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **caseplanId** | **String**| Caseplan identifier. | |
+| **body** | [**StageplanCreate**](StageplanCreate)| Stageplan create request. | |
+
+
+### Return type
+
+[**Stageplan**](Stageplan)
+
+
 ## postCasemanagementCaseplanVersions
 
 
@@ -2154,7 +2315,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 
@@ -2204,7 +2365,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CaseplanCreate = new CaseplanCreate(...) // Caseplan create request.
 
@@ -2256,7 +2417,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CaseplanQueryRequest = new CaseplanQueryRequest(...) // Caseplan query request.
 
@@ -2306,7 +2467,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CaseCreate = new CaseCreate(...) // Case create request.
 
@@ -2356,7 +2517,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CaseAssociationQuery = new CaseAssociationQuery(...) // Case association query request.
 
@@ -2406,7 +2567,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CaseQueryJobCreate = new CaseQueryJobCreate(...) // Case query job create request.
 
@@ -2456,7 +2617,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 let schemaKeyName: String = "" // Schema key (for example \"default\").
@@ -2510,7 +2671,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 let body: IntakeSettingsUpdate = new IntakeSettingsUpdate(...) // Intake settings update.
@@ -2540,4 +2701,4 @@ CaseManagementAPI.putCasemanagementCaseplanIntakesettings(caseplanId: caseplanId
 [**IntakeSettingsListing**](IntakeSettingsListing)
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

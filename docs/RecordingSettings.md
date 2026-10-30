@@ -12,7 +12,8 @@
 | **recordingPlaybackUrlTtl** | **Int** | The duration in minutes for which the generated URL for recording playback remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes. | [optional] |
 | **recordingBatchDownloadUrlTtl** | **Int** | The duration in minutes for which the generated URL for recording batch download remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes. | [optional] |
 | **stopRecordingWhenOnlyExternalParticipants** | **Bool** | Whether to stop recording in conference when only external participants remain | [optional] |
+| **hierarchyAccessControlEnabled** | **Bool** | Whether hierarchy access control using the Reports To management chain is enabled for the organization | [optional] |
 
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

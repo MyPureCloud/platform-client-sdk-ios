@@ -31,7 +31,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let downloadId: String = "" // Download ID
 let contentDisposition: String = "" // 
@@ -65,4 +65,4 @@ DownloadsAPI.getDownload(downloadId: downloadId, contentDisposition: contentDisp
 [**UrlResponse**](UrlResponse)
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

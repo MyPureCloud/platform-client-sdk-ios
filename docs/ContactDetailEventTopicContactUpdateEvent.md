@@ -28,7 +28,10 @@
 | **conversationExternalOrganizationIds** | **[String]** |  | [optional] |
 | **divisionId** | **String** |  | [optional] |
 | **utilizationLabel** | **String** |  | [optional] |
+| **outboundCampaignId** | **String** |  | [optional] |
+| **outboundContactListId** | **String** |  | [optional] |
+| **outboundContactId** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

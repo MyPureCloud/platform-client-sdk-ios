@@ -32,7 +32,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let entityType: DependenciesAPI.EntityType_getDependenciesTypeEntityTypeIdEntityIdConnectionsRequiredby = DependenciesAPI.EntityType_getDependenciesTypeEntityTypeIdEntityIdConnectionsRequiredby.enummember // Entity type
 let entityId: String = "" // Entity ID
@@ -94,7 +94,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let entityType: DependenciesAPI.EntityType_getDependenciesTypeEntityTypeIdEntityIdConnectionsRequiredbycounts = DependenciesAPI.EntityType_getDependenciesTypeEntityTypeIdEntityIdConnectionsRequiredbycounts.enummember // Entity type
 let entityId: String = "" // Entity ID
@@ -146,7 +146,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let entityType: DependenciesAPI.EntityType_getDependenciesTypeEntityTypeIdEntityIdConnectionsRequires = DependenciesAPI.EntityType_getDependenciesTypeEntityTypeIdEntityIdConnectionsRequires.enummember // Entity type
 let entityId: String = "" // Entity ID
@@ -186,4 +186,4 @@ DependenciesAPI.getDependenciesTypeEntityTypeIdEntityIdConnectionsRequires(entit
 [**DependencyEntityListing**](DependencyEntityListing)
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

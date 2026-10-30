@@ -26,6 +26,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Get the results of a usage query
 
+Deprecated - use GET /api/v2/usage/client/{clientId}/aggregates/query/jobs/{jobId} instead.
+
 
 
 Wraps GET /api/v2/oauth/clients/{clientId}/usage/query/results/{executionId}  
@@ -41,7 +43,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let executionId: String = "" // ID of the query execution
 let clientId: String = "" // Client ID
@@ -79,7 +81,7 @@ UsageAPI.getOauthClientUsageQueryResult(executionId: executionId, clientId: clie
 
 Get a summary of OAuth client API usage
 
-After calling this method, you will then need to poll for the query results based on the returned execution Id
+Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
 
 
 
@@ -96,7 +98,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let clientId: String = "" // Client ID
 let days: String = "" // Previous number of days to query
@@ -148,7 +150,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // jobId
 let pageSize: Int = 0 // Page size of the results. Max is 1000.
@@ -202,7 +204,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let clientId: String = "" // clientId
 let jobId: String = "" // jobId
@@ -244,6 +246,8 @@ UsageAPI.getUsageClientClientIdAggregatesQueryJob(clientId: clientId, jobId: job
 
 Get the results of a usage query
 
+Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
+
 
 
 Wraps GET /api/v2/usage/query/{executionId}/results  
@@ -259,7 +263,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let executionId: String = "" // ID of the query execution
 
@@ -295,6 +299,8 @@ UsageAPI.getUsageQueryExecutionIdResults(executionId: executionId) { (response, 
 
 Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
 
+Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
+
 
 
 Wraps GET /api/v2/usage/simplesearch/{executionId}/results  
@@ -310,7 +316,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let executionId: String = "" // ID of the search execution
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned
@@ -350,7 +356,7 @@ UsageAPI.getUsageSimplesearchExecutionIdResults(executionId: executionId, after:
 
 Query for OAuth client API usage
 
-After calling this method, you will then need to poll for the query results based on the returned execution Id
+Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
 
 
 
@@ -367,7 +373,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let clientId: String = "" // Client ID
 let body: ApiUsageClientQuery = new ApiUsageClientQuery(...) // Query
@@ -421,7 +427,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: OrganizationPublicApiUsageQueryRequest = new OrganizationPublicApiUsageQueryRequest(...) // Query
 
@@ -473,7 +479,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let clientId: String = "" // clientId
 let body: ClientPublicApiUsageQueryRequest = new ClientPublicApiUsageQueryRequest(...) // Query
@@ -511,7 +517,7 @@ UsageAPI.postUsageClientClientIdAggregatesQueryJobs(clientId: clientId, body: bo
 
 Query organization API Usage - 
 
-After calling this method, you will then need to poll for the query results based on the returned execution Id
+Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
 
 
 
@@ -528,7 +534,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ApiUsageOrganizationQuery = new ApiUsageOrganizationQuery(...) // Query
 
@@ -564,7 +570,7 @@ UsageAPI.postUsageQuery(body: body) { (response, error) in
 
 Search organization API Usage
 
-After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
+Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
 
 
 
@@ -581,7 +587,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ApiUsageSimpleSearch = new ApiUsageSimpleSearch(...) // SimpleSearch
 
@@ -609,4 +615,4 @@ UsageAPI.postUsageSimplesearch(body: body) { (response, error) in
 [**UsageExecutionResult**](UsageExecutionResult)
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

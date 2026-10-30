@@ -12,4 +12,4 @@ Target definition for input or output data type properties
 
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

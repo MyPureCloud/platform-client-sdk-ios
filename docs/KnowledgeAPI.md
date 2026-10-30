@@ -67,6 +67,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getKnowledgeSourceSynchronizations**](KnowledgeAPI#getKnowledgeSourceSynchronizations) | Get synchronizations of a source. |
 | [**getKnowledgeSources**](KnowledgeAPI#getKnowledgeSources) | List sources |
 | [**getKnowledgeSourcesSynchronizations**](KnowledgeAPI#getKnowledgeSourcesSynchronizations) | Get synchronizations of all sources of the organization. |
+| [**getKnowledgeSourcesTags**](KnowledgeAPI#getKnowledgeSourcesTags) | Get tags across sources for the organization |
+| [**getKnowledgeSourcesTagsGrouped**](KnowledgeAPI#getKnowledgeSourcesTagsGrouped) | Get tags grouped by source for the organization |
 | [**patchKnowledgeConnection**](KnowledgeAPI#patchKnowledgeConnection) | Update connection |
 | [**patchKnowledgeGuestSessionDocumentsSearchSearchId**](KnowledgeAPI#patchKnowledgeGuestSessionDocumentsSearchSearchId) | Update search result. |
 | [**patchKnowledgeKnowledgebase**](KnowledgeAPI#patchKnowledgeKnowledgebase) | Update knowledge base |
@@ -128,6 +130,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postKnowledgeSourceSynchronizationUploads**](KnowledgeAPI#postKnowledgeSourceSynchronizationUploads) | Create presigned URL for uploading a file in the synchronization. |
 | [**postKnowledgeSourceSynchronizations**](KnowledgeAPI#postKnowledgeSourceSynchronizations) | Start a manual synchronization from a source. |
 | [**postKnowledgeSources**](KnowledgeAPI#postKnowledgeSources) | Create a new source |
+| [**postKnowledgeSourcesFilesCounts**](KnowledgeAPI#postKnowledgeSourcesFilesCounts) | Get per-source file counts for the selected tag filter |
 | [**putKnowledgeKnowledgebaseSourcesSalesforceSourceId**](KnowledgeAPI#putKnowledgeKnowledgebaseSourcesSalesforceSourceId) | Update Salesforce Knowledge integration source |
 | [**putKnowledgeKnowledgebaseSourcesServicenowSourceId**](KnowledgeAPI#putKnowledgeKnowledgebaseSourcesServicenowSourceId) | Update ServiceNow Knowledge integration source |
 | [**putKnowledgeSource**](KnowledgeAPI#putKnowledgeSource) | Update the source |
@@ -156,7 +159,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let connectionId: String = "" // Connection ID
 
@@ -206,7 +209,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 
@@ -256,7 +259,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let categoryId: String = "" // Category ID
@@ -308,7 +311,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID.
 let documentId: String = "" // Document ID.
@@ -360,7 +363,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let documentVariationId: String = "" // Globally unique identifier for a document variation.
 let documentId: String = "" // Globally unique identifier for a document.
@@ -413,7 +416,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let exportJobId: String = "" // Export job ID
@@ -464,7 +467,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let importJobId: String = "" // Import job ID
@@ -515,7 +518,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let labelId: String = "" // Label ID
@@ -567,7 +570,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let sourceId: String = "" // Source ID
@@ -618,7 +621,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let sourceId: String = "" // Source ID
@@ -669,7 +672,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let syncJobId: String = "" // Synchronization job ID
@@ -720,7 +723,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeSettingId: String = "" // Knowledge Setting ID.
 
@@ -769,7 +772,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sourceId: String = "" // Source ID
 
@@ -818,7 +821,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sourceId: String = "" // Source ID
 let synchronizationId: String = "" // Synchronization ID
@@ -871,7 +874,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sourceId: String = "" // Source ID
 let synchronizationId: String = "" // Synchronization ID
@@ -924,7 +927,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let connectionId: String = "" // Connection ID
 let expand: [String] = [""] // The specified entity attributes will be filled. Comma separated values expected.
@@ -976,7 +979,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let connectionId: String = "" // Connection ID
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
@@ -1032,7 +1035,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -1077,7 +1080,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sessionId: String = "" // Knowledge guest session ID.
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
@@ -1144,7 +1147,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sessionId: String = "" // Knowledge guest session ID.
 let documentId: String = "" // Document ID
@@ -1195,7 +1198,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sessionId: String = "" // Knowledge guest session ID.
 let categoryId: [String] = [""] // If specified, retrieves documents associated with category ids, comma separated values expected.
@@ -1249,7 +1252,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let integrationId: String = "" // Integration ID
 let knowledgeBaseIds: [String] = [""] // Narrowing down filtering option results by knowledge base.
@@ -1301,7 +1304,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 
@@ -1351,7 +1354,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
@@ -1419,7 +1422,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let categoryId: String = "" // Category ID
@@ -1471,7 +1474,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID.
 let documentId: String = "" // Document ID.
@@ -1527,7 +1530,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID.
 let documentId: String = "" // Document ID.
@@ -1601,7 +1604,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID.
 let documentId: String = "" // Document ID.
@@ -1655,7 +1658,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let documentVariationId: String = "" // Globally unique identifier for a document variation.
 let documentId: String = "" // Globally unique identifier for a document.
@@ -1713,7 +1716,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Globally unique identifier for the knowledge base.
 let documentId: String = "" // Globally unique identifier for the document.
@@ -1775,7 +1778,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Globally unique identifier for the knowledge base.
 let documentId: String = "" // Globally unique identifier for the document.
@@ -1831,7 +1834,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Globally unique identifier for the knowledge base.
 let documentId: String = "" // Globally unique identifier for the document.
@@ -1887,7 +1890,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Globally unique identifier for the knowledge base.
 let documentId: String = "" // Globally unique identifier for the document.
@@ -1947,7 +1950,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Globally unique identifier for the knowledge base.
 let documentId: String = "" // Globally unique identifier for the document.
@@ -2007,7 +2010,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
@@ -2079,7 +2082,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID.
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
@@ -2151,7 +2154,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let exportJobId: String = "" // Export job ID
@@ -2203,7 +2206,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let importJobId: String = "" // Import job ID
@@ -2257,7 +2260,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let labelId: String = "" // Label ID
@@ -2309,7 +2312,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
@@ -2369,7 +2372,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
@@ -2435,7 +2438,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 
@@ -2485,7 +2488,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let parseJobId: String = "" // Parse job ID
@@ -2539,7 +2542,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let type: KnowledgeAPI.ModelType_getKnowledgeKnowledgebaseSources = KnowledgeAPI.ModelType_getKnowledgeKnowledgebaseSources.enummember // If specified, retrieves integration sources with specified integration type.
@@ -2595,7 +2598,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let sourceId: String = "" // Source ID
@@ -2649,7 +2652,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let sourceId: String = "" // Source ID
@@ -2703,7 +2706,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let syncJobId: String = "" // Synchronization job ID
@@ -2755,7 +2758,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let groupId: String = "" // The ID of the group to be retrieved.
@@ -2813,7 +2816,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let groupId: String = "" // The ID of the group to be retrieved.
@@ -2873,7 +2876,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let app: KnowledgeAPI.App_getKnowledgeKnowledgebaseUnansweredGroups = KnowledgeAPI.App_getKnowledgeKnowledgebaseUnansweredGroups.enummember // The app value to be used for filtering phrases.
@@ -2929,7 +2932,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let jobId: String = "" // Upload job ID
@@ -2981,7 +2984,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
@@ -3047,7 +3050,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeSettingId: String = "" // Knowledge Setting ID.
 
@@ -3097,7 +3100,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
@@ -3159,7 +3162,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sourceId: String = "" // Source ID
 let expand: [String] = [""] // Optional fields to expand for the Source.
@@ -3211,7 +3214,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sourceId: String = "" // Source ID
 let synchronizationId: String = "" // Synchronization ID
@@ -3263,7 +3266,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sourceId: String = "" // Source ID
 let synchronizationId: String = "" // Synchronization ID
@@ -3317,7 +3320,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sourceId: String = "" // Source ID
 let synchronizationId: String = "" // Synchronization ID
@@ -3375,7 +3378,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sourceId: String = "" // Source ID
 let synchronizationId: String = "" // Synchronization ID
@@ -3429,7 +3432,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sourceId: String = "" // Source ID
 let synchronizationId: String = "" // Synchronization ID
@@ -3487,7 +3490,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sourceId: String = "" // Source ID
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
@@ -3543,7 +3546,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let expand: [String] = [""] // Optional fields to expand for the Source.
 
@@ -3593,7 +3596,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
@@ -3625,6 +3628,116 @@ KnowledgeAPI.getKnowledgeSourcesSynchronizations(before: before, after: after, p
 [**V3SynchronizationListing**](V3SynchronizationListing)
 
 
+## getKnowledgeSourcesTags
+
+
+
+> [OrgV3SourcesTagsResponse](OrgV3SourcesTagsResponse) getKnowledgeSourcesTags(pageNumber, pageSize, tagName, sourceIds)
+
+Get tags across sources for the organization
+
+
+
+Wraps GET /api/v2/knowledge/sources/tags  
+
+Requires ALL permissions: 
+
+* knowledge:sourceTagList:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Number of items per page. Maximum is 200.
+let tagName: String = "" // Optional substring filter for tag names.
+let sourceIds: String = "" // Optional comma-separated source IDs to scope tags.
+
+// Code example
+KnowledgeAPI.getKnowledgeSourcesTags(pageNumber: pageNumber, pageSize: pageSize, tagName: tagName, sourceIds: sourceIds) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeSourcesTags was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Number of items per page. Maximum is 200. | [optional] |
+| **tagName** | **String**| Optional substring filter for tag names. | [optional] |
+| **sourceIds** | **String**| Optional comma-separated source IDs to scope tags. | [optional] |
+
+
+### Return type
+
+[**OrgV3SourcesTagsResponse**](OrgV3SourcesTagsResponse)
+
+
+## getKnowledgeSourcesTagsGrouped
+
+
+
+> [V3SourceTagsGroupedResponse](V3SourceTagsGroupedResponse) getKnowledgeSourcesTagsGrouped(pageNumber, pageSize, tagName)
+
+Get tags grouped by source for the organization
+
+
+
+Wraps GET /api/v2/knowledge/sources/tags/grouped  
+
+Requires ALL permissions: 
+
+* knowledge:sourceTagList:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Number of items per page. Maximum is 200.
+let tagName: String = "" // Optional substring filter for tag names.
+
+// Code example
+KnowledgeAPI.getKnowledgeSourcesTagsGrouped(pageNumber: pageNumber, pageSize: pageSize, tagName: tagName) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeSourcesTagsGrouped was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Number of items per page. Maximum is 200. | [optional] |
+| **tagName** | **String**| Optional substring filter for tag names. | [optional] |
+
+
+### Return type
+
+[**V3SourceTagsGroupedResponse**](V3SourceTagsGroupedResponse)
+
+
 ## patchKnowledgeConnection
 
 
@@ -3647,7 +3760,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let connectionId: String = "" // Connection ID
 let body: ConnectionUpdateRequest = new ConnectionUpdateRequest(...) // 
@@ -3698,7 +3811,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sessionId: String = "" // Knowledge guest session ID.
 let searchId: String = "" // Search Result ID
@@ -3751,7 +3864,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let body: KnowledgeBaseUpdateRequest = new KnowledgeBaseUpdateRequest(...) // 
@@ -3803,7 +3916,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let categoryId: String = "" // Category ID
@@ -3857,7 +3970,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge Base ID
 let searchId: String = "" // Unique identifier of search request
@@ -3910,7 +4023,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID.
 let documentId: String = "" // Document ID.
@@ -3964,7 +4077,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID.
 let documentId: String = "" // Document ID.
@@ -4020,7 +4133,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let documentVariationId: String = "" // Globally unique identifier for a document variation.
 let documentId: String = "" // Globally unique identifier for a document.
@@ -4076,7 +4189,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // The ID of knowledge base containing the documents to query.
 let searchId: String = "" // Search Result ID
@@ -4129,7 +4242,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let importJobId: String = "" // Import job ID
@@ -4183,7 +4296,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let labelId: String = "" // Label ID
@@ -4237,7 +4350,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let parseJobId: String = "" // Parse job ID
@@ -4290,7 +4403,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let syncJobId: String = "" // Synchronization job ID
@@ -4345,7 +4458,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let groupId: String = "" // The ID of the group to be updated.
@@ -4401,7 +4514,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeSettingId: String = "" // Knowledge Setting ID.
 let body: KnowledgeSettingsRequest = new KnowledgeSettingsRequest(...) // 
@@ -4453,7 +4566,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sourceId: String = "" // Source ID
 let synchronizationId: String = "" // Synchronization ID
@@ -4507,7 +4620,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ConnectionCreateRequest = new ConnectionCreateRequest(...) // 
 
@@ -4557,7 +4670,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: UploadUrlRequest = new UploadUrlRequest(...) // query
 
@@ -4606,7 +4719,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sessionId: String = "" // Knowledge guest session ID.
 let documentId: String = "" // Document ID
@@ -4658,7 +4771,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sessionId: String = "" // Knowledge guest session ID.
 let documentId: String = "" // Document ID.
@@ -4711,7 +4824,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sessionId: String = "" // Knowledge guest session ID.
 let documentId: String = "" // Document ID
@@ -4763,7 +4876,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sessionId: String = "" // Knowledge guest session ID.
 let body: KnowledgeDocumentsAnswerFilter = new KnowledgeDocumentsAnswerFilter(...) // 
@@ -4814,7 +4927,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sessionId: String = "" // Knowledge guest session ID.
 let body: KnowledgeGuestDocumentPresentation = new KnowledgeGuestDocumentPresentation(...) // 
@@ -4864,7 +4977,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sessionId: String = "" // Knowledge guest session ID.
 let expand: [String] = [""] // Fields, if any, to expand for each document in the search result matching the query.
@@ -4917,7 +5030,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sessionId: String = "" // Knowledge guest session ID.
 let body: KnowledgeGuestDocumentSuggestionRequest = new KnowledgeGuestDocumentSuggestionRequest(...) // 
@@ -4968,7 +5081,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: KnowledgeGuestSession = new KnowledgeGuestSession(...) // 
 
@@ -5018,7 +5131,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let body: CategoryCreateRequest = new CategoryCreateRequest(...) // 
@@ -5070,7 +5183,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge Base ID
 let body: KnowledgeDocumentChunkRequest = new KnowledgeDocumentChunkRequest(...) // 
@@ -5122,7 +5235,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID.
 let documentId: String = "" // Document ID.
@@ -5175,7 +5288,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID.
 let documentId: String = "" // Document ID.
@@ -5230,7 +5343,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Globally unique identifier for the knowledge base.
 let documentId: String = "" // Globally unique identifier for the document.
@@ -5284,7 +5397,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Globally unique identifier for the knowledge base.
 let documentId: String = "" // Globally unique identifier for the document.
@@ -5338,7 +5451,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID.
 let documentId: String = "" // Document ID.
@@ -5391,7 +5504,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let body: KnowledgeDocumentReq = new KnowledgeDocumentReq(...) // 
@@ -5444,7 +5557,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let body: KnowledgeDocumentsAnswerFilter = new KnowledgeDocumentsAnswerFilter(...) // 
@@ -5496,7 +5609,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let body: KnowledgeDocumentBulkRemoveRequest = new KnowledgeDocumentBulkRemoveRequest(...) // 
@@ -5548,7 +5661,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let body: KnowledgeDocumentBulkUpdateRequest = new KnowledgeDocumentBulkUpdateRequest(...) // 
@@ -5600,7 +5713,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID.
 let body: KnowledgeDocumentPresentation = new KnowledgeDocumentPresentation(...) // 
@@ -5651,7 +5764,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge Base ID
 let expand: [String] = [""] // Fields, if any, to expand for each document in the search result matching the query.
@@ -5705,7 +5818,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // The ID of knowledge base containing the documents to query.
 let expand: [String] = [""] // Fields, if any, to expand for each document in the search result matching the query.
@@ -5759,7 +5872,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // The ID of knowledge base containing the documents to query.
 let body: KnowledgeDocumentSuggestionRequest = new KnowledgeDocumentSuggestionRequest(...) // 
@@ -5811,7 +5924,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let body: KnowledgeDocumentBulkVersionAddRequest = new KnowledgeDocumentBulkVersionAddRequest(...) // 
@@ -5863,7 +5976,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let body: KnowledgeExportJobRequest = new KnowledgeExportJobRequest(...) // 
@@ -5915,7 +6028,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let body: KnowledgeImportJobRequest = new KnowledgeImportJobRequest(...) // 
@@ -5967,7 +6080,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let body: LabelCreateRequest = new LabelCreateRequest(...) // 
@@ -6019,7 +6132,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let parseJobId: String = "" // Parse job ID
@@ -6072,7 +6185,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let body: KnowledgeParseJobRequest = new KnowledgeParseJobRequest(...) // 
@@ -6124,7 +6237,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let body: SalesforceSourceRequest = new SalesforceSourceRequest(...) // 
@@ -6176,7 +6289,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let sourceId: String = "" // Source ID
@@ -6230,7 +6343,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let body: ServiceNowSourceRequest = new ServiceNowSourceRequest(...) // 
@@ -6282,7 +6395,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let sourceId: String = "" // Source ID
@@ -6336,7 +6449,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let body: KnowledgeSyncJobRequest = new KnowledgeSyncJobRequest(...) // 
@@ -6388,7 +6501,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let body: CreateUploadSourceUrlJobRequest = new CreateUploadSourceUrlJobRequest(...) // uploadRequest
@@ -6440,7 +6553,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: KnowledgeBaseCreateRequest = new KnowledgeBaseCreateRequest(...) // 
 
@@ -6490,7 +6603,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: KnowledgeSourcesSearchRequest = new KnowledgeSourcesSearchRequest(...) // 
 
@@ -6540,7 +6653,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: KnowledgeSearchPreviewRequest = new KnowledgeSearchPreviewRequest(...) // 
 
@@ -6590,7 +6703,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: KnowledgeSettingsRequest = new KnowledgeSettingsRequest(...) // 
 
@@ -6640,7 +6753,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sourceId: String = "" // Source ID
 let synchronizationId: String = "" // Synchronization ID
@@ -6694,7 +6807,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sourceId: String = "" // Source ID
 let synchronizationId: String = "" // Synchronization ID
@@ -6748,7 +6861,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sourceId: String = "" // Source ID
 let body: V3StartManualSyncRequest = new V3StartManualSyncRequest(...) // 
@@ -6800,7 +6913,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: V3SourceCreateRequest = new V3SourceCreateRequest(...) // 
 
@@ -6828,6 +6941,56 @@ KnowledgeAPI.postKnowledgeSources(body: body) { (response, error) in
 [**V3SourceDetailedResponse**](V3SourceDetailedResponse)
 
 
+## postKnowledgeSourcesFilesCounts
+
+
+
+> [V3SourceFileCountsResponse](V3SourceFileCountsResponse) postKnowledgeSourcesFilesCounts(body)
+
+Get per-source file counts for the selected tag filter
+
+
+
+Wraps POST /api/v2/knowledge/sources/files/counts  
+
+Requires ALL permissions: 
+
+* knowledge:sourceFileCount:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let body: V3SourceFileCountsRequest = new V3SourceFileCountsRequest(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeSourcesFilesCounts(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeSourcesFilesCounts was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**V3SourceFileCountsRequest**](V3SourceFileCountsRequest)|  | [optional] |
+
+
+### Return type
+
+[**V3SourceFileCountsResponse**](V3SourceFileCountsResponse)
+
+
 ## putKnowledgeKnowledgebaseSourcesSalesforceSourceId
 
 
@@ -6850,7 +7013,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let sourceId: String = "" // Source ID
@@ -6904,7 +7067,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let sourceId: String = "" // Source ID
@@ -6958,7 +7121,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sourceId: String = "" // Source ID
 let body: V3SourceUpdateRequest = new V3SourceUpdateRequest(...) // 
@@ -6988,4 +7151,4 @@ KnowledgeAPI.putKnowledgeSource(sourceId: sourceId, body: body) { (response, err
 [**V3SourceDetailedResponse**](V3SourceDetailedResponse)
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

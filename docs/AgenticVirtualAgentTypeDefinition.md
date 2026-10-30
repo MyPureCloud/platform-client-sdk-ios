@@ -16,9 +16,9 @@ Type definition used by a virtual agent. The applicable fields depend on the typ
 | **properties** | [**[AgenticVirtualAgentPropertyDefinition]**]([AgenticVirtualAgentPropertyDefinition]) | Properties of this object type. Applies when type is object. | [optional] |
 | **items** | **String** | Type of items in this array type. Applies when type is array. | [optional] |
 | **statusCodes** | **[Int]** | HTTP 4xx or 5xx status codes this error type can handle. Applies when type is DataActionHttpError. | [optional] |
-| **defaultInstruction** | **String** | Default instruction for how the virtual agent should handle this error type when a tool references it without its own error instruction. Applies when type is DataActionHttpError. | [optional] |
+| **defaultInstruction** | **String** | Default instruction for how the virtual agent should handle this error type when a tool references it without its own error instruction. Applies when type is DataActionHttpError or A2AError. | [optional] |
 | **_enum** | **[String]** | Allowed enum values. Applies to enum types. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

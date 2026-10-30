@@ -14,9 +14,12 @@
 | **engagementType** | **String** |  | [optional] |
 | **feedback** | [**ConversationThirdPartyActionSuggestionsTopicSuggestionFeedback**](ConversationThirdPartyActionSuggestionsTopicSuggestionFeedback) |  | [optional] |
 | **activeIntent** | [**ConversationThirdPartyActionSuggestionsTopicSuggestedIntent**](ConversationThirdPartyActionSuggestionsTopicSuggestedIntent) |  | [optional] |
+| **activeSentiment** | [**ConversationThirdPartyActionSuggestionsTopicActiveSentiment**](ConversationThirdPartyActionSuggestionsTopicActiveSentiment) |  | [optional] |
 | **context** | [**ConversationThirdPartyActionSuggestionsTopicSuggestionContext**](ConversationThirdPartyActionSuggestionsTopicSuggestionContext) |  | [optional] |
+| **conversationTurns** | [**[ConversationThirdPartyActionSuggestionsTopicConversationTurn]**]([ConversationThirdPartyActionSuggestionsTopicConversationTurn]) |  | [optional] |
 | **thirdPartySuggestion** | [**ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion**](ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion) |  | [optional] |
+| **copilotContext** | [**[ConversationThirdPartyActionSuggestionsTopicCopilotContextEntry]**]([ConversationThirdPartyActionSuggestionsTopicCopilotContextEntry]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

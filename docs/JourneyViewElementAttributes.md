@@ -13,4 +13,4 @@ Attributes on an element in a journey view
 
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_
