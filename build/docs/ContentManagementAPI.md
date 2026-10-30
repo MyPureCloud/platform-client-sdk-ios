@@ -65,7 +65,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let documentId: String = "" // Document ID
 let _override: Bool = true // Override any lock on the document
@@ -117,7 +117,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let shareId: String = "" // Share ID
 
@@ -165,7 +165,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let statusId: String = "" // Status ID
 
@@ -213,7 +213,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workspaceId: String = "" // Workspace ID
 let moveChildrenToWorkspaceId: String = "" // New location for objects in deleted workspace.
@@ -263,7 +263,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workspaceId: String = "" // Workspace ID
 let memberId: String = "" // Member ID
@@ -315,7 +315,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workspaceId: String = "" // Workspace ID
 let tagId: String = "" // Tag ID
@@ -366,7 +366,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let documentId: String = "" // Document ID
 let expand: [String] = [""] // Which fields, if any, to expand.
@@ -418,7 +418,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let documentId: String = "" // Document ID
 let disposition: ContentManagementAPI.Disposition_getContentmanagementDocumentContent = ContentManagementAPI.Disposition_getContentmanagementDocumentContent.enummember // Request how the content will be downloaded: a file attachment or inline. Default is attachment.
@@ -471,7 +471,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workspaceId: String = "" // Workspace ID
 let name: String = "" // Name
@@ -532,7 +532,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let queryPhrase: String = "" // Phrase tokens are ANDed together over all searchable fields
 let pageSize: Int = 0 // Page size
@@ -591,7 +591,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let securityProfileId: String = "" // Security Profile Id
 
@@ -640,7 +640,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -685,7 +685,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let shareId: String = "" // Share ID
 let expand: [String] = [""] // Which fields, if any, to expand.
@@ -738,7 +738,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sharedId: String = "" // Shared ID
 let disposition: ContentManagementAPI.Disposition_getContentmanagementSharedSharedId = ContentManagementAPI.Disposition_getContentmanagementSharedSharedId.enummember // Request how the share content will be downloaded: attached as a file or inline. Default is attachment.
@@ -795,7 +795,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let entityId: String = "" // Filters the shares returned to only the entity specified by the value of this parameter.
 let expand: [String] = [""] // Which fields, if any, to expand.
@@ -850,7 +850,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
@@ -901,7 +901,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let statusId: String = "" // Status ID
 
@@ -950,7 +950,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -995,7 +995,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workspaceId: String = "" // Workspace ID
 let expand: [String] = [""] // Which fields, if any, to expand.
@@ -1046,7 +1046,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workspaceId: String = "" // Workspace ID
 let expand: [String] = [""] // Which fields, if any, to expand.
@@ -1105,7 +1105,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workspaceId: String = "" // Workspace ID
 let memberId: String = "" // Member ID
@@ -1158,7 +1158,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workspaceId: String = "" // Workspace ID
 let pageSize: Int = 0 // Page size
@@ -1213,7 +1213,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workspaceId: String = "" // Workspace ID
 let tagId: String = "" // Tag ID
@@ -1266,7 +1266,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workspaceId: String = "" // Workspace ID
 let value: String = "" // filter the list of tags returned
@@ -1325,7 +1325,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
@@ -1381,7 +1381,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let documentId: String = "" // Document ID
 let body: DocumentUpdate = new DocumentUpdate(...) // Document
@@ -1437,7 +1437,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let documentId: String = "" // Document ID
 let body: ReplaceRequest = new ReplaceRequest(...) // Replace Request
@@ -1490,7 +1490,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: DocumentUpload = new DocumentUpload(...) // Document
 let copySource: String = "" // Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source.
@@ -1545,7 +1545,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: QueryRequest = new QueryRequest(...) // Allows for a filtered query returning facet information
 let expand: ContentManagementAPI.Expand_postContentmanagementQuery = ContentManagementAPI.Expand_postContentmanagementQuery.enummember // Expand some document fields
@@ -1596,7 +1596,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CreateShareRequest = new CreateShareRequest(...) // CreateShareRequest - entity id and type and a single member or list of members are required
 
@@ -1645,7 +1645,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workspaceId: String = "" // Workspace ID
 let body: TagValue = new TagValue(...) // tag
@@ -1696,7 +1696,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workspaceId: String = "" // Workspace ID
 let body: TagQueryRequest = new TagQueryRequest(...) // query
@@ -1749,7 +1749,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: WorkspaceCreate = new WorkspaceCreate(...) // Workspace
 
@@ -1798,7 +1798,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workspaceId: String = "" // Workspace ID
 let body: Workspace = new Workspace(...) // Workspace
@@ -1849,7 +1849,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workspaceId: String = "" // Workspace ID
 let memberId: String = "" // Member ID
@@ -1902,7 +1902,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workspaceId: String = "" // Workspace ID
 let tagId: String = "" // Tag ID
@@ -1934,4 +1934,4 @@ ContentManagementAPI.putContentmanagementWorkspaceTagvalue(workspaceId: workspac
 [**TagValue**](TagValue)
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

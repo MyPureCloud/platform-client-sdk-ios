@@ -107,7 +107,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let metricId: String = "" // Specifies the External Metric Definition ID
 
@@ -157,7 +157,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contestId: String = "" // The ID of the contest
 
@@ -206,7 +206,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let metricId: String = "" // Specifies the External Metric Definition ID
 
@@ -256,7 +256,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
@@ -308,7 +308,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contestId: String = "" // The ID of the contest
 
@@ -358,7 +358,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contestId: String = "" // The ID of the contest
 let pageNumber: Int = 0 // 
@@ -416,7 +416,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contestId: String = "" // The ID of the contest
 let pageNumber: Int = 0 // 
@@ -474,7 +474,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contestId: String = "" // The ID of the contest
 
@@ -524,7 +524,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contestId: String = "" // The ID of the contest
 
@@ -575,7 +575,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contestId: String = "" // The ID of the contest
 let prizeImageId: String = "" // The ID of the prize image
@@ -627,7 +627,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // 
 let pageSize: Int = 0 // 
@@ -689,7 +689,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageNumber: Int = 0 // 
 let pageSize: Int = 0 // 
@@ -753,7 +753,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let filterType: GamificationAPI.FilterType_getGamificationInsights = GamificationAPI.FilterType_getGamificationInsights.enummember // Filter type for the query request.
 let filterId: String = "" // ID for the filter type.
@@ -825,7 +825,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let filterType: GamificationAPI.FilterType_getGamificationInsightsDetails = GamificationAPI.FilterType_getGamificationInsightsDetails.enummember // Filter type for the query request.
 let filterId: String = "" // ID for the filter type.
@@ -883,7 +883,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let filterType: GamificationAPI.FilterType_getGamificationInsightsGroupsTrends = GamificationAPI.FilterType_getGamificationInsightsGroupsTrends.enummember // Filter type for the query request.
 let filterId: String = "" // ID for the filter type.
@@ -945,7 +945,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let filterType: GamificationAPI.FilterType_getGamificationInsightsGroupsTrendsAll = GamificationAPI.FilterType_getGamificationInsightsGroupsTrendsAll.enummember // Filter type for the query request.
 let filterId: String = "" // ID for the filter type.
@@ -1007,7 +1007,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let filterType: GamificationAPI.FilterType_getGamificationInsightsManagers = GamificationAPI.FilterType_getGamificationInsightsManagers.enummember // Filter type for the query request.
 let filterId: String = "" // ID for the filter type.
@@ -1067,7 +1067,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let filterType: GamificationAPI.FilterType_getGamificationInsightsMembers = GamificationAPI.FilterType_getGamificationInsightsMembers.enummember // Filter type for the query request.
 let filterId: String = "" // ID for the filter type.
@@ -1125,7 +1125,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let filterType: GamificationAPI.FilterType_getGamificationInsightsRankings = GamificationAPI.FilterType_getGamificationInsightsRankings.enummember // Filter type for the query request.
 let filterId: String = "" // ID for the filter type.
@@ -1193,7 +1193,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let filterType: GamificationAPI.FilterType_getGamificationInsightsTrends = GamificationAPI.FilterType_getGamificationInsightsTrends.enummember // Filter type for the query request.
 let filterId: String = "" // ID for the filter type.
@@ -1255,7 +1255,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let userId: String = "" // The ID of a user.
 let filterType: GamificationAPI.FilterType_getGamificationInsightsUserDetails = GamificationAPI.FilterType_getGamificationInsightsUserDetails.enummember // Filter type for the query request.
@@ -1315,7 +1315,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let userId: String = "" // The ID of a user.
 let filterType: GamificationAPI.FilterType_getGamificationInsightsUserTrends = GamificationAPI.FilterType_getGamificationInsightsUserTrends.enummember // Filter type for the query request.
@@ -1379,7 +1379,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let startWorkday: Date = new Date(...) // Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let endWorkday: Date = new Date(...) // End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -1433,7 +1433,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let filterType: GamificationAPI.FilterType_getGamificationLeaderboardAll = GamificationAPI.FilterType_getGamificationLeaderboardAll.enummember // Filter type for the query request.
 let filterId: String = "" // ID for the filter type. For example, division or performance profile Id
@@ -1491,7 +1491,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let filterType: GamificationAPI.FilterType_getGamificationLeaderboardAllBestpoints = GamificationAPI.FilterType_getGamificationLeaderboardAllBestpoints.enummember // Filter type for the query request.
 let filterId: String = "" // ID for the filter type. For example, division or performance profile Id
@@ -1543,7 +1543,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -1589,7 +1589,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let metricDefinitionId: String = "" // metric definition id
 
@@ -1641,7 +1641,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -1689,7 +1689,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let profileId: String = "" // performanceProfileId
 
@@ -1739,7 +1739,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let profileId: String = "" // Profile Id
 
@@ -1791,7 +1791,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let profileId: String = "" // Performance Profile Id
 let metricId: String = "" // Metric Id
@@ -1847,7 +1847,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let profileId: String = "" // Performance Profile Id
 let expand: [String] = [""] // Which fields, if any, to expand.
@@ -1905,7 +1905,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let profileId: String = "" // Performance Profile Id
 let workday: Date = new Date(...) // The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -1959,7 +1959,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -2007,7 +2007,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let userId: String = "" // 
 let workday: Date = new Date(...) // Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -2058,7 +2058,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workday: Date = new Date(...) // Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 
@@ -2108,7 +2108,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workday: Date = new Date(...) // Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let expand: [String] = [""] // Which fields, if any, to expand.
@@ -2160,7 +2160,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -2212,7 +2212,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -2258,7 +2258,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 
@@ -2308,7 +2308,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workday: Date = new Date(...) // The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 
@@ -2358,7 +2358,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -2412,7 +2412,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let profileId: String = "" // performanceProfileId
 let metricId: String = "" // metricId
@@ -2474,7 +2474,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let profileId: String = "" // performanceProfileId
 let metricId: String = "" // metricId
@@ -2538,7 +2538,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let profileId: String = "" // performanceProfileId
 let metricId: String = "" // metricId
@@ -2600,7 +2600,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let userId: String = "" // 
 let workday: Date = new Date(...) // Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -2654,7 +2654,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let userId: String = "" // 
 let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -2708,7 +2708,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let userId: String = "" // 
 
@@ -2758,7 +2758,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let userId: String = "" // 
 let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -2810,7 +2810,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let userId: String = "" // 
 let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -2866,7 +2866,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let userId: String = "" // 
 let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -2922,7 +2922,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let filterType: GamificationAPI.FilterType_getGamificationScorecardsUsersPointsAverage = GamificationAPI.FilterType_getGamificationScorecardsUsersPointsAverage.enummember // Filter type for the query request.
 let filterId: String = "" // ID for the filter type.
@@ -2976,7 +2976,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let filterType: GamificationAPI.FilterType_getGamificationScorecardsUsersValuesAverage = GamificationAPI.FilterType_getGamificationScorecardsUsersValuesAverage.enummember // Filter type for the query request.
 let filterId: String = "" // ID for the filter type. For example, division Id
@@ -3032,7 +3032,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let filterType: GamificationAPI.FilterType_getGamificationScorecardsUsersValuesTrends = GamificationAPI.FilterType_getGamificationScorecardsUsersValuesTrends.enummember // Filter type for the query request.
 let filterId: String = "" // ID for the filter type.
@@ -3090,7 +3090,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let workday: Date = new Date(...) // The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let timeZone: String = "" // Timezone for the workday. Defaults to UTC
@@ -3142,7 +3142,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -3202,7 +3202,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -3248,7 +3248,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let templateId: String = "" // template id
 
@@ -3298,7 +3298,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -3344,7 +3344,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let metricId: String = "" // Specifies the metric definition ID
 let body: ExternalMetricDefinitionUpdateRequest = new ExternalMetricDefinitionUpdateRequest(...) // The External Metric Definition parameters to be updated
@@ -3397,7 +3397,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contestId: String = "" // The ID of the contest
 let body: ContestsFinalizeRequest = new ContestsFinalizeRequest(...) // Finalize Contest
@@ -3449,7 +3449,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ExternalMetricDataWriteRequest = new ExternalMetricDataWriteRequest(...) // The External Metric Data to be added
 
@@ -3499,7 +3499,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ExternalMetricDefinitionCreateRequest = new ExternalMetricDefinitionCreateRequest(...) // The External Metric Definition to be created
 
@@ -3549,7 +3549,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ContestsCreateRequest = new ContestsCreateRequest(...) // Create Contest
 
@@ -3599,7 +3599,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: GamificationContestPrizeImageUploadUrlRequest = new GamificationContestPrizeImageUploadUrlRequest(...) // query
 
@@ -3649,7 +3649,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let profileId: String = "" // performanceProfileId
 
@@ -3699,7 +3699,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let profileId: String = "" // performanceProfileId
 
@@ -3749,7 +3749,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let profileId: String = "" // Profile Id
 let body: AssignUsers = new AssignUsers(...) // assignUsers
@@ -3801,7 +3801,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let profileId: String = "" // Profile Id
 let body: ValidateAssignUsers = new ValidateAssignUsers(...) // memberAssignments
@@ -3853,7 +3853,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sourceProfileId: String = "" // Source Performance Profile Id
 let sourceMetricId: String = "" // Source Metric Id
@@ -3907,7 +3907,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let profileId: String = "" // Performance Profile Id
 let body: CreateMetric = new CreateMetric(...) // Metric
@@ -3959,7 +3959,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CreatePerformanceProfile = new CreatePerformanceProfile(...) // performanceProfile
 let copyMetrics: Bool = true // Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile.
@@ -4011,7 +4011,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let userId: String = "" // The ID of a user.
 let body: UserProfilesInDateRangeRequest = new UserProfilesInDateRangeRequest(...) // The date range of work day.
@@ -4062,7 +4062,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: UserProfilesInDateRangeRequest = new UserProfilesInDateRangeRequest(...) // The date range of work day.
 
@@ -4113,7 +4113,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let contestId: String = "" // The ID of the contest
 let body: ContestsCreateRequest = new ContestsCreateRequest(...) // Contest
@@ -4165,7 +4165,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let profileId: String = "" // performanceProfileId
 let body: PerformanceProfile = new PerformanceProfile(...) // performanceProfile
@@ -4217,7 +4217,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let profileId: String = "" // Performance Profile Id
 let metricId: String = "" // Metric Id
@@ -4271,7 +4271,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let status: GamificationStatus = new GamificationStatus(...) // Gamification status
 
@@ -4299,4 +4299,4 @@ GamificationAPI.putGamificationStatus(status: status) { (response, error) in
 [**GamificationStatus**](GamificationStatus)
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

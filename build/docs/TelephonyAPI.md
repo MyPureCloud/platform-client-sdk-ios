@@ -54,7 +54,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let targetOrganizationId: String = "" // targetOrganizationId
 
@@ -103,7 +103,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let agentId: String = "" // User ID
 
@@ -153,7 +153,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -199,7 +199,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let metricType: TelephonyAPI.MetricType_getTelephonyCallsMetrics = TelephonyAPI.MetricType_getTelephonyCallsMetrics.enummember // Flag to indicate metric type to fetch.
 
@@ -249,7 +249,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -295,7 +295,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
@@ -357,7 +357,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -403,7 +403,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -449,7 +449,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let type: TelephonyAPI.ModelType_getTelephonyPrefixes = TelephonyAPI.ModelType_getTelephonyPrefixes.enummember // Filter by prefix type
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
@@ -507,7 +507,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let number: String = "" // Phone number to simulate
 
@@ -557,7 +557,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -605,7 +605,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let conversationId: String = "" // Conversation id
 
@@ -657,7 +657,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let conversationId: String = "" // Conversation id
 let keys: [String] = [""] // comma-separated list of header identifiers to query. e.g. ruri,to,from
@@ -711,7 +711,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let dateStart: Date = new Date(...) // Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
 let dateEnd: Date = new Date(...) // End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
@@ -771,7 +771,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let downloadId: String = "" // unique id for the downloaded file in S3
 
@@ -821,7 +821,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let requestingOrganizationId: String = "" // requestingOrganizationId
 let body: OrganizationLinkApprovalRequest = new OrganizationLinkApprovalRequest(...) // Approval request body
@@ -872,7 +872,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: [NumberRoutingRequest] = [new NumberRoutingRequest(...)] // drRoutingList
 
@@ -921,7 +921,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: DisasterRecoveryAllRoutingRequest = new DisasterRecoveryAllRoutingRequest(...) // Value for all routing request body
 
@@ -970,7 +970,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: NumberRoutingResetOrganizationRequest = new NumberRoutingResetOrganizationRequest(...) // Value for bulk routing request body
 
@@ -1019,7 +1019,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CreateOrganizationLink = new CreateOrganizationLink(...) // CreateLinkOrg body
 
@@ -1069,7 +1069,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BulkPrefixesRequest = new BulkPrefixesRequest(...) // Bulk save request with list of prefixes
 
@@ -1119,7 +1119,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sIPSearchPublicRequest: SIPSearchPublicRequest = new SIPSearchPublicRequest(...) // 
 
@@ -1169,7 +1169,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let agentId: String = "" // User ID
 let body: AgentGreeting = new AgentGreeting(...) // Agent Greeting
@@ -1221,7 +1221,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: SelfAgentGreeting = new SelfAgentGreeting(...) // Agent Greeting
 
@@ -1271,7 +1271,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: TelephonySettings = new TelephonySettings(...) // Telephony
 
@@ -1299,4 +1299,4 @@ TelephonyAPI.putTelephonySettings(body: body) { (response, error) in
 [**TelephonySettings**](TelephonySettings)
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

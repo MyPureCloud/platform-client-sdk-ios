@@ -35,7 +35,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let userId: String = "" // User ID
 
@@ -83,7 +83,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -127,7 +127,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let preserveIdleTTL: Bool = true // preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset.
 
@@ -176,7 +176,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -221,7 +221,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -266,7 +266,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: IdleTokenTimeout = new IdleTokenTimeout(...) // 
 
@@ -294,4 +294,4 @@ TokensAPI.putTokensTimeout(body: body) { (response, error) in
 [**IdleTokenTimeout**](IdleTokenTimeout)
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

@@ -11,6 +11,7 @@
 | **userId** | [**UUID**](UUID) |  | [optional] |
 | **externalContactId** | [**UUID**](UUID) |  | [optional] |
 | **assistantId** | [**UUID**](UUID) |  | [optional] |
+| **variationId** | [**UUID**](UUID) |  | [optional] |
 | **utteranceId** | [**UUID**](UUID) |  | [optional] |
 | **messageId** | **String** |  | [optional] |
 | **queryStatement** | **String** |  | [optional] |
@@ -20,4 +21,4 @@
 
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

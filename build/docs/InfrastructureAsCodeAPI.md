@@ -36,7 +36,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let acceleratorId: String = "" // Accelerator ID
 let preferredLanguage: InfrastructureAsCodeAPI.PreferredLanguage_getInfrastructureascodeAccelerator = InfrastructureAsCodeAPI.PreferredLanguage_getInfrastructureascodeAccelerator.enummember // Preferred Language
@@ -90,7 +90,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageSize: Int = 0 // The total page size requested
 let pageNumber: Int = 0 // The page number requested
@@ -160,7 +160,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // Job ID
 let details: Bool = true // Include details of execution, including job results or error information
@@ -214,7 +214,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let maxResults: Int = 0 // Number of jobs to show
 let includeErrors: Bool = true // Include error messages
@@ -278,7 +278,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: AcceleratorInput = new AcceleratorInput(...) // 
 
@@ -306,4 +306,4 @@ InfrastructureAsCodeAPI.postInfrastructureascodeJobs(body: body) { (response, er
 [**InfrastructureascodeJob**](InfrastructureascodeJob)
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

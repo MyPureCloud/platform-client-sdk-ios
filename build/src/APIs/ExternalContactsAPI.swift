@@ -3046,6 +3046,550 @@ open class ExternalContactsAPI {
 
     
     
+    
+    
+    public enum Expand_getExternalcontactsGraphsClusterscan: String { 
+        case statisticsAggregated = "statistics.aggregated"
+    }
+    
+    /**
+     Returns a single cluster scan
+     
+     - parameter scanId: (path) Cluster scan ID 
+     - parameter expand: (query) which fields, if any, to expand (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsGraphsClusterscan(scanId: String, expand: [String]? = nil, completion: @escaping ((_ data: ClusterScan?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsGraphsClusterscanWithRequestBuilder(scanId: scanId, expand: expand)
+        requestBuilder.execute { (response: Response<ClusterScan>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Returns a single cluster scan
+     - GET /api/v2/externalcontacts/graphs/clusterscans/{scanId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "statistics" : "{}"
+}, statusCode=200}]
+     
+     - parameter scanId: (path) Cluster scan ID 
+     - parameter expand: (query) which fields, if any, to expand (optional)
+
+     - returns: RequestBuilder<ClusterScan> 
+     */
+    open class func getExternalcontactsGraphsClusterscanWithRequestBuilder(scanId: String, expand: [String]? = nil) -> RequestBuilder<ClusterScan> {        
+        var path = "/api/v2/externalcontacts/graphs/clusterscans/{scanId}"
+        let scanIdPreEscape = "\(scanId)"
+        let scanIdPostEscape = scanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scanId}", with: scanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<ClusterScan>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Returns a single cluster found by a scan
+     
+     - parameter scanId: (path) Cluster scan ID 
+     - parameter clusterId: (path) Cluster ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsGraphsClusterscanCluster(scanId: String, clusterId: String, completion: @escaping ((_ data: Cluster?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsGraphsClusterscanClusterWithRequestBuilder(scanId: scanId, clusterId: clusterId)
+        requestBuilder.execute { (response: Response<Cluster>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Returns a single cluster found by a scan
+     - GET /api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters/{clusterId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "clusterScan" : "{}",
+  "mergeInfo" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "graph" : "{}"
+}, statusCode=200}]
+     
+     - parameter scanId: (path) Cluster scan ID 
+     - parameter clusterId: (path) Cluster ID 
+
+     - returns: RequestBuilder<Cluster> 
+     */
+    open class func getExternalcontactsGraphsClusterscanClusterWithRequestBuilder(scanId: String, clusterId: String) -> RequestBuilder<Cluster> {        
+        var path = "/api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters/{clusterId}"
+        let scanIdPreEscape = "\(scanId)"
+        let scanIdPostEscape = scanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scanId}", with: scanIdPostEscape, options: .literal, range: nil)
+        let clusterIdPreEscape = "\(clusterId)"
+        let clusterIdPostEscape = clusterIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{clusterId}", with: clusterIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Cluster>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum MergeInfoStatus_getExternalcontactsGraphsClusterscanClusters: String { 
+        case autoQueued = "AutoQueued"
+        case autoSucceeded = "AutoSucceeded"
+        case autoFailed = "AutoFailed"
+        case manualQueued = "ManualQueued"
+        case manualSucceeded = "ManualSucceeded"
+        case manualFailed = "ManualFailed"
+        case notMerged = "NotMerged"
+    }
+    
+    
+    /**
+     Returns a list of clusters found by a scan
+     
+     - parameter scanId: (path) Cluster scan ID 
+     - parameter limit: (query) Max number of records to return (must be between 1 and 100) (optional)
+     - parameter cursor: (query) Cursor to continue scanning (optional)
+     - parameter divisionIds: (query) which divisions to filter results to, up to 50 (defaults to all divisions use has access to) (optional)
+     - parameter mergeInfoStatus: (query) which merge statuses to filter results to (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsGraphsClusterscanClusters(scanId: String, limit: Int? = nil, cursor: String? = nil, divisionIds: [String]? = nil, mergeInfoStatus: MergeInfoStatus_getExternalcontactsGraphsClusterscanClusters? = nil, completion: @escaping ((_ data: ClusterList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsGraphsClusterscanClustersWithRequestBuilder(scanId: scanId, limit: limit, cursor: cursor, divisionIds: divisionIds, mergeInfoStatus: mergeInfoStatus)
+        requestBuilder.execute { (response: Response<ClusterList>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Returns a list of clusters found by a scan
+     - GET /api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "cursors" : "{}",
+  "entities" : [ {
+    "division" : "{}",
+    "clusterScan" : "{}",
+    "mergeInfo" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "graph" : "{}"
+  }, {
+    "division" : "{}",
+    "clusterScan" : "{}",
+    "mergeInfo" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "graph" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter scanId: (path) Cluster scan ID 
+     - parameter limit: (query) Max number of records to return (must be between 1 and 100) (optional)
+     - parameter cursor: (query) Cursor to continue scanning (optional)
+     - parameter divisionIds: (query) which divisions to filter results to, up to 50 (defaults to all divisions use has access to) (optional)
+     - parameter mergeInfoStatus: (query) which merge statuses to filter results to (optional)
+
+     - returns: RequestBuilder<ClusterList> 
+     */
+    open class func getExternalcontactsGraphsClusterscanClustersWithRequestBuilder(scanId: String, limit: Int? = nil, cursor: String? = nil, divisionIds: [String]? = nil, mergeInfoStatus: MergeInfoStatus_getExternalcontactsGraphsClusterscanClusters? = nil) -> RequestBuilder<ClusterList> {        
+        var path = "/api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters"
+        let scanIdPreEscape = "\(scanId)"
+        let scanIdPostEscape = scanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scanId}", with: scanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "limit": limit?.encodeToJSON(), 
+            "cursor": cursor, 
+            "divisionIds": divisionIds, 
+            "mergeInfo.status": mergeInfoStatus?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<ClusterList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Returns the statistics about a single cluster scan
+     
+     - parameter scanId: (path) Cluster scan ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsGraphsClusterscanStatistics(scanId: String, completion: @escaping ((_ data: ClusterScanStatistics?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsGraphsClusterscanStatisticsWithRequestBuilder(scanId: scanId)
+        requestBuilder.execute { (response: Response<ClusterScanStatistics>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Returns the statistics about a single cluster scan
+     - GET /api/v2/externalcontacts/graphs/clusterscans/{scanId}/statistics
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "aggregated" : "{}"
+}, statusCode=200}]
+     
+     - parameter scanId: (path) Cluster scan ID 
+
+     - returns: RequestBuilder<ClusterScanStatistics> 
+     */
+    open class func getExternalcontactsGraphsClusterscanStatisticsWithRequestBuilder(scanId: String) -> RequestBuilder<ClusterScanStatistics> {        
+        var path = "/api/v2/externalcontacts/graphs/clusterscans/{scanId}/statistics"
+        let scanIdPreEscape = "\(scanId)"
+        let scanIdPostEscape = scanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scanId}", with: scanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ClusterScanStatistics>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    public enum Expand_getExternalcontactsGraphsClusterscans: String { 
+        case statisticsAggregated = "statistics.aggregated"
+    }
+    
+    /**
+     Returns a list of cluster scans
+     
+     - parameter limit: (query) Max number of records to return (must be between 1 and 100) (optional)
+     - parameter cursor: (query) Cursor to continue scanning (optional)
+     - parameter expand: (query) which fields, if any, to expand (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsGraphsClusterscans(limit: Int? = nil, cursor: String? = nil, expand: [String]? = nil, completion: @escaping ((_ data: ClusterScanList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsGraphsClusterscansWithRequestBuilder(limit: limit, cursor: cursor, expand: expand)
+        requestBuilder.execute { (response: Response<ClusterScanList>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Returns a list of cluster scans
+     - GET /api/v2/externalcontacts/graphs/clusterscans
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "cursors" : "{}",
+  "entities" : [ {
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "statistics" : "{}"
+  }, {
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "statistics" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter limit: (query) Max number of records to return (must be between 1 and 100) (optional)
+     - parameter cursor: (query) Cursor to continue scanning (optional)
+     - parameter expand: (query) which fields, if any, to expand (optional)
+
+     - returns: RequestBuilder<ClusterScanList> 
+     */
+    open class func getExternalcontactsGraphsClusterscansWithRequestBuilder(limit: Int? = nil, cursor: String? = nil, expand: [String]? = nil) -> RequestBuilder<ClusterScanList> {        
+        let path = "/api/v2/externalcontacts/graphs/clusterscans"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "limit": limit?.encodeToJSON(), 
+            "cursor": cursor, 
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<ClusterScanList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    public enum Expand_getExternalcontactsGraphsClusterscansLatest: String { 
+        case statisticsAggregated = "statistics.aggregated"
+        case settings = "settings"
+    }
+    
+    /**
+     Returns the latest cluster scan
+     
+     - parameter expand: (query) which fields, if any, to expand (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsGraphsClusterscansLatest(expand: [String]? = nil, completion: @escaping ((_ data: LatestClusterScan?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsGraphsClusterscansLatestWithRequestBuilder(expand: expand)
+        requestBuilder.execute { (response: Response<LatestClusterScan>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Returns the latest cluster scan
+     - GET /api/v2/externalcontacts/graphs/clusterscans/latest
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "settings" : "{}",
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "statistics" : "{}"
+}, statusCode=200}]
+     
+     - parameter expand: (query) which fields, if any, to expand (optional)
+
+     - returns: RequestBuilder<LatestClusterScan> 
+     */
+    open class func getExternalcontactsGraphsClusterscansLatestWithRequestBuilder(expand: [String]? = nil) -> RequestBuilder<LatestClusterScan> {        
+        let path = "/api/v2/externalcontacts/graphs/clusterscans/latest"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<LatestClusterScan>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Returns the statistics about the latest cluster scan
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsGraphsClusterscansLatestStatistics(completion: @escaping ((_ data: ClusterScanStatistics?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsGraphsClusterscansLatestStatisticsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<ClusterScanStatistics>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Returns the statistics about the latest cluster scan
+     - GET /api/v2/externalcontacts/graphs/clusterscans/latest/statistics
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "aggregated" : "{}"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<ClusterScanStatistics> 
+     */
+    open class func getExternalcontactsGraphsClusterscansLatestStatisticsWithRequestBuilder() -> RequestBuilder<ClusterScanStatistics> {        
+        let path = "/api/v2/externalcontacts/graphs/clusterscans/latest/statistics"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ClusterScanStatistics>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Returns the org-wide settings for ExternalContact graph operations
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsGraphsSettings(completion: @escaping ((_ data: GraphSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsGraphsSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<GraphSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Returns the org-wide settings for ExternalContact graph operations
+     - GET /api/v2/externalcontacts/graphs/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "automaticMergingEnabled" : true
+}, statusCode=200}]
+
+     - returns: RequestBuilder<GraphSettings> 
+     */
+    open class func getExternalcontactsGraphsSettingsWithRequestBuilder() -> RequestBuilder<GraphSettings> {        
+        let path = "/api/v2/externalcontacts/graphs/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GraphSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Get settings for CSV import
      
@@ -3080,10 +3624,12 @@ open class ExternalContactsAPI {
   "externalSettingsId" : "externalSettingsId",
   "mappings" : [ {
     "sourceField" : "sourceField",
-    "targetField" : "targetField"
+    "targetField" : "targetField",
+    "valueFormat" : "String"
   }, {
     "sourceField" : "sourceField",
-    "targetField" : "targetField"
+    "targetField" : "targetField",
+    "valueFormat" : "String"
   } ],
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id"
@@ -3151,10 +3697,12 @@ open class ExternalContactsAPI {
     "externalSettingsId" : "externalSettingsId",
     "mappings" : [ {
       "sourceField" : "sourceField",
-      "targetField" : "targetField"
+      "targetField" : "targetField",
+      "valueFormat" : "String"
     }, {
       "sourceField" : "sourceField",
-      "targetField" : "targetField"
+      "targetField" : "targetField",
+      "valueFormat" : "String"
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -3162,10 +3710,12 @@ open class ExternalContactsAPI {
     "externalSettingsId" : "externalSettingsId",
     "mappings" : [ {
       "sourceField" : "sourceField",
-      "targetField" : "targetField"
+      "targetField" : "targetField",
+      "valueFormat" : "String"
     }, {
       "sourceField" : "sourceField",
-      "targetField" : "targetField"
+      "targetField" : "targetField",
+      "valueFormat" : "String"
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -13482,10 +14032,12 @@ open class ExternalContactsAPI {
   "externalSettingsId" : "externalSettingsId",
   "mappings" : [ {
     "sourceField" : "sourceField",
-    "targetField" : "targetField"
+    "targetField" : "targetField",
+    "valueFormat" : "String"
   }, {
     "sourceField" : "sourceField",
-    "targetField" : "targetField"
+    "targetField" : "targetField",
+    "valueFormat" : "String"
   } ],
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id"
@@ -15196,6 +15748,128 @@ open class ExternalContactsAPI {
     
     
     /**
+     Merge a single cluster found by a scan
+     
+     - parameter scanId: (path) Cluster scan ID 
+     - parameter clusterId: (path) Cluster ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putExternalcontactsGraphsClusterscanClusterMerge(scanId: String, clusterId: String, completion: @escaping ((_ data: Cluster?,_ error: Error?) -> Void)) {
+        let requestBuilder = putExternalcontactsGraphsClusterscanClusterMergeWithRequestBuilder(scanId: scanId, clusterId: clusterId)
+        requestBuilder.execute { (response: Response<Cluster>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Merge a single cluster found by a scan
+     - PUT /api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters/{clusterId}/merge
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "clusterScan" : "{}",
+  "mergeInfo" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "graph" : "{}"
+}, statusCode=200}]
+     
+     - parameter scanId: (path) Cluster scan ID 
+     - parameter clusterId: (path) Cluster ID 
+
+     - returns: RequestBuilder<Cluster> 
+     */
+    open class func putExternalcontactsGraphsClusterscanClusterMergeWithRequestBuilder(scanId: String, clusterId: String) -> RequestBuilder<Cluster> {        
+        var path = "/api/v2/externalcontacts/graphs/clusterscans/{scanId}/clusters/{clusterId}/merge"
+        let scanIdPreEscape = "\(scanId)"
+        let scanIdPostEscape = scanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scanId}", with: scanIdPostEscape, options: .literal, range: nil)
+        let clusterIdPreEscape = "\(clusterId)"
+        let clusterIdPostEscape = clusterIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{clusterId}", with: clusterIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Cluster>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Updates the org-wide settings for ExternalContact graph operations
+     
+     - parameter body: (body) OrgConfiguration 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putExternalcontactsGraphsSettings(body: GraphSettings, completion: @escaping ((_ data: GraphSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = putExternalcontactsGraphsSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<GraphSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Updates the org-wide settings for ExternalContact graph operations
+     - PUT /api/v2/externalcontacts/graphs/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "automaticMergingEnabled" : true
+}, statusCode=200}]
+     
+     - parameter body: (body) OrgConfiguration 
+
+     - returns: RequestBuilder<GraphSettings> 
+     */
+    open class func putExternalcontactsGraphsSettingsWithRequestBuilder(body: GraphSettings) -> RequestBuilder<GraphSettings> {        
+        let path = "/api/v2/externalcontacts/graphs/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GraphSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Update settings for CSV import
      
      - parameter settingsId: (path) Settings id 
@@ -15230,10 +15904,12 @@ open class ExternalContactsAPI {
   "externalSettingsId" : "externalSettingsId",
   "mappings" : [ {
     "sourceField" : "sourceField",
-    "targetField" : "targetField"
+    "targetField" : "targetField",
+    "valueFormat" : "String"
   }, {
     "sourceField" : "sourceField",
-    "targetField" : "targetField"
+    "targetField" : "targetField",
+    "valueFormat" : "String"
   } ],
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id"

@@ -42,6 +42,7 @@ open class UsageAPI {
     /**
      Get the results of a usage query
      - GET /api/v2/oauth/clients/{clientId}/usage/query/results/{executionId}
+     - Deprecated - use GET /api/v2/usage/client/{clientId}/aggregates/query/jobs/{jobId} instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -134,7 +135,7 @@ open class UsageAPI {
     /**
      Get a summary of OAuth client API usage
      - GET /api/v2/oauth/clients/{clientId}/usage/summary
-     - After calling this method, you will then need to poll for the query results based on the returned execution Id
+     - Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -396,6 +397,7 @@ open class UsageAPI {
     /**
      Get the results of a usage query
      - GET /api/v2/usage/query/{executionId}/results
+     - Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -487,6 +489,7 @@ open class UsageAPI {
     /**
      Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
      - GET /api/v2/usage/simplesearch/{executionId}/results
+     - Deprecated - use GET /api/v2/usage/aggregates/query/jobs/{jobId} instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -581,7 +584,7 @@ open class UsageAPI {
     /**
      Query for OAuth client API usage
      - POST /api/v2/oauth/clients/{clientId}/usage/query
-     - After calling this method, you will then need to poll for the query results based on the returned execution Id
+     - Deprecated - use POST /api/v2/usage/client/{clientId}/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -758,7 +761,7 @@ open class UsageAPI {
     /**
      Query organization API Usage - 
      - POST /api/v2/usage/query
-     - After calling this method, you will then need to poll for the query results based on the returned execution Id
+     - Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -812,7 +815,7 @@ open class UsageAPI {
     /**
      Search organization API Usage
      - POST /api/v2/usage/simplesearch
-     - After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
+     - Deprecated - use POST /api/v2/usage/aggregates/query/jobs instead. After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

@@ -3929,15 +3929,18 @@ open class RoutingAPI {
         case identityresolution = "identityresolution"
     }
     
+    
+    
     /**
      Get details about this queue.
      
      - parameter queueId: (path) Queue ID 
      - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter forceMemberRecount: (query) Force a recount of queue membership. This is an expensive, opt-in operation intended for repairing out-of-sync membership counters. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingQueue(queueId: String, expand: [String]? = nil, completion: @escaping ((_ data: Queue?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingQueueWithRequestBuilder(queueId: queueId, expand: expand)
+    open class func getRoutingQueue(queueId: String, expand: [String]? = nil, forceMemberRecount: Bool? = nil, completion: @escaping ((_ data: Queue?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueueWithRequestBuilder(queueId: queueId, expand: expand, forceMemberRecount: forceMemberRecount)
         requestBuilder.execute { (response: Response<Queue>?, error) -> Void in
             do {
                 if let e = error {
@@ -4073,10 +4076,11 @@ open class RoutingAPI {
      
      - parameter queueId: (path) Queue ID 
      - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter forceMemberRecount: (query) Force a recount of queue membership. This is an expensive, opt-in operation intended for repairing out-of-sync membership counters. (optional)
 
      - returns: RequestBuilder<Queue> 
      */
-    open class func getRoutingQueueWithRequestBuilder(queueId: String, expand: [String]? = nil) -> RequestBuilder<Queue> {        
+    open class func getRoutingQueueWithRequestBuilder(queueId: String, expand: [String]? = nil, forceMemberRecount: Bool? = nil) -> RequestBuilder<Queue> {        
         var path = "/api/v2/routing/queues/{queueId}"
         let queueIdPreEscape = "\(queueId)"
         let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4086,7 +4090,8 @@ open class RoutingAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "expand": expand
+            "expand": expand, 
+            "forceMemberRecount": forceMemberRecount
         ])
 
         let requestBuilder: RequestBuilder<Queue>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

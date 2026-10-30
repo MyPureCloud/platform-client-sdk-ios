@@ -7015,7 +7015,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -7147,7 +7147,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -7425,7 +7425,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -7507,7 +7507,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -13880,7 +13880,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -14012,7 +14012,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -14290,7 +14290,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -14372,7 +14372,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -22299,7 +22299,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "users.rules",
+            "namespace" : "usage",
             "value" : 6,
             "key" : "key"
           },
@@ -22431,7 +22431,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "users.rules",
+            "namespace" : "usage",
             "value" : 6,
             "key" : "key"
           },
@@ -22709,7 +22709,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "users.rules",
+            "namespace" : "usage",
             "value" : 6,
             "key" : "key"
           },
@@ -22791,7 +22791,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "users.rules",
+            "namespace" : "usage",
             "value" : 6,
             "key" : "key"
           },
@@ -29164,7 +29164,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "users.rules",
+            "namespace" : "usage",
             "value" : 6,
             "key" : "key"
           },
@@ -29296,7 +29296,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "users.rules",
+            "namespace" : "usage",
             "value" : 6,
             "key" : "key"
           },
@@ -29574,7 +29574,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "users.rules",
+            "namespace" : "usage",
             "value" : 6,
             "key" : "key"
           },
@@ -29656,7 +29656,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "users.rules",
+            "namespace" : "usage",
             "value" : 6,
             "key" : "key"
           },
@@ -36089,7 +36089,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "users.rules",
+            "namespace" : "usage",
             "value" : 6,
             "key" : "key"
           },
@@ -36221,7 +36221,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "users.rules",
+            "namespace" : "usage",
             "value" : 6,
             "key" : "key"
           },
@@ -36499,7 +36499,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "users.rules",
+            "namespace" : "usage",
             "value" : 6,
             "key" : "key"
           },
@@ -36581,7 +36581,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "users.rules",
+            "namespace" : "usage",
             "value" : 6,
             "key" : "key"
           },
@@ -42954,7 +42954,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "users.rules",
+            "namespace" : "usage",
             "value" : 6,
             "key" : "key"
           },
@@ -43086,7 +43086,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "users.rules",
+            "namespace" : "usage",
             "value" : 6,
             "key" : "key"
           },
@@ -43364,7 +43364,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "users.rules",
+            "namespace" : "usage",
             "value" : 6,
             "key" : "key"
           },
@@ -43446,7 +43446,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "users.rules",
+            "namespace" : "usage",
             "value" : 6,
             "key" : "key"
           },
@@ -51850,9 +51850,9 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
+  "total" : 5,
+  "pageCount" : 2,
+  "pageNumber" : 5,
   "entities" : [ {
     "otherMediaUris" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
     "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
@@ -52145,7 +52145,7 @@ open class ConversationsAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -52933,6 +52933,15 @@ open class ConversationsAPI {
   "historyIncluded" : true,
   "name" : "name",
   "replyTo" : "{}",
+  "recipientWarnings" : [ {
+    "reason" : "InvalidEmail",
+    "fieldName" : "fieldName",
+    "email" : "email"
+  }, {
+    "reason" : "InvalidEmail",
+    "fieldName" : "fieldName",
+    "email" : "email"
+  } ],
   "from" : "{}",
   "id" : "id",
   "to" : [ {
@@ -53047,6 +53056,15 @@ open class ConversationsAPI {
     "historyIncluded" : true,
     "name" : "name",
     "replyTo" : "{}",
+    "recipientWarnings" : [ {
+      "reason" : "InvalidEmail",
+      "fieldName" : "fieldName",
+      "email" : "email"
+    }, {
+      "reason" : "InvalidEmail",
+      "fieldName" : "fieldName",
+      "email" : "email"
+    } ],
     "from" : "{}",
     "id" : "id",
     "to" : [ {
@@ -53097,6 +53115,15 @@ open class ConversationsAPI {
     "historyIncluded" : true,
     "name" : "name",
     "replyTo" : "{}",
+    "recipientWarnings" : [ {
+      "reason" : "InvalidEmail",
+      "fieldName" : "fieldName",
+      "email" : "email"
+    }, {
+      "reason" : "InvalidEmail",
+      "fieldName" : "fieldName",
+      "email" : "email"
+    } ],
     "from" : "{}",
     "id" : "id",
     "to" : [ {
@@ -53212,6 +53239,15 @@ open class ConversationsAPI {
   "historyIncluded" : true,
   "name" : "name",
   "replyTo" : "{}",
+  "recipientWarnings" : [ {
+    "reason" : "InvalidEmail",
+    "fieldName" : "fieldName",
+    "email" : "email"
+  }, {
+    "reason" : "InvalidEmail",
+    "fieldName" : "fieldName",
+    "email" : "email"
+  } ],
   "from" : "{}",
   "id" : "id",
   "to" : [ {
@@ -53553,9 +53589,9 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
+  "total" : 2,
+  "pageCount" : 7,
+  "pageNumber" : 5,
   "entities" : [ {
     "otherMediaUris" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
     "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
@@ -53908,7 +53944,7 @@ open class ConversationsAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -54169,9 +54205,9 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
+  "total" : 5,
+  "pageCount" : 2,
+  "pageNumber" : 5,
   "entities" : [ {
     "otherMediaUris" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
     "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
@@ -54492,7 +54528,7 @@ open class ConversationsAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -55904,9 +55940,9 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
+  "total" : 5,
+  "pageCount" : 2,
+  "pageNumber" : 5,
   "entities" : [ {
     "otherMediaUris" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
     "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
@@ -56447,7 +56483,7 @@ open class ConversationsAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 1,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -60777,7 +60813,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -60909,7 +60945,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -61187,7 +61223,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -61269,7 +61305,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -67642,7 +67678,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -67774,7 +67810,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -68052,7 +68088,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -68134,7 +68170,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -75059,7 +75095,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -75191,7 +75227,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -75469,7 +75505,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -75551,7 +75587,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -81924,7 +81960,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -82056,7 +82092,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -82334,7 +82370,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -82416,7 +82452,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -89160,7 +89196,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -89292,7 +89328,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -89570,7 +89606,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -89652,7 +89688,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -96025,7 +96061,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -96157,7 +96193,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -96435,7 +96471,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -96517,7 +96553,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -103204,7 +103240,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -103336,7 +103372,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -103614,7 +103650,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -103696,7 +103732,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -110069,7 +110105,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -110201,7 +110237,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -110479,7 +110515,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -110561,7 +110597,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -116692,6 +116728,15 @@ open class ConversationsAPI {
   "historyIncluded" : true,
   "name" : "name",
   "replyTo" : "{}",
+  "recipientWarnings" : [ {
+    "reason" : "InvalidEmail",
+    "fieldName" : "fieldName",
+    "email" : "email"
+  }, {
+    "reason" : "InvalidEmail",
+    "fieldName" : "fieldName",
+    "email" : "email"
+  } ],
   "from" : "{}",
   "id" : "id",
   "to" : [ {
@@ -117421,7 +117466,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -117553,7 +117598,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -117831,7 +117876,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -117913,7 +117958,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -124286,7 +124331,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -124418,7 +124463,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -124696,7 +124741,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -124778,7 +124823,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -136693,7 +136738,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -136825,7 +136870,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -137103,7 +137148,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -137185,7 +137230,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -143558,7 +143603,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -143690,7 +143735,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -143968,7 +144013,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -144050,7 +144095,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -151351,7 +151396,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -151483,7 +151528,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -151761,7 +151806,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -151843,7 +151888,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -158216,7 +158261,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -158348,7 +158393,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -158626,7 +158671,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -158708,7 +158753,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -165201,7 +165246,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -165333,7 +165378,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -165611,7 +165656,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -165693,7 +165738,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -172066,7 +172111,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -172198,7 +172243,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -172476,7 +172521,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -172558,7 +172603,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "users.rules",
+          "namespace" : "usage",
           "value" : 6,
           "key" : "key"
         },
@@ -179547,6 +179592,15 @@ open class ConversationsAPI {
   "emailSizeBytes" : 0,
   "historyIncluded" : true,
   "replyTo" : "{}",
+  "recipientWarnings" : [ {
+    "reason" : "InvalidEmail",
+    "fieldName" : "fieldName",
+    "email" : "email"
+  }, {
+    "reason" : "InvalidEmail",
+    "fieldName" : "fieldName",
+    "email" : "email"
+  } ],
   "from" : "{}",
   "to" : [ {
     "name" : "name",
@@ -179653,6 +179707,15 @@ open class ConversationsAPI {
   "historyIncluded" : true,
   "name" : "name",
   "replyTo" : "{}",
+  "recipientWarnings" : [ {
+    "reason" : "InvalidEmail",
+    "fieldName" : "fieldName",
+    "email" : "email"
+  }, {
+    "reason" : "InvalidEmail",
+    "fieldName" : "fieldName",
+    "email" : "email"
+  } ],
   "from" : "{}",
   "id" : "id",
   "to" : [ {
@@ -183991,6 +184054,15 @@ open class ConversationsAPI {
   "historyIncluded" : true,
   "name" : "name",
   "replyTo" : "{}",
+  "recipientWarnings" : [ {
+    "reason" : "InvalidEmail",
+    "fieldName" : "fieldName",
+    "email" : "email"
+  }, {
+    "reason" : "InvalidEmail",
+    "fieldName" : "fieldName",
+    "email" : "email"
+  } ],
   "from" : "{}",
   "id" : "id",
   "to" : [ {

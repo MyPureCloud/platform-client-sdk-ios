@@ -144,6 +144,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementManagementunitAgent**](WorkforceManagementAPI#getWorkforcemanagementManagementunitAgent) | Get data for agent in the management unit |
 | [**getWorkforcemanagementManagementunitAgentShifttrades**](WorkforceManagementAPI#getWorkforcemanagementManagementunitAgentShifttrades) | Gets all the shift trades for a given agent |
 | [**getWorkforcemanagementManagementunitDecisionmetrics**](WorkforceManagementAPI#getWorkforcemanagementManagementunitDecisionmetrics) | Gets the decision metrics of all user in given management unit |
+| [**getWorkforcemanagementManagementunitSelfscheduleSettings**](WorkforceManagementAPI#getWorkforcemanagementManagementunitSelfscheduleSettings) | Get admin self-scheduling settings for a management unit |
 | [**getWorkforcemanagementManagementunitShifttradesMatched**](WorkforceManagementAPI#getWorkforcemanagementManagementunitShifttradesMatched) | Gets a summary of all shift trades in the matched state |
 | [**getWorkforcemanagementManagementunitShifttradesUsers**](WorkforceManagementAPI#getWorkforcemanagementManagementunitShifttradesUsers) | Gets list of users available for whom you can send direct shift trade requests |
 | [**getWorkforcemanagementManagementunitTimeofflimit**](WorkforceManagementAPI#getWorkforcemanagementManagementunitTimeofflimit) | Gets a time off limit object |
@@ -168,6 +169,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementSchedulebidSchedulesets**](WorkforceManagementAPI#getWorkforcemanagementSchedulebidSchedulesets) | Gets an agent&#39;s schedule sets for a bid |
 | [**getWorkforcemanagementSchedulebids**](WorkforceManagementAPI#getWorkforcemanagementSchedulebids) | Gets the list of schedule bids that belong to an agent. It will fetch an open bid or upcoming bid or a bid that is closed recently |
 | [**getWorkforcemanagementSchedulingjob**](WorkforceManagementAPI#getWorkforcemanagementSchedulingjob) | Get status of the scheduling job |
+| [**getWorkforcemanagementSelfscheduleActivitymove**](WorkforceManagementAPI#getWorkforcemanagementSelfscheduleActivitymove) | Lookup a single agent activity move based on its identifier |
+| [**getWorkforcemanagementSelfscheduleJob**](WorkforceManagementAPI#getWorkforcemanagementSelfscheduleJob) | View result of create self-schedule activity move operation. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementSelfscheduleOffersJob**](WorkforceManagementAPI#getWorkforcemanagementSelfscheduleOffersJob) | View result of self-schedule search for best time for offer operation. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementSelfscheduleQuery**](WorkforceManagementAPI#getWorkforcemanagementSelfscheduleQuery) | Query self-schedule activity moves for agent |
+| [**getWorkforcemanagementSelfscheduleSettings**](WorkforceManagementAPI#getWorkforcemanagementSelfscheduleSettings) | Agent gets the self-schedule management unit settings. |
 | [**getWorkforcemanagementShifttrades**](WorkforceManagementAPI#getWorkforcemanagementShifttrades) | Gets all of my shift trades |
 | [**getWorkforcemanagementShifttradingTradeJob**](WorkforceManagementAPI#getWorkforcemanagementShifttradingTradeJob) | View result of update trade operation. Only the user who started the operation can query the status |
 | [**getWorkforcemanagementShifttradingTradeMatchJob**](WorkforceManagementAPI#getWorkforcemanagementShifttradingTradeMatchJob) | View result of match shift trade operation. Only the receiving user who started the operation can query the status. |
@@ -219,6 +225,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchWorkforcemanagementManagementunit**](WorkforceManagementAPI#patchWorkforcemanagementManagementunit) | Update the requested management unit |
 | [**patchWorkforcemanagementManagementunitAgents**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitAgents) | Update agent configurations |
 | [**patchWorkforcemanagementManagementunitAgentsWorkplansBulk**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitAgentsWorkplansBulk) | Updates agent work plan configuration |
+| [**patchWorkforcemanagementManagementunitSelfscheduleSettings**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitSelfscheduleSettings) | Update admin self-scheduling settings for a management unit |
 | [**patchWorkforcemanagementManagementunitTimeofflimit**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitTimeofflimit) | Updates a time off limit object. |
 | [**patchWorkforcemanagementManagementunitTimeoffplan**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitTimeoffplan) | Updates a time off plan. Deprecated: Use /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId} instead |
 | [**patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus) | Set integration status for a time off request. |
@@ -362,6 +369,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementManagementunits**](WorkforceManagementAPI#postWorkforcemanagementManagementunits) | Add a management unit |
 | [**postWorkforcemanagementNotificationsUpdate**](WorkforceManagementAPI#postWorkforcemanagementNotificationsUpdate) | Mark a list of notifications as read or unread |
 | [**postWorkforcemanagementSchedules**](WorkforceManagementAPI#postWorkforcemanagementSchedules) | Get published schedule for the current user |
+| [**postWorkforcemanagementSelfscheduleJobs**](WorkforceManagementAPI#postWorkforcemanagementSelfscheduleJobs) | Agent starts an async job to edit a shift request by updating the start time of one or more activities. |
+| [**postWorkforcemanagementSelfscheduleOffersJobs**](WorkforceManagementAPI#postWorkforcemanagementSelfscheduleOffersJobs) | Agent starts async job to search for best time for offers |
 | [**postWorkforcemanagementShifttradingTradeJobs**](WorkforceManagementAPI#postWorkforcemanagementShifttradingTradeJobs) | Updates a shift trade. This route can only be called by the initiating user |
 | [**postWorkforcemanagementShifttradingTradeMatchJobs**](WorkforceManagementAPI#postWorkforcemanagementShifttradingTradeMatchJobs) | Matches a shift trade. This route can only be called by the receiving user |
 | [**postWorkforcemanagementShifttradingTradeStateJobs**](WorkforceManagementAPI#postWorkforcemanagementShifttradingTradeStateJobs) | Update trade state by a user |
@@ -406,7 +415,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let adjustmentId: String = "" // The ID of the adherence adjustment to delete
 
@@ -457,7 +466,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
 
@@ -506,7 +515,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
 let activityCodeId: String = "" // The ID of the activity code to delete
@@ -557,7 +566,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let reasonCodeId: String = "" // The ID of the reason code to delete
@@ -608,7 +617,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let ids: [String] = [""] // The IDs of the reason codes to delete
@@ -659,7 +668,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let capacityPlanId: String = "" // The ID of the capacity plan
@@ -712,7 +721,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit.
 let planningGroupId: String = "" // The ID of a planning group to delete
@@ -763,7 +772,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The ID of the schedule bid
@@ -814,7 +823,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The ID of the schedule bid associated with the bid groups
@@ -867,7 +876,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let runId: String = "" // The ID of the schedule run
@@ -918,7 +927,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit.
 let serviceGoalTemplateId: String = "" // The ID of the service goal template to delete
@@ -969,7 +978,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let staffingGroupId: String = "" // The ID of the staffing group to delete
@@ -1020,7 +1029,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let timeOffLimitId: String = "" // The ID of the time-off limit object to delete
@@ -1071,7 +1080,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let timeOffPlanId: String = "" // The ID of the time-off plan to delete
@@ -1122,7 +1131,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -1178,7 +1187,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -1231,7 +1240,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The ID of the work plan bid
@@ -1282,7 +1291,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The work plan bid id of the bid groups
@@ -1335,7 +1344,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -1380,7 +1389,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
@@ -1429,7 +1438,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit.
 let timeOffLimitId: String = "" // The ID of the time off limit object to delete
@@ -1480,7 +1489,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit
 let timeOffPlanId: String = "" // The ID of the time off plan to delete
@@ -1531,7 +1540,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let workPlanId: String = "" // The ID of the work plan to delete
@@ -1582,7 +1591,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let workPlanRotationId: String = "" // The ID of the work plan rotation to be deleted
@@ -1633,7 +1642,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let userId: [String] = [""] // User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request
 
@@ -1683,7 +1692,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let adjustmentId: String = "" // The ID of the adherence adjustment
 
@@ -1733,7 +1742,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let explanationId: String = "" // The ID of the explanation to update
 
@@ -1784,7 +1793,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // The ID of the job
 
@@ -1835,7 +1844,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // ID of the job to get
 
@@ -1887,7 +1896,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // jobId
 
@@ -1937,7 +1946,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let agentId: String = "" // The ID of the agent
 let adjustmentId: String = "" // The ID of the adherence adjustment
@@ -1989,7 +1998,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let agentId: String = "" // The ID of the agent to query
 let explanationId: String = "" // The ID of the explanation to update
@@ -2047,7 +2056,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let agentId: String = "" // The ID of the agent to look up
 
@@ -2098,7 +2107,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // ID of the job to get
 
@@ -2204,6 +2213,8 @@ Requires ANY permissions:
 * wfm:schedulingPreferencesQuery:view
 * wfm:schedulingPreferencesSettings:view
 * wfm:schedulingPreferencesSettings:edit
+* wfm:schedulingPreferencesSchedulesQuery:view
+* wfm:schedulingPreferencesSettingsQuery:view
 
 ### Example
 
@@ -2211,7 +2222,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -2259,7 +2270,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // The ID of the job
 
@@ -2311,7 +2322,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // The ID of the job
 
@@ -2361,7 +2372,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -2407,7 +2418,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let tradeId: String = "" // The ID of the alternative shift trade
 
@@ -2457,7 +2468,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
 
@@ -2509,7 +2520,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // The ID of the job
 
@@ -2561,7 +2572,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // The ID of the job
 
@@ -2682,6 +2693,8 @@ Requires ANY permissions:
 * wfm:schedulingPreferencesQuery:view
 * wfm:schedulingPreferencesSettings:view
 * wfm:schedulingPreferencesSettings:edit
+* wfm:schedulingPreferencesSchedulesQuery:view
+* wfm:schedulingPreferencesSettingsQuery:view
 
 ### Example
 
@@ -2689,7 +2702,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
 let expand: [String] = [""] // Include to access additional data on the business unit
@@ -2743,7 +2756,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
 let activityCodeId: String = "" // The ID of the activity code to fetch
@@ -2852,6 +2865,8 @@ Requires ANY permissions:
 * wfm:schedulingPreferencesQuery:view
 * wfm:schedulingPreferencesSettings:view
 * wfm:schedulingPreferencesSettings:edit
+* wfm:schedulingPreferencesSchedulesQuery:view
+* wfm:schedulingPreferencesSettingsQuery:view
 
 ### Example
 
@@ -2859,7 +2874,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
 let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
@@ -2911,7 +2926,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let activityPlanId: String = "" // The ID of the activity plan to fetch
@@ -2963,7 +2978,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let activityPlanId: String = "" // The ID of the activity plan associated with the deletion job
@@ -3017,7 +3032,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let activityPlanId: String = "" // The ID of the activity plan associated with the run job
@@ -3069,7 +3084,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let activityPlanId: String = "" // The ID of the activity plan
@@ -3127,7 +3142,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let activityPlanId: String = "" // The ID of the activity plan
@@ -3183,7 +3198,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let activityPlanId: String = "" // The ID of the activity plan
@@ -3237,7 +3252,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let activityPlanId: String = "" // The ID of the activity plan associated with the run job
@@ -3291,7 +3306,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let state: WorkforceManagementAPI.State_getWorkforcemanagementBusinessunitActivityplans = WorkforceManagementAPI.State_getWorkforcemanagementBusinessunitActivityplans.enummember // Optionally filter by activity plan state
@@ -3343,7 +3358,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 
@@ -3393,7 +3408,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let adjustmentIds: [String] = [""] // The IDs of the adherence adjustments to fetch
@@ -3447,7 +3462,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let jobId: String = "" // The ID of the query job
@@ -3499,7 +3514,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 
@@ -3549,7 +3564,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let reasonCodeId: String = "" // The ID of the reason code to fetch
@@ -3601,7 +3616,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 
@@ -3651,7 +3666,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let ids: [String] = [""] // The IDs of the reason codes to fetch
@@ -3703,7 +3718,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 
@@ -3753,7 +3768,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 
@@ -3803,7 +3818,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let tradeId: String = "" // The ID of the alternative shift trade
@@ -3857,7 +3872,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let jobId: String = "" // The ID of the job
@@ -3909,7 +3924,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let capacityPlanId: String = "" // The ID of the capacity plan
@@ -3961,7 +3976,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let capacityPlanId: String = "" // The ID of the capacity plan
@@ -4015,7 +4030,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let capacityPlanId: String = "" // The ID of the capacity plan
@@ -4069,7 +4084,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let capacityPlanId: String = "" // The ID of the capacity plan
@@ -4121,7 +4136,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // 
 let weekDateId: Date = new Date(...) // weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -4177,7 +4192,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 
@@ -4227,7 +4242,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let jobId: String = "" // The ID of the update job
@@ -4279,7 +4294,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let date: Date = new Date(...) // yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -4331,7 +4346,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let jobId: String = "" // The job ID
@@ -4383,7 +4398,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let jobId: String = "" // The job ID
@@ -4435,7 +4450,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let jobId: String = "" // The job ID
@@ -4486,7 +4501,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
 let feature: WorkforceManagementAPI.Feature_getWorkforcemanagementBusinessunitManagementunits = WorkforceManagementAPI.Feature_getWorkforcemanagementBusinessunitManagementunits.enummember // If specified, the list of management units for which the user is authorized to use the requested feature will be returned
@@ -4509,7 +4524,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitManagementunits(busines
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
-| **feature** | **String**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentHistoricalAdherence ("AgentHistoricalAdherence"), agentHistoricalAdherenceConformance ("AgentHistoricalAdherenceConformance"), agentSchedule ("AgentSchedule"), agentAdherenceAdjustments ("AgentAdherenceAdjustments"), agentTimeOffRequest ("AgentTimeOffRequest"), agentWorkPlanBid ("AgentWorkPlanBid"), agentScheduleBid ("AgentScheduleBid"), agentShiftTrade ("AgentShiftTrade"), alternativeShift ("AlternativeShift"), coaching ("Coaching"), learning ("Learning"), agentUnavailableTimes ("AgentUnavailableTimes"), agentSelfScheduleJob ("AgentSelfScheduleJob"), agentSelfScheduleOffers ("AgentSelfScheduleOffers"), agentSelfScheduleQuery ("AgentSelfScheduleQuery"), agentSelfScheduleActivityMove ("AgentSelfScheduleActivityMove"), selfScheduleSettings ("SelfScheduleSettings"), agentSelfScheduleSettings ("AgentSelfScheduleSettings"), agentOpportunitiesQuery ("AgentOpportunitiesQuery"), agentOpportunitiesEnrollments ("AgentOpportunitiesEnrollments"), agentOpportunitiesEnrollmentsStatuses ("AgentOpportunitiesEnrollmentsStatuses"), agentSchedulingPreferencesQuery ("AgentSchedulingPreferencesQuery"), agentSchedulingPreferences ("AgentSchedulingPreferences"), agentSchedulingPreferencesSettings ("AgentSchedulingPreferencesSettings"), activityCodes ("ActivityCodes"), activityPlans ("ActivityPlans"), adherenceAdjustmentsSettings ("AdherenceAdjustmentsSettings"), adherenceAdjustmentsReasonCodes ("AdherenceAdjustmentsReasonCodes"), adherenceAdjustments ("AdherenceAdjustments"), unavailableTimes ("UnavailableTimes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), capacityPlan ("CapacityPlan"), capacityPlanForecast ("CapacityPlanForecast"), capacityPlanForecastInputs ("CapacityPlanForecastInputs"), capacityPlanPerformancePrediction ("CapacityPlanPerformancePrediction"), continuousForecast ("ContinuousForecast"), mainForecastDiagnostics ("MainForecastDiagnostics"), predictionsForecastingScenarioJobs ("PredictionsForecastingScenarioJobs"), predictionsForecastingScenarios ("PredictionsForecastingScenarios"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), longTermStaffing ("LongTermStaffing"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanBids ("WorkPlanBids"), workPlanBidGroups ("WorkPlanBidGroups"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans"), scheduleBid ("ScheduleBid"), scheduleBidGroup ("ScheduleBidGroup"), opportunities ("Opportunities"), opportunitiesQuery ("OpportunitiesQuery"), opportunitiesEnrollmentsQuery ("OpportunitiesEnrollmentsQuery"), opportunitiesExternalActivitiesQuery ("OpportunitiesExternalActivitiesQuery"), opportunitiesStatuses ("OpportunitiesStatuses"), opportunitiesEnrollmentsStatuses ("OpportunitiesEnrollmentsStatuses"), schedulingPreferencesQuery ("SchedulingPreferencesQuery"), schedulingPreferencesSettings ("SchedulingPreferencesSettings"), decisionMetrics ("DecisionMetrics") |
+| **feature** | **String**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentHistoricalAdherence ("AgentHistoricalAdherence"), agentHistoricalAdherenceConformance ("AgentHistoricalAdherenceConformance"), agentSchedule ("AgentSchedule"), agentAdherenceAdjustments ("AgentAdherenceAdjustments"), agentTimeOffRequest ("AgentTimeOffRequest"), agentWorkPlanBid ("AgentWorkPlanBid"), agentScheduleBid ("AgentScheduleBid"), agentShiftTrade ("AgentShiftTrade"), alternativeShift ("AlternativeShift"), coaching ("Coaching"), learning ("Learning"), agentUnavailableTimes ("AgentUnavailableTimes"), agentSelfScheduleJob ("AgentSelfScheduleJob"), agentSelfScheduleOffers ("AgentSelfScheduleOffers"), agentSelfScheduleQuery ("AgentSelfScheduleQuery"), agentSelfScheduleActivityMove ("AgentSelfScheduleActivityMove"), selfScheduleSettings ("SelfScheduleSettings"), agentSelfScheduleSettings ("AgentSelfScheduleSettings"), agentOpportunitiesQuery ("AgentOpportunitiesQuery"), agentOpportunitiesEnrollments ("AgentOpportunitiesEnrollments"), agentOpportunitiesEnrollmentsStatuses ("AgentOpportunitiesEnrollmentsStatuses"), agentSchedulingPreferencesQuery ("AgentSchedulingPreferencesQuery"), agentSchedulingPreferences ("AgentSchedulingPreferences"), agentSchedulingPreferencesSettings ("AgentSchedulingPreferencesSettings"), activityCodes ("ActivityCodes"), activityPlans ("ActivityPlans"), adherenceAdjustmentsSettings ("AdherenceAdjustmentsSettings"), adherenceAdjustmentsReasonCodes ("AdherenceAdjustmentsReasonCodes"), adherenceAdjustments ("AdherenceAdjustments"), unavailableTimes ("UnavailableTimes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), capacityPlan ("CapacityPlan"), capacityPlanForecast ("CapacityPlanForecast"), capacityPlanForecastInputs ("CapacityPlanForecastInputs"), capacityPlanPerformancePrediction ("CapacityPlanPerformancePrediction"), continuousForecast ("ContinuousForecast"), mainForecastDiagnostics ("MainForecastDiagnostics"), predictionsForecastingScenarioJobs ("PredictionsForecastingScenarioJobs"), predictionsForecastingScenarios ("PredictionsForecastingScenarios"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), longTermStaffing ("LongTermStaffing"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanBids ("WorkPlanBids"), workPlanBidGroups ("WorkPlanBidGroups"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans"), scheduleBid ("ScheduleBid"), scheduleBidGroup ("ScheduleBidGroup"), opportunities ("Opportunities"), opportunitiesQuery ("OpportunitiesQuery"), opportunitiesEnrollmentsQuery ("OpportunitiesEnrollmentsQuery"), opportunitiesExternalActivitiesQuery ("OpportunitiesExternalActivitiesQuery"), opportunitiesStatuses ("OpportunitiesStatuses"), opportunitiesEnrollmentsStatuses ("OpportunitiesEnrollmentsStatuses"), schedulingPreferencesQuery ("SchedulingPreferencesQuery"), schedulingPreferencesSettings ("SchedulingPreferencesSettings"), schedulingPreferencesSchedulesQuery ("SchedulingPreferencesSchedulesQuery"), schedulingPreferencesSettingsQuery ("SchedulingPreferencesSettingsQuery"), decisionMetrics ("DecisionMetrics") |
 | **divisionId** | **String**| If specified, the list of management units belonging to the specified division will be returned | [optional] |
 
 
@@ -4540,7 +4555,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 
@@ -4590,7 +4605,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let opportunityId: String = "" // The ID of the opportunity
@@ -4644,7 +4659,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit.
 let planningGroupId: String = "" // The ID of a planning group to fetch
@@ -4701,7 +4716,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit.
 
@@ -4751,7 +4766,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The ID of the schedule bid
@@ -4803,7 +4818,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The ID of the schedule bid associated with the bid groups
@@ -4857,7 +4872,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The ID of the schedule bid associated with the bid groups
@@ -4915,7 +4930,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The ID of the schedule bid associated with the bid groups
@@ -4967,7 +4982,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 
@@ -5017,7 +5032,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 
@@ -5068,7 +5083,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let runId: String = "" // The ID of the schedule run
@@ -5121,7 +5136,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let runId: String = "" // The ID of the schedule run
@@ -5178,7 +5193,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 
@@ -5228,7 +5243,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit.
 let serviceGoalTemplateId: String = "" // The ID of a service goal template to fetch
@@ -5284,7 +5299,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit.
 let expand: [String] = [""] // Include to access additional data on the service goal template
@@ -5339,7 +5354,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let jobId: String = "" // The ID of the job
@@ -5394,7 +5409,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let jobId: String = "" // The ID of the job
@@ -5448,7 +5463,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let jobId: String = "" // The ID of the job
@@ -5502,7 +5517,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let jobId: String = "" // The ID of the job
@@ -5557,7 +5572,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let jobId: String = "" // The ID of the job
@@ -5609,7 +5624,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let staffingGroupId: String = "" // The ID of the staffing group to fetch
@@ -5661,7 +5676,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let managementUnitId: String = "" // The ID of the management unit to get management unit specific staffing groups
@@ -5717,7 +5732,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let timeOffLimitId: String = "" // The ID of the time-off limit to fetch
@@ -5769,7 +5784,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let timeOffLimitId: String = "" // The ID of the time-off limit
@@ -5823,7 +5838,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let timeOffLimitId: String = "" // The ID of the time-off limit
@@ -5878,7 +5893,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let managementUnitId: String = "" // The ID of the management unit to get management unit specific time-off limit objects
@@ -5930,7 +5945,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let timeOffPlanId: String = "" // The ID of the time-off plan to fetch
@@ -5982,7 +5997,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let managementUnitId: String = "" // The ID of the management unit to get management unit specific staffing groups
@@ -6038,7 +6053,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let managementUnitIds: [String] = [""] // The IDs of the management units for which to retrieve users
@@ -6091,7 +6106,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -6148,7 +6163,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -6203,7 +6218,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -6260,7 +6275,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -6317,7 +6332,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit to which the performance prediction belongs
 let weekId: String = "" // First day of schedule week in yyyy-MM-dd format
@@ -6372,7 +6387,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit to which the performance prediction belongs
 let weekId: String = "" // First day of schedule week in yyyy-MM-dd format
@@ -6431,7 +6446,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let weekId: String = "" // First day of schedule week in yyyy-MM-dd format, or 'recent' (without quotes) to get recent schedules
@@ -6491,7 +6506,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -6549,7 +6564,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -6607,7 +6622,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -6663,7 +6678,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -6721,7 +6736,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -6775,7 +6790,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -6836,7 +6851,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: String = "" // The week start date of the forecast in yyyy-MM-dd format or 'recent' (without quotes) to fetch recent forecasts
@@ -6888,7 +6903,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The id of the workplanbid
@@ -6940,7 +6955,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The work plan bid id of the bid groups
@@ -6994,7 +7009,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The work plan bid id of the bid groups
@@ -7048,7 +7063,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The work plan bid id of the bid groups
@@ -7100,7 +7115,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 
@@ -7149,7 +7164,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let feature: WorkforceManagementAPI.Feature_getWorkforcemanagementBusinessunits = WorkforceManagementAPI.Feature_getWorkforcemanagementBusinessunits.enummember // If specified, the list of business units for which the user is authorized to use the requested feature will be returned
 let divisionId: String = "" // If specified, the list of business units belonging to the specified division will be returned
@@ -7170,7 +7185,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunits(feature: feature, div
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **feature** | **String**| If specified, the list of business units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentHistoricalAdherence ("AgentHistoricalAdherence"), agentHistoricalAdherenceConformance ("AgentHistoricalAdherenceConformance"), agentSchedule ("AgentSchedule"), agentAdherenceAdjustments ("AgentAdherenceAdjustments"), agentTimeOffRequest ("AgentTimeOffRequest"), agentWorkPlanBid ("AgentWorkPlanBid"), agentScheduleBid ("AgentScheduleBid"), agentShiftTrade ("AgentShiftTrade"), alternativeShift ("AlternativeShift"), coaching ("Coaching"), learning ("Learning"), agentUnavailableTimes ("AgentUnavailableTimes"), agentSelfScheduleJob ("AgentSelfScheduleJob"), agentSelfScheduleOffers ("AgentSelfScheduleOffers"), agentSelfScheduleQuery ("AgentSelfScheduleQuery"), agentSelfScheduleActivityMove ("AgentSelfScheduleActivityMove"), selfScheduleSettings ("SelfScheduleSettings"), agentSelfScheduleSettings ("AgentSelfScheduleSettings"), agentOpportunitiesQuery ("AgentOpportunitiesQuery"), agentOpportunitiesEnrollments ("AgentOpportunitiesEnrollments"), agentOpportunitiesEnrollmentsStatuses ("AgentOpportunitiesEnrollmentsStatuses"), agentSchedulingPreferencesQuery ("AgentSchedulingPreferencesQuery"), agentSchedulingPreferences ("AgentSchedulingPreferences"), agentSchedulingPreferencesSettings ("AgentSchedulingPreferencesSettings"), activityCodes ("ActivityCodes"), activityPlans ("ActivityPlans"), adherenceAdjustmentsSettings ("AdherenceAdjustmentsSettings"), adherenceAdjustmentsReasonCodes ("AdherenceAdjustmentsReasonCodes"), adherenceAdjustments ("AdherenceAdjustments"), unavailableTimes ("UnavailableTimes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), capacityPlan ("CapacityPlan"), capacityPlanForecast ("CapacityPlanForecast"), capacityPlanForecastInputs ("CapacityPlanForecastInputs"), capacityPlanPerformancePrediction ("CapacityPlanPerformancePrediction"), continuousForecast ("ContinuousForecast"), mainForecastDiagnostics ("MainForecastDiagnostics"), predictionsForecastingScenarioJobs ("PredictionsForecastingScenarioJobs"), predictionsForecastingScenarios ("PredictionsForecastingScenarios"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), longTermStaffing ("LongTermStaffing"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanBids ("WorkPlanBids"), workPlanBidGroups ("WorkPlanBidGroups"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans"), scheduleBid ("ScheduleBid"), scheduleBidGroup ("ScheduleBidGroup"), opportunities ("Opportunities"), opportunitiesQuery ("OpportunitiesQuery"), opportunitiesEnrollmentsQuery ("OpportunitiesEnrollmentsQuery"), opportunitiesExternalActivitiesQuery ("OpportunitiesExternalActivitiesQuery"), opportunitiesStatuses ("OpportunitiesStatuses"), opportunitiesEnrollmentsStatuses ("OpportunitiesEnrollmentsStatuses"), schedulingPreferencesQuery ("SchedulingPreferencesQuery"), schedulingPreferencesSettings ("SchedulingPreferencesSettings"), decisionMetrics ("DecisionMetrics") |
+| **feature** | **String**| If specified, the list of business units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentHistoricalAdherence ("AgentHistoricalAdherence"), agentHistoricalAdherenceConformance ("AgentHistoricalAdherenceConformance"), agentSchedule ("AgentSchedule"), agentAdherenceAdjustments ("AgentAdherenceAdjustments"), agentTimeOffRequest ("AgentTimeOffRequest"), agentWorkPlanBid ("AgentWorkPlanBid"), agentScheduleBid ("AgentScheduleBid"), agentShiftTrade ("AgentShiftTrade"), alternativeShift ("AlternativeShift"), coaching ("Coaching"), learning ("Learning"), agentUnavailableTimes ("AgentUnavailableTimes"), agentSelfScheduleJob ("AgentSelfScheduleJob"), agentSelfScheduleOffers ("AgentSelfScheduleOffers"), agentSelfScheduleQuery ("AgentSelfScheduleQuery"), agentSelfScheduleActivityMove ("AgentSelfScheduleActivityMove"), selfScheduleSettings ("SelfScheduleSettings"), agentSelfScheduleSettings ("AgentSelfScheduleSettings"), agentOpportunitiesQuery ("AgentOpportunitiesQuery"), agentOpportunitiesEnrollments ("AgentOpportunitiesEnrollments"), agentOpportunitiesEnrollmentsStatuses ("AgentOpportunitiesEnrollmentsStatuses"), agentSchedulingPreferencesQuery ("AgentSchedulingPreferencesQuery"), agentSchedulingPreferences ("AgentSchedulingPreferences"), agentSchedulingPreferencesSettings ("AgentSchedulingPreferencesSettings"), activityCodes ("ActivityCodes"), activityPlans ("ActivityPlans"), adherenceAdjustmentsSettings ("AdherenceAdjustmentsSettings"), adherenceAdjustmentsReasonCodes ("AdherenceAdjustmentsReasonCodes"), adherenceAdjustments ("AdherenceAdjustments"), unavailableTimes ("UnavailableTimes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), capacityPlan ("CapacityPlan"), capacityPlanForecast ("CapacityPlanForecast"), capacityPlanForecastInputs ("CapacityPlanForecastInputs"), capacityPlanPerformancePrediction ("CapacityPlanPerformancePrediction"), continuousForecast ("ContinuousForecast"), mainForecastDiagnostics ("MainForecastDiagnostics"), predictionsForecastingScenarioJobs ("PredictionsForecastingScenarioJobs"), predictionsForecastingScenarios ("PredictionsForecastingScenarios"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), longTermStaffing ("LongTermStaffing"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanBids ("WorkPlanBids"), workPlanBidGroups ("WorkPlanBidGroups"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans"), scheduleBid ("ScheduleBid"), scheduleBidGroup ("ScheduleBidGroup"), opportunities ("Opportunities"), opportunitiesQuery ("OpportunitiesQuery"), opportunitiesEnrollmentsQuery ("OpportunitiesEnrollmentsQuery"), opportunitiesExternalActivitiesQuery ("OpportunitiesExternalActivitiesQuery"), opportunitiesStatuses ("OpportunitiesStatuses"), opportunitiesEnrollmentsStatuses ("OpportunitiesEnrollmentsStatuses"), schedulingPreferencesQuery ("SchedulingPreferencesQuery"), schedulingPreferencesSettings ("SchedulingPreferencesSettings"), schedulingPreferencesSchedulesQuery ("SchedulingPreferencesSchedulesQuery"), schedulingPreferencesSettingsQuery ("SchedulingPreferencesSettingsQuery"), decisionMetrics ("DecisionMetrics") |
 | **divisionId** | **String**| If specified, the list of business units belonging to the specified division will be returned | [optional] |
 
 
@@ -7201,7 +7216,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let divisionId: [String] = [""] // The divisionIds to filter by. If omitted, will return business units in all divisions
 
@@ -7250,7 +7265,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let calendarId: String = "" // The id of the ics-formatted calendar
 
@@ -7301,7 +7316,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -7347,7 +7362,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // The job ID of the historical data delete request
 
@@ -7397,7 +7412,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -7443,7 +7458,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -7489,7 +7504,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // The job Id of the historical data import request
 
@@ -7539,7 +7554,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -7584,7 +7599,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // The ID of the job.
 
@@ -7698,6 +7713,8 @@ Requires ANY permissions:
 * wfm:schedulingPreferencesQuery:view
 * wfm:schedulingPreferencesSettings:view
 * wfm:schedulingPreferencesSettings:edit
+* wfm:schedulingPreferencesSchedulesQuery:view
+* wfm:schedulingPreferencesSettingsQuery:view
 
 ### Example
 
@@ -7705,7 +7722,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let expand: [String] = [""] // 
@@ -7796,6 +7813,8 @@ Requires ANY permissions:
 * wfm:schedulingPreferencesQuery:view
 * wfm:schedulingPreferencesSettings:view
 * wfm:schedulingPreferencesSettings:edit
+* wfm:schedulingPreferencesSchedulesQuery:view
+* wfm:schedulingPreferencesSettingsQuery:view
 
 ### Example
 
@@ -7803,7 +7822,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
@@ -7853,7 +7872,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit
 let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
@@ -7905,7 +7924,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let agentId: String = "" // The agent id
@@ -7964,7 +7983,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let agentId: String = "" // The agent id
@@ -8016,7 +8035,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit
 
@@ -8044,6 +8063,56 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitDecisionmetrics(manag
 [**DecisionMetricsResponse**](DecisionMetricsResponse)
 
 
+## getWorkforcemanagementManagementunitSelfscheduleSettings
+
+
+
+> [SelfScheduleManagementUnitSettings](SelfScheduleManagementUnitSettings) getWorkforcemanagementManagementunitSelfscheduleSettings(managementUnitId)
+
+Get admin self-scheduling settings for a management unit
+
+
+
+Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/selfschedule/settings  
+
+Requires ANY permissions: 
+
+* wfm:selfScheduleSettings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let managementUnitId: String = "" // The ID of the management unit
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementManagementunitSelfscheduleSettings(managementUnitId: managementUnitId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementManagementunitSelfscheduleSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **managementUnitId** | **String**| The ID of the management unit | |
+
+
+### Return type
+
+[**SelfScheduleManagementUnitSettings**](SelfScheduleManagementUnitSettings)
+
+
 ## getWorkforcemanagementManagementunitShifttradesMatched
 
 
@@ -8069,7 +8138,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
@@ -8119,7 +8188,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
@@ -8171,7 +8240,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit.
 let timeOffLimitId: String = "" // The ID of the time off limit to fetch
@@ -8226,7 +8295,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit.
 
@@ -8276,7 +8345,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit
 let timeOffPlanId: String = "" // The ID of the time off plan to fetch
@@ -8328,7 +8397,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit
 
@@ -8378,7 +8447,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let userId: String = "" // The userId to whom the Time Off Request applies.
@@ -8433,7 +8502,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit.
 let userId: String = "" // The userId to whom the time off request applies.
@@ -8487,7 +8556,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let userId: String = "" // The userId to whom the Time Off Request applies.
@@ -8547,7 +8616,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
@@ -8598,7 +8667,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekId: String = "" // First day of schedule week in yyyy-MM-dd format.
@@ -8657,7 +8726,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekId: String = "" // First day of schedule week in yyyy-MM-dd format.
@@ -8718,7 +8787,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekDateId: Date = new Date(...) // The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -8778,7 +8847,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let workPlanId: String = "" // The ID of the work plan to fetch
@@ -8832,7 +8901,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let workPlanRotationId: String = "" // The ID of the work plan rotation to fetch
@@ -8885,7 +8954,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let expand: [String] = [""] // 
@@ -8919,7 +8988,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplanrotations(man
 
 
 
-> [WorkPlanListResponse](WorkPlanListResponse) getWorkforcemanagementManagementunitWorkplans(managementUnitId, expand, exclude)
+> [WorkPlanListResponse](WorkPlanListResponse) getWorkforcemanagementManagementunitWorkplans(managementUnitId, expand, exclude, forceDownloadService)
 
 Get work plans
 
@@ -8943,14 +9012,15 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let expand: [String] = [""] // Include to access additional data on the work plans
 let exclude: [String] = [""] // Exclude specific data on the work plans from the response
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplans(managementUnitId: managementUnitId, expand: expand, exclude: exclude) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplans(managementUnitId: managementUnitId, expand: expand, exclude: exclude, forceDownloadService: forceDownloadService) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -8968,6 +9038,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplans(managementU
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **expand** | [**[String]**](String)| Include to access additional data on the work plans | [optional]<br />**Values**: agentcount ("agentCount"), agents ("agents"), optionaldays ("optionalDays"), shifts ("shifts"), shiftstartvariances ("shiftStartVariances"), details ("details") |
 | **exclude** | [**[String]**](String)| Exclude specific data on the work plans from the response | [optional]<br />**Values**: shiftsActivities ("shifts.activities") |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
 
 
 ### Return type
@@ -8996,7 +9067,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let pageSize: Int = 0 // Deprecated, paging is not supported
 let pageNumber: Int = 0 // Deprecated, paging is not supported
@@ -9023,7 +9094,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunits(pageSize: pageSize,
 | **pageSize** | **Int**| Deprecated, paging is not supported | [optional] |
 | **pageNumber** | **Int**| Deprecated, paging is not supported | [optional] |
 | **expand** | **String**| Deprecated, expand settings on the single MU route | [optional]<br />**Values**: details ("details") |
-| **feature** | **String**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentHistoricalAdherence ("AgentHistoricalAdherence"), agentHistoricalAdherenceConformance ("AgentHistoricalAdherenceConformance"), agentSchedule ("AgentSchedule"), agentAdherenceAdjustments ("AgentAdherenceAdjustments"), agentTimeOffRequest ("AgentTimeOffRequest"), agentWorkPlanBid ("AgentWorkPlanBid"), agentScheduleBid ("AgentScheduleBid"), agentShiftTrade ("AgentShiftTrade"), alternativeShift ("AlternativeShift"), coaching ("Coaching"), learning ("Learning"), agentUnavailableTimes ("AgentUnavailableTimes"), agentSelfScheduleJob ("AgentSelfScheduleJob"), agentSelfScheduleOffers ("AgentSelfScheduleOffers"), agentSelfScheduleQuery ("AgentSelfScheduleQuery"), agentSelfScheduleActivityMove ("AgentSelfScheduleActivityMove"), selfScheduleSettings ("SelfScheduleSettings"), agentSelfScheduleSettings ("AgentSelfScheduleSettings"), agentOpportunitiesQuery ("AgentOpportunitiesQuery"), agentOpportunitiesEnrollments ("AgentOpportunitiesEnrollments"), agentOpportunitiesEnrollmentsStatuses ("AgentOpportunitiesEnrollmentsStatuses"), agentSchedulingPreferencesQuery ("AgentSchedulingPreferencesQuery"), agentSchedulingPreferences ("AgentSchedulingPreferences"), agentSchedulingPreferencesSettings ("AgentSchedulingPreferencesSettings"), activityCodes ("ActivityCodes"), activityPlans ("ActivityPlans"), adherenceAdjustmentsSettings ("AdherenceAdjustmentsSettings"), adherenceAdjustmentsReasonCodes ("AdherenceAdjustmentsReasonCodes"), adherenceAdjustments ("AdherenceAdjustments"), unavailableTimes ("UnavailableTimes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), capacityPlan ("CapacityPlan"), capacityPlanForecast ("CapacityPlanForecast"), capacityPlanForecastInputs ("CapacityPlanForecastInputs"), capacityPlanPerformancePrediction ("CapacityPlanPerformancePrediction"), continuousForecast ("ContinuousForecast"), mainForecastDiagnostics ("MainForecastDiagnostics"), predictionsForecastingScenarioJobs ("PredictionsForecastingScenarioJobs"), predictionsForecastingScenarios ("PredictionsForecastingScenarios"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), longTermStaffing ("LongTermStaffing"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanBids ("WorkPlanBids"), workPlanBidGroups ("WorkPlanBidGroups"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans"), scheduleBid ("ScheduleBid"), scheduleBidGroup ("ScheduleBidGroup"), opportunities ("Opportunities"), opportunitiesQuery ("OpportunitiesQuery"), opportunitiesEnrollmentsQuery ("OpportunitiesEnrollmentsQuery"), opportunitiesExternalActivitiesQuery ("OpportunitiesExternalActivitiesQuery"), opportunitiesStatuses ("OpportunitiesStatuses"), opportunitiesEnrollmentsStatuses ("OpportunitiesEnrollmentsStatuses"), schedulingPreferencesQuery ("SchedulingPreferencesQuery"), schedulingPreferencesSettings ("SchedulingPreferencesSettings"), decisionMetrics ("DecisionMetrics") |
+| **feature** | **String**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentHistoricalAdherence ("AgentHistoricalAdherence"), agentHistoricalAdherenceConformance ("AgentHistoricalAdherenceConformance"), agentSchedule ("AgentSchedule"), agentAdherenceAdjustments ("AgentAdherenceAdjustments"), agentTimeOffRequest ("AgentTimeOffRequest"), agentWorkPlanBid ("AgentWorkPlanBid"), agentScheduleBid ("AgentScheduleBid"), agentShiftTrade ("AgentShiftTrade"), alternativeShift ("AlternativeShift"), coaching ("Coaching"), learning ("Learning"), agentUnavailableTimes ("AgentUnavailableTimes"), agentSelfScheduleJob ("AgentSelfScheduleJob"), agentSelfScheduleOffers ("AgentSelfScheduleOffers"), agentSelfScheduleQuery ("AgentSelfScheduleQuery"), agentSelfScheduleActivityMove ("AgentSelfScheduleActivityMove"), selfScheduleSettings ("SelfScheduleSettings"), agentSelfScheduleSettings ("AgentSelfScheduleSettings"), agentOpportunitiesQuery ("AgentOpportunitiesQuery"), agentOpportunitiesEnrollments ("AgentOpportunitiesEnrollments"), agentOpportunitiesEnrollmentsStatuses ("AgentOpportunitiesEnrollmentsStatuses"), agentSchedulingPreferencesQuery ("AgentSchedulingPreferencesQuery"), agentSchedulingPreferences ("AgentSchedulingPreferences"), agentSchedulingPreferencesSettings ("AgentSchedulingPreferencesSettings"), activityCodes ("ActivityCodes"), activityPlans ("ActivityPlans"), adherenceAdjustmentsSettings ("AdherenceAdjustmentsSettings"), adherenceAdjustmentsReasonCodes ("AdherenceAdjustmentsReasonCodes"), adherenceAdjustments ("AdherenceAdjustments"), unavailableTimes ("UnavailableTimes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), capacityPlan ("CapacityPlan"), capacityPlanForecast ("CapacityPlanForecast"), capacityPlanForecastInputs ("CapacityPlanForecastInputs"), capacityPlanPerformancePrediction ("CapacityPlanPerformancePrediction"), continuousForecast ("ContinuousForecast"), mainForecastDiagnostics ("MainForecastDiagnostics"), predictionsForecastingScenarioJobs ("PredictionsForecastingScenarioJobs"), predictionsForecastingScenarios ("PredictionsForecastingScenarios"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), longTermStaffing ("LongTermStaffing"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanBids ("WorkPlanBids"), workPlanBidGroups ("WorkPlanBidGroups"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans"), scheduleBid ("ScheduleBid"), scheduleBidGroup ("ScheduleBidGroup"), opportunities ("Opportunities"), opportunitiesQuery ("OpportunitiesQuery"), opportunitiesEnrollmentsQuery ("OpportunitiesEnrollmentsQuery"), opportunitiesExternalActivitiesQuery ("OpportunitiesExternalActivitiesQuery"), opportunitiesStatuses ("OpportunitiesStatuses"), opportunitiesEnrollmentsStatuses ("OpportunitiesEnrollmentsStatuses"), schedulingPreferencesQuery ("SchedulingPreferencesQuery"), schedulingPreferencesSettings ("SchedulingPreferencesSettings"), schedulingPreferencesSchedulesQuery ("SchedulingPreferencesSchedulesQuery"), schedulingPreferencesSettingsQuery ("SchedulingPreferencesSettingsQuery"), decisionMetrics ("DecisionMetrics") |
 | **divisionId** | **String**| If specified, the list of management units belonging to the specified division will be returned | [optional] |
 
 
@@ -9054,7 +9125,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let divisionId: [String] = [""] // The divisionIds to filter by. If omitted, will return all divisions
 
@@ -9105,7 +9176,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -9151,7 +9222,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let bidId: String = "" // The ID of the schedule bid
 
@@ -9201,7 +9272,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let bidId: String = "" // The ID of the schedule bid
 
@@ -9251,7 +9322,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -9297,7 +9368,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // The id of the scheduling job
 
@@ -9323,6 +9394,252 @@ WorkforceManagementAPI.getWorkforcemanagementSchedulingjob(jobId: jobId) { (resp
 ### Return type
 
 [**SchedulingStatusResponse**](SchedulingStatusResponse)
+
+
+## getWorkforcemanagementSelfscheduleActivitymove
+
+
+
+> [SelfScheduleActivityMoveListItem](SelfScheduleActivityMoveListItem) getWorkforcemanagementSelfscheduleActivitymove(activityMoveId)
+
+Lookup a single agent activity move based on its identifier
+
+
+
+Wraps GET /api/v2/workforcemanagement/selfschedule/activitymoves/{activityMoveId}  
+
+Requires ANY permissions: 
+
+* wfm:agentSelfScheduleActivityMove:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let activityMoveId: String = "" // The ID of the activity move
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementSelfscheduleActivitymove(activityMoveId: activityMoveId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementSelfscheduleActivitymove was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **activityMoveId** | **String**| The ID of the activity move | |
+
+
+### Return type
+
+[**SelfScheduleActivityMoveListItem**](SelfScheduleActivityMoveListItem)
+
+
+## getWorkforcemanagementSelfscheduleJob
+
+
+
+> [SelfScheduleJob](SelfScheduleJob) getWorkforcemanagementSelfscheduleJob(jobId)
+
+View result of create self-schedule activity move operation. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Wraps GET /api/v2/workforcemanagement/selfschedule/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:agentSelfScheduleJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let jobId: String = "" // The ID of the job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementSelfscheduleJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementSelfscheduleJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| The ID of the job | |
+
+
+### Return type
+
+[**SelfScheduleJob**](SelfScheduleJob)
+
+
+## getWorkforcemanagementSelfscheduleOffersJob
+
+
+
+> [SelfScheduleOffersJob](SelfScheduleOffersJob) getWorkforcemanagementSelfscheduleOffersJob(jobId)
+
+View result of self-schedule search for best time for offer operation. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Wraps GET /api/v2/workforcemanagement/selfschedule/offers/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:agentSelfScheduleOffers:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let jobId: String = "" // The ID of the offer job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementSelfscheduleOffersJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementSelfscheduleOffersJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| The ID of the offer job | |
+
+
+### Return type
+
+[**SelfScheduleOffersJob**](SelfScheduleOffersJob)
+
+
+## getWorkforcemanagementSelfscheduleQuery
+
+
+
+> [SelfScheduleQuery](SelfScheduleQuery) getWorkforcemanagementSelfscheduleQuery()
+
+Query self-schedule activity moves for agent
+
+
+
+Wraps GET /api/v2/workforcemanagement/selfschedule/query  
+
+Requires ANY permissions: 
+
+* wfm:agentSelfScheduleQuery:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementSelfscheduleQuery() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementSelfscheduleQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**SelfScheduleQuery**](SelfScheduleQuery)
+
+
+## getWorkforcemanagementSelfscheduleSettings
+
+
+
+> [SelfScheduleAgentManagementUnitSettings](SelfScheduleAgentManagementUnitSettings) getWorkforcemanagementSelfscheduleSettings()
+
+Agent gets the self-schedule management unit settings.
+
+
+
+Wraps GET /api/v2/workforcemanagement/selfschedule/settings  
+
+Requires ANY permissions: 
+
+* wfm:agentSelfScheduleSettings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementSelfscheduleSettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementSelfscheduleSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**SelfScheduleAgentManagementUnitSettings**](SelfScheduleAgentManagementUnitSettings)
 
 
 ## getWorkforcemanagementShifttrades
@@ -9351,7 +9668,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -9399,7 +9716,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let tradeId: String = "" // The ID of the shift trade to update
 let jobId: String = "" // The ID of the job
@@ -9453,7 +9770,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let tradeId: String = "" // The ID of the shift trade to update
 let jobId: String = "" // The ID of the job
@@ -9507,7 +9824,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let tradeId: String = "" // The ID of the shift trade to update
 let jobId: String = "" // The ID of the job
@@ -9561,7 +9878,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // The ID of the job
 
@@ -9613,7 +9930,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // The ID of the job
 
@@ -9662,7 +9979,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // jobId
 
@@ -9712,7 +10029,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let teamId: String = "" // The ID of the team
 
@@ -9761,7 +10078,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // The ID of the job.
 
@@ -9812,7 +10129,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let timeOffRequestId: String = "" // The ID of the time off request
 
@@ -9862,7 +10179,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let timeOffRequestId: String = "" // The ID of the time off request
 
@@ -9913,7 +10230,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -9959,7 +10276,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -10005,7 +10322,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let jobId: String = "" // The ID of the job
 
@@ -10055,7 +10372,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let userId: String = "" // The userId to whom the work plan bid ranks apply.
 
@@ -10105,7 +10422,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let bidId: String = "" // The ID of the work plan bid
 
@@ -10155,7 +10472,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let bidId: String = "" // The ID of the work plan bid
 
@@ -10205,7 +10522,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 
 // Code example
@@ -10251,7 +10568,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let adjustmentId: String = "" // The ID of the adherence adjustment to update
 let body: UpdateAdherenceAdjustmentAgentRequest = new UpdateAdherenceAdjustmentAgentRequest(...) // body
@@ -10303,7 +10620,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let agentId: String = "" // The ID of the agent
 let adjustmentId: String = "" // The ID of the adherence adjustment
@@ -10357,7 +10674,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let agentId: String = "" // The ID of the agent to query
 let explanationId: String = "" // The ID of the explanation to update
@@ -10413,7 +10730,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let agentId: String = "" // The ID of the agent
 let body: UpdateUnavailableTimesRequest = new UpdateUnavailableTimesRequest(...) // body
@@ -10465,7 +10782,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let tradeId: String = "" // The ID of the alternative shift trade
 let body: AgentUpdateAlternativeShiftTradeRequest = new AgentUpdateAlternativeShiftTradeRequest(...) // body
@@ -10517,7 +10834,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: AdminBulkUpdateAlternativeShiftTradeStateRequest = new AdminBulkUpdateAlternativeShiftTradeStateRequest(...) // The request body
 
@@ -10567,7 +10884,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
 let body: UpdateBusinessUnitRequest = new UpdateBusinessUnitRequest(...) // body
@@ -10621,7 +10938,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
 let activityCodeId: String = "" // The ID of the activity code to update
@@ -10675,7 +10992,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
 let body: BulkUpdateActivityCodeRequest = new BulkUpdateActivityCodeRequest(...) // body
@@ -10729,7 +11046,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let activityPlanId: String = "" // The ID of the activity plan to update
@@ -10783,7 +11100,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: UpdateAdherenceAdjustmentsBulkRequest = new UpdateAdherenceAdjustmentsBulkRequest(...) // body
@@ -10835,7 +11152,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let reasonCodeId: String = "" // The ID of the reason code to update
@@ -10889,7 +11206,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: UpdateAdherenceAdjustmentsReasonCodesBulkRequest = new UpdateAdherenceAdjustmentsReasonCodesBulkRequest(...) // body
@@ -10941,7 +11258,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: UpdateBuAdherenceAdjustmentsSettingsRequest = new UpdateBuAdherenceAdjustmentsSettingsRequest(...) // body
@@ -10993,7 +11310,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: UpdateAlternativeShiftBuSettingsRequest = new UpdateAlternativeShiftBuSettingsRequest(...) // body
@@ -11045,7 +11362,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let capacityPlanId: String = "" // The ID of the capacity plan
@@ -11099,7 +11416,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: MinimumStaffingRequest = new MinimumStaffingRequest(...) // body
@@ -11153,7 +11470,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let opportunityId: String = "" // The ID of the opportunity
@@ -11210,7 +11527,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit.
 let planningGroupId: String = "" // The ID of a planning group to update
@@ -11264,7 +11581,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The ID of the schedule bid
@@ -11318,7 +11635,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The ID of the schedule bid associated with the bid groups
@@ -11374,7 +11691,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The ID of the schedule bid associated with the bid groups
@@ -11430,7 +11747,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: BuSchedulerSettingsRequest = new BuSchedulerSettingsRequest(...) // body
@@ -11482,7 +11799,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let runId: String = "" // The ID of the schedule run
@@ -11535,7 +11852,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit.
 let serviceGoalTemplateId: String = "" // The ID of a service goal template to update
@@ -11589,7 +11906,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let staffingGroupId: String = "" // The ID of the staffing group to update
@@ -11643,7 +11960,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let timeOffPlanId: String = "" // The ID of the time-off plan to update
@@ -11697,7 +12014,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The id of the workplanbid
@@ -11751,7 +12068,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The work plan bid id of the bid groups
@@ -11807,7 +12124,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The work plan bid id of the bid groups
@@ -11863,7 +12180,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: UpdateManagementUnitRequest = new UpdateManagementUnitRequest(...) // body
@@ -11915,7 +12232,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: UpdateMuAgentsRequest = new UpdateMuAgentsRequest(...) // body
@@ -11966,7 +12283,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: UpdateMuAgentWorkPlansBatchRequest = new UpdateMuAgentWorkPlansBatchRequest(...) // body
@@ -11996,6 +12313,58 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitAgentsWorkplansBulk
 [**UpdateMuAgentWorkPlansBatchResponse**](UpdateMuAgentWorkPlansBatchResponse)
 
 
+## patchWorkforcemanagementManagementunitSelfscheduleSettings
+
+
+
+> [SelfScheduleManagementUnitSettings](SelfScheduleManagementUnitSettings) patchWorkforcemanagementManagementunitSelfscheduleSettings(managementUnitId, body)
+
+Update admin self-scheduling settings for a management unit
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/selfschedule/settings  
+
+Requires ANY permissions: 
+
+* wfm:selfScheduleSettings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let managementUnitId: String = "" // The ID of the management unit
+let body: SelfScheduleManagementUnitSettingsRequest = new SelfScheduleManagementUnitSettingsRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementManagementunitSelfscheduleSettings(managementUnitId: managementUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementManagementunitSelfscheduleSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **managementUnitId** | **String**| The ID of the management unit | |
+| **body** | [**SelfScheduleManagementUnitSettingsRequest**](SelfScheduleManagementUnitSettingsRequest)| body | |
+
+
+### Return type
+
+[**SelfScheduleManagementUnitSettings**](SelfScheduleManagementUnitSettings)
+
+
 ## patchWorkforcemanagementManagementunitTimeofflimit
 
 
@@ -12020,7 +12389,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit.
 let timeOffLimitId: String = "" // The id of time off limit object to update
@@ -12074,7 +12443,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit
 let timeOffPlanId: String = "" // The ID of the time off plan to update
@@ -12128,7 +12497,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit.
 let timeOffRequestId: String = "" // The ID of the time off request.
@@ -12184,7 +12553,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit
 let body: UpdateManagementUnitsSettingsRequest = new UpdateManagementUnitsSettingsRequest(...) // body
@@ -12236,7 +12605,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let userId: String = "" // The id of the user the requested time off request belongs to
@@ -12294,7 +12663,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekDateId: Date = new Date(...) // The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -12350,7 +12719,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let workPlanId: String = "" // The ID of the work plan to update
@@ -12406,7 +12775,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let workPlanRotationId: String = "" // The ID of the work plan rotation to update
@@ -12460,7 +12829,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let timeOffRequestId: String = "" // The ID of the time off request
 let body: AgentTimeOffRequestPatch = new AgentTimeOffRequestPatch(...) // body
@@ -12512,7 +12881,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: UpdateUnavailableTimesRequest = new UpdateUnavailableTimesRequest(...) // body
 
@@ -12562,7 +12931,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let userId: String = "" // The userId to whom the work plan bid ranks apply.
 let body: WorkPlanBidRanks = new WorkPlanBidRanks(...) // body
@@ -12614,7 +12983,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: [WorkPlanBidRanks] = [new WorkPlanBidRanks(...)] // Users
 
@@ -12664,7 +13033,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let bidId: String = "" // The ID of the work plan bid
 let body: UpdateAgentWorkPlanBiddingPreference = new UpdateAgentWorkPlanBiddingPreference(...) // body
@@ -12716,7 +13085,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: AddAdherenceAdjustmentAgentRequest = new AddAdherenceAdjustmentAgentRequest(...) // body
 
@@ -12766,7 +13135,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: AgentQueryAdherenceAdjustmentsRequest = new AgentQueryAdherenceAdjustmentsRequest(...) // body
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
@@ -12822,7 +13191,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: AddAdherenceExplanationAgentRequest = new AddAdherenceExplanationAgentRequest(...) // The request body
 
@@ -12872,7 +13241,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: AgentQueryAdherenceExplanationsRequest = new AgentQueryAdherenceExplanationsRequest(...) // The request body
 let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
@@ -12926,7 +13295,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: WfmHistoricalAdherenceBulkQuery = new WfmHistoricalAdherenceBulkQuery(...) // body
 
@@ -12976,7 +13345,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let agentId: String = "" // The ID of the agent
 let body: AgentQueryAdherenceAdjustmentsRequest = new AgentQueryAdherenceAdjustmentsRequest(...) // body
@@ -13034,7 +13403,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let agentId: String = "" // The ID of the agent to query
 let body: AddAdherenceExplanationAdminRequest = new AddAdherenceExplanationAdminRequest(...) // The request body
@@ -13086,7 +13455,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let agentId: String = "" // The ID of the agent to query
 let body: AgentQueryAdherenceExplanationsRequest = new AgentQueryAdherenceExplanationsRequest(...) // The request body
@@ -13142,7 +13511,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let agentId: String = "" // The ID of the agent
 let body: QueryAgentUnavailableTimesRequest = new QueryAgentUnavailableTimesRequest(...) // body
@@ -13194,7 +13563,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: MoveAgentsRequest = new MoveAgentsRequest(...) // body
 
@@ -13244,7 +13613,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: QueryAgentsIntegrationsRequest = new QueryAgentsIntegrationsRequest(...) // body
 
@@ -13297,7 +13666,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let expand: [String] = [""] // Which fields, if any, to expand with. wfm:AgentHistoricalAdherenceConformance:view permission is required for conformance, and wfm:agentSchedule:view permission is required for scheduledActivities.
 let body: WfmHistoricalAdherenceQueryForAgent = new WfmHistoricalAdherenceQueryForAgent(...) // body
@@ -13349,7 +13718,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: AgentPossibleWorkShiftsRequest = new AgentPossibleWorkShiftsRequest(...) // body
 
@@ -13401,7 +13770,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: AgentBulkAddOpportunityEnrollmentsRequest = new AgentBulkAddOpportunityEnrollmentsRequest(...) // body
 
@@ -13453,7 +13822,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: AgentBulkStatusUpdateOpportunityEnrollmentsRequest = new AgentBulkStatusUpdateOpportunityEnrollmentsRequest(...) // body
 
@@ -13505,7 +13874,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: QueryOpportunitiesRequest = new QueryOpportunitiesRequest(...) // body
 let expand: WorkforceManagementAPI.Expand_postWorkforcemanagementAgentsOpportunitiesQuery = WorkforceManagementAPI.Expand_postWorkforcemanagementAgentsOpportunitiesQuery.enummember // List of resources to expand
@@ -13559,7 +13928,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: AgentMuScheduleQuery = new AgentMuScheduleQuery(...) // body
 let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
@@ -13613,7 +13982,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BuGetCurrentAgentScheduleRequest = new BuGetCurrentAgentScheduleRequest(...) // body
 
@@ -13663,7 +14032,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: AlternativeShiftOffersRequest = new AlternativeShiftOffersRequest(...) // The request body
 
@@ -13713,7 +14082,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: AlternativeShiftSearchOffersRequest = new AlternativeShiftSearchOffersRequest(...) // The request body
 
@@ -13763,7 +14132,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CreateAlternativeShiftTradeRequest = new CreateAlternativeShiftTradeRequest(...) // The request body
 
@@ -13813,7 +14182,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
 let body: CreateActivityCodeRequest = new CreateActivityCodeRequest(...) // body
@@ -13867,7 +14236,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let activityPlanId: String = "" // The ID of the activity plan to delete
@@ -13919,7 +14288,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let activityPlanId: String = "" // The ID of the activity plan
@@ -13977,7 +14346,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let activityPlanId: String = "" // The ID of the activity plan
@@ -14035,7 +14404,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let activityPlanId: String = "" // The ID of the activity plan
@@ -14091,7 +14460,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let activityPlanId: String = "" // The ID of the activity plan to run
@@ -14143,7 +14512,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: CreateActivityPlanRequest = new CreateActivityPlanRequest(...) // body
@@ -14195,7 +14564,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: BuQueryAdherenceAdjustmentsRequest = new BuQueryAdherenceAdjustmentsRequest(...) // body
@@ -14253,7 +14622,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: BuQueryAdherenceAdjustmentsRequest = new BuQueryAdherenceAdjustmentsRequest(...) // body
@@ -14305,7 +14674,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: CreateAdherenceAdjustmentsReasonCodeRequest = new CreateAdherenceAdjustmentsReasonCodeRequest(...) // body
@@ -14357,7 +14726,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: CreateAdherenceAdjustmentsReasonCodesBulkRequest = new CreateAdherenceAdjustmentsReasonCodesBulkRequest(...) // body
@@ -14409,7 +14778,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: BuQueryAdherenceExplanationsRequest = new BuQueryAdherenceExplanationsRequest(...) // The request body
@@ -14466,7 +14835,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body
@@ -14522,7 +14891,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: SearchAlternativeShiftTradesRequest = new SearchAlternativeShiftTradesRequest(...) // The request body
@@ -14576,7 +14945,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let capacityPlanId: String = "" // The ID of the capacity plan
@@ -14630,7 +14999,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let capacityPlanId: String = "" // The ID of the capacity plan
@@ -14682,7 +15051,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let capacityPlanId: String = "" // The ID of the capacity plan
@@ -14736,7 +15105,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let capacityPlanId: String = "" // The ID of the capacity plan
@@ -14790,7 +15159,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // 
 let weekDateId: Date = new Date(...) // weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -14844,7 +15213,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: CapacityPlanRequest = new CapacityPlanRequest(...) // body
@@ -14896,7 +15265,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: CapacityPlanDeleteRequest = new CapacityPlanDeleteRequest(...) // body
@@ -14947,7 +15316,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: DecisionMetricsUpdateJobRequest = new DecisionMetricsUpdateJobRequest(...) // body
@@ -14999,7 +15368,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: UploadUrlRequestBody = new UploadUrlRequestBody(...) // body
@@ -15051,7 +15420,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: IntradayPlanningGroupRequest = new IntradayPlanningGroupRequest(...) // body
@@ -15105,7 +15474,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: AggregatedExportJobRequest = new AggregatedExportJobRequest(...) // The request body
@@ -15157,7 +15526,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: AggregatedExportJobRequest = new AggregatedExportJobRequest(...) // The request body
@@ -15209,7 +15578,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: AggregatedExportSnapshotJobRequest = new AggregatedExportSnapshotJobRequest(...) // The request body
@@ -15261,7 +15630,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: BulkAddOpportunitiesRequest = new BulkAddOpportunitiesRequest(...) // body
@@ -15315,7 +15684,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: BulkOpportunitiesRequest = new BulkOpportunitiesRequest(...) // body
@@ -15369,7 +15738,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: BulkOpportunitiesRequest = new BulkOpportunitiesRequest(...) // body
@@ -15423,7 +15792,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: BulkOpportunitiesStatusUpdateRequest = new BulkOpportunitiesStatusUpdateRequest(...) // body
@@ -15477,7 +15846,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: BulkOpportunityEnrollmentsStatusUpdateRequest = new BulkOpportunityEnrollmentsStatusUpdateRequest(...) // body
@@ -15531,7 +15900,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: QueryOpportunityEnrollmentsRequest = new QueryOpportunityEnrollmentsRequest(...) // body
@@ -15587,7 +15956,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: BulkOpportunitiesExternalActivitiesRequest = new BulkOpportunitiesExternalActivitiesRequest(...) // body
@@ -15639,7 +16008,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: QueryOpportunitiesRequest = new QueryOpportunitiesRequest(...) // body
@@ -15696,7 +16065,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit.
 let body: CreatePlanningGroupRequest = new CreatePlanningGroupRequest(...) // body
@@ -15748,7 +16117,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The ID of the schedule bid to copy
@@ -15802,7 +16171,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The ID of the schedule bid associated with the bid groups
@@ -15856,7 +16225,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: CreateScheduleBid = new CreateScheduleBid(...) // The schedule bid to be created
@@ -15908,7 +16277,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: QueryEffectiveScheduleSetsRequest = new QueryEffectiveScheduleSetsRequest(...) // body
@@ -15960,7 +16329,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit.
 let body: CreateServiceGoalTemplate = new CreateServiceGoalTemplate(...) // body
@@ -16013,7 +16382,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: EvaluateShiftTradeListJobRequest = new EvaluateShiftTradeListJobRequest(...) // The request body
@@ -16070,7 +16439,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: QueryShiftTradeListJobRequest = new QueryShiftTradeListJobRequest(...) // The request body
@@ -16126,7 +16495,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: BulkUpdateShiftTradeListJobRequest = new BulkUpdateShiftTradeListJobRequest(...) // The request body
@@ -16182,7 +16551,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: SearchUnmatchedShiftTradeListJobRequest = new SearchUnmatchedShiftTradeListJobRequest(...) // The request body
@@ -16239,7 +16608,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: QueryWeekSummaryListJobRequest = new QueryWeekSummaryListJobRequest(...) // The request body
@@ -16293,7 +16662,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: CreateStaffingGroupRequest = new CreateStaffingGroupRequest(...) // body
@@ -16345,7 +16714,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: QueryPlanningGroupToStaffingGroupsRequest = new QueryPlanningGroupToStaffingGroupsRequest(...) // body
@@ -16397,7 +16766,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: QueryUserStaffingGroupListRequest = new QueryUserStaffingGroupListRequest(...) // body
@@ -16451,7 +16820,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let timeOffLimitId: String = "" // The ID of the time-off limit
@@ -16507,7 +16876,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let timeOffLimitId: String = "" // The ID of the time-off limit object to set limit values for
@@ -16563,7 +16932,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let timeOffLimitId: String = "" // The ID of the time-off limit object to set values for
@@ -16617,7 +16986,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let timeOffLimitId: String = "" // The ID of the time-off limit
@@ -16671,7 +17040,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: BuCreateTimeOffLimitRequest = new BuCreateTimeOffLimitRequest(...) // body
@@ -16723,7 +17092,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: QueryTimeOffLimitValuesRequest = new QueryTimeOffLimitValuesRequest(...) // body
@@ -16775,7 +17144,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: BuCreateTimeOffPlanRequest = new BuCreateTimeOffPlanRequest(...) // body
@@ -16827,7 +17196,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: QueryAgentScheduleUnavailableTimesRequest = new QueryAgentScheduleUnavailableTimesRequest(...) // body
@@ -16879,7 +17248,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: QueryAvailabilityManagementUnitsSettingsRequest = new QueryAvailabilityManagementUnitsSettingsRequest(...) // body
@@ -16932,7 +17301,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -16992,7 +17361,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -17048,7 +17417,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit to which the performance prediction belongs
 let weekId: String = "" // First day of schedule week in yyyy-MM-dd format
@@ -17104,7 +17473,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit to which the performance prediction belongs
 let weekId: String = "" // First day of schedule week in yyyy-MM-dd format
@@ -17160,7 +17529,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -17218,7 +17587,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -17276,7 +17645,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -17332,7 +17701,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -17386,7 +17755,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -17442,7 +17811,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -17498,7 +17867,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -17552,7 +17921,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -17610,7 +17979,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -17668,7 +18037,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -17724,7 +18093,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -17778,7 +18147,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The ID of the work plan bid to copy
@@ -17832,7 +18201,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let bidId: String = "" // The work plan bid id of the bid groups
@@ -17886,7 +18255,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let body: CreateWorkPlanBid = new CreateWorkPlanBid(...) // The work plan bid to be created
@@ -17940,7 +18309,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CreateBusinessUnitRequest = new CreateBusinessUnitRequest(...) // body
 let includeSchedulingDefaultMessageSeverities: Bool = true // Whether to include scheduling default message severities
@@ -17993,7 +18362,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let language: String = en-US // A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize default activity code names in the ics-formatted calendar
 
@@ -18043,7 +18412,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: HistoricalImportDeleteFilesJobRequest = new HistoricalImportDeleteFilesJobRequest(...) // body
 
@@ -18093,7 +18462,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ValidationServiceRequest = new ValidationServiceRequest(...) // body
 
@@ -18143,7 +18512,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let hrisIntegrationId: String = "" // The ID of the HRIS integration for which time off types are queried.
 
@@ -18193,7 +18562,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: GetAgentsWorkPlansRequest = new GetAgentsWorkPlansRequest(...) // body
@@ -18248,7 +18617,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body
@@ -18306,7 +18675,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit
 let body: WfmHistoricalAdherenceQuery = new WfmHistoricalAdherenceQuery(...) // body
@@ -18360,7 +18729,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: MoveManagementUnitRequest = new MoveManagementUnitRequest(...) // body
@@ -18413,7 +18782,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: UserListScheduleRequestBody = new UserListScheduleRequestBody(...) // body
@@ -18467,7 +18836,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit
 let body: WfmHistoricalShrinkageRequest = new WfmHistoricalShrinkageRequest(...) // body
@@ -18521,7 +18890,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit.
 let body: CreateTimeOffLimitRequest = new CreateTimeOffLimitRequest(...) // body
@@ -18573,7 +18942,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit.
 let body: QueryTimeOffLimitValuesRequest = new QueryTimeOffLimitValuesRequest(...) // body
@@ -18625,7 +18994,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit
 let body: CreateTimeOffPlanRequest = new CreateTimeOffPlanRequest(...) // body
@@ -18677,7 +19046,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: CreateAdminTimeOffRequest = new CreateAdminTimeOffRequest(...) // body
@@ -18729,7 +19098,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit.
 let body: QueryTimeOffIntegrationStatusRequest = new QueryTimeOffIntegrationStatusRequest(...) // body
@@ -18783,7 +19152,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: TimeOffRequestQueryBody = new TimeOffRequestQueryBody(...) // body
@@ -18837,7 +19206,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit.
 let body: QueryWaitlistPositionsRequest = new QueryWaitlistPositionsRequest(...) // body
@@ -18889,7 +19258,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit
 let userId: String = "" // The ID of the user
@@ -18943,7 +19312,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit.
 let userId: String = "" // The userId to whom the time off request applies.
@@ -18997,7 +19366,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit
 let userId: String = "" // The id of the user for whom the time off request estimate is requested
@@ -19055,7 +19424,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekDateId: Date = new Date(...) // The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -19113,7 +19482,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekDateId: Date = new Date(...) // The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -19169,7 +19538,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekDateId: Date = new Date(...) // The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -19228,7 +19597,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekDateId: Date = new Date(...) // The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
@@ -19284,7 +19653,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let workPlanId: String = "" // The ID of the work plan to create a copy
@@ -19339,7 +19708,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let workPlanId: String = "" // The ID of the work plan to validate. For new work plan, use the word 'new' for the ID.
@@ -19395,7 +19764,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let workPlanRotationId: String = "" // The ID of the work plan rotation to create a copy
@@ -19449,7 +19818,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: AddWorkPlanRotationRequest = new AddWorkPlanRotationRequest(...) // body
@@ -19501,7 +19870,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: CreateWorkPlan = new CreateWorkPlan(...) // body
@@ -19557,7 +19926,7 @@ Requires ALL permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CreateManagementUnitApiRequest = new CreateManagementUnitApiRequest(...) // body
 
@@ -19606,7 +19975,7 @@ Requires NO permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: UpdateNotificationsRequest = new UpdateNotificationsRequest(...) // body
 
@@ -19656,7 +20025,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CurrentUserScheduleRequestBody = new CurrentUserScheduleRequestBody(...) // body
 
@@ -19684,6 +20053,106 @@ WorkforceManagementAPI.postWorkforcemanagementSchedules(body: body) { (response,
 [**UserScheduleContainer**](UserScheduleContainer)
 
 
+## postWorkforcemanagementSelfscheduleJobs
+
+
+
+> [SelfScheduleJob](SelfScheduleJob) postWorkforcemanagementSelfscheduleJobs(body)
+
+Agent starts an async job to edit a shift request by updating the start time of one or more activities.
+
+
+
+Wraps POST /api/v2/workforcemanagement/selfschedule/jobs  
+
+Requires ANY permissions: 
+
+* wfm:agentSelfScheduleJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let body: SelfScheduleJobRequest = new SelfScheduleJobRequest(...) // The request body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementSelfscheduleJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementSelfscheduleJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**SelfScheduleJobRequest**](SelfScheduleJobRequest)| The request body | |
+
+
+### Return type
+
+[**SelfScheduleJob**](SelfScheduleJob)
+
+
+## postWorkforcemanagementSelfscheduleOffersJobs
+
+
+
+> [SelfScheduleOffersJob](SelfScheduleOffersJob) postWorkforcemanagementSelfscheduleOffersJobs(body)
+
+Agent starts async job to search for best time for offers
+
+
+
+Wraps POST /api/v2/workforcemanagement/selfschedule/offers/jobs  
+
+Requires ANY permissions: 
+
+* wfm:agentSelfScheduleOffers:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let body: SelfScheduleOffersJobRequest = new SelfScheduleOffersJobRequest(...) // The request body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementSelfscheduleOffersJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementSelfscheduleOffersJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**SelfScheduleOffersJobRequest**](SelfScheduleOffersJobRequest)| The request body | |
+
+
+### Return type
+
+[**SelfScheduleOffersJob**](SelfScheduleOffersJob)
+
+
 ## postWorkforcemanagementShifttradingTradeJobs
 
 
@@ -19706,7 +20175,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let tradeId: String = "" // The ID of the shift trade to update
 let body: UpdateShiftTradeJobRequest = new UpdateShiftTradeJobRequest(...) // The request body
@@ -19760,7 +20229,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let tradeId: String = "" // The ID of the shift trade to match
 let body: MatchShiftTradeJobRequest = new MatchShiftTradeJobRequest(...) // The request body
@@ -19814,7 +20283,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let tradeId: String = "" // The ID of the shift trade to update state
 let body: UpdateShiftTradeStateJobRequest = new UpdateShiftTradeStateJobRequest(...) // The request body
@@ -19868,7 +20337,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: AddShiftTradeJobRequest = new AddShiftTradeJobRequest(...) // The request body
 let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
@@ -19920,7 +20389,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: QueryAgentShiftTradeListJobRequest = new QueryAgentShiftTradeListJobRequest(...) // The request body
 let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes
@@ -19976,7 +20445,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let teamId: String = "" // The ID of the team
 let body: WfmHistoricalAdherenceQueryForTeams = new WfmHistoricalAdherenceQueryForTeams(...) // body
@@ -20030,7 +20499,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let teamId: String = "" // The ID of the team
 let body: WfmHistoricalShrinkageTeamsRequest = new WfmHistoricalShrinkageTeamsRequest(...) // body
@@ -20082,7 +20551,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: TimeOffBalanceRequest = new TimeOffBalanceRequest(...) // The request body
 
@@ -20132,7 +20601,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: AvailableTimeOffRequest = new AvailableTimeOffRequest(...) // body
 
@@ -20182,7 +20651,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CreateAgentTimeOffRequest = new CreateAgentTimeOffRequest(...) // body
 
@@ -20232,7 +20701,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: EstimateAvailableTimeOffRequest = new EstimateAvailableTimeOffRequest(...) // body
 let includeOnly: WorkforceManagementAPI.IncludeOnly_postWorkforcemanagementTimeoffrequestsEstimate = WorkforceManagementAPI.IncludeOnly_postWorkforcemanagementTimeoffrequestsEstimate.enummember // Limit response to the specified field
@@ -20284,7 +20753,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: CurrentUserTimeOffIntegrationStatusRequest = new CurrentUserTimeOffIntegrationStatusRequest(...) // body
 
@@ -20334,7 +20803,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: QueryAgentUnavailableTimesRequest = new QueryAgentUnavailableTimesRequest(...) // body
 
@@ -20384,7 +20853,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: ValidateAgentUnavailableTimesRequest = new ValidateAgentUnavailableTimesRequest(...) // body
 
@@ -20434,7 +20903,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: UsersActivityRequest = new UsersActivityRequest(...) // Request body
 
@@ -20484,7 +20953,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let agentId: String = "" // The ID of the agent
 let body: AgentIntegrationsRequest = new AgentIntegrationsRequest(...) // body
@@ -20538,7 +21007,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let businessUnitId: String = "" // The ID of the business unit
 let timeOffLimitId: String = "" // The ID of the time-off limit object to set values for
@@ -20594,7 +21063,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let managementUnitId: String = "" // The ID of the management unit.
 let timeOffLimitId: String = "" // The ID of the time off limit object to set values for
@@ -20648,7 +21117,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let bidId: String = "" // The ID of the schedule bid
 let body: UpdateAgentScheduleBiddingPreference = new UpdateAgentScheduleBiddingPreference(...) // body
@@ -20678,4 +21147,4 @@ WorkforceManagementAPI.putWorkforcemanagementSchedulebidPreference(bidId: bidId,
 [**AgentScheduleBiddingPreferenceResponse**](AgentScheduleBiddingPreferenceResponse)
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

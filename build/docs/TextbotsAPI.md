@@ -35,7 +35,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let botType: [String] = [""] // Bot types
 let botName: String = "" // Bot name
@@ -95,7 +95,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let sessionId: String = "" // The bot flow session ID, typically obtained from 'POST /api/v2/textbots/botflows/sessions'
 let turnRequest: TextBotFlowTurnRequest = new TextBotFlowTurnRequest(...) // 
@@ -149,7 +149,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let launchRequest: TextBotFlowLaunchRequest = new TextBotFlowLaunchRequest(...) // 
 
@@ -201,7 +201,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let postTextRequest: PostTextRequest = new PostTextRequest(...) // 
 
@@ -229,4 +229,4 @@ TextbotsAPI.postTextbotsBotsExecute(postTextRequest: postTextRequest) { (respons
 [**PostTextResponse**](PostTextResponse)
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

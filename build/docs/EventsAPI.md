@@ -33,7 +33,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BatchConversationEventRequest = new BatchConversationEventRequest(...) // batchRequest
 
@@ -83,7 +83,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BatchPredictiveRoutingCustomKpiAttributionEventRequest = new BatchPredictiveRoutingCustomKpiAttributionEventRequest(...) // batchRequest
 
@@ -133,7 +133,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BatchUserPresenceEventRequest = new BatchUserPresenceEventRequest(...) // batchRequest
 
@@ -183,7 +183,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: BatchUserRoutingStatusEventRequest = new BatchUserRoutingStatusEventRequest(...) // batchRequest
 
@@ -211,4 +211,4 @@ EventsAPI.postEventsUsersRoutingstatus(body: body) { (response, error) in
 [**BatchEventResponse**](BatchEventResponse)
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

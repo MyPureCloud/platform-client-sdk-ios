@@ -16,7 +16,8 @@
 | **feedback** | [**ConversationResponseSuggestionsTopicSuggestionFeedback**](ConversationResponseSuggestionsTopicSuggestionFeedback) |  | [optional] |
 | **cannedResponse** | [**ConversationResponseSuggestionsTopicSuggestedCannedResponse**](ConversationResponseSuggestionsTopicSuggestedCannedResponse) |  | [optional] |
 | **activeIntent** | [**ConversationResponseSuggestionsTopicSuggestedIntent**](ConversationResponseSuggestionsTopicSuggestedIntent) |  | [optional] |
+| **activeSentiment** | [**ConversationResponseSuggestionsTopicActiveSentiment**](ConversationResponseSuggestionsTopicActiveSentiment) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

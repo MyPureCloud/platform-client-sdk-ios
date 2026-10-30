@@ -13,4 +13,4 @@ Context provided to a guide session turn, including conversation custom attribut
 
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

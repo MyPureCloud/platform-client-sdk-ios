@@ -33,7 +33,8 @@
 | **callerId** | **String** | The phone number displayed to recipients of the phone call. The value should conform to the E164 format. | [optional] |
 | **callerIdName** | **String** | The name displayed to recipients of the phone call. | [optional] |
 | **queueMediaSettings** | [**QueueConversationVideoEventTopicQueueMediaSettings**](QueueConversationVideoEventTopicQueueMediaSettings) | Represents the queue setting for this media. | [optional] |
+| **publicIpAddress** | **String** | The reported client IP of the phone for the call. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

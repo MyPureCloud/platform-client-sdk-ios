@@ -6189,6 +6189,167 @@ open class KnowledgeAPI {
     
     
     
+    
+    
+    
+    
+    /**
+     Get tags across sources for the organization
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Number of items per page. Maximum is 200. (optional)
+     - parameter tagName: (query) Optional substring filter for tag names. (optional)
+     - parameter sourceIds: (query) Optional comma-separated source IDs to scope tags. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeSourcesTags(pageNumber: Int? = nil, pageSize: Int? = nil, tagName: String? = nil, sourceIds: String? = nil, completion: @escaping ((_ data: OrgV3SourcesTagsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeSourcesTagsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, tagName: tagName, sourceIds: sourceIds)
+        requestBuilder.execute { (response: Response<OrgV3SourcesTagsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get tags across sources for the organization
+     - GET /api/v2/knowledge/sources/tags
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "name" : "name"
+  }, {
+    "name" : "name"
+  } ],
+  "pageSize" : 0
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Number of items per page. Maximum is 200. (optional)
+     - parameter tagName: (query) Optional substring filter for tag names. (optional)
+     - parameter sourceIds: (query) Optional comma-separated source IDs to scope tags. (optional)
+
+     - returns: RequestBuilder<OrgV3SourcesTagsResponse> 
+     */
+    open class func getKnowledgeSourcesTagsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, tagName: String? = nil, sourceIds: String? = nil) -> RequestBuilder<OrgV3SourcesTagsResponse> {        
+        let path = "/api/v2/knowledge/sources/tags"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "tagName": tagName, 
+            "sourceIds": sourceIds
+        ])
+
+        let requestBuilder: RequestBuilder<OrgV3SourcesTagsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get tags grouped by source for the organization
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Number of items per page. Maximum is 200. (optional)
+     - parameter tagName: (query) Optional substring filter for tag names. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeSourcesTagsGrouped(pageNumber: Int? = nil, pageSize: Int? = nil, tagName: String? = nil, completion: @escaping ((_ data: V3SourceTagsGroupedResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeSourcesTagsGroupedWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, tagName: tagName)
+        requestBuilder.execute { (response: Response<V3SourceTagsGroupedResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get tags grouped by source for the organization
+     - GET /api/v2/knowledge/sources/tags/grouped
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "source" : "{}",
+    "tags" : [ {
+      "name" : "name"
+    }, {
+      "name" : "name"
+    } ]
+  }, {
+    "source" : "{}",
+    "tags" : [ {
+      "name" : "name"
+    }, {
+      "name" : "name"
+    } ]
+  } ],
+  "pageSize" : 0
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Number of items per page. Maximum is 200. (optional)
+     - parameter tagName: (query) Optional substring filter for tag names. (optional)
+
+     - returns: RequestBuilder<V3SourceTagsGroupedResponse> 
+     */
+    open class func getKnowledgeSourcesTagsGroupedWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, tagName: String? = nil) -> RequestBuilder<V3SourceTagsGroupedResponse> {        
+        let path = "/api/v2/knowledge/sources/tags/grouped"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "tagName": tagName
+        ])
+
+        let requestBuilder: RequestBuilder<V3SourceTagsGroupedResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     /**
      Update connection
      
@@ -10818,6 +10979,68 @@ open class KnowledgeAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<V3SourceDetailedResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get per-source file counts for the selected tag filter
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeSourcesFilesCounts(body: V3SourceFileCountsRequest? = nil, completion: @escaping ((_ data: V3SourceFileCountsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeSourcesFilesCountsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<V3SourceFileCountsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get per-source file counts for the selected tag filter
+     - POST /api/v2/knowledge/sources/files/counts
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "selectedTagsFileCount" : 0,
+    "source" : "{}",
+    "totalFileCount" : 6,
+    "fileNames" : [ "fileNames", "fileNames" ]
+  }, {
+    "selectedTagsFileCount" : 0,
+    "source" : "{}",
+    "totalFileCount" : 6,
+    "fileNames" : [ "fileNames", "fileNames" ]
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<V3SourceFileCountsResponse> 
+     */
+    open class func postKnowledgeSourcesFilesCountsWithRequestBuilder(body: V3SourceFileCountsRequest? = nil) -> RequestBuilder<V3SourceFileCountsResponse> {        
+        let path = "/api/v2/knowledge/sources/files/counts"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<V3SourceFileCountsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

@@ -236,6 +236,65 @@ open class CaseManagementAPI {
     
     
     
+    /**
+     Delete a Stageplan from a draft Caseplan.
+     
+     - parameter caseplanId: (path) Caseplan identifier. 
+     - parameter stageplanId: (path) Stageplan identifier. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteCasemanagementCaseplanStageplan(caseplanId: String, stageplanId: String, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteCasemanagementCaseplanStageplanWithRequestBuilder(caseplanId: caseplanId, stageplanId: stageplanId)
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a Stageplan from a draft Caseplan.
+     - DELETE /api/v2/casemanagement/caseplans/{caseplanId}/stageplans/{stageplanId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter caseplanId: (path) Caseplan identifier. 
+     - parameter stageplanId: (path) Stageplan identifier. 
+
+     - returns: RequestBuilder<JSON> 
+     */
+    open class func deleteCasemanagementCaseplanStageplanWithRequestBuilder(caseplanId: String, stageplanId: String) -> RequestBuilder<JSON> {        
+        var path = "/api/v2/casemanagement/caseplans/{caseplanId}/stageplans/{stageplanId}"
+        let caseplanIdPreEscape = "\(caseplanId)"
+        let caseplanIdPostEscape = caseplanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{caseplanId}", with: caseplanIdPostEscape, options: .literal, range: nil)
+        let stageplanIdPreEscape = "\(stageplanId)"
+        let stageplanIdPostEscape = stageplanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{stageplanId}", with: stageplanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     public enum Expands_getCasemanagementCase: String { 
         case caseplan = "caseplan"
         case owner = "owner"
@@ -3180,6 +3239,135 @@ open class CaseManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Caseplan>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Reposition a Stageplan within a draft Caseplan.
+     
+     - parameter caseplanId: (path) Caseplan identifier. 
+     - parameter stageplanId: (path) Stageplan identifier. 
+     - parameter body: (body) Stageplan reposition request. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postCasemanagementCaseplanStageplanReposition(caseplanId: String, stageplanId: String, body: StageplanReposition, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
+        let requestBuilder = postCasemanagementCaseplanStageplanRepositionWithRequestBuilder(caseplanId: caseplanId, stageplanId: stageplanId, body: body)
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Reposition a Stageplan within a draft Caseplan.
+     - POST /api/v2/casemanagement/caseplans/{caseplanId}/stageplans/{stageplanId}/reposition
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter caseplanId: (path) Caseplan identifier. 
+     - parameter stageplanId: (path) Stageplan identifier. 
+     - parameter body: (body) Stageplan reposition request. 
+
+     - returns: RequestBuilder<JSON> 
+     */
+    open class func postCasemanagementCaseplanStageplanRepositionWithRequestBuilder(caseplanId: String, stageplanId: String, body: StageplanReposition) -> RequestBuilder<JSON> {        
+        var path = "/api/v2/casemanagement/caseplans/{caseplanId}/stageplans/{stageplanId}/reposition"
+        let caseplanIdPreEscape = "\(caseplanId)"
+        let caseplanIdPostEscape = caseplanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{caseplanId}", with: caseplanIdPostEscape, options: .literal, range: nil)
+        let stageplanIdPreEscape = "\(stageplanId)"
+        let stageplanIdPostEscape = stageplanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{stageplanId}", with: stageplanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create a Stageplan on a draft Caseplan.
+     
+     - parameter caseplanId: (path) Caseplan identifier. 
+     - parameter body: (body) Stageplan create request. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postCasemanagementCaseplanStageplans(caseplanId: String, body: StageplanCreate, completion: @escaping ((_ data: Stageplan?,_ error: Error?) -> Void)) {
+        let requestBuilder = postCasemanagementCaseplanStageplansWithRequestBuilder(caseplanId: caseplanId, body: body)
+        requestBuilder.execute { (response: Response<Stageplan>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a Stageplan on a draft Caseplan.
+     - POST /api/v2/casemanagement/caseplans/{caseplanId}/stageplans
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "caseplan" : "{}",
+  "description" : "description",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter caseplanId: (path) Caseplan identifier. 
+     - parameter body: (body) Stageplan create request. 
+
+     - returns: RequestBuilder<Stageplan> 
+     */
+    open class func postCasemanagementCaseplanStageplansWithRequestBuilder(caseplanId: String, body: StageplanCreate) -> RequestBuilder<Stageplan> {        
+        var path = "/api/v2/casemanagement/caseplans/{caseplanId}/stageplans"
+        let caseplanIdPreEscape = "\(caseplanId)"
+        let caseplanIdPostEscape = caseplanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{caseplanId}", with: caseplanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Stageplan>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

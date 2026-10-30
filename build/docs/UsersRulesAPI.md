@@ -38,7 +38,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let ruleId: String = "" // The id of the rule
 
@@ -87,7 +87,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let ruleId: String = "" // The ID of the rule to retrieve
 
@@ -137,7 +137,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let ruleId: String = "" // The ID of the rule for which to retrieve dependents
 let ruleType: UsersRulesAPI.RuleType_getUsersRuleDependentTypeId = UsersRulesAPI.RuleType_getUsersRuleDependentTypeId.enummember // The type of the dependent
@@ -191,7 +191,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let ruleId: String = "" // The ID of the rule for which to retrieve dependents
 let pageSize: Int = 0 // Number of results per page
@@ -247,7 +247,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let types: [String] = [""] // The types of the rule
 let pageNumber: Int = 0 // Page number
@@ -309,7 +309,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let ruleType: UsersRulesAPI.RuleType_getUsersRulesSetting = UsersRulesAPI.RuleType_getUsersRulesSetting.enummember // The type of the rule
 
@@ -361,7 +361,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let ruleId: String = "" // The ID of the rule to update
 let body: UsersRulesUpdateRuleRequest = new UsersRulesUpdateRuleRequest(...) // updateRuleRequest
@@ -415,7 +415,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: UsersRulesCreateRuleRequest = new UsersRulesCreateRuleRequest(...) // usersRulesCreateRuleRequest
 
@@ -467,7 +467,7 @@ Requires ANY permissions:
 import PureCloudPlatformClientV2
 
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let body: UsersRulesQueryRuleRequest = new UsersRulesQueryRuleRequest(...) // usersRulesQueryRuleRequest
 let pageNumber: Int = 0 // Page number
@@ -499,4 +499,4 @@ UsersRulesAPI.postUsersRulesQuery(body: body, pageNumber: pageNumber, pageSize: 
 [**UsersRulesQueryResponse**](UsersRulesQueryResponse)
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

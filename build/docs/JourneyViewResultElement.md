@@ -14,4 +14,4 @@ An element within a journey view result
 
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

@@ -50,7 +50,7 @@ open class VirtualAgentsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "users.rules",
+      "namespace" : "usage",
       "value" : 6,
       "key" : "key"
     },
@@ -78,7 +78,7 @@ open class VirtualAgentsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "users.rules",
+      "namespace" : "usage",
       "value" : 6,
       "key" : "key"
     },
@@ -230,7 +230,7 @@ open class VirtualAgentsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "users.rules",
+      "namespace" : "usage",
       "value" : 6,
       "key" : "key"
     },
@@ -258,7 +258,7 @@ open class VirtualAgentsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "users.rules",
+      "namespace" : "usage",
       "value" : 6,
       "key" : "key"
     },
@@ -546,7 +546,7 @@ open class VirtualAgentsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "users.rules",
+      "namespace" : "usage",
       "value" : 6,
       "key" : "key"
     },
@@ -574,7 +574,7 @@ open class VirtualAgentsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "users.rules",
+      "namespace" : "usage",
       "value" : 6,
       "key" : "key"
     },

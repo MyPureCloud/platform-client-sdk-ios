@@ -17,4 +17,4 @@ Learning module preview get response assignment
 
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

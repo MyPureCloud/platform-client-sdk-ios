@@ -7,6 +7,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
+| **muId** | **String** |  | [optional] |
 | **user** | [**WfmTimeOffRequestUpdateTopicUserReference**](WfmTimeOffRequestUpdateTopicUserReference) |  | [optional] |
 | **isFullDayRequest** | **Bool** |  | [optional] |
 | **markedAsRead** | **Bool** |  | [optional] |
@@ -31,4 +32,4 @@
 
 
 
-_PureCloudPlatformClientV2@206.0.0_
+_PureCloudPlatformClientV2@207.0.0_

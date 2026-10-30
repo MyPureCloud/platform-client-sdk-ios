@@ -5457,6 +5457,8 @@ open class WorkforceManagementAPI {
         case opportunitiesEnrollmentsStatuses = "OpportunitiesEnrollmentsStatuses"
         case schedulingPreferencesQuery = "SchedulingPreferencesQuery"
         case schedulingPreferencesSettings = "SchedulingPreferencesSettings"
+        case schedulingPreferencesSchedulesQuery = "SchedulingPreferencesSchedulesQuery"
+        case schedulingPreferencesSettingsQuery = "SchedulingPreferencesSettingsQuery"
         case decisionMetrics = "DecisionMetrics"
     }
     
@@ -10039,6 +10041,8 @@ open class WorkforceManagementAPI {
         case opportunitiesEnrollmentsStatuses = "OpportunitiesEnrollmentsStatuses"
         case schedulingPreferencesQuery = "SchedulingPreferencesQuery"
         case schedulingPreferencesSettings = "SchedulingPreferencesSettings"
+        case schedulingPreferencesSchedulesQuery = "SchedulingPreferencesSchedulesQuery"
+        case schedulingPreferencesSettingsQuery = "SchedulingPreferencesSettingsQuery"
         case decisionMetrics = "DecisionMetrics"
     }
     
@@ -11223,6 +11227,66 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DecisionMetricsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get admin self-scheduling settings for a management unit
+     
+     - parameter managementUnitId: (path) The ID of the management unit 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementManagementunitSelfscheduleSettings(managementUnitId: String, completion: @escaping ((_ data: SelfScheduleManagementUnitSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementManagementunitSelfscheduleSettingsWithRequestBuilder(managementUnitId: managementUnitId)
+        requestBuilder.execute { (response: Response<SelfScheduleManagementUnitSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get admin self-scheduling settings for a management unit
+     - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/selfschedule/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "minimumMinutesBeforeEarliestScheduleChange" : 0,
+  "checkWorkPlanConstraints" : true,
+  "metadata" : "{}",
+  "movableActivityCategories" : [ "OnQueueWork", "OnQueueWork" ],
+  "movableActivityCodeIds" : [ "movableActivityCodeIds", "movableActivityCodeIds" ],
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit 
+
+     - returns: RequestBuilder<SelfScheduleManagementUnitSettings> 
+     */
+    open class func getWorkforcemanagementManagementunitSelfscheduleSettingsWithRequestBuilder(managementUnitId: String) -> RequestBuilder<SelfScheduleManagementUnitSettings> {        
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/selfschedule/settings"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SelfScheduleManagementUnitSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -12727,16 +12791,19 @@ open class WorkforceManagementAPI {
         case shiftsActivities = "shifts.activities"
     }
     
+    
+    
     /**
      Get work plans
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter expand: (query) Include to access additional data on the work plans (optional)
      - parameter exclude: (query) Exclude specific data on the work plans from the response (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementManagementunitWorkplans(managementUnitId: String, expand: [String]? = nil, exclude: [String]? = nil, completion: @escaping ((_ data: WorkPlanListResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: managementUnitId, expand: expand, exclude: exclude)
+    open class func getWorkforcemanagementManagementunitWorkplans(managementUnitId: String, expand: [String]? = nil, exclude: [String]? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: WorkPlanListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: managementUnitId, expand: expand, exclude: exclude, forceDownloadService: forceDownloadService)
         requestBuilder.execute { (response: Response<WorkPlanListResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -13103,16 +13170,18 @@ open class WorkforceManagementAPI {
     "constrainMaximumConsecutiveWorkingWeekends" : true,
     "agentCount" : 7,
     "shiftStartVariancePeriod" : "Weekly"
-  } ]
+  } ],
+  "downloadUrl" : "downloadUrl"
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter expand: (query) Include to access additional data on the work plans (optional)
      - parameter exclude: (query) Exclude specific data on the work plans from the response (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
 
      - returns: RequestBuilder<WorkPlanListResponse> 
      */
-    open class func getWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: String, expand: [String]? = nil, exclude: [String]? = nil) -> RequestBuilder<WorkPlanListResponse> {        
+    open class func getWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: String, expand: [String]? = nil, exclude: [String]? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<WorkPlanListResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -13123,7 +13192,8 @@ open class WorkforceManagementAPI {
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand, 
-            "exclude": exclude
+            "exclude": exclude, 
+            "forceDownloadService": forceDownloadService
         ])
 
         let requestBuilder: RequestBuilder<WorkPlanListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -13216,6 +13286,8 @@ open class WorkforceManagementAPI {
         case opportunitiesEnrollmentsStatuses = "OpportunitiesEnrollmentsStatuses"
         case schedulingPreferencesQuery = "SchedulingPreferencesQuery"
         case schedulingPreferencesSettings = "SchedulingPreferencesSettings"
+        case schedulingPreferencesSchedulesQuery = "SchedulingPreferencesSchedulesQuery"
+        case schedulingPreferencesSettingsQuery = "SchedulingPreferencesSettingsQuery"
         case decisionMetrics = "DecisionMetrics"
     }
     
@@ -13736,6 +13808,332 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SchedulingStatusResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Lookup a single agent activity move based on its identifier
+     
+     - parameter activityMoveId: (path) The ID of the activity move 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementSelfscheduleActivitymove(activityMoveId: String, completion: @escaping ((_ data: SelfScheduleActivityMoveListItem?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementSelfscheduleActivitymoveWithRequestBuilder(activityMoveId: activityMoveId)
+        requestBuilder.execute { (response: Response<SelfScheduleActivityMoveListItem>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Lookup a single agent activity move based on its identifier
+     - GET /api/v2/workforcemanagement/selfschedule/activitymoves/{activityMoveId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schedule" : "{}",
+  "shiftId" : "shiftId",
+  "activityCode" : "{}",
+  "lengthMinutes" : 0,
+  "workflowStatus" : "Error",
+  "selfUri" : "https://openapi-generator.tech",
+  "newDate" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Approved",
+  "startDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+     
+     - parameter activityMoveId: (path) The ID of the activity move 
+
+     - returns: RequestBuilder<SelfScheduleActivityMoveListItem> 
+     */
+    open class func getWorkforcemanagementSelfscheduleActivitymoveWithRequestBuilder(activityMoveId: String) -> RequestBuilder<SelfScheduleActivityMoveListItem> {        
+        var path = "/api/v2/workforcemanagement/selfschedule/activitymoves/{activityMoveId}"
+        let activityMoveIdPreEscape = "\(activityMoveId)"
+        let activityMoveIdPostEscape = activityMoveIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityMoveId}", with: activityMoveIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SelfScheduleActivityMoveListItem>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     View result of create self-schedule activity move operation. Only the user who started the operation can query the status
+     
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementSelfscheduleJob(jobId: String, completion: @escaping ((_ data: SelfScheduleJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementSelfscheduleJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<SelfScheduleJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     View result of create self-schedule activity move operation. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/selfschedule/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "error" : "{}",
+  "activityMoves" : [ {
+    "schedule" : "{}",
+    "shiftId" : "shiftId",
+    "activityCode" : "{}",
+    "lengthMinutes" : 0,
+    "workflowStatus" : "Error",
+    "selfUri" : "https://openapi-generator.tech",
+    "newDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "Approved",
+    "startDate" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "schedule" : "{}",
+    "shiftId" : "shiftId",
+    "activityCode" : "{}",
+    "lengthMinutes" : 0,
+    "workflowStatus" : "Error",
+    "selfUri" : "https://openapi-generator.tech",
+    "newDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "Approved",
+    "startDate" : "2000-01-23T04:56:07.000+00:00"
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<SelfScheduleJob> 
+     */
+    open class func getWorkforcemanagementSelfscheduleJobWithRequestBuilder(jobId: String) -> RequestBuilder<SelfScheduleJob> {        
+        var path = "/api/v2/workforcemanagement/selfschedule/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SelfScheduleJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     View result of self-schedule search for best time for offer operation. Only the user who started the operation can query the status
+     
+     - parameter jobId: (path) The ID of the offer job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementSelfscheduleOffersJob(jobId: String, completion: @escaping ((_ data: SelfScheduleOffersJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementSelfscheduleOffersJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<SelfScheduleOffersJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     View result of self-schedule search for best time for offer operation. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/selfschedule/offers/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadResultTemplate" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The ID of the offer job 
+
+     - returns: RequestBuilder<SelfScheduleOffersJob> 
+     */
+    open class func getWorkforcemanagementSelfscheduleOffersJobWithRequestBuilder(jobId: String) -> RequestBuilder<SelfScheduleOffersJob> {        
+        var path = "/api/v2/workforcemanagement/selfschedule/offers/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SelfScheduleOffersJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Query self-schedule activity moves for agent
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementSelfscheduleQuery(completion: @escaping ((_ data: SelfScheduleQuery?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementSelfscheduleQueryWithRequestBuilder()
+        requestBuilder.execute { (response: Response<SelfScheduleQuery>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query self-schedule activity moves for agent
+     - GET /api/v2/workforcemanagement/selfschedule/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "activityMoves" : [ {
+    "schedule" : "{}",
+    "shiftId" : "shiftId",
+    "activityCode" : "{}",
+    "lengthMinutes" : 0,
+    "workflowStatus" : "Error",
+    "selfUri" : "https://openapi-generator.tech",
+    "newDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "Approved",
+    "startDate" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "schedule" : "{}",
+    "shiftId" : "shiftId",
+    "activityCode" : "{}",
+    "lengthMinutes" : 0,
+    "workflowStatus" : "Error",
+    "selfUri" : "https://openapi-generator.tech",
+    "newDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "Approved",
+    "startDate" : "2000-01-23T04:56:07.000+00:00"
+  } ]
+}, statusCode=200}]
+
+     - returns: RequestBuilder<SelfScheduleQuery> 
+     */
+    open class func getWorkforcemanagementSelfscheduleQueryWithRequestBuilder() -> RequestBuilder<SelfScheduleQuery> {        
+        let path = "/api/v2/workforcemanagement/selfschedule/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SelfScheduleQuery>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Agent gets the self-schedule management unit settings.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementSelfscheduleSettings(completion: @escaping ((_ data: SelfScheduleAgentManagementUnitSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementSelfscheduleSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<SelfScheduleAgentManagementUnitSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Agent gets the self-schedule management unit settings.
+     - GET /api/v2/workforcemanagement/selfschedule/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "minimumMinutesBeforeEarliestScheduleChange" : 0,
+  "movableActivityCategories" : [ "OnQueueWork", "OnQueueWork" ],
+  "movableActivityCodeIds" : [ "movableActivityCodeIds", "movableActivityCodeIds" ],
+  "enabled" : true
+}, statusCode=200}]
+
+     - returns: RequestBuilder<SelfScheduleAgentManagementUnitSettings> 
+     */
+    open class func getWorkforcemanagementSelfscheduleSettingsWithRequestBuilder() -> RequestBuilder<SelfScheduleAgentManagementUnitSettings> {        
+        let path = "/api/v2/workforcemanagement/selfschedule/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SelfScheduleAgentManagementUnitSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -17758,6 +18156,70 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UpdateMuAgentWorkPlansBatchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update admin self-scheduling settings for a management unit
+     
+     - parameter managementUnitId: (path) The ID of the management unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementManagementunitSelfscheduleSettings(managementUnitId: String, body: SelfScheduleManagementUnitSettingsRequest, completion: @escaping ((_ data: SelfScheduleManagementUnitSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementManagementunitSelfscheduleSettingsWithRequestBuilder(managementUnitId: managementUnitId, body: body)
+        requestBuilder.execute { (response: Response<SelfScheduleManagementUnitSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update admin self-scheduling settings for a management unit
+     - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/selfschedule/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "minimumMinutesBeforeEarliestScheduleChange" : 0,
+  "checkWorkPlanConstraints" : true,
+  "metadata" : "{}",
+  "movableActivityCategories" : [ "OnQueueWork", "OnQueueWork" ],
+  "movableActivityCodeIds" : [ "movableActivityCodeIds", "movableActivityCodeIds" ],
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<SelfScheduleManagementUnitSettings> 
+     */
+    open class func patchWorkforcemanagementManagementunitSelfscheduleSettingsWithRequestBuilder(managementUnitId: String, body: SelfScheduleManagementUnitSettingsRequest) -> RequestBuilder<SelfScheduleManagementUnitSettings> {        
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/selfschedule/settings"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SelfScheduleManagementUnitSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -29317,6 +29779,141 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserScheduleContainer>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Agent starts an async job to edit a shift request by updating the start time of one or more activities.
+     
+     - parameter body: (body) The request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementSelfscheduleJobs(body: SelfScheduleJobRequest, completion: @escaping ((_ data: SelfScheduleJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementSelfscheduleJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<SelfScheduleJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Agent starts an async job to edit a shift request by updating the start time of one or more activities.
+     - POST /api/v2/workforcemanagement/selfschedule/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "error" : "{}",
+  "activityMoves" : [ {
+    "schedule" : "{}",
+    "shiftId" : "shiftId",
+    "activityCode" : "{}",
+    "lengthMinutes" : 0,
+    "workflowStatus" : "Error",
+    "selfUri" : "https://openapi-generator.tech",
+    "newDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "Approved",
+    "startDate" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "schedule" : "{}",
+    "shiftId" : "shiftId",
+    "activityCode" : "{}",
+    "lengthMinutes" : 0,
+    "workflowStatus" : "Error",
+    "selfUri" : "https://openapi-generator.tech",
+    "newDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "Approved",
+    "startDate" : "2000-01-23T04:56:07.000+00:00"
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter body: (body) The request body 
+
+     - returns: RequestBuilder<SelfScheduleJob> 
+     */
+    open class func postWorkforcemanagementSelfscheduleJobsWithRequestBuilder(body: SelfScheduleJobRequest) -> RequestBuilder<SelfScheduleJob> {        
+        let path = "/api/v2/workforcemanagement/selfschedule/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SelfScheduleJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Agent starts async job to search for best time for offers
+     
+     - parameter body: (body) The request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementSelfscheduleOffersJobs(body: SelfScheduleOffersJobRequest, completion: @escaping ((_ data: SelfScheduleOffersJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementSelfscheduleOffersJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<SelfScheduleOffersJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Agent starts async job to search for best time for offers
+     - POST /api/v2/workforcemanagement/selfschedule/offers/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "downloadResultTemplate" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter body: (body) The request body 
+
+     - returns: RequestBuilder<SelfScheduleOffersJob> 
+     */
+    open class func postWorkforcemanagementSelfscheduleOffersJobsWithRequestBuilder(body: SelfScheduleOffersJobRequest) -> RequestBuilder<SelfScheduleOffersJob> {        
+        let path = "/api/v2/workforcemanagement/selfschedule/offers/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SelfScheduleOffersJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

@@ -9324,7 +9324,7 @@ open class AnalyticsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "users.rules",
+      "namespace" : "usage",
       "value" : 6,
       "key" : "key"
     },
