@@ -234,7 +234,7 @@ IntentsAPI.getIntentsCategories(pageSize: pageSize, pageNumber: pageNumber, quer
 
 
 
-> [IntentsCategory](IntentsCategory) getIntentsCategory(categoryId)
+> [IntentsCategory](IntentsCategory) getIntentsCategory(categoryId, includeUsage)
 
 Get category for categoryId
 
@@ -255,9 +255,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let categoryId: String = "" // Category id
+let includeUsage: Bool = true // When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off.
 
 // Code example
-IntentsAPI.getIntentsCategory(categoryId: categoryId) { (response, error) in
+IntentsAPI.getIntentsCategory(categoryId: categoryId, includeUsage: includeUsage) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -273,6 +274,7 @@ IntentsAPI.getIntentsCategory(categoryId: categoryId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **categoryId** | **String**| Category id | |
+| **includeUsage** | **Bool**| When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. | [optional] |
 
 
 ### Return type
@@ -284,7 +286,7 @@ IntentsAPI.getIntentsCategory(categoryId: categoryId) { (response, error) in
 
 
 
-> [CustomerIntentResponse](CustomerIntentResponse) getIntentsCustomerintent(customerIntentId)
+> [CustomerIntentResponse](CustomerIntentResponse) getIntentsCustomerintent(customerIntentId, includeUsage)
 
 Get customer intent for customerIntentId
 
@@ -305,9 +307,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let customerIntentId: String = "" // Customer Intent id
+let includeUsage: Bool = true // When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off.
 
 // Code example
-IntentsAPI.getIntentsCustomerintent(customerIntentId: customerIntentId) { (response, error) in
+IntentsAPI.getIntentsCustomerintent(customerIntentId: customerIntentId, includeUsage: includeUsage) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -323,6 +326,7 @@ IntentsAPI.getIntentsCustomerintent(customerIntentId: customerIntentId) { (respo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **customerIntentId** | **String**| Customer Intent id | |
+| **includeUsage** | **Bool**| When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. | [optional] |
 
 
 ### Return type
@@ -910,4 +914,4 @@ IntentsAPI.postIntentsCustomerintentsBulkRetrieve(body: body) { (response, error
 [**[CustomerIntentResponse]**](CustomerIntentResponse)
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

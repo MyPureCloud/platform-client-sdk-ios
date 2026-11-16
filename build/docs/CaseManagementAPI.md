@@ -421,7 +421,7 @@ CaseManagementAPI.getCasemanagementCaseAssociation(caseId: caseId, associationId
 
 
 
-> [CaseAssociationListing](CaseAssociationListing) getCasemanagementCaseAssociations(caseId, before, after, pageSize)
+> [CaseAssociationListing](CaseAssociationListing) getCasemanagementCaseAssociations(caseId, after, pageSize)
 
 Get a list of Case associations for the Case.
 
@@ -442,12 +442,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
-let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
-let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
-let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let after: String = "" // Cursor that points to the end of the previously returned page.
+let pageSize: Int = 0 // Number of entities to return. Maximum is 200.
 
 // Code example
-CaseManagementAPI.getCasemanagementCaseAssociations(caseId: caseId, before: before, after: after, pageSize: pageSize) { (response, error) in
+CaseManagementAPI.getCasemanagementCaseAssociations(caseId: caseId, after: after, pageSize: pageSize) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -463,9 +462,8 @@ CaseManagementAPI.getCasemanagementCaseAssociations(caseId: caseId, before: befo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **caseId** | **String**| Case identifier. | |
-| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
-| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
-| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **after** | **String**| Cursor that points to the end of the previously returned page. | [optional] |
+| **pageSize** | **Int**| Number of entities to return. Maximum is 200. | [optional] |
 
 
 ### Return type
@@ -691,7 +689,7 @@ CaseManagementAPI.getCasemanagementCaseStageStep(caseId: caseId, stageId: stageI
 
 
 
-> [StepListing](StepListing) getCasemanagementCaseStageSteps(caseId, stageId, before, after, pageSize)
+> [StepListing](StepListing) getCasemanagementCaseStageSteps(caseId, stageId, after, pageSize)
 
 Get a list of Steps.
 
@@ -713,12 +711,11 @@ PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
 let stageId: String = "" // Stage identifier.
-let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
-let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
-let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let after: String = "" // Cursor that points to the end of the previously returned page.
+let pageSize: Int = 0 // Number of entities to return. Maximum is 200.
 
 // Code example
-CaseManagementAPI.getCasemanagementCaseStageSteps(caseId: caseId, stageId: stageId, before: before, after: after, pageSize: pageSize) { (response, error) in
+CaseManagementAPI.getCasemanagementCaseStageSteps(caseId: caseId, stageId: stageId, after: after, pageSize: pageSize) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -735,9 +732,8 @@ CaseManagementAPI.getCasemanagementCaseStageSteps(caseId: caseId, stageId: stage
 | ------------- | ------------- | ------------- | ------------- |
 | **caseId** | **String**| Case identifier. | |
 | **stageId** | **String**| Stage identifier. | |
-| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
-| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
-| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **after** | **String**| Cursor that points to the end of the previously returned page. | [optional] |
+| **pageSize** | **Int**| Number of entities to return. Maximum is 200. | [optional] |
 
 
 ### Return type
@@ -749,7 +745,7 @@ CaseManagementAPI.getCasemanagementCaseStageSteps(caseId: caseId, stageId: stage
 
 
 
-> [StageListing](StageListing) getCasemanagementCaseStages(caseId, before, after, pageSize)
+> [StageListing](StageListing) getCasemanagementCaseStages(caseId, after, pageSize)
 
 Get a list of Stages.
 
@@ -770,12 +766,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseId: String = "" // Case identifier.
-let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
-let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
-let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let after: String = "" // Cursor that points to the end of the previously returned page.
+let pageSize: Int = 0 // Number of entities to return. Maximum is 200.
 
 // Code example
-CaseManagementAPI.getCasemanagementCaseStages(caseId: caseId, before: before, after: after, pageSize: pageSize) { (response, error) in
+CaseManagementAPI.getCasemanagementCaseStages(caseId: caseId, after: after, pageSize: pageSize) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -791,9 +786,8 @@ CaseManagementAPI.getCasemanagementCaseStages(caseId: caseId, before: before, af
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **caseId** | **String**| Case identifier. | |
-| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
-| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
-| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **after** | **String**| Cursor that points to the end of the previously returned page. | [optional] |
+| **pageSize** | **Int**| Number of entities to return. Maximum is 200. | [optional] |
 
 
 ### Return type
@@ -1177,7 +1171,7 @@ CaseManagementAPI.getCasemanagementCaseplanVersionStageplanStepplan(caseplanId: 
 
 
 
-> [StepplanListing](StepplanListing) getCasemanagementCaseplanVersionStageplanStepplans(caseplanId, versionId, stageplanId, before, after, pageSize, expands)
+> [StepplanListing](StepplanListing) getCasemanagementCaseplanVersionStageplanStepplans(caseplanId, versionId, stageplanId, after, pageSize, expands)
 
 Get a list of Stepplans.
 
@@ -1200,13 +1194,12 @@ PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 let caseplanId: String = "" // Caseplan identifier.
 let versionId: String = "" // Caseplan version identifier.
 let stageplanId: String = "" // Stageplan identifier.
-let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
-let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
-let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let after: String = "" // Cursor that points to the end of the previously returned page.
+let pageSize: Int = 0 // Number of entities to return. Maximum is 200.
 let expands: [String] = [""] // Fields to expand.
 
 // Code example
-CaseManagementAPI.getCasemanagementCaseplanVersionStageplanStepplans(caseplanId: caseplanId, versionId: versionId, stageplanId: stageplanId, before: before, after: after, pageSize: pageSize, expands: expands) { (response, error) in
+CaseManagementAPI.getCasemanagementCaseplanVersionStageplanStepplans(caseplanId: caseplanId, versionId: versionId, stageplanId: stageplanId, after: after, pageSize: pageSize, expands: expands) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1224,9 +1217,8 @@ CaseManagementAPI.getCasemanagementCaseplanVersionStageplanStepplans(caseplanId:
 | **caseplanId** | **String**| Caseplan identifier. | |
 | **versionId** | **String**| Caseplan version identifier. | |
 | **stageplanId** | **String**| Stageplan identifier. | |
-| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
-| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
-| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **after** | **String**| Cursor that points to the end of the previously returned page. | [optional] |
+| **pageSize** | **Int**| Number of entities to return. Maximum is 200. | [optional] |
 | **expands** | [**[String]**](String)| Fields to expand. | [optional]<br />**Values**: caseplan ("caseplan"), stageplan ("stageplan"), worktype ("worktype") |
 
 
@@ -1239,7 +1231,7 @@ CaseManagementAPI.getCasemanagementCaseplanVersionStageplanStepplans(caseplanId:
 
 
 
-> [StageplanListing](StageplanListing) getCasemanagementCaseplanVersionStageplans(caseplanId, versionId, before, after, pageSize, expands)
+> [StageplanListing](StageplanListing) getCasemanagementCaseplanVersionStageplans(caseplanId, versionId, after, pageSize, expands)
 
 Get a list of Stageplans.
 
@@ -1261,13 +1253,12 @@ PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let caseplanId: String = "" // Caseplan identifier.
 let versionId: String = "" // Caseplan version identifier.
-let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
-let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
-let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let after: String = "" // Cursor that points to the end of the previously returned page.
+let pageSize: Int = 0 // Number of entities to return. Maximum is 200.
 let expands: [String] = [""] // Fields to expand.
 
 // Code example
-CaseManagementAPI.getCasemanagementCaseplanVersionStageplans(caseplanId: caseplanId, versionId: versionId, before: before, after: after, pageSize: pageSize, expands: expands) { (response, error) in
+CaseManagementAPI.getCasemanagementCaseplanVersionStageplans(caseplanId: caseplanId, versionId: versionId, after: after, pageSize: pageSize, expands: expands) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1284,9 +1275,8 @@ CaseManagementAPI.getCasemanagementCaseplanVersionStageplans(caseplanId: casepla
 | ------------- | ------------- | ------------- | ------------- |
 | **caseplanId** | **String**| Caseplan identifier. | |
 | **versionId** | **String**| Caseplan version identifier. | |
-| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
-| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
-| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **after** | **String**| Cursor that points to the end of the previously returned page. | [optional] |
+| **pageSize** | **Int**| Number of entities to return. Maximum is 200. | [optional] |
 | **expands** | [**[String]**](String)| Fields to expand. | [optional]<br />**Values**: caseplan ("caseplan") |
 
 
@@ -2701,4 +2691,4 @@ CaseManagementAPI.putCasemanagementCaseplanIntakesettings(caseplanId: caseplanId
 [**IntakeSettingsListing**](IntakeSettingsListing)
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

@@ -936,7 +936,7 @@ open class IntegrationsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "usage",
+      "namespace" : "agent.assistant",
       "value" : 6,
       "key" : "key"
     },
@@ -964,7 +964,7 @@ open class IntegrationsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "usage",
+      "namespace" : "agent.assistant",
       "value" : 6,
       "key" : "key"
     },

@@ -14,7 +14,8 @@
 | **inactivityTimeoutExclusions** | **[String]** | The list of exempt apis from inactivity timeout. | [optional] |
 | **universalLogout** | **Bool** | Indicates whether universal logout is enabled for the organization. | [optional] |
 | **tokenStorageLocation** | **String** | The browser storage location used for authentication tokens. | [optional] |
+| **ssoLoginFirst** | **Bool** | Indicates whether single sign-on is displayed before Genesys Cloud credentials on the login page. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

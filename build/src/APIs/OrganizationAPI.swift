@@ -172,6 +172,7 @@ open class OrganizationAPI {
      - examples: [{contentType=application/json, example={
   "multifactorAuthenticationRequired" : true,
   "ipAddressAllowlist" : [ "ipAddressAllowlist", "ipAddressAllowlist" ],
+  "ssoLoginFirst" : true,
   "inactivityTimeoutExclusions" : [ "inactivityTimeoutExclusions", "inactivityTimeoutExclusions" ],
   "universalLogout" : true,
   "tokenStorageLocation" : "persistent",
@@ -327,11 +328,11 @@ open class OrganizationAPI {
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "approvalNamespaces" : [ {
-    "namespace" : "usage",
+    "namespace" : "agent.assistant",
     "type" : "Primary",
     "status" : "Approved"
   }, {
-    "namespace" : "usage",
+    "namespace" : "agent.assistant",
     "type" : "Primary",
     "status" : "Approved"
   } ],
@@ -339,14 +340,14 @@ open class OrganizationAPI {
   "statusHistory" : [ {
     "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
-    "namespace" : "usage",
+    "namespace" : "agent.assistant",
     "message" : "message",
     "status" : "Approved",
     "previousStatus" : "Approved"
   }, {
     "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
-    "namespace" : "usage",
+    "namespace" : "agent.assistant",
     "message" : "message",
     "status" : "Approved",
     "previousStatus" : "Approved"
@@ -354,7 +355,7 @@ open class OrganizationAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "rejectReason" : "AlternativeExists",
   "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-  "namespace" : "usage",
+  "namespace" : "agent.assistant",
   "id" : "id",
   "key" : "key",
   "currentValue" : 6.027456183070403,
@@ -451,11 +452,11 @@ open class OrganizationAPI {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "approvalNamespaces" : [ {
-      "namespace" : "usage",
+      "namespace" : "agent.assistant",
       "type" : "Primary",
       "status" : "Approved"
     }, {
-      "namespace" : "usage",
+      "namespace" : "agent.assistant",
       "type" : "Primary",
       "status" : "Approved"
     } ],
@@ -463,14 +464,14 @@ open class OrganizationAPI {
     "statusHistory" : [ {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "usage",
+      "namespace" : "agent.assistant",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
     }, {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "usage",
+      "namespace" : "agent.assistant",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
@@ -478,7 +479,7 @@ open class OrganizationAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-    "namespace" : "usage",
+    "namespace" : "agent.assistant",
     "id" : "id",
     "key" : "key",
     "currentValue" : 6.027456183070403,
@@ -488,11 +489,11 @@ open class OrganizationAPI {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "approvalNamespaces" : [ {
-      "namespace" : "usage",
+      "namespace" : "agent.assistant",
       "type" : "Primary",
       "status" : "Approved"
     }, {
-      "namespace" : "usage",
+      "namespace" : "agent.assistant",
       "type" : "Primary",
       "status" : "Approved"
     } ],
@@ -500,14 +501,14 @@ open class OrganizationAPI {
     "statusHistory" : [ {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "usage",
+      "namespace" : "agent.assistant",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
     }, {
       "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
       "rejectReason" : "AlternativeExists",
-      "namespace" : "usage",
+      "namespace" : "agent.assistant",
       "message" : "message",
       "status" : "Approved",
       "previousStatus" : "Approved"
@@ -515,7 +516,7 @@ open class OrganizationAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "rejectReason" : "AlternativeExists",
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-    "namespace" : "usage",
+    "namespace" : "agent.assistant",
     "id" : "id",
     "key" : "key",
     "currentValue" : 6.027456183070403,
@@ -747,11 +748,11 @@ open class OrganizationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "namespace" : "usage",
+    "namespace" : "agent.assistant",
     "value" : 6,
     "key" : "key"
   }, {
-    "namespace" : "usage",
+    "namespace" : "agent.assistant",
     "value" : 6,
     "key" : "key"
   } ]
@@ -810,11 +811,11 @@ open class OrganizationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "namespace" : "usage",
+    "namespace" : "agent.assistant",
     "value" : 6,
     "key" : "key"
   }, {
-    "namespace" : "usage",
+    "namespace" : "agent.assistant",
     "value" : 6,
     "key" : "key"
   } ]
@@ -1042,6 +1043,7 @@ open class OrganizationAPI {
      - examples: [{contentType=application/json, example={
   "multifactorAuthenticationRequired" : true,
   "ipAddressAllowlist" : [ "ipAddressAllowlist", "ipAddressAllowlist" ],
+  "ssoLoginFirst" : true,
   "inactivityTimeoutExclusions" : [ "inactivityTimeoutExclusions", "inactivityTimeoutExclusions" ],
   "universalLogout" : true,
   "tokenStorageLocation" : "persistent",

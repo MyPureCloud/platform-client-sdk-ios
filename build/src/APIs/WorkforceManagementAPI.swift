@@ -3122,6 +3122,246 @@ open class WorkforceManagementAPI {
     
     
     
+    /**
+     Get a specific occurrence for the activity plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter occurrenceId: (path) The ID of the activity plan occurrence 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanOccurrence(businessUnitId: String, activityPlanId: String, occurrenceId: String, completion: @escaping ((_ data: ActivityPlanOccurrenceResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitActivityplanOccurrenceWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId, occurrenceId: occurrenceId)
+        requestBuilder.execute { (response: Response<ActivityPlanOccurrenceResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a specific occurrence for the activity plan
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "runDate" : "2000-01-23T04:56:07.000+00:00",
+  "sessions" : [ {
+    "edited" : true,
+    "attendees" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "violations" : [ {
+      "details" : "{}",
+      "type" : "GroupSizeMin"
+    }, {
+      "details" : "{}",
+      "type" : "GroupSizeMin"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "edited" : true,
+    "attendees" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "violations" : [ {
+      "details" : "{}",
+      "type" : "GroupSizeMin"
+    }, {
+      "details" : "{}",
+      "type" : "GroupSizeMin"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "affectedSchedules" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "published" : true,
+    "weekDate" : "2000-01-23",
+    "weekCount" : 2
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "published" : true,
+    "weekDate" : "2000-01-23",
+    "weekCount" : 2
+  } ],
+  "edited" : true,
+  "createdBy" : "{}",
+  "violations" : [ {
+    "details" : "{}",
+    "type" : "MaxSessions"
+  }, {
+    "details" : "{}",
+    "type" : "MaxSessions"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "unscheduledAttendees" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "id" : "id",
+  "facilitated" : true,
+  "sessionDateRange" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter occurrenceId: (path) The ID of the activity plan occurrence 
+
+     - returns: RequestBuilder<ActivityPlanOccurrenceResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanOccurrenceWithRequestBuilder(businessUnitId: String, activityPlanId: String, occurrenceId: String) -> RequestBuilder<ActivityPlanOccurrenceResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let activityPlanIdPreEscape = "\(activityPlanId)"
+        let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let occurrenceIdPreEscape = "\(occurrenceId)"
+        let occurrenceIdPostEscape = occurrenceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{occurrenceId}", with: occurrenceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanOccurrenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Gets an occurrence deletion job
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter occurrenceId: (path) The ID of the activity plan occurrence 
+     - parameter jobId: (path) The ID of the activity plan occurrence deletion job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob(businessUnitId: String, activityPlanId: String, occurrenceId: String, jobId: String, completion: @escaping ((_ data: ActivityPlanJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId, occurrenceId: occurrenceId, jobId: jobId)
+        requestBuilder.execute { (response: Response<ActivityPlanJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets an occurrence deletion job
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/deletions/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "activityPlan" : "{}",
+  "occurrence" : "{}",
+  "error" : "{}",
+  "type" : "RunPlan",
+  "exceptions" : [ {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter occurrenceId: (path) The ID of the activity plan occurrence 
+     - parameter jobId: (path) The ID of the activity plan occurrence deletion job 
+
+     - returns: RequestBuilder<ActivityPlanJobResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobWithRequestBuilder(businessUnitId: String, activityPlanId: String, occurrenceId: String, jobId: String) -> RequestBuilder<ActivityPlanJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/deletions/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let activityPlanIdPreEscape = "\(activityPlanId)"
+        let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let occurrenceIdPreEscape = "\(occurrenceId)"
+        let occurrenceIdPostEscape = occurrenceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{occurrenceId}", with: occurrenceIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
     
     
     
@@ -3321,6 +3561,107 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ActivityPlanJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get all occurrences for an activity plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanOccurrences(businessUnitId: String, activityPlanId: String, completion: @escaping ((_ data: ActivityPlanOccurrenceListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitActivityplanOccurrencesWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId)
+        requestBuilder.execute { (response: Response<ActivityPlanOccurrenceListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get all occurrences for an activity plan
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "scheduledAttendeesCount" : 6,
+    "runDate" : "2000-01-23T04:56:07.000+00:00",
+    "violationCount" : 5,
+    "sessionCount" : 0,
+    "edited" : true,
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "facilitated" : true,
+    "unscheduledAttendeesCount" : 1,
+    "affectedScheduleIndexes" : [ 5, 5 ],
+    "sessionDateRange" : "{}"
+  }, {
+    "scheduledAttendeesCount" : 6,
+    "runDate" : "2000-01-23T04:56:07.000+00:00",
+    "violationCount" : 5,
+    "sessionCount" : 0,
+    "edited" : true,
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "facilitated" : true,
+    "unscheduledAttendeesCount" : 1,
+    "affectedScheduleIndexes" : [ 5, 5 ],
+    "sessionDateRange" : "{}"
+  } ],
+  "schedules" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "published" : true,
+    "weekDate" : "2000-01-23",
+    "weekCount" : 2
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "published" : true,
+    "weekDate" : "2000-01-23",
+    "weekCount" : 2
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+
+     - returns: RequestBuilder<ActivityPlanOccurrenceListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanOccurrencesWithRequestBuilder(businessUnitId: String, activityPlanId: String) -> RequestBuilder<ActivityPlanOccurrenceListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let activityPlanIdPreEscape = "\(activityPlanId)"
+        let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanOccurrenceListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -4588,6 +4929,7 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "fullTimeEquivalentWeeklyHours" : 0.8008281904610115,
   "description" : "description",
+  "importedForecast" : "{}",
   "forecast" : "{}",
   "id" : "id",
   "startBusinessUnitDate" : "2000-01-23",
@@ -5391,6 +5733,8 @@ open class WorkforceManagementAPI {
         case agentTimeOffRequest = "AgentTimeOffRequest"
         case agentWorkPlanBid = "AgentWorkPlanBid"
         case agentScheduleBid = "AgentScheduleBid"
+        case agentScheduleChangeConstraint = "AgentScheduleChangeConstraint"
+        case agentShiftActivityRule = "AgentShiftActivityRule"
         case agentShiftTrade = "AgentShiftTrade"
         case alternativeShift = "AlternativeShift"
         case coaching = "Coaching"
@@ -5405,6 +5749,7 @@ open class WorkforceManagementAPI {
         case agentOpportunitiesQuery = "AgentOpportunitiesQuery"
         case agentOpportunitiesEnrollments = "AgentOpportunitiesEnrollments"
         case agentOpportunitiesEnrollmentsStatuses = "AgentOpportunitiesEnrollmentsStatuses"
+        case agentOpportunitySettings = "AgentOpportunitySettings"
         case agentSchedulingPreferencesQuery = "AgentSchedulingPreferencesQuery"
         case agentSchedulingPreferences = "AgentSchedulingPreferences"
         case agentSchedulingPreferencesSettings = "AgentSchedulingPreferencesSettings"
@@ -5435,6 +5780,7 @@ open class WorkforceManagementAPI {
         case buSchedules = "BuSchedules"
         case serviceGoalTemplates = "ServiceGoalTemplates"
         case planningGroups = "PlanningGroups"
+        case planningGroupsRoutePathsActuals = "PlanningGroupsRoutePathsActuals"
         case longTermStaffing = "LongTermStaffing"
         case shiftTrading = "ShiftTrading"
         case shortTermForecasts = "ShortTermForecasts"
@@ -5449,7 +5795,16 @@ open class WorkforceManagementAPI {
         case workPlans = "WorkPlans"
         case scheduleBid = "ScheduleBid"
         case scheduleBidGroup = "ScheduleBidGroup"
+        case scheduleChangeConstraint = "ScheduleChangeConstraint"
+        case scheduleChangeConstraintBulk = "ScheduleChangeConstraintBulk"
+        case scheduleChangeConstraintListing = "ScheduleChangeConstraintListing"
+        case scheduleChangeConstraintWorkPlans = "ScheduleChangeConstraintWorkPlans"
+        case shiftActivityRule = "ShiftActivityRule"
+        case shiftActivityRuleBulk = "ShiftActivityRuleBulk"
+        case shiftActivityRuleListing = "ShiftActivityRuleListing"
+        case shiftActivityRuleWorkPlans = "ShiftActivityRuleWorkPlans"
         case opportunities = "Opportunities"
+        case opportunitySettings = "OpportunitySettings"
         case opportunitiesQuery = "OpportunitiesQuery"
         case opportunitiesEnrollmentsQuery = "OpportunitiesEnrollmentsQuery"
         case opportunitiesExternalActivitiesQuery = "OpportunitiesExternalActivitiesQuery"
@@ -9975,6 +10330,8 @@ open class WorkforceManagementAPI {
         case agentTimeOffRequest = "AgentTimeOffRequest"
         case agentWorkPlanBid = "AgentWorkPlanBid"
         case agentScheduleBid = "AgentScheduleBid"
+        case agentScheduleChangeConstraint = "AgentScheduleChangeConstraint"
+        case agentShiftActivityRule = "AgentShiftActivityRule"
         case agentShiftTrade = "AgentShiftTrade"
         case alternativeShift = "AlternativeShift"
         case coaching = "Coaching"
@@ -9989,6 +10346,7 @@ open class WorkforceManagementAPI {
         case agentOpportunitiesQuery = "AgentOpportunitiesQuery"
         case agentOpportunitiesEnrollments = "AgentOpportunitiesEnrollments"
         case agentOpportunitiesEnrollmentsStatuses = "AgentOpportunitiesEnrollmentsStatuses"
+        case agentOpportunitySettings = "AgentOpportunitySettings"
         case agentSchedulingPreferencesQuery = "AgentSchedulingPreferencesQuery"
         case agentSchedulingPreferences = "AgentSchedulingPreferences"
         case agentSchedulingPreferencesSettings = "AgentSchedulingPreferencesSettings"
@@ -10019,6 +10377,7 @@ open class WorkforceManagementAPI {
         case buSchedules = "BuSchedules"
         case serviceGoalTemplates = "ServiceGoalTemplates"
         case planningGroups = "PlanningGroups"
+        case planningGroupsRoutePathsActuals = "PlanningGroupsRoutePathsActuals"
         case longTermStaffing = "LongTermStaffing"
         case shiftTrading = "ShiftTrading"
         case shortTermForecasts = "ShortTermForecasts"
@@ -10033,7 +10392,16 @@ open class WorkforceManagementAPI {
         case workPlans = "WorkPlans"
         case scheduleBid = "ScheduleBid"
         case scheduleBidGroup = "ScheduleBidGroup"
+        case scheduleChangeConstraint = "ScheduleChangeConstraint"
+        case scheduleChangeConstraintBulk = "ScheduleChangeConstraintBulk"
+        case scheduleChangeConstraintListing = "ScheduleChangeConstraintListing"
+        case scheduleChangeConstraintWorkPlans = "ScheduleChangeConstraintWorkPlans"
+        case shiftActivityRule = "ShiftActivityRule"
+        case shiftActivityRuleBulk = "ShiftActivityRuleBulk"
+        case shiftActivityRuleListing = "ShiftActivityRuleListing"
+        case shiftActivityRuleWorkPlans = "ShiftActivityRuleWorkPlans"
         case opportunities = "Opportunities"
+        case opportunitySettings = "OpportunitySettings"
         case opportunitiesQuery = "OpportunitiesQuery"
         case opportunitiesEnrollmentsQuery = "OpportunitiesEnrollmentsQuery"
         case opportunitiesExternalActivitiesQuery = "OpportunitiesExternalActivitiesQuery"
@@ -13220,6 +13588,8 @@ open class WorkforceManagementAPI {
         case agentTimeOffRequest = "AgentTimeOffRequest"
         case agentWorkPlanBid = "AgentWorkPlanBid"
         case agentScheduleBid = "AgentScheduleBid"
+        case agentScheduleChangeConstraint = "AgentScheduleChangeConstraint"
+        case agentShiftActivityRule = "AgentShiftActivityRule"
         case agentShiftTrade = "AgentShiftTrade"
         case alternativeShift = "AlternativeShift"
         case coaching = "Coaching"
@@ -13234,6 +13604,7 @@ open class WorkforceManagementAPI {
         case agentOpportunitiesQuery = "AgentOpportunitiesQuery"
         case agentOpportunitiesEnrollments = "AgentOpportunitiesEnrollments"
         case agentOpportunitiesEnrollmentsStatuses = "AgentOpportunitiesEnrollmentsStatuses"
+        case agentOpportunitySettings = "AgentOpportunitySettings"
         case agentSchedulingPreferencesQuery = "AgentSchedulingPreferencesQuery"
         case agentSchedulingPreferences = "AgentSchedulingPreferences"
         case agentSchedulingPreferencesSettings = "AgentSchedulingPreferencesSettings"
@@ -13264,6 +13635,7 @@ open class WorkforceManagementAPI {
         case buSchedules = "BuSchedules"
         case serviceGoalTemplates = "ServiceGoalTemplates"
         case planningGroups = "PlanningGroups"
+        case planningGroupsRoutePathsActuals = "PlanningGroupsRoutePathsActuals"
         case longTermStaffing = "LongTermStaffing"
         case shiftTrading = "ShiftTrading"
         case shortTermForecasts = "ShortTermForecasts"
@@ -13278,7 +13650,16 @@ open class WorkforceManagementAPI {
         case workPlans = "WorkPlans"
         case scheduleBid = "ScheduleBid"
         case scheduleBidGroup = "ScheduleBidGroup"
+        case scheduleChangeConstraint = "ScheduleChangeConstraint"
+        case scheduleChangeConstraintBulk = "ScheduleChangeConstraintBulk"
+        case scheduleChangeConstraintListing = "ScheduleChangeConstraintListing"
+        case scheduleChangeConstraintWorkPlans = "ScheduleChangeConstraintWorkPlans"
+        case shiftActivityRule = "ShiftActivityRule"
+        case shiftActivityRuleBulk = "ShiftActivityRuleBulk"
+        case shiftActivityRuleListing = "ShiftActivityRuleListing"
+        case shiftActivityRuleWorkPlans = "ShiftActivityRuleWorkPlans"
         case opportunities = "Opportunities"
+        case opportunitySettings = "OpportunitySettings"
         case opportunitiesQuery = "OpportunitiesQuery"
         case opportunitiesEnrollmentsQuery = "OpportunitiesEnrollmentsQuery"
         case opportunitiesExternalActivitiesQuery = "OpportunitiesExternalActivitiesQuery"
@@ -16833,6 +17214,7 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "fullTimeEquivalentWeeklyHours" : 0.8008281904610115,
   "description" : "description",
+  "importedForecast" : "{}",
   "forecast" : "{}",
   "id" : "id",
   "startBusinessUnitDate" : "2000-01-23",
@@ -20568,14 +20950,21 @@ open class WorkforceManagementAPI {
 
     
     
+    
+    
+    public enum Expand_postWorkforcemanagementAgentschedulesMine: String { 
+        case agentschedulesWorkplansperweek = "agentSchedules.workPlansPerWeek"
+    }
+    
     /**
      Get published schedule for the current user
      
      - parameter body: (body) body 
+     - parameter expand: (query) Include to access additional data on the agent schedules (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementAgentschedulesMine(body: BuGetCurrentAgentScheduleRequest, completion: @escaping ((_ data: BuCurrentAgentScheduleSearchResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementAgentschedulesMineWithRequestBuilder(body: body)
+    open class func postWorkforcemanagementAgentschedulesMine(body: BuGetCurrentAgentScheduleRequest, expand: [String]? = nil, completion: @escaping ((_ data: BuCurrentAgentScheduleSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAgentschedulesMineWithRequestBuilder(body: body, expand: expand)
         requestBuilder.execute { (response: Response<BuCurrentAgentScheduleSearchResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -20599,6 +20988,7 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "visibilityRange" : "{}",
   "endDate" : "2000-01-23T04:56:07.000+00:00",
   "agentSchedules" : [ {
     "fullDayTimeOffMarkers" : [ {
@@ -20689,7 +21079,16 @@ open class WorkforceManagementAPI {
       "startDate" : "2000-01-23T04:56:07.000+00:00",
       "manuallyEdited" : true
     } ],
-    "user" : "{}"
+    "user" : "{}",
+    "workPlansPerWeek" : [ {
+      "managementUnit" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "managementUnit" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
   }, {
     "fullDayTimeOffMarkers" : [ {
       "activityCodeId" : "activityCodeId",
@@ -20779,7 +21178,16 @@ open class WorkforceManagementAPI {
       "startDate" : "2000-01-23T04:56:07.000+00:00",
       "manuallyEdited" : true
     } ],
-    "user" : "{}"
+    "user" : "{}",
+    "workPlansPerWeek" : [ {
+      "managementUnit" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "managementUnit" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
   } ],
   "publishedSchedules" : [ {
     "selfUri" : "https://openapi-generator.tech",
@@ -20804,15 +21212,19 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter body: (body) body 
+     - parameter expand: (query) Include to access additional data on the agent schedules (optional)
 
      - returns: RequestBuilder<BuCurrentAgentScheduleSearchResponse> 
      */
-    open class func postWorkforcemanagementAgentschedulesMineWithRequestBuilder(body: BuGetCurrentAgentScheduleRequest) -> RequestBuilder<BuCurrentAgentScheduleSearchResponse> {        
+    open class func postWorkforcemanagementAgentschedulesMineWithRequestBuilder(body: BuGetCurrentAgentScheduleRequest, expand: [String]? = nil) -> RequestBuilder<BuCurrentAgentScheduleSearchResponse> {        
         let path = "/api/v2/workforcemanagement/agentschedules/mine"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
 
         let requestBuilder: RequestBuilder<BuCurrentAgentScheduleSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -21269,6 +21681,101 @@ open class WorkforceManagementAPI {
         let activityPlanIdPreEscape = "\(activityPlanId)"
         let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Delete an occurrence for the activity plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter occurrenceId: (path) The ID of the activity plan occurrence 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs(businessUnitId: String, activityPlanId: String, occurrenceId: String, completion: @escaping ((_ data: ActivityPlanJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobsWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId, occurrenceId: occurrenceId)
+        requestBuilder.execute { (response: Response<ActivityPlanJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete an occurrence for the activity plan
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/deletions/jobs
+     - Triggers a job to delete an occurrence of the activity plan. The activity plan cannot be updated until the job completes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "activityPlan" : "{}",
+  "occurrence" : "{}",
+  "error" : "{}",
+  "type" : "RunPlan",
+  "exceptions" : [ {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan 
+     - parameter occurrenceId: (path) The ID of the activity plan occurrence 
+
+     - returns: RequestBuilder<ActivityPlanJobResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobsWithRequestBuilder(businessUnitId: String, activityPlanId: String, occurrenceId: String) -> RequestBuilder<ActivityPlanJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/occurrences/{occurrenceId}/deletions/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let activityPlanIdPreEscape = "\(activityPlanId)"
+        let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let occurrenceIdPreEscape = "\(occurrenceId)"
+        let occurrenceIdPostEscape = occurrenceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{occurrenceId}", with: occurrenceIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
@@ -22325,6 +22832,7 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "fullTimeEquivalentWeeklyHours" : 0.8008281904610115,
   "description" : "description",
+  "importedForecast" : "{}",
   "forecast" : "{}",
   "id" : "id",
   "startBusinessUnitDate" : "2000-01-23",
@@ -22716,6 +23224,7 @@ open class WorkforceManagementAPI {
   "name" : "name",
   "fullTimeEquivalentWeeklyHours" : 0.8008281904610115,
   "description" : "description",
+  "importedForecast" : "{}",
   "forecast" : "{}",
   "id" : "id",
   "startBusinessUnitDate" : "2000-01-23",
@@ -22787,6 +23296,67 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Creates signed upload URLs for importing hourly and daily forecasts for a capacity plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitCapacityplansForecastUploadurls(businessUnitId: String, body: CapacityPlanForecastImportUploadRequest, completion: @escaping ((_ data: CapacityPlanForecastImportUploadResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitCapacityplansForecastUploadurlsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<CapacityPlanForecastImportUploadResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Creates signed upload URLs for importing hourly and daily forecasts for a capacity plan
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/forecast/uploadurls
+     - Returns two upload URLs, one for the hourly forecast and one for the daily forecast. Once both uploads are complete, call POST /capacityplans (new capacity plan) or PATCH /capacityplans/{capacityPlanId} (existing capacity plan) or POST /capacityplans/{capacityPlanId}/copy (copy capacity plan) with both upload keys in importedForecast
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "hourlyForecast" : "{}",
+  "dailyForecast" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<CapacityPlanForecastImportUploadResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitCapacityplansForecastUploadurlsWithRequestBuilder(businessUnitId: String, body: CapacityPlanForecastImportUploadRequest) -> RequestBuilder<CapacityPlanForecastImportUploadResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/forecast/uploadurls"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CapacityPlanForecastImportUploadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

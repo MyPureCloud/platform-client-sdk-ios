@@ -2464,16 +2464,56 @@ open class SCIMAPI {
     
     
     
+    
+    
+    public enum Attributes_patchScimGroup: String { 
+        case _id = "id"
+        case displayname = "displayName"
+        case members = "members"
+        case externalid = "externalId"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
+        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
+        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
+        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
+        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
+        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
+    }
+    
+    
+    
+    public enum ExcludedAttributes_patchScimGroup: String { 
+        case _id = "id"
+        case displayname = "displayName"
+        case members = "members"
+        case externalid = "externalId"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
+        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
+        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
+        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
+        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
+        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
+    }
+    
     /**
      Modify a group
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups. 
      - parameter body: (body) The information used to modify a group. 
      - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchScimGroup(groupId: String, body: ScimV2PatchRequest, ifMatch: String? = nil, completion: @escaping ((_ data: ScimV2Group?,_ error: Error?) -> Void)) {
-        let requestBuilder = patchScimGroupWithRequestBuilder(groupId: groupId, body: body, ifMatch: ifMatch)
+    open class func patchScimGroup(groupId: String, body: ScimV2PatchRequest, ifMatch: String? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil, completion: @escaping ((_ data: ScimV2Group?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchScimGroupWithRequestBuilder(groupId: groupId, body: body, ifMatch: ifMatch, attributes: attributes, excludedAttributes: excludedAttributes)
         requestBuilder.execute { (response: Response<ScimV2Group>?, error) -> Void in
             do {
                 if let e = error {
@@ -2516,10 +2556,12 @@ open class SCIMAPI {
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups. 
      - parameter body: (body) The information used to modify a group. 
      - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
 
      - returns: RequestBuilder<ScimV2Group> 
      */
-    open class func patchScimGroupWithRequestBuilder(groupId: String, body: ScimV2PatchRequest, ifMatch: String? = nil) -> RequestBuilder<ScimV2Group> {        
+    open class func patchScimGroupWithRequestBuilder(groupId: String, body: ScimV2PatchRequest, ifMatch: String? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil) -> RequestBuilder<ScimV2Group> {        
         var path = "/api/v2/scim/groups/{groupId}"
         let groupIdPreEscape = "\(groupId)"
         let groupIdPostEscape = groupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2527,7 +2569,11 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "attributes": attributes, 
+            "excludedAttributes": excludedAttributes
+        ])
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
         ]
@@ -2653,16 +2699,56 @@ open class SCIMAPI {
     
     
     
+    
+    
+    public enum Attributes_patchScimV2Group: String { 
+        case _id = "id"
+        case displayname = "displayName"
+        case members = "members"
+        case externalid = "externalId"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
+        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
+        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
+        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
+        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
+        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
+    }
+    
+    
+    
+    public enum ExcludedAttributes_patchScimV2Group: String { 
+        case _id = "id"
+        case displayname = "displayName"
+        case members = "members"
+        case externalid = "externalId"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
+        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
+        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
+        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
+        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
+        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
+    }
+    
     /**
      Modify a group
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
      - parameter body: (body) The information used to modify a group. 
      - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchScimV2Group(groupId: String, body: ScimV2PatchRequest, ifMatch: String? = nil, completion: @escaping ((_ data: ScimV2Group?,_ error: Error?) -> Void)) {
-        let requestBuilder = patchScimV2GroupWithRequestBuilder(groupId: groupId, body: body, ifMatch: ifMatch)
+    open class func patchScimV2Group(groupId: String, body: ScimV2PatchRequest, ifMatch: String? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil, completion: @escaping ((_ data: ScimV2Group?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchScimV2GroupWithRequestBuilder(groupId: groupId, body: body, ifMatch: ifMatch, attributes: attributes, excludedAttributes: excludedAttributes)
         requestBuilder.execute { (response: Response<ScimV2Group>?, error) -> Void in
             do {
                 if let e = error {
@@ -2705,10 +2791,12 @@ open class SCIMAPI {
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
      - parameter body: (body) The information used to modify a group. 
      - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
 
      - returns: RequestBuilder<ScimV2Group> 
      */
-    open class func patchScimV2GroupWithRequestBuilder(groupId: String, body: ScimV2PatchRequest, ifMatch: String? = nil) -> RequestBuilder<ScimV2Group> {        
+    open class func patchScimV2GroupWithRequestBuilder(groupId: String, body: ScimV2PatchRequest, ifMatch: String? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil) -> RequestBuilder<ScimV2Group> {        
         var path = "/api/v2/scim/v2/groups/{groupId}"
         let groupIdPreEscape = "\(groupId)"
         let groupIdPostEscape = groupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2716,7 +2804,11 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "attributes": attributes, 
+            "excludedAttributes": excludedAttributes
+        ])
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
         ]

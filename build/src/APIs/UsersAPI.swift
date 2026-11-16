@@ -742,18 +742,28 @@ open class UsersAPI {
 
     
     
+    
+    
     /**
      Delete a verifier
      
      - parameter verifierId: (path) Verifier ID 
+     - parameter replacementDefaultVerifierId: (query) The ID of an enabled verifier to make the default after deleting the current default (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteUsersMeVerifier(verifierId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        let requestBuilder = deleteUsersMeVerifierWithRequestBuilder(verifierId: verifierId)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
+    open class func deleteUsersMeVerifier(verifierId: String, replacementDefaultVerifierId: String? = nil, completion: @escaping ((_ data: DeleteVerifierResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteUsersMeVerifierWithRequestBuilder(verifierId: verifierId, replacementDefaultVerifierId: replacementDefaultVerifierId)
+        requestBuilder.execute { (response: Response<DeleteVerifierResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
                 completion(nil, error)
             }
         }
@@ -765,12 +775,16 @@ open class UsersAPI {
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "defaultVerifier" : "{}"
+}, statusCode=200}]
      
      - parameter verifierId: (path) Verifier ID 
+     - parameter replacementDefaultVerifierId: (query) The ID of an enabled verifier to make the default after deleting the current default (optional)
 
-     - returns: RequestBuilder<Void> 
+     - returns: RequestBuilder<DeleteVerifierResponse> 
      */
-    open class func deleteUsersMeVerifierWithRequestBuilder(verifierId: String) -> RequestBuilder<Void> {        
+    open class func deleteUsersMeVerifierWithRequestBuilder(verifierId: String, replacementDefaultVerifierId: String? = nil) -> RequestBuilder<DeleteVerifierResponse> {        
         var path = "/api/v2/users/me/verifiers/{verifierId}"
         let verifierIdPreEscape = "\(verifierId)"
         let verifierIdPostEscape = verifierIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -778,9 +792,12 @@ open class UsersAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "replacementDefaultVerifierId": replacementDefaultVerifierId
+        ])
 
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<DeleteVerifierResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
@@ -8570,6 +8587,74 @@ open class UsersAPI {
 
     
     
+    
+    
+    /**
+     Get a verifier
+     
+     - parameter userId: (path) User ID 
+     - parameter verifierId: (path) Verifier ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUserVerifier(userId: String, verifierId: String, completion: @escaping ((_ data: Verifier?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUserVerifierWithRequestBuilder(userId: userId, verifierId: verifierId)
+        requestBuilder.execute { (response: Response<Verifier>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a verifier
+     - GET /api/v2/users/{userId}/verifiers/{verifierId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "default" : true,
+  "credential" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "type" : "totp",
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter userId: (path) User ID 
+     - parameter verifierId: (path) Verifier ID 
+
+     - returns: RequestBuilder<Verifier> 
+     */
+    open class func getUserVerifierWithRequestBuilder(userId: String, verifierId: String) -> RequestBuilder<Verifier> {        
+        var path = "/api/v2/users/{userId}/verifiers/{verifierId}"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let verifierIdPreEscape = "\(verifierId)"
+        let verifierIdPostEscape = verifierIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{verifierId}", with: verifierIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Verifier>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Get a list of verifiers
      
@@ -10079,9 +10164,9 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 5,
+  "total" : 1,
   "pageCount" : 5,
-  "pageNumber" : 1,
+  "pageNumber" : 6,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
@@ -10134,7 +10219,7 @@ open class UsersAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 6,
+  "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -10284,9 +10369,9 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 5,
+  "total" : 1,
   "pageCount" : 5,
-  "pageNumber" : 1,
+  "pageNumber" : 6,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
@@ -10339,7 +10424,7 @@ open class UsersAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 6,
+  "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -25136,34 +25221,34 @@ open class UsersAPI {
   } ],
   "aggregations" : [ {
     "metric" : "metric",
-    "count" : 0,
+    "count" : 2,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     } ]
   }, {
     "metric" : "metric",
-    "count" : 0,
+    "count" : 2,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     } ]
   } ]

@@ -3927,6 +3927,7 @@ open class RoutingAPI {
     
     public enum Expand_getRoutingQueue: String { 
         case identityresolution = "identityresolution"
+        case outboundblendingstatus = "outboundblendingstatus"
     }
     
     

@@ -638,6 +638,78 @@ open class SpeechTextAnalyticsAPI {
     
     
     /**
+     Get the transcript outline for a specific conversation and communication.
+     
+     - parameter conversationId: (path) The ID of the conversation 
+     - parameter communicationId: (path) The ID of the communication 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsConversationCommunicationTranscriptoutline(conversationId: String, communicationId: String, completion: @escaping ((_ data: TranscriptOutlineResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsConversationCommunicationTranscriptoutlineWithRequestBuilder(conversationId: conversationId, communicationId: communicationId)
+        requestBuilder.execute { (response: Response<TranscriptOutlineResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the transcript outline for a specific conversation and communication.
+     - GET /api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcriptoutline
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "segments" : [ {
+    "firstPhraseStartTimeMs" : 0,
+    "header" : "header",
+    "description" : "description",
+    "lastPhraseStartTimeMs" : 6
+  }, {
+    "firstPhraseStartTimeMs" : 0,
+    "header" : "header",
+    "description" : "description",
+    "lastPhraseStartTimeMs" : 6
+  } ]
+}, statusCode=200}]
+     
+     - parameter conversationId: (path) The ID of the conversation 
+     - parameter communicationId: (path) The ID of the communication 
+
+     - returns: RequestBuilder<TranscriptOutlineResponse> 
+     */
+    open class func getSpeechandtextanalyticsConversationCommunicationTranscriptoutlineWithRequestBuilder(conversationId: String, communicationId: String) -> RequestBuilder<TranscriptOutlineResponse> {        
+        var path = "/api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcriptoutline"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let communicationIdPreEscape = "\(communicationId)"
+        let communicationIdPostEscape = communicationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{communicationId}", with: communicationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TranscriptOutlineResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Get the pre-signed S3 URL for the transcript of a specific communication of a conversation
      
      - parameter conversationId: (path) Conversation ID 
@@ -871,9 +943,19 @@ open class SpeechTextAnalyticsAPI {
       "outcome" : "outcome"
     } ],
     "summaryType" : "Conversation",
+    "communicationId" : "communicationId",
     "mediaType" : "Unknown",
     "language" : "language",
-    "summaryId" : "summaryId"
+    "summaryId" : "summaryId",
+    "labels" : [ {
+      "name" : "name",
+      "description" : "description",
+      "type" : "Unknown"
+    }, {
+      "name" : "name",
+      "description" : "description",
+      "type" : "Unknown"
+    } ]
   }, {
     "sourceId" : "sourceId",
     "summary" : "summary",
@@ -892,9 +974,19 @@ open class SpeechTextAnalyticsAPI {
       "outcome" : "outcome"
     } ],
     "summaryType" : "Conversation",
+    "communicationId" : "communicationId",
     "mediaType" : "Unknown",
     "language" : "language",
-    "summaryId" : "summaryId"
+    "summaryId" : "summaryId",
+    "labels" : [ {
+      "name" : "name",
+      "description" : "description",
+      "type" : "Unknown"
+    }, {
+      "name" : "name",
+      "description" : "description",
+      "type" : "Unknown"
+    } ]
   } ]
 }, statusCode=200}]
      
@@ -2455,7 +2547,7 @@ open class SpeechTextAnalyticsAPI {
   "tags" : [ "tags", "tags" ],
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
-  "strictness" : "1",
+  "strictness" : 0,
   "modifiedBy" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -2473,12 +2565,12 @@ open class SpeechTextAnalyticsAPI {
   "phrases" : [ {
     "sentiment" : "Unspecified",
     "isAIGenerated" : true,
-    "strictness" : "1",
+    "strictness" : 6,
     "text" : "text"
   }, {
     "sentiment" : "Unspecified",
     "isAIGenerated" : true,
-    "strictness" : "1",
+    "strictness" : 6,
     "text" : "text"
   } ],
   "participants" : "External"
@@ -2596,7 +2688,7 @@ open class SpeechTextAnalyticsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "total" : 5,
-  "pageCount" : 5,
+  "pageCount" : 2,
   "entities" : [ {
     "dialect" : "dialect",
     "selfUri" : "https://openapi-generator.tech",
@@ -2605,10 +2697,10 @@ open class SpeechTextAnalyticsAPI {
     "published" : true,
     "matchingType" : "Lexical",
     "tags" : [ "tags", "tags" ],
-    "phrasesCount" : 6,
+    "phrasesCount" : 1,
     "name" : "name",
-    "programsCount" : 0,
-    "strictness" : "1",
+    "programsCount" : 6,
+    "strictness" : 0,
     "modifiedBy" : {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -2623,10 +2715,10 @@ open class SpeechTextAnalyticsAPI {
     "published" : true,
     "matchingType" : "Lexical",
     "tags" : [ "tags", "tags" ],
-    "phrasesCount" : 6,
+    "phrasesCount" : 1,
     "name" : "name",
-    "programsCount" : 0,
-    "strictness" : "1",
+    "programsCount" : 6,
+    "strictness" : 0,
     "modifiedBy" : {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -2635,7 +2727,7 @@ open class SpeechTextAnalyticsAPI {
     "participants" : "External"
   } ],
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 1,
+  "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
@@ -3871,7 +3963,7 @@ open class SpeechTextAnalyticsAPI {
   "tags" : [ "tags", "tags" ],
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
-  "strictness" : "1",
+  "strictness" : 0,
   "modifiedBy" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -3889,12 +3981,12 @@ open class SpeechTextAnalyticsAPI {
   "phrases" : [ {
     "sentiment" : "Unspecified",
     "isAIGenerated" : true,
-    "strictness" : "1",
+    "strictness" : 6,
     "text" : "text"
   }, {
     "sentiment" : "Unspecified",
     "isAIGenerated" : true,
-    "strictness" : "1",
+    "strictness" : 6,
     "text" : "text"
   } ],
   "participants" : "External"
@@ -4726,7 +4818,7 @@ open class SpeechTextAnalyticsAPI {
   "tags" : [ "tags", "tags" ],
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
-  "strictness" : "1",
+  "strictness" : 0,
   "modifiedBy" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -4744,12 +4836,12 @@ open class SpeechTextAnalyticsAPI {
   "phrases" : [ {
     "sentiment" : "Unspecified",
     "isAIGenerated" : true,
-    "strictness" : "1",
+    "strictness" : 6,
     "text" : "text"
   }, {
     "sentiment" : "Unspecified",
     "isAIGenerated" : true,
-    "strictness" : "1",
+    "strictness" : 6,
     "text" : "text"
   } ],
   "participants" : "External"

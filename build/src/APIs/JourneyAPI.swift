@@ -934,16 +934,26 @@ open class JourneyAPI {
     
     
     
+    
+    
+    public enum Expand_getExternalcontactsContactJourneySegments: String { 
+        case segment = "segment"
+    }
+    
+    
+    
     /**
      Retrieve segment assignments by external contact ID.
      
      - parameter contactId: (path) ExternalContact ID 
      - parameter includeMerged: (query) Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)
      - parameter limit: (query) Number of entities to return. Default of 25, maximum of 500. (optional)
+     - parameter expand: (query) Expand the response with additional fields. (optional)
+     - parameter segmentIds: (query) IDs of segments to return. Maximum of 5 (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getExternalcontactsContactJourneySegments(contactId: String, includeMerged: Bool? = nil, limit: Int? = nil, completion: @escaping ((_ data: SegmentAssignmentListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getExternalcontactsContactJourneySegmentsWithRequestBuilder(contactId: contactId, includeMerged: includeMerged, limit: limit)
+    open class func getExternalcontactsContactJourneySegments(contactId: String, includeMerged: Bool? = nil, limit: Int? = nil, expand: [String]? = nil, segmentIds: [String]? = nil, completion: @escaping ((_ data: SegmentAssignmentListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsContactJourneySegmentsWithRequestBuilder(contactId: contactId, includeMerged: includeMerged, limit: limit, expand: expand, segmentIds: segmentIds)
         requestBuilder.execute { (response: Response<SegmentAssignmentListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -985,10 +995,12 @@ open class JourneyAPI {
      - parameter contactId: (path) ExternalContact ID 
      - parameter includeMerged: (query) Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)
      - parameter limit: (query) Number of entities to return. Default of 25, maximum of 500. (optional)
+     - parameter expand: (query) Expand the response with additional fields. (optional)
+     - parameter segmentIds: (query) IDs of segments to return. Maximum of 5 (optional)
 
      - returns: RequestBuilder<SegmentAssignmentListing> 
      */
-    open class func getExternalcontactsContactJourneySegmentsWithRequestBuilder(contactId: String, includeMerged: Bool? = nil, limit: Int? = nil) -> RequestBuilder<SegmentAssignmentListing> {        
+    open class func getExternalcontactsContactJourneySegmentsWithRequestBuilder(contactId: String, includeMerged: Bool? = nil, limit: Int? = nil, expand: [String]? = nil, segmentIds: [String]? = nil) -> RequestBuilder<SegmentAssignmentListing> {        
         var path = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments"
         let contactIdPreEscape = "\(contactId)"
         let contactIdPostEscape = contactIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -999,7 +1011,9 @@ open class JourneyAPI {
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "includeMerged": includeMerged, 
-            "limit": limit?.encodeToJSON()
+            "limit": limit?.encodeToJSON(), 
+            "expand": expand, 
+            "segmentIds": segmentIds
         ])
 
         let requestBuilder: RequestBuilder<SegmentAssignmentListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -3218,6 +3232,8 @@ open class JourneyAPI {
     
     
     
+    
+    
     /**
      Retrieve all segments.
      
@@ -3228,10 +3244,11 @@ open class JourneyAPI {
      - parameter segmentIds: (query) IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional)
      - parameter queryFields: (query) Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
      - parameter queryValue: (query) Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)
+     - parameter displayNames: (query) Display names of segments to return. Case-insensitive matching. Maximum of 5. Must not contain exact duplicates (case-sensitive). Use of this parameter is not compatible with pagination or sorting or querying or segmentIds. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getJourneySegments(sortBy: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, isActive: Bool? = nil, segmentIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil, completion: @escaping ((_ data: SegmentListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getJourneySegmentsWithRequestBuilder(sortBy: sortBy, pageSize: pageSize, pageNumber: pageNumber, isActive: isActive, segmentIds: segmentIds, queryFields: queryFields, queryValue: queryValue)
+    open class func getJourneySegments(sortBy: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, isActive: Bool? = nil, segmentIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil, displayNames: [String]? = nil, completion: @escaping ((_ data: SegmentListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneySegmentsWithRequestBuilder(sortBy: sortBy, pageSize: pageSize, pageNumber: pageNumber, isActive: isActive, segmentIds: segmentIds, queryFields: queryFields, queryValue: queryValue, displayNames: displayNames)
         requestBuilder.execute { (response: Response<SegmentListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -3306,10 +3323,11 @@ open class JourneyAPI {
      - parameter segmentIds: (query) IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional)
      - parameter queryFields: (query) Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
      - parameter queryValue: (query) Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)
+     - parameter displayNames: (query) Display names of segments to return. Case-insensitive matching. Maximum of 5. Must not contain exact duplicates (case-sensitive). Use of this parameter is not compatible with pagination or sorting or querying or segmentIds. (optional)
 
      - returns: RequestBuilder<SegmentListing> 
      */
-    open class func getJourneySegmentsWithRequestBuilder(sortBy: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, isActive: Bool? = nil, segmentIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil) -> RequestBuilder<SegmentListing> {        
+    open class func getJourneySegmentsWithRequestBuilder(sortBy: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, isActive: Bool? = nil, segmentIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil, displayNames: [String]? = nil) -> RequestBuilder<SegmentListing> {        
         let path = "/api/v2/journey/segments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -3322,7 +3340,8 @@ open class JourneyAPI {
             "isActive": isActive, 
             "segmentIds": segmentIds, 
             "queryFields": queryFields, 
-            "queryValue": queryValue
+            "queryValue": queryValue, 
+            "displayNames": displayNames
         ])
 
         let requestBuilder: RequestBuilder<SegmentListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

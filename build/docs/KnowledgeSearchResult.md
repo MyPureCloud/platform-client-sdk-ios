@@ -8,7 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **generatedAnswer** | **String** | The generated answer for search query. | [optional] |
 | **retrievedReferences** | [**[KnowledgeRetrievedReference]**]([KnowledgeRetrievedReference]) | The retrieved references for the search query. | [optional] |
+| **failureReason** | **String** | Reason the search request did not produce an answer or relevant content. | [optional] |
+| **message** | **String** | A detailed error message describing the failureReason. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

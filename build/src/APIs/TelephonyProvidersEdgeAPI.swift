@@ -15822,6 +15822,146 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
+    /**
+     Get the trunkbase metrics.
+     
+     - parameter trunkBaseId: (path) TrunkBase Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyTrunkbasesettingMetrics(trunkBaseId: String, completion: @escaping ((_ data: TrunkBaseMetrics?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyTrunkbasesettingMetricsWithRequestBuilder(trunkBaseId: trunkBaseId)
+        requestBuilder.execute { (response: Response<TrunkBaseMetrics>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the trunkbase metrics.
+     - GET /api/v2/telephony/trunkbasesettings/{trunkBaseId}/metrics
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "qosMismatchCount" : 5,
+  "outboundCallCount" : 1,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "eventTime" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "trunkBase" : "{}",
+  "trunkType" : "EXTERNAL",
+  "inboundCallCount" : 6
+}, statusCode=200}]
+     
+     - parameter trunkBaseId: (path) TrunkBase Id 
+
+     - returns: RequestBuilder<TrunkBaseMetrics> 
+     */
+    open class func getTelephonyTrunkbasesettingMetricsWithRequestBuilder(trunkBaseId: String) -> RequestBuilder<TrunkBaseMetrics> {        
+        var path = "/api/v2/telephony/trunkbasesettings/{trunkBaseId}/metrics"
+        let trunkBaseIdPreEscape = "\(trunkBaseId)"
+        let trunkBaseIdPostEscape = trunkBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{trunkBaseId}", with: trunkBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TrunkBaseMetrics>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get the trunkbase metrics for the specified ids.
+     
+     - parameter ids: (query) TrunkBase Ids 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyTrunkbasesettingsMetrics(ids: String, completion: @escaping ((_ data: TrunkBaseMetricsEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyTrunkbasesettingsMetricsWithRequestBuilder(ids: ids)
+        requestBuilder.execute { (response: Response<TrunkBaseMetricsEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the trunkbase metrics for the specified ids.
+     - GET /api/v2/telephony/trunkbasesettings/metrics
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 0,
+  "entities" : [ {
+    "qosMismatchCount" : 5,
+    "outboundCallCount" : 1,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "eventTime" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "trunkBase" : "{}",
+    "trunkType" : "EXTERNAL",
+    "inboundCallCount" : 6
+  }, {
+    "qosMismatchCount" : 5,
+    "outboundCallCount" : 1,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "eventTime" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "trunkBase" : "{}",
+    "trunkType" : "EXTERNAL",
+    "inboundCallCount" : 6
+  } ],
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter ids: (query) TrunkBase Ids 
+
+     - returns: RequestBuilder<TrunkBaseMetricsEntityListing> 
+     */
+    open class func getTelephonyTrunkbasesettingsMetricsWithRequestBuilder(ids: String) -> RequestBuilder<TrunkBaseMetricsEntityListing> {        
+        let path = "/api/v2/telephony/trunkbasesettings/metrics"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "ids": ids
+        ])
+
+        let requestBuilder: RequestBuilder<TrunkBaseMetricsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**

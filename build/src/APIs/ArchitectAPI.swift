@@ -1731,6 +1731,7 @@ open class ArchitectAPI {
         case smsphonenumber = "SMSPHONENUMBER"
         case sttengine = "STTENGINE"
         case surveyform = "SURVEYFORM"
+        case surveyformcontext = "SURVEYFORMCONTEXT"
         case surveyinviteflow = "SURVEYINVITEFLOW"
         case systemprompt = "SYSTEMPROMPT"
         case ttsengine = "TTSENGINE"
@@ -1830,6 +1831,7 @@ open class ArchitectAPI {
         case smsphonenumber = "SMSPHONENUMBER"
         case sttengine = "STTENGINE"
         case surveyform = "SURVEYFORM"
+        case surveyformcontext = "SURVEYFORMCONTEXT"
         case surveyinviteflow = "SURVEYINVITEFLOW"
         case systemprompt = "SYSTEMPROMPT"
         case ttsengine = "TTSENGINE"
@@ -1925,6 +1927,7 @@ open class ArchitectAPI {
         case smsphonenumber = "SMSPHONENUMBER"
         case sttengine = "STTENGINE"
         case surveyform = "SURVEYFORM"
+        case surveyformcontext = "SURVEYFORMCONTEXT"
         case surveyinviteflow = "SURVEYINVITEFLOW"
         case systemprompt = "SYSTEMPROMPT"
         case ttsengine = "TTSENGINE"
@@ -2266,6 +2269,7 @@ open class ArchitectAPI {
         case smsphonenumber = "SMSPHONENUMBER"
         case sttengine = "STTENGINE"
         case surveyform = "SURVEYFORM"
+        case surveyformcontext = "SURVEYFORMCONTEXT"
         case surveyinviteflow = "SURVEYINVITEFLOW"
         case systemprompt = "SYSTEMPROMPT"
         case ttsengine = "TTSENGINE"
@@ -2464,6 +2468,7 @@ open class ArchitectAPI {
         case smsphonenumber = "SMSPHONENUMBER"
         case sttengine = "STTENGINE"
         case surveyform = "SURVEYFORM"
+        case surveyformcontext = "SURVEYFORMCONTEXT"
         case surveyinviteflow = "SURVEYINVITEFLOW"
         case systemprompt = "SYSTEMPROMPT"
         case ttsengine = "TTSENGINE"
@@ -2675,6 +2680,7 @@ open class ArchitectAPI {
         case smsphonenumber = "SMSPHONENUMBER"
         case sttengine = "STTENGINE"
         case surveyform = "SURVEYFORM"
+        case surveyformcontext = "SURVEYFORMCONTEXT"
         case surveyinviteflow = "SURVEYINVITEFLOW"
         case systemprompt = "SYSTEMPROMPT"
         case ttsengine = "TTSENGINE"
@@ -2779,6 +2785,7 @@ open class ArchitectAPI {
         case smsphonenumber = "SMSPHONENUMBER"
         case sttengine = "STTENGINE"
         case surveyform = "SURVEYFORM"
+        case surveyformcontext = "SURVEYFORMCONTEXT"
         case surveyinviteflow = "SURVEYINVITEFLOW"
         case systemprompt = "SYSTEMPROMPT"
         case ttsengine = "TTSENGINE"
@@ -3055,6 +3062,7 @@ open class ArchitectAPI {
         case smsphonenumber = "SMSPHONENUMBER"
         case sttengine = "STTENGINE"
         case surveyform = "SURVEYFORM"
+        case surveyformcontext = "SURVEYFORMCONTEXT"
         case surveyinviteflow = "SURVEYINVITEFLOW"
         case systemprompt = "SYSTEMPROMPT"
         case ttsengine = "TTSENGINE"
@@ -3155,6 +3163,7 @@ open class ArchitectAPI {
         case smsphonenumber = "SMSPHONENUMBER"
         case sttengine = "STTENGINE"
         case surveyform = "SURVEYFORM"
+        case surveyformcontext = "SURVEYFORMCONTEXT"
         case surveyinviteflow = "SURVEYINVITEFLOW"
         case systemprompt = "SYSTEMPROMPT"
         case ttsengine = "TTSENGINE"
@@ -3250,6 +3259,7 @@ open class ArchitectAPI {
         case smsphonenumber = "SMSPHONENUMBER"
         case sttengine = "STTENGINE"
         case surveyform = "SURVEYFORM"
+        case surveyformcontext = "SURVEYFORMCONTEXT"
         case surveyinviteflow = "SURVEYINVITEFLOW"
         case systemprompt = "SYSTEMPROMPT"
         case ttsengine = "TTSENGINE"
@@ -3605,6 +3615,7 @@ open class ArchitectAPI {
         case smsphonenumber = "SMSPHONENUMBER"
         case sttengine = "STTENGINE"
         case surveyform = "SURVEYFORM"
+        case surveyformcontext = "SURVEYFORMCONTEXT"
         case surveyinviteflow = "SURVEYINVITEFLOW"
         case systemprompt = "SYSTEMPROMPT"
         case ttsengine = "TTSENGINE"
@@ -3702,6 +3713,7 @@ open class ArchitectAPI {
         case smsphonenumber = "SMSPHONENUMBER"
         case sttengine = "STTENGINE"
         case surveyform = "SURVEYFORM"
+        case surveyformcontext = "SURVEYFORMCONTEXT"
         case surveyinviteflow = "SURVEYINVITEFLOW"
         case systemprompt = "SYSTEMPROMPT"
         case ttsengine = "TTSENGINE"
@@ -23731,6 +23743,130 @@ open class ArchitectAPI {
     
     
     
+    public enum Expand_getFlowsValidateJob: String { 
+        case messages = "messages"
+    }
+    
+    /**
+     Fetch Architect Validate Job Status
+     
+     - parameter jobId: (path) Job ID 
+     - parameter expand: (query) Which fields, if any, to expand. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsValidateJob(jobId: String, expand: [String]? = nil, completion: @escaping ((_ data: ArchitectValidateJobStateResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsValidateJobWithRequestBuilder(jobId: jobId, expand: expand)
+        requestBuilder.execute { (response: Response<ArchitectValidateJobStateResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Fetch Architect Validate Job Status
+     - GET /api/v2/flows/validate/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "messages" : [ {
+    "dateTime" : "2000-01-23T04:56:07.000+00:00",
+    "details" : [ {
+      "responseBody" : "responseBody",
+      "method" : "method",
+      "requestBody" : "requestBody",
+      "errorMessage" : "errorMessage",
+      "errorCode" : "errorCode",
+      "correlationId" : "correlationId",
+      "type" : "NetworkDiagnostic",
+      "url" : "url",
+      "statusMessage" : "statusMessage",
+      "statusCode" : 0
+    }, {
+      "responseBody" : "responseBody",
+      "method" : "method",
+      "requestBody" : "requestBody",
+      "errorMessage" : "errorMessage",
+      "errorCode" : "errorCode",
+      "correlationId" : "correlationId",
+      "type" : "NetworkDiagnostic",
+      "url" : "url",
+      "statusMessage" : "statusMessage",
+      "statusCode" : 0
+    } ],
+    "text" : "text",
+    "type" : "Error"
+  }, {
+    "dateTime" : "2000-01-23T04:56:07.000+00:00",
+    "details" : [ {
+      "responseBody" : "responseBody",
+      "method" : "method",
+      "requestBody" : "requestBody",
+      "errorMessage" : "errorMessage",
+      "errorCode" : "errorCode",
+      "correlationId" : "correlationId",
+      "type" : "NetworkDiagnostic",
+      "url" : "url",
+      "statusMessage" : "statusMessage",
+      "statusCode" : 0
+    }, {
+      "responseBody" : "responseBody",
+      "method" : "method",
+      "requestBody" : "requestBody",
+      "errorMessage" : "errorMessage",
+      "errorCode" : "errorCode",
+      "correlationId" : "correlationId",
+      "type" : "NetworkDiagnostic",
+      "url" : "url",
+      "statusMessage" : "statusMessage",
+      "statusCode" : 0
+    } ],
+    "text" : "text",
+    "type" : "Error"
+  } ],
+  "id" : "id",
+  "command" : "Publish",
+  "status" : "Registered"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) Job ID 
+     - parameter expand: (query) Which fields, if any, to expand. (optional)
+
+     - returns: RequestBuilder<ArchitectValidateJobStateResponse> 
+     */
+    open class func getFlowsValidateJobWithRequestBuilder(jobId: String, expand: [String]? = nil) -> RequestBuilder<ArchitectValidateJobStateResponse> {        
+        var path = "/api/v2/flows/validate/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<ArchitectValidateJobStateResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     /**
      Updates a grammar
      
@@ -38887,6 +39023,61 @@ open class ArchitectAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FlowOutcome>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Register Architect Validate Job
+     
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postFlowsValidateJobs(body: RegisterArchitectValidateJob, completion: @escaping ((_ data: RegisterArchitectValidateJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postFlowsValidateJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<RegisterArchitectValidateJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Register Architect Validate Job
+     - POST /api/v2/flows/validate/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "totalFlows" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "status" : "Registered"
+}, statusCode=200}]
+     
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<RegisterArchitectValidateJobResponse> 
+     */
+    open class func postFlowsValidateJobsWithRequestBuilder(body: RegisterArchitectValidateJob) -> RequestBuilder<RegisterArchitectValidateJobResponse> {        
+        let path = "/api/v2/flows/validate/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<RegisterArchitectValidateJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

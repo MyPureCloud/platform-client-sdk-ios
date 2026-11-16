@@ -3170,7 +3170,7 @@ RoutingAPI.getRoutingQueue(queueId: queueId, expand: expand, forceMemberRecount:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **queueId** | **String**| Queue ID | |
-| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: identityresolution ("identityresolution") |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: identityresolution ("identityresolution"), outboundblendingstatus ("outboundblendingstatus") |
 | **forceMemberRecount** | **Bool**| Force a recount of queue membership. This is an expensive, opt-in operation intended for repairing out-of-sync membership counters. | [optional] |
 
 
@@ -6730,7 +6730,7 @@ Assign multiple routing skills to a user
 
 Wraps PATCH /api/v2/users/{userId}/routingskills/bulk  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:assign
 
@@ -9252,7 +9252,7 @@ Assign multiple routing skills to a user, replacing any current assignments
 
 Wraps PUT /api/v2/users/{userId}/routingskills/bulk  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:assign
 
@@ -9292,4 +9292,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

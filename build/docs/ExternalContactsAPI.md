@@ -764,7 +764,7 @@ ExternalContactsAPI.getExternalcontactsContactIdentifiers(contactId: contactId) 
 
 
 
-> [SegmentAssignmentListing](SegmentAssignmentListing) getExternalcontactsContactJourneySegments(contactId, includeMerged, limit)
+> [SegmentAssignmentListing](SegmentAssignmentListing) getExternalcontactsContactJourneySegments(contactId, includeMerged, limit, expand, segmentIds)
 
 Retrieve segment assignments by external contact ID.
 
@@ -787,9 +787,11 @@ PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 let contactId: String = "" // ExternalContact ID
 let includeMerged: Bool = true // Indicates whether to return segment assignments from all external contacts in the merge-set of the given one.
 let limit: Int = 0 // Number of entities to return. Default of 25, maximum of 500.
+let expand: [String] = [""] // Expand the response with additional fields.
+let segmentIds: [String] = [""] // IDs of segments to return. Maximum of 5
 
 // Code example
-ExternalContactsAPI.getExternalcontactsContactJourneySegments(contactId: contactId, includeMerged: includeMerged, limit: limit) { (response, error) in
+ExternalContactsAPI.getExternalcontactsContactJourneySegments(contactId: contactId, includeMerged: includeMerged, limit: limit, expand: expand, segmentIds: segmentIds) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -807,6 +809,8 @@ ExternalContactsAPI.getExternalcontactsContactJourneySegments(contactId: contact
 | **contactId** | **String**| ExternalContact ID | |
 | **includeMerged** | **Bool**| Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. | [optional] |
 | **limit** | **Int**| Number of entities to return. Default of 25, maximum of 500. | [optional] |
+| **expand** | [**[String]**](String)| Expand the response with additional fields. | [optional]<br />**Values**: segment ("segment") |
+| **segmentIds** | [**[String]**](String)| IDs of segments to return. Maximum of 5 | [optional] |
 
 
 ### Return type
@@ -7695,4 +7699,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

@@ -460,19 +460,16 @@ open class CaseManagementAPI {
     
     
     
-    
-    
     /**
      Get a list of Case associations for the Case.
      
      - parameter caseId: (path) Case identifier. 
-     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
-     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter after: (query) Cursor that points to the end of the previously returned page. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum is 200. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getCasemanagementCaseAssociations(caseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: CaseAssociationListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getCasemanagementCaseAssociationsWithRequestBuilder(caseId: caseId, before: before, after: after, pageSize: pageSize)
+    open class func getCasemanagementCaseAssociations(caseId: String, after: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: CaseAssociationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getCasemanagementCaseAssociationsWithRequestBuilder(caseId: caseId, after: after, pageSize: pageSize)
         requestBuilder.execute { (response: Response<CaseAssociationListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -519,19 +516,16 @@ open class CaseManagementAPI {
     "conversation" : "{}",
     "case" : "{}"
   } ],
-  "selfUri" : "selfUri",
-  "nextUri" : "nextUri",
-  "previousUri" : "previousUri"
+  "nextUri" : "nextUri"
 }, statusCode=200}]
      
      - parameter caseId: (path) Case identifier. 
-     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
-     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter after: (query) Cursor that points to the end of the previously returned page. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum is 200. (optional)
 
      - returns: RequestBuilder<CaseAssociationListing> 
      */
-    open class func getCasemanagementCaseAssociationsWithRequestBuilder(caseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil) -> RequestBuilder<CaseAssociationListing> {        
+    open class func getCasemanagementCaseAssociationsWithRequestBuilder(caseId: String, after: String? = nil, pageSize: Int? = nil) -> RequestBuilder<CaseAssociationListing> {        
         var path = "/api/v2/casemanagement/cases/{caseId}/associations"
         let caseIdPreEscape = "\(caseId)"
         let caseIdPostEscape = caseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -541,9 +535,8 @@ open class CaseManagementAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "before": before, 
             "after": after, 
-            "pageSize": pageSize
+            "pageSize": pageSize?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<CaseAssociationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -683,9 +676,7 @@ open class CaseManagementAPI {
     "user" : "{}",
     "content" : "content"
   } ],
-  "selfUri" : "selfUri",
-  "nextUri" : "nextUri",
-  "previousUri" : "previousUri"
+  "nextUri" : "nextUri"
 }, statusCode=200}]
      
      - parameter caseId: (path) Case identifier. 
@@ -880,20 +871,17 @@ open class CaseManagementAPI {
     
     
     
-    
-    
     /**
      Get a list of Steps.
      
      - parameter caseId: (path) Case identifier. 
      - parameter stageId: (path) Stage identifier. 
-     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
-     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter after: (query) Cursor that points to the end of the previously returned page. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum is 200. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getCasemanagementCaseStageSteps(caseId: String, stageId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: StepListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getCasemanagementCaseStageStepsWithRequestBuilder(caseId: caseId, stageId: stageId, before: before, after: after, pageSize: pageSize)
+    open class func getCasemanagementCaseStageSteps(caseId: String, stageId: String, after: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: StepListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getCasemanagementCaseStageStepsWithRequestBuilder(caseId: caseId, stageId: stageId, after: after, pageSize: pageSize)
         requestBuilder.execute { (response: Response<StepListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -950,20 +938,17 @@ open class CaseManagementAPI {
     "case" : "{}",
     "status" : "Unknown"
   } ],
-  "selfUri" : "selfUri",
-  "nextUri" : "nextUri",
-  "previousUri" : "previousUri"
+  "nextUri" : "nextUri"
 }, statusCode=200}]
      
      - parameter caseId: (path) Case identifier. 
      - parameter stageId: (path) Stage identifier. 
-     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
-     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter after: (query) Cursor that points to the end of the previously returned page. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum is 200. (optional)
 
      - returns: RequestBuilder<StepListing> 
      */
-    open class func getCasemanagementCaseStageStepsWithRequestBuilder(caseId: String, stageId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil) -> RequestBuilder<StepListing> {        
+    open class func getCasemanagementCaseStageStepsWithRequestBuilder(caseId: String, stageId: String, after: String? = nil, pageSize: Int? = nil) -> RequestBuilder<StepListing> {        
         var path = "/api/v2/casemanagement/cases/{caseId}/stages/{stageId}/steps"
         let caseIdPreEscape = "\(caseId)"
         let caseIdPostEscape = caseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -976,9 +961,8 @@ open class CaseManagementAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "before": before, 
             "after": after, 
-            "pageSize": pageSize
+            "pageSize": pageSize?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<StepListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -992,19 +976,16 @@ open class CaseManagementAPI {
     
     
     
-    
-    
     /**
      Get a list of Stages.
      
      - parameter caseId: (path) Case identifier. 
-     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
-     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter after: (query) Cursor that points to the end of the previously returned page. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum is 200. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getCasemanagementCaseStages(caseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: StageListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getCasemanagementCaseStagesWithRequestBuilder(caseId: caseId, before: before, after: after, pageSize: pageSize)
+    open class func getCasemanagementCaseStages(caseId: String, after: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: StageListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getCasemanagementCaseStagesWithRequestBuilder(caseId: caseId, after: after, pageSize: pageSize)
         requestBuilder.execute { (response: Response<StageListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1057,19 +1038,16 @@ open class CaseManagementAPI {
     "case" : "{}",
     "status" : "Unknown"
   } ],
-  "selfUri" : "selfUri",
-  "nextUri" : "nextUri",
-  "previousUri" : "previousUri"
+  "nextUri" : "nextUri"
 }, statusCode=200}]
      
      - parameter caseId: (path) Case identifier. 
-     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
-     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter after: (query) Cursor that points to the end of the previously returned page. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum is 200. (optional)
 
      - returns: RequestBuilder<StageListing> 
      */
-    open class func getCasemanagementCaseStagesWithRequestBuilder(caseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil) -> RequestBuilder<StageListing> {        
+    open class func getCasemanagementCaseStagesWithRequestBuilder(caseId: String, after: String? = nil, pageSize: Int? = nil) -> RequestBuilder<StageListing> {        
         var path = "/api/v2/casemanagement/cases/{caseId}/stages"
         let caseIdPreEscape = "\(caseId)"
         let caseIdPostEscape = caseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1079,9 +1057,8 @@ open class CaseManagementAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "before": before, 
             "after": after, 
-            "pageSize": pageSize
+            "pageSize": pageSize?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<StageListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1642,8 +1619,6 @@ open class CaseManagementAPI {
     
     
     
-    
-    
     public enum Expands_getCasemanagementCaseplanVersionStageplanStepplans: String { 
         case caseplan = "caseplan"
         case stageplan = "stageplan"
@@ -1656,14 +1631,13 @@ open class CaseManagementAPI {
      - parameter caseplanId: (path) Caseplan identifier. 
      - parameter versionId: (path) Caseplan version identifier. 
      - parameter stageplanId: (path) Stageplan identifier. 
-     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
-     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter after: (query) Cursor that points to the end of the previously returned page. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum is 200. (optional)
      - parameter expands: (query) Fields to expand. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getCasemanagementCaseplanVersionStageplanStepplans(caseplanId: String, versionId: String, stageplanId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, expands: [String]? = nil, completion: @escaping ((_ data: StepplanListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getCasemanagementCaseplanVersionStageplanStepplansWithRequestBuilder(caseplanId: caseplanId, versionId: versionId, stageplanId: stageplanId, before: before, after: after, pageSize: pageSize, expands: expands)
+    open class func getCasemanagementCaseplanVersionStageplanStepplans(caseplanId: String, versionId: String, stageplanId: String, after: String? = nil, pageSize: Int? = nil, expands: [String]? = nil, completion: @escaping ((_ data: StepplanListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getCasemanagementCaseplanVersionStageplanStepplansWithRequestBuilder(caseplanId: caseplanId, versionId: versionId, stageplanId: stageplanId, after: after, pageSize: pageSize, expands: expands)
         requestBuilder.execute { (response: Response<StepplanListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1712,22 +1686,19 @@ open class CaseManagementAPI {
     "activityType" : "Unknown",
     "stageplan" : "{}"
   } ],
-  "selfUri" : "selfUri",
-  "nextUri" : "nextUri",
-  "previousUri" : "previousUri"
+  "nextUri" : "nextUri"
 }, statusCode=200}]
      
      - parameter caseplanId: (path) Caseplan identifier. 
      - parameter versionId: (path) Caseplan version identifier. 
      - parameter stageplanId: (path) Stageplan identifier. 
-     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
-     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter after: (query) Cursor that points to the end of the previously returned page. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum is 200. (optional)
      - parameter expands: (query) Fields to expand. (optional)
 
      - returns: RequestBuilder<StepplanListing> 
      */
-    open class func getCasemanagementCaseplanVersionStageplanStepplansWithRequestBuilder(caseplanId: String, versionId: String, stageplanId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, expands: [String]? = nil) -> RequestBuilder<StepplanListing> {        
+    open class func getCasemanagementCaseplanVersionStageplanStepplansWithRequestBuilder(caseplanId: String, versionId: String, stageplanId: String, after: String? = nil, pageSize: Int? = nil, expands: [String]? = nil) -> RequestBuilder<StepplanListing> {        
         var path = "/api/v2/casemanagement/caseplans/{caseplanId}/versions/{versionId}/stageplans/{stageplanId}/stepplans"
         let caseplanIdPreEscape = "\(caseplanId)"
         let caseplanIdPostEscape = caseplanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1743,9 +1714,8 @@ open class CaseManagementAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "before": before, 
             "after": after, 
-            "pageSize": pageSize, 
+            "pageSize": pageSize?.encodeToJSON(), 
             "expands": expands
         ])
 
@@ -1754,8 +1724,6 @@ open class CaseManagementAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
-    
-    
     
     
     
@@ -1775,14 +1743,13 @@ open class CaseManagementAPI {
      
      - parameter caseplanId: (path) Caseplan identifier. 
      - parameter versionId: (path) Caseplan version identifier. 
-     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
-     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter after: (query) Cursor that points to the end of the previously returned page. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum is 200. (optional)
      - parameter expands: (query) Fields to expand. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getCasemanagementCaseplanVersionStageplans(caseplanId: String, versionId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, expands: [String]? = nil, completion: @escaping ((_ data: StageplanListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getCasemanagementCaseplanVersionStageplansWithRequestBuilder(caseplanId: caseplanId, versionId: versionId, before: before, after: after, pageSize: pageSize, expands: expands)
+    open class func getCasemanagementCaseplanVersionStageplans(caseplanId: String, versionId: String, after: String? = nil, pageSize: Int? = nil, expands: [String]? = nil, completion: @escaping ((_ data: StageplanListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getCasemanagementCaseplanVersionStageplansWithRequestBuilder(caseplanId: caseplanId, versionId: versionId, after: after, pageSize: pageSize, expands: expands)
         requestBuilder.execute { (response: Response<StageplanListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1825,21 +1792,18 @@ open class CaseManagementAPI {
     "modifiedBy" : "{}",
     "id" : "id"
   } ],
-  "selfUri" : "selfUri",
-  "nextUri" : "nextUri",
-  "previousUri" : "previousUri"
+  "nextUri" : "nextUri"
 }, statusCode=200}]
      
      - parameter caseplanId: (path) Caseplan identifier. 
      - parameter versionId: (path) Caseplan version identifier. 
-     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
-     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter after: (query) Cursor that points to the end of the previously returned page. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum is 200. (optional)
      - parameter expands: (query) Fields to expand. (optional)
 
      - returns: RequestBuilder<StageplanListing> 
      */
-    open class func getCasemanagementCaseplanVersionStageplansWithRequestBuilder(caseplanId: String, versionId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, expands: [String]? = nil) -> RequestBuilder<StageplanListing> {        
+    open class func getCasemanagementCaseplanVersionStageplansWithRequestBuilder(caseplanId: String, versionId: String, after: String? = nil, pageSize: Int? = nil, expands: [String]? = nil) -> RequestBuilder<StageplanListing> {        
         var path = "/api/v2/casemanagement/caseplans/{caseplanId}/versions/{versionId}/stageplans"
         let caseplanIdPreEscape = "\(caseplanId)"
         let caseplanIdPostEscape = caseplanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1852,9 +1816,8 @@ open class CaseManagementAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "before": before, 
             "after": after, 
-            "pageSize": pageSize, 
+            "pageSize": pageSize?.encodeToJSON(), 
             "expands": expands
         ])
 
@@ -1942,9 +1905,7 @@ open class CaseManagementAPI {
     "id" : "id",
     "latest" : 1
   } ],
-  "selfUri" : "selfUri",
-  "nextUri" : "nextUri",
-  "previousUri" : "previousUri"
+  "nextUri" : "nextUri"
 }, statusCode=200}]
      
      - parameter after: (query) Cursor that points to the end of the previously returned set of Caseplans. (optional)
@@ -2070,9 +2031,7 @@ open class CaseManagementAPI {
     "ttlSeconds" : 6,
     "status" : "Unknown"
   } ],
-  "selfUri" : "selfUri",
-  "nextUri" : "nextUri",
-  "previousUri" : "previousUri"
+  "nextUri" : "nextUri"
 }, statusCode=200}]
      
      - parameter externalContactId: (path) External contact identifier. 
@@ -3598,10 +3557,7 @@ open class CaseManagementAPI {
     "id" : "id",
     "latest" : 1
   } ],
-  "selfUri" : "selfUri",
-  "after" : "after",
-  "nextUri" : "nextUri",
-  "previousUri" : "previousUri"
+  "after" : "after"
 }, statusCode=200}]
      
      - parameter body: (body) Caseplan query request. 
@@ -3750,10 +3706,7 @@ open class CaseManagementAPI {
     "conversation" : "{}",
     "case" : "{}"
   } ],
-  "selfUri" : "selfUri",
-  "after" : "after",
-  "nextUri" : "nextUri",
-  "previousUri" : "previousUri"
+  "after" : "after"
 }, statusCode=200}]
      
      - parameter body: (body) Case association query request. 

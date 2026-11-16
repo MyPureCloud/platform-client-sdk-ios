@@ -11,4 +11,4 @@ Request body for publishing a guide version
 
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

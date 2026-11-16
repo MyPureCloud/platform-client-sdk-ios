@@ -14,6 +14,9 @@
 | **sendExitingAlarmNotifications** | **Bool** | Indicates if the alert will send a notification when it is closed. | [optional] |
 | **waitBetweenNotificationMs** | **Int64** | The amount of time in milliseconds to wait between notification. | [optional] |
 | **conditions** | [**CommonRuleConditions**](CommonRuleConditions) | The set of metric conditions that would trigger an alert. | [optional] |
+| **muted** | **Bool** | Flag that indicates if the rule is muted. | [optional] |
+| **dateStartMute** | [**Date**](Date) | Timestamp of when the mute status of the rule should start. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateEndMute** | [**Date**](Date) | Timestamp of when the mute status of the rule should end. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **type** | **String** | The type of the rule. | |
 | **inAlarm** | **Bool** | Indicates if the rule is in alarm state. | [optional] |
 | **user** | [**UserReference**](UserReference) | The entity that created the rule. | [optional] |
@@ -24,4 +27,4 @@
 
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

@@ -1083,7 +1083,7 @@ SCIMAPI.getScimV2Users(startIndex: startIndex, count: count, attributes: attribu
 
 
 
-> [ScimV2Group](ScimV2Group) patchScimGroup(groupId, body, ifMatch)
+> [ScimV2Group](ScimV2Group) patchScimGroup(groupId, body, ifMatch, attributes, excludedAttributes)
 
 Modify a group
 
@@ -1106,9 +1106,11 @@ PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 let groupId: String = "" // The ID of a group. Returned with GET /api/v2/scim/groups.
 let body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a group.
 let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\".
+let attributes: [String] = [""] // Indicates which attributes to include. Returns these attributes and the \"id\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes.
+let excludedAttributes: [String] = [""] // Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns \"id\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes.
 
 // Code example
-SCIMAPI.patchScimGroup(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in
+SCIMAPI.patchScimGroup(groupId: groupId, body: body, ifMatch: ifMatch, attributes: attributes, excludedAttributes: excludedAttributes) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1126,6 +1128,8 @@ SCIMAPI.patchScimGroup(groupId: groupId, body: body, ifMatch: ifMatch) { (respon
 | **groupId** | **String**| The ID of a group. Returned with GET /api/v2/scim/groups. | |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest)| The information used to modify a group. | |
 | **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". | [optional] |
+| **attributes** | [**[String]**](String)| Indicates which attributes to include. Returns these attributes and the \"id\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
+| **excludedAttributes** | [**[String]**](String)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns \"id\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
 
 
 ### Return type
@@ -1197,7 +1201,7 @@ SCIMAPI.patchScimUser(userId: userId, body: body, ifMatch: ifMatch) { (response,
 
 
 
-> [ScimV2Group](ScimV2Group) patchScimV2Group(groupId, body, ifMatch)
+> [ScimV2Group](ScimV2Group) patchScimV2Group(groupId, body, ifMatch, attributes, excludedAttributes)
 
 Modify a group
 
@@ -1220,9 +1224,11 @@ PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 let groupId: String = "" // The ID of a group. Returned with GET /api/v2/scim/v2/groups.
 let body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a group.
 let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\".
+let attributes: [String] = [""] // Indicates which attributes to include. Returns these attributes and the \"id\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes.
+let excludedAttributes: [String] = [""] // Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns \"id\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes.
 
 // Code example
-SCIMAPI.patchScimV2Group(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in
+SCIMAPI.patchScimV2Group(groupId: groupId, body: body, ifMatch: ifMatch, attributes: attributes, excludedAttributes: excludedAttributes) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1240,6 +1246,8 @@ SCIMAPI.patchScimV2Group(groupId: groupId, body: body, ifMatch: ifMatch) { (resp
 | **groupId** | **String**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. | |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest)| The information used to modify a group. | |
 | **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". | [optional] |
+| **attributes** | [**[String]**](String)| Indicates which attributes to include. Returns these attributes and the \"id\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
+| **excludedAttributes** | [**[String]**](String)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns \"id\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
 
 
 ### Return type
@@ -1645,4 +1653,4 @@ SCIMAPI.putScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (response,
 [**ScimV2User**](ScimV2User)
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

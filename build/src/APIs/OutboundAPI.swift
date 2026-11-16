@@ -2951,6 +2951,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -2993,6 +2994,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -3189,7 +3191,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -3321,7 +3323,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -3599,7 +3601,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -3681,7 +3683,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -9816,6 +9818,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -9858,6 +9861,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -10054,7 +10058,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -10186,7 +10190,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -10464,7 +10468,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -10546,7 +10550,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -16769,6 +16773,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -16811,6 +16816,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -17007,7 +17013,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -17139,7 +17145,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -17417,7 +17423,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -17499,7 +17505,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -23634,6 +23640,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -23676,6 +23683,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -23872,7 +23880,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -24004,7 +24012,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -24282,7 +24290,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -24364,7 +24372,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -30593,6 +30601,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -30635,6 +30644,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -30831,7 +30841,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -30963,7 +30973,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -31241,7 +31251,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -31323,7 +31333,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -37458,6 +37468,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -37500,6 +37511,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -37696,7 +37708,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -37828,7 +37840,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -38106,7 +38118,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -38188,7 +38200,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -44411,6 +44423,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -44453,6 +44466,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -44649,7 +44663,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -44781,7 +44795,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -45059,7 +45073,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -45141,7 +45155,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -51276,6 +51290,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -51318,6 +51333,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -51514,7 +51530,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -51646,7 +51662,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -51924,7 +51940,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -52006,7 +52022,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -58230,6 +58246,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -58272,6 +58289,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -58468,7 +58486,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -58600,7 +58618,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -58878,7 +58896,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -58960,7 +58978,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -65095,6 +65113,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -65137,6 +65156,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -65333,7 +65353,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -65465,7 +65485,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -65743,7 +65763,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -65825,7 +65845,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -72048,6 +72068,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -72090,6 +72111,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -72286,7 +72308,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -72418,7 +72440,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -72696,7 +72718,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -72778,7 +72800,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -78913,6 +78935,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -78955,6 +78978,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -79151,7 +79175,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -79283,7 +79307,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -79561,7 +79585,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -79643,7 +79667,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -85867,6 +85891,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -85909,6 +85934,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -86105,7 +86131,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -86237,7 +86263,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -86515,7 +86541,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -86597,7 +86623,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -92732,6 +92758,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -92774,6 +92801,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -92970,7 +92998,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -93102,7 +93130,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -93380,7 +93408,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -93462,7 +93490,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -99685,6 +99713,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -99727,6 +99756,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -99923,7 +99953,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -100055,7 +100085,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -100333,7 +100363,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -100415,7 +100445,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -106550,6 +106580,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -106592,6 +106623,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -106788,7 +106820,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -106920,7 +106952,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -107198,7 +107230,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -107280,7 +107312,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -113504,6 +113536,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -113546,6 +113579,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -113742,7 +113776,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -113874,7 +113908,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -114152,7 +114186,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -114234,7 +114268,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -120369,6 +120403,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -120411,6 +120446,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -120607,7 +120643,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -120739,7 +120775,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -121017,7 +121053,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -121099,7 +121135,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -127322,6 +127358,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -127364,6 +127401,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -127560,7 +127598,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -127692,7 +127730,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -127970,7 +128008,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -128052,7 +128090,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -134187,6 +134225,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -134229,6 +134268,7 @@ open class OutboundAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -134425,7 +134465,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -134557,7 +134597,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -134835,7 +134875,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -134917,7 +134957,7 @@ open class OutboundAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -142757,13 +142797,13 @@ open class OutboundAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "completedRecords" : 1,
-  "totalRecords" : 6,
+  "completedRecords" : 6,
+  "totalRecords" : 0,
   "failureReason" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id",
   "state" : "InProgress",
-  "percentComplete" : 5,
+  "percentComplete" : 1,
   "downloadURI" : "downloadURI",
   "type" : "BulkDelete"
 }, statusCode=200}]
@@ -142826,23 +142866,23 @@ open class OutboundAPI {
      - examples: [{contentType=application/json, example={
   "total" : 0,
   "entities" : [ {
-    "completedRecords" : 1,
-    "totalRecords" : 6,
+    "completedRecords" : 6,
+    "totalRecords" : 0,
     "failureReason" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "InProgress",
-    "percentComplete" : 5,
+    "percentComplete" : 1,
     "downloadURI" : "downloadURI",
     "type" : "BulkDelete"
   }, {
-    "completedRecords" : 1,
-    "totalRecords" : 6,
+    "completedRecords" : 6,
+    "totalRecords" : 0,
     "failureReason" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "InProgress",
-    "percentComplete" : 5,
+    "percentComplete" : 1,
     "downloadURI" : "downloadURI",
     "type" : "BulkDelete"
   } ],
@@ -151146,13 +151186,13 @@ open class OutboundAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "completedRecords" : 1,
-  "totalRecords" : 6,
+  "completedRecords" : 6,
+  "totalRecords" : 0,
   "failureReason" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id",
   "state" : "InProgress",
-  "percentComplete" : 5,
+  "percentComplete" : 1,
   "downloadURI" : "downloadURI",
   "type" : "BulkDelete"
 }, statusCode=200}]
@@ -151213,13 +151253,13 @@ open class OutboundAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "completedRecords" : 1,
-  "totalRecords" : 6,
+  "completedRecords" : 6,
+  "totalRecords" : 0,
   "failureReason" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id",
   "state" : "InProgress",
-  "percentComplete" : 5,
+  "percentComplete" : 1,
   "downloadURI" : "downloadURI",
   "type" : "BulkDelete"
 }, statusCode=200}]

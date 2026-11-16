@@ -7151,4 +7151,4 @@ KnowledgeAPI.putKnowledgeSource(sourceId: sourceId, body: body) { (response, err
 [**V3SourceDetailedResponse**](V3SourceDetailedResponse)
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

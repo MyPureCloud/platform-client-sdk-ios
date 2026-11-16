@@ -228,12 +228,34 @@ open class IntentsAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "usage" : [ {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "sourceType" : "Bot",
+      "entityType" : "Intent",
+      "source" : "{}"
+    }, {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "sourceType" : "Bot",
+      "entityType" : "Intent",
+      "source" : "{}"
+    } ],
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
     "id" : "id"
   }, {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "usage" : [ {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "sourceType" : "Bot",
+      "entityType" : "Intent",
+      "source" : "{}"
+    }, {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "sourceType" : "Bot",
+      "entityType" : "Intent",
+      "source" : "{}"
+    } ],
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "description" : "description",
@@ -272,14 +294,17 @@ open class IntentsAPI {
 
     
     
+    
+    
     /**
      Get category for categoryId
      
      - parameter categoryId: (path) Category id 
+     - parameter includeUsage: (query) When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIntentsCategory(categoryId: String, completion: @escaping ((_ data: IntentsCategory?,_ error: Error?) -> Void)) {
-        let requestBuilder = getIntentsCategoryWithRequestBuilder(categoryId: categoryId)
+    open class func getIntentsCategory(categoryId: String, includeUsage: Bool? = nil, completion: @escaping ((_ data: IntentsCategory?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntentsCategoryWithRequestBuilder(categoryId: categoryId, includeUsage: includeUsage)
         requestBuilder.execute { (response: Response<IntentsCategory>?, error) -> Void in
             do {
                 if let e = error {
@@ -304,6 +329,17 @@ open class IntentsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "usage" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "sourceType" : "Bot",
+    "entityType" : "Intent",
+    "source" : "{}"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "sourceType" : "Bot",
+    "entityType" : "Intent",
+    "source" : "{}"
+  } ],
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "description" : "description",
@@ -311,10 +347,11 @@ open class IntentsAPI {
 }, statusCode=200}]
      
      - parameter categoryId: (path) Category id 
+     - parameter includeUsage: (query) When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)
 
      - returns: RequestBuilder<IntentsCategory> 
      */
-    open class func getIntentsCategoryWithRequestBuilder(categoryId: String) -> RequestBuilder<IntentsCategory> {        
+    open class func getIntentsCategoryWithRequestBuilder(categoryId: String, includeUsage: Bool? = nil) -> RequestBuilder<IntentsCategory> {        
         var path = "/api/v2/intents/categories/{categoryId}"
         let categoryIdPreEscape = "\(categoryId)"
         let categoryIdPostEscape = categoryIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -322,7 +359,10 @@ open class IntentsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeUsage": includeUsage
+        ])
 
         let requestBuilder: RequestBuilder<IntentsCategory>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -331,14 +371,17 @@ open class IntentsAPI {
 
     
     
+    
+    
     /**
      Get customer intent for customerIntentId
      
      - parameter customerIntentId: (path) Customer Intent id 
+     - parameter includeUsage: (query) When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIntentsCustomerintent(customerIntentId: String, completion: @escaping ((_ data: CustomerIntentResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getIntentsCustomerintentWithRequestBuilder(customerIntentId: customerIntentId)
+    open class func getIntentsCustomerintent(customerIntentId: String, includeUsage: Bool? = nil, completion: @escaping ((_ data: CustomerIntentResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntentsCustomerintentWithRequestBuilder(customerIntentId: customerIntentId, includeUsage: includeUsage)
         requestBuilder.execute { (response: Response<CustomerIntentResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -363,6 +406,17 @@ open class IntentsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "usage" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "sourceType" : "Bot",
+    "entityType" : "Intent",
+    "source" : "{}"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "sourceType" : "Bot",
+    "entityType" : "Intent",
+    "source" : "{}"
+  } ],
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "expiryTime" : 0,
@@ -372,10 +426,11 @@ open class IntentsAPI {
 }, statusCode=200}]
      
      - parameter customerIntentId: (path) Customer Intent id 
+     - parameter includeUsage: (query) When usage tracking is enabled, usage is absent when includeUsage is false or omitted, empty when no usage exists, and populated when usage exists. includeUsage is ignored when usage tracking is off. (optional)
 
      - returns: RequestBuilder<CustomerIntentResponse> 
      */
-    open class func getIntentsCustomerintentWithRequestBuilder(customerIntentId: String) -> RequestBuilder<CustomerIntentResponse> {        
+    open class func getIntentsCustomerintentWithRequestBuilder(customerIntentId: String, includeUsage: Bool? = nil) -> RequestBuilder<CustomerIntentResponse> {        
         var path = "/api/v2/intents/customerintents/{customerIntentId}"
         let customerIntentIdPreEscape = "\(customerIntentId)"
         let customerIntentIdPostEscape = customerIntentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -383,7 +438,10 @@ open class IntentsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeUsage": includeUsage
+        ])
 
         let requestBuilder: RequestBuilder<CustomerIntentResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -524,6 +582,17 @@ open class IntentsAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "usage" : [ {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "sourceType" : "Bot",
+      "entityType" : "Intent",
+      "source" : "{}"
+    }, {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "sourceType" : "Bot",
+      "entityType" : "Intent",
+      "source" : "{}"
+    } ],
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "expiryTime" : 0,
@@ -532,6 +601,17 @@ open class IntentsAPI {
     "category" : "{}"
   }, {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "usage" : [ {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "sourceType" : "Bot",
+      "entityType" : "Intent",
+      "source" : "{}"
+    }, {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "sourceType" : "Bot",
+      "entityType" : "Intent",
+      "source" : "{}"
+    } ],
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "expiryTime" : 0,
@@ -703,6 +783,17 @@ open class IntentsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "usage" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "sourceType" : "Bot",
+    "entityType" : "Intent",
+    "source" : "{}"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "sourceType" : "Bot",
+    "entityType" : "Intent",
+    "source" : "{}"
+  } ],
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "description" : "description",
@@ -766,6 +857,17 @@ open class IntentsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "usage" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "sourceType" : "Bot",
+    "entityType" : "Intent",
+    "source" : "{}"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "sourceType" : "Bot",
+    "entityType" : "Intent",
+    "source" : "{}"
+  } ],
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "expiryTime" : 0,
@@ -896,6 +998,17 @@ open class IntentsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "usage" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "sourceType" : "Bot",
+    "entityType" : "Intent",
+    "source" : "{}"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "sourceType" : "Bot",
+    "entityType" : "Intent",
+    "source" : "{}"
+  } ],
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "description" : "description",
@@ -1086,6 +1199,17 @@ open class IntentsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "usage" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "sourceType" : "Bot",
+    "entityType" : "Intent",
+    "source" : "{}"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "sourceType" : "Bot",
+    "entityType" : "Intent",
+    "source" : "{}"
+  } ],
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "expiryTime" : 0,
@@ -1144,6 +1268,17 @@ open class IntentsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "usage" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "sourceType" : "Bot",
+    "entityType" : "Intent",
+    "source" : "{}"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "sourceType" : "Bot",
+    "entityType" : "Intent",
+    "source" : "{}"
+  } ],
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "expiryTime" : 0,

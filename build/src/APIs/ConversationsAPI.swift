@@ -6777,6 +6777,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -6819,6 +6820,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -7015,7 +7017,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -7147,7 +7149,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -7425,7 +7427,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -7507,7 +7509,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -13642,6 +13644,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -13684,6 +13687,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -13880,7 +13884,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -14012,7 +14016,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -14290,7 +14294,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -14372,7 +14376,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -21554,6 +21558,7 @@ open class ConversationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "thirdPartySuggestion" : "{}",
+  "suggestedKnowledgeAnswer" : "{}",
   "knowledgeSearch" : "{}",
   "assistant" : "{}",
   "knowledgeArticle" : "{}",
@@ -21664,6 +21669,7 @@ open class ConversationsAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "thirdPartySuggestion" : "{}",
+    "suggestedKnowledgeAnswer" : "{}",
     "knowledgeSearch" : "{}",
     "assistant" : "{}",
     "knowledgeArticle" : "{}",
@@ -21682,6 +21688,7 @@ open class ConversationsAPI {
     "conversation" : "{}"
   }, {
     "thirdPartySuggestion" : "{}",
+    "suggestedKnowledgeAnswer" : "{}",
     "knowledgeSearch" : "{}",
     "assistant" : "{}",
     "knowledgeArticle" : "{}",
@@ -21773,13 +21780,27 @@ open class ConversationsAPI {
     "reason" : "{}",
     "editedSummary" : "{}",
     "confidence" : 0.8008282,
+    "latestCommunication" : "{}",
     "mediaType" : "Email",
     "language" : "language",
     "resolution" : "{}",
+    "lastEditedBy" : "{}",
+    "labels" : [ {
+      "name" : "name",
+      "description" : "description",
+      "type" : "Unknown"
+    }, {
+      "name" : "name",
+      "description" : "description",
+      "type" : "Unknown"
+    } ],
     "followup" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "text" : "text",
+    "summarySourceType" : "GenesysNativeService",
+    "triggerType" : "OnDemand",
+    "triggerSource" : "{}",
     "communication" : "{}",
     "predictedWrapupCodes" : [ {
       "confidence" : 6.0274563,
@@ -21794,6 +21815,7 @@ open class ConversationsAPI {
       "description" : "description",
       "id" : "id"
     } ],
+    "queue" : "{}",
     "status" : "Pending",
     "participants" : [ {
       "selfUri" : "https://openapi-generator.tech",
@@ -21806,13 +21828,27 @@ open class ConversationsAPI {
     "reason" : "{}",
     "editedSummary" : "{}",
     "confidence" : 0.8008282,
+    "latestCommunication" : "{}",
     "mediaType" : "Email",
     "language" : "language",
     "resolution" : "{}",
+    "lastEditedBy" : "{}",
+    "labels" : [ {
+      "name" : "name",
+      "description" : "description",
+      "type" : "Unknown"
+    }, {
+      "name" : "name",
+      "description" : "description",
+      "type" : "Unknown"
+    } ],
     "followup" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "text" : "text",
+    "summarySourceType" : "GenesysNativeService",
+    "triggerType" : "OnDemand",
+    "triggerSource" : "{}",
     "communication" : "{}",
     "predictedWrapupCodes" : [ {
       "confidence" : 6.0274563,
@@ -21827,6 +21863,7 @@ open class ConversationsAPI {
       "description" : "description",
       "id" : "id"
     } ],
+    "queue" : "{}",
     "status" : "Pending",
     "participants" : [ {
       "selfUri" : "https://openapi-generator.tech",
@@ -22061,6 +22098,7 @@ open class ConversationsAPI {
         "id" : "id",
         "dialerPreview" : "{}",
         "direction" : "inbound",
+        "clientIpAddress" : "clientIpAddress",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "voicemail" : "{}",
@@ -22103,6 +22141,7 @@ open class ConversationsAPI {
         "id" : "id",
         "dialerPreview" : "{}",
         "direction" : "inbound",
+        "clientIpAddress" : "clientIpAddress",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "voicemail" : "{}",
@@ -22299,7 +22338,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -22431,7 +22470,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -22709,7 +22748,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -22791,7 +22830,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -28926,6 +28965,7 @@ open class ConversationsAPI {
         "id" : "id",
         "dialerPreview" : "{}",
         "direction" : "inbound",
+        "clientIpAddress" : "clientIpAddress",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "voicemail" : "{}",
@@ -28968,6 +29008,7 @@ open class ConversationsAPI {
         "id" : "id",
         "dialerPreview" : "{}",
         "direction" : "inbound",
+        "clientIpAddress" : "clientIpAddress",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "voicemail" : "{}",
@@ -29164,7 +29205,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -29296,7 +29337,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -29574,7 +29615,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -29656,7 +29697,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -35851,6 +35892,7 @@ open class ConversationsAPI {
         "id" : "id",
         "dialerPreview" : "{}",
         "direction" : "inbound",
+        "clientIpAddress" : "clientIpAddress",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "voicemail" : "{}",
@@ -35893,6 +35935,7 @@ open class ConversationsAPI {
         "id" : "id",
         "dialerPreview" : "{}",
         "direction" : "inbound",
+        "clientIpAddress" : "clientIpAddress",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "voicemail" : "{}",
@@ -36089,7 +36132,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -36221,7 +36264,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -36499,7 +36542,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -36581,7 +36624,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -42716,6 +42759,7 @@ open class ConversationsAPI {
         "id" : "id",
         "dialerPreview" : "{}",
         "direction" : "inbound",
+        "clientIpAddress" : "clientIpAddress",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "voicemail" : "{}",
@@ -42758,6 +42802,7 @@ open class ConversationsAPI {
         "id" : "id",
         "dialerPreview" : "{}",
         "direction" : "inbound",
+        "clientIpAddress" : "clientIpAddress",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "voicemail" : "{}",
@@ -42954,7 +42999,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -43086,7 +43131,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -43364,7 +43409,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -43446,7 +43491,7 @@ open class ConversationsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -50070,6 +50115,7 @@ open class ConversationsAPI {
     "startAcwTime" : "2000-01-23T04:56:07.000+00:00",
     "direction" : "inbound",
     "mediaRoles" : [ "mediaRoles", "mediaRoles" ],
+    "clientIpAddress" : "clientIpAddress",
     "wrapup" : "{}",
     "address" : "address",
     "voicemail" : "{}",
@@ -50120,6 +50166,7 @@ open class ConversationsAPI {
     "startAcwTime" : "2000-01-23T04:56:07.000+00:00",
     "direction" : "inbound",
     "mediaRoles" : [ "mediaRoles", "mediaRoles" ],
+    "clientIpAddress" : "clientIpAddress",
     "wrapup" : "{}",
     "address" : "address",
     "voicemail" : "{}",
@@ -50500,6 +50547,7 @@ open class ConversationsAPI {
       "startAcwTime" : "2000-01-23T04:56:07.000+00:00",
       "direction" : "inbound",
       "mediaRoles" : [ "mediaRoles", "mediaRoles" ],
+      "clientIpAddress" : "clientIpAddress",
       "wrapup" : "{}",
       "address" : "address",
       "voicemail" : "{}",
@@ -50550,6 +50598,7 @@ open class ConversationsAPI {
       "startAcwTime" : "2000-01-23T04:56:07.000+00:00",
       "direction" : "inbound",
       "mediaRoles" : [ "mediaRoles", "mediaRoles" ],
+      "clientIpAddress" : "clientIpAddress",
       "wrapup" : "{}",
       "address" : "address",
       "voicemail" : "{}",
@@ -50652,6 +50701,7 @@ open class ConversationsAPI {
       "startAcwTime" : "2000-01-23T04:56:07.000+00:00",
       "direction" : "inbound",
       "mediaRoles" : [ "mediaRoles", "mediaRoles" ],
+      "clientIpAddress" : "clientIpAddress",
       "wrapup" : "{}",
       "address" : "address",
       "voicemail" : "{}",
@@ -50702,6 +50752,7 @@ open class ConversationsAPI {
       "startAcwTime" : "2000-01-23T04:56:07.000+00:00",
       "direction" : "inbound",
       "mediaRoles" : [ "mediaRoles", "mediaRoles" ],
+      "clientIpAddress" : "clientIpAddress",
       "wrapup" : "{}",
       "address" : "address",
       "voicemail" : "{}",
@@ -59368,6 +59419,547 @@ open class ConversationsAPI {
 
     
     
+    /**
+     Get screen monitoring conversation
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getConversationsScreenmonitor(conversationId: String, completion: @escaping ((_ data: ScreenMonitoringConversation?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsScreenmonitorWithRequestBuilder(conversationId: conversationId)
+        requestBuilder.execute { (response: Response<ScreenMonitoringConversation>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get screen monitoring conversation
+     - GET /api/v2/conversations/screenmonitors/{conversationId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "otherMediaUris" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
+  "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "recentTransfers" : [ {
+    "dateIssued" : "2000-01-23T04:56:07.000+00:00",
+    "initiator" : "{}",
+    "destination" : "{}",
+    "transferType" : "Attended",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "Pending"
+  }, {
+    "dateIssued" : "2000-01-23T04:56:07.000+00:00",
+    "initiator" : "{}",
+    "destination" : "{}",
+    "transferType" : "Attended",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "Pending"
+  } ],
+  "utilizationLabelId" : "utilizationLabelId",
+  "id" : "id",
+  "divisions" : [ {
+    "division" : "{}",
+    "entities" : [ {
+      "dateDivisionUpdated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "dateDivisionUpdated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ]
+  }, {
+    "division" : "{}",
+    "entities" : [ {
+      "dateDivisionUpdated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "dateDivisionUpdated" : "2000-01-23T04:56:07.000+00:00",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ]
+  } ],
+  "participants" : [ {
+    "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
+    "externalContactInitialDivisionId" : "externalContactInitialDivisionId",
+    "parkTime" : "2000-01-23T04:56:07.000+00:00",
+    "wrapupSkipped" : true,
+    "purpose" : "purpose",
+    "held" : true,
+    "wrapupTimeoutMs" : 0,
+    "errorInfo" : "{}",
+    "alertingTimeoutMs" : 6,
+    "resumeTime" : "2000-01-23T04:56:07.000+00:00",
+    "conversationRoutingData" : "{}",
+    "provider" : "provider",
+    "peer" : "peer",
+    "journeyContext" : "{}",
+    "endAcwTime" : "2000-01-23T04:56:07.000+00:00",
+    "wrapupRequired" : true,
+    "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+    "disconnectType" : "endpoint",
+    "startTime" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "alerting",
+    "startAcwTime" : "2000-01-23T04:56:07.000+00:00",
+    "direction" : "inbound",
+    "mediaRoles" : [ "mediaRoles", "mediaRoles" ],
+    "wrapup" : "{}",
+    "address" : "address",
+    "count" : 1,
+    "externalContact" : "{}",
+    "team" : "{}",
+    "externalOrganization" : "{}",
+    "flaggedReason" : "general",
+    "script" : "{}",
+    "screenMonitoring" : "{}",
+    "monitoringType" : "Unknown",
+    "name" : "name",
+    "wrapupPrompt" : "wrapupPrompt",
+    "screenMonitoringCommunicationId" : "screenMonitoringCommunicationId",
+    "attributes" : {
+      "key" : "attributes"
+    },
+    "endTime" : "2000-01-23T04:56:07.000+00:00",
+    "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
+    "user" : "{}",
+    "targetUser" : "{}",
+    "queue" : "{}"
+  }, {
+    "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
+    "externalContactInitialDivisionId" : "externalContactInitialDivisionId",
+    "parkTime" : "2000-01-23T04:56:07.000+00:00",
+    "wrapupSkipped" : true,
+    "purpose" : "purpose",
+    "held" : true,
+    "wrapupTimeoutMs" : 0,
+    "errorInfo" : "{}",
+    "alertingTimeoutMs" : 6,
+    "resumeTime" : "2000-01-23T04:56:07.000+00:00",
+    "conversationRoutingData" : "{}",
+    "provider" : "provider",
+    "peer" : "peer",
+    "journeyContext" : "{}",
+    "endAcwTime" : "2000-01-23T04:56:07.000+00:00",
+    "wrapupRequired" : true,
+    "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+    "disconnectType" : "endpoint",
+    "startTime" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "alerting",
+    "startAcwTime" : "2000-01-23T04:56:07.000+00:00",
+    "direction" : "inbound",
+    "mediaRoles" : [ "mediaRoles", "mediaRoles" ],
+    "wrapup" : "{}",
+    "address" : "address",
+    "count" : 1,
+    "externalContact" : "{}",
+    "team" : "{}",
+    "externalOrganization" : "{}",
+    "flaggedReason" : "general",
+    "script" : "{}",
+    "screenMonitoring" : "{}",
+    "monitoringType" : "Unknown",
+    "name" : "name",
+    "wrapupPrompt" : "wrapupPrompt",
+    "screenMonitoringCommunicationId" : "screenMonitoringCommunicationId",
+    "attributes" : {
+      "key" : "attributes"
+    },
+    "endTime" : "2000-01-23T04:56:07.000+00:00",
+    "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
+    "user" : "{}",
+    "targetUser" : "{}",
+    "queue" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter conversationId: (path) conversationId 
+
+     - returns: RequestBuilder<ScreenMonitoringConversation> 
+     */
+    open class func getConversationsScreenmonitorWithRequestBuilder(conversationId: String) -> RequestBuilder<ScreenMonitoringConversation> {        
+        var path = "/api/v2/conversations/screenmonitors/{conversationId}"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScreenMonitoringConversation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get active screen monitoring conversations for the logged in user
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getConversationsScreenmonitors(completion: @escaping ((_ data: ScreenMonitoringConversationEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsScreenmonitorsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<ScreenMonitoringConversationEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get active screen monitoring conversations for the logged in user
+     - GET /api/v2/conversations/screenmonitors
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 2,
+  "pageCount" : 7,
+  "pageNumber" : 5,
+  "entities" : [ {
+    "otherMediaUris" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
+    "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "recentTransfers" : [ {
+      "dateIssued" : "2000-01-23T04:56:07.000+00:00",
+      "initiator" : "{}",
+      "destination" : "{}",
+      "transferType" : "Attended",
+      "modifiedBy" : "{}",
+      "id" : "id",
+      "state" : "Pending"
+    }, {
+      "dateIssued" : "2000-01-23T04:56:07.000+00:00",
+      "initiator" : "{}",
+      "destination" : "{}",
+      "transferType" : "Attended",
+      "modifiedBy" : "{}",
+      "id" : "id",
+      "state" : "Pending"
+    } ],
+    "utilizationLabelId" : "utilizationLabelId",
+    "id" : "id",
+    "divisions" : [ {
+      "division" : "{}",
+      "entities" : [ {
+        "dateDivisionUpdated" : "2000-01-23T04:56:07.000+00:00",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "dateDivisionUpdated" : "2000-01-23T04:56:07.000+00:00",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ]
+    }, {
+      "division" : "{}",
+      "entities" : [ {
+        "dateDivisionUpdated" : "2000-01-23T04:56:07.000+00:00",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "dateDivisionUpdated" : "2000-01-23T04:56:07.000+00:00",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ]
+    } ],
+    "participants" : [ {
+      "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
+      "externalContactInitialDivisionId" : "externalContactInitialDivisionId",
+      "parkTime" : "2000-01-23T04:56:07.000+00:00",
+      "wrapupSkipped" : true,
+      "purpose" : "purpose",
+      "held" : true,
+      "wrapupTimeoutMs" : 0,
+      "errorInfo" : "{}",
+      "alertingTimeoutMs" : 6,
+      "resumeTime" : "2000-01-23T04:56:07.000+00:00",
+      "conversationRoutingData" : "{}",
+      "provider" : "provider",
+      "peer" : "peer",
+      "journeyContext" : "{}",
+      "endAcwTime" : "2000-01-23T04:56:07.000+00:00",
+      "wrapupRequired" : true,
+      "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+      "disconnectType" : "endpoint",
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "state" : "alerting",
+      "startAcwTime" : "2000-01-23T04:56:07.000+00:00",
+      "direction" : "inbound",
+      "mediaRoles" : [ "mediaRoles", "mediaRoles" ],
+      "wrapup" : "{}",
+      "address" : "address",
+      "count" : 1,
+      "externalContact" : "{}",
+      "team" : "{}",
+      "externalOrganization" : "{}",
+      "flaggedReason" : "general",
+      "script" : "{}",
+      "screenMonitoring" : "{}",
+      "monitoringType" : "Unknown",
+      "name" : "name",
+      "wrapupPrompt" : "wrapupPrompt",
+      "screenMonitoringCommunicationId" : "screenMonitoringCommunicationId",
+      "attributes" : {
+        "key" : "attributes"
+      },
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
+      "user" : "{}",
+      "targetUser" : "{}",
+      "queue" : "{}"
+    }, {
+      "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
+      "externalContactInitialDivisionId" : "externalContactInitialDivisionId",
+      "parkTime" : "2000-01-23T04:56:07.000+00:00",
+      "wrapupSkipped" : true,
+      "purpose" : "purpose",
+      "held" : true,
+      "wrapupTimeoutMs" : 0,
+      "errorInfo" : "{}",
+      "alertingTimeoutMs" : 6,
+      "resumeTime" : "2000-01-23T04:56:07.000+00:00",
+      "conversationRoutingData" : "{}",
+      "provider" : "provider",
+      "peer" : "peer",
+      "journeyContext" : "{}",
+      "endAcwTime" : "2000-01-23T04:56:07.000+00:00",
+      "wrapupRequired" : true,
+      "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+      "disconnectType" : "endpoint",
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "state" : "alerting",
+      "startAcwTime" : "2000-01-23T04:56:07.000+00:00",
+      "direction" : "inbound",
+      "mediaRoles" : [ "mediaRoles", "mediaRoles" ],
+      "wrapup" : "{}",
+      "address" : "address",
+      "count" : 1,
+      "externalContact" : "{}",
+      "team" : "{}",
+      "externalOrganization" : "{}",
+      "flaggedReason" : "general",
+      "script" : "{}",
+      "screenMonitoring" : "{}",
+      "monitoringType" : "Unknown",
+      "name" : "name",
+      "wrapupPrompt" : "wrapupPrompt",
+      "screenMonitoringCommunicationId" : "screenMonitoringCommunicationId",
+      "attributes" : {
+        "key" : "attributes"
+      },
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
+      "user" : "{}",
+      "targetUser" : "{}",
+      "queue" : "{}"
+    } ]
+  }, {
+    "otherMediaUris" : [ "https://openapi-generator.tech", "https://openapi-generator.tech" ],
+    "inactivityTimeout" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "recentTransfers" : [ {
+      "dateIssued" : "2000-01-23T04:56:07.000+00:00",
+      "initiator" : "{}",
+      "destination" : "{}",
+      "transferType" : "Attended",
+      "modifiedBy" : "{}",
+      "id" : "id",
+      "state" : "Pending"
+    }, {
+      "dateIssued" : "2000-01-23T04:56:07.000+00:00",
+      "initiator" : "{}",
+      "destination" : "{}",
+      "transferType" : "Attended",
+      "modifiedBy" : "{}",
+      "id" : "id",
+      "state" : "Pending"
+    } ],
+    "utilizationLabelId" : "utilizationLabelId",
+    "id" : "id",
+    "divisions" : [ {
+      "division" : "{}",
+      "entities" : [ {
+        "dateDivisionUpdated" : "2000-01-23T04:56:07.000+00:00",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "dateDivisionUpdated" : "2000-01-23T04:56:07.000+00:00",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ]
+    }, {
+      "division" : "{}",
+      "entities" : [ {
+        "dateDivisionUpdated" : "2000-01-23T04:56:07.000+00:00",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "dateDivisionUpdated" : "2000-01-23T04:56:07.000+00:00",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ]
+    } ],
+    "participants" : [ {
+      "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
+      "externalContactInitialDivisionId" : "externalContactInitialDivisionId",
+      "parkTime" : "2000-01-23T04:56:07.000+00:00",
+      "wrapupSkipped" : true,
+      "purpose" : "purpose",
+      "held" : true,
+      "wrapupTimeoutMs" : 0,
+      "errorInfo" : "{}",
+      "alertingTimeoutMs" : 6,
+      "resumeTime" : "2000-01-23T04:56:07.000+00:00",
+      "conversationRoutingData" : "{}",
+      "provider" : "provider",
+      "peer" : "peer",
+      "journeyContext" : "{}",
+      "endAcwTime" : "2000-01-23T04:56:07.000+00:00",
+      "wrapupRequired" : true,
+      "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+      "disconnectType" : "endpoint",
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "state" : "alerting",
+      "startAcwTime" : "2000-01-23T04:56:07.000+00:00",
+      "direction" : "inbound",
+      "mediaRoles" : [ "mediaRoles", "mediaRoles" ],
+      "wrapup" : "{}",
+      "address" : "address",
+      "count" : 1,
+      "externalContact" : "{}",
+      "team" : "{}",
+      "externalOrganization" : "{}",
+      "flaggedReason" : "general",
+      "script" : "{}",
+      "screenMonitoring" : "{}",
+      "monitoringType" : "Unknown",
+      "name" : "name",
+      "wrapupPrompt" : "wrapupPrompt",
+      "screenMonitoringCommunicationId" : "screenMonitoringCommunicationId",
+      "attributes" : {
+        "key" : "attributes"
+      },
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
+      "user" : "{}",
+      "targetUser" : "{}",
+      "queue" : "{}"
+    }, {
+      "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
+      "externalContactInitialDivisionId" : "externalContactInitialDivisionId",
+      "parkTime" : "2000-01-23T04:56:07.000+00:00",
+      "wrapupSkipped" : true,
+      "purpose" : "purpose",
+      "held" : true,
+      "wrapupTimeoutMs" : 0,
+      "errorInfo" : "{}",
+      "alertingTimeoutMs" : 6,
+      "resumeTime" : "2000-01-23T04:56:07.000+00:00",
+      "conversationRoutingData" : "{}",
+      "provider" : "provider",
+      "peer" : "peer",
+      "journeyContext" : "{}",
+      "endAcwTime" : "2000-01-23T04:56:07.000+00:00",
+      "wrapupRequired" : true,
+      "connectedTime" : "2000-01-23T04:56:07.000+00:00",
+      "disconnectType" : "endpoint",
+      "startTime" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "state" : "alerting",
+      "startAcwTime" : "2000-01-23T04:56:07.000+00:00",
+      "direction" : "inbound",
+      "mediaRoles" : [ "mediaRoles", "mediaRoles" ],
+      "wrapup" : "{}",
+      "address" : "address",
+      "count" : 1,
+      "externalContact" : "{}",
+      "team" : "{}",
+      "externalOrganization" : "{}",
+      "flaggedReason" : "general",
+      "script" : "{}",
+      "screenMonitoring" : "{}",
+      "monitoringType" : "Unknown",
+      "name" : "name",
+      "wrapupPrompt" : "wrapupPrompt",
+      "screenMonitoringCommunicationId" : "screenMonitoringCommunicationId",
+      "attributes" : {
+        "key" : "attributes"
+      },
+      "endTime" : "2000-01-23T04:56:07.000+00:00",
+      "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
+      "user" : "{}",
+      "targetUser" : "{}",
+      "queue" : "{}"
+    } ]
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 5,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<ScreenMonitoringConversationEntityListing> 
+     */
+    open class func getConversationsScreenmonitorsWithRequestBuilder() -> RequestBuilder<ScreenMonitoringConversationEntityListing> {        
+        let path = "/api/v2/conversations/screenmonitors"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScreenMonitoringConversationEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     
@@ -60090,6 +60682,7 @@ open class ConversationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "thirdPartySuggestion" : "{}",
+  "suggestedKnowledgeAnswer" : "{}",
   "knowledgeSearch" : "{}",
   "assistant" : "{}",
   "knowledgeArticle" : "{}",
@@ -60575,6 +61168,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -60617,6 +61211,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -60813,7 +61408,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -60945,7 +61540,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -61223,7 +61818,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -61305,7 +61900,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -67440,6 +68035,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -67482,6 +68078,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -67678,7 +68275,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -67810,7 +68407,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -68088,7 +68685,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -68170,7 +68767,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -74857,6 +75454,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -74899,6 +75497,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -75095,7 +75694,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -75227,7 +75826,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -75505,7 +76104,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -75587,7 +76186,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -81722,6 +82321,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -81764,6 +82364,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -81960,7 +82561,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -82092,7 +82693,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -82370,7 +82971,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -82452,7 +83053,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -88958,6 +89559,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -89000,6 +89602,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -89196,7 +89799,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -89328,7 +89931,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -89606,7 +90209,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -89688,7 +90291,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -95823,6 +96426,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -95865,6 +96469,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -96061,7 +96666,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -96193,7 +96798,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -96471,7 +97076,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -96553,7 +97158,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -103002,6 +103607,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -103044,6 +103650,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -103240,7 +103847,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -103372,7 +103979,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -103650,7 +104257,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -103732,7 +104339,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -109867,6 +110474,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -109909,6 +110517,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -110105,7 +110714,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -110237,7 +110846,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -110515,7 +111124,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -110597,7 +111206,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -117228,6 +117837,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -117270,6 +117880,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -117466,7 +118077,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -117598,7 +118209,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -117876,7 +118487,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -117958,7 +118569,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -124093,6 +124704,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -124135,6 +124747,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -124331,7 +124944,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -124463,7 +125076,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -124741,7 +125354,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -124823,7 +125436,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -132716,7 +133329,7 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalHits" : 5,
+  "totalHits" : 6,
   "conversations" : [ {
     "conversationStart" : "2000-01-23T04:56:07.000+00:00",
     "mediaStatsMinConversationMos" : 0.8008281904610115,
@@ -134674,34 +135287,34 @@ open class ConversationsAPI {
   } ],
   "aggregations" : [ {
     "metric" : "metric",
-    "count" : 0,
+    "count" : 2,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     } ]
   }, {
     "metric" : "metric",
-    "count" : 0,
+    "count" : 2,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     } ]
   } ]
@@ -136500,6 +137113,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -136542,6 +137156,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -136738,7 +137353,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -136870,7 +137485,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -137148,7 +137763,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -137230,7 +137845,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -143365,6 +143980,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -143407,6 +144023,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -143603,7 +144220,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -143735,7 +144352,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -144013,7 +144630,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -144095,7 +144712,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -151158,6 +151775,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -151200,6 +151818,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -151396,7 +152015,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -151528,7 +152147,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -151806,7 +152425,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -151888,7 +152507,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -158023,6 +158642,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -158065,6 +158685,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -158261,7 +158882,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -158393,7 +159014,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -158671,7 +159292,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -158753,7 +159374,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -165008,6 +165629,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -165050,6 +165672,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -165246,7 +165869,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -165378,7 +166001,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -165656,7 +166279,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -165738,7 +166361,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -171873,6 +172496,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -171915,6 +172539,7 @@ open class ConversationsAPI {
       "id" : "id",
       "dialerPreview" : "{}",
       "direction" : "inbound",
+      "clientIpAddress" : "clientIpAddress",
       "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
       "wrapup" : "{}",
       "voicemail" : "{}",
@@ -172111,7 +172736,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -172243,7 +172868,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -172521,7 +173146,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -172603,7 +173228,7 @@ open class ConversationsAPI {
         "code" : "code",
         "entityName" : "entityName",
         "limit" : {
-          "namespace" : "usage",
+          "namespace" : "agent.assistant",
           "value" : 6,
           "key" : "key"
         },
@@ -180698,78 +181323,6 @@ open class ConversationsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<MessageData>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
-    }
-
-    
-    
-    
-    
-    /**
-     Create media
-     
-     - parameter conversationId: (path) conversationId 
-     - parameter communicationId: (path) communicationId 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func postConversationsMessageCommunicationMessagesMedia(conversationId: String, communicationId: String, completion: @escaping ((_ data: MessageMediaData?,_ error: Error?) -> Void)) {
-        let requestBuilder = postConversationsMessageCommunicationMessagesMediaWithRequestBuilder(conversationId: conversationId, communicationId: communicationId)
-        requestBuilder.execute { (response: Response<MessageMediaData>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Create media
-     - POST /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media
-     - See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "contentLengthBytes" : 0,
-  "uploadUrl" : "uploadUrl",
-  "conversationId" : "conversationId",
-  "communicationId" : "communicationId",
-  "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
-  "mediaType" : "mediaType",
-  "id" : "id",
-  "url" : "url",
-  "status" : "uploading"
-}, statusCode=202}]
-     
-     - parameter conversationId: (path) conversationId 
-     - parameter communicationId: (path) communicationId 
-
-     - returns: RequestBuilder<MessageMediaData> 
-     */
-    open class func postConversationsMessageCommunicationMessagesMediaWithRequestBuilder(conversationId: String, communicationId: String) -> RequestBuilder<MessageMediaData> {        
-        var path = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media"
-        let conversationIdPreEscape = "\(conversationId)"
-        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
-        let communicationIdPreEscape = "\(communicationId)"
-        let communicationIdPostEscape = communicationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{communicationId}", with: communicationIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<MessageMediaData>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

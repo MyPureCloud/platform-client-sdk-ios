@@ -14,11 +14,16 @@
 | **intent** | [**ReportingTurnIntent**](ReportingTurnIntent) | The intent and associated slots detected during this reporting turn. | [optional] |
 | **knowledge** | [**ReportingTurnKnowledge**](ReportingTurnKnowledge) | The knowledge data captured during this reporting turn. | [optional] |
 | **knowledgeBaseEvents** | [**ReportingTurnKnowledgeEvents**](ReportingTurnKnowledgeEvents) | The knowledge data captured during this reporting turn. | [optional] |
+| **botFlowInvocationEvents** | [**[ReportingTurnBotFlowInvocationEvent]**]([ReportingTurnBotFlowInvocationEvent]) | The details related to the invoking and invoked flows of the bot flow session. | [optional] |
+| **dateInputStarted** | [**Date**](Date) | Timestamp indicating the datetime when the input came from the user. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **dateCreated** | [**Date**](Date) | Timestamp indicating when the original turn was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **dateCompleted** | [**Date**](Date) | Timestamp indicating when the original turn was completed. Note: The &#39;interval&#39; query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **askActionResult** | **String** | Result of the bot flow &#39;ask&#39; action. | [optional] |
 | **sessionEndDetails** | [**SessionEndDetails**](SessionEndDetails) | The details related to end of bot flow session. | [optional] |
+| **toolCalls** | [**[ReportingTurnToolCall]**]([ReportingTurnToolCall]) | Metadata of tool calls carried out in the reporting turn. | [optional] |
+| **guardrailEvents** | [**[ReportingTurnGuardrailEvent]**]([ReportingTurnGuardrailEvent]) | Metadata of any Guardrail events that occurred in the reporting turn. | [optional] |
+| **executionFrameId** | **String** | The executionFrameId of the ask action within the reportingTurn. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

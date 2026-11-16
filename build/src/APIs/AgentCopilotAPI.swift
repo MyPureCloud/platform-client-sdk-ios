@@ -45,6 +45,7 @@ open class AgentCopilotAPI {
      - examples: [{contentType=application/json, example={
   "autoSearchConfig" : "{}",
   "selfUri" : "https://openapi-generator.tech",
+  "emailSummaryGenerationConfig" : "{}",
   "answerGenerationConfig" : "{}",
   "liveOnQueue" : true,
   "enabled" : true,
@@ -192,6 +193,7 @@ open class AgentCopilotAPI {
      - examples: [{contentType=application/json, example={
   "autoSearchConfig" : "{}",
   "selfUri" : "https://openapi-generator.tech",
+  "emailSummaryGenerationConfig" : "{}",
   "answerGenerationConfig" : "{}",
   "liveOnQueue" : true,
   "enabled" : true,

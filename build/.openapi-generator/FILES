@@ -72,8 +72,13 @@ docs/ActivityPlanJobListing.md
 docs/ActivityPlanJobResponse.md
 docs/ActivityPlanListItem.md
 docs/ActivityPlanListing.md
+docs/ActivityPlanOccurrenceListItem.md
+docs/ActivityPlanOccurrenceListing.md
 docs/ActivityPlanOccurrenceReference.md
+docs/ActivityPlanOccurrenceResponse.md
+docs/ActivityPlanOccurrenceSessionWithAttendees.md
 docs/ActivityPlanOccurrenceSessionsUsersStructureReference.md
+docs/ActivityPlanOccurrenceViolation.md
 docs/ActivityPlanOccurrencesDeletionJobResponse.md
 docs/ActivityPlanReference.md
 docs/ActivityPlanResponse.md
@@ -81,8 +86,11 @@ docs/ActivityPlanRunJobResponse.md
 docs/ActivityPlanServiceGoalImpactOverrides.md
 docs/ActivityPlanServiceLevelImpactOverride.md
 docs/ActivityPlanSessionStructureReference.md
+docs/ActivityPlanSessionViolation.md
 docs/ActivityPlanStructureWithOccurrenceSessionsUsersReference.md
 docs/ActivityPlanStructureWithOccurrencesReference.md
+docs/ActivityPlanUnscheduledAttendee.md
+docs/ActivityPlanViolationDetails.md
 docs/AcwDetailEventTopicAfterCallWorkEvent.md
 docs/AcwSettings.md
 docs/AddAdherenceAdjustmentAgentRequest.md
@@ -231,6 +239,11 @@ docs/AgentStateSessionFilter.md
 docs/AgentStateSessionQueryClause.md
 docs/AgentStateSessionQueryPredicate.md
 docs/AgentStateUserFilter.md
+docs/AgentStateWorkitemAssignmentStateCount.md
+docs/AgentStateWorkitemFilter.md
+docs/AgentStateWorkitemQueryClause.md
+docs/AgentStateWorkitemQueryPredicate.md
+docs/AgentStateWorkitemStatusCategoryCount.md
 docs/AgentTimeOffRequestPatch.md
 docs/AgentUIAPI.json
 docs/AgentUIAPI.md
@@ -256,6 +269,7 @@ docs/AgenticVirtualAgentEntityListing.md
 docs/AgenticVirtualAgentGuardrailInstruction.md
 docs/AgenticVirtualAgentGuardrails.md
 docs/AgenticVirtualAgentJob.md
+docs/AgenticVirtualAgentMcpSchemas.md
 docs/AgenticVirtualAgentPropertyDefinition.md
 docs/AgenticVirtualAgentRepetitionCheck.md
 docs/AgenticVirtualAgentStructuredCondition.md
@@ -336,6 +350,7 @@ docs/AnalyticsAPI.md
 docs/AnalyticsAgentGroup.md
 docs/AnalyticsAgentStateAgentResponse.md
 docs/AnalyticsAgentStateAgentSessionResult.md
+docs/AnalyticsAgentStateAgentWorkitemResult.md
 docs/AnalyticsAgentStateCountsResponse.md
 docs/AnalyticsAgentStateQueryResponse.md
 docs/AnalyticsConversation.md
@@ -429,6 +444,7 @@ docs/ArchitectPromptResourceNotificationPromptResourceAudioFormat.md
 docs/ArchitectPromptResourceNotificationPromptResourceNotification.md
 docs/ArchitectSystemPromptResourceNotificationPromptResourceAudioFormat.md
 docs/ArchitectSystemPromptResourceNotificationSystemPromptResourceNotification.md
+docs/ArchitectValidateJobStateResponse.md
 docs/ArchiveRetention.md
 docs/ArrayNode.md
 docs/Article.md
@@ -514,6 +530,8 @@ docs/AuditTopicAuditLogMessage.md
 docs/AuditTopicDomainEntityRef.md
 docs/AuditTopicMessageInfo.md
 docs/AuditTopicPropertyChange.md
+docs/AuthenticationExtensionsLargeBlobOutputs.md
+docs/AuthenticationExtensionsPRFOutputs.md
 docs/AuthenticationProperties.md
 docs/AuthenticationSettings.md
 docs/AuthenticatorAttestationResponse.md
@@ -628,7 +646,7 @@ docs/BuAgentScheduleShift.md
 docs/BuAgentScheduleShiftRequest.md
 docs/BuAgentScheduleUpdate.md
 docs/BuAgentSchedulesQueryResponse.md
-docs/BuAgentSchedulesSearchResponse.md
+docs/BuAgentSchedulesSearchResponseBuAgentScheduleSearchResponse.md
 docs/BuAlternativeShiftJobResponse.md
 docs/BuAsyncAgentSchedulesQueryResponse.md
 docs/BuAsyncAgentSchedulesSearchResponse.md
@@ -691,6 +709,8 @@ docs/BuScheduleReference.md
 docs/BuScheduleReferenceForMuRoute.md
 docs/BuScheduleRun.md
 docs/BuScheduleRunListing.md
+docs/BuScheduleSearchAgentScheduleResponse.md
+docs/BuScheduleSummary.md
 docs/BuSchedulerSettingsRequest.md
 docs/BuSchedulerSettingsResponse.md
 docs/BuSchedulingSettingsRequest.md
@@ -888,6 +908,7 @@ docs/CampaignDiagnostics.md
 docs/CampaignDivisionView.md
 docs/CampaignDivisionViewListing.md
 docs/CampaignEntityListing.md
+docs/CampaignIdentityResolutionConfig.md
 docs/CampaignInteraction.md
 docs/CampaignInteractions.md
 docs/CampaignLinesUtilization.md
@@ -915,6 +936,7 @@ docs/CampaignRuleDayOfWeekParameters.md
 docs/CampaignRuleEntities.md
 docs/CampaignRuleEntityListing.md
 docs/CampaignRuleExecutionSettings.md
+docs/CampaignRuleOutboundBlendingSettings.md
 docs/CampaignRuleParameters.md
 docs/CampaignRuleSpecificDateInterval.md
 docs/CampaignRuleSpecificDateParameters.md
@@ -933,9 +955,17 @@ docs/CampaignStats.md
 docs/CampaignTimeSlot.md
 docs/CannedResponseLibraries.md
 docs/CapacityPlanDeleteRequest.md
+docs/CapacityPlanForecastActualValues.md
+docs/CapacityPlanForecastDistribution.md
+docs/CapacityPlanForecastDistributionValues.md
+docs/CapacityPlanForecastImportSchema.md
+docs/CapacityPlanForecastImportUpload.md
+docs/CapacityPlanForecastImportUploadRequest.md
+docs/CapacityPlanForecastImportUploadResponse.md
 docs/CapacityPlanForecastInputsResponse.md
 docs/CapacityPlanForecastInputsTemplate.md
 docs/CapacityPlanForecastMetrics.md
+docs/CapacityPlanForecastPlanningGroup.md
 docs/CapacityPlanImportedForecast.md
 docs/CapacityPlanImportedForecastRequest.md
 docs/CapacityPlanListItem.md
@@ -1064,6 +1094,7 @@ docs/ChunkSearchRegisterRequest.md
 docs/ClientApp.md
 docs/ClientAppConfigurationInfo.md
 docs/ClientAppEntityListing.md
+docs/ClientExtensionResults.md
 docs/ClientPublicApiUsage.md
 docs/ClientPublicApiUsageQueryRequest.md
 docs/ClientPublicApiUsageResultsResponse.md
@@ -1886,6 +1917,7 @@ docs/CredentialInfo.md
 docs/CredentialInfoCursorListing.md
 docs/CredentialInfoListing.md
 docs/CredentialParameter.md
+docs/CredentialPropertiesOutput.md
 docs/CredentialSpecification.md
 docs/CredentialType.md
 docs/Criteria.md
@@ -1947,6 +1979,7 @@ docs/CustomerIntentListing.md
 docs/CustomerIntentPatch.md
 docs/CustomerIntentReference.md
 docs/CustomerIntentResponse.md
+docs/CustomerIntentUsage.md
 docs/CustomerInteractionCenter.md
 docs/CustomerSourceIntent.md
 docs/CustomerSourceIntentListing.md
@@ -2049,6 +2082,7 @@ docs/Definition.md
 docs/DeletableUserReference.md
 docs/DeleteProgramResponse.md
 docs/DeleteRetention.md
+docs/DeleteVerifierResponse.md
 docs/DependenciesAPI.json
 docs/DependenciesAPI.md
 docs/Dependency.md
@@ -4819,6 +4853,8 @@ docs/RegisterArchitectExportJob.md
 docs/RegisterArchitectExportJobResponse.md
 docs/RegisterArchitectJobRequest.md
 docs/RegisterArchitectJobResponse.md
+docs/RegisterArchitectValidateJob.md
+docs/RegisterArchitectValidateJobResponse.md
 docs/Relationship.md
 docs/RelationshipListing.md
 docs/RelationshipsExport.md
@@ -5066,7 +5102,10 @@ docs/ScreenMonitorSettings.md
 docs/ScreenMonitoring.md
 docs/ScreenMonitoringAPI.json
 docs/ScreenMonitoringAPI.md
+docs/ScreenMonitoringConversation.md
+docs/ScreenMonitoringConversationEntityListing.md
 docs/ScreenMonitoringDetails.md
+docs/ScreenMonitoringParticipant.md
 docs/ScreenMonitoringSession.md
 docs/ScreenMonitoringSessionEntityListing.md
 docs/ScreenMonitoringUserDetails.md
@@ -5654,6 +5693,8 @@ docs/TranscriptAggregationView.md
 docs/TranscriptAsyncAggregateQueryResponse.md
 docs/TranscriptAsyncAggregationQuery.md
 docs/TranscriptCategories.md
+docs/TranscriptOutlineResponse.md
+docs/TranscriptOutlineSegment.md
 docs/TranscriptSearchCriteria.md
 docs/TranscriptSearchRequest.md
 docs/TranscriptTopic.md
@@ -5693,6 +5734,8 @@ docs/Trunk.md
 docs/TrunkBase.md
 docs/TrunkBaseAssignment.md
 docs/TrunkBaseEntityListing.md
+docs/TrunkBaseMetrics.md
+docs/TrunkBaseMetricsEntityListing.md
 docs/TrunkBasesSearchResponse.md
 docs/TrunkConnectedStatus.md
 docs/TrunkEntityListing.md
@@ -6086,6 +6129,14 @@ docs/V2MobiusRulesTopicCondition.md
 docs/V2MobiusRulesTopicConditionRulePredicate.md
 docs/V2MobiusRulesTopicEntityProperties.md
 docs/V2MobiusRulesTopicRule.md
+docs/V2MonitoredQueueAddedEventMonitoredQueueNotification.md
+docs/V2MonitoredQueueEvaluatedEventMonitoredQueueNotification.md
+docs/V2MonitoredQueueRemovedEventMonitoredQueueNotification.md
+docs/V2QueueAnomalyEventConsensusAnalysis.md
+docs/V2QueueAnomalyEventDivisionReference.md
+docs/V2QueueAnomalyEventQueueAnomalyNotification.md
+docs/V2QueueAnomalyEventQueueReference.md
+docs/V2QueueAnomalyExportJobEventQueueAnomalyExportJobNotification.md
 docs/V2QueueObservationMetricCountData.md
 docs/V2QueueObservationMetricCountGroup.md
 docs/V2QueueObservationObservationCountNotification.md
@@ -6171,6 +6222,7 @@ docs/ValidateAddressResponse.md
 docs/ValidateAgentUnavailableTimesRequest.md
 docs/ValidateAgentUnavailableTimesResponse.md
 docs/ValidateAssignUsers.md
+docs/ValidateDetails.md
 docs/ValidateVerifierRequest.md
 docs/ValidateWorkPlanMessages.md
 docs/ValidateWorkPlanResponse.md
@@ -6455,7 +6507,6 @@ docs/WfmMoveManagementUnitTopicMoveManagementUnitNotification.md
 docs/WfmProcessUploadRequest.md
 docs/WfmScheduleActivity.md
 docs/WfmScheduleReference.md
-docs/WfmScheduleTopicWfmScheduleNotification.md
 docs/WfmSelfScheduleCompleteEventErrorBody.md
 docs/WfmSelfScheduleCompleteEventSelfScheduleCompleteNotification.md
 docs/WfmServiceGoalImpact.md
@@ -7509,6 +7560,8 @@ docs/getConversationsMessagingSupportedcontent-example.txt
 docs/getConversationsMessagingSupportedcontentDefault-example.txt
 docs/getConversationsMessagingSupportedcontentSupportedContentId-example.txt
 docs/getConversationsMessagingThreadingtimeline-example.txt
+docs/getConversationsScreenmonitor-example.txt
+docs/getConversationsScreenmonitors-example.txt
 docs/getConversationsScreenshareParticipantCommunicationWrapup-example.txt
 docs/getConversationsSettings-example.txt
 docs/getConversationsSocialParticipantCommunicationWrapup-example.txt
@@ -7655,6 +7708,7 @@ docs/getFlowsMilestonesDivisionviews-example.txt
 docs/getFlowsOutcome-example.txt
 docs/getFlowsOutcomes-example.txt
 docs/getFlowsOutcomesDivisionviews-example.txt
+docs/getFlowsValidateJob-example.txt
 docs/getGamificationContest-example.txt
 docs/getGamificationContestAgentsScores-example.txt
 docs/getGamificationContestAgentsScoresMe-example.txt
@@ -8306,6 +8360,7 @@ docs/getSpeechandtextanalyticsCategories-example.txt
 docs/getSpeechandtextanalyticsCategory-example.txt
 docs/getSpeechandtextanalyticsConversation-example.txt
 docs/getSpeechandtextanalyticsConversationCategories-example.txt
+docs/getSpeechandtextanalyticsConversationCommunicationTranscriptoutline-example.txt
 docs/getSpeechandtextanalyticsConversationCommunicationTranscripturl-example.txt
 docs/getSpeechandtextanalyticsConversationCommunicationTranscripturls-example.txt
 docs/getSpeechandtextanalyticsConversationSentiments-example.txt
@@ -8466,6 +8521,8 @@ docs/getTelephonySipmessagesConversation-example.txt
 docs/getTelephonySipmessagesConversationHeaders-example.txt
 docs/getTelephonySiptraces-example.txt
 docs/getTelephonySiptracesDownloadDownloadId-example.txt
+docs/getTelephonyTrunkbasesettingMetrics-example.txt
+docs/getTelephonyTrunkbasesettingsMetrics-example.txt
 docs/getTextbotsBotsSearch-example.txt
 docs/getTimezones-example.txt
 docs/getTokensMe-example.txt
@@ -8510,6 +8567,7 @@ docs/getUserState-example.txt
 docs/getUserStation-example.txt
 docs/getUserSuperiors-example.txt
 docs/getUserTrustors-example.txt
+docs/getUserVerifier-example.txt
 docs/getUserVerifiers-example.txt
 docs/getUserrecording-example.txt
 docs/getUserrecordingTranscoding-example.txt
@@ -8594,8 +8652,11 @@ docs/getWorkforcemanagementBusinessunitActivitycodes-example.txt
 docs/getWorkforcemanagementBusinessunitActivityplan-example.txt
 docs/getWorkforcemanagementBusinessunitActivityplanDeletionsJob-example.txt
 docs/getWorkforcemanagementBusinessunitActivityplanJobs-example.txt
+docs/getWorkforcemanagementBusinessunitActivityplanOccurrence-example.txt
+docs/getWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJob-example.txt
 docs/getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJob-example.txt
 docs/getWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJob-example.txt
+docs/getWorkforcemanagementBusinessunitActivityplanOccurrences-example.txt
 docs/getWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJob-example.txt
 docs/getWorkforcemanagementBusinessunitActivityplanRunsJob-example.txt
 docs/getWorkforcemanagementBusinessunitActivityplans-example.txt
@@ -9252,7 +9313,6 @@ docs/postConversationsFaxes-example.txt
 docs/postConversationsKeyconfigurations-example.txt
 docs/postConversationsKeyconfigurationsValidate-example.txt
 docs/postConversationsMessageCommunicationMessages-example.txt
-docs/postConversationsMessageCommunicationMessagesMedia-example.txt
 docs/postConversationsMessageCommunicationMessagesMediaUploads-example.txt
 docs/postConversationsMessageCommunicationSocialmediaMessages-example.txt
 docs/postConversationsMessageCommunicationTyping-example.txt
@@ -9371,6 +9431,7 @@ docs/postFlowsInstancesQuery-example.txt
 docs/postFlowsJobs-example.txt
 docs/postFlowsMilestones-example.txt
 docs/postFlowsOutcomes-example.txt
+docs/postFlowsValidateJobs-example.txt
 docs/postGamificationContests-example.txt
 docs/postGamificationContestsUploadsPrizeimages-example.txt
 docs/postGamificationContestsUploadsPrizeimages-example.txt
@@ -9810,6 +9871,7 @@ docs/postWorkforcemanagementAlternativeshiftsOffersSearchJobs-example.txt
 docs/postWorkforcemanagementAlternativeshiftsTrades-example.txt
 docs/postWorkforcemanagementBusinessunitActivitycodes-example.txt
 docs/postWorkforcemanagementBusinessunitActivityplanDeletionsJobs-example.txt
+docs/postWorkforcemanagementBusinessunitActivityplanOccurrenceDeletionsJobs-example.txt
 docs/postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionUsersDeletionsJobs-example.txt
 docs/postWorkforcemanagementBusinessunitActivityplanOccurrenceSessionsDeletionsJobs-example.txt
 docs/postWorkforcemanagementBusinessunitActivityplanOccurrencesDeletionsJobs-example.txt
@@ -9829,6 +9891,7 @@ docs/postWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshist
 docs/postWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate-example.txt
 docs/postWorkforcemanagementBusinessunitCapacityplans-example.txt
 docs/postWorkforcemanagementBusinessunitCapacityplansBulkRemove-example.txt
+docs/postWorkforcemanagementBusinessunitCapacityplansForecastUploadurls-example.txt
 docs/postWorkforcemanagementBusinessunitDecisionmetricsUpdate-example.txt
 docs/postWorkforcemanagementBusinessunitDecisionmetricsUpdateUploadurl-example.txt
 docs/postWorkforcemanagementBusinessunitIntraday-example.txt
@@ -10372,8 +10435,13 @@ src/Models/ActivityPlanJobListing.swift
 src/Models/ActivityPlanJobResponse.swift
 src/Models/ActivityPlanListItem.swift
 src/Models/ActivityPlanListing.swift
+src/Models/ActivityPlanOccurrenceListItem.swift
+src/Models/ActivityPlanOccurrenceListing.swift
 src/Models/ActivityPlanOccurrenceReference.swift
+src/Models/ActivityPlanOccurrenceResponse.swift
+src/Models/ActivityPlanOccurrenceSessionWithAttendees.swift
 src/Models/ActivityPlanOccurrenceSessionsUsersStructureReference.swift
+src/Models/ActivityPlanOccurrenceViolation.swift
 src/Models/ActivityPlanOccurrencesDeletionJobResponse.swift
 src/Models/ActivityPlanReference.swift
 src/Models/ActivityPlanResponse.swift
@@ -10381,8 +10449,11 @@ src/Models/ActivityPlanRunJobResponse.swift
 src/Models/ActivityPlanServiceGoalImpactOverrides.swift
 src/Models/ActivityPlanServiceLevelImpactOverride.swift
 src/Models/ActivityPlanSessionStructureReference.swift
+src/Models/ActivityPlanSessionViolation.swift
 src/Models/ActivityPlanStructureWithOccurrenceSessionsUsersReference.swift
 src/Models/ActivityPlanStructureWithOccurrencesReference.swift
+src/Models/ActivityPlanUnscheduledAttendee.swift
+src/Models/ActivityPlanViolationDetails.swift
 src/Models/AcwDetailEventTopicAfterCallWorkEvent.swift
 src/Models/AcwSettings.swift
 src/Models/AddAdherenceAdjustmentAgentRequest.swift
@@ -10527,6 +10598,11 @@ src/Models/AgentStateSessionFilter.swift
 src/Models/AgentStateSessionQueryClause.swift
 src/Models/AgentStateSessionQueryPredicate.swift
 src/Models/AgentStateUserFilter.swift
+src/Models/AgentStateWorkitemAssignmentStateCount.swift
+src/Models/AgentStateWorkitemFilter.swift
+src/Models/AgentStateWorkitemQueryClause.swift
+src/Models/AgentStateWorkitemQueryPredicate.swift
+src/Models/AgentStateWorkitemStatusCategoryCount.swift
 src/Models/AgentTimeOffRequestPatch.swift
 src/Models/AgentUpdateAlternativeShiftTradeRequest.swift
 src/Models/AgentVideoSettings.swift
@@ -10550,6 +10626,7 @@ src/Models/AgenticVirtualAgentEntityListing.swift
 src/Models/AgenticVirtualAgentGuardrailInstruction.swift
 src/Models/AgenticVirtualAgentGuardrails.swift
 src/Models/AgenticVirtualAgentJob.swift
+src/Models/AgenticVirtualAgentMcpSchemas.swift
 src/Models/AgenticVirtualAgentPropertyDefinition.swift
 src/Models/AgenticVirtualAgentRepetitionCheck.swift
 src/Models/AgenticVirtualAgentStructuredCondition.swift
@@ -10626,6 +10703,7 @@ src/Models/AmazonLexRequest.swift
 src/Models/AnalyticsAgentGroup.swift
 src/Models/AnalyticsAgentStateAgentResponse.swift
 src/Models/AnalyticsAgentStateAgentSessionResult.swift
+src/Models/AnalyticsAgentStateAgentWorkitemResult.swift
 src/Models/AnalyticsAgentStateCountsResponse.swift
 src/Models/AnalyticsAgentStateQueryResponse.swift
 src/Models/AnalyticsConversation.swift
@@ -10717,6 +10795,7 @@ src/Models/ArchitectPromptResourceNotificationPromptResourceAudioFormat.swift
 src/Models/ArchitectPromptResourceNotificationPromptResourceNotification.swift
 src/Models/ArchitectSystemPromptResourceNotificationPromptResourceAudioFormat.swift
 src/Models/ArchitectSystemPromptResourceNotificationSystemPromptResourceNotification.swift
+src/Models/ArchitectValidateJobStateResponse.swift
 src/Models/ArchiveRetention.swift
 src/Models/ArrayNode.swift
 src/Models/Article.swift
@@ -10798,6 +10877,8 @@ src/Models/AuditTopicAuditLogMessage.swift
 src/Models/AuditTopicDomainEntityRef.swift
 src/Models/AuditTopicMessageInfo.swift
 src/Models/AuditTopicPropertyChange.swift
+src/Models/AuthenticationExtensionsLargeBlobOutputs.swift
+src/Models/AuthenticationExtensionsPRFOutputs.swift
 src/Models/AuthenticationProperties.swift
 src/Models/AuthenticationSettings.swift
 src/Models/AuthenticatorAttestationResponse.swift
@@ -10906,7 +10987,7 @@ src/Models/BuAgentScheduleShift.swift
 src/Models/BuAgentScheduleShiftRequest.swift
 src/Models/BuAgentScheduleUpdate.swift
 src/Models/BuAgentSchedulesQueryResponse.swift
-src/Models/BuAgentSchedulesSearchResponse.swift
+src/Models/BuAgentSchedulesSearchResponseBuAgentScheduleSearchResponse.swift
 src/Models/BuAlternativeShiftJobResponse.swift
 src/Models/BuAsyncAgentSchedulesQueryResponse.swift
 src/Models/BuAsyncAgentSchedulesSearchResponse.swift
@@ -10969,6 +11050,8 @@ src/Models/BuScheduleReference.swift
 src/Models/BuScheduleReferenceForMuRoute.swift
 src/Models/BuScheduleRun.swift
 src/Models/BuScheduleRunListing.swift
+src/Models/BuScheduleSearchAgentScheduleResponse.swift
+src/Models/BuScheduleSummary.swift
 src/Models/BuSchedulerSettingsRequest.swift
 src/Models/BuSchedulerSettingsResponse.swift
 src/Models/BuSchedulingSettingsRequest.swift
@@ -11164,6 +11247,7 @@ src/Models/CampaignDiagnostics.swift
 src/Models/CampaignDivisionView.swift
 src/Models/CampaignDivisionViewListing.swift
 src/Models/CampaignEntityListing.swift
+src/Models/CampaignIdentityResolutionConfig.swift
 src/Models/CampaignInteraction.swift
 src/Models/CampaignInteractions.swift
 src/Models/CampaignLinesUtilization.swift
@@ -11191,6 +11275,7 @@ src/Models/CampaignRuleDayOfWeekParameters.swift
 src/Models/CampaignRuleEntities.swift
 src/Models/CampaignRuleEntityListing.swift
 src/Models/CampaignRuleExecutionSettings.swift
+src/Models/CampaignRuleOutboundBlendingSettings.swift
 src/Models/CampaignRuleParameters.swift
 src/Models/CampaignRuleSpecificDateInterval.swift
 src/Models/CampaignRuleSpecificDateParameters.swift
@@ -11209,9 +11294,17 @@ src/Models/CampaignStats.swift
 src/Models/CampaignTimeSlot.swift
 src/Models/CannedResponseLibraries.swift
 src/Models/CapacityPlanDeleteRequest.swift
+src/Models/CapacityPlanForecastActualValues.swift
+src/Models/CapacityPlanForecastDistribution.swift
+src/Models/CapacityPlanForecastDistributionValues.swift
+src/Models/CapacityPlanForecastImportSchema.swift
+src/Models/CapacityPlanForecastImportUpload.swift
+src/Models/CapacityPlanForecastImportUploadRequest.swift
+src/Models/CapacityPlanForecastImportUploadResponse.swift
 src/Models/CapacityPlanForecastInputsResponse.swift
 src/Models/CapacityPlanForecastInputsTemplate.swift
 src/Models/CapacityPlanForecastMetrics.swift
+src/Models/CapacityPlanForecastPlanningGroup.swift
 src/Models/CapacityPlanImportedForecast.swift
 src/Models/CapacityPlanImportedForecastRequest.swift
 src/Models/CapacityPlanListItem.swift
@@ -11334,6 +11427,7 @@ src/Models/ChunkSearchRegisterRequest.swift
 src/Models/ClientApp.swift
 src/Models/ClientAppConfigurationInfo.swift
 src/Models/ClientAppEntityListing.swift
+src/Models/ClientExtensionResults.swift
 src/Models/ClientPublicApiUsage.swift
 src/Models/ClientPublicApiUsageQueryRequest.swift
 src/Models/ClientPublicApiUsageResultsResponse.swift
@@ -12150,6 +12244,7 @@ src/Models/CredentialInfo.swift
 src/Models/CredentialInfoCursorListing.swift
 src/Models/CredentialInfoListing.swift
 src/Models/CredentialParameter.swift
+src/Models/CredentialPropertiesOutput.swift
 src/Models/CredentialSpecification.swift
 src/Models/CredentialType.swift
 src/Models/Criteria.swift
@@ -12211,6 +12306,7 @@ src/Models/CustomerIntentListing.swift
 src/Models/CustomerIntentPatch.swift
 src/Models/CustomerIntentReference.swift
 src/Models/CustomerIntentResponse.swift
+src/Models/CustomerIntentUsage.swift
 src/Models/CustomerInteractionCenter.swift
 src/Models/CustomerSourceIntent.swift
 src/Models/CustomerSourceIntentListing.swift
@@ -12309,6 +12405,7 @@ src/Models/Definition.swift
 src/Models/DeletableUserReference.swift
 src/Models/DeleteProgramResponse.swift
 src/Models/DeleteRetention.swift
+src/Models/DeleteVerifierResponse.swift
 src/Models/Dependency.swift
 src/Models/DependencyCount.swift
 src/Models/DependencyEntity.swift
@@ -15007,6 +15104,8 @@ src/Models/RegisterArchitectExportJob.swift
 src/Models/RegisterArchitectExportJobResponse.swift
 src/Models/RegisterArchitectJobRequest.swift
 src/Models/RegisterArchitectJobResponse.swift
+src/Models/RegisterArchitectValidateJob.swift
+src/Models/RegisterArchitectValidateJobResponse.swift
 src/Models/Relationship.swift
 src/Models/RelationshipListing.swift
 src/Models/RelationshipsExport.swift
@@ -15245,7 +15344,10 @@ src/Models/ScorableSurvey.swift
 src/Models/ScoredAgent.swift
 src/Models/ScreenMonitorSettings.swift
 src/Models/ScreenMonitoring.swift
+src/Models/ScreenMonitoringConversation.swift
+src/Models/ScreenMonitoringConversationEntityListing.swift
 src/Models/ScreenMonitoringDetails.swift
+src/Models/ScreenMonitoringParticipant.swift
 src/Models/ScreenMonitoringSession.swift
 src/Models/ScreenMonitoringSessionEntityListing.swift
 src/Models/ScreenMonitoringUserDetails.swift
@@ -15807,6 +15909,8 @@ src/Models/TranscriptAggregationView.swift
 src/Models/TranscriptAsyncAggregateQueryResponse.swift
 src/Models/TranscriptAsyncAggregationQuery.swift
 src/Models/TranscriptCategories.swift
+src/Models/TranscriptOutlineResponse.swift
+src/Models/TranscriptOutlineSegment.swift
 src/Models/TranscriptSearchCriteria.swift
 src/Models/TranscriptSearchRequest.swift
 src/Models/TranscriptTopic.swift
@@ -15846,6 +15950,8 @@ src/Models/Trunk.swift
 src/Models/TrunkBase.swift
 src/Models/TrunkBaseAssignment.swift
 src/Models/TrunkBaseEntityListing.swift
+src/Models/TrunkBaseMetrics.swift
+src/Models/TrunkBaseMetricsEntityListing.swift
 src/Models/TrunkBasesSearchResponse.swift
 src/Models/TrunkConnectedStatus.swift
 src/Models/TrunkEntityListing.swift
@@ -16227,6 +16333,14 @@ src/Models/V2MobiusRulesTopicCondition.swift
 src/Models/V2MobiusRulesTopicConditionRulePredicate.swift
 src/Models/V2MobiusRulesTopicEntityProperties.swift
 src/Models/V2MobiusRulesTopicRule.swift
+src/Models/V2MonitoredQueueAddedEventMonitoredQueueNotification.swift
+src/Models/V2MonitoredQueueEvaluatedEventMonitoredQueueNotification.swift
+src/Models/V2MonitoredQueueRemovedEventMonitoredQueueNotification.swift
+src/Models/V2QueueAnomalyEventConsensusAnalysis.swift
+src/Models/V2QueueAnomalyEventDivisionReference.swift
+src/Models/V2QueueAnomalyEventQueueAnomalyNotification.swift
+src/Models/V2QueueAnomalyEventQueueReference.swift
+src/Models/V2QueueAnomalyExportJobEventQueueAnomalyExportJobNotification.swift
 src/Models/V2QueueObservationMetricCountData.swift
 src/Models/V2QueueObservationMetricCountGroup.swift
 src/Models/V2QueueObservationObservationCountNotification.swift
@@ -16312,6 +16426,7 @@ src/Models/ValidateAddressResponse.swift
 src/Models/ValidateAgentUnavailableTimesRequest.swift
 src/Models/ValidateAgentUnavailableTimesResponse.swift
 src/Models/ValidateAssignUsers.swift
+src/Models/ValidateDetails.swift
 src/Models/ValidateVerifierRequest.swift
 src/Models/ValidateWorkPlanMessages.swift
 src/Models/ValidateWorkPlanResponse.swift
@@ -16587,7 +16702,6 @@ src/Models/WfmMoveManagementUnitTopicMoveManagementUnitNotification.swift
 src/Models/WfmProcessUploadRequest.swift
 src/Models/WfmScheduleActivity.swift
 src/Models/WfmScheduleReference.swift
-src/Models/WfmScheduleTopicWfmScheduleNotification.swift
 src/Models/WfmSelfScheduleCompleteEventErrorBody.swift
 src/Models/WfmSelfScheduleCompleteEventSelfScheduleCompleteNotification.swift
 src/Models/WfmServiceGoalImpact.swift

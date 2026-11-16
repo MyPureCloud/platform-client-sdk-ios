@@ -1926,28 +1926,118 @@ open class AnalyticsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "botPrompts" : [ "botPrompts", "botPrompts" ],
-    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-    "userInput" : "userInput",
+    "botFlowInvocationEvents" : [ {
+      "action" : "{}",
+      "type" : "Call",
+      "flow" : "{}"
+    }, {
+      "action" : "{}",
+      "type" : "Call",
+      "flow" : "{}"
+    } ],
+    "executionFrameId" : "executionFrameId",
     "sessionId" : "sessionId",
     "askAction" : "{}",
-    "askActionResult" : "SuccessCollection",
     "sessionEndDetails" : "{}",
     "intent" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "botPrompts" : [ "botPrompts", "botPrompts" ],
+    "dateInputStarted" : "2000-01-23T04:56:07.000+00:00",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "guardrailEvents" : [ {
+      "violationsThreshold" : 6,
+      "instruction" : "instruction",
+      "violationsTriggered" : 1,
+      "type" : "Custom"
+    }, {
+      "violationsThreshold" : 6,
+      "instruction" : "instruction",
+      "violationsTriggered" : 1,
+      "type" : "Custom"
+    } ],
+    "userInput" : "userInput",
+    "askActionResult" : "SuccessCollection",
+    "toolCalls" : [ {
+      "toolId" : "toolId",
+      "errorText" : "errorText",
+      "knowledgeMetadata" : "{}",
+      "targetId" : "targetId",
+      "origin" : "AvaTool",
+      "toolType" : "KnowledgeSetting",
+      "latencyMs" : 0,
+      "toolName" : "toolName",
+      "status" : "Success",
+      "dateInvoked" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "toolId" : "toolId",
+      "errorText" : "errorText",
+      "knowledgeMetadata" : "{}",
+      "targetId" : "targetId",
+      "origin" : "AvaTool",
+      "toolType" : "KnowledgeSetting",
+      "latencyMs" : 0,
+      "toolName" : "toolName",
+      "status" : "Success",
+      "dateInvoked" : "2000-01-23T04:56:07.000+00:00"
+    } ],
     "knowledgeBaseEvents" : "{}",
     "conversation" : "{}",
     "knowledge" : "{}"
   }, {
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "botPrompts" : [ "botPrompts", "botPrompts" ],
-    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-    "userInput" : "userInput",
+    "botFlowInvocationEvents" : [ {
+      "action" : "{}",
+      "type" : "Call",
+      "flow" : "{}"
+    }, {
+      "action" : "{}",
+      "type" : "Call",
+      "flow" : "{}"
+    } ],
+    "executionFrameId" : "executionFrameId",
     "sessionId" : "sessionId",
     "askAction" : "{}",
-    "askActionResult" : "SuccessCollection",
     "sessionEndDetails" : "{}",
     "intent" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "botPrompts" : [ "botPrompts", "botPrompts" ],
+    "dateInputStarted" : "2000-01-23T04:56:07.000+00:00",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "guardrailEvents" : [ {
+      "violationsThreshold" : 6,
+      "instruction" : "instruction",
+      "violationsTriggered" : 1,
+      "type" : "Custom"
+    }, {
+      "violationsThreshold" : 6,
+      "instruction" : "instruction",
+      "violationsTriggered" : 1,
+      "type" : "Custom"
+    } ],
+    "userInput" : "userInput",
+    "askActionResult" : "SuccessCollection",
+    "toolCalls" : [ {
+      "toolId" : "toolId",
+      "errorText" : "errorText",
+      "knowledgeMetadata" : "{}",
+      "targetId" : "targetId",
+      "origin" : "AvaTool",
+      "toolType" : "KnowledgeSetting",
+      "latencyMs" : 0,
+      "toolName" : "toolName",
+      "status" : "Success",
+      "dateInvoked" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "toolId" : "toolId",
+      "errorText" : "errorText",
+      "knowledgeMetadata" : "{}",
+      "targetId" : "targetId",
+      "origin" : "AvaTool",
+      "toolType" : "KnowledgeSetting",
+      "latencyMs" : 0,
+      "toolName" : "toolName",
+      "status" : "Success",
+      "dateInvoked" : "2000-01-23T04:56:07.000+00:00"
+    } ],
     "knowledgeBaseEvents" : "{}",
     "conversation" : "{}",
     "knowledge" : "{}"
@@ -2069,28 +2159,118 @@ open class AnalyticsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "botPrompts" : [ "botPrompts", "botPrompts" ],
-    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-    "userInput" : "userInput",
+    "botFlowInvocationEvents" : [ {
+      "action" : "{}",
+      "type" : "Call",
+      "flow" : "{}"
+    }, {
+      "action" : "{}",
+      "type" : "Call",
+      "flow" : "{}"
+    } ],
+    "executionFrameId" : "executionFrameId",
     "sessionId" : "sessionId",
     "askAction" : "{}",
-    "askActionResult" : "SuccessCollection",
     "sessionEndDetails" : "{}",
     "intent" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "botPrompts" : [ "botPrompts", "botPrompts" ],
+    "dateInputStarted" : "2000-01-23T04:56:07.000+00:00",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "guardrailEvents" : [ {
+      "violationsThreshold" : 6,
+      "instruction" : "instruction",
+      "violationsTriggered" : 1,
+      "type" : "Custom"
+    }, {
+      "violationsThreshold" : 6,
+      "instruction" : "instruction",
+      "violationsTriggered" : 1,
+      "type" : "Custom"
+    } ],
+    "userInput" : "userInput",
+    "askActionResult" : "SuccessCollection",
+    "toolCalls" : [ {
+      "toolId" : "toolId",
+      "errorText" : "errorText",
+      "knowledgeMetadata" : "{}",
+      "targetId" : "targetId",
+      "origin" : "AvaTool",
+      "toolType" : "KnowledgeSetting",
+      "latencyMs" : 0,
+      "toolName" : "toolName",
+      "status" : "Success",
+      "dateInvoked" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "toolId" : "toolId",
+      "errorText" : "errorText",
+      "knowledgeMetadata" : "{}",
+      "targetId" : "targetId",
+      "origin" : "AvaTool",
+      "toolType" : "KnowledgeSetting",
+      "latencyMs" : 0,
+      "toolName" : "toolName",
+      "status" : "Success",
+      "dateInvoked" : "2000-01-23T04:56:07.000+00:00"
+    } ],
     "knowledgeBaseEvents" : "{}",
     "conversation" : "{}",
     "knowledge" : "{}"
   }, {
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "botPrompts" : [ "botPrompts", "botPrompts" ],
-    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
-    "userInput" : "userInput",
+    "botFlowInvocationEvents" : [ {
+      "action" : "{}",
+      "type" : "Call",
+      "flow" : "{}"
+    }, {
+      "action" : "{}",
+      "type" : "Call",
+      "flow" : "{}"
+    } ],
+    "executionFrameId" : "executionFrameId",
     "sessionId" : "sessionId",
     "askAction" : "{}",
-    "askActionResult" : "SuccessCollection",
     "sessionEndDetails" : "{}",
     "intent" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "botPrompts" : [ "botPrompts", "botPrompts" ],
+    "dateInputStarted" : "2000-01-23T04:56:07.000+00:00",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "guardrailEvents" : [ {
+      "violationsThreshold" : 6,
+      "instruction" : "instruction",
+      "violationsTriggered" : 1,
+      "type" : "Custom"
+    }, {
+      "violationsThreshold" : 6,
+      "instruction" : "instruction",
+      "violationsTriggered" : 1,
+      "type" : "Custom"
+    } ],
+    "userInput" : "userInput",
+    "askActionResult" : "SuccessCollection",
+    "toolCalls" : [ {
+      "toolId" : "toolId",
+      "errorText" : "errorText",
+      "knowledgeMetadata" : "{}",
+      "targetId" : "targetId",
+      "origin" : "AvaTool",
+      "toolType" : "KnowledgeSetting",
+      "latencyMs" : 0,
+      "toolName" : "toolName",
+      "status" : "Success",
+      "dateInvoked" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "toolId" : "toolId",
+      "errorText" : "errorText",
+      "knowledgeMetadata" : "{}",
+      "targetId" : "targetId",
+      "origin" : "AvaTool",
+      "toolType" : "KnowledgeSetting",
+      "latencyMs" : 0,
+      "toolName" : "toolName",
+      "status" : "Success",
+      "dateInvoked" : "2000-01-23T04:56:07.000+00:00"
+    } ],
     "knowledgeBaseEvents" : "{}",
     "conversation" : "{}",
     "knowledge" : "{}"
@@ -9324,7 +9504,7 @@ open class AnalyticsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "usage",
+      "namespace" : "agent.assistant",
       "value" : 6,
       "key" : "key"
     },
@@ -18404,7 +18584,7 @@ open class AnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalHits" : 5,
+  "totalHits" : 6,
   "conversations" : [ {
     "conversationStart" : "2000-01-23T04:56:07.000+00:00",
     "mediaStatsMinConversationMos" : 0.8008281904610115,
@@ -20362,34 +20542,34 @@ open class AnalyticsAPI {
   } ],
   "aggregations" : [ {
     "metric" : "metric",
-    "count" : 0,
+    "count" : 2,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     } ]
   }, {
     "metric" : "metric",
-    "count" : 0,
+    "count" : 2,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     } ]
   } ]
@@ -27987,34 +28167,34 @@ open class AnalyticsAPI {
   } ],
   "aggregations" : [ {
     "metric" : "metric",
-    "count" : 0,
+    "count" : 2,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     } ]
   }, {
     "metric" : "metric",
-    "count" : 0,
+    "count" : 2,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     } ]
   } ]

@@ -609,12 +609,14 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -841,12 +843,14 @@ open class ExternalContactsAPI {
   "entities" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -878,16 +882,26 @@ open class ExternalContactsAPI {
     
     
     
+    
+    
+    public enum Expand_getExternalcontactsContactJourneySegments: String { 
+        case segment = "segment"
+    }
+    
+    
+    
     /**
      Retrieve segment assignments by external contact ID.
      
      - parameter contactId: (path) ExternalContact ID 
      - parameter includeMerged: (query) Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)
      - parameter limit: (query) Number of entities to return. Default of 25, maximum of 500. (optional)
+     - parameter expand: (query) Expand the response with additional fields. (optional)
+     - parameter segmentIds: (query) IDs of segments to return. Maximum of 5 (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getExternalcontactsContactJourneySegments(contactId: String, includeMerged: Bool? = nil, limit: Int? = nil, completion: @escaping ((_ data: SegmentAssignmentListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getExternalcontactsContactJourneySegmentsWithRequestBuilder(contactId: contactId, includeMerged: includeMerged, limit: limit)
+    open class func getExternalcontactsContactJourneySegments(contactId: String, includeMerged: Bool? = nil, limit: Int? = nil, expand: [String]? = nil, segmentIds: [String]? = nil, completion: @escaping ((_ data: SegmentAssignmentListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsContactJourneySegmentsWithRequestBuilder(contactId: contactId, includeMerged: includeMerged, limit: limit, expand: expand, segmentIds: segmentIds)
         requestBuilder.execute { (response: Response<SegmentAssignmentListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -929,10 +943,12 @@ open class ExternalContactsAPI {
      - parameter contactId: (path) ExternalContact ID 
      - parameter includeMerged: (query) Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)
      - parameter limit: (query) Number of entities to return. Default of 25, maximum of 500. (optional)
+     - parameter expand: (query) Expand the response with additional fields. (optional)
+     - parameter segmentIds: (query) IDs of segments to return. Maximum of 5 (optional)
 
      - returns: RequestBuilder<SegmentAssignmentListing> 
      */
-    open class func getExternalcontactsContactJourneySegmentsWithRequestBuilder(contactId: String, includeMerged: Bool? = nil, limit: Int? = nil) -> RequestBuilder<SegmentAssignmentListing> {        
+    open class func getExternalcontactsContactJourneySegmentsWithRequestBuilder(contactId: String, includeMerged: Bool? = nil, limit: Int? = nil, expand: [String]? = nil, segmentIds: [String]? = nil) -> RequestBuilder<SegmentAssignmentListing> {        
         var path = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments"
         let contactIdPreEscape = "\(contactId)"
         let contactIdPostEscape = contactIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -943,7 +959,9 @@ open class ExternalContactsAPI {
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "includeMerged": includeMerged, 
-            "limit": limit?.encodeToJSON()
+            "limit": limit?.encodeToJSON(), 
+            "expand": expand, 
+            "segmentIds": segmentIds
         ])
 
         let requestBuilder: RequestBuilder<SegmentAssignmentListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -1524,12 +1542,14 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -1829,12 +1849,14 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -2050,12 +2072,14 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -4685,12 +4709,14 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -4906,12 +4932,14 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -6778,12 +6806,14 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -6999,12 +7029,14 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -7286,12 +7318,14 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -7507,12 +7541,14 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -7794,12 +7830,14 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -8015,12 +8053,14 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -9197,12 +9237,14 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -9428,6 +9470,7 @@ open class ExternalContactsAPI {
      - examples: [{contentType=application/json, example={
   "division" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "portfolioId" : "portfolioId",
   "type" : "SocialLine",
   "value" : "value",
   "externalSource" : "{}"
@@ -11517,12 +11560,14 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -11791,12 +11836,14 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -12066,12 +12113,14 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -12403,12 +12452,14 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -12738,12 +12789,14 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -12959,12 +13012,14 @@ open class ExternalContactsAPI {
     "identifiers" : [ {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
     }, {
       "division" : "{}",
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "portfolioId" : "portfolioId",
       "type" : "SocialLine",
       "value" : "value",
       "externalSource" : "{}"
@@ -13307,12 +13362,14 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -13593,12 +13650,14 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -14336,12 +14395,14 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
@@ -15287,12 +15348,14 @@ open class ExternalContactsAPI {
   "identifiers" : [ {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"
   }, {
     "division" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "portfolioId" : "portfolioId",
     "type" : "SocialLine",
     "value" : "value",
     "externalSource" : "{}"

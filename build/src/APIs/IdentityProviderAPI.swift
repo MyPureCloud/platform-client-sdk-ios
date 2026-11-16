@@ -1263,7 +1263,9 @@ open class IdentityProviderAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "disabled" : true,
-  "id" : "id"
+  "nativeLoginExceptionsEnabled" : true,
+  "id" : "id",
+  "nativeLoginExceptionGroupIds" : [ "nativeLoginExceptionGroupIds", "nativeLoginExceptionGroupIds" ]
 }, statusCode=200}]
 
      - returns: RequestBuilder<PureCloud> 

@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **text** | **String** | The phrase text | |
-| **strictness** | **String** | The phrase strictness, default value is null | [optional] |
+| **strictness** | **Int** | The phrase strictness, default value is null | [optional] |
 
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

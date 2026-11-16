@@ -291,6 +291,7 @@ open class UserRecordingsAPI {
         "id" : "id",
         "dialerPreview" : "{}",
         "direction" : "inbound",
+        "clientIpAddress" : "clientIpAddress",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "voicemail" : "{}",
@@ -333,6 +334,7 @@ open class UserRecordingsAPI {
         "id" : "id",
         "dialerPreview" : "{}",
         "direction" : "inbound",
+        "clientIpAddress" : "clientIpAddress",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "voicemail" : "{}",
@@ -529,7 +531,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -661,7 +663,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -939,7 +941,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -1021,7 +1023,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -7156,6 +7158,7 @@ open class UserRecordingsAPI {
         "id" : "id",
         "dialerPreview" : "{}",
         "direction" : "inbound",
+        "clientIpAddress" : "clientIpAddress",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "voicemail" : "{}",
@@ -7198,6 +7201,7 @@ open class UserRecordingsAPI {
         "id" : "id",
         "dialerPreview" : "{}",
         "direction" : "inbound",
+        "clientIpAddress" : "clientIpAddress",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "voicemail" : "{}",
@@ -7394,7 +7398,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -7526,7 +7530,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -7804,7 +7808,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -7886,7 +7890,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -14271,6 +14275,7 @@ open class UserRecordingsAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -14313,6 +14318,7 @@ open class UserRecordingsAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -14509,7 +14515,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -14641,7 +14647,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -14919,7 +14925,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -15001,7 +15007,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -21136,6 +21142,7 @@ open class UserRecordingsAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -21178,6 +21185,7 @@ open class UserRecordingsAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -21374,7 +21382,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -21506,7 +21514,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -21784,7 +21792,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -21866,7 +21874,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -28092,6 +28100,7 @@ open class UserRecordingsAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -28134,6 +28143,7 @@ open class UserRecordingsAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -28330,7 +28340,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -28462,7 +28472,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -28740,7 +28750,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -28822,7 +28832,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -34957,6 +34967,7 @@ open class UserRecordingsAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -34999,6 +35010,7 @@ open class UserRecordingsAPI {
           "id" : "id",
           "dialerPreview" : "{}",
           "direction" : "inbound",
+          "clientIpAddress" : "clientIpAddress",
           "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
           "wrapup" : "{}",
           "voicemail" : "{}",
@@ -35195,7 +35207,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -35327,7 +35339,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -35605,7 +35617,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -35687,7 +35699,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "usage",
+              "namespace" : "agent.assistant",
               "value" : 6,
               "key" : "key"
             },
@@ -42036,6 +42048,7 @@ open class UserRecordingsAPI {
         "id" : "id",
         "dialerPreview" : "{}",
         "direction" : "inbound",
+        "clientIpAddress" : "clientIpAddress",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "voicemail" : "{}",
@@ -42078,6 +42091,7 @@ open class UserRecordingsAPI {
         "id" : "id",
         "dialerPreview" : "{}",
         "direction" : "inbound",
+        "clientIpAddress" : "clientIpAddress",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "voicemail" : "{}",
@@ -42274,7 +42288,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -42406,7 +42420,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -42684,7 +42698,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -42766,7 +42780,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -48901,6 +48915,7 @@ open class UserRecordingsAPI {
         "id" : "id",
         "dialerPreview" : "{}",
         "direction" : "inbound",
+        "clientIpAddress" : "clientIpAddress",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "voicemail" : "{}",
@@ -48943,6 +48958,7 @@ open class UserRecordingsAPI {
         "id" : "id",
         "dialerPreview" : "{}",
         "direction" : "inbound",
+        "clientIpAddress" : "clientIpAddress",
         "disconnectedTime" : "2000-01-23T04:56:07.000+00:00",
         "wrapup" : "{}",
         "voicemail" : "{}",
@@ -49139,7 +49155,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -49271,7 +49287,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -49549,7 +49565,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
@@ -49631,7 +49647,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "usage",
+            "namespace" : "agent.assistant",
             "value" : 6,
             "key" : "key"
           },
