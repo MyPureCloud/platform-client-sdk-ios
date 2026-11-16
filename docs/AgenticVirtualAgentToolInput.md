@@ -12,8 +12,9 @@ Input for a tool.
 | **source** | **String** | Source of the input value. | |
 | **_required** | **Bool** | Whether this input must be supplied. | [optional] |
 | **fallbackToUser** | **Bool** | Whether the virtual agent should ask the user for this input value when it is not available from the configured source. | [optional] |
+| **dependencyOnly** | **Bool** | Whether this input is used for gating/preconditions only and is not sent with the underlying tool at runtime. | [optional] |
 | **mapping** | [**[JSON]**]([null]) | Path used to extract this input from a previous tool output. Only valid when source is &#39;ToolOutput&#39;. The path starts with a tool output type name, may contain only string property names or integer array indexes, and must resolve to a primitive value. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

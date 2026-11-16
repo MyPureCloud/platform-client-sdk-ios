@@ -15,4 +15,4 @@ User information for a twitter account. Either id OR screenName (or both) must b
 
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

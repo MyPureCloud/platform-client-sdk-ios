@@ -14,7 +14,8 @@ Settings concerning messenger
 | **apps** | [**MessengerApps**](MessengerApps) | The apps embedded in the messenger | [optional] |
 | **homeScreen** | [**MessengerHomeScreen**](MessengerHomeScreen) | The homescreen settings for messenger | [optional] |
 | **sessionPersistenceType** | **String** | The session persistence type for messenger | [optional] |
+| **richSurveyEnabled** | **Bool** | Whether or not rich in-app surveys are enabled for messenger | [optional] |
 
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

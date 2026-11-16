@@ -13,7 +13,8 @@ Request for a guide session turn
 | **inputVariables** | [**[GuideSessionVariable]**]([GuideSessionVariable]) | The input variables for this turn. | [optional] |
 | **knowledgeSettings** | [**KnowledgeSettings**](KnowledgeSettings) | The knowledge settings for this turn. | [optional] |
 | **context** | [**GuideSessionTurnRequestContext**](GuideSessionTurnRequestContext) | The context for this turn, including conversation custom attributes and messages. | [optional] |
+| **conversationId** | **String** | The ID of the conversation this turn belongs to. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

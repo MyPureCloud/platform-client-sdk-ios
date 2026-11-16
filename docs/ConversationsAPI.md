@@ -126,6 +126,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagingSupportedcontentDefault**](ConversationsAPI#getConversationsMessagingSupportedcontentDefault) | Get the organization&#39;s default supported content profile that will be used as the default when creating an integration. |
 | [**getConversationsMessagingSupportedcontentSupportedContentId**](ConversationsAPI#getConversationsMessagingSupportedcontentSupportedContentId) | Get a supported content profile |
 | [**getConversationsMessagingThreadingtimeline**](ConversationsAPI#getConversationsMessagingThreadingtimeline) | Get conversation threading window timeline for each messaging type |
+| [**getConversationsScreenmonitor**](ConversationsAPI#getConversationsScreenmonitor) | Get screen monitoring conversation |
+| [**getConversationsScreenmonitors**](ConversationsAPI#getConversationsScreenmonitors) | Get active screen monitoring conversations for the logged in user |
 | [**getConversationsScreenshareParticipantCommunicationWrapup**](ConversationsAPI#getConversationsScreenshareParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
 | [**getConversationsSettings**](ConversationsAPI#getConversationsSettings) | Get Settings |
 | [**getConversationsSocialParticipantCommunicationWrapup**](ConversationsAPI#getConversationsSocialParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
@@ -248,7 +250,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsKeyconfigurations**](ConversationsAPI#postConversationsKeyconfigurations) | Setup configurations for encryption key creation |
 | [**postConversationsKeyconfigurationsValidate**](ConversationsAPI#postConversationsKeyconfigurationsValidate) | Validate encryption key configurations without saving it |
 | [**postConversationsMessageCommunicationMessages**](ConversationsAPI#postConversationsMessageCommunicationMessages) | Send message |
-| [**postConversationsMessageCommunicationMessagesMedia**](ConversationsAPI#postConversationsMessageCommunicationMessagesMedia) | Create media |
 | [**postConversationsMessageCommunicationMessagesMediaUploads**](ConversationsAPI#postConversationsMessageCommunicationMessagesMediaUploads) | Create a URL to upload a message media file |
 | [**postConversationsMessageCommunicationSocialmediaMessages**](ConversationsAPI#postConversationsMessageCommunicationSocialmediaMessages) | Send a social media message |
 | [**postConversationsMessageCommunicationTyping**](ConversationsAPI#postConversationsMessageCommunicationTyping) | Send message typing event |
@@ -6555,6 +6556,102 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**ConversationThreadingWindow**](ConversationThreadingWindow)
+
+
+## getConversationsScreenmonitor
+
+
+
+> [ScreenMonitoringConversation](ScreenMonitoringConversation) getConversationsScreenmonitor(conversationId)
+
+Get screen monitoring conversation
+
+
+
+Wraps GET /api/v2/conversations/screenmonitors/{conversationId}  
+
+Requires ANY permissions: 
+
+* conversation:screenMonitor:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let conversationId: String = "" // conversationId
+
+// Code example
+ConversationsAPI.getConversationsScreenmonitor(conversationId: conversationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsScreenmonitor was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+
+
+### Return type
+
+[**ScreenMonitoringConversation**](ScreenMonitoringConversation)
+
+
+## getConversationsScreenmonitors
+
+
+
+> [ScreenMonitoringConversationEntityListing](ScreenMonitoringConversationEntityListing) getConversationsScreenmonitors()
+
+Get active screen monitoring conversations for the logged in user
+
+
+
+Wraps GET /api/v2/conversations/screenmonitors  
+
+Requires ANY permissions: 
+
+* conversation:screenMonitor:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+
+// Code example
+ConversationsAPI.getConversationsScreenmonitors() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsScreenmonitors was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**ScreenMonitoringConversationEntityListing**](ScreenMonitoringConversationEntityListing)
 
 
 ## getConversationsScreenshareParticipantCommunicationWrapup
@@ -13043,62 +13140,6 @@ ConversationsAPI.postConversationsMessageCommunicationMessages(conversationId: c
 [**MessageData**](MessageData)
 
 
-## postConversationsMessageCommunicationMessagesMedia
-
-
-
-> [MessageMediaData](MessageMediaData) postConversationsMessageCommunicationMessagesMedia(conversationId, communicationId)
-
-Create media
-
-See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
-
-
-
-Wraps POST /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media  
-
-Requires ANY permissions: 
-
-* conversation:message:create
-* conversation:webmessaging:create
-* conversation:socialmedia:create
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
-
-let conversationId: String = "" // conversationId
-let communicationId: String = "" // communicationId
-
-// Code example
-ConversationsAPI.postConversationsMessageCommunicationMessagesMedia(conversationId: conversationId, communicationId: communicationId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("ConversationsAPI.postConversationsMessageCommunicationMessagesMedia was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **conversationId** | **String**| conversationId | |
-| **communicationId** | **String**| communicationId | |
-
-
-### Return type
-
-[**MessageMediaData**](MessageMediaData)
-
-
 ## postConversationsMessageCommunicationMessagesMediaUploads
 
 
@@ -16051,4 +16092,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

@@ -87,6 +87,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTelephonyProvidersEdgesTrunks**](TelephonyProvidersEdgeAPI#getTelephonyProvidersEdgesTrunks) | Get the list of available trunks. |
 | [**getTelephonyProvidersEdgesTrunksMetrics**](TelephonyProvidersEdgeAPI#getTelephonyProvidersEdgesTrunksMetrics) | Get the metrics for a list of trunks. |
 | [**getTelephonyProvidersEdgesTrunkswithrecording**](TelephonyProvidersEdgeAPI#getTelephonyProvidersEdgesTrunkswithrecording) | Get Counts of trunks that have recording disabled or enabled |
+| [**getTelephonyTrunkbasesettingMetrics**](TelephonyProvidersEdgeAPI#getTelephonyTrunkbasesettingMetrics) | Get the trunkbase metrics. |
+| [**getTelephonyTrunkbasesettingsMetrics**](TelephonyProvidersEdgeAPI#getTelephonyTrunkbasesettingsMetrics) | Get the trunkbase metrics for the specified ids. |
 | [**patchTelephonyProvidersEdgesSiteSiteconnections**](TelephonyProvidersEdgeAPI#patchTelephonyProvidersEdgesSiteSiteconnections) | Disable site connections for a site. |
 | [**postTelephonyProvidersEdgeDiagnosticNslookup**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgeDiagnosticNslookup) | Nslookup request command to collect networking-related information from an Edge for a target IP or host. |
 | [**postTelephonyProvidersEdgeDiagnosticPing**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgeDiagnosticPing) | Ping Request command to collect networking-related information from an Edge for a target IP or host. |
@@ -4536,6 +4538,106 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesTrunkswithrecording(trunkTyp
 [**TrunkRecordingEnabledCount**](TrunkRecordingEnabledCount)
 
 
+## getTelephonyTrunkbasesettingMetrics
+
+
+
+> [TrunkBaseMetrics](TrunkBaseMetrics) getTelephonyTrunkbasesettingMetrics(trunkBaseId)
+
+Get the trunkbase metrics.
+
+
+
+Wraps GET /api/v2/telephony/trunkbasesettings/{trunkBaseId}/metrics  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let trunkBaseId: String = "" // TrunkBase Id
+
+// Code example
+TelephonyProvidersEdgeAPI.getTelephonyTrunkbasesettingMetrics(trunkBaseId: trunkBaseId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.getTelephonyTrunkbasesettingMetrics was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **trunkBaseId** | **String**| TrunkBase Id | |
+
+
+### Return type
+
+[**TrunkBaseMetrics**](TrunkBaseMetrics)
+
+
+## getTelephonyTrunkbasesettingsMetrics
+
+
+
+> [TrunkBaseMetricsEntityListing](TrunkBaseMetricsEntityListing) getTelephonyTrunkbasesettingsMetrics(ids)
+
+Get the trunkbase metrics for the specified ids.
+
+
+
+Wraps GET /api/v2/telephony/trunkbasesettings/metrics  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let ids: String = "" // TrunkBase Ids
+
+// Code example
+TelephonyProvidersEdgeAPI.getTelephonyTrunkbasesettingsMetrics(ids: ids) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.getTelephonyTrunkbasesettingsMetrics was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ids** | **String**| TrunkBase Ids | |
+
+
+### Return type
+
+[**TrunkBaseMetricsEntityListing**](TrunkBaseMetricsEntityListing)
+
+
 ## patchTelephonyProvidersEdgesSiteSiteconnections
 
 
@@ -6797,4 +6899,4 @@ TelephonyProvidersEdgeAPI.putTelephonyProvidersEdgesTrunkbasesetting(trunkBaseSe
 [**TrunkBase**](TrunkBase)
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

@@ -703,7 +703,7 @@ JourneyAPI.getAnalyticsJourneysAggregatesJobResults(jobId: jobId, cursor: cursor
 
 
 
-> [SegmentAssignmentListing](SegmentAssignmentListing) getExternalcontactsContactJourneySegments(contactId, includeMerged, limit)
+> [SegmentAssignmentListing](SegmentAssignmentListing) getExternalcontactsContactJourneySegments(contactId, includeMerged, limit, expand, segmentIds)
 
 Retrieve segment assignments by external contact ID.
 
@@ -726,9 +726,11 @@ PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 let contactId: String = "" // ExternalContact ID
 let includeMerged: Bool = true // Indicates whether to return segment assignments from all external contacts in the merge-set of the given one.
 let limit: Int = 0 // Number of entities to return. Default of 25, maximum of 500.
+let expand: [String] = [""] // Expand the response with additional fields.
+let segmentIds: [String] = [""] // IDs of segments to return. Maximum of 5
 
 // Code example
-JourneyAPI.getExternalcontactsContactJourneySegments(contactId: contactId, includeMerged: includeMerged, limit: limit) { (response, error) in
+JourneyAPI.getExternalcontactsContactJourneySegments(contactId: contactId, includeMerged: includeMerged, limit: limit, expand: expand, segmentIds: segmentIds) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -746,6 +748,8 @@ JourneyAPI.getExternalcontactsContactJourneySegments(contactId: contactId, inclu
 | **contactId** | **String**| ExternalContact ID | |
 | **includeMerged** | **Bool**| Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. | [optional] |
 | **limit** | **Int**| Number of entities to return. Default of 25, maximum of 500. | [optional] |
+| **expand** | [**[String]**](String)| Expand the response with additional fields. | [optional]<br />**Values**: segment ("segment") |
+| **segmentIds** | [**[String]**](String)| IDs of segments to return. Maximum of 5 | [optional] |
 
 
 ### Return type
@@ -2016,7 +2020,7 @@ JourneyAPI.getJourneySegment(segmentId: segmentId) { (response, error) in
 
 
 
-> [SegmentListing](SegmentListing) getJourneySegments(sortBy, pageSize, pageNumber, isActive, segmentIds, queryFields, queryValue)
+> [SegmentListing](SegmentListing) getJourneySegments(sortBy, pageSize, pageNumber, isActive, segmentIds, queryFields, queryValue, displayNames)
 
 Retrieve all segments.
 
@@ -2043,9 +2047,10 @@ let isActive: Bool = true // Determines whether or not to show only active segme
 let segmentIds: [String] = [""] // IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request.
 let queryFields: [String] = [""] // Segment field(s) to query on. Requires 'queryValue' to also be set.
 let queryValue: String = "" // Value to query on using fuzzy matching. Requires 'queryFields' to also be set.
+let displayNames: [String] = [""] // Display names of segments to return. Case-insensitive matching. Maximum of 5. Must not contain exact duplicates (case-sensitive). Use of this parameter is not compatible with pagination or sorting or querying or segmentIds.
 
 // Code example
-JourneyAPI.getJourneySegments(sortBy: sortBy, pageSize: pageSize, pageNumber: pageNumber, isActive: isActive, segmentIds: segmentIds, queryFields: queryFields, queryValue: queryValue) { (response, error) in
+JourneyAPI.getJourneySegments(sortBy: sortBy, pageSize: pageSize, pageNumber: pageNumber, isActive: isActive, segmentIds: segmentIds, queryFields: queryFields, queryValue: queryValue, displayNames: displayNames) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2067,6 +2072,7 @@ JourneyAPI.getJourneySegments(sortBy: sortBy, pageSize: pageSize, pageNumber: pa
 | **segmentIds** | [**[String]**](String)| IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. | [optional] |
 | **queryFields** | [**[String]**](String)| Segment field(s) to query on. Requires 'queryValue' to also be set. | [optional] |
 | **queryValue** | **String**| Value to query on using fuzzy matching. Requires 'queryFields' to also be set. | [optional] |
+| **displayNames** | [**[String]**](String)| Display names of segments to return. Case-insensitive matching. Maximum of 5. Must not contain exact duplicates (case-sensitive). Use of this parameter is not compatible with pagination or sorting or querying or segmentIds. | [optional] |
 
 
 ### Return type
@@ -4826,4 +4832,4 @@ JourneyAPI.putJourneyViewsEventdefinitionActivate(eventDefinitionId: eventDefini
 [**ActivateExternalEventResponse**](ActivateExternalEventResponse)
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

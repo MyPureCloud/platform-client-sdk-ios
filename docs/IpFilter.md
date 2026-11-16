@@ -12,4 +12,4 @@ Configuration for filtering tracking based on IP addresses.
 
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

@@ -59,6 +59,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserStation**](UsersAPI#getUserStation) | Get station information for user |
 | [**getUserSuperiors**](UsersAPI#getUserSuperiors) | Get superiors |
 | [**getUserTrustors**](UsersAPI#getUserTrustors) | List the organizations that have authorized/trusted the user. |
+| [**getUserVerifier**](UsersAPI#getUserVerifier) | Get a verifier |
 | [**getUserVerifiers**](UsersAPI#getUserVerifiers) | Get a list of verifiers |
 | [**getUsers**](UsersAPI#getUsers) | Get the list of available users. |
 | [**getUsersChatsMe**](UsersAPI#getUsersChatsMe) | Get chats for a user |
@@ -892,7 +893,7 @@ UsersAPI.deleteUsersCustomattributesSchema(schemaId: schemaId) { (error) in
 
 
 
-> Void deleteUsersMeVerifier(verifierId)
+> [DeleteVerifierResponse](DeleteVerifierResponse) deleteUsersMeVerifier(verifierId, replacementDefaultVerifierId)
 
 Delete a verifier
 
@@ -912,13 +913,15 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 
 let verifierId: String = "" // Verifier ID
+let replacementDefaultVerifierId: String = "" // The ID of an enabled verifier to make the default after deleting the current default
 
 // Code example
-UsersAPI.deleteUsersMeVerifier(verifierId: verifierId) { (error) in
+UsersAPI.deleteUsersMeVerifier(verifierId: verifierId, replacementDefaultVerifierId: replacementDefaultVerifierId) { (response, error) in
     if let error = error {
         dump(error)
-    } else {
+    } else if let response = response {
         print("UsersAPI.deleteUsersMeVerifier was successful")
+        dump(response)
     }
 }
 ```
@@ -929,11 +932,12 @@ UsersAPI.deleteUsersMeVerifier(verifierId: verifierId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **verifierId** | **String**| Verifier ID | |
+| **replacementDefaultVerifierId** | **String**| The ID of an enabled verifier to make the default after deleting the current default | [optional] |
 
 
 ### Return type
 
-`nil` (empty response body)
+[**DeleteVerifierResponse**](DeleteVerifierResponse)
 
 
 ## deleteUsersStationsMeAssociatedstation
@@ -2965,6 +2969,58 @@ UsersAPI.getUserTrustors(userId: userId, pageSize: pageSize, pageNumber: pageNum
 [**TrustorEntityListing**](TrustorEntityListing)
 
 
+## getUserVerifier
+
+
+
+> [Verifier](Verifier) getUserVerifier(userId, verifierId)
+
+Get a verifier
+
+
+
+Wraps GET /api/v2/users/{userId}/verifiers/{verifierId}  
+
+Requires ANY permissions: 
+
+* mfa:verifier:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
+
+let userId: String = "" // User ID
+let verifierId: String = "" // Verifier ID
+
+// Code example
+UsersAPI.getUserVerifier(userId: userId, verifierId: verifierId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUserVerifier was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+| **verifierId** | **String**| Verifier ID | |
+
+
+### Return type
+
+[**Verifier**](Verifier)
+
+
 ## getUserVerifiers
 
 
@@ -4494,7 +4550,7 @@ Assign multiple routing skills to a user
 
 Wraps PATCH /api/v2/users/{userId}/routingskills/bulk  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:assign
 
@@ -6346,7 +6402,7 @@ Assign multiple routing skills to a user, replacing any current assignments
 
 Wraps PUT /api/v2/users/{userId}/routingskills/bulk  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:skill:assign
 
@@ -6798,4 +6854,4 @@ UsersAPI.putUsersStationsMeAssociatedstationStationId(stationId: stationId) { (e
 `nil` (empty response body)
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

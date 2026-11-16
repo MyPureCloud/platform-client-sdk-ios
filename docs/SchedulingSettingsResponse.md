@@ -12,8 +12,8 @@
 | **planningPeriod** | [**PlanningPeriodSettings**](PlanningPeriodSettings) | Planning period settings for scheduling. Only one of planningPeriod or monthlyPlanningPeriod will be defined if applicable, but both can be null | [optional] |
 | **monthlyPlanningPeriod** | [**MonthlyPlanningPeriodSettings**](MonthlyPlanningPeriodSettings) | Monthly planning period settings for scheduling. Only one of planningPeriod or monthlyPlanningPeriod will be defined if applicable, but both can be null | [optional] |
 | **startDayOfWeekend** | **String** | Start day of weekend for scheduling | [optional] |
-| **scheduleVisibility** | [**ScheduleVisibilitySettingsResponse**](ScheduleVisibilitySettingsResponse) | Schedule visibility settings for agents | [optional] |
+| **scheduleVisibility** | [**ScheduleVisibilitySettingsResponse**](ScheduleVisibilitySettingsResponse) | Schedule visibility settings for agents | |
 
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_

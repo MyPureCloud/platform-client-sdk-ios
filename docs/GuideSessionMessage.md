@@ -12,4 +12,4 @@ A message in the conversation history provided to a guide session turn.
 
 
 
-_PureCloudPlatformClientV2@207.0.0_
+_PureCloudPlatformClientV2@208.0.0_
